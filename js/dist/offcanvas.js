@@ -22,12 +22,6 @@
   var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
@@ -95,7 +89,17 @@
     element.dispatchEvent(new Event(TRANSITION_END));
   };
 
-  const isElement = obj => (obj[0] || obj).nodeType;
+  const isElement = obj => {
+    if (!obj || typeof obj !== 'object') {
+      return false;
+    }
+
+    if (typeof obj.jquery !== 'undefined') {
+      obj = obj[0];
+    }
+
+    return typeof obj.nodeType !== 'undefined';
+  };
 
   const emulateTransitionEnd = (element, duration) => {
     let called = false;
@@ -179,12 +183,13 @@
     }
   };
 
-  const defineJQueryPlugin = (name, plugin) => {
+  const defineJQueryPlugin = plugin => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
+        const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
@@ -205,7 +210,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): util/scrollBar.js
+   * Bootstrap (v5.0.1): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -279,7 +284,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): util/backdrop.js
+   * Bootstrap (v5.0.1): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -363,6 +368,7 @@
       config = { ...Default$1,
         ...(typeof config === 'object' ? config : {})
       };
+      config.rootElement = config.rootElement || document.body;
       typeCheckConfig(NAME$1, config, DefaultType$1);
       return config;
     }
@@ -407,7 +413,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): offcanvas.js
+   * Bootstrap (v5.0.1): offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -462,12 +468,12 @@
     } // Getters
 
 
-    static get Default() {
-      return Default;
+    static get NAME() {
+      return NAME;
     }
 
-    static get DATA_KEY() {
-      return DATA_KEY;
+    static get Default() {
+      return Default;
     } // Public
 
 
@@ -513,9 +519,7 @@
         });
       };
 
-      const transitionDuration = getTransitionDurationFromElement(this._element);
-      EventHandler__default['default'].one(this._element, 'transitionend', completeCallBack);
-      emulateTransitionEnd(this._element, transitionDuration);
+      this._queueCallback(completeCallBack, this._element, true);
     }
 
     hide() {
@@ -555,9 +559,7 @@
         EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
       };
 
-      const transitionDuration = getTransitionDurationFromElement(this._element);
-      EventHandler__default['default'].one(this._element, 'transitionend', completeCallback);
-      emulateTransitionEnd(this._element, transitionDuration);
+      this._queueCallback(completeCallback, this._element, true);
     }
 
     dispose() {
@@ -565,8 +567,6 @@
 
       super.dispose();
       EventHandler__default['default'].off(document, EVENT_FOCUSIN);
-      this._config = null;
-      this._backdrop = null;
     } // Private
 
 
@@ -669,7 +669,7 @@
    * ------------------------------------------------------------------------
    */
 
-  defineJQueryPlugin(NAME, Offcanvas);
+  defineJQueryPlugin(Offcanvas);
 
   return Offcanvas;
 

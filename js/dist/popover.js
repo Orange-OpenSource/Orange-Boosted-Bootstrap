@@ -47,12 +47,13 @@
     }
   };
 
-  const defineJQueryPlugin = (name, plugin) => {
+  const defineJQueryPlugin = plugin => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
+        const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
@@ -67,7 +68,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): popover.js
+   * Bootstrap (v5.0.1): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -124,16 +125,8 @@
       return NAME;
     }
 
-    static get DATA_KEY() {
-      return DATA_KEY;
-    }
-
     static get Event() {
       return Event;
-    }
-
-    static get EVENT_KEY() {
-      return EVENT_KEY;
     }
 
     static get DefaultType() {
@@ -166,7 +159,7 @@
     }
 
     _getContent() {
-      return this._element.getAttribute('data-bs-content') || this.config.content;
+      return this._element.getAttribute('data-bs-content') || this._config.content;
     }
 
     _cleanTipClass() {
@@ -213,7 +206,7 @@
    */
 
 
-  defineJQueryPlugin(NAME, Popover);
+  defineJQueryPlugin(Popover);
 
   return Popover;
 

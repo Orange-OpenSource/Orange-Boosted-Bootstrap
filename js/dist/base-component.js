@@ -31,11 +31,11 @@
    * ------------------------------------------------------------------------
    */
 
-  const VERSION = '5.0.0';
+  const VERSION = '5.0.1';
 
   class BaseComponent {
     constructor(element) {
-      element = typeof element === 'string' ? document.querySelector(element) : element;
+      element = getElement(element);
 
       if (!element) {
         return;
@@ -47,8 +47,21 @@
 
     dispose() {
       Data__default['default'].remove(this._element, this.constructor.DATA_KEY);
-      EventHandler__default['default'].off(this._element, `.${this.constructor.DATA_KEY}`);
-      this._element = null;
+      EventHandler__default['default'].off(this._element, this.constructor.EVENT_KEY);
+      Object.getOwnPropertyNames(this).forEach(propertyName => {
+        this[propertyName] = null;
+      });
+    }
+
+    _queueCallback(callback, element, isAnimated = true) {
+      if (!isAnimated) {
+        execute(callback);
+        return;
+      }
+
+      const transitionDuration = getTransitionDurationFromElement(element);
+      EventHandler__default['default'].one(element, 'transitionend', () => execute(callback));
+      emulateTransitionEnd(element, transitionDuration);
     }
     /** Static */
 
@@ -59,6 +72,18 @@
 
     static get VERSION() {
       return VERSION;
+    }
+
+    static get NAME() {
+      throw new Error('You have to implement the static method "NAME", for each component!');
+    }
+
+    static get DATA_KEY() {
+      return `bs.${this.NAME}`;
+    }
+
+    static get EVENT_KEY() {
+      return `.${this.DATA_KEY}`;
     }
 
   }

@@ -37,18 +37,11 @@
   }
 
   var Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
+  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
   var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
   const toType = obj => {
     if (obj === null || obj === undefined) {
@@ -87,7 +80,30 @@
     return selector ? document.querySelector(selector) : null;
   };
 
-  const isElement = obj => (obj[0] || obj).nodeType;
+  const isElement = obj => {
+    if (!obj || typeof obj !== 'object') {
+      return false;
+    }
+
+    if (typeof obj.jquery !== 'undefined') {
+      obj = obj[0];
+    }
+
+    return typeof obj.nodeType !== 'undefined';
+  };
+
+  const getElement = obj => {
+    if (isElement(obj)) {
+      // it's a jQuery object or a node element
+      return obj.jquery ? obj[0] : obj;
+    }
+
+    if (typeof obj === 'string' && obj.length > 0) {
+      return SelectorEngine__default['default'].findOne(obj);
+    }
+
+    return null;
+  };
 
   const typeCheckConfig = (componentName, config, configTypes) => {
     Object.keys(configTypes).forEach(property => {
@@ -155,12 +171,13 @@
 
   const isRTL = () => document.documentElement.dir === 'rtl';
 
-  const defineJQueryPlugin = (name, plugin) => {
+  const defineJQueryPlugin = plugin => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
+        const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
@@ -175,7 +192,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): dropdown.js
+   * Bootstrap (v5.0.1): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -262,8 +279,8 @@
       return DefaultType;
     }
 
-    static get DATA_KEY() {
-      return DATA_KEY;
+    static get NAME() {
+      return NAME;
     } // Public
 
 
@@ -310,11 +327,7 @@
         if (this._config.reference === 'parent') {
           referenceElement = parent;
         } else if (isElement(this._config.reference)) {
-          referenceElement = this._config.reference; // Check if it's jQuery element
-
-          if (typeof this._config.reference.jquery !== 'undefined') {
-            referenceElement = this._config.reference[0];
-          }
+          referenceElement = getElement(this._config.reference);
         } else if (typeof this._config.reference === 'object') {
           referenceElement = this._config.reference;
         }
@@ -361,12 +374,8 @@
     }
 
     dispose() {
-      this._menu = null;
-
       if (this._popper) {
         this._popper.destroy();
-
-        this._popper = null;
       }
 
       super.dispose();
@@ -552,14 +561,8 @@
     }
 
     static clearMenus(event) {
-      if (event) {
-        if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY) {
-          return;
-        }
-
-        if (/input|select|option|textarea|form/i.test(event.target.tagName)) {
-          return;
-        }
+      if (event && (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY)) {
+        return;
       }
 
       const toggles = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
@@ -585,10 +588,10 @@
 
           if (composedPath.includes(context._element) || context._config.autoClose === 'inside' && !isMenuTarget || context._config.autoClose === 'outside' && isMenuTarget) {
             continue;
-          } // Tab navigation through the dropdown menu shouldn't close the menu
+          } // Tab navigation through the dropdown menu or events from contained inputs shouldn't close the menu
 
 
-          if (event.type === 'keyup' && event.key === TAB_KEY && context._menu.contains(event.target)) {
+          if (context._menu.contains(event.target) && (event.type === 'keyup' && event.key === TAB_KEY || /input|select|option|textarea|form/i.test(event.target.tagName))) {
             continue;
           }
 
@@ -674,7 +677,7 @@
    * add .Dropdown to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME, Dropdown);
+  defineJQueryPlugin(Dropdown);
 
   return Dropdown;
 
