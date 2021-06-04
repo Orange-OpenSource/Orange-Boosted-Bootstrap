@@ -50,7 +50,7 @@
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "30.9 kB"
+      "maxSize": "31 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",
