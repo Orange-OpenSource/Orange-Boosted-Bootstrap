@@ -25,6 +25,7 @@
   </metadata>
   <files>
     <file src="LICENSE.txt" target="" />
+    <file src="nuget\boosted.png" target="" />
 
     <file src="scss\**\*.scss" target="content\Content\boosted" />
     <file src="dist\js\boosted*.js" target="content\Scripts" />
