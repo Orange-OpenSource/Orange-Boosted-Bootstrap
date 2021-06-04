@@ -514,7 +514,7 @@ class Carousel extends BaseComponent {
         to: nextElementIndex
       })
     }
-    
+
     // Boosted mod: enable/disable prev/next controls when wrap=false
     if (!this._config.wrap) {
       const prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element)
