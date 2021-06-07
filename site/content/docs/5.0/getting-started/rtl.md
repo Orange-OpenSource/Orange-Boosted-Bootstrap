@@ -174,7 +174,7 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
       "scope": "*",
       "ignoreCase": false
     }
-  ] }
+  } ]
 } */
 .ltr {
   @import "../node_modules/boosted/scss/boosted";
