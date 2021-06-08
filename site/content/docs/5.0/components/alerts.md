@@ -12,19 +12,19 @@ Alerts are available for any length of text, as well as an optional close button
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
-  <span class="alert-icon" role="img" aria-label="Success"><span class="visually-hidden">Success</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <p>Success notification text goes here.</p>
 </div>
 <div class="alert alert-info" role="alert">
-  <span class="alert-icon" role="img" aria-label="Info"><span class="visually-hidden">Info</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Info</span></span>
   <p>Information notification text goes here.</p>
 </div>
 <div class="alert alert-warning" role="alert">
-  <span class="alert-icon" role="img" aria-label="Warning"><span class="visually-hidden">Warning</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
 </div>
 <div class="alert alert-danger" role="alert">
-  <span class="alert-icon" role="img" aria-label="Danger"><span class="visually-hidden">Error</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Error</span></span>
   <p>Error notification text goes here.</p>
 </div>
 {{< /example >}}
@@ -42,19 +42,19 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 {{< example >}}
 <div class="alert alert-success alert-sm" role="alert">
-  <span class="alert-icon" role="img" aria-label="Success"><span class="visually-hidden">Success</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <p>Success notification text goes here.</p>
 </div>
 <div class="alert alert-info alert-sm" role="alert">
-  <span class="alert-icon" role="img" aria-label="Info"><span class="visually-hidden">Info</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Info</span></span>
   <p>Information notification text goes here.</p>
 </div>
 <div class="alert alert-warning alert-sm" role="alert">
-  <span class="alert-icon" role="img" aria-label="Warning"><span class="visually-hidden">Warning</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
 </div>
 <div class="alert alert-danger alert-sm" role="alert">
-  <span class="alert-icon" role="img" aria-label="Danger"><span class="visually-hidden">Error</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Error</span></span>
   <p>Error notification text goes here.</p>
 </div>
 {{< /example >}}
@@ -66,7 +66,7 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
-  <span class="alert-icon" role="img" aria-label="Success"><span class="visually-hidden">Success</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <div>
     <h4 class="alert-heading">Success notification text goes here.</h4>
     <p>Description text goes here.</p>
@@ -89,7 +89,7 @@ You can see this in action with a live demo:
 
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <span class="alert-icon" role="img" aria-label="Warning:"><span class="visually-hidden">Warning</span></span>
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
   <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
 </div>
