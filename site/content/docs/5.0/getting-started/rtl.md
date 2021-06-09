@@ -44,7 +44,7 @@ You can see the above requirements reflected in this modified RTL starter templa
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Preconnect to CDN: remove if not needed -->
-    <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous"
+    <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
 
     <!--
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
