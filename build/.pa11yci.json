@@ -1,6 +1,7 @@
 {
   "standard": "WCAG2AA",
   "level": "error",
+  "chromeLaunchConfig": { "ignoreHTTPSErrors": true, "args": ["--single-process"] },
   "concurrency": 1,
   "defaults": {
     "wait": 3000,
