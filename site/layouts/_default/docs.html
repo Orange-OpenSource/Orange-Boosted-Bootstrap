@@ -1,13 +1,13 @@
 {{ define "main" }}
   {{ partial "docs-subnav" . }}
 
-  <div class="container-xxl bd-layout">
+  <div class="container-xxl my-md-4 bd-layout">
     <aside class="bd-sidebar border-end border-light border-1">
       {{ partial "docs-sidebar" . }}
     </aside>
 
     <main class="bd-main order-1">
-      <div class="bd-intro pt-md-4 ps-lg-4">
+      <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
@@ -17,22 +17,22 @@
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
+        <div class="bd-toc mt-4 mb-5 my-md-0 border-start border-light border-1">
           <strong class="d-block h6 my-2 ps-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
           <div class="ps-lg-3">{{ .TableOfContents }}</div>
         </div>
       {{ end }}
 
-      <div class="bd-content ps-lg-4 mb-3">
+      <div class="bd-content ps-lg-4">
         {{ if .Page.Params.sections }}
           <div class="row g-3">
             {{ range .Page.Params.sections }}
-              <div class="col-md-6">
-                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
-                  <span class="text-secondary">{{ .description }}</span>
-                </a>
-              </div>
+            <div class="col-md-6">
+              <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
+                <strong class="d-block h5 mb-0">{{ .title }}</strong>
+                <span class="text-secondary">{{ .description }}</span>
+              </a>
+            </div>
             {{ end }}
           </div>
         {{ end }}

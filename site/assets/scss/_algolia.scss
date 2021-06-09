@@ -21,7 +21,7 @@
 
 .algolia-docsearch-suggestion--category-header {
   padding: .125rem 1rem;
-  font-weight: 700;
+  font-weight: 700; // Boosted mod
   color: $bd-purple-bright;
 
   // stylelint-disable-next-line selector-class-pattern
@@ -65,7 +65,7 @@
 
 .algolia-docsearch-suggestion--title {
   display: inline;
-  font-weight: 400;
+  font-weight: 400; // Boosted mod
   color: $gray-800;
 }
 

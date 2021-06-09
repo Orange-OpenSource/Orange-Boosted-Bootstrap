@@ -234,12 +234,14 @@ var myOffcanvas = document.getElementById('myOffcanvas')
 var bsOffcanvas = new boosted.Offcanvas(myOffcanvas)
 ```
 
+{{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
 | `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
 | `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
 | `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
+{{< /bs-table >}}
 
 ### Events
 

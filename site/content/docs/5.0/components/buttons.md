@@ -145,10 +145,8 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
-<!-- Boosted mod: @TODO to drop when buttons are aware of their background -->
-{{< callout info >}}
-Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
-{{< /callout >}}
+<!-- Boosted mod: No outline buttons -->
+
 
 ## Sizes
 
