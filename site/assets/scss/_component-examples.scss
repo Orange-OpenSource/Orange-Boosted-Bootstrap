@@ -259,7 +259,7 @@
 
 .bd-example-border-utils-0 {
   [class^="border"] {
-    border: 2px solid $border-color;
+    border: 2px solid $border-color; // Boosted mod
   }
 }
 
@@ -321,7 +321,7 @@
     @include font-size(inherit);
     color: $gray-900; // Effectively the base text color
     word-wrap: normal;
-    @include transition(color .15s ease-in);
+    @include transition(color .15s ease-in); // Boosted mod
   }
 
   // Boosted mod

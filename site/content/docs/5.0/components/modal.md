@@ -628,7 +628,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
     <tr>
       <td>Small</td>
       <td><code>.modal-sm</code></td>
-      <td><code>300px</code></td><!-- Boosted mod -->
+      <td><code>300px</code></td>
     </tr>
     <tr>
       <td>Default</td>
