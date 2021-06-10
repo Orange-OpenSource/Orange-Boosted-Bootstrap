@@ -1,3 +1,21 @@
+## [5.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0...v5.0.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **#677:** improve cookie consent panel rendering ([c595c0a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c595c0a0e7d0d7e00e084a5852bf0d6b52f9370e)), closes [#677](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/677)
+* **accessibility:** issue on pricing and sidebar + update label for logo on headers example ([7223e41](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7223e41a3726bde152f561ae379b671136f31f55))
+* **core:** update nuspec add boosted icon ([#679](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/679)) ([d6b639c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d6b639caf5abda129850178e6e2a0c74645181a0))
+* **doc:** replace `.sr-only` by `.visually-hidden` in checkout example ([1a23636](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1a23636f9bc5fcaab9f411d27be1219934d2ddfa))
+* **docs:** fix 'View on GitHub' link to target 'v5-dev' branch ([7d66ae4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7d66ae492df388520e1cfa9b4f9b0eeede2e5af2))
+* **docs:** missing character in RTL starter template ([fda8432](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fda843233b40405cd8f3862613f6083f6298752b))
+* **lint:** remove trailing spaces ([d13994d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d13994ddce95d5d437bc54ad751187ed84b3a9e2))
+* **margin:** finish migration of margin-left and right from `ml-` and `mr-` to `ms-` and `me-` ([195c408](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/195c4085798595931494efc5c35bc5278f913e3d))
+* **offcanvas:** add offcanvas to boosted.scss ([8c1c8b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8c1c8b2aa52449649929b317db4d8c4794b6da49))
+* **sri:** v5 documentation rendering is broken due to bad integrity sha384s in config.yml ([edc8fa2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/edc8fa2a7fdc0d66cf8b63a4338e0a5733298424))
+* **table:** Accented table displays properly again ([85cdbf7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/85cdbf759775a99b7a061f99e450ff87761ff8f3))
+
+
 # [5.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta3...v5.0.0) (2021-05-27)
 
 
