@@ -1,34 +1,27 @@
 /*!
-  * Boosted v5.0.0 (https://boosted.orange.com/)
+  * Boosted v5.0.1 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.0.0 (https://boosted.orange.com/)
+  * Bootstrap carousel.js v5.0.1 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js'), require('./base-component.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data', './dom/event-handler', './dom/manipulator', './dom/selector-engine', './base-component'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.Data, global.EventHandler, global.Manipulator, global.SelectorEngine, global.Base));
-}(this, (function (Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/selector-engine.js'), require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./base-component.js')) :
+  typeof define === 'function' && define.amd ? define(['./dom/selector-engine', './dom/data', './dom/event-handler', './dom/manipulator', './base-component'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.SelectorEngine, global.Data, global.EventHandler, global.Manipulator, global.Base));
+}(this, (function (SelectorEngine, Data, EventHandler, Manipulator, BaseComponent) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
   var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-  const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   const toType = obj => {
@@ -631,7 +624,17 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-      this._activeElement = nextElement; // Boosted mod: enable/disable prev/next controls when wrap=false
+      this._activeElement = nextElement;
+
+      const triggerSlidEvent = () => {
+        EventHandler__default['default'].trigger(this._element, EVENT_SLID, {
+          relatedTarget: nextElement,
+          direction: eventDirectionName,
+          from: activeElementIndex,
+          to: nextElementIndex
+        });
+      }; // Boosted mod: enable/disable prev/next controls when wrap=false
+
 
       if (!this._config.wrap) {
         const prevControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_PREV, this._element);
@@ -654,32 +657,21 @@
         reflow(nextElement);
         activeElement.classList.add(directionalClassName);
         nextElement.classList.add(directionalClassName);
-        const transitionDuration = getTransitionDurationFromElement(activeElement);
-        EventHandler__default['default'].one(activeElement, 'transitionend', () => {
+
+        const completeCallBack = () => {
           nextElement.classList.remove(directionalClassName, orderClassName);
           nextElement.classList.add(CLASS_NAME_ACTIVE);
           activeElement.classList.remove(CLASS_NAME_ACTIVE, orderClassName, directionalClassName);
           this._isSliding = false;
-          setTimeout(() => {
-            EventHandler__default['default'].trigger(this._element, EVENT_SLID, {
-              relatedTarget: nextElement,
-              direction: eventDirectionName,
-              from: activeElementIndex,
-              to: nextElementIndex
-            });
-          }, 0);
-        });
-        emulateTransitionEnd(activeElement, transitionDuration);
+          setTimeout(triggerSlidEvent, 0);
+        };
+
+        this._queueCallback(completeCallBack, activeElement, true);
       } else {
         activeElement.classList.remove(CLASS_NAME_ACTIVE);
         nextElement.classList.add(CLASS_NAME_ACTIVE);
         this._isSliding = false;
-        EventHandler__default['default'].trigger(this._element, EVENT_SLID, {
-          relatedTarget: nextElement,
-          direction: eventDirectionName,
-          from: activeElementIndex,
-          to: nextElementIndex
-        });
+        triggerSlidEvent();
       }
 
       if (isCycling) {
