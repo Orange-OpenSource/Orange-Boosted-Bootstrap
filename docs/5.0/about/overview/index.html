@@ -23,8 +23,8 @@
 
 
 <!-- Boosted core CSS -->
-<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-9BDn6EpdWMmf91d+gsoVk3n0CHQOmr5P8sdm6cZWKElGfFzZjkVrILeQfCaQde9L" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-tSxM4wLu3j8sRc/UX0jo54uHzJ0J5bceaL/CwiWufYMj25GlX7VxwGD9HdwpLfGw" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-R0qdKznf4X4yZtWNFsZDg1uUuT+UOFgVmn+1nisQnQalwhEls35oTUa9oWbox9s3" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -58,6 +58,7 @@
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
 
 
   </head>
@@ -265,6 +266,7 @@
               <li><a href="/docs/5.0/components/modal/" class="d-flex align-items-center">Modal</a></li>
               <li><a href="/docs/5.0/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
               <li><a href="/docs/5.0/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.0/components/offcanvas/" class="d-flex align-items-center">Offcanvas</a></li>
               <li><a href="/docs/5.0/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
               <li><a href="/docs/5.0/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
               <li><a href="/docs/5.0/components/progress/" class="d-flex align-items-center">Progress</a></li>
@@ -359,7 +361,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-md-4 ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.0/about/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/site/content/docs/5.0/about/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">About</h1>
         </div>
         <p class="bd-lead">Boosted is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud Boosted maintainers and contributors.</p>
@@ -379,7 +381,10 @@
 <p>Boosted can be used for all <strong>responsive web projects</strong> for Orange group — but other developers may also take advantage of the proposed accessibility improvements and additional components.</p>
 <h3 id="custom-components">Custom components</h3>
 <p>Boosted ships with custom accessible components to suit specific needs:</p>
-<p><strong>@todo</strong></p>
+<ul>
+<li><a href="/docs/5.0/components/back-to-top/">Back to top</a></li>
+<li><a href="/docs/5.0/components/stepped-process/">Stepped process</a></li>
+</ul>
 <h2 id="bootstrap-team">Bootstrap Team</h2>
 <p>Bootstrap is maintained by a <a href="https://github.com/orgs/twbs/people">small team of developers</a> on GitHub. They&rsquo;re actively looking to grow this team and would love to hear from you if you&rsquo;re excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.</p>
 <h2 id="bootstrap-history">Bootstrap History</h2>
@@ -387,9 +392,9 @@
 <p>Bootstrap was created at Twitter in mid-2010 by <a href="https://twitter.com/mdo">@mdo</a> and <a href="https://twitter.com/fat">@fat</a>. Prior to being an open-sourced framework, Bootstrap was known as <em>Twitter Blueprint</em>. A few months into development, Twitter held its <a href="https://blog.twitter.com/engineering/en_us/a/2010/hack-week.html">first Hack Week</a> and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.</p>
 <p>Originally <a href="https://blog.twitter.com/developer/en_us/a/2011/bootstrap-twitter.html">released</a> on <time datetime="2011-08-19 11:25">Friday, August 19, 2011</time>, they&rsquo;ve since had over <a href="https://github.com/twbs/bootstrap/releases">twenty releases</a>, including two major rewrites with v2 and v3. With Bootstrap 2, they added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, they rewrote the library once more to make it responsive by default with a mobile first approach.</p>
 <p>With Bootstrap 4, they once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS&rsquo;s flexbox. Their intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.</p>
-<p>Their latest release, Bootstrap 5 (currently in development), focuses on improving v4&rsquo;s codebase with as few major breaking changes as possible. They improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of their tooling.</p>
+<p>Their latest release, Bootstrap 5, focuses on improving v4&rsquo;s codebase with as few major breaking changes as possible. They improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of their tooling.</p>
 <h2 id="get-involved-in-bootstrap">Get involved in Bootstrap</h2>
-<p>Get involved with Bootstrap development by <a href="https://github.com/twbs/bootstrap/issues/new">opening an issue</a> or submitting a pull request. Read their <a href="https://github.com/twbs/bootstrap/blob/v5.0.0/.github/CONTRIBUTING.md">contributing guidelines</a> for information on how they develop.</p>
+<p>Get involved with Bootstrap development by <a href="https://github.com/twbs/bootstrap/issues/new">opening an issue</a> or submitting a pull request. Read their <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/.github/CONTRIBUTING.md">contributing guidelines</a> for information on how they develop.</p>
 
       </div>
     </main>
@@ -408,7 +413,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.0</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -458,7 +463,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

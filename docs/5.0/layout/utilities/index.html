@@ -23,8 +23,8 @@
 
 
 <!-- Boosted core CSS -->
-<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-9BDn6EpdWMmf91d+gsoVk3n0CHQOmr5P8sdm6cZWKElGfFzZjkVrILeQfCaQde9L" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-tSxM4wLu3j8sRc/UX0jo54uHzJ0J5bceaL/CwiWufYMj25GlX7VxwGD9HdwpLfGw" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-R0qdKznf4X4yZtWNFsZDg1uUuT+UOFgVmn+1nisQnQalwhEls35oTUa9oWbox9s3" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -58,6 +58,7 @@
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
 
 
   </head>
@@ -265,6 +266,7 @@
               <li><a href="/docs/5.0/components/modal/" class="d-flex align-items-center">Modal</a></li>
               <li><a href="/docs/5.0/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
               <li><a href="/docs/5.0/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.0/components/offcanvas/" class="d-flex align-items-center">Offcanvas</a></li>
               <li><a href="/docs/5.0/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
               <li><a href="/docs/5.0/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
               <li><a href="/docs/5.0/components/progress/" class="d-flex align-items-center">Progress</a></li>
@@ -359,7 +361,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-md-4 ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.0/layout/utilities.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/site/content/docs/5.0/layout/utilities.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">Utilities for layout</h1>
         </div>
         <p class="bd-lead">For faster mobile-friendly and responsive development, Boosted includes dozens of utility classes for showing, hiding, aligning, and spacing content.</p>
@@ -390,7 +392,7 @@
 <p>Boosted is built with flexbox, but not every element&rsquo;s <code>display</code> has been changed to <code>display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of <a href="/docs/5.0/components/alerts/">our components</a> are built with flexbox enabled.</p>
 <p>Should you need to add <code>display: flex</code> to an element, do so with <code>.d-flex</code> or one of the responsive variants (e.g., <code>.d-sm-flex</code>). You&rsquo;ll need this class or <code>display</code> value to allow the use of our extra <a href="/docs/5.0/utilities/flex/">flexbox utilities</a> for sizing, alignment, spacing, and more.</p>
 <h2 id="margin-and-padding">Margin and padding</h2>
-<p>Use the <code>margin</code> and <code>padding</code> <a href="/docs/5.0/utilities/spacing/">spacing utilities</a> to control how elements and components are spaced and sized. Boosted includes a six-level scale for spacing utilities, based on a <code>1.25rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.me-3</code> for <code>margin-right: 1.25rem</code> in LTR), or pick responsive variants to target specific viewports (e.g., <code>.mr-md-3</code> for <code>margin-right: 1.25rem</code> —in LTR— starting at the <code>md</code> breakpoint).</p>
+<p>Use the <code>margin</code> and <code>padding</code> <a href="/docs/5.0/utilities/spacing/">spacing utilities</a> to control how elements and components are spaced and sized. Boosted includes a six-level scale for spacing utilities, based on a <code>1.25rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.me-3</code> for <code>margin-right: 1.25rem</code> in LTR), or pick responsive variants to target specific viewports (e.g., <code>.me-md-3</code> for <code>margin-right: 1.25rem</code> —in LTR— starting at the <code>md</code> breakpoint).</p>
 <h2 id="toggle-visibility">Toggle <code>visibility</code></h2>
 <p>When toggling <code>display</code> isn&rsquo;t needed, you can toggle the <code>visibility</code> of an element with our <a href="/docs/5.0/utilities/visibility/">visibility utilities</a>. Invisible elements will still affect the layout of the page, but are visually hidden from visitors.</p>
 
@@ -411,7 +413,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.0</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -461,7 +463,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

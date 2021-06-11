@@ -23,8 +23,8 @@
 
 
 <!-- Boosted core CSS -->
-<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-9BDn6EpdWMmf91d+gsoVk3n0CHQOmr5P8sdm6cZWKElGfFzZjkVrILeQfCaQde9L" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-tSxM4wLu3j8sRc/UX0jo54uHzJ0J5bceaL/CwiWufYMj25GlX7VxwGD9HdwpLfGw" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-R0qdKznf4X4yZtWNFsZDg1uUuT+UOFgVmn+1nisQnQalwhEls35oTUa9oWbox9s3" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -58,6 +58,7 @@
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
 
 
   </head>
@@ -265,6 +266,7 @@
               <li><a href="/docs/5.0/components/modal/" class="d-flex align-items-center">Modal</a></li>
               <li><a href="/docs/5.0/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
               <li><a href="/docs/5.0/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.0/components/offcanvas/" class="d-flex align-items-center">Offcanvas</a></li>
               <li><a href="/docs/5.0/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
               <li><a href="/docs/5.0/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
               <li><a href="/docs/5.0/components/progress/" class="d-flex align-items-center">Progress</a></li>
@@ -359,7 +361,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-md-4 ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.0/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/site/content/docs/5.0/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">RTL</h1>
         </div>
         <p class="bd-lead">Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.</p>
@@ -412,7 +414,7 @@
 <li>Add an appropriate <code>lang</code> attribute, like <code>lang=&quot;ar&quot;</code>, on the <code>&lt;html&gt;</code> element.</li>
 </ol>
 <p>From there, you&rsquo;ll need to include an RTL version of our CSS. For example, here&rsquo;s the stylesheet for our compiled and minified CSS with RTL enabled:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.0/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-6eWpS9fgp9W0YT/uKDshRfhy+tEkq66Ol/cxh71mnmS19kFWEeNmdxYq8abovadS&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-cuVmxbQ58vgVQiiWaPggLmqkKrc2dvcejm32H6zetCogXbPdFvfabpgx10cwWoGV&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="starter-template">Starter template</h3>
 <p>You can see the above requirements reflected in this modified RTL starter template.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
@@ -423,23 +425,23 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
 
     <span class="c">&lt;!-- Preconnect to CDN: remove if not needed --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 
-    <span class="err">&lt;!</span><span class="na">--</span>
-      <span class="na">Neue</span> <span class="na">Helvetica</span> <span class="na">is</span> <span class="na">a</span> <span class="na">trademark</span> <span class="na">of</span> <span class="na">Monotype</span> <span class="na">Imaging</span> <span class="na">Inc</span><span class="err">.</span> <span class="na">registered</span> <span class="na">in</span> <span class="na">the</span> <span class="na">U</span><span class="err">.</span><span class="na">S</span><span class="err">.</span>
-      <span class="na">Patent</span> <span class="na">and</span> <span class="na">Trademark</span> <span class="na">Office</span> <span class="na">and</span> <span class="na">may</span> <span class="na">be</span> <span class="na">registered</span> <span class="na">in</span> <span class="na">certain</span> <span class="na">other</span> <span class="na">jurisdictions</span><span class="err">.</span>
-      <span class="na">Copyright</span> <span class="err">©</span> <span class="na">2014</span> <span class="na">Monotype</span> <span class="na">Imaging</span> <span class="na">Inc</span><span class="err">.</span> <span class="na">All</span> <span class="na">rights</span> <span class="na">reserved</span><span class="err">.</span>
-      <span class="na">Orange</span> <span class="na">has</span> <span class="na">purchased</span> <span class="na">the</span> <span class="na">right</span> <span class="na">to</span> <span class="na">use</span> <span class="na">Helvetica</span> <span class="na">in</span> <span class="na">its</span> <span class="na">websites</span> <span class="na">and</span> <span class="na">mobile</span> <span class="na">applications</span><span class="err">.</span>
-      <span class="na">If</span> <span class="na">you</span> <span class="na">are</span> <span class="na">not</span> <span class="na">autorized</span> <span class="na">to</span> <span class="na">used</span> <span class="na">it</span><span class="err">,</span> <span class="na">don</span><span class="err">&#39;</span><span class="na">t</span> <span class="na">include</span> <span class="na">the</span> <span class="na">orangeHelvetica</span><span class="err">.</span><span class="na">css</span>
-      <span class="na">See</span> <span class="na">NOTICE</span><span class="err">.</span><span class="na">txt</span> <span class="na">for</span> <span class="na">more</span> <span class="na">informations</span><span class="err">.</span>
-    <span class="na">--</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--
+</span><span class="c">      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
+</span><span class="c">      Patent and Trademark Office and may be registered in certain other jurisdictions.
+</span><span class="c">      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+</span><span class="c">      Orange has purchased the right to use Helvetica in its websites and mobile applications.
+</span><span class="c">      If you are not autorized to used it, don&#39;t include the orangeHelvetica.css
+</span><span class="c">      See NOTICE.txt for more informations.
+</span><span class="c">    --&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;dist/fonts/HelveticaNeueW20-55Roman.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;dist/fonts/HelveticaNeueW20-75Bold.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.0/dist/css/orange-helvetica.rtl.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ihl4jOMS2VMlKkg/jH4cTxPHmSMcnVyANsKMO0YSUNvNyrrglHI9Itbx0wLOmV+W&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/orange-helvetica.rtl.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-c5ZbSvKMZGOy0hQhaZcO2NlP0YrkP8TYwhy5wHhrssMesnAHsN8bb/4VR3O4k8Dh&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 
     <span class="c">&lt;!-- Boosted CSS --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.0/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-6eWpS9fgp9W0YT/uKDshRfhy+tEkq66Ol/cxh71mnmS19kFWEeNmdxYq8abovadS&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-cuVmxbQ58vgVQiiWaPggLmqkKrc2dvcejm32H6zetCogXbPdFvfabpgx10cwWoGV&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>مرحبا بالعالم!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -449,12 +451,12 @@
     <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
 
     <span class="c">&lt;!-- Option 1: Boosted Bundle with Popper --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.0/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
     <span class="c">&lt;!-- Option 2: Separate Popper and Boosted JS --&gt;</span>
     <span class="c">&lt;!--
 </span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js&#34; integrity=&#34;sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.0/dist/js/boosted.min.js&#34; integrity=&#34;sha384-9562HpPgCDFMBgEAQabnTyKve/yPGeTj3ECM7Uc2FWqUDsI23ROcDdBUCYcM9X1n&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/js/boosted.min.js&#34; integrity=&#34;sha384-0tS8fbGKiB7GB70LSdtQkAFJxFUzY5ckwzAdLwenxMFh+RTlXU+qPMhMA1udvoNV&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
 </span><span class="c">    --&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -519,7 +521,7 @@
 <p>Need both LTR and RTL on the same page? Thanks to <a href="https://rtlcss.com/learn/usage-guide/string-map/">RTLCSS String Maps</a>, this is pretty straightforward. Wrap your <code>@import</code>s with a class, and set a custom rename rule for RTLCSS:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* rtl:begin:options: {
 </span><span class="cm">  &#34;autoRename&#34;: true,
-</span><span class="cm">  &#34;stringMap&#34;:[
+</span><span class="cm">  &#34;stringMap&#34;:[ {
 </span><span class="cm">    &#34;name&#34;: &#34;ltr-rtl&#34;,
 </span><span class="cm">    &#34;priority&#34;: 100,
 </span><span class="cm">    &#34;search&#34;: [&#34;ltr&#34;],
@@ -528,7 +530,7 @@
 </span><span class="cm">      &#34;scope&#34;: &#34;*&#34;,
 </span><span class="cm">      &#34;ignoreCase&#34;: false
 </span><span class="cm">    }
-</span><span class="cm">  ]
+</span><span class="cm">  } ]
 </span><span class="cm">} */</span>
 <span class="nc">.ltr</span> <span class="p">{</span>
   <span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/boosted&#34;</span><span class="p">;</span>
@@ -571,7 +573,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.0</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -621,7 +623,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
