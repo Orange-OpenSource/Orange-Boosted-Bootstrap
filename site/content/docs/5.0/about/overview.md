@@ -22,7 +22,8 @@ Boosted can be used for all **responsive web projects** for Orange group —&nbs
 
 Boosted ships with custom accessible components to suit specific needs:
 
-**@todo**
+- [Back to top]({{< docsref "/components/back-to-top" >}})
+- [Stepped process]({{< docsref "/components/stepped-process" >}})
 
 
 ## Bootstrap Team
