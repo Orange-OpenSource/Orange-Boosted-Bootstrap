@@ -7,6 +7,7 @@
     "runners": [
       "axe"
     ],
+    "timeout": 100000,
     "hideElements": ".bd-search, [id*='tarteaucitron'], #TableOfContents, .text-primary, .navbar-light .navbar-brand, .accordion-button:not(.collapsed), .active, [aria-current], select:disabled, [disabled] label, [disabled] + label, .modal, .bd-example nav",
     "ignore": [
       "heading-order",

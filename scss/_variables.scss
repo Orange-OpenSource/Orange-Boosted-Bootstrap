@@ -117,7 +117,7 @@ $background-colors: map-merge(
     "success": $supporting-green,
     "info":    $supporting-blue,
     "warning": $supporting-yellow,
-    "danger":  $purple
+    "danger":  $danger
   )
 ) !default;
 // End mod
@@ -1024,8 +1024,8 @@ $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
 $zindex-back-to-top:                1035 !default; // Boosted mod
-$zindex-offcanvas:                  1040 !default;
-$zindex-modal-backdrop:             1050 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-offcanvas:                  1050 !default;
 $zindex-modal:                      1060 !default;
 $zindex-popover:                    1070 !default;
 $zindex-tooltip:                    1080 !default;
@@ -1038,8 +1038,8 @@ $nav-link-padding-y:                $spacer / 2 !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
-$nav-link-color:                    inherit !default;
-$nav-link-hover-color:              null !default;
+$nav-link-color:                    $link-color !default;
+$nav-link-hover-color:              $link-hover-color !default;
 $nav-link-transition:               null !default;
 $nav-link-disabled-color:           $gray-500 !default;
 
@@ -1575,6 +1575,7 @@ $carousel-transition:                transform $carousel-transition-duration $tr
 // scss-docs-start spinner-variables
 $spinner-width:           $spacer * 2 !default;
 $spinner-height:          $spinner-width !default;
+$spinner-vertical-align:  -.125em !default;
 $spinner-border-width:    $border-width * 3 !default;
 $spinner-animation-speed: .75s !default;
 
@@ -1619,7 +1620,6 @@ $offcanvas-border-width:            $modal-content-border-width !default;
 $offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                $modal-content-bg !default;
 $offcanvas-color:                   $modal-content-color !default;
-$offcanvas-body-backdrop-color:     rgba($modal-backdrop-bg, $modal-backdrop-opacity) !default;
 $offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
 // scss-docs-end offcanvas-variables
 

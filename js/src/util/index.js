@@ -1,6 +1,8 @@
+import SelectorEngine from '../dom/selector-engine'
+
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta3): util/index.js
+ * Bootstrap (v5.0.1): util/index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -48,7 +50,7 @@ const getSelector = element => {
 
     // Just in case some CMS puts out a full URL with the anchor appended
     if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
-      hrefAttr = '#' + hrefAttr.split('#')[1]
+      hrefAttr = `#${hrefAttr.split('#')[1]}`
     }
 
     selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null
@@ -100,7 +102,29 @@ const triggerTransitionEnd = element => {
   element.dispatchEvent(new Event(TRANSITION_END))
 }
 
-const isElement = obj => (obj[0] || obj).nodeType
+const isElement = obj => {
+  if (!obj || typeof obj !== 'object') {
+    return false
+  }
+
+  if (typeof obj.jquery !== 'undefined') {
+    obj = obj[0]
+  }
+
+  return typeof obj.nodeType !== 'undefined'
+}
+
+const getElement = obj => {
+  if (isElement(obj)) { // it's a jQuery object or a node element
+    return obj.jquery ? obj[0] : obj
+  }
+
+  if (typeof obj === 'string' && obj.length > 0) {
+    return SelectorEngine.findOne(obj)
+  }
+
+  return null
+}
 
 const emulateTransitionEnd = (element, duration) => {
   let called = false
@@ -128,9 +152,7 @@ const typeCheckConfig = (componentName, config, configTypes) => {
 
     if (!new RegExp(expectedTypes).test(valueType)) {
       throw new TypeError(
-        `${componentName.toUpperCase()}: ` +
-        `Option "${property}" provided type "${valueType}" ` +
-        `but expected type "${expectedTypes}".`
+        `${componentName.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`
       )
     }
   })
@@ -192,7 +214,7 @@ const findShadowRoot = element => {
   return findShadowRoot(element.parentNode)
 }
 
-const noop = () => function () {}
+const noop = () => {}
 
 const reflow = element => element.offsetHeight
 
@@ -216,11 +238,12 @@ const onDOMContentLoaded = callback => {
 
 const isRTL = () => document.documentElement.dir === 'rtl'
 
-const defineJQueryPlugin = (name, plugin) => {
+const defineJQueryPlugin = plugin => {
   onDOMContentLoaded(() => {
     const $ = getjQuery()
     /* istanbul ignore if */
     if ($) {
+      const name = plugin.NAME
       const JQUERY_NO_CONFLICT = $.fn[name]
       $.fn[name] = plugin.jQueryInterface
       $.fn[name].Constructor = plugin
@@ -232,7 +255,14 @@ const defineJQueryPlugin = (name, plugin) => {
   })
 }
 
+const execute = callback => {
+  if (typeof callback === 'function') {
+    callback()
+  }
+}
+
 export {
+  getElement,
   getUID,
   getSelectorFromElement,
   getElementFromSelector,
@@ -249,5 +279,6 @@ export {
   getjQuery,
   onDOMContentLoaded,
   isRTL,
-  defineJQueryPlugin
+  defineJQueryPlugin,
+  execute
 }

@@ -14,31 +14,37 @@
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(function (button) {
-      button.classList.add('btn', 'btn-sm', 'btn-danger', 'my-2', 'my-lg-0', 'ml-lg-2')
+      button.classList.add('btn', 'btn-sm', 'btn-danger', 'my-2', 'my-lg-0', 'ms-lg-2')
     })
 
-    document.getElementById('tarteaucitronClosePanel').classList.add('btn-close')
+    document.getElementById('tarteaucitron').classList.add('p-3')
+
+    document.getElementById('tarteaucitronClosePanel').classList.add('d-flex', 'align-content-end', 'position-relative', 'btn-close')
+    document.getElementById('tarteaucitronClosePanel').innerHTML =
+      '<span class="visually-hidden">' +
+      document.getElementById('tarteaucitronClosePanel').innerHTML +
+      '</span>'
   }, { once: true })
 
   window.addEventListener('tac.open_alert', function () {
     var alert = document.getElementById('tarteaucitronAlertBig')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'ml-lg-2')
-    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ml-lg-auto', 'my-2', 'my-lg-0')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'ms-lg-2')
+    alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
   }, { once: true })
 
   window.addEventListener('tac.open_panel', function () {
     document.querySelectorAll('#tarteaucitronServices_api button').forEach(function (button) {
-      button.classList.add('btn', 'btn-sm', 'ml-2')
+      button.classList.add('btn', 'btn-sm', 'ms-2')
     })
   }, { once: true })
 
   document.addEventListener('googletagmanager_added', function () {
     var ask = document.querySelector('#googletagmanagerLine .tarteaucitronAsk')
     var choiceEvent = 'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
-    var toggle = document.createRange().createContextualFragment('<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ml-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="' + choiceEvent + '"><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label></div>')
+    var toggle = document.createRange().createContextualFragment('<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="' + choiceEvent + '"><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label></div>')
     ask.innerHTML = ''
     ask.append(toggle)
   }, { once: true })

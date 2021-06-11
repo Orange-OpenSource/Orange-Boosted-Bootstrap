@@ -74,6 +74,8 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 </div>
 {{< /example >}}
 
+<!-- Boosted mod: no icons -->
+
 ### Dismissing
 
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:

@@ -1,15 +1,13 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta3): carousel.js
+ * Bootstrap (v5.0.1): carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
   defineJQueryPlugin,
-  emulateTransitionEnd,
   getElementFromSelector,
-  getTransitionDurationFromElement,
   isRTL,
   isVisible,
   reflow,
@@ -135,8 +133,8 @@ class Carousel extends BaseComponent {
     return Default
   }
 
-  static get DATA_KEY() {
-    return DATA_KEY
+  static get NAME() {
+    return NAME
   }
 
   // Public
@@ -237,20 +235,6 @@ class Carousel extends BaseComponent {
       ORDER_PREV
 
     this._slide(order, this._items[index])
-  }
-
-  dispose() {
-    EventHandler.off(this._element, EVENT_KEY)
-
-    this._items = null
-    this._config = null
-    this._interval = null
-    this._isPaused = null
-    this._isSliding = null
-    this._activeElement = null
-    this._indicatorsElement = null
-
-    super.dispose()
   }
 
   // Private
@@ -360,10 +344,10 @@ class Carousel extends BaseComponent {
 
     if (event.key === ARROW_LEFT_KEY) {
       event.preventDefault()
-      this._slide(DIRECTION_LEFT)
+      this._slide(DIRECTION_RIGHT)
     } else if (event.key === ARROW_RIGHT_KEY) {
       event.preventDefault()
-      this._slide(DIRECTION_RIGHT)
+      this._slide(DIRECTION_LEFT)
     }
   }
 
@@ -522,6 +506,15 @@ class Carousel extends BaseComponent {
     this._setActiveIndicatorElement(nextElement)
     this._activeElement = nextElement
 
+    const triggerSlidEvent = () => {
+      EventHandler.trigger(this._element, EVENT_SLID, {
+        relatedTarget: nextElement,
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
+      })
+    }
+
     // Boosted mod: enable/disable prev/next controls when wrap=false
     if (!this._config.wrap) {
       const prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element)
@@ -546,9 +539,7 @@ class Carousel extends BaseComponent {
       activeElement.classList.add(directionalClassName)
       nextElement.classList.add(directionalClassName)
 
-      const transitionDuration = getTransitionDurationFromElement(activeElement)
-
-      EventHandler.one(activeElement, 'transitionend', () => {
+      const completeCallBack = () => {
         nextElement.classList.remove(directionalClassName, orderClassName)
         nextElement.classList.add(CLASS_NAME_ACTIVE)
 
@@ -556,28 +547,16 @@ class Carousel extends BaseComponent {
 
         this._isSliding = false
 
-        setTimeout(() => {
-          EventHandler.trigger(this._element, EVENT_SLID, {
-            relatedTarget: nextElement,
-            direction: eventDirectionName,
-            from: activeElementIndex,
-            to: nextElementIndex
-          })
-        }, 0)
-      })
+        setTimeout(triggerSlidEvent, 0)
+      }
 
-      emulateTransitionEnd(activeElement, transitionDuration)
+      this._queueCallback(completeCallBack, activeElement, true)
     } else {
       activeElement.classList.remove(CLASS_NAME_ACTIVE)
       nextElement.classList.add(CLASS_NAME_ACTIVE)
 
       this._isSliding = false
-      EventHandler.trigger(this._element, EVENT_SLID, {
-        relatedTarget: nextElement,
-        direction: eventDirectionName,
-        from: activeElementIndex,
-        to: nextElementIndex
-      })
+      triggerSlidEvent()
     }
 
     if (isCycling) {
@@ -591,10 +570,10 @@ class Carousel extends BaseComponent {
     }
 
     if (isRTL()) {
-      return direction === DIRECTION_RIGHT ? ORDER_PREV : ORDER_NEXT
+      return direction === DIRECTION_LEFT ? ORDER_PREV : ORDER_NEXT
     }
 
-    return direction === DIRECTION_RIGHT ? ORDER_NEXT : ORDER_PREV
+    return direction === DIRECTION_LEFT ? ORDER_NEXT : ORDER_PREV
   }
 
   _orderToDirection(order) {
@@ -603,10 +582,10 @@ class Carousel extends BaseComponent {
     }
 
     if (isRTL()) {
-      return order === ORDER_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT
+      return order === ORDER_PREV ? DIRECTION_LEFT : DIRECTION_RIGHT
     }
 
-    return order === ORDER_NEXT ? DIRECTION_RIGHT : DIRECTION_LEFT
+    return order === ORDER_PREV ? DIRECTION_RIGHT : DIRECTION_LEFT
   }
 
   // Static
@@ -701,6 +680,6 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
  * add .Carousel to jQuery only if jQuery is present
  */
 
-defineJQueryPlugin(NAME, Carousel)
+defineJQueryPlugin(Carousel)
 
 export default Carousel

@@ -4,3 +4,4 @@
 {{- end }}
 {{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}
 <script src="{{ $tarteJS.Permalink | absURL }}" {{ printf "integrity=%q" $secureTarteJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+<!-- Boosted mod: use tarteaucitron -->

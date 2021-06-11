@@ -14,7 +14,7 @@ Install [Parcel Bundler](https://en.parceljs.org/getting_started.html).
 
 [Install boosted]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
 
-Boosted depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property. This means that you will have to make sure to add both of them to your `package.json` using `npm install popper.js`.
+Boosted depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property. This means that you will have to make sure to add both of them to your `package.json` using `npm install @popperjs/core`.
 
 When all will be completed, your project will be structured like this:
 
