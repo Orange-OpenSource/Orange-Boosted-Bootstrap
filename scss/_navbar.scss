@@ -148,6 +148,10 @@
       }
     }
   }
+
+  &.flex-row .nav-item{
+    border: 0;
+  }
   // End mod
 
   .dropdown-menu {
@@ -181,6 +185,10 @@
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
   align-self: flex-end; // Boosted mod
+
+  &.justify-content-end li:last-child {
+    margin-right: divide($spacer, 2);
+  }
 }
 
 // Button for toggling the navbar when in its collapsed state
@@ -287,6 +295,10 @@
           img {
             width: $navbar-brand-logo-height;
             height: $navbar-brand-logo-height;
+          }
+
+          > span {
+            margin-right: $spacer;
           }
         }
         // End mod

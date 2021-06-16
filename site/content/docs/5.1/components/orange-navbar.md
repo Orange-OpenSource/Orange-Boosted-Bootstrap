@@ -18,7 +18,7 @@ You may refer to its documentation in order to properly create and use navbars.
 A simple navigation can be added on top of Orange navbar, it is called supra bar. Simply add the `.supra` class in your navbar declaration.
 
 {{< callout warning >}}
-This navbar is visible only on desktop view. 
+This navbar is visible only on desktop view.
 {{< /callout >}}
 
 {{< example class="p-0" >}}
@@ -82,7 +82,7 @@ Brand-compliant navbars that are easy to use and customizable.
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">    
+    <div class="d-flex">
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
@@ -91,7 +91,7 @@ Brand-compliant navbars that are easy to use and customizable.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon position-relative">
             <span class="position-relative">
@@ -115,7 +115,7 @@ Brand-compliant navbars that are easy to use and customizable.
       </ul>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header" aria-controls="global-header" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>      
+      </button>
     </div>
     <div class="navbar-collapse collapse" id="global-header" style="height: auto;">
       <ul class="navbar-nav">
@@ -135,7 +135,7 @@ Brand-compliant navbars that are easy to use and customizable.
           </svg>
           <span class="visually-hidden">Search</span>
         </a>
-      </li> 
+      </li>
       <li class="nav-item">
         <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
           <span class="position-relative">
@@ -157,8 +157,7 @@ Brand-compliant navbars that are easy to use and customizable.
         </a>
       </li>
     </ul>
-  </div>
-</nav>
+{{< /orange-supra >}}
 {{< /example >}}
 
 #### Global header with title
@@ -178,7 +177,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title" class="title h1">Title</span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -187,7 +186,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
@@ -199,7 +198,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>              
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -231,7 +230,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -243,7 +242,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>              
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -268,7 +267,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -277,7 +276,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
@@ -289,7 +288,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>                
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -321,7 +320,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -333,7 +332,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>              
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -362,7 +361,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
     <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">    
+    <div class="d-flex">
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
@@ -371,7 +370,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon position-relative">
             <span class="position-relative">
@@ -383,7 +382,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>            
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -415,7 +414,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
           </svg>
           <span class="visually-hidden">Search</span>
         </a>
-      </li> 
+      </li>
       <li class="nav-item">
         <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
           <span class="position-relative">
@@ -427,7 +426,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
-          </span>            
+          </span>
         </a>
       </li>
       <li class="nav-item">
@@ -437,8 +436,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
         </a>
       </li>
     </ul>
-  </div>
-</nav>
+{{< /orange-supra >}}
 {{< /example >}}
 
 #### With navigation under
@@ -463,7 +461,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -472,7 +470,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
@@ -484,7 +482,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>                
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -506,7 +504,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -518,7 +516,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>            
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -529,7 +527,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
         </li>
       </ul>
     </div>
-  </nav>    
+  </nav>
   <div class="navbar navbar-dark bg-dark d-none d-md-flex navbar-expand-md bg-dark flex-sm-wrap p-0">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="global-header-title-nav-2">
@@ -571,7 +569,7 @@ For accessibility purposes, do not forget to add the `role="search"` on the inpu
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-search" aria-controls="global-header-search" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -597,7 +595,7 @@ For accessibility purposes, do not forget to add the `role="search"` on the inpu
 
 #### With custom logo (OBS example)
 
-Instead of using the Master Logo that is provided by Boosted, you can also use whatever logo you want depending on your project, entity, ... 
+Instead of using the Master Logo that is provided by Boosted, you can also use whatever logo you want depending on your project, entity, ...
 
 {{< callout warning >}}
 You should consider having a **responsive SVG logo**. In order to do so, you may set up a responsive rendering into your SVG, [as we do with the Master Logo]({{< docsref "/guidelines/logos#responsive-svg" >}}).
@@ -627,7 +625,7 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
@@ -657,7 +655,7 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-2">
             <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
