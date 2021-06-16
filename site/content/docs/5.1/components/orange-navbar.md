@@ -1,58 +1,25 @@
 ---
-layout: guidelines
-title: Global headers
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
-group: guidelines
-subgroup: Modules
+layout: docs
+title: Orange Navbar
+description: Documentation and examples for Boosted's exclusive Brand responsive navbars. Includes support for branding, navigation, and more, including support for our collapse plugin.
+group: components
 toc: true
 ---
 
-## Supra bars
-{{< callout info >}}
-<strong>Supra bars are hidden on tablet and mobile devices.</strong><br>
-Based on viewport size, supra bar is hidden under <var>768px</var>.
+## How it works
+
+Orange navbar is based on the [navbar]({{<docsref "/components/navbar">}}) component. It adds some display management and introduces the supra bar component.
+You may refer to its documentation in order to properly create and use navbars.
+
+### Supra Bar
+
+A simple navigation that can be added on top of orange navbar, it is called supra bar. Simply add the `.supra` class in your navbar declaration.
+
+{{< callout warning >}}
+Supra bars are visible only in desktop view.
 {{< /callout >}}
 
-### Supra bar standard
-
-{{< anchor web-glh-sub-001 >}}
-
-{{< example show_markup="true" class="p-0">}}
-<nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
-  <div class="container">
-      <div class="navbar-nav">
-        <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
-        <a href="#" class="nav-link pb-1">Business</a>
-      </div>
-  </div>
-</nav>
-{{< /example >}}
-
-### Supra bar with language options
-
-{{< anchor web-glh-sub-002 >}}
-
-{{< example show_markup="true" class="p-0">}}
-<nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
-  <div class="container">
-    <div class="navbar-nav d-flex flex-row">
-      <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
-      <a class="nav-link pb-1" href="#">Business</a>
-    </div>
-    <div class="navbar-nav d-flex flex-row">
-        <a class="nav-link active pb-1" href="#" aria-label="English version">EN</a>
-        <a class="nav-link ml-1 pb-1" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a>
-        <a class="nav-link ml-1 pb-1" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a>
-    </div>
-  </div>
-</nav>
-{{< /example >}}
-
-### Supra bar with actions
-
-{{< anchor web-glh-sub-003 >}}
-
-{{< example show_markup="true" class="p-0">}}
+{{< example >}}
 <nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
   <div class="container">
     <div class="navbar-nav d-flex flex-row">
@@ -92,3 +59,5 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   </div>
 </nav>
 {{< /example >}}
+
+You can have a complete overview of how to use supra bars in the dedicated [Design Guidelines page]({{<docsref "/guidelines/global-headers">}})
