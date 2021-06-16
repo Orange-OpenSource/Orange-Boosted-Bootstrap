@@ -1198,6 +1198,7 @@ $navbar-transition:                    padding-top $navbar-transition-duration $
 $navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-supra-padding-bottom:          .375rem !default;
 // End mod
 
 // Boosted mod: Orange navbar
