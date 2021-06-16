@@ -402,6 +402,18 @@
     }
   }
 
+  input[type="search"] {
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $gray-700;
+  }
+  &::placeholder {
+    color: $gray-600;
+  }
+  &:focus {
+    border: 2px solid $white;
+  }
+
   .navbar-toggler {
     color: $navbar-dark-color;
     border-color: $navbar-dark-toggler-border-color;

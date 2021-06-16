@@ -194,7 +194,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>            
           </a>
         </li>
         <li class="nav-item">
@@ -284,7 +285,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>              
             </a>
           </li>
           <li class="nav-item">
@@ -327,7 +329,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -376,7 +379,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -419,7 +423,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -466,7 +471,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -499,7 +505,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -563,7 +570,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -605,7 +613,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <span class="visually-hidden">My account</span>
           </a>
         </li>
-      </ul>
       </ul>
     </div>
   </nav>    
