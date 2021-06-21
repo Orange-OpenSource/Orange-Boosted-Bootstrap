@@ -7,10 +7,6 @@ subgroup: Modules
 toc: true
 ---
 
-<!-- {{< callout info >}}
-The feature will be delivered with [#525]({{< param repo >}}/issues/525).
-{{< /callout >}} -->
-
 <main>
   <div class="container">
     <h2 id="suprabar">Supra bar</h2>
@@ -20,54 +16,55 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
     </p>
     <h3 class="mt-5 h5">Supra bar standard — <a id="web-glh-sub-001" class="ui-kit-id">web-glh-sub-001</a></h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
-    <div class="container-fluid">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Personal</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-      </ul>
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+    <div class="container">
+        <div class="navbar-nav">
+          <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
+          <a class="nav-link pb-1" href="#">Business</a>
+        </div>
     </div>
   </nav>
   <div class="container">
     <h3 class="mt-5 h5">Supra bar with language options — <a id="web-glh-sub-002" class="ui-kit-id">web-glh-sub-002</a></h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
-    <div class="container-lg">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Personal</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
-        <li class="nav-item"><a class="nav-link ml-1" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
-        <li class="nav-item"><a class="nav-link ml-1" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
-      </ul>
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+    <div class="container">
+      <div class="navbar-nav d-flex flex-row">
+        <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
+        <a class="nav-link pb-1" href="#">Business</a>
+      </div>
+      <div class="navbar-nav d-flex flex-row">
+          <a class="nav-link active pb-1" href="#" aria-label="English version">EN</a>
+          <a class="nav-link ml-1 pb-1" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a>
+          <a class="nav-link ml-1 pb-1" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a>
+      </div>
     </div>
   </nav>
   <div class="container">
     <h3 class="mt-5 h5" id="web-glh-sub-003">Supra bar with actions — <a id="web-glh-sub-003" class="ui-kit-id">web-glh-sub-003</a></h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
-    <div class="container-lg">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Personal</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-      </ul>
+  <!-- WIP -->
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+    <div class="container">
+      <div class="navbar-nav d-flex flex-row">
+        <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
+        <a class="nav-link pb-1" href="#">Business</a>
+      </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-mail">
+          <a href="#" class="nav-link nav-icon svg-mail pb-1">
           <span class="sr-only">Mail</span>
           <sup class="badge badge-lg badge-info rounded-pill">25</sup>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-buy">
+          <a href="#" class="nav-link nav-icon svg-buy pb-1">
           <span class="sr-only">Basket</span>
           <sup class="badge badge-lg badge-info rounded-pill">3</sup>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-avatar">
+          <a href="#" class="nav-link nav-icon svg-avatar pb-1">
           <span class="sr-only">My account</span>
           </a>
         </li>
@@ -217,7 +214,7 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
       <div class="container-lg flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span id="Title">Title</span>
+          <span id="title" class="h2">Title</span>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
@@ -349,7 +346,7 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
       <div class="container-lg flex-sm-wrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span id="Title-2">Title</span>
+          <span id="title-2" class="h2">Title</span>
         </a>
         <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
           <li class="nav-item">
@@ -483,9 +480,9 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
       <div class="container-lg flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span class="ml-2 align-self-end" id="obs">
-            <span class="sr-only">Orange </span>Business<br>Services
-          </span>
+          <h2 class="h4" id="obs-1">
+            <span class="sr-only">Business</span><br>Services
+          </h2>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
@@ -541,9 +538,9 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
       <div class="container-lg flex-sm-wrap justify-content-start">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span class="ml-2 align-self-end" id="obs-2">
-            <span class="sr-only">Orange </span>Business<br>Services
-          </span>
+          <h2 class="h4" id="obs-2">
+            <span class="sr-only">Business</span><br>Services
+          </h2>
         </a>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
         <span aria-hidden="true" class="navbar-toggler-icon"></span>
@@ -596,9 +593,9 @@ The feature will be delivered with [#525]({{< param repo >}}/issues/525).
       <div class="container-lg flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span class="ml-2 align-self-end" id="obs-3">
-            <span class="sr-only">Orange </span>Business<br>Services
-          </span>
+          <h2 class="h4" id="obs-3">
+            <span class="sr-only">Business</span><br>Services
+          </h2>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
