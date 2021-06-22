@@ -23,7 +23,7 @@ Class `.navbar-inverse` is changed to `.navbar-dark` and `.navbar-light`. Please
 
 Class `.navbar-toggle` is now `.navbar-toggler` and can be put directly inside a `<button>` tag. Use classes `.d-none d-${BP}-block` to specify wether it should be displayed or not at which breakpoint.
 
-For more information please check the new [navbar]{{< docsref "/components/navbar" >}}) for documentation and examples.
+For more information please check the new [navbar]({{< docsref "/components/navbar" >}}) for documentation and examples.
 
 #### Local nav
 
@@ -31,7 +31,7 @@ In addition to new navbar classes and semantic, arrows elements are now to be pu
 
 #### Megamenu
 
-Megamenu has been reworked based on the collapse and navbar components. See [documentation and examples]{{< docsref "/components/orange-megamenu" >}}).
+Megamenu has been reworked based on the collapse and navbar components. See [documentation and examples]({{< docsref "/components/orange-megamenu" >}}).
 
 ### Forms
 
@@ -39,11 +39,11 @@ Dropped the `.horizontal-form`class. Each row of form is now contained in a `.fo
 
 Class `.control-label`is now `.col-form-label`.
 
-[Orange switches]{{< docsref "/components/forms#orange-switches" >}}) update: add a class `.o-switch` to `.form-group` element when you want to use custom toggles
+[Orange switches]({{< docsref "/components/forms#orange-switches" >}}) update: add a class `.o-switch` to `.form-group` element when you want to use custom toggles
 
-Dropped `.o-checkbox` and `.o-radio`, now using native custom form [components]{{< docsref "/components/forms#checkboxes-and-radios-1" >}}).
+Dropped `.o-checkbox` and `.o-radio`, now using native custom form [components]({{< docsref "/components/forms#checkboxes-and-radios" >}}).
 
-For more information please check the new [forms]{{< docsref "/components/forms" >}}) documentation and examples.
+For more information please check the new [forms]({{< docsref "/components/forms" >}}) documentation and examples.
 
 
 ### Skiplinks
@@ -59,19 +59,19 @@ Rename all the class containing  `_` to `-`.
 
 ### Step bar
 
-Class names and semantic changed, see [Orange stepbar]{{< docsref "/components/stepbar" >}}) for documentation and examples.
+Class names and semantic changed, see [Orange stepbar]({{< docsref "/components/stepbar" >}}) for documentation and examples.
 
 ### Badge
 `badge-default` have been replace by `badge-dark`.
 
 ### Accordions
 
-[Accordions]{{< docsref "/components/collapse#accordion-example" >}}) are now based on card structure. Be sure to use `.card-header` and `.card-body` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.
+[Accordions]({{< docsref "/components/collapse#accordion-example" >}}) are now based on card structure. Be sure to use `.card-header` and `.card-body` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.
 
 ### Tablesorter
-[Tablesorter]{{< docsref "/boostwatch#complextable" >}}) add a template on tablesorter header, need to be added separatly by each project.
+[Tablesorter]({{< docsref "/boostwatch#complextable" >}}) add a template on tablesorter header, need to be added separatly by each project.
 
-{{{js
+```js
 $("#myTable").tablesorter({
   ....
   // manipulate the template string after is it created
