@@ -41,7 +41,7 @@
       content: "";
       @if $direction == down {
         @include caret-down();
-        transform: translateY($border-width / 2); // Boosted mod
+        transform: translateY($border-width * .5); // Boosted mod
       } @else if $direction == up {
         @include caret-up();
       } @else if $direction == end {

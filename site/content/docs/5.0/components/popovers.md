@@ -396,6 +396,15 @@ var exampleTriggerEl = document.getElementById('example')
 var popover = boosted.Popover.getInstance(exampleTriggerEl) // Returns a Boosted popover instance
 ```
 
+#### getOrCreateInstance
+
+*Static* method which allows you to get the popover instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var popover = boosted.Popover.getOrCreateInstance(exampleTriggerEl) // Returns a Boosted popover instance
+```
+
 ### Events
 
 <table class="table">

@@ -58,7 +58,7 @@
 
   &:focus {
     text-decoration: $link-decoration;
-    outline-offset: $spacer / 4;
+    outline-offset: $spacer * .25;
   }
 
   .active &,

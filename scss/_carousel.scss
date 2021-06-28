@@ -144,7 +144,7 @@
 .carousel-control-next-icon {
   display: inline-block;
   background-color: var(--#{$boosted-variable-prefix}control-bg); // Boosted mod
-  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer / 10) 50%); // Boosted mod
+  @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // Boosted mod
   @include border-radius(50%, 50%);
 }
 
@@ -294,9 +294,9 @@
 
 .carousel-caption {
   position: absolute;
-  right: (100% - $carousel-caption-width) / 2;
+  right: (100% - $carousel-caption-width) * .5;
   bottom: $carousel-caption-spacer;
-  left: (100% - $carousel-caption-width) / 2;
+  left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
   color: $carousel-caption-color;
   background-color: color-contrast($carousel-caption-color); // Boosted mod: ensure contrast
