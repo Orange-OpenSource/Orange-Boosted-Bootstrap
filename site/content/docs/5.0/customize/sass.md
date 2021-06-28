@@ -80,7 +80,7 @@ Every Sass variable in Boosted includes the `!default` flag allowing you to over
 
 You will find the complete list of Boosted's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
 
-Variable overrides must come after our functions, variables, and mixins are imported, but before the rest of the imports.
+Variable overrides must come after our functions are imported, but before the rest of the imports.
 
 Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Boosted via npm:
 
@@ -95,6 +95,8 @@ $body-color: #111;
 // Required
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+
+// Boosted and its default variables
 
 // Optional Boosted components here
 @import "../node_modules/boosted/scss/root";
@@ -124,7 +126,7 @@ $primary: #0074d9;
 $danger: #ff4136;
 ```
 
-Later on, theses variables are set in Boosted's `$theme-colors` map:
+Later on, these variables are set in Boosted's `$theme-colors` map:
 
 ```scss
 $theme-colors: (

@@ -116,12 +116,12 @@
   // Boosted mod
   .nav-item {
     font-size: $h5-font-size;
-    border-top: $border-width / 2 solid $gray-900;
+    border-top: $border-width * .5 solid $gray-900;
   }
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x / 4;
+    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .25;
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
@@ -131,9 +131,9 @@
 
     &.active::before {
       position: absolute;
-      right: $nav-link-padding-y / 2;
+      right: $nav-link-padding-y * .5;
       bottom: 0;
-      left: $nav-link-padding-y / 2;
+      left: $nav-link-padding-y * .5;
       height: $border-width * 2;
       content: "";
       background-color: currentColor;

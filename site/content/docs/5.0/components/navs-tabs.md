@@ -648,6 +648,15 @@ var triggerEl = document.querySelector('#trigger')
 var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 ```
 
+#### getOrCreateInstance
+
+*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var triggerEl = document.querySelector('#trigger')
+var tab = boosted.Tab.getOrCreateInstance(triggerEl) // Returns a Boosted tab instance
+```
+
 ### Events
 
 When showing a new tab, the events fire in the following order:

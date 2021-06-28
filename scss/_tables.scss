@@ -4,6 +4,7 @@
 
 .table {
   --#{$variable-prefix}table-bg: #{$table-bg};
+  // Boosted mod: no table-accent-bg
   --#{$variable-prefix}table-active-color: #{$table-active-color};
   --#{$variable-prefix}table-active-bg: #{$table-active-bg};
   --#{$variable-prefix}table-hover-color: #{$table-hover-color};

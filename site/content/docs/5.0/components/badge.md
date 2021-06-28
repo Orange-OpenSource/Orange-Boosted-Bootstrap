@@ -6,9 +6,11 @@ group: components
 toc: true
 ---
 
-## Example
+## Examples
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
+
+### Headings
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -18,6 +20,8 @@ Badges scale to match the size of the immediate parent element by using relative
 <h5>Example heading <span class="badge bg-secondary">New</span></h5>
 <h6>Example heading <span class="badge bg-secondary">New</span></h6>
 {{< /example >}}
+
+### Buttons
 
 Badges can be used as part of links or buttons to provide a counter.
 
@@ -31,12 +35,28 @@ Note that depending on how they are used, badges may be confusing for users of s
 
 Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
 
+### Positioned
+
+<!-- Boosted mod: replace the button with a link with an icon because notifiers are only authorized with icons -->
+
+Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
+
 {{< example >}}
-<button type="button" class="btn btn-primary">
-  Profile <span class="badge bg-secondary">9</span>
-  <span class="visually-hidden">unread messages</span>
-</button>
+<a href="#" class="position-relative">
+  <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  <span class="visually-hidden">Shopping basket</span>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+    99+
+    <span class="visually-hidden">shopping basket items</span>
+  </span>
+</a>
 {{< /example >}}
+
+<!-- The example without a count is dropped because not existing in the UI kit -->
+
+<!-- End mod -->
 
 ## Background colors
 

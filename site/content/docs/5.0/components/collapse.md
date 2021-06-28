@@ -187,8 +187,21 @@ var bsCollapse = new boosted.Collapse(myCollapse, {
       <td>Destroys an element's collapse. (Removes stored data on the DOM element)</td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
-      <td>Static method which allows you to get the collapse instance associated with a DOM element.</td>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: <code>boosted.Collapse.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>boosted.Collapse.getOrCreateInstance(element)</code>
+      </td>
     </tr>
   </tbody>
 </table>

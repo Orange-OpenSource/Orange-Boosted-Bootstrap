@@ -31,7 +31,7 @@
   }
 
   &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
-    margin-left: $spacer / 2;
+    margin-left: $spacer * .5;
   }
 
   @include media-breakpoint-up(xl) {
