@@ -52,20 +52,22 @@ toc: true
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
+        <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-mail pb-1">
-          <span class="sr-only">Mail</span>
-          <sup class="badge badge-lg badge-info rounded-pill">25</sup>
+            <span class="visually-hidden">Search</span>
           </a>
         </li>
         <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-buy pb-1">
-          <span class="sr-only">Basket</span>
+          <span class="visually-hidden">Basket</span>
           <sup class="badge badge-lg badge-info rounded-pill">3</sup>
           </a>
         </li>
         <li class="nav-item">
+          <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
           <a href="#" class="nav-link nav-icon svg-avatar pb-1">
-          <span class="sr-only">My account</span>
+          <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
@@ -83,22 +85,17 @@ toc: true
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-1" aria-expanded="false" aria-controls="search-1">
-          <span class="sr-only">Search bar</span>
+          <span class="visually-hidden">Search bar</span>
           </button>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-mail">
-          <span class="sr-only">Email</span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="sr-only">Basket</span>
+          <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-avatar">
-          <span class="sr-only">My account</span>
+          <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
@@ -117,18 +114,20 @@ toc: true
       </div>
       <ul class="navbar-nav d-none d-md-flex">
         <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
           <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-1" aria-expanded="false" aria-controls="search-1">
-          <span class="sr-only">Search bar</span>
+          <span class="visually-hidden">Search bar</span>
           </button>
         </li>
         <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="sr-only">Basket</span>
+          <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-avatar">
-          <span class="sr-only">My account</span>
+          <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
@@ -151,17 +150,17 @@ toc: true
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-2" aria-expanded="false" aria-controls="search-2">
-          <span class="sr-only">Search bar</span>
+          <span class="visually-hidden">Search bar</span>
           </button>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="sr-only">Basket</span>
+          <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-avatar">
-          <span class="sr-only">My account</span>
+          <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
@@ -181,18 +180,20 @@ toc: true
       </div>
       <ul class="navbar-nav d-none d-md-flex">
         <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
           <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-2" aria-expanded="false" aria-controls="search-2">
-          <span class="sr-only">Search bar</span>
+          <span class="visually-hidden">Search bar</span>
           </button>
         </li>
         <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="sr-only">Basket</span>
+          <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon svg-avatar">
-          <span class="sr-only">My account</span>
+          <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
@@ -218,18 +219,20 @@ toc: true
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
+            <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-6" aria-expanded="false" aria-controls="search-6">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
+            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -248,18 +251,20 @@ toc: true
         </div>
         <ul class="navbar-nav d-none d-md-flex">
           <li class="nav-item">
+            <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-6" aria-expanded="false" aria-controls="search-6">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
+          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -280,22 +285,24 @@ toc: true
       <div class="container-lg flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span class="align-self-end" id="two-line-title">Title Line 1<br>Title Line 2</span>
+          <h2 class="h4" id="two-line-title">
+            <span class="align-self-end">Title Line 1<br>Title Line 2</span>
+          </h2>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-8" aria-expanded="false" aria-controls="search-8">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -312,20 +319,24 @@ toc: true
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-md-flex">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-8" aria-expanded="false" aria-controls="search-8">
-            <span class="sr-only">Search bar</span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+          <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
+            <a href="#" class="nav-link nav-icon svg-mail pb-1">
+              <span class="visually-hidden">Search</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
+            <a href="#" class="nav-link nav-icon svg-buy pb-1">
+            <span class="visually-hidden">Basket</span>
+            <sup class="badge badge-lg badge-info rounded-pill">3</sup>
+            </a>
+          </li>
+          <li class="nav-item">
+            <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
+            <a href="#" class="nav-link nav-icon svg-avatar pb-1">
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -351,17 +362,17 @@ toc: true
         <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -371,17 +382,17 @@ toc: true
         <ul class="navbar-nav ml-auto d-none d-md-flex">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -417,7 +428,9 @@ toc: true
       <div class="container-lg flex-sm-wrap justify-content-start">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <span class="align-self-end" id="two-line-title-2">Title Line 1<br>Title Line 2</span>
+          <h2 class="h4" id="two-line-title-2">
+            <span class="align-self-end">Title Line 1<br>Title Line 2</span>
+          </h2>
         </a>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
         <span aria-hidden="true" class="navbar-toggler-icon"></span>
@@ -425,17 +438,17 @@ toc: true
         <ul class="navbar-nav d-none d-md-flex ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-search">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="sr-only">Basket</span>
+            <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -448,17 +461,17 @@ toc: true
           <ul class="navbar-nav">
             <li class="nav-item d-md-none">
               <a href="#" class="nav-link nav-icon svg-search">
-              <span class="sr-only">Search bar</span>
+              <span class="visually-hidden">Search bar</span>
               </a>
             </li>
             <li class="nav-item d-md-none">
               <a href="#" class="nav-link nav-icon svg-buy">
-              <span class="sr-only">Basket</span>
+              <span class="visually-hidden">Basket</span>
               </a>
             </li>
             <li class="nav-item d-md-none">
               <a href="#" class="nav-link nav-icon svg-avatar">
-              <span class="sr-only">My account</span>
+              <span class="visually-hidden">My account</span>
               </a>
             </li>
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
@@ -481,18 +494,18 @@ toc: true
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
           <h2 class="h4" id="obs-1">
-            <span class="sr-only">Business</span><br>Services
+            <span>Business</span><br>Services
           </h2>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-9" aria-expanded="false" aria-controls="search-9">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -509,15 +522,17 @@ toc: true
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-md-flex">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-9" aria-expanded="false" aria-controls="search-9">
-            <span class="sr-only">Search bar</span>
-            </button>
+          <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
+            <a href="#" class="nav-link nav-icon svg-mail pb-1">
+              <span class="visually-hidden">Search</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
+            <a href="#" class="nav-link nav-icon svg-avatar pb-1">
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -539,7 +554,7 @@ toc: true
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
           <h2 class="h4" id="obs-2">
-            <span class="sr-only">Business</span><br>Services
+            <span>Business</span><br>Services
           </h2>
         </a>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
@@ -548,12 +563,12 @@ toc: true
         <ul class="navbar-nav d-none d-md-flex ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-search">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon svg-avatar">
-            <span class="sr-only">My account</span>
+            <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
@@ -566,12 +581,12 @@ toc: true
           <ul class="navbar-nav">
             <li class="nav-item d-md-none">
               <a href="#" class="nav-link nav-icon svg-search">
-              <span class="sr-only">Search bar</span>
+              <span class="visually-hidden">Search bar</span>
               </a>
             </li>
             <li class="nav-item d-md-none">
               <a href="#" class="nav-link nav-icon svg-avatar">
-              <span class="sr-only">My account</span>
+              <span class="visually-hidden">My account</span>
               </a>
             </li>
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
@@ -593,14 +608,11 @@ toc: true
       <div class="container-lg flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-          <h2 class="h4" id="obs-3">
-            <span class="sr-only">Business</span><br>Services
-          </h2>
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-9" aria-expanded="false" aria-controls="search-9">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
         </ul>
@@ -620,9 +632,12 @@ toc: true
         <ul class="navbar-nav d-none d-md-flex">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-9" aria-expanded="false" aria-controls="search-9">
-            <span class="sr-only">Search bar</span>
+            <span class="visually-hidden">Search bar</span>
             </button>
           </li>
+                <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
         </ul>
       </div>
     </nav>
