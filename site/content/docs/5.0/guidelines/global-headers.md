@@ -328,6 +328,51 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="visually-hidden">Search</span>
             </a>
           </li> 
+    <h2 id="suprabar">Supra bar</h2>
+    <p>
+      <strong>Supra bars are hidden on tablet and mobile devices.</strong>
+      Based on viewport size, supra bar is hidden under <var>768px</var>.
+    </p>
+  </div>
+  <div class="container">
+    <h2 id="navbar" class="mt-5">Headers (Navbar)</h2>
+  </div>
+  <div class="container">
+    <h3 class="mt-5 h5">Global header with title and navigation bar — <a id="web-glh-tni-003" class="ui-kit-id">web-glh-tni-003</a></h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+      <div class="container-lg flex-sm-wrap">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+          <span id="title-2" class="h2">Title</span>
+        </a>
+        <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
+            <span class="visually-hidden">Search bar</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon svg-buy">
+            <span class="visually-hidden">Basket</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon svg-avatar">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler d-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
+        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav ml-auto d-none d-md-flex">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
+            <span class="visually-hidden">Search bar</span>
+            </button>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon pt-1 pb-0">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
