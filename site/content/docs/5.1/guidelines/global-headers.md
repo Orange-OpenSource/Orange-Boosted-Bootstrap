@@ -46,3 +46,43 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
   </div>
 </nav>
+{{< /example >}}
+
+### Supra bar with actions
+
+{{< anchor web-glh-sub-003 >}}
+
+{{< example show_markup="true" class="p-0">}}
+<nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block lh-1">
+  <div class="container fs-7">
+    <div class="navbar-nav d-flex flex-row">
+      <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
+      <a class="nav-link pb-1" href="#">Business</a>
+    </div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon pt-1 pb-0">
+          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+          </svg>
+          <span class="visually-hidden">Search</span>
+        </a>
+      </li> 
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon pt-1 pb-0">
+          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+          </svg>
+          <span class="visually-hidden">Basket</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon pt-1 pb-0">
+          <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+        <span class="visually-hidden">My account</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{< /example >}}
