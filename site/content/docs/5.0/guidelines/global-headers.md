@@ -98,6 +98,9 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     <h2 id="navbar" class="mt-5">Headers (Navbar)</h2>
     <h3 class="mt-5 h5">Global header standard — <a id="web-glh-stn-001" class="ui-kit-id">web-glh-stn-001</a></h3>
   </div>
+  <div class="container">
+    <h3 class="mt-5 h5">Global header minimised — <a id="web-glh-min-001" class="ui-kit-id">web-glh-min-001</a></h3>
+  </div>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
     <div class="container-lg">
       <a class="navbar-brand" href="#">
