@@ -420,6 +420,30 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-title-nav" aria-controls="global-header-title-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+    <h2 id="suprabar">Supra bar</h2>
+    <p>
+      <strong>Supra bars are hidden on tablet and mobile devices.</strong>
+      Based on viewport size, supra bar is hidden under <var>768px</var>.
+    </p>
+  </div>
+  </nav>
+  <div class="container">
+    <h2 id="navbar" class="mt-5">Headers (Navbar)</h2>
+  </div>
+  <div class="container">
+    <h3 class="mt-5 h5">Global header with title on two lines and navigation bar — <a id="web-glh-tni-004" class="ui-kit-id">web-glh-tni-004</a></h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+      <div class="container-lg flex-sm-wrap justify-content-start">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+          <h2 class="h4" id="two-line-title-2">
+            <span class="align-self-end">Title Line 1<br>Title Line 2</span>
+          </h2>
+        </a>
+        <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
+        <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav ml-auto d-none d-md-flex">
           <li class="nav-item">
