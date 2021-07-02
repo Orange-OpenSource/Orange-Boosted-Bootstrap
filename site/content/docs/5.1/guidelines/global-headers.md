@@ -292,5 +292,83 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h3 class="mt-5 h5">Global header with title on two lines — <a id="web-glh-tni-002" class="ui-kit-id">web-glh-tni-002</a></h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+      <div class="container-lg flex-sm-wrap flex-md-nowrap">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+          <h2 class="h4" id="two-line-title">
+            <span class="align-self-end">Title Line 1<br>Title Line 2</span>
+          </h2>
+        </a>
+        <ul class="navbar-nav d-md-none flex-row ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-0">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-0">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-0">
+              <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-two-line" aria-controls="global-header-two-line" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="global-header-two-line">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav d-none d-md-flex">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-0">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-0">
+              <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
   </header>
