@@ -421,3 +421,15 @@
     }
   }
 }
+
+.supra {
+  padding-bottom: $navbar-supra-padding-bottom;
+  border-bottom: 1px solid $gray-700;
+
+  a {
+    margin-right: .313rem;
+  }
+  a::before {
+    bottom: -.438rem;
+  }
+}
