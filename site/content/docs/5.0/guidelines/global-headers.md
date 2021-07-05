@@ -65,16 +65,15 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-        <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-mail pb-1">
+        <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
             <span class="visually-hidden">Search</span>
           </a>
         </li>
         <li class="nav-item">
-          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
           <a href="#" class="nav-link nav-icon svg-buy pb-1">
+          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
           <span class="visually-hidden">Basket</span>
-          <sup class="badge badge-lg badge-info rounded-pill">3</sup>
           </a>
         </li>
         <li class="nav-item">
