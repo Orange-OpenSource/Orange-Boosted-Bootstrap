@@ -135,15 +135,15 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </div>
       <ul class="navbar-nav d-none d-md-flex">
         <li class="nav-item">
-          <img src="/docs/5.0/assets/img/boosted-search.svg" width="50" height="50" role="img" alt="Search" loading="lazy">
-          <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-1" aria-expanded="false" aria-controls="search-1">
-          <span class="visually-hidden">Search bar</span>
-          </button>
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+            <span class="visually-hidden">Search</span>
+          </a>
         </li>
         <li class="nav-item">
-          <img src="/docs/5.0/assets/img/boosted-buy.svg" width="50" height="50" role="img" alt="Basket" loading="lazy">
-          <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+            <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
