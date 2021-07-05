@@ -3,8 +3,6 @@
   examples:
     - name: Headers
       description: "Display your branding, navigation, search, and more with these header components"
-    - name: Global Headers
-      description: "Showcase all brand-exclusive Global Headers."
     - name: Heroes
       description: "Set the stage on your homepage with heroes that feature clear calls to action."
     - name: Features

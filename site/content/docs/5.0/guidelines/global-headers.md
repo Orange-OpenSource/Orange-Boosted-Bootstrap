@@ -16,7 +16,7 @@ toc: true
     </p>
     <h3 class="mt-5 h5">Supra bar standard — <a id="web-glh-sub-001" class="ui-kit-id">web-glh-sub-001</a></h3>
   </div>
-  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block">
     <div class="container">
         <div class="navbar-nav">
           <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
