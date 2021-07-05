@@ -38,7 +38,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   <div class="container">
     <h3 class="mt-5 h5">Supra bar with language options — <a id="web-glh-sub-002" class="ui-kit-id">web-glh-sub-002</a></h3>
   </div>
-  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block">
     <div class="container">
       <div class="navbar-nav d-flex flex-row">
         <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
