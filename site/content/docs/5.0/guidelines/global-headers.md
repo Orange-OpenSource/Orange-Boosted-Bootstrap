@@ -401,7 +401,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
       <hr class="w-100 m-0 d-none d-md-block border-700">
       <div class="container-lg border-bottom">
-        <div class="navbar-collapse collapse" id="global-header-title-nav">
+        <div class="navbar-collapse collapse pb-1" id="global-header-title-nav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
