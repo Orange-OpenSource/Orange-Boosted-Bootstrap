@@ -101,12 +101,12 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   <div class="container">
     <h3 class="mt-5 h5">Global header minimised — <a id="web-glh-min-001" class="ui-kit-id">web-glh-min-001</a></h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0" role="navigation">
     <div class="container-lg">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
       </a>
-      <ul class="navbar-nav d-md-none flex-row ml-auto">
+      <ul class="navbar-nav d-md-none flex-row">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -130,10 +130,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li>
       </ul>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-standard" aria-controls="global-header-standard" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-minified" aria-controls="global-header-minified" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse collapse" id="global-header-standard" style="height: auto;">
+      <div class="mega-menu navbar-collapse collapse bg-dark" id="global-header-minified" style="height: auto;">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
