@@ -435,15 +435,34 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   </div>
   <header>
     <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
-      <div class="container-lg flex-sm-wrap justify-content-start">
+      <div class="container-lg flex-sm-wrap">
         <a class="navbar-brand" href="#">
           <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
           <h2 class="h4" id="two-line-title-2">
             <span class="align-self-end">Title Line 1<br>Title Line 2</span>
           </h2>
         </a>
-        <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
-        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+        <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+              <span class="visually-hidden">Basket</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon svg-avatar">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-title-nav-2" aria-controls="global-header-title-nav-2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav ml-auto d-none d-md-flex">
           <li class="nav-item">
@@ -459,6 +478,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
                 <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
               </svg>
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
               <span class="visually-hidden">Basket</span>
             </a>
           </li>
@@ -475,7 +496,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
       <hr class="w-100 m-0 d-none d-md-block border-700">
       <div class="container-lg border-bottom">
-        <div class="navbar-collapse collapse pb-1" id="global-header-title-nav">
+        <div class="navbar-collapse collapse pb-1" id="global-header-title-nav-2">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
