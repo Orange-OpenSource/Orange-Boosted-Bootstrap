@@ -356,7 +356,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-md-flex">
+        <ul class="navbar-nav d-none d-md-flex pb-1">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon pt-1 pb-2">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
