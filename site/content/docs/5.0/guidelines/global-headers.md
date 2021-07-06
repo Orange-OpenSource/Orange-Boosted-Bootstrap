@@ -105,13 +105,15 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </a>
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
-          <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-1" aria-expanded="false" aria-controls="search-1">
-          <span class="visually-hidden">Search bar</span>
-          </button>
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+            <span class="visually-hidden">Search</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-buy">
-          <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+            <span class="visually-hidden">Basket</span>
           </a>
         </li>
         <li class="nav-item">
@@ -120,10 +122,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li>
       </ul>
-      <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar3" aria-controls="collapsing-navbar3" aria-expanded="false" aria-label="Toggle navigation">
-      <span aria-hidden="true" class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-standard" aria-controls="global-header-standard" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse collapse" id="collapsing-navbar3" style="height: auto;">
+      <div class="navbar-collapse collapse" id="global-header-standard" style="height: auto;">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
