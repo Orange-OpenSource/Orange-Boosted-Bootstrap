@@ -303,12 +303,25 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </li>
         </ul>
       </div>
-    </nav>
-    <div class="collapse bg-dark" id="search-6">
-      <form class="container-lg d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
-      </form>
+      <ul class="navbar-nav d-none d-md-flex">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+            <span class="visually-hidden">Basket</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon svg-avatar">
+          <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
 </main>
