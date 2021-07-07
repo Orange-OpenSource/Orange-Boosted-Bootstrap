@@ -101,7 +101,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   <div class="container">
     <h3 class="mt-5 h5">Global header minimised — <a id="web-glh-min-001" class="ui-kit-id">web-glh-min-001</a></h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
     <div class="container-lg">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
