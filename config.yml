@@ -66,7 +66,7 @@ params:
     css:               "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css"
     css_hash:          "sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx"
     rtlcss:            "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted-rtl.min.css"
-    rtlcss_hash:       "sha384-hJxq6SSxAKmw1m05Nn88CYZPfEVrgnLSYPW4/qrFYe5kT+Z2p/mpjaaoMUyvGXtk"
+    rtlcss_hash:       "sha384-mrKuu3shyS5p78eE2DQobpok1z4dU6isk/NpbjATicFx98Ca00JmSXXN0hl1xUJ6"
     iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/orangeIcons.min.css"
     iconcss_hash:      "sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP"
     helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/orangeHelvetica.min.css"
