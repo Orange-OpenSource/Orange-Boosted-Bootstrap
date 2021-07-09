@@ -7,14 +7,17 @@ subgroup: Modules
 toc: true
 ---
 
-<div class="container">
-  <h2 id="suprabar">Supra bar</h2>
-  <p>
-    <strong>Supra bars are hidden on tablet and mobile devices.</strong>
-    Based on viewport size, supra bar is hidden under <var>768px</var>.
-  </p>
-  <h3 class="mt-5 h5">Supra bar standard — <a id="web-glh-sub-001" class="ui-kit-id">web-glh-sub-001</a></h3>
-</div>
+## Supra bars
+{{< callout info >}}
+<strong>Supra bars are hidden on tablet and mobile devices.</strong><br>
+Based on viewport size, supra bar is hidden under <var>768px</var>.
+{{< /callout >}}
+
+### Supra bar standard
+
+{{< anchor web-glh-sub-001 >}}
+
+{{< example show_markup="true" class="p-0">}}
 <nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block">
   <div class="container">
       <div class="navbar-nav">
@@ -23,3 +26,4 @@ toc: true
       </div>
   </div>
 </nav>
+{{< /example >}}
