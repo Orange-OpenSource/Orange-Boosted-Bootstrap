@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.0.1 (https://boosted.orange.com/)
+  * Boosted v5.0.2 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap collapse.js v5.0.1 (https://boosted.orange.com/)
+  * Bootstrap collapse.js v5.0.2 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -120,9 +120,18 @@
     return null;
   };
 
+  const DOMContentLoadedCallbacks = [];
+
   const onDOMContentLoaded = callback => {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', callback);
+      // add listener on the first call when the document is in loading state
+      if (!DOMContentLoadedCallbacks.length) {
+        document.addEventListener('DOMContentLoaded', () => {
+          DOMContentLoadedCallbacks.forEach(callback => callback());
+        });
+      }
+
+      DOMContentLoadedCallbacks.push(callback);
     } else {
       callback();
     }
@@ -149,7 +158,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.1): collapse.js
+   * Bootstrap (v5.0.2): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -265,7 +274,7 @@
 
       if (actives) {
         const tempActiveData = actives.find(elem => container !== elem);
-        activesData = tempActiveData ? Data__default['default'].get(tempActiveData, DATA_KEY) : null;
+        activesData = tempActiveData ? Collapse.getInstance(tempActiveData) : null;
 
         if (activesData && activesData._isTransitioning) {
           return;
@@ -428,7 +437,7 @@
 
 
     static collapseInterface(element, config) {
-      let data = Data__default['default'].get(element, DATA_KEY);
+      let data = Collapse.getInstance(element);
       const _config = { ...Default,
         ...Manipulator__default['default'].getDataAttributes(element),
         ...(typeof config === 'object' && config ? config : {})
@@ -475,7 +484,7 @@
     const selector = getSelectorFromElement(this);
     const selectorElements = SelectorEngine__default['default'].find(selector);
     selectorElements.forEach(element => {
-      const data = Data__default['default'].get(element, DATA_KEY);
+      const data = Collapse.getInstance(element);
       let config;
 
       if (data) {
