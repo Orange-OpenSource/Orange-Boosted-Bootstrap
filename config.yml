@@ -53,8 +53,8 @@ params:
   social_image_path:    /docs/5.0/assets/brand/orange-social.png
   social_logo_path:     /docs/5.0/assets/brand/orange-social-logo.png
 
-  current_version:      "5.0.1"
-  current_ruby_version: "5.0.1"
+  current_version:      "5.0.2"
+  current_ruby_version: "5.0.2"
   docs_version:         "5.0"
   rfs_version:          "9.0.3"
   repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
@@ -63,24 +63,24 @@ params:
   bootstrap:            "https://getbootstrap.com"
 
   download:
-    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.1.zip"
-    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.1/boosted-5.0.1-dist.zip"
-    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.1/boosted-5.0.1-examples.zip"
+    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.2.zip"
+    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.2/boosted-5.0.2-dist.zip"
+    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.2/boosted-5.0.2-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:                "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/boosted.min.css"
-    css_hash:           "sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa"
-    css_rtl:            "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:       "sha384-MwceZlhxmAAZkcPOfMIwwNh4aogVCLkmb4Dq9yQ1pJQNfNACT/kqkpoZerl9pXGw"
-    helvetica:          "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/orange-helvetica.min.css"
+    css:                "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/css/boosted.min.css"
+    css_hash:           "sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/"
+    css_rtl:            "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/css/boosted.rtl.min.css"
+    css_rtl_hash:       "sha384-x/XUPDn/QA0KFhmzaFJDHWswboH4oArIMNaL6078j1pks9u0BMnpKJdY6uzlIIxm"
+    helvetica:          "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/css/orange-helvetica.min.css"
     helvetica_hash:     "sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe"
-    helvetica_rtl:      "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/css/orange-helvetica.rtl.min.css"
+    helvetica_rtl:      "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/css/orange-helvetica.rtl.min.css"
     helvetica_rtl_hash: "sha384-ihl4jOMS2VMlKkg/jH4cTxPHmSMcnVyANsKMO0YSUNvNyrrglHI9Itbx0wLOmV+W"
-    js:                 "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/js/boosted.min.js"
-    js_hash:            "sha384-0tS8fbGKiB7GB70LSdtQkAFJxFUzY5ckwzAdLwenxMFh+RTlXU+qPMhMA1udvoNV"
-    js_bundle:          "https://cdn.jsdelivr.net/npm/boosted@5.0.1/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:     "sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE"
+    js:                 "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/js/boosted.min.js"
+    js_hash:            "sha384-1UbT9rl+kYIxxTzOdYwd5X1Ip8YibY13AW+yGMV9wjvX5866t/KzsEp31+gxs6va"
+    js_bundle:          "https://cdn.jsdelivr.net/npm/boosted@5.0.2/dist/js/boosted.bundle.min.js"
+    js_bundle_hash:     "sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2"
     popper:             "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
     popper_hash:        "sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     focus_visible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"

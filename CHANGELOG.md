@@ -1,3 +1,15 @@
+## [5.0.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/5.0.1...5.0.2) (2021-07-15)
+
+
+### Bug Fixes
+
+* **#694:** replace the boosted.netlify doc links with /docs/5.0 ([01b77cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/01b77cfe114db6392aca0c12f84f607d7172e569)), closes [#694](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/694)
+* **docs:** add a list of Orange custom components in about/overview to fix [#688](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/688) ([f7a78b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7a78b3dcf0cd6404667e549db123c8a7cc04b88))
+* **pa11y:** add pa11y and puppeteer devDependencies to fix the pa11y-ci execution (GitHub actions) and update setup-node version ([3a8990e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a8990e79ba52a66d6adc2386ca3bb4d672ca080))
+* **sri:** v5 documentation rendering is broken due to bad integrity sha384 in config.yml ([54a2e7a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54a2e7aed6e5f9ff8e943e721474a67a71859cc7))
+
+
+
 ## [5.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0...v5.0.1) (2021-06-10)
 
 
