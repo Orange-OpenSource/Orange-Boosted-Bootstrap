@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -648,7 +648,7 @@
 <p><code>$btn-input-*</code> variables are shared global variables between our <a href="/docs/5.0/components/buttons/">buttons</a> and our form components. You&rsquo;ll find these frequently reassigned as values to other component-specific variables.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$input-btn-padding-y</span><span class="o">:</span>         <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$input-btn-padding-x</span><span class="o">:</span>         <span class="mi">1</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$input-btn-font-family</span><span class="o">:</span>       <span class="no">inherit</span><span class="p">;</span>
+<span class="nv">$input-btn-font-family</span><span class="o">:</span>       <span class="ni">inherit</span><span class="p">;</span>
 <span class="nv">$input-btn-font-size</span><span class="o">:</span>         <span class="nv">$font-size-base</span><span class="p">;</span>
 <span class="nv">$input-btn-line-height</span><span class="o">:</span>       <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
 
@@ -656,8 +656,8 @@
 <span class="c1">// Boosted mod: no need for a blur variable
 </span><span class="c1"></span><span class="nv">$input-btn-focus-box-shadow</span><span class="o">:</span>  <span class="n">null</span><span class="p">;</span>
 
-<span class="nv">$input-btn-padding-y-sm</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
-<span class="nv">$input-btn-padding-x-sm</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$input-btn-padding-y-sm</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$input-btn-padding-x-sm</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$input-btn-font-size-sm</span><span class="o">:</span>      <span class="nv">$font-size-sm</span><span class="p">;</span>
 
 <span class="nv">$input-btn-padding-y-lg</span><span class="o">:</span>      <span class="mf">.8125</span><span class="kt">rem</span><span class="p">;</span>
@@ -684,7 +684,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -734,7 +734,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

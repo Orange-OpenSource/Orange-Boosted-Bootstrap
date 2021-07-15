@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bring Boosted to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -461,7 +461,7 @@ If you use special selectors, for example: <code>collapse:Example</code> be sure
 </code></pre></div><h3 id="asynchronous-functions-and-transitions">Asynchronous functions and transitions</h3>
 <p>All programmatic API methods are <strong>asynchronous</strong> and return to the caller once the transition is started but <strong>before it ends</strong>.</p>
 <p>In order to execute an action once the transition is complete, you can listen to the corresponding event.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCollapseEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;#myCollapse&#39;</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCollapseEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myCollapse&#39;</span><span class="p">)</span>
 
 <span class="nx">myCollapseEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Action to execute once the collapsible area is expanded
@@ -486,7 +486,7 @@ If you use special selectors, for example: <code>collapse:Example</code> be sure
 </span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">boostedBtn</span> <span class="o">=</span> <span class="nx">boostedButton</span> <span class="c1">// give $().boostedBtn the Boosted functionality
 </span></code></pre></div><h2 id="version-numbers">Version numbers</h2>
 <p>The version of each of Boosted&rsquo;s plugins can be accessed via the <code>VERSION</code> property of the plugin&rsquo;s constructor. For example, for the tooltip plugin:</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">boosted</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;5.0.1&#34;
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">boosted</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;5.0.2&#34;
 </span></code></pre></div><h2 id="no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</h2>
 <p>Boosted&rsquo;s plugins don&rsquo;t fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
 <div class="bd-callout bd-callout-warning">
@@ -569,7 +569,7 @@ If you use special selectors, for example: <code>collapse:Example</code> be sure
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -619,7 +619,7 @@ If you use special selectors, for example: <code>collapse:Example</code> be sure
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

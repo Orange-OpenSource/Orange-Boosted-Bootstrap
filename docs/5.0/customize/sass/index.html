@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Utilize our source Sass files to take advantage of variables, maps, mixins, and functions to help you build faster and customize your project.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -458,7 +458,7 @@
 <h2 id="variable-defaults">Variable defaults</h2>
 <p>Every Sass variable in Boosted includes the <code>!default</code> flag allowing you to override the variable&rsquo;s default value in your own Sass without modifying Boosted&rsquo;s source code. Copy and paste variables as needed, modify their values, and remove the <code>!default</code> flag. If a variable has already been assigned, then it won&rsquo;t be re-assigned by the default values in Boosted.</p>
 <p>You will find the complete list of Boosted&rsquo;s variables in <code>scss/_variables.scss</code>. Some variables are set to <code>null</code>, these variables don&rsquo;t output the property unless they are overridden in your configuration.</p>
-<p>Variable overrides must come after our functions, variables, and mixins are imported, but before the rest of the imports.</p>
+<p>Variable overrides must come after our functions are imported, but before the rest of the imports.</p>
 <p>Here&rsquo;s an example that changes the <code>background-color</code> and <code>color</code> for the <code>&lt;body&gt;</code> when importing and compiling Boosted via npm:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Required
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
@@ -471,6 +471,8 @@
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
 
+<span class="c1">// Boosted and its default variables
+</span><span class="c1"></span>
 <span class="c1">// Optional Boosted components here
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
@@ -489,7 +491,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 <p>All variables in the <code>$theme-colors</code> map are defined as standalone variables. To modify an existing color in our <code>$theme-colors</code> map, add the following to your custom Sass file:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$primary</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="p">;</span>
 <span class="nv">$danger</span><span class="o">:</span> <span class="mh">#ff4136</span><span class="p">;</span>
-</code></pre></div><p>Later on, theses variables are set in Boosted&rsquo;s <code>$theme-colors</code> map:</p>
+</code></pre></div><p>Later on, these variables are set in Boosted&rsquo;s <code>$theme-colors</code> map:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">,</span>
   <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="nv">$danger</span>
@@ -524,49 +526,49 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 <h3 id="colors">Colors</h3>
 <p>Next to the <a href="/docs/5.0/customize/color/#color-sass-maps">Sass maps</a> we have, theme colors can also be used as standalone variables, like <code>$primary</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">gray-100</span><span class="p">;</span>
-  <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">dark</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="p">;</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>You can lighten or darken colors with Boosted&rsquo;s <code>tint-color()</code> and <code>shade-color()</code> functions. These functions will mix colors with black or white, unlike Sass' native <code>lighten()</code> and <code>darken()</code> functions which will change the lightness by a fixed amount, which often doesn&rsquo;t lead to the desired effect.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Tint a color: mix a color with white
-</span><span class="c1"></span><span class="k">@function</span> <span class="nt">tint-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nt">mix</span><span class="o">(</span><span class="nt">white</span><span class="o">,</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="ni">white</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Shade a color: mix a color with black
-</span><span class="c1"></span><span class="k">@function</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nt">mix</span><span class="o">(</span><span class="nt">black</span><span class="o">,</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Shade the color if the weight is positive, else tint it
-</span><span class="c1"></span><span class="k">@function</span> <span class="nt">shift-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nt">if</span><span class="o">(</span><span class="err">$</span><span class="nt">weight</span> <span class="o">&gt;</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">weight</span><span class="o">),</span> <span class="nt">tint-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="nt">-</span><span class="err">$</span><span class="nt">weight</span><span class="o">))</span><span class="p">;</span>
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shift-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="nv">$weight</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>In practice, you&rsquo;d call the function and pass in the color and weight parameters.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="nt">tint-color</span><span class="o">(</span><span class="err">$</span><span class="nt">primary</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">)</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nc">.custom-element-2</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">danger</span><span class="o">,</span> <span class="nt">30</span><span class="err">%</span><span class="o">)</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="color-contrast">Color contrast</h3>
 <p>In order to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 accessibility standards for color contrast</a>, authors <strong>must</strong> provide <a href="https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast">a contrast ratio of at least 4.5:1</a>, with very few exceptions.</p>
 <p>An additional function we include in Boosted is the color contrast function, <code>color-contrast</code>. It utilizes the <a href="https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests">WCAG 2.0 algorithm</a> for calculating contrast thresholds based on <a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">relative luminance</a> in a <code>sRGB</code> colorspace to automatically return a light (<code>#fff</code>) or dark (<code>#000</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you&rsquo;re generating multiple classes.</p>
 <p>For example, to generate color swatches from our <code>$theme-colors</code> map:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-contrast</span><span class="o">(</span><span class="err">$</span><span class="nt">value</span><span class="o">)</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><p>It can also be used for one-off contrast needs:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-contrast</span><span class="o">(</span><span class="nn">#000</span><span class="o">)</span><span class="p">;</span> <span class="c1">// returns `color: #fff`
+  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><p>You can also specify a base color with our color map functions:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-contrast</span><span class="o">(</span><span class="err">$</span><span class="nt">dark</span><span class="o">)</span><span class="p">;</span> <span class="c1">// returns `color: #fff`
+  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$dark</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><h3 id="escape-svg">Escape SVG</h3>
 <p>We use the <code>escape-svg</code> function to escape the <code>&lt;</code>, <code>&gt;</code> and <code>#</code> characters for SVG background images. When using the <code>escape-svg</code> function, data URIs must be quoted.</p>
@@ -578,12 +580,12 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 
 <span class="nc">.element</span> <span class="p">{</span>
   <span class="c1">// Output calc(.25rem - 1px) is valid
-</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">calc</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span> <span class="nt">-</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nc">.element</span> <span class="p">{</span>
   <span class="c1">// Output the same calc(.25rem - 1px) as above
-</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span><span class="o">,</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><p>Example where the calc is invalid:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
@@ -591,12 +593,12 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 
 <span class="nc">.element</span> <span class="p">{</span>
   <span class="c1">// Output calc(.25rem - 0) is invalid
-</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">calc</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span> <span class="nt">-</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nc">.element</span> <span class="p">{</span>
   <span class="c1">// Output .25rem
-</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span><span class="o">,</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="mixins">Mixins</h2>
 <p>Our <code>scss/mixins/</code> directory has a ton of mixins that power parts of Bootstrap and can also be used across your own project.</p>
@@ -609,7 +611,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 <span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="n">dark</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Insert dark mode styles here
 </span><span class="c1"></span>  <span class="p">}</span>
 
@@ -635,7 +637,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -685,7 +687,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

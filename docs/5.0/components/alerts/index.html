@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -533,7 +533,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 <span class="nv">$alert-border-width</span><span class="o">:</span>                <span class="nv">$border-width</span><span class="p">;</span>
 
 <span class="c1">// Boosted mod
-</span><span class="c1"></span><span class="nv">$alert-padding-sm</span><span class="o">:</span>                  <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class="c1"></span><span class="nv">$alert-padding-sm</span><span class="o">:</span>                  <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$alert-colors</span><span class="o">:</span>                      <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;primary&#34;</span><span class="o">,</span> <span class="s2">&#34;secondary&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
 <span class="nv">$alert-icons</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;success&#34;</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$boosted-variable-prefix</span><span class="si">}</span><span class="n">success-icon</span><span class="p">)</span><span class="o">,</span>
@@ -541,12 +541,12 @@ When an alert is dismissed, the element is completely removed from the page stru
   <span class="s2">&#34;warning&#34;</span><span class="o">:</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$warning-icon</span><span class="p">)</span><span class="o">,</span>
   <span class="s2">&#34;danger&#34;</span><span class="o">:</span>  <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$boosted-variable-prefix</span><span class="si">}</span><span class="n">error-icon</span><span class="p">)</span>
 <span class="p">);</span>
-<span class="nv">$alert-logo-size</span><span class="o">:</span>                   <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">);</span>
+<span class="nv">$alert-logo-size</span><span class="o">:</span>                   <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="o">,</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">);</span>
 <span class="nv">$alert-logo-size-sm</span><span class="o">:</span>                <span class="nf">add</span><span class="p">(</span><span class="mi">1</span><span class="kt">rem</span><span class="o">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">);</span>
 <span class="nv">$alert-icon-size</span><span class="o">:</span>                   <span class="mi">3</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$alert-icon-margin-y</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nv">$alert-icon-margin-y</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.1</span><span class="p">;</span>
 <span class="nv">$alert-btn-close-offset</span><span class="o">:</span>            <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$alert-btn-close-offset-sm</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nv">$alert-btn-close-offset-sm</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
 <span class="c1">// End mod
 </span><span class="c1"></span>
 <span class="nv">$alert-dismissible-padding-r</span><span class="o">:</span>       <span class="nv">$alert-padding-y</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 3x covers width of x plus default padding on either side
@@ -554,24 +554,24 @@ When an alert is dismissed, the element is completely removed from the page stru
 <h3 id="variant-mixin">Variant mixin</h3>
 <p>Used in combination with <code>$theme-colors</code> to create contextual modifier classes for our alerts.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> alert-variant</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="nv">$border</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> gradient-bg</span><span class="p">(</span><span class="nv">$background</span><span class="p">);</span>
-  <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">border</span><span class="p">;</span>
+  <span class="na">border-color</span><span class="o">:</span> <span class="nv">$border</span><span class="p">;</span>
 
   <span class="nc">.alert-link</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="nt">20</span><span class="err">%</span><span class="o">)</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">20</span><span class="kt">%</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="loop">Loop</h3>
 <p>Loop that generates the modifier classes with the <code>alert-variant()</code> mixin.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
-</span><span class="c1"></span><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">alert-colors</span> <span class="p">{</span>
+</span><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$alert-colors</span> <span class="p">{</span>
   <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-    <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">value</span><span class="p">;</span>
+    <span class="na">border-color</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
 
     <span class="nc">.alert-icon</span><span class="nd">::before</span> <span class="p">{</span>
-      <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">alert-icons</span><span class="o">,</span> <span class="err">$</span><span class="nt">color</span><span class="o">)</span><span class="p">;</span>
+      <span class="na">background-image</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$alert-icons</span><span class="o">,</span> <span class="nv">$color</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -621,6 +621,15 @@ When an alert is dismissed, the element is completely removed from the page stru
       </td>
       <td>
         Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>boosted.Alert.getInstance(alert)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>boosted.Alert.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>
@@ -676,7 +685,7 @@ When an alert is dismissed, the element is completely removed from the page stru
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -726,7 +735,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

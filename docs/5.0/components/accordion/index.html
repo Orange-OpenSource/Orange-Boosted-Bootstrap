@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -731,11 +731,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>Please read the <a href="/docs/5.0/components/collapse/#accessibility">collapse accessibility section</a> for more information.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$accordion-padding-y</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nv">$accordion-padding-x</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$accordion-padding-y</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$accordion-padding-x</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$accordion-color</span><span class="o">:</span>                         <span class="nv">$body-color</span><span class="p">;</span>
 <span class="nv">$accordion-bg</span><span class="o">:</span>                            <span class="nv">$body-bg</span><span class="p">;</span>
-<span class="nv">$accordion-border-width</span><span class="o">:</span>                  <span class="nv">$border-width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$accordion-border-width</span><span class="o">:</span>                  <span class="nv">$border-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$accordion-border-color</span><span class="o">:</span>                  <span class="nv">$gray-500</span><span class="p">;</span>
 <span class="nv">$accordion-border-radius</span><span class="o">:</span>                 <span class="nv">$border-radius</span><span class="p">;</span>
 <span class="nv">$accordion-inner-border-radius</span><span class="o">:</span>           <span class="nf">subtract</span><span class="p">(</span><span class="nv">$accordion-border-radius</span><span class="o">,</span> <span class="nv">$accordion-border-width</span><span class="p">);</span>
@@ -747,12 +747,12 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$accordion-button-padding-x</span><span class="o">:</span>              <span class="nv">$accordion-padding-x</span><span class="p">;</span>
 <span class="nv">$accordion-button-color</span><span class="o">:</span>                  <span class="nv">$accordion-color</span><span class="p">;</span>
 <span class="nv">$accordion-button-bg</span><span class="o">:</span>                     <span class="nv">$accordion-bg</span><span class="p">;</span>
-<span class="nv">$accordion-transition</span><span class="o">:</span>                    <span class="nv">$btn-transition</span><span class="o">,</span> <span class="no">border</span><span class="o">-</span><span class="n">radius</span> <span class="mf">.15</span><span class="kt">s</span> <span class="n">ease</span><span class="p">;</span>
+<span class="nv">$accordion-transition</span><span class="o">:</span>                    <span class="nv">$btn-transition</span><span class="o">,</span> <span class="n">border-radius</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 <span class="nv">$accordion-button-active-bg</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
 <span class="nv">$accordion-button-active-color</span><span class="o">:</span>           <span class="nv">$accessible-orange</span><span class="p">;</span>
 
 <span class="c1">// Boosted mod: use caret
-</span><span class="c1"></span><span class="nv">$accordion-icon-transform</span><span class="o">:</span>                <span class="nf">scaleY</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span>
+</span><span class="c1"></span><span class="nv">$accordion-icon-transform</span><span class="o">:</span>                <span class="nf">scaleY</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="c1">// Boosted mod: accordion sizes
 </span><span class="c1"></span><span class="nv">$accordion-button-font-size</span><span class="o">:</span>              <span class="nv">$h3-font-size</span><span class="p">;</span>
@@ -785,7 +785,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -835,7 +835,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

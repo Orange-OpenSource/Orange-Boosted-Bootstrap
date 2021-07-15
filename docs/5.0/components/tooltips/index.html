@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for adding custom Boosted tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -402,6 +402,7 @@
             <li><a href="#toggleenabled">toggleEnabled</a></li>
             <li><a href="#update">update</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#events">Events</a></li>
@@ -493,12 +494,12 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$tooltip-bg</span><span class="o">:</span>                        <span class="nv">$gray-400</span><span class="p">;</span>
 <span class="nv">$tooltip-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius</span><span class="p">;</span>
 <span class="nv">$tooltip-opacity</span><span class="o">:</span>                   <span class="mi">1</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
 
-<span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nv">$tooltip-arrow-height</span><span class="o">:</span>              <span class="nv">$tooltip-arrow-width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$tooltip-arrow-height</span><span class="o">:</span>              <span class="nv">$tooltip-arrow-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$tooltip-arrow-color</span><span class="o">:</span>               <span class="nv">$tooltip-bg</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="usage">Usage</h2>
@@ -635,7 +636,7 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td><code>'hover focus'</code></td>
       <td>
         <p>How tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</p>
-        <p><code>'manual'</code> indicates that the tooltip will be triggered programmatically via the <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> and <code>.tooltip('toggle')</code> methods; this value cannot be combined with any other trigger.</p>
+        <p><code>'manual'</code> indicates that the tooltip will be triggered programmatically via the <code>.show()</code>, <code>.hide()</code> and <code>.toggle()</code> methods; this value cannot be combined with any other trigger.</p>
         <p><code>'hover'</code> on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present.</p>
       </td>
     </tr>
@@ -749,6 +750,10 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
 <p><em>Static</em> method which allows you to get the tooltip instance associated with a DOM element</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Boosted tooltip instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Static</em> method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Boosted tooltip instance
 </span></code></pre></div><h3 id="events">Events</h3>
 <table class="table">
   <thead>
@@ -806,7 +811,7 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -856,7 +861,7 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

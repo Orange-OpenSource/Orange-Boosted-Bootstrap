@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Customize the native &lt;select&gt;s with custom CSS that changes the element&rsquo;s initial appearance.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -478,7 +478,7 @@
 <span class="nv">$form-select-disabled-color</span><span class="o">:</span>        <span class="nv">$gray-700</span><span class="p">;</span>
 <span class="nv">$form-select-disabled-bg</span><span class="o">:</span>           <span class="nv">$gray-300</span><span class="p">;</span>
 <span class="nv">$form-select-disabled-border-color</span><span class="o">:</span> <span class="nv">$input-disabled-border-color</span><span class="p">;</span>
-<span class="nv">$form-select-bg-position</span><span class="o">:</span>           <span class="no">right</span> <span class="nv">$form-select-padding-x</span> <span class="no">top</span> <span class="nf">add</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">);</span>
+<span class="nv">$form-select-bg-position</span><span class="o">:</span>           <span class="ni">right</span> <span class="nv">$form-select-padding-x</span> <span class="ni">top</span> <span class="nf">add</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">);</span>
 <span class="nv">$form-select-bg-size</span><span class="o">:</span>               <span class="mf">.875</span><span class="kt">rem</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// In pixels because image dimensions
 </span><span class="c1"></span><span class="nv">$form-select-indicator</span><span class="o">:</span>             <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 14 7&#39;&gt;&lt;path d=&#39;M7 7L0 0h14L7 7z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span>
 <span class="nv">$form-select-disabled-indicator</span><span class="o">:</span>    <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 14 7&#39;&gt;&lt;path fill=&#39;</span><span class="si">#{</span><span class="nv">$form-select-disabled-color</span><span class="si">}</span><span class="sx">&#39; d=&#39;M7 7L0 0h14L7 7z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span> <span class="c1">// Boosted mod
@@ -495,9 +495,11 @@
 
 <span class="c1">// Boosted mod: no .form-select-sm
 </span><span class="c1"></span>
-<span class="nv">$form-select-padding-y-lg</span><span class="o">:</span>        <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$form-select-padding-y-lg</span><span class="o">:</span>        <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$form-select-padding-x-lg</span><span class="o">:</span>        <span class="nv">$input-padding-x-lg</span><span class="p">;</span>
 <span class="nv">$form-select-font-size-lg</span><span class="o">:</span>        <span class="nv">$input-font-size-lg</span><span class="p">;</span>
+
+<span class="nv">$form-select-transition</span><span class="o">:</span>          <span class="nv">$input-transition</span><span class="p">;</span>
 </code></pre></div>
 
       </div>
@@ -517,7 +519,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -567,7 +569,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

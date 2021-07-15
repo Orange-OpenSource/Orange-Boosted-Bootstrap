@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for Boosted&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -1154,11 +1154,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes <em>before</em> the toggler in the document&rsquo;s structure. We also recommend making sure that the toggler has the <code>aria-controls</code> attribute, pointing to the <code>id</code> of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$navbar-padding-y</span><span class="o">:</span>                  <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span><span class="o">,</span> <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">);</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$navbar-padding-y</span><span class="o">:</span>                  <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span><span class="o">,</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">);</span>
 <span class="nv">$navbar-padding-x</span><span class="o">:</span>                  <span class="n">null</span><span class="p">;</span>
-<span class="nv">$navbar-padding-bottom</span><span class="o">:</span>             <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span> <span class="c1">// Boosted mod
+<span class="nv">$navbar-padding-bottom</span><span class="o">:</span>             <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>
-<span class="nv">$navbar-nav-link-padding-x</span><span class="o">:</span>         <span class="nv">$nav-link-padding-x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$navbar-nav-link-padding-x</span><span class="o">:</span>         <span class="nv">$nav-link-padding-x</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 
 <span class="c1">// Boosted mod: Orange master logo &amp; minimizing behaviour
 </span><span class="c1"></span><span class="nv">$navbar-icon-size</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
@@ -1166,19 +1166,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span><span class="c1"></span><span class="nv">$navbar-brand-logo-height</span><span class="o">:</span>             <span class="nf">add</span><span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$spacer</span><span class="p">);</span>
 <span class="nv">$navbar-brand-logo-minimized-height</span><span class="o">:</span>   <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
 <span class="c1">//$navbar-supra-padding-y:               $navbar-brand-logo-height / 10;
-</span><span class="c1">//$navbar-supra-padding-x:               $spacer / 4 * 1.5;
+</span><span class="c1">//$navbar-supra-padding-x:               $spacer * .25 * 1.5;
 </span><span class="c1"></span><span class="nv">$navbar-transition-duration</span><span class="o">:</span>           <span class="nv">$transition-duration</span><span class="p">;</span>
 <span class="nv">$navbar-transition-timing-function</span><span class="o">:</span>    <span class="nv">$transition-timing</span><span class="p">;</span>
-<span class="nv">$navbar-transition</span><span class="o">:</span>                    <span class="no">padding</span><span class="o">-</span><span class="no">top</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="no">padding</span><span class="o">-</span><span class="no">bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
-<span class="nv">$navbar-brand-transition</span><span class="o">:</span>              <span class="no">margin</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
-<span class="nv">$navbar-brand-logo-transition</span><span class="o">:</span>         <span class="no">width</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="no">height</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
-<span class="nv">$navbar-active-transition</span><span class="o">:</span>             <span class="no">bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
+<span class="nv">$navbar-transition</span><span class="o">:</span>                    <span class="n">padding-top</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">padding-bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
+<span class="nv">$navbar-brand-transition</span><span class="o">:</span>              <span class="n">margin</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
+<span class="nv">$navbar-brand-logo-transition</span><span class="o">:</span>         <span class="ni">width</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">height</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
+<span class="nv">$navbar-active-transition</span><span class="o">:</span>             <span class="ni">bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
 <span class="c1">// End mod
 </span><span class="c1"></span>
 <span class="nv">$navbar-brand-font-size</span><span class="o">:</span>            <span class="nv">$font-size-base</span><span class="p">;</span>
 <span class="c1">// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 </span><span class="c1"></span><span class="nv">$navbar-brand-padding-y</span><span class="o">:</span>            <span class="n">null</span><span class="p">;</span>
-<span class="nv">$navbar-brand-margin-end</span><span class="o">:</span>           <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nv">$navbar-brand-margin-end</span><span class="o">:</span>           <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
 
 <span class="nv">$navbar-toggler-padding-y</span><span class="o">:</span>          <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$navbar-toggler-padding-x</span><span class="o">:</span>          <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
@@ -1191,7 +1191,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$navbar-dark-hover-color</span><span class="o">:</span>            <span class="nv">$primary</span><span class="p">;</span>
 <span class="nv">$navbar-dark-active-color</span><span class="o">:</span>           <span class="nv">$primary</span><span class="p">;</span>
 <span class="nv">$navbar-dark-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-400</span><span class="p">;</span>
-<span class="nv">$navbar-dark-toggler-border-color</span><span class="o">:</span>   <span class="no">transparent</span><span class="p">;</span>
+<span class="nv">$navbar-dark-toggler-border-color</span><span class="o">:</span>   <span class="ni">transparent</span><span class="p">;</span>
 
 <span class="nv">$navbar-light-color</span><span class="o">:</span>                 <span class="nv">$black</span><span class="p">;</span>
 <span class="nv">$navbar-light-hover-color</span><span class="o">:</span>           <span class="nv">$accessible-orange</span><span class="p">;</span>
@@ -1201,7 +1201,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 
 <span class="nv">$navbar-light-brand-color</span><span class="o">:</span>          <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
 <span class="nv">$navbar-light-brand-hover-color</span><span class="o">:</span>    <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
-<span class="nv">$navbar-dark-brand-color</span><span class="o">:</span>           <span class="no">inherit</span><span class="p">;</span>
+<span class="nv">$navbar-dark-brand-color</span><span class="o">:</span>           <span class="ni">inherit</span><span class="p">;</span>
 <span class="nv">$navbar-dark-brand-hover-color</span><span class="o">:</span>     <span class="nv">$navbar-dark-active-color</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="loop">Loop</h3>
@@ -1209,67 +1209,67 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate series of `.navbar-expand-*` responsive classes for configuring
 </span><span class="c1">// where your navbar collapses.
 </span><span class="c1"></span><span class="nc">.navbar-expand</span> <span class="p">{</span>
-  <span class="k">@each</span> <span class="err">$</span><span class="nt">breakpoint</span> <span class="nt">in</span> <span class="nt">map-keys</span><span class="o">(</span><span class="err">$</span><span class="nt">grid-breakpoints</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$next</span><span class="o">:</span> <span class="nf">breakpoint-next</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
     <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$next</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
 
     <span class="c1">// stylelint-disable-next-line scss/selector-no-union-class-name
-</span><span class="c1"></span>    <span class="k">&amp;</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">infix</span><span class="p">}</span> <span class="p">{</span>
+</span><span class="c1"></span>    <span class="k">&amp;</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span> <span class="p">{</span>
       <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nt">flex-wrap</span><span class="nd">:</span> <span class="nt">nowrap</span><span class="p">;</span>
-        <span class="nt">justify-content</span><span class="nd">:</span> <span class="nt">flex-start</span><span class="p">;</span>
-        <span class="nt">padding-top</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-padding-y</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span><span class="c1"></span>        <span class="nt">padding-bottom</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-padding-bottom</span><span class="p">;</span> <span class="c1">// Boosted mod
+        <span class="na">flex-wrap</span><span class="o">:</span> <span class="ni">nowrap</span><span class="p">;</span>
+        <span class="na">justify-content</span><span class="o">:</span> <span class="ni">flex-start</span><span class="p">;</span>
+        <span class="na">padding-top</span><span class="o">:</span> <span class="nv">$navbar-padding-y</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span><span class="c1"></span>        <span class="na">padding-bottom</span><span class="o">:</span> <span class="nv">$navbar-padding-bottom</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>
         <span class="nc">.navbar-nav</span> <span class="p">{</span>
-          <span class="nt">flex-direction</span><span class="nd">:</span> <span class="nt">row</span><span class="p">;</span>
+          <span class="na">flex-direction</span><span class="o">:</span> <span class="ni">row</span><span class="p">;</span>
 
           <span class="nc">.dropdown-menu</span> <span class="p">{</span>
-            <span class="nt">position</span><span class="nd">:</span> <span class="nt">absolute</span><span class="p">;</span>
+            <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
           <span class="p">}</span>
 
           <span class="nc">.nav-link</span> <span class="p">{</span>
-            <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-nav-link-padding-x</span><span class="p">;</span>
-            <span class="nt">padding-left</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-nav-link-padding-x</span><span class="p">;</span>
+            <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$navbar-nav-link-padding-x</span><span class="p">;</span>
+            <span class="na">padding-left</span><span class="o">:</span> <span class="nv">$navbar-nav-link-padding-x</span><span class="p">;</span>
 
             <span class="c1">// Boosted mod
 </span><span class="c1"></span>            <span class="k">&amp;</span><span class="nc">.active</span><span class="nd">::before</span> <span class="p">{</span>
-              <span class="nt">right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">nav-link-padding-y</span><span class="p">;</span>
-              <span class="nt">bottom</span><span class="nd">:</span> <span class="nt">-</span><span class="err">$</span><span class="nt">navbar-padding-bottom</span><span class="p">;</span>
-              <span class="nt">left</span><span class="nd">:</span> <span class="err">$</span><span class="nt">nav-link-padding-y</span><span class="p">;</span>
+              <span class="na">right</span><span class="o">:</span> <span class="nv">$nav-link-padding-y</span><span class="p">;</span>
+              <span class="na">bottom</span><span class="o">:</span> <span class="o">-</span><span class="nv">$navbar-padding-bottom</span><span class="p">;</span>
+              <span class="na">left</span><span class="o">:</span> <span class="nv">$nav-link-padding-y</span><span class="p">;</span>
             <span class="p">}</span>
           <span class="p">}</span>
 
           <span class="nc">.nav-item</span> <span class="p">{</span>
-            <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">font-size-base</span><span class="p">;</span>
-            <span class="nt">border</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span>
+            <span class="na">font-size</span><span class="o">:</span> <span class="nv">$font-size-base</span><span class="p">;</span>
+            <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
           <span class="p">}</span>
           <span class="c1">// End mod
 </span><span class="c1"></span>        <span class="p">}</span>
 
         <span class="c1">// Boosted mod
 </span><span class="c1"></span>        <span class="nc">.navbar-brand</span> <span class="p">{</span>
-          <span class="nt">align-self</span><span class="nd">:</span> <span class="nt">flex-end</span><span class="p">;</span>
-          <span class="nt">margin</span><span class="nd">:</span> <span class="nt">0</span> <span class="err">$</span><span class="nt">spacer</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">spacer</span><span class="o">,</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span> <span class="nt">0</span><span class="p">;</span>
+          <span class="na">align-self</span><span class="o">:</span> <span class="ni">flex-end</span><span class="p">;</span>
+          <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="nv">$spacer</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$spacer</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">)</span> <span class="mi">0</span><span class="p">;</span>
 
           <span class="nt">img</span> <span class="p">{</span>
-            <span class="nt">width</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-brand-logo-height</span><span class="p">;</span>
-            <span class="nt">height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">navbar-brand-logo-height</span><span class="p">;</span>
+            <span class="na">width</span><span class="o">:</span> <span class="nv">$navbar-brand-logo-height</span><span class="p">;</span>
+            <span class="na">height</span><span class="o">:</span> <span class="nv">$navbar-brand-logo-height</span><span class="p">;</span>
           <span class="p">}</span>
         <span class="p">}</span>
         <span class="c1">// End mod
 </span><span class="c1"></span>
         <span class="nc">.navbar-nav-scroll</span> <span class="p">{</span>
-          <span class="nt">overflow</span><span class="nd">:</span> <span class="nt">visible</span><span class="p">;</span>
+          <span class="na">overflow</span><span class="o">:</span> <span class="ni">visible</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="nc">.navbar-collapse</span> <span class="p">{</span>
-          <span class="nt">display</span><span class="nd">:</span> <span class="nt">flex</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span> <span class="c1">// stylelint-disable-line declaration-no-important
-</span><span class="c1"></span>          <span class="nt">flex-basis</span><span class="nd">:</span> <span class="nt">auto</span><span class="p">;</span>
+          <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span> <span class="k">!important</span><span class="p">;</span> <span class="c1">// stylelint-disable-line declaration-no-important
+</span><span class="c1"></span>          <span class="na">flex-basis</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="nc">.navbar-toggler</span> <span class="p">{</span>
-          <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
+          <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
         <span class="p">}</span>
       <span class="p">}</span>
     <span class="p">}</span>
@@ -1294,7 +1294,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -1344,7 +1344,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

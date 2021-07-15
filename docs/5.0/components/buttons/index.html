@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Use Boosted&rsquo;s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -618,7 +618,7 @@
     <span class="s2">&#34;icon&#34;</span><span class="o">:</span> <span class="s2">&#34;&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 26 28&#39;&gt;&lt;path d=&#39;M13 2c3 0 5 2 7 4v6h2l1 1-3 2v1l4 4h1l1 1-4 1-1 2h-2-1c-1 0-2 2-5 2s-4-2-5-2H5l-1-2-4-1 1-1h1l4-4v-1l-3-2 1-1h2V9 6c2-3 4-4 7-4z&#39;/&gt;&lt;/svg&gt;&#34;</span>
   <span class="p">)</span><span class="o">,</span>
   <span class="s2">&#34;pinterest&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="ni">red</span><span class="o">,</span>
+    <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="no">red</span><span class="o">,</span>
     <span class="s2">&#34;icon&#34;</span><span class="o">:</span> <span class="s2">&#34;&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;path d=&#39;M16 2a14 14 0 00-5 27v-4l2-7-1-2c0-2 1-3 3-3l1 2-1 4c0 2 1 3 2 3 3 0 5-3 5-7 0-3-3-5-6-5-4 0-6 3-6 6l1 3a302 302 0 01-1 2c-2-1-3-3-3-5 0-5 3-9 9-9 5 0 9 4 9 8 0 5-3 9-7 9l-4-2v4l-2 3a14 14 0 0018-13c0-8-6-14-14-14z&#39;/&gt;&lt;/svg&gt;&#34;</span><span class="o">,</span>
     <span class="s2">&#34;size&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.375</span><span class="kt">rem</span>
   <span class="p">)</span>
@@ -768,6 +768,23 @@ Visually, these toggle buttons are identical to the <a href="/docs/5.0/forms/che
         Destroys an element's button. (Removes stored data on the DOM element)
       </td>
     </tr>
+    <tr>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Static method which allows you to get the button instance associated to a DOM element, you can use it like this: <code>boosted.Button.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>boosted.Button.getOrCreateInstance(element)</code>
+      </td>
+    </tr>
   </tbody>
 </table>
 <p>For example, to toggle all buttons</p>
@@ -831,56 +848,56 @@ Visually, these toggle buttons are identical to the <a href="/docs/5.0/forms/che
   <span class="nv">$disabled-border</span><span class="o">:</span> <span class="nv">$gray-500</span><span class="o">,</span> <span class="c1">// Boosted mod</span>
   <span class="nv">$disabled-color</span><span class="o">:</span> <span class="nv">$white</span> <span class="c1">// Boosted mod</span>
 <span class="p">)</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> gradient-bg</span><span class="p">(</span><span class="nv">$background</span><span class="p">);</span>
-  <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">border</span><span class="p">;</span>
+  <span class="na">border-color</span><span class="o">:</span> <span class="nv">$border</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="nv">$btn-box-shadow</span><span class="p">);</span>
 
   <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">hover-color</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$hover-color</span><span class="p">;</span>
     <span class="k">@include</span><span class="nd"> gradient-bg</span><span class="p">(</span><span class="nv">$hover-background</span><span class="p">);</span>
-    <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">hover-border</span><span class="p">;</span>
+    <span class="na">border-color</span><span class="o">:</span> <span class="nv">$hover-border</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="c1">// Boosted mod: custom styles for .btn-check
 </span><span class="c1"></span>  <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">hover-color</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$hover-color</span><span class="p">;</span>
     <span class="k">@include</span><span class="nd"> gradient-bg</span><span class="p">(</span><span class="nv">$hover-background</span><span class="p">);</span>
-    <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">hover-border</span><span class="p">;</span>
-    <span class="nt">outline-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">hover-border</span><span class="p">;</span> <span class="c1">// Boosted mod
+    <span class="na">border-color</span><span class="o">:</span> <span class="nv">$hover-border</span><span class="p">;</span>
+    <span class="na">outline-color</span><span class="o">:</span> <span class="nv">$hover-border</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>    <span class="c1">// Boosted mod: buttons share the same `box-shadow` on `:focus`
 </span><span class="c1"></span>  <span class="p">}</span>
 
   <span class="c1">// Boosted mod: custom styles for .btn-check
-</span><span class="c1"></span>  <span class="k">&amp;</span><span class="nd">:active</span><span class="o">,</span>
-  <span class="k">&amp;</span><span class="nc">.active</span><span class="o">,</span>
-  <span class="nc">.show</span> <span class="o">&gt;</span> <span class="k">&amp;</span><span class="nc">.dropdown-toggle</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">active-color</span><span class="p">;</span>
-    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">active-background</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">&amp;</span><span class="o">:</span><span class="n">active</span><span class="o">,</span>
+  <span class="o">&amp;.</span><span class="n">active</span><span class="o">,</span>
+  <span class="o">.</span><span class="ni">show</span> <span class="o">&gt;</span> <span class="o">&amp;.</span><span class="n">dropdown-toggle</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$active-color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$active-background</span><span class="p">;</span>
     <span class="c1">// Remove CSS gradients if they&#39;re enabled
-</span><span class="c1"></span>    <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">if</span><span class="o">(</span><span class="err">$</span><span class="nt">enable-gradients</span><span class="o">,</span> <span class="nt">none</span><span class="o">,</span> <span class="nt">null</span><span class="o">)</span><span class="p">;</span>
-    <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">active-border</span><span class="p">;</span>
-    <span class="nt">outline-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">active-border</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span><span class="c1"></span>    <span class="na">background-image</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$enable-gradients</span><span class="o">,</span> <span class="ni">none</span><span class="o">,</span> <span class="n">null</span><span class="p">);</span>
+    <span class="na">border-color</span><span class="o">:</span> <span class="nv">$active-border</span><span class="p">;</span>
+    <span class="na">outline-color</span><span class="o">:</span> <span class="nv">$active-border</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>
     <span class="c1">// Boosted mod: buttons share the same `box-shadow` on `:focus`
 </span><span class="c1"></span>  <span class="p">}</span>
 
-  <span class="k">&amp;</span><span class="nd">:disabled</span><span class="o">,</span>
-  <span class="k">&amp;</span><span class="nc">.disabled</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">disabled-color</span><span class="p">;</span>
-    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">disabled-background</span><span class="p">;</span>
+  <span class="na">&amp;</span><span class="o">:</span><span class="n">disabled</span><span class="o">,</span>
+  <span class="o">&amp;.</span><span class="n">disabled</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$disabled-color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$disabled-background</span><span class="p">;</span>
     <span class="c1">// Remove CSS gradients if they&#39;re enabled
-</span><span class="c1"></span>    <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">if</span><span class="o">(</span><span class="err">$</span><span class="nt">enable-gradients</span><span class="o">,</span> <span class="nt">none</span><span class="o">,</span> <span class="nt">null</span><span class="o">)</span><span class="p">;</span>
-    <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">disabled-border</span><span class="p">;</span>
+</span><span class="c1"></span>    <span class="na">background-image</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$enable-gradients</span><span class="o">,</span> <span class="ni">none</span><span class="o">,</span> <span class="n">null</span><span class="p">);</span>
+    <span class="na">border-color</span><span class="o">:</span> <span class="nv">$disabled-border</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <!-- Boosted mod: no .btn-ouline -->
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> button-size</span><span class="p">(</span><span class="nv">$padding-y</span><span class="o">,</span> <span class="nv">$padding-x</span><span class="o">,</span> <span class="nv">$font-size</span><span class="o">,</span> <span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$line-height</span><span class="o">:</span> <span class="n">null</span><span class="o">,</span> <span class="nv">$icon-spacing</span><span class="o">:</span> <span class="nv">$btn-icon-padding-x</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">boosted-variable-prefix</span><span class="p">}</span><span class="nt">icon-spacing</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">icon-spacing</span><span class="p">};</span> <span class="c1">// Boosted mod: used for icons
-</span><span class="c1"></span>  <span class="nt">padding</span><span class="nd">:</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">padding-y</span><span class="o">,</span> <span class="nt">1px</span><span class="o">)</span> <span class="err">$</span><span class="nt">padding-x</span> <span class="nt">add</span><span class="o">(</span><span class="err">$</span><span class="nt">padding-y</span><span class="o">,</span> <span class="nt">1px</span><span class="o">)</span><span class="p">;</span>
+  <span class="na">--#{$boosted-variable-prefix}icon-spacing</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$icon-spacing</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod: used for icons
+</span><span class="c1"></span>  <span class="na">padding</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$padding-y</span><span class="o">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">)</span> <span class="nv">$padding-x</span> <span class="nf">add</span><span class="p">(</span><span class="nv">$padding-y</span><span class="o">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">);</span>
   <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$font-size</span><span class="p">);</span>
-  <span class="nt">line-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">line-height</span><span class="p">;</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="nv">$line-height</span><span class="p">;</span>
   <span class="c1">// Manually declare to provide an override to the browser default
 </span><span class="c1"></span>  <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
@@ -895,18 +912,18 @@ Visually, these toggle buttons are identical to the <a href="/docs/5.0/forms/che
   <span class="nv">$selector</span><span class="o">:</span> <span class="o">&amp;,</span>
   <span class="nv">$position</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
 <span class="p">)</span> <span class="p">{</span>
-  <span class="nt">min-width</span><span class="nd">:</span> <span class="err">$</span><span class="nt">width</span><span class="p">;</span>
-  <span class="nt">min-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">height</span><span class="p">;</span>
+  <span class="na">min-width</span><span class="o">:</span> <span class="nv">$width</span><span class="p">;</span>
+  <span class="na">min-height</span><span class="o">:</span> <span class="nv">$height</span><span class="p">;</span>
 
-  <span class="k">@at-root</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">selector</span><span class="p">}</span> <span class="p">{</span>
+  <span class="k">@at-root</span> <span class="si">#{</span><span class="nv">$selector</span><span class="si">}</span> <span class="p">{</span>
     <span class="k">&amp;</span><span class="nd">::</span><span class="si">#{</span><span class="nv">$pseudo</span><span class="si">}</span> <span class="p">{</span>
-      <span class="nt">display</span><span class="nd">:</span> <span class="nt">block</span><span class="p">;</span>
-      <span class="nt">min-width</span><span class="nd">:</span> <span class="nt">inherit</span><span class="p">;</span>
-      <span class="nt">min-height</span><span class="nd">:</span> <span class="nt">inherit</span><span class="p">;</span>
-      <span class="nt">content</span><span class="nd">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-      <span class="nt">background-color</span><span class="nd">:</span> <span class="nt">currentColor</span><span class="p">;</span>
-      <span class="nt">-webkit-mask</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">icon</span><span class="p">}</span> <span class="nt">no-repeat</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">position</span><span class="p">}</span> <span class="o">/</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">size</span><span class="p">};</span> <span class="c1">// stylelint-disable-line property-no-vendor-prefix
-</span><span class="c1"></span>      <span class="nt">mask</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">icon</span><span class="p">}</span> <span class="nt">no-repeat</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">position</span><span class="p">}</span> <span class="o">/</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">size</span><span class="p">};</span>
+      <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
+      <span class="na">min-width</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
+      <span class="na">min-height</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
+      <span class="na">content</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+      <span class="na">background-color</span><span class="o">:</span> <span class="ni">currentColor</span><span class="p">;</span>
+      <span class="na">-webkit-mask</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$icon</span><span class="si">}</span> <span class="ni">no-repeat</span> <span class="si">#{</span><span class="nv">$position</span><span class="si">}</span> <span class="o">/</span> <span class="si">#{</span><span class="nv">$size</span><span class="si">}</span><span class="p">;</span> <span class="c1">// stylelint-disable-line property-no-vendor-prefix
+</span><span class="c1"></span>      <span class="na">mask</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$icon</span><span class="si">}</span> <span class="ni">no-repeat</span> <span class="si">#{</span><span class="nv">$position</span><span class="si">}</span> <span class="o">/</span> <span class="si">#{</span><span class="nv">$size</span><span class="si">}</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -954,7 +971,7 @@ Visually, these toggle buttons are identical to the <a href="/docs/5.0/forms/che
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -1004,7 +1021,7 @@ Visually, these toggle buttons are identical to the <a href="/docs/5.0/forms/che
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

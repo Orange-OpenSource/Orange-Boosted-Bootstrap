@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -704,14 +704,14 @@
     <span class="nv">$hover-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-hover-bg-factor</span><span class="p">));</span>
     <span class="nv">$active-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-active-bg-factor</span><span class="p">));</span>
 
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-bg</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">background</span><span class="p">};</span>
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-active-bg</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">active-bg</span><span class="p">};</span>
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-active-color</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="nt">color-contrast</span><span class="o">(</span><span class="err">$</span><span class="nt">active-bg</span><span class="o">)</span><span class="p">};</span>
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-hover-bg</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">hover-bg</span><span class="p">};</span>
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-hover-color</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="nt">color-contrast</span><span class="o">(</span><span class="err">$</span><span class="nt">hover-bg</span><span class="o">)</span><span class="p">};</span>
-    <span class="nt">--</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">variable-prefix</span><span class="p">}</span><span class="nt">table-border-color</span><span class="nd">:</span> <span class="nn">#</span><span class="p">{</span><span class="nt">mix</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">background</span><span class="o">,</span> <span class="nt">percentage</span><span class="o">(</span><span class="err">$</span><span class="nt">table-border-factor</span><span class="o">))</span><span class="p">};</span>
+    <span class="na">--#{$variable-prefix}table-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$background</span><span class="si">}</span><span class="p">;</span>
+    <span class="na">--#{$variable-prefix}table-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$active-bg</span><span class="si">}</span><span class="p">;</span>
+    <span class="na">--#{$variable-prefix}table-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$active-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
+    <span class="na">--#{$variable-prefix}table-hover-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$hover-bg</span><span class="si">}</span><span class="p">;</span>
+    <span class="na">--#{$variable-prefix}table-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$hover-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
+    <span class="na">--#{$variable-prefix}table-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-border-factor</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
 
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1558,16 +1558,17 @@
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$table-cell-padding-y</span><span class="o">:</span>      <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$table-cell-padding-x</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$table-cell-padding-x</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$table-cell-padding-y-sm</span><span class="o">:</span>   <span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$table-cell-padding-x-sm</span><span class="o">:</span>   <span class="nv">$table-cell-padding-x</span><span class="p">;</span>
 
-<span class="nv">$table-cell-vertical-align</span><span class="o">:</span>   <span class="no">top</span><span class="p">;</span>
+<span class="nv">$table-cell-vertical-align</span><span class="o">:</span>   <span class="ni">top</span><span class="p">;</span>
 <span class="nv">$table-line-height</span><span class="o">:</span>           <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>
 <span class="nv">$table-color</span><span class="o">:</span>                 <span class="nv">$body-color</span><span class="p">;</span>
 <span class="nv">$table-bg</span><span class="o">:</span>                    <span class="nv">$body-bg</span><span class="p">;</span>
-
+<span class="c1">// Boosted mod: no $table-accent-bg
+</span><span class="c1"></span>
 <span class="nv">$table-th-font-weight</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span>
 
 <span class="nv">$table-active-color</span><span class="o">:</span>          <span class="nv">$table-color</span><span class="p">;</span>
@@ -1579,10 +1580,10 @@
 <span class="nv">$table-hover-bg</span><span class="o">:</span>              <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-hover-bg-factor</span><span class="p">);</span>
 
 <span class="nv">$table-border-factor</span><span class="o">:</span>         <span class="mf">.4</span><span class="p">;</span>
-<span class="nv">$table-border-width</span><span class="o">:</span>          <span class="nv">$border-width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$table-border-width</span><span class="o">:</span>          <span class="nv">$border-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$table-border-color</span><span class="o">:</span>          <span class="nv">$gray-500</span><span class="p">;</span>
 
-<span class="nv">$table-group-separator-color</span><span class="o">:</span> <span class="n">currentColor</span><span class="p">;</span>
+<span class="nv">$table-group-separator-color</span><span class="o">:</span> <span class="ni">currentColor</span><span class="p">;</span>
 
 <span class="nv">$table-caption-color</span><span class="o">:</span>         <span class="nv">$black</span><span class="p">;</span>
 <span class="nv">$table-caption-padding-y</span><span class="o">:</span>     <span class="mf">.75</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
@@ -1613,7 +1614,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -1663,7 +1664,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A brief overview of Boosted&rsquo;s features and limitations for the creation of accessible content.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -426,16 +426,16 @@
 <h3 id="focus-visibility">Focus visibility</h3>
 <p>Boosted includes <a href="https://github.com/WICG/focus-visible">WICG&rsquo;s <code>:focus-visible</code> polyfill</a> to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nd">:focus</span> <span class="p">{</span>
-  <span class="nt">outline</span><span class="nd">:</span> <span class="err">$</span><span class="nt">outline-width</span> <span class="nt">solid</span><span class="p">;</span> <span class="c1">// 1
+  <span class="na">outline</span><span class="o">:</span> <span class="nv">$outline-width</span> <span class="ni">solid</span><span class="p">;</span> <span class="c1">// 1
 </span><span class="c1"></span><span class="p">}</span>
 
 <span class="nc">.js-focus-visible</span> <span class="nd">:focus:not</span><span class="o">([</span><span class="nt">data-focus-visible-added</span><span class="o">]),</span>
 <span class="nc">.js-focus-visible</span> <span class="nc">.focus</span><span class="nd">:not</span><span class="o">([</span><span class="nt">data-focus-visible-added</span><span class="o">])</span> <span class="p">{</span> <span class="c1">// 2
-</span><span class="c1"></span>  <span class="nt">outline</span><span class="nd">:</span> <span class="nt">0</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">outline</span><span class="o">:</span> <span class="mi">0</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Each component then specifies its own focus style, usually a solid <code>2px</code> outline with an <code>outline-offset</code> transition.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-focus</span><span class="o">:</span>    <span class="no">outline</span><span class="o">-</span><span class="n">offset</span> <span class="nv">$transition-duration</span> <span class="nv">$transition-timing</span><span class="p">;</span> <span class="c1">// Boosted mod
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-focus</span><span class="o">:</span>    <span class="n">outline-offset</span> <span class="nv">$transition-duration</span> <span class="nv">$transition-timing</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></code></pre></div>
 <h4 id="under-a-fixed-header">Under a fixed header</h4>
 <p>When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets <code>scroll-padding-top</code> property for such case. This feature is configurable in two ways:</p>
@@ -444,28 +444,28 @@
 <li>and <a href="/docs/5.0/customize/options/"><code>$enable-fixed-header</code> allows to drop this rule</a> if you don&rsquo;t use a fixed header.</li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss">  <span class="k">@if</span> <span class="nv">$enable-fixed-header</span> <span class="p">{</span>
-    <span class="nt">scroll-padding-top</span><span class="nd">:</span> <span class="err">$</span><span class="nt">scroll-offset-top</span> <span class="o">/</span> <span class="nt">2</span><span class="p">;</span>
+    <span class="na">scroll-padding-top</span><span class="o">:</span> <span class="nv">$scroll-offset-top</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 
     <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nt">scroll-padding-top</span><span class="nd">:</span> <span class="err">$</span><span class="nt">scroll-offset-top</span><span class="p">;</span>
+      <span class="na">scroll-padding-top</span><span class="o">:</span> <span class="nv">$scroll-offset-top</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
   </code></pre></div>
 <h3 id="minimum-target-size">Minimum target size</h3>
 <p>Boosted provides <code>target-size()</code> mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to <code>44px</code> to pass <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">WCAG 2.1 &ldquo;Target Size&rdquo; Success Criterion (2.5.5)</a>— alongside a few arguments to fit specific needs (eg. different width and height, using <code>::after</code> instead of <code>::before</code>, etc.).</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> target-size</span><span class="p">(</span><span class="nv">$size</span><span class="o">:</span> <span class="nv">$target-size</span><span class="o">,</span> <span class="nv">$pseudo-element</span><span class="o">:</span> <span class="n">before</span><span class="o">,</span> <span class="nv">$position</span><span class="o">:</span> <span class="no">relative</span><span class="o">,</span> <span class="nv">$width</span><span class="o">:</span> <span class="nv">$size</span><span class="o">,</span> <span class="nv">$height</span><span class="o">:</span> <span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">position</span><span class="nd">:</span> <span class="err">$</span><span class="nt">position</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> target-size</span><span class="p">(</span><span class="nv">$size</span><span class="o">:</span> <span class="nv">$target-size</span><span class="o">,</span> <span class="nv">$pseudo-element</span><span class="o">:</span> <span class="n">before</span><span class="o">,</span> <span class="nv">$position</span><span class="o">:</span> <span class="ni">relative</span><span class="o">,</span> <span class="nv">$width</span><span class="o">:</span> <span class="nv">$size</span><span class="o">,</span> <span class="nv">$height</span><span class="o">:</span> <span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="na">position</span><span class="o">:</span> <span class="nv">$position</span><span class="p">;</span>
 
   <span class="k">&amp;</span><span class="nd">::</span><span class="si">#{</span><span class="nv">$pseudo-element</span><span class="si">}</span> <span class="p">{</span>
-    <span class="nt">position</span><span class="nd">:</span> <span class="nt">absolute</span><span class="p">;</span>
-    <span class="nt">top</span><span class="nd">:</span> <span class="nt">50</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">left</span><span class="nd">:</span> <span class="nt">50</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">width</span><span class="nd">:</span> <span class="err">$</span><span class="nt">width</span><span class="p">;</span>
-    <span class="nt">min-width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">height</span><span class="p">;</span>
-    <span class="nt">min-height</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">content</span><span class="nd">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-    <span class="nt">transform</span><span class="nd">:</span> <span class="nt">translate3d</span><span class="o">(</span><span class="nt">-50</span><span class="err">%</span><span class="o">,</span> <span class="nt">-50</span><span class="err">%</span><span class="o">,</span> <span class="nt">0</span><span class="o">)</span><span class="p">;</span>
+    <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
+    <span class="na">top</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nv">$width</span><span class="p">;</span>
+    <span class="na">min-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="nv">$height</span><span class="p">;</span>
+    <span class="na">min-height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">content</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+    <span class="na">transform</span><span class="o">:</span> <span class="nf">translate3d</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="o">-</span><span class="mi">50</span><span class="kt">%</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -502,7 +502,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -552,7 +552,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -403,6 +403,7 @@
             <li><a href="#show">show</a></li>
             <li><a href="#dispose">dispose</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#events">Events</a></li>
@@ -870,14 +871,14 @@
 <p>Used in combination with <code>$theme-colors</code> to generate the <a href="#contextual-classes">contextual variant classes</a> for <code>.list-group-item</code>s.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
   <span class="nc">.list-group-item-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">background</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$background</span><span class="p">;</span>
 
     <span class="k">&amp;</span><span class="nc">.list-group-item-action</span> <span class="p">{</span>
-      <span class="k">&amp;</span><span class="nd">:hover</span><span class="o">,</span>
-      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-        <span class="nt">background-color</span><span class="nd">:</span> <span class="nt">if</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span> <span class="o">==</span> <span class="err">$</span><span class="nt">white</span><span class="o">,</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">background</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">),</span> <span class="nt">tint-color</span><span class="o">(</span><span class="err">$</span><span class="nt">background</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">))</span><span class="p">;</span> <span class="c1">// Boosted mod
+      <span class="na">&amp;</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+      <span class="o">&amp;:</span><span class="ni">focus</span> <span class="p">{</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$color</span> <span class="o">==</span> <span class="nv">$white</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">));</span> <span class="c1">// Boosted mod
 </span><span class="c1"></span>      <span class="p">}</span>
 
       <span class="c1">// Boosted mod: no variant for active state
@@ -891,7 +892,7 @@
 </span><span class="c1">//
 </span><span class="c1">// Add modifier classes to change text and background color on individual items.
 </span><span class="c1">// Organizationally, this must come after the `:hover` states.
-</span><span class="c1"></span><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">background-colors</span> <span class="p">{</span>
+</span><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$background-colors</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> list-group-item-variant</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1022,6 +1023,10 @@
 <p><em>Static</em> method which allows you to get the tab instance associated with a DOM element</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Boosted tab instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Static</em> method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Boosted tab instance
 </span></code></pre></div><h3 id="events">Events</h3>
 <p>When showing a new tab, the events fire in the following order:</p>
 <ol>
@@ -1057,11 +1062,13 @@
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;a[data-bs-toggle=&#34;list&#34;]&#39;</span><span class="p">)</span>
-<span class="nx">tabEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// newly activated tab
-</span><span class="c1"></span>  <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous active tab
-</span><span class="c1"></span><span class="p">})</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tabElms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;a[data-bs-toggle=&#34;list&#34;]&#39;</span><span class="p">)</span>
+<span class="nx">tabElms</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">tabElm</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">tabElm</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// newly activated tab
+</span><span class="c1"></span>    <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous active tab
+</span><span class="c1"></span>  <span class="p">})</span>
+<span class="p">}</span>
 </code></pre></div>
       </div>
     </main>
@@ -1080,7 +1087,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -1130,7 +1137,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

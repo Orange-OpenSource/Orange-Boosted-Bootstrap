@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-WzcZhMVAdM9KyQQnVNbhRtYY2HQLhwTSo2sZJ4YzZ2rrZPW0j3Xl3NuKjbJqV1oa" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-6VTsNhIHFxNglfMLfhvvJFxXZbdvT1UXhm7+wVMAda9c+2NIFu4zmlKKz/bJthi/" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -444,10 +444,10 @@
 <h2 id="documentation-changes">Documentation changes</h2>
 <ul>
 <li>Redesigned homepage, docs layout, and footer.</li>
-<li>Added <a href="https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/parcel/">new Parcel guide</a>.</li>
-<li>Added <a href="https://v5-dev--boosted.netlify.app/docs/5.0/customize/overview/">new Customize section</a>, replacing <a href="https://boosted.orange.com/docs/4.6/getting-started/theming/">v4&rsquo;s Theming page</a>, with new details on Sass, global configuration options, color schemes, CSS variables, and more.</li>
-<li>Reorganized all form documentation into <a href="https://v5-dev--boosted.netlify.app/docs/5.0/forms/overview/">new Forms section</a>, breaking apart the content into more focused pages.</li>
-<li>Similarly, updated <a href="https://v5-dev--boosted.netlify.app/docs/5.0/layout/breakpoints/">the Layout section</a>, to flesh out grid content more clearly.</li>
+<li>Added <a href="/docs/5.0/getting-started/parcel/">new Parcel guide</a>.</li>
+<li>Added <a href="/docs/5.0/customize/overview/">new Customize section</a>, replacing <a href="https://boosted.orange.com/docs/4.6/getting-started/theming/">v4&rsquo;s Theming page</a>, with new details on Sass, global configuration options, color schemes, CSS variables, and more.</li>
+<li>Reorganized all form documentation into <a href="/docs/5.0/forms/overview/">new Forms section</a>, breaking apart the content into more focused pages.</li>
+<li>Similarly, updated <a href="/docs/5.0/layout/breakpoints/">the Layout section</a>, to flesh out grid content more clearly.</li>
 <li>Renamed &ldquo;Navs&rdquo; component page to &ldquo;Navs &amp; Tabs&rdquo;.</li>
 <li>Renamed &ldquo;Checks&rdquo; page to &ldquo;Checks &amp; radios&rdquo;.</li>
 <li>Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.</li>
@@ -463,6 +463,13 @@
 <ul>
 <li><code>$yiq-contrasted-threshold</code> is renamed to <code>$min-contrast-ratio</code>.</li>
 <li><code>$yiq-text-dark</code> and <code>$yiq-text-light</code> are respectively renamed to <code>$color-contrast-dark</code> and <code>$color-contrast-light</code>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.</p>
+<ul>
+<li><code>media-breakpoint-down()</code> uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-breakpoint-down(lg)</code> instead of <code>media-breakpoint-down(md)</code> targets viewports smaller than <code>lg</code>).</li>
+<li>Similarly, the second parameter in <code>media-breakpoint-between()</code> also uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-between(sm, lg)</code> instead of <code>media-breakpoint-between(sm, md)</code> targets viewports between <code>sm</code> and <code>lg</code>).</li>
 </ul>
 </li>
 <li>
@@ -526,7 +533,7 @@
 <li>
 <p><strong>Improved gutters.</strong> Gutters are now set in rems, and are narrower than v4 (<code>1.5rem</code>, or about <code>24px</code>, down from <code>30px</code>). This aligns our grid system&rsquo;s gutters with our spacing utilities.</p>
 <ul>
-<li>Added new <a href="https://v5-dev--boosted.netlify.app/docs/5.0/layout/gutters/">gutter class</a> (<code>.g-*</code>, <code>.gx-*</code>, and <code>.gy-*</code>) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.</li>
+<li>Added new <a href="/docs/5.0/layout/gutters/">gutter class</a> (<code>.g-*</code>, <code>.gx-*</code>, and <code>.gy-*</code>) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.</li>
 <li><span class="badge bg-danger">Breaking</span> Renamed <code>.no-gutters</code> to <code>.g-0</code> to match new gutter utilities.</li>
 </ul>
 </li>
@@ -573,7 +580,7 @@
 <p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> and <code>.thead-dark</code> are dropped in favor of the <code>.table-*</code> variant classes which can be used for all table elements (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code>).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> The <code>table-row-variant()</code> mixin is renamed to <code>table-variant()</code> and accepts only 2 parameters: <code>$color</code> (colon name) and <code>$value</code> (color code). The border color and accent colors are automatically calculated based on the table factor variables.</p>
+<p><span class="badge bg-danger">Breaking</span> The <code>table-row-variant()</code> mixin is renamed to <code>table-variant()</code> and accepts only 2 parameters: <code>$color</code> (color name) and <code>$value</code> (color code). The border color and accent colors are automatically calculated based on the table factor variables.</p>
 </li>
 <li>
 <p>Split table cell padding variables into <code>-y</code> and <code>-x</code>.</p>
@@ -679,10 +686,10 @@
 <h3 id="buttons">Buttons</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong><a href="https://v5-dev--boosted.netlify.app/docs/5.0/forms/checks-radios/#toggle-buttons">Toggle buttons</a>, with checkboxes or radios, no longer require JavaScript and have new markup.</strong> We no longer require a wrapping element, add <code>.btn-check</code> to the <code>&lt;input&gt;</code>, and pair it with any <code>.btn</code> classes on the <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">See #30650</a>. <em>The docs for this has moved from our Buttons page to the new Forms section.</em></p>
+<p><span class="badge bg-danger">Breaking</span> <strong><a href="/docs/5.0/forms/checks-radios/#toggle-buttons">Toggle buttons</a>, with checkboxes or radios, no longer require JavaScript and have new markup.</strong> We no longer require a wrapping element, add <code>.btn-check</code> to the <code>&lt;input&gt;</code>, and pair it with any <code>.btn</code> classes on the <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">See #30650</a>. <em>The docs for this has moved from our Buttons page to the new Forms section.</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Dropped <code>.btn-block</code> for utilities.</strong> Instead of using <code>.btn-block</code> on the <code>.btn</code>, wrap your buttons with <code>.d-grid</code> and a <code>.gap-*</code> utility to space them as needed. Switch to responsive classes for even more control over them. <a href="https://v5-dev--boosted.netlify.app/docs/5.0/components/buttons/#block-buttons">Read the docs for some examples.</a></p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Dropped <code>.btn-block</code> for utilities.</strong> Instead of using <code>.btn-block</code> on the <code>.btn</code>, wrap your buttons with <code>.d-grid</code> and a <code>.gap-*</code> utility to space them as needed. Switch to responsive classes for even more control over them. <a href="/docs/5.0/components/buttons/#block-buttons">Read the docs for some examples.</a></p>
 </li>
 <li>
 <p>Updated our <code>button-variant()</code> and <code>button-outline-variant()</code> mixins to support additional parameters.</p>
@@ -761,7 +768,7 @@
 </ul>
 <h3 id="jumbotron">Jumbotron</h3>
 <ul>
-<li><span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. <a href="https://v5-dev--boosted.netlify.app/docs/5.0/examples/jumbotron/">See our new Jumbotron example for a demo.</a></li>
+<li><span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. <a href="/docs/5.0/examples/jumbotron/">See our new Jumbotron example for a demo.</a></li>
 </ul>
 <h3 id="list-group">List group</h3>
 <ul>
@@ -954,7 +961,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -1004,7 +1011,7 @@
 </nav>
 
 
-    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-mFPPHeH+rtMsMEPs8/kfTxLkXuDuTN+VunbATtzU3lWRS/8BeEuZ3Ck9jEYE8ICE" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-a3K6jz95fJEM/VHhViODijMUDGZsk3kzR9A9te5dH5jYIoXW7scODk+TtVjLhCW2" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
