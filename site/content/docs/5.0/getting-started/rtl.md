@@ -54,10 +54,16 @@ You can see the above requirements reflected in this modified RTL starter templa
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
+    <!-- Option 1: Use a CDN -->
+    <link href="{{< param "cdn.HelveticaNeueW20-55Roman" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-55Roman_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.HelveticaNeueW20-75Bold" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-75Bold_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.helvetica_rtl" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_rtl_hash" >}}" crossorigin="anonymous">
+
+    <!-- Option 2: Embed the fonts
     <link href="dist/fonts/HelveticaNeueW20-55Roman.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="dist/fonts/HelveticaNeueW20-75Bold.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-    <link href="{{< param "cdn.helvetica_rtl" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_rtl_hash" >}}" crossorigin="anonymous">
+    <link href="dist/css/orange-helvetica.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
+    -->
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
