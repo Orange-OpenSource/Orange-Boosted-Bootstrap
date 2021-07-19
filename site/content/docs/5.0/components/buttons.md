@@ -25,33 +25,34 @@ Boosted includes several predefined button styles, each serving its own semantic
 {{< /callout >}}
 
 <!-- Boosted mod -->
+
 ## With icon
 
 The recommended way of using an icon in a button is [an embedded SVG]({{< docsref "/extend/icons" >}}). You need to:
 
-- set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `1rem`,
+- set its dimensions to `1.25rem` to match button size—except for `.btn-sm` where you should use `1rem`,
 - apply `.me-1` on it to get consistent spacing,
 - fill it using `currentColor` to respect button color scheme,
 - finally add `.overflow-visible` utility to prevent SVG content from being cropped.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Secondary
+<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+Secondary
 </button>
 <button type="button" class="btn btn-primary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Secondary
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+Secondary
 </button>
 <button type="button" class="btn btn-primary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Secondary
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+Secondary
 </button>
 {{< /example >}}
 
@@ -61,22 +62,22 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-secondary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
+<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-secondary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">Secondary</span>
 </button>
 {{< /example >}}
 
@@ -86,22 +87,22 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
+<svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
+<svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+<span class="visually-hidden">No outline</span>
 </button>
 {{< /example >}}
 
@@ -110,15 +111,15 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
 Use `.btn-social` to get a rounded button meant to display contact points links or actions. Use one of our modifier to specify a network. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example >}}
-<a href="/" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
-<a href="/" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
-<a href="/" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
-<a href="/" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
-<a href="/" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
-<a href="/" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
-<a href="/" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
-<a href="/" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
-<a href="/" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
+<a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
+<a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
+<a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
+<a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
+<a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
+<a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
+<a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
+<a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
+<a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
 {{< /example >}}
 
 Supported social networks are declared in a dedicated Sass map—meaning you're able to [add or remove a network from the following map]({{< docsref "/customize/sass#maps-and-loops" >}}).
@@ -146,7 +147,6 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 {{< /example >}}
 
 <!-- Boosted mod: No outline buttons -->
-
 
 ## Sizes
 
@@ -183,6 +183,7 @@ Disabled buttons using the `<a>` element behave a bit different:
 {{< /example >}}
 
 {{< callout warning >}}
+
 ##### Link functionality caveat
 
 The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
@@ -193,6 +194,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< example >}}
+
 <div class="d-grid gap-2">
   <button class="btn btn-primary" type="button">Button</button>
   <button class="btn btn-primary" type="button">Button</button>
@@ -202,6 +204,7 @@ Create responsive stacks of full-width, "block buttons" like those in Boosted 4 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
 
 {{< example >}}
+
 <div class="d-grid gap-2 d-md-block">
   <button class="btn btn-primary" type="button">Button</button>
   <button class="btn btn-primary" type="button">Button</button>
@@ -211,6 +214,7 @@ Here we create a responsive variation, starting with vertically stacked buttons 
 You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example >}}
+
 <div class="d-grid gap-2 col-6 mx-auto">
   <button class="btn btn-primary" type="button">Button</button>
   <button class="btn btn-primary" type="button">Button</button>
@@ -220,6 +224,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they're no longer stacked.
 
 {{< example >}}
+
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary me-md-2" type="button">Button</button>
   <button class="btn btn-primary" type="button">Button</button>
@@ -255,8 +260,8 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 You can create a button instance with the button constructor, for example:
 
 ```js
-var button = document.getElementById('myButton')
-var bsButton = new boosted.Button(button)
+var button = document.getElementById("myButton");
+var bsButton = new boosted.Button(button);
 ```
 
 <table class="table">
@@ -306,11 +311,11 @@ var bsButton = new boosted.Button(button)
 For example, to toggle all buttons
 
 ```js
-var buttons = document.querySelectorAll('.btn')
+var buttons = document.querySelectorAll(".btn");
 buttons.forEach(function (button) {
-  var button = new boosted.Button(button)
-  button.toggle()
-})
+  var button = new boosted.Button(button);
+  button.toggle();
+});
 ```
 
 ## Sass
@@ -330,6 +335,7 @@ There are three mixins for buttons: button and button outline variant mixins (bo
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
 <!-- Boosted mod: .btn-icon -->
+
 {{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}}
 
 ### Loops
