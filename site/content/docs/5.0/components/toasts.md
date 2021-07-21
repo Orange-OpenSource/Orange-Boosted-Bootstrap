@@ -48,7 +48,7 @@ Click the button below to show a toast (positioned with our utilities in the low
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+      {{< placeholder width="20" height="20" background="#ff7900" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
