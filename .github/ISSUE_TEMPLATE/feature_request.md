@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for a new feature in Boosted.
 title: ''
 labels: feature
-assignees: ffoodd
+assignees: Nurovek
 
 ---
 
