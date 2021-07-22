@@ -355,7 +355,9 @@ $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
-$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{black}'><path d='M28,21 L28,23 L2,23 L2,21 L28,21 Z M28,14 L28,16 L2,16 L2,14 L28,14 Z M28,7 L28,9 L2,9 L2,7 L28,7 Z'></path></svg>") !default;
+$burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{black}'><path d='M2,19 L23,19 L23,17 L2,17 L2,19 Z M2,13 L23,13 L23,11 L2,11 L2,13 Z M2,7 L23,7 L23,5 L2,5 L2,7 Z'></path></svg>") !default;
+
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 01-1.3 3.7L57.7 86a5.8 5.8 0 01-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 011.7-4.1l2.3-2.4a5.8 5.8 0 014.2-1.7 5.8 5.8 0 013.8 1.4L52 64.7 86.6 31a5.8 5.8 0 014-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 100 30 15 15 0 000-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
@@ -1189,15 +1191,17 @@ $navbar-padding-bottom:             add($spacer * .25, $border-width) !default; 
 $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 
 // Boosted mod: Orange master logo & minimizing behavior
-$navbar-icon-size:                     $spacer * 1.5 !default;
-$navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
-$navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-$navbar-transition-duration:           $transition-duration !default;
-$navbar-transition-timing-function:    $transition-timing !default;
-$navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
-$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
-$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-icon-size:                        $spacer * 1.5 !default;
+$navbar-brand-logo-height:                add($spacer * 1.5, $spacer) !default;
+$navbar-brand-logo-minimized-height:      $spacer * 1.5 !default;
+$navbar-brand-margin-bottom:              .1875rem !default;
+$navbar-transition-duration:              $transition-duration !default;
+$navbar-transition-timing-function:       $transition-timing !default;
+$navbar-transition:                       padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-transition:                 margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-logo-transition:            width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-active-transition:                bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-orange-navigation-padding-bottom: .125rem !default;
 // End mod
 
 // Boosted mod: Orange navbar
@@ -1254,6 +1258,7 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 // Boosted mod
 $navbar-toggler-icon-bg:       $burger-icon !default;
+$navbar-toggler-icon-bg-small: $burger-icon-small !default;
 $navbar-toggler-icon-close-bg: $cross-icon !default;
 // End mod
 
