@@ -148,6 +148,10 @@
       }
     }
   }
+
+  &.flex-row .nav-item{
+    border: 0;
+  }
   // End mod
 
   .dropdown-menu {
@@ -181,6 +185,10 @@
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
   align-self: flex-end; // Boosted mod
+
+  &.justify-content-end li:last-child {
+    margin-right: divide($spacer, 2);
+  }
 }
 
 // Button for toggling the navbar when in its collapsed state
@@ -224,11 +232,21 @@
   width: $navbar-icon-size; // Boosted mod
   height: $navbar-icon-size; // Boosted mod
   vertical-align: middle;
-  background-image: escape-svg($navbar-toggler-icon-bg); // Boosted mod
+  background-image: escape-svg($navbar-toggler-icon-bg-small); // Boosted mod
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 90%; // Boosted mod
 }
+
+// Boosted mod: use a slightly different icon for sizes between xs & sm
+@include media-breakpoint-up(sm) {
+  .navbar-toggler-icon {
+    // TODO: is it useful to have 2 SVGs for 3 rectangles?...
+    background-image: escape-svg($navbar-toggler-icon-bg);
+    background-size: 100%;
+  }
+}
+// End mod
 
 .navbar-nav-scroll {
   max-height: var(--#{$variable-prefix}scroll-height, 75vh);
@@ -265,7 +283,7 @@
             // Boosted mod
             &.active::before {
               right: $nav-link-padding-y;
-              bottom: -$navbar-padding-bottom;
+              bottom: subtract(-$navbar-padding-bottom, $navbar-orange-supra-border-bottom-width);
               left: $nav-link-padding-y;
             }
             // End mod
@@ -282,11 +300,15 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: 0 $spacer subtract($spacer, $border-width) 0;
+          margin: 0 $spacer subtract($spacer, $navbar-brand-margin-bottom) 0;
 
           img {
             width: $navbar-brand-logo-height;
             height: $navbar-brand-logo-height;
+          }
+
+          > span {
+            margin-right: $spacer;
           }
         }
         // End mod
@@ -305,6 +327,16 @@
         }
 
         // Boosted mod: Offcanvas navbar is not allowed
+
+        &.flex-sm-wrap {
+          .navbar-collapse {
+            padding: divide($navbar-orange-navigation-padding-bottom, 2) 0 $navbar-orange-navigation-padding-bottom;
+          }
+
+          .nav-link.active::before{
+            bottom: subtract(-$navbar-orange-navigation-padding-bottom, $navbar-orange-supra-border-bottom-width);
+          }
+        }
       }
     }
   }
@@ -394,12 +426,39 @@
       &.disabled {
         color: $navbar-dark-disabled-color;
       }
+
+      // Boosted mod
+      .badge {
+        @extend .position-absolute;
+        @extend .top-0;
+        @extend .bg-info;
+        @extend .text-white;
+        @extend .translate-middle;
+        @extend .rounded-pill;
+        padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
+        margin-top: $navbar-orange-badge-margin-top;
+        font-size: $font-size-base;
+      }
+      // End mod
     }
 
     .show > .nav-link,
     .nav-link.active {
       color: $navbar-dark-active-color;
     }
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  input[type="search"] {
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $gray-700;
+  }
+  &::placeholder {
+    color: $gray-600;
+  }
+  &:focus {
+    border: 2px solid $white;
   }
 
   .navbar-toggler {
