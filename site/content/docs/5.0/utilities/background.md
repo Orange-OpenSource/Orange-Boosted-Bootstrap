@@ -33,6 +33,44 @@ Bootstrap's `background-color` utilities are supported in Boosted, but will resu
 
 <!-- Boosted mod: no background gradient -->
 
+## Opacity
+
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+
+As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+
+### How it works
+
+Consider our default `.bg-success` utility.
+
+```css
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+```
+
+We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+
+### Example
+
+To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
+
+{{< example >}}
+<div class="bg-success p-2 text-dark">This is default success background</div>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
+{{< /example >}}
+
+Or, choose from any of the `.bg-opacity` utilities:
+
+{{< example >}}
+<div class="bg-success p-2 text-dark">This is default success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-75">This is 75% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+{{< /example >}}
+
 ## Sass
 
 In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.

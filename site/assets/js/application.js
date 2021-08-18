@@ -58,6 +58,24 @@
     })
   }
 
+  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+  var alertTrigger = document.getElementById('liveAlertBtn')
+
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert()
+
+  function alert(message, type, typeVisuallyHidden) {
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert"><span class="alert-icon"><span class="visually-hidden">' + typeVisuallyHidden + '</span></span><p>' + message + '</p><button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button></div>'
+
+    alertPlaceholder.append(wrapper)
+  }
+
+  if (alertTrigger) {
+    alertTrigger.addEventListener('click', function () {
+      alert('Nice, you triggered this alert message!', 'success', 'Success')
+    })
+  }
+
   // Demos within modals
   document.querySelectorAll('.tooltip-test')
     .forEach(function (tooltip) {

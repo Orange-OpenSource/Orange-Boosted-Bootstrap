@@ -1,3 +1,14 @@
+// Boosted mod
+@function get-color-from-rgba-string($value) {
+  $prefix: "rgba(var(--bs-";
+  $rgba-string-index-before-color-name: str-index($value, $prefix);
+  @if $rgba-string-index-before-color-name == 1 {
+    $rgba-string-index-after-color-name: str-index($value, "-rgb");
+    @return str-slice($value, $rgba-string-index-before-color-name + str-length($prefix), $rgba-string-index-after-color-name - 1);
+  }
+  @return undefined;
+}
+
 // Utility generator
 // Used to generate utilities & print utilities
 @mixin generate-utility($utility, $infix, $is-rfs-media-query: false) {
@@ -41,22 +52,75 @@
       }
     }
 
+    $is-css-var: map-get($utility, css-var);
+    $is-local-vars: map-get($utility, local-vars);
     $is-rtl: map-get($utility, rtl);
 
     @if $value != null {
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
-      .#{$property-class + $infix + $property-class-modifier} {
-        @each $property in $properties {
-          #{$property}: $value if($enable-important-utilities, !important, null);
-          // Boosted mod: ensure contrasts in color utilities
-          @if "background-color" == $property and "transparent" != inspect($value) {
-            color: color-contrast($value);
-          } @else if "color" == $property and "inherit" != inspect($value) and $accessible-orange != $value {
-            background-color: color-contrast($value);
+
+      @if $is-css-var {
+        .#{$property-class + $infix + $property-class-modifier} {
+          --#{$variable-prefix}#{$property-class}: #{$value};
+        }
+
+        @each $pseudo in $state {
+          .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+            --#{$variable-prefix}#{$property-class}: #{$value};
           }
-          // End mod
+        }
+      } @else {
+        .#{$property-class + $infix + $property-class-modifier} {
+          @each $property in $properties {
+            @if $is-local-vars {
+              @each $local-var, $value in $is-local-vars {
+                --#{$variable-prefix}#{$local-var}: #{$value};
+              }
+            }
+            #{$property}: $value if($enable-important-utilities, !important, null);
+
+            // Boosted mod: ensure contrasts in color utilities
+            @if "background-color" == $property {
+              @if type-of($value) == "string" {
+                $color-name: get-color-from-rgba-string($value);
+                @if undefined != $color-name {
+                  @if map-has-key($theme-colors, $color-name) {
+                    $value: map-get($theme-colors, $color-name);
+                  }
+                  // Handle colors not in $theme-colors
+                  @else if $color-name == "black" {
+                    $value: $black;
+                  }
+                }
+              }
+              @if "transparent" != inspect($value) {
+                color: color-contrast($value);
+              }
+            }
+            @else if "color" == $property {
+              @if type-of($value) == "string" {
+                $color-name: get-color-from-rgba-string($value);
+                @if undefined != $color-name {
+                  @if map-has-key($theme-colors, $color-name) {
+                    $value: map-get($theme-colors, $color-name);
+                  }
+                  // Handle colors not in $theme-colors
+                  @else if $color-name == "white" {
+                    $value: $white;
+                  }
+                  @else if $color-name == "body" {
+                    $value: $black;
+                  }
+                }
+              }
+              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value {
+                background-color: color-contrast($value);
+              }
+            }
+            // End mod
+          }
         }
 
         @each $pseudo in $state {
@@ -67,6 +131,7 @@
           }
         }
       }
+
       @if $is-rtl == false {
         /* rtl:end:remove */
       }

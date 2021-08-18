@@ -23,6 +23,21 @@
   background-color: tint-color($info, 80%); // Boosted mod
 }
 
+.bd-example-cssgrid {
+  text-align: center;
+
+  .grid + .grid {
+    margin-top: 1rem;
+  }
+
+  .grid > * {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(255, 0, 255, .1);
+    border: 1px solid rgba(255, 0, 255, .25);
+  }
+}
+
 .bd-highlight {
   background-color: tint-color($info, 80%); // Boosted mod
   border: 1px solid tint-color($info, 50%); // Boosted mod
@@ -289,6 +304,17 @@
 .bd-example-position-examples {
   &::after {
     content: none;
+  }
+}
+
+// Placeholders
+.bd-example-placeholder-cards {
+  &::after {
+    display: none;
+  }
+
+  .card {
+    width: 18rem;
   }
 }
 
