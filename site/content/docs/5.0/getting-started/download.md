@@ -21,10 +21,10 @@ This doesn't include documentation, source files, or any optional JavaScript dep
 
 Compile Boosted with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
 
-- [Sass compiler]({{< docsref "/getting-started/build-tools#sass" >}}) for compiling Sass source files into CSS files
+- [Sass compiler]({{< docsref "/getting-started/contribute#sass" >}}) for compiling Sass source files into CSS files
 - [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
 
-Should you require our full set of [build tools]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
+Should you require our full set of [build tools]({{< docsref "/getting-started/contribute#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
 
 <a href="{{< param "download.source" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
@@ -58,7 +58,7 @@ Make sure to use [`preconnect` ressource hint](https://www.w3.org/TR/resource-hi
 
 ## Package managers
 
-Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a [Sass compiler]({{< docsref "/getting-started/build-tools#sass" >}}) and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a [Sass compiler]({{< docsref "/getting-started/contribute#sass" >}}) and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
 
 ### npm
 

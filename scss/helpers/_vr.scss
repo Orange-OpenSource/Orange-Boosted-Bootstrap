@@ -1,0 +1,8 @@
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 2px; // Boosted mod
+  min-height: 1em;
+  background-color: currentColor;
+  opacity: $hr-opacity;
+}

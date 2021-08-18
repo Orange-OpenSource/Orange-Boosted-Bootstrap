@@ -549,7 +549,7 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new boosted.Tab(triggerEl)
 
@@ -563,10 +563,10 @@ triggerTabList.forEach(function (triggerEl) {
 You can activate individual tabs in several ways:
 
 ```js
-var triggerEl = document.querySelector('#myTab a[href="#profile"]')
+var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
 boosted.Tab.getInstance(triggerEl).show() // Select tab by name
 
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
+var triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
 boosted.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
@@ -617,7 +617,7 @@ Activates a tab element and content container. Tab should have either a `data-bs
 </div>
 
 <script>
-  var firstTabEl = document.querySelector('#myTab li:last-child a')
+  var firstTabEl = document.querySelector('#myTab li:last-child button')
   var firstTab = new boosted.Tab(firstTabEl)
 
   firstTab.show()
