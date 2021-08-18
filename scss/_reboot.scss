@@ -26,7 +26,9 @@
 // null by default, thus nothing is generated.
 
 :root {
-  font-size: $font-size-root;
+  @if $font-size-root != null {
+    font-size: var(--#{$variable-prefix}-root-font-size);
+  }
 
   @if $enable-smooth-scroll {
     @media (prefers-reduced-motion: no-preference) {
@@ -58,25 +60,27 @@
 // 5. Prevent faux-bold/italic
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
+// scss-docs-start reboot-body-rules
 body {
   position: relative; // Boosted mod: required for back-to-top component
   margin: 0; // 1
-  font-family: $font-family-base;
+  font-family: var(--#{$variable-prefix}body-font-family);
   font-synthesis: none; // Boosted mod // 5
-  @include font-size($font-size-base);
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  text-align: $body-text-align;
+  @include font-size(var(--#{$variable-prefix}body-font-size));
+  font-weight: var(--#{$variable-prefix}body-font-weight);
+  line-height: var(--#{$variable-prefix}body-line-height);
+  color: var(--#{$variable-prefix}body-color);
+  text-align: var(--#{$variable-prefix}body-text-align);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
-  background-color: $body-bg; // 2
+  background-color: var(--#{$variable-prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
   text-rendering: optimizeSpeed; // Boosted mod
 }
+// scss-docs-end reboot-body-rules
 
 
 // Boosted mod: focus state

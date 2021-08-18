@@ -60,16 +60,21 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // 3. Include remainder of required Boosted stylesheets
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
-
-// 4. Include any optional Boosted components as you like
 @import "../node_modules/boosted/scss/root";
+
+// 4. Include any optional Boosted CSS as needed
+@import "../node_modules/boosted/scss/utilities";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 @import "../node_modules/boosted/scss/images";
 @import "../node_modules/boosted/scss/containers";
 @import "../node_modules/boosted/scss/grid";
+@import "../node_modules/boosted/scss/helpers";
 
-// 5. Add additional custom code here
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+@import "../node_modules/boosted/scss/utilities/api";
+
+// 6. Add additional custom code here
 ```
 
 With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
@@ -95,11 +100,9 @@ $body-color: #111;
 // Required
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
-
-// Boosted and its default variables
+@import "../node_modules/boosted/scss/root";
 
 // Optional Boosted components here
-@import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 // etc
@@ -158,11 +161,11 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 @import "../node_modules/boosted/scss/functions";
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
+@import "../node_modules/boosted/scss/root";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 // Optional
-@import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 // etc
@@ -279,7 +282,7 @@ $border-width: 0;
 
 ## Mixins
 
-Our `scss/mixins/` directory has a ton of mixins that power parts of Bootstrap and can also be used across your own project.
+Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted and can also be used across your own project.
 
 ### Color schemes
 

@@ -33,6 +33,45 @@ Alerts are available for any length of text, as well as an optional close button
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
+### Live example
+
+Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+
+<div class="bd-example">
+  <!-- Boosted mod: moved this div within the .bd-example -->
+  <div id="liveAlertPlaceholder"></div>
+  <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+</div>
+
+<!-- Boosted mod: removed the alert div source code and added the #liveAlertPlaceholder div -->
+
+```html
+<div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+```
+
+We use the following JavaScript to trigger our live alert demo:
+
+<!-- Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() -->
+
+```js
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('liveAlertBtn')
+
+function alert(message, type, typeVisuallyHidden) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert"><span class="alert-icon"><span class="visually-hidden">' + typeVisuallyHidden + '</span></span><p>' + message + '</p><button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button></div>'
+
+  alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', function () {
+    alert('Nice, you triggered this alert message!', 'success', 'Success')
+  })
+}
+```
+
 <!-- Boosted mod: no Link color -->
 
 <!-- Boosted mod: small alerts -->
@@ -119,35 +158,30 @@ Loop that generates the modifier classes with the `alert-variant()` mixin.
 
 ## JavaScript behavior
 
-### Triggers
+### Initialize
 
-Enable dismissal of an alert via JavaScript:
+Initialize elements as alerts
 
 ```js
 var alertList = document.querySelectorAll('.alert')
-alertList.forEach(function (alert) {
-  new boosted.Alert(alert)
+var alerts =  [].slice.call(alertList).map(function (element) {
+  return new boosted.Alert(element)
 })
 ```
 
-Or with `data` attributes on a button **within the alert**, as demonstrated above:
+{{< callout info >}}
+For the sole purpose of dismissing an alert, it isn't necessary to initialize the component manually via the JS API. By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
 
-```html
-<button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
-```
+See the [triggers](#triggers) section for more details.
+{{< /callout >}}
 
-Note that closing an alert will remove it from the DOM.
+### Triggers
+
+{{% js-dismiss "alert" %}}
+
+**Note that closing an alert will remove it from the DOM.**
 
 ### Methods
-
-You can create an alert instance with the alert constructor, for example:
-
-```js
-var myAlert = document.getElementById('myAlert')
-var bsAlert = new boosted.Alert(myAlert)
-```
-
-This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-bs-api's auto-initialization.)
 
 <table class="table">
   <thead>

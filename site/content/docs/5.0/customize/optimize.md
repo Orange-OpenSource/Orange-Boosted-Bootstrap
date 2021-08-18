@@ -30,6 +30,7 @@ For instance, assuming you're using your own JavaScript bundler like Webpack or 
 // import 'boosted/js/dist/collapse';
 // import 'boosted/js/dist/dropdown';
 import 'boosted/js/dist/modal';
+// import 'boosted/js/dist/offcanvas';
 // import 'boosted/js/dist/popover';
 // import 'boosted/js/dist/scrollspy';
 // import 'boosted/js/dist/tab';
