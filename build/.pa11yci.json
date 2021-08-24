@@ -1,7 +1,7 @@
 {
   "standard": "WCAG2AA",
   "level": "error",
-  "concurrency": 1,
+  "concurrency": 4,
   "defaults": {
     "wait": 3000,
     "runners": [
