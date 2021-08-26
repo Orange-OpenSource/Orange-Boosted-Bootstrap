@@ -93,8 +93,8 @@ $body-bg: #000;
 $body-color: #111;
 
 // Required
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/mixins";
 
 // Boosted and its default variables
 
