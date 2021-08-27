@@ -1144,8 +1144,8 @@ $dropdown-link-color:               $black !default;
 $dropdown-link-hover-color:         $white !default;
 $dropdown-link-hover-bg:            $black !default;
 
-$dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           color-contrast($dropdown-link-active-color) !default;
+$dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
+$dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
 
 $dropdown-link-disabled-color:      $gray-500 !default;
 
