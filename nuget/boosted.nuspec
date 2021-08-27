@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>boosted</id>
-    <version>4.3.1</version>
+    <version>5.0.2</version>
     <title>Boosted CSS</title>
     <authors>The Boosted Authors, Orange SA</authors>
     <owners>Orange SA</owners>
@@ -13,7 +13,7 @@
     <projectUrl>https://boosted.orange.com/</projectUrl>
     <icon>boosted.png</icon>
     <license type="file">LICENSE.txt</license>
-    <copyright>Copyright 2017-2020</copyright>
+    <copyright>Copyright 2017-2021</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="popper.js" version="[1.16.0,2)" />
