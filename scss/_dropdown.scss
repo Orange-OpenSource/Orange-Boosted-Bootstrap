@@ -115,7 +115,6 @@
   }
 }
 
-
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
   height: 0;
@@ -162,9 +161,9 @@
 
   &.active,
   &:active {
-    color: $dropdown-link-active-color;
+    color: $dropdown-link-hover-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-active-bg);
+    @include gradient-bg($dropdown-link-active-color);
   }
 
   &.disabled,
