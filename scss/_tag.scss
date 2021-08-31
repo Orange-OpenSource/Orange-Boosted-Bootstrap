@@ -1,24 +1,15 @@
 // Base class
 
 .tag {
-  display: inline-block;
-  padding: $tag-padding-y $tag-padding-x add($tag-padding-y, 1px);
+  @extend .badge;
   @include font-size($tag-font-size);
-  font-weight: $tag-font-weight;
-  line-height: 1;
   color: $tag-color;
-  text-align: center;
-
-  letter-spacing: initial;
-  white-space: nowrap;
-  vertical-align: baseline;
 
   cursor: if($enable-button-pointers, pointer, null);
 
-  background-color: transparent;
   border: $tag-border-width solid $tag-border-color;
-  // stylelint-disable-next-line property-disallowed-list
-  border-radius: $tag-border-radius;
+
+  @include border-radius($tag-border-radius, $tag-border-radius);
 
   &:hover {
     border: $tag-border-width solid $tag-border-color-hover;
