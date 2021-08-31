@@ -28,7 +28,7 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
 
 {{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
-<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" data-bs-backdrop="false" data-bs-scroll="true">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -85,9 +85,24 @@ There's no default placement for offcanvas components, so you must add one of th
 
 - `.offcanvas-start` places offcanvas on the left of the viewport (shown above)
 - `.offcanvas-end` places offcanvas on the right of the viewport
+- `.offcanvas-top` places offcanvas on the top of the viewport
 - `.offcanvas-bottom` places offcanvas on the bottom of the viewport
 
-Try the right and bottom examples out below.
+Try the top, right, and bottom examples out below.
+
+{{< example >}}
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
+{{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
@@ -219,43 +234,20 @@ var myOffcanvas = document.getElementById('myOffcanvas')
 var bsOffcanvas = new boosted.Offcanvas(myOffcanvas)
 ```
 
+{{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
 | `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
 | `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
-| `_getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
+| `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
+| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialised |
+{{< /bs-table >}}
 
 ### Events
 
 Boosted's offcanvas class exposes a few events for hooking into offcanvas functionality.
 
-<!-- <table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>show.bs.offcanvas</td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
-    </tr>
-    <tr>
-      <td>shown.bs.offcanvas</td>
-      <td>This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete).</td>
-    </tr>
-    <tr>
-      <td>hide.bs.offcanvas</td>
-      <td>This event is fired immediately when the <code>hide</code> method has been called.</td>
-    </tr>
-    <tr>
-      <td>hidden.bs.offcanvas</td>
-      <td>This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete).</td>
-    </tr>
-  </tbody>
-</table> -->
 {{< bs-table "table" >}}
 | Event type | Description |
 | --- | --- |

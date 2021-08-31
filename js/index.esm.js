@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta3): index.esm.js
+ * Bootstrap (v5.0.2): index.esm.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ import ScrollSpy from './src/scrollspy'
 import Tab from './src/tab'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
-import 'focus-visible' // Boosted mod
+import '../node_modules/focus-visible/dist/focus-visible.js' // Boosted mod
 
 export {
   Alert,

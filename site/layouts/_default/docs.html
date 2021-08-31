@@ -9,7 +9,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-md-4 ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="{{ .Site.Params.repo }}/blob/v5-dev/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
@@ -27,12 +27,12 @@
         {{ if .Page.Params.sections }}
           <div class="row g-3">
             {{ range .Page.Params.sections }}
-              <div class="col-md-6">
-                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
-                  <span class="text-secondary">{{ .description }}</span>
-                </a>
-              </div>
+            <div class="col-md-6">
+              <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
+                <strong class="d-block h5 mb-0">{{ .title }}</strong>
+                <span class="text-secondary">{{ .description }}</span>
+              </a>
+            </div>
             {{ end }}
           </div>
         {{ end }}

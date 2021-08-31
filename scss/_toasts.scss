@@ -41,7 +41,7 @@
 
   .btn-close {
     --#{$boosted-variable-prefix}icon-spacing: #{$btn-close-padding-sm}; // Boosted mod
-    margin-right: $toast-padding-x / -2;
+    margin-right: $toast-padding-x * .5;
     margin-left: $toast-padding-x;
   }
 }

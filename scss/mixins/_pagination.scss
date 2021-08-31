@@ -40,8 +40,8 @@
   display: none;
 
   &.active,
-  &:nth-child(-n+#{$pagination-max-items / 2}),
-  &:nth-last-child(-n+#{$pagination-max-items / 2}) {
+  &:nth-child(-n+#{$pagination-max-items * .5}),
+  &:nth-last-child(-n+#{$pagination-max-items * .5}) {
     display: list-item;
   }
 }

@@ -104,10 +104,16 @@ Be sure to have your pages set up with the latest design and development standar
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
+    <!-- Option 1: Use a CDN -->
+    <link href="{{< param "cdn.HelvNeue55_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue55_W1G_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.HelvNeue75_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue75_W1G_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
+
+    <!-- Option 2: Embed the fonts
     <link href="dist/fonts/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="dist/fonts/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-    <link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
+    <link href="dist/css/orange-helvetica.min.css" rel="stylesheet" crossorigin="anonymous">
+    -->
 
     <!-- Boosted CSS -->
     <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">

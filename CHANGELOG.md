@@ -1,3 +1,50 @@
+## [5.0.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/5.0.1...5.0.2) (2021-07-15)
+
+
+### Bug Fixes
+
+* **#694:** replace the boosted.netlify doc links with /docs/5.0 ([01b77cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/01b77cfe114db6392aca0c12f84f607d7172e569)), closes [#694](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/694)
+* **docs:** add a list of Orange custom components in about/overview to fix [#688](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/688) ([f7a78b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f7a78b3dcf0cd6404667e549db123c8a7cc04b88))
+* **pa11y:** add pa11y and puppeteer devDependencies to fix the pa11y-ci execution (GitHub actions) and update setup-node version ([3a8990e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a8990e79ba52a66d6adc2386ca3bb4d672ca080))
+* **sri:** v5 documentation rendering is broken due to bad integrity sha384 in config.yml ([54a2e7a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54a2e7aed6e5f9ff8e943e721474a67a71859cc7))
+
+
+
+## [5.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0...v5.0.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **#677:** improve cookie consent panel rendering ([c595c0a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c595c0a0e7d0d7e00e084a5852bf0d6b52f9370e)), closes [#677](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/677)
+* **accessibility:** issue on pricing and sidebar + update label for logo on headers example ([7223e41](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7223e41a3726bde152f561ae379b671136f31f55))
+* **core:** update nuspec add boosted icon ([#679](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/679)) ([d6b639c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d6b639caf5abda129850178e6e2a0c74645181a0))
+* **doc:** replace `.sr-only` by `.visually-hidden` in checkout example ([1a23636](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1a23636f9bc5fcaab9f411d27be1219934d2ddfa))
+* **docs:** fix 'View on GitHub' link to target 'v5-dev' branch ([7d66ae4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7d66ae492df388520e1cfa9b4f9b0eeede2e5af2))
+* **docs:** missing character in RTL starter template ([fda8432](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fda843233b40405cd8f3862613f6083f6298752b))
+* **lint:** remove trailing spaces ([d13994d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d13994ddce95d5d437bc54ad751187ed84b3a9e2))
+* **margin:** finish migration of margin-left and right from `ml-` and `mr-` to `ms-` and `me-` ([195c408](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/195c4085798595931494efc5c35bc5278f913e3d))
+* **offcanvas:** add offcanvas to boosted.scss ([8c1c8b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8c1c8b2aa52449649929b317db4d8c4794b6da49))
+* **sri:** v5 documentation rendering is broken due to bad integrity sha384s in config.yml ([edc8fa2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/edc8fa2a7fdc0d66cf8b63a4338e0a5733298424))
+* **table:** Accented table displays properly again ([85cdbf7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/85cdbf759775a99b7a061f99e450ff87761ff8f3))
+
+
+# [5.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta3...v5.0.0) (2021-05-27)
+
+
+### Bug Fixes
+
+* **a11y:** Add title to dropdown menu ([c1c8851](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c1c8851242b42ded1d8a0486bd17904b340648c2))
+* **a11y:** Improve a11y for dropdown example in header ([64f6e98](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64f6e98b26471eee603b3b4cd9c483af51da04fc))
+* **linter:** Reorganize imports for linter to pass ([0b06d5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b06d5e1eba044e7e5d1f62a20d85ade266d79a4))
+* **misc:** Apply reviews ([5be515d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5be515dd0dc70aea15cdd1271c8b2c34c8896802))
+
+
+### Reverts
+
+* Revert "remove useless content from features page" ([eb5cfe8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eb5cfe890917d55c02ad3ab5af7a35b8ca12f201))
+
+
+
 # [5.0.0-beta3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta2...v5.0.0-beta3) (2021-04-28)
 
 

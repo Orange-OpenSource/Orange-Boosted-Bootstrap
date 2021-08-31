@@ -22,7 +22,8 @@ Boosted can be used for all **responsive web projects** for Orange group —&nbs
 
 Boosted ships with custom accessible components to suit specific needs:
 
-**@todo**
+- [Back to top]({{< docsref "/components/back-to-top" >}})
+- [Stepped process]({{< docsref "/components/stepped-process" >}})
 
 
 ## Bootstrap Team
@@ -39,7 +40,8 @@ Originally [released](https://blog.twitter.com/developer/en_us/a/2011/bootstrap-
 
 With Bootstrap 4, they once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS's flexbox. Their intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.
 
-Their latest release, Bootstrap 5 (currently in development), focuses on improving v4's codebase with as few major breaking changes as possible. They improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of their tooling.
+Their latest release, Bootstrap 5, focuses on improving v4's codebase with as few major breaking changes as possible. They improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of their tooling.
+
 
 ## Get involved in Bootstrap
 
