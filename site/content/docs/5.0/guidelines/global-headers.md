@@ -61,19 +61,23 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon svg-mail pb-1">
-      <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+        <a href="#" class="nav-link nav-icon svg-buy pb-1">
+          <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+          </svg>
           <span class="visually-hidden">Search</span>
         </a>
-      </li>
+      </li> 
       <li class="nav-item">
         <a href="#" class="nav-link nav-icon svg-buy pb-1">
-        <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
-        <span class="visually-hidden">Basket</span>
+          <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+          </svg>
+          <span class="visually-hidden">Basket</span>
         </a>
       </li>
       <li class="nav-item">
-        <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
+        <img src="/docs/5.0/assets/img/navbar-contact.png" width="30" height="30" role="img" alt="User" loading="lazy">
         <a href="#" class="nav-link nav-icon svg-avatar pb-1">
         <span class="visually-hidden">My account</span>
         </a>
