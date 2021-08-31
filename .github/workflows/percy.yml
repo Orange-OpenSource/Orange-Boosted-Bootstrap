@@ -6,7 +6,7 @@ on:
       - 'scss/**'
       - 'site/content/docs/**/guidelines'
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
   pull_request:
     types:
@@ -15,11 +15,11 @@ on:
       - labeled
       - unlabeled
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
 env:
   FORCE_COLOR: 2
-  NODE: 14
+  NODE: 16
 
 jobs:
   percy:
@@ -65,7 +65,7 @@ jobs:
         uses: percy/snapshot-action@v0.1.2
         with:
           build-directory: "_site/"
-          flags: "--snapshot-files ./docs/5.0/guidelines/**/*.html,./docs/5.0/examples/cheatsheet/index.html,./docs/5.0/examples/cheatsheet-rtl/index.html"
+          flags: "--snapshot-files ./docs/5.1/guidelines/**/*.html,./docs/5.1/examples/cheatsheet/index.html,./docs/5.1/examples/cheatsheet-rtl/index.html"
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"

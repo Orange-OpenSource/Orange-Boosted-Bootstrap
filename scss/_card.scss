@@ -13,6 +13,7 @@
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
+  @include box-shadow($card-box-shadow);
 
   > hr {
     margin-right: 0;
@@ -61,7 +62,7 @@
 }
 
 .card-subtitle {
-  margin-top: -$card-title-spacer-y / 2;
+  margin-top: -$card-title-spacer-y * .5;
   margin-bottom: 0;
 }
 
@@ -71,7 +72,7 @@
 
 .card-link {
   &:hover {
-    text-decoration: none;
+    text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
   + .card-link {
@@ -115,9 +116,9 @@
 //
 
 .card-header-tabs {
-  margin-right: -$card-cap-padding-x / 2;
+  margin-right: -$card-cap-padding-x * .5;
   margin-bottom: -$card-cap-padding-y;
-  margin-left: -$card-cap-padding-x / 2;
+  margin-left: -$card-cap-padding-x * .5;
   border-bottom: 0;
 
   @if $nav-tabs-link-active-bg != $card-bg {
@@ -129,8 +130,8 @@
 }
 
 .card-header-pills {
-  margin-right: -$card-cap-padding-x / 2;
-  margin-left: -$card-cap-padding-x / 2;
+  margin-right: -$card-cap-padding-x * .5;
+  margin-left: -$card-cap-padding-x * .5;
 }
 
 // Card image

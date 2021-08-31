@@ -7,6 +7,8 @@
   display: block;
   width: 100%;
   padding: subtract($form-select-padding-y, 1px) $form-select-indicator-padding add($form-select-padding-y, 1px) $form-select-padding-x; // Boosted mod
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
   font-family: $form-select-font-family;
   @include font-size($form-select-font-size);
   font-weight: $form-select-font-weight;
@@ -20,10 +22,12 @@
   border: $form-select-border-width solid $form-select-border-color;
   @include border-radius($form-select-border-radius, 0);
   @include box-shadow($form-select-box-shadow);
+  @include transition($form-select-transition);
   appearance: none;
 
   &:focus {
     border-color: $form-select-focus-border-color !important; // stylelint-disable-line declaration-no-important
+    outline: 0;
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
     } @else {
@@ -59,5 +63,6 @@
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;
   @include font-size($form-select-font-size-lg);
+  @include border-radius($form-select-border-radius-lg);
   line-height: 1.5; // Boosted mod
 }

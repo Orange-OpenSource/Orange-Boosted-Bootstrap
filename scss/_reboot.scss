@@ -26,7 +26,9 @@
 // null by default, thus nothing is generated.
 
 :root {
-  font-size: $font-size-root;
+  @if $font-size-root != null {
+    font-size: var(--#{$variable-prefix}root-font-size);
+  }
 
   @if $enable-smooth-scroll {
     @media (prefers-reduced-motion: no-preference) {
@@ -38,7 +40,7 @@
   // See https://caniuse.com/?search=scroll-padding
   // scss-docs-start scroll-offset
   @if $enable-fixed-header {
-    scroll-padding-top: $scroll-offset-top / 2;
+    scroll-padding-top: $scroll-offset-top * .5;
 
     @include media-breakpoint-up(lg) {
       scroll-padding-top: $scroll-offset-top;
@@ -58,25 +60,27 @@
 // 5. Prevent faux-bold/italic
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
+// scss-docs-start reboot-body-rules
 body {
   position: relative; // Boosted mod: required for back-to-top component
   margin: 0; // 1
-  font-family: $font-family-base;
+  font-family: var(--#{$variable-prefix}body-font-family);
   font-synthesis: none; // Boosted mod // 5
-  @include font-size($font-size-base);
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  text-align: $body-text-align;
+  @include font-size(var(--#{$variable-prefix}body-font-size));
+  font-weight: var(--#{$variable-prefix}body-font-weight);
+  line-height: var(--#{$variable-prefix}body-line-height);
+  color: var(--#{$variable-prefix}body-color);
+  text-align: var(--#{$variable-prefix}body-text-align);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
-  background-color: $body-bg; // 2
+  background-color: var(--#{$variable-prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
   text-rendering: optimizeSpeed; // Boosted mod
 }
+// scss-docs-end reboot-body-rules
 
 
 // Boosted mod: focus state
@@ -106,7 +110,7 @@ hr {
   margin: $hr-margin-y 0;
   color: $hr-color; // 1
   background-color: currentColor !important; // Boosted mod: ensure .text-* utilities can't override this
-  border: 0;
+  border: $hr-border-width;
   opacity: $hr-opacity;
 }
 
@@ -364,8 +368,6 @@ kbd,
 samp {
   font-family: $font-family-code;
   @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
-  direction: ltr #{"/* rtl:ignore */"};
-  unicode-bidi: bidi-override;
 }
 
 // 1. Remove browser default top margin
@@ -679,16 +681,10 @@ legend {
 }
 
 
-// Inherit font family and line height for file input buttons
-
-::file-selector-button {
-  font: inherit;
-}
-
-// 1. Change font properties to `inherit`
+// 1. Inherit font family and line height for file input buttons
 // 2. Correct the inability to style clickable types in iOS and Safari.
 
-::-webkit-file-upload-button {
+::file-selector-button {
   font: inherit; // 1
   -webkit-appearance: button; // 2
 }

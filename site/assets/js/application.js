@@ -58,6 +58,24 @@
     })
   }
 
+  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+  var alertTrigger = document.getElementById('liveAlertBtn')
+
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert()
+
+  function alert(message, type, typeVisuallyHidden) {
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert"><span class="alert-icon"><span class="visually-hidden">' + typeVisuallyHidden + '</span></span><p>' + message + '</p><button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button></div>'
+
+    alertPlaceholder.append(wrapper)
+  }
+
+  if (alertTrigger) {
+    alertTrigger.addEventListener('click', function () {
+      alert('Nice, you triggered this alert message!', 'success', 'Success')
+    })
+  }
+
   // Demos within modals
   document.querySelectorAll('.tooltip-test')
     .forEach(function (tooltip) {
@@ -78,8 +96,8 @@
   // Disable empty links in docs examples
   document.querySelectorAll('.bd-content [href="#"]')
     .forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault()
+      link.addEventListener('click', function (event) {
+        event.preventDefault()
       })
     })
 
@@ -98,17 +116,6 @@
 
       modalTitle.textContent = 'New message to ' + recipient
       modalBodyInput.value = recipient
-    })
-  }
-
-  // Activate animated progress bar
-  var btnToggleAnimatedProgress = document.getElementById('btnToggleAnimatedProgress')
-  if (btnToggleAnimatedProgress) {
-    btnToggleAnimatedProgress.addEventListener('click', function () {
-      btnToggleAnimatedProgress.parentNode
-        .querySelector('.progress-bar-striped')
-        .classList
-        .toggle('progress-bar-animated')
     })
   }
 
@@ -137,25 +144,25 @@
     }
   })
 
-  clipboard.on('success', function (e) {
-    var tooltipBtn = boosted.Tooltip.getInstance(e.trigger)
+  clipboard.on('success', function (event) {
+    var tooltipBtn = boosted.Tooltip.getInstance(event.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copied!')
+    event.trigger.setAttribute('data-bs-original-title', 'Copied!')
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
-    e.clearSelection()
+    event.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    event.clearSelection()
   })
 
-  clipboard.on('error', function (e) {
+  clipboard.on('error', function (event) {
     var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
-    var tooltipBtn = boosted.Tooltip.getInstance(e.trigger)
+    var tooltipBtn = boosted.Tooltip.getInstance(event.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', fallbackMsg)
+    event.trigger.setAttribute('data-bs-original-title', fallbackMsg)
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    event.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
   })
 
   anchors.options = {

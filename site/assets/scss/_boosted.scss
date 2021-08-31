@@ -139,3 +139,10 @@ body {
     vertical-align: middle;
   }
 }
+
+// "Added in vX.Y.Z" areas
+// stylelint-disable-next-line selector-max-class, selector-no-qualifying-type
+small.d-inline-flex.px-2.py-1.font-monospace.text-muted.border.rounded-3 {
+  // stylelint-disable-next-line declaration-no-important
+  border-color: $light !important;
+}

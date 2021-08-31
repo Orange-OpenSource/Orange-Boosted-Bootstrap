@@ -1,51 +1,48 @@
 /*!
-  * Boosted v5.0.0-beta3 (https://boosted.orange.com/)
+  * Boosted v5.1.3 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v5.0.0-beta3 (https://boosted.orange.com/)
+  * Bootstrap dropdown.js v5.1.3 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core'), require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js'), require('./base-component.js')) :
-  typeof define === 'function' && define.amd ? define(['@popperjs/core', './dom/data', './dom/event-handler', './dom/manipulator', './dom/selector-engine', './base-component'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Dropdown = factory(global.Popper, global.Data, global.EventHandler, global.Manipulator, global.SelectorEngine, global.Base));
-}(this, (function (Popper, Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js'), require('./base-component.js')) :
+  typeof define === 'function' && define.amd ? define(['@popperjs/core', './dom/event-handler', './dom/manipulator', './dom/selector-engine', './base-component'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Dropdown = factory(global.Popper, global.EventHandler, global.Manipulator, global.SelectorEngine, global.Base));
+})(this, (function (Popper, EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
 
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
   function _interopNamespace(e) {
     if (e && e.__esModule) return e;
-    var n = Object.create(null);
+    const n = Object.create(null);
     if (e) {
-      Object.keys(e).forEach(function (k) {
+      for (const k in e) {
         if (k !== 'default') {
-          var d = Object.getOwnPropertyDescriptor(e, k);
+          const d = Object.getOwnPropertyDescriptor(e, k);
           Object.defineProperty(n, k, d.get ? d : {
             enumerable: true,
-            get: function () {
-              return e[k];
-            }
+            get: () => e[k]
           });
         }
-      });
+      }
     }
-    n['default'] = e;
+    n.default = e;
     return Object.freeze(n);
   }
 
-  var Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
-  var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
-  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+  const Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
+  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/index.js
+   * Bootstrap (v5.1.3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -73,7 +70,7 @@
 
 
       if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
-        hrefAttr = '#' + hrefAttr.split('#')[1];
+        hrefAttr = `#${hrefAttr.split('#')[1]}`;
       }
 
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
@@ -87,7 +84,30 @@
     return selector ? document.querySelector(selector) : null;
   };
 
-  const isElement = obj => (obj[0] || obj).nodeType;
+  const isElement = obj => {
+    if (!obj || typeof obj !== 'object') {
+      return false;
+    }
+
+    if (typeof obj.jquery !== 'undefined') {
+      obj = obj[0];
+    }
+
+    return typeof obj.nodeType !== 'undefined';
+  };
+
+  const getElement = obj => {
+    if (isElement(obj)) {
+      // it's a jQuery object or a node element
+      return obj.jquery ? obj[0] : obj;
+    }
+
+    if (typeof obj === 'string' && obj.length > 0) {
+      return document.querySelector(obj);
+    }
+
+    return null;
+  };
 
   const typeCheckConfig = (componentName, config, configTypes) => {
     Object.keys(configTypes).forEach(property => {
@@ -96,26 +116,36 @@
       const valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new TypeError(`${componentName.toUpperCase()}: ` + `Option "${property}" provided type "${valueType}" ` + `but expected type "${expectedTypes}".`);
+        throw new TypeError(`${componentName.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`);
       }
     });
   };
 
   const isVisible = element => {
-    if (!element) {
+    if (!isElement(element) || element.getClientRects().length === 0) {
       return false;
     }
 
-    if (element.style && element.parentNode && element.parentNode.style) {
-      const elementStyle = getComputedStyle(element);
-      const parentNodeStyle = getComputedStyle(element.parentNode);
-      return elementStyle.display !== 'none' && parentNodeStyle.display !== 'none' && elementStyle.visibility !== 'hidden';
-    }
-
-    return false;
+    return getComputedStyle(element).getPropertyValue('visibility') === 'visible';
   };
 
-  const noop = () => function () {};
+  const isDisabled = element => {
+    if (!element || element.nodeType !== Node.ELEMENT_NODE) {
+      return true;
+    }
+
+    if (element.classList.contains('disabled')) {
+      return true;
+    }
+
+    if (typeof element.disabled !== 'undefined') {
+      return element.disabled;
+    }
+
+    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+  };
+
+  const noop = () => {};
 
   const getjQuery = () => {
     const {
@@ -129,9 +159,18 @@
     return null;
   };
 
+  const DOMContentLoadedCallbacks = [];
+
   const onDOMContentLoaded = callback => {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', callback);
+      // add listener on the first call when the document is in loading state
+      if (!DOMContentLoadedCallbacks.length) {
+        document.addEventListener('DOMContentLoaded', () => {
+          DOMContentLoadedCallbacks.forEach(callback => callback());
+        });
+      }
+
+      DOMContentLoadedCallbacks.push(callback);
     } else {
       callback();
     }
@@ -139,12 +178,13 @@
 
   const isRTL = () => document.documentElement.dir === 'rtl';
 
-  const defineJQueryPlugin = (name, plugin) => {
+  const defineJQueryPlugin = plugin => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
+        const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
@@ -156,10 +196,37 @@
       }
     });
   };
+  /**
+   * Return the previous/next element of a list.
+   *
+   * @param {array} list    The list of elements
+   * @param activeElement   The active element
+   * @param shouldGetNext   Choose to get next or previous element
+   * @param isCycleAllowed
+   * @return {Element|elem} The proper element
+   */
+
+
+  const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
+    let index = list.indexOf(activeElement); // if the element does not exist in the list return an element depending on the direction and if cycle is allowed
+
+    if (index === -1) {
+      return list[!shouldGetNext && isCycleAllowed ? list.length - 1 : 0];
+    }
+
+    const listLength = list.length;
+    index += shouldGetNext ? 1 : -1;
+
+    if (isCycleAllowed) {
+      index = (index + listLength) % listLength;
+    }
+
+    return list[Math.max(0, Math.min(index, listLength - 1))];
+  };
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dropdown.js
+   * Bootstrap (v5.1.3): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -185,11 +252,9 @@
   const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
   const EVENT_SHOW = `show${EVENT_KEY}`;
   const EVENT_SHOWN = `shown${EVENT_KEY}`;
-  const EVENT_CLICK = `click${EVENT_KEY}`;
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
   const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY}${DATA_API_KEY}`;
   const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`;
-  const CLASS_NAME_DISABLED = 'disabled';
   const CLASS_NAME_SHOW = 'show';
   const CLASS_NAME_DROPUP = 'dropup';
   const CLASS_NAME_DROPEND = 'dropend';
@@ -210,14 +275,16 @@
     boundary: 'clippingParents',
     reference: 'toggle',
     display: 'dynamic',
-    popperConfig: null
+    popperConfig: null,
+    autoClose: true
   };
   const DefaultType = {
     offset: '(array|string|function)',
     boundary: '(string|element)',
     reference: '(string|element|object)',
     display: 'string',
-    popperConfig: '(null|object|function)'
+    popperConfig: '(null|object|function)',
+    autoClose: '(boolean|string)'
   };
   /**
    * ------------------------------------------------------------------------
@@ -225,15 +292,13 @@
    * ------------------------------------------------------------------------
    */
 
-  class Dropdown extends BaseComponent__default['default'] {
+  class Dropdown extends BaseComponent__default.default {
     constructor(element, config) {
       super(element);
       this._popper = null;
       this._config = this._getConfig(config);
       this._menu = this._getMenuElement();
       this._inNavbar = this._detectNavbar();
-
-      this._addEventListeners();
     } // Getters
 
 
@@ -245,72 +310,35 @@
       return DefaultType;
     }
 
-    static get DATA_KEY() {
-      return DATA_KEY;
+    static get NAME() {
+      return NAME;
     } // Public
 
 
     toggle() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED)) {
-        return;
-      }
-
-      const isActive = this._element.classList.contains(CLASS_NAME_SHOW);
-
-      Dropdown.clearMenus();
-
-      if (isActive) {
-        return;
-      }
-
-      this.show();
+      return this._isShown() ? this.hide() : this.show();
     }
 
     show() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || this._menu.classList.contains(CLASS_NAME_SHOW)) {
+      if (isDisabled(this._element) || this._isShown(this._menu)) {
         return;
       }
 
-      const parent = Dropdown.getParentFromElement(this._element);
       const relatedTarget = {
         relatedTarget: this._element
       };
-      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW, relatedTarget);
+      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, relatedTarget);
 
       if (showEvent.defaultPrevented) {
         return;
-      } // Totally disable Popper for Dropdowns in Navbar
+      }
 
+      const parent = Dropdown.getParentFromElement(this._element); // Totally disable Popper for Dropdowns in Navbar
 
       if (this._inNavbar) {
-        Manipulator__default['default'].setDataAttribute(this._menu, 'popper', 'none');
+        Manipulator__default.default.setDataAttribute(this._menu, 'popper', 'none');
       } else {
-        if (typeof Popper__namespace === 'undefined') {
-          throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
-        }
-
-        let referenceElement = this._element;
-
-        if (this._config.reference === 'parent') {
-          referenceElement = parent;
-        } else if (isElement(this._config.reference)) {
-          referenceElement = this._config.reference; // Check if it's jQuery element
-
-          if (typeof this._config.reference.jquery !== 'undefined') {
-            referenceElement = this._config.reference[0];
-          }
-        } else if (typeof this._config.reference === 'object') {
-          referenceElement = this._config.reference;
-        }
-
-        const popperConfig = this._getPopperConfig();
-
-        const isDisplayStatic = popperConfig.modifiers.find(modifier => modifier.name === 'applyStyles' && modifier.enabled === false);
-        this._popper = Popper__namespace.createPopper(referenceElement, this._menu, popperConfig);
-
-        if (isDisplayStatic) {
-          Manipulator__default['default'].setDataAttribute(this._menu, 'popper', 'static');
-        }
+        this._createPopper(parent);
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
@@ -318,54 +346,35 @@
 
 
       if ('ontouchstart' in document.documentElement && !parent.closest(SELECTOR_NAVBAR_NAV)) {
-        [].concat(...document.body.children).forEach(elem => EventHandler__default['default'].on(elem, 'mouseover', null, noop()));
+        [].concat(...document.body.children).forEach(elem => EventHandler__default.default.on(elem, 'mouseover', noop));
       }
 
       this._element.focus();
 
       this._element.setAttribute('aria-expanded', true);
 
-      this._menu.classList.toggle(CLASS_NAME_SHOW);
+      this._menu.classList.add(CLASS_NAME_SHOW);
 
-      this._element.classList.toggle(CLASS_NAME_SHOW);
+      this._element.classList.add(CLASS_NAME_SHOW);
 
-      EventHandler__default['default'].trigger(this._element, EVENT_SHOWN, relatedTarget);
+      EventHandler__default.default.trigger(this._element, EVENT_SHOWN, relatedTarget);
     }
 
     hide() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || !this._menu.classList.contains(CLASS_NAME_SHOW)) {
+      if (isDisabled(this._element) || !this._isShown(this._menu)) {
         return;
       }
 
       const relatedTarget = {
         relatedTarget: this._element
       };
-      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE, relatedTarget);
 
-      if (hideEvent.defaultPrevented) {
-        return;
-      }
-
-      if (this._popper) {
-        this._popper.destroy();
-      }
-
-      this._menu.classList.toggle(CLASS_NAME_SHOW);
-
-      this._element.classList.toggle(CLASS_NAME_SHOW);
-
-      Manipulator__default['default'].removeDataAttribute(this._menu, 'popper');
-      EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN, relatedTarget);
+      this._completeHide(relatedTarget);
     }
 
     dispose() {
-      EventHandler__default['default'].off(this._element, EVENT_KEY);
-      this._menu = null;
-
       if (this._popper) {
         this._popper.destroy();
-
-        this._popper = null;
       }
 
       super.dispose();
@@ -380,16 +389,36 @@
     } // Private
 
 
-    _addEventListeners() {
-      EventHandler__default['default'].on(this._element, EVENT_CLICK, event => {
-        event.preventDefault();
-        this.toggle();
-      });
+    _completeHide(relatedTarget) {
+      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE, relatedTarget);
+
+      if (hideEvent.defaultPrevented) {
+        return;
+      } // If this is a touch-enabled device we remove the extra
+      // empty mouseover listeners we added for iOS support
+
+
+      if ('ontouchstart' in document.documentElement) {
+        [].concat(...document.body.children).forEach(elem => EventHandler__default.default.off(elem, 'mouseover', noop));
+      }
+
+      if (this._popper) {
+        this._popper.destroy();
+      }
+
+      this._menu.classList.remove(CLASS_NAME_SHOW);
+
+      this._element.classList.remove(CLASS_NAME_SHOW);
+
+      this._element.setAttribute('aria-expanded', 'false');
+
+      Manipulator__default.default.removeDataAttribute(this._menu, 'popper');
+      EventHandler__default.default.trigger(this._element, EVENT_HIDDEN, relatedTarget);
     }
 
     _getConfig(config) {
       config = { ...this.constructor.Default,
-        ...Manipulator__default['default'].getDataAttributes(this._element),
+        ...Manipulator__default.default.getDataAttributes(this._element),
         ...config
       };
       typeCheckConfig(NAME, config, this.constructor.DefaultType);
@@ -402,8 +431,37 @@
       return config;
     }
 
+    _createPopper(parent) {
+      if (typeof Popper__namespace === 'undefined') {
+        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
+      }
+
+      let referenceElement = this._element;
+
+      if (this._config.reference === 'parent') {
+        referenceElement = parent;
+      } else if (isElement(this._config.reference)) {
+        referenceElement = getElement(this._config.reference);
+      } else if (typeof this._config.reference === 'object') {
+        referenceElement = this._config.reference;
+      }
+
+      const popperConfig = this._getPopperConfig();
+
+      const isDisplayStatic = popperConfig.modifiers.find(modifier => modifier.name === 'applyStyles' && modifier.enabled === false);
+      this._popper = Popper__namespace.createPopper(referenceElement, this._menu, popperConfig);
+
+      if (isDisplayStatic) {
+        Manipulator__default.default.setDataAttribute(this._menu, 'popper', 'static');
+      }
+    }
+
+    _isShown(element = this._element) {
+      return element.classList.contains(CLASS_NAME_SHOW);
+    }
+
     _getMenuElement() {
-      return SelectorEngine__default['default'].next(this._element, SELECTOR_MENU)[0];
+      return SelectorEngine__default.default.next(this._element, SELECTOR_MENU)[0];
     }
 
     _getPlacement() {
@@ -473,100 +531,81 @@
       return { ...defaultBsPopperConfig,
         ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
       };
+    }
+
+    _selectMenuItem({
+      key,
+      target
+    }) {
+      const items = SelectorEngine__default.default.find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible);
+
+      if (!items.length) {
+        return;
+      } // if target isn't included in items (e.g. when expanding the dropdown)
+      // allow cycling to get the last item in case key equals ARROW_UP_KEY
+
+
+      getNextActiveElement(items, target, key === ARROW_DOWN_KEY, !items.includes(target)).focus();
     } // Static
 
 
-    static dropdownInterface(element, config) {
-      let data = Data__default['default'].get(element, DATA_KEY);
+    static jQueryInterface(config) {
+      return this.each(function () {
+        const data = Dropdown.getOrCreateInstance(this, config);
 
-      const _config = typeof config === 'object' ? config : null;
+        if (typeof config !== 'string') {
+          return;
+        }
 
-      if (!data) {
-        data = new Dropdown(element, _config);
-      }
-
-      if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`);
         }
 
         data[config]();
-      }
-    }
-
-    static jQueryInterface(config) {
-      return this.each(function () {
-        Dropdown.dropdownInterface(this, config);
       });
     }
 
     static clearMenus(event) {
-      if (event) {
-        if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY) {
-          return;
-        }
-
-        if (/input|select|textarea|form/i.test(event.target.tagName)) {
-          return;
-        }
+      if (event && (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY)) {
+        return;
       }
 
-      const toggles = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
+      const toggles = SelectorEngine__default.default.find(SELECTOR_DATA_TOGGLE);
 
       for (let i = 0, len = toggles.length; i < len; i++) {
-        const context = Data__default['default'].get(toggles[i], DATA_KEY);
+        const context = Dropdown.getInstance(toggles[i]);
+
+        if (!context || context._config.autoClose === false) {
+          continue;
+        }
+
+        if (!context._isShown()) {
+          continue;
+        }
+
         const relatedTarget = {
-          relatedTarget: toggles[i]
+          relatedTarget: context._element
         };
 
-        if (event && event.type === 'click') {
-          relatedTarget.clickEvent = event;
-        }
-
-        if (!context) {
-          continue;
-        }
-
-        const dropdownMenu = context._menu;
-
-        if (!toggles[i].classList.contains(CLASS_NAME_SHOW)) {
-          continue;
-        }
-
         if (event) {
-          // Don't close the menu if the clicked element or one of its parents is the dropdown button
-          if ([context._element].some(element => event.composedPath().includes(element))) {
+          const composedPath = event.composedPath();
+          const isMenuTarget = composedPath.includes(context._menu);
+
+          if (composedPath.includes(context._element) || context._config.autoClose === 'inside' && !isMenuTarget || context._config.autoClose === 'outside' && isMenuTarget) {
             continue;
-          } // Tab navigation through the dropdown menu shouldn't close the menu
+          } // Tab navigation through the dropdown menu or events from contained inputs shouldn't close the menu
 
 
-          if (event.type === 'keyup' && event.key === TAB_KEY && dropdownMenu.contains(event.target)) {
+          if (context._menu.contains(event.target) && (event.type === 'keyup' && event.key === TAB_KEY || /input|select|option|textarea|form/i.test(event.target.tagName))) {
             continue;
+          }
+
+          if (event.type === 'click') {
+            relatedTarget.clickEvent = event;
           }
         }
 
-        const hideEvent = EventHandler__default['default'].trigger(toggles[i], EVENT_HIDE, relatedTarget);
-
-        if (hideEvent.defaultPrevented) {
-          continue;
-        } // If this is a touch-enabled device we remove the extra
-        // empty mouseover listeners we added for iOS support
-
-
-        if ('ontouchstart' in document.documentElement) {
-          [].concat(...document.body.children).forEach(elem => EventHandler__default['default'].off(elem, 'mouseover', null, noop()));
-        }
-
-        toggles[i].setAttribute('aria-expanded', 'false');
-
-        if (context._popper) {
-          context._popper.destroy();
-        }
-
-        dropdownMenu.classList.remove(CLASS_NAME_SHOW);
-        toggles[i].classList.remove(CLASS_NAME_SHOW);
-        Manipulator__default['default'].removeDataAttribute(dropdownMenu, 'popper');
-        EventHandler__default['default'].trigger(toggles[i], EVENT_HIDDEN, relatedTarget);
+        context._completeHide(relatedTarget);
       }
     }
 
@@ -586,54 +625,40 @@
         return;
       }
 
+      const isActive = this.classList.contains(CLASS_NAME_SHOW);
+
+      if (!isActive && event.key === ESCAPE_KEY) {
+        return;
+      }
+
       event.preventDefault();
       event.stopPropagation();
 
-      if (this.disabled || this.classList.contains(CLASS_NAME_DISABLED)) {
+      if (isDisabled(this)) {
         return;
       }
 
-      const parent = Dropdown.getParentFromElement(this);
-      const isActive = this.classList.contains(CLASS_NAME_SHOW);
+      const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE) ? this : SelectorEngine__default.default.prev(this, SELECTOR_DATA_TOGGLE)[0];
+      const instance = Dropdown.getOrCreateInstance(getToggleButton);
 
       if (event.key === ESCAPE_KEY) {
-        const button = this.matches(SELECTOR_DATA_TOGGLE) ? this : SelectorEngine__default['default'].prev(this, SELECTOR_DATA_TOGGLE)[0];
-        button.focus();
-        Dropdown.clearMenus();
+        instance.hide();
         return;
       }
 
-      if (!isActive && (event.key === ARROW_UP_KEY || event.key === ARROW_DOWN_KEY)) {
-        const button = this.matches(SELECTOR_DATA_TOGGLE) ? this : SelectorEngine__default['default'].prev(this, SELECTOR_DATA_TOGGLE)[0];
-        button.click();
+      if (event.key === ARROW_UP_KEY || event.key === ARROW_DOWN_KEY) {
+        if (!isActive) {
+          instance.show();
+        }
+
+        instance._selectMenuItem(event);
+
         return;
       }
 
       if (!isActive || event.key === SPACE_KEY) {
         Dropdown.clearMenus();
-        return;
       }
-
-      const items = SelectorEngine__default['default'].find(SELECTOR_VISIBLE_ITEMS, parent).filter(isVisible);
-
-      if (!items.length) {
-        return;
-      }
-
-      let index = items.indexOf(event.target); // Up
-
-      if (event.key === ARROW_UP_KEY && index > 0) {
-        index--;
-      } // Down
-
-
-      if (event.key === ARROW_DOWN_KEY && index < items.length - 1) {
-        index++;
-      } // index is -1 if the first keydown is an ArrowUp
-
-
-      index = index === -1 ? 0 : index;
-      items[index].focus();
     }
 
   }
@@ -644,13 +669,13 @@
    */
 
 
-  EventHandler__default['default'].on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE, Dropdown.dataApiKeydownHandler);
-  EventHandler__default['default'].on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
-  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, Dropdown.clearMenus);
-  EventHandler__default['default'].on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
-  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+  EventHandler__default.default.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE, Dropdown.dataApiKeydownHandler);
+  EventHandler__default.default.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
+  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, Dropdown.clearMenus);
+  EventHandler__default.default.on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
+  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     event.preventDefault();
-    Dropdown.dropdownInterface(this);
+    Dropdown.getOrCreateInstance(this).toggle();
   });
   /**
    * ------------------------------------------------------------------------
@@ -659,9 +684,9 @@
    * add .Dropdown to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME, Dropdown);
+  defineJQueryPlugin(Dropdown);
 
   return Dropdown;
 
-})));
+}));
 //# sourceMappingURL=dropdown.js.map

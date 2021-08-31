@@ -1,27 +1,22 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta3): tab.js
+ * Bootstrap (v5.1.3): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
   defineJQueryPlugin,
-  emulateTransitionEnd,
   getElementFromSelector,
-  getTransitionDurationFromElement,
   isDisabled,
   reflow
 } from './util/index'
-import Data from './dom/data'
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
 
 /**
- * ------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
  */
 
 const NAME = 'tab'
@@ -49,25 +44,20 @@ const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
 const SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active'
 
 /**
- * ------------------------------------------------------------------------
- * Class Definition
- * ------------------------------------------------------------------------
+ * Class definition
  */
 
 class Tab extends BaseComponent {
   // Getters
-
-  static get DATA_KEY() {
-    return DATA_KEY
+  static get NAME() {
+    return NAME
   }
 
   // Public
-
   show() {
     if ((this._element.parentNode &&
       this._element.parentNode.nodeType === Node.ELEMENT_NODE &&
-      this._element.classList.contains(CLASS_NAME_ACTIVE)) ||
-      isDisabled(this._element)) {
+      this._element.classList.contains(CLASS_NAME_ACTIVE))) {
       return
     }
 
@@ -82,9 +72,7 @@ class Tab extends BaseComponent {
     }
 
     const hideEvent = previous ?
-      EventHandler.trigger(previous, EVENT_HIDE, {
-        relatedTarget: this._element
-      }) :
+      EventHandler.trigger(previous, EVENT_HIDE, { relatedTarget: this._element }) :
       null
 
     const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {
@@ -98,12 +86,8 @@ class Tab extends BaseComponent {
     this._activate(this._element, listElement)
 
     const complete = () => {
-      EventHandler.trigger(previous, EVENT_HIDDEN, {
-        relatedTarget: this._element
-      })
-      EventHandler.trigger(this._element, EVENT_SHOWN, {
-        relatedTarget: previous
-      })
+      EventHandler.trigger(previous, EVENT_HIDDEN, { relatedTarget: this._element })
+      EventHandler.trigger(this._element, EVENT_SHOWN, { relatedTarget: previous })
     }
 
     if (target) {
@@ -114,7 +98,6 @@ class Tab extends BaseComponent {
   }
 
   // Private
-
   _activate(element, container, callback) {
     const activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ?
       SelectorEngine.find(SELECTOR_ACTIVE_UL, container) :
@@ -126,11 +109,8 @@ class Tab extends BaseComponent {
     const complete = () => this._transitionComplete(element, active, callback)
 
     if (active && isTransitioning) {
-      const transitionDuration = getTransitionDurationFromElement(active)
       active.classList.remove(CLASS_NAME_SHOW)
-
-      EventHandler.one(active, 'transitionend', complete)
-      emulateTransitionEnd(active, transitionDuration)
+      this._queueCallback(complete, element, true)
     } else {
       complete()
     }
@@ -162,12 +142,18 @@ class Tab extends BaseComponent {
       element.classList.add(CLASS_NAME_SHOW)
     }
 
-    if (element.parentNode && element.parentNode.classList.contains(CLASS_NAME_DROPDOWN_MENU)) {
+    let parent = element.parentNode
+    if (parent && parent.nodeName === 'LI') {
+      parent = parent.parentNode
+    }
+
+    if (parent && parent.classList.contains(CLASS_NAME_DROPDOWN_MENU)) {
       const dropdownElement = element.closest(SELECTOR_DROPDOWN)
 
       if (dropdownElement) {
-        SelectorEngine.find(SELECTOR_DROPDOWN_TOGGLE)
-          .forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE))
+        for (const dropdown of SelectorEngine.find(SELECTOR_DROPDOWN_TOGGLE, dropdownElement)) {
+          dropdown.classList.add(CLASS_NAME_ACTIVE)
+        }
       }
 
       element.setAttribute('aria-expanded', true)
@@ -179,10 +165,9 @@ class Tab extends BaseComponent {
   }
 
   // Static
-
   static jQueryInterface(config) {
     return this.each(function () {
-      const data = Data.get(this, DATA_KEY) || new Tab(this)
+      const data = Tab.getOrCreateInstance(this)
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
@@ -196,25 +181,26 @@ class Tab extends BaseComponent {
 }
 
 /**
- * ------------------------------------------------------------------------
- * Data Api implementation
- * ------------------------------------------------------------------------
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  event.preventDefault()
+  if (['A', 'AREA'].includes(this.tagName)) {
+    event.preventDefault()
+  }
 
-  const data = Data.get(this, DATA_KEY) || new Tab(this)
+  if (isDisabled(this)) {
+    return
+  }
+
+  const data = Tab.getOrCreateInstance(this)
   data.show()
 })
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
- * add .Tab to jQuery only if jQuery is present
  */
 
-defineJQueryPlugin(NAME, Tab)
+defineJQueryPlugin(Tab)
 
 export default Tab

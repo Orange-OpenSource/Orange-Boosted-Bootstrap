@@ -52,10 +52,14 @@ const files = [
   {
     file: 'node_modules/@popperjs/core/dist/umd/popper.min.js',
     configPropertyName: 'popper_hash'
+  },
+  {
+    file: 'node_modules/focus-visible/dist/focus-visible.min.js',
+    configPropertyName: 'focus_visible_hash'
   }
 ]
 
-files.forEach(file => {
+for (const file of files) {
   fs.readFile(file.file, 'utf8', (err, data) => {
     if (err) {
       throw err
@@ -69,4 +73,4 @@ files.forEach(file => {
 
     sh.sed('-i', new RegExp(`^(\\s+${file.configPropertyName}:\\s+["'])\\S*(["'])`), `$1${integrity}$2`, configFile)
   })
-})
+}

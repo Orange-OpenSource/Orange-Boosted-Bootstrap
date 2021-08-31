@@ -1,11 +1,5 @@
 import Button from '../../src/button'
-
-/** Test helpers */
-import {
-  getFixture,
-  clearFixture,
-  jQueryMock
-} from '../helpers/fixture'
+import { getFixture, clearFixture, jQueryMock } from '../helpers/fixture'
 
 describe('Button', () => {
   let fixtureEl
@@ -91,7 +85,7 @@ describe('Button', () => {
       const btnEl = fixtureEl.querySelector('.btn')
       const button = new Button(btnEl)
 
-      expect(Button.getInstance(btnEl)).toBeDefined()
+      expect(Button.getInstance(btnEl)).not.toBeNull()
 
       button.dispose()
 
@@ -126,7 +120,7 @@ describe('Button', () => {
 
       jQueryMock.fn.button.call(jQueryMock, 'toggle')
 
-      expect(Button.getInstance(btnEl)).toBeDefined()
+      expect(Button.getInstance(btnEl)).not.toBeNull()
       expect(btnEl.classList.contains('active')).toEqual(true)
     })
 
@@ -140,7 +134,7 @@ describe('Button', () => {
 
       jQueryMock.fn.button.call(jQueryMock)
 
-      expect(Button.getInstance(btnEl)).toBeDefined()
+      expect(Button.getInstance(btnEl)).not.toBeNull()
       expect(btnEl.classList.contains('active')).toEqual(false)
     })
   })
@@ -162,6 +156,28 @@ describe('Button', () => {
       const div = fixtureEl.querySelector('div')
 
       expect(Button.getInstance(div)).toEqual(null)
+    })
+  })
+
+  describe('getOrCreateInstance', () => {
+    it('should return button instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const button = new Button(div)
+
+      expect(Button.getOrCreateInstance(div)).toEqual(button)
+      expect(Button.getInstance(div)).toEqual(Button.getOrCreateInstance(div, {}))
+      expect(Button.getOrCreateInstance(div)).toBeInstanceOf(Button)
+    })
+
+    it('should return new instance when there is no button instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+
+      expect(Button.getInstance(div)).toEqual(null)
+      expect(Button.getOrCreateInstance(div)).toBeInstanceOf(Button)
     })
   })
 })

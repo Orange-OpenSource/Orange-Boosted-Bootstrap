@@ -1,8 +1,6 @@
 import Collapse from '../../src/collapse'
 import EventHandler from '../../src/dom/event-handler'
-
-/** Test helpers */
-import { getFixture, clearFixture, jQueryMock } from '../helpers/fixture'
+import { clearFixture, getFixture, jQueryMock } from '../helpers/fixture'
 
 describe('Collapse', () => {
   let fixtureEl
@@ -58,14 +56,14 @@ describe('Collapse', () => {
       const collapseEl = fixtureEl.querySelector('div.collapse')
       const myCollapseEl = fixtureEl.querySelector('.my-collapse')
       const fakejQueryObject = {
-        0: myCollapseEl
+        0: myCollapseEl,
+        jquery: 'foo'
       }
       const collapse = new Collapse(collapseEl, {
         parent: fakejQueryObject
       })
 
-      expect(collapse._config.parent).toEqual(fakejQueryObject)
-      expect(collapse._getParent()).toEqual(myCollapseEl)
+      expect(collapse._config.parent).toEqual(myCollapseEl)
     })
 
     it('should allow non jquery object in parent config', () => {
@@ -103,8 +101,7 @@ describe('Collapse', () => {
         parent: 'div.my-collapse'
       })
 
-      expect(collapse._config.parent).toEqual('div.my-collapse')
-      expect(collapse._getParent()).toEqual(myCollapseEl)
+      expect(collapse._config.parent).toEqual(myCollapseEl)
     })
   })
 
@@ -224,7 +221,7 @@ describe('Collapse', () => {
     })
 
     it('should show a collapsed element on width', done => {
-      fixtureEl.innerHTML = '<div class="collapse width" style="width: 0px;"></div>'
+      fixtureEl.innerHTML = '<div class="collapse collapse-horizontal" style="width: 0px;"></div>'
 
       const collapseEl = fixtureEl.querySelector('div')
       const collapse = new Collapse(collapseEl, {
@@ -268,6 +265,112 @@ describe('Collapse', () => {
       collapse.show()
     })
 
+    it('should be able to handle toggling of other children siblings', done => {
+      fixtureEl.innerHTML = [
+        '<div id="parentGroup" class="accordion">',
+        '   <div id="parentHeader" class="accordion-header">',
+        '      <button data-bs-target="#parentContent" data-bs-toggle="collapse" role="button" class="accordion-toggle">Parent</button>',
+        '   </div>',
+        '   <div id="parentContent" class="accordion-collapse collapse" aria-labelledby="parentHeader" data-bs-parent="#parentGroup">',
+        '      <div class="accordion-body">',
+        '         <div id="childGroup" class="accordion">',
+        '            <div class="accordion-item">',
+        '               <div id="childHeader1" class="accordion-header">',
+        '                  <button data-bs-target="#childContent1" data-bs-toggle="collapse" role="button" class="accordion-toggle">Child 1</button>',
+        '               </div>',
+        '               <div id="childContent1" class="accordion-collapse collapse" aria-labelledby="childHeader1" data-bs-parent="#childGroup">',
+        '                  <div>content</div>',
+        '               </div>',
+        '            </div>',
+        '            <div class="accordion-item">',
+        '               <div id="childHeader2" class="accordion-header">',
+        '                  <button data-bs-target="#childContent2" data-bs-toggle="collapse" role="button" class="accordion-toggle">Child 2</button>',
+        '               </div>',
+        '               <div id="childContent2" class="accordion-collapse collapse" aria-labelledby="childHeader2" data-bs-parent="#childGroup">',
+        '                  <div>content</div>',
+        '               </div>',
+        '            </div>',
+        '         </div>',
+        '      </div>',
+        '   </div>',
+        '</div>'
+      ].join('')
+
+      const el = selector => fixtureEl.querySelector(selector)
+
+      const parentBtn = el('[data-bs-target="#parentContent"]')
+      const childBtn1 = el('[data-bs-target="#childContent1"]')
+      const childBtn2 = el('[data-bs-target="#childContent2"]')
+
+      const parentCollapseEl = el('#parentContent')
+      const childCollapseEl1 = el('#childContent1')
+      const childCollapseEl2 = el('#childContent2')
+
+      parentCollapseEl.addEventListener('shown.bs.collapse', () => {
+        expect(parentCollapseEl.classList.contains('show')).toEqual(true)
+        childBtn1.click()
+      })
+      childCollapseEl1.addEventListener('shown.bs.collapse', () => {
+        expect(childCollapseEl1.classList.contains('show')).toEqual(true)
+        childBtn2.click()
+      })
+      childCollapseEl2.addEventListener('shown.bs.collapse', () => {
+        expect(childCollapseEl2.classList.contains('show')).toEqual(true)
+        expect(childCollapseEl1.classList.contains('show')).toEqual(false)
+        done()
+      })
+
+      parentBtn.click()
+    })
+    it('should not change tab tabpanels descendants on accordion', done => {
+      fixtureEl.innerHTML = [
+        '<div class="accordion" id="accordionExample">',
+        '      <div class="accordion-item">',
+        '        <h2 class="accordion-header" id="headingOne">',
+        '          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">',
+        '            Accordion Item #1',
+        '          </button>',
+        '        </h2>',
+        '        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">',
+        '          <div class="accordion-body">',
+        '            <nav>',
+        '              <div class="nav nav-tabs" id="nav-tab" role="tablist">',
+        '                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>',
+        '                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>',
+        '              </div>',
+        '            </nav>',
+        '            <div class="tab-content" id="nav-tabContent">',
+        '              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Home</div>',
+        '              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Profile</div>',
+        '            </div>',
+        '          </div>',
+        '        </div>',
+        '      </div>',
+        '    </div>'
+      ].join('')
+
+      const el = fixtureEl.querySelector('#collapseOne')
+      const activeTabPane = fixtureEl.querySelector('#nav-home')
+      const collapse = new Collapse(el)
+      let times = 1
+
+      el.addEventListener('hidden.bs.collapse', () => {
+        collapse.show()
+      })
+
+      el.addEventListener('shown.bs.collapse', () => {
+        expect(activeTabPane.classList.contains('show')).toEqual(true)
+        times++
+        if (times === 2) {
+          done()
+        }
+
+        collapse.hide()
+      })
+
+      collapse.show()
+    })
+
     it('should not fire shown when show is prevented', done => {
       fixtureEl.innerHTML = '<div class="collapse"></div>'
 
@@ -283,8 +386,8 @@ describe('Collapse', () => {
         }, 10)
       }
 
-      collapseEl.addEventListener('show.bs.collapse', e => {
-        e.preventDefault()
+      collapseEl.addEventListener('show.bs.collapse', event => {
+        event.preventDefault()
         expectEnd()
       })
 
@@ -360,8 +463,8 @@ describe('Collapse', () => {
         }, 10)
       }
 
-      collapseEl.addEventListener('hide.bs.collapse', e => {
-        e.preventDefault()
+      collapseEl.addEventListener('hide.bs.collapse', event => {
+        event.preventDefault()
         expectEnd()
       })
 
@@ -810,7 +913,7 @@ describe('Collapse', () => {
 
       jQueryMock.fn.collapse.call(jQueryMock)
 
-      expect(Collapse.getInstance(div)).toBeDefined()
+      expect(Collapse.getInstance(div)).not.toBeNull()
     })
 
     it('should not re create a collapse', () => {
@@ -859,6 +962,60 @@ describe('Collapse', () => {
       const div = fixtureEl.querySelector('div')
 
       expect(Collapse.getInstance(div)).toEqual(null)
+    })
+  })
+
+  describe('getOrCreateInstance', () => {
+    it('should return collapse instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const collapse = new Collapse(div)
+
+      expect(Collapse.getOrCreateInstance(div)).toEqual(collapse)
+      expect(Collapse.getInstance(div)).toEqual(Collapse.getOrCreateInstance(div, {}))
+      expect(Collapse.getOrCreateInstance(div)).toBeInstanceOf(Collapse)
+    })
+
+    it('should return new instance when there is no collapse instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+
+      expect(Collapse.getInstance(div)).toEqual(null)
+      expect(Collapse.getOrCreateInstance(div)).toBeInstanceOf(Collapse)
+    })
+
+    it('should return new instance when there is no collapse instance with given configuration', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+
+      expect(Collapse.getInstance(div)).toEqual(null)
+      const collapse = Collapse.getOrCreateInstance(div, {
+        toggle: false
+      })
+      expect(collapse).toBeInstanceOf(Collapse)
+
+      expect(collapse._config.toggle).toEqual(false)
+    })
+
+    it('should return the instance when exists without given configuration', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const collapse = new Collapse(div, {
+        toggle: false
+      })
+      expect(Collapse.getInstance(div)).toEqual(collapse)
+
+      const collapse2 = Collapse.getOrCreateInstance(div, {
+        toggle: true
+      })
+      expect(collapse).toBeInstanceOf(Collapse)
+      expect(collapse2).toEqual(collapse)
+
+      expect(collapse2._config.toggle).toEqual(false)
     })
   })
 })

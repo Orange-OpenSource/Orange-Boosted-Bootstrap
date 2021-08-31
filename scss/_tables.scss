@@ -3,15 +3,18 @@
 //
 
 .table {
+  --#{$variable-prefix}table-color: #{$table-color};
   --#{$variable-prefix}table-bg: #{$table-bg};
+  --#{$variable-prefix}table-border-color: #{$table-border-color};
+  // Boosted mod: no table-accent-bg
   --#{$variable-prefix}table-active-color: #{$table-active-color};
   --#{$variable-prefix}table-active-bg: #{$table-active-bg};
   --#{$variable-prefix}table-hover-color: #{$table-hover-color};
   --#{$variable-prefix}table-hover-bg: #{$table-hover-bg};
-  --#{$variable-prefix}table-border-color: #{$table-border-color}; // Boosted mod
+
   width: 100%;
   margin-bottom: $spacer;
-  color: $table-color;
+  color: var(--#{$variable-prefix}table-color);
   vertical-align: $table-cell-vertical-align;
 
   // Boosted mod
@@ -47,8 +50,8 @@
   }
 
   // Highlight border color between thead, tbody and tfoot.
-  > :not(:last-child) > :last-child > * {
-    border-bottom-color: $table-group-separator-color;
+  > :not(:first-child) {
+    border-top: (2 * $table-border-width) solid $table-group-separator-color;
   }
 }
 
@@ -93,7 +96,7 @@
 // Placed here since it has to come after the potential zebra striping
 
 .table-hover {
-  > tbody > tr:hover {
+  > tbody > tr:hover > * {
     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);
     color: var(--#{$variable-prefix}table-hover-color);
   }

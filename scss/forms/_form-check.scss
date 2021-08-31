@@ -17,7 +17,7 @@
 .form-check-input {
   width: $form-check-input-width;
   height: $form-check-input-width;
-  margin-top: ($input-btn-line-height - $form-check-input-width) / 2; // line-height minus check height
+  margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
   background-color: $form-check-input-bg;
   background-repeat: no-repeat;
@@ -75,11 +75,11 @@
 
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$variable-prefix}gradient);
-      background-position: 50% add(50%, $border-width / 4), center; // Boosted mod
+      background-position: 50% add(50%, $border-width * .25), center; // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
-      background-position: 50% add(50%, $border-width / 4); // Boosted mod
+      background-position: 50% add(50%, $border-width * .25); // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5; // Boosted mod
     }
   }
@@ -131,12 +131,12 @@
 .form-switch {
   // Boosted mod
   --#{$boosted-variable-prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
-  min-height: $form-switch-width / 2;
+  min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
 
   .form-check-input {
     width: $form-switch-width;
-    height: $form-switch-width / 2;
+    height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
     background-color: $white; // Boosted mod
     background-image: $form-switch-bg-image, var(--#{$boosted-variable-prefix}switch-gradient);
@@ -176,7 +176,7 @@
     }
 
     &:focus {
-      outline-offset: $outline-width / 2;
+      outline-offset: $outline-width * .5;
     }
 
     &:active {

@@ -39,7 +39,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
             </div>
             <div class="modal-body">
               <h4>Text in a modal</h4>
@@ -124,7 +124,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="firefoxModalLabel">Firefox Bug Test</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
             </div>
             <div class="modal-body">
               <ol>
@@ -148,7 +148,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="slowModalLabel">Lorem slowly</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button><!--Boosted mod: a11y-->
             </div>
             <div class="modal-body">
               <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
@@ -199,7 +199,7 @@
       </button>
     </div>
 
-    <script src="../../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../../dist/dom/event-handler.js"></script>
     <script src="../../dist/dom/selector-engine.js"></script>
     <script src="../../dist/dom/data.js"></script>
@@ -220,15 +220,14 @@
         }
       }
 
-      [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        .forEach(function (popover) {
-          new Popover(popover)
-        })
-
-      var tooltipList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      tooltipList.forEach(function (tooltip) {
-        new Tooltip(tooltip)
-      })
+      var popoverElements = document.querySelectorAll('[data-bs-toggle="popover"]')
+      for (const popoverEl of popoverElements) {
+        new Popover(popoverEl)
+      }
+      var tooltipElements = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      for (const tooltipEl of tooltipElements) {
+        new Tooltip(tooltipEl)
+      }
 
       var tallToggle = document.getElementById('tall-toggle')
       var tall = document.getElementById('tall')

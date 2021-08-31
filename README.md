@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://v5-dev--boosted.netlify.app/docs/5.0/assets/brand/orange_logo.svg" alt="Boosted" width="50" height="50">
+    <img src="https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
   </a>
 </p>
 
@@ -9,12 +9,12 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://v5-dev--boosted.netlify.app/docs/5.0/"><strong>Visit Boosted</strong></a>
+  <a href="https://boosted.orange.com/docs/5.1/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=bug.md">Report bug</a>
+  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
+  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
 </p>
 
 
@@ -36,30 +36,28 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.1.3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-beta3`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.1.3`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
-Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
 
 ## Status
 
-[![Build Status](https://img.shields.io/github/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/JS%20Tests/v5-dev?label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av5-dev)
+[![Build Status](https://img.shields.io/github/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/JS%20Tests/main?label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amain)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/boosted)](https://www.nuget.org/packages/boosted/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
-[![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/css/boosted.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/dist/css/boosted.min.css)
-[![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/css/boosted.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/dist/css/boosted.min.css)
-[![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/dist/js/boosted.min.js)
-[![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/dist/js/boosted.min.js)
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)](https://automate.browserstack.com/public-build/eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)
+[![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/css/boosted.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/css/boosted.min.css)
+[![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/css/boosted.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/css/boosted.min.css)
+[![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
+[![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
+[![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)](https://automate.browserstack.com/public-build/ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)
 [![JS Delivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included
@@ -116,12 +114,12 @@ boosted/
     └── boosted.min.js.map
 ```
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
 
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new).
 
 
 ## Documentation
@@ -148,11 +146,11 @@ You can find all our previous releases docs on <https://boosted.orange.com/docs/
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/master/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
 
 ## Versioning
@@ -160,6 +158,8 @@ Editor preferences are available in the [editor config](https://github.com/Orang
 For transparency into our release cycle and in striving to maintain backward compatibility, Boosted is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
 See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of Boosted.
+
+Our default branch is for development of our Boosted 5 release. Head to the [`v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Boosted 4.
 
 
 ## Creators
@@ -203,5 +203,5 @@ Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-release
 
 Code and documentation copyright 2011-2021 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-Boosted code and documentation copyright 2015-2021 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/docs/LICENSE).
+Boosted code and documentation copyright 2015-2021 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

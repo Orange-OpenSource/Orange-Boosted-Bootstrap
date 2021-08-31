@@ -116,12 +116,12 @@
   // Boosted mod
   .nav-item {
     font-size: $h5-font-size;
-    border-top: $border-width / 2 solid $gray-900;
+    border-top: $border-width * .5 solid $gray-900;
   }
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x / 4;
+    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .25;
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
@@ -131,9 +131,9 @@
 
     &.active::before {
       position: absolute;
-      right: $nav-link-padding-y / 2;
+      right: $nav-link-padding-y * .5;
       bottom: 0;
-      left: $nav-link-padding-y / 2;
+      left: $nav-link-padding-y * .5;
       height: $border-width * 2;
       content: "";
       background-color: currentColor;
@@ -161,8 +161,8 @@
 //
 
 .navbar-text {
-  padding-top: add($nav-link-padding-y, $border-width * 2);
-  padding-bottom: add($nav-link-padding-y, $border-width * 2);
+  padding-top: add($nav-link-padding-y, $border-width * 2); // Boosted mod
+  padding-bottom: add($nav-link-padding-y, $border-width * 2); // Boosted mod
 }
 
 
@@ -221,8 +221,8 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: $navbar-icon-size;
-  height: $navbar-icon-size;
+  width: $navbar-icon-size; // Boosted mod
+  height: $navbar-icon-size; // Boosted mod
   vertical-align: middle;
   background-image: escape-svg($navbar-toggler-icon-bg); // Boosted mod
   background-repeat: no-repeat;
@@ -268,8 +268,10 @@
               bottom: -$navbar-padding-bottom;
               left: $nav-link-padding-y;
             }
+            // End mod
           }
 
+          // Boosted mod
           .nav-item {
             font-size: $font-size-base;
             border: 0;
@@ -301,12 +303,13 @@
         .navbar-toggler {
           display: none;
         }
+
+        // Boosted mod: Offcanvas navbar is not allowed
       }
     }
   }
 }
 // scss-docs-end navbar-expand-loop
-
 
 // Navbar themes
 //

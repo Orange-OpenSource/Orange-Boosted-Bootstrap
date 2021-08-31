@@ -1,11 +1,11 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta3): util/index.js
+ * Bootstrap (v5.1.3): util/index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const MAX_UID = 1000000
+const MAX_UID = 1_000_000
 const MILLISECONDS_MULTIPLIER = 1000
 const TRANSITION_END = 'transitionend'
 
@@ -15,13 +15,11 @@ const toType = obj => {
     return `${obj}`
   }
 
-  return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase()
+  return Object.prototype.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase()
 }
 
 /**
- * --------------------------------------------------------------------------
- * Public Util Api
- * --------------------------------------------------------------------------
+ * Public Util API
  */
 
 const getUID = prefix => {
@@ -48,7 +46,7 @@ const getSelector = element => {
 
     // Just in case some CMS puts out a full URL with the anchor appended
     if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
-      hrefAttr = '#' + hrefAttr.split('#')[1]
+      hrefAttr = `#${hrefAttr.split('#')[1]}`
     }
 
     selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null
@@ -100,57 +98,51 @@ const triggerTransitionEnd = element => {
   element.dispatchEvent(new Event(TRANSITION_END))
 }
 
-const isElement = obj => (obj[0] || obj).nodeType
-
-const emulateTransitionEnd = (element, duration) => {
-  let called = false
-  const durationPadding = 5
-  const emulatedDuration = duration + durationPadding
-
-  function listener() {
-    called = true
-    element.removeEventListener(TRANSITION_END, listener)
+const isElement = obj => {
+  if (!obj || typeof obj !== 'object') {
+    return false
   }
 
-  element.addEventListener(TRANSITION_END, listener)
-  setTimeout(() => {
-    if (!called) {
-      triggerTransitionEnd(element)
-    }
-  }, emulatedDuration)
+  if (typeof obj.jquery !== 'undefined') {
+    obj = obj[0]
+  }
+
+  return typeof obj.nodeType !== 'undefined'
+}
+
+const getElement = obj => {
+  // it's a jQuery object or a node element
+  if (isElement(obj)) {
+    return obj.jquery ? obj[0] : obj
+  }
+
+  if (typeof obj === 'string' && obj.length > 0) {
+    return document.querySelector(obj)
+  }
+
+  return null
 }
 
 const typeCheckConfig = (componentName, config, configTypes) => {
-  Object.keys(configTypes).forEach(property => {
+  for (const property of Object.keys(configTypes)) {
     const expectedTypes = configTypes[property]
     const value = config[property]
     const valueType = value && isElement(value) ? 'element' : toType(value)
 
     if (!new RegExp(expectedTypes).test(valueType)) {
       throw new TypeError(
-        `${componentName.toUpperCase()}: ` +
-        `Option "${property}" provided type "${valueType}" ` +
-        `but expected type "${expectedTypes}".`
+        `${componentName.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`
       )
     }
-  })
+  }
 }
 
 const isVisible = element => {
-  if (!element) {
+  if (!isElement(element) || element.getClientRects().length === 0) {
     return false
   }
 
-  if (element.style && element.parentNode && element.parentNode.style) {
-    const elementStyle = getComputedStyle(element)
-    const parentNodeStyle = getComputedStyle(element.parentNode)
-
-    return elementStyle.display !== 'none' &&
-      parentNodeStyle.display !== 'none' &&
-      elementStyle.visibility !== 'hidden'
-  }
-
-  return false
+  return getComputedStyle(element).getPropertyValue('visibility') === 'visible'
 }
 
 const isDisabled = element => {
@@ -192,9 +184,19 @@ const findShadowRoot = element => {
   return findShadowRoot(element.parentNode)
 }
 
-const noop = () => function () {}
+const noop = () => {}
 
-const reflow = element => element.offsetHeight
+/**
+ * Trick to restart an element's animation
+ *
+ * @param {HTMLElement} element
+ * @return void
+ *
+ * @see https://www.charistheo.io/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
+ */
+const reflow = element => {
+  element.offsetHeight // eslint-disable-line no-unused-expressions
+}
 
 const getjQuery = () => {
   const { jQuery } = window
@@ -206,9 +208,20 @@ const getjQuery = () => {
   return null
 }
 
+const DOMContentLoadedCallbacks = []
+
 const onDOMContentLoaded = callback => {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', callback)
+    // add listener on the first call when the document is in loading state
+    if (!DOMContentLoadedCallbacks.length) {
+      document.addEventListener('DOMContentLoaded', () => {
+        for (const callback of DOMContentLoadedCallbacks) {
+          callback()
+        }
+      })
+    }
+
+    DOMContentLoadedCallbacks.push(callback)
   } else {
     callback()
   }
@@ -216,11 +229,12 @@ const onDOMContentLoaded = callback => {
 
 const isRTL = () => document.documentElement.dir === 'rtl'
 
-const defineJQueryPlugin = (name, plugin) => {
+const defineJQueryPlugin = plugin => {
   onDOMContentLoaded(() => {
     const $ = getjQuery()
     /* istanbul ignore if */
     if ($) {
+      const name = plugin.NAME
       const JQUERY_NO_CONFLICT = $.fn[name]
       $.fn[name] = plugin.jQueryInterface
       $.fn[name].Constructor = plugin
@@ -232,22 +246,88 @@ const defineJQueryPlugin = (name, plugin) => {
   })
 }
 
+const execute = callback => {
+  if (typeof callback === 'function') {
+    callback()
+  }
+}
+
+const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
+  if (!waitForTransition) {
+    execute(callback)
+    return
+  }
+
+  const durationPadding = 5
+  const emulatedDuration = getTransitionDurationFromElement(transitionElement) + durationPadding
+
+  let called = false
+
+  const handler = ({ target }) => {
+    if (target !== transitionElement) {
+      return
+    }
+
+    called = true
+    transitionElement.removeEventListener(TRANSITION_END, handler)
+    execute(callback)
+  }
+
+  transitionElement.addEventListener(TRANSITION_END, handler)
+  setTimeout(() => {
+    if (!called) {
+      triggerTransitionEnd(transitionElement)
+    }
+  }, emulatedDuration)
+}
+
+/**
+ * Return the previous/next element of a list.
+ *
+ * @param {array} list    The list of elements
+ * @param activeElement   The active element
+ * @param shouldGetNext   Choose to get next or previous element
+ * @param isCycleAllowed
+ * @return {Element|elem} The proper element
+ */
+const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
+  let index = list.indexOf(activeElement)
+
+  // if the element does not exist in the list return an element depending on the direction and if cycle is allowed
+  if (index === -1) {
+    return list[!shouldGetNext && isCycleAllowed ? list.length - 1 : 0]
+  }
+
+  const listLength = list.length
+
+  index += shouldGetNext ? 1 : -1
+
+  if (isCycleAllowed) {
+    index = (index + listLength) % listLength
+  }
+
+  return list[Math.max(0, Math.min(index, listLength - 1))]
+}
+
 export {
-  getUID,
-  getSelectorFromElement,
-  getElementFromSelector,
-  getTransitionDurationFromElement,
-  triggerTransitionEnd,
-  isElement,
-  emulateTransitionEnd,
-  typeCheckConfig,
-  isVisible,
-  isDisabled,
+  defineJQueryPlugin,
+  execute,
+  executeAfterTransition,
   findShadowRoot,
-  noop,
-  reflow,
+  getElement,
+  getElementFromSelector,
   getjQuery,
-  onDOMContentLoaded,
+  getNextActiveElement,
+  getSelectorFromElement,
+  getTransitionDurationFromElement,
+  getUID,
+  isDisabled,
+  isElement,
   isRTL,
-  defineJQueryPlugin
+  isVisible,
+  noop,
+  onDOMContentLoaded,
+  reflow,
+  triggerTransitionEnd,
+  typeCheckConfig
 }

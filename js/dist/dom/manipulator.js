@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.0.0-beta3 (https://boosted.orange.com/)
+  * Boosted v5.1.3 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap manipulator.js v5.0.0-beta3 (https://boosted.orange.com/)
+  * Bootstrap manipulator.js v5.1.3 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -12,11 +12,11 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Manipulator = factory());
-}(this, (function () { 'use strict';
+})(this, (function () { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dom/manipulator.js
+   * Bootstrap (v5.1.3): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -74,8 +74,8 @@
     offset(element) {
       const rect = element.getBoundingClientRect();
       return {
-        top: rect.top + document.body.scrollTop,
-        left: rect.left + document.body.scrollLeft
+        top: rect.top + window.pageYOffset,
+        left: rect.left + window.pageXOffset
       };
     },
 
@@ -90,5 +90,5 @@
 
   return Manipulator;
 
-})));
+}));
 //# sourceMappingURL=manipulator.js.map

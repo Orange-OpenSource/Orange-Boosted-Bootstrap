@@ -4,7 +4,7 @@ on:
     paths:
       - "scss/**"
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
   pull_request:
     types:
@@ -13,11 +13,11 @@ on:
       - labeled
       - unlabeled
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
 env:
   FORCE_COLOR: 2
-  NODE: 14
+  NODE: 16
 
 jobs:
   css:
@@ -36,19 +36,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+          cache: npm
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - run: node --version
       - run: npm --version
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
-
-      - name: Set up npm cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Install npm dependencies

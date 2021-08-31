@@ -6,7 +6,7 @@
 
 .bd-links {
   overflow: auto;
-  font-weight: 700;
+  font-weight: 700; // Boosted mod
 
   @include media-breakpoint-up(md) {
     position: sticky;

@@ -77,7 +77,7 @@
 .alert-icon {
   flex-shrink: 0;
   width: $alert-icon-size;
-  margin: -#{$alert-icon-margin-y / 2} 0;
+  margin: -#{$alert-icon-margin-y * .5} 0;
 
   + * {
     margin: $alert-icon-margin-y 0;
@@ -105,7 +105,7 @@
   border: 0;
 
   .alert-icon {
-    width: $alert-icon-size / 2;
+    width: $alert-icon-size * .5;
     margin: $alert-icon-margin-y 0;
 
     &::before {

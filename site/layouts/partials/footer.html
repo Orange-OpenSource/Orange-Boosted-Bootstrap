@@ -1,22 +1,56 @@
 <footer class="bd-footer py-3 py-md-4 bg-dark">
-  <div class="container">
-    <p class="mb-0">This documentation is an adaptation made by Orange.</p>
-    <p class="mb-0">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
-    <p class="mb-md-0">
-      Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
-      —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
-      docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
-    </p>
-    <ul class="bd-footer-links ps-0 mb-0">
-      <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v{{ .Site.Params.current_version }}</span></li>
-      <li class="list-inline-item me-3"><a href="{{ .Site.Params.repo }}">GitHub</a></li>
-      <li class="list-inline-item me-3"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Examples</a></li>
-      <li class="list-inline-item me-3"><a href="{{ .Site.Params.bootstrap }}">Bootstrap</a></li>
-      <li class="list-inline-item me-3"><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
-      <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
-        <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
-      </a></li>
-    </ul>
+  <div class="container py-1">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <p class="mb-1">This documentation is an adaptation made by Orange.</p>
+        <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
+        <p class="mb-md-1">
+          Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
+          docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+        </p>
+        <ul class="bd-footer-links ps-0 mb-0">
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v{{ .Site.Params.current_version }}</span></li>
+          <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
+          </a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Examples</a></li>
+          <!-- Boosted mod: removed .Site.Params.themes and .Site.Params.blog -->
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.repo }}">Boosted 5</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.repo }}/tree/v4-dev">Boosted 4</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.bootstrap }}">Bootstrap</a></li>
+          <li class=""><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.repo }}/issues">Issues</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.repo }}/discussions">Discussions</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
 <!-- Boosted mod: back-to-top component -->

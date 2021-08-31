@@ -1,25 +1,23 @@
 {{ define "main" }}
+  <!-- Boosted mod no Header tag here to avoid duplicate banner landmark accessibility error -->
   <main class="bd-content order-1 py-5" id="content">
     <div class="mb-5 pb-5 border-bottom border-light">
       <div class="container pt-md-1 pb-md-4">
         <div class="row">
-          <div class="col-xl-8">
+          <div class="col-12">
             <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
             <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" }}
             <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">Download examples</a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-outline-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Download source code</a>
+              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-primary">Download examples</a>
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-secondary mt-3 mt-sm-0 ms-sm-3">Download source code</a>
             </div>
             {{ end }}
           </div>
-          <div class="col-xl-4 d-lg-flex justify-content-xl-end">
-            {{ partial "ads" . }}
-          </div>
+          <!-- Boosted mod no ads -->
         </div>
       </div>
     </div>
-
     <div class="container">
       {{ .Content }}
     </div>

@@ -1,24 +1,17 @@
 // Base class
 
 .tag {
-  display: inline-block;
-  padding: $tag-padding-y $tag-padding-x add($tag-padding-y, 1px);
+  @extend .badge;
   @include font-size($tag-font-size);
-  font-weight: $tag-font-weight;
-  line-height: 1;
+  padding: $badge-padding-y 8px $badge-padding-y;
+  line-height: 16px;
   color: $tag-color;
-  text-align: center;
-
-  letter-spacing: initial;
-  white-space: nowrap;
-  vertical-align: baseline;
 
   cursor: if($enable-button-pointers, pointer, null);
 
-  background-color: transparent;
   border: $tag-border-width solid $tag-border-color;
-  // stylelint-disable-next-line property-disallowed-list
-  border-radius: $tag-border-radius;
+
+  @include border-radius($tag-border-radius, $tag-border-radius);
 
   &:hover {
     border: $tag-border-width solid $tag-border-color-hover;
@@ -34,16 +27,30 @@
   &:disabled,
   &.disabled {
     color: $tag-disabled-color;
+    cursor: default !important; // stylelint-disable-line declaration-no-important
+    border: $tag-border-width solid $tag-border-color;
+
+    &.active {
+      background-color: $tag-background-color !important; // stylelint-disable-line declaration-no-important
+    }
   }
 
   > svg {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 }
 
+.tag-icon,
 .tag-remove {
-  padding-right: 5px;
-  padding-bottom: 2px;
+  padding: subtract($badge-padding-y, 2px) 8px subtract($badge-padding-y, 2px);
+}
+
+.tag-icon {
+  padding-bottom: subtract($badge-padding-y, 1px);
+}
+
+.tag-remove {
+  padding-right: 3px;
   .remove {
     &:hover {
       padding: 2px;
@@ -63,6 +70,8 @@
     $tag-border-radius-lg,
     $tag-line-height-lg
   );
+  padding-top: add($tag-padding-y-lg, 1px);
+  @include font-size($tag-font-size-lg);
   // stylelint-disable-next-line property-disallowed-list
   border-radius: $tag-border-radius-lg;
 }
