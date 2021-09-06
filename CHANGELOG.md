@@ -1,4 +1,20 @@
-## [5.0.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/5.0.1...5.0.2) (2021-07-15)
+# [5.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.2...v5.1.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **#691:** remove temporary fix from [#682](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/682) to fix pa11y-ci GitHub Actions execution ([81d1f33](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/81d1f3322507f54834a48e3ca0d513aba29aec8a))
+* **#733:** prevent a redirection to the main page after clicking on social buttons ([d344bef](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d344bef10789f63102860c3883b242ada05dc02b)), closes [#733](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/733)
+* **#734:** changed toast color within Live section from blue to orange ([be5b56a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/be5b56afc6e6db4524083d00167191649a8a6110)), closes [#734](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/734)
+* **#735:** separate local fonts from CDN in the starter template ([fcbafea](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fcbafeace3cce6ca21ef7eb219d6ade024c8e759)), closes [#735](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/735)
+* **#782:** active dropdown items background color ([#784](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/784)) ([0ec4d1d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0ec4d1d13ef2c108f898b984d4e428a1e6b23426)), closes [#782](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/782)
+* **docs:** replace /bootstrap by /boosted in sass.md ([092df17](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/092df175277afc25e031152b36b308e921021a34))
+* **pa11y:** hide contrast issue from badge positioning ([c017022](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c017022a7d28c613075b0ade97a43742123dc7cb))
+* update references of ff00dd to Nurovek ([#756](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/756)) ([0c5d846](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0c5d84620986ec792e5803d46d4ef0af50339816))
+
+
+
+## [5.0.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.1...v5.0.2) (2021-07-15)
 
 
 ### Bug Fixes
