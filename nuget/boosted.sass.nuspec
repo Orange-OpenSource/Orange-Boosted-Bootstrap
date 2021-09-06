@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>boosted.sass</id>
-    <version>5.0.2</version>
+    <version>5.1.0</version>
     <title>Boosted Sass</title>
     <authors>The Boosted Authors, Orange SA</authors>
     <owners>Orange SA</owners>
