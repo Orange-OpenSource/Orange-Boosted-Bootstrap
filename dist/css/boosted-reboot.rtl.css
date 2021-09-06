@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v5.0.2 (https://boosted.orange.com/)
+ * Boosted Reboot v5.1.0 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.0.2 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -33,13 +33,14 @@
 body {
   position: relative;
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: var(--bs-body-font-family);
   font-synthesis: none;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: calc(18 / 16);
-  color: #000;
-  background-color: #fff;
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: subpixel-antialiased;
