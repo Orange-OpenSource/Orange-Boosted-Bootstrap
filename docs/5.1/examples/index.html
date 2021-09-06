@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta name="author" content="Orange and Boosted contributors">
+<meta name="generator" content="Hugo 0.87.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
+
+<title>Examples · Boosted v5.1</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/5.1/examples/">
+
+
+
+
+<link rel="preload" href="/docs/5.1/dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/5.1/dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+
+
+<!-- Boosted core CSS -->
+<link href="/docs/5.1/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
+<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-p65W0Den8mG2rY0XUuSgjXmMvwuJ1y3Z9THeLsd2VkKKQW0zy/gY1EAE1wkqkQGr" crossorigin="anonymous">
+
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Examples">
+<meta name="twitter:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/5.1/assets/brand/orange-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/5.1/examples/">
+<meta property="og:title" content="Examples">
+<meta property="og:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://boosted.orange.com/docs/5.1/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
+
+
+  </head>
+  <body>
+    <a id="top"></a>
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
+    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
+    
+  </nav>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="container-xxl" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      <img src="/docs/5.1/assets/img/orange-logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.1/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link active" aria-current="true" href="/docs/5.1/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.1/guidelines/logos/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+          </a>
+        </li>
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0 align-self-center">
+          <a class="btn btn-primary my-2 ms-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    
+  
+  <main class="bd-content order-1 py-5" id="content">
+    <div class="mb-5 pb-5 border-bottom border-light">
+      <div class="container pt-md-1 pb-md-4">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="bd-title mt-0">Examples</h1>
+            <p class="bd-lead">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
+            
+            <div class="d-flex flex-column flex-sm-row">
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.1.0/boosted-5.1.0-examples.zip" class="btn btn-lg btn-primary">Download examples</a>
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.1.0.zip" class="btn btn-lg btn-secondary mt-3 mt-sm-0 ms-sm-3">Download source code</a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<h2 id="snippets">Snippets</h2>
+  <p>Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more.</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/headers/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/headers.png,
+                                                  /docs/5.1/assets/img/examples/headers@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/headers.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Headers</h3>
+        </a>
+        <p class="text-muted">Display your branding, navigation, search, and more with these header components</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/heroes/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/heroes.png,
+                                                  /docs/5.1/assets/img/examples/heroes@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/heroes.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Heroes</h3>
+        </a>
+        <p class="text-muted">Set the stage on your homepage with heroes that feature clear calls to action.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/features/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/features.png,
+                                                  /docs/5.1/assets/img/examples/features@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/features.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Features</h3>
+        </a>
+        <p class="text-muted">Explain the features, benefits, or other details in your marketing content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/sidebars/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/sidebars.png,
+                                                  /docs/5.1/assets/img/examples/sidebars@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/sidebars.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Sidebars</h3>
+        </a>
+        <p class="text-muted">Common navigation patterns ideal for offcanvas or multi-column layouts.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/footers/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/footers.png,
+                                                  /docs/5.1/assets/img/examples/footers@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/footers.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Footers</h3>
+        </a>
+        <p class="text-muted">Finish every page strong with an awesome footer, big or small.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/dropdowns/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/dropdowns.png,
+                                                  /docs/5.1/assets/img/examples/dropdowns@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/dropdowns.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Dropdowns</h3>
+        </a>
+        <p class="text-muted">Enhance your dropdowns with filters, icons, custom styles, and more.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/list-groups/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/list-groups.png,
+                                                  /docs/5.1/assets/img/examples/list-groups@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/list-groups.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">List groups</h3>
+        </a>
+        <p class="text-muted">Extend list groups with utilities and custom styles for any content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/modals/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/modals.png,
+                                                  /docs/5.1/assets/img/examples/modals@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/modals.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Modals</h3>
+        </a>
+        <p class="text-muted">Transform modals to serve any purpose, from feature tours to dialogs.</p>
+      </div>
+    </div>
+  <h2 id="custom-components">Custom Components</h2>
+  <p>Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework.</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/album/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/album.png,
+                                                  /docs/5.1/assets/img/examples/album@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/album.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Album</h3>
+        </a>
+        <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/pricing/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/pricing.png,
+                                                  /docs/5.1/assets/img/examples/pricing@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/pricing.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Pricing</h3>
+        </a>
+        <p class="text-muted">Example pricing page built with Cards and featuring a custom header and footer.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/checkout/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/checkout.png,
+                                                  /docs/5.1/assets/img/examples/checkout@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/checkout.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Checkout</h3>
+        </a>
+        <p class="text-muted">Custom checkout form showing our form components and their validation features.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/product/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/product.png,
+                                                  /docs/5.1/assets/img/examples/product@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/product.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Product</h3>
+        </a>
+        <p class="text-muted">Lean product-focused marketing page with extensive grid and image work.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/cover/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/cover.png,
+                                                  /docs/5.1/assets/img/examples/cover@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/cover.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Cover</h3>
+        </a>
+        <p class="text-muted">A one-page template for building simple and beautiful home pages.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/carousel/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/carousel.png,
+                                                  /docs/5.1/assets/img/examples/carousel@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/carousel.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Carousel</h3>
+        </a>
+        <p class="text-muted">Customize the navbar and carousel, then add some new components.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/blog/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/blog.png,
+                                                  /docs/5.1/assets/img/examples/blog@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/blog.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Blog</h3>
+        </a>
+        <p class="text-muted">Magazine like blog template with header, navigation, featured content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/dashboard/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/dashboard.png,
+                                                  /docs/5.1/assets/img/examples/dashboard@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/dashboard.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Dashboard</h3>
+        </a>
+        <p class="text-muted">Basic admin dashboard shell with fixed sidebar and navbar.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/sign-in/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/sign-in.png,
+                                                  /docs/5.1/assets/img/examples/sign-in@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/sign-in.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Sign-in</h3>
+        </a>
+        <p class="text-muted">Custom form layout and design for a simple sign in form.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/sticky-footer/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/sticky-footer.png,
+                                                  /docs/5.1/assets/img/examples/sticky-footer@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/sticky-footer.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Sticky footer</h3>
+        </a>
+        <p class="text-muted">Attach a footer to the bottom of the viewport when page content is short.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/sticky-footer-navbar/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/sticky-footer-navbar.png,
+                                                  /docs/5.1/assets/img/examples/sticky-footer-navbar@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/sticky-footer-navbar.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Sticky footer navbar</h3>
+        </a>
+        <p class="text-muted">Attach a footer to the bottom of the viewport with a fixed top navbar.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/jumbotron/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/jumbotron.png,
+                                                  /docs/5.1/assets/img/examples/jumbotron@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/jumbotron.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Jumbotron</h3>
+        </a>
+        <p class="text-muted">Use utilities to recreate and enhance Bootstrap 4's jumbotron.</p>
+      </div>
+    </div>
+  <h2 id="framework">Framework</h2>
+  <p>Examples that focus on implementing uses of built-in components provided by Boosted.</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/starter-template/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/starter-template.png,
+                                                  /docs/5.1/assets/img/examples/starter-template@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/starter-template.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Starter template</h3>
+        </a>
+        <p class="text-muted">Nothing but the basics: compiled CSS and JavaScript.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/grid/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/grid.png,
+                                                  /docs/5.1/assets/img/examples/grid@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/grid.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Grid</h3>
+        </a>
+        <p class="text-muted">Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/cheatsheet/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/cheatsheet.png,
+                                                  /docs/5.1/assets/img/examples/cheatsheet@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/cheatsheet.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Cheatsheet</h3>
+        </a>
+        <p class="text-muted">Kitchen sink of Boosted components.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/cheatsheet-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/cheatsheet-rtl.png,
+                                                  /docs/5.1/assets/img/examples/cheatsheet-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/cheatsheet-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Cheatsheet RTL</h3>
+        </a>
+        <p class="text-muted">Kitchen sink of Boosted components, RTL.</p>
+      </div>
+    </div>
+  <h2 id="navbars">Navbars</h2>
+  <p>Taking the default navbar component and showing how it can be moved, placed, and extended.</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/navbars/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/navbars.png,
+                                                  /docs/5.1/assets/img/examples/navbars@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/navbars.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Navbars</h3>
+        </a>
+        <p class="text-muted">Demonstration of all responsive and container options for the navbar.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/navbar-static/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/navbar-static.png,
+                                                  /docs/5.1/assets/img/examples/navbar-static@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/navbar-static.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Navbar static</h3>
+        </a>
+        <p class="text-muted">Single navbar example of a static top navbar along with some additional content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/navbar-fixed/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/navbar-fixed.png,
+                                                  /docs/5.1/assets/img/examples/navbar-fixed@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/navbar-fixed.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Navbar fixed</h3>
+        </a>
+        <p class="text-muted">Single navbar example with a fixed top navbar along with some additional content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/navbar-bottom/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/navbar-bottom.png,
+                                                  /docs/5.1/assets/img/examples/navbar-bottom@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/navbar-bottom.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Navbar bottom</h3>
+        </a>
+        <p class="text-muted">Single navbar example with a bottom navbar along with some additional content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/offcanvas-navbar/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/offcanvas-navbar.png,
+                                                  /docs/5.1/assets/img/examples/offcanvas-navbar@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/offcanvas-navbar.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Offcanvas navbar</h3>
+        </a>
+        <p class="text-muted">Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component).</p>
+      </div>
+    </div>
+  <h2 id="rtl">RTL</h2>
+  <p>See Boosted's RTL version in action with these modified Custom Components examples.</p>
+  <div class="bd-callout bd-callout-warning">
+      <p>The RTL feature is still <strong>experimental</strong> and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new">Open an issue</a>, we'd love to get your insights.</p>
+    </div>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/album-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/album-rtl.png,
+                                                  /docs/5.1/assets/img/examples/album-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/album-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Album RTL</h3>
+        </a>
+        <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/checkout-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/checkout-rtl.png,
+                                                  /docs/5.1/assets/img/examples/checkout-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/checkout-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Checkout RTL</h3>
+        </a>
+        <p class="text-muted">Custom checkout form showing our form components and their validation features.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/carousel-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/carousel-rtl.png,
+                                                  /docs/5.1/assets/img/examples/carousel-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/carousel-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Carousel RTL</h3>
+        </a>
+        <p class="text-muted">Customize the navbar and carousel, then add some new components.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/blog-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/blog-rtl.png,
+                                                  /docs/5.1/assets/img/examples/blog-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/blog-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Blog RTL</h3>
+        </a>
+        <p class="text-muted">Magazine like blog template with header, navigation, featured content.</p>
+      </div>
+    
+  
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/dashboard-rtl/" hreflang="ar">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/dashboard-rtl.png,
+                                                  /docs/5.1/assets/img/examples/dashboard-rtl@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/dashboard-rtl.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Dashboard RTL</h3>
+        </a>
+        <p class="text-muted">Basic admin dashboard shell with fixed sidebar and navbar.</p>
+      </div>
+    </div>
+  <h2 id="integrations">Integrations</h2>
+  <p>Integrations with external libraries.</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+        <a class="d-block" href="/docs/5.1/examples/masonry/">
+          <img class="img-thumbnail mb-3" srcset="/docs/5.1/assets/img/examples/masonry.png,
+                                                  /docs/5.1/assets/img/examples/masonry@2x.png 2x"
+                                          src="/docs/5.1/assets/img/examples/masonry.png"
+                                          alt=""
+                                          width="480" height="300"
+                                          loading="lazy">
+          <h3 class="h5 mb-1">Masonry</h3>
+        </a>
+        <p class="text-muted">Combine the powers of the Boosted grid and the Masonry layout.</p>
+      </div>
+    </div>
+  
+
+    </div>
+  </main>
+
+
+    <footer class="bd-footer py-3 py-md-4 bg-dark">
+  <div class="container py-1">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <p class="mb-1">This documentation is an adaptation made by Orange.</p>
+        <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
+        <p class="mb-md-1">
+          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
+          docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+        </p>
+        <ul class="bd-footer-links ps-0 mb-0">
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.0</span></li>
+          <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
+          </a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Examples</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted 5</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev">Boosted 4</a></li>
+          <li class="mb-2"><a href="https://getbootstrap.com">Bootstrap</a></li>
+          <li class=""><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions">Discussions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
+
+    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-ERNiHfjIjCHxVmcVnfFkjyTZf/+vbcNoIh99eriKB9+NhLxxDL5r3rR4a/d+/s0B" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
+
+
+    
+    
+  </body>
+</html>

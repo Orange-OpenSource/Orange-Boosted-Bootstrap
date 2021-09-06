@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta name="author" content="Orange and Boosted contributors">
+<meta name="generator" content="Hugo 0.87.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
+
+<title>Flex · Boosted v5.1</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/5.1/utilities/flex/">
+
+
+
+
+<link rel="preload" href="/docs/5.1/dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/5.1/dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+
+
+<!-- Boosted core CSS -->
+<link href="/docs/5.1/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
+<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-p65W0Den8mG2rY0XUuSgjXmMvwuJ1y3Z9THeLsd2VkKKQW0zy/gY1EAE1wkqkQGr" crossorigin="anonymous">
+
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Flex">
+<meta name="twitter:description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/5.1/assets/brand/orange-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/5.1/utilities/flex/">
+<meta property="og:title" content="Flex">
+<meta property="og:description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/5.1/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
+
+
+  </head>
+  <body>
+    <a id="top"></a>
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
+    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+  </nav>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="container-xxl" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      <img src="/docs/5.1/assets/img/orange-logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.1/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.1/guidelines/logos/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+          </a>
+        </li>
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0 align-self-center">
+          <a class="btn btn-primary my-2 ms-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    
+  <nav class="bd-subnavbar py-2 border-bottom border-light border-1" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-3" role="search">
+      <input type="search" class="form-control" id="search-input" placeholder="Search docs…" aria-label="Search docs for…" autocomplete="off" data-bd-docs-version="5.1">
+    </form>
+
+    <div class="dropdown ms-auto">
+  <button class="btn btn-primary dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Boosted&nbsp;</span> v5.1
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item active" aria-current="true" href="/docs/5.1/">Latest (5.0.x)</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-2 ms-2 ms-md-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+</svg>
+
+   </button>
+  </div>
+</nav>
+
+
+  <div class="container-xxl bd-layout">
+    <aside class="bd-sidebar border-end border-light border-1">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-4">
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" type="button" aria-expanded="false">
+         Getting started
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-flex align-items-center">Introduction</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-flex align-items-center">Download</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-flex align-items-center">Contents</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-flex align-items-center">Browsers &amp; devices</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-flex align-items-center">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-flex align-items-center">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-flex align-items-center">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-flex align-items-center">Accessibility</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-flex align-items-center">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-flex align-items-center">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-flex align-items-center">Contribute</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" type="button" aria-expanded="false">
+         Customize
+        </button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/customize/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-flex align-items-center">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-flex align-items-center">Options</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-flex align-items-center">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-flex align-items-center">Components</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-flex align-items-center">CSS variables</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-flex align-items-center">Optimize</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" type="button" aria-expanded="false">
+         Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-flex align-items-center">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-flex align-items-center">Containers</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-flex align-items-center">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-flex align-items-center">Columns</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-flex align-items-center">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-flex align-items-center">Utilities</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-flex align-items-center">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-flex align-items-center">CSS Grid</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" type="button" aria-expanded="false">
+         Content
+        </button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/content/reboot/" class="d-flex align-items-center">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-flex align-items-center">Typography</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-flex align-items-center">Images</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-flex align-items-center">Tables</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-flex align-items-center">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" type="button" aria-expanded="false">
+         Forms
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/forms/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-flex align-items-center">Form control</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-flex align-items-center">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-flex align-items-center">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-flex align-items-center">Range</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-flex align-items-center">Input group</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-flex align-items-center">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-flex align-items-center">Validation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" type="button" aria-expanded="false">
+         Components
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/components/accordion/" class="d-flex align-items-center">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-flex align-items-center">Alerts</a></li>
+              <li><a href="/docs/5.1/components/back-to-top/" class="d-flex align-items-center">Back to top</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-flex align-items-center">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-flex align-items-center">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-flex align-items-center">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-flex align-items-center">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-flex align-items-center">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-flex align-items-center">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-flex align-items-center">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-flex align-items-center">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-flex align-items-center">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-flex align-items-center">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-flex align-items-center">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-flex align-items-center">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-flex align-items-center">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-flex align-items-center">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-flex align-items-center">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-flex align-items-center">Spinners</a></li>
+              <li><a href="/docs/5.1/components/stepped-process/" class="d-flex align-items-center">Stepped process</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-flex align-items-center">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-flex align-items-center">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" type="button" aria-expanded="false">
+         Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-flex align-items-center">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-flex align-items-center">Colored links</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-flex align-items-center">Ratio</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-flex align-items-center">Stacks</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-flex align-items-center">Visually hidden</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-flex align-items-center">Stretched link</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-flex align-items-center">Text truncation</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-flex align-items-center">Vertical rule</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" type="button" aria-expanded="true" aria-current="true">
+         Utilities
+        </button>
+
+        <div class="collapse show" id="utilities-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/utilities/api/" class="d-flex align-items-center">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-flex align-items-center">Background</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-flex align-items-center">Borders</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-flex align-items-center">Colors</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-flex align-items-center">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-flex align-items-center active" aria-current="page">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-flex align-items-center">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-flex align-items-center">Interactions</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-flex align-items-center">Opacity</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-flex align-items-center">Overflow</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-flex align-items-center">Sizing</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-flex align-items-center">Spacing</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-flex align-items-center">Text</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-flex align-items-center">Vertical align</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-flex align-items-center">Visibility</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" type="button" aria-expanded="false">
+         Extend
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/extend/approach/" class="d-flex align-items-center">Approach</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-flex align-items-center">Icons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" type="button" aria-expanded="false">
+         About
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.1/about/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-flex align-items-center">Team</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-flex align-items-center">Brand</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-flex align-items-center">License</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-flex align-items-center">Translations</a></li>
+              <li><a href="/docs/5.1/about/cookies/" class="d-flex align-items-center">Cookies</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-light border-top border-1 my-3">
+        <a href="/docs/5.1/migration/" class="d-flex align-items-center p-2 fw-bold fs-6">
+          Migration
+        </a>
+      </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-md-4 ps-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/site/content/docs/5.1/utilities/flex.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Flex</h1>
+        </div>
+        <p class="bd-lead">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
+        
+
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
+          <strong class="d-block h6 my-2 ps-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
+          <div class="ps-lg-3"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#enable-flex-behaviors">Enable flex behaviors</a></li>
+    <li><a href="#direction">Direction</a></li>
+    <li><a href="#justify-content">Justify content</a></li>
+    <li><a href="#align-items">Align items</a></li>
+    <li><a href="#align-self">Align self</a></li>
+    <li><a href="#fill">Fill</a></li>
+    <li><a href="#grow-and-shrink">Grow and shrink</a></li>
+    <li><a href="#auto-margins">Auto margins</a>
+      <ul>
+        <li><a href="#with-align-items">With align-items</a></li>
+      </ul>
+    </li>
+    <li><a href="#wrap">Wrap</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#align-content">Align content</a></li>
+    <li><a href="#media-object">Media object</a></li>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#utilities-api">Utilities API</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+        </div>
+      
+
+      <div class="bd-content ps-lg-4 mb-3">
+        
+
+        <h2 id="enable-flex-behaviors">Enable flex behaviors</h2>
+<p>Apply <code>display</code> utilities to create a flexbox container and transform <strong>direct children elements</strong> into flex items. Flex containers and items are able to be modified further with additional flex properties.</p>
+<div class="bd-example">
+<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>I&#39;m a flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-example">
+<div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>I&#39;m an inline flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Responsive variations also exist for <code>.d-flex</code> and <code>.d-inline-flex</code>.</p>
+<ul>
+<li><code>.d-flex</code></li>
+<li><code>.d-inline-flex</code></li>
+<li><code>.d-sm-flex</code></li>
+<li><code>.d-sm-inline-flex</code></li>
+<li><code>.d-md-flex</code></li>
+<li><code>.d-md-inline-flex</code></li>
+<li><code>.d-lg-flex</code></li>
+<li><code>.d-lg-inline-flex</code></li>
+<li><code>.d-xl-flex</code></li>
+<li><code>.d-xl-inline-flex</code></li>
+<li><code>.d-xxl-flex</code></li>
+<li><code>.d-xxl-inline-flex</code></li>
+</ul>
+
+<h2 id="direction">Direction</h2>
+<p>Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is <code>row</code>. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).</p>
+<p>Use <code>.flex-row</code> to set a horizontal direction (the browser default), or <code>.flex-row-reverse</code> to start the horizontal direction from the opposite side.</p>
+<div class="bd-example">
+<div class="d-flex flex-row bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item 1</div>
+  <div class="p-2 bd-highlight">Flex item 2</div>
+  <div class="p-2 bd-highlight">Flex item 3</div>
+</div>
+<div class="d-flex flex-row-reverse bd-highlight">
+  <div class="p-2 bd-highlight">Flex item 1</div>
+  <div class="p-2 bd-highlight">Flex item 2</div>
+  <div class="p-2 bd-highlight">Flex item 3</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Use <code>.flex-column</code> to set a vertical direction, or <code>.flex-column-reverse</code>  to start the vertical direction from the opposite side.</p>
+<div class="bd-example">
+<div class="d-flex flex-column bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item 1</div>
+  <div class="p-2 bd-highlight">Flex item 2</div>
+  <div class="p-2 bd-highlight">Flex item 3</div>
+</div>
+<div class="d-flex flex-column-reverse bd-highlight">
+  <div class="p-2 bd-highlight">Flex item 1</div>
+  <div class="p-2 bd-highlight">Flex item 2</div>
+  <div class="p-2 bd-highlight">Flex item 3</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Responsive variations also exist for <code>flex-direction</code>.</p>
+<ul>
+<li><code>.flex-row</code></li>
+<li><code>.flex-row-reverse</code></li>
+<li><code>.flex-column</code></li>
+<li><code>.flex-column-reverse</code></li>
+<li><code>.flex-sm-row</code></li>
+<li><code>.flex-sm-row-reverse</code></li>
+<li><code>.flex-sm-column</code></li>
+<li><code>.flex-sm-column-reverse</code></li>
+<li><code>.flex-md-row</code></li>
+<li><code>.flex-md-row-reverse</code></li>
+<li><code>.flex-md-column</code></li>
+<li><code>.flex-md-column-reverse</code></li>
+<li><code>.flex-lg-row</code></li>
+<li><code>.flex-lg-row-reverse</code></li>
+<li><code>.flex-lg-column</code></li>
+<li><code>.flex-lg-column-reverse</code></li>
+<li><code>.flex-xl-row</code></li>
+<li><code>.flex-xl-row-reverse</code></li>
+<li><code>.flex-xl-column</code></li>
+<li><code>.flex-xl-column-reverse</code></li>
+<li><code>.flex-xxl-row</code></li>
+<li><code>.flex-xxl-row-reverse</code></li>
+<li><code>.flex-xxl-column</code></li>
+<li><code>.flex-xxl-column-reverse</code></li>
+</ul>
+
+<h2 id="justify-content">Justify content</h2>
+<p>Use <code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <code>flex-direction: column</code>). Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, or <code>evenly</code>.</p>
+<div class="bd-example">
+  <div class="d-flex justify-content-start bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex justify-content-end bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex justify-content-center bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex justify-content-between bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex justify-content-around bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex justify-content-evenly bd-highlight">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-end&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-between&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-around&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-evenly&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Responsive variations also exist for <code>justify-content</code>.</p>
+<ul>
+<li><code>.justify-content-start</code></li>
+<li><code>.justify-content-end</code></li>
+<li><code>.justify-content-center</code></li>
+<li><code>.justify-content-between</code></li>
+<li><code>.justify-content-around</code></li>
+<li><code>.justify-content-evenly</code></li>
+<li><code>.justify-content-sm-start</code></li>
+<li><code>.justify-content-sm-end</code></li>
+<li><code>.justify-content-sm-center</code></li>
+<li><code>.justify-content-sm-between</code></li>
+<li><code>.justify-content-sm-around</code></li>
+<li><code>.justify-content-sm-evenly</code></li>
+<li><code>.justify-content-md-start</code></li>
+<li><code>.justify-content-md-end</code></li>
+<li><code>.justify-content-md-center</code></li>
+<li><code>.justify-content-md-between</code></li>
+<li><code>.justify-content-md-around</code></li>
+<li><code>.justify-content-md-evenly</code></li>
+<li><code>.justify-content-lg-start</code></li>
+<li><code>.justify-content-lg-end</code></li>
+<li><code>.justify-content-lg-center</code></li>
+<li><code>.justify-content-lg-between</code></li>
+<li><code>.justify-content-lg-around</code></li>
+<li><code>.justify-content-lg-evenly</code></li>
+<li><code>.justify-content-xl-start</code></li>
+<li><code>.justify-content-xl-end</code></li>
+<li><code>.justify-content-xl-center</code></li>
+<li><code>.justify-content-xl-between</code></li>
+<li><code>.justify-content-xl-around</code></li>
+<li><code>.justify-content-xl-evenly</code></li>
+<li><code>.justify-content-xxl-start</code></li>
+<li><code>.justify-content-xxl-end</code></li>
+<li><code>.justify-content-xxl-center</code></li>
+<li><code>.justify-content-xxl-between</code></li>
+<li><code>.justify-content-xxl-around</code></li>
+<li><code>.justify-content-xxl-evenly</code></li>
+</ul>
+
+<h2 id="align-items">Align items</h2>
+<p>Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
+<div class="bd-example">
+  <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-baseline&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-stretch&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Responsive variations also exist for <code>align-items</code>.</p>
+<ul>
+<li><code>.align-items-start</code></li>
+<li><code>.align-items-end</code></li>
+<li><code>.align-items-center</code></li>
+<li><code>.align-items-baseline</code></li>
+<li><code>.align-items-stretch</code></li>
+<li><code>.align-items-sm-start</code></li>
+<li><code>.align-items-sm-end</code></li>
+<li><code>.align-items-sm-center</code></li>
+<li><code>.align-items-sm-baseline</code></li>
+<li><code>.align-items-sm-stretch</code></li>
+<li><code>.align-items-md-start</code></li>
+<li><code>.align-items-md-end</code></li>
+<li><code>.align-items-md-center</code></li>
+<li><code>.align-items-md-baseline</code></li>
+<li><code>.align-items-md-stretch</code></li>
+<li><code>.align-items-lg-start</code></li>
+<li><code>.align-items-lg-end</code></li>
+<li><code>.align-items-lg-center</code></li>
+<li><code>.align-items-lg-baseline</code></li>
+<li><code>.align-items-lg-stretch</code></li>
+<li><code>.align-items-xl-start</code></li>
+<li><code>.align-items-xl-end</code></li>
+<li><code>.align-items-xl-center</code></li>
+<li><code>.align-items-xl-baseline</code></li>
+<li><code>.align-items-xl-stretch</code></li>
+<li><code>.align-items-xxl-start</code></li>
+<li><code>.align-items-xxl-end</code></li>
+<li><code>.align-items-xxl-center</code></li>
+<li><code>.align-items-xxl-baseline</code></li>
+<li><code>.align-items-xxl-stretch</code></li>
+</ul>
+
+<h2 id="align-self">Align self</h2>
+<p>Use <code>align-self</code> utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from the same options as <code>align-items</code>: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
+<div class="bd-example">
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="align-self-start p-2 bd-highlight">Aligned flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="align-self-end p-2 bd-highlight">Aligned flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="align-self-center p-2 bd-highlight">Aligned flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="align-self-baseline p-2 bd-highlight">Aligned flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+  <div class="d-flex bd-highlight" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="align-self-stretch p-2 bd-highlight">Aligned flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-baseline&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-stretch&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Responsive variations also exist for <code>align-self</code>.</p>
+<ul>
+<li><code>.align-self-start</code></li>
+<li><code>.align-self-end</code></li>
+<li><code>.align-self-center</code></li>
+<li><code>.align-self-baseline</code></li>
+<li><code>.align-self-stretch</code></li>
+<li><code>.align-self-sm-start</code></li>
+<li><code>.align-self-sm-end</code></li>
+<li><code>.align-self-sm-center</code></li>
+<li><code>.align-self-sm-baseline</code></li>
+<li><code>.align-self-sm-stretch</code></li>
+<li><code>.align-self-md-start</code></li>
+<li><code>.align-self-md-end</code></li>
+<li><code>.align-self-md-center</code></li>
+<li><code>.align-self-md-baseline</code></li>
+<li><code>.align-self-md-stretch</code></li>
+<li><code>.align-self-lg-start</code></li>
+<li><code>.align-self-lg-end</code></li>
+<li><code>.align-self-lg-center</code></li>
+<li><code>.align-self-lg-baseline</code></li>
+<li><code>.align-self-lg-stretch</code></li>
+<li><code>.align-self-xl-start</code></li>
+<li><code>.align-self-xl-end</code></li>
+<li><code>.align-self-xl-center</code></li>
+<li><code>.align-self-xl-baseline</code></li>
+<li><code>.align-self-xl-stretch</code></li>
+<li><code>.align-self-xxl-start</code></li>
+<li><code>.align-self-xxl-end</code></li>
+<li><code>.align-self-xxl-center</code></li>
+<li><code>.align-self-xxl-baseline</code></li>
+<li><code>.align-self-xxl-stretch</code></li>
+</ul>
+
+<h2 id="fill">Fill</h2>
+<p>Use the <code>.flex-fill</code> class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 flex-fill bd-highlight">Flex item with a lot of content</div>
+  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item with a lot of content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Responsive variations also exist for <code>flex-fill</code>.</p>
+<ul>
+<li><code>.flex-fill</code></li>
+<li><code>.flex-sm-fill</code></li>
+<li><code>.flex-md-fill</code></li>
+<li><code>.flex-lg-fill</code></li>
+<li><code>.flex-xl-fill</code></li>
+<li><code>.flex-xxl-fill</code></li>
+</ul>
+
+<h2 id="grow-and-shrink">Grow and shrink</h2>
+<p>Use <code>.flex-grow-*</code> utilities to toggle a flex item&rsquo;s ability to grow to fill available space. In the example below, the <code>.flex-grow-1</code> elements uses all available space it can, while allowing the remaining two flex items their necessary space.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Third flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-grow-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Third flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Use <code>.flex-shrink-*</code> utilities to toggle a flex item&rsquo;s ability to shrink if necessary. In the example below, the second flex item with <code>.flex-shrink-1</code> is forced to wrap its contents to a new line, &ldquo;shrinking&rdquo; to allow more space for the previous flex item with <code>.w-100</code>.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 w-100 bd-highlight">Flex item</div>
+  <div class="p-2 flex-shrink-1 bd-highlight">Flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-shrink-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Responsive variations also exist for <code>flex-grow</code> and <code>flex-shrink</code>.</p>
+<ul>
+<li><code>.flex-{grow|shrink}-0</code></li>
+<li><code>.flex-{grow|shrink}-1</code></li>
+<li><code>.flex-sm-{grow|shrink}-0</code></li>
+<li><code>.flex-sm-{grow|shrink}-1</code></li>
+<li><code>.flex-md-{grow|shrink}-0</code></li>
+<li><code>.flex-md-{grow|shrink}-1</code></li>
+<li><code>.flex-lg-{grow|shrink}-0</code></li>
+<li><code>.flex-lg-{grow|shrink}-1</code></li>
+<li><code>.flex-xl-{grow|shrink}-0</code></li>
+<li><code>.flex-xl-{grow|shrink}-1</code></li>
+<li><code>.flex-xxl-{grow|shrink}-0</code></li>
+<li><code>.flex-xxl-{grow|shrink}-1</code></li>
+</ul>
+
+<h2 id="auto-margins">Auto margins</h2>
+<p>Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (<code>.me-auto</code>), and pushing two items to the left (<code>.ms-auto</code>).</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+</div>
+
+<div class="d-flex bd-highlight mb-3">
+  <div class="me-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+</div>
+
+<div class="d-flex bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="ms-auto p-2 bd-highlight">Flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;me-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ms-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="with-align-items">With align-items</h3>
+<p>Vertically move one flex item to the top or bottom of a container by mixing <code>align-items</code>, <code>flex-direction: column</code>, and <code>margin-top: auto</code> or <code>margin-bottom: auto</code>.</p>
+<div class="bd-example">
+<div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+  <div class="mb-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+</div>
+
+<div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="mt-auto p-2 bd-highlight">Flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="wrap">Wrap</h2>
+<p>Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with <code>.flex-nowrap</code>, wrapping with <code>.flex-wrap</code>, or reverse wrapping with <code>.flex-wrap-reverse</code>.</p>
+<div class="bd-example">
+  <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex flex-wrap bd-highlight">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex flex-wrap-reverse bd-highlight">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap-reverse&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Responsive variations also exist for <code>flex-wrap</code>.</p>
+<ul>
+<li><code>.flex-nowrap</code></li>
+<li><code>.flex-wrap</code></li>
+<li><code>.flex-wrap-reverse</code></li>
+<li><code>.flex-sm-nowrap</code></li>
+<li><code>.flex-sm-wrap</code></li>
+<li><code>.flex-sm-wrap-reverse</code></li>
+<li><code>.flex-md-nowrap</code></li>
+<li><code>.flex-md-wrap</code></li>
+<li><code>.flex-md-wrap-reverse</code></li>
+<li><code>.flex-lg-nowrap</code></li>
+<li><code>.flex-lg-wrap</code></li>
+<li><code>.flex-lg-wrap-reverse</code></li>
+<li><code>.flex-xl-nowrap</code></li>
+<li><code>.flex-xl-wrap</code></li>
+<li><code>.flex-xl-wrap-reverse</code></li>
+<li><code>.flex-xxl-nowrap</code></li>
+<li><code>.flex-xxl-wrap</code></li>
+<li><code>.flex-xxl-wrap-reverse</code></li>
+</ul>
+
+<h2 id="order">Order</h2>
+<p>Change the <em>visual</em> order of specific flex items with a handful of <code>order</code> utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As <code>order</code> takes any integer value from 0 to 5, add custom CSS for any additional values needed.</p>
+<div class="bd-example">
+<div class="d-flex flex-nowrap bd-highlight">
+  <div class="order-3 p-2 bd-highlight">First flex item</div>
+  <div class="order-2 p-2 bd-highlight">Second flex item</div>
+  <div class="order-1 p-2 bd-highlight">Third flex item</div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-3 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>First flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-2 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Second flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-1 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Third flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Responsive variations also exist for <code>order</code>.</p>
+<ul>
+<li><code>.order-0</code></li>
+<li><code>.order-1</code></li>
+<li><code>.order-2</code></li>
+<li><code>.order-3</code></li>
+<li><code>.order-4</code></li>
+<li><code>.order-5</code></li>
+<li><code>.order-sm-0</code></li>
+<li><code>.order-sm-1</code></li>
+<li><code>.order-sm-2</code></li>
+<li><code>.order-sm-3</code></li>
+<li><code>.order-sm-4</code></li>
+<li><code>.order-sm-5</code></li>
+<li><code>.order-md-0</code></li>
+<li><code>.order-md-1</code></li>
+<li><code>.order-md-2</code></li>
+<li><code>.order-md-3</code></li>
+<li><code>.order-md-4</code></li>
+<li><code>.order-md-5</code></li>
+<li><code>.order-lg-0</code></li>
+<li><code>.order-lg-1</code></li>
+<li><code>.order-lg-2</code></li>
+<li><code>.order-lg-3</code></li>
+<li><code>.order-lg-4</code></li>
+<li><code>.order-lg-5</code></li>
+<li><code>.order-xl-0</code></li>
+<li><code>.order-xl-1</code></li>
+<li><code>.order-xl-2</code></li>
+<li><code>.order-xl-3</code></li>
+<li><code>.order-xl-4</code></li>
+<li><code>.order-xl-5</code></li>
+<li><code>.order-xxl-0</code></li>
+<li><code>.order-xxl-1</code></li>
+<li><code>.order-xxl-2</code></li>
+<li><code>.order-xxl-3</code></li>
+<li><code>.order-xxl-4</code></li>
+<li><code>.order-xxl-5</code></li>
+</ul>
+
+<p>Additionally there are also responsive <code>.order-first</code> and <code>.order-last</code> classes that change the <code>order</code> of an element by applying <code>order: -1</code> and <code>order: 6</code>, respectively.</p>
+<ul>
+<li><code>.order-first</code></li>
+<li><code>.order-last</code></li>
+<li><code>.order-sm-first</code></li>
+<li><code>.order-sm-last</code></li>
+<li><code>.order-md-first</code></li>
+<li><code>.order-md-last</code></li>
+<li><code>.order-lg-first</code></li>
+<li><code>.order-lg-last</code></li>
+<li><code>.order-xl-first</code></li>
+<li><code>.order-xl-last</code></li>
+<li><code>.order-xxl-first</code></li>
+<li><code>.order-xxl-last</code></li>
+</ul>
+
+<h2 id="align-content">Align content</h2>
+<p>Use <code>align-content</code> utilities on flexbox containers to align flex items <em>together</em> on the cross axis. Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, or <code>stretch</code>. To demonstrate these utilities, we&rsquo;ve enforced <code>flex-wrap: wrap</code> and increased the number of flex items.</p>
+<p><strong>Heads up!</strong> This property has no effect on single rows of flex items.</p>
+<div class="bd-example">
+  <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-start flex-wrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-end flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-center flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-between flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-around flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-stretch flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Responsive variations also exist for <code>align-content</code>.</p>
+<ul>
+<li><code>.align-content-start</code></li>
+<li><code>.align-content-end</code></li>
+<li><code>.align-content-center</code></li>
+<li><code>.align-content-around</code></li>
+<li><code>.align-content-stretch</code></li>
+<li><code>.align-content-sm-start</code></li>
+<li><code>.align-content-sm-end</code></li>
+<li><code>.align-content-sm-center</code></li>
+<li><code>.align-content-sm-around</code></li>
+<li><code>.align-content-sm-stretch</code></li>
+<li><code>.align-content-md-start</code></li>
+<li><code>.align-content-md-end</code></li>
+<li><code>.align-content-md-center</code></li>
+<li><code>.align-content-md-around</code></li>
+<li><code>.align-content-md-stretch</code></li>
+<li><code>.align-content-lg-start</code></li>
+<li><code>.align-content-lg-end</code></li>
+<li><code>.align-content-lg-center</code></li>
+<li><code>.align-content-lg-around</code></li>
+<li><code>.align-content-lg-stretch</code></li>
+<li><code>.align-content-xl-start</code></li>
+<li><code>.align-content-xl-end</code></li>
+<li><code>.align-content-xl-center</code></li>
+<li><code>.align-content-xl-around</code></li>
+<li><code>.align-content-xl-stretch</code></li>
+<li><code>.align-content-xxl-start</code></li>
+<li><code>.align-content-xxl-end</code></li>
+<li><code>.align-content-xxl-center</code></li>
+<li><code>.align-content-xxl-around</code></li>
+<li><code>.align-content-xxl-stretch</code></li>
+</ul>
+
+<h2 id="media-object">Media object</h2>
+<p>Looking to replicate the <a href="https://getbootstrap.com/docs/4.6/components/media-object/">media object component</a> from Bootstrap 4? Recreate it in no time with a few flex utilities that allow even more flexibility and customization than before.</p>
+<div class="bd-example">
+<div class="d-flex">
+  <div class="flex-shrink-0">
+    <svg class="bd-placeholder-img" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e5e5e5"/><text x="50%" y="50%" fill="#999" dy=".3em" class="fw-bold">Image</text></svg>
+
+  </div>
+  <div class="flex-grow-1 ms-3">
+    This is some content from a media component. You can replace this with any content and adjust it as needed.
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-shrink-0&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-grow-1 ms-3&#34;</span><span class="p">&gt;</span>
+    This is some content from a media component. You can replace this with any content and adjust it as needed.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>And say you want to vertically center the content next to the image:</p>
+<div class="bd-example">
+<div class="d-flex align-items-center">
+  <div class="flex-shrink-0">
+    <svg class="bd-placeholder-img" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#e5e5e5"/><text x="50%" y="50%" fill="#999" dy=".3em" class="fw-bold">Image</text></svg>
+
+  </div>
+  <div class="flex-grow-1 ms-3">
+    This is some content from a media component. You can replace this with any content and adjust it as needed.
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-shrink-0&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-grow-1 ms-3&#34;</span><span class="p">&gt;</span>
+    This is some content from a media component. You can replace this with any content and adjust it as needed.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="sass">Sass</h2>
+<h3 id="utilities-api">Utilities API</h3>
+<p>Flexbox utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;flex&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span><span class="nt">fill</span><span class="nd">:</span> <span class="nt">1</span> <span class="nt">1</span> <span class="nt">auto</span><span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;flex-direction&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex-direction</span><span class="o">,</span>
+      <span class="nt">class</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="nt">row</span> <span class="nt">column</span> <span class="nt">row-reverse</span> <span class="nt">column-reverse</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;flex-grow&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex-grow</span><span class="o">,</span>
+      <span class="nt">class</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">grow-0</span><span class="nd">:</span> <span class="nt">0</span><span class="o">,</span>
+        <span class="nt">grow-1</span><span class="nd">:</span> <span class="nt">1</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;flex-shrink&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex-shrink</span><span class="o">,</span>
+      <span class="nt">class</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">shrink-0</span><span class="nd">:</span> <span class="nt">0</span><span class="o">,</span>
+        <span class="nt">shrink-1</span><span class="nd">:</span> <span class="nt">1</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;flex-wrap&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex-wrap</span><span class="o">,</span>
+      <span class="nt">class</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="nt">wrap</span> <span class="nt">nowrap</span> <span class="nt">wrap-reverse</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;gap&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">gap</span><span class="o">,</span>
+      <span class="nt">class</span><span class="nd">:</span> <span class="nt">gap</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="err">$</span><span class="nt">spacers</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;justify-content&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">justify-content</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">start</span><span class="nd">:</span> <span class="nt">flex-start</span><span class="o">,</span>
+        <span class="nt">end</span><span class="nd">:</span> <span class="nt">flex-end</span><span class="o">,</span>
+        <span class="nt">center</span><span class="nd">:</span> <span class="nt">center</span><span class="o">,</span>
+        <span class="nt">between</span><span class="nd">:</span> <span class="nt">space-between</span><span class="o">,</span>
+        <span class="nt">around</span><span class="nd">:</span> <span class="nt">space-around</span><span class="o">,</span>
+        <span class="nt">evenly</span><span class="nd">:</span> <span class="nt">space-evenly</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;align-items&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">align-items</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">start</span><span class="nd">:</span> <span class="nt">flex-start</span><span class="o">,</span>
+        <span class="nt">end</span><span class="nd">:</span> <span class="nt">flex-end</span><span class="o">,</span>
+        <span class="nt">center</span><span class="nd">:</span> <span class="nt">center</span><span class="o">,</span>
+        <span class="nt">baseline</span><span class="nd">:</span> <span class="nt">baseline</span><span class="o">,</span>
+        <span class="nt">stretch</span><span class="nd">:</span> <span class="nt">stretch</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;align-content&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">align-content</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">start</span><span class="nd">:</span> <span class="nt">flex-start</span><span class="o">,</span>
+        <span class="nt">end</span><span class="nd">:</span> <span class="nt">flex-end</span><span class="o">,</span>
+        <span class="nt">center</span><span class="nd">:</span> <span class="nt">center</span><span class="o">,</span>
+        <span class="nt">between</span><span class="nd">:</span> <span class="nt">space-between</span><span class="o">,</span>
+        <span class="nt">around</span><span class="nd">:</span> <span class="nt">space-around</span><span class="o">,</span>
+        <span class="nt">stretch</span><span class="nd">:</span> <span class="nt">stretch</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;align-self&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">align-self</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">auto</span><span class="nd">:</span> <span class="nt">auto</span><span class="o">,</span>
+        <span class="nt">start</span><span class="nd">:</span> <span class="nt">flex-start</span><span class="o">,</span>
+        <span class="nt">end</span><span class="nd">:</span> <span class="nt">flex-end</span><span class="o">,</span>
+        <span class="nt">center</span><span class="nd">:</span> <span class="nt">center</span><span class="o">,</span>
+        <span class="nt">baseline</span><span class="nd">:</span> <span class="nt">baseline</span><span class="o">,</span>
+        <span class="nt">stretch</span><span class="nd">:</span> <span class="nt">stretch</span><span class="o">,</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="s2">&#34;order&#34;</span><span class="nd">:</span> <span class="o">(</span>
+      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+      <span class="nt">property</span><span class="nd">:</span> <span class="nt">order</span><span class="o">,</span>
+      <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
+        <span class="nt">first</span><span class="nd">:</span> <span class="o">-</span><span class="nt">1</span><span class="o">,</span>
+        <span class="nt">0</span><span class="nd">:</span> <span class="nt">0</span><span class="o">,</span>
+        <span class="nt">1</span><span class="nd">:</span> <span class="nt">1</span><span class="o">,</span>
+        <span class="nt">2</span><span class="nd">:</span> <span class="nt">2</span><span class="o">,</span>
+        <span class="nt">3</span><span class="nd">:</span> <span class="nt">3</span><span class="o">,</span>
+        <span class="nt">4</span><span class="nd">:</span> <span class="nt">4</span><span class="o">,</span>
+        <span class="nt">5</span><span class="nd">:</span> <span class="nt">5</span><span class="o">,</span>
+        <span class="nt">last</span><span class="nd">:</span> <span class="nt">6</span><span class="o">,</span>
+      <span class="o">),</span>
+    <span class="o">),</span>
+    </code></pre></div>
+
+      </div>
+    </main>
+  </div>
+
+
+    <footer class="bd-footer py-3 py-md-4 bg-dark">
+  <div class="container py-1">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <p class="mb-1">This documentation is an adaptation made by Orange.</p>
+        <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
+        <p class="mb-md-1">
+          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
+          docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+        </p>
+        <ul class="bd-footer-links ps-0 mb-0">
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.0</span></li>
+          <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
+          </a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Examples</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted 5</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev">Boosted 4</a></li>
+          <li class="mb-2"><a href="https://getbootstrap.com">Bootstrap</a></li>
+          <li class=""><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions">Discussions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
+
+    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-ERNiHfjIjCHxVmcVnfFkjyTZf/+vbcNoIh99eriKB9+NhLxxDL5r3rR4a/d+/s0B" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
+
+
+    
+  
+  </body>
+</html>
