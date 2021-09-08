@@ -10,7 +10,7 @@ assignees: Nurovek
 Before opening:
 
 - [Search for duplicate or closed issues](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues?utf8=%E2%9C%93&q=is%3Aissue)
-- Read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.github/CONTRIBUTING.md)
+- Read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
 
 Feature requests must include:
 
