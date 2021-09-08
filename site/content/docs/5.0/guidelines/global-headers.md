@@ -86,14 +86,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
   </div>
 </nav>
 {{< /example >}}
-<main>
-  <div class="container">
-    <h2 id="suprabar">Supra bar</h2>
-    <p>
-      <strong>Supra bars are hidden on tablet and mobile devices.</strong>
-      Based on viewport size, supra bar is hidden under <var>768px</var>.
-    </p>
-  </div>
   <div class="container">
     <h2 id="navbar" class="mt-5">Headers (Navbar)</h2>
     <h3 class="mt-5 h5">Global header standard — <a id="web-glh-stn-001" class="ui-kit-id">web-glh-stn-001</a></h3>
@@ -237,8 +229,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </ul>
     </div>
   </nav>
-</main>
-  </div>
+
   <div class="container">
     <h3 class="mt-5 h5">
       Global header with title — <a id="web-glh-tni-001" class="ui-kit-id">web-glh-tni-001</a>
@@ -253,19 +244,24 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </a>
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+              </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
               <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-avatar">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
             </a>
           </li>
@@ -285,43 +281,28 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </div>
         <ul class="navbar-nav d-none d-md-flex">
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+              </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
               <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-avatar">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
             </a>
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-md-flex">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
-            <span class="visually-hidden">Basket</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon svg-avatar">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
     </div>
   </header>
-</main>
