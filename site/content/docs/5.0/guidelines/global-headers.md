@@ -594,3 +594,64 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </form>
     </div>
   </header>
+
+  <div class="container">
+    <h3 class="mt-5 h5">OBS global header standard — <a id="web-glh-obs-001" class="ui-kit-id">web-glh-obs-001</a></h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+      <div class="container-lg flex-sm-wrap flex-md-nowrap">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+          <h2 class="h4" id="obs-1">
+            <span>Business</span><br>Services
+          </h2>
+        </a>
+        <div class="d-flex">
+          <ul class="navbar-nav d-md-none ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon svg-mail">
+                <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
+              <a href="#" class="nav-link nav-icon svg-avatar pb-1">
+              <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#obs-global-header" aria-controls="obs-global-header" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse justify-content-end collapse" id="obs-global-header">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav d-none d-md-flex">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#search"/>
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon pt-1 pb-2">
+              <img src="/docs/5.0/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
