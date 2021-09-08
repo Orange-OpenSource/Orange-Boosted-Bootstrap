@@ -12,9 +12,9 @@
   <a href="https://boosted.orange.com/docs/5.1/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=bug.md">Report bug</a>
+  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=bug_report.md&labels=bug">Report bug</a>
   ·
-  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
+  <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=feature_request.md&labels=feature">Request feature</a>
 </p>
 
 
