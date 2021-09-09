@@ -5,7 +5,7 @@ on:
       - 'js/**'
       - 'scss/**'
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
   pull_request:
     types:
@@ -14,7 +14,7 @@ on:
       - labeled
       - unlabeled
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
 env:
   FORCE_COLOR: 2
@@ -56,5 +56,5 @@ jobs:
         run: npm run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: "${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}"
-          CI_BRANCH_BASE: v5-dev
+          CI_BRANCH_BASE: main
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
