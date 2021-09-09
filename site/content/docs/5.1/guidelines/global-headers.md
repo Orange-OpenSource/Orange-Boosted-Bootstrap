@@ -147,7 +147,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white  mt-1">
               1
               <span class="visually-hidden">shopping basket items</span>
           </span>
@@ -169,9 +169,9 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-min-001>}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md header-minimised pt-2 pb-0">
   <div class="container-lg">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
     <div class="d-flex">    
@@ -234,7 +234,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
               1
               <span class="visually-hidden">shopping basket items</span>
           </span>
@@ -323,7 +323,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
             </span>
@@ -415,7 +415,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
             </span>
@@ -495,7 +495,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
             </span>
@@ -592,7 +592,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
