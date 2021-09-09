@@ -98,11 +98,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -136,11 +141,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </a>
       </li> 
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-          </svg>
-          <span class="visually-hidden">Basket</span>
+        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+          <span class="position-relative">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+          </span>
         </a>
       </li>
       <li class="nav-item">
@@ -175,11 +185,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -213,11 +228,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </a>
       </li> 
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-          </svg>
-          <span class="visually-hidden">Basket</span>
+        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+          <span class="position-relative">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+          </span>
         </a>
       </li>
       <li class="nav-item">
@@ -254,11 +274,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </a>
           </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -292,11 +317,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -336,11 +366,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </a>
           </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -374,11 +409,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -416,11 +456,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </a>
           </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -444,11 +489,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
+          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -503,11 +553,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </a>
           </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+              </span>
             </a>
           </li>
           <li class="nav-item">
@@ -531,11 +586,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li> 
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
+          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+          <span class="position-relative">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
               <use xlink:href="/docs/5.0/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             <span class="visually-hidden">Basket</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+            </span>
           </a>
         </li>
         <li class="nav-item">
