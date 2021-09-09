@@ -431,3 +431,16 @@
     bottom: -.438rem;
   }
 }
+
+.header-minimised {
+  // Boosted mod
+  .navbar-brand {
+    img {
+      width: $h2-font-size;
+      height: $h2-font-size;
+    }
+  }
+  .nav-link.active::before {
+    bottom: 0 !important;
+  }
+}
