@@ -4,13 +4,13 @@ on:
     paths:
       - 'js/**'
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
   pull_request:
     paths:
       - 'js/**'
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
 env:
   FORCE_COLOR: 2

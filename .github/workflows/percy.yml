@@ -6,7 +6,7 @@ on:
       - 'scss/**'
       - 'site/content/docs/**/guidelines'
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
   pull_request:
     types:
@@ -15,7 +15,7 @@ on:
       - labeled
       - unlabeled
     branches:
-      - v5-dev
+      - main
       - "!dependabot/**"
 env:
   FORCE_COLOR: 2
