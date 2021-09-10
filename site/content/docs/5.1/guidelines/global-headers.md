@@ -79,6 +79,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
+          </span>
         </a>
       </li>
       <li class="nav-item">
