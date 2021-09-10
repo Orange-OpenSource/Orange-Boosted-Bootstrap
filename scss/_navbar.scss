@@ -441,6 +441,7 @@
     }
   }
   .nav-link.active::before {
+    // stylelint-disable declaration-no-important
     bottom: 0 !important;
   }
 }
