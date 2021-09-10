@@ -61,13 +61,31 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0"><svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/></svg><span class="visually-hidden">Search</span></a>
+        <a href="#" class="nav-link nav-icon pt-1 pb-0">
+          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
+          </svg>
+          <span class="visually-hidden">Search</span>
+        </a>
       </li> 
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative"><span class="position-relative"><svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/></svg><span class="visually-hidden">Basket</span><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">1<span class="visually-hidden">shopping basket items</span></span></a>
+        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+          <span class="position-relative">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+            </span>
+        </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0"><img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy"><span class="visually-hidden">My account</span></a>
+        <a href="#" class="nav-link nav-icon pt-1 pb-0">
+          <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+        <span class="visually-hidden">My account</span>
+        </a>
       </li>
     </ul>
   </div>
