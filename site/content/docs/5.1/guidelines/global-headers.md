@@ -79,6 +79,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
+          </span>            
         </a>
       </li>
       <li class="nav-item">
@@ -99,7 +100,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-stn-001 >}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
   <div class="container-lg">
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -124,6 +125,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                 1
                 <span class="visually-hidden">shopping basket items</span>
+              </span>
             </span>
           </a>
         </li>
@@ -134,11 +136,11 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </a>
         </li>
       </ul>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-standard" aria-controls="global-header-standard" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header" aria-controls="global-header" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
     </div>
-    <div class="navbar-collapse collapse" id="global-header-standard" style="height: auto;">
+    <div class="navbar-collapse collapse" id="global-header" style="height: auto;">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -167,6 +169,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white  mt-1">
               1
               <span class="visually-hidden">shopping basket items</span>
+            </span>
           </span>
         </a>
       </li>
@@ -211,7 +214,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>            
           </a>
         </li>
         <li class="nav-item">
@@ -254,7 +258,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
               1
               <span class="visually-hidden">shopping basket items</span>
-          </span>
+            </span>
+          </span>            
         </a>
       </li>
       <li class="nav-item">
@@ -274,7 +279,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
@@ -300,7 +305,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>              
             </a>
           </li>
           <li class="nav-item">
@@ -343,7 +349,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -364,7 +371,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -392,7 +399,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -435,7 +443,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -456,7 +465,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -482,7 +491,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -515,7 +525,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
                 1
                 <span class="visually-hidden">shopping basket items</span>
-            </span>
+              </span>
+            </span>              
           </a>
         </li>
         <li class="nav-item">
@@ -551,7 +562,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -579,7 +590,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
                   1
                   <span class="visually-hidden">shopping basket items</span>
-              </span>
+                </span>
+              </span>                
             </a>
           </li>
           <li class="nav-item">
@@ -604,15 +616,16 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </li> 
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-          <span class="position-relative">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-              1
-              <span class="visually-hidden">shopping basket items</span>
-            </span>
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>            
           </a>
         </li>
         <li class="nav-item">
@@ -621,7 +634,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <span class="visually-hidden">My account</span>
           </a>
         </li>
-      </ul>
       </ul>
     </div>
   </nav>    
@@ -649,7 +661,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -680,10 +692,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <span class="visually-hidden">Search bar</span>
           </button>
         </li>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
       </ul>
+      <form class="d-flex pt-1">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
     </div>
   </nav>
   <div class="collapse bg-dark" id="search-9">
@@ -703,7 +715,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -769,7 +781,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
