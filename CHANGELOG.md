@@ -1,3 +1,20 @@
+## [5.1.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.0...v5.1.1) (2021-09-17)
+
+
+### Bug Fixes
+
+* **doc:** replace Creative Commons license link in README.md ([dbaa78a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dbaa78a2122d8ea738a13c314f26fbad1b577239))
+* **doc:** update broken links to issue templates in README.md ([eac95cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eac95cfb71b40a53f891f684ae1c7e824ad71ada))
+* **docs:** automatically retrieve latest version in version selector ([ac8ee0f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ac8ee0fda90edbd282b2aac7871b76d945f5ad50))
+* **nuget:** update version in boosted.sass.nuspec ([fc4e31c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fc4e31cf6b4c293659e16c7361168958f96ab550))
+
+
+### Chore
+
+* **#207:** rename "v5-dev" to "main" ([31fda13](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/31fda1384db0d6f604b3a85e1389b834736af962))
+
+
+
 # [5.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.2...v5.1.0) (2021-09-06)
 
 
