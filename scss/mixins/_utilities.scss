@@ -110,7 +110,7 @@
                   @else if $color-name == "white" {
                     $value: $white;
                   }
-                  @else if $color-name == "body" {
+                  @else if $color-name == "body-color" {
                     $value: $black;
                   }
                 }

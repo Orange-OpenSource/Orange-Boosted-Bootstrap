@@ -47,7 +47,7 @@ toc: true
       <a class="nav-link" href="#tabs">Label</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#tabs" tabindex="-1" aria-disabled="true">Label</a>
+      <a class="nav-link disabled">Label</a>
     </li>
   </ul>
 </div>
@@ -65,7 +65,7 @@ toc: true
       <a class="nav-link" href="#tabs-light">Label</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#tabs-light" tabindex="-1" aria-disabled="true">Label</a>
+      <a class="nav-link disabled">Label</a>
     </li>
   </ul>
 </div>
@@ -76,7 +76,7 @@ toc: true
 
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item disabled"><a class="page-link" href="#pagination" tabindex="-1" aria-disabled="true" aria-label="Previous"></a></li>
+    <li class="page-item disabled"><a class="page-link" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#pagination">1</a></li>
     <li class="page-item"><a class="page-link" href="#pagination">2</a></li>
     <li class="page-item"><a class="page-link" href="#pagination">3</a></li>
