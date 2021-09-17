@@ -37,18 +37,10 @@ Alerts are available for any length of text, as well as an optional close button
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-<div class="bd-example">
-  <!-- Boosted mod: moved this div within the .bd-example -->
-  <div id="liveAlertPlaceholder"></div>
-  <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-</div>
-
-<!-- Boosted mod: removed the alert div source code and added the #liveAlertPlaceholder div -->
-
-```html
+{{< example >}}
 <div id="liveAlertPlaceholder"></div>
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-```
+{{< /example >}}
 
 We use the following JavaScript to trigger our live alert demo:
 
@@ -220,7 +212,7 @@ See the [triggers](#triggers) section for more details.
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised.
+        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialized.
         You can use it like this: <code>boosted.Alert.getOrCreateInstance(element)</code>
       </td>
     </tr>
