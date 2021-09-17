@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.1.0 (https://boosted.orange.com/)
+  * Boosted v5.1.1 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v5.1.0 (https://boosted.orange.com/)
+  * Bootstrap tooltip.js v5.1.1 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -45,7 +45,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.0): util/index.js
+   * Bootstrap (v5.1.1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -187,7 +187,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.0): util/sanitizer.js
+   * Bootstrap (v5.1.1): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -300,7 +300,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.0): tooltip.js
+   * Bootstrap (v5.1.1): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -474,9 +474,7 @@
         this.tip.remove();
       }
 
-      if (this._popper) {
-        this._popper.destroy();
-      }
+      this._disposePopper();
 
       super.dispose();
     }
@@ -496,6 +494,15 @@
 
       if (showEvent.defaultPrevented || !isInTheDom) {
         return;
+      } // A trick to recreate a tooltip in case a new title is given by using the NOT documented `data-bs-original-title`
+      // This will be removed later in favor of a `setContent` method
+
+
+      if (this.constructor.NAME === 'tooltip' && this.tip && this.getTitle() !== this.tip.querySelector(SELECTOR_TOOLTIP_INNER).innerHTML) {
+        this._disposePopper();
+
+        this.tip.remove();
+        this.tip = null;
       }
 
       const tip = this.getTipElement();
@@ -585,11 +592,7 @@
 
         EventHandler__default['default'].trigger(this._element, this.constructor.Event.HIDDEN);
 
-        if (this._popper) {
-          this._popper.destroy();
-
-          this._popper = null;
-        }
+        this._disposePopper();
       };
 
       const hideEvent = EventHandler__default['default'].trigger(this._element, this.constructor.Event.HIDE);
@@ -969,6 +972,14 @@
       this._cleanTipClass();
 
       this._addAttachmentClass(this._getAttachment(state.placement));
+    }
+
+    _disposePopper() {
+      if (this._popper) {
+        this._popper.destroy();
+
+        this._popper = null;
+      }
     } // Static
 
 

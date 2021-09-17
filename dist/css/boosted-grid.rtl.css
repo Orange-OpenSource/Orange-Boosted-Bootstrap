@@ -1,14 +1,73 @@
 /*!
- * Boosted Grid v5.1.0 (https://boosted.orange.com/)
+ * Boosted Grid v5.1.1 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v5.1.0 (https://getbootstrap.com)
+ * Bootstrap Grid v5.1.1 (https://getbootstrap.com)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+:root {
+  --bs-blue: #527edb;
+  --bs-indigo: #a885d8;
+  --bs-purple: #a885d8;
+  --bs-pink: #ffb4e6;
+  --bs-red: #cd3c14;
+  --bs-orange: #ff7900;
+  --bs-yellow: #fc0;
+  --bs-green: #32c832;
+  --bs-teal: #50be87;
+  --bs-cyan: #4bb4e6;
+  --bs-white: #fff;
+  --bs-gray: #999;
+  --bs-gray-dark: #595959;
+  --bs-gray-100: #fafafa;
+  --bs-gray-200: #f6f6f6;
+  --bs-gray-300: #eee;
+  --bs-gray-400: #ddd;
+  --bs-gray-500: #ccc;
+  --bs-gray-600: #999;
+  --bs-gray-700: #666;
+  --bs-gray-800: #595959;
+  --bs-gray-900: #333;
+  --bs-primary: #ff7900;
+  --bs-secondary: #000;
+  --bs-success: #32c832;
+  --bs-info: #527edb;
+  --bs-warning: #fc0;
+  --bs-danger: #cd3c14;
+  --bs-light: #ccc;
+  --bs-dark: #000;
+  --bs-primary-rgb: 255, 121, 0;
+  --bs-secondary-rgb: 0, 0, 0;
+  --bs-success-rgb: 50, 200, 50;
+  --bs-info-rgb: 82, 126, 219;
+  --bs-warning-rgb: 255, 204, 0;
+  --bs-danger-rgb: 205, 60, 20;
+  --bs-light-rgb: 204, 204, 204;
+  --bs-dark-rgb: 0, 0, 0;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 0, 0, 0;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --o-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
+  --o-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23000'%3e%3cpath stroke='%23000' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/%3e%3c/svg%3e");
+  --o-check-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'%3e%3cpath fill='%23000' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/%3e%3c/svg%3e");
+  --o-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'%3e%3cpath fill='%2332c832' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 01-1.3 3.7L57.7 86a5.8 5.8 0 01-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 011.7-4.1l2.3-2.4a5.8 5.8 0 014.2-1.7 5.8 5.8 0 013.8 1.4L52 64.7 86.6 31a5.8 5.8 0 014-1.6z'/%3e%3c/svg%3e");
+  --o-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'%3e%3cpath fill='%23cd3c14' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0015.6 125H125a15.6 15.6 0 0013.5-23.5L83.8 7.8A15.6 15.6 0 0070.3 0zm19.2 50a6.4 6.4 0 014.4 1.9 6.4 6.4 0 010 9L79.4 75.6l15 15a6.4 6.4 0 010 9.2 6.4 6.4 0 01-4.5 1.9 6.4 6.4 0 01-4.6-2l-15-15-15 15a6.4 6.4 0 01-4.6 2 6.4 6.4 0 01-4.6-2 6.4 6.4 0 010-9l15-15L46.8 61a6.4 6.4 0 119-9.1l14.6 14.5L84.8 52a6.4 6.4 0 014.7-1.9z'/%3e%3c/svg%3e");
+  --bs-font-sans-serif: HelvNeueOrangeArabic, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: calc(18 / 16);
+  --bs-body-color: #000;
+  --bs-body-bg: #fff;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -2402,7 +2461,7 @@
 
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
   background-color: #fff;
 }
 
