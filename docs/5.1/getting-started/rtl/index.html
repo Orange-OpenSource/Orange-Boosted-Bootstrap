@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.87.0">
+<meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.1/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-p65W0Den8mG2rY0XUuSgjXmMvwuJ1y3Z9THeLsd2VkKKQW0zy/gY1EAE1wkqkQGr" crossorigin="anonymous">
+<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-L3dmE7dPzuuu008/uCWuDRI+1KoCmCfjwEQAtgsuo6+5IsZcynvIU1XZovqE6y1j" crossorigin="anonymous">
 
 <link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
@@ -125,7 +125,7 @@
     <span class="d-none d-lg-inline">Boosted&nbsp;</span> v5.1
   </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
-    <li><a class="dropdown-item active" aria-current="true" href="/docs/5.1/">Latest (5.0.x)</a></li>
+    <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
     <li><hr class="dropdown-divider m-0"></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider m-0"></li>
@@ -366,7 +366,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-md-4 ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/site/content/docs/5.1/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.1/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">RTL</h1>
         </div>
         <p class="bd-lead">Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.</p>
@@ -419,7 +419,7 @@
 <li>Add an appropriate <code>lang</code> attribute, like <code>lang=&quot;ar&quot;</code>, on the <code>&lt;html&gt;</code> element.</li>
 </ol>
 <p>From there, you&rsquo;ll need to include an RTL version of our CSS. For example, here&rsquo;s the stylesheet for our compiled and minified CSS with RTL enabled:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-adBaY8YofvS4ChTxwzWY1cAH2r7KOOIrczF6KhvN8azUFSI+fn7BTeDyCdRtkDNl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nloGgZuMox1QvqdHgSxKCXSmKj33InRh9ngqRPpu8M57ynR8zfl89f1BpQEGl21U&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="starter-template">Starter template</h3>
 <p>You can see the above requirements reflected in this modified RTL starter template.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
@@ -441,9 +441,9 @@
 </span><span class="c">      See NOTICE.txt for more informations.
 </span><span class="c">    --&gt;</span>
     <span class="c">&lt;!-- Option 1: Use a CDN --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/fonts/HelveticaNeueW20-55Roman.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/fonts/HelveticaNeueW20-75Bold.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/css/orange-helvetica.rtl.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ihl4jOMS2VMlKkg/jH4cTxPHmSMcnVyANsKMO0YSUNvNyrrglHI9Itbx0wLOmV+W&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/fonts/HelveticaNeueW20-55Roman.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/fonts/HelveticaNeueW20-75Bold.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/css/orange-helvetica.rtl.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ihl4jOMS2VMlKkg/jH4cTxPHmSMcnVyANsKMO0YSUNvNyrrglHI9Itbx0wLOmV+W&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 
     <span class="c">&lt;!-- Option 2: Embed the fonts
 </span><span class="c">    &lt;link href=&#34;dist/fonts/HelveticaNeueW20-55Roman.woff2&#34; rel=&#34;preload&#34; as=&#34;font&#34; type=&#34;font/woff2&#34; crossorigin=&#34;anonymous&#34;&gt;
@@ -452,7 +452,7 @@
 </span><span class="c">    --&gt;</span>
 
     <span class="c">&lt;!-- Boosted CSS --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-adBaY8YofvS4ChTxwzWY1cAH2r7KOOIrczF6KhvN8azUFSI+fn7BTeDyCdRtkDNl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/css/boosted.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nloGgZuMox1QvqdHgSxKCXSmKj33InRh9ngqRPpu8M57ynR8zfl89f1BpQEGl21U&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>مرحبا بالعالم!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -462,12 +462,12 @@
     <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
 
     <span class="c">&lt;!-- Option 1: Boosted Bundle with Popper --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ERNiHfjIjCHxVmcVnfFkjyTZf/+vbcNoIh99eriKB9+NhLxxDL5r3rR4a/d+/s0B&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-Njq6Cdj8rs3ZqRkj0DCyKcP+OuU9FD99AObDbfh0I0nMTg9jAwgShNdhg/Q4Wq0K&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
     <span class="c">&lt;!-- Option 2: Separate Popper and Boosted JS --&gt;</span>
     <span class="c">&lt;!--
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js&#34; integrity=&#34;sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.0/dist/js/boosted.min.js&#34; integrity=&#34;sha384-d9MsTpM4nzIAsRT8yrYg2tl/JG4A1LAmuG7n001qGCewc4iHonwHnrIvUizw/3d4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js&#34; integrity=&#34;sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/js/boosted.min.js&#34; integrity=&#34;sha384-KmiznHRZsRXbvlEFfKSf9EGYhJa+94X/K4kgdlpIEVIz7kY8ASB3/vwhBKLKECeS&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
 </span><span class="c">    --&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -579,12 +579,12 @@
         <p class="mb-1">This documentation is an adaptation made by Orange.</p>
         <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
         <p class="mb-md-1">
-          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>
           —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.0</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.1</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -635,7 +635,7 @@
 </nav>
 
 
-    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-ERNiHfjIjCHxVmcVnfFkjyTZf/+vbcNoIh99eriKB9+NhLxxDL5r3rR4a/d+/s0B" crossorigin="anonymous"></script>
+    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-Njq6Cdj8rs3ZqRkj0DCyKcP+OuU9FD99AObDbfh0I0nMTg9jAwgShNdhg/Q4Wq0K" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
