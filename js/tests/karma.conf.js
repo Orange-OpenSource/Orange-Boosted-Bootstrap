@@ -108,7 +108,7 @@ if (BROWSERSTACK) {
   conf.browserStack = {
     username: ENV.BROWSER_STACK_USERNAME,
     accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
-    build: `boosted-v5-${new Date().toISOString()}`,
+    build: `boosted-v5-${ENV.GITHUB_SHA ? ENV.GITHUB_SHA.slice(0, 7) + '-' : ''}${new Date().toISOString()}`,
     project: 'Boosted',
     retryLimit: 2
   }

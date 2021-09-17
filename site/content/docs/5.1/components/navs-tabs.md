@@ -31,7 +31,7 @@ To convey the active state to assistive technologies, use the `aria-current` att
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -43,7 +43,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -69,7 +69,7 @@ Centered with `.justify-content-center`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -88,7 +88,7 @@ Right-aligned with `.justify-content-end`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -109,7 +109,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -121,7 +121,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -141,7 +141,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -164,7 +164,7 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -186,7 +186,7 @@ Take that same HTML, but use `.nav-pills` instead:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -207,7 +207,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -219,7 +219,7 @@ When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -237,7 +237,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -249,7 +249,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="nav-link disabled">Disabled</a>
 </nav>
 
 {{< /example >}}
@@ -262,7 +262,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -297,7 +297,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -323,7 +323,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -650,7 +650,7 @@ var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 
 #### getOrCreateInstance
 
-*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialised
+*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
 
 ```js
 var triggerEl = document.querySelector('#trigger')

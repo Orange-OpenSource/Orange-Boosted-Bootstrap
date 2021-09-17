@@ -471,33 +471,32 @@ $body-text-align:           null !default;
 //
 // Extends the default `$theme-colors` maps to help create our utilities.
 
+// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
 // scss-docs-start utilities-colors
-$utilities-colors: map-merge(
-  $background-colors,
-  (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body":  to-rgb($body-color)
-  )
-) !default;
+$utilities-colors: $theme-colors-rgb !default;
 // scss-docs-end utilities-colors
 
-// Boosted mod: begin
-$utilities-boosted-colors: (
+// scss-docs-start utilities-text-colors
+// Boosted mod: content of $utilities-text
+$utilities-text: (
   "primary": to-rgb($accessible-orange),
   "light": to-rgb($gray-500),
   "white": to-rgb($white),
   "body": to-rgb($body-color),
 ) !default;
-// Boosted mod: end
-
-// scss-docs-start utilities-text-colors
-// $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text") !default;
-$utilities-text-colors: map-loop($utilities-boosted-colors, rgba-css-var, "$key", "text") !default; // Boosted mod
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
 // scss-docs-end utilities-text-colors
 
 // scss-docs-start utilities-bg-colors
-$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg") !default;
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-bg)
+  )
+) !default;
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
 // scss-docs-end utilities-bg-colors
 
 // Links
@@ -1301,9 +1300,9 @@ $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               $box-shadow !default;
 
-$dropdown-link-color:               $black !default;
-$dropdown-link-hover-color:         $white !default;
-$dropdown-link-hover-bg:            $black !default;
+$dropdown-link-color:               $black !default; // Boosted mod
+$dropdown-link-hover-color:         $white !default; // Boosted mod
+$dropdown-link-hover-bg:            $black !default; // Boosted mod
 
 $dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
 $dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod

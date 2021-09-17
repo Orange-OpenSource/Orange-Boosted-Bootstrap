@@ -8,6 +8,10 @@ toc: true
 
 Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Boosted. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
 
+{{< callout warning >}}
+Heads up! Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
+{{< /callout >}}
+
 ## Vertical
 
 Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
@@ -71,11 +75,7 @@ Use `.vstack` to stack buttons and other elements:
 
 Create an inline form with `.hstack`:
 
-<!--
-  Boosted mod:
-  - primary and secondary button
-  - add input aria-label
--->
+<!-- Boosted mod: primary and secondary button -->
 {{< example >}}
 <div class="hstack gap-3">
   <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
