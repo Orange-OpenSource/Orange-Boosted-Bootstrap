@@ -106,19 +106,19 @@ A switch has the markup of a custom checkbox but uses the `.form-switch` class t
 
 {{< example >}}
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" aria-checked="false">
   <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" aria-checked="true" checked>
   <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" aria-checked="false" disabled>
   <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" aria-checked="true" checked disabled>
   <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
 </div>
 {{< /example >}}
