@@ -420,9 +420,14 @@
   }
 }
 
+// Boosted mod : supra bar
 .supra {
   padding-bottom: $navbar-supra-padding-bottom;
   border-bottom: 1px solid $gray-700;
+
+  .nav-link {
+    font-size: $font-size-sm;
+  }
 
   a {
     margin-right: .313rem;

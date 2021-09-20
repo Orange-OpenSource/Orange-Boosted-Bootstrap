@@ -21,8 +21,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 <nav class="navbar supra navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block lh-1">
   <div class="container">
       <div class="navbar-nav">
-        <a href="#" class="nav-link active pb-1 fs-7" aria-current="page">Personal</a>
-        <a href="#" class="nav-link pb-1 fs-7">Business</a>
+        <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
+        <a href="#" class="nav-link pb-1">Business</a>
       </div>
   </div>
 </nav>
@@ -34,7 +34,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <nav class="navbar supra navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block lh-1">
-  <div class="container fs-7">
+  <div class="container">
     <div class="navbar-nav d-flex flex-row">
       <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
       <a class="nav-link pb-1" href="#">Business</a>
@@ -54,7 +54,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <nav class="navbar supra navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block lh-1">
-  <div class="container fs-7">
+  <div class="container">
     <div class="navbar-nav d-flex flex-row">
       <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
       <a class="nav-link pb-1" href="#">Business</a>
