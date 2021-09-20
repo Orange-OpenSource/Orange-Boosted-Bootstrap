@@ -71,7 +71,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/grid";
 @import "../node_modules/boosted/scss/helpers";
 
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/boosted/scss/utilities/api";
 
 // 6. Add additional custom code here
