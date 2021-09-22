@@ -48,8 +48,8 @@
   }
 
   // Highlight border color between thead, tbody and tfoot.
-  > :not(:last-child) > :last-child > * {
-    border-bottom-color: $table-group-separator-color;
+  > :not(:first-child) {
+    border-top: (2 * $table-border-width) solid $table-group-separator-color;
   }
 }
 
@@ -94,7 +94,7 @@
 // Placed here since it has to come after the potential zebra striping
 
 .table-hover {
-  > tbody > tr:hover {
+  > tbody > tr:hover > * {
     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);
     color: var(--#{$variable-prefix}table-hover-color);
   }
