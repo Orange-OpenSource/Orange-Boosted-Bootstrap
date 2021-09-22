@@ -67,24 +67,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 
 <!-- Boosted mod: do not show button's variants for dropdown -->
 
-<div class="bd-example">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div><!-- /btn-group -->
-</div>
-
-```html
-<!-- Example split button -->
+{{< example >}}
 <div class="btn-group" role="group">
   <button type="button" class="btn btn-secondary">Action</button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,7 +81,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
-```
+{{< /example >}}
 
 ## Sizing
 

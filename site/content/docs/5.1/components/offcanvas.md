@@ -167,7 +167,7 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
 </div>
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5>
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body">
