@@ -419,27 +419,3 @@
     }
   }
 }
-
-// Boosted mod : supra bar
-.supra {
-  display: none;
-  padding-top: 0;
-  padding-bottom: $navbar-supra-padding-bottom;
-  line-height: 1;
-  border-bottom: 1px solid $gray-700;
-
-  @include media-breakpoint-up(md) {
-    display: flex;
-  }
-
-  .nav-link {
-    font-size: $font-size-sm;
-  }
-
-  a {
-    margin-right: .313rem;
-  }
-  a::before {
-    bottom: -.438rem;
-  }
-}
