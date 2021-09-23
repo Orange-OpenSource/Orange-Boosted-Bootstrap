@@ -1,9 +1,7 @@
 $(function () {
   'use strict'
 
-  if (typeof boosted !== 'undefined') {
-    window.Toast = boosted.Toast
-  }
+  window.Toast = typeof boosted !== 'undefined' ? boosted.Toast : Toast
 
   QUnit.module('toast plugin')
 
