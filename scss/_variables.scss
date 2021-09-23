@@ -1290,9 +1290,10 @@ $carousel-transition:                transform $carousel-transition-duration eas
 
 // Spinners
 
-$spinner-width:         $spacer * 2 !default;         // Boosted mod
-$spinner-height:        $spinner-width !default;
-$spinner-border-width:  $border-width * 3 !default;   // Boosted mod
+$spinner-width:           $spacer * 2 !default;         // Boosted mod
+$spinner-height:          $spinner-width !default;
+$spinner-vertical-align:  -.125em !default;
+$spinner-border-width:    $border-width * 3 !default;   // Boosted mod
 
 $spinner-width-sm:        $spacer !default;           // Boosted mod
 $spinner-height-sm:       $spinner-width-sm !default;
