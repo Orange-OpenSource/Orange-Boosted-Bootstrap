@@ -33,7 +33,7 @@ const MenuLabelDefault = 'More'
 function menuTemplate(MenuLabel) {
   return `
   <li class="overflow-nav nav-item dropdown d-none">
-      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
+      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">${MenuLabel}</a>
       <ul class="overflow-nav-list dropdown-menu dropdown-menu-right"></ul>
   </li>
 `
