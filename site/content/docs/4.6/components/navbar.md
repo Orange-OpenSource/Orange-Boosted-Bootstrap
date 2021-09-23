@@ -79,7 +79,7 @@ In addition to the `.active` class, you must use `aria-current="page"` attribute
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -154,7 +154,7 @@ Active states—with `.active`—to indicate the current page can be applied dir
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
   </div>
@@ -174,7 +174,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
       <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       <a class="nav-link" href="#">Features</a>
       <a class="nav-link" href="#">Pricing</a>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled">Disabled</a>
     </div>
   </div>
 </nav>
@@ -466,7 +466,7 @@ With no `.navbar-brand` shown at the smallest breakpoint:
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -496,7 +496,7 @@ With a brand name shown on the left and toggler on the right:
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -526,7 +526,7 @@ With a toggler on the left and brand name on the right:
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled">Disabled</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
