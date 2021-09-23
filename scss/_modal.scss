@@ -161,7 +161,7 @@
     position: relative; // Boosted mod
     z-index: 2; // Boosted mod
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: ($close-icon-size / -4) ($close-icon-size / -4) ($close-icon-size / -4) auto; // Boosted mod
+    margin: ($close-icon-size * -.25) ($close-icon-size * -.25) ($close-icon-size * -.25) auto; // Boosted mod
   }
 }
 
@@ -187,7 +187,7 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding-y  subtract($modal-inner-padding-x, $modal-footer-margin-between / 2) 0; // Boosted mod
+  padding: $modal-inner-padding-y  subtract($modal-inner-padding-x, $modal-footer-margin-between * .5) 0; // Boosted mod
   // Boosted mod: no border
   @include border-bottom-radius($modal-content-inner-border-radius);
 
@@ -195,7 +195,7 @@
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
-    margin: 0 $modal-footer-margin-between / 2;
+    margin: 0 $modal-footer-margin-between * .5;
   }
 }
 

@@ -81,7 +81,7 @@
     display: inline-block;
     width: $pagination-icon-width;
     height: $pagination-icon-height;
-    margin-top: $pagination-border-width / 2;
+    margin-top: $pagination-border-width * .5;
     content: "";
     background: $pagination-icon-background;
   }
@@ -103,7 +103,7 @@
     }
 
     .has-label::before {
-      margin: $pagination-border-width / 2 $pagination-icon-margin 0 0;
+      margin: $pagination-border-width * .5 $pagination-icon-margin 0 0;
     }
   }
 
@@ -121,7 +121,7 @@
     }
 
     .has-label::after {
-      margin: $pagination-border-width / 2 0 0 $pagination-icon-margin;
+      margin: $pagination-border-width * .5 0 0 $pagination-icon-margin;
     }
   }
 
