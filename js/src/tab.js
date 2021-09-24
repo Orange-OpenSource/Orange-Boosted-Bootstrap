@@ -225,15 +225,16 @@ class Tab {
       }
   
       if (parent && $(parent).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
-      const dropdownElement = $(element).closest(SELECTOR_DROPDOWN)[0]
+        const dropdownElement = $(element).closest(SELECTOR_DROPDOWN)[0]
 
-      if (dropdownElement) {
-        const dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE))
+        if (dropdownElement) {
+          const dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE))
 
-        $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE)
+          $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE)
+        }
+
+        element.setAttribute('aria-expanded', true)
       }
-
-      element.setAttribute('aria-expanded', true)
     }
 
     if (callback) {
