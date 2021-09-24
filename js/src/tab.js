@@ -223,7 +223,7 @@ class Tab {
       if (parent && parent.nodeName === 'LI') {
         parent = parent.parentNode
       }
-  
+
       if (parent && $(parent).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
         const dropdownElement = $(element).closest(SELECTOR_DROPDOWN)[0]
 

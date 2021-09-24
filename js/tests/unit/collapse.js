@@ -917,7 +917,7 @@ $(function () {
 
     $collapseOneMulti.one('shown.bs.collapse', function () {
       assert.ok($collapseOneMulti.hasClass('show'), '#collapseOne is shown')
-      assert.ok(!$collapseTwoMulti.hasClass('show'), '#collapseTwo is not shown')
+      assert.false($collapseTwoMulti.hasClass('show'), '#collapseTwo is not shown')
       $collapseTwoMulti.one('shown.bs.collapse', function () {
         assert.ok($collapseOneMulti.hasClass('show'), '#collapseOne is shown')
         assert.ok($collapseTwoMulti.hasClass('show'), '#collapseTwo is shown')

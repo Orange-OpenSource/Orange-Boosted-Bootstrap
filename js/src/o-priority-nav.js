@@ -49,13 +49,7 @@ class PriorityNav {
   constructor(element, config) {
     this._element = element
     this._config = config
-
-    if ($(element).is('ul')) {
-      this._$menu = $(element)
-    } else {
-      this._$menu = $(element).find('ul').first()
-    }
-
+    this._$menu = $(element).is('ul') ? $(element) : $(element).find('ul').first()
     this._initMenu()
     this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS)
     this._bindUIActions()
