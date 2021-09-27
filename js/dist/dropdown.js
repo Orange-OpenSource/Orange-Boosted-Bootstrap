@@ -1,11 +1,12 @@
 /*!
   * Boosted v4.6.0 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors
-  * Copyright 2014-2021 Orange
+  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2021 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v4.6.0 (https://boosted.orange.com)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  **
+  * This a fork of Bootstrap:
+  * Bootstrap dropdown.js v4.6.0 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -98,8 +99,6 @@
   var SELECTOR_FORM_CHILD = '.dropdown form';
   var SELECTOR_MENU = '.dropdown-menu';
   var SELECTOR_NAVBAR_NAV = '.navbar-nav';
-  var SELECTOR_FIRST_ITEM_IN_MENU = '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)'; // Boosted mod
-
   var SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
   var PLACEMENT_TOP = 'top-start';
   var PLACEMENT_TOPEND = 'top-end';
@@ -227,9 +226,7 @@
       this._element.setAttribute('aria-expanded', true);
 
       $__default['default'](this._menu).toggleClass(CLASS_NAME_SHOW);
-      $__default['default'](parent).toggleClass(CLASS_NAME_SHOW).trigger($__default['default'].Event(EVENT_SHOWN, relatedTarget)); // Boosted mod
-
-      $__default['default'](parent).find(SELECTOR_FIRST_ITEM_IN_MENU).first().trigger('focus'); // end mod
+      $__default['default'](parent).toggleClass(CLASS_NAME_SHOW).trigger($__default['default'].Event(EVENT_SHOWN, relatedTarget));
     };
 
     _proto.hide = function hide() {

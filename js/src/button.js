@@ -71,6 +71,10 @@ class Button {
     return VERSION
   }
 
+  static get fake() {
+    return 'fake'
+  }
+
   // Public
 
   toggle() {
