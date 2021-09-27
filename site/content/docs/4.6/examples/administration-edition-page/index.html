@@ -56,11 +56,11 @@ html_class: "h-100"
     <div class="col-12 col-lg-4">
       <div class="form-group required">
         <label for="PostName" class="is-required">Title</label>
-        <input name="data[Post][titre]" class="form-control" maxlength="255" type="text" id="PostName" required="required" aria-required="true">
+        <input name="data[Post][titre]" class="form-control" maxlength="255" type="text" id="PostName" required="required">
       </div>
       <div class="form-group required">
         <label for="PostDate" class="is-required">Date</label>
-        <input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" class="form-control" type="date" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
+        <input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" class="form-control" type="date" id="PostDate" required="required" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
         <span class="form-text small text-muted" id="date-format">Expected date format: mm/dd/yyyy</span>
       </div>
       <div class="form-group">
@@ -73,7 +73,7 @@ html_class: "h-100"
       </div>
       <div class="form-group">
         <label for="PostUser" class="is-required">Author</label>
-        <input name="data[Post][user]" class="form-control" maxlength="255" type="text" id="PostUser" required="required" aria-required="true" title="autor is empty">
+        <input name="data[Post][user]" class="form-control" maxlength="255" type="text" id="PostUser" required="required" title="autor is empty">
       </div>
     </div>
     <div class="col-12 col-lg-8">
