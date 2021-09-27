@@ -12,8 +12,8 @@
 */ -}}
 
 {{- $grays := $.Site.Data.grays -}}
-{{- $default_color := (index $grays 2).hex -}}
-{{- $default_background := (index $grays 5).hex -}}
+{{- $default_color := (index $grays 5).hex -}} <!--Boosted mod: 5 instead of 2-->
+{{- $default_background := (index $grays 3).hex -}} <!--Boosted mod: 3 instead of 5-->
 
 {{- $title := .Get "title" | default "Placeholder" -}}
 {{- $class := .Get "class" -}}
