@@ -701,7 +701,7 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size,
+  6: $h6-font-size
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1237,11 +1237,8 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 
 // Boosted mod: Orange master logo & minimizing behavior
 $navbar-icon-size:                     $spacer * 1.5 !default;
-//$navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-//$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
-//$navbar-supra-padding-x:               $spacer * .25 * 1.5 !default;
 $navbar-transition-duration:           $transition-duration !default;
 $navbar-transition-timing-function:    $transition-timing !default;
 $navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
