@@ -16,6 +16,10 @@
 
   @include media-breakpoint-up(md) {
     display: flex;
+    
+    .container {
+      padding-left: 0;
+    }
   }
 
   .nav-link {
