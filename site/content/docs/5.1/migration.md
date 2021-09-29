@@ -288,6 +288,11 @@ We only replaced `Bootstrap` with `Boosted`—especially in code examples and fi
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
 
+### Orange navbar
+
+- The previously-called Navbar Orange is now called Orange navbar in the documentation.
+- <span class="badge bg-danger">Breaking</span> To have the good displaying of the supra bar, be sure to use the helper-class `.bg-dark` in addition to needed navbar classes and `.supra`.
+
 ### Pagination
 
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
