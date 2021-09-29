@@ -6,30 +6,57 @@
 // Supra bar
 //
 // Brand exclusive thin navbar that can be used with orange navbar
-
 .supra {
   display: none;
   padding-top: 0;
-  padding-bottom: $navbar-supra-padding-bottom;
-  line-height: 1;
+  padding-bottom: 0;
   border-bottom: 1px solid $gray-700;
 
   @include media-breakpoint-up(md) {
     display: flex;
-    
     .container {
-      padding-left: 0;
+      padding-right: .125rem;
+      padding-left: .125rem;
+    }
+  }
+
+  .nav-item:last-of-type {
+    .nav-icon {
+      padding-right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
     }
   }
 
   .nav-link {
+    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} $navbar-supra-padding-x .75rem !important; // stylelint-disable-line declaration-no-important
     font-size: $font-size-sm;
-  }
+    line-height: 1;
 
-  a {
-    margin-right: .313rem;
-  }
-  a::before {
-    bottom: -.438rem;
+    &.active::before {
+      right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
+      bottom: -1px !important; // stylelint-disable-line declaration-no-important
+      left: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
+    }
+
+    &.nav-icon {
+      padding: divide($spacer, 2) .9375rem .25rem !important; // stylelint-disable-line declaration-no-important
+
+      svg,
+      img {
+        width: $navbar-supra-icon-size;
+        height: $navbar-supra-icon-size;
+      }
+    }
+
+    .badge {
+      @extend .position-absolute;
+      @extend .top-0;
+      @extend .bg-info;
+      @extend .text-white;
+      @extend .translate-middle;
+      @extend .rounded-pill;
+      padding: .125rem .375rem;
+      margin-top: .1875rem;
+      font-size: $font-size-base;
+    }
   }
 }
