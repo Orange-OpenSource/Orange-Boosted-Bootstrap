@@ -89,7 +89,7 @@ params:
     js_hash:                        "sha384-KmiznHRZsRXbvlEFfKSf9EGYhJa+94X/K4kgdlpIEVIz7kY8ASB3/vwhBKLKECeS"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.1.1/dist/js/boosted.bundle.min.js"
     js_bundle_hash:                 "sha384-Njq6Cdj8rs3ZqRkj0DCyKcP+OuU9FD99AObDbfh0I0nMTg9jAwgShNdhg/Q4Wq0K"
-    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
     popper_hash:                    "sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
     focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"
     focus_visible_hash:             "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
