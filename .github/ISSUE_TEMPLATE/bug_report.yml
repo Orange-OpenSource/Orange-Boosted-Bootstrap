@@ -56,7 +56,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: What version of Bootstrap are you using?
+      label: What version of Boosted are you using?
       placeholder: "e.g., v5.1.0 or v4.5.2"
     validations:
       required: true
