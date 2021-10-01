@@ -18,14 +18,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-sub-001 >}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
-  <div class="container">
-      <div class="navbar-nav">
-        <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
-        <a href="#" class="nav-link pb-1">Business</a>
-      </div>
-  </div>
-</nav>
+{{< orange-supra >}}
+{{< /orange-supra >}}
 {{< /example >}}
 
 ### Supra bar with language options
@@ -33,19 +27,13 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-sub-002 >}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
-  <div class="container">
-    <div class="navbar-nav d-flex flex-row">
-      <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
-      <a class="nav-link pb-1" href="#">Business</a>
-    </div>
-    <div class="navbar-nav d-flex flex-row">
-        <a class="nav-link active pb-1" href="#" aria-label="English version">EN</a>
-        <a class="nav-link ml-1 pb-1" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a>
-        <a class="nav-link ml-1 pb-1" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a>
-    </div>
-  </div>
-</nav>
+{{< orange-supra >}}
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+  <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
+  <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
+</ul>
+{{< /orange-supra >}}
 {{< /example >}}
 
 ### Supra bar with actions
@@ -53,42 +41,36 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-sub-003 >}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar supra navbar-dark bg-dark navbar-expand-md">
-  <div class="container">
-    <div class="navbar-nav d-flex flex-row">
-      <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
-      <a class="nav-link pb-1" href="#">Business</a>
-    </div>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0">
-          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-          </svg>
-          <span class="visually-hidden">Search</span>
-        </a>
-      </li> 
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-          <span class="position-relative">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-              1
-              <span class="visually-hidden">shopping basket items</span>
-            </span>
-          </span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0">
-          <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-        <span class="visually-hidden">My account</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+{{< orange-supra >}}
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a href="#" class="nav-link nav-icon">
+      <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+        <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
+      </svg>
+      <span class="visually-hidden">Search</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="#" class="nav-link nav-icon">
+      <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+        <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      <span class="visually-hidden">Basket</span>
+      <span class="position-relative">
+        <span class="badge">
+          1
+          <span class="visually-hidden">shopping basket items</span>
+        </span>
+      </span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="#" class="nav-link nav-icon">
+      <img src="/docs/5.1/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" aria-hidden="true">
+      <span class="visually-hidden">My account</span>
+    </a>
+  </li>
+</ul>
+{{< /orange-supra >}}
 {{< /example >}}
