@@ -20,7 +20,14 @@
   @include media-breakpoint-up(md) {
     display: flex;
     .container {
-      padding-left: 0;
+      padding-right: .125rem;
+      padding-left: .125rem;
+    }
+  }
+
+  .nav-item:last-of-type {
+    .nav-icon {
+      padding-right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
     }
   }
 

@@ -1192,13 +1192,15 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 $navbar-icon-size:                     $spacer * 1.5 !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
+$navbar-supra-padding-y:               map-get($spacers, 4) * .1 !default;
+$navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
+$navbar-supra-icon-size:               1.5625rem !default;
 $navbar-transition-duration:           $transition-duration !default;
 $navbar-transition-timing-function:    $transition-timing !default;
 $navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-supra-padding-bottom:          .375rem !default;
 // End mod
 
 // Boosted mod: Orange navbar
