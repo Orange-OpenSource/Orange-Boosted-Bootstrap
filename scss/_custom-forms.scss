@@ -13,7 +13,7 @@
   display: block;
   min-height: $font-size-base * $line-height-base;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
-  margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
+  margin-bottom: ($spacer * .5); // Boosted mod ensure that there's at least 10px
   color-adjust: exact; // Keep themed appearance for print
 }
 
@@ -27,7 +27,7 @@
   left: 0;
   z-index: -1; // Put the input behind the label so it doesn't overlay text
   width: $custom-control-indicator-size;
-  height: ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2;
+  height: ($font-size-base * $line-height-base + $custom-control-indicator-size) * .5;
   opacity: 0;
 
   &:checked ~ .custom-control-label::before {
@@ -105,7 +105,7 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) * .5;
     left: 0; // Boosted mod: checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
@@ -120,7 +120,7 @@
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) * .5;
     left: 0; // Boosted mod: checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
@@ -171,7 +171,7 @@
     &::after {
       background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
       background-size: map-get($spacers, 2) $border-width * 1.5;
-      transform: translateY($border-width / 4);
+      transform: translateY($border-width * .25);
     }
   }
 
@@ -260,7 +260,7 @@
     }
 
     &::after {
-      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width);
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) * .5, $custom-control-indicator-border-width);
       left: $custom-control-indicator-border-width; // Boosted mod
       width: $custom-switch-indicator-width; // Boosted mod
       height: $custom-switch-indicator-height; // Boosted mod
@@ -281,7 +281,7 @@
       }
 
       &::after {
-        right: add($custom-switch-width / 2, $custom-control-indicator-border-width);
+        right: add($custom-switch-width * .5, $custom-control-indicator-border-width);
         left: auto;
       }
     }
@@ -295,7 +295,7 @@
     // end mod
     &::after {
       background-color: $custom-control-indicator-bg;
-      transform: translateX($custom-switch-width / 2); // Boosted mod : change the indicator size
+      transform: translateX($custom-switch-width * .5); // Boosted mod : change the indicator size
     }
   }
 
@@ -521,7 +521,7 @@
     box-sizing: content-box; // Boosted mod
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: #{add(-$custom-range-thumb-height / 2, 1px)}; // Webkit specific // Boosted mod
+    margin-top: #{add(-$custom-range-thumb-height * .5, 1px)}; // Webkit specific // Boosted mod
     cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
@@ -611,7 +611,7 @@
     cursor: $custom-range-track-cursor;
     background-color: transparent;
     border-color: transparent;
-    border-width: $custom-range-thumb-height / 2;
+    border-width: $custom-range-thumb-height * .5;
     @include box-shadow($custom-range-track-box-shadow);
   }
 

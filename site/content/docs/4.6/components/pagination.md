@@ -60,9 +60,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 <nav role="navigation" aria-label="Pagination example with disabled item">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true" title="Previous">
-        <span class="sr-only">Previous</span>
-      </a>
+      <a class="page-link">Previous</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -70,9 +68,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" title="Next">
-        <span class="sr-only">Next</span>
-      </a>
+      <a class="page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>

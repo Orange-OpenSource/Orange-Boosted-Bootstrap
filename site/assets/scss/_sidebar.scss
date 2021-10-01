@@ -38,9 +38,9 @@
 
 .bd-search {
   position: relative; // To contain the Algolia search
-  padding: 1rem $grid-gutter-width / 2; // Boosted mod our col-12 has 10px paddings
-  margin-right: $grid-gutter-width / -2; // Boosted mod
-  margin-left: $grid-gutter-width / -2; // Boosted mod
+  padding: 1rem $grid-gutter-width * .5; // Boosted mod our col-12 has 10px paddings
+  margin-right: $grid-gutter-width * -.5; // Boosted mod
+  margin-left: $grid-gutter-width * -.5; // Boosted mod
   border-bottom: 1px solid $gray-300;
 
   // Boosted mod : keep basic form-control style

@@ -18,7 +18,7 @@ buildFuture:            true
 
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
@@ -50,6 +50,7 @@ params:
   current_version:                  "4.6.0"
   current_ruby_version:             "4.6.0"
   docs_version:                     "4.6"
+  # Boosted mod: no RFS
   github_org:                       "https://github.com/Orange-OpenSource"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "orange"

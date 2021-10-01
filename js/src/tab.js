@@ -219,15 +219,22 @@ class Tab {
     }
 
     if (element.parentNode && $(element.parentNode).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
-      const dropdownElement = $(element).closest(SELECTOR_DROPDOWN)[0]
-
-      if (dropdownElement) {
-        const dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE))
-
-        $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE)
+      let parent = element.parentNode
+      if (parent && parent.nodeName === 'LI') {
+        parent = parent.parentNode
       }
 
-      element.setAttribute('aria-expanded', true)
+      if (parent && $(parent).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
+        const dropdownElement = $(element).closest(SELECTOR_DROPDOWN)[0]
+
+        if (dropdownElement) {
+          const dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE))
+
+          $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE)
+        }
+
+        element.setAttribute('aria-expanded', true)
+      }
     }
 
     if (callback) {

@@ -43,7 +43,7 @@
 
   // Boosted mod
   > .list-group + .card-footer {
-    padding-top: $card-spacer-y / 2;
+    padding-top: $card-spacer-y * .5;
   }
   // End mod
 }
@@ -70,7 +70,7 @@
 }
 
 .card-subtitle {
-  margin-top: -$card-spacer-y / 2;
+  margin-top: -$card-spacer-y * .5;
   margin-bottom: 0;
 }
 
@@ -124,15 +124,15 @@
 //
 
 .card-header-tabs {
-  margin-right: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x * .5;
   margin-bottom: -$card-spacer-y;
-  margin-left: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x * .5;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -$card-spacer-x / 2;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x * .5;
+  margin-left: -$card-spacer-x * .5;
 }
 
 // Card image
@@ -291,9 +291,9 @@
     }
 
     @include media-breakpoint-up(md) {
-      border-width: 0 0 $border-width / 2;
+      border-width: 0 0 $border-width * .5;
       &:first-child {
-        border-width: $border-width / 2 0;
+        border-width: $border-width * .5 0;
       }
     }
   }

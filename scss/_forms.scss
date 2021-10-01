@@ -216,13 +216,13 @@ textarea.form-control {
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -$form-grid-gutter-width / 2;
-  margin-left: -$form-grid-gutter-width / 2;
+  margin-right: -$form-grid-gutter-width * .5;
+  margin-left: -$form-grid-gutter-width * .5;
 
   > .col,
   > [class*="col-"] {
-    padding-right: $form-grid-gutter-width / 2;
-    padding-left: $form-grid-gutter-width / 2;
+    padding-right: $form-grid-gutter-width * .5;
+    padding-left: $form-grid-gutter-width * .5;
   }
 }
 
@@ -235,7 +235,7 @@ textarea.form-control {
   position: relative;
   display: block;
   padding-left: $form-check-input-gutter;
-  margin-bottom: $spacer / 2; // Boosted mod ensure that there's at least 10px
+  margin-bottom: $spacer * .5; // Boosted mod ensure that there's at least 10px
 }
 
 .form-check-input {

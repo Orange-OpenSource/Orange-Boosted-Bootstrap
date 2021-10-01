@@ -49,23 +49,27 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Custom.scss
 // Option A: Include all of Boosted
 
+// Include any default variable overrides here (though functions won't be available)
+
 @import "../node_modules/boosted/scss/boosted";
 
-// Add custom code after this
+// Then add additional custom code here
 ```
 
 ```scss
 // Custom.scss
 // Option B: Include parts of Boosted
 
-// Required
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/boosted/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Boosted stylesheets
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
 
-// Include custom variable default overrides here
-
-// Optional
+// 4. Include any optional Boosted components as you like
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 @import "../node_modules/boosted/scss/images";
@@ -86,18 +90,17 @@ Variable overrides must come after our functions, variables, and mixins are impo
 Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Boosted via npm:
 
 ```scss
-// Required
 @import "../node_modules/boosted/scss/functions";
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/mixins";
 
-// Your variable overrides
+// Default variable overrides
 $body-bg: #000;
 $body-color: #000;
 
-// Boosted and its default variables
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
-// Optional
+// Optional Boosted components here
 @import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
