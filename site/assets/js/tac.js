@@ -59,7 +59,6 @@ if (typeof tarteaucitron !== 'undefined') {
     cookieslist: true,
     highPrivacy: false,
     showIcon: false,
-    handleBrowserDNTRequest: true,
     useExternalCss: true,
     mandatory: false
   })
