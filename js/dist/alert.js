@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.1.1 (https://boosted.orange.com/)
+  * Boosted v5.1.2 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap alert.js v5.1.1 (https://boosted.orange.com/)
+  * Bootstrap alert.js v5.1.2 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -12,16 +12,16 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/event-handler.js'), require('./base-component.js')) :
   typeof define === 'function' && define.amd ? define(['./dom/event-handler', './base-component'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Alert = factory(global.EventHandler, global.Base));
-}(this, (function (EventHandler, BaseComponent) { 'use strict';
+})(this, (function (EventHandler, BaseComponent) { 'use strict';
 
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.1): util/index.js
+   * Bootstrap (v5.1.2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -121,7 +121,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.1): util/component-functions.js
+   * Bootstrap (v5.1.2): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -129,7 +129,7 @@
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
-    EventHandler__default['default'].on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+    EventHandler__default.default.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
       if (['A', 'AREA'].includes(this.tagName)) {
         event.preventDefault();
       }
@@ -147,7 +147,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.1): alert.js
+   * Bootstrap (v5.1.2): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -170,7 +170,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Alert extends BaseComponent__default['default'] {
+  class Alert extends BaseComponent__default.default {
     // Getters
     static get NAME() {
       return NAME;
@@ -178,7 +178,7 @@
 
 
     close() {
-      const closeEvent = EventHandler__default['default'].trigger(this._element, EVENT_CLOSE);
+      const closeEvent = EventHandler__default.default.trigger(this._element, EVENT_CLOSE);
 
       if (closeEvent.defaultPrevented) {
         return;
@@ -195,7 +195,7 @@
     _destroyElement() {
       this._element.remove();
 
-      EventHandler__default['default'].trigger(this._element, EVENT_CLOSED);
+      EventHandler__default.default.trigger(this._element, EVENT_CLOSED);
       this.dispose();
     } // Static
 
@@ -236,5 +236,5 @@
 
   return Alert;
 
-})));
+}));
 //# sourceMappingURL=alert.js.map
