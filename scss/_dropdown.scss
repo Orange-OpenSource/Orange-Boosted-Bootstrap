@@ -14,7 +14,25 @@
   background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
-  .bg-dark &:not(.dropdown-toggle-split),
+  .bg-dark &:not(.dropdown-toggle-split) {
+    border-color: $gray-700;
+
+    &:hover {
+      border-color: $dropdown-bg;
+    }
+  }
+
+  .show > &.btn {
+    background-color: $dropdown-bg;
+    border-color: $dropdown-color;
+
+    .bg-dark &:not(.dropdown-toggle-split) {
+      color: $dropdown-bg;
+      background-color: $dropdown-color;
+      border-color: $dropdown-bg;
+    }
+  }
+
   .navbar-dark &:not(.dropdown-toggle-split) {
     color: $dropdown-bg;
     background-color: $dropdown-color;
@@ -68,6 +86,7 @@
   .bg-dark & {
     color: $dropdown-bg;
     background-color: $dropdown-color;
+    border-color: $gray-700;
   }
   // End mod
 }
