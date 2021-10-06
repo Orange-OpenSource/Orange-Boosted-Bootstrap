@@ -197,7 +197,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: dont' promote "without label" -->
+<!-- Boosted mod: don't promote "without label" -->
 
 ## Toggle buttons
 

@@ -122,7 +122,7 @@ In addition a method call on a **transitioning component will be ignored**.
 var myCarouselEl = document.getElementById('myCarousel')
 var carousel = boosted.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
 
-myCarouselEl.addEventListener('slid.bs.carousel', function (eevent) {
+myCarouselEl.addEventListener('slid.bs.carousel', function (event) {
   carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
 })
 

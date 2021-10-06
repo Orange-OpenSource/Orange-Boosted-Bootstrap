@@ -115,7 +115,7 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 {{< /example >}}
 
 <!-- Boosted mod -->
-## Responsive behaviour
+## Responsive behavior
 
 To avoid pagination wrapping or overflowing, we limit the number or pagination item to display depending on breakpoint.
 
@@ -151,5 +151,5 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 
 {{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}
 
-<!-- Boosted mod: responsive behaviour -->
+<!-- Boosted mod: responsive behavior -->
 {{< scss-docs name="pagination-max-items-mixin" file="scss/mixins/_pagination.scss" >}}
