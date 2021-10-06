@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v5.1.1 (https://boosted.orange.com/)
+ * Boosted Grid v5.1.2 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v5.1.1 (https://getbootstrap.com)
+ * Bootstrap Grid v5.1.2 (https://getbootstrap.com)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -63,7 +63,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: calc(18 / 16);
+  --bs-body-line-height: 1.125;
   --bs-body-color: #000;
   --bs-body-bg: #fff;
 }
@@ -129,9 +129,9 @@
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5);
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 @media (min-width: 768px) {
   .row {
@@ -142,8 +142,8 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -2392,15 +2392,15 @@
 }
 
 .lh-sm {
-  line-height: calc(16 / 14) !important;
+  line-height: 1.1428571429 !important;
 }
 
 .lh-base {
-  line-height: calc(18 / 16) !important;
+  line-height: 1.125 !important;
 }
 
 .lh-lg {
-  line-height: calc(30 / 16) !important;
+  line-height: 1.875 !important;
 }
 
 .text-start {

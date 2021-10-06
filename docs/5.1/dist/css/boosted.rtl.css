@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
- * Boosted v5.1.1 (https://boosted.orange.com/)
+ * Boosted v5.1.2 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap v5.1.1 (https://getbootstrap.com)
+ * Bootstrap v5.1.2 (https://getbootstrap.com)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -64,7 +64,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: calc(18 / 16);
+  --bs-body-line-height: 1.125;
   --bs-body-color: #000;
   --bs-body-bg: #fff;
 }
@@ -137,7 +137,7 @@ h6,
   margin-bottom: 1.25rem;
   font-size: 1rem;
   font-weight: 700;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -145,12 +145,12 @@ h6,
 
 h1, .h1 {
   font-size: 1.25rem;
-  line-height: calc(22 / 20);
+  line-height: 1.1;
 }
 
 h2, .h2 {
   font-size: 1.125rem;
-  line-height: calc(20 / 18);
+  line-height: 1.1111111111;
 }
 
 p {
@@ -244,7 +244,7 @@ strong {
 small, .small {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: calc(16 / 14);
+  line-height: 1.1428571429;
 }
 
 mark, .mark {
@@ -506,6 +506,10 @@ legend + * {
   padding: 0;
 }
 
+::-webkit-file-upload-button {
+  font: inherit;
+}
+
 ::file-selector-button {
   font: inherit;
 }
@@ -538,25 +542,25 @@ progress {
 
 .display-1 {
   font-size: 1.875rem;
-  line-height: calc(32 / 30);
+  line-height: 1.0666666667;
 }
 
 h1, .h1,
 .display-2,
 .display-3 {
   font-size: 1.5rem;
-  line-height: calc(26 / 24);
+  line-height: 1.0833333333;
 }
 h2, .h2,
 .display-4 {
   font-size: 1.125rem;
-  line-height: calc(20 / 18);
+  line-height: 1.1111111111;
 }
 
 .lead {
   font-size: 1rem;
   font-weight: 400;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
 }
 
 @media (min-width: 480px) {
@@ -583,7 +587,7 @@ h2, .h2,
   h2, .h2,
 .display-4 {
     font-size: 1.5rem;
-    line-height: calc(26 / 24);
+    line-height: 1.0833333333;
   }
 
   h3, .h3,
@@ -591,7 +595,7 @@ h4,
 .h4,
 .lead {
     font-size: 1.125rem;
-    line-height: calc(20 / 18);
+    line-height: 1.1111111111;
   }
 }
 @media (min-width: 1024px) {
@@ -614,27 +618,27 @@ h4,
 
   h2, .h2 {
     font-size: 1.875rem;
-    line-height: calc(32 / 30);
+    line-height: 1.0666666667;
   }
 
   h3, .h3 {
     font-size: 1.5rem;
-    line-height: calc(26 / 24);
+    line-height: 1.0833333333;
   }
 
   h4, .h4 {
     font-size: 1.25rem;
-    line-height: calc(22 / 20);
+    line-height: 1.1;
   }
 
   h5, .h5 {
     font-size: 1.125rem;
-    line-height: calc(20 / 18);
+    line-height: 1.1111111111;
   }
 
   h6, .h6 {
     font-size: 1rem;
-    line-height: calc(18 / 16);
+    line-height: 1.125;
   }
 
   .lead {
@@ -699,7 +703,7 @@ h4,
   margin-top: -1.25rem;
   margin-bottom: 1.25rem;
   font-size: 0.875rem;
-  line-height: calc(16 / 14);
+  line-height: 1.1428571429;
   color: #666;
 }
 .blockquote-footer::before {
@@ -794,9 +798,9 @@ h4,
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-left: calc(var(--bs-gutter-x) * -.5);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
 }
 @media (min-width: 768px) {
   .row {
@@ -807,8 +811,8 @@ h4,
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-left: calc(var(--bs-gutter-x) * .5);
-  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -2115,8 +2119,8 @@ h4,
 .table > tbody {
   vertical-align: inherit;
 }
-.table > :not(:last-child) > :last-child > * {
-  border-bottom-color: currentColor;
+.table > :not(:first-child) {
+  border-top: 0.125rem solid currentColor;
 }
 
 .caption-bottom {
@@ -2132,7 +2136,7 @@ h4,
   color: var(--bs-table-active-color);
 }
 
-.table-hover > tbody > tr:hover {
+.table-hover > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color);
 }
@@ -2268,6 +2272,22 @@ h4,
   background-color: #eee;
   opacity: 1;
 }
+.form-control::-webkit-file-upload-button {
+  padding: calc(0.5rem - 1px) 0.625rem calc(0.5rem + 1px);
+  margin: calc((0.5rem - 1px) * -1) -0.625rem calc((0.5rem + 1px) * -1);
+  -webkit-margin-end: 0.625rem;
+  margin-inline-end: 0.625rem;
+  color: #000;
+  background-color: #fff;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 0.125rem;
+  border-radius: 0;
+  -webkit-transition: outline-offset 0.2s ease-in-out;
+  transition: outline-offset 0.2s ease-in-out;
+}
 .form-control::file-selector-button {
   padding: calc(0.5rem - 1px) 0.625rem calc(0.5rem + 1px);
   margin: calc((0.5rem - 1px) * -1) -0.625rem calc((0.5rem + 1px) * -1);
@@ -2284,13 +2304,24 @@ h4,
   transition: outline-offset 0.2s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
+  .form-control::-webkit-file-upload-button {
+    -webkit-transition: none;
+    transition: none;
+  }
   .form-control::file-selector-button {
     transition: none;
   }
 }
+.form-control:disabled::-webkit-file-upload-button {
+  color: #666;
+  background-color: #eee;
+}
 .form-control:disabled::file-selector-button {
   color: #666;
   background-color: #eee;
+}
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #f2f2f2;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #f2f2f2;
@@ -2343,8 +2374,14 @@ h4,
 
 .form-control-lg {
   min-height: 3.125rem;
-  line-height: calc(20 / 18);
+  line-height: 1.1111111111;
   font-size: 1.125rem;
+}
+.form-control-lg::-webkit-file-upload-button {
+  padding: calc(0.8125rem - 1px) 1.25rem calc(0.8125rem + 1px);
+  margin: calc((0.5rem - 1px) * -1) -0.625rem calc((0.5rem + 1px) * -1);
+  -webkit-margin-end: 1.25rem;
+  margin-inline-end: 1.25rem;
 }
 .form-control-lg::file-selector-button {
   padding: calc(0.8125rem - 1px) 1.25rem calc(0.8125rem + 1px);
@@ -2881,6 +2918,7 @@ textarea.form-control-lg {
 .btn {
   display: inline-flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   font-family: inherit;
   font-weight: 700;
@@ -3114,7 +3152,7 @@ textarea.form-control-lg {
   --o-icon-spacing: 0.8125rem;
   padding: calc(0.8125rem - 1px) 1.25rem calc(0.8125rem + 1px);
   font-size: 1.125rem;
-  line-height: calc(20 / 18);
+  line-height: 1.1111111111;
   border-radius: 0;
 }
 
@@ -3122,7 +3160,7 @@ textarea.form-control-lg {
   --o-icon-spacing: 0.3125rem;
   padding: calc(0.3125rem - 1px) 0.625rem calc(0.3125rem + 1px);
   font-size: 0.875rem;
-  line-height: calc(16 / 14);
+  line-height: 1.1428571429;
   border-radius: 0;
 }
 
@@ -3597,6 +3635,7 @@ textarea.form-control-lg {
   margin-right: -0.125rem;
 }
 .dropdown-toggle-split {
+  align-self: stretch;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-color: #000;
@@ -4494,12 +4533,12 @@ textarea.form-control-lg {
 
 .accordion-sm .accordion-button {
   font-size: 1.125rem;
-  line-height: calc(20 / 18);
+  line-height: 1.1111111111;
 }
 
 .accordion-lg .accordion-button {
   font-size: 1.875rem;
-  line-height: calc(40 / 30);
+  line-height: 1.3333333333;
 }
 
 .breadcrumb {
@@ -4785,7 +4824,7 @@ textarea.form-control-lg {
 .alert-sm {
   padding: 0.625rem 0;
   font-size: 0.875rem;
-  line-height: calc(16 / 14);
+  line-height: 1.1428571429;
   border: 0;
 }
 .alert-sm .alert-icon {
@@ -5321,7 +5360,7 @@ textarea.form-control-lg {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
 }
 
 .modal-body {
@@ -5467,7 +5506,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
   text-align: right;
   text-align: start;
   text-decoration: none;
@@ -5568,7 +5607,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
   text-align: right;
   text-align: start;
   text-decoration: none;
@@ -5875,7 +5914,7 @@ textarea.form-control-lg {
   transform: scale(1.5);
 }
 .carousel-indicators [data-bs-target]:hover::before, .carousel-indicators [data-bs-target]:focus::before {
-  transform: translate3d(-50%, -50%, 0) scale(calc(2 / 3));
+  transform: translate3d(-50%, -50%, 0) scale(0.6666666667);
 }
 .carousel-indicators .active {
   background-color: #fff;
@@ -5890,7 +5929,7 @@ textarea.form-control-lg {
   mask-image: none;
 }
 .carousel-indicators .active::before {
-  transform: translate3d(-50%, -50%, 0) scale(calc(2 / 3));
+  transform: translate3d(-50%, -50%, 0) scale(0.6666666667);
 }
 .carousel-indicators .active::after {
   position: absolute;
@@ -6042,7 +6081,7 @@ textarea.form-control-lg {
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: calc(18 / 16);
+  line-height: 1.125;
 }
 
 .offcanvas-body {
@@ -6375,15 +6414,15 @@ textarea.form-control-lg {
 }
 
 .ratio-4x3 {
-  --bs-aspect-ratio: calc(3 / 4 * 100%);
+  --bs-aspect-ratio: 75%;
 }
 
 .ratio-16x9 {
-  --bs-aspect-ratio: calc(9 / 16 * 100%);
+  --bs-aspect-ratio: 56.25%;
 }
 
 .ratio-21x9 {
-  --bs-aspect-ratio: calc(9 / 21 * 100%);
+  --bs-aspect-ratio: 42.8571428571%;
 }
 
 .fixed-top {
@@ -7472,15 +7511,15 @@ textarea.form-control-lg {
 }
 
 .lh-sm {
-  line-height: calc(16 / 14) !important;
+  line-height: 1.1428571429 !important;
 }
 
 .lh-base {
-  line-height: calc(18 / 16) !important;
+  line-height: 1.125 !important;
 }
 
 .lh-lg {
-  line-height: calc(30 / 16) !important;
+  line-height: 1.875 !important;
 }
 
 .text-start {

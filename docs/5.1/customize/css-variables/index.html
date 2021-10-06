@@ -24,7 +24,7 @@
 
 <!-- Boosted core CSS -->
 <link href="/docs/5.1/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
-<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-L3dmE7dPzuuu008/uCWuDRI+1KoCmCfjwEQAtgsuo6+5IsZcynvIU1XZovqE6y1j" crossorigin="anonymous">
+<link href="/docs/5.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-w2udGD2dD4LpJLOfRwt2+pIjplDqErOaO4G6bwTGrdaiKj/MlgbExKDoy+W1s7q3" crossorigin="anonymous">
 
 <link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
@@ -57,7 +57,7 @@
 <meta property="og:image:height" content="500">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-VsydnMNXwTlsFcl844OdgCO9mAWOjH/nDuNpvC0M6EGZihkQLx4rWmfcm4Oi+XtE" crossorigin="anonymous"></script>
 
 
 
@@ -450,7 +450,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: calc(18 / 16);
+  --bs-body-line-height: 1.125;
   --bs-body-color: #000;
   --bs-body-bg: #fff;
 }</span>
@@ -460,7 +460,7 @@
 <p>We&rsquo;re also using CSS variables across our grids—primarily for gutters—with more component usage coming in the future.</p>
 <!-- Boosted mod -->
 <h2 id="deduping-embedded-svgs">Deduping embedded SVGs</h2>
-<p>Boosted uses <a href="/docs/5.1/customize/overview/#csps-and-embedded-svgs">embedded SVGs as data URIs</a> in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output filesize.</p>
+<p>Boosted uses <a href="/docs/5.1/customize/overview/#csps-and-embedded-svgs">embedded SVGs as data URIs</a> in the wild, which means extremely long strings in CSS. When one of them is used several times in the stylesheet, CSS custom properties allows to factorize its string— thus to decrease output file size.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
   <span class="nv">--o-chevron-icon</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 9 14&#39;%3e%3cpath d=&#39;M9 2L7 0 0 7l7 7 2-2-5-5 5-5z&#39;/%3e%3c/svg%3e&#34;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -501,7 +501,7 @@
           docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
         </p>
         <ul class="bd-footer-links ps-0 mb-0">
-          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.1</span></li>
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.1.2</span></li>
           <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
             <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
           </a></li>
@@ -552,7 +552,7 @@
 </nav>
 
 
-    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-Njq6Cdj8rs3ZqRkj0DCyKcP+OuU9FD99AObDbfh0I0nMTg9jAwgShNdhg/Q4Wq0K" crossorigin="anonymous"></script>
+    <script src="/docs/5.1/dist/js/boosted.bundle.min.js" integrity="sha384-mlJxQXakdb0qbeREItdSDKkuCMdUAuc7pmrTnzH61YkLH4mmqLF+Qj5cZex87vCR" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
