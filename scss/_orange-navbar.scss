@@ -27,7 +27,7 @@
   }
 
   .nav-link {
-    padding: .75rem $navbar-supra-padding-x #{map-get($spacers, 2) + $navbar-supra-padding-y} !important; // stylelint-disable-line declaration-no-important
+    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} $navbar-supra-padding-x .75rem !important; // stylelint-disable-line declaration-no-important
     font-size: $font-size-sm;
     line-height: 1;
 
