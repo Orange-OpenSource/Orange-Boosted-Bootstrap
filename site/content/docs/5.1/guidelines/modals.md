@@ -20,7 +20,7 @@ toc: true
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
-          <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
+          <p lang="zxx">Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Button</button>
@@ -37,7 +37,7 @@ toc: true
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
-          <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
+          <p lang="zxx">Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
           <a href="#" class="fw-bold me-3">Text link</a>
@@ -62,7 +62,7 @@ toc: true
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
-          <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
+          <p lang="zxx">Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Button</button>
@@ -86,11 +86,13 @@ toc: true
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body" lang="zxx">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Consectetur lorem donec massa sapien faucibus et molestie. Nunc mattis enim ut tellus elementum sagittis vitae et leo.</p>
-          <p>Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Lorem sed risus ultricies tristique. Volutpat diam ut venenatis tellus in. Mauris vitae ultricies leo integer malesuada nunc vel risus.</p>
-          <p>Sit amet consectetur adipiscing elit duis tristique. Lacus laoreet non curabitur gravida arcu ac tortor. Pellentesque pulvinar pellentesque habitant morbi.</p>
-          <p>Adipiscing commodo elit at imperdiet dui accumsan sit amet. Sit amet aliquam id diam maecenas. Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Tellus at urna condimentum mattis pellentesque id nibh tortor.</p>
+          <p>Please read through our Contributing guidelines.</p>
+          <p>Included are directions for opening issues, coding standards, and notes on development.</p>
+          <p>Moreover, if your pull request contains JavaScript patches or features, you must include relevant unit tests.</p>
+          <p>All HTML and CSS should conform to the Code Guide.</p>
+          <p>Editor preferences are available in the editor config for easy use in common text editors.</p>
+          <p>For transparency into our release cycle and in striving to maintain backward compatibility, Boosted is maintained under the Semantic Versioning guidelines.</p>
+          <p>Sometimes we screw up, but we adhere to those rules whenever possible.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Button</button>

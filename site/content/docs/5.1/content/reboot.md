@@ -43,7 +43,7 @@ $font-family-sans-serif:
   HelvNeueOrange,
   // Helvetica Neue
   Helvetica Neue,
-  // Websafe Fallbacks
+  // Web Safe Fallbacks
   Helvetica, Arial,
   // Ubuntu
   Liberation Sans,

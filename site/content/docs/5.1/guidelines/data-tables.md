@@ -219,7 +219,7 @@ toc: true
 {{< callout info >}}
 ### Selection feature
 
-The selection behaviour isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
+The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
 ## With icons or thumbnails

@@ -329,7 +329,7 @@ There are three mixins for buttons: button and button outline variant mixins (bo
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: no .btn-ouline -->
+<!-- Boosted mod: no .btn-outline -->
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
