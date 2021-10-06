@@ -38,7 +38,7 @@
     }
 
     &.nav-icon {
-      padding: divide($spacer, 2) $spacer .25rem !important; // stylelint-disable-line declaration-no-important
+      padding: divide($spacer, 2) .9375rem .25rem !important; // stylelint-disable-line declaration-no-important
 
       svg,
       img {
