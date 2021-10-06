@@ -102,8 +102,8 @@ Be sure to have your pages set up with the latest design and development standar
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not autorized to used it, don't include the orangeHelvetica.css
-      See NOTICE.txt for more informations.
+      If you are not authorized to used it, don't include the orangeHelvetica.css
+      See NOTICE.txt for more information.
     -->
     <!-- Option 1: Use a CDN -->
     <link href="{{< param "cdn.HelvNeue55_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue55_W1G_hash" >}}" crossorigin="anonymous">
@@ -181,9 +181,9 @@ With the above snippet, nested elements—including generated content via `::bef
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
 
-### Ressource Hints
+### Resource Hints
 
-[Ressource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
+[Resource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
 It should be used for critical resources only.
 
 #### `preload` fonts

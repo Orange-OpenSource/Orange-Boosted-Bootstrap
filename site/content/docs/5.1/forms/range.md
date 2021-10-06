@@ -11,7 +11,7 @@ toc: true
 Create custom `<input type="range">` controls with `.form-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers.
 
 {{< callout warning >}}
-### Progressive enchancement
+### Progressive enhancement
 
 Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
 {{< /callout >}}

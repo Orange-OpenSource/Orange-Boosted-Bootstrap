@@ -6,7 +6,7 @@ group: guidelines
 subgroup: Core elements
 ---
 
-Boosted typography styles are heavily documented, including their **responsive behaviours and values**: [global settings]({{< docsref "/content/typography" >}}#global-settings), [headings]({{< docsref "/content/typography" >}}#headings), [display headings]({{< docsref "/content/typography" >}}#display-headings) and [regular text]({{< docsref "/content/typography" >}}#regular-text) for the main ones. You may apply them using the `.display-*` and `.h*` utilities, and through [`text` utilities]({{< docsref "/utilities/text" >}})—but **every HTML element has default styles matching the brand guidelines**.
+Boosted typography styles are heavily documented, including their **responsive behaviors and values**: [global settings]({{< docsref "/content/typography" >}}#global-settings), [headings]({{< docsref "/content/typography" >}}#headings), [display headings]({{< docsref "/content/typography" >}}#display-headings) and [regular text]({{< docsref "/content/typography" >}}#regular-text) for the main ones. You may apply them using the `.display-*` and `.h*` utilities, and through [`text` utilities]({{< docsref "/utilities/text" >}})—but **every HTML element has default styles matching the brand guidelines**.
 
 <table class="table table-typography">
   <caption>Headlines & body copy</caption>
