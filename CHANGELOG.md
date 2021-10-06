@@ -1,3 +1,13 @@
+## [5.1.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.1...v5.1.2) (2021-10-06)
+
+
+### Chore
+
+* **organization** update core team members list and change automatic assignee ([c2f9af7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c2f9af71cff37794b8c30fe69ed9c1d7682f89f2))
+* **nuget** resync nuget/*.nuspec files with Bootstrap ([95beecb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/95beecb28a7320c13307683ad5ec805a054be0fd))
+
+
+
 ## [5.1.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.0...v5.1.1) (2021-09-17)
 
 
