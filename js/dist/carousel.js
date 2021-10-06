@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.1.1 (https://boosted.orange.com/)
+  * Boosted v5.1.2 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.1.1 (https://boosted.orange.com/)
+  * Bootstrap carousel.js v5.1.2 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -12,18 +12,18 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js'), require('./base-component.js')) :
   typeof define === 'function' && define.amd ? define(['./dom/event-handler', './dom/manipulator', './dom/selector-engine', './base-component'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.EventHandler, global.Manipulator, global.SelectorEngine, global.Base));
-}(this, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
+})(this, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
 
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.1): util/index.js
+   * Bootstrap (v5.1.2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -195,7 +195,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.1): carousel.js
+   * Bootstrap (v5.1.2): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -286,7 +286,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Carousel extends BaseComponent__default['default'] {
+  class Carousel extends BaseComponent__default.default {
     constructor(element, config) {
       super(element);
       this._items = null;
@@ -298,7 +298,7 @@
       this.touchStartX = 0;
       this.touchDeltaX = 0;
       this._config = this._getConfig(config);
-      this._indicatorsElement = SelectorEngine__default['default'].findOne(SELECTOR_INDICATORS, this._element);
+      this._indicatorsElement = SelectorEngine__default.default.findOne(SELECTOR_INDICATORS, this._element);
       this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
       this._pointerEvent = Boolean(window.PointerEvent);
 
@@ -342,7 +342,7 @@
         this._isPaused = true;
       }
 
-      if (SelectorEngine__default['default'].findOne(SELECTOR_NEXT_PREV, this._element)) {
+      if (SelectorEngine__default.default.findOne(SELECTOR_NEXT_PREV, this._element)) {
         triggerTransitionEnd(this._element);
         this.cycle(true);
       }
@@ -375,7 +375,7 @@
     }
 
     to(index) {
-      this._activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      this._activeElement = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
       const activeIndex = this._getItemIndex(this._activeElement); // Boosted mod: restart the animation on progress indicator
 
@@ -390,7 +390,7 @@
       }
 
       if (this._isSliding) {
-        EventHandler__default['default'].one(this._element, EVENT_SLID, () => this.to(index));
+        EventHandler__default.default.one(this._element, EVENT_SLID, () => this.to(index));
         return;
       }
 
@@ -408,7 +408,7 @@
 
     _getConfig(config) {
       config = { ...Default,
-        ...Manipulator__default['default'].getDataAttributes(this._element),
+        ...Manipulator__default.default.getDataAttributes(this._element),
         ...(typeof config === 'object' ? config : {})
       };
       typeCheckConfig(NAME, config, DefaultType);
@@ -434,12 +434,12 @@
 
     _addEventListeners() {
       if (this._config.keyboard) {
-        EventHandler__default['default'].on(this._element, EVENT_KEYDOWN, event => this._keydown(event));
+        EventHandler__default.default.on(this._element, EVENT_KEYDOWN, event => this._keydown(event));
       }
 
       if (this._config.pause === 'hover') {
-        EventHandler__default['default'].on(this._element, EVENT_MOUSEENTER, event => this.pause(event));
-        EventHandler__default['default'].on(this._element, EVENT_MOUSELEAVE, event => this.cycle(event));
+        EventHandler__default.default.on(this._element, EVENT_MOUSEENTER, event => this.pause(event));
+        EventHandler__default.default.on(this._element, EVENT_MOUSELEAVE, event => this.cycle(event));
       }
 
       if (this._config.touch && this._touchSupported) {
@@ -490,19 +490,19 @@
         }
       };
 
-      SelectorEngine__default['default'].find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
-        EventHandler__default['default'].on(itemImg, EVENT_DRAG_START, e => e.preventDefault());
+      SelectorEngine__default.default.find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
+        EventHandler__default.default.on(itemImg, EVENT_DRAG_START, event => event.preventDefault());
       });
 
       if (this._pointerEvent) {
-        EventHandler__default['default'].on(this._element, EVENT_POINTERDOWN, event => start(event));
-        EventHandler__default['default'].on(this._element, EVENT_POINTERUP, event => end(event));
+        EventHandler__default.default.on(this._element, EVENT_POINTERDOWN, event => start(event));
+        EventHandler__default.default.on(this._element, EVENT_POINTERUP, event => end(event));
 
         this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        EventHandler__default['default'].on(this._element, EVENT_TOUCHSTART, event => start(event));
-        EventHandler__default['default'].on(this._element, EVENT_TOUCHMOVE, event => move(event));
-        EventHandler__default['default'].on(this._element, EVENT_TOUCHEND, event => end(event));
+        EventHandler__default.default.on(this._element, EVENT_TOUCHSTART, event => start(event));
+        EventHandler__default.default.on(this._element, EVENT_TOUCHMOVE, event => move(event));
+        EventHandler__default.default.on(this._element, EVENT_TOUCHEND, event => end(event));
       }
     }
 
@@ -541,7 +541,7 @@
 
 
     _getItemIndex(element) {
-      this._items = element && element.parentNode ? SelectorEngine__default['default'].find(SELECTOR_ITEM, element.parentNode) : [];
+      this._items = element && element.parentNode ? SelectorEngine__default.default.find(SELECTOR_ITEM, element.parentNode) : [];
       return this._items.indexOf(element);
     }
 
@@ -578,9 +578,9 @@
     _triggerSlideEvent(relatedTarget, eventDirectionName) {
       const targetIndex = this._getItemIndex(relatedTarget);
 
-      const fromIndex = this._getItemIndex(SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element));
+      const fromIndex = this._getItemIndex(SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element));
 
-      return EventHandler__default['default'].trigger(this._element, EVENT_SLIDE, {
+      return EventHandler__default.default.trigger(this._element, EVENT_SLIDE, {
         relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
@@ -590,10 +590,10 @@
 
     _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        const activeIndicator = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+        const activeIndicator = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE, this._indicatorsElement);
         activeIndicator.classList.remove(CLASS_NAME_ACTIVE);
         activeIndicator.removeAttribute('aria-current');
-        const indicators = SelectorEngine__default['default'].find(SELECTOR_INDICATOR, this._indicatorsElement);
+        const indicators = SelectorEngine__default.default.find(SELECTOR_INDICATOR, this._indicatorsElement);
 
         for (let i = 0; i < indicators.length; i++) {
           if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
@@ -606,7 +606,7 @@
     }
 
     _updateInterval() {
-      const element = this._activeElement || SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      const element = this._activeElement || SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
       if (!element) {
         return;
@@ -625,7 +625,7 @@
       if (this._indicatorsElement && this._config.interval !== Default.interval) {
         const currentIndex = this._getItemIndex(element);
 
-        const currentIndicator = SelectorEngine__default['default'].findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement);
+        const currentIndicator = SelectorEngine__default.default.findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement);
         currentIndicator.style.setProperty(`--${PREFIX_CUSTOM_PROPS}carousel-interval`, `${this._config.interval}ms`);
       } // End mod
 
@@ -634,7 +634,7 @@
     _slide(directionOrOrder, element) {
       const order = this._directionToOrder(directionOrOrder);
 
-      const activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      const activeElement = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
       const activeElementIndex = this._getItemIndex(activeElement);
 
@@ -680,7 +680,7 @@
       this._activeElement = nextElement;
 
       const triggerSlidEvent = () => {
-        EventHandler__default['default'].trigger(this._element, EVENT_SLID, {
+        EventHandler__default.default.trigger(this._element, EVENT_SLID, {
           relatedTarget: nextElement,
           direction: eventDirectionName,
           from: activeElementIndex,
@@ -690,8 +690,8 @@
 
 
       if (!this._config.wrap) {
-        const prevControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_PREV, this._element);
-        const nextControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_NEXT, this._element);
+        const prevControl = SelectorEngine__default.default.findOne(SELECTOR_CONTROL_PREV, this._element);
+        const nextControl = SelectorEngine__default.default.findOne(SELECTOR_CONTROL_NEXT, this._element);
 
         this._enableControl(prevControl);
 
@@ -798,8 +798,8 @@
         return;
       }
 
-      const config = { ...Manipulator__default['default'].getDataAttributes(target),
-        ...Manipulator__default['default'].getDataAttributes(this)
+      const config = { ...Manipulator__default.default.getDataAttributes(target),
+        ...Manipulator__default.default.getDataAttributes(this)
       };
       const slideIndex = this.getAttribute('data-bs-slide-to');
 
@@ -824,9 +824,9 @@
    */
 
 
-  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler);
-  EventHandler__default['default'].on(window, EVENT_LOAD_DATA_API, () => {
-    const carousels = SelectorEngine__default['default'].find(SELECTOR_DATA_RIDE);
+  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler);
+  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
+    const carousels = SelectorEngine__default.default.find(SELECTOR_DATA_RIDE);
 
     for (let i = 0, len = carousels.length; i < len; i++) {
       Carousel.carouselInterface(carousels[i], Carousel.getInstance(carousels[i]));
@@ -843,5 +843,5 @@
 
   return Carousel;
 
-})));
+}));
 //# sourceMappingURL=carousel.js.map
