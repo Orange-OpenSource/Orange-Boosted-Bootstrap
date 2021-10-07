@@ -1192,7 +1192,14 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 $navbar-icon-size:                     $spacer * 1.5 !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-$navbar-supra-padding-y:               map-get($spacers, 4) * .1 !default;
+$navbar-orange-padding-x:              .125rem !default;
+$navbar-orange-border-bottom:          1px !default;
+$navbar-orange-link-padding-bottom:    .75rem !default;
+$navbar-orange-icon-padding-x:         .9375rem !default;
+$navbar-orange-icon-padding-bottom:    .25rem !default;
+$navbar-orange-badge-padding-y:        .125rem !default;
+$navbar-orange-badge-padding-x:        .375rem !default;
+$navbar-supra-padding-y:               map-get($spacers, 4) * .1 !default; // 0.1875rem
 $navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
 $navbar-supra-icon-size:               1.5625rem !default;
 $navbar-transition-duration:           $transition-duration !default;
@@ -1250,6 +1257,11 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        null !default;
 $navbar-toggler-transition:         $transition-focus !default;
 // scss-docs-end navbar-variables
+
+// Boosted mod: Orange navbar
+
+$navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
+// scss-docs-end orange-navbar-variables
 
 // scss-docs-start navbar-theme-variables
 $navbar-dark-color:                  $white !default;
