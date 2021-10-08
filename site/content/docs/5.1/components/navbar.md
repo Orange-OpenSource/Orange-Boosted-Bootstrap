@@ -67,7 +67,7 @@ Here's an example of all the sub-components included in a responsive light-theme
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
@@ -211,7 +211,7 @@ Place various form controls and components within a navbar:
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <form class="d-flex">
+    <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
@@ -227,7 +227,7 @@ Immediate child elements of `.navbar` use flex layout and will default to `justi
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <form class="d-flex">
+    <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
@@ -332,7 +332,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
             <a class="nav-link" href="#">About</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-secondary" type="submit">Search</button>
         </form>
@@ -363,7 +363,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
             <a class="nav-link" href="#">About</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-secondary" type="submit">Search</button>
         </form>
@@ -498,7 +498,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
           <a class="nav-link disabled">Link</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
