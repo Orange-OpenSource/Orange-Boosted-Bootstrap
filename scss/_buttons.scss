@@ -50,6 +50,7 @@
   [class*="svg-"],
   [class*="icon-"] {
     display: inline-block;
+    transform: translateY(1px);
   }
 
   &:not(.btn-icon) {
