@@ -1,0 +1,40 @@
+@mixin sticker-init($sticker-size: "sm", $sticker-architecture: "One-Line") {
+  $sticker-font-size: 30px;
+  $icon-size: 80px;
+  @if ($sticker-size == "sm") {
+    $sticker-size: $stickers-size-sm;
+  } @else if ($sticker-size == "md") {
+    $sticker-size: $stickers-size-md;
+    $sticker-font-size: 40px;
+    $icon-size: 100px;
+  } @else { // large
+    $sticker-size: $stickers-size-lg;
+    $sticker-font-size: 60px;
+    $icon-size: 160px;
+  }
+
+  width: $sticker-size;
+  height: $sticker-size;
+
+  circle {
+    cx: divide($sticker-size, 2);
+    cy: divide($sticker-size, 2);
+    r: divide($sticker-size, 2);
+    fill: #f16e00;
+  }
+
+  @if ($sticker-architecture == "One-Line") {
+    text {
+      text-anchor: middle;
+      dominant-baseline: middle;
+      font-size: $sticker-font-size;
+      font-weight: 700;
+    }
+  } @else if ($sticker-architecture == "Icon") {
+    image {
+      width: $icon-size;
+      height: $icon-size;
+      transform: translate(-.5 * $icon-size, -.5 * $icon-size);
+    }
+  }
+}

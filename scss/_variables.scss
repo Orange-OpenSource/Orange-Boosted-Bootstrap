@@ -1866,3 +1866,10 @@ $step-item-arrow-width:  1rem !default;
 $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, $border-width 50%, 100% 100%) #{"*/"} !default; // Used in clip-path
 // scss-docs-end stepped-process
 // End mod
+
+// scss-docs-start stickers
+$stickers-size-sm: 140px !default;
+$stickers-size-md: 180px !default;
+$stickers-size-lg: 280px !default;
+// scss-docs-end stickers
+// dev

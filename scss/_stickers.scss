@@ -1,0 +1,23 @@
+.sticker-sm.sticker-one-line {
+  @include sticker-init("sm", "One-Line");
+}
+
+.sticker-md.sticker-one-line {
+  @include sticker-init("md", "One-Line");
+}
+
+.sticker-lg.sticker-one-line {
+  @include sticker-init("lg", "One-Line");
+}
+
+.sticker-sm.sticker-icon {
+  @include sticker-init("sm", "Icon");
+}
+
+.sticker-md.sticker-icon {
+  @include sticker-init("md", "Icon");
+}
+
+.sticker-lg.sticker-icon {
+  @include sticker-init("lg", "Icon");
+}
