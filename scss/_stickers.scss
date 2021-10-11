@@ -21,3 +21,57 @@
 .sticker-lg.sticker-icon {
   @include sticker-init("lg", "Icon");
 }
+
+// Test with flex-boxes
+.sticker-lg2 {
+  width: 280px;
+  height: 280px;
+  font-size: 60px;
+  @include sticker-init2();
+}
+
+.sticker-icon-lg2 {
+  width: 160px;
+  height: auto;
+}
+
+.sticker-md2 {
+  width: 180px;
+  height: 180px;
+  font-size: 40px;
+  @include sticker-init2();
+}
+
+.sticker-icon-md2 {
+  width: 100px;
+  height: auto;
+}
+
+.sticker-sm2 {
+  width: 140px;
+  height: 140px;
+  font-size: 30px;
+  @include sticker-init2();
+}
+
+.sticker-icon-sm2 {
+  width: 80px;
+  height: auto;
+}
+
+.sticker-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  column-gap: normal;
+  font-weight: 700;
+
+  div {
+    text-align: center;
+    overflow-wrap: break-word;
+  }
+}

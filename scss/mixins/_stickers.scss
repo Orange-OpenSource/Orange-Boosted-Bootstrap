@@ -38,3 +38,9 @@
     }
   }
 }
+
+@mixin sticker-init2() {
+  margin: auto;
+  background-color: #f16e00;
+  @include border-radius(1000px, 1000px);
+}
