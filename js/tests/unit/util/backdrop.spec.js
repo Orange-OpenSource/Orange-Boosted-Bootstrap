@@ -38,6 +38,7 @@ describe('Backdrop', () => {
         for (const el of getElements()) {
           expect(el.classList.contains(CLASS_NAME_SHOW)).toEqual(true)
         }
+
         done()
       })
     })
@@ -70,6 +71,7 @@ describe('Backdrop', () => {
         for (const el of getElements()) {
           expect(el.classList.contains(CLASS_NAME_FADE)).toEqual(true)
         }
+
         done()
       })
     })
