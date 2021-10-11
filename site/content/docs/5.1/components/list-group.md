@@ -372,7 +372,7 @@ You can activate a list group navigation without writing any JavaScript by simpl
 Enable tabbable list item via JavaScript (each list item needs to be activated individually):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+var triggerTabList = Array.prototype.slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new boosted.Tab(triggerEl)
 
