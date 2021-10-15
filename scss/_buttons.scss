@@ -50,12 +50,13 @@
   [class*="svg-"],
   [class*="icon-"] {
     display: inline-block;
-    transform: translateY(1px);
   }
 
   &:not(.btn-icon) {
     [class*="svg-"],
     [class*="icon-"] {
+      position: relative;
+      top: 1px;
       margin-right: $border-width * 3;
     }
   }
