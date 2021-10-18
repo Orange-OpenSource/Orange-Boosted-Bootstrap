@@ -11,10 +11,12 @@
 
     tac.querySelectorAll('.tarteaucitronAllow').forEach(function (button) {
       button.classList.add('btn', 'btn-sm', 'btn-success', 'my-2', 'my-lg-0')
+      button.innerHTML = tarteaucitron.lang.allowAll
     })
 
     tac.querySelectorAll('.tarteaucitronDeny').forEach(function (button) {
       button.classList.add('btn', 'btn-sm', 'btn-danger', 'my-2', 'my-lg-0', 'ms-lg-2')
+      button.innerHTML = tarteaucitron.lang.denyAll
     })
 
     document.getElementById('tarteaucitron').classList.add('p-3')
@@ -31,8 +33,9 @@
 
     document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'ms-lg-2')
     alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
+    alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
-    alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
+    alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
   window.addEventListener('tac.open_panel', function () {
