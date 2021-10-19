@@ -1,18 +1,22 @@
+// Boosted mod: striped is not handled by table-variant()
 // scss-docs-start table-variant
 @mixin table-variant($state, $background) {
   .table-#{$state} {
     $color: color-contrast(opaque($body-bg, $background));
     $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));
     $active-bg: mix($color, $background, percentage($table-active-bg-factor));
+    $border-color: mix($color, $background, percentage($table-border-factor));
 
+    --#{$variable-prefix}table-color: #{$color};
     --#{$variable-prefix}table-bg: #{$background};
+    --#{$variable-prefix}table-border-color: #{$border-color};
     --#{$variable-prefix}table-active-bg: #{$active-bg};
     --#{$variable-prefix}table-active-color: #{color-contrast($active-bg)};
     --#{$variable-prefix}table-hover-bg: #{$hover-bg};
     --#{$variable-prefix}table-hover-color: #{color-contrast($hover-bg)};
-    --#{$variable-prefix}table-border-color: #{mix($color, $background, percentage($table-border-factor))};
 
-    color: $color;
+    color: var(--#{$variable-prefix}table-color);
+    border-color: var(--#{$variable-prefix}table-border-color);
   }
 }
 // scss-docs-end table-variant
