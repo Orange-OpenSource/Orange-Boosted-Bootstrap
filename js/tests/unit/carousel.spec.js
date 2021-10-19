@@ -1523,6 +1523,7 @@ describe('Carousel', () => {
 
       carousel.dispose()
 
+      expect(carousel._swipeHelper).toBeNull()
       expect(removeEventSpy).toHaveBeenCalledWith(carouselEl, Carousel.EVENT_KEY)
       expect(swipeHelperSpy).toHaveBeenCalled()
 
