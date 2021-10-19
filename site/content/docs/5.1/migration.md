@@ -13,6 +13,9 @@ toc: true
 We only replaced `Bootstrap` with `Boosted`—especially in code examples and file names. Some changes mentioned here might not concern Boosted itself.
 {{< /callout >}}
 
+## v5.2.0
+
+- **Introduced new `$enable-container-classes` option.** Now when opting into the experimental CSS Grid layout, `.container-*` classes will still be compiled, unless this option is set to `false`.
 
 ## Dependencies
 

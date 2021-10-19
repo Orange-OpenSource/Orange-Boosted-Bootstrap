@@ -402,6 +402,7 @@ $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
 $enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false !default;
@@ -769,6 +770,8 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
+// Boosted mod: no $hr-bg-color so that hr background color can't get overrided
+$hr-border-width:             0 !default;
 $hr-height:                   $border-width !default;
 $hr-opacity:                  null !default;
 
