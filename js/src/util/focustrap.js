@@ -9,6 +9,10 @@ import EventHandler from '../dom/event-handler'
 import SelectorEngine from '../dom/selector-engine'
 import { typeCheckConfig } from './index'
 
+/**
+ * Constants
+ */
+
 const NAME = 'focustrap'
 const DATA_KEY = 'bs.focustrap'
 const EVENT_KEY = `.${DATA_KEY}`

@@ -12,10 +12,10 @@ import { execute, executeAfterTransition, getElement, reflow, typeCheckConfig } 
  * Constants
  */
 
- const NAME = 'backdrop'
- const CLASS_NAME_FADE = 'fade'
- const CLASS_NAME_SHOW = 'show'
- const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`
+const NAME = 'backdrop'
+const CLASS_NAME_FADE = 'fade'
+const CLASS_NAME_SHOW = 'show'
+const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`
 
 const Default = {
   className: 'modal-backdrop',
