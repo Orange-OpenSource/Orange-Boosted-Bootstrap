@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.1.2): scrollspy.js
+ * Bootstrap (v5.1.3): scrollspy.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -110,29 +110,29 @@ class ScrollSpy extends BaseComponent {
     this._scrollHeight = this._getScrollHeight()
 
     const targets = SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target)
+      .map(element => {
+        const targetSelector = getSelectorFromElement(element)
+        const target = targetSelector ? SelectorEngine.findOne(targetSelector) : null
 
-    targets.map(element => {
-      const targetSelector = getSelectorFromElement(element)
-      const target = targetSelector ? SelectorEngine.findOne(targetSelector) : null
-
-      if (target) {
-        const targetBCR = target.getBoundingClientRect()
-        if (targetBCR.width || targetBCR.height) {
-          return [
-            Manipulator[offsetMethod](target).top + offsetBase,
-            targetSelector
-          ]
+        if (target) {
+          const targetBCR = target.getBoundingClientRect()
+          if (targetBCR.width || targetBCR.height) {
+            return [
+              Manipulator[offsetMethod](target).top + offsetBase,
+              targetSelector
+            ]
+          }
         }
-      }
 
-      return null
-    })
-      .filter(item => item)
-      .sort((a, b) => a[0] - b[0])
-      .forEach(item => {
-        this._offsets.push(item[0])
-        this._targets.push(item[1])
+        return null
       })
+        .filter(item => item)
+        .sort((a, b) => a[0] - b[0])
+
+    for (const item of targets) {
+      this._offsets.push(item[0])
+      this._targets.push(item[1])
+    }
   }
 
   dispose() {
@@ -226,20 +226,20 @@ class ScrollSpy extends BaseComponent {
       SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE, link.closest(SELECTOR_DROPDOWN))
         .classList.add(CLASS_NAME_ACTIVE)
     } else {
-      SelectorEngine.parents(link, SELECTOR_NAV_LIST_GROUP)
-        .forEach(listGroup => {
-          // Set triggered links parents as active
-          // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-          SelectorEngine.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`)
-            .forEach(item => item.classList.add(CLASS_NAME_ACTIVE))
+      for (const listGroup of SelectorEngine.parents(link, SELECTOR_NAV_LIST_GROUP)) {
+        // Set triggered links parents as active
+        // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
+        for (const item of SelectorEngine.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`)) {
+          item.classList.add(CLASS_NAME_ACTIVE)
+        }
 
-          // Handle special case when .nav-link is inside .nav-item
-          SelectorEngine.prev(listGroup, SELECTOR_NAV_ITEMS)
-            .forEach(navItem => {
-              SelectorEngine.children(navItem, SELECTOR_NAV_LINKS)
-                .forEach(item => item.classList.add(CLASS_NAME_ACTIVE))
-            })
-        })
+        // Handle special case when .nav-link is inside .nav-item
+        for (const navItem of SelectorEngine.prev(listGroup, SELECTOR_NAV_ITEMS)) {
+          for (const item of SelectorEngine.children(navItem, SELECTOR_NAV_LINKS)) {
+            item.classList.add(CLASS_NAME_ACTIVE)
+          }
+        }
+      }
     }
 
     EventHandler.trigger(this._scrollElement, EVENT_ACTIVATE, {
@@ -248,9 +248,12 @@ class ScrollSpy extends BaseComponent {
   }
 
   _clear() {
-    SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target)
+    const activeNodes = SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target)
       .filter(node => node.classList.contains(CLASS_NAME_ACTIVE))
-      .forEach(node => node.classList.remove(CLASS_NAME_ACTIVE))
+
+    for (const node of activeNodes) {
+      node.classList.remove(CLASS_NAME_ACTIVE)
+    }
   }
 
   // Static
@@ -279,8 +282,9 @@ class ScrollSpy extends BaseComponent {
  */
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  SelectorEngine.find(SELECTOR_DATA_SPY)
-    .forEach(spy => new ScrollSpy(spy))
+  for (const spy of SelectorEngine.find(SELECTOR_DATA_SPY)) {
+    new ScrollSpy(spy) // eslint-disable-line no-new
+  }
 })
 
 /**

@@ -1,8 +1,6 @@
 import Modal from '../../src/modal'
 import EventHandler from '../../src/dom/event-handler'
 import ScrollBarHelper from '../../src/util/scrollbar'
-
-/** Test helpers */
 import { clearBodyAndDocument, clearFixture, createEvent, getFixture, jQueryMock } from '../helpers/fixture'
 
 describe('Modal', () => {
@@ -17,10 +15,9 @@ describe('Modal', () => {
     clearBodyAndDocument()
     document.body.classList.remove('modal-open')
 
-    document.querySelectorAll('.modal-backdrop')
-      .forEach(backdrop => {
-        backdrop.remove()
-      })
+    for (const backdrop of document.querySelectorAll('.modal-backdrop')) {
+      backdrop.remove()
+    }
   })
 
   beforeEach(() => {

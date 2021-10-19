@@ -1,9 +1,7 @@
 import Carousel from '../../src/carousel'
 import EventHandler from '../../src/dom/event-handler'
-
-/** Test helpers */
 import { clearFixture, createEvent, getFixture, jQueryMock } from '../helpers/fixture'
-import * as util from '../../src/util'
+import { isRTL, noop } from '../../src/util/index'
 
 describe('Carousel', () => {
   const { Simulator, PointerEvent } = window
@@ -211,14 +209,14 @@ describe('Carousel', () => {
 
       spyOn(carousel, '_triggerSlideEvent')
 
-      carousel._isSliding = true;
+      carousel._isSliding = true
 
-      ['ArrowLeft', 'ArrowRight'].forEach(key => {
+      for (const key of ['ArrowLeft', 'ArrowRight']) {
         const keydown = createEvent('keydown')
         keydown.key = key
 
         carouselEl.dispatchEvent(keydown)
-      })
+      }
 
       expect(carousel._triggerSlideEvent).not.toHaveBeenCalled()
     })
@@ -502,7 +500,7 @@ describe('Carousel', () => {
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add properly.
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
       const carousel = new Carousel(carouselEl)
 
       expect(carousel._addTouchEventListeners).toHaveBeenCalled()
@@ -515,7 +513,7 @@ describe('Carousel', () => {
         return
       }
 
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
       document.head.append(stylesCarousel)
       Simulator.setType('pointer')
 
@@ -560,7 +558,7 @@ describe('Carousel', () => {
         return
       }
 
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
       document.head.append(stylesCarousel)
       Simulator.setType('pointer')
 
@@ -602,7 +600,7 @@ describe('Carousel', () => {
     it('should allow swiperight and call _slide (prev) with touch events', done => {
       Simulator.setType('touch')
       clearPointerEvents()
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
 
       fixtureEl.innerHTML = [
         '<div class="carousel" data-bs-interval="false">',
@@ -641,7 +639,7 @@ describe('Carousel', () => {
     it('should allow swipeleft and call _slide (next) with touch events', done => {
       Simulator.setType('touch')
       clearPointerEvents()
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
 
       fixtureEl.innerHTML = [
         '<div class="carousel" data-bs-interval="false">',
@@ -681,7 +679,7 @@ describe('Carousel', () => {
     it('should not slide when swiping and carousel is sliding', done => {
       Simulator.setType('touch')
       clearPointerEvents()
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
 
       fixtureEl.innerHTML = [
         '<div class="carousel" data-bs-interval="false">',
@@ -724,7 +722,7 @@ describe('Carousel', () => {
     it('should not allow pinch with touch events', done => {
       Simulator.setType('touch')
       clearPointerEvents()
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
 
       fixtureEl.innerHTML = '<div class="carousel" data-bs-interval="false"></div>'
 
@@ -1199,7 +1197,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const carousel = new Carousel(carouselEl)
 
-      carousel._interval = setInterval(() => {}, 10)
+      carousel._interval = setInterval(noop, 10)
 
       spyOn(window, 'setInterval').and.callThrough()
       spyOn(window, 'clearInterval').and.callThrough()
@@ -1429,7 +1427,7 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
-      expect(util.isRTL()).toEqual(true, 'rtl has to be true')
+      expect(isRTL()).toEqual(true, 'rtl has to be true')
 
       expect(carousel._directionToOrder('left')).toEqual('prev')
       expect(carousel._directionToOrder('prev')).toEqual('prev')
@@ -1497,7 +1495,7 @@ describe('Carousel', () => {
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add/removed properly.
-      document.documentElement.ontouchstart = () => {}
+      document.documentElement.ontouchstart = noop
 
       const carousel = new Carousel(carouselEl)
 

@@ -70,7 +70,6 @@
 //
 
 .dropdown-toggle-split {
-  align-self: stretch; // Boosted mod: due to .btn { align-self: center }
   padding-right: subtract($dropdown-padding-x, $border-width);
   padding-left: subtract($dropdown-padding-x, $border-width);
   border-color: $black;
