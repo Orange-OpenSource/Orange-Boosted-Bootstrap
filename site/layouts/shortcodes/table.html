@@ -8,9 +8,13 @@
 
 {{- $class := .Get "class" -}}
 {{- $simplified := .Get "simplified" | default true -}}
+{{- $tabindex := .Get "tabindex" | default 0 -}}
+{{- $aria := .Get "aria" | default "" -}}
 
 {{- $table_attributes := "" -}}
 {{- $table_content := "  ...\n" -}}
+{{- $table_tabindex := " tabindex=\"0\"" -}}
+{{- $table_aria := "" -}}
 
 {{- with $class -}}
   {{- $table_attributes = printf ` class="%s"` . -}}
@@ -20,12 +24,22 @@
   {{- $table_content = partialCached "table-content" . -}}
 {{- end -}}
 
-{{- $table := printf "<table%s>\n%s</table>" $table_attributes $table_content -}}
+{{- with $tabindex -}}
+  {{- $table_tabindex = printf ` tabindex="%i"` . -}}
+{{- end -}}
+
+{{- with $aria -}}
+  {{- $table_aria = printf ` aria-label="%s"` . -}}
+{{- end -}}
+
+{{- $table := printf "<div role=\"region\"%s%s>\n<table%s>\n%s</table>\n</div>" $table_tabindex $table_aria $table_attributes $table_content -}}
 
 <div class="bd-example">
-  <table{{ with $class }} class="{{ . }}"{{ end }}>
-    {{ partialCached "table-content" . }}
-  </table>
+  <div role="region" tabindex="{{ $tabindex }}" aria-label="{{ $aria }}">
+    <table{{ with $class }} class="{{ . }}"{{ end }}>
+      {{ partialCached "table-content" . }}
+    </table>
+  </div>
 </div>
 
 {{- highlight $table "html" "" -}}

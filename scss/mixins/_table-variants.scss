@@ -1,15 +1,21 @@
-// Boosted mod: striped is not handled by table-variant()
+// Boosted mod: Variants have a brand different :hover and :striped management
 // scss-docs-start table-variant
 @mixin table-variant($state, $background) {
   .table-#{$state} {
     $color: color-contrast(opaque($body-bg, $background));
-    $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));
-    $active-bg: mix($color, $background, percentage($table-active-bg-factor));
+    $hover-bg: mix($color, $background, percentage($table-variant-hover-bg-factor));
+    $striped-bg: mix($color, $background, percentage($table-variant-striped-bg-factor));
+    $striped-hover-bg: mix($color, $background, percentage($table-variant-striped-hover-bg-factor)); // Boosted mod
+    $active-bg: mix($color, $background, percentage($table-variant-active-bg-factor));
     $border-color: mix($color, $background, percentage($table-border-factor));
 
     --#{$prefix}table-color: #{$color};
     --#{$prefix}table-bg: #{$background};
     --#{$prefix}table-border-color: #{$border-color};
+    --#{$prefix}table-striped-bg: #{$striped-bg};
+    --#{$prefix}table-striped-color: #{color-contrast($striped-bg)};
+    --#{$prefix}table-striped-hover-bg: #{$striped-hover-bg}; // Boosted mod
+    --#{$prefix}table-striped-hover-color: #{color-contrast($striped-hover-bg)}; // Boosted mod
     --#{$prefix}table-active-bg: #{$active-bg};
     --#{$prefix}table-active-color: #{color-contrast($active-bg)};
     --#{$prefix}table-hover-bg: #{$hover-bg};

@@ -6,7 +6,11 @@
   --#{$prefix}table-color: #{$table-color};
   --#{$prefix}table-bg: #{$table-bg};
   --#{$prefix}table-border-color: #{$table-border-color};
-  // Boosted mod: no table-accent-bg
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-striped-hover-color: #{$table-striped-color}; // Boosted mod
+  --#{$prefix}table-striped-hover-bg: #{$table-striped-hover-bg}; // Boosted mod
   --#{$prefix}table-active-color: #{$table-active-color};
   --#{$prefix}table-active-bg: #{$table-active-bg};
   --#{$prefix}table-hover-color: #{$table-hover-color};
@@ -48,11 +52,17 @@
   > tbody {
     vertical-align: inherit;
   }
+
+  > thead {
+    vertical-align: bottom;
+  }
 }
 
 .table-group-divider {
   border-top: ($table-border-width * 2) solid $table-group-separator-color;
 }
+
+// Boosted mod : no table-group-divider.
 
 //
 // Change placement of captions with a class
@@ -78,7 +88,19 @@
 
 // Boosted mod: no .table-borderless
 
-// Boosted mod: no .table-striped
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+// For rows
+.table-striped {
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    color: var(--#{$prefix}table-striped-color);
+  }
+}
+
+// Boosted mod : no .table-striped-columns
 
 // Active table
 //
@@ -98,10 +120,43 @@
     --#{$prefix}table-accent-bg: var(--#{$prefix}table-hover-bg);
     color: var(--#{$prefix}table-hover-color);
   }
+
+  // Boosted mod
+  &.table-striped > tbody > tr:hover > * {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-hover-bg);
+    color: var(--#{$prefix}table-striped-hover-color);
+  }
 }
 
+.table-height-sm {
+  max-height: $table-height-sm;
+  overflow: auto;
+}
 
-// Boosted mod: no table-row-variants
+.table-height-md {
+  max-height: $table-height-md;
+  overflow: auto;
+}
+
+.table-height-lg {
+  max-height: $table-height-lg;
+  overflow: auto;
+}
+
+.table-sticky > thead > tr {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-width: 0;
+
+  // Redraw the border-bottom, otherwise it doesn't stick.
+  > th { // stylelint-disable-line
+    $border-bottom-thead: subtract(100%, ($table-border-width * 2));
+    background: linear-gradient(transparent 0%, transparent $border-bottom-thead, var(--#{$prefix}table-border-color) $border-bottom-thead, var(--#{$prefix}table-border-color) 100%);
+    background-color: var(--#{$prefix}table-bg);
+  }
+}
+// End mod
 
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
