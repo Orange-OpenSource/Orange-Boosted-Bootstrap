@@ -1,0 +1,64 @@
+.quantity-selector {
+  width: 7.5em;
+  $validation-messages: "";
+
+  @each $state in map-keys($form-validation-states) {
+    $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+  }
+
+  > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
+    margin-left: 0;
+  }
+
+  .form-control {
+    max-width: $quantity-selector-input-width;
+    padding: 0;
+    font-size: $font-size-sm;
+    text-align: center;
+    transition: none; // stylelint-disable-line property-disallowed-list
+    appearance: textfield;
+
+    &:not(:focus) {
+      border-right: none;
+      border-left: none;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      appearance: none;
+    }
+  }
+
+  button {
+    border: $border-width solid $gray-500;
+
+    &:first-of-type {
+      @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
+      order: -1;
+      border-right: none;
+
+      &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
+        @include button-icon($quantity-selector-icon-remove, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
+      }
+    }
+
+    &:last-of-type {
+      @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
+      border-left: none;
+
+      &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
+        @include button-icon($quantity-selector-icon-add, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
+      }
+    }
+  }
+}
+
+.quantity-selector-sm {
+  width: $quantity-selector-sm-width;
+
+  .form-control {
+    max-width: $quantity-selector-input-sm-width;
+    font-size: $font-size-base;
+  }
+}
