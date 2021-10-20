@@ -1,65 +1,74 @@
 ---
 layout: docs
 title: Quantity selector
-description: Use our custom quantity selector in forms for selecting a number.
+description: Form element used to select a number.
 group: forms
 toc: true
 ---
 
-## Default
+## Examples
 
-Quantity selector is a form element used to select a number.
+Quantity selector is a form element used to select a number. The default version is the large version. To use the small version, use the contextual class `.quantity-selector-sm`.
 
-**Please note that this component is suitable for incremental and decremental display of small numbers, i.e. numbers with 3-4 digits. We do not recommend using it with larger numbers.**
+You can specify a default value in the `value` attribute of your input.
 
-A default value can be specified with the input `value` attribute.
-
-Value will vary between the values defined for the `min` and `max` attributes (negative value are allowed). `min` and `max` values are customizable.
+Value will vary between the values define in the `min` and `max` attributes (negatives values are allowed).
 
 The custom `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
 
 {{< example >}}
-<div class="input-group quantity-selector">
-  <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
-    <span class="visually-hidden">Step down</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
-    <span class="visually-hidden">Step up</span>
-  </button>
-</div>
-{{< /example >}}
-
-## Sizing
-
-You may also use small quantity selectors with the contextual class `.quantity-selector-sm`.
-
-{{< example >}}
-<div class="input-group quantity-selector quantity-selector-sm">
-  <input type="number" id="inputQuantitySelectorSm" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-  <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down">
-    <span class="visually-hidden">Step down</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="up">
-    <span class="visually-hidden">Step up</span>
-  </button>
-</div>
+<form>
+  <div class="mb-3">
+    <label for="inputQuantitySelector1" class="form-label">Quantity selector large:</label>
+    <div class="input-group quantity-selector w-100">
+      <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">
+        <span class="visually-hidden">Step down</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">
+        <span class="visually-hidden">Step up</span>
+      </button>
+    </div>
+    <div class="quantitySelectorHelp form-text">Lorem ipsum.</div>
+  </div>
+  <div class="mb-3">
+    <label for="inputQuantitySelector2" class="form-label">Quantity selector small:</label>
+    <div class="input-group quantity-selector quantity-selector-sm w-100">
+      <input type="number" id="inputQuantitySelector2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+      <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelector2" data-bs-step="down">
+        <span class="visually-hidden">Step down</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelector2" data-bs-step="up">
+        <span class="visually-hidden">Step up</span>
+      </button>
+    </div>
+    <div class="quantitySelectorHelp form-text">Lorem ipsum.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {{< /example >}}
 
 ## Disabled
 
-Add the `disabled` boolean attribute on quantity selector elements to give it a grayed out appearance and remove pointer events.
+Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
 
 {{< example >}}
-<div class="input-group quantity-selector">
-  <input type="number" id="inputQuantitySelectorDisabled" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
-  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled" data-bs-step="down" disabled>
-    <span class="visually-hidden">Step down</span>
-  </button>
-  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled" data-bs-step="up" disabled>
-    <span class="visually-hidden">Step up</span>
-  </button>
-</div>
+<form>
+  <div class="mb-3">
+    <label for="inputQuantitySelector3" class="form-label">Disabled large quantity selector:</label>
+    <div class="input-group quantity-selector">
+      <input type="number" id="inputQuantitySelector3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="down" disabled>
+        <span class="visually-hidden">Step down</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="up" disabled>
+        <span class="visually-hidden">Step up</span>
+      </button>
+    </div>
+    <div class="quantitySelectorHelp form-text">Lorem ipsum.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {{< /example >}}
 
 ## Sass

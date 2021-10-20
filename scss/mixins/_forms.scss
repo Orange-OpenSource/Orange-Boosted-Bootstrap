@@ -76,13 +76,14 @@
     }
 
     // Boosted mod: Remove border on input for form element QuantitySelector
-    .quantity-selector .form-control {
-      @include form-validation-state-selector($state) {
-        border-right: none;
-        border-left: none;
-
-        & ~ button {
-          border-color: $color;
+    .quantity-selector {
+      .form-control {
+        @include form-validation-state-selector($state) {
+          border-right: none;
+          border-left: none;
+          & ~ button {
+            border-color: $color;
+          }
         }
       }
     }
