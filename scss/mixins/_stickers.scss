@@ -91,5 +91,185 @@
       height: $icon-size;
       transform: translate(-.5 * $icon-size, -.5 * $icon-size);
     }
+
+  } @else if ($sticker-architecture == "Price") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
+
+      > tspan:last-child {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 13px;
+          letter-spacing: -.08px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 16px;
+          letter-spacing: -.1px;
+        } @else {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        }
+      }
+    }
+
+  } @else if ($sticker-architecture == "Old-and-new-price") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
+
+      > tspan:first-child {
+        text-decoration: line-through;
+        text-decoration-thickness: auto;
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 18px;
+          letter-spacing: -.2px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        } @else {
+          font-size: 34px;
+          letter-spacing: -1px;
+        }
+      }
+
+      > tspan:last-child {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 13px;
+          letter-spacing: -.08px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 16px;
+          letter-spacing: -.1px;
+        } @else {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        }
+      }
+    }
+
+  } @else if ($sticker-architecture == "Bonus-min") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
+
+      > tspan:last-child,
+      > tspan:first-child {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 13px;
+          letter-spacing: -.08px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 16px;
+          letter-spacing: -.1px;
+        } @else {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        }
+      }
+    }
+
+  } @else if ($sticker-architecture == "Bonus-offer") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 13px;
+        letter-spacing: -.08px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 16px;
+        letter-spacing: -.1px;
+      } @else {
+        font-size: 24px;
+        letter-spacing: -.5px;
+      }
+
+      > tspan:nth-child(2) {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 30px;
+          letter-spacing: -.8px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 40px;
+          letter-spacing: -1px;
+        } @else {
+          font-size: 60px;
+          letter-spacing: -2px;
+        }
+      }
+    }
+
+  } @else if ($sticker-architecture == "Additional-min") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
+
+      > tspan:last-child {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 13px;
+          letter-spacing: -.08px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 16px;
+          letter-spacing: -.1px;
+        } @else {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        }
+      }
+    }
+
+  } @else if ($sticker-architecture == "Additional-offer") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
+
+      > tspan:nth-child(3),
+      > tspan:last-child {
+        @if ($sticker-size == $stickers-size-sm) {
+          font-size: 13px;
+          letter-spacing: -.08px;
+        } @else if ($sticker-size == $stickers-size-md) {
+          font-size: 16px;
+          letter-spacing: -.1px;
+        } @else {
+          font-size: 24px;
+          letter-spacing: -.5px;
+        }
+      }
+    }
+
   }
 }

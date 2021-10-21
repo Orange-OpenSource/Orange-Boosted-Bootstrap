@@ -319,3 +319,351 @@ Add `.sticker-{sm|md|lg}` to the svg in order to have the sticker of the good si
   </text>
 </svg>
 ```
+
+### Sticker price
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-price">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" y="45%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-price">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" y="45%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-price">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" y="45%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```
+
+### Sticker with old and new price
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-old-and-new-price">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.5em">69,99€</tspan><tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-old-and-new-price">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.5em">69,99€</tspan><tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-old-and-new-price">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.5em">69,99€</tspan><tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-price">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```
+
+### Sticker for bonus minutes
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-bonus-min">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-bonus-min">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-bonus-min">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-bonus-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-bonus-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-bonus-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```
+
+### Sticker for bonus offer
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-bonus-offer">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-bonus-offer">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-bonus-offer">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-bonus-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-bonus-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-bonus-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```
+
+### Sticker for additionnal minutes
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-add-min">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-add-min">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-add-min">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-add-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-add-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-add-min">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```
+
+### Sticker for additionnal offer
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-add-offer">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-add-offer">
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-add-offer">
+        <title>Sticker</title>
+        <circle></circle>
+        <text x="50%" y="50%">
+          <tspan x="50%" dy="-1.1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-add-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-md sticker-add-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+
+<svg class="sticker-lg sticker-add-offer">
+  <circle></circle>
+  <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+  <text x="50%" y="60%">
+    <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+  </text>
+</svg>
+```

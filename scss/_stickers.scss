@@ -57,3 +57,75 @@
 .sticker-lg.sticker-icon-two-lines {
   @include sticker-init("lg", "Icon-Two-lines");
 }
+
+.sticker-sm.sticker-price {
+  @include sticker-init("sm", "Price");
+}
+
+.sticker-md.sticker-price {
+  @include sticker-init("md", "Price");
+}
+
+.sticker-lg.sticker-price {
+  @include sticker-init("lg", "Price");
+}
+
+.sticker-sm.sticker-old-and-new-price {
+  @include sticker-init("sm", "Old-and-new-price");
+}
+
+.sticker-md.sticker-old-and-new-price {
+  @include sticker-init("md", "Old-and-new-price");
+}
+
+.sticker-lg.sticker-old-and-new-price {
+  @include sticker-init("lg", "Old-and-new-price");
+}
+
+.sticker-sm.sticker-bonus-min {
+  @include sticker-init("sm", "Bonus-min");
+}
+
+.sticker-md.sticker-bonus-min {
+  @include sticker-init("md", "Bonus-min");
+}
+
+.sticker-lg.sticker-bonus-min {
+  @include sticker-init("lg", "Bonus-min");
+}
+
+.sticker-sm.sticker-bonus-offer {
+  @include sticker-init("sm", "Bonus-offer");
+}
+
+.sticker-md.sticker-bonus-offer {
+  @include sticker-init("md", "Bonus-offer");
+}
+
+.sticker-lg.sticker-bonus-offer {
+  @include sticker-init("lg", "Bonus-offer");
+}
+
+.sticker-sm.sticker-add-min {
+  @include sticker-init("sm", "Additional-min");
+}
+
+.sticker-md.sticker-add-min {
+  @include sticker-init("md", "Additional-min");
+}
+
+.sticker-lg.sticker-add-min {
+  @include sticker-init("lg", "Additional-min");
+}
+
+.sticker-sm.sticker-add-offer {
+  @include sticker-init("sm", "Additional-offer");
+}
+
+.sticker-md.sticker-add-offer {
+  @include sticker-init("md", "Additional-offer");
+}
+
+.sticker-lg.sticker-add-offer {
+  @include sticker-init("lg", "Additional-offer");
+}
