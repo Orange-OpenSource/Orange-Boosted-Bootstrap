@@ -1,46 +1,95 @@
-@mixin sticker-init($sticker-size: "sm", $sticker-architecture: "One-Line") {
-  $sticker-font-size: 30px;
-  $icon-size: 80px;
+@mixin sticker-init($sticker-size: "sm", $sticker-architecture: "One-line") {
   @if ($sticker-size == "sm") {
     $sticker-size: $stickers-size-sm;
   } @else if ($sticker-size == "md") {
     $sticker-size: $stickers-size-md;
-    $sticker-font-size: 40px;
-    $icon-size: 100px;
   } @else { // large
     $sticker-size: $stickers-size-lg;
-    $sticker-font-size: 60px;
-    $icon-size: 160px;
   }
 
   width: $sticker-size;
   height: $sticker-size;
 
-  circle {
+  > circle {
     cx: divide($sticker-size, 2);
     cy: divide($sticker-size, 2);
     r: divide($sticker-size, 2);
-    fill: #f16e00;
+    fill: $accessible-orange;
   }
 
-  @if ($sticker-architecture == "One-Line") {
-    text {
-      text-anchor: middle;
-      dominant-baseline: middle;
-      font-size: $sticker-font-size;
-      font-weight: 700;
+  > text {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-weight: $font-weight-bold;
+  }
+
+  @if ($sticker-architecture == "One-line") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 30px;
+        letter-spacing: -.8px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 40px;
+        letter-spacing: -1px;
+      } @else {
+        font-size: 60px;
+        letter-spacing: -2px;
+      }
     }
+
   } @else if ($sticker-architecture == "Icon") {
-    image {
+    > image {
+      $icon-size: 160px;
+      @if ($sticker-size == $stickers-size-sm) {
+        $icon-size: 80px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        $icon-size: 100px;
+      }
+
+      width: $icon-size;
+      height: $icon-size;
+      transform: translate(-.5 * $icon-size, -.5 * $icon-size);
+    }
+
+  } @else if ($sticker-architecture == "Two-lines") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 20px;
+        letter-spacing: -.4px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 24px;
+        letter-spacing: -.5px;
+      } @else {
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+    }
+
+  } @else if ($sticker-architecture == "Icon-Two-lines") {
+    > text {
+      @if ($sticker-size == $stickers-size-sm) {
+        font-size: 20px;
+        letter-spacing: -.4px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        font-size: 24px;
+        letter-spacing: -.5px;
+      } @else {
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+    }
+
+    > image {
+      $icon-size: 60px;
+      @if ($sticker-size == $stickers-size-sm) {
+        $icon-size: 30px;
+      } @else if ($sticker-size == $stickers-size-md) {
+        $icon-size: 40px;
+      }
+
       width: $icon-size;
       height: $icon-size;
       transform: translate(-.5 * $icon-size, -.5 * $icon-size);
     }
   }
-}
-
-@mixin sticker-init2() {
-  margin: auto;
-  background-color: #f16e00;
-  @include border-radius(1000px, 1000px);
 }

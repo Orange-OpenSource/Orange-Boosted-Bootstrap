@@ -1,13 +1,25 @@
+.sticker-sm {
+  @include sticker-init("sm", "One-line");
+}
+
+.sticker-md {
+  @include sticker-init("md", "One-line");
+}
+
+.sticker-lg {
+  @include sticker-init("lg", "One-line");
+}
+
 .sticker-sm.sticker-one-line {
-  @include sticker-init("sm", "One-Line");
+  @include sticker-init("sm", "One-line");
 }
 
 .sticker-md.sticker-one-line {
-  @include sticker-init("md", "One-Line");
+  @include sticker-init("md", "One-line");
 }
 
 .sticker-lg.sticker-one-line {
-  @include sticker-init("lg", "One-Line");
+  @include sticker-init("lg", "One-line");
 }
 
 .sticker-sm.sticker-icon {
@@ -22,56 +34,26 @@
   @include sticker-init("lg", "Icon");
 }
 
-// Test with flex-boxes
-.sticker-lg2 {
-  width: 280px;
-  height: 280px;
-  font-size: 60px;
-  @include sticker-init2();
+.sticker-sm.sticker-two-lines {
+  @include sticker-init("sm", "Two-lines");
 }
 
-.sticker-icon-lg2 {
-  width: 160px;
-  height: auto;
+.sticker-md.sticker-two-lines {
+  @include sticker-init("md", "Two-lines");
 }
 
-.sticker-md2 {
-  width: 180px;
-  height: 180px;
-  font-size: 40px;
-  @include sticker-init2();
+.sticker-lg.sticker-two-lines {
+  @include sticker-init("lg", "Two-lines");
 }
 
-.sticker-icon-md2 {
-  width: 100px;
-  height: auto;
+.sticker-sm.sticker-icon-two-lines {
+  @include sticker-init("sm", "Icon-Two-lines");
 }
 
-.sticker-sm2 {
-  width: 140px;
-  height: 140px;
-  font-size: 30px;
-  @include sticker-init2();
+.sticker-md.sticker-icon-two-lines {
+  @include sticker-init("md", "Icon-Two-lines");
 }
 
-.sticker-icon-sm2 {
-  width: 80px;
-  height: auto;
-}
-
-.sticker-content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  column-gap: normal;
-  font-weight: 700;
-
-  div {
-    text-align: center;
-    overflow-wrap: break-word;
-  }
+.sticker-lg.sticker-icon-two-lines {
+  @include sticker-init("lg", "Icon-Two-lines");
 }
