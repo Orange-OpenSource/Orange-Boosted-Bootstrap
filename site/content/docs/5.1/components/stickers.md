@@ -8,31 +8,34 @@ toc: true
 
 ## Overview
 
-General usage of the stickers. (Ask to the )
+General usage of the stickers. (Ask to the designers ?)
 
 ## Examples
 
 {{< example >}}
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-lg-start">
-    <svg class="sticker-lg sticker-one-line sticker-rotate-15">
-      <title>Sticker</title>
+    <svg class="sticker-lg sticker-one-line" aria-labelledby="StickersTitle1">
+      <title id="StickersTitle1" lang="en">Sticker's utility</title>
+      <desc lang="en">Sticker's description if needed</desc>
       <circle></circle>
       <text x="50%" y="50%">New</text>
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-    <svg class="sticker-md sticker-icon">
-      <title>Sticker</title>
+    <svg class="sticker-md sticker-icon" aria-labelledby="StickersTitle2">
+      <title id="StickersTitle2" lang="en">Sticker's utility</title>
+      <desc lang="en">Sticker's description if needed</desc>
       <circle></circle>
       <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" />
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-end">
-    <svg class="sticker-sm sticker-icon-two-lines sticker-rotate15">
-      <title>Sticker</title>
+    <svg class="sticker-sm sticker-icon-two-lines" aria-labelledby="StickersTitle3">
+      <title id="StickersTitle3" lang="en">Sticker's utility</title>
+      <desc lang="en">Sticker's description if needed</desc>
       <circle></circle>
       <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
       <text x="50%" y="60%">
@@ -45,24 +48,27 @@ General usage of the stickers. (Ask to the )
 
 ## Sizing
 
-Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size. This
+Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size. Default use of sticker applies the one line design.
 
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
       <svg class="sticker-sm">
+        <title>Small sticker</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
       <svg class="sticker-md">
+        <title>Medium sticker</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
       <svg class="sticker-lg">
+        <title>Large sticker</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
@@ -72,16 +78,19 @@ Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good s
 
 ```html
 <svg class="sticker-sm">
+  <title>Small sticker</title>
   <circle></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
 <svg class="sticker-md">
+  <title>Medium sticker</title>
   <circle></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
 <svg class="sticker-lg">
+  <title>Large sticker</title>
   <circle></circle>
   <text x="50%" y="50%">New</text>
 </svg>
@@ -95,18 +104,21 @@ Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good s
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
       <svg class="sticker-sm sticker-one-line">
+        <title lang="en">Small sticker on one line</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
       <svg class="sticker-md sticker-one-line">
+        <title lang="en">Medium sticker on one line</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
       <svg class="sticker-lg sticker-one-line">
+        <title lang="en">Large sticker on one line</title>
         <circle></circle>
         <text x="50%" y="50%">New</text>
       </svg>
@@ -116,6 +128,7 @@ Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good s
 
 ```html
 <svg class="sticker-sm sticker-one-line">
+  <title lang="en">Small sticker on one line</title>
   <circle></circle>
   <text x="50%" y="50%">New</text>
 </svg>
