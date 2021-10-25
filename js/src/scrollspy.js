@@ -266,7 +266,7 @@ class ScrollSpy {
       .filter(node => node.classList.contains(CLASS_NAME_ACTIVE))
       .forEach(node => {
         node.classList.remove(CLASS_NAME_ACTIVE)
-        node.removeAttribute('aria-current')  // Boosted mod
+        node.removeAttribute('aria-current') // Boosted mod
       })
   }
 
