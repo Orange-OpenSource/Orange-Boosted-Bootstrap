@@ -57,7 +57,7 @@ const DefaultType = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class ScrollSpy extends BaseComponent {
@@ -268,7 +268,7 @@ class ScrollSpy extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {

@@ -58,7 +58,7 @@ const DefaultType = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Offcanvas extends BaseComponent {
@@ -215,7 +215,7 @@ class Offcanvas extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {

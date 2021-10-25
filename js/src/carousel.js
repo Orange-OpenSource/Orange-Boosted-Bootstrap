@@ -96,7 +96,7 @@ const DefaultType = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Carousel extends BaseComponent {
@@ -599,7 +599,7 @@ class Carousel extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler)

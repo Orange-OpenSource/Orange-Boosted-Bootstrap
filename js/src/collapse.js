@@ -57,7 +57,7 @@ const DefaultType = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Collapse extends BaseComponent {
@@ -286,7 +286,7 @@ class Collapse extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {

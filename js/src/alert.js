@@ -24,7 +24,7 @@ const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Alert extends BaseComponent {
@@ -73,7 +73,7 @@ class Alert extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 enableDismissTrigger(Alert, 'close')

@@ -86,7 +86,7 @@ const DefaultType = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Dropdown extends BaseComponent {
@@ -465,7 +465,7 @@ class Dropdown extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE, Dropdown.dataApiKeydownHandler)

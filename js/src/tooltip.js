@@ -115,7 +115,7 @@ const Event = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Tooltip extends BaseComponent {

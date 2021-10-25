@@ -52,7 +52,7 @@ const Event = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Popover extends Tooltip {

@@ -44,7 +44,7 @@ const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
 const SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active'
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Tab extends BaseComponent {
@@ -181,7 +181,7 @@ class Tab extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {

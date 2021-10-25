@@ -50,7 +50,7 @@ const Default = {
 }
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Toast extends BaseComponent {

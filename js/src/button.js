@@ -23,7 +23,7 @@ const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]'
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 /**
- * Class Definition
+ * Class definition
  */
 
 class Button extends BaseComponent {
@@ -51,7 +51,7 @@ class Button extends BaseComponent {
 }
 
 /**
- * Data Api implementation
+ * Data API implementation
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
