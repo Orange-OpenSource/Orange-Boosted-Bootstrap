@@ -147,7 +147,7 @@
     "pa11y-ci-reporter-html": "^3.0.1",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
-    "rollup": "^2.58.0",
+    "rollup": "^2.58.3",
     "rollup-plugin-istanbul": "^3.0.0",
     "rtlcss": "^3.3.0",
     "sass": "^1.42.1",
