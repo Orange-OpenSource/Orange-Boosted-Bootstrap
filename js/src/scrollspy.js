@@ -9,9 +9,7 @@ import $ from 'jquery'
 import Util from './util'
 
 /**
- * ------------------------------------------------------------------------
  * Constants
- * ------------------------------------------------------------------------
  */
 
 const NAME = 'scrollspy'
@@ -20,6 +18,25 @@ const DATA_KEY = 'bs.scrollspy'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
+
+const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item'
+const CLASS_NAME_ACTIVE = 'active'
+
+const EVENT_ACTIVATE = `activate${EVENT_KEY}`
+const EVENT_SCROLL = `scroll${EVENT_KEY}`
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+
+const METHOD_OFFSET = 'offset'
+const METHOD_POSITION = 'position'
+
+const SELECTOR_DATA_SPY = '[data-spy="scroll"]'
+const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group'
+const SELECTOR_NAV_LINKS = '.nav-link'
+const SELECTOR_NAV_ITEMS = '.nav-item'
+const SELECTOR_LIST_ITEMS = '.list-group-item'
+const SELECTOR_DROPDOWN = '.dropdown'
+const SELECTOR_DROPDOWN_ITEMS = '.dropdown-item'
+const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
 
 const Default = {
   offset: 10,
@@ -33,29 +50,8 @@ const DefaultType = {
   target: '(string|element)'
 }
 
-const EVENT_ACTIVATE = `activate${EVENT_KEY}`
-const EVENT_SCROLL = `scroll${EVENT_KEY}`
-const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
-
-const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item'
-const CLASS_NAME_ACTIVE = 'active'
-
-const SELECTOR_DATA_SPY = '[data-spy="scroll"]'
-const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group'
-const SELECTOR_NAV_LINKS = '.nav-link'
-const SELECTOR_NAV_ITEMS = '.nav-item'
-const SELECTOR_LIST_ITEMS = '.list-group-item'
-const SELECTOR_DROPDOWN = '.dropdown'
-const SELECTOR_DROPDOWN_ITEMS = '.dropdown-item'
-const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle'
-
-const METHOD_OFFSET = 'offset'
-const METHOD_POSITION = 'position'
-
 /**
- * ------------------------------------------------------------------------
- * Class Definition
- * ------------------------------------------------------------------------
+ * Class definition
  */
 
 class ScrollSpy {
@@ -78,7 +74,6 @@ class ScrollSpy {
   }
 
   // Getters
-
   static get VERSION() {
     return VERSION
   }
@@ -88,7 +83,6 @@ class ScrollSpy {
   }
 
   // Public
-
   refresh() {
     const autoMethod = this._scrollElement === this._scrollElement.window ?
       METHOD_OFFSET : METHOD_POSITION
@@ -151,7 +145,6 @@ class ScrollSpy {
   }
 
   // Private
-
   _getConfig(config) {
     config = {
       ...Default,
@@ -242,25 +235,25 @@ class ScrollSpy {
       $link.closest(SELECTOR_DROPDOWN)
         .find(SELECTOR_DROPDOWN_TOGGLE)
         .addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'true')
+        .attr('aria-current', 'true') // Boosted mod
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'location')
+        .attr('aria-current', 'location') // Boosted mod
     } else {
       // Set triggered link as active
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'location')
+        .attr('aria-current', 'location') // Boosted mod
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
       $link.parents(SELECTOR_NAV_LIST_GROUP)
         .prev(`${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`)
         .addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'true')
+        .attr('aria-current', 'true') // Boosted mod
       // Handle special case when .nav-link is inside .nav-item
       $link.parents(SELECTOR_NAV_LIST_GROUP)
         .prev(SELECTOR_NAV_ITEMS)
         .children(SELECTOR_NAV_LINKS)
         .addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'true')
+        .attr('aria-current', 'true') // Boosted mod
     }
 
     $(this._scrollElement).trigger(EVENT_ACTIVATE, {
@@ -273,12 +266,11 @@ class ScrollSpy {
       .filter(node => node.classList.contains(CLASS_NAME_ACTIVE))
       .forEach(node => {
         node.classList.remove(CLASS_NAME_ACTIVE)
-        node.removeAttribute('aria-current')
+        node.removeAttribute('aria-current') // Boosted mod
       })
   }
 
   // Static
-
   static _jQueryInterface(config) {
     return this.each(function () {
       let data = $(this).data(DATA_KEY)
@@ -301,9 +293,7 @@ class ScrollSpy {
 }
 
 /**
- * ------------------------------------------------------------------------
- * Data Api implementation
- * ------------------------------------------------------------------------
+ * Data API implementation
  */
 
 $(window).on(EVENT_LOAD_DATA_API, () => {
@@ -317,9 +307,7 @@ $(window).on(EVENT_LOAD_DATA_API, () => {
 })
 
 /**
- * ------------------------------------------------------------------------
  * jQuery
- * ------------------------------------------------------------------------
  */
 
 $.fn[NAME] = ScrollSpy._jQueryInterface
