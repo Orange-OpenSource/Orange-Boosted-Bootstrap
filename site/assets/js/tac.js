@@ -80,7 +80,8 @@
             choiceEvent +
             '"' +
             ((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!googletagmanager=true' ? 'checked' : '') +
-            '><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label></div>'
+            '><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label>' +
+            '<input id="googletagmanagerDenied" class="d-none"></div>'
         )
       ask.innerHTML = ''
       ask.append(toggle)
