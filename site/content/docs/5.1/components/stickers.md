@@ -15,7 +15,7 @@ General usage of the stickers. (Ask to the designers ?)
 {{< example >}}
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-lg-start">
-    <svg class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
+    <svg class="sticker-lg sticker-one-line sticker-animate-rotate" aria-hidden="true" focusable="false">
       <circle></circle>
       <text x="50%" y="50%">New</text>
     </svg>
@@ -29,11 +29,11 @@ General usage of the stickers. (Ask to the designers ?)
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-end">
-    <svg class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
+    <svg class="sticker-sm sticker-icon-two-lines sticker-animate" aria-hidden="true" focusable="false">
       <circle></circle>
       <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
       <text x="50%" y="60%">
-        <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
+        <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
       </text>
     </svg>
   </div>
@@ -44,7 +44,7 @@ General usage of the stickers. (Ask to the designers ?)
 
 For the remaining page, the accessibility of the stickers will be set and considered as a decorating image aka : `aria-hidden="true" focusable="false"`.
 
-If the sticker stands for a functionnality of the site and not as a decorative element, please read the examples below in order to have a good idea of what is needed for stickers. See [more](https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/).
+If the sticker stands for a functionality of the site and not as a decorative element, please read the examples below in order to have a good idea of what is needed for stickers. See [more](https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/).
 
 {{< example >}}
 <div class="row align-items-center my-5">
@@ -80,9 +80,11 @@ If the sticker stands for a functionnality of the site and not as a decorative e
 </div>
 {{< /example >}}
 
-## Sizing
+## Size
 
-Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size. Default use of sticker applies the one line style.
+### Standard sizing
+
+Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size and its look. Default use of sticker applies the one line style. Only these sizes should be used.
 
 <div class="bd-example">
   <div class="row align-items-center my-5">
@@ -125,6 +127,8 @@ Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good s
 ```
 
 ## Styles
+
+Choose one and only one class below in order to apply an architecture to the sticker.
 
 ### Sticker on one line
 
@@ -392,7 +396,7 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
       <svg class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
         <circle></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -400,7 +404,7 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
       <svg class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
         <circle></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -408,7 +412,7 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
       <svg class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
         <circle></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -419,21 +423,21 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <svg class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
   <circle></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
   </text>
 </svg>
 
 <svg class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
   <circle></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
   </text>
 </svg>
 
 <svg class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
   <circle></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1.2em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
   </text>
 </svg>
 ```
@@ -552,7 +556,7 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 
 Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the center effect.
 
-### Sticker for additionnal minutes
+### Sticker for additional minutes
 
 <div class="bd-example">
   <div class="row align-items-center my-5">
@@ -608,7 +612,7 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 
 Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the center effect.
 
-### Sticker for additionnal offer
+### Sticker for additional offer
 
 <div class="bd-example">
   <div class="row align-items-center my-5">
@@ -663,3 +667,99 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 ```
 
 Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the center effect.
+
+## Animations
+
+### Straight animation
+
+Add `.sticker-animate` to the svg tag in order to animate the sticker straightly. These animations are launched right after the page finished loading.
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-animate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-animate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-animate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-animate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+
+<svg class="sticker-md sticker-animate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+
+<svg class="sticker-lg sticker-animate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+```
+
+### Rotate animation
+
+Add `.sticker-animate-rotate` to the svg tag in order to animate the sticker straightly. These animations are launched right after the page finished loading.
+
+<div class="bd-example">
+  <div class="row align-items-center my-5">
+    <div class="col col-12 col-md-6 col-lg-3 text-start">
+      <svg class="sticker-sm sticker-animate-rotate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
+      <svg class="sticker-md sticker-animate-rotate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+    <div class="col col-12 col-lg-5 text-end">
+      <svg class="sticker-lg sticker-animate-rotate" aria-hidden="true" focusable="false">
+        <circle></circle>
+        <text x="50%" y="50%">New</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+```html
+<svg class="sticker-sm sticker-animate-rotate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+
+<svg class="sticker-md sticker-animate-rotate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+
+<svg class="sticker-lg sticker-animate-rotate" aria-hidden="true" focusable="false">
+  <circle></circle>
+  <text x="50%" y="50%">New</text>
+</svg>
+```
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="stickers-variables" file="scss/_variables.scss" >}}

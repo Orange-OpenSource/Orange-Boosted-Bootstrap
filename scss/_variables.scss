@@ -1865,12 +1865,28 @@ $step-link-marker-lg:    counter($stepped-process-counter) ".\A0" !default;
 $step-item-arrow-width:  1rem !default;
 $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, $border-width 50%, 100% 100%) #{"*/"} !default; // Used in clip-path
 // scss-docs-end stepped-process
+
+// scss-docs-start stickers-variables
+$stickers-size-sm: $spacer * 7 !default;
+$stickers-size-md: $spacer * 9 !default;
+$stickers-size-lg: $spacer * 14 !default;
+
+$stickers-sizes: (
+  "sm": $stickers-size-sm,
+  "md": $stickers-size-md,
+  "lg": $stickers-size-lg
+) !default;
+$stickers-architectures: (
+  "add-min": "Additional-min",
+  "add-offer": "Additional-offer",
+  "bonus-min": "Bonus-min",
+  "bonus-offer": "Bonus-offer",
+  "icon": "Icon",
+  "icon-two-lines": "Icon-Two-lines",
+  "old-and-new-price": "Old-and-new-price",
+  "one-line": "One-line",
+  "price": "Price",
+  "two-lines": "Two-lines"
+) !default;
+// scss-docs-end stickers-variables
 // End mod
-
-// scss-docs-start stickers
-$stickers-size-sm: 140px !default;
-$stickers-size-md: 180px !default;
-$stickers-size-lg: 280px !default;
-
-// scss-docs-end stickers
-// dev

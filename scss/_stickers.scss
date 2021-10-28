@@ -1,131 +1,27 @@
-.sticker-sm {
-  @include sticker-init("sm", "One-line");
+@each $key-size, $value-size in $stickers-sizes {
+  @each $key-archi, $value-archi in $stickers-architectures {
+    .sticker-#{$key-size}.sticker-#{$key-archi} {
+      @include sticker-init($value-size, $value-archi);
+    }
+  }
+
+  .sticker-#{$key-size} {
+    @include sticker-init($value-size);
+  }
 }
 
-.sticker-md {
-  @include sticker-init("md", "One-line");
+@keyframes sticker-animation {
+  70% { transform: scale(1.1); }
+  90% { transform: scale(.95); }
+}
+.sticker-animate {
+  animation: sticker-animation ease-out 2s 1 250ms;
 }
 
-.sticker-lg {
-  @include sticker-init("lg", "One-line");
+@keyframes sticker-animation-rotate {
+  70% { transform: scale(1.1) rotate(10deg); }
+  90% { transform: scale(.95) rotate(-5deg); }
 }
-
-.sticker-sm.sticker-one-line {
-  @include sticker-init("sm", "One-line");
-}
-
-.sticker-md.sticker-one-line {
-  @include sticker-init("md", "One-line");
-}
-
-.sticker-lg.sticker-one-line {
-  @include sticker-init("lg", "One-line");
-}
-
-.sticker-sm.sticker-icon {
-  @include sticker-init("sm", "Icon");
-}
-
-.sticker-md.sticker-icon {
-  @include sticker-init("md", "Icon");
-}
-
-.sticker-lg.sticker-icon {
-  @include sticker-init("lg", "Icon");
-}
-
-.sticker-sm.sticker-two-lines {
-  @include sticker-init("sm", "Two-lines");
-}
-
-.sticker-md.sticker-two-lines {
-  @include sticker-init("md", "Two-lines");
-}
-
-.sticker-lg.sticker-two-lines {
-  @include sticker-init("lg", "Two-lines");
-}
-
-.sticker-sm.sticker-icon-two-lines {
-  @include sticker-init("sm", "Icon-Two-lines");
-}
-
-.sticker-md.sticker-icon-two-lines {
-  @include sticker-init("md", "Icon-Two-lines");
-}
-
-.sticker-lg.sticker-icon-two-lines {
-  @include sticker-init("lg", "Icon-Two-lines");
-}
-
-.sticker-sm.sticker-price {
-  @include sticker-init("sm", "Price");
-}
-
-.sticker-md.sticker-price {
-  @include sticker-init("md", "Price");
-}
-
-.sticker-lg.sticker-price {
-  @include sticker-init("lg", "Price");
-}
-
-.sticker-sm.sticker-old-and-new-price {
-  @include sticker-init("sm", "Old-and-new-price");
-}
-
-.sticker-md.sticker-old-and-new-price {
-  @include sticker-init("md", "Old-and-new-price");
-}
-
-.sticker-lg.sticker-old-and-new-price {
-  @include sticker-init("lg", "Old-and-new-price");
-}
-
-.sticker-sm.sticker-bonus-min {
-  @include sticker-init("sm", "Bonus-min");
-}
-
-.sticker-md.sticker-bonus-min {
-  @include sticker-init("md", "Bonus-min");
-}
-
-.sticker-lg.sticker-bonus-min {
-  @include sticker-init("lg", "Bonus-min");
-}
-
-.sticker-sm.sticker-bonus-offer {
-  @include sticker-init("sm", "Bonus-offer");
-}
-
-.sticker-md.sticker-bonus-offer {
-  @include sticker-init("md", "Bonus-offer");
-}
-
-.sticker-lg.sticker-bonus-offer {
-  @include sticker-init("lg", "Bonus-offer");
-}
-
-.sticker-sm.sticker-add-min {
-  @include sticker-init("sm", "Additional-min");
-}
-
-.sticker-md.sticker-add-min {
-  @include sticker-init("md", "Additional-min");
-}
-
-.sticker-lg.sticker-add-min {
-  @include sticker-init("lg", "Additional-min");
-}
-
-.sticker-sm.sticker-add-offer {
-  @include sticker-init("sm", "Additional-offer");
-}
-
-.sticker-md.sticker-add-offer {
-  @include sticker-init("md", "Additional-offer");
-}
-
-.sticker-lg.sticker-add-offer {
-  @include sticker-init("lg", "Additional-offer");
+.sticker-animate-rotate {
+  animation: sticker-animation-rotate ease-out 2s 1 250ms;
 }
