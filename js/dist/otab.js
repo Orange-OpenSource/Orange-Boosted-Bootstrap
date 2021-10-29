@@ -1,18 +1,19 @@
 /*!
-  * Boosted v4.6.0 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors
-  * Copyright 2014-2021 Orange
+  * Boosted v4.6.1 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2021 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap otab.js v4.6.0 (https://boosted.orange.com)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  **
+  * This a fork of Bootstrap:
+  * Bootstrap otab.js v4.6.1 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Otab = factory(global.jQuery, global.Util));
-}(this, (function ($, Util) { 'use strict';
+})(this, (function ($, Util) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -42,11 +43,11 @@
    */
 
   var NAME = 'otab';
-  var VERSION = '4.6.0';
+  var VERSION = '4.6.1';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
   var DEFAULT_THRESHOLD = 2;
   var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
   var CLASS_NAME_SHOW = 'show';
@@ -65,8 +66,8 @@
 
       this._addAccessibility();
 
-      if ($__default['default'](this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
-        $__default['default'](this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT);
+      if ($__default["default"](this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
+        $__default["default"](this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT);
       }
     } // getters
 
@@ -75,7 +76,7 @@
 
     // public
     _proto.show = function show() {
-      var $element = $__default['default'](this._element);
+      var $element = $__default["default"](this._element);
 
       if ($element.next().hasClass(CLASS_NAME_SHOW)) {
         return;
@@ -93,10 +94,10 @@
     ;
 
     _proto._addAccessibility = function _addAccessibility() {
-      var $tab = $__default['default'](this._element);
+      var $tab = $__default["default"](this._element);
       var $tabpanel = $tab.next();
-      $tab.attr('id', Util__default['default'].getUID(NAME));
-      $tabpanel.attr('id', Util__default['default'].getUID(NAME));
+      $tab.attr('id', Util__default["default"].getUID(NAME));
+      $tabpanel.attr('id', Util__default["default"].getUID(NAME));
       $tab.attr({
         'aria-controls': $tabpanel.attr('id'),
         role: 'tab'
@@ -117,7 +118,7 @@
 
     Otab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $__default['default'](this);
+        var $this = $__default["default"](this);
         var data = $this.data(DATA_KEY);
 
         if (!data) {
@@ -151,12 +152,12 @@
    */
 
 
-  $__default['default'](document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($__default['default'](SELECTOR_OTAB_HEADING));
+  $__default["default"](document).on('DOMContentLoaded', function () {
+    Otab._jQueryInterface.call($__default["default"](SELECTOR_OTAB_HEADING));
   }).on(EVENT_CLICK_DATA_API, SELECTOR_OTAB_HEADING, function (event) {
     event.preventDefault();
 
-    Otab._jQueryInterface.call($__default['default'](this), CLASS_NAME_SHOW);
+    Otab._jQueryInterface.call($__default["default"](this), CLASS_NAME_SHOW);
   });
   /**
    * ------------------------------------------------------------------------
@@ -164,15 +165,15 @@
    * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME] = Otab._jQueryInterface;
-  $__default['default'].fn[NAME].Constructor = Otab;
+  $__default["default"].fn[NAME] = Otab._jQueryInterface;
+  $__default["default"].fn[NAME].Constructor = Otab;
 
-  $__default['default'].fn[NAME].noConflict = function () {
-    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default["default"].fn[NAME].noConflict = function () {
+    $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return Otab._jQueryInterface;
   };
 
   return Otab;
 
-})));
+}));
 //# sourceMappingURL=otab.js.map

@@ -1,18 +1,19 @@
 /*!
-  * Boosted v4.6.0 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors
-  * Copyright 2014-2021 Orange
+  * Boosted v4.6.1 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2021 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap prioritynav.js v4.6.0 (https://boosted.orange.com)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  **
+  * This a fork of Bootstrap:
+  * Bootstrap prioritynav.js v4.6.1 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.PriorityNav = factory(global.jQuery));
-}(this, (function ($) { 'use strict';
+})(this, (function ($) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -41,9 +42,9 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.6.0';
+  var VERSION = '4.6.1';
   var DATA_KEY = 'bs.prioritynav';
-  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
   var RESIZE_DURATION = 500;
   var TAB_KEYCODE = 9;
   var EVENT_RESIZE = 'resize';
@@ -54,7 +55,7 @@
   var MenuLabelDefault = 'More';
 
   function menuTemplate(MenuLabel) {
-    return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
+    return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
   }
   /**
    * ------------------------------------------------------------------------
@@ -67,12 +68,7 @@
     function PriorityNav(element, config) {
       this._element = element;
       this._config = config;
-
-      if ($__default['default'](element).is('ul')) {
-        this._$menu = $__default['default'](element);
-      } else {
-        this._$menu = $__default['default'](element).find('ul').first();
-      }
+      this._$menu = $__default["default"](element).is('ul') ? $__default["default"](element) : $__default["default"](element).find('ul').first();
 
       this._initMenu();
 
@@ -105,12 +101,12 @@
       var firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
 
 
-      var $wrappedElements = $__default['default'](); // Used to snag the previous menu item in addition to ones that have wrapped
+      var $wrappedElements = $__default["default"](); // Used to snag the previous menu item in addition to ones that have wrapped
 
       var first = true; // Loop through all the nav items...
 
       this._$allNavElements.each(function (i) {
-        var $elm = $__default['default'](this); // ...in which to find wrapped elements
+        var $elm = $__default["default"](this); // ...in which to find wrapped elements
 
         var pos = $elm.position();
 
@@ -142,7 +138,7 @@
 
 
         if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          var $item = $__default['default'](this._element).find("." + CLASS_NAME_HIDE).first().prev();
+          var $item = $__default["default"](this._element).find("." + CLASS_NAME_HIDE).first().prev();
           var $itemDuplicate = $item.clone();
           $item.addClass(CLASS_NAME_HIDE);
           $item.find('.nav-link').attr('tabindex', -1);
@@ -168,7 +164,7 @@
     _proto._bindUIActions = function _bindUIActions() {
       var _this = this;
 
-      $__default['default'](window).on(EVENT_RESIZE, function () {
+      $__default["default"](window).on(EVENT_RESIZE, function () {
         _this._$menu.addClass(CLASS_NAME_RESIZING);
 
         setTimeout(function () {
@@ -182,7 +178,7 @@
 
       this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
         if (e.which === TAB_KEYCODE) {
-          $__default['default'](e.target).dropdown('toggle');
+          $__default["default"](e.target).dropdown('toggle');
         }
       });
     } // static
@@ -190,11 +186,11 @@
 
     PriorityNav._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY);
+        var data = $__default["default"](this).data(DATA_KEY);
 
         if (!data) {
           data = new PriorityNav(this, config);
-          $__default['default'](this).data(DATA_KEY, data);
+          $__default["default"](this).data(DATA_KEY, data);
         }
 
         if (typeof config !== 'undefined' && config && typeof config !== 'string') {
@@ -219,15 +215,15 @@
    */
 
 
-  $__default['default'].fn[NAME] = PriorityNav._jQueryInterface;
-  $__default['default'].fn[NAME].Constructor = PriorityNav;
+  $__default["default"].fn[NAME] = PriorityNav._jQueryInterface;
+  $__default["default"].fn[NAME].Constructor = PriorityNav;
 
-  $__default['default'].fn[NAME].noConflict = function () {
-    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default["default"].fn[NAME].noConflict = function () {
+    $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return PriorityNav._jQueryInterface;
   };
 
   return PriorityNav;
 
-})));
+}));
 //# sourceMappingURL=prioritynav.js.map

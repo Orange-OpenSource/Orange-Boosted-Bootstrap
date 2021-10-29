@@ -1,18 +1,19 @@
 /*!
-  * Boosted v4.6.0 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors
-  * Copyright 2014-2021 Orange
+  * Boosted v4.6.1 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2021 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap navbar.js v4.6.0 (https://boosted.orange.com)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  **
+  * This a fork of Bootstrap:
+  * Bootstrap navbar.js v4.6.1 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Navbar = factory(global.jQuery, global.Util));
-}(this, (function ($, Util) { 'use strict';
+})(this, (function ($, Util) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -60,9 +61,9 @@
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.6.0';
+  var VERSION = '4.6.1';
   var DATA_KEY = 'bs.navbar';
-  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
   var BREAKPOINT = 768;
   var Default = {
     sticky: false,
@@ -87,38 +88,38 @@
       this._element = element;
       this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR);
       this._config = this._getConfig(config);
-      this._initialHeight = $__default['default'](this._element).outerHeight();
-      this._initialSupraHeight = $__default['default'](this._supraBar).outerHeight();
+      this._initialHeight = $__default["default"](this._element).outerHeight();
+      this._initialSupraHeight = $__default["default"](this._supraBar).outerHeight();
 
       this._addAria();
 
       if (this._config.sticky) {
-        $__default['default'](this._element).addClass('fixed-top');
-        $__default['default'](SELECTOR_MEGAMENU_PANEL).addClass('sticky');
-        $__default['default'](document.body).css('padding-top', this._initialHeight);
-        $__default['default'](window).on('scroll', function () {
-          var Scroll = $__default['default'](window).scrollTop();
+        $__default["default"](this._element).addClass('fixed-top');
+        $__default["default"](SELECTOR_MEGAMENU_PANEL).addClass('sticky');
+        $__default["default"](document.body).css('padding-top', this._initialHeight);
+        $__default["default"](window).on('scroll', function () {
+          var Scroll = $__default["default"](window).scrollTop();
 
           if (Scroll > 0) {
-            $__default['default'](_this._element).addClass('minimized');
+            $__default["default"](_this._element).addClass('minimized');
           } else {
-            $__default['default'](_this._element).removeClass('minimized');
+            $__default["default"](_this._element).removeClass('minimized');
           }
         });
       }
 
       if (this._config.hideSupra) {
-        $__default['default'](window).on('scroll', function () {
-          if ($__default['default'](window).innerWidth() < BREAKPOINT) {
+        $__default["default"](window).on('scroll', function () {
+          if ($__default["default"](window).innerWidth() < BREAKPOINT) {
             return;
           }
 
-          var Scroll = $__default['default'](window).scrollTop();
+          var Scroll = $__default["default"](window).scrollTop();
 
           if (Scroll > 0) {
-            $__default['default'](SELECTOR_SUPRA_BAR).hide();
+            $__default["default"](SELECTOR_SUPRA_BAR).hide();
           } else {
-            $__default['default'](SELECTOR_SUPRA_BAR).show();
+            $__default["default"](SELECTOR_SUPRA_BAR).show();
           }
         });
       }
@@ -129,25 +130,25 @@
 
     // private
     _proto._getConfig = function _getConfig(config) {
-      config = $__default['default'].extend({}, Default, config);
-      Util__default['default'].typeCheckConfig(NAME, config, DefaultType);
+      config = $__default["default"].extend({}, Default, config);
+      Util__default["default"].typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
 
     _proto._addAria = function _addAria() {
-      $__default['default'](this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
+      $__default["default"](this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
     } // static
     ;
 
     Navbar._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY);
+        var data = $__default["default"](this).data(DATA_KEY);
 
-        var _config = _extends({}, Default, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default, $__default["default"](this).data(), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Navbar(this, _config);
-          $__default['default'](this).data(DATA_KEY, data);
+          $__default["default"](this).data(DATA_KEY, data);
         }
 
         if (typeof config === 'string') {
@@ -181,15 +182,15 @@
    */
 
 
-  $__default['default'].fn[NAME] = Navbar._jQueryInterface;
-  $__default['default'].fn[NAME].Constructor = Navbar;
+  $__default["default"].fn[NAME] = Navbar._jQueryInterface;
+  $__default["default"].fn[NAME].Constructor = Navbar;
 
-  $__default['default'].fn[NAME].noConflict = function () {
-    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default["default"].fn[NAME].noConflict = function () {
+    $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return Navbar._jQueryInterface;
   };
 
   return Navbar;
 
-})));
+}));
 //# sourceMappingURL=navbar.js.map
