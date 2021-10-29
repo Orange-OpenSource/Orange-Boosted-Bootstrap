@@ -27,9 +27,9 @@
 <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
 <link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU" crossorigin="anonymous">
 
 <!-- Documentation extras -->
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -134,11 +134,11 @@
       </ul>
       <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
         <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
             v4.6
           </button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.0)</a>
+            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.x)</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
@@ -146,7 +146,7 @@
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://v5-dev--boosted.netlify.app/docs/5.0/">5.0.x</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/5.1/">5.1.x</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
           </div>
@@ -308,8 +308,8 @@
           <h2 id="supported-browsers">Supported browsers</h2>
 <p>Boosted supports the <strong>latest, stable releases</strong> of all major browsers and platforms. On Windows, <strong>we support Internet Explorer 11 / Microsoft Edge</strong>.</p>
 <p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform&rsquo;s web view API, are not explicitly supported. However, Boosted should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
-<p>You can find our supported range of browsers and their versions <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.0/.browserslistrc">in our <code>.browserslistrc file</code></a>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"># https://github.com/browserslist/browserslist#readme
+<p>You can find our supported range of browsers and their versions <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.1/.browserslistrc">in our <code>.browserslistrc file</code></a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># https://github.com/browserslist/browserslist#readme
 
 &gt;= 1%
 last 1 major version
@@ -411,7 +411,7 @@ Firefox ESR
 <h2 id="printing">Printing</h2>
 <p>Even in some modern browsers, printing can be quirky.</p>
 <p>As of Safari v8.0, use of the fixed-width <code>.container</code> class can cause Safari to use an unusually small font size when printing. See <a href="https://github.com/twbs/bootstrap/issues/14868">issue #14868</a> and <a href="https://bugs.webkit.org/show_bug.cgi?id=138192">WebKit bug #138192</a> for more details. One potential workaround is the following CSS:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="nt">print</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="nt">print</span> <span class="p">{</span>
   <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
   <span class="p">}</span>
@@ -420,7 +420,7 @@ Firefox ESR
 <p>Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.</p>
 <h3 id="select-menu">Select menu</h3>
 <p>On <code>&lt;select&gt;</code> elements, the Android stock browser will not display the side controls if there is a <code>border-radius</code> and/or <code>border</code> applied. (See <a href="https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">this StackOverflow question</a> for details.) Use the snippet of code below to remove the offending CSS and render the <code>&lt;select&gt;</code> as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
   <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Android &#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;AppleWebKit&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Chrome&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -449,7 +449,7 @@ Firefox ESR
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN" crossorigin="anonymous"></script>
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

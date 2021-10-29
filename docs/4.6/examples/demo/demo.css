@@ -48,7 +48,7 @@
   stroke: #ffd200;
 }
 
-legend.gauge-label {
+.gauge-label {
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
@@ -68,7 +68,7 @@ legend.gauge-label {
 .dark-bg {
   background-color: #000;
 }
-.dark-bg legend.gauge-label {
+.dark-bg .gauge-label {
   color: #fff;
 }
 
