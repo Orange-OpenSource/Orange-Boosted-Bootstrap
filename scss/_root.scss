@@ -18,11 +18,7 @@
   }
 
   @each $color, $value in $theme-colors-rgb {
-    @if ($color == "primary") {
-      --#{$variable-prefix}#{$color}-rgb: #{to-rgb($accessible-orange)};
-    } @else {
-      --#{$variable-prefix}#{$color}-rgb: #{$value};
-    }
+    --#{$variable-prefix}#{$color}-rgb: #{$value};
   }
 
   --#{$prefix}white-rgb: #{to-rgb($white)};

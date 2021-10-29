@@ -542,6 +542,7 @@ $utilities: map-merge(
           "black-50": rgba($black, .5), // deprecated
           "white-50": rgba($white, .5), // deprecated
           "reset": inherit,
+          "primary": $accessible-orange,
         )
       )
     ),
@@ -573,8 +574,7 @@ $utilities: map-merge(
           "supporting-blue": $supporting-blue,
           "supporting-yellow": $supporting-yellow,
           "supporting-pink": $supporting-pink,
-          "supporting-purple": $supporting-purple,
-          "primary": $brand-orange
+          "supporting-purple": $supporting-purple
         )
       )
     ),
