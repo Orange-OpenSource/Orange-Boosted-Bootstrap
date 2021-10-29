@@ -20,32 +20,26 @@
     }
   }
 
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
-    }
-  }
-
-  .nav-link {
-    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} $navbar-supra-padding-x .75rem !important; // stylelint-disable-line declaration-no-important
+  .navbar-nav .nav-link {
+    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} $navbar-supra-padding-x .75rem;
     font-size: $font-size-sm;
     line-height: 1;
 
     &.active::before {
-      right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
-      bottom: -1px !important; // stylelint-disable-line declaration-no-important
-      left: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
+      right: $navbar-supra-padding-x;
+      bottom: -1px;
+      left: $navbar-supra-padding-x;
     }
 
     &.nav-icon {
-      padding: divide($spacer, 2) .9375rem .25rem !important; // stylelint-disable-line declaration-no-important
+      padding: divide($spacer, 2) .9375rem .25rem;
 
       svg,
       img {
         width: $navbar-supra-icon-size;
         height: $navbar-supra-icon-size;
       }
-    }
+    }    
 
     .badge {
       @extend .position-absolute;
@@ -57,6 +51,12 @@
       padding: .125rem .375rem;
       margin-top: .1875rem;
       font-size: $font-size-base;
+    }
+  }
+  
+  .nav-item:last-of-type {
+    .nav-icon {
+      padding-right: $navbar-supra-padding-x;
     }
   }
 }
