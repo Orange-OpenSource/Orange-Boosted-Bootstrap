@@ -20,8 +20,8 @@
   @include media-breakpoint-up(md) {
     display: flex;
     .container {
-      padding-right: .125rem;
-      padding-left: .125rem;
+      padding-right: $navbar-orange-padding-x;
+      padding-left: $navbar-orange-padding-x;
     }
   }
 
