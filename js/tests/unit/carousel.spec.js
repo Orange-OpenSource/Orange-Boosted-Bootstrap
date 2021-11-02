@@ -2,6 +2,7 @@ import Carousel from '../../src/carousel'
 import EventHandler from '../../src/dom/event-handler'
 import { clearFixture, createEvent, getFixture, jQueryMock } from '../helpers/fixture'
 import { isRTL, noop } from '../../src/util/index'
+import Swipe from '../../src/util/swipe'
 
 describe('Carousel', () => {
   const { Simulator, PointerEvent } = window
@@ -472,23 +473,25 @@ describe('Carousel', () => {
       })
 
       expect(carousel._addTouchEventListeners).not.toHaveBeenCalled()
+      expect(carousel._swipeHelper).toBeNull()
     })
 
     it('should not add touch event listeners if touch supported = false', () => {
       fixtureEl.innerHTML = '<div></div>'
 
       const carouselEl = fixtureEl.querySelector('div')
+      spyOn(Swipe, 'isSupported').and.returnValue(false)
 
       const carousel = new Carousel(carouselEl)
 
-      EventHandler.off(carouselEl, '.bs-carousel')
-      carousel._touchSupported = false
+      EventHandler.off(carouselEl, Carousel.EVENT_KEY)
 
       spyOn(carousel, '_addTouchEventListeners')
 
       carousel._addEventListeners()
 
       expect(carousel._addTouchEventListeners).not.toHaveBeenCalled()
+      expect(carousel._swipeHelper).toBeNull()
     })
 
     it('should add touch event listeners by default', () => {
@@ -737,7 +740,7 @@ describe('Carousel', () => {
       }, () => {
         restorePointerEvents()
         delete document.documentElement.ontouchstart
-        expect(carousel.touchDeltaX).toEqual(0)
+        expect(carousel._swipeHelper._deltaX).toEqual(0)
         done()
       })
     })
@@ -1491,19 +1494,20 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('#myCarousel')
       const addEventSpy = spyOn(carouselEl, 'addEventListener').and.callThrough()
-      const removeEventSpy = spyOn(carouselEl, 'removeEventListener').and.callThrough()
+      const removeEventSpy = spyOn(EventHandler, 'off').and.callThrough()
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add/removed properly.
       document.documentElement.ontouchstart = noop
 
       const carousel = new Carousel(carouselEl)
+      const swipeHelperSpy = spyOn(carousel._swipeHelper, 'dispose').and.callThrough()
 
       const expectedArgs = [
         ['keydown', jasmine.any(Function), jasmine.any(Boolean)],
         ['mouseover', jasmine.any(Function), jasmine.any(Boolean)],
         ['mouseout', jasmine.any(Function), jasmine.any(Boolean)],
-        ...(carousel._pointerEvent ?
+        ...(carousel._swipeHelper._supportPointerEvents ?
           [
             ['pointerdown', jasmine.any(Function), jasmine.any(Boolean)],
             ['pointerup', jasmine.any(Function), jasmine.any(Boolean)]
@@ -1519,7 +1523,9 @@ describe('Carousel', () => {
 
       carousel.dispose()
 
-      expect(removeEventSpy.calls.allArgs()).toEqual(expectedArgs)
+      expect(carousel._swipeHelper).toBeNull()
+      expect(removeEventSpy).toHaveBeenCalledWith(carouselEl, Carousel.EVENT_KEY)
+      expect(swipeHelperSpy).toHaveBeenCalled()
 
       delete document.documentElement.ontouchstart
     })
