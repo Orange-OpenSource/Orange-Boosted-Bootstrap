@@ -37,7 +37,7 @@ You can also use icons as navigation items as followed :
 {{< orange-supra >}}
 <ul class="navbar-nav ml-auto">
   <li class="nav-item">
-    <a href="#" class="nav-link nav-icon" role="search">
+    <a href="#" class="nav-link nav-icon">
       <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
         <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
       </svg>
