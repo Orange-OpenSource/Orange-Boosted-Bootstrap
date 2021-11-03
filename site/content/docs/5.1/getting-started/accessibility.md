@@ -78,6 +78,12 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (eg. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
+
+### Maximum line length
+
+When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained at [C20 : Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20). This rule applies also to the [Orange's Web Browsing Guidelines](https://design.orange.com/guidelines/web-browsing) at Typography.
+
+This feature is a bit more explained at [text utilities](/docs/5.1/utilities/text/#line-length).
 <!-- End mod -->
 
 ## Additional resources
