@@ -31,7 +31,7 @@ This navbar is visible only on desktop view.
 {{< /orange-supra >}}
 {{< /example >}}
 
-You can also use icons as navigation items as followed :
+You can also use icons as navigation items as followed:
 
 {{< example >}}
 {{< orange-supra >}}
