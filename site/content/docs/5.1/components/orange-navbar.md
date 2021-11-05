@@ -676,9 +676,13 @@ You can have a complete overview of how to use supra bars in the dedicated [Desi
 </header>
 {{< /example >}}
 
-## OBS Headers
+### Global Header with Custom logo (OBS example)
 
-### OBS global header standard
+Instead of using the Master Logo that is provided by Boosted, you can also use whatever logo you want depending on your project, entity, ... 
+
+{{< callout warning >}}
+You should however consider having a responsive svg logo, or even use the Master Logo inside a parent element having the `.navbar-brand` class with side text made with html. 
+{{< /callout >}}
 
 {{< anchor web-glh-obs-001 >}}
 
@@ -689,11 +693,7 @@ You can have a complete overview of how to use supra bars in the dedicated [Desi
       <a class="navbar-brand" href="#">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <div class="d-inline-flex align-items-baseline">
-            <img class="obs-logo" src="/docs/5.1/assets/brand/orange-logo.svg" alt="" aria-hidden="true" loading="lazy">
-            <span class="h5 ms-2 mb-0 align-self-end">
-                <span class="visually-hidden">Orange </span>
-                Business<br>Services
-            </span>
+            <img class="obs-logo" src="/docs/5.1/assets/brand/OBS-logo.svg" alt="" aria-hidden="true" loading="lazy" style="width: 100%;">
           </div>
         </div>
       </a>
