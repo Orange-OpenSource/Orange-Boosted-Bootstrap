@@ -33,7 +33,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 - `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
 - Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
 
-Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
+Here's an example of all the sub-components included in a responsive dark-themed navbar that automatically collapses at the `lg` (large) breakpoint.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
