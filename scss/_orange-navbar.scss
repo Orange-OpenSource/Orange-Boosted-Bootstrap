@@ -10,16 +10,12 @@
   display: none;
   padding-top: 0;
   padding-bottom: 0;
-<<<<<<< HEAD
   border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
 
   .container {
     padding-right: $navbar-orange-supra-padding-x;
     padding-left: $navbar-orange-supra-padding-x;
   }
-=======
-  // border-bottom: 1px solid $gray-700;
->>>>>>> 3cc3184e3 (feat(headers): Global Headers)
 
   @include media-breakpoint-up(md) {
     display: flex;
