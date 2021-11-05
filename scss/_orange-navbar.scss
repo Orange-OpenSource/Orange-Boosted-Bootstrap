@@ -233,7 +233,8 @@
   }
 }
 
-.supra, .global {
+.supra,
+.global {
   border-bottom: 1px solid $gray-700;
 
   .badge {
@@ -258,10 +259,10 @@
     }
   }
   .nav-link.active::before {
-    bottom: -1px !important;
+    bottom: -1px !important; // stylelint-disable-line declaration-no-important
   }
 }
 
 .obs-logo {
-  margin-bottom: $spacer / 10;
+  margin-bottom: $spacer * .1;
 }

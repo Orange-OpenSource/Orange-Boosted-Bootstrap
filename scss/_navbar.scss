@@ -402,6 +402,7 @@
     }
   }
 
+  // stylelint-disable-next-line selector-no-qualifying-type
   input[type="search"] {
     color: $white;
     background-color: transparent;
