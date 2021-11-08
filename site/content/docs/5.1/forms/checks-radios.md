@@ -307,6 +307,115 @@ Drop borders using `.btn-no-outline`, too.
 </div>
 {{< /example >}}
 
+<!-- Boosted mod: star rating -->
+
+## Star rating
+
+Here is an example for star rating. Simply add `.star-rating` to a `<fieldset>`, then copy the following pattern into the tags in order to have a complete star rating system. Change the `xlink:href` value to get the svg you want. You can also add as much stars as you want. The default star size is 25px (based on default font-size = 16px).
+
+{{< example >}}
+<form>
+<fieldset class="star-rating w-125">
+  <legend class="visually-hidden">Results relevance</legend>
+
+  <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden" />
+  <label for="terrible" title="Terrible">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="bad" name="rating" value="2" class="visually-hidden" />
+  <label for="bad" title="Bad">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden" />
+  <label for="mixed" title="Mixed">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="good" name="rating" value="4" class="visually-hidden" />
+  <label for="good" title="Good">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden" />
+  <label for="excellent" title="Excellent">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+</fieldset>
+</form>
+{{< /example >}}
+
+You can reduce the size of stars to 20px (also based on default font-size) by adding `.star-rating-sm`.
+
+{{< example >}}
+<form>
+<fieldset class="star-rating star-rating-sm">
+  <legend class="visually-hidden">Results relevance</legend>
+
+  <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden" />
+  <label for="terrible2" title="Terrible">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden" />
+  <label for="bad2" title="Bad">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden" />
+  <label for="mixed2" title="Mixed">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" />
+  <label for="good2" title="Good">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden" />
+  <label for="excellent2" title="Excellent">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+</fieldset>
+</form>
+{{< /example >}}
+
+Here is the dark version of the component. Just add `.star-rating-dark`.
+
+{{< example class="bg-dark" >}}
+<form>
+<fieldset class="star-rating star-rating-dark">
+  <legend class="visually-hidden">Results relevance</legend>
+
+  <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden" />
+  <label for="terrible3" title="Terrible">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden" />
+  <label for="bad3" title="Bad">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden" />
+  <label for="mixed3" title="Mixed">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" />
+  <label for="good3" title="Good">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden" />
+  <label for="excellent3" title="Excellent">
+    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+</fieldset>
+</form>
+{{< /example >}}
+
 <!-- End mod -->
 
 ## Sass

@@ -343,3 +343,78 @@
   }
   // End mod
 }
+
+// Boosted mod
+.star-rating {
+  &:focus-within {
+    outline: $black solid .125rem;
+  }
+  svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: top; // to prevent default behavior : middle
+    fill: currentColor;
+    stroke: currentColor;
+  }
+  > label {
+    display: block;
+    float: left;
+    height: 1em;
+    font-size: $form-star-size;
+    color: $accessible-orange;
+    cursor: pointer;
+  }
+  > input:checked ~ label {
+    color: $gray-500;
+  }
+  > input:checked + label {
+    color: $accessible-orange;
+  }
+  > input:focus ~ label {
+    color: $gray-500;
+  }
+  > input:focus + label {
+    color: $accessible-orange;
+  }
+  &:hover input + label {
+    color: $black;
+  }
+  > input:hover ~ label {
+    color: $gray-500;
+  }
+  > input:hover + label {
+    color: $black;
+  }
+}
+
+.star-rating-dark {
+  &:focus-within {
+    outline: $white solid .125rem;
+  }
+  > input:checked ~ label {
+    color: $gray-700;
+  }
+  > input:checked + label {
+    color: $brand-orange;
+  }
+  > input:focus ~ label {
+    color: $gray-700;
+  }
+  > input:focus + label {
+    color: $brand-orange;
+  }
+  &:hover input + label {
+    color: $white;
+  }
+  > input:hover ~ label {
+    color: $gray-700;
+  }
+  > input:hover + label {
+    color: $white;
+  }
+}
+
+.star-rating-sm > label {
+  font-size: $form-star-size-sm;
+}
+// End mod
