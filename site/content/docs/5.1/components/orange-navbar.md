@@ -169,8 +169,8 @@ You can, if you want, add title (on one or two lines) next to the brand logo.
 It is not allowed to have a title into a [minimised global header]({{< ref "#global-header-minimised" >}}), because it is not compliant with the Orange Design System.
 {{< /callout >}}
 
-##### One-lined title
 {{< example class="p-0">}}
+<!-- On one line -->
 <header>
   <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
@@ -256,10 +256,8 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
     </div>
   </nav>
 </header>
-{{< /example >}}
-
-##### Two-lined title
-{{< example class="p-0">}}
+<br>
+<!-- On two lines -->
 <header>
   <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
