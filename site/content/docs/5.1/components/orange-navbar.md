@@ -549,7 +549,11 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
 
 #### With search box
 
-You can have a search input into your Global Header. This one will appear different from your regular search input. 
+You can have a search input into your Global Header. This one will appear different from your regular search input.
+
+{{< callout warning >}}
+For accessibility purposes, do not forget to add the `role="search"` on the input itself.
+{{< /callout >}}
 
 {{< example class="p-0">}}
 <header>
@@ -584,7 +588,7 @@ You can have a search input into your Global Header. This one will appear differ
         </ul>
       </div>
       <form class="d-flex d-none d-md-flex pt-1">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" role="search" placeholder="Search" aria-label="Search">
       </form>
     </div>
   </nav>
@@ -600,7 +604,7 @@ You should consider having a **responsive SVG logo**. In order to do so, you may
 
 If you do not intend to use your own SVG, you should explore the [DOM solution]({{< docsref "/guidelines/logos#using-semantic-markup" >}}) and therefore do as if you had a [title on one or two lines]({{< ref "#global-header-with-title" >}}).
 
-The latter may be the preferred way to do a custom logo, still.
+The latter may be the preferred way to do a custom logo, still, as it's *really* not recommended to use anything other than the Master logo.
 {{< /callout >}}
 
 {{< example class="p-0">}}
