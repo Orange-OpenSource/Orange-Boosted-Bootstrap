@@ -53,8 +53,6 @@ Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-star
 [![npm version](https://img.shields.io/npm/v/boosted)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/boosted)](https://www.nuget.org/packages/boosted/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
 [![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/css/boosted.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/css/boosted.min.css)
 [![CSS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/css/boosted.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)

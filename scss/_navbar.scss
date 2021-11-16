@@ -161,8 +161,8 @@
 //
 
 .navbar-text {
-  padding-top: add($nav-link-padding-y, $border-width * 2);
-  padding-bottom: add($nav-link-padding-y, $border-width * 2);
+  padding-top: add($nav-link-padding-y, $border-width * 2); // Boosted mod
+  padding-bottom: add($nav-link-padding-y, $border-width * 2); // Boosted mod
 }
 
 
@@ -221,8 +221,8 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: $navbar-icon-size;
-  height: $navbar-icon-size;
+  width: $navbar-icon-size; // Boosted mod
+  height: $navbar-icon-size; // Boosted mod
   vertical-align: middle;
   background-image: escape-svg($navbar-toggler-icon-bg); // Boosted mod
   background-repeat: no-repeat;
@@ -268,8 +268,10 @@
               bottom: -$navbar-padding-bottom;
               left: $nav-link-padding-y;
             }
+            // End mod
           }
 
+          // Boosted mod
           .nav-item {
             font-size: $font-size-base;
             border: 0;

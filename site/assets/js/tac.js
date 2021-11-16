@@ -38,19 +38,56 @@
     alert.querySelector('.tarteaucitronDeny').innerHTML = tarteaucitron.lang.denyAll
   }, { once: true })
 
-  window.addEventListener('tac.open_panel', function () {
-    document.querySelectorAll('#tarteaucitronServices_api button').forEach(function (button) {
-      button.classList.add('btn', 'btn-sm', 'ms-2')
-    })
-  }, { once: true })
+  window.addEventListener('tac.open_panel',
+    function () {
+      document.querySelectorAll('#tarteaucitronServices_api button').forEach(function (button) {
+        button.classList.add('btn', 'btn-sm', 'ms-2')
+      })
+      var allowConsentButton = document.querySelector('#tarteaucitronAllAllowed')
+      var denyConsentButton = document.querySelector('#tarteaucitronAllDenied')
+      var checkboxes = document.querySelectorAll('.form-check-input')
 
-  document.addEventListener('googletagmanager_added', function () {
-    var ask = document.querySelector('#googletagmanagerLine .tarteaucitronAsk')
-    var choiceEvent = 'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
-    var toggle = document.createRange().createContextualFragment('<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="' + choiceEvent + '"><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label></div>')
-    ask.innerHTML = ''
-    ask.append(toggle)
-  }, { once: true })
+      allowConsentButton.addEventListener('click', function () {
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (!checkboxes.checked) {
+            checkboxes[i].checked = true
+          }
+        }
+      })
+      denyConsentButton.addEventListener('click', function () {
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes.checked !== true) {
+            checkboxes[i].checked = false
+          }
+        }
+      })
+    },
+    { once: true }
+  )
+
+  document.addEventListener(
+    'googletagmanager_added',
+    function () {
+      var ask = document.querySelector(
+        '#googletagmanagerLine .tarteaucitronAsk'
+      )
+      var choiceEvent =
+        'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
+      var toggle = document
+        .createRange()
+        .createContextualFragment(
+          '<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="' +
+            choiceEvent +
+            '"' +
+            ((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!googletagmanager=true' ? 'checked' : '') +
+            '><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label>' +
+            '<input id="googletagmanagerDenied" class="d-none"></div>'
+        )
+      ask.innerHTML = ''
+      ask.append(toggle)
+    },
+    { once: true }
+  )
 })()
 
 if (typeof tarteaucitron !== 'undefined') {
