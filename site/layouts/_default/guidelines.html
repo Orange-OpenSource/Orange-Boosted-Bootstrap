@@ -16,7 +16,7 @@
       </aside>
 
       <main class="bd-main bd-guidelines order-1 {{ if eq .Title "Typography" }}bd-typography{{ else if eq .Title "Alerts" }}bd-alerts{{ end }}">
-        <div class="bd-intro pt-md-4 ps-lg-4">
+        <div class="bd-intro pt-md-5 pt-lg-4 ps-lg-4">
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
           <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
           {{ partial "ads" . }}
@@ -24,7 +24,7 @@
 
         {{ if (eq .Page.Params.toc true) }}
           <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
-            <strong class="d-block h6 my-2 ps-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
+            <strong class="d-block h6 my-2 ps-lg-3 pb-2 border-bottom border-light border-1">On this page</strong>
             <div class="ps-lg-3">{{ .TableOfContents }}</div>
           </div>
         {{ end }}
