@@ -338,7 +338,7 @@ Here is an example for star rating. Simply add `.star-rating` to a `<fieldset>`,
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
 
-  <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden" />
+  <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden" checked="" />
   <label for="excellent" title="Excellent">
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
@@ -373,7 +373,7 @@ You can reduce the size of stars to 20px (also based on default font-size) by ad
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
 
-  <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden" />
+  <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden" checked="" />
   <label for="excellent2" title="Excellent">
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
@@ -408,12 +408,44 @@ Here is the dark version of the component. Just add `.star-rating-dark`.
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
 
-  <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden" />
+  <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden" checked="" />
   <label for="excellent3" title="Excellent">
     <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
   </label>
 </fieldset>
 </form>
+{{< /example >}}
+
+To rate outside a form, for example in a card to rate a product, add the booleans `disabled` on the fieldset and `checked` to the input you want to be selected.
+
+{{< example >}}
+<fieldset class="star-rating" disabled>
+  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden" />
+  <label for="terrible4" title="Terrible">
+    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden" />
+  <label for="bad4" title="Bad">
+    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked="" />
+  <label for="mixed4" title="Mixed">
+    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" />
+  <label for="good4" title="Good">
+    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+
+  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden" />
+  <label for="excellent4" title="Excellent">
+    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
+  </label>
+</fieldset>
+<span class="visually-hidden">3 stars</span>
 {{< /example >}}
 
 <!-- End mod -->

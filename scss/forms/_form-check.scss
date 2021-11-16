@@ -349,6 +349,9 @@
   &:focus-within {
     outline: $black solid .125rem;
   }
+  &[disabled] {
+    pointer-events: none;
+  }
   svg {
     width: 1em;
     height: 1em;
@@ -390,6 +393,9 @@
 .star-rating-dark {
   &:focus-within {
     outline: $white solid .125rem;
+  }
+  > label {
+    color: $brand-orange;
   }
   > input:checked ~ label {
     color: $gray-700;
