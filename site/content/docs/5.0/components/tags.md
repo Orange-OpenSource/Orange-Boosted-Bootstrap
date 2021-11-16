@@ -10,13 +10,34 @@ toc: true
 
 {{< example >}}
 <span class="tag">Label</span>
+<span class="tag tag-icon">
+  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  Label
+</span>
+<span class="tag tag-remove">
+  Label
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+  </svg>
+</span>
+<span class="tag tag-remove">
+  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  Label
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+  </svg>
+</span>
 {{< /example >}}
 
 ## With icon
 
 {{< example >}}
-<span class="tag">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+<span class="tag tag-icon">
+  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
@@ -38,7 +59,7 @@ toc: true
 
 {{< example >}}
 <span class="tag tag-remove">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
@@ -46,6 +67,12 @@ toc: true
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
   </svg>
 </span>
+{{< /example >}}
+
+## Disabled state
+
+{{< example >}}
+<span class="tag disabled">Label</span>
 {{< /example >}}
 
 ## Sizes

@@ -3,6 +3,7 @@
 .tag {
   @extend .badge;
   @include font-size($tag-font-size);
+  padding: add($badge-padding-y, 3px) $badge-padding-x add($badge-padding-y, 3px); // Boosted mod
   color: $tag-color;
 
   cursor: if($enable-button-pointers, pointer, null);
@@ -28,13 +29,22 @@
   }
 
   > svg {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
+}
+
+.tag-icon,
+.tag-remove {
+  padding: add($badge-padding-y, 1px) $badge-padding-x add($badge-padding-y, 1px); // Boosted mod
+}
+
+.tag-icon {
+  padding-bottom: subtract($badge-padding-y, 1px);
 }
 
 .tag-remove {
   padding-right: 5px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   .remove {
     &:hover {
       padding: 2px;
@@ -54,6 +64,8 @@
     $tag-border-radius-lg,
     $tag-line-height-lg
   );
+  padding-top: add($tag-padding-y-lg, 1px); // Boosted mod
+  @include font-size($tag-font-size-lg);
   // stylelint-disable-next-line property-disallowed-list
   border-radius: $tag-border-radius-lg;
 }
