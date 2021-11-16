@@ -26,6 +26,7 @@ Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` a
 
 Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
 
+<!--Boosted mod: 9x16 aspect ratio-->
 ```html
 <!-- 21:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-21by9">
@@ -34,6 +35,11 @@ Aspect ratios can be customized with modifier classes. By default the following 
 
 <!-- 16:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+
+<!-- 9:16 aspect ratio -->
+<div class="embed-responsive embed-responsive-9by16">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
 
@@ -54,6 +60,7 @@ Within `_variables.scss`, you can change the aspect ratios you want to use. Here
 $embed-responsive-aspect-ratios: (
   (21 9),
   (16 9),
+  (9 16),
   (4 3),
   (1 1)
 ) !default;
