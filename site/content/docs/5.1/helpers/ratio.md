@@ -31,6 +31,9 @@ Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an asp
 Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
 
 {{< example class="bd-example-ratios" >}}
+<div class="ratio ratio-9x16">
+  <div>9x16</div>
+</div>
 <div class="ratio ratio-1x1">
   <div>1x1</div>
 </div>
