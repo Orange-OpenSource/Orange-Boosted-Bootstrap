@@ -26,6 +26,7 @@ Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` a
 
 Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
 
+<!--Boosted mod: 9x16 aspect ratio-->
 ```html
 <!-- 21:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-21by9">
