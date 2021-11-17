@@ -103,11 +103,12 @@ Change the line height with `.lh-*` utilities.
 
 ## Line length
 
-Limit the line length with `.ll-*` utilities. It applies `max-width` rule to an element with a width based on `ch` dimension.
+Limit the line length with `.ll-*` utilities. It applies `max-width` rule to an element with a width based on `ch` dimension. It only applies on [block-level elements](https://developer.mozilla.org/fr/docs/Web/HTML/Block-level_elements) and not on [inline elements](https://developer.mozilla.org/fr/docs/Web/HTML/Inline_elements).
 
 {{< example >}}
 <p class="ll-sm">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 <p class="ll-md">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p><span class="ll-md"><strong>Inline element.</strong> This is a long paragraph written to show how the line-length of an inline element isn't affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</span></p>
 <p class="ll-md fs-3">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 {{< /example >}}
 

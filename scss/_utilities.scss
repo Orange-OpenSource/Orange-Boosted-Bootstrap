@@ -482,8 +482,8 @@ $utilities: map-merge(
       property: max-width,
       class: ll,
       values: (
-        sm: $small-line-length,
-        md: $medium-line-length,
+        sm: $line-length-sm,
+        md: $line-length-md,
       )
     ),
     "text-align": (
