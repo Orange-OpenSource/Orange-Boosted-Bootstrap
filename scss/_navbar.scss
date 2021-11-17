@@ -121,8 +121,8 @@
 
   &::before {
     position: absolute;
-    top: $navbar-brand-logo-height / 2;
-    left: $navbar-brand-logo-height / 2;
+    top: $navbar-brand-logo-height * .5;
+    left: $navbar-brand-logo-height * .5;
     width: $navbar-brand-logo-expanded-height;
     height: $navbar-brand-logo-expanded-height;
     content: "";
@@ -318,7 +318,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  margin: map-get($spacers, 1) / 2 0 map-get($spacers, 1) / 2 .3125rem;
+  margin: map-get($spacers, 1) * .5 0 map-get($spacers, 1) * .5 .3125rem;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
@@ -369,7 +369,7 @@
   height: $navbar-supra-icon-size; // Boosted mod: create a var for the toggler size
   vertical-align: middle;
   content: "";
-  background: 50% / 100% 100% no-repeat;
+  background: divide(50%, 100%) 100% no-repeat;
 
   // Boosted mod
   @include media-breakpoint-up(sm) {
@@ -403,7 +403,7 @@
         }
 
         .navbar-brand {
-          margin: $spacer / 10 $spacer 1rem 0;
+          margin: $spacer * .1 $spacer 1rem 0;
 
           img {
             width: $navbar-brand-logo-expanded-height;
@@ -446,7 +446,7 @@
           .navbar-toggler {
             padding: map-get($spacers, 1);
             margin-top: -#{map-get($spacers, 2)};
-            border-width: $border-width / 2;
+            border-width: $border-width * .5;
           }
           // end mod
         }

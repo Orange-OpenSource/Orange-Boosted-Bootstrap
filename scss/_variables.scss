@@ -130,7 +130,7 @@ $yiq-contrasted-threshold:  4.5 !default;
 $yiq-text-dark:             $black !default;
 $yiq-text-light:            $white !default;
 
-// A list of pre-calculated numbers of pow(($value / 255 + .055) / 1.055, 2.4). (from 0 to 255)
+// A list of pre-calculated numbers of pow(divide((divide($value, 255) + .055), 1.055), 2.4). (from 0 to 255)
 $luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003 .0033 .0037 .004 .0044 .0048 .0052 .0056 .006 .0065 .007 .0075 .008 .0086 .0091 .0097 .0103 .011 .0116 .0123 .013 .0137 .0144 .0152 .016 .0168 .0176 .0185 .0194 .0203 .0212 .0222 .0232 .0242 .0252 .0262 .0273 .0284 .0296 .0307 .0319 .0331 .0343 .0356 .0369 .0382 .0395 .0409 .0423 .0437 .0452 .0467 .0482 .0497 .0513 .0529 .0545 .0561 .0578 .0595 .0612 .063 .0648 .0666 .0685 .0704 .0723 .0742 .0762 .0782 .0802 .0823 .0844 .0865 .0887 .0908 .0931 .0953 .0976 .0999 .1022 .1046 .107 .1095 .1119 .1144 .117 .1195 .1221 .1248 .1274 .1301 .1329 .1356 .1384 .1413 .1441 .147 .15 .1529 .1559 .159 .162 .1651 .1683 .1714 .1746 .1779 .1812 .1845 .1878 .1912 .1946 .1981 .2016 .2051 .2086 .2122 .2159 .2195 .2232 .227 .2307 .2346 .2384 .2423 .2462 .2502 .2542 .2582 .2623 .2664 .2705 .2747 .2789 .2831 .2874 .2918 .2961 .3005 .305 .3095 .314 .3185 .3231 .3278 .3325 .3372 .3419 .3467 .3515 .3564 .3613 .3663 .3712 .3763 .3813 .3864 .3916 .3968 .402 .4072 .4125 .4179 .4233 .4287 .4342 .4397 .4452 .4508 .4564 .4621 .4678 .4735 .4793 .4851 .491 .4969 .5029 .5089 .5149 .521 .5271 .5333 .5395 .5457 .552 .5583 .5647 .5711 .5776 .5841 .5906 .5972 .6038 .6105 .6172 .624 .6308 .6376 .6445 .6514 .6584 .6654 .6724 .6795 .6867 .6939 .7011 .7084 .7157 .7231 .7305 .7379 .7454 .7529 .7605 .7682 .7758 .7835 .7913 .7991 .807 .8148 .8228 .8308 .8388 .8469 .855 .8632 .8714 .8796 .8879 .8963 .9047 .9131 .9216 .9301 .9387 .9473 .956 .9647 .9734 .9823 .9911 1;
 
 // Characters which are escaped by the escape-svg function
@@ -268,7 +268,7 @@ $container-fluid-margin-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           $spacer / 2 !default;
+$grid-gutter-width:           $spacer * .5 !default;
 $grid-gutter-breakpoint:      "md" !default; // Boosted mod
 $grid-row-columns:            6 !default;
 
@@ -277,8 +277,8 @@ $grid-row-columns:            6 !default;
 // Define common padding and border radius sizes and more.
 
 // stylelint-disable function-disallowed-list
-$line-height-lg:              calc(20 / 18) !default;
-$line-height-sm:              calc(16 / 14) !default;
+$line-height-lg:              calc(divide(20, 18)) !default;
+$line-height-sm:              calc(divide(16, 14)) !default;
 // stylelint-enable function-disallowed-list
 
 $border-width:                .125rem !default;
@@ -312,6 +312,7 @@ $embed-responsive-aspect-ratios: join(
   (
     (21 9),
     (16 9),
+    (9 16), // Boosted mod
     (4 3),
     (1 1),
   ),
@@ -343,7 +344,7 @@ $font-weight-bolder:          $font-weight-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.125 !default; // 18px
-$letter-spacing-base:         map-get($spacers, 2) / -100 !default; // -0.1px
+$letter-spacing-base:         map-get($spacers, 2) * -.01 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
 $h2-font-size:                $font-size-base * 1.875 !default;   // 30px
@@ -360,10 +361,10 @@ $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
 // stylelint-disable function-disallowed-list
 $h1-line-height:              1 !default;
-$h2-line-height:              calc(32 / 30) !default;
-$h3-line-height:              calc(26 / 24) !default;
-$h4-line-height:              calc(22 / 20) !default;
-$h5-line-height:              calc(20 / 18) !default;
+$h2-line-height:              calc(divide(32, 30)) !default;
+$h3-line-height:              calc(divide(26, 24)) !default;
+$h4-line-height:              calc(divide(22, 20)) !default;
+$h5-line-height:              calc(divide(20, 18)) !default;
 $h6-line-height:              $line-height-base !default;
 // stylelint-enable function-disallowed-list
 
@@ -394,7 +395,7 @@ $display-line-height:         1 !default;
 $lead-font-size:              $font-size-xlg !default; // Boosted mod
 $lead-font-weight:            400 !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
-$lead-line-height:            calc(30 / 20) !default; // Boosted mod
+$lead-line-height:            calc(divide(30, 20)) !default; // Boosted mod
 $lead-letter-spacing:         $letter-spacing-base * 2.5 !default; // Boosted mod
 
 $small-font-size:             $font-size-sm !default; // Boosted mod → 14px
@@ -407,11 +408,11 @@ $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-xlg !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
-$blockquote-line-height:      calc(30 / 20) !default; // Boosted mod
+$blockquote-line-height:      calc(divide(30, 20)) !default; // Boosted mod
 $blockquote-letter-spacing:   -.015625rem !default; // Boosted mod
 
 $hr-border-color:             $gray-300 !default;
-$hr-border-width:             $border-width / 2 !default;
+$hr-border-width:             $border-width * .5 !default;
 
 $mark-padding:                .2em !default;
 
@@ -432,8 +433,8 @@ $hr-margin-y:                 $spacer !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-cell-padding-y:        .875rem !default;
-$table-cell-padding-x:        $spacer / 2 !default;
-$table-cell-padding-y-sm:     subtract($spacer / 2, $border-width / 2) !default;
+$table-cell-padding-x:        $spacer * .5 !default;
+$table-cell-padding-y-sm:     subtract($spacer * .5, $border-width * .5) !default;
 $table-cell-padding-x-sm:     $table-cell-padding-x !default;
 
 $table-cell-line-height:      1.25 !default; // Boosted mod
@@ -445,7 +446,7 @@ $table-hover-color:           $table-color !default;
 $table-hover-bg:              $gray-300 !default; // Boosted mod: #eee on white bg
 // $table-active-bg:             $gray-400 !default; // Boosted mod
 
-$table-border-width:          $border-width / 2 !default; // Boosted mod: 1px
+$table-border-width:          $border-width * .5 !default; // Boosted mod: 1px
 $table-border-color:          $gray-500 !default;
 
 // $table-head-bg:               $white !default; // Boosted mod
@@ -592,9 +593,9 @@ $input-height-border:                   $input-border-width * 2 !default;
 
 $input-height-inner:                    add($input-btn-font-size * $input-btn-line-height, $input-btn-padding-y * 2) !default;
 $input-height-inner-half:               add($input-line-height * .5em, $input-padding-y) !default;
-$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y / 2) !default;
-$input-height-inner-sm:                 add($input-btn-font-size-sm * (16 / 14), $input-btn-padding-y-sm * 2) !default; // Boosted mod
-$input-height-inner-lg:                 add($input-btn-font-size-lg * (20 / 18), $input-btn-padding-y-lg * 2) !default; // Boosted mod
+$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y * .5) !default;
+$input-height-inner-sm:                 add($input-btn-font-size-sm * divide(16, 14), $input-btn-padding-y-sm * 2) !default; // Boosted mod
+$input-height-inner-lg:                 add($input-btn-font-size-lg * divide(20, 18), $input-btn-padding-y-lg * 2) !default; // Boosted mod
 
 $input-height:                          add($input-height-inner, $input-height-border) !default;
 $input-height-sm:                       add($input-height-inner-sm, $input-height-border) !default;
@@ -669,7 +670,7 @@ $custom-switch-height:                          $custom-control-indicator-size *
 // $custom-switch-indicator-border-radius:         null !default; // Boosted mod : not rounded
 // Boosted mod
 // $custom-switch-indicator-size:                  subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default;
-$custom-switch-indicator-width:                 subtract($custom-switch-width / 2, $custom-control-indicator-border-width * 2) !default;
+$custom-switch-indicator-width:                 subtract($custom-switch-width * .5, $custom-control-indicator-border-width * 2) !default;
 $custom-switch-indicator-height:                subtract($custom-switch-height, $custom-control-indicator-border-width * 2) !default;
 // end mod
 $custom-switch-indicator-bg-color:              $white !default;
@@ -826,7 +827,7 @@ $nav-pills-link-active-color:       $component-active-bg !default;
 $nav-pills-link-active-bg:          $primary !default;
 
 $nav-divider-color:                 $gray-200 !default;
-$nav-divider-margin-y:              $spacer / 2 !default;
+$nav-divider-margin-y:              $spacer * .5 !default;
 
 
 // Navbar
@@ -842,7 +843,7 @@ $navbar-expanded-minimized-padding-y: $navbar-padding-y !default; // Boosted mod
 $navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             map-get($spacers, 4) !default;
 $navbar-brand-logo-expanded-height:    3.125rem !default;
-$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
+$navbar-supra-padding-y:               $navbar-brand-logo-height * .1 !default;
 $navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
 $navbar-supra-icon-size:               1.5625rem !default;
 $navbar-transition-duration:           .2s !default;
@@ -897,7 +898,7 @@ $navbar-toggler-icon-hover:         url("data:image/svg+xml,<svg xmlns='http://w
 
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-y:                .5rem !default; // Boosted mod
-$dropdown-padding-x:                $spacer / 2 !default; // Boosted mod
+$dropdown-padding-x:                $spacer * .5 !default; // Boosted mod
 $dropdown-spacer:                   -2px !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
@@ -1002,7 +1003,7 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 
 $card-img-overlay-padding:          $spacer !default; // Boosted mod
 
-$card-group-margin:                 $grid-gutter-width / 2 !default;
+$card-group-margin:                 $grid-gutter-width * .5 !default;
 $card-deck-margin:                  map-get($spacers, 4) !default;
 
 $card-columns-count:                3 !default;
@@ -1099,8 +1100,8 @@ $badge-font-size-xlg:               $font-size-lg !default; // Boosted mod
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .1875rem !default;
 $badge-padding-x:                   map-get($spacers, 2) !default; // Boosted mod
-$badge-padding-y-lg:                $spacer / 10 !default; // Boosted mod
-$badge-padding-x-lg:                $badge-padding-x / 2 !default; // Boosted mod
+$badge-padding-y-lg:                $spacer * .1 !default; // Boosted mod
+$badge-padding-x-lg:                $badge-padding-x * .5 !default; // Boosted mod
 $badge-border-radius:               $border-radius !default;
 
 $badge-transition:                  $btn-transition !default;
@@ -1115,16 +1116,16 @@ $badge-pill-border-radius:          $border-radius !default;
 
 // Padding applied to the modal body
 // Boosted mod
-$modal-inner-padding-y:             $spacer / 2 !default;
+$modal-inner-padding-y:             $spacer * .5 !default;
 $modal-inner-padding-x:             $spacer !default;
 $modal-inner-padding:               $modal-inner-padding-y $modal-inner-padding-x !default;
 $modal-content-padding-y:           $spacer !default;
 // End mod
 
 // Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between:       $spacer / 2 !default; // Boosted mod
+$modal-footer-margin-between:       $spacer * .5 !default; // Boosted mod
 
-$modal-dialog-margin:               $spacer / 2 !default; // Boosted mod
+$modal-dialog-margin:               $spacer * .5 !default; // Boosted mod
 $modal-dialog-margin-y-sm-up:       $spacer * 1.5 !default; // Boosted mod
 
 $modal-title-line-height:           $line-height-base !default;
@@ -1171,7 +1172,7 @@ $alert-border-width:                $border-width !default;
 $alert-logo-size:                   1.625rem !default;
 $alert-logo-size-sm:                1.0625rem !default;
 $alert-close-icon-size:             .875rem !default;
-$alert-icon-margin-y:               $spacer / 10 !default;
+$alert-icon-margin-y:               $spacer * .1 !default;
 // end mod
 
 // $alert-bg-level:                    0 !default; // Boosted mod
@@ -1191,8 +1192,8 @@ $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
 // Boosted mod
-$progress-height-sm:                $spacer / 2 !default;
-$progress-height-xs:                $spacer / 4 !default;
+$progress-height-sm:                $spacer * .5 !default;
+$progress-height-xs:                $spacer * .25 !default;
 // End mod
 
 
@@ -1290,9 +1291,10 @@ $carousel-transition:                transform $carousel-transition-duration eas
 
 // Spinners
 
-$spinner-width:         $spacer * 2 !default;         // Boosted mod
-$spinner-height:        $spinner-width !default;
-$spinner-border-width:  $border-width * 3 !default;   // Boosted mod
+$spinner-width:           $spacer * 2 !default;         // Boosted mod
+$spinner-height:          $spinner-width !default;
+$spinner-vertical-align:  -.125em !default;
+$spinner-border-width:    $border-width * 3 !default;   // Boosted mod
 
 $spinner-width-sm:        $spacer !default;           // Boosted mod
 $spinner-height-sm:       $spinner-width-sm !default;
@@ -1309,7 +1311,7 @@ $spinner-border-width-lg: $border-width * 4 !default;
 
 // Boosted mod: relying on SVG instead of font
 $close-icon-size:         add($spacer * 2, $border-width * 2) !default;
-$close-icon-offset:       $spacer / 2 !default;
+$close-icon-offset:       $spacer * .5 !default;
 $close-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $close-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $close-icon-hover:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
@@ -1324,8 +1326,8 @@ $close-icon-stroke-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 $code-font-size:                    87.5% !default;
 $code-color:                        $gray-900 !default;
 
-$kbd-padding-y:                     map-get($spacers, 2) / 10 !default; // Boosted mod
-$kbd-padding-x:                     map-get($spacers, 2) / 10 !default; // Boosted mod
+$kbd-padding-y:                     map-get($spacers, 2) * .1 !default; // Boosted mod
+$kbd-padding-x:                     map-get($spacers, 2) * .1 !default; // Boosted mod
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;

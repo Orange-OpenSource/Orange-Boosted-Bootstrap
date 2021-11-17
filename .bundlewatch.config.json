@@ -18,7 +18,7 @@
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "36.1 kB"
+      "maxSize": "36.2 kB"
     },
     {
       "path": "./dist/css/boosted.min.css",
@@ -30,7 +30,7 @@
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "26.2 kB"
+      "maxSize": "26.7 kB"
     },
     {
       "path": "./dist/js/boosted.js",

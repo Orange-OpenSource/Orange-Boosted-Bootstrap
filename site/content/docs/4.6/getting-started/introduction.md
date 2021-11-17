@@ -110,9 +110,17 @@ Be sure to have your pages set up with the latest design and development standar
       If you are not authorized to used it, don't include the orangeHelvetica.css.
       See NOTICE.txt for more information.
     -->
-    <link rel="preload" href="fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Option 1: Use a CDN -->
+    <link href="{{< param "cdn.HelvNeue55_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue55_W1G_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.HelvNeue75_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue75_W1G_hash" >}}" crossorigin="anonymous">
     <link rel="stylesheet" href="{{< param "cdn.helveticacss" >}}" integrity="{{< param "cdn.helveticacss_hash" >}}" crossorigin="anonymous">
+
+    <!-- Option 2: Embed the fonts>
+    <link rel="preload" href="dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/orangeHelvetica.min.css" crossorigin="anonymous">
+    -->
+
     <!--
       Orange Icons
       Copyright (C) 2016 - {{< year >}} Orange SA All rights reserved
@@ -220,7 +228,7 @@ Stay up to date on the development of Bootstrap and reach out to the community w
 - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
 - Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
 - Join [the official Slack room]({{< param slack >}}).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
+- Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.
 

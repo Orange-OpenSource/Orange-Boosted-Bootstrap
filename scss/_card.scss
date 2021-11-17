@@ -43,7 +43,7 @@
 
   // Boosted mod
   > .list-group + .card-footer {
-    padding-top: $card-spacer-y / 2;
+    padding-top: $card-spacer-y * .5;
   }
   // End mod
 }
@@ -70,7 +70,7 @@
 }
 
 .card-subtitle {
-  margin-top: -$card-spacer-y / 2;
+  margin-top: -$card-spacer-y * .5;
   margin-bottom: 0;
 }
 
@@ -124,15 +124,15 @@
 //
 
 .card-header-tabs {
-  margin-right: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x * .5;
   margin-bottom: -$card-spacer-y;
-  margin-left: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x * .5;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -$card-spacer-x / 2;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x * .5;
+  margin-left: -$card-spacer-x * .5;
 }
 
 // Card image
@@ -291,9 +291,9 @@
     }
 
     @include media-breakpoint-up(md) {
-      border-width: 0 0 $border-width / 2;
+      border-width: 0 0 $border-width * .5;
       &:first-child {
-        border-width: $border-width / 2 0;
+        border-width: $border-width * .5 0;
       }
     }
   }
@@ -307,7 +307,7 @@
     a {
       display: flex;
       width: add(100%, $card-accordion-spacer * 2);
-      padding: $card-spacer-y;
+      padding: $card-accordion-spacer;
       margin: 0 -#{$card-accordion-spacer};
       @include font-size($h3-font-size);
       line-height: $h3-line-height;
@@ -338,7 +338,7 @@
 
     .btn-sm {
       width: add(100%, $card-spacer-y * 2);
-      padding: map-get($spacers, 2);
+      padding: $card-spacer-y;
       margin: 0 -#{$card-spacer-y};
       @include font-size($h5-font-size);
       line-height: $h5-line-height;
@@ -347,7 +347,7 @@
 
     .btn-lg {
       width: add(100%, map-get($spacers, 3) * 2);
-      padding: $card-accordion-spacer;
+      padding: map-get($spacers, 3);
       margin: 0 -#{map-get($spacers, 3)};
       @include font-size($h2-font-size);
       line-height: $h2-line-height;

@@ -135,7 +135,7 @@ and prefer using [`.text-*` and `.bg-*` utilities]({{< docsref "/utilities/color
   <h3 class="h4 col col-md-4 col-lg-2 mb-0">{{ $category.name | title }}</h3>
   <div class="col col-md-8 col-lg-10 row row-cols-2 row-cols-md-4 row-cols-lg-6">
     {{ range $color := $category.colors }}
-    <figure class="col" role="figure" aria-label="{{ $color.name | title }}">
+    <figure class="col" aria-label="{{ $color.name | title }}">
       <svg width="100%" height="6rem" role="img" aria-label="{{ $color.name | title }}">
         <rect fill="{{ $color.hex }}" width="100%" height="100%"/>
       </svg>

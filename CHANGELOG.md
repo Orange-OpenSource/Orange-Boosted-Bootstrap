@@ -1,3 +1,35 @@
+## [4.6.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.6.0...v4.6.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* **#690:** some links were broken in 'Migrating to Boosted v4' page ([#698](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/698)) ([e2f37fb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e2f37fb8a0ef5545d06b3e18a2a65b0c612d00cd)), closes [#690](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/690)
+* **#728:** add rtlcss_hash into generate-sri.js in order to update the integrity automatically ([#729](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/729)) ([32d921b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/32d921bb020206712d03cc32cc9e3b55994c1dc9)), closes [#728](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/728)
+* **#735:** separate local fonts from CDN in the starter template ([a96a7dc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a96a7dcc4164caa577ecc44c592e86c89b19aedb)), closes [#735](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/735)
+* **#773:** vertical alignment of icons within buttons ([#851](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/851)) ([57cb7a2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/57cb7a2426fd511238d355c0ba7071bac1e3b53e)), closes [#773](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/773)
+* **badges:** use functional colors again for variations ([7aebc31](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7aebc31e64b88861c76ef91a24302ace3de1a757))
+* **ci:** 'if' is defined two times in JS GitHub CI workflow ([#809](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/809)) ([6138680](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6138680a38b6cd76f555b8d95cb3c294022d38a4))
+* correct cross-env-shell that fails on Windows when run test is executed ([ac1c4a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ac1c4a4ee2c90ffc979db1632909aabc74fba231))
+* **docs:** some '[comment]: boosted mod' appear in the documentation ([efa7ec6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/efa7ec6a3432631a73742a7335e177783d149a15))
+* **dropdowns:** stop focusing the first item when opening ([2808bed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2808bedbf19b38211464b151dfacab41ee661ddf))
+* **icons:** accessibility typo… ([0fc54c8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0fc54c853dd9d5ad5bc8bacfbc2ae0d1c2e1b562))
+* **orange navbar:** change 1px border bottom color ([#808](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/808)) ([fbd37e9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fbd37e974d759376c528f603dc818aa73cca5821))
+
+
+### Features
+
+* **grid:** use subtract function to calculate max-width of fluid container to allow fixed unit in container-fluid-margin-widths definition ([f3bb99a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f3bb99aa9825bc01fefdee086eb89e08fd9c6df1))
+* **modal:** Orange branded :tada: ([7f7da39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7f7da39230515c483be310176eb185b892353538))
+* **utilities:** add .bg-supporting-* utilities ([f5f152c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f5f152c3d16b987b2af4c1603cf3fd3614466034))
+* **close** refactored to use Solaris "Delete" icon, to match UI Kit ([3456453c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/615/commits/3456453c682dafe16c13a7654eb8d1046ba25552)
+
+### Chore
+
+- **docs**: forgotten date occurencies ([2603a13](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2603a139ca1e7781f317b20c5d817d320cd5b6b3))
+- **docs**: use `{{ < year >}}` shortcode in getting started ([a2b6646](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2b66469480c5c3c25636a4a23d51d2b277d020d))
+
+
+
 <a name="4.6.0"></a>
 # [4.6.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.3...v4.6.0) (2021-01-19)
 
@@ -36,7 +68,7 @@ See below for details.
 * **variables:** theme-color-interval up to `10%` to ease color conversion from v5 ([47b8471](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/47b84713e6fb2e117f8e349547417753c0cc628a))
 
 
-### :Chore
+### Chore
 
 - **docs**: moved to Hugo ([#575](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/575))
 - **grid**: add deprecation warnings for `make-gutter()` and `make-container-fluid-widths()` since they won't land in v5 ([#562](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/562)

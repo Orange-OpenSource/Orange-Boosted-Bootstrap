@@ -32,6 +32,10 @@ const files = [
     configPropertyName: 'css_hash'
   },
   {
+    file: 'dist/css/boosted-rtl.min.css',
+    configPropertyName: 'rtlcss_hash'
+  },
+  {
     file: 'dist/css/orangeIcons.min.css',
     configPropertyName: 'iconcss_hash'
   },

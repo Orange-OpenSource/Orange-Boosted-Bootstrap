@@ -1,18 +1,19 @@
 /*!
-  * Boosted v4.6.0 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors
-  * Copyright 2014-2021 Orange
+  * Boosted v4.6.1 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2021 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap megamenu.js v4.6.0 (https://boosted.orange.com)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  **
+  * This a fork of Bootstrap:
+  * Bootstrap megamenu.js v4.6.1 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.MegaMenu = factory(global.jQuery, global.Util));
-}(this, (function ($, Util) { 'use strict';
+})(this, (function ($, Util) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -44,9 +45,9 @@
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.6.0';
+  var VERSION = '4.6.1';
   var DATA_KEY = 'bs.megamenu';
-  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -91,7 +92,7 @@
       var _this = this;
 
       this._element = element;
-      this._parent = $__default['default'](this._element).parents(SELECTOR_PARENT);
+      this._parent = $__default["default"](this._element).parents(SELECTOR_PARENT);
       this._$parentNavbarClasses = this._parent.attr('class'); // default if no class navbar-expand-* navbar is always mobile
 
       this._$mediaQuery = window.matchMedia('(min-width: 0px)');
@@ -108,11 +109,11 @@
         this._$mediaQuery = window.matchMedia("(max-width: " + BreakPoints[this._$breakpoint] + "px)");
       }
 
-      this._$navLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK);
-      this._$goForwardLinks = $__default['default'](this._element).find(SELECTOR_MEGAMENU_NAV).prev(SELECTOR_NAV_LINK);
-      this._$goBackLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK_BACK);
-      this._$topCollapseMenus = $__default['default'](this._element).find(SELECTOR_MEGAMENU_PANEL);
-      this._$navLinkCollapses = $__default['default'](this._element).find(SELECTOR_NAV_LINK_COLLAPSE);
+      this._$navLinks = $__default["default"](this._element).find(SELECTOR_NAV_LINK);
+      this._$goForwardLinks = $__default["default"](this._element).find(SELECTOR_MEGAMENU_NAV).prev(SELECTOR_NAV_LINK);
+      this._$goBackLinks = $__default["default"](this._element).find(SELECTOR_NAV_LINK_BACK);
+      this._$topCollapseMenus = $__default["default"](this._element).find(SELECTOR_MEGAMENU_PANEL);
+      this._$navLinkCollapses = $__default["default"](this._element).find(SELECTOR_NAV_LINK_COLLAPSE);
       this._config = config;
 
       if (typeof this._config.noFocus === 'undefined') {
@@ -132,9 +133,9 @@
         } else {
           _this._removeAriaAttributes(_this._element);
 
-          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).first().attr('style', null);
-          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).show();
-          $__default['default'](_this._element).height('auto');
+          $__default["default"](_this._element).find(SELECTOR_NAV_MENU).first().attr('style', null);
+          $__default["default"](_this._element).find(SELECTOR_NAV_MENU).show();
+          $__default["default"](_this._element).height('auto');
         }
       });
     } // getters
@@ -163,7 +164,7 @@
         this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
       }
 
-      $__default['default'](this._element).on('hidden.bs.collapse', function (event) {
+      $__default["default"](this._element).on('hidden.bs.collapse', function (event) {
         return _this2._handleCollapseToggle(event);
       });
 
@@ -173,21 +174,21 @@
     };
 
     _proto._addAriaAttributes = function _addAriaAttributes(element) {
-      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
-      var $parents = $__default['default'](element).find(SELECTOR_CURRENT).parents(SELECTOR_NAV_ITEM);
-      $__default['default'](element).attr('role', 'application');
-      $__default['default'](element).find('> .navbar-nav').attr('role', 'menu');
-      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', 'menu');
-      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $__default['default'](element).find(SELECTOR_NAV_LINK_BACK).attr('aria-hidden', 'true');
-      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', 'presentation');
+      var $subNavs = $__default["default"](element).find(SELECTOR_MEGAMENU_NAV);
+      var $parents = $__default["default"](element).find(SELECTOR_CURRENT).parents(SELECTOR_NAV_ITEM);
+      $__default["default"](element).attr('role', 'application');
+      $__default["default"](element).find('> .navbar-nav').attr('role', 'menu');
+      $__default["default"](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', 'menu');
+      $__default["default"](element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $__default["default"](element).find(SELECTOR_NAV_LINK_BACK).attr('aria-hidden', 'true');
+      $__default["default"](element).find(SELECTOR_NAV_ITEM).attr('role', 'presentation');
       $parents.each(function () {
-        $__default['default'](this).find(SELECTOR_NAV_LINK).first().attr('aria-current', 'true');
+        $__default["default"](this).find(SELECTOR_NAV_LINK).first().attr('aria-current', 'true');
       });
       $subNavs.each(function () {
-        var navId = Util__default['default'].getUID(NAME);
-        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
-        var $thisNav = $__default['default'](this);
+        var navId = Util__default["default"].getUID(NAME);
+        var $thisNavToggler = $__default["default"](this).prev(SELECTOR_NAV_LINK);
+        var $thisNav = $__default["default"](this);
         var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
         $thisNav.attr({
           id: navId,
@@ -207,20 +208,20 @@
     };
 
     _proto._removeAriaAttributes = function _removeAriaAttributes(element) {
-      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
-      $__default['default'](element).attr('role', null);
-      $__default['default'](element).find('> .navbar-nav').attr('role', null);
-      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', null);
-      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', null);
-      $__default['default'](element).find(SELECTOR_NAV_LINK).attr({
+      var $subNavs = $__default["default"](element).find(SELECTOR_MEGAMENU_NAV);
+      $__default["default"](element).attr('role', null);
+      $__default["default"](element).find('> .navbar-nav').attr('role', null);
+      $__default["default"](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', null);
+      $__default["default"](element).find('.nav-link[data-toggle=collapse]').attr('role', null);
+      $__default["default"](element).find(SELECTOR_NAV_LINK).attr({
         'aria-hidden': null,
         tabindex: null
       });
-      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', null);
-      $__default['default'](element).find(SELECTOR_NAV_MENU).attr('style', null);
+      $__default["default"](element).find(SELECTOR_NAV_ITEM).attr('role', null);
+      $__default["default"](element).find(SELECTOR_NAV_MENU).attr('style', null);
       $subNavs.each(function () {
-        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
-        var $thisNav = $__default['default'](this);
+        var $thisNavToggler = $__default["default"](this).prev(SELECTOR_NAV_LINK);
+        var $thisNav = $__default["default"](this);
         var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
         $thisNav.attr('role', null);
         $thisNavToggler.attr({
@@ -239,13 +240,13 @@
     _proto._initPosition = function _initPosition(target) {
       var _this3 = this;
 
-      if (!$__default['default'](target).length) {
+      if (!$__default["default"](target).length) {
         return;
       }
 
-      var $target = $__default['default'](target).first();
+      var $target = $__default["default"](target).first();
       var position = $target.parents().index(this._element);
-      var rootPosition = $__default['default']('.mega-menu-panel .nav-link').first().parents().index($__default['default']('.mega-menu')); // @TODO WTF RTL?
+      var rootPosition = $__default["default"]('.mega-menu-panel .nav-link').first().parents().index($__default["default"]('.mega-menu')); // @TODO WTF RTL?
 
       var translatePercentage = -(position - rootPosition) * 100 / 2;
       var $thisNav = $target.closest(SELECTOR_NAV_MENU);
@@ -261,7 +262,7 @@
 
         this._$topCollapseMenus.not($target.siblings(SELECTOR_MEGAMENU_PANEL)).collapse('hide');
 
-        $__default['default'](this._element).height('auto');
+        $__default["default"](this._element).height('auto');
         $rootNav.css('transform', 'translateX(0%)');
       } else {
         $target.closest(SELECTOR_MEGAMENU_PANEL).collapse('show');
@@ -283,9 +284,9 @@
 
           if (translatePercentage) {
             // adapt main collapse height to target height
-            $__default['default'](this._element).height($thisNav.height());
+            $__default["default"](this._element).height($thisNav.height());
           } else {
-            $__default['default'](this._element).height('auto');
+            $__default["default"](this._element).height('auto');
           }
         }
       } // set focus on target link
@@ -302,7 +303,7 @@
     };
 
     _proto._manageKeyDown = function _manageKeyDown(event) {
-      var $thisTarget = $__default['default'](event.target); // test key code
+      var $thisTarget = $__default["default"](event.target); // test key code
 
       if (/input|textarea/i.test(event.target.tagName)) {
         return;
@@ -333,14 +334,14 @@
     };
 
     _proto._collapseFocus = function _collapseFocus() {
-      $__default['default'](this).find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
+      $__default["default"](this).find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
     };
 
     _proto._handleCollapseToggle = function _handleCollapseToggle(event) {
-      var $this = $__default['default'](event.target);
-      var $thisCollapse = $__default['default']($this.attr('href'));
+      var $this = $__default["default"](event.target);
+      var $thisCollapse = $__default["default"]($this.attr('href'));
 
-      if ($this.is($__default['default'](this._element))) {
+      if ($this.is($__default["default"](this._element))) {
         $this.children(SELECTOR_NAV_MENU).css('transform', 'translateX(0%)');
         $this.height('auto');
         $this.find(SELECTOR_NAV_LINK_EXPANDED).attr({
@@ -364,7 +365,7 @@
       }
 
       event.preventDefault();
-      var $this = $__default['default'](event.target);
+      var $this = $__default["default"](event.target);
       var $thisNav = $this.closest(SELECTOR_NAV_MENU);
       var $targetNav = $this.next(SELECTOR_NAV_MENU);
       var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
@@ -384,7 +385,7 @@
 
       $targetNav.show(); // adapt main collapse height to target height
 
-      $__default['default'](SELECTOR_MEGAMENU).height($targetNav.height()); // make only visible elements focusable
+      $__default["default"](SELECTOR_MEGAMENU).height($targetNav.height()); // make only visible elements focusable
 
       if (!currentTranslatePercentage) {
         $rootNav.find('>.nav-item .nav-link').attr({
@@ -419,7 +420,7 @@
       }
 
       event.preventDefault();
-      var $this = $__default['default'](event.target);
+      var $this = $__default["default"](event.target);
       var $thisNav = $this.closest(SELECTOR_NAV_MENU);
       var $targetNav = $thisNav.parent().closest(SELECTOR_NAV_MENU);
       var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
@@ -435,7 +436,7 @@
 
       $rootNav.addClass(CLASS_NAME_TRANSITIONING); // reset main collapse height
 
-      $__default['default'](SELECTOR_MEGAMENU).height('auto'); // make only visible elements focusable
+      $__default["default"](SELECTOR_MEGAMENU).height('auto'); // make only visible elements focusable
 
       $targetNav.find(SELECTOR_NAV_LINK).attr({
         tabindex: 0,
@@ -465,7 +466,7 @@
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        if (!$__default['default'](this).is(SELECTOR_MEGAMENU)) {
+        if (!$__default["default"](this).is(SELECTOR_MEGAMENU)) {
           throw new TypeError('Element is not a mega menu');
         }
 
@@ -476,11 +477,11 @@
           throw new TypeError('no-focus parameter must be boolean');
         }
 
-        var data = $__default['default'](this).data(DATA_KEY);
+        var data = $__default["default"](this).data(DATA_KEY);
 
         if (!data) {
           data = new MegaMenu(this, config);
-          $__default['default'](this).data(DATA_KEY, data);
+          $__default["default"](this).data(DATA_KEY, data);
         }
 
         if (config.target) {
@@ -509,15 +510,15 @@
    */
 
 
-  $__default['default'].fn[NAME] = MegaMenu._jQueryInterface;
-  $__default['default'].fn[NAME].Constructor = MegaMenu;
+  $__default["default"].fn[NAME] = MegaMenu._jQueryInterface;
+  $__default["default"].fn[NAME].Constructor = MegaMenu;
 
-  $__default['default'].fn[NAME].noConflict = function () {
-    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default["default"].fn[NAME].noConflict = function () {
+    $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return MegaMenu._jQueryInterface;
   };
 
   return MegaMenu;
 
-})));
+}));
 //# sourceMappingURL=megamenu.js.map

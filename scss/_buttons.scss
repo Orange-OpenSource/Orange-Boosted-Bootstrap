@@ -55,6 +55,8 @@
   &:not(.btn-icon) {
     [class*="svg-"],
     [class*="icon-"] {
+      position: relative;
+      top: 1px;
       margin-right: $border-width * 3;
     }
   }

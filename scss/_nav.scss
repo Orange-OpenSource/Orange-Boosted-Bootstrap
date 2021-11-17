@@ -92,10 +92,10 @@
 // Boosted mod
 .nav-tabs-light {
   padding-left: 0;
-  border-bottom: $nav-tabs-border-width / 2 solid $gray-600;
+  border-bottom: $nav-tabs-border-width * .5 solid $gray-600;
 
   .nav-item {
-    margin-bottom: $nav-tabs-border-width / -2;
+    margin-bottom: $nav-tabs-border-width * -.5;
   }
 
   .nav-link  {

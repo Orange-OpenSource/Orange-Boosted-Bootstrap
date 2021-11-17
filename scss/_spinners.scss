@@ -10,7 +10,7 @@
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
-  vertical-align: text-bottom;
+  vertical-align: $spinner-vertical-align;
   border: $spinner-border-width solid currentColor;
   border-right-color: transparent;
   // stylelint-disable-next-line property-disallowed-list
@@ -56,7 +56,7 @@
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
-  vertical-align: text-bottom;
+  vertical-align: $spinner-vertical-align;
   // stylelint-disable-next-line declaration-no-important
   background-color: currentColor !important; // Boosted mod: ensure .text-* backgrounds don't override this
   // stylelint-disable-next-line property-disallowed-list

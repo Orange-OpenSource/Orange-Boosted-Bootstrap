@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.6.0): o-priority-nav.js
+ * Boosted (v4.6.1): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'prioritynav'
-const VERSION = '4.6.0'
+const VERSION = '4.6.1'
 const DATA_KEY = 'bs.prioritynav'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 const RESIZE_DURATION = 500
@@ -33,7 +33,7 @@ const MenuLabelDefault = 'More'
 function menuTemplate(MenuLabel) {
   return `
   <li class="overflow-nav nav-item dropdown d-none">
-      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
+      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">${MenuLabel}</a>
       <ul class="overflow-nav-list dropdown-menu dropdown-menu-right"></ul>
   </li>
 `
@@ -49,13 +49,7 @@ class PriorityNav {
   constructor(element, config) {
     this._element = element
     this._config = config
-
-    if ($(element).is('ul')) {
-      this._$menu = $(element)
-    } else {
-      this._$menu = $(element).find('ul').first()
-    }
-
+    this._$menu = $(element).is('ul') ? $(element) : $(element).find('ul').first()
     this._initMenu()
     this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS)
     this._bindUIActions()

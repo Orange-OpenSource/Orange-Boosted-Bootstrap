@@ -43,10 +43,10 @@
 @mixin make-container-fluid-widths() {
   @each $breakpoint, $container-margin in $container-fluid-margin-widths {
     @include media-breakpoint-up($breakpoint) {
-      max-width: #{100% - ($container-margin * 2)};
+      max-width: subtract(100%, ($container-margin * 2));
     }
   }
-  @include deprecate("The `make-container-fluid-widths` mixin", "v4.6.0", "v5");
+  @include deprecate("The `make-container-fluid-widths` mixin", "v4.5.2", "v5");
 }
 // End mod
 

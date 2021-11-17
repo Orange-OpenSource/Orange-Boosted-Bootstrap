@@ -39,9 +39,17 @@ Boosted RTL uses the Arabic version of Helvetica Neue in lieu of the PanEuropean
       If you are not authorized to used it, don't include the orangeHelvetica.css.
       See NOTICE.txt for more information.
     -->
-    <link rel="preload" href="/fonts/HelveticaNeueW20-55Roman.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/HelveticaNeueW20-75Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Option 1: Use a CDN -->
+    <link href="{{< param "cdn.HelveticaNeueW20-55Roman" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-55Roman_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.HelveticaNeueW20-75Bold" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-75Bold_hash" >}}" crossorigin="anonymous">
     <link rel="stylesheet" href="{{< param "cdn.helveticacss" >}}" integrity="{{< param "cdn.helveticacss_hash" >}}" crossorigin="anonymous">
+
+    <!-- Option 2: Embed the fonts>
+    <link rel="preload" href="dist/fonts/HelveticaNeueW20-55Roman.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="dist/fonts/HelveticaNeueW20-75Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/orangeHelvetica.min.css" crossorigin="anonymous">
+    -->
+
     <!--
       Orange Icons
       Copyright (C) 2016 - {{< year >}} Orange SA All rights reserved

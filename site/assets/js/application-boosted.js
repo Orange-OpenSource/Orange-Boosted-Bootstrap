@@ -55,12 +55,7 @@
     if (el && window.innerWidth > 768) {
       return function () {
         var footerRect = el.getBoundingClientRect()
-
-        if (isElementInViewport(el)) {
-          scrollTopElm.style.bottom = window.innerHeight - footerRect.top + parseInt(defaultPos, 10) + 'px'
-        } else {
-          scrollTopElm.style.bottom = defaultPos
-        }
+        scrollTopElm.style.bottom = isElementInViewport(el) ? window.innerHeight - footerRect.top + parseInt(defaultPos, 10) + 'px' : defaultPos
       }
     }
 
