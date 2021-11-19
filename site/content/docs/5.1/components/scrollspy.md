@@ -41,7 +41,7 @@ Scroll the area below the nav and watch the active class change. The dropdown it
           <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
           <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#scrollspyHeading5">Fith</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
         </ul>
       </li>
     </ul>
@@ -75,7 +75,7 @@ Scroll the area below the nav and watch the active class change. The dropdown it
         <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
         <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading5">Fith</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
       </ul>
     </li>
   </ul>
