@@ -104,6 +104,14 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
+RGB colors are generated from a separate Sass map:
+
+{{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+And background color opacities build on that with their own map that's consumed by the utilities API:
+
+{{< scss-docs name="utilities-bg-colors" file="scss/_maps.scss" >}}
+
 ### Mixins
 
 **No mixins are used to generate our background utilities**, but we do have some additional mixins for other situations where you'd like to create your own gradients.
