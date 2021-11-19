@@ -27,7 +27,7 @@ If you're making a scrollable container (other than the `<body>`), be sure to ha
 Scroll the area below the nav and watch the active class change. The dropdown items will be highlighted as well.
 
 <div class="bd-example">
-  <nav role="navigation" id="nav-example1" class="nav">
+  <nav id="nav-example1" class="nav">
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" aria-current="page" href="#scrollspyHeading1">First</a>
@@ -61,7 +61,7 @@ Scroll the area below the nav and watch the active class change. The dropdown it
 </div>
 
 ```html
-<nav role="navigation" id="nav-example1" class="nav">
+<nav id="nav-example1" class="nav">
   <ul class="nav nav-pills">
     <li class="nav-item">
       <a class="nav-link" aria-current="page" href="#scrollspyHeading1">First</a>
@@ -102,7 +102,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
-      <nav role="navigation" id="nav-example2" class="nav flex-column">
+      <nav id="nav-example2" class="nav flex-column">
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#item-1" aria-current="page">Item 1</a>
           <nav class="nav nav-pills flex-column">
@@ -141,7 +141,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 
 ```html
  <div class="col-4">
-  <nav role="navigation" id="nav-example2" class="nav flex-column">
+  <nav id="nav-example2" class="nav flex-column">
     <nav class="nav nav-pills flex-column">
       <a class="nav-link" href="#item-1" aria-current="page">Item 1</a>
       <nav class="nav nav-pills flex-column">
