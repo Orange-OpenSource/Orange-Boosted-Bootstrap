@@ -1,27 +1,11 @@
+@each $key-archi, $value-archi in $stickers-architectures {
+  .sticker-#{$key-archi} {
+    @include sticker-init($value-archi);
+  }
+}
+
 @each $key-size, $value-size in $stickers-sizes {
-  @each $key-archi, $value-archi in $stickers-architectures {
-    .sticker-#{$key-size}.sticker-#{$key-archi} {
-      @include sticker-init($value-size, $value-archi);
-    }
-  }
-
   .sticker-#{$key-size} {
-    @include sticker-init($value-size);
+    @include sticker-init-size($value-size);
   }
-}
-
-@keyframes sticker-animation {
-  70% { transform: scale(1.1); }
-  90% { transform: scale(.95); }
-}
-.sticker-animate {
-  animation: sticker-animation ease-out 2s 1 250ms;
-}
-
-@keyframes sticker-animation-rotate {
-  70% { transform: scale(1.1) rotate(10deg); }
-  90% { transform: scale(.95) rotate(-5deg); }
-}
-.sticker-animate-rotate {
-  animation: sticker-animation-rotate ease-out 2s 1 250ms;
 }

@@ -15,23 +15,23 @@ General usage of the stickers. (Ask to the designers ?)
 {{< example >}}
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-lg-start">
-    <svg class="sticker-lg sticker-one-line sticker-animate-rotate" aria-hidden="true" focusable="false">
-      <circle></circle>
+    <svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
+      <circle r="70" cx="70" cy="70"></circle>
       <text x="50%" y="50%">New</text>
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-    <svg class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
-      <circle></circle>
-      <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" />
+    <svg viewBox="0 0 140 140" class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
+      <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="50%" height="80" width="80" xlink:href="/docs/{{< param docs_version >}}/assets/img/5G.svg" />
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-end">
-    <svg class="sticker-sm sticker-icon-two-lines sticker-animate" aria-hidden="true" focusable="false">
-      <circle></circle>
-      <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+    <svg viewBox="0 0 140 140" class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
+      <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="30%" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/Delivery.svg" />
       <text x="50%" y="60%">
         <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
       </text>
@@ -49,29 +49,29 @@ If the sticker stands for a functionality of the site and not as a decorative el
 {{< example >}}
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-lg-start">
-    <svg class="sticker-lg sticker-one-line" role="img" lang="en" aria-labelledby="StickersTitle1 StickersDesc1" tabindex="0">
+    <svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" role="img" lang="en" aria-labelledby="StickersTitle1 StickersDesc1" tabindex="0">
       <title id="StickersTitle1" lang="en">Sticker utility</title>
       <desc id="StickersDesc1" lang="en">Sticker description if needed</desc>
-      <circle></circle>
+      <circle r="70" cx="70" cy="70"></circle>
       <text x="50%" y="50%" aria-hidden="true">New</text>
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-    <svg class="sticker-md sticker-icon" role="img" lang="en" aria-labelledby="StickersTitle2 StickersDesc2" tabindex="0">
+    <svg viewBox="0 0 140 140" class="sticker-md sticker-icon" role="img" lang="en" aria-labelledby="StickersTitle2 StickersDesc2" tabindex="0">
       <title id="StickersTitle2" lang="en">Sticker utility</title>
       <desc id="StickersDesc2" lang="en">Sticker description if needed</desc>
-      <circle></circle>
-      <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" aria-hidden="true" />
+      <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="50%" height="80" width="80" xlink:href="/docs/{{< param docs_version >}}/assets/img/5G.svg" />
     </svg>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-end">
-    <svg class="sticker-sm sticker-icon-two-lines" role="img" lang="en" aria-labelledby="StickersTitle3 StickersDesc3" tabindex="0">
+    <svg viewBox="0 0 140 140" class="sticker-sm sticker-icon-two-lines" role="img" lang="en" aria-labelledby="StickersTitle3 StickersDesc3" tabindex="0">
       <title id="StickersTitle3" lang="en">Sticker utility</title>
       <desc id="StickersDesc3" lang="en">Sticker description if needed</desc>
-      <circle></circle>
-      <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" aria-hidden="true" />
+      <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="30%" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/Delivery.svg" />
       <text x="50%" y="60%" aria-hidden="true">
         <tspan x="50%" dy="-.55em">Free</tspan><tspan x="50%" dy="1.1em">delivery</tspan>
       </text>
@@ -84,25 +84,25 @@ If the sticker stands for a functionality of the site and not as a decorative el
 
 ### Standard sizing
 
-Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size and its look. Default use of sticker applies the one line style. Only these sizes should be used.
+Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good size. Only these sizes should be used, however the size can be modified by setting the height and the width of the svg up.
 
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
@@ -110,18 +110,18 @@ Add `.sticker-{sm|md|lg}` to the svg tag in order to give the sticker the good s
 </div>
 
 ```html
-<svg class="sticker-sm" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
-<svg class="sticker-md" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
-<svg class="sticker-lg" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 ```
@@ -135,20 +135,20 @@ Choose one and only one class below in order to apply an architecture to the sti
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-one-line" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-one-line" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">New</text>
       </svg>
     </div>
@@ -156,18 +156,18 @@ Choose one and only one class below in order to apply an architecture to the sti
 </div>
 
 ```html
-<svg class="sticker-sm sticker-one-line" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-one-line" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
-<svg class="sticker-md sticker-one-line" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-one-line" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 
-<svg class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">New</text>
 </svg>
 ```
@@ -177,40 +177,40 @@ Choose one and only one class below in order to apply an architecture to the sti
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-icon" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-icon" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="50%" height="80" width="80" xlink:href="/docs/{{< param docs_version >}}/assets/img/5G.svg" />
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="50%" height="80" width="80" xlink:href="/docs/{{< param docs_version >}}/assets/img/5G.svg" />
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-icon" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="50%" xlink:href="/docs/5.1/assets/5G.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-icon" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="50%" height="80" width="80" xlink:href="/docs/{{< param docs_version >}}/assets/img/5G.svg" />
       </svg>
     </div>
   </div>
 </div>
 
 ```html
-<svg class="sticker-sm sticker-icon" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="50%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-icon" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="50%" height="80" width="80" xlink:href="/path/to/svg.svg" />
 </svg>
 
-<svg class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="50%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-md sticker-icon" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="50%" height="80" width="80" xlink:href="/path/to/svg.svg" />
 </svg>
 
-<svg class="sticker-lg sticker-icon" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="50%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-icon" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="50%" height="80" width="80" xlink:href="/path/to/svg.svg" />
 </svg>
 ```
 
@@ -219,24 +219,24 @@ Choose one and only one class below in order to apply an architecture to the sti
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
           <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
           <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
           <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
@@ -246,22 +246,22 @@ Choose one and only one class below in order to apply an architecture to the sti
 </div>
 
 ```html
-<svg class="sticker-sm sticker-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
     <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
     <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
     <tspan x="50%" dy="-.5em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
@@ -275,27 +275,27 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="40" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/Delivery.svg" />
         <text x="50%" y="60%">
           <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-icon-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-icon-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="30%" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/Delivery.svg" />
         <text x="50%" y="60%">
           <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-icon-two-lines" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <image x="50%" y="30%" xlink:href="/docs/5.1/assets/Delivery.svg" />
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-icon-two-lines" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
+      <image x="50%" y="30%" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/Delivery.svg" />
         <text x="50%" y="60%">
           <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
         </text>
@@ -305,25 +305,25 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="30%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="30%" height="35" width="35" xlink:href="/path/to/svg.svg" />
   <text x="50%" y="60%">
     <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-icon-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="30%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-md sticker-icon-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="30%" height="35" width="35" xlink:href="/path/to/svg.svg" />
   <text x="50%" y="60%">
     <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-icon-two-lines" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <image x="50%" y="30%" xlink:href="/path/to/svg.svg" />
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-icon-two-lines" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
+  <image x="50%" y="30%" height="35" width="35" xlink:href="/path/to/svg.svg" />
   <text x="50%" y="60%">
     <tspan x="50%" dy="-.6em">Free</tspan><tspan x="50%" dy="1em">delivery</tspan>
   </text>
@@ -337,26 +337,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+          <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -364,24 +364,24 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="2.2em">Per month</tspan>
+    <tspan x="50%" y="50%">39,99€</tspan><tspan x="50%" dy="1.6em">Per month</tspan>
   </text>
 </svg>
 ```
@@ -393,26 +393,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -420,24 +420,24 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-old-and-new-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-old-and-new-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-old-and-new-price" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">69,99€</tspan><tspan x="50%" y="55%">39,99€</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.4em">69,99€</tspan><tspan x="50%" y="53%">39,99€</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 ```
@@ -449,26 +449,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-bonus-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-bonus-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-bonus-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-bonus-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-bonus-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-bonus-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -476,24 +476,24 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-bonus-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-bonus-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-bonus-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-bonus-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-bonus-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-bonus-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.3em">Bonus</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1.8em">Bonus</tspan><tspan x="50%" y="53%">90mins</tspan><tspan x="50%" dy="1.625em">Per month</tspan>
   </text>
 </svg>
 ```
@@ -505,26 +505,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-bonus-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-bonus-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-bonus-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-bonus-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-bonus-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-bonus-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
@@ -532,24 +532,24 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-bonus-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-bonus-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-bonus-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-bonus-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-bonus-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-bonus-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-2.5em">Bonus</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 ```
@@ -561,26 +561,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-add-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-add-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-add-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-add-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-add-min" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-add-min" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
         </text>
       </svg>
     </div>
@@ -588,24 +588,24 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-add-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-add-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-add-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-add-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-add-min" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-add-min" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="2em">Per month</tspan>
+    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">90mins</tspan><tspan x="50%" dy="1.75em">Per month</tspan>
   </text>
 </svg>
 ```
@@ -617,26 +617,26 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 <div class="bd-example">
   <div class="row align-items-center my-5">
     <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-add-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-sm sticker-add-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-add-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-md sticker-add-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
     <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-add-offer" aria-hidden="true" focusable="false">
-        <circle></circle>
+      <svg viewBox="0 0 140 140" class="sticker-lg sticker-add-offer" aria-hidden="true" focusable="false">
+        <circle r="70" cx="70" cy="70"></circle>
         <text x="50%" y="50%">
-          <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+          <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
         </text>
       </svg>
     </div>
@@ -644,119 +644,29 @@ Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the
 </div>
 
 ```html
-<svg class="sticker-sm sticker-add-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-sm sticker-add-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 
-<svg class="sticker-md sticker-add-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-md sticker-add-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 
-<svg class="sticker-lg sticker-add-offer" aria-hidden="true" focusable="false">
-  <circle></circle>
+<svg viewBox="0 0 140 140" class="sticker-lg sticker-add-offer" aria-hidden="true" focusable="false">
+  <circle r="70" cx="70" cy="70"></circle>
   <text x="50%" y="50%">
-    <tspan x="50%" dy="-1em">+</tspan><tspan x="50%" y="50%">250%</tspan><tspan x="50%" dy="2em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
+    <tspan x="50%" dy="-1.25em">+</tspan><tspan x="50%" y="45%">250%</tspan><tspan x="50%" dy="1.625em">With Orange</tspan><tspan x="50%" dy="1.1em">Money</tspan>
   </text>
 </svg>
 ```
 
 Here the `<tspan>`s are inlined, otherwise it adds a white space that shifts the center effect.
-
-## Animations
-
-### Straight animation
-
-Add `.sticker-animate` to the svg tag in order to animate the sticker straightly. These animations are launched right after the page finished loading.
-
-<div class="bd-example">
-  <div class="row align-items-center my-5">
-    <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-animate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-animate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-    <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-animate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-```html
-<svg class="sticker-sm sticker-animate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-
-<svg class="sticker-md sticker-animate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-
-<svg class="sticker-lg sticker-animate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-```
-
-### Rotate animation
-
-Add `.sticker-animate-rotate` to the svg tag in order to animate the sticker straightly. These animations are launched right after the page finished loading.
-
-<div class="bd-example">
-  <div class="row align-items-center my-5">
-    <div class="col col-12 col-md-6 col-lg-3 text-start">
-      <svg class="sticker-sm sticker-animate-rotate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-    <div class="col col-12 col-md-6 col-lg-4 text-lg-center">
-      <svg class="sticker-md sticker-animate-rotate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-    <div class="col col-12 col-lg-5 text-end">
-      <svg class="sticker-lg sticker-animate-rotate" aria-hidden="true" focusable="false">
-        <circle></circle>
-        <text x="50%" y="50%">New</text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-```html
-<svg class="sticker-sm sticker-animate-rotate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-
-<svg class="sticker-md sticker-animate-rotate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-
-<svg class="sticker-lg sticker-animate-rotate" aria-hidden="true" focusable="false">
-  <circle></circle>
-  <text x="50%" y="50%">New</text>
-</svg>
-```
 
 ## Sass
 

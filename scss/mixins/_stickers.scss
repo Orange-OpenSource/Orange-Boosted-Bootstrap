@@ -1,13 +1,12 @@
-@mixin sticker-init($sticker-size: $stickers-size-sm, $sticker-architecture: undefined) {
+@mixin sticker-init-size($sticker-size: $stickers-size-lg) {
   // Set the size of the sticker
   width: $sticker-size;
   height: $sticker-size;
+}
 
+@mixin sticker-init($sticker-architecture) {
   // Draw the circle
   > circle {
-    cx: divide($sticker-size, 2);
-    cy: divide($sticker-size, 2);
-    r: divide($sticker-size, 2);
     fill: $accessible-orange;
   }
 
@@ -16,109 +15,63 @@
     text-anchor: middle;
     dominant-baseline: middle;
     font-weight: $font-weight-bold;
-
-    // Default values for text size
-    @if ($sticker-size == $stickers-size-sm) {
-      @include sticker-font(1.875, 8);
-    } @else if ($sticker-size == $stickers-size-md) {
-      @include sticker-font(2.5, 10);
-    } @else {
-      @include sticker-font(3.75, 20);
-    }
+    @include sticker-font(1.875, 8);
   }
 
   > image {
-    // Default values for iamge size
-    @if ($sticker-size == $stickers-size-sm) {
-      @include sticker-image(4);
-    } @else if ($sticker-size == $stickers-size-md) {
-      @include sticker-image(5);
-    } @else {
-      @include sticker-image(8);
-    }
+    // Default transform for icon size
+    transform: translate(-40px, -40px);
   }
 
   // Specify the values depending on the architecture
   @if ($sticker-architecture == "Two-lines") {
     > text {
-      @include sticker-second-font("medium", $sticker-size);
+      @include sticker-font(1.25, 4);
     }
   } @else if ($sticker-architecture == "Icon-Two-lines") {
     > text {
-      @include sticker-second-font("medium", $sticker-size);
+      @include sticker-font(1.25, 4);
     }
 
     > image {
-      @if ($sticker-size == $stickers-size-sm) {
-        @include sticker-image(1.5);
-      } @else if ($sticker-size == $stickers-size-md) {
-        @include sticker-image(2);
-      } @else {
-        @include sticker-image(3);
-      }
+      transform: translate(-17.5px, -17.5px);
     }
   } @else if ($sticker-architecture == "Price") {
     > text > tspan:last-child {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   } @else if ($sticker-architecture == "Old-and-new-price") {
     > text > tspan:first-child {
       text-decoration: line-through;
       text-decoration-thickness: auto;
-      @include sticker-second-font("medium", $sticker-size);
+      @include sticker-font(1.125, 2);
     }
 
     > text > tspan:last-child {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   } @else if ($sticker-architecture == "Bonus-min") {
     > text > tspan:last-child,
     > text > tspan:first-child {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   } @else if ($sticker-architecture == "Bonus-offer") {
     > text > tspan:not(:nth-child(2)) {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   } @else if ($sticker-architecture == "Additional-min") {
     > text > tspan:last-child {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   } @else if ($sticker-architecture == "Additional-offer") {
     > text > tspan:nth-child(3),
     > text > tspan:last-child {
-      @include sticker-second-font("small", $sticker-size);
+      @include sticker-font(.875, 1);
     }
   }
-}
-
-@mixin sticker-image($icon-size) {
-  width: $spacer * $icon-size;
-  height: $spacer * $icon-size;
-  transform: translate(-.5 * $spacer * $icon-size, -.5 * $spacer * $icon-size);
 }
 
 @mixin sticker-font($font-size, $letter-spacing) {
   font-size: $font-size-base * $font-size;
   letter-spacing: $letter-spacing-base * $letter-spacing;
-}
-
-@mixin sticker-second-font($size: "small", $sticker-size: $stickers-size-sm) {
-  @if ($size == "small") {
-    @if ($sticker-size == $stickers-size-sm) {
-      @include sticker-font(.75, .8);
-    } @else if ($sticker-size == $stickers-size-md) {
-      @include sticker-font(1, 1);
-    } @else {
-      @include sticker-font(1.5, 5);
-    }
-  } @else if ($size == "medium") {
-    @if ($sticker-size == $stickers-size-sm) {
-      @include sticker-font(1.25, 4);
-    } @else if ($sticker-size == $stickers-size-md) {
-      @include sticker-font(1.5, 5);
-    } @else {
-      @include sticker-font(2.5, 10);
-    }
-  }
 }
