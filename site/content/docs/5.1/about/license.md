@@ -5,7 +5,7 @@ description: Commonly asked questions about Boosted's open source license.
 group: about
 ---
 
-## Boosted licence
+## Boosted license
 
 Boosted is released under the MIT license and is copyright {{< year >}} Orange SA for additions to native Bootstrap, which is released under MIT license and copyright {{< year >}} Twitter.
 
@@ -33,4 +33,4 @@ Boosted is released under the MIT license and is copyright {{< year >}} Orange S
 - Include the source of Boosted nor Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
 - Submit changes that you make to Boosted or Bootstrap back to their respective project (though such feedback is encouraged)
 
-For more information, the full Boosted licence is located [in the project repository]({{< param repo >}}/blob/v{{< param current_version >}}/LICENSE), and Bootstrap license is located [in the project repository](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/LICENSE).
+For more information, the full Boosted license is located [in the project repository]({{< param repo >}}/blob/v{{< param current_version >}}/LICENSE), and Bootstrap license is located [in the project repository](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/LICENSE).
