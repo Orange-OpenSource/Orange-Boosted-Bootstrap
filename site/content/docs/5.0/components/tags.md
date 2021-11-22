@@ -10,37 +10,18 @@ toc: true
 
 {{< example >}}
 <span class="tag">Label</span>
-<span class="tag tag-icon">
-  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-</span>
-<span class="tag tag-remove">
-  Label
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
-  </svg>
-</span>
-<span class="tag tag-remove">
-  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
-  </svg>
-</span>
 {{< /example >}}
 
 ## With icon
 
 {{< example >}}
 <span class="tag tag-icon">
-  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
+  <div class="d-flex align-items-center">
+    <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </div>
 </span>
 {{< /example >}}
 
@@ -48,10 +29,12 @@ toc: true
 
 {{< example >}}
 <span class="tag tag-remove">
-  Label
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
-  </svg>
+  <div class="d-flex align-items-center">
+    Label
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+    </svg>
+  </div>
 </span>
 {{< /example >}}
 
@@ -59,13 +42,15 @@ toc: true
 
 {{< example >}}
 <span class="tag tag-remove">
-  <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
-  </svg>
+  <div class="d-flex align-items-center">
+    <svg width="1rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+    </svg>
+  </div>
 </span>
 {{< /example >}}
 
@@ -77,7 +62,7 @@ toc: true
 
 ## Sizes
 
-Fancy larger buttons? Add .tag-lg for additional size.
+Fancy larger buttons? Add `.tag-lg` for additional size.
 
 {{< example >}}
 <span class="tag">Label</span>

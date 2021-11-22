@@ -3,7 +3,8 @@
 .tag {
   @extend .badge;
   @include font-size($tag-font-size);
-  padding: add($badge-padding-y, 3px) $badge-padding-x add($badge-padding-y, 3px); // Boosted mod
+  padding: $badge-padding-y 8px $badge-padding-y;
+  line-height: 16px;
   color: $tag-color;
 
   cursor: if($enable-button-pointers, pointer, null);
@@ -26,6 +27,12 @@
   &:disabled,
   &.disabled {
     color: $tag-disabled-color;
+    cursor: default !important; // stylelint-disable-line declaration-no-important
+    border: $tag-border-width solid $tag-border-color;
+
+    &.active {
+      background-color: $tag-background-color !important; // stylelint-disable-line declaration-no-important
+    }
   }
 
   > svg {
@@ -35,7 +42,7 @@
 
 .tag-icon,
 .tag-remove {
-  padding: add($badge-padding-y, 1px) $badge-padding-x add($badge-padding-y, 1px); // Boosted mod
+  padding: subtract($badge-padding-y, 2px) 8px subtract($badge-padding-y, 2px);
 }
 
 .tag-icon {
@@ -43,8 +50,7 @@
 }
 
 .tag-remove {
-  padding-right: 5px;
-  padding-bottom: 4px;
+  padding-right: 3px;
   .remove {
     &:hover {
       padding: 2px;
@@ -64,7 +70,7 @@
     $tag-border-radius-lg,
     $tag-line-height-lg
   );
-  padding-top: add($tag-padding-y-lg, 1px); // Boosted mod
+  padding-top: add($tag-padding-y-lg, 1px);
   @include font-size($tag-font-size-lg);
   // stylelint-disable-next-line property-disallowed-list
   border-radius: $tag-border-radius-lg;
