@@ -645,6 +645,10 @@ $line-height-base:            calc(18 / 16) !default;
 $line-height-sm:              calc(16 / 14) !default;
 $line-height-lg:              calc(30 / 16) !default;
 // stylelint-enable function-disallowed-list
+
+$line-length-sm:              40ch !default;
+$line-length-md:              80ch !default;
+
 $letter-spacing-base:         $spacer * -.005 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
