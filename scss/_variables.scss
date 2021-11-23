@@ -281,6 +281,9 @@ $line-height-lg:              calc(divide(20, 18)) !default;
 $line-height-sm:              calc(divide(16, 14)) !default;
 // stylelint-enable function-disallowed-list
 
+$line-length-sm:              40ch !default;
+$line-length-md:              80ch !default;
+
 $border-width:                .125rem !default;
 $border-color:                theme-color("dark") !default;
 
