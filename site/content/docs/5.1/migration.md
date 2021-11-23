@@ -22,6 +22,7 @@ Boosted v5.2.0 introduced a new Sass file, `_maps.scss`, that pulled out several
 This is why variable customizations in Boosted have to come after `@import "functions"`, but before `@import "variables"` and the rest of our import stack. The same applies to Sass maps—you must override the defaults before the defaults get used. The following maps have been moved to the new `_maps.scss`:
 
 - `$theme-colors-rgb`
+- `$background-colors`
 - `$utilities-colors`
 - `$utilities-text`
 - `$utilities-text-colors`
@@ -29,6 +30,7 @@ This is why variable customizations in Boosted have to come after `@import "func
 - `$utilities-bg-colors`
 - `$negative-spacers`
 - `$gutters`
+- `$alert-colors`
 
 Your custom Boosted CSS builds should now look something like this with a separate maps import.
 

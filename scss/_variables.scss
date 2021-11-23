@@ -110,18 +110,6 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-// Boosted mod
-$background-colors: map-merge(
-  $theme-colors,
-  (
-    "success": $supporting-green,
-    "info":    $supporting-blue,
-    "warning": $supporting-yellow,
-    "danger":  $danger
-  )
-) !default;
-// End mod
-
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   4.5 !default;
@@ -1568,7 +1556,6 @@ $alert-border-width:                $border-width !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
-$alert-colors:                      map-remove($theme-colors, "primary", "secondary", "light", "dark") !default;
 $alert-icons: (
   "success": var(--#{$boosted-variable-prefix}success-icon),
   "info":    escape-svg($info-icon),

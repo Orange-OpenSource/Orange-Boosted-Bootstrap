@@ -6,6 +6,18 @@
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb
 
+// Boosted mod
+$background-colors: map-merge(
+  $theme-colors,
+  (
+    "success": $supporting-green,
+    "info":    $supporting-blue,
+    "warning": $supporting-yellow,
+    "danger":  $danger
+  )
+) !default;
+// End mod
+
 // Utilities maps
 //
 // Extends the default `$theme-colors` maps to help create our utilities.
@@ -41,3 +53,5 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !defau
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
 $gutters: $spacers !default;
+
+$alert-colors: map-remove($theme-colors, "primary", "secondary", "light", "dark") !default; // Boosted mod
