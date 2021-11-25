@@ -127,7 +127,7 @@ Remove a text decoration with a `.text-decoration-none` class.
 
 ## Line length
 
-Limit the line length with `.ll-*` utilities. It applies `max-width` property to an element with a width based on `ch` unit. We chose this one because it is a font-based unit and because 1`ch` is the width of '0' (which is around an average character width). It requires anything but `inline` to be applied.
+Limit the line length with `.ll-*` utilities. It applies `max-width` property to an element with a width based on `ch` unit. This one was chosen because it is a font-based unit and because `1ch` is the width of "0" (which is around an average character width). It requires anything but `inline` to be applied.
 
 {{< example >}}
 <p class="ll-sm">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
