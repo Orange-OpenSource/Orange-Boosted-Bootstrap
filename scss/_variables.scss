@@ -277,12 +277,17 @@ $grid-row-columns:            6 !default;
 // Define common padding and border radius sizes and more.
 
 // stylelint-disable function-disallowed-list
-$line-height-lg:              calc(divide(20, 18)) !default;
-$line-height-sm:              calc(divide(16, 14)) !default;
+$line-height-lg:              calc(divide(20, 18)) !default; // Boosted mod
+$line-height-sm:              calc(divide(16, 14)) !default; // Boosted mod
 // stylelint-enable function-disallowed-list
 
-$border-width:                .125rem !default;
-$border-color:                theme-color("dark") !default;
+// Boosted mod: Line length for accessibility
+$line-length-sm:              40ch !default;
+$line-length-md:              80ch !default;
+// End mod
+
+$border-width:                .125rem !default; // Boosted mod
+$border-color:                theme-color("dark") !default; // Boosted mod
 
 $border-radius:               .25rem !default;
 $border-radius-lg:            .3rem !default;

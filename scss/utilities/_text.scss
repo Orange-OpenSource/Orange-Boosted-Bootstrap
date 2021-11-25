@@ -31,6 +31,11 @@
 //.text-uppercase  { text-transform: uppercase !important; } // Boosted mod
 .text-capitalize { text-transform: capitalize !important; }
 
+// Boosted mod: Line length for accessibility
+.ll-sm { max-width: $line-length-sm; }
+.ll-md { max-width: $line-length-md; }
+// end mod
+
 // Weight and italics
 
 // Boosted mod: anything but 400 and 700 is forbidden by Orange Typography Guidelines

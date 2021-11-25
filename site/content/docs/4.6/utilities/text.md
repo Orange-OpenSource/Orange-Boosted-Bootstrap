@@ -124,3 +124,14 @@ Remove a text decoration with a `.text-decoration-none` class.
 {{< example >}}
 <a href="#" class="text-decoration-none">Non-underlined link</a>
 {{< /example >}}
+
+## Line length
+
+Limit the line length with `.ll-*` utilities. It applies `max-width` property to an element with a width based on `ch` unit. This one was chosen because it is a font-based unit and because `1ch` is the width of "0" (which is around an average character width). It requires anything but `inline` to be applied.
+
+{{< example >}}
+<p class="ll-sm">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="ll-md">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p><span class="ll-md"><strong>Inline element.</strong> This is a long paragraph written to show how the line-length of an inline element isn't affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</span></p>
+<p class="ll-sm display-4">This is a long paragraph written to show how the line-length of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+{{< /example >}}
