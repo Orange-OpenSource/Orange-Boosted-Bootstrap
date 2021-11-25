@@ -59,10 +59,15 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 
 // 3. Include remainder of required Boosted stylesheets
 @import "../node_modules/boosted/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../node_modules/boosted/scss/maps";
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
 
-// 4. Include any optional Boosted CSS as needed
+// 6. Optionally include any other parts as needed
 @import "../node_modules/boosted/scss/utilities";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
@@ -71,10 +76,10 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/grid";
 @import "../node_modules/boosted/scss/helpers";
 
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/boosted/scss/utilities/api";
 
-// 6. Add additional custom code here
+// 8. Add additional custom code here
 ```
 
 With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
