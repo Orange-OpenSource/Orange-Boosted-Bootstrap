@@ -2,7 +2,7 @@
   {{ partial "docs-subnav" . }}
 
   <div class="container-xxl bd-layout">
-    <aside class="bd-sidebar border-end border-light border-1">
+    <aside class="bd-sidebar">
       {{ partial "docs-sidebar" . }}
     </aside>
 
@@ -17,9 +17,9 @@
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
-          <strong class="d-block h6 my-2 ps-lg-3 pb-2 border-bottom border-light border-1">On this page</strong>
-          <div class="ps-lg-3">{{ .TableOfContents }}</div>
+        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 ps-xl-3 mb-lg-5">
+          <strong class="d-block h6 my-2 pb-2 border-bottom border-light border-1">On this page</strong>
+          {{ .TableOfContents }}
         </div>
       {{ end }}
 
