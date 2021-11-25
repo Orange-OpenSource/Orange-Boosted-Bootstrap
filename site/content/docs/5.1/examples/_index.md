@@ -6,9 +6,11 @@ aliases: "/examples/"
 ---
 
 {{< callout info >}}
-Some examples are missing here, they will arrive as soon as possible with [#410](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410).
+**Some examples are missing here.**
 
-If you want to ask about a missing example, feel free to ask on our Mattermost channel, contact a member of the [team]({{< docsref "/about/team" >}}) or [create an issue on GitHub](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml&title=Suggest+a+new+feature).
+They are tracked in [#410](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410) and will be shipped as soon as possible.
+
+One of the missing examples has priority? Feel free to contact a member of the [Core team]({{< docsref "/about/team" >}}) or add a comment directly [in the corresponding issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410) to let us know.
 {{</ callout >}}
 
 {{< list-examples.inline >}}

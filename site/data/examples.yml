@@ -18,7 +18,6 @@
 #     - name: Modals
 #       description: "Transform modals to serve any purpose, from feature tours to dialogs."
 
-## Should this category disapear while waiting for Branded examples ?
 # - category: Custom Components
 #   description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
 #   examples:
