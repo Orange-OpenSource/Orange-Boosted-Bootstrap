@@ -6,6 +6,17 @@ group: components
 toc: true
 ---
 
+<!--Boosted mod-->
+{{< callout danger >}}
+### Not compliant with Orange brand
+
+Badges come from Bootstrap and are not compliant with Orange brand except the [Positioned](#positioned) version used in headers.
+
+They are kept for compatibility with Bootstrap and third-party libraries linked to Bootstrap.
+
+{{< /callout >}}
+<!--End mod-->
+
 ## Examples
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
