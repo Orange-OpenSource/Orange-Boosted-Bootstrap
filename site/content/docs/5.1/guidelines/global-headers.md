@@ -87,7 +87,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">    
+    <div class="d-flex">
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
@@ -96,7 +96,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon position-relative">
             <span class="position-relative">
@@ -120,7 +120,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
       </ul>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header" aria-controls="global-header" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>      
+      </button>
     </div>
     <div class="navbar-collapse collapse" id="global-header" style="height: auto;">
       <ul class="navbar-nav">
@@ -140,7 +140,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </svg>
           <span class="visually-hidden">Search</span>
         </a>
-      </li> 
+      </li>
       <li class="nav-item">
         <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
           <span class="position-relative">
@@ -176,7 +176,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">    
+    <div class="d-flex">
       <ul class="navbar-nav d-md-none flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
@@ -185,7 +185,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon position-relative">
             <span class="position-relative">
@@ -197,7 +197,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>            
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -229,7 +229,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           </svg>
           <span class="visually-hidden">Search</span>
         </a>
-      </li> 
+      </li>
       <li class="nav-item">
         <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
           <span class="position-relative">
@@ -241,7 +241,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
-          </span>            
+          </span>
         </a>
       </li>
       <li class="nav-item">
@@ -267,7 +267,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title" class="title h1">Title</span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -276,8 +276,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
-          <li class="nav-item">
+          </li>
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -288,10 +288,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>              
+              </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -310,6 +310,26 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ul class="navbar-nav d-none d-md-flex">
@@ -320,7 +340,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -332,7 +352,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>              
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -362,7 +382,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -371,8 +391,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
-          <li class="nav-item">
+          </li>
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -383,10 +403,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>                
+              </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -405,6 +425,26 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ul class="navbar-nav d-none d-md-flex pb-1">
@@ -415,7 +455,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -427,7 +467,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>              
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -454,7 +494,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title-2" class="title h1">Title</span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -463,8 +503,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
-          <li class="nav-item">
+          </li>
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -475,10 +515,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>                
+              </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -497,7 +537,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -509,7 +549,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>              
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -531,6 +571,26 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -553,7 +613,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">    
+      <div class="d-flex">
         <ul class="navbar-nav d-md-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -562,8 +622,8 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
-          <li class="nav-item">
+          </li>
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -574,10 +634,10 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
-              </span>                
+              </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -596,7 +656,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
             <span class="position-relative">
@@ -608,7 +668,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
-            </span>            
+            </span>
           </a>
         </li>
         <li class="nav-item">
@@ -619,7 +679,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </li>
       </ul>
     </div>
-  </nav>    
+  </nav>
   <div class="navbar navbar-dark bg-dark d-none d-md-flex navbar-expand-md bg-dark flex-sm-wrap p-0">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="global-header-title-nav-2">
@@ -630,6 +690,26 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -657,7 +737,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-search" aria-controls="global-header-search" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -711,7 +791,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
@@ -741,7 +821,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-2">
             <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
@@ -782,7 +862,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
               </svg>
               <span class="visually-hidden">Search</span>
             </a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
@@ -802,7 +882,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-2">
             <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
@@ -811,7 +891,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
         </li>
       </ul>
     </div>
-  </nav>    
+  </nav>
   <div class="navbar navbar-dark bg-dark d-none d-md-flex navbar-expand-md bg-dark flex-sm-wrap p-0">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="obs-header-nav">
