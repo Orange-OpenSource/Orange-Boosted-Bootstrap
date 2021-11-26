@@ -290,6 +290,10 @@
             width: $navbar-brand-logo-height;
             height: $navbar-brand-logo-height;
           }
+
+          > span {
+            margin-right: $spacer;
+          }
         }
         // End mod
 
