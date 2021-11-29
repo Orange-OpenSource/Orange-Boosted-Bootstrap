@@ -185,6 +185,10 @@
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
   align-self: flex-end; // Boosted mod
+
+  &.justify-content-end li:last-child {
+    margin-right: divide($spacer, 2);
+  }
 }
 
 // Button for toggling the navbar when in its collapsed state
