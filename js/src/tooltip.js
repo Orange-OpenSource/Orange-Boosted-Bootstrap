@@ -29,7 +29,6 @@ import TemplateFactory from './util/template-factory'
 const NAME = 'tooltip'
 const DATA_KEY = 'bs.tooltip'
 const EVENT_KEY = `.${DATA_KEY}`
-const CLASS_PREFIX = 'bs-tooltip'
 const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn'])
 
 const CLASS_NAME_FADE = 'fade'
