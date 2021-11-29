@@ -149,10 +149,12 @@
     margin-bottom: .875rem;
   }
   .navbar-nav .nav-link{
-    padding: .6875rem divide($spacer, 2);
+    @include media-breakpoint-up("md"){
+      padding: .6875rem divide($spacer, 2);
 
-    &.nav-icon {
-      padding: divide($spacer, 4) 1.25rem .875rem !important; // stylelint-disable-line declaration-no-important
+      &.nav-icon {
+        padding: divide($spacer, 4) 1.25rem .875rem !important; // stylelint-disable-line declaration-no-important
+      }
     }
 
     &.active::before {
