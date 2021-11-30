@@ -1,6 +1,6 @@
-# - category: Snippets
-#   description: "Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more."
-#   examples:
+- category: Snippets
+  description: "Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more."
+  examples:
 #     - name: Headers
 #       description: "Display your branding, navigation, search, and more with these header components"
 #     - name: Heroes
@@ -9,8 +9,8 @@
 #       description: "Explain the features, benefits, or other details in your marketing content."
 #     - name: Sidebars
 #       description: "Common navigation patterns ideal for offcanvas or multi-column layouts."
-#     - name: Footers
-#       description: "Finish every page strong with an awesome footer, big or small."
+    - name: Footers
+      description: "Finish every page strong with an awesome footer, big or small."
 #     - name: Dropdowns
 #       description: "Enhance your dropdowns with filters, icons, custom styles, and more."
 #     - name: List groups
