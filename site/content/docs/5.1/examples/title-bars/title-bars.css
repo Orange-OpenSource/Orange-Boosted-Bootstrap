@@ -10,7 +10,8 @@
   }
 }
 
-.img, .img img {
+.img,
+.img img {
   height: 1.8em;
 }
 
