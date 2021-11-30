@@ -10,11 +10,11 @@
   display: none;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: $navbar-orange-border-bottom-width solid $gray-700;
+  border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
 
   .container {
-    padding-right: $navbar-orange-padding-x;
-    padding-left: $navbar-orange-padding-x;
+    padding-right: $navbar-orange-supra-padding-x;
+    padding-left: $navbar-orange-supra-padding-x;
   }
 
   @include media-breakpoint-up(md) {
@@ -22,18 +22,18 @@
   }
 
   .navbar-nav .nav-link {
-    padding: $navbar-orange-link-padding-top $navbar-orange-supra-padding-x $navbar-orange-link-padding-bottom;
+    padding: $navbar-orange-supra-link-padding-top $navbar-orange-supra-link-padding-x $navbar-orange-supra-link-padding-bottom;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
 
     &.active::before {
-      right: $navbar-orange-supra-padding-x;
-      bottom: -$navbar-orange-border-bottom-width;
-      left: $navbar-orange-supra-padding-x;
+      right: $navbar-orange-supra-link-padding-x;
+      bottom: -$navbar-orange-supra-border-bottom-width;
+      left: $navbar-orange-supra-link-padding-x;
     }
 
     &.nav-icon {
-      padding: $navbar-orange-icon-padding-top $navbar-orange-icon-padding-x $navbar-orange-icon-padding-bottom;
+      padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
 
       svg,
       img {
@@ -49,15 +49,15 @@
       @extend .text-white;
       @extend .translate-middle;
       @extend .rounded-pill;
-      padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
-      margin-top: $navbar-orange-supra-margin-y;
+      padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
+      margin-top: $navbar-orange-supra-badge-margin-top;
       font-size: $font-size-base;
     }
   }
 
   .nav-item:last-of-type {
     .nav-icon {
-      padding-right: $navbar-orange-supra-padding-x;
+      padding-right: $navbar-orange-supra-link-padding-x;
     }
   }
 }
