@@ -1,0 +1,23 @@
+.test {
+  background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat;
+
+  @media (min-width: 480px) {
+    background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat, url("https://www.pngfind.com/pngs/m/2-24642_imagenes-random-png-cosas-random-png-transparent-png.png") right 6em bottom/1.73em no-repeat;
+  }
+}
+
+.img, .img img {
+  height: 1.8em;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}

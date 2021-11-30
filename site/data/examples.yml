@@ -18,9 +18,11 @@
 #     - name: Modals
 #       description: "Transform modals to serve any purpose, from feature tours to dialogs."
 
-# - category: Custom Components
-#   description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
-#   examples:
+- category: Custom Components
+  description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
+  examples:
+    - name: Title bars
+      description: "Orange branded title bars to introduce titles."
 #     - name: Album
 #       description: "Simple one-page template for photo galleries, portfolios, and more."
 #     - name: Pricing

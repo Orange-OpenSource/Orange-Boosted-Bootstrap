@@ -1,0 +1,25 @@
+.title-bar {
+  img,
+  svg {
+    width: auto;
+    height: 1.8em;
+  }
+
+  h1,
+  img,
+  svg {
+    font-size: $h2-font-size;
+    line-height: $display-line-height;
+    letter-spacing: $h2-spacing;
+
+    @include media-breakpoint-up(md) {
+      font-size: $display2-size;
+      letter-spacing: $display2-spacing;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: $display1-size;
+      letter-spacing: $display1-spacing;
+    }
+  }
+}
