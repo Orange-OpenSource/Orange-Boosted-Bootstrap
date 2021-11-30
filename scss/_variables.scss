@@ -110,22 +110,6 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-// scss-docs-start theme-colors-rgb
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
-// scss-docs-end theme-colors-rgb
-
-// Boosted mod
-$background-colors: map-merge(
-  $theme-colors,
-  (
-    "success": $supporting-green,
-    "info":    $supporting-blue,
-    "warning": $supporting-yellow,
-    "danger":  $danger
-  )
-) !default;
-// End mod
-
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   4.5 !default;
@@ -441,8 +425,6 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 3,
 ) !default;
-
-$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 // scss-docs-end spacer-variables-maps
 
 $target-size: 2.75rem !default; // Boosted mod: minimum target size (44×44px)
@@ -467,38 +449,6 @@ $position-values: (
 $body-bg:                   $white !default;
 $body-color:                $black !default;
 $body-text-align:           null !default;
-
-// Utilities maps
-//
-// Extends the default `$theme-colors` maps to help create our utilities.
-
-// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
-// scss-docs-start utilities-colors
-$utilities-colors: $theme-colors-rgb !default;
-// scss-docs-end utilities-colors
-
-// scss-docs-start utilities-text-colors
-// Boosted mod: content of $utilities-text
-$utilities-text: (
-  "primary": to-rgb($accessible-orange),
-  "light": to-rgb($gray-500),
-  "white": to-rgb($white),
-  "body": to-rgb($body-color),
-) !default;
-$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
-// scss-docs-end utilities-text-colors
-
-// scss-docs-start utilities-bg-colors
-$utilities-bg: map-merge(
-  $utilities-colors,
-  (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body": to-rgb($body-bg)
-  )
-) !default;
-$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
-// scss-docs-end utilities-bg-colors
 
 // Links
 //
@@ -577,8 +527,6 @@ $grid-gutter-width:           $spacer !default;
 $grid-gutter-breakpoint:      "md" !default; // Boosted mod: gutter depends on breakpoint
 $grid-row-columns:            6 !default;
 
-$gutters: $spacers !default;
-
 // Container padding
 
 $container-padding-x: $grid-gutter-width * .25 !default;
@@ -642,7 +590,8 @@ $aspect-ratios: (
   "1x1": 100%,
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "21x9": calc(9 / 21 * 100%),
+  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portait videos
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -684,6 +633,10 @@ $line-height-base:            calc(18 / 16) !default;
 $line-height-sm:              calc(16 / 14) !default;
 $line-height-lg:              calc(30 / 16) !default;
 // stylelint-enable function-disallowed-list
+
+$line-length-sm:              40ch !default;
+$line-length-md:              80ch !default;
+
 $letter-spacing-base:         $spacer * -.005 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
@@ -1621,7 +1574,6 @@ $alert-border-width:                $border-width !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
-$alert-colors:                      map-remove($theme-colors, "primary", "secondary", "light", "dark") !default;
 $alert-icons: (
   "success": var(--#{$boosted-variable-prefix}success-icon),
   "info":    escape-svg($info-icon),

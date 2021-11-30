@@ -478,6 +478,14 @@ $utilities: map-merge(
         lg: $line-height-lg,
       )
     ),
+    "line-length": (
+      property: max-width,
+      class: ll,
+      values: (
+        sm: $line-length-sm,
+        md: $line-length-md,
+      )
+    ),
     "text-align": (
       responsive: true,
       property: text-align,
