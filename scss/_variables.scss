@@ -1190,17 +1190,34 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 
 // Boosted mod: Orange master logo & minimizing behavior
 $navbar-icon-size:                     $spacer * 1.5 !default;
-//$navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-//$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
-//$navbar-supra-padding-x:               $spacer * .25 * 1.5 !default;
 $navbar-transition-duration:           $transition-duration !default;
 $navbar-transition-timing-function:    $transition-timing !default;
 $navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+// End mod
+
+// Boosted mod: Orange navbar
+// scss-docs-start orange-navbar-variables
+$navbar-orange-supra-padding-x:               .125rem !default;
+$navbar-orange-supra-border-bottom-width:     1px !default;
+
+$navbar-orange-supra-badge-padding-y:         .125rem !default;
+$navbar-orange-supra-badge-padding-x:         .375rem !default;
+$navbar-orange-supra-badge-margin-top:        map-get($spacers, 4) * .1 !default;
+
+$navbar-orange-supra-icon-padding-top:        divide($spacer, 2) !default;
+$navbar-orange-supra-icon-padding-x:          .9375rem !default;
+$navbar-orange-supra-icon-padding-bottom:     .25rem !default;
+$navbar-orange-supra-icon-size:               1.5625rem !default;
+
+$navbar-orange-supra-link-padding-top:        .75rem !default;
+$navbar-orange-supra-link-padding-x:          map-get($spacers, 1) * 1.5 !default;
+$navbar-orange-supra-link-padding-bottom:     .6875rem !default;
+// scss-docs-end orange-navbar-variables
 // End mod
 
 $navbar-brand-font-size:            $font-size-base !default;

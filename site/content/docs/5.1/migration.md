@@ -333,6 +333,10 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
 
+### Orange navbar
+
+- <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
+
 ### Pagination
 
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
