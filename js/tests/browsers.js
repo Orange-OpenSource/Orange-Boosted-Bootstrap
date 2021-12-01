@@ -51,13 +51,6 @@ const browsers = {
     browser: 'Firefox',
     browser_version: 'latest'
   },
-  EsrWin10: {
-    base: 'BrowserStack',
-    os: 'Windows',
-    os_version: '10',
-    browser: 'Firefox',
-    browser_version: '68'
-  },
   iphone7: {
     base: 'BrowserStack',
     os: 'ios',
@@ -81,9 +74,6 @@ const browsers = {
   }
 }
 
-const browsersKeys = Object.keys(browsers)
-
 module.exports = {
-  browsers,
-  browsersKeys
+  browsers
 }
