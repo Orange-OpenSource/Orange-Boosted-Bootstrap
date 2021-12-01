@@ -181,6 +181,34 @@ describe('Alert', () => {
     })
   })
 
+  it('should throw an error on undefined method', () => {
+    fixtureEl.innerHTML = '<div></div>'
+
+    const div = fixtureEl.querySelector('div')
+    const action = 'undefinedMethod'
+
+    jQueryMock.fn.alert = Alert.jQueryInterface
+    jQueryMock.elements = [div]
+
+    expect(() => {
+      jQueryMock.fn.alert.call(jQueryMock, action)
+    }).toThrowError(TypeError, `No method named "${action}"`)
+  })
+
+  it('should throw an error on protected method', () => {
+    fixtureEl.innerHTML = '<div></div>'
+
+    const div = fixtureEl.querySelector('div')
+    const action = '_getConfig'
+
+    jQueryMock.fn.alert = Alert.jQueryInterface
+    jQueryMock.elements = [div]
+
+    expect(() => {
+      jQueryMock.fn.alert.call(jQueryMock, action)
+    }).toThrowError(TypeError, `No method named "${action}"`)
+  })
+
   describe('getInstance', () => {
     it('should return alert instance', () => {
       fixtureEl.innerHTML = '<div></div>'
