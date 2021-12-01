@@ -1,0 +1,48 @@
+$themes: (
+  default: (
+    "test-primary": #00f,
+    "test-secondary": #008000
+  ),
+  dark: (
+    "test-primary": #800080,
+    "test-secondary": #008080
+  ),
+  yellow: (
+    "test-primary": #008000,
+    "secondary": #d9b346
+  ),
+  red: (
+    "test-primary": #ff0,
+    "test-secondary": #ffd9b8
+  ),
+  blue: (
+    "test-primary": #0d2233,
+    "test-secondary": #d9b346
+  ),
+  pink: (
+    "test-primary": #ff1493,
+    "test-secondary": #00bfff
+  )
+) !default;
+
+@each $theme, $name in $themes {
+  /* #{$theme} */
+  [data-bs-theme="#{$theme}"] {
+    @each $color, $value in $name {
+      --bs-#{$color}: #{$value};
+    }
+  }
+}
+
+// Mapping
+$bs-test-primary: var(--bs-test-primary) !default;
+$bs-test-secondary: var(--bs-test-secondary) !default;
+
+
+h1 {
+  color: $bs-test-primary;
+}
+p {
+  color: $bs-test-primary;
+  background-color: $bs-test-secondary;
+}
