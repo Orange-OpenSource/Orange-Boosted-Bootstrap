@@ -38,7 +38,7 @@
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "23.7 kB"
+      "maxSize": "23.8 kB"
     },
     {
       "path": "./dist/js/boosted.esm.js",
