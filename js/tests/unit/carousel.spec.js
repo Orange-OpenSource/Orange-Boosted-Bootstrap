@@ -311,7 +311,7 @@ describe('Carousel', () => {
       carousel.next()
 
       setTimeout(() => {
-        expect(lastElement.toHaveClass('active'))
+        expect(lastElement).toHaveClass('active')
         done()
       }, 10)
     })
@@ -422,7 +422,7 @@ describe('Carousel', () => {
       carousel.next()
 
       setTimeout(() => {
-        expect(carousel._element.toHaveClass('is-done'))
+        expect(carousel._element).toHaveClass('is-done')
         done()
       }, 10)
     })
@@ -453,7 +453,7 @@ describe('Carousel', () => {
       carousel.prev()
 
       setTimeout(() => {
-        expect(carousel._element.not.toHaveClass('is-done')
+        expect(carousel._element).not.toHaveClass('is-done')
         done()
       }, 10)
     })
@@ -1029,7 +1029,7 @@ describe('Carousel', () => {
       carousel.pause()
 
       expect(carousel._isPaused).toBeTrue()
-      expect(carousel._element.toHaveClass('is-paused'))
+      expect(carousel._element).toHaveClass('is-paused')
     })
     // End mod
 
@@ -1131,7 +1131,7 @@ describe('Carousel', () => {
 
       carousel.cycle()
 
-      expect(carousel._element.not.toHaveClass('is-paused'))
+      expect(carousel._element).not.toHaveClass('is-paused')
     })
     // End mod
 
