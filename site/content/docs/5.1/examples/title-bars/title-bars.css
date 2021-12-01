@@ -1,19 +1,20 @@
-.test {
+/* .test {
   background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat;
-
-  @media (min-width: 480px) {
+}
+@media (min-width: 480px) {
+  .test {
     background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat;
   }
-
-  @media (min-width: 768px) {
+}
+@media (min-width: 768px) {
+  .test {
     background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat, url("https://www.pngfind.com/pngs/m/2-24642_imagenes-random-png-cosas-random-png-transparent-png.png") right 6em bottom/1.73em no-repeat;
   }
 }
 
-.img,
-.img img {
+.img {
   height: 1.8em;
-}
+} */
 
 .b-example-divider {
   height: 3rem;

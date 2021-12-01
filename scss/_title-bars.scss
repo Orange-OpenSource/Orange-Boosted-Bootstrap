@@ -3,11 +3,39 @@
   svg {
     width: auto;
     height: 1.8em;
+
+    @media (max-width: 20em) {
+      display: none;
+    }
+    @include media-breakpoint-up("sm") {
+      @media (max-width: 26em) {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up("md") {
+      @media (max-width: 43em) {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up("lg") {
+      @media (max-width: 49em) {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up("xl") {
+      @media (max-width: 57.5em) {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up("xxl") {
+      @media (max-width: 63.5em) {
+        display: none;
+      }
+    }
   }
 
   h1,
-  img,
-  svg {
+  & {
     font-size: $h2-font-size;
     line-height: $display-line-height;
     letter-spacing: $h2-spacing;
