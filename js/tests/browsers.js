@@ -37,6 +37,15 @@ const browsers = {
     browser: 'Firefox',
     browser_version: '60'
   },
+  // Boosted mod: ESR Firefox used inside Orange
+  EsrWin10: {
+    base: 'BrowserStack',
+    os: 'Windows',
+    os_version: '10',
+    browser: 'Firefox',
+    browser_version: '68'
+  },
+  // End mod
   chromeWin10Latest: {
     base: 'BrowserStack',
     os: 'Windows',
@@ -50,13 +59,6 @@ const browsers = {
     os_version: '10',
     browser: 'Firefox',
     browser_version: 'latest'
-  },
-  EsrWin10: {
-    base: 'BrowserStack',
-    os: 'Windows',
-    os_version: '10',
-    browser: 'Firefox',
-    browser_version: '68'
   },
   iphone7: {
     base: 'BrowserStack',
@@ -81,9 +83,6 @@ const browsers = {
   }
 }
 
-const browsersKeys = Object.keys(browsers)
-
 module.exports = {
-  browsers,
-  browsersKeys
+  browsers
 }
