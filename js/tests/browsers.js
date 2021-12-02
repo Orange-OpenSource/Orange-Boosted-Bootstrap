@@ -37,6 +37,15 @@ const browsers = {
     browser: 'Firefox',
     browser_version: '60'
   },
+  // Boosted mod: ESR Firefox used inside Orange
+  EsrWin10: {
+    base: 'BrowserStack',
+    os: 'Windows',
+    os_version: '10',
+    browser: 'Firefox',
+    browser_version: '68'
+  },
+  // End mod
   chromeWin10Latest: {
     base: 'BrowserStack',
     os: 'Windows',
