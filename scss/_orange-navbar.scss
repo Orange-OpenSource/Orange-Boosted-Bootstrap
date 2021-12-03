@@ -19,16 +19,6 @@
 
   @include media-breakpoint-up(md) {
     display: flex;
-    .container {
-      padding-right: $navbar-orange-padding-x;
-      padding-left: $navbar-orange-padding-x;
-    }
-  }
-
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: $navbar-supra-padding-x !important; // stylelint-disable-line declaration-no-important
-    }
   }
 
   .navbar-nav .nav-link {
@@ -73,6 +63,20 @@
 }
 
 .global {
+  border-bottom: 1px solid $gray-700;
+
+  .badge {
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .bg-info;
+    @extend .text-white;
+    @extend .translate-middle;
+    @extend .rounded-pill;
+    padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
+    margin-top: $navbar-orange-supra-badge-margin-top;
+    font-size: $font-size-base;
+  }
+
   @include media-breakpoint-up(xs) {
     .title {
       font-size: 1.313rem;
@@ -92,8 +96,8 @@
   }
   svg,
   img {
-    width: $navbar-supra-icon-size;
-    height: $navbar-supra-icon-size;
+    width: $navbar-orange-supra-icon-size;
+    height: $navbar-orange-supra-icon-size;
   }
 
   @include media-breakpoint-up(md) {
@@ -112,8 +116,8 @@
     }
 
     .container {
-      padding-right: .125rem;
-      padding-left: .125rem;
+      padding-right: $navbar-orange-supra-padding-x;
+      padding-left: $navbar-orange-supra-padding-x;
     }
 
     svg,
@@ -131,118 +135,6 @@
     &.nav-icon {
       padding: divide($spacer, 2) 1.25rem !important; // stylelint-disable-line declaration-no-important
     }
-  }
-}
-
-.supra, .global {
-  border-bottom: 1px solid $gray-700;
-
-  .badge {
-    @extend .position-absolute;
-    @extend .top-0;
-    @extend .bg-info;
-    @extend .text-white;
-    @extend .translate-middle;
-    @extend .rounded-pill;
-    padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
-    margin-top: $navbar-supra-padding-y;
-    font-size: $font-size-base;
-  }
-}
-
-.header-minimised {
-  // Boosted mod
-  .navbar-brand {
-    img {
-      width: $h2-font-size;
-      height: $h2-font-size;
-    }
-  }
-  .nav-link.active::before {
-    bottom: -1px !important;
-  }
-}
-
-.obs-logo {
-  margin-bottom: $spacer / 10;
-}
-
-.global {
-  @include media-breakpoint-up(xs) {
-    .title {
-      font-size: 1.313rem;
-    }
-
-    .two-lined {
-      font-size: 1.125rem;
-      & :first-child {
-        vertical-align: text-top;
-      }
-    }
-
-    .title,
-    .two-lined {
-      margin-left: .9375rem;
-    }
-  }
-  svg,
-  img {
-    width: $navbar-supra-icon-size;
-    height: $navbar-supra-icon-size;
-  }
-
-  @include media-breakpoint-up(md) {
-    display: flex;
-    .title {
-      font-size: 2.1875rem;
-      letter-spacing: $h1-spacing;
-    }
-    .two-lined {
-      font-size: 1.813rem;
-    }
-
-    .title,
-    .two-lined {
-      margin-left: 1.5625rem;
-    }
-
-    .container {
-      padding-right: .125rem;
-      padding-left: .125rem;
-    }
-
-    svg,
-    img {
-      width: $navbar-icon-size;
-      height: $navbar-icon-size;
-    }
-  }
-
-  .nav-link {
-    &.active::before {
-      bottom: -8px !important; // stylelint-disable-line declaration-no-important
-    }
-
-    &.nav-icon {
-      padding: divide($spacer, 2) 1.25rem !important; // stylelint-disable-line declaration-no-important
-    }
-  }
-}
-
-.supra,
-.global {
-  border-bottom: 1px solid $gray-700;
-
-  .badge {
-    @extend .position-absolute;
-    @extend .top-0;
-    @extend .bg-info;
-    @extend .text-white;
-    @extend .translate-middle;
-    @extend .rounded-pill;
-    padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
-    margin-top: $navbar-supra-padding-y;
-    font-size: $font-size-base;
   }
 }
 

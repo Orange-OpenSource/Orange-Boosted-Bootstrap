@@ -82,7 +82,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 {{< anchor web-glh-stn-001 >}}
 
 {{< example show_markup="true" class="p-0">}}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
   <div class="container-lg">
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -261,7 +261,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
@@ -353,7 +353,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -447,7 +447,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -521,7 +521,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
   </nav>
   <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
-    <hr class="w-100 m-0 d-none d-md-block border-700">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="global-header-title-nav">
         <ul class="navbar-nav">
@@ -544,7 +543,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -619,7 +618,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
   </nav>    
   <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
-    <hr class="w-100 m-0 d-none d-md-block border-700">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="global-header-title-nav-2">
         <ul class="navbar-nav">
@@ -642,7 +640,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -696,7 +694,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -762,7 +760,7 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
 
 {{< example show_markup="true" class="p-0">}}
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -810,7 +808,6 @@ Based on viewport size, supra bar is hidden under <var>768px</var>.
     </div>
   </nav>    
   <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
-    <hr class="w-100 m-0 d-none d-md-block border-700">
     <div class="container-lg border-bottom">
       <div class="navbar-collapse collapse pb-1" id="obs-header-nav">
         <ul class="navbar-nav">
