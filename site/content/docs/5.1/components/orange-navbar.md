@@ -157,7 +157,8 @@ Brand-compliant navbars that are easy to use and customizable.
         </a>
       </li>
     </ul>
-{{< /orange-supra >}}
+  </div>
+</nav>
 {{< /example >}}
 
 #### Global header with title
@@ -436,7 +437,8 @@ The minimised global header will **always** use the small [Master logo]({{< docs
         </a>
       </li>
     </ul>
-{{< /orange-supra >}}
+  </div>
+</nav>
 {{< /example >}}
 
 #### With navigation under
