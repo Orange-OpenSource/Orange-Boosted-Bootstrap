@@ -145,8 +145,20 @@
       width: $h2-font-size;
       height: $h2-font-size;
     }
+    margin-bottom: .875rem;
   }
-  .nav-link.active::before {
-    bottom: -1px !important; // stylelint-disable-line declaration-no-important
+
+  .navbar-nav .nav-link{
+    padding: .6875rem divide($spacer, 2);
+
+    @include media-breakpoint-up("md"){
+      &.nav-icon {
+        padding: divide($spacer, 4) 1.25rem .875rem !important; // stylelint-disable-line declaration-no-important
+      }
+
+      &.active::before {
+        bottom: -1px !important; // stylelint-disable-line declaration-no-important
+      }
+    }
   }
 }

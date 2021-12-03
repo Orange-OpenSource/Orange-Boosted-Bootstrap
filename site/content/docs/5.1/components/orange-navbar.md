@@ -188,7 +188,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               <span class="visually-hidden">Search</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -202,7 +202,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -221,6 +221,26 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ul class="navbar-nav d-none d-md-flex">
@@ -278,7 +298,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               <span class="visually-hidden">Search</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -292,7 +312,7 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
               </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -311,6 +331,26 @@ It is not allowed to have a title into a [minimised global header]({{< ref "#glo
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ul class="navbar-nav d-none d-md-flex pb-1">
@@ -372,7 +412,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
             <span class="visually-hidden">Search</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-block">
           <a href="#" class="nav-link nav-icon position-relative">
             <span class="position-relative">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -386,7 +426,7 @@ The minimised global header will **always** use the small [Master logo]({{< docs
             </span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-block">
           <a href="#" class="nav-link nav-icon">
             <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
           <span class="visually-hidden">My account</span>
@@ -405,6 +445,26 @@ The minimised global header will **always** use the small [Master logo]({{< docs
         <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
         <li class="nav-item"><a class="nav-link" href="#">News</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+        <li class="nav-item d-sm-none">
+          <a href="#" class="nav-link nav-icon position-relative">
+            <span class="position-relative">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item d-sm-none">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+          <span class="visually-hidden">My account</span>
+          </a>
+        </li>
       </ul>
     </div>
     <ul class="navbar-nav d-none d-md-flex">
@@ -473,7 +533,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
               <span class="visually-hidden">Search</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -487,7 +547,7 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
               </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
             <span class="visually-hidden">My account</span>
@@ -540,6 +600,26 @@ Also, it is not allowed to use this bar under a [minimised global header]({{< re
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon position-relative">
+              <span class="position-relative">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
