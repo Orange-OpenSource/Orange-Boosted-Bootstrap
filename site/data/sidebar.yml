@@ -63,6 +63,7 @@
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
+    - title: buttons-dark-mode
     - title: Button group
     - title: Card
     - title: Carousel

@@ -29,7 +29,7 @@ $themes: (
   /* #{$theme} */
   [data-bs-theme="#{$theme}"] {
     @each $color, $value in $name {
-      --bs-#{$color}: #{$value};
+      --bs-test-#{$color}: #{$value};
     }
   }
 }
@@ -46,3 +46,63 @@ p {
   color: $bs-test-primary;
   background-color: $bs-test-secondary;
 }
+
+// scss-docs-start btn-variant-mixin
+@mixin button-variant(
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: $black, // Boosted mod
+  $hover-border: $black, // Boosted mod
+  $hover-color: color-contrast($hover-background),
+  $active-background: $primary, // Boosted mod
+  $active-border: $primary, // Boosted mod
+  $active-color: color-contrast($active-background),
+  $disabled-background: $gray-500, // Boosted mod
+  $disabled-border: $gray-500, // Boosted mod
+  $disabled-color: $white // Boosted mod
+) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  &:hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  // Boosted mod: custom styles for .btn-check
+  &:focus {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+    outline-color: $hover-border; // Boosted mod
+    // Boosted mod: buttons share the same `box-shadow` on `:focus`
+  }
+
+  // Boosted mod: custom styles for .btn-check
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $active-color;
+    background-color: $active-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $active-border;
+    outline-color: $active-border; // Boosted mod
+
+    // Boosted mod: buttons share the same `box-shadow` on `:focus`
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $disabled-color;
+    background-color: $disabled-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $disabled-border;
+  }
+}
+// scss-docs-end btn-variant-mixin
