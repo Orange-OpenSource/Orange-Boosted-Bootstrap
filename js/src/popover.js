@@ -73,14 +73,14 @@ class Popover extends Tooltip {
   }
 
   // Overrides
-  isWithContent() {
-    return this.getTitle() || this._getContent()
+  _isWithContent() {
+    return this._getTitle() || this._getContent()
   }
 
   // Private
   _getContentForTemplate() {
     return {
-      [SELECTOR_TITLE]: this.getTitle(),
+      [SELECTOR_TITLE]: this._getTitle(),
       [SELECTOR_CONTENT]: this._getContent()
     }
   }
@@ -94,13 +94,15 @@ class Popover extends Tooltip {
     return this.each(function () {
       const data = Popover.getOrCreateInstance(this, config)
 
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        }
-
-        data[config]()
+      if (typeof config !== 'string') {
+        return
       }
+
+      if (typeof data[config] === 'undefined') {
+        throw new TypeError(`No method named "${config}"`)
+      }
+
+      data[config]()
     })
   }
 }
