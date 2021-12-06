@@ -1,12 +1,12 @@
 ---
-layout: guidelines
+layout: single
 title: Logos
 description: The Master logo is our most important and valuable identity element. It’s the mark of assurance that appears on almost everything we do.
 group: guidelines
 subgroup: Core elements
-aliases:
-  - "/guidelines/"
-  - "/docs/5.1/guidelines/"
+#aliases:
+#  - "/guidelines/"
+#  - "/docs/5.1/guidelines/"
 toc: true
 ---
 
