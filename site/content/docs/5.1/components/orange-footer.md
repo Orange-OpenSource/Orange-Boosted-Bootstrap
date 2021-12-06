@@ -7,14 +7,18 @@ aliases: "/docs/5.1/components/orange-footer/"
 toc: true
 ---
 
-## Orange footer
+## Overview
 
-Orange footer is not a component yet. The feature will be delivered with [#892]({{< param repo >}}/issues/892).
+{{< callout warning >}}
+### Orange footer is not a component yet
 
-{{< callout info >}}
-As a substitute, you can see some examples at the [**footers examples section**]({{< docsref "/examples/footers" >}}). These footers don't need more css than boosted but they aren't branded yet for the "Mailing list" bar and the "Follow us" bar (See [complements]({{< docsref "/components/orange-footer#orange-footer-examples-complement" >}}) below). Furthermore, the padding applied here is not that responsive.
+The feature will be delivered with [#892]({{< param repo >}}/issues/892).
 
-These footers need Boosted's js for accordions in mobile views.
+In the meantime, some examples have been developed in the [footers examples section]({{< docsref "/examples/footers" >}}) by using mostly Boosted utilities and our Collapse JavaScript plugin.
+
+The "Mailing list" and "Follow us" bars require some extra CSS. (See [complements]({{< docsref "/components/orange-footer#orange-footer-examples-complement" >}}) below).
+
+Furthermore, the padding applied here is not that responsive.
 {{< /callout >}}
 
 ## Orange footer examples complement
@@ -29,10 +33,6 @@ In order to be branded on this sub-component, adding `.custom-form` on the `form
 
 ```scss
 .custom-form {
-  input {
-    border-color: $gray-700;
-  }
-
   button {
     border-color: $white;
 
