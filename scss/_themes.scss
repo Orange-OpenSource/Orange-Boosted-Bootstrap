@@ -1,25 +1,25 @@
 $themes: (
-  default: (
+  theme-default: (
     "test-primary": #00f,
     "test-secondary": #008000
   ),
-  dark: (
+  theme-dark: (
     "test-primary": #800080,
     "test-secondary": #008080
   ),
-  yellow: (
+  theme-yellow: (
     "test-primary": #008000,
     "secondary": #d9b346
   ),
-  red: (
+  theme-red: (
     "test-primary": #ff0,
     "test-secondary": #ffd9b8
   ),
-  blue: (
+  theme-blue: (
     "test-primary": #0d2233,
     "test-secondary": #d9b346
   ),
-  pink: (
+  theme-pink: (
     "test-primary": #ff1493,
     "test-secondary": #00bfff
   )
@@ -29,7 +29,7 @@ $themes: (
   /* #{$theme} */
   [data-bs-theme="#{$theme}"] {
     @each $color, $value in $name {
-      --bs-test-#{$color}: #{$value};
+      --bs-#{$color}: #{$value};
     }
   }
 }
@@ -106,3 +106,16 @@ p {
   }
 }
 // scss-docs-end btn-variant-mixin
+
+[data-bs-theme] {
+
+  .btn {
+    color: $bs-test-secondary;
+    background-color: $bs-test-primary;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+}
