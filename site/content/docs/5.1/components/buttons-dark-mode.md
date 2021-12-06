@@ -90,10 +90,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Bowser theme
+## Castle theme
 
 {{< example >}}
-<div data-bs-theme="bowser">
+<div data-bs-theme="castle">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -104,10 +104,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Yoshi theme
+## Dino theme
 
 {{< example >}}
-<div data-bs-theme="yoshi">
+<div data-bs-theme="dino">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
