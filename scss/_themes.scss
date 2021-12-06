@@ -1,27 +1,93 @@
 $themes: (
-  theme-default: (
-    "test-primary": #00f,
-    "test-secondary": #008000
+  classic: (
+    "color-bg": #fff,
+    "color-bg-offset": #f7f7f9,
+    "color-text": #373a3c,
+    "color-text-offset": #818a91,
+    "color-border": #eceeef,
+    "color-primary": #ff335f,
+    "color-primary-offset": #ff1447,
+    "color-secondary": #43a9a3
   ),
-  theme-dark: (
-    "test-primary": #800080,
-    "test-secondary": #008080
+  dark: (
+    "color-bg": #0e141b,
+    "color-bg-offset": #252526,
+    "color-text": #fff,
+    "color-text-offset": #818a91,
+    "color-border": #2d2d2d,
+    "color-primary": #ff5277,
+    "color-primary-offset": #ff2957,
+    "color-secondary": #43a9a3
   ),
-  theme-yellow: (
-    "test-primary": #008000,
-    "secondary": #d9b346
+  beach: (
+    "color-bg": #fffffe,
+    "color-bg-offset": #e3f6f5,
+    "color-text": #272343,
+    "color-text-offset": #2d334a,
+    "color-border": #e3f6f5,
+    "color-primary": #ff9d00,
+    "color-primary-offset": #ffca00,
+    "color-secondary": #bae8e8
   ),
-  theme-red: (
-    "test-primary": #ff0,
-    "test-secondary": #ffd9b8
+  choco: (
+    "color-bg": #55423d,
+    "color-bg-offset": #41474c,
+    "color-text": #fffffe,
+    "color-text-offset": #ffc0ad,
+    "color-border": #271c19,
+    "color-primary": #f3ab87,
+    "color-primary-offset": #ffc0ad,
+    "color-secondary": #e78fb3
   ),
-  theme-blue: (
-    "test-primary": #0d2233,
-    "test-secondary": #d9b346
+  milk: (
+    "color-bg": #fef6e4,
+    "color-bg-offset": #f3e1d8,
+    "color-text": #172c66,
+    "color-text-offset": #006e8a,
+    "color-border": #f3d2c1,
+    "color-primary": #f582ae,
+    "color-primary-offset": #ff3d6a,
+    "color-secondary": #8bd3dd
   ),
-  theme-pink: (
-    "test-primary": #ff1493,
-    "test-secondary": #00bfff
+  bowser: (
+    "color-bg": #16161a,
+    "color-bg-offset": #29293e,
+    "color-text": #fffffe,
+    "color-text-offset": #94a1b2,
+    "color-border": #383a61,
+    "color-primary": #7f5af0,
+    "color-primary-offset": #e068fd,
+    "color-secondary": #2cb67d
+  ),
+  yoshi: (
+    "color-bg": #fafbf5,
+    "color-bg-offset": #f2ede9,
+    "color-text": #41474c,
+    "color-text-offset": #757d84,
+    "color-border": #e8e0d9,
+    "color-primary": #99c221,
+    "color-primary-offset": #6e910a,
+    "color-secondary": #e55812
+  ),
+  rainbow: (
+    "color-bg": #140527,
+    "color-bg-offset": #311b46,
+    "color-text": #feff00,
+    "color-text-offset": #ff464d,
+    "color-border": #d846ff,
+    "color-primary": #49f5f7,
+    "color-primary-offset": #5dccf8,
+    "color-secondary": #01c317
+  ),
+  lobster: (
+    "color-bg": #fcddd4,
+    "color-bg-offset": #ffb9ad,
+    "color-text": #4b1313,
+    "color-text-offset": #146caa,
+    "color-border": #f1797c,
+    "color-primary": #b62b2b,
+    "color-primary-offset": #ff0030,
+    "color-secondary": #fb9f13
   )
 ) !default;
 
@@ -35,86 +101,25 @@ $themes: (
 }
 
 // Mapping
-$bs-test-primary: var(--bs-test-primary) !default;
-$bs-test-secondary: var(--bs-test-secondary) !default;
-
-
-h1 {
-  color: $bs-test-primary;
-}
-p {
-  color: $bs-test-primary;
-  background-color: $bs-test-secondary;
-}
-
-// scss-docs-start btn-variant-mixin
-@mixin button-variant(
-  $background,
-  $border,
-  $color: color-contrast($background),
-  $hover-background: $black, // Boosted mod
-  $hover-border: $black, // Boosted mod
-  $hover-color: color-contrast($hover-background),
-  $active-background: $primary, // Boosted mod
-  $active-border: $primary, // Boosted mod
-  $active-color: color-contrast($active-background),
-  $disabled-background: $gray-500, // Boosted mod
-  $disabled-border: $gray-500, // Boosted mod
-  $disabled-color: $white // Boosted mod
-) {
-  color: $color;
-  @include gradient-bg($background);
-  border-color: $border;
-  @include box-shadow($btn-box-shadow);
-
-  &:hover {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-  }
-
-  // Boosted mod: custom styles for .btn-check
-  &:focus {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-    outline-color: $hover-border; // Boosted mod
-    // Boosted mod: buttons share the same `box-shadow` on `:focus`
-  }
-
-  // Boosted mod: custom styles for .btn-check
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $active-border;
-    outline-color: $active-border; // Boosted mod
-
-    // Boosted mod: buttons share the same `box-shadow` on `:focus`
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $disabled-color;
-    background-color: $disabled-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $disabled-border;
-  }
-}
-// scss-docs-end btn-variant-mixin
+$bs-color-bg: var(--bs-color-bg) !default;
+$bs-color-bg-offset: var(--bs-color-bg-offset) !default;
+$bs-color-text: var(--bs-color-text) !default;
+$bs-color-text-offset: var(--bs-color-text-offset) !default;
+$bs-color-border: var(--bs-color-border) !default;
+$bs-color-primary: var(--bs-color-primary) !default;
+$bs-color-primary-offset: var(--bs-color-primary-offset) !default;
+$bs-color-secondary: var(--bs-color-secondary) !default;
 
 [data-bs-theme] {
 
   .btn {
-    color: $bs-test-secondary;
-    background-color: $bs-test-primary;
+    color: $bs-color-text;
+    background-color: $bs-color-bg-offset;
+    border: $bs-color-border;
 
     &:hover {
-      background-color: $white;
+      color: $bs-color-text-offset;
+      background-color: $bs-color-bg;
     }
   }
 

@@ -20,10 +20,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Default theme
+## Classic theme
 
 {{< example >}}
-<div data-bs-theme="theme-default">
+<div data-bs-theme="classic">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -37,7 +37,7 @@ toc: true
 ## Dark theme
 
 {{< example >}}
-<div data-bs-theme="theme-dark">
+<div data-bs-theme="dark">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -48,10 +48,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Yellow theme
+## Beach theme
 
 {{< example >}}
-<div data-bs-theme="theme-yellow">
+<div data-bs-theme="beach">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -62,10 +62,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Red theme
+## Choco theme
 
 {{< example >}}
-<div data-bs-theme="theme-red">
+<div data-bs-theme="choco">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -76,10 +76,10 @@ toc: true
 </div>
 {{< /example >}}
 
-## Blue theme
+## Milk theme
 
 {{< example >}}
-<div data-bs-theme="theme-blue">
+<div data-bs-theme="milk">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -90,10 +90,52 @@ toc: true
 </div>
 {{< /example >}}
 
-## Pink theme
+## Bowser theme
 
 {{< example >}}
-<div data-bs-theme="theme-pink">
+<div data-bs-theme="bowser">
+  {{< buttons.inline >}}
+  {{- range (index $.Site.Data "theme-colors") }}
+  <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
+  {{- end -}}
+  {{< /buttons.inline >}}
+
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+{{< /example >}}
+
+## Yoshi theme
+
+{{< example >}}
+<div data-bs-theme="yoshi">
+  {{< buttons.inline >}}
+  {{- range (index $.Site.Data "theme-colors") }}
+  <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
+  {{- end -}}
+  {{< /buttons.inline >}}
+
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+{{< /example >}}
+
+## Rainbow theme
+
+{{< example >}}
+<div data-bs-theme="rainbow">
+  {{< buttons.inline >}}
+  {{- range (index $.Site.Data "theme-colors") }}
+  <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
+  {{- end -}}
+  {{< /buttons.inline >}}
+
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+{{< /example >}}
+
+## Lobster theme
+
+{{< example >}}
+<div data-bs-theme="lobster">
   {{< buttons.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
   <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
