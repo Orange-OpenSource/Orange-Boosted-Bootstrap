@@ -112,6 +112,18 @@ $bs-color-secondary: var(--bs-color-secondary) !default;
 
 [data-bs-theme] {
 
+
+  h2 {
+    color: $bs-color-primary;
+  }
+
+  p {
+    color: $bs-color-secondary;
+    &:last-of-type {
+      color: $bs-color-primary-offset;
+    }
+  }
+
   .btn {
     color: $bs-color-text;
     background-color: $bs-color-bg-offset;
