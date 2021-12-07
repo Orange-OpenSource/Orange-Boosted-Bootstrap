@@ -25,11 +25,11 @@ Even if the padding applied here is not that responsive and that everything is n
 In order to have correct active colors in "Mailing list" and "Follow us" bars, some extra classes and CSS are required:
 
 ```css
-.example-footer-custom-form button:active {
+.example-footer-custom-form .btn:active {
   border-color: var(--bs-orange) !important;
 }
 
-.example-footer-custom-social a:active {
+.example-footer-custom-social .btn:active {
   color: var(--bs-dark) !important;
   background-color: var(--bs-white) !important;
   border-color: var(--bs-white) !important;
