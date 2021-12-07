@@ -6,6 +6,18 @@ extra_css:
 body_class: ""
 ---
 
+<style>
+  .example-footer-custom-form button:active {
+    border-color: var(--bs-orange) !important;
+  }
+
+  .example-footer-custom-social a:active {
+    color: var(--bs-dark) !important;
+    background-color: var(--bs-white) !important;
+    border-color: var(--bs-white) !important;
+  }
+</style>
+
 <main>
   <!-- Boosted mod: page must contain a level-one heading (a11y) -->
   <h1 class="visually-hidden">Footers Boosted example</h1>
@@ -34,7 +46,7 @@ body_class: ""
     <div class="w-100 px-2 px-md-4 py-4">
       <div class="pb-2">
         <h6>Sign up to our mailing list</h6>
-        <form class="row g-3">
+        <form class="row g-3 example-footer-custom-form">
           <div class="col-auto">
             <label for="inputEmail1" class="visually-hidden">Email</label>
             <!-- Dark homemade input version -->
@@ -55,7 +67,7 @@ body_class: ""
     <!-- Follow us bar -->
     <span class="visually-hidden">Follow us bar</span>
     <div class="w-100 px-2 px-md-4 py-4">
-      <ul class="nav flex-row align-items-center gap-2">
+      <ul class="nav flex-row align-items-center gap-2 example-footer-custom-social">
         <li class="text-white fw-bold col-12 col-md-auto me-2 mb-2 mb-md-0">Follow us</li>
         <!-- Dark homemade button version -->
         <li><a href="#" class="btn btn-icon btn-social btn-twitter text-white"><span class="visually-hidden">Twitter</span></a></li>
@@ -238,7 +250,7 @@ body_class: ""
     <div class="w-100 px-2 px-md-4 py-4 border-bottom border-1 border-dark">
       <div class="pb-2">
         <h6>Sign up to our mailing list</h6>
-        <form class="row g-3">
+        <form class="row g-3 example-footer-custom-form">
           <div class="col-auto">
             <label for="inputEmail" class="visually-hidden">Email</label>
             <!-- Dark homemade input version -->
@@ -255,7 +267,7 @@ body_class: ""
     <!-- Follow us bar -->
     <span class="visually-hidden">Follow us bar</span>
     <div class="w-100 px-2 px-md-4 py-4 border-bottom border-1 border-dark">
-      <ul class="nav flex-row align-items-center gap-2">
+      <ul class="nav flex-row align-items-center gap-2 example-footer-custom-social">
         <li class="text-white fw-bold col-12 col-md-auto me-2 mb-2 mb-md-0">Follow us</li>
         <!-- Dark homemade button version -->
         <li><a href="#" class="btn btn-icon btn-social btn-twitter text-white"><span class="visually-hidden">Twitter</span></a></li>
