@@ -11,7 +11,7 @@
 
 - title: Components
   pages:
-    - title: Buttons
+    # - title: Buttons
     - title: Alerts
     - title: Navigation
     - title: Forms
