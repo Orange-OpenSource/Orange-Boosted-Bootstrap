@@ -82,7 +82,7 @@ Alerts come with a smaller variant: `.alert-sm`.
 </div>
 <div class="alert alert-warning alert-sm" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-  <p>Warning notification text goes here.</p>
+  <p>Warning notification text goes here. <a href="#">Action</a></p>
 </div>
 <div class="alert alert-danger alert-sm" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Error</span></span>
@@ -93,13 +93,13 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 ### Additional content
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+Alerts can also contain additional HTML elements like headings, actions, paragraphs and dividers.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <div>
-    <h4 class="alert-heading">Success notification text goes here.</h4>
+    <h4 class="alert-heading">Success notification text goes here. <a href="#">Action</a></h4>
     <p>Description text goes here.</p>
   </div>
 </div>

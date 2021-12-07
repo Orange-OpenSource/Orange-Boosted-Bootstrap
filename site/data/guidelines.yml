@@ -11,8 +11,6 @@
 
 - title: Components
   pages:
-    # - title: Buttons
-    - title: Alerts
     - title: Navigation
     - title: Forms
     - title: Data tables
