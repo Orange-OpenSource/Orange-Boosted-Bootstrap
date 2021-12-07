@@ -17,6 +17,21 @@ The feature will be delivered with [#892]({{< param repo >}}/issues/892).
 In the meantime, some examples have been developed in the [footers examples section]({{< docsref "/examples/footers" >}}) by using mostly Boosted utilities and our Collapse JavaScript plugin.
 
 Even if the padding applied here is not that responsive and that everything is not perfectly respecting the design guidelines, it will help you while waiting for the component's delivery.
+{{< /callout >}}
 
-In order to have correct active colors for the links in "Mailing list" and "Follow us" bars, some extra CSS is required. The latter is located directly in the example within the `<style>` tag and uses `.example-footer-custom-form` and `.example-footer-custom-social` classes.
+{{< callout info >}}
+### Active colors
+
+In order to have correct active colors in "Mailing list" and "Follow us" bars, some extra classes and CSS are required:
+
+```css
+.example-footer-custom-form button:active {
+  border-color: var(--bs-orange) !important;
+}
+
+.example-footer-custom-social a:active {
+  color: var(--bs-dark) !important;
+  background-color: var(--bs-white) !important;
+  border-color: var(--bs-white) !important;
+}
 {{< /callout >}}

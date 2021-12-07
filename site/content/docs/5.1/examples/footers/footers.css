@@ -10,3 +10,13 @@
   vertical-align: -.125em;
   fill: currentColor;
 }
+
+.example-footer-custom-form button:active {
+  border-color: var(--bs-orange) !important;
+}
+
+.example-footer-custom-social a:active {
+  color: var(--bs-dark) !important;
+  background-color: var(--bs-white) !important;
+  border-color: var(--bs-white) !important;
+}
