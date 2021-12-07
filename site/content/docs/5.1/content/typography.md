@@ -371,7 +371,8 @@ Links in content are black and underlined. They adapt to their context otherwise
 Add `.link-chevron` to bold your link and enhance them with a chevron.
 
 {{< example >}}
-<a class="link-chevron" href="#links">This is a sample link with chevron</a>
+<a class="link-chevron" href="#links">This is a sample link with chevron</a><br>
+<a class="link-chevron small" href="#links">This is a sample link with chevron</a>
 {{< /example >}}
 <!-- End mod -->
 
