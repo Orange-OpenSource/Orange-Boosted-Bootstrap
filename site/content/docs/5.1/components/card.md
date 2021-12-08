@@ -17,31 +17,7 @@ Cards are built with as little markup and styles as possible, but still manage t
 Below are some examples of basic cards. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
 
 {{< example class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gy-md-5" >}}
-<div class="col">
-  <div class="card border-0">
-    {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-    <div class="card-body bg-dark">
-      <h5 class="card-title">Title</h5>
-      <p class="card-text fw-bold">Caption</p>
-    </div>
-    <div class="card-footer bg-dark text-light">
-      <p class="card-text">Meta data</p>
-    </div>
-  </div>
-</div>
-<div class="col"> <!-- to replace -->
-  <div class="card">
-    {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-    <div class="card-body">
-      <h5 class="card-title">Title</h5>
-      <p class="card-text fw-bold">Caption</p>
-    </div>
-    <div class="card-footer">
-      <p class="card-text">Meta data</p>
-    </div>
-  </div>
-</div>
-<div class="col">
+<div class="col m-0">
   <div class="card border-0">
     {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
     <div class="card-body px-0">
@@ -53,10 +29,34 @@ Below are some examples of basic cards. Cards have no fixed width to start, so t
     </div>
   </div>
 </div>
+<div class="col m-0"> <!-- to replace -->
+  <div class="card">
+    {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+    <div class="card-body">
+      <h5 class="card-title">Title</h5>
+      <p class="card-text fw-bold">Caption</p>
+    </div>
+    <div class="card-footer">
+      <p class="card-text">Meta data</p>
+    </div>
+  </div>
+</div>
+<div class="col m-0">
+  <div class="card border-0">
+    {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+    <div class="card-body bg-dark">
+      <h5 class="card-title">Title</h5>
+      <p class="card-text fw-bold">Caption</p>
+    </div>
+    <div class="card-footer bg-dark text-light">
+      <p class="card-text">Meta data</p>
+    </div>
+  </div>
+</div>
 {{< /example >}}
 
 {{< example class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gy-md-5 bg-dark" >}}
-<div class="col">
+<div class="col m-0">
   <div class="card border-0 p-0 bg-dark">
     {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
     <div class="card-body px-0">
@@ -64,7 +64,7 @@ Below are some examples of basic cards. Cards have no fixed width to start, so t
     </div>
   </div>
 </div>
-<div class="col">
+<div class="col m-0">
   <div class="card border-dark">
     {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
     <div class="card-body bg-dark">
@@ -75,7 +75,7 @@ Below are some examples of basic cards. Cards have no fixed width to start, so t
     </div>
   </div>
 </div>
-<div class="col">
+<div class="col m-0">
   <div class="card border-0 bg-body">
     {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
