@@ -6,189 +6,425 @@ extra_css:
 body_class: ""
 ---
 
-<!-- Boosted mod: Bootstrap example without yet an Orange version so excluded from pa11y analysis -->
-<main class="exclude-from-pa11y-analysis">
+<main>
   <!-- Boosted mod: page must contain a level-one heading (a11y) -->
-  <h1 class="visually-hidden">Footers Bootstrap example</h1>
+  <h1 class="visually-hidden">Footers Boosted example</h1>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="bootstrap" viewBox="0 0 118 94">
-      <title>Bootstrap</title>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="contact" viewBox="0 0 1000 1000">
+      <path fill="currentColor" fill-rule="evenodd" d="M 825 125 H 100 V 650 a 75 75 0 0 0 75 75 H 275 V 900 L 450 725 H 900 V 200 A 75 75 0 0 0 825 125 Z M 672.059 345.588 H 661.034 C 636.487 260.512 573.648 200 500 200 S 363.513 260.512 338.966 345.588 H 327.941 A 52.942 52.942 0 0 0 275 398.529 v 52.942 a 52.942 52.942 0 0 0 52.941 52.941 h 11.025 C 363.513 589.488 426.352 650 500 650 s 136.487 -60.512 161.034 -145.588 h 11.025 A 52.942 52.942 0 0 0 725 451.471 V 398.529 A 52.942 52.942 0 0 0 672.059 345.588 Z M 622.983 530.882 H 537.438 a 39.707 39.707 0 1 0 0 26.471 h 70.784 q -3.633 5.5 -7.585 10.666 c -13.568 17.743 -29.2 31.583 -46.476 41.136 a 109.226 109.226 0 0 1 -108.322 0 c -17.271 -9.553 -32.908 -23.393 -46.476 -41.136 c -13.97 -18.268 -24.977 -39.661 -32.715 -63.585 a 263.954 263.954 0 0 1 0 -158.868 q 3.219 -9.948 7.188 -19.3 a 18.115 18.115 0 0 1 19.246 -10.826 C 413.6 318.373 450.416 329.608 500 368.876 c 60.075 47.576 123.906 34.466 143.568 23.146 A 268.978 268.978 0 0 1 645.588 425 a 257.715 257.715 0 0 1 -12.236 79.434 A 230.064 230.064 0 0 1 622.983 530.882 Z"></path>
     </symbol>
-    <symbol id="facebook" viewBox="0 0 16 16">
-      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    <symbol id="locate" viewBox="0 0 1000 1000">
+      <path fill="currentColor" fill-rule="evenodd" d="M 775 350 C 775 198.125 651.877 75 500 75 S 225 198.125 225 350 a 273.743 273.743 0 0 0 36.235 136.528 h 0 L 500 925 L 738.769 486.528 h 0 A 273.733 273.733 0 0 0 775 350 Z M 500 550 c -110.457 0 -200 -89.543 -200 -200 s 89.543 -200 200 -200 s 200 89.543 200 200 S 610.457 550 500 550 Z M 623.457 234.342 L 335.14 362.17 l 103.051 30.409 l 15.768 117.692 Z"></path>
     </symbol>
-    <symbol id="instagram" viewBox="0 0 16 16">
-        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    <symbol id="coverage" viewBox="0 0 31 31">
+      <path fill="currentColor" fill-rule="evenodd" d="M 8.25 26.25 h -4.5 v -9 h 4.5 v 9 Z m 6 0 h -4.5 v -13.5 h 4.5 v 13.5 Z m 6 0 h -4.5 v -18 h 4.5 v 18 Z m 6 0 h -4.5 V 3.75 h 4.5 v 22.5 Z"></path>
     </symbol>
-    <symbol id="twitter" viewBox="0 0 16 16">
-      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+    <symbol id="business" viewBox="0 0 1000 1000">
+      <path fill="currentColor" fill-rule="evenodd" d="M 670 270 A 170 170 0 1 1 500 100 A 170 170 0 0 1 670 270 Z M 643.59 423.219 a 209.95 209.95 0 0 1 -287.18 0 A 199.959 199.959 0 0 0 250 600 v 6.674 h 0 V 810 h 0.01 a 90.906 90.906 0 0 0 90.9 90 H 750 V 600 A 199.96 199.96 0 0 0 643.59 423.219 Z M 500 810 l -50 -65.1 l 30.922 -230.312 q 9.478 0.739 19.078 0.75 q 10.128 0 20.135 -0.826 L 550 744.9 Z"></path>
+    </symbol>
+    <symbol id="protection" viewBox="0 0 1000 1000">
+      <path fill="currentColor" fill-rule="evenodd" d="M 664.923 225.063 c 0 90.608 -73.615 164.062 -164.423 164.062 S 336.077 315.671 336.077 225.063 S 409.692 61 500.5 61 S 664.923 134.454 664.923 225.063 Z M 632.188 376.531 a 201.295 201.295 0 0 1 -263.376 0 A 200.419 200.419 0 0 0 263 553.187 V 699.021 C 263 829.9 369.333 936 500.5 936 S 738 829.9 738 699.021 V 553.187 A 200.419 200.419 0 0 0 632.188 376.531 Z M 516.793 563.4 a 65.557 65.557 0 1 1 -65.556 -65.625 A 65.591 65.591 0 0 1 516.793 563.4 Z m -8.773 66.439 a 87.1 87.1 0 0 1 -112.756 0.7 a 83.527 83.527 0 0 0 -41.634 72.31 v 60.764 a 98.64 98.64 0 1 0 197.279 0 V 702.849 A 83.526 83.526 0 0 0 508.02 629.835 Z"></path>
     </symbol>
   </svg>
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-muted">&copy; {{< year >}} Company, Inc</p>
+  <div class="alert alert-info mb-0" role="alert">
+    <span class="alert-icon"><span class="visually-hidden">Information</span></span>
+    <div>
+      <h4 class="alert-heading">Active colors</h4>
+      <p>In order to have correct active colors in "Mailing list" and "Follow us" bars, some extra classes and CSS are required. Corresponding classes are prefixed with <code>.example-footer-custom-</code> and can be found in <a href="footers.css" title="Footers example CSS file">footers.css</a>.</p>
+    </div>
+  </div>
 
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      </a>
+  <div class="b-example-divider"></div>
 
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+  <footer class="bg-dark">
+    <!-- Mailing list -->
+    <span class="visually-hidden">Mailing list</span>
+    <div class="w-100 px-2 px-md-4 py-4">
+      <div class="pb-2">
+        <h6>Sign up to our mailing list</h6>
+        <form class="row g-3 example-footer-custom-form">
+          <div class="col-auto">
+            <label for="inputEmail1" class="visually-hidden">Email</label>
+            <!-- Dark homemade input version -->
+            <input type="email" class="form-control bg-dark text-white border-dark" id="inputEmail1" placeholder="Enter your email">
+          </div>
+          <div class="col-auto">
+            <!-- Dark homemade button version -->
+            <button type="submit" class="btn btn-dark border-white">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <div class="b-example-divider"></div>
+
+  <footer class="bg-dark">
+    <!-- Follow us bar -->
+    <span class="visually-hidden">Follow us bar</span>
+    <div class="w-100 px-2 px-md-4 py-4">
+      <ul class="nav flex-row align-items-center gap-2 example-footer-custom-social">
+        <li class="text-white fw-bold col-12 col-md-auto me-2 mb-2 mb-md-0">Follow us</li>
+        <!-- Dark homemade button version -->
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter text-white"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook text-white"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram text-white"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp text-white"><span class="visually-hidden">Whatsapp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin text-white"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube text-white"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat text-white"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest text-white"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail text-white"><span class="visually-hidden">Mail</span></a></li>
       </ul>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <div class="b-example-divider"></div>
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-muted">&copy; {{< year >}} Company, Inc</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-      </ul>
-    </footer>
-  </div>
-
-  <div class="b-example-divider"></div>
-
-  <div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-      </ul>
-      <p class="text-center text-muted">&copy; {{< year >}} Company, Inc</p>
-    </footer>
-  </div>
-
-  <div class="b-example-divider"></div>
-
-  <div class="container">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-      <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        </a>
-        <p class="text-muted">&copy; {{< year >}}</p>
-      </div>
-
-      <div class="col mb-3">
-
-      </div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-
-  <div class="b-example-divider"></div>
-
-
-  <div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+  <footer class="bg-dark">
+    <!-- Navigation -->
+    <span class="visually-hidden">Navigation</span>
+    <div class="w-100 p-md-4 navbar-dark">
+      <div class="pb-2 row d-none d-md-flex">
+        <div class="col-3">
+          <h6>Category</h6>
+          <!-- Dark homemade nav-link version -->
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
           </ul>
         </div>
-
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
           </ul>
         </div>
-
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
           </ul>
         </div>
-
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of whats new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
-            </div>
-          </form>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>&copy; {{< year >}} Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
+      <!-- Dark homemade accordion version -->
+      <div class="d-md-none" id="accordionExampleSmall1">
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingOneSmall1">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall1" aria-expanded="true" aria-controls="collapseOneSmall1">
+              Category
+            </button>
+          </h6>
+          <div id="collapseOneSmall1" class="accordion-collapse collapse" aria-labelledby="headingOneSmall1" data-bs-parent="#accordionExampleSmall1">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingTwoSmall1">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall1" aria-expanded="true" aria-controls="collapseTwoSmall1">
+              Category
+            </button>
+          </h6>
+          <div id="collapseTwoSmall1" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall1" data-bs-parent="#accordionExampleSmall1">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingThreeSmall1">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall1" aria-expanded="true" aria-controls="collapseThreeSmall1">
+              Category
+            </button>
+          </h6>
+          <div id="collapseThreeSmall1" class="accordion-collapse collapse" aria-labelledby="headingThreeSmall1" data-bs-parent="#accordionExampleSmall1">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2">
+          <h6 class="navbar-nav border-0" id="headingFourSmall1">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall1" aria-expanded="true" aria-controls="collapseFourSmall1">
+              Category
+            </button>
+          </h6>
+          <div id="collapseFourSmall1" class="accordion-collapse collapse" aria-labelledby="headingFourSmall1" data-bs-parent="#accordionExampleSmall1">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
+  <div class="b-example-divider"></div>
+
+  <footer class="bg-dark">
+    <!-- Service links -->
+    <span class="visually-hidden">Service links</span>
+    <div class="w-100 px-2 px-md-4 py-3 navbar-dark">
+      <ul class="navbar-nav d-md-flex flex-md-row flex-wrap gap-3 gap-md-4">
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#contact"/></svg>
+          Contact us
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#locate"/></svg>
+          Locate a store
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#coverage"/></svg>
+          Coverage map
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#business"/></svg>
+          Business
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#protection"/></svg>
+          Child protection
+          </a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="b-example-divider"></div>
+
+  <footer class="bg-dark">
+    <!-- Terms & Conditions -->
+    <span class="visually-hidden">Terms and conditions</span>
+    <div class="w-100 px-2 px-md-4 py-3 navbar-dark">
+      <ul class="navbar-nav d-flex flex-md-row flex-wrap gap-md-3 gap-4">
+        <li class="text-white fw-bold">© Orange 2018-{{< year >}}</li>
+        <li><a class="nav-link p-0" href="#">Jobs</a></li>
+        <li><a class="nav-link p-0" href="#">Advertise</a></li>
+        <li><a class="nav-link p-0" href="#">Terms & Conditions</a></li>
+        <li><a class="nav-link p-0" href="#">Privacy</a></li>
+        <li><a class="nav-link p-0" href="#">Cookies</a></li>
+        <li><a class="nav-link p-0" href="#">Access for all</a></li>
+        <li><a class="nav-link p-0" href="#">Safety online</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="b-example-divider"></div>
+
+  <footer class="bg-dark">
+    <!-- Mailing list -->
+    <span class="visually-hidden">Mailing list</span>
+    <div class="w-100 px-2 px-md-4 py-4 border-bottom border-1 border-dark">
+      <div class="pb-2">
+        <h6>Sign up to our mailing list</h6>
+        <form class="row g-3 example-footer-custom-form">
+          <div class="col-auto">
+            <label for="inputEmail" class="visually-hidden">Email</label>
+            <!-- Dark homemade input version -->
+            <input type="email" class="form-control bg-dark text-white border-dark" id="inputEmail" placeholder="Enter your email">
+          </div>
+          <div class="col-auto">
+            <!-- Dark homemade button version -->
+            <button type="submit" class="btn btn-dark border-white">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Follow us bar -->
+    <span class="visually-hidden">Follow us bar</span>
+    <div class="w-100 px-2 px-md-4 py-4 border-bottom border-1 border-dark">
+      <ul class="nav flex-row align-items-center gap-2 example-footer-custom-social">
+        <li class="text-white fw-bold col-12 col-md-auto me-2 mb-2 mb-md-0">Follow us</li>
+        <!-- Dark homemade button version -->
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter text-white"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook text-white"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram text-white"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp text-white"><span class="visually-hidden">Whatsapp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin text-white"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube text-white"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat text-white"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest text-white"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail text-white"><span class="visually-hidden">Mail</span></a></li>
+      </ul>
+    </div>
+
+    <!-- Navigation -->
+    <span class="visually-hidden">Navigation</span>
+    <div class="w-100 p-md-4 navbar-dark border-bottom border-1 border-dark">
+      <div class="pb-2 row d-none d-md-flex">
+        <div class="col-3">
+          <h6>Category</h6>
+          <!-- Dark homemade nav-link version -->
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h6>Category</h6>
+          <ul class="navbar-nav gap-2">
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Dark homemade accordion version -->
+      <div class="d-md-none" id="accordionExampleSmall">
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingOneSmall">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="true" aria-controls="collapseOneSmall">
+              Category
+            </button>
+          </h6>
+          <div id="collapseOneSmall" class="accordion-collapse collapse" aria-labelledby="headingOneSmall" data-bs-parent="#accordionExampleSmall">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingTwoSmall">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall" aria-expanded="true" aria-controls="collapseTwoSmall">
+              Category
+            </button>
+          </h6>
+          <div id="collapseTwoSmall" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall" data-bs-parent="#accordionExampleSmall">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2 border-bottom border-1 border-dark">
+          <h6 class="navbar-nav border-0" id="headingThreeSmall">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
+              Category
+            </button>
+          </h6>
+          <div id="collapseThreeSmall" class="accordion-collapse collapse" aria-labelledby="headingThreeSmall" data-bs-parent="#accordionExampleSmall">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 px-2">
+          <h6 class="navbar-nav border-0" id="headingFourSmall">
+            <button class="accordion-button collapsed bg-dark nav-link m-0 p-0 fs-6 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall" aria-expanded="true" aria-controls="collapseFourSmall">
+              Category
+            </button>
+          </h6>
+          <div id="collapseFourSmall" class="accordion-collapse collapse" aria-labelledby="headingFourSmall" data-bs-parent="#accordionExampleSmall">
+            <ul class="pt-3 navbar-nav gap-2">
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+              <li><a class="nav-link p-0" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service links -->
+    <span class="visually-hidden">Service links</span>
+    <div class="w-100 px-2 px-md-4 py-3 navbar-dark border-bottom border-1 border-dark">
+      <ul class="navbar-nav d-md-flex flex-md-row flex-wrap gap-3 gap-md-4">
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#contact"/></svg>
+          Contact us
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#locate"/></svg>
+          Locate a store
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#coverage"/></svg>
+          Coverage map
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#business"/></svg>
+          Business
+          </a></li>
+        <li><a class="nav-link d-flex align-items-center p-0 gap-1" href="#">
+          <svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#protection"/></svg>
+          Child protection
+          </a></li>
+      </ul>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <span class="visually-hidden">Terms and conditions</span>
+    <div class="w-100 px-2 px-md-4 py-3 navbar-dark">
+      <ul class="navbar-nav d-flex flex-md-row flex-wrap gap-md-3 gap-4">
+        <li class="text-white fw-bold">© Orange 2018-{{< year >}}</li>
+        <li><a class="nav-link p-0" href="#">Jobs</a></li>
+        <li><a class="nav-link p-0" href="#">Advertise</a></li>
+        <li><a class="nav-link p-0" href="#">Terms & Conditions</a></li>
+        <li><a class="nav-link p-0" href="#">Privacy</a></li>
+        <li><a class="nav-link p-0" href="#">Cookies</a></li>
+        <li><a class="nav-link p-0" href="#">Access for all</a></li>
+        <li><a class="nav-link p-0" href="#">Safety online</a></li>
+      </ul>
+    </div>
+  </footer>
 </main>

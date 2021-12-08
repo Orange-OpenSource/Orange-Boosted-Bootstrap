@@ -10,3 +10,13 @@
   vertical-align: -.125em;
   fill: currentColor;
 }
+
+.example-footer-custom-form .btn:active {
+  border-color: var(--bs-orange) !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.example-footer-custom-social .btn:active {
+  color: var(--bs-dark) !important; /* stylelint-disable-line declaration-no-important */
+  background-color: var(--bs-white) !important; /* stylelint-disable-line declaration-no-important */
+  border-color: var(--bs-white) !important; /* stylelint-disable-line declaration-no-important */
+}
