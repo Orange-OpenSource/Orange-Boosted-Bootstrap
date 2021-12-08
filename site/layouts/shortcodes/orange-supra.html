@@ -1,7 +1,11 @@
 {{- /*
-  Usage: `orange-supra`
+  Usage: `orange-supra args`
+
+  `args` are all optional and can be one of the following:
+    * mode: Modes used to display specific content: ["languages", "actions"] - default = ""
 */ -}}
 
+{{- $mode := .Get "mode" -}}
 {{- $input := .Inner -}}
 
 <nav class="navbar navbar-dark navbar-expand bg-dark supra">
@@ -10,6 +14,44 @@
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
     </ul>
-    {{- $input -}}
+{{- if eq $mode "languages" }}
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
+    </ul>
+{{- end }}
+{{- if eq $mode "actions" }}
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#search"/>
+          </svg>
+          <span class="visually-hidden">Search</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy"/>
+          </svg>
+          <span class="visually-hidden">Basket</span>
+          <span class="position-relative">
+            <span class="badge">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <img src="/docs/5.1/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" aria-hidden="true">
+          <span class="visually-hidden">My account</span>
+        </a>
+      </li>
+    </ul>
+{{- end }}
   </div>
 </nav>

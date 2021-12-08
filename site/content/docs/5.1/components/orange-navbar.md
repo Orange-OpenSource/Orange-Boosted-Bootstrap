@@ -23,52 +23,22 @@ This navbar is visible only on desktop view.
 
 {{< example >}}
 {{< orange-supra >}}
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
-    </ul>
 {{< /orange-supra >}}
 {{< /example >}}
 
-You can also use icons as navigation items as followed:
+Supra bar items can be added on left and right.
 
 {{< example >}}
-{{< orange-supra >}}
-<ul class="navbar-nav ml-auto">
-  <li class="nav-item">
-    <a href="#" class="nav-link nav-icon">
-      <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-        <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-      </svg>
-      <span class="visually-hidden">Search</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link nav-icon">
-      <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-        <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-      </svg>
-      <span class="visually-hidden">Basket</span>
-      <span class="position-relative">
-        <span class="badge">
-          1
-          <span class="visually-hidden">shopping basket items</span>
-        </span>
-      </span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link nav-icon">
-      <img src="/docs/5.1/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" aria-hidden="true">
-      <span class="visually-hidden">My account</span>
-    </a>
-  </li>
-</ul>
+{{< orange-supra mode="languages" >}}
 {{< /orange-supra >}}
 {{< /example >}}
 
-You can have a complete overview of how to use supra bars in the dedicated [Design Guidelines page]({{<docsref "/guidelines/global-headers">}})
+Icons as navigation items can be used as well.
+
+{{< example >}}
+{{< orange-supra mode="actions" >}}
+{{< /orange-supra >}}
+{{< /example >}}
 
 ## Sass
 
