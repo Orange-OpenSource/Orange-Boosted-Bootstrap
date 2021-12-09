@@ -6,14 +6,11 @@ group: components
 toc: true
 ---
 
-<div class="alert alert-danger" role="alert">
-  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-  <div>
-    <h4 class="alert-heading mb-1">Incompatibility with Orange Design System</h4>
-    <p class="mb-1">This component gathers technical utilities linked to the Navbar component and most of those examples are not compatible with the Orange Design System.</p>
-    <p>Refer to <a class="fw-bold" href='/docs/{{<param docs_version>}}/components/navbar/'>Orange NavBar</a> and <a class="fw-bold" href='/docs/{{<param docs_version>}}/components/navs-tabs/'>Nav & tabs</a></p>
-  </div>
-</div>
+{{< ods-incompatibility-alert >}}
+This component gathers technical utilities linked to the Navbar component and most of those examples are not compatible with the Orange Design System.
+
+Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+{{< /ods-incompatibility-alert >}}
 
 ## How it works
 
@@ -159,7 +156,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 ```html
 <div class="row">
   <div class="col-4 col-lg-3">
-    <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch p-3">
+    <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch">
       <a class="navbar-brand align-self-start" href="#">
         <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
       </a>
@@ -179,7 +176,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
     </nav>
   </div>
   <div class="col-8 col-lg-9">
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
       <h4 id="item-1">Item 1</h4>
       <p>...</p>
       <h5 id="item-1-1">Item 1-1</h5>
@@ -197,7 +194,6 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
     </div>
   </div>
 </div>
-
 ```
 
 ## Example with list-group

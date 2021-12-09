@@ -1,0 +1,11 @@
+{{- /*
+  Usage: `ods-incompatibility-alert`
+*/ -}}
+
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <h4 class="alert-heading mb-1">Incompatibility with Orange Design System</h4>
+    {{ .Inner | markdownify }}
+  </div>
+</div>
