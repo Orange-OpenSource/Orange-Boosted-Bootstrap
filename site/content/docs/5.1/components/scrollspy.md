@@ -11,7 +11,7 @@ toc: true
   <div>
     <h4 class="alert-heading mb-1">Incompatibility with Orange Design System</h4>
     <p class="mb-1">This component gathers technical utilities linked to the Navbar component and most of those examples are not compatible with the Orange Design System.</p>
-    <p>Refer to <a class="fw-bold" href='http://localhost:9001/docs/5.1/components/navbar/'>Orange NavBar</a> and <a class="fw-bold" href='http://localhost:9001/docs/5.1/components/navbar/'>Nav & tabs</a></p>
+    <p>Refer to <a class="fw-bold" href='/docs/{{<param docs_version>}}/components/navbar/'>Orange NavBar</a> and <a class="fw-bold" href='/docs/{{<param docs_version>}}/components/navs-tabs/'>Nav & tabs</a></p>
   </div>
 </div>
 
