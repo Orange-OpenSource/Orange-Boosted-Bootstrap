@@ -17,6 +17,16 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
+
+<div class="mt-4"></div>
+
+<label class="form-label" for="form-select">Label</label>
+<select class="form-select" id="form-select" aria-label="Default select example with label">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
 {{< /example >}}
 
 ## Sizing

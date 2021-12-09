@@ -411,6 +411,10 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 When using Boosted's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
 
+{{< callout warning >}}
+Boosted branded grids are described in the **[design guidelines](https://system.design.orange.com/0c1af118d/p/43fadd-responsive-grids/t/74add6)**.
+{{< /callout >}}
+
 ### Variables
 
 Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
