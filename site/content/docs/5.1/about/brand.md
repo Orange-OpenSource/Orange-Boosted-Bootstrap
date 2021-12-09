@@ -122,8 +122,18 @@ A single CSS property is required for proper alignment:
 }
 {{< /example >}}
 
+## Orange's colors
+
 {{< callout info >}}
-### Bootstrap brand guidelines
+Please see our dedicated section about [Orange's colors]({{< docsref >}}/customize/color#oranges-colors).
+{{</ callout >}}
+
+## Typography
+
+{{< callout info >}}
+Please see the dedicated section about [Orange's typography](https://system.design.orange.com/0c1af118d/p/38f221-typography) and our dedicated section about [typography]({{<docsref>}}/content/typography).
+{{</ callout >}}
+
+## Bootstrap brand guidelines
 
 Boosted is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/brand/).
-{{< /callout >}}

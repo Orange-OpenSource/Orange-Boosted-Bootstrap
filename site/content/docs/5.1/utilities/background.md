@@ -27,7 +27,7 @@ Similar to the contextual text color classes, set the background of an element t
 {{< callout >}}
 ### Color naming
 
-Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/guidelines/colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
+Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color#oranges-colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
 Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
 {{< /callout >}}
 
