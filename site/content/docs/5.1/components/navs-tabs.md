@@ -22,8 +22,8 @@ To convey the active state to assistive technologies, use the `aria-current` att
 {{< /callout >}}
 
 {{< example >}}
-<a class="nav-link" aria-current="page" href="#">Link</a>
-<a class="nav-link small" aria-current="page" href="#">Link</a>
+<a class="nav-link" aria-current="page" href="#" aria-label="Link description" title="Link description">Link</a>
+<a class="nav-link small" aria-current="page" href="#" aria-label="Link description" title="Link description">Link</a>
 
 <div class="mt-3"></div>
 

@@ -25,7 +25,7 @@ Below are some examples of basic cards. Cards have no fixed width to start, so t
       <p class="card-text fw-bold">Caption</p>
     </div>
     <div class="card-footer px-0 pt-2">
-      <a class="btn btn-secondary">Button</a>
+      <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
     </div>
   </div>
 </div>
