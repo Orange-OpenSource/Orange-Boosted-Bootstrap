@@ -44,7 +44,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 {{< example >}}
 <a href="#" class="position-relative">
   <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">

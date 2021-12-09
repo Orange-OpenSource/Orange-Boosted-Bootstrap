@@ -81,7 +81,7 @@ Boosted provides `target-size()` mixin to ensure a minimum target size, adding a
 
 ### Maximum line length
 
-When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 website: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20).
+When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20).
 
 For more information, please [read text utilities]({{< docsref "/utilities/text#line-length" >}}).
 <!-- End mod -->

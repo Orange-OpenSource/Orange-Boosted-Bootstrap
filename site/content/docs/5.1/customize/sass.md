@@ -104,6 +104,7 @@ $body-color: #111;
 
 // Required
 @import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/maps";
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
 
@@ -165,6 +166,7 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 // Required
 @import "../node_modules/boosted/scss/functions";
 @import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/maps";
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
 

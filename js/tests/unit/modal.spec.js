@@ -57,9 +57,7 @@ describe('Modal', () => {
 
   describe('toggle', () => {
     it('should call ScrollBarHelper to handle scrollBar on body', done => {
-      fixtureEl.innerHTML = [
-        '<div class="modal"><div class="modal-dialog"></div></div>'
-      ].join('')
+      fixtureEl.innerHTML = '<div class="modal"><div class="modal-dialog"></div></div>'
 
       spyOn(ScrollBarHelper.prototype, 'hide').and.callThrough()
       spyOn(ScrollBarHelper.prototype, 'reset').and.callThrough()
@@ -234,12 +232,12 @@ describe('Modal', () => {
 
       modalEl.addEventListener('show.bs.modal', () => {
         setTimeout(() => {
-          expect(modal._isTransitioning).toEqual(true)
+          expect(modal._isTransitioning).toBeTrue()
         })
       })
 
       modalEl.addEventListener('shown.bs.modal', () => {
-        expect(modal._isTransitioning).toEqual(false)
+        expect(modal._isTransitioning).toBeFalse()
         done()
       })
 
@@ -432,6 +430,38 @@ describe('Modal', () => {
       modal.show()
     })
 
+    it('should not close modal when clicking on modal-content', done => {
+      fixtureEl.innerHTML = [
+        '<div class="modal">',
+        '  <div class="modal-dialog">',
+        '    <div class="modal-content"></div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const modalEl = fixtureEl.querySelector('.modal')
+      const modal = new Modal(modalEl)
+
+      const shownCallback = () => {
+        setTimeout(() => {
+          expect(modal._isShown).toEqual(true)
+          done()
+        }, 10)
+      }
+
+      modalEl.addEventListener('shown.bs.modal', () => {
+        fixtureEl.querySelector('.modal-dialog').click()
+        fixtureEl.querySelector('.modal-content').click()
+        shownCallback()
+      })
+
+      modalEl.addEventListener('hidden.bs.modal', () => {
+        throw new Error('Should not hide a modal')
+      })
+
+      modal.show()
+    })
+
     it('should not close modal when clicking outside of modal-content if backdrop = false', done => {
       fixtureEl.innerHTML = '<div class="modal"><div class="modal-dialog"></div></div>'
 
@@ -442,7 +472,7 @@ describe('Modal', () => {
 
       const shownCallback = () => {
         setTimeout(() => {
-          expect(modal._isShown).toEqual(true)
+          expect(modal._isShown).toBeTrue()
           done()
         }, 10)
       }
@@ -469,7 +499,7 @@ describe('Modal', () => {
 
       const shownCallback = () => {
         setTimeout(() => {
-          expect(modal._isShown).toEqual(true)
+          expect(modal._isShown).toBeTrue()
           done()
         }, 10)
       }
@@ -497,7 +527,7 @@ describe('Modal', () => {
 
       const shownCallback = () => {
         setTimeout(() => {
-          expect(modal._isShown).toEqual(false)
+          expect(modal._isShown).toBeFalse()
           done()
         }, 10)
       }
@@ -523,7 +553,7 @@ describe('Modal', () => {
 
       const shownCallback = () => {
         setTimeout(() => {
-          expect(modal._isShown).toEqual(true)
+          expect(modal._isShown).toBeTrue()
           done()
         }, 10)
       }
@@ -687,7 +717,7 @@ describe('Modal', () => {
 
       const hideCallback = () => {
         setTimeout(() => {
-          expect(modal._isShown).toEqual(true)
+          expect(modal._isShown).toBeTrue()
           done()
         }, 10)
       }
@@ -994,7 +1024,7 @@ describe('Modal', () => {
       })
       modalEl1.addEventListener('hidden.bs.modal', () => {
         expect(Modal.getInstance(modalEl2)).not.toBeNull()
-        expect(modalEl2.classList.contains('show')).toBeTrue()
+        expect(modalEl2).toHaveClass('show')
         done()
       })
       modal1.show()
@@ -1029,7 +1059,7 @@ describe('Modal', () => {
 
       const modal = Modal.getInstance(div)
       expect(modal).not.toBeNull()
-      expect(modal._config.keyboard).toBe(false)
+      expect(modal._config.keyboard).toBeFalse()
     })
 
     it('should not re create a modal', () => {
@@ -1129,7 +1159,7 @@ describe('Modal', () => {
 
       const div = fixtureEl.querySelector('div')
 
-      expect(Modal.getInstance(div)).toEqual(null)
+      expect(Modal.getInstance(div)).toBeNull()
       expect(Modal.getOrCreateInstance(div)).toBeInstanceOf(Modal)
     })
 
@@ -1138,13 +1168,13 @@ describe('Modal', () => {
 
       const div = fixtureEl.querySelector('div')
 
-      expect(Modal.getInstance(div)).toEqual(null)
+      expect(Modal.getInstance(div)).toBeNull()
       const modal = Modal.getOrCreateInstance(div, {
         backdrop: true
       })
       expect(modal).toBeInstanceOf(Modal)
 
-      expect(modal._config.backdrop).toEqual(true)
+      expect(modal._config.backdrop).toBeTrue()
     })
 
     it('should return the instance when exists without given configuration', () => {
@@ -1162,7 +1192,7 @@ describe('Modal', () => {
       expect(modal).toBeInstanceOf(Modal)
       expect(modal2).toEqual(modal)
 
-      expect(modal2._config.backdrop).toEqual(true)
+      expect(modal2._config.backdrop).toBeTrue()
     })
   })
 })

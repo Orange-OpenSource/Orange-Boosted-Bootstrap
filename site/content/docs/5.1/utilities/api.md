@@ -363,6 +363,7 @@ New utilities can be added to the default `$utilities` map with a `map-merge`. M
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
 @import "boosted/scss/utilities/api";
@@ -387,6 +388,7 @@ Modify existing utilities in the default `$utilities` map with `map-get` and `ma
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
 @import "boosted/scss/utilities/api";
@@ -414,6 +416,7 @@ You can enable responsive classes for an existing set of utilities that are not 
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
 @import "boosted/scss/utilities/api";
@@ -467,6 +470,7 @@ Missing v4 utilities, or used to another naming convention? The utilities API ca
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
 @import "boosted/scss/utilities/api";
@@ -488,6 +492,7 @@ Remove any of the default utilities by setting the group key to `null`. For exam
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
 @import "boosted/scss/utilities/api";
