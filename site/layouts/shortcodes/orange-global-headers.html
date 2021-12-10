@@ -119,9 +119,9 @@
         {{ end }}
       </div>
       {{- if eq $mode "actions" }}
-      <ul class="navbar-nav d-none d-md-flex">
+      <ul class="navbar-nav d-none d-md-flex {{ cond $minimized "" "pb-2"}}">
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
+          <a href="#" class="nav-link nav-icon">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
               <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
             </svg>
@@ -129,13 +129,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
+          <a href="#" class="nav-link nav-icon">
+            <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy"/>
+            </svg>
+            <span class="visually-hidden">Basket</span>
             <span class="position-relative">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
+              <span class="badge">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -143,14 +143,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
+          <a href="#" class="nav-link nav-icon">
             <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
+            <span class="visually-hidden">My account</span>
           </a>
         </li>
       </ul>
       {{- else if eq $mode "search" }}
-      <form class="d-flex d-none d-md-flex pt-1" role="search">
+      <form class="d-flex d-none d-md-flex pb-2" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       </form>
       {{ end }}
@@ -168,26 +168,6 @@
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon position-relative">
-              <span class="position-relative">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
-                  1
-                  <span class="visually-hidden">shopping basket items</span>
-                </span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
