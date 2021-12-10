@@ -1,20 +1,104 @@
-/* .test {
-  background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat;
+/* Display the right background-image */
+.example-title-bar-custom-background {
+  height: 1.8em;
+  background: none;
+}
+@media (min-width: 328px) {
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-320.png") right bottom/4em no-repeat;
+  }
 }
 @media (min-width: 480px) {
-  .test {
-    background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat;
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-480.png") right bottom/7.47em no-repeat;
   }
 }
 @media (min-width: 768px) {
-  .test {
-    background: url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 2em bottom/1.8em no-repeat, url("https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg") right 4em bottom/1.8em no-repeat, url("https://www.pngfind.com/pngs/m/2-24642_imagenes-random-png-cosas-random-png-transparent-png.png") right 6em bottom/1.73em no-repeat;
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-768.png") right bottom/7.12em no-repeat;
+  }
+}
+@media (min-width: 1024px) {
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-1024.png") right bottom/8.08em no-repeat;
+  }
+}
+@media (min-width: 1280px) {
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-1280.png") right bottom/7.85em no-repeat;
+  }
+}
+@media (min-width: 1440px) {
+  .example-title-bar-custom-background {
+    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-1440.png") right bottom/8.67em no-repeat;
   }
 }
 
-.img {
-  height: 1.8em;
-} */
+
+
+/* Don't display image when too big */
+@media (max-width: 20.5em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 30em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 45em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 50em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 60em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+@media (min-width: 1440px) and (max-width: 65em) {
+  .title-bar {
+    background-color: white !important;
+    color: black;
+  }
+  .title-bar img,
+  .title-bar svg {
+    display: none !important;
+  }
+}
+
+
 
 .b-example-divider {
   height: 3rem;
