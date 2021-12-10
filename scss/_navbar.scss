@@ -238,13 +238,15 @@
   background-size: 90%; // Boosted mod
 }
 
-// Boosted mod : use a slightly different icon for sizes between xs & sm
+// Boosted mod: use a slightly different icon for sizes between xs & sm
 @include media-breakpoint-up(sm) {
   .navbar-toggler-icon {
-    background-image: escape-svg($navbar-toggler-icon-bg); // Boosted mod
-    background-size: 100%; // Boosted mod
+    // TODO: is it useful to have 2 SVGs for 3 rectangles?...
+    background-image: escape-svg($navbar-toggler-icon-bg);
+    background-size: 100%;
   }
 }
+// End mod
 
 .navbar-nav-scroll {
   max-height: var(--#{$variable-prefix}scroll-height, 75vh);
