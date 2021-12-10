@@ -41,18 +41,6 @@
         height: $navbar-orange-supra-icon-size;
       }
     }
-
-    .badge {
-      @extend .position-absolute;
-      @extend .top-0;
-      @extend .bg-info;
-      @extend .text-white;
-      @extend .translate-middle;
-      @extend .rounded-pill;
-      padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
-      margin-top: $navbar-orange-supra-badge-margin-top;
-      font-size: $font-size-base;
-    }
   }
 
   .nav-item:last-of-type {
@@ -64,18 +52,6 @@
 
 .global {
   border-bottom: 1px solid $gray-700;
-
-  .badge {
-    @extend .position-absolute;
-    @extend .top-0;
-    @extend .bg-info;
-    @extend .text-white;
-    @extend .translate-middle;
-    @extend .rounded-pill;
-    padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
-    margin-top: $navbar-orange-supra-badge-margin-top;
-    font-size: $font-size-base;
-  }
 
   @include media-breakpoint-up(xs) {
     .title {

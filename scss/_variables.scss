@@ -1206,12 +1206,12 @@ $navbar-orange-navigation-padding-bottom: .125rem !default;
 
 // Boosted mod: Orange navbar
 // scss-docs-start orange-navbar-variables
+$navbar-orange-badge-padding-y:               .125rem !default;
+$navbar-orange-badge-padding-x:               .375rem !default;
+$navbar-orange-badge-margin-top:              map-get($spacers, 4) * .1 !default;
+
 $navbar-orange-supra-padding-x:               .125rem !default;
 $navbar-orange-supra-border-bottom-width:     1px !default;
-
-$navbar-orange-supra-badge-padding-y:         .125rem !default;
-$navbar-orange-supra-badge-padding-x:         .375rem !default;
-$navbar-orange-supra-badge-margin-top:        map-get($spacers, 4) * .1 !default;
 
 $navbar-orange-supra-icon-padding-top:        divide($spacer, 2) !default;
 $navbar-orange-supra-icon-padding-x:          .9375rem !default;

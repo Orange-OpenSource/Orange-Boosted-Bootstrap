@@ -423,6 +423,20 @@
       &.disabled {
         color: $navbar-dark-disabled-color;
       }
+
+      // Boosted mod
+      .badge {
+        @extend .position-absolute;
+        @extend .top-0;
+        @extend .bg-info;
+        @extend .text-white;
+        @extend .translate-middle;
+        @extend .rounded-pill;
+        padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
+        margin-top: $navbar-orange-badge-margin-top;
+        font-size: $font-size-base;
+      }
+      // End mod
     }
 
     .show > .nav-link,
