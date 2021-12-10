@@ -35,69 +35,67 @@
 }
 
 
-
 /* Don't display image when too big */
 @media (max-width: 20.5em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 @media (min-width: 480px) and (max-width: 30em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 @media (min-width: 768px) and (max-width: 45em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 @media (min-width: 1024px) and (max-width: 50em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 @media (min-width: 1280px) and (max-width: 60em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 @media (min-width: 1440px) and (max-width: 65em) {
   .title-bar {
-    background-color: white !important;
-    color: black;
+    color: #000;
+    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
   }
   .title-bar img,
   .title-bar svg {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
-
 
 
 .b-example-divider {

@@ -8,12 +8,12 @@ toc: true
 
 ## Overview
 
-Some examples are available in the [examples' section]({{<docsref>}}/examples/title-bars). You can also see the [design specifications](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0).
+Some examples are available in the [examples' section]({{<docsref "/examples/title-bars">}}). You can also see the [design specifications](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0).
 
 {{< callout info >}}
-The local navigation will come with [#890](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/890).
+The local navigation will come with [#890]({{<param repo>}}/issues/890).
 
-Branded breadcrumbs will come with [#891](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/891).
+Branded breadcrumbs will come with [#891]({{<param repo>}}/issues/891).
 {{</ callout >}}
 
 ## Title bars
@@ -22,7 +22,7 @@ Title bars have been built to be used just after a global header to display the 
 
 ### Background color
 
-Use our [background utilities]({{<docsref>}}/utilities/background) to change the appearance of a title bar. The ones that are Orange branded are the `.bg-dark .bg-white .bg-supporting-*`. The **colored** ones are supposed to be used only with **images and short title**.
+Use our [background utilities]({{<docsref "/utilities/background">}}) to change the appearance of a title bar. The ones that are Orange branded are the `.bg-dark .bg-white .bg-supporting-*`. The **colored** ones are supposed to be used only with **images and short title**.
 
 {{< example >}}
 <div class="bg-dark title-bar">
@@ -55,7 +55,7 @@ Title bars include a few options to work with images.
 We **strongly recommend** to use `srcset` attribute as it is very well supported by browsers and as it allows you to load an image depending on the device of the user. However, it might introduce a delay to display the image while resizing.
 
 {{< callout warning >}}
-It doesn't render well here, as the breakpoints for the font-size and for the spacing are screen based. Please see [**our examples on title bars**]({{<docsref>}}/examples/title-bars).
+It doesn't render well here, as the breakpoints for the font-size and for the spacing are screen based. Please see [**our examples on title bars**]({{<docsref "/examples/title-bars">}}).
 
 The background image based title bar requires some extra css that you can see on our example page too.
 {{< /callout >}}
@@ -128,7 +128,7 @@ The background image based title bar requires some extra css that you can see on
   <div class="px-2 px-md-3 px-lg-4 px-xxl-5">
     <div class="px-lg-2 px-xl-3 px-xxl-2 d-flex">
       <div class="pt-3 pt-md-4 pb-2 pb-md-3">
-        <h1 class="py-xl-1 m-0">Bg-image</h1>
+        <h1 class="py-xl-1 m-0 me-3">Bg-image</h1>
       </div>
       <h1 class="mt-auto col m-0 example-title-bar-custom-background"></h1>
     </div>
