@@ -235,13 +235,14 @@
   background-image: escape-svg($navbar-toggler-icon-bg-small); // Boosted mod
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 90%; // Boosted mod
 }
 
 // Boosted mod : use a slightly different icon for sizes between xs & sm
 @include media-breakpoint-up(sm) {
   .navbar-toggler-icon {
     background-image: escape-svg($navbar-toggler-icon-bg); // Boosted mod
+    background-size: 100%; // Boosted mod
   }
 }
 
