@@ -49,8 +49,7 @@
         {{ end }}
       </a>
       <div class="d-flex">
-        <!--TODO: remove ml-auto-->
-        <ul class="navbar-nav d-md-none flex-row ml-auto">
+        <ul class="navbar-nav d-md-none flex-row">
           {{- if eq $mode "actions" }}
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -83,7 +82,7 @@
             </a>
           </li>
           {{- else if eq $mode "search" }}
-          <ul class="navbar-nav d-md-none flex-row ml-auto">
+          <ul class="navbar-nav d-md-none flex-row">
             <li class="nav-item">
               <a href="#" class="nav-link nav-icon">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
