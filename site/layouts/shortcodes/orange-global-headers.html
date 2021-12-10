@@ -26,8 +26,7 @@
 {{- $input := .Inner -}}
 
 <header role="banner">
-  <!--TODO: .pt-md-2 and pb-md-0 should be handled by header-minimized-->
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized pt-md-2 pb-md-0" ""}}">
+  <nav class="navbar global navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
     <div class="container-lg"> <!--flex-sm-wrap flex-md-nowrap-->
       <a class="navbar-brand" href="#">
         {{ if $responsive_logo }}
@@ -98,9 +97,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <!--TODO: why style height: auto here?-->
-      <!--<div class="navbar-collapse justify-content-between collapse">-->
-      <div id="{{ $id }}" class="navbar-collapse collapse {{ cond $labels_end "justify-content-end" ""}}" style="height: auto;">
+      <div id="{{ $id }}" class="navbar-collapse collapse {{ cond $labels_end "justify-content-end" ""}}">
         {{ if not $navigation }}
         <ul class="navbar-nav">
           {{ if $labels }}
