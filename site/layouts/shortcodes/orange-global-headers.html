@@ -60,13 +60,13 @@
           </li>
           <!--<li class="nav-item d-none d-sm-block">-->
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon position-relative">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy"/>
+              </svg>
+              <span class="visually-hidden">Basket</span>
               <span class="position-relative">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+                <span class="badge">
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>
