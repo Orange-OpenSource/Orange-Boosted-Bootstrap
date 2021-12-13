@@ -315,4 +315,3 @@ export {
   triggerTransitionEnd,
   toType
 }
- 
