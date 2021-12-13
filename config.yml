@@ -62,10 +62,6 @@ params:
   icons:                            "https://design.orange.com/icons-libraries/"
   bootstrap:                        "https://getbootstrap.com"
   ods:
-    android:                        "https://system.design.orange.com/0c1af118d/n/40c8b1"
-    conversational:                 "https://system.design.orange.com/0c1af118d/n/903c09"
-    extended_reality:               "https://system.design.orange.com/0c1af118d/n/92d30c"
-    iOS:                            "https://system.design.orange.com/0c1af118d/n/24511f"
     web:                            "https://system.design.orange.com/0c1af118d/n/76065f"
 
   download:
