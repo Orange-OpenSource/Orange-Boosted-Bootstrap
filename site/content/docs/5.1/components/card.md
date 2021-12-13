@@ -10,11 +10,24 @@ toc: true
 
 A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Boosted 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
 
-## Examples
+## Example
 
 Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Boosted components. They have no `margin` by default, so use [spacing utilities]({{< docsref "/utilities/spacing" >}}) as needed.
 
-Below are some examples of basic cards. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+
+{{< example >}}
+<div class="card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{{< /example >}}
+
+******** To delete **************
 
 {{< example class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gy-md-5" >}}
 <div class="col m-0">
@@ -84,7 +97,12 @@ Below are some examples of basic cards. Cards have no fixed width to start, so t
     </div>
   </div>
 </div>
+
+
 {{< /example >}}
+
+******** To delete END **************
+
 
 ## Content types
 
