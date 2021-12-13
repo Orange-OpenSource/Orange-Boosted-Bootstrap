@@ -16,25 +16,25 @@
     width: $navbar-orange-supra-icon-size;
     height: $navbar-orange-supra-icon-size;
   }
-  
+
   @include media-breakpoint-up(xs) {
     .title {
       font-size: $navbar-orange-title-font-size-xs;
     }
-  
+
     .two-lined {
       font-size: $navbar-orange-two-titles-font-size-xs;
       & :first-child {
         vertical-align: text-top;
       }
     }
-  
+
     .title,
     .two-lined {
       margin-left: $navbar-orange-title-margin-left;
     }
   }
-  
+
   @include media-breakpoint-up(md) {
     display: flex;
     .title {
@@ -44,27 +44,27 @@
     .two-lined {
       font-size: $navbar-orange-two-titles-font-size;
     }
-  
+
     .title,
     .two-lined {
       margin-left: $navbar-orange-title-margin-left;
     }
-  
+
     .container {
       padding-right: $navbar-orange-supra-padding-x;
       padding-left: $navbar-orange-supra-padding-x;
     }
-  
+
     svg,
     img {
       width: $navbar-icon-size;
       height: $navbar-icon-size;
     }
   }
-  
+
   .nav-link {
     &.nav-icon {
-      padding: divide($spacer, 2) 1.25rem;
+      padding: divide($spacer, 2) $spacer;
     }
   }
 }
@@ -113,7 +113,7 @@
       padding-right: $navbar-orange-supra-link-padding-x;
     }
   }
-} 
+}
 
 .header-minimized {
   @include media-breakpoint-up(md){
@@ -135,7 +135,7 @@
 
     @include media-breakpoint-up(md){
       &.nav-icon {
-        padding: divide($spacer, 4) 1.25rem .875rem;
+        padding: divide($spacer, 4) $spacer .875rem;
       }
 
       &.active::before {
