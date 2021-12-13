@@ -21,7 +21,7 @@ A simple navigation can be added on top of Orange navbar, it is called supra bar
 This navbar is visible only on desktop view.
 {{< /callout >}}
 
-{{< example class="p-0" >}}
+{{< example >}}
 {{< orange-supra >}}
 {{< /orange-supra >}}
 {{< /example >}}
@@ -47,7 +47,7 @@ Brand-compliant navbars that are easy to use and customizable.
 #### Global header standard
 
 {{< example class="p-0">}}
-<nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
   <div class="container-lg">
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -142,7 +142,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 {{< example class="p-0">}}
 <!-- On one line -->
 <header>
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
@@ -249,7 +249,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 <br>
 <!-- On two lines -->
 <header>
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -367,7 +367,7 @@ The minimized global header will **always** use the small [Master logo]({{< docs
 {{< /callout >}}
 
 {{< example class="p-0">}}
-<nav class="navbar global navbar-dark bg-dark navbar-expand-md header-minimized pt-md-2 pb-md-0">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md header-minimized pt-md-2 pb-md-0">
   <div class="container-lg">
     <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -484,7 +484,7 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
 
 {{< example class="p-0">}}
 <header>
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -603,7 +603,7 @@ You can have a search input into your Global Header. This one will appear differ
 
 {{< example class="p-0">}}
 <header>
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
@@ -655,7 +655,7 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
 
 {{< example class="p-0">}}
 <header>
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
