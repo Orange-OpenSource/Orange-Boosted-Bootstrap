@@ -53,6 +53,12 @@
 .global {
   border-bottom: 1px solid $gray-700;
 
+  .nav-item:last-of-type {
+    .nav-icon {
+      padding-right: 0;
+    }
+  }
+
   @include media-breakpoint-up(xs) {
     .title {
       font-size: 1.313rem;
@@ -136,6 +142,13 @@
       &.active::before {
         bottom: -1px;
       }
+    }
+  }
+
+  // TODO: avoid declare this rule 2 times
+  .nav-item:last-of-type {
+    .nav-icon {
+      padding-right: 0;
     }
   }
 }
