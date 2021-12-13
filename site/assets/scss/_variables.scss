@@ -7,9 +7,10 @@ $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-
 $bd-info:          $info;
 $bd-warning:       $warning;
 $bd-danger:        $danger;
+$dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
+// Boosted mod: no $sidebar-collapse-icon
 
-// Boosted mod
-$dropdown-active-icon: $form-check-input-checked-bg-image;
+$bd-gutter-x: 1.25rem;
 
 $zindex-skippy: 1080;
 

@@ -62,7 +62,9 @@ Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-star
 
 ## What's included
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
+
+<details><summary>Download contents</summary>
 
 ```text
 boosted/
@@ -113,6 +115,7 @@ boosted/
     ├── boosted.min.js
     └── boosted.min.js.map
 ```
+</details>
 
 We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
 

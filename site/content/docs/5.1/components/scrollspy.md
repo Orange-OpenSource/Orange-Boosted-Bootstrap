@@ -6,6 +6,12 @@ group: components
 toc: true
 ---
 
+{{< ods-incompatibility-alert >}}
+This component gathers technical utilities linked to the Navbar component and most of those examples are not compatible with the Orange Design System.
+
+Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+{{< /ods-incompatibility-alert >}}
+
 ## How it works
 
 Scrollspy has a few requirements to function properly:
@@ -44,7 +50,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
           <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
           <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#three">three</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
         </ul>
       </li>
     </ul>
@@ -106,8 +112,8 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 
 <div class="bd-example">
   <div class="row">
-    <div class="col-4 col-lg-2">
-      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">      
+    <div class="col-4 col-lg-3">
+      <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch">
         <a class="navbar-brand align-self-start" href="#">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         </a>
@@ -126,7 +132,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
         </nav>
       </nav>
     </div>
-    <div class="col-8 col-lg-10">
+    <div class="col-8 col-lg-9">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Item 1</h4>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
@@ -148,40 +154,45 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 </div>
 
 ```html
-<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-  <a class="navbar-brand align-self-start" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-  </a>
-  <nav class="nav nav-pills flex-column">
-    <a class="nav-link" href="#item-1">Item 1</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+<div class="row">
+  <div class="col-4 col-lg-3">
+    <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch">
+      <a class="navbar-brand align-self-start" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+      </a>
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#item-1">Item 1</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+        </nav>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link" href="#item-3">Item 3</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+        </nav>
+      </nav>
     </nav>
-    <a class="nav-link" href="#item-2">Item 2</a>
-    <a class="nav-link" href="#item-3">Item 3</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
-    </nav>
-  </nav>
-</nav>
-
-<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-  <h4 id="item-1">Item 1</h4>
-  <p>...</p>
-  <h5 id="item-1-1">Item 1-1</h5>
-  <p>...</p>
-  <h5 id="item-1-2">Item 1-2</h5>
-  <p>...</p>
-  <h4 id="item-2">Item 2</h4>
-  <p>...</p>
-  <h4 id="item-3">Item 3</h4>
-  <p>...</p>
-  <h5 id="item-3-1">Item 3-1</h5>
-  <p>...</p>
-  <h5 id="item-3-2">Item 3-2</h5>
-  <p>...</p>
+  </div>
+  <div class="col-8 col-lg-9">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
+      <h4 id="item-1">Item 1</h4>
+      <p>...</p>
+      <h5 id="item-1-1">Item 1-1</h5>
+      <p>...</p>
+      <h5 id="item-1-2">Item 1-2</h5>
+      <p>...</p>
+      <h4 id="item-2">Item 2</h4>
+      <p>...</p>
+      <h4 id="item-3">Item 3</h4>
+      <p>...</p>
+      <h5 id="item-3-1">Item 3-1</h5>
+      <p>...</p>
+      <h5 id="item-3-2">Item 3-2</h5>
+      <p>...</p>
+    </div>
+  </div>
 </div>
 ```
 

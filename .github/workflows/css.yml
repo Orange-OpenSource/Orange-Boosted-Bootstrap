@@ -15,6 +15,8 @@ on:
     branches:
       - main
       - "!dependabot/**"
+  workflow_dispatch:
+
 env:
   FORCE_COLOR: 2
   NODE: 16
