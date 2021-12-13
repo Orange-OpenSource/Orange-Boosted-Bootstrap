@@ -6,7 +6,11 @@ group: about
 toc: true
 ---
 
-Have a need for Boosted's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA on the [Orange Design System website]({{<param ods.web>}}).
+{{< callout info >}}
+Boosted is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/brand/).
+{{</ callout >}}
+
+Have a need for Boosted's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA on the [Orange Design System website]({{< param ods.web >}}).
 
 ## Orange logo
 
@@ -30,8 +34,6 @@ Have a need for Boosted's brand resources? Great! We have only a few guidelines 
 </div>
 
 ### Responsive SVG
-
-<hr class="d-none"><!-- Boosted mod: to prevent following paragraphs to be styled like docs links -->
 
 Boosted uses —and recommends to use— **a single SVG file for both logos**, since it's lightweight and easily made responsive. Here is the unminified SVG content:
 
@@ -100,8 +102,6 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
 
 ### Using semantic markup
 
-<hr class="d-none"><!-- Boosted mod: to prevent following paragraphs to be styled like docs links -->
-
 Boosted [flex]({{< docsref "/utilities/flex" >}}) and [spacing]({{< docsref "/utilities/spacing" >}}) utilities allows to use semantic markup to implement Orange Business Services' logo.
 
 {{< example show_preview="false" >}}
@@ -121,19 +121,3 @@ A single CSS property is required for proper alignment:
   margin-bottom: $spacer / 10;
 }
 {{< /example >}}
-
-## Orange's colors
-
-{{< callout info >}}
-Please see our dedicated section about [Orange's colors]({{< docsref >}}/customize/color#oranges-colors).
-{{</ callout >}}
-
-## Typography
-
-{{< callout info >}}
-Please see the dedicated section about [Orange's typography](https://system.design.orange.com/0c1af118d/p/38f221-typography) and our dedicated section about [typography]({{<docsref>}}/content/typography).
-{{</ callout >}}
-
-## Bootstrap brand guidelines
-
-Boosted is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param docs_version >}}/about/brand/).
