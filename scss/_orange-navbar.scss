@@ -127,15 +127,15 @@
       height: $h2-font-size;
     }
     padding-top: map-get($spacers, 1);
-    margin-bottom: .875rem;
+    margin-bottom: $navbar-orange-minimized-brand-margin-bottom;
   }
 
   .navbar-nav .nav-link{
-    padding: .6875rem divide($spacer, 2);
+    padding: $navbar-orange-minimized-link-padding-y divide($spacer, 2);
 
     @include media-breakpoint-up(md){
       &.nav-icon {
-        padding: divide($spacer, 4) $spacer .875rem;
+        padding: divide($spacer, 4) $spacer $navbar-orange-minimized-icon-padding-bottom;
       }
 
       &.active::before {
