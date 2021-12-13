@@ -1,4 +1,7 @@
 .bd-subnavbar {
+  --bs-gutter-x: $bd-gutter-x;
+  --bs-gutter-y: $bd-gutter-x;
+
   // The position and z-index are needed for the dropdown to stay on top of the content
   position: relative;
   z-index: $zindex-sticky;
@@ -22,19 +25,19 @@
 
   &::after {
     position: absolute;
-    top: .5rem; // Boosted mod
+    top: .4rem;
     right: .4rem;
+    bottom: .4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1.5rem;
-    padding-right: .25rem;
-    padding-left: .25rem;
+    padding-right: .3125rem;
+    padding-left: .3125rem;
     @include font-size(.625rem); // Boosted mod
     font-family: $font-family-monospace; // Boosted mod
     color: $gray-700; // Boosted mod
     content: "Ctrl + /";
-    border: $border-width solid $gray-400; // Boosted mod
+    background-color: $gray-100;
     @include border-radius(.125rem);
   }
 
