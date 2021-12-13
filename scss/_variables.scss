@@ -1065,7 +1065,7 @@ $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $input-border-radius !default;
 $form-select-box-shadow:          $box-shadow-inset !default;
 
-$form-select-focus-border-color:  $input-focus-border-color !default;
+$form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
 $form-select-focus-box-shadow:    null !default;
 
 // Boosted mod: no .form-select-sm
