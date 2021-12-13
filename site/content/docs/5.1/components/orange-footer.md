@@ -16,7 +16,7 @@ The feature will be delivered with [#892]({{< param repo >}}/issues/892).
 
 In the meantime, some examples have been developed in the [footers examples section]({{< docsref "/examples/footers" >}}) by using mostly Boosted utilities and our Collapse JavaScript plugin.
 
-Total responsiveness is not implemented and design guidelines are not perfectly respected but it can help you while waiting for the component's delivery.
+Design guidelines are not perfectly respected but it can help you while waiting for the component's delivery.
 {{< /callout >}}
 
 {{< callout info >}}
