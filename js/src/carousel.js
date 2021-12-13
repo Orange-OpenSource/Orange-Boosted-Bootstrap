@@ -12,8 +12,7 @@ import {
   isRTL,
   isVisible,
   reflow,
-  triggerTransitionEnd,
-  typeCheckConfig
+  triggerTransitionEnd
 } from './util/index'
 import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
@@ -101,7 +100,7 @@ const DefaultType = {
 
 class Carousel extends BaseComponent {
   constructor(element, config) {
-    super(element)
+    super(element, config)
 
     this._items = null
     this._interval = null
@@ -111,7 +110,6 @@ class Carousel extends BaseComponent {
     this.touchTimeout = null
     this._swipeHelper = null
 
-    this._config = this._getConfig(config)
     this._indicatorsElement = SelectorEngine.findOne(SELECTOR_INDICATORS, this._element)
 
     this._addEventListeners()
@@ -120,6 +118,10 @@ class Carousel extends BaseComponent {
   // Getters
   static get Default() {
     return Default
+  }
+
+  static get DefaultType() {
+    return DefaultType
   }
 
   static get NAME() {
@@ -230,16 +232,6 @@ class Carousel extends BaseComponent {
   }
 
   // Private
-  _getConfig(config) {
-    config = {
-      ...Default,
-      ...Manipulator.getDataAttributes(this._element),
-      ...(typeof config === 'object' ? config : {})
-    }
-    typeCheckConfig(NAME, config, DefaultType)
-    return config
-  }
-
   _addEventListeners() {
     if (this._config.keyboard) {
       EventHandler.on(this._element, EVENT_KEYDOWN, event => this._keydown(event))
