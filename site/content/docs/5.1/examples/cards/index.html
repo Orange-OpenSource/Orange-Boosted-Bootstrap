@@ -14,8 +14,54 @@ title: Cards
   </svg>
 
   <div class="container">
+    <h1>Card sizes</h1>
+    <div class="row row-cols-3 gy-3">
+      <div class="col-lg-6">
+        <div class="card">
+          {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card">
+          {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="card">
+          {{< placeholder width="100%" height="90" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 mt-4">
+      <p class="lead m-0">Card sizes only rely on width for now, as explained in <a href="{{< docsref "/components/card/">}}"> cards documentation</a>. Future release might introduce sizes variants…
+     </p>
+    </div>
+  </div>
+
+  <div class="container pt-5">
     <h1>Cards filed black</h1>
-    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
       <div class="col m-0 py-2">
         <div class="card border-0">
           {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
