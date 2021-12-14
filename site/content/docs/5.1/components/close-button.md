@@ -6,42 +6,12 @@ group: components
 toc: true
 ---
 
-{{< callout warning >}}
-This section might change in the future with [#521]({{<param repo>}}/issues/521). The class **`.btn-close` might be removed**.
-{{< /callout >}}
-
-## Examples
+## Example
 
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
 {{< example >}}
 <button type="button" class="btn-close"><span class="visually-hidden">Close</span></button>
-{{< /example >}}
-
-{{< callout info >}}
-The **following examples** are branded and won't change for now. The white variant of these buttons will come with [#917]({{<param repo>}}/issues/917).
-{{< /callout >}}
-
-{{< example >}}
-<button type="button" class="btn btn-icon btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
-  <span class="visually-hidden">Close</span>
-</button>
-
-<button type="button" class="btn btn-icon btn-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
-  <span class="visually-hidden">Close</span>
-</button>
-
-<button type="button" class="btn btn-icon btn-no-outline" disabled>
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
-  <span class="visually-hidden">Close</span>
-</button>
-
-<button type="button" class="btn btn-icon btn-secondary" disabled>
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
-  <span class="visually-hidden">Close</span>
-</button>
 {{< /example >}}
 
 ## Disabled state
@@ -59,6 +29,22 @@ Change the default `.btn-close` to be white with the `.btn-close-white` class.
 {{< example class="bg-dark" >}}
 <button type="button" class="btn-close btn-close-white"><span class="visually-hidden">Close</span></button>
 <button type="button" class="btn-close btn-close-white" disabled><span class="visually-hidden">Close</span></button>
+{{< /example >}}
+
+## Without specific class
+
+Close buttons can also be created without `.btn-close`.
+
+{{< example >}}
+<button type="button" class="btn btn-icon btn-no-outline">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-no-outline" disabled>
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
 {{< /example >}}
 
 ## Sass
