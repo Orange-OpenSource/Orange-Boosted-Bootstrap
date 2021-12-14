@@ -201,11 +201,10 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 ### Usage
 
-<div class="row row-cols-1 row-cols-lg-2">
-    <p class="col-lg-12">
-        Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
-        Boosted core uses Bootstrap's naming for maintenance ease, but <strong>you're encouraged to use Orange color tokens when it comes to custom code</strong>.
-    </p>
+Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
+Boosted core uses Bootstrap's naming for maintenance ease, but **you're encouraged to use Orange color tokens when it comes to custom code**.
+
+<div class="row row-cols-1 row-cols-lg-2 mt-4">
     <div class="col">
         <h4>Orange color tokens</h4>
         {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
