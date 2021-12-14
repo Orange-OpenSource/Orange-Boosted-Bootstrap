@@ -595,10 +595,16 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 ## Rich content tables
 
 ### Row selection
+Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute.
+
+{{< callout info >}}
+#### Selection feature
+
+The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
+{{< /callout >}}
 
 <div>
   <table class="table table-sm table-hover table-responsive">
-    <caption class="h4">Standard table with column headers and row selection</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -732,17 +738,71 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
   </table>
 </div>
 
-{{< callout info >}}
-#### Selection feature
-
-The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
-{{< /callout >}}
+```html
+<div>
+  <table class="table table-sm table-hover table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck">
+            <label class="form-check-label" for="customCheck">
+              <span class="visually-hidden">Select all</span>
+            </label>
+          </div>
+        </th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck1">
+            <label class="form-check-label" for="customCheck1">
+                <span class="visually-hidden">Select first row</span>
+            </label>
+          </div>
+        </td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+      </tr>
+      <tr>...</tr>
+      <tr class="table-active">
+        <td>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck3" checked>
+            <label class="form-check-label" for="customCheck3">
+                <span class="visually-hidden">Select third row</span>
+            </label>
+          </div>
+        </td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+      </tr>
+      <tr class="table-active">...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+    </tbody>
+  </table>
+</div>
+```
 
 ### With icons or thumbnails
 
+Use SVG to display thumbnails or icons in your table data cell elements.
+
 <div>
   <table class="table table-sm table-hover table-responsive align-middle">
-    <caption class="h4">Standard table with column headers, row selection and icons or thumbnails</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -924,11 +984,25 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
   </table>
 </div>
 
-### With column headers and icons
+```html
+<td>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+    <title id="svg1">Thumbnail</title>
+    <rect width="100%" height="100%" fill="#ffd200"></rect>
+  </svg>
+  Cell text
+</td>
+<td>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
+    <title id="svg2">Document</title>
+    <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+  </svg>
+  Cell text
+</td>
+```
 
 <div>
   <table class="table table-responsive align-middle">
-    <caption class="h4">Standard table with column headers and icons</caption>
     <thead>
       <tr>
         <th scope="col">Column header</th>
@@ -1037,6 +1111,15 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
     </tbody>
   </table>
 </div>
+
+```html
+<td>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
+    <title id="check1-1">Yes</title>
+    <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+  </svg>
+</td>
+```
 
 ## Sass
 

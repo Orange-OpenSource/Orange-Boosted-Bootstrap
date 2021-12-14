@@ -72,8 +72,8 @@
 #     - name: Offcanvas navbar
 #       description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
 
-- category: Cards
-  description: "Showing the possible variants of card component."
+- category: Components
+  description: "Showing the possible variants of components."
   examples:
     - name: Cards
       description: "List of all card variants (content and design)."
