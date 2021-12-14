@@ -20,6 +20,7 @@
 ) {
   color: $color;
   @include gradient-bg($background);
+  // background-color: var(--#{$variable-prefix}color-secondary, $background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 

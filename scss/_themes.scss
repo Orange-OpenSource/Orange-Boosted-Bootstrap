@@ -1,5 +1,5 @@
 $themes: (
-  classic: (
+  "classic": (
     "color-bg": #fff,
     "color-bg-offset": #f7f7f9,
     "color-text": #373a3c,
@@ -7,9 +7,9 @@ $themes: (
     "color-border": #eceeef,
     "color-primary": #ff335f,
     "color-primary-offset": #ff1447,
-    "color-secondary": #43a9a3
+    "color-secondary": #43a9a3,
   ),
-  dark: (
+  "dark": (
     "color-bg": #0e141b,
     "color-bg-offset": #252526,
     "color-text": #fff,
@@ -17,9 +17,9 @@ $themes: (
     "color-border": #2d2d2d,
     "color-primary": #ff5277,
     "color-primary-offset": #ff2957,
-    "color-secondary": #43a9a3
+    "color-secondary": #43a9a3,
   ),
-  beach: (
+  "beach": (
     "color-bg": #fffffe,
     "color-bg-offset": #e3f6f5,
     "color-text": #272343,
@@ -27,9 +27,9 @@ $themes: (
     "color-border": #e3f6f5,
     "color-primary": #ff9d00,
     "color-primary-offset": #ffca00,
-    "color-secondary": #bae8e8
+    "color-secondary": #bae8e8,
   ),
-  choco: (
+  "choco": (
     "color-bg": #55423d,
     "color-bg-offset": #41474c,
     "color-text": #fffffe,
@@ -37,9 +37,9 @@ $themes: (
     "color-border": #271c19,
     "color-primary": #f3ab87,
     "color-primary-offset": #ffc0ad,
-    "color-secondary": #e78fb3
+    "color-secondary": #e78fb3,
   ),
-  milk: (
+  "milk": (
     "color-bg": #fef6e4,
     "color-bg-offset": #f3e1d8,
     "color-text": #172c66,
@@ -47,9 +47,9 @@ $themes: (
     "color-border": #f3d2c1,
     "color-primary": #f582ae,
     "color-primary-offset": #ff3d6a,
-    "color-secondary": #8bd3dd
+    "color-secondary": #8bd3dd,
   ),
-  castle: (
+  "castle": (
     "color-bg": #16161a,
     "color-bg-offset": #29293e,
     "color-text": #fffffe,
@@ -57,9 +57,9 @@ $themes: (
     "color-border": #383a61,
     "color-primary": #7f5af0,
     "color-primary-offset": #e068fd,
-    "color-secondary": #2cb67d
+    "color-secondary": #2cb67d,
   ),
-  dino: (
+  "dino": (
     "color-bg": #fafbf5,
     "color-bg-offset": #f2ede9,
     "color-text": #41474c,
@@ -67,9 +67,9 @@ $themes: (
     "color-border": #e8e0d9,
     "color-primary": #99c221,
     "color-primary-offset": #6e910a,
-    "color-secondary": #e55812
+    "color-secondary": #e55812,
   ),
-  rainbow: (
+  "rainbow": (
     "color-bg": #140527,
     "color-bg-offset": #311b46,
     "color-text": #feff00,
@@ -77,9 +77,9 @@ $themes: (
     "color-border": #d846ff,
     "color-primary": #49f5f7,
     "color-primary-offset": #5dccf8,
-    "color-secondary": #01c317
+    "color-secondary": #01c317,
   ),
-  lobster: (
+  "lobster": (
     "color-bg": #fcddd4,
     "color-bg-offset": #ffb9ad,
     "color-text": #4b1313,
@@ -87,51 +87,70 @@ $themes: (
     "color-border": #f1797c,
     "color-primary": #b62b2b,
     "color-primary-offset": #ff0030,
-    "color-secondary": #fb9f13
+    "color-secondary": #fb9f13,
   )
 ) !default;
 
 @each $theme, $name in $themes {
-  /* #{$theme} */
   [data-bs-theme="#{$theme}"] {
     @each $color, $value in $name {
-      --bs-#{$color}: #{$value};
+      --#{$variable-prefix}#{$color}: #{$value};
     }
   }
 }
 
 // Mapping
-$bs-color-bg: var(--bs-color-bg) !default;
-$bs-color-bg-offset: var(--bs-color-bg-offset) !default;
-$bs-color-text: var(--bs-color-text) !default;
-$bs-color-text-offset: var(--bs-color-text-offset) !default;
-$bs-color-border: var(--bs-color-border) !default;
-$bs-color-primary: var(--bs-color-primary) !default;
-$bs-color-primary-offset: var(--bs-color-primary-offset) !default;
-$bs-color-secondary: var(--bs-color-secondary) !default;
+// $bs-color-bg: var(--bs-color-bg) !default;
+// $bs-color-bg-offset: var(--bs-color-bg-offset) !default;
+// $bs-color-text: var(--bs-color-text) !default;
+// $bs-color-text-offset: var(--bs-color-text-offset) !default;
+// $bs-color-border: var(--bs-color-border) !default;
+// $bs-color-primary: var(--bs-color-primary) !default;
+// $bs-color-primary-offset: var(--bs-color-primary-offset) !default;
+// $bs-color-secondary: var(--bs-color-secondary) !default;
 
-[data-bs-theme] {
 
-  h2 {
-    color: $bs-color-primary;
-  }
+// [data-bs-theme] {
 
-  p {
-    color: $bs-color-secondary;
-    &:last-of-type {
-      color: $bs-color-primary-offset;
+//   h2 {
+//     color: var(--bs-color-primary, currentColor);
+//   }
+
+//   p {
+//     color: var(--bs-color-primary, currentColor);
+//     &:last-of-type {
+//       color: var(--bs-color-primary-offset, currentColor);
+//     }
+//   }
+
+//   .btn {
+//     color: var(--bs-color-text, currentColor);
+//     background-color: var(--bs-color-bg-offset, currentColor);
+//     border: var(--bs-color-border, currentColor);
+
+//     &:hover {
+//       color: var(--bs-color-text-offset, currentColor);
+//       background-color: var(--bs-color-bg, currentColor);
+//     }
+//   }
+
+// }
+
+
+@each $theme-name in map-keys($themes) {
+
+  $theme: map-get($themes, $theme-name);
+
+  [data-bs-theme=#{$theme-name}] {
+
+    $custom-primary: map-get($theme, "color-primary") !default;
+    $custom-secondary: map-get($theme, "color-secondary") !default;
+
+    .btn-primary,
+    .btn-warning {
+      @include button-variant($custom-primary, $custom-secondary, $active-background: $white, $active-border: $black);
     }
-  }
 
-  .btn {
-    color: $bs-color-text;
-    background-color: $bs-color-bg-offset;
-    border: $bs-color-border;
-
-    &:hover {
-      color: $bs-color-text-offset;
-      background-color: $bs-color-bg;
-    }
   }
 
 }
