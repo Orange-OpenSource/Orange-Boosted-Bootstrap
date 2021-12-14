@@ -43,6 +43,13 @@
     }
     .two-lined {
       font-size: $navbar-orange-two-titles-font-size;
+      & :first-child {
+        line-height: $navbar-orange-two-titles-line-height;
+        vertical-align: top;
+      }
+      & :last-child {
+        vertical-align: middle;
+      }
     }
 
     .title,
