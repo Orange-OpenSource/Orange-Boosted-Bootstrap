@@ -8,7 +8,7 @@ toc: true
 
 ## Global settings
 
-Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
 - Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.

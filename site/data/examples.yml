@@ -72,6 +72,12 @@
 #     - name: Offcanvas navbar
 #       description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
 
+- category: Components
+  description: "Showing the possible variants of components."
+  examples:
+    - name: Cards
+      description: "List of all card variants (content and design)."
+
 # - category: RTL
 #   description: "See Boosted's RTL version in action with these modified Custom Components examples."
 #   examples:

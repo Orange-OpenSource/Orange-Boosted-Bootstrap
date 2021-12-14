@@ -93,14 +93,14 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 ### Additional content
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+Alerts can also contain additional HTML elements like headings, links and paragraphs.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <div>
-    <h4 class="alert-heading">Success notification text goes here.</h4>
-    <p>Description text goes here.</p>
+    <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
+    <p>Description text with <a href="#">a link</a> goes here.</p>
   </div>
 </div>
 {{< /example >}}

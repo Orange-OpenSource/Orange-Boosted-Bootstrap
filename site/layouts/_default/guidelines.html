@@ -1,58 +1,19 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "header" . }}
-  </head>
-  <body>
-    {{ partial "analytics-body" . }}
-    {{ partial "skippy" . }}
-
-    {{ partial "docs-navbar" . }}
-    {{ partial "guidelines-subnav" . }}
-
-    <div class="container-xxl bd-layout">
-      <aside class="bd-sidebar">
-        {{ partial "guidelines-sidebar" . }}
-      </aside>
-
-      <main class="bd-main bd-guidelines order-1 {{ if eq .Title "Typography" }}bd-typography{{ else if eq .Title "Alerts" }}bd-alerts{{ end }}">
-        <div class="bd-intro pt-md-5 pt-lg-4 ps-lg-4">
-          <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
+{{ define "main" }}
+  <!-- Boosted mod no Header tag here to avoid duplicate banner landmark accessibility error -->
+  <main class="bd-content order-1 py-5" id="content">
+    <div class="container pt-md-1 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
           <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-          {{ partial "ads" . }}
-        </div>
-
-        {{ if (eq .Page.Params.toc true) }}
-          <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 ps-xl-3 mb-lg-5">
-            <strong class="d-block h6 my-2 pb-2 border-bottom border-light border-1">On this page</strong>
-            {{ .TableOfContents }}
+          <div class="d-flex flex-column flex-sm-row">
+            <a href="{{ .Site.Params.ods.web }}" class="btn btn-lg btn-primary" aria-label="Design system for web" title="Design system for web">Visit system.design.orange.com</a>
           </div>
-        {{ end }}
-
-      <div class="bd-content ps-lg-4 mb-3">
-        {{ if .Page.Params.sections }}
-            <div class="row g-3">
-              {{ range .Page.Params.sections }}
-              <div class="col-md-6">
-                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
-                  <span class="text-secondary">{{ .description }}</span>
-                </a>
-              </div>
-              {{ end }}
-            </div>
-          {{ end }}
-
-          {{ .Content }}
         </div>
-      </main>
+      </div>
     </div>
-
-    {{ partial "footer" . }}
-    {{ partial "scripts" . }}
-
-    {{ range .Page.Params.extra_js -}}
-      <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
-    {{- end -}}
-  </body>
-</html>
+    <div class="container-fluid p-0 mt-3">
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}

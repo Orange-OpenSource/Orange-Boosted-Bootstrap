@@ -4,7 +4,8 @@ on:
     paths:
       - 'js/**'
       - 'scss/**'
-      - 'site/content/docs/**/guidelines'
+      - 'site/content/docs/**/components'
+      - 'site/content/docs/**/forms'
     branches:
       - main
       - "!dependabot/**"
@@ -67,7 +68,7 @@ jobs:
         uses: percy/snapshot-action@v0.1.2
         with:
           build-directory: "_site/"
-          flags: "--snapshot-files ./docs/5.1/guidelines/**/*.html,./docs/5.1/examples/cheatsheet/index.html,./docs/5.1/examples/cheatsheet-rtl/index.html"
+          flags: "--snapshot-files ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"

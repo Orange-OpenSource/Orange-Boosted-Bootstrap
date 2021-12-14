@@ -14,6 +14,8 @@ Navigation available in Boosted share general markup and styles, from the base `
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
 {{< callout info >}}
+Note that the `.nav-link` can be used out of any context and combined with our [text utilities]({{<docsref "/utilities/text">}}) or with our [inline text elements]({{<docsref "/content/typography#inline-text-elements">}}).
+
 The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
 To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.

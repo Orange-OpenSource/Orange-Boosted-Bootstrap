@@ -94,7 +94,30 @@ With an SVG:
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
     </svg>
   </a>
+
+  <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+    </svg>
+    <span class="visually-hidden">Helper</span>
+  </button>
 </div>
+
+```html
+<a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="Default tooltip">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+    <rect width="100%" height="100%" fill="#563d7c"/>
+    <circle cx="50" cy="50" r="30" fill="#007bff"/>
+  </svg>
+</a>
+
+<button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+  </svg>
+  <span class="visually-hidden">Helper</span>
+</button>
+```
 
 ## Sass
 
