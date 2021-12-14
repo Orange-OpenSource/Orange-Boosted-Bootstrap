@@ -99,8 +99,8 @@ Alerts can also contain additional HTML elements like headings, links and paragr
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <div>
-    <h4 class="alert-heading">Success notification text with <a href="#" aria-label="Link description" title="Link description">a link</a> goes here.</h4>
-    <p>Description text with <a href="#" aria-label="Link description" title="Link description">a link</a> goes here.</p>
+    <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
+    <p>Description text with <a href="#">a link</a> goes here.</p>
   </div>
 </div>
 {{< /example >}}
