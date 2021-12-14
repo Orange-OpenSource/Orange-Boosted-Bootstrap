@@ -8,7 +8,7 @@ toc: true
 
 ## Global settings
 
-Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{<param ods.web>}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
 - Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
@@ -371,7 +371,7 @@ Links in content are black and underlined. They adapt to their context otherwise
 Add `.link-chevron` to bold your link and enhance them with a chevron.
 
 {{< example >}}
-<a class="link-chevron" href="#links" aria-label="Link description" title="Link description">This is a sample link with chevron</a>
+<a class="link-chevron" href="#links">This is a sample link with chevron</a>
 {{< /example >}}
 <!-- End mod -->
 

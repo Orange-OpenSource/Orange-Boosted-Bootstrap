@@ -852,7 +852,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
             <title id="svg2">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -892,7 +892,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
             <title id="svg4">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -912,7 +912,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
             <title id="svg5">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -932,7 +932,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
             <title id="svg6">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -952,7 +952,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
             <title id="svg7">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -972,7 +972,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
             <title id="svg8">Document</title>
-            <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -995,7 +995,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 <td>
   <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
     <title id="svg2">Document</title>
-    <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#document"></use>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
   </svg>
   Cell text
 </td>
@@ -1017,19 +1017,19 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
             <title id="check1-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-2">
             <title id="check1-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-3">
             <title id="check1-3">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1038,19 +1038,19 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-1">
             <title id="check2-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-2">
             <title id="check2-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-3">
             <title id="check2-3">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1060,13 +1060,13 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-1">
             <title id="check3-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-2">
             <title id="check3-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1076,13 +1076,13 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-1">
             <title id="check4-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-2">
             <title id="check4-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1093,7 +1093,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check5">
            <title id="check5">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1104,7 +1104,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check6">
             <title id="check6">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
           </svg>
         </td>
       </tr>
@@ -1116,7 +1116,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 <td>
   <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
     <title id="check1-1">Yes</title>
-    <use style="color: var(--bs-success);" xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tick"></use>
+    <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
   </svg>
 </td>
 ```

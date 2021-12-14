@@ -97,7 +97,7 @@ With an SVG:
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false">
-      <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tooltip"></use>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
     </svg>
   </button>
 </div>
@@ -112,7 +112,7 @@ With an SVG:
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false">
-    <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#tooltip"></use>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
   </svg>
 </button>
 ```
