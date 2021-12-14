@@ -36,7 +36,7 @@
 
 
 /* Don't display image when too big */
-@media (max-width: 20.5em) {
+@media (max-width: 20.9em) {
   .title-bar {
     color: #000;
     background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
@@ -46,7 +46,7 @@
     display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
-@media (min-width: 480px) and (max-width: 30em) {
+@media (min-width: 480px) and (max-width: 29.9em) {
   .title-bar {
     color: #000;
     background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
