@@ -96,9 +96,10 @@ With an SVG:
   </a>
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
     </svg>
+    <span class="visually-hidden">Helper</span>
   </button>
 </div>
 
@@ -111,9 +112,10 @@ With an SVG:
 </a>
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
   </svg>
+  <span class="visually-hidden">Helper</span>
 </button>
 ```
 

@@ -12,7 +12,7 @@ aliases: "/guidelines/"
       {{< design-guidelines-cards.inline >}}
       {{ range (index $.Site.Data "design-guidelines") -}}
       <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
-        <div class="card border-1">
+        <div class="card border-1 mb-2 mb-md-3 mb-lg-0">
           <img class="card-img-top" src="/docs/{{ $.Site.Params.docs_version }}/{{.image}}" alt="">
           <div class="card-body ps-2 pt-2">
             <a href="{{.link}}" class="stretched-link text-decoration-none h4 text-body" aria-label="{{.description}}" title="{{.description}}">{{.name}}</a>

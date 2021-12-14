@@ -1,7 +1,7 @@
 {{ define "main" }}
   <!-- Boosted mod no Header tag here to avoid duplicate banner landmark accessibility error -->
   <main class="bd-content order-1 py-5" id="content">
-    <div class="container pt-md-1 pb-md-4">
+    <div class="container pt-md-1 pb-4">
       <div class="row">
         <div class="col-12">
           <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
@@ -12,8 +12,8 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid p-0 mt-3">
+      {{ .Content }}
+    </div>
   </main>
-  <div class="container-fluid p-0">
-    {{ .Content }}
-  </div>
 {{ end }}
