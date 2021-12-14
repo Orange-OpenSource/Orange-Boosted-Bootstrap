@@ -16,13 +16,6 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
 {{< /callout >}}
 
-{{< callout info >}}
-These features will be delivered with [#116]({{< param repo >}}/issues/116):
-- Slider with value
-- Slider with units
-- Range slider
-{{< /callout >}}
-
 {{< example >}}
 <label for="customRange1" class="form-label">Example range</label>
 <input type="range" class="form-range" id="customRange1">
