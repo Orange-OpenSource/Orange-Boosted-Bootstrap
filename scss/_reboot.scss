@@ -446,10 +446,10 @@ svg {
 //    See https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
 
 table {
-  caption-side: top; // Boosted mod
+  font-feature-settings: "tnum";      // Boosted mod: 2
+  font-variant-numeric: tabular-nums; // Boosted mod: 2
+  caption-side: top;                  // Boosted mod
   border-collapse: collapse;
-  font-feature-settings: "tnum";      // Boosted mod : 2
-  font-variant-numeric: tabular-nums; // Boosted mod : 2
 }
 
 caption {

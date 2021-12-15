@@ -64,11 +64,11 @@
     &:focus {
       color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
       background-color: $nav-tabs-link-hover-border-color; // Boosted mod
+      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+      isolation: isolate;
       border-color: $nav-tabs-link-hover-border-color;
       outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
       outline-offset: var(--#{$variable-prefix}tabs-spacing); // Boosted mod
-      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
-      isolation: isolate;
     }
 
     &.disabled {
