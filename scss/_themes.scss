@@ -92,6 +92,7 @@ $themes: (
 ) !default;
 
 @each $theme, $name in $themes {
+  /* #{$theme} */
   [data-bs-theme="#{$theme}"] {
     @each $color, $value in $name {
       --#{$variable-prefix}#{$color}: #{$value};
@@ -99,15 +100,53 @@ $themes: (
   }
 }
 
+// /* classic */
+// [data-bs-theme="default"] {
+//   ---bs-color-bg: #fff;
+//   ---bs-color-bg-offset: #f7f7f9;
+//   ---bs-color-text: #373a3c;
+//   ---bs-color-text-offset: #818a91;
+//   ---bs-color-border: #eceeef;
+//   ---bs-color-primary: #ff335f;
+//   ---bs-color-primary-offset: #ff1447;
+//   ---bs-color-secondary: #43a9a3;
+// }
+
+// /* dark */
+// [data-bs-theme="dark"] {
+//   ---bs-color-bg: #0e141b;
+//   ---bs-color-bg-offset: #252526;
+//   ---bs-color-text: #fff;
+//   ---bs-color-text-offset: #818a91;
+//   ---bs-color-border: #2d2d2d;
+//   ---bs-color-primary: #ff5277;
+//   ---bs-color-primary-offset: #ff2957;
+//   ---bs-color-secondary: #43a9a3;
+// }
+
+// /* beach */
+// [data-bs-theme="beach"] {
+//   ---bs-color-bg: #fffffe;
+//   ---bs-color-bg-offset: #e3f6f5;
+//   ---bs-color-text: #272343;
+//   ---bs-color-text-offset: #2d334a;
+//   ---bs-color-border: #e3f6f5;
+//   ---bs-color-primary: #ff9d00;
+//   ---bs-color-primary-offset: #ffca00;
+//   ---bs-color-secondary: #bae8e8;
+// }
+// /* etc ... */
+
+
 // Mapping
-// $bs-color-bg: var(--bs-color-bg) !default;
-// $bs-color-bg-offset: var(--bs-color-bg-offset) !default;
-// $bs-color-text: var(--bs-color-text) !default;
-// $bs-color-text-offset: var(--bs-color-text-offset) !default;
-// $bs-color-border: var(--bs-color-border) !default;
-// $bs-color-primary: var(--bs-color-primary) !default;
-// $bs-color-primary-offset: var(--bs-color-primary-offset) !default;
-// $bs-color-secondary: var(--bs-color-secondary) !default;
+$bs-color-bg: var(--bs-color-bg) !default;
+$bs-color-bg-offset: var(--bs-color-bg-offset) !default;
+$bs-color-text: var(--bs-color-text) !default;
+$bs-color-text-offset: var(--bs-color-text-offset) !default;
+$bs-color-border: var(--bs-color-border) !default;
+$bs-color-primary: var(--bs-color-primary) !default;
+$bs-color-primary-offset: var(--bs-color-primary-offset) !default;
+$bs-color-secondary: var(--bs-color-secondary) !default;
 
 
 // [data-bs-theme] {
@@ -134,6 +173,16 @@ $themes: (
 //     }
 //   }
 
+//   .btn-primary,
+//   .btn-warning {
+//     @include button-variant($bs-color-primary, $bs-color-secondary, $active-background: $white, $active-border: $black);
+//   }
+
+//   .btn-primary,
+//   .btn-warning {
+//     background-color: var(--bs-color-primary, currentColor);
+//   }
+
 // }
 
 
@@ -143,12 +192,34 @@ $themes: (
 
   [data-bs-theme=#{$theme-name}] {
 
-    $custom-primary: map-get($theme, "color-primary") !default;
-    $custom-secondary: map-get($theme, "color-secondary") !default;
+    $bs-color-bg: map-get($theme, "color-bg") !default;
+    $bs-color-bg-offset: map-get($theme, "color-bg-offset") !default;
+    $bs-color-text: map-get($theme, "color-text") !default;
+    $bs-color-text-offset: map-get($theme, "color-text-offset") !default;
+    $bs-color-border: map-get($theme, "color-border") !default;
+    $bs-color-primary: map-get($theme, "color-primary") !default;
+    $bs-color-primary-offset: map-get($theme, "color-primary-offset") !default;
+    $bs-color-secondary: map-get($theme, "color-secondary") !default;
+
+    h2 {
+      color: $bs-color-secondary;
+    }
+
+    p {
+      color: $bs-color-text-offset;
+
+      &:last-of-type {
+        color: $bs-color-primary-offset;
+      }
+    }
 
     .btn-primary,
     .btn-warning {
-      @include button-variant($custom-primary, $custom-secondary, $active-background: $white, $active-border: $black);
+      @include button-variant($bs-color-primary, $bs-color-secondary, $active-background: $white, $active-border: $black);
+    }
+
+    .btn-success {
+      @include button-variant($bs-color-secondary, $bs-color-text-offset);
     }
 
   }
