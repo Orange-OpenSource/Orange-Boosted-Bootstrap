@@ -109,8 +109,7 @@
                   // Handle colors not in $theme-colors
                   @else if $color-name == "white" {
                     $value: $white;
-                  }
-                  @else if $color-name == "body-color" {
+                  } @else if $color-name == "body-color" {
                     $value: $black;
                   }
                 }

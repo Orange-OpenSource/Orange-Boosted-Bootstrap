@@ -85,9 +85,9 @@
       left: subtract(100%, 1px);
       z-index: -1;
       width: $step-item-arrow-width;
+      clip-path: $step-item-arrow-shape;
       content: "";
       background-color: inherit;
-      clip-path: $step-item-arrow-shape;
     }
   }
 
