@@ -100,63 +100,15 @@ $themes: (
   }
 }
 
-// /* classic */
-// [data-bs-theme="default"] {
-//   ---bs-color-bg: #fff;
-//   ---bs-color-bg-offset: #f7f7f9;
-//   ---bs-color-text: #373a3c;
-//   ---bs-color-text-offset: #818a91;
-//   ---bs-color-border: #eceeef;
-//   ---bs-color-primary: #ff335f;
-//   ---bs-color-primary-offset: #ff1447;
-//   ---bs-color-secondary: #43a9a3;
-// }
-
-// /* dark */
-// [data-bs-theme="dark"] {
-//   ---bs-color-bg: #0e141b;
-//   ---bs-color-bg-offset: #252526;
-//   ---bs-color-text: #fff;
-//   ---bs-color-text-offset: #818a91;
-//   ---bs-color-border: #2d2d2d;
-//   ---bs-color-primary: #ff5277;
-//   ---bs-color-primary-offset: #ff2957;
-//   ---bs-color-secondary: #43a9a3;
-// }
-
-// /* beach */
-// [data-bs-theme="beach"] {
-//   ---bs-color-bg: #fffffe;
-//   ---bs-color-bg-offset: #e3f6f5;
-//   ---bs-color-text: #272343;
-//   ---bs-color-text-offset: #2d334a;
-//   ---bs-color-border: #e3f6f5;
-//   ---bs-color-primary: #ff9d00;
-//   ---bs-color-primary-offset: #ffca00;
-//   ---bs-color-secondary: #bae8e8;
-// }
-// /* etc ... */
-
-
-// Mapping
-$bs-color-bg: var(--bs-color-bg) !default;
-$bs-color-bg-offset: var(--bs-color-bg-offset) !default;
-$bs-color-text: var(--bs-color-text) !default;
-$bs-color-text-offset: var(--bs-color-text-offset) !default;
-$bs-color-border: var(--bs-color-border) !default;
-$bs-color-primary: var(--bs-color-primary) !default;
-$bs-color-primary-offset: var(--bs-color-primary-offset) !default;
-$bs-color-secondary: var(--bs-color-secondary) !default;
-
 
 // [data-bs-theme] {
 
 //   h2 {
-//     color: var(--bs-color-primary, currentColor);
+//     color: var(--bs-color-secondary, currentColor);
 //   }
 
 //   p {
-//     color: var(--bs-color-primary, currentColor);
+//     color: var(--bs-color-text-offset, currentColor);
 //     &:last-of-type {
 //       color: var(--bs-color-primary-offset, currentColor);
 //     }
@@ -175,16 +127,29 @@ $bs-color-secondary: var(--bs-color-secondary) !default;
 
 //   .btn-primary,
 //   .btn-warning {
-//     @include button-variant($bs-color-primary, $bs-color-secondary, $active-background: $white, $active-border: $black);
-//   }
-
-//   .btn-primary,
-//   .btn-warning {
 //     background-color: var(--bs-color-primary, currentColor);
 //   }
 
 // }
 
+// // Mapping
+// $bs-color-bg: var(--bs-color-bg) !default;
+// $bs-color-bg-offset: var(--bs-color-bg-offset) !default;
+// $bs-color-text: var(--bs-color-text) !default;
+// $bs-color-text-offset: var(--bs-color-text-offset) !default;
+// $bs-color-border: var(--bs-color-border) !default;
+// $bs-color-primary: var(--bs-color-primary) !default;
+// $bs-color-primary-offset: var(--bs-color-primary-offset) !default;
+// $bs-color-secondary: var(--bs-color-secondary) !default;
+
+// [data-bs-theme] {
+
+//   .btn-primary,
+//   .btn-warning {
+//     @include button-variant($bs-color-primary, $bs-color-secondary, $active-background: $white, $active-border: $black);
+//   }
+
+// }
 
 @each $theme-name in map-keys($themes) {
 
