@@ -35,7 +35,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body">
-    Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+    Content for the offcanvas goes here. You can place just about any Boosted component or custom elements here.
   </div>
 </div>
 {{< /example >}}
