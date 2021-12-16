@@ -253,6 +253,12 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 
 Boosted includes a [focus-visible polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 
+### Maximum line length
+
+When writing a paragraph, it is commonly admitted that a line should have 80 characters as a maximum. This phenomenon is carefully explained in the [C20 technique: Using relative measurements to set column widths](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20).
+
+For more information, please [read text utilities]({{< docsref "/utilities/text#line-length" >}}).
+
 ## Additional resources
 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
