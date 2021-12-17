@@ -216,7 +216,7 @@ The background image based title bar requires some extra css that you can see on
 
 ### Customize
 
-Informations to help you customize your css file:
+Information to help you customize your css file:
 
 - **For background images:**
 The numbers following `bottom/number` are, for each breakpoint, the result of `image width/font-size`.
