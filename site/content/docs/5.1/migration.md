@@ -337,6 +337,10 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
 
+- You do not have to use the `.global` class anymore
+
+- A new `.header-minimized` class is here to have a more condensed version of an Orange navbar, e.g. if you want to transition from a standard global header to a smaller one.
+
 ### Pagination
 
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
