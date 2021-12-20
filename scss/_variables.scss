@@ -537,6 +537,15 @@ $grid-row-columns:            6 !default;
 
 $container-padding-x: $grid-gutter-width !default;
 
+// Boosted mod, orange container margin
+$orange-container-margin-x-xs:  .5625rem !default; // 9px
+$orange-container-margin-x-sm:  .6875rem !default; // 11px
+$orange-container-margin-x-md:  1.375rem !default; // 22px
+$orange-container-margin-x-lg:  2.625rem !default; // 42px
+$orange-container-margin-x-xl:  3.125rem !default; // 50px
+$orange-container-margin-x-xxl: auto !default;     // 70px, and keep the container centered in the page for xxl+ viewports
+// End mod
+
 
 // Components
 //

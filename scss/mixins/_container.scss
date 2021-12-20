@@ -20,35 +20,36 @@
 // Boosted mod
 @mixin orange-container() {
   width: 100%;
-  max-width: map-get($container-max-widths, "xxl");
+  max-width: 100%; // To override some max-width in navbars
   padding: 0;
-  margin-right: 9px;
-  margin-left: 9px;
+  margin-right: $orange-container-margin-x-xs;
+  margin-left: $orange-container-margin-x-xs;
 
   @include media-breakpoint-up("sm") {
-    margin-right: 11px;
-    margin-left: 11px;
+    margin-right: $orange-container-margin-x-sm;
+    margin-left: $orange-container-margin-x-sm;
   }
 
   @include media-breakpoint-up("md") {
-    margin-right: 22px;
-    margin-left: 22px;
+    margin-right: $orange-container-margin-x-md;
+    margin-left: $orange-container-margin-x-md;
   }
 
   @include media-breakpoint-up("lg") {
-    margin-right: 42px;
-    margin-left: 42px;
+    margin-right: $orange-container-margin-x-lg;
+    margin-left: $orange-container-margin-x-lg;
   }
 
   @include media-breakpoint-up("xl") {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: $orange-container-margin-x-xl;
+    margin-left: $orange-container-margin-x-xl;
   }
 
   @include media-breakpoint-up("xxl") {
-    padding: 0 10px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: map-get($container-max-widths, "xxl");
+    padding: 0 $container-padding-x * 2;
+    margin-right: $orange-container-margin-x-xxl;
+    margin-left: $orange-container-margin-x-xxl;
   }
 }
 // End mod
