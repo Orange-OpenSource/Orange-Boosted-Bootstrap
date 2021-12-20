@@ -176,7 +176,7 @@ boosted/
 ├── site/
 │   └──content/
 │      └── docs/
-│          └── 5.0/
+│          └── {{< param docs_version >}}/
 │              └── examples/
 ├── js/
 └── scss/
