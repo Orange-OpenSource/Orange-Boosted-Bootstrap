@@ -389,7 +389,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar sticky-bottom navbar-light bg-light">
+<nav class="navbar sticky-bottom navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
