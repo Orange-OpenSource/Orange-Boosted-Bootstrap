@@ -300,14 +300,14 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 </div>
 ```
 
-### Dropright
+### Dropend
 
 Trigger dropdown menus at the right of the elements by adding `.dropend` to the parent element.
 
 <div class="bd-example">
   <div class="btn-group dropend">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropright
+      Dropend
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -322,7 +322,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
       Split dropend
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropright</span>
+      <span class="visually-hidden">Toggle Dropend</span>
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -338,7 +338,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
 <!-- Default dropend button -->
 <div class="btn-group dropend">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropright
+    Dropend
   </button>
   <ul class="dropdown-menu">
     <!-- Dropdown menu links -->
@@ -351,7 +351,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
     Split dropend
   </button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropright</span>
+    <span class="visually-hidden">Toggle Dropend</span>
   </button>
   <ul class="dropdown-menu">
     <!-- Dropdown menu links -->
@@ -359,14 +359,14 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
 </div>
 ```
 
-### Dropleft
+### Dropstart
 
 Trigger dropdown menus at the left of the elements by adding `.dropstart` to the parent element.
 
 <div class="bd-example">
   <div class="btn-group dropstart">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropleft
+      Dropstart
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -379,7 +379,7 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
   <div class="btn-group" role="group">
     <div class="btn-group dropstart" role="group">
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropleft</span>
+        <span class="visually-hidden">Toggle Dropstart</span>
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>
