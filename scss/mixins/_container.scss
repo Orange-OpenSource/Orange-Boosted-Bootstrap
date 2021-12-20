@@ -16,3 +16,39 @@
   }
   // End mod
 }
+
+// Boosted mod
+@mixin orange-container() {
+  width: 100%;
+  max-width: map-get($container-max-widths, "xxl");
+  padding: 0;
+  margin-right: 9px;
+  margin-left: 9px;
+
+  @include media-breakpoint-up("sm") {
+    margin-right: 11px;
+    margin-left: 11px;
+  }
+
+  @include media-breakpoint-up("md") {
+    margin-right: 22px;
+    margin-left: 22px;
+  }
+
+  @include media-breakpoint-up("lg") {
+    margin-right: 42px;
+    margin-left: 42px;
+  }
+
+  @include media-breakpoint-up("xl") {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  @include media-breakpoint-up("xxl") {
+    padding: 0 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+// End mod

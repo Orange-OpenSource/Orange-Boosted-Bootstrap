@@ -13,45 +13,49 @@
   border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
 
   .container {
-    padding-right: $navbar-orange-supra-padding-x;
-    padding-left: $navbar-orange-supra-padding-x;
+    @include orange-container();
   }
 
   @include media-breakpoint-up(md) {
     display: flex;
   }
 
-  .navbar-nav .nav-link {
-    padding: $navbar-orange-supra-link-padding-top $navbar-orange-supra-link-padding-x $navbar-orange-supra-link-padding-bottom;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+  .navbar-nav {
+    margin-right: - $navbar-orange-supra-link-padding-x;
+    margin-left: - $navbar-orange-supra-link-padding-x;
 
-    &.active::before {
-      right: $navbar-orange-supra-link-padding-x;
-      bottom: -$navbar-orange-supra-border-bottom-width;
-      left: $navbar-orange-supra-link-padding-x;
-    }
+    .nav-link {
+      padding: $navbar-orange-supra-link-padding-top $navbar-orange-supra-link-padding-x $navbar-orange-supra-link-padding-bottom;
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
 
-    &.nav-icon {
-      padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
-
-      svg,
-      img {
-        width: $navbar-orange-supra-icon-size;
-        height: $navbar-orange-supra-icon-size;
+      &.active::before {
+        right: $navbar-orange-supra-link-padding-x;
+        bottom: -$navbar-orange-supra-border-bottom-width;
+        left: $navbar-orange-supra-link-padding-x;
       }
-    }
 
-    .badge {
-      @extend .position-absolute;
-      @extend .top-0;
-      @extend .bg-info;
-      @extend .text-white;
-      @extend .translate-middle;
-      @extend .rounded-pill;
-      padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
-      margin-top: $navbar-orange-supra-badge-margin-top;
-      font-size: $font-size-base;
+      &.nav-icon {
+        padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
+
+        svg,
+        img {
+          width: $navbar-orange-supra-icon-size;
+          height: $navbar-orange-supra-icon-size;
+        }
+      }
+
+      .badge {
+        @extend .position-absolute;
+        @extend .top-0;
+        @extend .bg-info;
+        @extend .text-white;
+        @extend .translate-middle;
+        @extend .rounded-pill;
+        padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
+        margin-top: $navbar-orange-supra-badge-margin-top;
+        font-size: $font-size-base;
+      }
     }
   }
 
