@@ -78,26 +78,26 @@
 
 
 @mixin orange-container() {
-  padding: 0 $orange-container-margin-x-xs;
+  padding: 0 divide(subtract(320px, map-get($container-max-widths, "xs")), 2);
 
   @include media-breakpoint-up("sm") {
-    padding: 0 $orange-container-margin-x-sm;
+    padding: 0 divide(subtract(map-get($grid-breakpoints, "sm"), map-get($container-max-widths, "sm")), 2);
   }
 
   @include media-breakpoint-up("md") {
-    padding: 0 $orange-container-margin-x-md;
+    padding: 0 divide(subtract(map-get($grid-breakpoints, "md"), map-get($container-max-widths, "md")), 2);
   }
 
   @include media-breakpoint-up("lg") {
-    padding: 0 $orange-container-margin-x-lg;
+    padding: 0 divide(subtract(map-get($grid-breakpoints, "lg"), map-get($container-max-widths, "lg")), 2);
   }
 
   @include media-breakpoint-up("xl") {
-    padding: 0 $orange-container-margin-x-xl;
+    padding: 0 divide(subtract(map-get($grid-breakpoints, "xl"), map-get($container-max-widths, "xl")), 2);
   }
 
   @include media-breakpoint-up("xxl") {
-    padding: 0 $orange-container-margin-x-xxl;
+    padding: 0 divide(subtract(map-get($grid-breakpoints, "xxl"), map-get($container-max-widths, "xxl")), 2);
   }
 }
 // End mod
