@@ -519,6 +519,15 @@ $container-max-widths: (
   xl: 1200px,
   xxl: 1320px
 ) !default;
+
+// $container-max-widths: (
+//   xs: 94.4%,
+//   sm: 95.4%,
+//   md: 94.3%,
+//   lg: 91.8%,
+//   xl: 92.2%,
+//   xxl: 1320px
+// ) !default;
 // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -538,12 +547,12 @@ $grid-row-columns:            6 !default;
 $container-padding-x: $grid-gutter-width !default;
 
 // Boosted mod, orange container margin
-$orange-container-margin-x-xs:  .5625rem !default; // 9px
-$orange-container-margin-x-sm:  .6875rem !default; // 11px
-$orange-container-margin-x-md:  1.375rem !default; // 22px
-$orange-container-margin-x-lg:  2.625rem !default; // 42px
-$orange-container-margin-x-xl:  3.125rem !default; // 50px
-$orange-container-margin-x-xxl: auto !default;     // 70px, and keep the container centered in the page for xxl+ viewports
+$orange-container-margin-x-xs:  .25rem !default;  // 4px + 5px from container
+$orange-container-margin-x-sm:  .375rem !default; // 6px
+$orange-container-margin-x-md:  .75rem !default;  // 12px
+$orange-container-margin-x-lg:  2rem !default;    // 32px
+$orange-container-margin-x-xl:  2.5rem !default;  // 40px
+$orange-container-margin-x-xxl: auto !default;    // 60px, and keep the container centered in the page for xxl+ viewports
 // End mod
 
 

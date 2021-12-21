@@ -12,17 +12,19 @@
   padding-bottom: 0;
   border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
 
-  .container {
-    @include orange-container();
-  }
+  @include orange-container();
 
-  @include media-breakpoint-up(md) {
+  // .container-xxl {
+
+  // }
+
+  @include media-breakpoint-up(lg) {
     display: flex;
   }
 
   .navbar-nav {
-    margin-right: - $navbar-orange-supra-link-padding-x;
-    margin-left: - $navbar-orange-supra-link-padding-x;
+    margin-right: -$navbar-orange-supra-link-padding-x;
+    margin-left: -$navbar-orange-supra-link-padding-x;
 
     .nav-link {
       padding: $navbar-orange-supra-link-padding-top $navbar-orange-supra-link-padding-x $navbar-orange-supra-link-padding-bottom;

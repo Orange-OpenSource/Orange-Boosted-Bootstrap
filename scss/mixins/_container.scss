@@ -18,38 +18,86 @@
 }
 
 // Boosted mod
+// @mixin orange-container() {
+//   width: 100%;
+//   max-width: 100%; // To override some max-width in navbars
+//   margin-right: $orange-container-margin-x-xs;
+//   margin-left: $orange-container-margin-x-xs;
+
+//   @include media-breakpoint-up("sm") {
+//     margin-right: $orange-container-margin-x-sm;
+//     margin-left: $orange-container-margin-x-sm;
+//   }
+
+//   @include media-breakpoint-up("md") {
+//     margin-right: $orange-container-margin-x-md;
+//     margin-left: $orange-container-margin-x-md;
+//   }
+
+//   @include media-breakpoint-up("lg") {
+//     margin-right: $orange-container-margin-x-lg;
+//     margin-left: $orange-container-margin-x-lg;
+//   }
+
+//   @include media-breakpoint-up("xl") {
+//     margin-right: $orange-container-margin-x-xl;
+//     margin-left: $orange-container-margin-x-xl;
+//   }
+
+//   @include media-breakpoint-up("xxl") {
+//     max-width: map-get($container-max-widths, "xxl");
+//     margin-right: $orange-container-margin-x-xxl;
+//     margin-left: $orange-container-margin-x-xxl;
+//   }
+// }
+
+
+// @mixin orange-container() {
+//   max-width: 94.4%;
+
+//   @include media-breakpoint-up("sm") {
+//     max-width: 95.4%;
+//   }
+
+//   @include media-breakpoint-up("md") {
+//     max-width: 94.3%;
+//   }
+
+//   @include media-breakpoint-up("lg") {
+//     max-width: 91.8%;
+//   }
+
+//   @include media-breakpoint-up("xl") {
+//     max-width: 92.2%;
+//   }
+
+//   @include media-breakpoint-up("xxl") {
+//     max-width: 1320px;
+//   }
+// }
+
+
 @mixin orange-container() {
-  width: 100%;
-  max-width: 100%; // To override some max-width in navbars
-  padding: 0;
-  margin-right: $orange-container-margin-x-xs;
-  margin-left: $orange-container-margin-x-xs;
+  padding: 0 $orange-container-margin-x-xs;
 
   @include media-breakpoint-up("sm") {
-    margin-right: $orange-container-margin-x-sm;
-    margin-left: $orange-container-margin-x-sm;
+    padding: 0 $orange-container-margin-x-sm;
   }
 
   @include media-breakpoint-up("md") {
-    margin-right: $orange-container-margin-x-md;
-    margin-left: $orange-container-margin-x-md;
+    padding: 0 $orange-container-margin-x-md;
   }
 
   @include media-breakpoint-up("lg") {
-    margin-right: $orange-container-margin-x-lg;
-    margin-left: $orange-container-margin-x-lg;
+    padding: 0 $orange-container-margin-x-lg;
   }
 
   @include media-breakpoint-up("xl") {
-    margin-right: $orange-container-margin-x-xl;
-    margin-left: $orange-container-margin-x-xl;
+    padding: 0 $orange-container-margin-x-xl;
   }
 
   @include media-breakpoint-up("xxl") {
-    max-width: map-get($container-max-widths, "xxl");
-    padding: 0 $container-padding-x * 2;
-    margin-right: $orange-container-margin-x-xxl;
-    margin-left: $orange-container-margin-x-xxl;
+    padding: 0 $orange-container-margin-x-xxl;
   }
 }
 // End mod
