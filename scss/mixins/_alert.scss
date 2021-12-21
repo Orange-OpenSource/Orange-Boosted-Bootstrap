@@ -1,15 +1,19 @@
 // scss-docs-start alert-variant-mixin
-@mixin alert-variant($background, $border, $color) {
+@mixin alert-variant($background, $border, $color, $background-image) { // Boosted mod
   --#{$variable-prefix}alert-color: #{$color};
   --#{$variable-prefix}alert-bg: #{$background};
-  --#{$variable-prefix}alert-border-color: #{$border};
+  --#{$variable-prefix}alert-border: #{$border};
 
-  @if $enable-gradients {
-    background-image: var(--#{$variable-prefix}gradient);
-  }
+  // Boosted mod
+  border: var(--#{$variable-prefix}alert-border);
 
-  .alert-link {
-    color: shade-color($color, 20%);
+  .alert-icon::before {
+    background-image: $background-image;
   }
+  // End mod
+
+  // Boosted mod: no $enable-gradients test
+
+  // Boosted mod: no .alert-link
 }
 // scss-docs-end alert-variant-mixin
