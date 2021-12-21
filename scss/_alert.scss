@@ -7,7 +7,7 @@
   --#{$variable-prefix}alert-bg: transparent;
   --#{$variable-prefix}alert-padding: #{$alert-padding-y $alert-padding-x};
   --#{$variable-prefix}alert-margin-bottom: #{$alert-margin-bottom};
-  --#{$variable-prefix}alert-color: inherit;
+  --#{$variable-prefix}alert-color: #{alert-color}; // Boosted mod
   --#{$variable-prefix}alert-border-color: transparent;
   --#{$variable-prefix}alert-border: #{$alert-border-width} solid var(--#{$variable-prefix}alert-border-color);
   --#{$variable-prefix}alert-border-radius: #{$alert-border-radius};
