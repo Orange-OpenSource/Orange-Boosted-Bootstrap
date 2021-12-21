@@ -62,8 +62,8 @@ _Help wanted with this section, please consider opening a PR. Thanks!_
 
 While we don't have a prebuilt example for using [PurgeCSS](https://github.com/FullHuman/purgecss) with Boosted, there are some helpful articles and walkthroughs that the community has written. Here are some options:
 
-- <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-boosted-using-purgecss-88395a2c5772>
-- <https://lukelowrey.com/automatically-removeunused-css-from-boosted-or-other-frameworks/>
+- <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772>
+- <https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/>
 
 Lastly, this [CSS Tricks article on unused CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) shows how to use PurgeCSS and other similar tools.
 

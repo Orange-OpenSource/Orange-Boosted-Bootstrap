@@ -3,16 +3,18 @@
 //
 
 .table {
+  --#{$variable-prefix}table-color: #{$table-color};
   --#{$variable-prefix}table-bg: #{$table-bg};
+  --#{$variable-prefix}table-border-color: #{$table-border-color};
   // Boosted mod: no table-accent-bg
   --#{$variable-prefix}table-active-color: #{$table-active-color};
   --#{$variable-prefix}table-active-bg: #{$table-active-bg};
   --#{$variable-prefix}table-hover-color: #{$table-hover-color};
   --#{$variable-prefix}table-hover-bg: #{$table-hover-bg};
-  --#{$variable-prefix}table-border-color: #{$table-border-color}; // Boosted mod
+
   width: 100%;
   margin-bottom: $spacer;
-  color: $table-color;
+  color: var(--#{$variable-prefix}table-color);
   vertical-align: $table-cell-vertical-align;
 
   // Boosted mod

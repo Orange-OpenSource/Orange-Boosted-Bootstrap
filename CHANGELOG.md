@@ -1,3 +1,7 @@
+## [5.1.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.2...v5.1.3) (2021-10-11)
+
+
+
 ## [5.1.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.1...v5.1.2) (2021-10-06)
 
 

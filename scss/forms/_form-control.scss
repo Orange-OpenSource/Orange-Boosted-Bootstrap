@@ -100,33 +100,6 @@
   &:hover:not(:disabled):not([readonly])::file-selector-button {
     background-color: $form-file-button-hover-bg;
   }
-
-  &::-webkit-file-upload-button {
-    padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // Boosted mod
-    margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
-    margin-inline-end: $input-padding-x;
-    color: $form-file-button-color;
-    @include gradient-bg($form-file-button-bg);
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: $input-border-width;
-    border-radius: 0; // stylelint-disable-line property-disallowed-list
-    @include transition($btn-transition);
-  }
-
-  // Boosted mod
-  &:disabled::-webkit-file-upload-button {
-    color: $input-disabled-color;
-    background-color: $input-disabled-bg;
-    border-color: $input-disabled-border-color;
-  }
-  // End mod
-
-  &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-    background-color: $form-file-button-hover-bg;
-  }
 }
 
 // Readonly controls as plain text
@@ -167,12 +140,6 @@
   @include border-radius($input-border-radius-lg);
 
   &::file-selector-button {
-    padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // Boosted mod
-    margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
-    margin-inline-end: $input-padding-x-lg;
-  }
-
-  &::-webkit-file-upload-button {
     padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // Boosted mod
     margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
     margin-inline-end: $input-padding-x-lg;

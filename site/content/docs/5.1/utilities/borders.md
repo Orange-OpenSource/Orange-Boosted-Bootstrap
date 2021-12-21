@@ -60,6 +60,23 @@ Add classes to an element to easily round its corners.
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
+## Dividers
+
+{{< example >}}
+<div class="bg-dark p-1">
+  <div class="border-top border-white my-3"></div>
+  <hr>
+</div>
+<div class="border-top border-light my-3"></div>
+<div class="border-top border-light border-1 my-3"></div>
+<div class="border-top border-dark my-3"></div>
+<div class="border-top border-dark border-1 my-3"></div>
+<div class="border-top my-3"></div>
+<hr class="text-light">
+<hr class="text-muted">
+<hr>
+{{< /example >}}
+
 ## Sass
 
 ### Variables

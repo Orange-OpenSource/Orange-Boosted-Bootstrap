@@ -85,7 +85,7 @@
 .bd-example {
   position: relative;
   padding: 1rem;
-  margin: 1rem (-$grid-gutter-width * .5) 0;
+  margin: 1rem ($bd-gutter-x * -1) 0;
   border: solid $gray-300;
   border-width: 1px 0 0;
   @include clearfix();
@@ -185,7 +185,7 @@
 .bd-example-ratios {
   .ratio {
     display: inline-block;
-    width: 10rem;
+    width: 9rem; // Boosted mod
     font-weight: $font-weight-bold; // Boosted mod
     color: $gray-800; // Boosted mod
     background-color: $gray-400; // Boosted mod
@@ -367,8 +367,8 @@
 }
 
 .bd-content .highlight {
-  margin-right: (-$grid-gutter-width * .5);
-  margin-left: (-$grid-gutter-width * .5);
+  margin-right: $bd-gutter-x * -1;
+  margin-left: $bd-gutter-x * -1;
 
   @include media-breakpoint-up(sm) {
     margin-right: 0;

@@ -8,7 +8,7 @@ toc: true
 
 ## Global settings
 
-Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
 - Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
@@ -312,7 +312,7 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
 
 {{< example >}}
 <blockquote class="blockquote">

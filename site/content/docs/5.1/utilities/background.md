@@ -27,7 +27,7 @@ Similar to the contextual text color classes, set the background of an element t
 {{< callout >}}
 ### Color naming
 
-Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/guidelines/colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
+Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/customize/color#oranges-colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
 Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
 {{< /callout >}}
 
@@ -103,6 +103,14 @@ Theme colors are then put into a Sass map so we can loop over them to generate o
 Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
+
+RGB colors are generated from a separate Sass map:
+
+{{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+And background color opacities build on that with their own map that's consumed by the utilities API:
+
+{{< scss-docs name="utilities-bg-colors" file="scss/_maps.scss" >}}
 
 ### Mixins
 

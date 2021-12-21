@@ -110,22 +110,6 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-// scss-docs-start theme-colors-rgb
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
-// scss-docs-end theme-colors-rgb
-
-// Boosted mod
-$background-colors: map-merge(
-  $theme-colors,
-  (
-    "success": $supporting-green,
-    "info":    $supporting-blue,
-    "warning": $supporting-yellow,
-    "danger":  $danger
-  )
-) !default;
-// End mod
-
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   4.5 !default;
@@ -260,8 +244,8 @@ $indigos: (
 ) !default;
 
 $purples: (
-  "purple-100": $purple-200,
-  "purple-200": $purple-100,
+  "purple-100": $purple-100,
+  "purple-200": $purple-200,
   "purple-300": $purple-300,
   "purple-400": $purple-400,
   "purple-500": $purple-500,
@@ -402,6 +386,7 @@ $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
 $enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false !default;
@@ -440,8 +425,6 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 3,
 ) !default;
-
-$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 // scss-docs-end spacer-variables-maps
 
 $target-size: 2.75rem !default; // Boosted mod: minimum target size (44×44px)
@@ -466,38 +449,6 @@ $position-values: (
 $body-bg:                   $white !default;
 $body-color:                $black !default;
 $body-text-align:           null !default;
-
-// Utilities maps
-//
-// Extends the default `$theme-colors` maps to help create our utilities.
-
-// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
-// scss-docs-start utilities-colors
-$utilities-colors: $theme-colors-rgb !default;
-// scss-docs-end utilities-colors
-
-// scss-docs-start utilities-text-colors
-// Boosted mod: content of $utilities-text
-$utilities-text: (
-  "primary": to-rgb($accessible-orange),
-  "light": to-rgb($gray-500),
-  "white": to-rgb($white),
-  "body": to-rgb($body-color),
-) !default;
-$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
-// scss-docs-end utilities-text-colors
-
-// scss-docs-start utilities-bg-colors
-$utilities-bg: map-merge(
-  $utilities-colors,
-  (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
-    "body": to-rgb($body-bg)
-  )
-) !default;
-$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
-// scss-docs-end utilities-bg-colors
 
 // Links
 //
@@ -576,8 +527,6 @@ $grid-gutter-width:           $spacer !default;
 $grid-gutter-breakpoint:      "md" !default; // Boosted mod: gutter depends on breakpoint
 $grid-row-columns:            6 !default;
 
-$gutters: $spacers !default;
-
 // Container padding
 
 $container-padding-x: $grid-gutter-width * .25 !default;
@@ -641,7 +590,8 @@ $aspect-ratios: (
   "1x1": 100%,
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "21x9": calc(9 / 21 * 100%),
+  "9x16": calc(16 / 9 * 100%) // Boosted mod: additional ratio for portait videos
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -683,6 +633,10 @@ $line-height-base:            calc(18 / 16) !default;
 $line-height-sm:              calc(16 / 14) !default;
 $line-height-lg:              calc(30 / 16) !default;
 // stylelint-enable function-disallowed-list
+
+$line-length-sm:              40ch !default;
+$line-length-md:              80ch !default;
+
 $letter-spacing-base:         $spacer * -.005 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
@@ -769,6 +723,8 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
+// Boosted mod: no $hr-bg-color so that hr background color can't get overrided
+$hr-border-width:             0 !default;
 $hr-height:                   $border-width !default;
 $hr-opacity:                  null !default;
 
@@ -1109,7 +1065,7 @@ $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $input-border-radius !default;
 $form-select-box-shadow:          $box-shadow-inset !default;
 
-$form-select-focus-border-color:  $input-focus-border-color !default;
+$form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
 $form-select-focus-box-shadow:    null !default;
 
 // Boosted mod: no .form-select-sm
@@ -1234,17 +1190,34 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 
 // Boosted mod: Orange master logo & minimizing behavior
 $navbar-icon-size:                     $spacer * 1.5 !default;
-//$navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-//$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
-//$navbar-supra-padding-x:               $spacer * .25 * 1.5 !default;
 $navbar-transition-duration:           $transition-duration !default;
 $navbar-transition-timing-function:    $transition-timing !default;
 $navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+// End mod
+
+// Boosted mod: Orange navbar
+// scss-docs-start orange-navbar-variables
+$navbar-orange-supra-padding-x:               .125rem !default;
+$navbar-orange-supra-border-bottom-width:     1px !default;
+
+$navbar-orange-supra-badge-padding-y:         .125rem !default;
+$navbar-orange-supra-badge-padding-x:         .375rem !default;
+$navbar-orange-supra-badge-margin-top:        map-get($spacers, 4) * .1 !default;
+
+$navbar-orange-supra-icon-padding-top:        divide($spacer, 2) !default;
+$navbar-orange-supra-icon-padding-x:          .9375rem !default;
+$navbar-orange-supra-icon-padding-bottom:     .25rem !default;
+$navbar-orange-supra-icon-size:               1.5625rem !default;
+
+$navbar-orange-supra-link-padding-top:        .75rem !default;
+$navbar-orange-supra-link-padding-x:          map-get($spacers, 1) * 1.5 !default;
+$navbar-orange-supra-link-padding-bottom:     .6875rem !default;
+// scss-docs-end orange-navbar-variables
 // End mod
 
 $navbar-brand-font-size:            $font-size-base !default;
@@ -1604,7 +1577,6 @@ $alert-border-width:                $border-width !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
-$alert-colors:                      map-remove($theme-colors, "primary", "secondary", "light", "dark") !default;
 $alert-icons: (
   "success": var(--#{$boosted-variable-prefix}success-icon),
   "info":    escape-svg($info-icon),

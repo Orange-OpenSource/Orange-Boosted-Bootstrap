@@ -59,7 +59,7 @@ const files = [
   }
 ]
 
-files.forEach(file => {
+for (const file of files) {
   fs.readFile(file.file, 'utf8', (err, data) => {
     if (err) {
       throw err
@@ -73,4 +73,4 @@ files.forEach(file => {
 
     sh.sed('-i', new RegExp(`^(\\s+${file.configPropertyName}:\\s+["'])\\S*(["'])`), `$1${integrity}$2`, configFile)
   })
-})
+}

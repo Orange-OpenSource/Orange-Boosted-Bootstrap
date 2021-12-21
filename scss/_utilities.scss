@@ -1,5 +1,3 @@
-// stylelint-disable indentation
-
 // Utilities
 
 $utilities: () !default;
@@ -476,6 +474,14 @@ $utilities: map-merge(
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
+      )
+    ),
+    "line-length": (
+      property: max-width,
+      class: ll,
+      values: (
+        sm: $line-length-sm,
+        md: $line-length-md,
       )
     ),
     "text-align": (

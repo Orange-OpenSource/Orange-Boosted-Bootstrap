@@ -68,10 +68,10 @@ You can see the above requirements reflected in this modified RTL starter templa
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 
-    <title>مرحبا بالعالم!</title>
+    <title>مرحبًا بالعالم!</title>
   </head>
   <body>
-    <h1>مرحبا بالعالم!</h1>
+    <h1>مرحبًا بالعالم!</h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

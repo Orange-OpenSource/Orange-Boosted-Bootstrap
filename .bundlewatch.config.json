@@ -2,7 +2,7 @@
   "files": [
     {
       "path": "./dist/css/boosted-grid.css",
-      "maxSize": "9.8 kB"
+      "maxSize": "9.9 kB"
     },
     {
       "path": "./dist/css/boosted-grid.min.css",
@@ -38,11 +38,11 @@
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "23.7 kB"
+      "maxSize": "23.8 kB"
     },
     {
       "path": "./dist/js/boosted.esm.js",
-      "maxSize": "31.0 kB"
+      "maxSize": "31.25 kB"
     },
     {
       "path": "./dist/js/boosted.esm.min.js",
@@ -50,7 +50,7 @@
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "31.8 kB"
+      "maxSize": "32.0 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",

@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
- * Boosted v5.1.2 (https://boosted.orange.com/)
+ * Boosted v5.1.3 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap v5.1.2 (https://getbootstrap.com)
+ * Bootstrap v5.1.3 (https://getbootstrap.com)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -2918,7 +2918,6 @@ textarea.form-control-lg {
 .btn {
   display: inline-flex;
   align-items: center;
-  align-self: center;
   justify-content: center;
   font-family: inherit;
   font-weight: 700;
@@ -3635,7 +3634,6 @@ textarea.form-control-lg {
   margin-right: -0.125rem;
 }
 .dropdown-toggle-split {
-  align-self: stretch;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-color: #000;
