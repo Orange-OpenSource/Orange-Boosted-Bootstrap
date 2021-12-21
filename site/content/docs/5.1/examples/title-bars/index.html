@@ -18,13 +18,9 @@ body_class: "d-flex flex-column"
 
   <div class="b-example-divider"></div>
 
-  <div class="bg-body title-bar">
-    <div class="px-1 px-md-2 px-lg-4 px-xxl-0">
-      <div class="px-xl-3 px-xxl-2 container-xxl d-flex">
-        <div class="pt-3 pt-md-4 pb-2 pb-md-3">
-          <h1 class="py-xl-1 m-0">Title that can be long</h1>
-        </div>
-      </div>
+  <div class="bg-white title-bar">
+    <div class="container">
+      <h1>Title that can be long</h1>
     </div>
   </div>
 
@@ -32,13 +28,9 @@ body_class: "d-flex flex-column"
 
   <!-- Backgroung-image in different div -->
   <div class="bg-supporting-blue title-bar">
-    <div class="px-1 px-md-2 px-lg-4 px-xxl-0">
-      <div class="px-xl-3 px-xxl-2 container-xxl d-flex">
-        <div class="pt-3 pt-md-4 pb-2 pb-md-3">
-          <h1 class="py-xl-1 m-0 me-1">Bg-image</h1>
-        </div>
-        <div class="mt-auto col m-0 example-title-bar-custom-background"></div>
-      </div>
+    <div class="container">
+      <h1>Bg-image</h1>
+      <div class="col m-0 example-title-bar-custom-background"></div>
     </div>
   </div>
 
@@ -46,23 +38,17 @@ body_class: "d-flex flex-column"
 
   <!-- Test with picture srcset, download image as resize -> stonk -->
   <div class="bg-supporting-pink title-bar">
-    <div class="px-1 px-md-2 px-lg-4 px-xxl-0">
-      <div class="px-xl-3 px-xxl-2 container-xxl d-flex">
-        <div class="pt-3 pt-md-4 pb-2 pb-md-3">
-          <h1 class="py-xl-1 m-0">Srcset image</h1>
-        </div>
-        <div class="pt-1 pt-md-2 ms-auto mt-auto text-end m-0">
-          <picture>
-            <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
-            <source media="(min-width:1280px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1280.png">
-            <source media="(min-width:1024px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1024.png">
-            <source media="(min-width:768px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-768.png">
-            <source media="(min-width:480px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-480.png">
-            <source media="(min-width:320px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png">
-            <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt=""/>
-          </picture>
-        </div>
-      </div>
+    <div class="container">
+      <h1>Srcset image</h1>
+      <picture>
+        <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
+        <source media="(min-width:1280px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1280.png">
+        <source media="(min-width:1024px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1024.png">
+        <source media="(min-width:768px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-768.png">
+        <source media="(min-width:480px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-480.png">
+        <source media="(min-width:320px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png">
+        <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt=""/>
+      </picture>
     </div>
   </div>
 
