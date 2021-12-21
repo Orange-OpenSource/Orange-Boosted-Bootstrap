@@ -4,6 +4,7 @@
   --#{$variable-prefix}alert-bg: #{$background};
   --#{$variable-prefix}alert-border: #{$border};
 
+  // Boosted mod
   .alert-icon::before {
     background-image: $background-image;
   }
