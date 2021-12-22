@@ -10,7 +10,7 @@ Boosted provides an easy-to-use framework of ready-made styles, layout tools, an
 
 ## Overview and Limitations
 
-The overall accessibility of any project built with Boosted depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0](https://www.w3.org/TR/WCAG20/) (A/AA/AAA), [Section 508](https://www.section508.gov/) and similar accessibility standards and requirements.
+The overall accessibility of any project built with Boosted depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/) and similar accessibility standards and requirements.
 
 ### Structural markup
 
@@ -246,7 +246,7 @@ For visually hidden interactive controls, such as traditional "skip" links, `.sr
 
 ### Reduced motion
 
-Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
+Boosted includes support for the [`prefers-reduced-motion` media feature](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
 
 <!-- Boosted mod -->
 ### Focus visibility
@@ -261,11 +261,11 @@ For more information, please [read text utilities]({{< docsref "/utilities/text#
 
 ## Additional resources
 
-- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
+- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/)
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Colour Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [Color Contrast Analyser (CCA)](https://www.tpgi.com/color-contrast-checker/)
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 - ["aXe core" extension for identifying accessibility issues](https://github.com/dequelabs/axe-core/blob/master/doc/projects.md)
 - [Orange accessibility guidelines](http://a11y-guidelines.orange.com/home_EN/index.html)
