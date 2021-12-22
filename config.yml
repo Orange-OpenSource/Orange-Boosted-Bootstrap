@@ -2,7 +2,7 @@ languageCode:                       "en"
 title:                              "Boosted"
 baseURL:                            "https://boosted.orange.com"
 
-ecurity:
+security:
   enableInlineShortcodes: true
   funcs:
     getenv:
