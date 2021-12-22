@@ -51,8 +51,6 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.6/getting-star
 [![npm version](https://img.shields.io/npm/v/boosted)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/v/orange-opensource/orange-boosted-bootstrap)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 [![NuGet](https://img.shields.io/nuget/v/boosted)](https://www.nuget.org/packages/boosted/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
 [![CSS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v4-dev/dist/js/boosted.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)](https://automate.browserstack.com/public-build/eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)
