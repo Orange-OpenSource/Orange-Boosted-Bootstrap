@@ -1,10 +1,12 @@
-@mixin sticker-init-size($sticker-size: $stickers-size-lg) {
+@mixin sticker-init-size($sticker-size: $stickers-size-sm) {
   // Set the size of the sticker
   width: $sticker-size;
   height: $sticker-size;
 }
 
 @mixin sticker-init($sticker-architecture) {
+  @include sticker-init-size();
+
   // Draw the circle
   > circle {
     fill: $accessible-orange;
@@ -12,15 +14,15 @@
 
   // Set the text's anchors in the middle
   > text {
-    text-anchor: middle;
-    dominant-baseline: middle;
     font-weight: $font-weight-bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
     @include sticker-font(1.875, 8);
   }
 
-  > image {
-    // Default transform for icon size
-    transform: translate(-40px, -40px);
+  > use {
+    // Default icon size
+    transform: translate(divide(-$stickers-icon, 2), divide(-$stickers-icon, 2));
   }
 
   // Specify the values depending on the architecture
@@ -33,8 +35,8 @@
       @include sticker-font(1.25, 4);
     }
 
-    > image {
-      transform: translate(-17.5px, -17.5px);
+    > use {
+      transform: translate(divide(-$stickers-icon-sm, 2), divide(-$stickers-icon-sm, 2));
     }
   } @else if ($sticker-architecture == "Price") {
     > text > tspan:last-child {
