@@ -167,10 +167,10 @@ boosted/
 │   ├── img/
 │   └── js/
 ├── site/
-│   └──content/
-│      └──docs/
-│         └── 4.6/
-│             └── examples/
+│   └── content/
+|       └── docs/
+|           └── {{< param docs_version >}}/
+|               └── examples/
 ├── js/
 └── scss/
 ```
