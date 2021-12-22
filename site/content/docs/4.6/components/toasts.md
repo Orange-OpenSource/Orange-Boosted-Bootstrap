@@ -49,7 +49,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 
 ### Translucent
 
-Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the `backdrop-filter` CSS property, we'll also attempt to blur the elements under a toast.
+Toasts are slightly translucent, too, so they blend over whatever they might appear over.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
