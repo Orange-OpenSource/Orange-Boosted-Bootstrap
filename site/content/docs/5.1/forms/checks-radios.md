@@ -315,33 +315,23 @@ Here is an example for star rating. Simply add `.star-rating` to a `<fieldset>`,
 
 {{< example >}}
 <form>
-<fieldset class="star-rating w-125">
+<fieldset class="star-rating">
   <legend class="visually-hidden">Results relevance</legend>
 
   <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden" />
-  <label for="terrible" title="Terrible">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="terrible" title="Terrible"></label>
 
   <input type="radio" id="bad" name="rating" value="2" class="visually-hidden" />
-  <label for="bad" title="Bad">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="bad" title="Bad"></label>
 
   <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden" />
-  <label for="mixed" title="Mixed">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="mixed" title="Mixed"></label>
 
   <input type="radio" id="good" name="rating" value="4" class="visually-hidden" />
-  <label for="good" title="Good">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="good" title="Good"></label>
 
   <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden" checked="" />
-  <label for="excellent" title="Excellent">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="excellent" title="Excellent"></label>
 </fieldset>
 </form>
 {{< /example >}}
@@ -354,29 +344,19 @@ You can reduce the size of stars to 20px (also based on default font-size) by ad
   <legend class="visually-hidden">Results relevance</legend>
 
   <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden" />
-  <label for="terrible2" title="Terrible">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="terrible2" title="Terrible"></label>
 
   <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden" />
-  <label for="bad2" title="Bad">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="bad2" title="Bad"></label>
 
   <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden" />
-  <label for="mixed2" title="Mixed">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="mixed2" title="Mixed"></label>
 
   <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" />
-  <label for="good2" title="Good">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="good2" title="Good"></label>
 
   <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden" checked="" />
-  <label for="excellent2" title="Excellent">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="excellent2" title="Excellent"></label>
 </fieldset>
 </form>
 {{< /example >}}
@@ -389,29 +369,19 @@ Here is the dark version of the component. Just add `.star-rating-dark`.
   <legend class="visually-hidden">Results relevance</legend>
 
   <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden" />
-  <label for="terrible3" title="Terrible">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="terrible3" title="Terrible"></label>
 
   <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden" />
-  <label for="bad3" title="Bad">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="bad3" title="Bad"></label>
 
   <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden" />
-  <label for="mixed3" title="Mixed">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="mixed3" title="Mixed"></label>
 
   <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" />
-  <label for="good3" title="Good">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="good3" title="Good"></label>
 
   <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden" checked="" />
-  <label for="excellent3" title="Excellent">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="excellent3" title="Excellent"></label>
 </fieldset>
 </form>
 {{< /example >}}
@@ -421,29 +391,19 @@ To rate outside a form, for example in a card to rate a product, add the boolean
 {{< example >}}
 <fieldset class="star-rating" disabled>
   <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden" />
-  <label for="terrible4" title="Terrible">
-    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="terrible4" title="Terrible"></label>
 
   <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden" />
-  <label for="bad4" title="Bad">
-    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="bad4" title="Bad"></label>
 
   <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked="" />
-  <label for="mixed4" title="Mixed">
-    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="mixed4" title="Mixed"></label>
 
   <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" />
-  <label for="good4" title="Good">
-    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="good4" title="Good"></label>
 
   <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden" />
-  <label for="excellent4" title="Excellent">
-    <svg><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#star" /></svg>
-  </label>
+  <label for="excellent4" title="Excellent"></label>
 </fieldset>
 <span class="visually-hidden">3 stars</span>
 {{< /example >}}
