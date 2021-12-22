@@ -1050,12 +1050,12 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl)
 
       spyOn(carousel, 'cycle')
-      spyOn(window, 'clearInterval')
+      spyOn(carousel, '_clearInterval')
 
       carousel.pause()
 
       expect(carousel.cycle).toHaveBeenCalledWith(true)
-      expect(window.clearInterval).toHaveBeenCalled()
+      expect(carousel._clearInterval).toHaveBeenCalled()
       expect(carousel._isPaused).toBeTrue()
     })
 
@@ -1076,12 +1076,12 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl)
 
       spyOn(carousel, 'cycle')
-      spyOn(window, 'clearInterval')
+      spyOn(carousel, '_clearInterval')
 
       carousel.pause()
 
       expect(carousel.cycle).not.toHaveBeenCalled()
-      expect(window.clearInterval).toHaveBeenCalled()
+      expect(carousel._clearInterval).toHaveBeenCalled()
       expect(carousel._isPaused).toBeTrue()
     })
 
@@ -1102,11 +1102,11 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl)
       const event = createEvent('mouseenter')
 
-      spyOn(window, 'clearInterval')
+      spyOn(carousel, '_clearInterval')
 
       carousel.pause(event)
 
-      expect(window.clearInterval).toHaveBeenCalled()
+      expect(carousel._clearInterval).toHaveBeenCalled()
       expect(carousel._isPaused).toBeFalse()
     })
   })

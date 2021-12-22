@@ -161,8 +161,7 @@ class Carousel extends BaseComponent {
       this.cycle(true)
     }
 
-    clearInterval(this._interval)
-    this._interval = null
+    this._clearInterval()
   }
 
   cycle(event) {
@@ -176,11 +175,7 @@ class Carousel extends BaseComponent {
       this._isPaused = false
     }
 
-    if (this._interval) {
-      clearInterval(this._interval)
-      this._interval = null
-    }
-
+    this._clearInterval()
     if (this._config.interval && !this._isPaused) {
       this._updateInterval()
 
@@ -503,6 +498,13 @@ class Carousel extends BaseComponent {
 
   _getActive() {
     return SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element)
+  }
+
+  _clearInterval() {
+    if (this._interval) {
+      clearInterval(this._interval)
+      this._interval = null
+    }
   }
 
   _directionToOrder(direction) {
