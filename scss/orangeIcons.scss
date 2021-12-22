@@ -13,8 +13,8 @@
   font-family: icon-orange;
   font-style: normal;
   font-weight: $font-weight-normal;
-  font-display: block;
   src: url("#{$icon-font-path}icon-orange.woff2") format("woff2"), url("#{$icon-font-path}icon-orange.woff") format("woff");
+  font-display: block;
 }
 
 .icon-checkbox-tick,

@@ -34,7 +34,7 @@
   function onSidebarVisibilityChange(el) {
     if (el) {
       return function () {
-        var sidebar = document.getElementById('docsNavbarContent')
+        var sidebar = document.getElementById('docs-navbar-content')
 
         if (isElementInViewport(el)) {
           sidebar.style.position = 'static'

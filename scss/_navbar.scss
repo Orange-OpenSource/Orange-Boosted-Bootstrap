@@ -33,8 +33,8 @@
   // few properties so that content nested within behave properly.
   %container-flex-properties {
     display: flex;
-    flex-wrap: wrap;
     flex-grow: 1; // Boosted mod
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding-right: 0; // Boosted mod

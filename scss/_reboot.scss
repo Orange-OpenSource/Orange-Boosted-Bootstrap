@@ -349,9 +349,9 @@ svg {
 // @link https://helpx.adobe.com/fonts/using/open-type-syntax.html#tnum
 
 table {
-  border-collapse: collapse; // Prevent double borders
   font-feature-settings: "tnum"; // Boosted mod // 1
   font-variant-numeric: tabular-nums; // Boosted mod // 1
+  border-collapse: collapse; // Prevent double borders
 }
 
 caption {
