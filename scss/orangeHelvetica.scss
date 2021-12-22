@@ -32,40 +32,40 @@
   font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src:
     // local("Helvetica 55 Roman"), local("HelveticaNeue"), // 1
     url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
     url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src:
     // local("Helvetica 75 Bold"), local("HelveticaNeue-Bold"), // 1
     url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
     url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: HelvNeueOrangeArabic;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src:
     url("#{$icon-font-path}HelveticaNeueW20-55Roman.woff2") format("woff2"),
     url("#{$icon-font-path}HelveticaNeueW20-55Roman.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: HelvNeueOrangeArabic;
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src:
     url("#{$icon-font-path}HelveticaNeueW20-75Bold.woff2") format("woff2"),
     url("#{$icon-font-path}HelveticaNeueW20-75Bold.woff") format("woff");
+  font-display: swap;
 }

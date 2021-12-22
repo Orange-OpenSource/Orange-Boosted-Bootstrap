@@ -10,6 +10,8 @@ on:
     branches:
       - v4-dev
       - "!dependabot/**"
+  workflow_dispatch:
+
 env:
   FORCE_COLOR: 2
   NODE: 16

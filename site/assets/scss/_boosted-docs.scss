@@ -63,7 +63,7 @@
 
 // boostwatch
 
-#docsNavbarContent {
+#docs-navbar-content {
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       max-height: subtract(100vh, 5rem);
