@@ -3,13 +3,25 @@
 //
 
 .alert {
+  // scss-docs-start alert-css-vars
+  --#{$variable-prefix}alert-bg: transparent;
+  --#{$variable-prefix}alert-padding: #{$alert-padding-y $alert-padding-x};
+  --#{$variable-prefix}alert-margin-bottom: #{$alert-margin-bottom};
+  --#{$variable-prefix}alert-color: #{alert-color}; // Boosted mod
+  --#{$variable-prefix}alert-border-color: transparent;
+  --#{$variable-prefix}alert-border: #{$alert-border-width} solid var(--#{$variable-prefix}alert-border-color);
+  --#{$variable-prefix}alert-border-radius: #{$alert-border-radius};
+  // scss-docs-end alert-css-vars
+
   position: relative;
   display: flex; // Boosted mod
-  padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $alert-margin-bottom;
+  padding: var(--#{$variable-prefix}alert-padding);
+  margin-bottom: var(--#{$variable-prefix}alert-margin-bottom);
   font-weight: $font-weight-bold; // Boosted mod
-  border: $alert-border-width solid transparent;
-  @include border-radius($alert-border-radius);
+  color: var(--#{$variable-prefix}alert-color);
+  background-color: var(--#{$variable-prefix}alert-bg);
+  border: var(--#{$variable-prefix}alert-border);
+  border-radius: var(--#{$variable-prefix}alert-border-radius, 0); // stylelint-disable-line property-disallowed-list
 }
 
 // Headings for larger alerts
@@ -45,24 +57,25 @@
   }
 }
 
-//
-// Boosted mod
-//
-
-//// Only border changes — and we add a Solaris icon
 
 // scss-docs-start alert-modifiers
 // Generate contextual modifier classes for colorizing the alert.
-@each $color, $value in $alert-colors {
-  .alert-#{$color} {
-    border-color: $value;
 
-    .alert-icon::before {
-      background-image: map-get($alert-icons, $color);
-    }
+@each $state, $value in $alert-colors {
+  $alert-background: transparent; // Boosted mod
+  $alert-border: $alert-border-width solid $value; // Boosted mod
+  // Boosted mod: no $alert-color change
+
+  // Boosted mod: no contrast-ratio test
+  .alert-#{$state} {
+    @include alert-variant($alert-background, $alert-border, $alert-color, map-get($alert-icons, $state)); // Boosted mod
   }
 }
 // scss-docs-end alert-modifiers
+
+//
+// Boosted mod
+//
 
 //// Additional content
 .alert * p {
