@@ -14,6 +14,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: $stickers-size-md;
+  height: $stickers-size-md;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  background-color: $brand-orange;
+  border-radius: $stickers-size-lg; // stylelint-disable-line property-disallowed-list
+
+  &.sticker-lg {
+    width: $stickers-size-lg;
+    height: $stickers-size-lg;
+
+    .sticker-text-xl {
+      position: relative;
+      top: 108px;
+      font-size: $display1-size;
+      line-height: 60px;
+      letter-spacing: $display1-spacing;
+    }
+
+    .sticker-icon-lg {
+      width: 160px;
+      height: 160px;
+    }
+
+    .sticker-text-md-multiline {
+      position: relative;
+      top: 94px;
+      max-width: 200px;
+      font-size: 40px;
+      text-align: center;
+      letter-spacing: -1px;
+    }
+
+    .sticker-icon {
+      position: relative;
+      top: 50px;
+      width: 62px;
+      height: 62px;
+
+      & ~ .sticker-text-md-multiline {
+        top: 50px;
+      }
+    }
+  }
+}
+
+/* .sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: $stickers-size-md;
   height: $stickers-size-md;
@@ -124,3 +174,4 @@
     }
   }
 }
+*/

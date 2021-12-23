@@ -13,68 +13,25 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 ## With flexboxes
 
 {{< example >}}
-<div class="row align-items-center my-5">
-  <div class="col col-12 col-lg-5 text-center">
-    <div class="sticker sticker-lg">
-      <div class="sticker-text-xl">New</div>
-    </div>
-  </div>
 
-  <div class="col col-12 col-md-6 col-lg-4 text-center">
-    <div class="sticker">
-      <div class="sticker-text-xl">New</div>
-    </div>
-  </div>
-
-  <div class="col col-12 col-md-6 col-lg-3 text-center">
-    <div class="sticker sticker-sm">
-      <div class="sticker-text-xl">New</div>
-    </div>
-  </div>
+<div class="sticker sticker-lg">
+  <span class="sticker-text-xl">New</span>
 </div>
 
-
-<div class="row align-items-center my-5">
-  <div class="col col-12 col-lg-5 text-center">
-    <div class="sticker sticker-lg">
-      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
-    </div>
-  </div>
-
-  <div class="col col-12 col-md-6 col-lg-4 text-center">
-    <div class="sticker">
-      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
-    </div>
-  </div>
-
-  <div class="col col-12 col-md-6 col-lg-3 text-center">
-    <div class="sticker sticker-sm">
-      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
-    </div>
-  </div>
+<div class="sticker sticker-lg justify-content-center">
+  <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
 </div>
 
-
-<div class="row align-items-center my-5">
-  <div class="col col-12 col-lg-5 text-center">
-    <div class="sticker sticker-lg">
-      <div class="sticker-text-lg">Free<br>delivery</div>
-    </div>
-  </div>
-
-  <div class="col col-12 col-md-6 col-lg-4 text-center">
-    <div class="sticker">
-      <div class="sticker-text-lg">Free<br>delivery</div>
-    </div>
-  </div>
-
-  <div class="col col-12 col-md-6 col-lg-3 text-center">
-    <div class="sticker sticker-sm">
-      <div class="sticker-text-lg">Free<br>delivery</div>
-    </div>
-  </div>
+<div class="sticker sticker-lg">
+  <span class="sticker-text-md-multiline">Free delivery</span>
 </div>
 
+<div class="sticker sticker-lg">
+  <svg class="sticker-icon"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
+  <span class="sticker-text-md-multiline">Free delivery</span>
+</div>
+
+<!--
 
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-center">
@@ -250,7 +207,8 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
       <div class="sticker-text-sm pb-3">With Orange<br>Money</div>
     </div>
   </div>
-</div>
+  
+</div>-->
 {{< /example >}}
 
 <!-- ## Examples
