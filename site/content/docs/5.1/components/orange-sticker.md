@@ -16,19 +16,19 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-center">
     <div class="sticker sticker-lg">
-      <div class="sticker-text-lg">New</div>
+      <div class="sticker-text-xl">New</div>
     </div>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-4 text-center">
     <div class="sticker">
-      <div class="sticker-text-lg">New</div>
+      <div class="sticker-text-xl">New</div>
     </div>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-center">
     <div class="sticker sticker-sm">
-      <div class="sticker-text-lg">New</div>
+      <div class="sticker-text-xl">New</div>
     </div>
   </div>
 </div>
@@ -37,19 +37,217 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-center">
     <div class="sticker sticker-lg">
-      <div class="sticker-text-md">Free delivery</div>
+      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
     </div>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-4 text-center">
     <div class="sticker">
-      <div class="sticker-text-md">Free delivery</div>
+      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
     </div>
   </div>
 
   <div class="col col-12 col-md-6 col-lg-3 text-center">
     <div class="sticker sticker-sm">
-      <div class="sticker-text-md">Free delivery</div>
+      <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-lg">Free<br>delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-lg">Free<br>delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-lg">Free<br>delivery</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <svg class="sticker-icon-md"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
+      <div class="sticker-text-lg pb-3">Free<br>delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <svg class="sticker-icon-md"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
+      <div class="sticker-text-lg pb-2">Free<br>delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <svg class="sticker-icon-md"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
+      <div class="sticker-text-lg pb-2">Free<br>delivery</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-xl pt-3">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-xl pt-2">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-xl pt-2">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-md text-decoration-line-through">69,99€</div>
+      <div class="sticker-text-xl">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-md text-decoration-line-through">69,99€</div>
+      <div class="sticker-text-xl">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-md text-decoration-line-through">69,99€</div>
+      <div class="sticker-text-xl">39,99€</div>
+      <div class="sticker-text-sm">Per month</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-sm pb-2">Bonus</div>
+      <div class="sticker-text-xl">90 mins</div>
+      <div class="sticker-text-sm pb-3">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-sm pb-2">Bonus</div>
+      <div class="sticker-text-xl">90 mins</div>
+      <div class="sticker-text-sm pb-2">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-sm pb-1">Bonus</div>
+      <div class="sticker-text-xl">90 mins</div>
+      <div class="sticker-text-sm pb-1">Per month</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-sm pb-3">Bonus</div>
+      <div class="sticker-text-xl">250%</div>
+      <div class="sticker-text-sm pb-2">With Orange<br>Money</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-sm pb-2">Bonus</div>
+      <div class="sticker-text-xl">250%</div>
+      <div class="sticker-text-sm pb-1">With Orange<br>Money</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-sm pb-1">Bonus</div>
+      <div class="sticker-text-xl">250%</div>
+      <div class="sticker-text-sm pb-1">With Orange<br>Money</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-xl pb-1">+<br>90 mins</div>
+      <div class="sticker-text-sm pb-4">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-xl pb-1">+<br>90 mins</div>
+      <div class="sticker-text-sm pb-3">Per month</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-xl">+<br>90 mins</div>
+      <div class="sticker-text-sm pb-2">Per month</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-xl pb-1">+<br>250%</div>
+      <div class="sticker-text-sm pb-4">With Orange<br>Money</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-xl pb-1">+<br>250%</div>
+      <div class="sticker-text-sm pb-3">With Orange<br>Money</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-xl">+<br>250%</div>
+      <div class="sticker-text-sm pb-3">With Orange<br>Money</div>
     </div>
   </div>
 </div>
