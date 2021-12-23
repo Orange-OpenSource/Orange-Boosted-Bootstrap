@@ -10,7 +10,7 @@ toc: true
 
 Stickers have their own relative sizes with `rem` units. They also have their own pattern.
 
-## With flexboxes
+## With flexbox
 
 {{< example >}}
 
@@ -30,6 +30,41 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
   <svg class="sticker-icon"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
   <span class="sticker-text-md-multiline">Free delivery</span>
 </div>
+
+<div class="sticker sticker-lg">
+  <span class="sticker-text-xl">39,99€</span>
+  <span class="sticker-text-sm">Per month</span>
+</div>
+
+<div class="sticker sticker-lg">
+  <div class="sticker-text-md text-decoration-line-through">69,99€</div>
+  <div class="sticker-text-xl">39,99€</div>
+  <div class="sticker-text-sm">Per month</div>
+</div>
+
+<div class="sticker sticker-lg">
+  <div class="sticker-text-sm">Bonus</div>
+  <div class="sticker-text-xl">90 mins</div>
+  <div class="sticker-text-sm">Per month</div>
+</div>
+
+<div class="sticker sticker-lg">
+  <div class="sticker-text-sm">Bonus</div>
+  <div class="sticker-text-xl">250%</div>
+  <div class="sticker-text-sm text-center">With Orange<br>Money</div>
+</div>
+
+<!-- div class="sticker sticker-lg text-center">
+  <div class="sticker-text-xl">+</div>
+  <div class="sticker-text-xl>90 mins</div>
+  <div class="sticker-text-sm">Per month</div>
+</div>
+
+<div class="sticker sticker-lg text-center">
+  <div class="sticker-text-xl">+</div>
+  <div class="sticker-text-xl>250%</div>
+  <div class="sticker-text-sm">With Orange<br>Money</div>
+</div -->
 
 <!--
 
@@ -207,7 +242,7 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
       <div class="sticker-text-sm pb-3">With Orange<br>Money</div>
     </div>
   </div>
-  
+
 </div>-->
 {{< /example >}}
 

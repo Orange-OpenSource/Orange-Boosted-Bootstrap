@@ -27,10 +27,30 @@
 
     .sticker-text-xl {
       position: relative;
-      top: 108px;
+      top: 106px;
       font-size: $display1-size;
       line-height: 60px;
       letter-spacing: $display1-spacing;
+
+      & ~ .sticker-text-sm {
+        top: 112px;
+      }
+    }
+
+    .sticker-text-sm {
+      position: relative;
+      top: 67px;
+      font-size: $h3-font-size;
+      line-height: $h3-line-height;
+      letter-spacing: $h3-spacing;
+
+      & ~ .sticker-text-xl {
+        top: 75px;
+      }
+
+      & ~ .sticker-text-sm {
+        top: 81px;
+      }
     }
 
     .sticker-icon-lg {
@@ -54,7 +74,22 @@
       height: 62px;
 
       & ~ .sticker-text-md-multiline {
-        top: 50px;
+        top: 52px;
+      }
+    }
+
+    .sticker-text-md {
+      position: relative;
+      top: 69px;
+      font-size: $display4-size;
+      letter-spacing: $display4-spacing;
+
+      & ~ .sticker-text-xl {
+        top: 72px;
+      }
+
+      & ~ .sticker-text-sm {
+        top: 78px;
       }
     }
   }
