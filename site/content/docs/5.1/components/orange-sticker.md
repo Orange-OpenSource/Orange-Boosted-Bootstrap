@@ -10,13 +10,58 @@ toc: true
 
 Stickers have their own relative sizes with `rem` units. They also have their own pattern.
 
-## Examples
+## With flexboxes
+
+{{< example >}}
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-lg">New</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-lg">New</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-lg">New</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center my-5">
+  <div class="col col-12 col-lg-5 text-center">
+    <div class="sticker sticker-lg">
+      <div class="sticker-text-md">Free delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-4 text-center">
+    <div class="sticker">
+      <div class="sticker-text-md">Free delivery</div>
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-6 col-lg-3 text-center">
+    <div class="sticker sticker-sm">
+      <div class="sticker-text-md">Free delivery</div>
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
+<!-- ## Examples
 
 <div class="row align-items-center my-5">
   <div class="col col-12 col-lg-5 text-start">
     <svg viewBox="0 0 140 140" class="sticker-lg sticker-one-line" aria-hidden="true" focusable="false">
       <circle r="70" cx="70" cy="70"></circle>
-      <text x="50%" y="50%" dy=".2rem">New</text>
+      <text x="50%" y="50%">New</text>
     </svg>
   </div>
 
@@ -31,8 +76,8 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
     <svg viewBox="0 0 140 140" class="sticker-sm sticker-icon-two-lines" aria-hidden="true" focusable="false">
       <circle r="70" cx="70" cy="70"></circle>
       <use x="50%" y="27%" height="35" width="35" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use>
-      <text x="50%" y="60%">
-        <tspan x="50%" dy="-.9rem">Free</tspan><tspan x="50%" dy="1.25rem">delivery</tspan>
+      <text>
+        <tspan x="50%" y="51%">Free</tspan><tspan x="50%" y="65%">delivery</tspan>
       </text>
     </svg>
   </div>
@@ -363,7 +408,7 @@ Choose one and only one class below in order to apply a pattern to the sticker.
     <tspan x="50%" dy="-2.3rem">+</tspan><tspan x="50%" y="47%">250%</tspan><tspan x="50%" dy="1.35rem">With Orange</tspan><tspan x="50%" dy=".95rem">Money</tspan>
   </text>
 </svg>
-```
+``` -->
 
 ## Sass
 

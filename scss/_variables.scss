@@ -1844,25 +1844,25 @@ $stickers-size-sm:  $spacer * 7 !default;
 $stickers-size-md:  $spacer * 9 !default;
 $stickers-size-lg:  $spacer * 14 !default;
 
-$stickers-icon:     80px !default; // Flat pixels because responsiveness comes from the svg
-$stickers-icon-sm:  35px !default;
+// $stickers-icon:     80px !default; // Flat pixels because responsiveness comes from the svg
+// $stickers-icon-sm:  35px !default;
 
-$stickers-sizes: (
-  "sm": $stickers-size-sm,
-  "md": $stickers-size-md,
-  "lg": $stickers-size-lg
-) !default;
-$stickers-architectures: (
-  "add-min": "Additional-min",
-  "add-offer": "Additional-offer",
-  "bonus-min": "Bonus-min",
-  "bonus-offer": "Bonus-offer",
-  "icon": "Icon",
-  "icon-two-lines": "Icon-Two-lines",
-  "old-and-new-price": "Old-and-new-price",
-  "one-line": "One-line",
-  "price": "Price",
-  "two-lines": "Two-lines"
-) !default;
+// $stickers-sizes: (
+//   "sm": $stickers-size-sm,
+//   "md": $stickers-size-md,
+//   "lg": $stickers-size-lg
+// ) !default;
+// $stickers-architectures: (
+//   "add-min": "Additional-min",
+//   "add-offer": "Additional-offer",
+//   "bonus-min": "Bonus-min",
+//   "bonus-offer": "Bonus-offer",
+//   "icon": "Icon",
+//   "icon-two-lines": "Icon-Two-lines",
+//   "old-and-new-price": "Old-and-new-price",
+//   "one-line": "One-line",
+//   "price": "Price",
+//   "two-lines": "Two-lines"
+// ) !default;
 // scss-docs-end stickers-variables
 // End mod
