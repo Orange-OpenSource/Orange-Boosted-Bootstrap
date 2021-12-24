@@ -1,0 +1,13 @@
+$enable-dark-variants: (
+  alert,
+  card,
+  modal,
+) !default;
+
+@each $composant in $enable-dark-variants {
+  /* #{$composant} */
+  .#{$composant}-dark {
+    color: var(--bs-body-bg);
+    background-color: var(--bs-body-color);
+  }
+}
