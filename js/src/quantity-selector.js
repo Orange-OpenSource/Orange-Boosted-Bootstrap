@@ -17,7 +17,9 @@ const NAME = 'quantityselector'
 const DATA_KEY = 'bs.quantityselector'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
+
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+
 const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
 const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]'
 const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]'
@@ -33,7 +35,7 @@ class QuantitySelector extends BaseComponent {
     return NAME
   }
 
-  // Public
+  // Static
   static StepUp(event) {
     event.preventDefault()
     const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
