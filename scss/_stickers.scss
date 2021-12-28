@@ -21,16 +21,60 @@
   background-color: $brand-orange;
   border-radius: $stickers-size-lg; // stylelint-disable-line property-disallowed-list
 
+  .sticker-text-xl,
+  .sticker-text-symbol {
+    position: relative;
+    font-size: $display1-size;
+    line-height: 60px;
+    letter-spacing: $display1-spacing;
+  }
+
+  .sticker-text-sm {
+    position: relative;
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+    letter-spacing: $h3-spacing;
+  }
+
+  .sticker-text-sm-multiline {
+    position: relative;
+    max-width: 200px;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -.5px;
+  }
+
+  .sticker-text-md {
+    position: relative;
+    font-size: $display4-size;
+    letter-spacing: $display4-spacing;
+  }
+
+  .sticker-text-md-multiline {
+    position: relative;
+    max-width: 200px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  .sticker-icon {
+    position: relative;
+    width: 62px;
+    height: 62px;
+  }
+
+  .sticker-icon-lg {
+    width: 160px;
+    height: 160px;
+  }
+
   &.sticker-lg {
     width: $stickers-size-lg;
     height: $stickers-size-lg;
 
     .sticker-text-xl {
-      position: relative;
       top: 106px;
-      font-size: $display1-size;
-      line-height: 60px;
-      letter-spacing: $display1-spacing;
 
       & ~ .sticker-text-sm {
         top: 112px;
@@ -38,11 +82,7 @@
     }
 
     .sticker-text-symbol {
-      position: relative;
       top: 38px;
-      font-size: $display1-size;
-      line-height: 60px;
-      letter-spacing: $display1-spacing;
 
       & ~ .sticker-text-xl {
         top: 39px;
@@ -58,11 +98,7 @@
     }
 
     .sticker-text-sm {
-      position: relative;
       top: 67px;
-      font-size: $h3-font-size;
-      line-height: $h3-line-height;
-      letter-spacing: $h3-spacing;
 
       & ~ .sticker-text-xl {
         top: 75px;
@@ -73,34 +109,16 @@
       }
     }
 
-    .sticker-icon-lg {
-      width: 160px;
-      height: 160px;
-    }
-
     .sticker-text-md-multiline {
-      position: relative;
       top: 94px;
-      max-width: 200px;
-      font-size: 40px;
-      text-align: center;
-      letter-spacing: -1px;
     }
 
     .sticker-text-sm-multiline {
-      position: relative;
       top: 78px;
-      max-width: 200px;
-      font-size: 24px;
-      text-align: center;
-      letter-spacing: -.5px;
     }
 
     .sticker-icon {
-      position: relative;
       top: 50px;
-      width: 62px;
-      height: 62px;
 
       & ~ .sticker-text-md-multiline {
         top: 52px;
@@ -108,10 +126,7 @@
     }
 
     .sticker-text-md {
-      position: relative;
       top: 69px;
-      font-size: $display4-size;
-      letter-spacing: $display4-spacing;
 
       & ~ .sticker-text-xl {
         top: 72px;
