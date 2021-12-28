@@ -30,42 +30,46 @@
   }
 
   .sticker-text-xl {
-    top: 68px;
+    top: 63px;
+
+    &:only-child {
+      top: 68px;
+    }
 
     & ~ .sticker-text-sm {
-      // top: 112px;
+      top: 70px;
     }
   }
 
   .sticker-text-symbol {
-    // top: 38px;
+    top: 25px;
 
     & ~ .sticker-text-xl {
-      // top: 39px;
+      top: 24px;
     }
 
     & ~ .sticker-text-sm-multiline {
-      // top: 44px;
+      top: 30px;
     }
 
     & ~ .sticker-text-sm {
-      // top: 44px;
+      top: 27px;
     }
   }
 
   .sticker-text-md {
     position: relative;
-    // font-size: 24px;
-    // line-height: 26px;
-    // letter-spacing: -.5px;
-    // top: 69px;
+    top: 43px;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -.5px;
 
     & ~ .sticker-text-xl {
-      // top: 72px;
+      top: 43px;
     }
 
     & ~ .sticker-text-sm {
-      // top: 78px;
+      top: 48px;
     }
   }
 
@@ -81,27 +85,28 @@
 
   .sticker-text-sm {
     position: relative;
-    // font-size: $h3-font-size;
-    // line-height: $h3-line-height;
-    // letter-spacing: $h3-spacing;
-    // top: 67px;
+    top: 40px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -.1px;
 
     & ~ .sticker-text-xl {
-      // top: 75px;
+      top: 46px;
     }
 
     & ~ .sticker-text-sm {
-      // top: 81px;
+      top: 52px;
     }
   }
 
   .sticker-text-sm-multiline {
     position: relative;
-    // max-width: 200px;
-    // font-size: 24px;
+    top: 47px;
+    max-width: 120px;
+    font-size: 16px;
+    line-height: 18px;
     text-align: center;
-    // letter-spacing: -.5px;
-    // top: 78px;
+    letter-spacing: -.1px;
   }
 
   .sticker-icon {
@@ -134,7 +139,11 @@
     }
 
     .sticker-text-xl {
-      top: 106px;
+      top: 102px;
+
+      &:only-child {
+        top: 106px;
+      }
 
       & ~ .sticker-text-sm {
         top: 112px;
@@ -176,6 +185,7 @@
       top: 94px;
       max-width: 200px;
       font-size: 40px;
+      line-height: $h3-line-height;
       letter-spacing: -1px;
     }
 
@@ -231,6 +241,10 @@
 
     .sticker-text-xl {
       // top: 106px;
+
+      &:only-child {
+        // top: px;
+      }
 
       & ~ .sticker-text-sm {
         // top: 112px;
