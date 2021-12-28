@@ -24,54 +24,114 @@
   .sticker-text-xl,
   .sticker-text-symbol {
     position: relative;
-    font-size: $display1-size;
-    line-height: 60px;
-    letter-spacing: $display1-spacing;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
   }
 
-  .sticker-text-sm {
-    position: relative;
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-    letter-spacing: $h3-spacing;
+  .sticker-text-xl {
+    top: 68px;
+
+    & ~ .sticker-text-sm {
+      // top: 112px;
+    }
   }
 
-  .sticker-text-sm-multiline {
-    position: relative;
-    max-width: 200px;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: -.5px;
+  .sticker-text-symbol {
+    // top: 38px;
+
+    & ~ .sticker-text-xl {
+      // top: 39px;
+    }
+
+    & ~ .sticker-text-sm-multiline {
+      // top: 44px;
+    }
+
+    & ~ .sticker-text-sm {
+      // top: 44px;
+    }
   }
 
   .sticker-text-md {
     position: relative;
-    font-size: $display4-size;
-    letter-spacing: $display4-spacing;
+    // font-size: 24px;
+    // line-height: 26px;
+    // letter-spacing: -.5px;
+    // top: 69px;
+
+    & ~ .sticker-text-xl {
+      // top: 72px;
+    }
+
+    & ~ .sticker-text-sm {
+      // top: 78px;
+    }
   }
 
   .sticker-text-md-multiline {
     position: relative;
-    max-width: 200px;
-    font-size: 40px;
+    top: 63px;
+    max-width: 130px; // Note: there's a problem with this example because "Free delivery" is about 139px and is not multiline when applying max-width: 140px as in the design specs
+    font-size: 24px;
+    line-height: 26px;
     text-align: center;
-    letter-spacing: -1px;
+    letter-spacing: -.5px;
+  }
+
+  .sticker-text-sm {
+    position: relative;
+    // font-size: $h3-font-size;
+    // line-height: $h3-line-height;
+    // letter-spacing: $h3-spacing;
+    // top: 67px;
+
+    & ~ .sticker-text-xl {
+      // top: 75px;
+    }
+
+    & ~ .sticker-text-sm {
+      // top: 81px;
+    }
+  }
+
+  .sticker-text-sm-multiline {
+    position: relative;
+    // max-width: 200px;
+    // font-size: 24px;
+    text-align: center;
+    // letter-spacing: -.5px;
+    // top: 78px;
   }
 
   .sticker-icon {
     position: relative;
-    width: 62px;
-    height: 62px;
+    top: 35px;
+    width: 40px;
+    height: 40px;
+
+    & ~ .sticker-text-md-multiline {
+      top: 39px;
+    }
   }
 
   .sticker-icon-lg {
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
   }
+
+  // Large sticker
 
   &.sticker-lg {
     width: $stickers-size-lg;
     height: $stickers-size-lg;
+
+    .sticker-text-xl,
+    .sticker-text-symbol {
+      font-size: $display1-size;
+      line-height: 60px;
+      letter-spacing: $display1-spacing;
+    }
 
     .sticker-text-xl {
       top: 106px;
@@ -99,6 +159,9 @@
 
     .sticker-text-sm {
       top: 67px;
+      font-size: $h3-font-size;
+      line-height: $h3-line-height;
+      letter-spacing: $h3-spacing;
 
       & ~ .sticker-text-xl {
         top: 75px;
@@ -111,22 +174,37 @@
 
     .sticker-text-md-multiline {
       top: 94px;
+      max-width: 200px;
+      font-size: 40px;
+      letter-spacing: -1px;
     }
 
     .sticker-text-sm-multiline {
       top: 78px;
+      max-width: 200px;
+      font-size: 24px;
+      letter-spacing: -.5px;
     }
 
     .sticker-icon {
       top: 50px;
+      width: 62px;
+      height: 62px;
 
       & ~ .sticker-text-md-multiline {
         top: 52px;
       }
     }
 
+    .sticker-icon-lg {
+      width: 160px;
+      height: 160px;
+    }
+
     .sticker-text-md {
       top: 69px;
+      font-size: $display4-size;
+      letter-spacing: $display4-spacing;
 
       & ~ .sticker-text-xl {
         top: 72px;
@@ -137,120 +215,100 @@
       }
     }
   }
-}
 
-/* .sticker {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: $stickers-size-md;
-  height: $stickers-size-md;
-  font-weight: $font-weight-bold;
-  line-height: 1;
-  background-color: $brand-orange;
-  border-radius: $stickers-size-lg; // stylelint-disable-line property-disallowed-list
-
-  .sticker-text-xl {
-    font-size: $display3-size;
-    letter-spacing: $display3-spacing;
-  }
-
-  .sticker-text-lg {
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-    letter-spacing: $h3-spacing;
-  }
-
-  .sticker-text-md {
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-    letter-spacing: $h3-spacing;
-  }
-
-  .sticker-text-sm {
-    font-size: $h6-font-size;
-    line-height: $h6-line-height;
-    letter-spacing: $h6-spacing;
-  }
-
-  .sticker-icon-lg {
-    width: 100px;
-    height: 100px;
-  }
-
-  .sticker-icon-md {
-    width: 40px;
-    height: 40px;
-  }
-
-  &.sticker-lg {
-    width: $stickers-size-lg;
-    height: $stickers-size-lg;
-
-    .sticker-text-xl {
-      font-size: $display1-size;
-      letter-spacing: $display1-spacing;
-    }
-
-    .sticker-text-lg {
-      font-size: $display3-size;
-      letter-spacing: $display3-spacing;
-    }
-
-    .sticker-text-md {
-      font-size: $display4-size;
-      letter-spacing: $display4-spacing;
-    }
-
-    .sticker-text-sm {
-      font-size: $h3-font-size;
-      line-height: $h3-line-height;
-      letter-spacing: $h3-spacing;
-    }
-
-    .sticker-icon-lg {
-      width: 160px;
-      height: 160px;
-    }
-
-    .sticker-icon-md {
-      width: 62px;
-      height: 62px;
-    }
-  }
+  // Small sticker
 
   &.sticker-sm {
     width: $stickers-size-sm;
     height: $stickers-size-sm;
 
+    .sticker-text-xl,
+    .sticker-text-symbol {
+      // font-size: $display1-size;
+      // line-height: 60px;
+      // letter-spacing: $display1-spacing;
+    }
+
     .sticker-text-xl {
-      font-size: $h2-font-size;
-      line-height: $h2-line-height;
-      letter-spacing: $h2-spacing;
+      // top: 106px;
+
+      & ~ .sticker-text-sm {
+        // top: 112px;
+      }
     }
 
-    .sticker-text-lg {
-      font-size: $h4-font-size;
-      line-height: $h4-line-height;
-      letter-spacing: $h4-spacing;
+    .sticker-text-symbol {
+      // top: 38px;
+
+      & ~ .sticker-text-xl {
+        // top: 39px;
+      }
+
+      & ~ .sticker-text-sm-multiline {
+        // top: 44px;
+      }
+
+      & ~ .sticker-text-sm {
+        // top: 44px;
+      }
     }
 
-    .sticker-text-md {
-      font-size: $h5-font-size;
-      line-height: $h5-line-height;
-      letter-spacing: $h5-spacing;
+    .sticker-text-sm {
+      // top: 67px;
+      // font-size: $h3-font-size;
+      // line-height: $h3-line-height;
+      // letter-spacing: $h3-spacing;
+
+      & ~ .sticker-text-xl {
+        // top: 75px;
+      }
+
+      & ~ .sticker-text-sm {
+        // top: 81px;
+      }
+    }
+
+    .sticker-text-md-multiline {
+      // top: 94px;
+      // max-width: 200px;
+      // font-size: 40px;
+      // letter-spacing: -1px;
+    }
+
+    .sticker-text-sm-multiline {
+      // top: 78px;
+      // max-width: 200px;
+      // font-size: 24px;
+      // letter-spacing: -.5px;
+    }
+
+    .sticker-icon {
+      // top: 50px;
+      // width: 62px;
+      // height: 62px;
+
+      & ~ .sticker-text-md-multiline {
+        // top: 52px;
+      }
     }
 
     .sticker-icon-lg {
-      width: 80px;
-      height: 80px;
+      // width: 160px;
+      // height: 160px;
     }
 
-    .sticker-icon-md {
-      width: 35px;
-      height: 35px;
+    .sticker-text-md {
+      // top: 69px;
+      // font-size: $display4-size;
+      // letter-spacing: $display4-spacing;
+
+      & ~ .sticker-text-xl {
+        // top: 72px;
+      }
+
+      & ~ .sticker-text-sm {
+        // top: 78px;
+      }
     }
   }
 }
-*/
