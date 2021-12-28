@@ -1840,19 +1840,31 @@ $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 10
 // scss-docs-end stepped-process
 
 // scss-docs-start stickers-variables
-$stickers-size-sm:  $spacer * 7 !default;
-$stickers-size-md:  $spacer * 9 !default;
-$stickers-size-lg:  $spacer * 14 !default;
+$sticker-size-sm:                       $spacer * 7 !default;
+$sticker-size-md:                       $spacer * 9 !default;
+$sticker-size-lg:                       $spacer * 14 !default;
 
-// $stickers-icon:     80px !default; // Flat pixels because responsiveness comes from the svg
-// $stickers-icon-sm:  35px !default;
+$sticker-text-multiline-max-width-sm:   100px !default;
+$sticker-text-multiline-max-width-md:   130px !default; // 130px instead of 140px in design guidelines otherwise "Free delivery" example fits in 1 line
+$sticker-text-multiline-max-width-lg:   200px !default;
 
-// $stickers-sizes: (
-//   "sm": $stickers-size-sm,
-//   "md": $stickers-size-md,
-//   "lg": $stickers-size-lg
+$sticker-icon-size-sm:                  35px !default;
+$sticker-icon-size-md:                  40px !default;
+$sticker-icon-size-lg:                  62px !default;
+
+$sticker-large-icon-size-sm:            80px !default;
+$sticker-large-icon-size-md:            100px !default;
+$sticker-large-icon-size-lg:            160px !default;
+
+// $sticker-icon:     80px !default; // Flat pixels because responsiveness comes from the svg
+// $sticker-icon-sm:  35px !default;
+
+// $sticker-sizes: (
+//   "sm": $sticker-size-sm,
+//   "md": $sticker-size-md,
+//   "lg": $sticker-size-lg
 // ) !default;
-// $stickers-architectures: (
+// $sticker-architectures: (
 //   "add-min": "Additional-min",
 //   "add-offer": "Additional-offer",
 //   "bonus-min": "Bonus-min",

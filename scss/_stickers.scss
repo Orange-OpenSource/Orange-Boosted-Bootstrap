@@ -1,10 +1,10 @@
-// @each $key-archi, $value-archi in $stickers-architectures {
+// @each $key-archi, $value-archi in $sticker-architectures {
 //   .sticker-#{$key-archi} {
 //     @include sticker-init($value-archi);
 //   }
 // }
 
-// @each $key-size, $value-size in $stickers-sizes {
+// @each $key-size, $value-size in $sticker-sizes {
 //   .sticker-#{$key-size} {
 //     @include sticker-init-size($value-size);
 //   }
@@ -14,19 +14,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: $stickers-size-md;
-  height: $stickers-size-md;
+  width: $sticker-size-md;
+  height: $sticker-size-md;
   font-weight: $font-weight-bold;
   line-height: 1;
   background-color: $brand-orange;
-  border-radius: $stickers-size-lg; // stylelint-disable-line property-disallowed-list
+  border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
 
   .sticker-text-xl,
   .sticker-text-symbol {
     position: relative;
-    font-size: 40px;
-    line-height: 40px;
-    letter-spacing: -1px;
+    font-size: $display3-size;
+    line-height: $display-line-height;
+    letter-spacing: $display3-spacing;
   }
 
   .sticker-text-xl {
@@ -60,9 +60,9 @@
   .sticker-text-md {
     position: relative;
     top: 43px;
-    font-size: 24px;
-    line-height: 26px;
-    letter-spacing: -.5px;
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+    letter-spacing: $h3-spacing;
 
     & ~ .sticker-text-xl {
       top: 43px;
@@ -76,19 +76,19 @@
   .sticker-text-md-multiline {
     position: relative;
     top: 63px;
-    max-width: 130px; // Note: there's a problem with this example because "Free delivery" is about 139px and is not multiline when applying max-width: 140px as in the design specs
-    font-size: 24px;
-    line-height: 26px;
+    max-width: $sticker-text-multiline-max-width-md;
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
     text-align: center;
-    letter-spacing: -.5px;
+    letter-spacing: $h3-spacing;
   }
 
   .sticker-text-sm {
     position: relative;
     top: 40px;
-    font-size: 16px;
-    line-height: 18px;
-    letter-spacing: -.1px;
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+    letter-spacing: $h6-spacing;
 
     & ~ .sticker-text-xl {
       top: 46px;
@@ -102,18 +102,18 @@
   .sticker-text-sm-multiline {
     position: relative;
     top: 47px;
-    max-width: 120px;
-    font-size: 16px;
-    line-height: 18px;
+    max-width: $sticker-text-multiline-max-width-md;
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
     text-align: center;
-    letter-spacing: -.1px;
+    letter-spacing: $h6-spacing;
   }
 
   .sticker-icon {
     position: relative;
     top: 35px;
-    width: 40px;
-    height: 40px;
+    width: $sticker-icon-size-md;
+    height: $sticker-icon-size-md;
 
     & ~ .sticker-text-md-multiline {
       top: 39px;
@@ -121,20 +121,20 @@
   }
 
   .sticker-icon-lg {
-    width: 100px;
-    height: 100px;
+    width: $sticker-large-icon-size-md;
+    height: $sticker-large-icon-size-md;
   }
 
   // Large sticker
 
   &.sticker-lg {
-    width: $stickers-size-lg;
-    height: $stickers-size-lg;
+    width: $sticker-size-lg;
+    height: $sticker-size-lg;
 
     .sticker-text-xl,
     .sticker-text-symbol {
       font-size: $display1-size;
-      line-height: 60px;
+      line-height: $display-line-height;
       letter-spacing: $display1-spacing;
     }
 
@@ -183,24 +183,24 @@
 
     .sticker-text-md-multiline {
       top: 94px;
-      max-width: 200px;
-      font-size: 40px;
-      line-height: $h3-line-height;
-      letter-spacing: -1px;
+      max-width: $sticker-text-multiline-max-width-lg;
+      font-size: $display3-size;
+      line-height: $display-line-height;
+      letter-spacing: $display3-spacing;
     }
 
     .sticker-text-sm-multiline {
       top: 78px;
-      max-width: 200px;
-      font-size: 24px;
-      line-height: 26px;
-      letter-spacing: -.5px;
+      max-width: $sticker-text-multiline-max-width-lg;
+      font-size: $h3-font-size;
+      line-height: $h3-line-height;
+      letter-spacing: $h3-spacing;
     }
 
     .sticker-icon {
       top: 50px;
-      width: 62px;
-      height: 62px;
+      width: $sticker-icon-size-lg;
+      height: $sticker-icon-size-lg;
 
       & ~ .sticker-text-md-multiline {
         top: 52px;
@@ -208,15 +208,15 @@
     }
 
     .sticker-icon-lg {
-      width: 160px;
-      height: 160px;
+      width: $sticker-large-icon-size-lg;
+      height: $sticker-large-icon-size-lg;
     }
 
     .sticker-text-md {
       top: 69px;
-      font-size: 34px;
-      line-height: 34px;
-      letter-spacing: -1px;
+      font-size: $display4-size;
+      line-height: $display-line-height;
+      letter-spacing: $display4-spacing;
 
       & ~ .sticker-text-xl {
         top: 72px;
@@ -231,14 +231,14 @@
   // Small sticker
 
   &.sticker-sm {
-    width: $stickers-size-sm;
-    height: $stickers-size-sm;
+    width: $sticker-size-sm;
+    height: $sticker-size-sm;
 
     .sticker-text-xl,
     .sticker-text-symbol {
-      font-size: 30px;
-      line-height: 32px;
-      letter-spacing: -.8px;
+      font-size: $h2-font-size;
+      line-height: $h2-line-height;
+      letter-spacing: $h2-spacing;
     }
 
     .sticker-text-xl {
@@ -271,9 +271,9 @@
 
     .sticker-text-sm {
       top: 30px;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: -.1px;
+      font-size: $h6-font-size;
+      line-height: $h6-line-height;
+      letter-spacing: $h6-spacing;
 
       & ~ .sticker-text-xl {
         top: 35px;
@@ -286,24 +286,24 @@
 
     .sticker-text-md-multiline {
       top: 47px;
-      max-width: 100px;
-      font-size: 20px;
-      line-height: 22px;
-      letter-spacing: -.4px;
+      max-width: $sticker-text-multiline-max-width-sm;
+      font-size: $h4-font-size;
+      line-height: $h4-line-height;
+      letter-spacing: $h4-spacing;
     }
 
     .sticker-text-sm-multiline {
       top: 30px;
-      max-width: 100px;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: -.1px;
+      max-width: $sticker-text-multiline-max-width-sm;
+      font-size: $h6-font-size;
+      line-height: $h6-line-height;
+      letter-spacing: $h6-spacing;
     }
 
     .sticker-icon {
       top: 22px;
-      width: 35px;
-      height: 35px;
+      width: $sticker-icon-size-sm;
+      height: $sticker-icon-size-sm;
 
       & ~ .sticker-text-md-multiline {
         top: 23px;
@@ -311,15 +311,15 @@
     }
 
     .sticker-icon-lg {
-      width: 80px;
-      height: 80px;
+      width: $sticker-large-icon-size-sm;
+      height: $sticker-large-icon-size-sm;
     }
 
     .sticker-text-md {
       top: 33px;
-      font-size: 18px;
-      line-height: 20px;
-      letter-spacing: -.2px;
+      font-size: $h5-font-size;
+      line-height: $h5-line-height;
+      letter-spacing: $h5-spacing;
 
       & ~ .sticker-text-xl {
         top: 32px;
