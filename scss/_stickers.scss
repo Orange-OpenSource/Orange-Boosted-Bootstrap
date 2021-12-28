@@ -193,6 +193,7 @@
       top: 78px;
       max-width: 200px;
       font-size: 24px;
+      line-height: 26px;
       letter-spacing: -.5px;
     }
 
@@ -213,8 +214,9 @@
 
     .sticker-text-md {
       top: 69px;
-      font-size: $display4-size;
-      letter-spacing: $display4-spacing;
+      font-size: 34px;
+      line-height: 34px;
+      letter-spacing: -1px;
 
       & ~ .sticker-text-xl {
         top: 72px;
@@ -234,94 +236,97 @@
 
     .sticker-text-xl,
     .sticker-text-symbol {
-      // font-size: $display1-size;
-      // line-height: 60px;
-      // letter-spacing: $display1-spacing;
+      font-size: 30px;
+      line-height: 32px;
+      letter-spacing: -.8px;
     }
 
     .sticker-text-xl {
-      // top: 106px;
+      top: 48px;
 
       &:only-child {
-        // top: px;
+        top: 53px;
       }
 
       & ~ .sticker-text-sm {
-        // top: 112px;
+        top: 48px;
       }
     }
 
     .sticker-text-symbol {
-      // top: 38px;
+      top: 18px;
 
       & ~ .sticker-text-xl {
-        // top: 39px;
+        top: 16px;
       }
 
       & ~ .sticker-text-sm-multiline {
-        // top: 44px;
+        top: 12px;
       }
 
       & ~ .sticker-text-sm {
-        // top: 44px;
+        top: 17px;
       }
     }
 
     .sticker-text-sm {
-      // top: 67px;
-      // font-size: $h3-font-size;
-      // line-height: $h3-line-height;
-      // letter-spacing: $h3-spacing;
+      top: 30px;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -.1px;
 
       & ~ .sticker-text-xl {
-        // top: 75px;
+        top: 35px;
       }
 
       & ~ .sticker-text-sm {
-        // top: 81px;
+        top: 35px;
       }
     }
 
     .sticker-text-md-multiline {
-      // top: 94px;
-      // max-width: 200px;
-      // font-size: 40px;
-      // letter-spacing: -1px;
+      top: 47px;
+      max-width: 100px;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -.4px;
     }
 
     .sticker-text-sm-multiline {
-      // top: 78px;
-      // max-width: 200px;
-      // font-size: 24px;
-      // letter-spacing: -.5px;
+      top: 30px;
+      max-width: 100px;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: -.1px;
     }
 
     .sticker-icon {
-      // top: 50px;
-      // width: 62px;
-      // height: 62px;
+      top: 22px;
+      width: 35px;
+      height: 35px;
 
       & ~ .sticker-text-md-multiline {
-        // top: 52px;
+        top: 23px;
       }
     }
 
     .sticker-icon-lg {
-      // width: 160px;
-      // height: 160px;
+      width: 80px;
+      height: 80px;
     }
 
     .sticker-text-md {
-      // top: 69px;
-      // font-size: $display4-size;
-      // letter-spacing: $display4-spacing;
+      top: 33px;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -.2px;
 
       & ~ .sticker-text-xl {
-        // top: 72px;
+        top: 32px;
       }
 
       & ~ .sticker-text-sm {
-        // top: 78px;
+        top: 32px;
       }
     }
   }
