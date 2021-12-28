@@ -28,7 +28,7 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 
 {{< example >}}
 <div class="sticker">
-  <span class="sticker-text-md-multiline">Free delivery</span>
+  <span class="sticker-text-xl-multiline">Free delivery</span>
 </div>
 {{< /example >}}
 
@@ -37,7 +37,7 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
   <svg class="sticker-icon">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use>
   </svg>
-  <span class="sticker-text-md-multiline">Free delivery</span>
+  <span class="sticker-text-xl-multiline">Free delivery</span>
 </div>
 {{< /example >}}
 
