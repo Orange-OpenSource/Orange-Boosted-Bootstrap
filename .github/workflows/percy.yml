@@ -1,23 +1,15 @@
-name: Tests
+name: Percy
 on:
   push:
     paths:
       - 'js/**'
       - 'scss/**'
-      - 'site/content/docs/**/components'
-      - 'site/content/docs/**/forms'
+      - 'site/content/docs/**/components/**'
+      - 'site/content/docs/**/forms/**'
     branches:
       - main
-      - "!dependabot/**"
+      - v4-dev
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
-    branches:
-      - main
-      - "!dependabot/**"
   workflow_dispatch:
 
 env:
@@ -30,18 +22,18 @@ jobs:
 
     steps:
       - name: Bail early
-        if: github.event_name == 'pull_request' && ((contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:percy')) || (github.event.pull_request.draft == true))
         run: exit 0
+        if: github.event_name == 'pull_request' || github.actor == 'dependabot[bot]'
 
       - name: Clone repository
         uses: actions/checkout@v2
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "${{ env.NODE }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -50,19 +42,19 @@ jobs:
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Compile dist
         run: npm run dist
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Build docs
         run: npm run docs-build
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
 
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.2
@@ -72,4 +64,4 @@ jobs:
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
+        if: "!(github.event_name == 'pull_request' || github.actor == 'dependabot[bot]')"
