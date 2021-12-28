@@ -54,6 +54,18 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
   <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 
+<div class="sticker sticker-lg">
+  <div class="sticker-text-symbol">+</div>
+  <div class="sticker-text-xl">90 mins</div>
+  <div class="sticker-text-sm">Per month</div>
+</div>
+
+<div class="sticker sticker-lg">
+  <div class="sticker-text-symbol">+</div>
+  <div class="sticker-text-xl">250%</div>
+  <div class="sticker-text-sm-multiline">With Orange Money</div>
+</div>
+
 <!-- div class="sticker sticker-lg text-center">
   <div class="sticker-text-xl">+</div>
   <div class="sticker-text-xl>90 mins</div>

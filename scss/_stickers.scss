@@ -37,6 +37,26 @@
       }
     }
 
+    .sticker-text-symbol {
+      position: relative;
+      top: 38px;
+      font-size: $display1-size;
+      line-height: 60px;
+      letter-spacing: $display1-spacing;
+
+      & ~ .sticker-text-xl {
+        top: 39px;
+      }
+
+      & ~ .sticker-text-sm-multiline {
+        top: 44px;
+      }
+
+      & ~ .sticker-text-sm {
+        top: 44px;
+      }
+    }
+
     .sticker-text-sm {
       position: relative;
       top: 67px;
@@ -65,6 +85,15 @@
       font-size: 40px;
       text-align: center;
       letter-spacing: -1px;
+    }
+
+    .sticker-text-sm-multiline {
+      position: relative;
+      top: 78px;
+      max-width: 200px;
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: -.5px;
     }
 
     .sticker-icon {
