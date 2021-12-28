@@ -51,7 +51,7 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 <div class="sticker sticker-lg">
   <div class="sticker-text-sm">Bonus</div>
   <div class="sticker-text-xl">250%</div>
-  <div class="sticker-text-sm text-center">With Orange<br>Money</div>
+  <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 
 <!-- div class="sticker sticker-lg text-center">
