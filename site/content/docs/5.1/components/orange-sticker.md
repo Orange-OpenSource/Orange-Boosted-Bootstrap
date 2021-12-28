@@ -13,53 +13,74 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 ## Examples
 
 {{< example >}}
-
 <div class="sticker">
   <span class="sticker-text-xl">New</span>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker justify-content-center">
-  <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
+  <svg class="sticker-icon-lg">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use>
+  </svg>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <span class="sticker-text-md-multiline">Free delivery</span>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
-  <svg class="sticker-icon"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
+  <svg class="sticker-icon">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use>
+  </svg>
   <span class="sticker-text-md-multiline">Free delivery</span>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <span class="sticker-text-xl">39,99€</span>
   <span class="sticker-text-sm">Per month</span>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <div class="sticker-text-md text-decoration-line-through">69,99€</div>
   <div class="sticker-text-xl">39,99€</div>
   <div class="sticker-text-sm">Per month</div>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <div class="sticker-text-sm">Bonus</div>
   <div class="sticker-text-xl">90 mins</div>
   <div class="sticker-text-sm">Per month</div>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <div class="sticker-text-sm">Bonus</div>
   <div class="sticker-text-xl">250%</div>
   <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <div class="sticker-text-symbol">+</div>
   <div class="sticker-text-xl">90 mins</div>
   <div class="sticker-text-sm">Per month</div>
 </div>
+{{< /example >}}
 
+{{< example >}}
 <div class="sticker">
   <div class="sticker-text-symbol">+</div>
   <div class="sticker-text-xl">250%</div>
@@ -67,117 +88,19 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 </div>
 {{< /example >}}
 
-## Large stickers
+## Sizes
+
+Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additional sizes.
 
 {{< example >}}
-
 <div class="sticker sticker-lg">
   <span class="sticker-text-xl">New</span>
-</div>
-
-<div class="sticker sticker-lg justify-content-center">
-  <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
-</div>
-
-<div class="sticker sticker-lg">
-  <span class="sticker-text-md-multiline">Free delivery</span>
-</div>
-
-<div class="sticker sticker-lg">
-  <svg class="sticker-icon"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
-  <span class="sticker-text-md-multiline">Free delivery</span>
-</div>
-
-<div class="sticker sticker-lg">
-  <span class="sticker-text-xl">39,99€</span>
-  <span class="sticker-text-sm">Per month</span>
-</div>
-
-<div class="sticker sticker-lg">
-  <div class="sticker-text-md text-decoration-line-through">69,99€</div>
-  <div class="sticker-text-xl">39,99€</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-lg">
-  <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">90 mins</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-lg">
-  <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">250%</div>
-  <div class="sticker-text-sm-multiline">With Orange Money</div>
-</div>
-
-<div class="sticker sticker-lg">
-  <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">90 mins</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-lg">
-  <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">250%</div>
-  <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 {{< /example >}}
 
-## Small stickers
-
 {{< example >}}
-
 <div class="sticker sticker-sm">
   <span class="sticker-text-xl">New</span>
-</div>
-
-<div class="sticker sticker-sm justify-content-center">
-  <svg class="sticker-icon-lg"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#5G"></use></svg>
-</div>
-
-<div class="sticker sticker-sm">
-  <span class="sticker-text-md-multiline">Free delivery</span>
-</div>
-
-<div class="sticker sticker-sm">
-  <svg class="sticker-icon"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delivery"></use></svg>
-  <span class="sticker-text-md-multiline">Free delivery</span>
-</div>
-
-<div class="sticker sticker-sm">
-  <span class="sticker-text-xl">39,99€</span>
-  <span class="sticker-text-sm">Per month</span>
-</div>
-
-<div class="sticker sticker-sm">
-  <div class="sticker-text-md text-decoration-line-through">69,99€</div>
-  <div class="sticker-text-xl">39,99€</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-sm">
-  <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">90 mins</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-sm">
-  <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">250%</div>
-  <div class="sticker-text-sm-multiline">With Orange Money</div>
-</div>
-
-<div class="sticker sticker-sm">
-  <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">90 mins</div>
-  <div class="sticker-text-sm">Per month</div>
-</div>
-
-<div class="sticker sticker-sm">
-  <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">250%</div>
-  <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 {{< /example >}}
 

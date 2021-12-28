@@ -77,6 +77,8 @@
   examples:
     - name: Cards
       description: "List of all card variants (content and design)."
+    - name: Stickers
+      description: "List of all sticker variants."
 
 # - category: RTL
 #   description: "See Boosted's RTL version in action with these modified Custom Components examples."
