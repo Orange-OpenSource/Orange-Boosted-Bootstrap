@@ -44,6 +44,7 @@ Several Boosted components include embedded SVGs in our CSS to style components 
 - [Breadcrumb]({{< docsref "/components/breadcrumb" >}}) <!-- Boosted mod -->
 - [Close button]({{< docsref "/components/close-button" >}}) (used in alerts and modals)
 - [Form checkboxes and radio buttons]({{< docsref "/forms/checks-radios" >}})
+- [Form star rating]({{< docsref "/forms/checks-radios#star-rating" >}}) <!-- Boosted mod -->
 - [Form switches]({{< docsref "/forms/checks-radios#switches" >}})
 - [Form validation icons]({{< docsref "/forms/validation#server-side" >}})
 - [Select menus]({{< docsref "/forms/select" >}})

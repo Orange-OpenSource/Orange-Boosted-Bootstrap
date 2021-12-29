@@ -307,14 +307,15 @@ Drop borders using `.btn-no-outline`, too.
 </div>
 {{< /example >}}
 
+<!-- End mod -->
+
 <!-- Boosted mod: star rating -->
 
 ## Star rating
 
-Here is an example for star rating. Simply add `.star-rating` to a `<fieldset>`, then copy the following pattern into the tags in order to have a complete star rating system. Change the `xlink:href` value to get the svg you want. You can also add as much stars as you want. The default star size is 25px (based on default font-size = 16px).
+Star rating system is built on top of radios. Simply add `.star-rating` to a `<fieldset>` element to use predefined glyphs and compose your star rating system with as much stars as needed.
 
 {{< example >}}
-<form>
 <fieldset class="star-rating">
   <legend class="visually-hidden">Results relevance</legend>
 
@@ -333,10 +334,9 @@ Here is an example for star rating. Simply add `.star-rating` to a `<fieldset>`,
   <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden" checked="" />
   <label for="excellent" title="Excellent"></label>
 </fieldset>
-</form>
 {{< /example >}}
 
-You can reduce the size of stars to 20px (also based on default font-size) by adding `.star-rating-sm`.
+Star ratings come with a smaller variant: `.star-rating-sm`.
 
 {{< example >}}
 <form>
@@ -361,7 +361,7 @@ You can reduce the size of stars to 20px (also based on default font-size) by ad
 </form>
 {{< /example >}}
 
-Here is the dark version of the component. Just add `.star-rating-dark`.
+Star ratings come with a dark background variant: `.star-rating-dark`.
 
 {{< example class="bg-dark" >}}
 <form>
@@ -386,7 +386,7 @@ Here is the dark version of the component. Just add `.star-rating-dark`.
 </form>
 {{< /example >}}
 
-To rate outside a form, for example in a card to rate a product, add the booleans `disabled` on the fieldset and `checked` to the input you want to be selected.
+Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 
 {{< example >}}
 <fieldset class="star-rating" disabled>
@@ -415,3 +415,7 @@ To rate outside a form, for example in a card to rate a product, add the boolean
 ### Variables
 
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}
+
+### Mixin
+
+{{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_forms.scss" >}}
