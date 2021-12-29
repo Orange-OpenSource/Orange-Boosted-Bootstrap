@@ -73,7 +73,7 @@
     }
   }
 
-  .sticker-text-md-multiline {
+  .sticker-text-xl-multiline {
     position: relative;
     top: 63px;
     max-width: $sticker-text-multiline-max-width-md;
@@ -115,7 +115,7 @@
     width: $sticker-icon-size-md;
     height: $sticker-icon-size-md;
 
-    & ~ .sticker-text-md-multiline {
+    & ~ .sticker-text-xl-multiline {
       top: 39px;
     }
   }
@@ -181,7 +181,7 @@
       }
     }
 
-    .sticker-text-md-multiline {
+    .sticker-text-xl-multiline {
       top: 94px;
       max-width: $sticker-text-multiline-max-width-lg;
       font-size: $display3-size;
@@ -202,7 +202,7 @@
       width: $sticker-icon-size-lg;
       height: $sticker-icon-size-lg;
 
-      & ~ .sticker-text-md-multiline {
+      & ~ .sticker-text-xl-multiline {
         top: 52px;
       }
     }
@@ -284,7 +284,7 @@
       }
     }
 
-    .sticker-text-md-multiline {
+    .sticker-text-xl-multiline {
       top: 47px;
       max-width: $sticker-text-multiline-max-width-sm;
       font-size: $h4-font-size;
@@ -305,7 +305,7 @@
       width: $sticker-icon-size-sm;
       height: $sticker-icon-size-sm;
 
-      & ~ .sticker-text-md-multiline {
+      & ~ .sticker-text-xl-multiline {
         top: 23px;
       }
     }
