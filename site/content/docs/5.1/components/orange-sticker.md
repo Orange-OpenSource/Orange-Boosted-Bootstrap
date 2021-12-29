@@ -59,15 +59,15 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 {{< example >}}
 <div class="sticker">
   <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">90 mins</div>
+  <div class="sticker-text-xl">90mins</div>
   <div class="sticker-text-sm">Per month</div>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <div class="sticker">
-  <div class="sticker-text-sm">Bonus</div>
-  <div class="sticker-text-xl">250%</div>
+  <div class="sticker-text-sm sticker-text-offset">Bonus</div>
+  <div class="sticker-text-xl sticker-text-offset">250%</div>
   <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 {{< /example >}}
@@ -75,15 +75,15 @@ Stickers have their own relative sizes with `rem` units. They also have their ow
 {{< example >}}
 <div class="sticker">
   <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">90 mins</div>
+  <div class="sticker-text-xl">90mins</div>
   <div class="sticker-text-sm">Per month</div>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <div class="sticker">
-  <div class="sticker-text-symbol">+</div>
-  <div class="sticker-text-xl">250%</div>
+  <div class="sticker-text-symbol sticker-text-offset">+</div>
+  <div class="sticker-text-xl sticker-text-offset">250%</div>
   <div class="sticker-text-sm-multiline">With Orange Money</div>
 </div>
 {{< /example >}}

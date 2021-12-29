@@ -33,27 +33,35 @@
     top: 63px;
 
     &:only-child {
-      top: 68px;
+      top: 69px;
     }
 
     & ~ .sticker-text-sm {
-      top: 70px;
+      top: 69px;
     }
   }
 
   .sticker-text-symbol {
     top: 25px;
 
+    &.sticker-text-offset {
+      top: 20px;
+    }
+
     & ~ .sticker-text-xl {
-      top: 24px;
+      top: 25px;
+
+      &.sticker-text-offset {
+        top: 20px;
+      }
     }
 
     & ~ .sticker-text-sm-multiline {
-      top: 30px;
+      top: 25px;
     }
 
     & ~ .sticker-text-sm {
-      top: 27px;
+      top: 30px;
     }
   }
 
@@ -69,7 +77,7 @@
     }
 
     & ~ .sticker-text-sm {
-      top: 48px;
+      top: 49px;
     }
   }
 
@@ -90,8 +98,16 @@
     line-height: $h6-line-height;
     letter-spacing: $h6-spacing;
 
+    &.sticker-text-offset {
+      top: 35px;
+    }
+
     & ~ .sticker-text-xl {
-      top: 46px;
+      top: 47px;
+
+      &.sticker-text-offset {
+        top: 42px;
+      }
     }
 
     & ~ .sticker-text-sm {
@@ -116,7 +132,7 @@
     height: $sticker-icon-size-md;
 
     & ~ .sticker-text-xl-multiline {
-      top: 39px;
+      top: 38px;
     }
   }
 
@@ -142,42 +158,58 @@
       top: 102px;
 
       &:only-child {
-        top: 106px;
+        top: 108px;
       }
 
       & ~ .sticker-text-sm {
-        top: 112px;
+        top: 107px;
       }
     }
 
     .sticker-text-symbol {
-      top: 38px;
+      top: 43px;
+
+      &.sticker-text-offset {
+        top: 38px;
+      }
 
       & ~ .sticker-text-xl {
-        top: 39px;
+        top: 44px;
+
+        &.sticker-text-offset { // stylelint-disable-line selector-max-class
+          top: 38px;
+        }
       }
 
       & ~ .sticker-text-sm-multiline {
-        top: 44px;
+        top: 43px;
       }
 
       & ~ .sticker-text-sm {
-        top: 44px;
+        top: 49px;
       }
     }
 
     .sticker-text-sm {
-      top: 67px;
+      top: 68px;
       font-size: $h3-font-size;
       line-height: $h3-line-height;
       letter-spacing: $h3-spacing;
 
+      &.sticker-text-offset {
+        top: 63px;
+      }
+
       & ~ .sticker-text-xl {
-        top: 75px;
+        top: 77px;
+
+        &.sticker-text-offset { // stylelint-disable-line selector-max-class
+          top: 72px;
+        }
       }
 
       & ~ .sticker-text-sm {
-        top: 81px;
+        top: 82px;
       }
     }
 
@@ -190,7 +222,7 @@
     }
 
     .sticker-text-sm-multiline {
-      top: 78px;
+      top: 77px;
       max-width: $sticker-text-multiline-max-width-lg;
       font-size: $h3-font-size;
       line-height: $h3-line-height;
@@ -213,17 +245,17 @@
     }
 
     .sticker-text-md {
-      top: 69px;
+      top: 70px;
       font-size: $display4-size;
       line-height: $display-line-height;
       letter-spacing: $display4-spacing;
 
       & ~ .sticker-text-xl {
-        top: 72px;
+        top: 74px;
       }
 
       & ~ .sticker-text-sm {
-        top: 78px;
+        top: 79px;
       }
     }
   }
@@ -256,16 +288,24 @@
     .sticker-text-symbol {
       top: 18px;
 
+      &.sticker-text-offset {
+        top: 14px;
+      }
+
       & ~ .sticker-text-xl {
         top: 16px;
+
+        &.sticker-text-offset { // stylelint-disable-line selector-max-class
+          top: 11px;
+        }
       }
 
       & ~ .sticker-text-sm-multiline {
-        top: 12px;
+        top: 11px;
       }
 
       & ~ .sticker-text-sm {
-        top: 17px;
+        top: 16px;
       }
     }
 
@@ -275,8 +315,16 @@
       line-height: $h6-line-height;
       letter-spacing: $h6-spacing;
 
+      &.sticker-text-offset {
+        top: 25px;
+      }
+
       & ~ .sticker-text-xl {
         top: 35px;
+
+        &.sticker-text-offset { // stylelint-disable-line selector-max-class
+          top: 30px;
+        }
       }
 
       & ~ .sticker-text-sm {
@@ -285,7 +333,7 @@
     }
 
     .sticker-text-xl-multiline {
-      top: 47px;
+      top: 46px;
       max-width: $sticker-text-multiline-max-width-sm;
       font-size: $h4-font-size;
       line-height: $h4-line-height;
@@ -306,7 +354,7 @@
       height: $sticker-icon-size-sm;
 
       & ~ .sticker-text-xl-multiline {
-        top: 23px;
+        top: 21px;
       }
     }
 
@@ -322,11 +370,11 @@
       letter-spacing: $h5-spacing;
 
       & ~ .sticker-text-xl {
-        top: 32px;
+        top: 33px;
       }
 
       & ~ .sticker-text-sm {
-        top: 32px;
+        top: 33px;
       }
     }
   }
