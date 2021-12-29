@@ -1,0 +1,93 @@
+.orange-footer {
+  color: $white;
+  background-color: $black;
+
+  h6 {
+    padding: 24px 0 18px;
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 29px;
+
+    @include media-breakpoint-up(md) {
+      gap: 20px;
+      padding-bottom: 39px;
+    }
+
+    > * {
+      width: auto;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    padding: 16px 0 30px;
+    margin: 0;
+    font-weight: $font-weight-bold;
+    list-style: none;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 30px;
+    }
+
+    > :first-child {
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -.1px;
+
+      @include media-breakpoint-up(md) {
+        width: auto;
+        margin: 0 10px 0 0;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 19px 0 21px;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 30px;
+      align-items: center;
+      padding: 25px 0 24px;
+    }
+
+    > :first-child { // Could be simplified with :has in the previous definition, but not very well supported atm https://caniuse.com/?search=%3Ahas.
+      width: auto;
+      margin: 0;
+      font-size: 14px;
+      line-height: 16px;
+
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
+    }
+
+    .nav-link {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 0;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -.1px;
+    }
+  }
+}
