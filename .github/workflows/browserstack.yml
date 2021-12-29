@@ -18,33 +18,23 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: Bail early
-        run: exit 0
-        if: github.actor == 'dependabot[bot]'
-
       - name: Clone repository
         uses: actions/checkout@v2
-        if: "!(github.actor == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: "!(github.actor == 'dependabot[bot]')"
 
       - run: node --version
-        if: "!(github.actor == 'dependabot[bot]')"
       - run: npm --version
-        if: "!(github.actor == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: "!(github.actor == 'dependabot[bot]')"
 
       - name: Run dist
         run: npm run dist
-        if: "!(github.actor == 'dependabot[bot]')"
 
       - name: Run BrowserStack tests
         run: npm run js-test-cloud
@@ -52,4 +42,3 @@ jobs:
           BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
           BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"
           GITHUB_SHA: "${{ github.sha }}"
-        if: "!(github.actor == 'dependabot[bot]')"
