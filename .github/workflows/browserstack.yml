@@ -5,13 +5,7 @@ on:
       - 'js/**'
     branches:
       - main
-      - "!dependabot/**"
-  pull_request:
-    paths:
-      - 'js/**'
-    branches:
-      - main
-      - "!dependabot/**"
+      - v4-dev
   workflow_dispatch:
 
 env:
@@ -21,36 +15,26 @@ env:
 jobs:
   browserstack:
     runs-on: ubuntu-latest
-    if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && (!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]'))
     timeout-minutes: 30
 
     steps:
-      - name: Bail early
-        if: github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v2
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - run: node --version
       - run: npm --version
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Run dist
         run: npm run dist
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Run BrowserStack tests
         run: npm run js-test-cloud
@@ -58,4 +42,3 @@ jobs:
           BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
           BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"
           GITHUB_SHA: "${{ github.sha }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
