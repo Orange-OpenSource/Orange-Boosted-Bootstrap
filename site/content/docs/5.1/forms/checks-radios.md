@@ -424,4 +424,4 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 
 ### Mixin
 
-{{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_forms.scss" >}}
+{{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" >}}
