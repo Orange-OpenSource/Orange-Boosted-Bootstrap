@@ -1,23 +1,14 @@
-name: Tests
+name: Percy
 on:
   push:
     paths:
       - 'js/**'
       - 'scss/**'
-      - 'site/content/docs/**/components'
-      - 'site/content/docs/**/forms'
+      - 'site/content/docs/**/components/**'
+      - 'site/content/docs/**/forms/**'
     branches:
       - main
-      - "!dependabot/**"
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
-    branches:
-      - main
-      - "!dependabot/**"
+      - v4-dev
   workflow_dispatch:
 
 env:
@@ -29,19 +20,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Bail early
-        if: github.event_name == 'pull_request' && ((contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:percy')) || (github.event.pull_request.draft == true))
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v2
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "${{ env.NODE }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -50,19 +35,15 @@ jobs:
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Compile dist
         run: npm run dist
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Build docs
         run: npm run docs-build
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
 
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.2
@@ -72,4 +53,3 @@ jobs:
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))
