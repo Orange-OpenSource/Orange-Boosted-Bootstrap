@@ -336,6 +336,8 @@ Star rating system is built on top of radios. Simply add `.star-rating` to a `<f
 </fieldset>
 {{< /example >}}
 
+### Sizes
+
 Star ratings come with a smaller variant: `.star-rating-sm`.
 
 {{< example >}}
@@ -361,6 +363,8 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 </form>
 {{< /example >}}
 
+### Dark background
+
 Star ratings come with a dark background variant: `.star-rating-dark`.
 
 {{< example class="bg-dark" >}}
@@ -385,6 +389,8 @@ Star ratings come with a dark background variant: `.star-rating-dark`.
 </fieldset>
 </form>
 {{< /example >}}
+
+### Disabled
 
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 

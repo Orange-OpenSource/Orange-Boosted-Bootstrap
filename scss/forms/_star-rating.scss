@@ -1,11 +1,16 @@
-// Boosted mod
+//
+// Star rating
+//
+
 .star-rating {
   &:focus-within {
     outline: $black solid .125rem;
   }
+
   &[disabled] {
     pointer-events: none;
   }
+
   > label {
     display: block;
     float: left;
@@ -13,27 +18,33 @@
     height: 1em;
     font-size: $form-star-size;
     cursor: pointer;
-
     @include form-star-rating($accessible-orange);
   }
+
   > input:checked ~ label {
     @include form-star-rating($gray-500);
   }
+
   > input:checked + label {
     @include form-star-rating($accessible-orange);
   }
+
   > input:focus ~ label {
     @include form-star-rating($gray-500);
   }
+
   > input:focus + label {
     @include form-star-rating($accessible-orange);
   }
+
   &:hover input + label {
     @include form-star-rating($black);
   }
+
   > input:hover ~ label {
     @include form-star-rating($gray-500);
   }
+
   > input:hover + label {
     @include form-star-rating($black);
   }
@@ -43,27 +54,35 @@
   &:focus-within {
     outline: $white solid .125rem;
   }
+
   > label {
     @include form-star-rating($brand-orange);
   }
+
   > input:checked ~ label {
     @include form-star-rating($gray-700);
   }
+
   > input:checked + label {
     @include form-star-rating($brand-orange);
   }
+
   > input:focus ~ label {
     @include form-star-rating($gray-700);
   }
+
   > input:focus + label {
     @include form-star-rating($brand-orange);
   }
+
   &:hover input + label {
     @include form-star-rating($white);
   }
+
   > input:hover ~ label {
     @include form-star-rating($gray-700);
   }
+
   > input:hover + label {
     @include form-star-rating($white);
   }
@@ -72,4 +91,3 @@
 .star-rating-sm > label {
   font-size: $form-star-size-sm;
 }
-// End mod
