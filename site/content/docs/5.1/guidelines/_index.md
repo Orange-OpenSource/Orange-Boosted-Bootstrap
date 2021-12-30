@@ -1,5 +1,5 @@
 ---
-layout: guidelines
+layout: single
 title: Orange Design System for web
 description: Streamline your workflow and improve experience consistency with this cross-platform, scalable and inspiring design system. Designers, developers, marketers and partners, start your digital creations from the ready-to-use resources here!
 aliases: "/guidelines/"
