@@ -130,6 +130,10 @@
   &.disabled {
     color: $gray-500;
   }
+
+  &.btn-inverse:not(:active) {
+    color: $white;
+  }
 }
 // End mod
 
