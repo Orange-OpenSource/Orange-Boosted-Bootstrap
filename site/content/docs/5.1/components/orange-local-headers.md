@@ -152,7 +152,7 @@ The background image based title bar requires some extra css that you can see on
 {{< example class="p-0">}}
 <div class="bg-supporting-blue title-bar">
   <div class="container">
-    <h1>Background-image</h1>
+    <h1>Title</h1>
     <div class="col m-0 example-title-bar-custom-background"></div>
   </div>
 </div>
