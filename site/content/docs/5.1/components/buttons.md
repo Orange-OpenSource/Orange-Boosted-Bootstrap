@@ -127,7 +127,7 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark background
 
-To get the inversed button behavior, simply add `.btn-inverse` to a `<button>` or `<a>`.
+To get the inverted button behavior, simply add `.btn-inverse` to a `<button>` or `<a>`.
 
 {{< example class="bg-dark" >}}
 {{< buttons.inline >}}
