@@ -1,0 +1,11 @@
+@each $key-archi, $value-archi in $sticker-architectures {
+  .sticker-#{$key-archi} {
+    @include sticker-init($value-archi);
+  }
+}
+
+@each $key-size, $value-size in $sticker-sizes {
+  .sticker-#{$key-size} {
+    @include sticker-init-size($value-size);
+  }
+}
