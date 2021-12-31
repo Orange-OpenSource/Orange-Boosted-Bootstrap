@@ -14,6 +14,23 @@
   background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
+  // Boosted mod: dark background
+  .bg-dark &:not(.dropdown-toggle-split),
+  .navbar-dark &:not(.dropdown-toggle-split) {
+    color: $dropdown-bg;
+    background-color: $dropdown-color;
+    border-color: $gray-700;
+
+    &:hover {
+      border-color: $dropdown-link-hover-color;
+    }
+  }
+
+  .btn-group &:not(.btn-inverse) {
+    border-color: $dropdown-color;
+  }
+  // End mod
+
   // Generate the caret automatically
   @include caret();
 }

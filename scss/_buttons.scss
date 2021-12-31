@@ -72,24 +72,39 @@
 .btn-primary,
 .btn-warning {
   @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
+  &.btn-inverse {
+    @include button-variant($primary, $primary, $white, $white, $black, $white, $gray-700, $gray-700, $black);
+  }
 }
 
 .btn-light,
 .btn-secondary {
   @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+  &.btn-inverse {
+    @include button-variant($black, $white, $white, $white, $primary, $primary, transparent, $gray-700, $gray-700);
+  }
 }
 
 .btn-success {
   @include button-variant($success, $success);
+  &.btn-inverse {
+    @include button-variant($success, $success, $white, $white, $primary, $primary, $gray-700, $gray-700, $black);
+  }
 }
 
 .btn-info,
 .btn-dark {
   @include button-variant($black, $black, $white, $white, $black, $black);
+  &.btn-inverse {
+    @include button-variant($white, $white, $black, $white, $primary, $primary, $gray-700, $gray-700, $black);
+  }
 }
 
 .btn-danger {
   @include button-variant($danger, $danger);
+  &.btn-inverse {
+    @include button-variant($danger, $danger, $white, $white, $primary, $primary, $gray-700, $gray-700, $black);
+  }
 }
 // scss-docs-end btn-variant-loops
 // End mod
@@ -127,8 +142,14 @@
 .btn-link {
   color: $btn-link-color;
   text-decoration: $link-decoration;
+  // Boosted mod
   // stylelint-disable-next-line declaration-no-important
-  border-color: transparent !important; // Boosted mod
+  border-color: transparent !important;
+
+  &.btn-inverse {
+    color: $white;
+  }
+  // End mod
 
   &:hover {
     color: $btn-link-hover-color;
@@ -161,14 +182,14 @@
 }
 
 
-//
 // Boosted mod: icon button
-//
 .btn-icon {
   padding-right: var(--#{$boosted-variable-prefix}icon-spacing);
   padding-left: var(--#{$boosted-variable-prefix}icon-spacing);
 }
+// End mod
 
+// Boosted mod: social button
 .btn-social {
   border-color: currentColor;
   @include border-radius(50%, 50%);
@@ -201,6 +222,15 @@
     --#{$boosted-variable-prefix}network-color: #{map-get($network, "color")};
     --#{$boosted-variable-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
 
+    &.btn-inverse {
+      color: $white;
+
+      &:active {
+        color: $black;
+        background-color: $white;
+      }
+    }
+
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
 
@@ -210,3 +240,4 @@
     }
   }
 }
+// End mod
