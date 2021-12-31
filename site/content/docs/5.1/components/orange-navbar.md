@@ -363,7 +363,10 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 Add the `.header-minimized` on your navbar in order to have a thinner Orange Navbar.
 
 {{< callout warning >}}
-The minimized global header will **always** use the small [Master logo]({{< docsref "guidelines/logos#orange-logo" >}}).
+
+<!-- TODO: replace /guidelines/logos#orange-logo reference -->
+
+The minimized global header will **always** use the small [Master logo]().
 {{< /callout >}}
 
 {{< example class="p-0">}}
@@ -646,9 +649,13 @@ You can have a search input into your Global Header. This one will appear differ
 Instead of using the Master Logo that is provided by Boosted, you can also use whatever logo you want depending on your project, entity, ...
 
 {{< callout warning >}}
-You should consider having a **responsive SVG logo**. In order to do so, you may set up a responsive rendering into your SVG, [as we do with the Master Logo]({{< docsref "/guidelines/logos#responsive-svg" >}}).
+<!-- TODO: replace /guidelines/logos#responsive-svg reference -->
 
-If you do not intend to use your own SVG, you should explore the [DOM solution]({{< docsref "/guidelines/logos#using-semantic-markup" >}}) and therefore do as if you had a [title on one or two lines]({{< ref "#global-header-with-title" >}}).
+You should consider having a **responsive SVG logo**. In order to do so, you may set up a responsive rendering into your SVG, [as we do with the Master Logo]().
+
+<!-- TODO: replace /guidelines/logos#using-semantic-markup reference -->
+
+If you do not intend to use your own SVG, you should explore the [DOM solution]() and therefore do as if you had a [title on one or two lines]({{< ref "#global-header-with-title" >}}).
 
 The latter may be the preferred way to do a custom logo, still, as it's *really* not recommended to use anything other than the Master logo.
 {{< /callout >}}
