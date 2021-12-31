@@ -81,7 +81,7 @@
 .btn-secondary {
   @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
   &.btn-inverse {
-    @include button-variant($black, $white, $white, $white, $black, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700);
+    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700);
   }
 }
 
