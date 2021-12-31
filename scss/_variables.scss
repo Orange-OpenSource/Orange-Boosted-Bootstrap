@@ -1996,4 +1996,48 @@ $quantity-selector-icon-sm-remove-height: .125rem !default;
 $quantity-selector-input-max-width:       2.625rem !default;
 $quantity-selector-input-sm-max-width:    2.5rem !default;
 // scss-docs-end quantity-selector
+
+//// Orange footer
+// scss-docs-start orange-footer
+$footer-orange-font-size-sm:                        $font-size-sm !default;
+$footer-orange-line-height-sm:                      $line-height-sm !default;
+$footer-orange-font-size-md:                        $font-size-base !default;
+$footer-orange-line-height-md:                      $line-height-base !default;
+$footer-orange-letter-spacing:                      $letter-spacing-base !default;
+
+$footer-orange-mailing-padding-top:                 1.5rem !default;
+$footer-orange-mailing-padding-bottom:              1.8125rem !default;
+$footer-orange-mailing-padding-bottom-md:           2.4375rem !default;
+$footer-orange-mailing-title-margin-bottom:         1.125rem !default;
+
+$footer-orange-social-padding-top:                  1rem !default;
+$footer-orange-social-padding-bottom:               1.8125rem !default;
+$footer-orange-social-padding-top-md:               1.875rem !default;
+$footer-orange-social-margin-first-child:           0 0 .5rem !default;
+$footer-orange-social-margin-first-child-md:        0 .6875rem .25rem 0 !default; // .25 is here to well align the first child
+
+$footer-orange-nav-margin-top:                      1.875rem !default;
+$footer-orange-nav-list-padding:                    .0625rem 0 2.25rem !default;
+$footer-orange-nav-list-padding-md:                 .0625rem 0 2.5625rem !default;
+$footer-orange-nav-accordion-header-padding-top:    1rem !default;
+$footer-orange-nav-accordion-header-padding-bottom: 1.0625rem !default;
+$footer-orange-nav-accordion-collapse-padding:      .0625rem 0 1.625rem !default;
+
+$footer-orange-service-padding-top:                 1.1875rem !default;
+$footer-orange-service-padding-bottom:              1.25rem !default;
+$footer-orange-service-padding-top-md:              1.5625rem !default;
+$footer-orange-service-padding-bottom-md:           1.5rem !default;
+
+$footer-orange-terms-padding-top:                   1rem !default;
+$footer-orange-terms-padding-bottom:                1.75rem !default;
+$footer-orange-terms-padding-top-md:                1.3125rem !default;
+$footer-orange-terms-padding-bottom-md:             1.4375rem !default;
+
+$footer-orange-gap-xs:                              map-get($spacers, 1) !default;
+$footer-orange-gap-sm:                              map-get($spacers, 2) !default;
+$footer-orange-gap-md:                              map-get($spacers, 3) !default;
+$footer-orange-gap:                                 $spacer * .75 !default;
+$footer-orange-gap-lg:                              map-get($spacers, 4) !default;
+$footer-orange-gap-xl:                              $spacer * 1.7 !default;
+// scss-docs-end orange-footer
 // End mod

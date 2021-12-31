@@ -1,17 +1,21 @@
 .footer-mailing {
+  padding-top: $footer-orange-mailing-padding-top;
+  padding-bottom: $footer-orange-mailing-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: $footer-orange-mailing-padding-bottom-md;
+  }
+
   h6 {
-    padding: 24px 0 18px;
-    margin: 0;
+    margin-bottom: $footer-orange-mailing-title-margin-bottom;
   }
 
   form {
     display: flex;
-    gap: 10px;
-    padding-bottom: 29px;
+    gap: $footer-orange-gap-sm;
 
     @include media-breakpoint-up(md) {
-      gap: 20px;
-      padding-bottom: 39px;
+      gap: $footer-orange-gap-md;
     }
 
     > * {
@@ -20,37 +24,37 @@
   }
 }
 
-.footer-follow {
+.footer-social {
+  padding-top: $footer-orange-social-padding-top;
+  padding-bottom: $footer-orange-social-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $footer-orange-social-padding-top-md;
+  }
+
   ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: $footer-orange-gap-sm;
     align-items: center;
-    padding: 16px 0 30px;
+    padding: 0;
     margin: 0;
-    font-size: 14px;
-    font-weight: $font-weight-bold;
-    line-height: 16px;
-    letter-spacing: -.1px;
     list-style: none;
-
-    @include media-breakpoint-up(md) {
-      padding-top: 30px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 16px;
-      line-height: 18px;
-    }
 
     > :first-child {
       width: 100%;
-      margin-bottom: 8px;
+      margin: $footer-orange-social-margin-first-child;
+      font-size: $footer-orange-font-size-sm;
+      font-weight: $font-weight-bold;
+      line-height: $footer-orange-line-height-sm;
+      letter-spacing: $footer-orange-letter-spacing;
 
       @include media-breakpoint-up(md) {
         width: auto;
-        margin: 0 10px 0 0;
+        margin: $footer-orange-social-margin-first-child-md;
+        font-size: $footer-orange-font-size-md;
+        line-height: $footer-orange-line-height-md;
       }
     }
   }
@@ -58,18 +62,18 @@
 
 .footer-nav {
   h6 {
-    padding-top: 30px;
+    padding-top: $footer-orange-nav-margin-top;
   }
 
   .navbar-nav {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: $footer-orange-gap;
     align-items: flex-start;
-    padding: 1px 0 36px;
+    padding: $footer-orange-nav-list-padding;
 
     @include media-breakpoint-up(lg) {
-      padding-bottom: 41px;
+      padding: $footer-orange-nav-list-padding-md;
     }
 
     .nav-link {
@@ -79,18 +83,18 @@
 
   .accordion {
     .accordion-header {
-      padding-top: 16px;
-      padding-bottom: 17px;
+      padding-top: $footer-orange-nav-accordion-header-padding-top;
+      padding-bottom: $footer-orange-nav-accordion-header-padding-bottom;
       border: 0;
 
       .accordion-button {
         width: 100%;
         padding: 0;
         margin: 0;
-        font-size: 14px;
-        line-height: 16px;
+        font-size: $footer-orange-font-size-sm;
+        line-height: $footer-orange-line-height-sm;
         color: $white;
-        letter-spacing: -.1px;
+        letter-spacing: $footer-orange-letter-spacing;
         background-color: $black;
 
         &::after {
@@ -106,32 +110,45 @@
         }
       }
     }
+
+    .navbar-nav {
+      padding: $footer-orange-nav-accordion-collapse-padding;
+      font-size: $footer-orange-font-size-sm;
+      line-height: $footer-orange-line-height-sm;
+      letter-spacing: $footer-orange-letter-spacing;
+    }
   }
 }
 
 .footer-service {
+  padding-top: $footer-orange-service-padding-top;
+  padding-bottom: $footer-orange-service-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $footer-orange-service-padding-top-md;
+    padding-bottom: $footer-orange-service-padding-bottom-md;
+  }
+
   .navbar-nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: $footer-orange-gap-md;
     align-items: flex-start;
-    padding: 19px 0 20px;
     margin: 0;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: -.1px;
+    font-size: $footer-orange-font-size-sm;
+    line-height: $footer-orange-line-height-sm;
+    letter-spacing: $footer-orange-letter-spacing;
 
     @include media-breakpoint-up(md) {
       flex-direction: row;
-      gap: 30px;
+      gap: $footer-orange-gap-lg;
       align-items: center;
-      padding: 25px 0 24px;
     }
 
     .nav-link {
       display: flex;
-      gap: 5px;
+      gap: $footer-orange-gap-xs;
       align-items: center;
       padding: 0;
     }
@@ -139,24 +156,30 @@
 }
 
 .footer-terms {
+  padding-top: $footer-orange-terms-padding-top;
+  padding-bottom: $footer-orange-terms-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $footer-orange-terms-padding-top-md;
+    padding-bottom: $footer-orange-terms-padding-bottom-md;
+  }
+
   .navbar-nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 34px;
+    gap: $footer-orange-gap-xl;
     align-items: flex-start;
-    padding: 16px 0 28px;
     margin: 0;
-    font-size: 14px;
+    font-size: $footer-orange-font-size-sm;
     font-weight: $font-weight-bold;
-    line-height: 16px;
-    letter-spacing: -.1px;
+    line-height: $footer-orange-line-height-sm;
+    letter-spacing: $footer-orange-letter-spacing;
 
     @include media-breakpoint-up(md) {
       flex-direction: row;
-      gap: 20px;
+      gap: $footer-orange-gap-md;
       align-items: center;
-      padding: 21px 0 22px;
     }
 
     .nav-link {
