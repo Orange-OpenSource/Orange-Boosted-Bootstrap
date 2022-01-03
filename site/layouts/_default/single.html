@@ -2,14 +2,10 @@
   <!-- Boosted mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
 
   <!-- Boosted mod: Orange rendering that handles "Guidelines" page as well -->
-  <main class="bd-content order-1 py-3 py-md-5 py-lg-3" id="content">
-    <div class="mb-4 border-bottom border-light">
-      <div class="container-xxl pt-md-1">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
-          </div>
-        </div>
+  <main class="bd-content order-1" id="content">
+    <div class="bg-white title-bar">
+      <div class="container-xxl">
+        <h1>{{ .Title | markdownify }}</h1>
       </div>
     </div>
     <div class="pb-4 pb-md-2">
