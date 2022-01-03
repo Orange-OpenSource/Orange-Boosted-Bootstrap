@@ -38,7 +38,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
       <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">Whatsapp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
@@ -213,7 +213,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
 
 ## Parts
 
-The orange footer parts are independent from each other. Just add the following code between each part.
+Orange footer parts are independent from each other. Just add a dark separator between each part.
 
 ```html
 <div class="border-bottom border-1 border-dark"></div>
@@ -221,7 +221,7 @@ The orange footer parts are independent from each other. Just add the following 
 
 ### Mailing list bar
 
-Footers come with a mailing list sub-component: `.footer-mailing`.
+Orange footer comes with a mailing list sub-component: `.footer-mailing`.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
@@ -239,7 +239,7 @@ Footers come with a mailing list sub-component: `.footer-mailing`.
 
 ### Social media bar
 
-Footers come with a social media sub-component: `.footer-social`.
+Orange footer comes with a social media sub-component: `.footer-social`.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
@@ -250,7 +250,7 @@ Footers come with a social media sub-component: `.footer-social`.
       <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
-      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">Whatsapp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
@@ -263,9 +263,11 @@ Footers come with a social media sub-component: `.footer-social`.
 
 ### Navigation bar
 
-Footers come with a navigation sub-component: `.footer-nav`.
+Orange footer comes with a navigation sub-component: `.footer-nav`.
 
-{{< callout warning >}}This sub-component need our Collapse JavaScript plugin to work well.{{< /callout >}}
+{{< callout warning >}}
+This sub-component needs our Collapse JavaScript plugin to work well.
+{{< /callout >}}
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
@@ -409,7 +411,7 @@ Footers come with a navigation sub-component: `.footer-nav`.
 
 ### Service bar
 
-Footers come with a service links sub-component: `.footer-service`.
+Orange Footer comes with a service links sub-component: `.footer-service`.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
@@ -427,7 +429,7 @@ Footers come with a service links sub-component: `.footer-service`.
 
 ### Mandatory bar
 
-Footers come with a terms & conditions sub-component: `.footer-terms`. This sub-component is mandatory.
+Orange Footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component is mandatory.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
