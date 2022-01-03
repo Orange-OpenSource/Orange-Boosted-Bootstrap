@@ -66,6 +66,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Modals for displaying, positioning, and scroll behavior
 - Navbar for extending our Collapse plugin to implement responsive behavior
 - Offcanvases for displaying, positioning, and scroll behavior
+- Orange footer for extending our Collapse plugin to implement responsive behavior
 - Orange navbar for minimizing the header
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
