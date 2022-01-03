@@ -9,31 +9,15 @@ toc: true
 
 ## How it works
 
-Orange footer is based on the `<footer>` tag with a `.bg-dark` class. Then, the orange footer can be composed of several parts, you may refer to documentation in order to properly create and use footers :
-- A mailing list bar
-- A social media bar
-- A navigation bar
-- A service bar
-- A **mandatory** bar
+Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be composed of several parts:
+- mailing list bar
+- social media bar
+- navigation bar
+- service bar
+- **mandatory** bar
 
 ## Examples
 
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="contact" viewBox="0 0 1000 1000">
-    <path fill="currentColor" fill-rule="evenodd" d="M 825 125 H 100 V 650 a 75 75 0 0 0 75 75 H 275 V 900 L 450 725 H 900 V 200 A 75 75 0 0 0 825 125 Z M 672.059 345.588 H 661.034 C 636.487 260.512 573.648 200 500 200 S 363.513 260.512 338.966 345.588 H 327.941 A 52.942 52.942 0 0 0 275 398.529 v 52.942 a 52.942 52.942 0 0 0 52.941 52.941 h 11.025 C 363.513 589.488 426.352 650 500 650 s 136.487 -60.512 161.034 -145.588 h 11.025 A 52.942 52.942 0 0 0 725 451.471 V 398.529 A 52.942 52.942 0 0 0 672.059 345.588 Z M 622.983 530.882 H 537.438 a 39.707 39.707 0 1 0 0 26.471 h 70.784 q -3.633 5.5 -7.585 10.666 c -13.568 17.743 -29.2 31.583 -46.476 41.136 a 109.226 109.226 0 0 1 -108.322 0 c -17.271 -9.553 -32.908 -23.393 -46.476 -41.136 c -13.97 -18.268 -24.977 -39.661 -32.715 -63.585 a 263.954 263.954 0 0 1 0 -158.868 q 3.219 -9.948 7.188 -19.3 a 18.115 18.115 0 0 1 19.246 -10.826 C 413.6 318.373 450.416 329.608 500 368.876 c 60.075 47.576 123.906 34.466 143.568 23.146 A 268.978 268.978 0 0 1 645.588 425 a 257.715 257.715 0 0 1 -12.236 79.434 A 230.064 230.064 0 0 1 622.983 530.882 Z"></path>
-  </symbol>
-  <symbol id="locate" viewBox="0 0 1000 1000">
-    <path fill="currentColor" fill-rule="evenodd" d="M 775 350 C 775 198.125 651.877 75 500 75 S 225 198.125 225 350 a 273.743 273.743 0 0 0 36.235 136.528 h 0 L 500 925 L 738.769 486.528 h 0 A 273.733 273.733 0 0 0 775 350 Z M 500 550 c -110.457 0 -200 -89.543 -200 -200 s 89.543 -200 200 -200 s 200 89.543 200 200 S 610.457 550 500 550 Z M 623.457 234.342 L 335.14 362.17 l 103.051 30.409 l 15.768 117.692 Z"></path>
-  </symbol>
-  <symbol id="coverage" viewBox="0 0 31 31">
-    <path fill="currentColor" fill-rule="evenodd" d="M 8.25 26.25 h -4.5 v -9 h 4.5 v 9 Z m 6 0 h -4.5 v -13.5 h 4.5 v 13.5 Z m 6 0 h -4.5 v -18 h 4.5 v 18 Z m 6 0 h -4.5 V 3.75 h 4.5 v 22.5 Z"></path>
-  </symbol>
-  <symbol id="protection" viewBox="0 0 1000 1000">
-    <path fill="currentColor" fill-rule="evenodd" d="M 664.923 225.063 c 0 90.608 -73.615 164.062 -164.423 164.062 S 336.077 315.671 336.077 225.063 S 409.692 61 500.5 61 S 664.923 134.454 664.923 225.063 Z M 632.188 376.531 a 201.295 201.295 0 0 1 -263.376 0 A 200.419 200.419 0 0 0 263 553.187 V 699.021 C 263 829.9 369.333 936 500.5 936 S 738 829.9 738 699.021 V 553.187 A 200.419 200.419 0 0 0 632.188 376.531 Z M 516.793 563.4 a 65.557 65.557 0 1 1 -65.556 -65.625 A 65.591 65.591 0 0 1 516.793 563.4 Z m -8.773 66.439 a 87.1 87.1 0 0 1 -112.756 0.7 a 83.527 83.527 0 0 0 -41.634 72.31 v 60.764 a 98.64 98.64 0 1 0 197.279 0 V 702.849 A 83.526 83.526 0 0 0 508.02 629.835 Z"></path>
-  </symbol>
-</svg>
-
-{{< example class="p-0" >}}
 <footer class="bg-dark">
   <!-- Mailing list -->
   <div class="container footer-mailing">
@@ -121,7 +105,6 @@ Orange footer is based on the `<footer>` tag with a `.bg-dark` class. Then, the 
         </ul>
       </div>
     </div>
-    <!-- Dark homemade accordion version -->
     <div class="d-md-none accordion" id="accordionExampleSmall">
       <div class="border-bottom border-1 border-dark">
         <h6 class="container accordion-header" id="headingOneSmall">
@@ -207,10 +190,10 @@ Orange footer is based on the `<footer>` tag with a `.bg-dark` class. Then, the 
   <!-- Service links -->
   <div class="container navbar-dark footer-service">
     <ul class="navbar-nav">
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#locate"/></svg>Locate a store</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#coverage"/></svg>Coverage checker</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#contact"/></svg>Contact us</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#protection"/></svg>Child protection</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg>Locate a store</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg>Coverage checker</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg>Contact us</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg>Child protection</a></li>
     </ul>
   </div>
 
@@ -227,7 +210,6 @@ Orange footer is based on the `<footer>` tag with a `.bg-dark` class. Then, the 
     </ul>
   </div>
 </footer>
-{{< /example >}}
 
 ## Parts
 
@@ -343,7 +325,6 @@ Footers come with a navigation sub-component: `.footer-nav`.
         </ul>
       </div>
     </div>
-    <!-- Dark homemade accordion version -->
     <div class="d-md-none accordion" id="accordionExampleSmall1">
       <div class="border-bottom border-1 border-dark">
         <h6 class="container accordion-header" id="headingOneSmall1">
@@ -435,10 +416,10 @@ Footers come with a service links sub-component: `.footer-service`.
   <!-- Service links -->
   <div class="container navbar-dark footer-service">
     <ul class="navbar-nav">
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#locate"/></svg>Locate a store</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#coverage"/></svg>Coverage checker</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#contact"/></svg>Contact us</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="#protection"/></svg>Child protection</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg>Locate a store</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg>Coverage checker</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg>Contact us</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg>Child protection</a></li>
     </ul>
   </div>
 </footer>
