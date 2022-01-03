@@ -87,7 +87,7 @@ We **strongly recommend** to use `srcset` attribute as it is very well supported
 <div class="bg-supporting-purple title-bar">
   <div class="container">
     <h1>Title</h1>
-    <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="#coverage"/></svg>
+    <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
   </div>
 </div>
 
