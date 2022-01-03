@@ -5,7 +5,7 @@ description: Streamline your workflow and improve experience consistency with th
 aliases: "/guidelines/"
 ---
 
-<div class="ods-guidelines p-4">
+<div class="ods-guidelines p-4 mt-md-2">
   <div class="container">
     <h2 class="h1">Other platforms in the Orange Design System</h2>
     <div class="row pt-3">
