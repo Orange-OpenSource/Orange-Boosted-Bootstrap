@@ -29,17 +29,16 @@ To encourage extensible and predictable toasts, we recommend a header and body. 
 
 Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-     {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+    {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
-    <!-- Boosted mod -->
     <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-        <span class="sr-only">Close</span>
+      <span class="sr-only">Close</span>
     </button>
-    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -47,21 +46,67 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 </div>
 {{< /example >}}
 
+
+### Live
+
+Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default with `.hide`.
+
+<!-- Boosted mod: different close button and orange bg color -->
+<div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+    <div class="toast-header">
+      {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+      <strong class="mr-auto">Boosted</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+</div>
+
+<!-- Boosted mod: different close button and orange bg color -->
+```html
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+    <div class="toast-header">
+      <img src="..." class="mr-2" alt="...">
+      <strong class="mr-auto">Boosted</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+```
+
 ### Translucent
 
-Toasts are slightly translucent, too, so they blend over whatever they might appear over.
+Toasts are slightly translucent to blend in with what's below them.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-     {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+    {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted-dark">11 mins ago</small>
-    <!-- Boosted mod -->
     <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-        <span class="sr-only">Close</span>
+      <span class="sr-only">Close</span>
     </button>
-    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -73,17 +118,16 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
 
 When you have multiple toasts, we default to vertically stacking them in a readable manner.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-     {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+    {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted">just now</small>
-    <!-- Boosted mod -->
     <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-        <span class="sr-only">Close</span>
+      <span class="sr-only">Close</span>
     </button>
-    <!-- end mod -->
   </div>
   <div class="toast-body">
     See? Just like this.
@@ -92,14 +136,12 @@ When you have multiple toasts, we default to vertically stacking them in a reada
 
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-     {{< placeholder width="20" height="20" background="#007aff" class="mr-2" text=" " title=" " >}}
+    {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted">2 seconds ago</small>
-    <!-- Boosted mod -->
     <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
-    <!-- end mod -->
   </div>
   <div class="toast-body">
     Heads up, toasts will stack automatically
@@ -111,18 +153,17 @@ When you have multiple toasts, we default to vertically stacking them in a reada
 
 Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
   <div class="toast" style="position: absolute; top: 0; right: 0;">
     <div class="toast-header">
-       {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+      {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <!-- Boosted mod -->
       <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-          <span class="sr-only">Close</span>
+        <span class="sr-only">Close</span>
       </button>
-      <!-- end mod -->
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -133,6 +174,7 @@ Place toasts with custom CSS as you need them. The top right is often used for n
 
 For systems that generate more notifications, consider using a wrapping element so they can easily stack.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
   <!-- Position it -->
@@ -141,14 +183,12 @@ For systems that generate more notifications, consider using a wrapping element 
     <!-- Then put toasts within -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-         {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+        {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted-dark">just now</small>
-        <!-- Boosted mod -->
         <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-            <span class="sr-only">Close</span>
+          <span class="sr-only">Close</span>
         </button>
-        <!-- end mod -->
       </div>
       <div class="toast-body">
         See? Just like this.
@@ -157,14 +197,12 @@ For systems that generate more notifications, consider using a wrapping element 
 
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-         {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+        {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted-dark">2 seconds ago</small>
-        <!-- Boosted mod -->
         <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-            <span class="sr-only">Close</span>
+          <span class="sr-only">Close</span>
         </button>
-        <!-- end mod -->
       </div>
       <div class="toast-body">
         Heads up, toasts will stack automatically
@@ -176,6 +214,7 @@ For systems that generate more notifications, consider using a wrapping element 
 
 You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="height: 200px;">
@@ -183,14 +222,12 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
   <!-- Then put toasts within -->
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-       {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+      {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <!-- Boosted mod -->
       <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
       </button>
-      <!-- end mod -->
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -201,13 +238,13 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
 
 ## Accessibility
 
-Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
+Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than just announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
 
 Note that the live region needs to be present in the markup *before* the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.
 
 You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
 
-As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
+As the content you're displaying changes, be sure to update the [`delay` timeout](#options) so that users have enough time to read the toast.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
@@ -217,23 +254,24 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 
 When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
 
+<!-- Boosted mod: different close button and orange bg color -->
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
   <div class="toast-header">
-     {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
+    {{< placeholder width="20" height="20" background="#f16e00" class="mr-2" text=" " title=" " >}}
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
-    <!-- Boosted mod -->
     <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
-        <span class="sr-only">Close</span>
+      <span class="sr-only">Close</span>
     </button>
-    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
   </div>
 </div>
 {{< /example >}}
+
+While technically it's possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. Even if you give the toast a long [`delay` timeout](#options), keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don't receive focus when they are displayed). If you absolutely must have further controls, we recommend using a toast with `autohide: false`.
 
 ## JavaScript behavior
 
