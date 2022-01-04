@@ -172,6 +172,44 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 {{< /example >}}
 <!-- End mod -->
 
+### Nested tabs
+
+
+Nav tabs light is nested in a tab for adding a level of depth in information organization.
+
+{{< example >}}
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+<ul class="nav nav-tabs nav-tabs-light mt-0">
+  <li class="nav-item ps-1">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+{{< /example >}}
+
+<!-- End mod -->
+
 ### Pills
 
 Take that same HTML, but use `.nav-pills` instead:
