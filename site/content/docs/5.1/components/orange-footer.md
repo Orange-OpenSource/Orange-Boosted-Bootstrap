@@ -411,7 +411,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
 
 ### Service bar
 
-Orange Footer comes with a service links sub-component: `.footer-service`.
+Orange footer comes with a service links sub-component: `.footer-service`.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
@@ -429,7 +429,7 @@ Orange Footer comes with a service links sub-component: `.footer-service`.
 
 ### Mandatory bar
 
-Orange Footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component is mandatory.
+Orange footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component is mandatory.
 
 {{< example class="p-0" >}}
 <footer class="bg-dark">
