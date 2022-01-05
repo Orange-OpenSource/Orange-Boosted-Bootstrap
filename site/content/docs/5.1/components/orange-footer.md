@@ -25,7 +25,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
     <form>
       <label for="inputEmail2" class="visually-hidden">Email</label>
       <input type="email" class="form-control bg-dark border-dark text-white" id="inputEmail2" placeholder="Enter your email">
-      <button type="submit" class="btn btn-secondary btn-inverse">Sign up</button>
+      <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
     </form>
   </div>
 
@@ -231,7 +231,7 @@ Orange footer comes with a mailing list sub-component: `.footer-mailing`.
     <form>
       <label for="inputEmail1" class="visually-hidden">Email</label>
       <input type="email" class="form-control bg-dark border-dark text-white" id="inputEmail1" placeholder="Enter your email">
-      <button type="submit" class="btn btn-secondary btn-inverse">Sign up</button>
+      <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
     </form>
   </div>
 </footer>

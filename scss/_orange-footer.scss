@@ -18,8 +18,9 @@
       gap: $footer-orange-gap-md;
     }
 
-    > * {
-      width: auto;
+    > input {
+      min-width: $footer-orange-mailing-input-min-width;
+      max-width: $footer-orange-mailing-input-max-width;
     }
   }
 }
