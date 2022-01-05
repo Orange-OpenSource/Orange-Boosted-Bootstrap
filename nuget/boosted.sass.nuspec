@@ -14,7 +14,7 @@
     <projectUrl>https://boosted.orange.com</projectUrl>
     <icon>boosted.png</icon>
     <license type="file">LICENSE.txt</license>
-    <copyright>Copyright 2017-2020</copyright>
+    <copyright>Copyright 2017-2022</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="v4-dev" commit="1d6a593107c8dce82ee997bf6c573941328a0d6d" />
     <dependencies>
