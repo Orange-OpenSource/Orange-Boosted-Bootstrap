@@ -105,7 +105,7 @@ According to the brand, Orange footer has black background and white text color.
   <div class="o-footer-bottom">
     <div class="container-md">
       <ul class="nav flex-column flex-md-row">
-        <li class="nav-item mb-2 mt-1 mr-3 my-md-0 align-self-md-center">© Orange 2020</li>
+        <li class="nav-item mb-2 mt-1 mr-3 my-md-0 align-self-md-center">© Orange {{< year >}}</li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Jobs</a></li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Advertise</a></li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Terms & Conditions</a></li>
