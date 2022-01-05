@@ -52,7 +52,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
   <!-- Navigation -->
   <div class="navbar-dark footer-nav">
     <div class="container d-none d-md-flex">
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -65,7 +65,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -78,7 +78,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -91,7 +91,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -274,7 +274,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
   <!-- Navigation -->
   <div class="navbar-dark footer-nav">
     <div class="container d-none d-md-flex">
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -287,7 +287,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -300,7 +300,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
@@ -313,7 +313,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           <li><a class="nav-link" href="#">Subcategory</a></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-3 me-1">
         <h6>Category</h6>
         <ul class="navbar-nav">
           <li><a class="nav-link" href="#">Subcategory</a></li>
