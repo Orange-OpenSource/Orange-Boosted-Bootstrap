@@ -7,12 +7,6 @@ aliases: "/migration/"
 toc: true
 ---
 
-{{< callout >}}
-**This document is [Bootstrap's migration guide]({{< param bootstrap >}}/docs/{{< param docs_version >}}/migration/).**
-
-We only replaced `Bootstrap` with `Boosted`—especially in code examples and file names. Some changes mentioned here might not concern Boosted itself.
-{{< /callout >}}
-
 ## v5.2.0
 
 <hr class="mb-4">
@@ -357,8 +351,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
 
-- Replaced chevron icons for carousel controls with new SVGs from
-[Solaris]({{< docsref "/extend/icons" >}}).
+- Replaced chevron icons for carousel controls with new SVGs from [Solaris]({{< docsref "/extend/icons" >}}).
 
 ### Close button
 
@@ -409,6 +402,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ### Offcanvas
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
+
+### Orange footer
+
+- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with subcomponents. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/orange-footer" >}}).
 
 ### Orange navbar
 

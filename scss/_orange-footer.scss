@@ -6,8 +6,10 @@
     padding-bottom: $footer-orange-mailing-padding-bottom-md;
   }
 
-  h6 {
+  h3 {
     margin-bottom: $footer-orange-mailing-title-margin-bottom;
+    font-size: $footer-orange-font-size-md;
+    line-height: $footer-orange-line-height-md;
   }
 
   form {
@@ -26,11 +28,30 @@
 }
 
 .footer-social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-top: $footer-orange-social-padding-top;
   padding-bottom: $footer-orange-social-padding-bottom;
 
   @include media-breakpoint-up(md) {
     padding-top: $footer-orange-social-padding-top-md;
+  }
+
+  > h3 {
+    width: 100%;
+    margin: $footer-orange-social-title-margin;
+    font-size: $footer-orange-font-size-sm;
+    font-weight: $font-weight-bold;
+    line-height: $footer-orange-line-height-sm;
+    letter-spacing: $footer-orange-letter-spacing;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+      margin: $footer-orange-social-title-margin-md;
+      font-size: $footer-orange-font-size-md;
+      line-height: $footer-orange-line-height-md;
+    }
   }
 
   ul {
@@ -42,28 +63,14 @@
     padding: 0;
     margin: 0;
     list-style: none;
-
-    > :first-child {
-      width: 100%;
-      margin: $footer-orange-social-margin-first-child;
-      font-size: $footer-orange-font-size-sm;
-      font-weight: $font-weight-bold;
-      line-height: $footer-orange-line-height-sm;
-      letter-spacing: $footer-orange-letter-spacing;
-
-      @include media-breakpoint-up(md) {
-        width: auto;
-        margin: $footer-orange-social-margin-first-child-md;
-        font-size: $footer-orange-font-size-md;
-        line-height: $footer-orange-line-height-md;
-      }
-    }
   }
 }
 
 .footer-nav {
-  h6 {
+  h3 {
     padding-top: $footer-orange-nav-margin-top;
+    font-size: $footer-orange-font-size-md;
+    line-height: $footer-orange-line-height-md;
   }
 
   .navbar-nav {
