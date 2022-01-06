@@ -190,10 +190,10 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
   <!-- Service links -->
   <div class="container navbar-dark footer-service">
     <ul class="navbar-nav">
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg>Locate a store</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg>Coverage checker</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg>Contact us</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg>Child protection</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg><span>Locate a store</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
     </ul>
   </div>
 
@@ -418,10 +418,10 @@ Orange footer comes with a service links sub-component: `.footer-service`.
   <!-- Service links -->
   <div class="container navbar-dark footer-service">
     <ul class="navbar-nav">
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg>Locate a store</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg>Coverage checker</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg>Contact us</a></li>
-      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg>Child protection</a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#locate"/></svg><span>Locate a store</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
     </ul>
   </div>
 </footer>

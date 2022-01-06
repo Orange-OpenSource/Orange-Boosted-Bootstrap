@@ -79,6 +79,7 @@
 
     .nav-link {
       padding: 0;
+      outline-offset: map-get($spacers, 1);
     }
   }
 
@@ -97,6 +98,7 @@
         color: $white;
         letter-spacing: $footer-orange-letter-spacing;
         background-color: $black;
+        outline-offset: map-get($spacers, 1);
 
         &::after {
           margin-right: 0;
@@ -117,6 +119,10 @@
       font-size: $footer-orange-font-size-sm;
       line-height: $footer-orange-line-height-sm;
       letter-spacing: $footer-orange-letter-spacing;
+
+      > .nav-link {
+        outline-offset: map-get($spacers, 1);
+      }
     }
   }
 }
@@ -152,6 +158,11 @@
       gap: $footer-orange-gap-xs;
       align-items: center;
       padding: 0;
+      outline-offset: map-get($spacers, 1);
+
+      > span {
+        padding-top: $footer-orange-service-link-padding-top;
+      }
     }
   }
 }
@@ -185,6 +196,7 @@
 
     .nav-link {
       padding: 0;
+      outline-offset: map-get($spacers, 1);
     }
   }
 }
