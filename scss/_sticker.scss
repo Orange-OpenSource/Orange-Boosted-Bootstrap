@@ -1,0 +1,39 @@
+.sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $sticker-size-md;
+  height: $sticker-size-md;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: $brand-orange;
+  border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
+
+  & > * {
+    max-width: $sticker-content-max-width-md;
+  }
+
+  // Large sticker
+
+  &.sticker-lg {
+    width: $sticker-size-lg;
+    height: $sticker-size-lg;
+
+    & > * {
+      max-width: $sticker-content-max-width-lg;
+    }
+  }
+
+  // Small sticker
+
+  &.sticker-sm {
+    width: $sticker-size-sm;
+    height: $sticker-size-sm;
+
+    & > * {
+      max-width: $sticker-content-max-width-sm;
+    }
+  }
+}

@@ -26,7 +26,7 @@ Boosted ships with custom accessible components to suit specific needs:
 - [Orange Navbars]({{< docsref "/components/orange-navbar" >}})
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
-
+- [Sticker]({{< docsref "/components/sticker" >}})
 
 ## Bootstrap Team
 

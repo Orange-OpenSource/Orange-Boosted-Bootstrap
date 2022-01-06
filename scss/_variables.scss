@@ -1851,4 +1851,15 @@ $step-link-marker-lg:    counter($stepped-process-counter) ".\A0" !default;
 $step-item-arrow-width:  1rem !default;
 $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, $border-width 50%, 100% 100%) #{"*/"} !default; // Used in clip-path
 // scss-docs-end stepped-process
+
+//// Sticker
+// scss-docs-start sticker
+$sticker-size-sm:                       $spacer * 7 !default;
+$sticker-size-md:                       $spacer * 9 !default;
+$sticker-size-lg:                       $spacer * 14 !default;
+
+$sticker-content-max-width-sm:          $sticker-size-sm * .7 !default;
+$sticker-content-max-width-md:          8.1875rem !default; // Should be $sticker-size-md * .7;
+$sticker-content-max-width-lg:          $sticker-size-lg * .7 !default;
+// scss-docs-end sticker
 // End mod
