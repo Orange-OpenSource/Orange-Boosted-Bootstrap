@@ -56,7 +56,7 @@
   }
 
   // Boosted mod: with icon
-  > svg {
+  &:not(.btn-icon) > svg {
     transform: translateY(1px);
   }
   // End mod
@@ -188,7 +188,8 @@
 
 // Boosted mod: icon button
 .btn-icon {
-  padding: var(--#{$boosted-variable-prefix}icon-spacing);
+  padding-right: var(--#{$boosted-variable-prefix}icon-spacing);
+  padding-left: var(--#{$boosted-variable-prefix}icon-spacing);
 }
 // End mod
 
