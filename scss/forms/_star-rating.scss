@@ -21,6 +21,10 @@
     font-size: $form-star-size;
     cursor: pointer;
     @include form-star-rating($accessible-orange);
+
+    &:not(:last-of-type){
+      margin-left: $form-star-margin-between;
+    }
   }
 
   > input:checked ~ label {
@@ -59,6 +63,10 @@
 
   > label {
     @include form-star-rating($brand-orange);
+
+    &:not(:last-of-type){
+      margin-left: $form-star-margin-between * .5;
+    }
   }
 
   > input:checked ~ label {
