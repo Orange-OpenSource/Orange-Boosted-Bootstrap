@@ -1405,7 +1405,7 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     $spacer * .5 !default;
-$accordion-padding-x:                     $spacer * .5 !default;
+$accordion-padding-x:                     0 !default;
 $accordion-color:                         $body-color !default;
 $accordion-bg:                            $body-bg !default;
 $accordion-border-width:                  $border-width * .5 !default;
@@ -1423,6 +1423,14 @@ $accordion-button-bg:                     $accordion-bg !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default;
 $accordion-button-active-color:           $accessible-orange !default;
+
+$accordion-dark-color:                    $white !default;
+$accordion-dark-bg:                       $black !default;
+$accordion-dark-border-color:             $gray-700 !default;
+$accordion-dark-button-color:             $accordion-dark-color !default;
+$accordion-dark-button-bg:                $accordion-dark-bg !default;
+$accordion-dark-button-active-bg:         null !default;
+$accordion-dark-button-active-color:      $brand-orange !default;
 
 // Boosted mod: no $accordion-button-focus-*
 

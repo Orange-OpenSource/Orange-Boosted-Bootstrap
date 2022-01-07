@@ -114,3 +114,39 @@
     letter-spacing: $accordion-button-letter-spacing-lg;
   }
 }
+
+// Boosted mod
+.accordion-dark {
+  .accordion-button {
+    color: $accordion-dark-button-color;
+    background-color: $accordion-dark-button-bg;
+
+    &:not(.collapsed) {
+      color: $accordion-dark-button-active-color;
+      background-color: $accordion-dark-button-active-bg;
+    }
+
+    &:hover {
+      color: $accordion-dark-button-active-color;
+    }
+
+    &:focus {
+      color: $accordion-dark-button-active-color;
+    }
+  }
+
+  .accordion-header {
+    border: $accordion-border-width solid $accordion-dark-border-color;
+    border-width: $accordion-border-width 0 0;
+  }
+
+  .accordion-item {
+    color: color-contrast($accordion-dark-bg);
+    background-color: $accordion-dark-bg;
+
+    &:last-of-type {
+      border-bottom: $accordion-border-width solid $accordion-dark-border-color;
+    }
+  }
+}
+// End mod
