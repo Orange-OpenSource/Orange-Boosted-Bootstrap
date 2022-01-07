@@ -98,7 +98,7 @@
 // Boosted mod
 .nav-tabs-light {
   --#{$variable-prefix}tabs-spacing: #{$nav-tabs-border-width * .5};
-  border-color: $gray-600;
+  border-color: $gray-500;
 
   .nav-link {
     // stylelint-disable-next-line function-disallowed-list
@@ -188,7 +188,28 @@
   > .tab-pane {
     display: none;
   }
+
+  > .tab-pane-with-nested-tab {
+    display: none;
+    margin: subtract(-$spacer, -$nav-tabs-border-width);
+  }
+
   > .active {
+    display: block;
+  }
+}
+
+.nested-tab-content {
+  // Boosted mod
+  padding: subtract($spacer, $nav-tabs-border-width);
+  border-top: 0;
+  // End mod
+
+  >.tab-pane {
+    display: none;
+  }
+
+  >.active {
     display: block;
   }
 }
