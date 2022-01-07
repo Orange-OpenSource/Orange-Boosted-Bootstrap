@@ -178,44 +178,44 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
-<ul class="nav nav-tabs" id="nav-tab" role="tablist">
+<ul class="nav nav-tabs" id="nav-tab-with-nested-tabs" role="tablist">
   <li class="nav-item">
-    <button class="nav-link active" aria-current="page" id="nav-tab1" data-bs-toggle="tab" data-bs-target="#tab1-content" type="button" role="tab" aria-controls="nested-tab" aria-selected="true">Tab 1</button>
+    <button class="nav-link active" aria-current="page" id="nav-tab1" data-bs-toggle="tab" data-bs-target="#tab1-content" type="button" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</button>
   </li>
   <li class="nav-item">
-    <button class="nav-link" id="nav-tab2" data-bs-toggle="tab" data-bs-target="#tab2-content" type="button" role="tab" aria-controls="nav-link2" aria-selected="false">Tab 2</button>
+    <button class="nav-link" id="nav-tab2" data-bs-toggle="tab" data-bs-target="#tab2-content" type="button" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</button>
   </li>
   <li class="nav-item">
-    <button class="nav-link" id="nav-tab3" data-bs-toggle="tab" data-bs-target="#tab3-content" type="button" role="tab" aria-controls="nav-link3" aria-selected="false">Tab 3</button>
+    <button class="nav-link" id="nav-tab3" data-bs-toggle="tab" data-bs-target="#tab3-content" type="button" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</button>
   </li>
   <li class="nav-item">
-    <button class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" type="button" role="tab" aria-controls="nav-linkD-disabled" aria-selected="false">Tab 4</button>
+    <button class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" type="button" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</button>
   </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="tab1-content">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tab" aria-labelledby="tab1-content">
     <ul class="nav nav-tabs nav-tabs-light mt-0">
       <li class="nav-item">
-        <button class="nav-link active" id="nav-linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tabpanel" aria-current="page" aria-labelledby="nav-linkA-tab">Link A</button>
+        <button class="nav-link active" id="nav-linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page" aria-labelledby="nav-linkA-tab">Link A</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tabpanel" aria-labelledby="nav-linkB-tab">Link B</button>
+        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab" aria-labelledby="nav-linkB-tab">Link B</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tabpanel" aria-labelledby="nav-linkC-tab">Link C</button>
+        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab" aria-labelledby="nav-linkC-tab">Link C</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tabpanel" aria-labelledby="nav-linkD-tab">Link D</button>
+        <button class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab" aria-labelledby="nav-linkD-tab">Link D</button>
       </li>
     </ul>
      <!-- Tab light panes -->
     <div class="nested-tab-content ps-4" id="nav-tabs-light-content">
-      <div class="tab-pane fade show active" id="linkA" role="tabpanel" aria-labelledby="linkA">Content of Link A</div>
-      <div class="tab-pane" id="linkB" role="tabpanel" aria-labelledby="linkB">Content of Link B</div>
-      <div class="tab-pane" id="linkC" role="tabpanel" aria-labelledby="linkC">Content of Link C</div>
-      <div class="tab-pane" id="linkD" role="tabpanel" aria-labelledby="linkD">Content of Link D</div>
+      <div class="tab-pane fade show active" id="linkA" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+      <div class="tab-pane" id="linkB" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
+      <div class="tab-pane" id="linkC" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
+      <div class="tab-pane" id="linkD" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
     </div>
   </div>
   <div class="tab-pane" id="tab2-content" role="tabpanel" aria-labelledby="tab2-content">Content of Tab 2</div>
