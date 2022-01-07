@@ -79,27 +79,37 @@
   // Boosted mod
   &:not(:hover):not(:focus):not(:active) {
     border-left-color: transparent;
+
+    &.btn-inverse::before {
+      background-color: $black;
+    }
   }
 
-  &:not(:focus):not(:active)::before {
-    position: absolute;
-    top: -$border-width;
-    bottom: -$border-width;
-    left: -$border-width;
-    width: $border-width;
-    color: $black;
-    content: "";
-    background:
-      linear-gradient(
-        currentColor $border-width,
-        transparent $border-width,
-        transparent $border-width * 2.5,
-        currentColor $border-width * 2.5,
-        currentColor subtract(100%, $border-width * 2.5),
-        transparent subtract(100%, $border-width * 2.5),
-        transparent subtract(100%, $border-width),
-        currentColor subtract(100%, $border-width)
-      );
+  &:not(:focus):not(:active) {
+    &::before {
+      position: absolute;
+      top: -$border-width;
+      bottom: -$border-width;
+      left: -$border-width;
+      width: $border-width;
+      color: $black;
+      content: "";
+      background:
+        linear-gradient(
+          currentColor $border-width,
+          transparent $border-width,
+          transparent $border-width * 2.5,
+          currentColor $border-width * 2.5,
+          currentColor subtract(100%, $border-width * 2.5),
+          transparent subtract(100%, $border-width * 2.5),
+          transparent subtract(100%, $border-width),
+          currentColor subtract(100%, $border-width)
+        );
+    }
+
+    &.btn-inverse::before {
+      color: $white;
+    }
   }
 
   .btn:active + &,
