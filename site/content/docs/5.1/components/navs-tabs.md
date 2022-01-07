@@ -194,20 +194,20 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist">
+<div class="tab-content" id="nav-tabs-content">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist" aria-labelledby="nav-tab1">
     <ul class="nav nav-tabs nav-tabs-light mt-0">
       <li class="nav-item">
-        <button class="nav-link active" id="nav-linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page" aria-labelledby="nav-linkA-tab">Link A</button>
+        <button class="nav-link active" id="nav-linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page" >Link A</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab" aria-labelledby="nav-linkB-tab">Link B</button>
+        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab"">Link B</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab" aria-labelledby="nav-linkC-tab">Link C</button>
+        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab"">Link C</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab" aria-labelledby="nav-linkD-tab">Link D</button>
+        <button class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</button>
       </li>
     </ul>
      <!-- Tab light panes -->
@@ -218,9 +218,9 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
       <div class="tab-pane" id="linkD" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
     </div>
   </div>
-  <div class="tab-pane" id="tab2-content" role="tabpanel" aria-labelledby="tab2-content">Content of Tab 2</div>
-  <div class="tab-pane" id="tab3-content" role="tabpanel" aria-labelledby="tab3-content">Content of Tab 3</div>
-  <div class="tab-pane" id="tab4-content" role="tabpanel" aria-labelledby="tab4-content">Content of Tab 4</div>
+  <div class="tab-pane" id="tab2-content" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+  <div class="tab-pane" id="tab3-content" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+  <div class="tab-pane" id="tab4-content" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
 </div>
 {{< /example >}}
 
