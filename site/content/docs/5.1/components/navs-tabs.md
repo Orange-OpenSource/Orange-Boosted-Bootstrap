@@ -201,10 +201,10 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <button class="nav-link active" id="nav-linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page" >Link A</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab"">Link B</button>
+        <button class="nav-link" id="nav-linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab">Link B</button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab"">Link C</button>
+        <button class="nav-link" id="nav-linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</button>
       </li>
       <li class="nav-item">
         <button class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</button>
