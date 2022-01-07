@@ -100,24 +100,12 @@
       border: 0;
 
       .accordion-button {
-        width: 100%;
-        margin: 0;
         font-size: $footer-orange-font-size-sm;
         line-height: $footer-orange-accordion-line-height;
-        color: $white;
         letter-spacing: $footer-orange-letter-spacing;
-        background-color: $black;
 
         &::after {
           margin-right: 0;
-        }
-
-        &:hover {
-          color: $brand-orange;
-        }
-
-        &:not(.collapsed) {
-          color: $brand-orange;
         }
       }
     }

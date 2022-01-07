@@ -18,7 +18,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
 
 ## Examples
 
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Mailing list -->
   <div class="container footer-mailing">
@@ -106,7 +106,7 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
         </ul>
       </div>
     </div>
-    <div class="d-md-none accordion" id="accordionExampleSmall">
+    <div class="d-md-none accordion accordion-dark" id="accordionExampleSmall">
       <div class="border-bottom border-1 border-dark">
         <h3 class="container accordion-header" id="headingOneSmall">
           <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="true" aria-controls="collapseOneSmall">
@@ -229,7 +229,7 @@ Orange footer parts are independent from each other. Just add a dark separator b
 Orange footer comes with a mailing list sub-component: `.footer-mailing`.
 
 {{< example class="p-0" >}}
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Mailing list -->
   <div class="container footer-mailing">
@@ -248,7 +248,7 @@ Orange footer comes with a mailing list sub-component: `.footer-mailing`.
 Orange footer comes with a social media sub-component: `.footer-social`.
 
 {{< example class="p-0" >}}
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Follow us bar -->
   <div class="container footer-social">
@@ -277,7 +277,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
 {{< /callout >}}
 
 {{< example class="p-0" >}}
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Navigation -->
   <div class="navbar-dark footer-nav">
@@ -335,7 +335,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
         </ul>
       </div>
     </div>
-    <div class="d-md-none accordion" id="accordionExampleSmall1">
+    <div class="d-md-none accordion accordion-dark" id="accordionExampleSmall1">
       <div class="border-bottom border-1 border-dark">
         <h3 class="container accordion-header" id="headingOneSmall1">
           <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall1" aria-expanded="true" aria-controls="collapseOneSmall1">
@@ -422,7 +422,7 @@ This sub-component needs our Collapse JavaScript plugin to work well.
 Orange footer comes with a service links sub-component: `.footer-service`.
 
 {{< example class="p-0" >}}
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Service links -->
   <div class="container navbar-dark footer-service">
@@ -441,7 +441,7 @@ Orange footer comes with a service links sub-component: `.footer-service`.
 Orange footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component is mandatory.
 
 {{< example class="p-0" >}}
-<footer role="contentinfo" class="footer bg-dark">
+<footer class="footer bg-dark">
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Terms & Conditions -->
   <div class="container navbar-dark footer-terms">
