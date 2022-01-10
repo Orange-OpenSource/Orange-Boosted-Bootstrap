@@ -77,27 +77,29 @@
 }
 
 .footer-nav {
-  .footer-heading {
-    padding-top: $footer-orange-nav-padding-top;
-  }
-
-  .navbar-nav {
-    gap: $footer-orange-gap;
-
-    @include media-breakpoint-up(md) {
-      padding: $footer-orange-nav-list-padding;
-      font-size: $footer-orange-font-size-md;
-      line-height: $footer-orange-line-height-md;
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding: $footer-orange-nav-list-padding-md;
-    }
-  }
-
   .accordion {
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-category:not(:last-of-type) {
+      border-bottom: $footer-orange-nav-accordion-border-bottom;
+
+      @include media-breakpoint-up(md) {
+        padding-right: $footer-orange-nav-list-padding-right;
+        margin-right: $footer-orange-nav-list-margin-right;
+        border: 0;
+      }
+    }
+
     .accordion-header {
       border: 0;
+
+      @include media-breakpoint-up(md) {
+        padding: $footer-orange-nav-padding-top 0 $spacer;
+      }
 
       .accordion-button {
         font-size: $footer-orange-font-size-sm;
@@ -106,12 +108,38 @@
 
         &::after {
           margin-right: 0;
+
+          @include media-breakpoint-up(md) {
+            all: unset;
+          }
+        }
+
+        @include media-breakpoint-up(md) {
+          all: unset;
+          pointer-events: none;
         }
       }
     }
 
     .navbar-nav {
-      padding: $footer-orange-nav-accordion-collapse-padding;
+      gap: $footer-orange-gap;
+      padding: $footer-orange-nav-list-padding-top 0 $footer-orange-nav-collapse-padding-bottom;
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: $footer-orange-nav-list-padding-bottom;
+        font-size: $footer-orange-font-size-md;
+        line-height: $footer-orange-line-height-md;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: $footer-orange-nav-list-padding-bottom-md;
+      }
+    }
+
+    .accordion-collapse {
+      @include media-breakpoint-up(md) {
+        all: unset;
+      }
     }
   }
 }

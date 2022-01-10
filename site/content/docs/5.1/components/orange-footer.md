@@ -52,64 +52,10 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
 
   <!-- Navigation -->
   <div class="navbar-dark footer-nav">
-    <div class="container d-none d-md-flex">
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="d-md-none accordion accordion-dark" id="accordionExampleSmall">
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingOneSmall">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="true" aria-controls="collapseOneSmall">
+    <div class="accordion accordion-dark container d-md-flex" id="accordionExampleSmall">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingOneSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="true" aria-controls="collapseOneSmall">
             Category
           </button>
         </h3>
@@ -126,9 +72,9 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           </ul>
         </div>
       </div>
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingTwoSmall">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall" aria-expanded="true" aria-controls="collapseTwoSmall">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingTwoSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall" aria-expanded="true" aria-controls="collapseTwoSmall">
             Category
           </button>
         </h3>
@@ -145,9 +91,9 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           </ul>
         </div>
       </div>
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingThreeSmall">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingThreeSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
             Category
           </button>
         </h3>
@@ -164,9 +110,9 @@ Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It can be c
           </ul>
         </div>
       </div>
-      <div>
-        <h3 class="container accordion-header" id="headingFourSmall">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall" aria-expanded="true" aria-controls="collapseFourSmall">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingFourSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall" aria-expanded="true" aria-controls="collapseFourSmall">
             Category
           </button>
         </h3>
@@ -281,64 +227,10 @@ This sub-component needs our Collapse JavaScript plugin to work well.
   <h2 class="visually-hidden">Site map & information</h2>
   <!-- Navigation -->
   <div class="navbar-dark footer-nav">
-    <div class="container d-none d-md-flex">
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-      <div class="col-3 me-1">
-        <h3 class="footer-heading">Category</h3>
-        <ul class="navbar-nav">
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-          <li><a class="nav-link" href="#">Subcategory</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="d-md-none accordion accordion-dark" id="accordionExampleSmall1">
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingOneSmall1">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall1" aria-expanded="true" aria-controls="collapseOneSmall1">
+    <div class="accordion accordion-dark container d-md-flex" id="accordionExampleSmall1">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingOneSmall1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall1" aria-expanded="true" aria-controls="collapseOneSmall1">
             Category
           </button>
         </h3>
@@ -355,9 +247,9 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           </ul>
         </div>
       </div>
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingTwoSmall1">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall1" aria-expanded="true" aria-controls="collapseTwoSmall1">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingTwoSmall1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall1" aria-expanded="true" aria-controls="collapseTwoSmall1">
             Category
           </button>
         </h3>
@@ -374,9 +266,9 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           </ul>
         </div>
       </div>
-      <div class="border-bottom border-1 border-dark">
-        <h3 class="container accordion-header" id="headingThreeSmall1">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall1" aria-expanded="true" aria-controls="collapseThreeSmall1">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingThreeSmall1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall1" aria-expanded="true" aria-controls="collapseThreeSmall1">
             Category
           </button>
         </h3>
@@ -393,9 +285,9 @@ This sub-component needs our Collapse JavaScript plugin to work well.
           </ul>
         </div>
       </div>
-      <div>
-        <h3 class="container accordion-header" id="headingFourSmall1">
-          <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall1" aria-expanded="true" aria-controls="collapseFourSmall1">
+      <div class="footer-category col-md-3">
+        <h3 class="container accordion-header footer-heading" id="headingFourSmall1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourSmall1" aria-expanded="true" aria-controls="collapseFourSmall1">
             Category
           </button>
         </h3>
