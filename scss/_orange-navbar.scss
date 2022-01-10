@@ -11,23 +11,13 @@
     }
   }
   :not(.navbar-brand) {
-    & > svg,
-    img {
+    > svg,
+    > img {
       width: $navbar-orange-supra-icon-size;
       height: $navbar-orange-supra-icon-size;
     }
   }
-  :not(.navbar-brand) img {
-    width: $navbar-orange-supra-icon-size;
-    height: $navbar-orange-supra-icon-size;
-  }
-  // .navbar-brand {
-  //   > svg,
-  //   img {
-  //     wideh
-  //   }
-  // }
-
+  
   @include media-breakpoint-up(xs) {
     .title {
       font-size: $navbar-orange-title-font-size-xs;
