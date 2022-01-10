@@ -132,7 +132,9 @@
     &.active::before {
       position: absolute;
       right: $nav-link-padding-y * .5;
-      bottom: 0;
+      // bottom: 0;
+      // bottom: -0.063rem;
+      bottom: $h1-spacing;
       left: $nav-link-padding-y * .5;
       height: $border-width * 2;
       content: "";
