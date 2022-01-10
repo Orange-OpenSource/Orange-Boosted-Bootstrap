@@ -22,7 +22,7 @@
     cursor: pointer;
     @include form-star-rating($accessible-orange);
 
-    &:not(:last-of-type){
+    &:not(:first-of-type){
       margin-left: $form-star-margin-between;
     }
   }
@@ -63,10 +63,6 @@
 
   > label {
     @include form-star-rating($brand-orange);
-
-    &:not(:last-of-type){
-      margin-left: $form-star-margin-between * .5;
-    }
   }
 
   > input:checked ~ label {
