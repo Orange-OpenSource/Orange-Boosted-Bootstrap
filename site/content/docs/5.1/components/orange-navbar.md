@@ -563,7 +563,7 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
       </ul>
     </div>
   </nav>
-  <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0">
+  <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0 d-none d-md-block">
     <div class="container-lg">
       <div class="navbar-collapse collapse" id="global-header-title-nav-2">
         <ul class="navbar-nav">
