@@ -57,10 +57,10 @@ Since stickers only provide a container, accessibility becomes specific to the s
 
 {{< example >}}
 <div class="sticker">
-  <span class="h3 mb-0 text-decoration-line-through" aria-hidden="true">69,99€</span>
-  <span class="display-3 mb-1" aria-hidden="true">39,99€</span>
+  <span class="h3 mb-0 text-decoration-line-through" aria-hidden="true">69.99 €</span>
+  <span class="display-3 mb-0" aria-hidden="true">39.99 €</span>
   <span class="mb-1" aria-hidden="true">Per month</span>
-  <span class="visually-hidden">39,99€ per month instead of 69,99€</span>
+  <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
 </div>
 {{< /example >}}
 
