@@ -10,12 +10,23 @@
       padding-right: 0;
     }
   }
-
-  svg,
-  img {
+  :not(.navbar-brand) {
+    & > svg,
+    img {
+      width: $navbar-orange-supra-icon-size;
+      height: $navbar-orange-supra-icon-size;
+    }
+  }
+  :not(.navbar-brand) img {
     width: $navbar-orange-supra-icon-size;
     height: $navbar-orange-supra-icon-size;
   }
+  // .navbar-brand {
+  //   > svg,
+  //   img {
+  //     wideh
+  //   }
+  // }
 
   @include media-breakpoint-up(xs) {
     .title {
@@ -158,3 +169,8 @@
     }
   }
 }
+
+// - WEB-GLH-OBS-002: on aperçoit une border-bottom grise en trop en mode 1440px
+// - WEB-GLH-STN-001: l'avatar et les icônes sont trop haut de 1 ou 2 px (cf. alignement avec le bas du logo)
+// - WEB-GLH-TNI-001: on ne tombe jamais sur le mode 768px (on passe directement du mode 1024px à 480px)
+// - En mode 480px, le burger ne semble pas être le bon, les espacements ne semblent pas bons entre les burgers et les icônes, l'espace autour du logo n'est pas bon, la taille du logo n'est pas bonne
