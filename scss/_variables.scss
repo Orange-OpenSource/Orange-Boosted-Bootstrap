@@ -1858,8 +1858,10 @@ $sticker-size-sm:                       $spacer * 7 !default;
 $sticker-size-md:                       $spacer * 9 !default;
 $sticker-size-lg:                       $spacer * 14 !default;
 
-$sticker-content-max-width-sm:          $sticker-size-sm * .7 !default;
-$sticker-content-max-width-md:          8.1875rem !default; // Should be $sticker-size-md * .7;
-$sticker-content-max-width-lg:          $sticker-size-lg * .7 !default;
+// Considering @use "sass:math", math.sqrt(2) / 2 is approximated to 0.7071067812
+$sticker-content-max-width-sm:          $sticker-size-sm * .7071067812 !default;
+$sticker-content-max-width-md:          $sticker-size-md * .7071067812 !default;
+$sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
+
 // scss-docs-end sticker
 // End mod
