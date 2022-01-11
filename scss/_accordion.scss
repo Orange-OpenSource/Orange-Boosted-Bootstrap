@@ -6,9 +6,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: add(100%, $accordion-button-padding-x * 2);
+  width: 100%;
   padding: $accordion-button-padding-y $accordion-button-padding-x;
-  margin: 0 -#{$accordion-button-padding-x}; // Boosted mod
   @include font-size($accordion-button-font-size); // Boosted mod
   font-weight: $accordion-button-font-weight; // Boosted mod
   line-height: $accordion-button-line-height; // Boosted mod
