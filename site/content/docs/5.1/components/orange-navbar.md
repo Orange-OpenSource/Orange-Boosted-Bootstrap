@@ -636,7 +636,7 @@ You can have a search input into your Global Header. This one will appear differ
           <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
         </ul>
       </div>
-      <form class="d-flex d-none d-md-flex pt-1" role="search">
+      <form class="d-flex d-none d-md-flex pt-1 ps-2" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       </form>
     </div>
