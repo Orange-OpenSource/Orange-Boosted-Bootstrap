@@ -1009,6 +1009,19 @@ $form-check-label-disabled-opacity:        null !default;
 $form-check-btn-check-disabled-opacity:    null !default;
 
 $form-check-inline-margin-end:    1rem !default;
+
+// Boosted mod: Star rating
+$form-star-size:                  1.5625rem !default;
+$form-star-size-sm:               1.25rem !default;
+$form-star-margin-between:        -.125rem !default;
+
+$form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default;
+$form-star-focus-color:           $black !default;
+$form-star-focus-outline:         $border-width solid $form-star-focus-color !default;
+
+$form-star-focus-color-dark:      $white !default;
+$form-star-focus-outline-dark:    $border-width solid $form-star-focus-color-dark !default;
+// End mod
 // scss-docs-end form-check-variables
 
 // scss-docs-start form-switch-variables
