@@ -142,14 +142,14 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 {{< example class="p-0">}}
 <!-- On one line -->
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title" class="title h1">Title</span>
       </a>
       <div class="d-flex">
-        <ul class="navbar-nav d-md-none flex-row ml-auto">
+        <ul class="navbar-nav d-lg-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -187,11 +187,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item d-sm-none">
+          <li class="nav-item d-sm-none"> -->
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
                 <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -213,7 +209,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-md-flex">
+      <ul class="navbar-nav d-none d-lg-flex">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-2">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -249,17 +245,17 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 <br>
 <!-- On two lines -->
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <div class="container-lg flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-        <span class="two-lined h2" id="two-line-title">
+        <span class="two-lined h1" id="two-line-title">
           <span class="align-self-end">Title Line 1</span><br>
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
       <div class="d-flex">
-        <ul class="navbar-nav d-md-none flex-row ml-auto">
+        <ul class="navbar-nav d-lg-none flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -297,10 +293,6 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item d-sm-none">
             <a href="#" class="nav-link nav-icon position-relative">
               <span class="position-relative">
@@ -323,7 +315,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-md-flex pb-1">
+      <ul class="navbar-nav d-none d-lg-flex pb-1">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon pt-1 pb-2">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
