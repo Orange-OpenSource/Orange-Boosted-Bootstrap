@@ -55,7 +55,7 @@ Boosted utilizes a "native font stack" or "system font stack" — as a fallback 
 
 ```scss
 $font-family-sans-serif:
-  // Webfont
+  // Web font
   HelvNeueOrange,
   // Helvetica Neue
   Helvetica Neue,
