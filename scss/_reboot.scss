@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix, selector-max-type
 
 
 // Reboot
@@ -232,7 +232,6 @@ ul {
 
 // Future-proof markers' color
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
-// stylelint-disable selector-max-type
 li::marker {
   color: $accessible-orange;
   vertical-align: middle;
@@ -253,7 +252,6 @@ li::before {
 li li::before { color: $gray-600; }
 
 li li li::before { color: $gray-500; }
-// stylelint-enable selector-max-type
 // End mod
 
 dt {
@@ -727,3 +725,39 @@ progress {
 [hidden] {
   display: none !important;
 }
+
+// Boosted mod
+[class*="-dark"] {
+  li::marker { color: $brand-orange; }
+  li li::marker { color: $gray-600; }
+  li li li::marker { color: $gray-700; }
+
+  li::before { color: $brand-orange; }
+  li li::before { color: $gray-600; }
+  li li li::before { color: $gray-700; }
+
+  caption { color: $white; }
+  // No <mark> because of accessibility
+  var,
+  code,
+  figcaption { color: $code-color-dark; }
+
+  pre { color: $pre-color-dark; }
+
+  a > * { color: inherit; }
+
+  a:not(.btn) {
+    color: $link-color-dark;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active { color: $link-hover-color-dark; }
+  }
+
+  kbd {
+    color: $kbd-color-dark;
+    background-color: $kbd-bg-dark;
+  }
+}
+// End mod
