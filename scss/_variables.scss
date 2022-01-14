@@ -1400,8 +1400,10 @@ $o-scroll-up-bottom: (
 ) !default;
 
 // Step process bar
-$o-stepbar-height:      $spacer * 2 !default;
-$o-stepbar-arrow-width: 1.0625rem !default;
+$o-stepbar-padding-y:   divide(.875rem, 2) !default;
+$o-stepbar-line-height: 1rem !default;
+$o-stepbar-height:      $o-stepbar-line-height + $o-stepbar-padding-y * 2 !default;
+$o-stepbar-arrow-width: .8125rem !default;
 $o-stepbar-margin-r:    $border-width !default;
 
 // o-table
