@@ -15,7 +15,9 @@
   border-color: $dropdown-border-color;
 
   .bg-dark &:not(.dropdown-toggle-split) {
-    border-color: $gray-700;
+    &.btn-secondary.btn-inverse {
+      border-color: $gray-700;
+    }
 
     &:hover {
       border-color: $dropdown-bg;
