@@ -21,7 +21,6 @@
     "clearfix",
     "clic",
     "Codesniffer",
-    "colorspace",
     "combinator",
     "Contentful",
     "Cpath",
@@ -49,9 +48,7 @@
     "flexbox",
     "française",
     "fullscreen",
-    "fusv",
     "getbootstrap",
-    "globby",
     "Grayscale",
     "Helv",
     "Hoverable",
@@ -100,12 +97,10 @@
     "scrollbars",
     "scrollspy",
     "Segoe",
-    "sirv",
     "srcset",
     "stickied",
     "Stylelint",
     "subnav",
-    "svgo",
     "svgs",
     "tabbable",
     "tarteaucitron",
@@ -117,7 +112,6 @@
     "twbs",
     "unitless",
     "unminified",
-    "Unported",
     "unstylable",
     "unstyled",
     "Uppercased",
@@ -128,16 +122,18 @@
     "walkthroughs",
     "whatsapp",
     "WCAG",
-    "webfont",
     "WICG's",
-    "Woohoo",
     "zindex",
     "بالعالم",
     "مرحبًا"
   ],
-  "language": "en,en-US",
+  "language": "en, en-US",
+  "files": [
+    "site/**/*.md"
+  ],
   "ignorePaths": [
     ".cspell.json",
-    ".min."
-  ]
+    "*.min.*"
+  ],
+  "useGitignore": true
 }
