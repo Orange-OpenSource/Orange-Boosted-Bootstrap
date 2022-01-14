@@ -10,8 +10,10 @@ toc: true
 
 {{< example >}}
 <div class="sticker">
-  <span class="display-3 mb-0">39.99 €</span>
-  <span>Per month</span>
+  <p class="mb-0">
+    <span class="display-3 mb-0 d-block">39.99 €</span>
+    <span>Per month</span>
+  </p>
 </div>
 {{< /example >}}
 
@@ -37,13 +39,17 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 
 {{< example >}}
 <div class="sticker sticker-lg">
-  <span class="display-1 mb-0">New</span>
+  <p class="mb-0">
+    <span class="display-1">New</span>
+  </p>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <div class="sticker sticker-sm">
-  <span class="h2 mb-0">New</span>
+  <p class="mb-0">
+    <span class="h2">New</span>
+  </p>
 </div>
 {{< /example >}}
 
@@ -57,10 +63,12 @@ Since stickers only provide a container, accessibility becomes specific to the s
 
 {{< example >}}
 <div class="sticker">
-  <span class="h3 mb-0 text-decoration-line-through" aria-hidden="true">69.99 €</span>
-  <span class="display-3 mb-0" aria-hidden="true">39.99 €</span>
-  <span class="mb-1" aria-hidden="true">Per month</span>
-  <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+  <p class="mb-1">
+    <span class="h3 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+    <span class="display-3 mb-0 d-block" aria-hidden="true">39.99 €</span>
+    <span aria-hidden="true">Per month</span>
+    <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+  </p>
 </div>
 {{< /example >}}
 
