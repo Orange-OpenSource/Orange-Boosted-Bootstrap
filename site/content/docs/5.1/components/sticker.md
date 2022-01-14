@@ -58,6 +58,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 Since stickers only provide a container, accessibility becomes specific to the sticker content:
 * [Showing and vocalizing prices](https://a11y-guidelines.orange.com/en/web/components-examples/price-vocalization) can help when stickers contain prices.
 * [Accessibility and SVGs](https://a11y-guidelines.orange.com/en/articles/accessible-svg) can help with the SVGs.
+* ou must also semantize the informative content in context  with HTML tags, such as <p> (set by default), <h1...6>, etc.
 
 ### Focus on one use case
 
