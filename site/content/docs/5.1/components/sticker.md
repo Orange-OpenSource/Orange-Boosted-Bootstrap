@@ -10,7 +10,7 @@ toc: true
 
 {{< example >}}
 <div class="sticker">
-  <span class="display-3 mb-1">39,99€</span>
+  <span class="display-3 mb-0">39.99 €</span>
   <span>Per month</span>
 </div>
 {{< /example >}}
