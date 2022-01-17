@@ -11,7 +11,7 @@
   background-color: $brand-orange;
   border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
 
-  & > * {
+  > * {
     max-width: $sticker-content-max-width-md;
   }
 
@@ -21,7 +21,7 @@
     width: $sticker-size-lg;
     height: $sticker-size-lg;
 
-    & > * {
+    > * {
       max-width: $sticker-content-max-width-lg;
     }
   }
@@ -32,7 +32,7 @@
     width: $sticker-size-sm;
     height: $sticker-size-sm;
 
-    & > * {
+    > * {
       max-width: $sticker-content-max-width-sm;
     }
   }
