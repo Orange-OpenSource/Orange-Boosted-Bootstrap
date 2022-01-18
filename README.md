@@ -201,12 +201,6 @@ Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infras
 
 Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
-</a>
-
-Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com) and auto-deploy pull requests.
-
 ## Copyright and license
 
 Code and documentation copyright 2011-2022 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
