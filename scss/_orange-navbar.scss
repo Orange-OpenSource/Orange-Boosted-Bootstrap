@@ -5,9 +5,11 @@
 
 .navbar {
   border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: 0;
+  @include media-breakpoint-up(md) {
+    .nav-item:last-of-type {
+      .nav-icon {
+        padding-right: 0;
+      }
     }
   }
   :not(.navbar-brand) {
@@ -127,6 +129,11 @@
   @include media-breakpoint-up(md){
     padding-top: map-get($spacers, 2);
     padding-bottom: 0;
+    .nav-item:last-of-type {
+      .nav-icon {
+        padding-right: 0 !important;
+      }
+    }
   }
 
   .navbar-brand {
@@ -139,28 +146,12 @@
   }
 
   .navbar-nav .nav-link{
-    padding: $navbar-orange-minimized-link-padding-y divide($spacer, 2);
-
-    @include media-breakpoint-up(md){
-      &.nav-icon {
+    &.nav-icon {
         padding: divide($spacer, 4) $spacer $navbar-orange-minimized-icon-padding-bottom;
-      }
-
-      &.active::before {
-        bottom: -1px;
-      }
     }
-  }
 
-  // TODO: avoid declare this rule 2 times
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: 0;
+    &.active::before {
+      bottom: -1px;
     }
   }
 }
-
-// - WEB-GLH-OBS-002: on aperçoit une border-bottom grise en trop en mode 1440px
-// - WEB-GLH-STN-001: l'avatar et les icônes sont trop haut de 1 ou 2 px (cf. alignement avec le bas du logo)
-// - WEB-GLH-TNI-001: on ne tombe jamais sur le mode 768px (on passe directement du mode 1024px à 480px)
-// - En mode 480px, le burger ne semble pas être le bon, les espacements ne semblent pas bons entre les burgers et les icônes, l'espace autour du logo n'est pas bon, la taille du logo n'est pas bonne
