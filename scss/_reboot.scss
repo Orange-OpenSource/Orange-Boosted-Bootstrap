@@ -728,36 +728,22 @@ progress {
 
 // Boosted mod
 [class*="-dark"] {
-  li::marker { color: $brand-orange; }
-  li li::marker { color: $gray-600; }
-  li li li::marker { color: $gray-700; }
+  --link-color: #{$white};
+  --link-hover-color: #{$brand-orange};
+  --caption-color: #{$white};
+  --code-color: #{$gray-600};
+  --kbd-color: #{$white};
+  --kbd-bg: #{$gray-900};
+  --pre-color: #{$gray-300};
 
-  li::before { color: $brand-orange; }
-  li li::before { color: $gray-600; }
-  li li li::before { color: $gray-700; }
-
-  caption { color: $white; }
-  // No <mark> because of accessibility
-  var,
-  code,
-  figcaption { color: $code-color-dark; }
-
-  pre { color: $pre-color-dark; }
-
-  a > * { color: inherit; }
-
-  a:not(.btn) {
-    color: $link-color-dark;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active { color: $link-hover-color-dark; }
-  }
-
-  kbd {
-    color: $kbd-color-dark;
-    background-color: $kbd-bg-dark;
+  [class*="bg-"]:not(&) {
+    --link-color: #{$link-color};
+    --link-hover-color: #{$link-hover-color};
+    --caption-color: #{$black};
+    --code-color: #{$code-color};
+    --kbd-color: #{$kbd-color};
+    --kbd-bg: #{$kbd-bg};
+    --pre-color: #{$pre-color};
   }
 }
 // End mod
