@@ -18,6 +18,8 @@ const DATA_KEY = 'bs.quantityselector'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
+const EVENT_LOAD_DATA_API = `input${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_ON_CHANGE_DATA_API = `change${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
@@ -40,6 +42,8 @@ class QuantitySelector extends BaseComponent {
     event.preventDefault()
     const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
     const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
+    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
     const MAX = COUNTER_INPUT.getAttribute('max')
     const STEP = Number(COUNTER_INPUT.getAttribute('step'))
@@ -47,6 +51,16 @@ class QuantitySelector extends BaseComponent {
 
     if (Number(COUNTER_INPUT.value) < MAX) {
       COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) + STEP).toFixed(ROUND).toString()
+    } else if (Number(COUNTER_INPUT.value) + STEP > MAX) {
+      BTN_UP.setAttribute('disabled', '')
+    }
+
+    if (BTN_DOWN.hasAttribute('disabled', '')) {
+      BTN_DOWN.removeAttribute('disabled', '')
+    }
+
+    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
+      BTN_UP.setAttribute('disabled', '')
     }
   }
 
@@ -54,6 +68,8 @@ class QuantitySelector extends BaseComponent {
     event.preventDefault()
     const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
     const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
+    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
     const MIN = COUNTER_INPUT.getAttribute('min')
     const STEP = Number(COUNTER_INPUT.getAttribute('step'))
@@ -61,6 +77,39 @@ class QuantitySelector extends BaseComponent {
 
     if (Number(COUNTER_INPUT.value) > MIN) {
       COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) - STEP).toFixed(ROUND).toString()
+    } else if (Number(COUNTER_INPUT.value) + STEP < MIN) {
+      BTN_DOWN.setAttribute('disabled', '')
+    }
+
+    if (BTN_UP.hasAttribute('disabled', '')) {
+      BTN_UP.removeAttribute('disabled', '')
+    }
+
+    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
+      BTN_DOWN.setAttribute('disabled', '')
+    }
+  }
+
+  static ValueChange(event) {
+    event.preventDefault()
+    const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
+    const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
+    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+
+    const MIN = COUNTER_INPUT.getAttribute('min')
+    const MAX = COUNTER_INPUT.getAttribute('max')
+    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
+
+    BTN_UP.removeAttribute('disabled', '')
+    BTN_DOWN.removeAttribute('disabled', '')
+
+    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
+      BTN_DOWN.setAttribute('disabled', '')
+    }
+
+    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
+      BTN_UP.setAttribute('disabled', '')
     }
   }
 }
@@ -69,6 +118,8 @@ class QuantitySelector extends BaseComponent {
  * Data API implementation
  */
 
+EventHandler.on(document, EVENT_LOAD_DATA_API, SELECTOR_COUNTER_INPUT.value, QuantitySelector.ValueChange)
+EventHandler.on(document, EVENT_ON_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT.value, QuantitySelector.ValueChange)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
