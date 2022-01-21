@@ -1,80 +1,81 @@
 // Base class
 
 .tag {
-  @extend .badge;
-  @include font-size($tag-font-size);
-  padding: $badge-padding-y 8px $badge-padding-y;
-  line-height: 16px;
+  display: inline-flex;
+  gap: $tag-gap;
+  align-items: center;
+  padding: .25rem $tag-padding-x .375rem;
+  font-size: $tag-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $tag-line-height;
   color: $tag-color;
-
   cursor: if($enable-button-pointers, pointer, null);
-
   border: $tag-border-width solid $tag-border-color;
 
   @include border-radius($tag-border-radius, $tag-border-radius);
 
   &:hover {
-    border: $tag-border-width solid $tag-border-color-hover;
+    border-color: $tag-border-color-hover;
   }
 
   &:active,
-  &.active {
+  &.active,
+  &:focus,
+  &.focus {
     color: $tag-active-color;
     background-color: $tag-active-background-color;
-    border: $tag-border-width solid $tag-border-color-hover;
+    border-color: $tag-border-color-hover;
   }
 
   &:disabled,
-  &.disabled {
+  &.disabled,
+  &[disabled] {
     color: $tag-disabled-color;
-    cursor: default !important; // stylelint-disable-line declaration-no-important
-    border: $tag-border-width solid $tag-border-color;
-
-    &.active {
-      background-color: $tag-background-color !important; // stylelint-disable-line declaration-no-important
-    }
+    pointer-events: none;
+    border-color: $tag-border-color;
   }
+}
 
-  svg:first-of-type {
-    transform: translateX(-2px);
+.tag-icon {
+  padding-left: subtract($tag-padding-x, .125rem);
+}
+
+.tag-remove {
+  padding-right: subtract($tag-padding-x, .3125rem);
+
+  .remove {
+    padding: $tag-padding-remove-icon;
+    @include border-radius($tag-border-radius, $tag-border-radius);
+
+    &:hover {
+      color: $tag-active-color;
+      background: $tag-active-background-color;
+    }
   }
 }
 
 .tag-icon,
 .tag-remove {
-  padding: subtract($badge-padding-y, 2px) 8px subtract($badge-padding-y, 2px);
-}
-
-.tag-icon {
-  padding-bottom: subtract($badge-padding-y, 1px);
-}
-
-.tag-remove {
-  padding-right: 6px;
-  .remove {
-    &:hover {
-      padding: 2px;
-      color: $tag-active-color;
-      background: $tag-active-background-color;
-      // stylelint-disable-next-line property-disallowed-list
-      border-radius: 10px;
-    }
-  }
-  svg:last-of-type {
-    transform: translateX(3px);
-  }
+  padding-top: .1875rem;
+  padding-bottom: .1875rem;
 }
 
 .tag-lg {
-  @include button-size(
-    $tag-padding-y-lg,
-    $tag-padding-x-lg,
-    $tag-font-size-lg,
-    $tag-border-radius-lg,
-    $tag-line-height-lg
-  );
-  padding-top: add($tag-padding-y-lg, 1px);
-  @include font-size($tag-font-size-lg);
-  // stylelint-disable-next-line property-disallowed-list
-  border-radius: $tag-border-radius-lg;
+  padding: .5rem $tag-padding-x-lg .625rem;
+  font-size: $tag-font-size-lg;
+  line-height: $tag-line-height-lg;
+  @include border-radius($tag-border-radius, $tag-border-radius);
+
+  &.tag-icon {
+    padding-left: subtract($tag-padding-x-lg, .125rem);
+  }
+
+  &.tag-remove {
+    padding-right: subtract($tag-padding-x-lg, .3125rem);
+  }
+
+  &.tag-icon,
+  &.tag-remove {
+    padding-bottom: .5rem;
+  }
 }

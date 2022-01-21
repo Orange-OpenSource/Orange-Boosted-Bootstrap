@@ -1618,21 +1618,24 @@ $badge-border-radius:               $border-radius !default;
 // Tags
 
 // scss-docs-start tag-variables
-$tag-font-size:                   .875em !default;
+$tag-font-size:                   $font-size-sm !default;
+$tag-line-height:                 $line-height-sm !default;
 $tag-font-size-lg:                $font-size-base !default;
-$tag-line-height-lg:              $line-height-sm !default;
+$tag-line-height-lg:              $line-height-base !default;
+
+$tag-padding-remove-icon:         .1875rem !default;
+$tag-padding-x:                   .5rem !default;
+$tag-padding-x-lg:                .8125rem !default;
+$tag-gap:                         map-get($spacers, 1) !default;
+
 $tag-color:                       $black !default;
 $tag-active-color:                $white !default;
 $tag-disabled-color:              $gray-500 !default;
-$tag-background-color:            transparent !default;
-$tag-active-background-color:     $black !default;
-$tag-padding-x-lg:                .75em !default;
-$tag-padding-y-lg:                .45em !default;
 $tag-border-width:                $btn-border-width !default;
-$tag-border-radius:               15px !default;
-$tag-border-radius-lg:            2em !default;
+$tag-border-radius:               2rem !default;
 $tag-border-color:                $gray-500 !default;
 $tag-border-color-hover:          $black !default;
+$tag-active-background-color:     $black !default;
 // scss-docs-end tag-variables
 
 // Modals
