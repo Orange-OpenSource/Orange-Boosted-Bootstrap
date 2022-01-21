@@ -132,7 +132,7 @@ describe('QuantitySelector', () => {
     expect(inputEl.value).toBe('0')
   })
 
-  it('should increment by 0.5 step on click on Step Up button', () => {
+  it('should increment a decimal value by 0.5 step on click on Step Up button and round it', () => {
     fixtureEl.innerHTML = [
       '<div class="input-group quantity-selector">',
       '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="1.25" min="0" max="10" step="0.5" data-bs-round="1" aria-label="Quantity selector">',
