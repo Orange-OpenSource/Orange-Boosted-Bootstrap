@@ -23,7 +23,7 @@
   // Boosted mod
   padding: $navbar-padding-x; // default: null
   font-weight: $font-weight-bold;
-  border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700; // Boosted mod
+  box-shadow: inset 0 -.063em 0 $gray-700;
   @include transition($navbar-transition);
   // End mod
   @include gradient-bg();
@@ -72,6 +72,7 @@
 
     .two-lined {
       font-size: $navbar-orange-two-titles-font-size-xs;
+      line-height: .73;
       & :first-child {
         vertical-align: text-top;
       }
@@ -344,7 +345,7 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding-top: $navbar-padding-y; // Boosted mod
-        padding-bottom: $navbar-padding-bottom; // Boosted mod
+        padding-bottom: $spacer * .4; // Boosted mod
 
         .navbar-nav {
           flex-direction: row;
@@ -407,11 +408,11 @@
 
         &.flex-sm-wrap {
           .navbar-collapse {
-            padding: divide($navbar-orange-navigation-padding-bottom, 2) 0 $navbar-orange-navigation-padding-bottom;
+            padding: $navbar-orange-navigation-padding-bottom 0;
           }
 
           .nav-link.active::before{
-            bottom: subtract(-$navbar-orange-navigation-padding-bottom, $navbar-orange-supra-border-bottom-width);
+            bottom: -$navbar-orange-navigation-padding-bottom;
           }
         }
       }
