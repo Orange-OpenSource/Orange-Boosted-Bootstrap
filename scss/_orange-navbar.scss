@@ -54,6 +54,7 @@
     padding-bottom: 0;
     .nav-item:last-of-type {
       .nav-icon {
+        // stylelint-disable declaration-no-important
         padding-right: 0 !important;
       }
     }
@@ -70,7 +71,7 @@
 
   .navbar-nav .nav-link{
     &.nav-icon {
-        padding: divide($spacer, 4) $spacer $navbar-orange-minimized-icon-padding-bottom;
+      padding: divide($spacer, 4) $spacer $navbar-orange-minimized-icon-padding-bottom;
     }
 
     &.active::before {
