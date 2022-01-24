@@ -197,7 +197,7 @@
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .25;
+    padding-bottom: $nav-link-padding-y $nav-link-padding-x * .25; // Boosted mod
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
@@ -208,8 +208,6 @@
     &.active::before {
       position: absolute;
       right: $nav-link-padding-y * .5;
-      // bottom: 0;
-      // bottom: -0.063rem;
       bottom: $h1-spacing;
       left: $nav-link-padding-y * .5;
       height: $border-width * 2;

@@ -402,7 +402,7 @@ The minimized global header will **always** use the small [Master logo]().
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-    <div class="mega-menu navbar-collapse collapse bg-dark" id="global-header-minified" style="height: auto;">
+    <div class="navbar-collapse collapse bg-dark" id="global-header-minified" style="height: auto;">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>

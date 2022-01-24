@@ -75,7 +75,11 @@
     }
 
     &.active::before {
-      bottom: 0;
+      bottom: -.125em;
     }
+  }
+
+  .navbar-collapse{
+    margin-bottom: .125em;
   }
 }
