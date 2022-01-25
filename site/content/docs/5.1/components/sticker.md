@@ -26,9 +26,19 @@ A max width is set for this content so that it fits easily within the circle.
 We provide [a set of stickers examples]({{< docsref "/examples/stickers" >}}) representing several use cases.
 
 {{< callout warning >}}
+**Positioning**
+
 This flexibility means that the stickers can vary from the design specifications regarding the vertical positioning of content.
 
 For a better rendering you can use our margin utilities or even CSS.
+{{< /callout >}}
+
+{{< callout warning >}}
+**Font sizes and responsiveness**
+
+All the provided examples use our text utilities to facilitate the understanding and to match the examples from the Orange Design System in desktop mode.
+
+Be aware that those examples are not meant to be responsive. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you will need to set fixed font sizes in CSS.
 {{< /callout >}}
 
 ## Sizes
