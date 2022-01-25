@@ -1,21 +1,23 @@
-// Base class
-
 .tag {
   display: inline-flex;
   gap: $tag-gap;
   align-items: center;
-  padding: .25rem $tag-padding-x .375rem;
+  padding: add($tag-padding-y, .0625rem) $tag-padding-x add($tag-padding-y, .1875rem);
   font-size: $tag-font-size;
   font-weight: $font-weight-bold;
   line-height: $tag-line-height;
-  color: $tag-color;
   cursor: if($enable-button-pointers, pointer, null);
-  border: $tag-border-width solid $tag-border-color;
-
+  border: $border-width solid $tag-border-color;
   @include border-radius($tag-border-radius, $tag-border-radius);
 
+  svg,
+  .remove {
+    width: $tag-icon-size;
+    height: $tag-icon-size;
+  }
+
   &:hover {
-    border-color: $tag-border-color-hover;
+    border-color: currentColor;
   }
 
   &:active,
@@ -24,7 +26,13 @@
   &.focus {
     color: $tag-active-color;
     background-color: $tag-active-background-color;
-    border-color: $tag-border-color-hover;
+    border-color: $tag-active-border-color;
+    outline: $outline-width solid $black;
+    outline-offset: .25rem;
+
+    .remove {
+      @include tag-remove($tag-active-color);
+    }
   }
 
   &:disabled,
@@ -32,8 +40,18 @@
   &[disabled] {
     color: $tag-disabled-color;
     pointer-events: none;
-    border-color: $tag-border-color;
+    background-color: transparent;
+    border-color: $tag-disabled-color;
+
+    .remove {
+      @include tag-remove($tag-disabled-color);
+    }
   }
+}
+
+.tag-icon,
+.tag-remove {
+  padding: $tag-padding-y $tag-padding-x;
 }
 
 .tag-icon {
@@ -44,38 +62,85 @@
   padding-right: subtract($tag-padding-x, .3125rem);
 
   .remove {
-    padding: $tag-padding-remove-icon;
+    background: no-repeat center/subtract($tag-icon-size, $tag-padding-remove-icon * 2);
+    border: 0;
+    @include tag-remove($black);
     @include border-radius($tag-border-radius, $tag-border-radius);
 
-    &:hover {
-      color: $tag-active-color;
-      background: $tag-active-background-color;
+    &:hover,
+    &:focus {
+      background-color: $tag-active-background-color;
+      @include tag-remove($tag-active-color);
     }
   }
 }
 
-.tag-icon,
-.tag-remove {
-  padding-top: .1875rem;
-  padding-bottom: .1875rem;
-}
-
 .tag-lg {
-  padding: .5rem $tag-padding-x-lg .625rem;
+  padding: add($tag-padding-y-lg, .125rem) $tag-padding-x-lg add($tag-padding-y-lg, .25rem);
   font-size: $tag-font-size-lg;
   line-height: $tag-line-height-lg;
   @include border-radius($tag-border-radius, $tag-border-radius);
 
-  &.tag-icon {
-    padding-left: subtract($tag-padding-x-lg, .125rem);
-  }
-
-  &.tag-remove {
-    padding-right: subtract($tag-padding-x-lg, .3125rem);
+  svg,
+  .remove {
+    width: $tag-icon-size-lg;
+    height: $tag-icon-size-lg;
   }
 
   &.tag-icon,
   &.tag-remove {
-    padding-bottom: .5rem;
+    padding: $tag-padding-y-lg $tag-padding-x-lg;
+  }
+
+  &.tag-icon {
+    padding-left: subtract($tag-padding-x-lg, .375rem);
+  }
+
+  &.tag-remove {
+    padding-right: subtract($tag-padding-x-lg, .375rem);
+
+    .remove {
+      background-size: subtract($tag-icon-size-lg, $tag-padding-remove-icon * 2);
+    }
+  }
+}
+
+.tag-dark {
+  border-color: $tag-border-color-dark;
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    color: $tag-active-color-dark;
+    background-color: $tag-active-background-color-dark;
+    border-color: $tag-active-border-color-dark;
+    outline-color: $white;
+
+    .remove {
+      @include tag-remove($tag-active-color-dark);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  &[disabled] {
+    color: $tag-disabled-color-dark;
+    background-color: transparent;
+    border-color: $tag-disabled-color-dark;
+
+    .remove {
+      @include tag-remove($tag-disabled-color-dark);
+    }
+  }
+
+  .remove{
+    @include tag-remove($white);
+
+    &:hover,
+    &:focus {
+      background-color: $tag-active-background-color-dark;
+      @include tag-remove($tag-active-color-dark);
+    }
   }
 }
