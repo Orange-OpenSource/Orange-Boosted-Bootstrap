@@ -52,8 +52,8 @@ Brand-compliant navbars that are easy to use and customizable.
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">
-      <ul class="navbar-nav d-md-none flex-row ml-auto">
+    <div class="d-flex order-md-1 align-self-end">
+      <ul class="navbar-nav flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -97,36 +97,6 @@ Brand-compliant navbars that are easy to use and customizable.
         <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
       </ul>
     </div>
-    <ul class="navbar-nav d-none d-md-flex">
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-          </svg>
-          <span class="visually-hidden">Search</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-          <span class="position-relative">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-              1
-              <span class="visually-hidden">shopping basket items</span>
-            </span>
-          </span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-        <span class="visually-hidden">My account</span>
-        </a>
-      </li>
-    </ul>
   </div>
 </nav>
 {{< /example >}}
@@ -148,8 +118,8 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title" class="title h1">Title</span>
       </a>
-      <div class="d-flex">
-        <ul class="navbar-nav d-lg-none flex-row ml-auto">
+      <div class="d-flex order-md-1 align-self-end">
+        <ul class="navbar-nav flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -187,58 +157,8 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item d-sm-none"> -->
-            <a href="#" class="nav-link nav-icon position-relative">
-              <span class="position-relative">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
-                  1
-                  <span class="visually-hidden">shopping basket items</span>
-                </span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-            </a>
-          </li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-lg-flex">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-            <span class="position-relative">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-                1
-                <span class="visually-hidden">shopping basket items</span>
-              </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
     </div>
   </nav>
 </header>
@@ -254,8 +174,8 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">
-        <ul class="navbar-nav d-lg-none flex-row ml-auto">
+      <div class="d-flex order-md-1 align-self-end">
+        <ul class="navbar-nav flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -293,58 +213,8 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon position-relative">
-              <span class="position-relative">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
-                  1
-                  <span class="visually-hidden">shopping basket items</span>
-                </span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-            </a>
-          </li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-lg-flex pb-1">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-            <span class="position-relative">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-                1
-                <span class="visually-hidden">shopping basket items</span>
-              </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
     </div>
   </nav>
 </header>
@@ -367,8 +237,8 @@ The minimized global header will **always** use the small [Master logo]().
     <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
-    <div class="d-flex">
-      <ul class="navbar-nav d-md-none flex-row ml-auto">
+    <div class="d-flex order-md-1 align-self-end">
+      <ul class="navbar-nav flex-row ml-auto">
         <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -410,58 +280,8 @@ The minimized global header will **always** use the small [Master logo]().
         <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
         <li class="nav-item"><a class="nav-link" href="#">News</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-        <li class="nav-item d-sm-none">
-          <a href="#" class="nav-link nav-icon position-relative">
-            <span class="position-relative">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
-                1
-                <span class="visually-hidden">shopping basket items</span>
-              </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item d-sm-none">
-          <a href="#" class="nav-link nav-icon">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
       </ul>
     </div>
-    <ul class="navbar-nav d-none d-md-flex">
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-          </svg>
-          <span class="visually-hidden">Search</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-          <span class="position-relative">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-              1
-              <span class="visually-hidden">shopping basket items</span>
-            </span>
-          </span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link nav-icon pt-1 pb-2">
-          <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-        <span class="visually-hidden">My account</span>
-        </a>
-      </li>
-    </ul>
   </div>
 </nav>
 {{< /example >}}
@@ -488,8 +308,8 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
           <span class="align-self-end">Title Line 2</span>
         </span>
       </a>
-      <div class="d-flex">
-        <ul class="navbar-nav d-md-none flex-row ml-auto">
+      <div class="d-flex order-md-1 align-self-end">
+        <ul class="navbar-nav flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -523,36 +343,6 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <ul class="navbar-nav ml-auto d-none d-md-flex">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-0 position-relative">
-            <span class="position-relative">
-              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-              </svg>
-              <span class="visually-hidden">Basket</span>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white mt-1">
-                1
-                <span class="visually-hidden">shopping basket items</span>
-              </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
     </div>
   </nav>
   <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0 d-none d-md-block">
@@ -565,26 +355,6 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon position-relative">
-              <span class="position-relative">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#buy"/>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
-                  1
-                  <span class="visually-hidden">shopping basket items</span>
-                </span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item d-sm-none">
-            <a href="#" class="nav-link nav-icon">
-              <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -663,8 +433,8 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
           </div>
         </div>
       </a>
-      <div class="d-flex">
-        <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
+      <div class="d-flex order-md-1 align-self-end">
+        <ul class="navbar-nav flex-row ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
@@ -694,22 +464,6 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-md-flex">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon pt-1 pb-2">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-          <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
     </div>
   </nav>
 </header>
