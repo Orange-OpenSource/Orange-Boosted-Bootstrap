@@ -9,7 +9,7 @@ toc: true
 {{< ods-incompatibility-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
-The **grow spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
+**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
 {{< /ods-incompatibility-alert >}}
 
 ## About
@@ -22,7 +22,7 @@ For accessibility purposes, each loader here includes `role="status"` and a nest
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Example
+## Border spinner
 
 Use the border spinners for a lightweight loading indicator.
 
@@ -44,7 +44,13 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 <div class="spinner-border text-secondary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-border text-white" role="status">
+{{< /example >}}
+
+{{< example class="bg-dark" >}}
+<div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-secondary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
@@ -64,8 +70,9 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 </div>
 {{< /example >}}
 
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in blue, along with the supported variants.
+Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in orange, along with a secondary supported variant.
 
+<!-- Boosted mod -->
 {{< example >}}
 <div class="spinner-grow text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -73,10 +80,17 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 <div class="spinner-grow text-secondary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-grow text-light" role="status">
+{{< /example >}}
+
+{{< example class="bg-dark" >}}
+<div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
+<!-- End mod -->
 
 ## Alignment
 
@@ -136,7 +150,6 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 ## Size
 
 <!-- Boosted mod: -sm & -lg -->
-
 Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that can quickly be used within other components.
 
 {{< example >}}
@@ -153,7 +166,6 @@ Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that 
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
-
 <!-- End mod -->
 
 ## Buttons
@@ -195,7 +207,6 @@ Used for creating the CSS animations for our spinners. Included in `scss/_spinne
 {{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
 
 {{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
-
 
 [color]:   {{< docsref "/utilities/colors" >}}
 [display]: {{< docsref "/utilities/display" >}}

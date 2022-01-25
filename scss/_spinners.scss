@@ -71,6 +71,7 @@
   width: $spinner-width-lg;
   height: $spinner-height-lg;
 }
+// End mod
 
 @if $enable-reduced-motion {
   @media (prefers-reduced-motion: reduce) {
@@ -80,6 +81,3 @@
     }
   }
 }
-// End mod
-
-// Boosted mod: no .spinner-grow
