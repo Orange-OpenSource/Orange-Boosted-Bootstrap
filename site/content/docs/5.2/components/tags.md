@@ -11,28 +11,28 @@ toc: true
 A tag is basically a rounded button that can contain some text, an icon and a close button.
 
 {{< example class="d-flex gap-2" >}}
-<button class="tag">Label</button>
-<button class="tag tag-icon">
+<div role="button" tabindex="0" class="tag">Label</div>
+<div role="button" tabindex="0" class="tag tag-icon">
   <svg fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-</button>
-<button class="tag tag-remove">
+</div>
+<div role="button" tabindex="0" class="tag tag-remove">
   Label
-  <div role="button" class="remove" tabindex="0">
+  <button class="remove">
     <span class="visually-hidden">Close</span>
-  </div>
-</button>
-<button class="tag tag-icon tag-remove">
+  </button>
+</div>
+<div role="button" tabindex="0" class="tag tag-icon tag-remove">
   <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-  <div role="button" class="remove" tabindex="0">
+  <button class="remove">
     <span class="visually-hidden">Close</span>
-  </div>
-</button>
+  </button>
+</div>
 {{< /example >}}
 
 ## With icon
@@ -40,12 +40,12 @@ A tag is basically a rounded button that can contain some text, an icon and a cl
 To add icon to your tag, add `.tag-icon`.
 
 {{< example class="d-flex gap-2" >}}
-<button class="tag tag-icon">
+<div role="button" tabindex="0" class="tag tag-icon">
   <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-</button>
+</div>
 {{< /example >}}
 
 ## Dismissing
@@ -53,12 +53,12 @@ To add icon to your tag, add `.tag-icon`.
 Tags come with an embedded close icon : `.tag-remove`.
 
 {{< example class="d-flex gap-2" >}}
-<button class="tag tag-remove">
+<div role="button" tabindex="0" class="tag tag-remove">
   Label
-  <div role="button" class="remove" tabindex="0">
+  <button class="remove">
     <span class="visually-hidden">Close</span>
-  </div>
-</button>
+  </button>
+</div>
 {{< /example >}}
 
 ## Dark variant
@@ -66,15 +66,15 @@ Tags come with an embedded close icon : `.tag-remove`.
 Tags come with a dark variant : `.tag-dark`.
 
 {{< example class="bg-dark d-flex gap-2" >}}
-<button class="tag tag-dark tag-icon tag-remove">
+<div role="button" tabindex="0" class="tag tag-dark tag-icon tag-remove">
   <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-  <div role="button" class="remove" tabindex="0">
+  <button class="remove">
     <span class="visually-hidden">Close</span>
-  </div>
-</button>
+  </button>
+</div>
 {{< /example >}}
 
 ## Disabled state
@@ -82,16 +82,16 @@ Tags come with a dark variant : `.tag-dark`.
 Tags come with a disabled state. Add `.disabled` or even the attribute `disabled`.
 
 {{< example class="d-flex gap-2" >}}
-<button class="tag disabled" tabindex="-1">Label</button>
-<button class="tag tag-icon tag-remove" disabled>
+<div role="button" tabindex="-1" class="tag disabled">Label</div>
+<div role="button" class="tag tag-icon tag-remove" disabled>
   <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-  <div role="button" class="remove">
+  <button class="remove">
     <span class="visually-hidden">Close</span>
-  </div>
-</button>
+  </button>
+</div>
 {{< /example >}}
 
 ## Sizes
@@ -99,8 +99,8 @@ Tags come with a disabled state. Add `.disabled` or even the attribute `disabled
 Fancy smaller tags ? Add `.tag-sm` for additional size.
 
 {{< example >}}
-<button class="tag me-1">Label</button>
-<button class="tag tag-sm">Label</button>
+<div role="button" tabindex="0" class="tag me-1">Label</div>
+<div role="button" tabindex="0" class="tag tag-sm">Label</div>
 {{< /example >}}
 
 ## Sass
