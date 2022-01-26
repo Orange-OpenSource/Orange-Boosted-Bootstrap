@@ -114,7 +114,7 @@ class QuantitySelector extends BaseComponent {
     }
   }
 
-  // Static
+  // Public
   ValueOnLoad(el) {
     const COUNTER_INPUT = el.querySelector(SELECTOR_COUNTER_INPUT)
     const BTN_UP = el.querySelector(SELECTOR_STEP_UP_BUTTON)
