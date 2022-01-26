@@ -8,6 +8,7 @@
 import { defineJQueryPlugin } from './util/index'
 import EventHandler from './dom/event-handler'
 import BaseComponent from './base-component'
+import SelectorEngine from './dom/selector-engine'
 
 /**
  * Constants
@@ -18,8 +19,8 @@ const DATA_KEY = 'bs.quantityselector'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
-const EVENT_LOAD_DATA_API = `input${EVENT_KEY}${DATA_API_KEY}`
-const EVENT_ON_CHANGE_DATA_API = `change${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CHANGE_DATA_API = `change${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
@@ -112,14 +113,37 @@ class QuantitySelector extends BaseComponent {
       BTN_UP.setAttribute('disabled', '')
     }
   }
+
+  // Static
+  ValueOnLoad(el) {
+    const COUNTER_INPUT = el.querySelector(SELECTOR_COUNTER_INPUT)
+    const BTN_UP = el.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const BTN_DOWN = el.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+
+    const MIN = COUNTER_INPUT.getAttribute('min')
+    const MAX = COUNTER_INPUT.getAttribute('max')
+    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
+
+    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
+      BTN_DOWN.setAttribute('disabled', '')
+    }
+
+    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
+      BTN_UP.setAttribute('disabled', '')
+    }
+  }
 }
 
 /**
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_LOAD_DATA_API, SELECTOR_COUNTER_INPUT.value, QuantitySelector.ValueChange)
-EventHandler.on(document, EVENT_ON_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT.value, QuantitySelector.ValueChange)
+EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+  for (const el of SelectorEngine.find(SELECTOR_INPUT_GROUP)) {
+    QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
+  }
+})
+EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.ValueChange)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
