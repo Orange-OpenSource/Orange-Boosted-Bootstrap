@@ -1618,32 +1618,32 @@ $badge-border-radius:               $border-radius !default;
 // Tags
 
 // scss-docs-start tag-variables
-$tag-font-size:                     $font-size-sm !default;
-$tag-line-height:                   $line-height-sm !default;
-$tag-font-size-lg:                  $font-size-base !default;
-$tag-line-height-lg:                $line-height-base !default;
+$tag-font-size-sm:                  $font-size-sm !default;
+$tag-line-height-sm:                $line-height-sm !default;
+$tag-font-size:                     $font-size-base !default;
+$tag-line-height:                   $line-height-base !default;
 
 $tag-padding-remove-icon:           .1875rem !default;
-$tag-padding-x:                     .5rem !default;
-$tag-padding-y:                     .1875rem !default;
-$tag-padding-x-lg:                  .8125rem !default;
-$tag-padding-y-lg:                  .375rem !default;
+$tag-padding-x:                     .8125rem !default;
+$tag-padding-y:                     .375rem !default;
 $tag-gap:                           map-get($spacers, 1) !default;
-$tag-icon-size:                     1.25rem !default;
-$tag-icon-size-lg:                  1.5rem !default;
+$tag-icon-size:                     1.5rem !default;
+$tag-icon-shift:                    .125rem !default;
 $tag-border-radius:                 2rem !default;
+
+$tag-padding-x-sm:                  .5rem !default;
+$tag-padding-y-sm:                  .1875rem !default;
+$tag-icon-size-sm:                  1.25rem !default;
 
 $tag-active-color:                  $white !default;
 $tag-disabled-color:                $gray-500 !default;
 $tag-border-color:                  $gray-500 !default;
-$tag-active-border-color:           $black !default;
-$tag-active-background-color:       $black !default;
+$tag-active-decoration-color:       $black !default;
 
 $tag-active-color-dark:             $black !default;
 $tag-disabled-color-dark:           $gray-700 !default;
 $tag-border-color-dark:             $gray-700 !default;
-$tag-active-border-color-dark:      $white !default;
-$tag-active-background-color-dark:  $white !default;
+$tag-active-decoration-color-dark:  $white !default;
 // scss-docs-end tag-variables
 
 // Modals

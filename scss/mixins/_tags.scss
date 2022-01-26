@@ -1,3 +1,5 @@
+// scss-docs-start tag-mixin
 @mixin tag-remove($color: $black) {
   background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$color}' d='M24.536 20.298a1.499 1.499 0 0 1 0 2.12l-2.119 2.118a1.499 1.499 0 0 1-2.119 0L15 19.238l-5.298 5.298a1.499 1.499 0 0 1-2.12 0l-2.118-2.119a1.499 1.499 0 0 1 0-2.119L10.762 15 5.464 9.702a1.499 1.499 0 0 1 0-2.12l2.119-2.118a1.499 1.499 0 0 1 2.119 0L15 10.762l5.298-5.298a1.499 1.499 0 0 1 2.12 0l2.118 2.119a1.499 1.499 0 0 1 0 2.119L19.238 15z'/></svg>"));
 }
+// scss-docs-end tag-mixin
