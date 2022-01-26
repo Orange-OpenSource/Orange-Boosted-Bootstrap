@@ -35,6 +35,7 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 img/orange-logo.svg
+img/OBS-logo.svg
 dist/img/orange-logo.svg
 site/favicon.ico
 site/docs/**/assets/img/favicons/favicon.ico
@@ -55,6 +56,7 @@ site/docs/**/assets/brand/logo-rule-4b.png
 site/docs/**/assets/brand/orange-logo.svg
 site/docs/**/assets/brand/orange-social.svg
 site/docs/**/assets/brand/orange-social.png
+site/docs/**/assets/brand/OBS-logo.svg
 
 End of the parts list under Orange SA Copyright
 
