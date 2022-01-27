@@ -41,95 +41,95 @@ class QuantitySelector extends BaseComponent {
   // Static
   static StepUp(event) {
     event.preventDefault()
-    const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
-    const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
-    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
+    const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
-    const MAX = COUNTER_INPUT.getAttribute('max')
-    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
-    const ROUND = Number(COUNTER_INPUT.getAttribute('data-bs-round'))
+    const max = counterInput.getAttribute('max')
+    const step = Number(counterInput.getAttribute('step'))
+    const round = Number(counterInput.getAttribute('data-bs-round'))
 
-    if (Number(COUNTER_INPUT.value) < MAX) {
-      COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) + STEP).toFixed(ROUND).toString()
-    } else if (Number(COUNTER_INPUT.value) + STEP > MAX) {
-      BTN_UP.setAttribute('disabled', '')
+    if (Number(counterInput.value) < max) {
+      counterInput.value = (Number(counterInput.value) + step).toFixed(round).toString()
+    } else if (Number(counterInput.value) + step > max) {
+      btnUp.setAttribute('disabled', '')
     }
 
-    if (BTN_DOWN.hasAttribute('disabled', '')) {
-      BTN_DOWN.removeAttribute('disabled', '')
+    if (btnDown.hasAttribute('disabled', '')) {
+      btnDown.removeAttribute('disabled', '')
     }
 
-    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
+    if (Number(counterInput.value) + step > max) {
+      btnUp.setAttribute('disabled', '')
+    }
+  }
+
+  // Public
+  ValueOnLoad(element) {
+    const counterInput = element.querySelector(SELECTOR_COUNTER_INPUT)
+    const BTN_UP = element.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const BTN_DOWN = element.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+
+    const MIN = counterInput.getAttribute('min')
+    const MAX = counterInput.getAttribute('max')
+    const STEP = Number(counterInput.getAttribute('step'))
+
+    if (Number(counterInput.value) - STEP < MIN) {
+      BTN_DOWN.setAttribute('disabled', '')
+    }
+
+    if (Number(counterInput.value) + STEP > MAX) {
       BTN_UP.setAttribute('disabled', '')
     }
   }
 
   static StepDown(event) {
     event.preventDefault()
-    const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
-    const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
-    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
+    const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
-    const MIN = COUNTER_INPUT.getAttribute('min')
-    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
-    const ROUND = Number(COUNTER_INPUT.getAttribute('data-bs-round'))
+    const min = counterInput.getAttribute('min')
+    const step = Number(counterInput.getAttribute('step'))
+    const round = Number(counterInput.getAttribute('data-bs-round'))
 
-    if (Number(COUNTER_INPUT.value) > MIN) {
-      COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) - STEP).toFixed(ROUND).toString()
-    } else if (Number(COUNTER_INPUT.value) + STEP < MIN) {
-      BTN_DOWN.setAttribute('disabled', '')
+    if (Number(counterInput.value) > min) {
+      counterInput.value = (Number(counterInput.value) - step).toFixed(round).toString()
+    } else if (Number(counterInput.value) + step < min) {
+      btnDown.setAttribute('disabled', '')
     }
 
-    if (BTN_UP.hasAttribute('disabled', '')) {
-      BTN_UP.removeAttribute('disabled', '')
+    if (btnUp.hasAttribute('disabled', '')) {
+      btnUp.removeAttribute('disabled', '')
     }
 
-    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
-      BTN_DOWN.setAttribute('disabled', '')
+    if (Number(counterInput.value) - step < min) {
+      btnDown.setAttribute('disabled', '')
     }
   }
 
   static ValueChange(event) {
     event.preventDefault()
-    const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
-    const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
-    const BTN_UP = PARENT.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const BTN_DOWN = PARENT.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
+    const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
-    const MIN = COUNTER_INPUT.getAttribute('min')
-    const MAX = COUNTER_INPUT.getAttribute('max')
-    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
+    const min = counterInput.getAttribute('min')
+    const max = counterInput.getAttribute('max')
+    const STEP = Number(counterInput.getAttribute('step'))
 
-    BTN_UP.removeAttribute('disabled', '')
-    BTN_DOWN.removeAttribute('disabled', '')
+    btnUp.removeAttribute('disabled', '')
+    btnDown.removeAttribute('disabled', '')
 
-    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
-      BTN_DOWN.setAttribute('disabled', '')
+    if (Number(counterInput.value) - STEP < min) {
+      btnDown.setAttribute('disabled', '')
     }
 
-    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
-      BTN_UP.setAttribute('disabled', '')
-    }
-  }
-
-  // Public
-  ValueOnLoad(el) {
-    const COUNTER_INPUT = el.querySelector(SELECTOR_COUNTER_INPUT)
-    const BTN_UP = el.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const BTN_DOWN = el.querySelector(SELECTOR_STEP_DOWN_BUTTON)
-
-    const MIN = COUNTER_INPUT.getAttribute('min')
-    const MAX = COUNTER_INPUT.getAttribute('max')
-    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
-
-    if (Number(COUNTER_INPUT.value) - STEP < MIN) {
-      BTN_DOWN.setAttribute('disabled', '')
-    }
-
-    if (Number(COUNTER_INPUT.value) + STEP > MAX) {
-      BTN_UP.setAttribute('disabled', '')
+    if (Number(counterInput.value) + STEP > max) {
+      btnUp.setAttribute('disabled', '')
     }
   }
 }
