@@ -39,7 +39,7 @@ describe('QuantitySelector', () => {
   it('should take care of element either passed as a CSS selector or DOM element (Step Up button)', () => {
     fixtureEl.innerHTML = [
       '<div class="input-group quantity-selector">',
-      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" aria-label="Quantity selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="1" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">',
       '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
       '    <span class="visually-hidden">Step down</span>',
       '  </button>',
@@ -60,7 +60,7 @@ describe('QuantitySelector', () => {
   it('should take care of element either passed as a CSS selector or DOM element (Step Down button)', () => {
     fixtureEl.innerHTML = [
       '<div class="input-group quantity-selector">',
-      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" aria-label="Quantity selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="1" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">',
       '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
       '    <span class="visually-hidden">Step down</span>',
       '  </button>',
@@ -81,7 +81,7 @@ describe('QuantitySelector', () => {
   it('should increment by one step on click on Step Up button', () => {
     fixtureEl.innerHTML = [
       '<div class="input-group quantity-selector">',
-      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="9" min="0" max="10" step="1" aria-label="Quantity selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="9" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">',
       '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
       '    <span class="visually-hidden">Step down</span>',
       '  </button>',
@@ -153,5 +153,107 @@ describe('QuantitySelector', () => {
     buttonStepUpEl.click()
 
     expect(inputEl.value).toBe('1.8') // 1.25 + .5 = 1.75 and with data-bs-round="1" = 1.8
+  })
+
+  it('should decrement a decimal value by 1 step on click on Step Down button but not resulting as a negative value', () => {
+    fixtureEl.innerHTML = [
+      '<div class="input-group quantity-selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="1.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector">',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
+      '    <span class="visually-hidden">Step down</span>',
+      '  </button>',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">',
+      '    <span class="visually-hidden">Step up</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
+
+    const buttonStepDownEl = fixtureEl.querySelector('[data-bs-step="down"]')
+    const inputEl = fixtureEl.querySelector('[data-bs-step="counter"]')
+
+    expect(inputEl.value).toBe('1.5')
+
+    buttonStepDownEl.click()
+
+    expect(inputEl.value).toBe('0.5')
+
+    expect(buttonStepDownEl.disabled).toBeTruthy()
+  })
+
+  it('should increment a decimal value by 1 step on click on Step Up button but not resulting as a negative value', () => {
+    fixtureEl.innerHTML = [
+      '<div class="input-group quantity-selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="8.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector">',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
+      '    <span class="visually-hidden">Step down</span>',
+      '  </button>',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">',
+      '    <span class="visually-hidden">Step up</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
+
+    const buttonStepUpEl = fixtureEl.querySelector('[data-bs-step="up"]')
+    const inputEl = fixtureEl.querySelector('[data-bs-step="counter"]')
+
+    expect(inputEl.value).toBe('8.5')
+
+    buttonStepUpEl.click()
+
+    expect(inputEl.value).toBe('9.5')
+
+    expect(buttonStepUpEl.disabled).toBeTruthy()
+  })
+
+  it('should disable click on Step Down button on load to prevent a value out of range', done => {
+    fixtureEl.innerHTML = [
+      '<div class="input-group quantity-selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector">',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
+      '    <span class="visually-hidden">Step down</span>',
+      '  </button>',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">',
+      '    <span class="visually-hidden">Step up</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
+
+    const buttonStepDownEl = fixtureEl.querySelector('[data-bs-step="down"]')
+    const inputEl = fixtureEl.querySelector('[data-bs-step="counter"]')
+
+    expect(inputEl.value).toBe('0.5')
+
+    buttonStepDownEl.click()
+
+    setTimeout(() => {
+      expect(buttonStepDownEl.disabled).toBeTruthy()
+      done()
+    }, 10)
+  })
+
+  it('should disable click on Step Up button on load to prevent a value out of range', done => {
+    fixtureEl.innerHTML = [
+      '<div class="input-group quantity-selector">',
+      '  <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="9.5" min="0" max="10" step="1" data-bs-round="1" aria-label="Quantity selector">',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">',
+      '    <span class="visually-hidden">Step down</span>',
+      '  </button>',
+      '  <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">',
+      '    <span class="visually-hidden">Step up</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
+
+    const buttonStepUpEl = fixtureEl.querySelector('[data-bs-step="up"]')
+    const inputEl = fixtureEl.querySelector('[data-bs-step="counter"]')
+
+    expect(inputEl.value).toBe('9.5')
+
+    buttonStepUpEl.click()
+
+    setTimeout(() => {
+      expect(buttonStepUpEl.disabled).toBeTruthy()
+      done()
+    }, 10)
   })
 })
