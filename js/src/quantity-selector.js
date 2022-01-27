@@ -38,6 +38,25 @@ class QuantitySelector extends BaseComponent {
     return NAME
   }
 
+  // Public
+  ValueOnLoad(element) {
+    const counterInput = element.querySelector(SELECTOR_COUNTER_INPUT)
+    const btnUp = element.querySelector(SELECTOR_STEP_UP_BUTTON)
+    const btnDown = element.querySelector(SELECTOR_STEP_DOWN_BUTTON)
+
+    const min = counterInput.getAttribute('min')
+    const max = counterInput.getAttribute('max')
+    const step = Number(counterInput.getAttribute('step'))
+
+    if (Number(counterInput.value) - step < min) {
+      btnDown.setAttribute('disabled', '')
+    }
+
+    if (Number(counterInput.value) + step > max) {
+      btnUp.setAttribute('disabled', '')
+    }
+  }
+
   // Static
   static StepUp(event) {
     event.preventDefault()
@@ -62,25 +81,6 @@ class QuantitySelector extends BaseComponent {
 
     if (Number(counterInput.value) + step > max) {
       btnUp.setAttribute('disabled', '')
-    }
-  }
-
-  // Public
-  ValueOnLoad(element) {
-    const counterInput = element.querySelector(SELECTOR_COUNTER_INPUT)
-    const BTN_UP = element.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const BTN_DOWN = element.querySelector(SELECTOR_STEP_DOWN_BUTTON)
-
-    const MIN = counterInput.getAttribute('min')
-    const MAX = counterInput.getAttribute('max')
-    const STEP = Number(counterInput.getAttribute('step'))
-
-    if (Number(counterInput.value) - STEP < MIN) {
-      BTN_DOWN.setAttribute('disabled', '')
-    }
-
-    if (Number(counterInput.value) + STEP > MAX) {
-      BTN_UP.setAttribute('disabled', '')
     }
   }
 
@@ -119,16 +119,16 @@ class QuantitySelector extends BaseComponent {
 
     const min = counterInput.getAttribute('min')
     const max = counterInput.getAttribute('max')
-    const STEP = Number(counterInput.getAttribute('step'))
+    const step = Number(counterInput.getAttribute('step'))
 
     btnUp.removeAttribute('disabled', '')
     btnDown.removeAttribute('disabled', '')
 
-    if (Number(counterInput.value) - STEP < min) {
+    if (Number(counterInput.value) - step < min) {
       btnDown.setAttribute('disabled', '')
     }
 
-    if (Number(counterInput.value) + STEP > max) {
+    if (Number(counterInput.value) + step > max) {
       btnUp.setAttribute('disabled', '')
     }
   }

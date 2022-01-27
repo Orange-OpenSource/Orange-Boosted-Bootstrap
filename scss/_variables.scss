@@ -936,14 +936,14 @@ $form-label-disabled-color:             $gray-500 !default; // Boosted mod
 // scss-docs-start form-input-variables
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       $spacer * .5 !default;
-$input-padding-y-sm:                    divide($input-padding-y, 2) !default;
-$input-padding-x-sm:                    divide($input-padding-y, 2) !default;
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
 $input-font-weight:                     $font-weight-bold !default;
 $input-line-height:                     $input-btn-line-height !default;
 
-// Boosted mod: no input-sm
+$input-padding-y-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
+$input-padding-x-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
+// Boosted mod: no $input-font-size-sm
 
 $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
@@ -975,15 +975,13 @@ $input-plaintext-color:                 $body-color !default;
 // Boosted mod: no $input-height-inner-*
 
 $input-height:                          2.5rem !default;
-// Boosted mod: no input-sm
+// Boosted mod: no $input-height-sm
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 $form-color-width:                      3rem !default;
-// End mod
-
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
