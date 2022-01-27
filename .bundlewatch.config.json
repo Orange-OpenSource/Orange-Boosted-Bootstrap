@@ -26,11 +26,15 @@
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "29.23 kB"
+      "maxSize": "29.3 kB"
     },
     {
       "path": "./dist/css/boosted.min.css",
+<<<<<<< HEAD
       "maxSize": "26.85 kB"
+=======
+      "maxSize": "27.0 kB"
+>>>>>>> 830d6a464 (Fix bundlewatch conflict)
     },
     {
       "path": "./dist/js/boosted.bundle.js",
