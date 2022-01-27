@@ -47,8 +47,8 @@
         <span class="title h1">{{ $title }}</span>
         {{ end }}
       </a>
-      <div class="d-flex">
-        <ul class="navbar-nav d-md-none flex-row">
+      <div class="d-flex order-md-1 align-self-end">
+        <ul class="navbar-nav flex-row ml-auto">
           {{- if eq $mode "actions" }}
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
@@ -118,38 +118,7 @@
         </ul>
         {{ end }}
       </div>
-      {{- if eq $mode "actions" }}
-      <ul class="navbar-nav d-none d-md-flex {{ cond $minimized "" "pb-2"}}">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/5.1/assets/img/boosted-sprite.svg#search"/>
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy"/>
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-relative">
-              <span class="badge">
-                1
-                <span class="visually-hidden">shopping basket items</span>
-              </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
-      {{- else if eq $mode "search" }}
+      {{- if eq $mode "search" }}
       <form class="d-flex d-none d-md-flex ps-2" role="search">
         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       </form>
