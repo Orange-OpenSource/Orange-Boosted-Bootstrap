@@ -77,7 +77,7 @@
 
   &:focus {
     text-decoration: $link-decoration;
-    outline-offset: map-get($spacers, 1);
+    outline-offset: .0625rem;
   }
 }
 
@@ -85,7 +85,7 @@
   .stepbar-item {
     position: relative;
     max-width: 3.75rem;
-    padding: $o-stepbar-padding-y 0 $o-stepbar-padding-y $o-stepbar-arrow-width;
+    padding: $o-stepbar-padding-y .25rem $o-stepbar-padding-y add($o-stepbar-arrow-width, .25rem);
     margin: 0;
 
     &::after {
@@ -102,7 +102,11 @@
     }
 
     &:first-child {
-      padding-left: $o-stepbar-paddingl-fc;
+      padding-left: $o-stepbar-paddingx-xc;
+    }
+
+    &:last-child {
+      padding-right: $o-stepbar-paddingx-xc;
     }
 
     &:last-child::after {
