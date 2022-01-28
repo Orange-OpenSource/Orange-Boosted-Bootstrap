@@ -54,8 +54,7 @@
     padding-bottom: 0;
     .nav-item:last-of-type {
       .nav-icon {
-        // stylelint-disable-line
-        padding-right: 0 !important;
+        padding-right: 0 !important; // stylelint-disable-line
       }
     }
   }

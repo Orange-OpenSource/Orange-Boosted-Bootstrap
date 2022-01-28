@@ -48,7 +48,7 @@ Brand-compliant navbars that are easy to use and customizable.
 
 {{< example class="p-0">}}
 <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-  <div class="container-lg">
+  <div class="container">
     <a class="navbar-brand" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
@@ -113,7 +113,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 <!-- On one line -->
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <div class="container-lg flex-sm-wrap flex-md-nowrap">
+    <div class="container flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="30" height="50" role="img" alt="Boosted" loading="lazy">
         <span id="title" class="title h1">Title</span>
@@ -166,7 +166,7 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 <!-- On two lines -->
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <div class="container-lg flex-sm-wrap flex-md-nowrap">
+    <div class="container flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         <span class="two-lined h1" id="two-line-title">
@@ -233,7 +233,7 @@ The minimized global header will **always** use the small [Master logo]().
 
 {{< example class="p-0">}}
 <nav class="navbar navbar-dark bg-dark navbar-expand-md header-minimized pt-md-2 pb-md-0">
-  <div class="container-lg">
+  <div class="container">
     <a class="navbar-brand pt-1" href="#">
       <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
@@ -300,7 +300,7 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
 {{< example class="p-0">}}
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container-lg flex-sm-wrap">
+    <div class="container flex-sm-wrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         <span class="two-lined h2" id="two-line-title-2">
@@ -345,8 +345,8 @@ Also, it is not allowed to use this bar under a [minimized global header]({{< re
       </div>
     </div>
   </nav>
-  <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0 d-none d-md-block">
-    <div class="container-lg">
+  <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0">
+    <div class="container">
       <div class="navbar-collapse collapse" id="global-header-title-nav-2">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
@@ -369,7 +369,7 @@ You can have a search input into your Global Header. This one will appear differ
 {{< example class="p-0">}}
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container-lg flex-sm-wrap flex-md-nowrap">
+    <div class="container flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
       </a>
@@ -425,7 +425,7 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
 {{< example class="p-0">}}
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container-lg flex-sm-wrap flex-md-nowrap">
+    <div class="container flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand" href="#">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <div class="d-inline-flex align-items-baseline">
