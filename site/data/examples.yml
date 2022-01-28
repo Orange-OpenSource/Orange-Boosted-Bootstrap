@@ -53,6 +53,8 @@
     #   description: "Nothing but the basics: compiled CSS and JavaScript."
     - name: Grid
       description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+    - name: Grid tests
+      description: "Tests"
     # - name: Cheatsheet
     #   description: "Kitchen sink of Boosted components."
     # - name: Cheatsheet RTL
