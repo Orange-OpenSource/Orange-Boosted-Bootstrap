@@ -58,7 +58,7 @@
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "17.24 kB"
+      "maxSize": "17.25 kB"
     }
   ],
   "ci": {
