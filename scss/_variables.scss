@@ -1400,12 +1400,12 @@ $o-scroll-up-bottom: (
 ) !default;
 
 // Step process bar
-$o-stepbar-padding-y:   .4375rem !default;
-$o-stepbar-padding-x:   map-get($spacers, 2) !default;
-$o-stepbar-height:      $line-height-sm + $o-stepbar-padding-y * 2 !default;
-$o-stepbar-arrow-width: .8125rem !default;
-$o-stepbar-margin-r:    $border-width !default;
-$o-stepbar-paddingx-xc: divide($o-stepbar-arrow-width, 2) !default;
+$o-stepbar-padding-y:     .4375rem !default;
+$o-stepbar-padding-x:     map-get($spacers, 2) !default;
+$o-stepbar-padding-x-xc:  divide($o-stepbar-arrow-width, 2) !default;
+$o-stepbar-height:        $line-height-sm + $o-stepbar-padding-y * 2 !default;
+$o-stepbar-arrow-width:   .8125rem !default;
+$o-stepbar-margin-r:      $border-width !default;
 
 // o-table
 $o-table-icon-size:     map-get($spacers, 4) !default;
