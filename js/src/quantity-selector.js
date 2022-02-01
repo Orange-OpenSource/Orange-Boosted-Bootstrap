@@ -59,7 +59,6 @@ class QuantitySelector extends BaseComponent {
 
   // Static
   static StepUp(event) {
-    event.preventDefault()
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
@@ -68,6 +67,8 @@ class QuantitySelector extends BaseComponent {
     const max = counterInput.getAttribute('max')
     const step = Number(counterInput.getAttribute('step'))
     const round = Number(counterInput.getAttribute('data-bs-round'))
+
+    const eventChange = new Event('change')
 
     if (Number(counterInput.value) < max) {
       counterInput.value = (Number(counterInput.value) + step).toFixed(round).toString()
@@ -82,10 +83,11 @@ class QuantitySelector extends BaseComponent {
     if (Number(counterInput.value) + step > max) {
       btnUp.setAttribute('disabled', '')
     }
+
+    counterInput.dispatchEvent(eventChange)
   }
 
   static StepDown(event) {
-    event.preventDefault()
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
@@ -94,6 +96,8 @@ class QuantitySelector extends BaseComponent {
     const min = counterInput.getAttribute('min')
     const step = Number(counterInput.getAttribute('step'))
     const round = Number(counterInput.getAttribute('data-bs-round'))
+
+    const eventChange = new Event('change')
 
     if (Number(counterInput.value) > min) {
       counterInput.value = (Number(counterInput.value) - step).toFixed(round).toString()
@@ -108,10 +112,11 @@ class QuantitySelector extends BaseComponent {
     if (Number(counterInput.value) - step < min) {
       btnDown.setAttribute('disabled', '')
     }
+
+    counterInput.dispatchEvent(eventChange)
   }
 
   static ValueChange(event) {
-    event.preventDefault()
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
