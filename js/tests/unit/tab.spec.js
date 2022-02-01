@@ -326,17 +326,17 @@ describe('Tab', () => {
           '<ul class="nav nav-tabs" role="tablist">',
           '  <li class="nav-item" role="presentation">',
           '    <a class="nav-link nav-tab" href="#profile" role="tab" data-bs-toggle="tab">',
-          '      <button class="btn-close" aria-label="Close"></button>',
+          '      <button class="btn-close"><span class="visually-hidden">Close</span></button>', // Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)
           '    </a>',
           '  </li>',
           '  <li class="nav-item" role="presentation">',
           '    <a id="secondNav" class="nav-link nav-tab" href="#buzz" role="tab" data-bs-toggle="tab">',
-          '      <button class="btn-close" aria-label="Close"></button>',
+          '      <button class="btn-close"><span class="visually-hidden">Close</span></button>', // Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)
           '    </a>',
           '  </li>',
           '  <li class="nav-item" role="presentation">',
           '    <a class="nav-link nav-tab" href="#references" role="tab" data-bs-toggle="tab">',
-          '      <button id="btnClose" class="btn-close" aria-label="Close"></button>',
+          '      <button id="btnClose" class="btn-close"><span class="visually-hidden">Close</span></button>', // Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)
           '    </a>',
           '  </li>',
           '</ul>',
