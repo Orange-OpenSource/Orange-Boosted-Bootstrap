@@ -102,11 +102,11 @@
     }
 
     &:first-child {
-      padding-left: $o-stepbar-paddingx-xc;
+      padding-left: $o-stepbar-padding-x-xc;
     }
 
     &:last-child {
-      padding-right: $o-stepbar-paddingx-xc;
+      padding-right: $o-stepbar-padding-x-xc;
     }
 
     &:last-child::after {

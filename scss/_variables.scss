@@ -1402,9 +1402,9 @@ $o-scroll-up-bottom: (
 // Step process bar
 $o-stepbar-padding-y:     .4375rem !default;
 $o-stepbar-padding-x:     map-get($spacers, 2) !default;
+$o-stepbar-arrow-width:   .8125rem !default;
 $o-stepbar-padding-x-xc:  divide($o-stepbar-arrow-width, 2) !default;
 $o-stepbar-height:        $line-height-sm + $o-stepbar-padding-y * 2 !default;
-$o-stepbar-arrow-width:   .8125rem !default;
 $o-stepbar-margin-r:      $border-width !default;
 
 // o-table
