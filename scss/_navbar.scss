@@ -119,7 +119,12 @@
   }
 
   .nav-link {
-    &.nav-icon {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8rem;
+    display: block;
+  &.nav-icon {
       padding: divide($spacer, 2) $spacer;
     }
   }
