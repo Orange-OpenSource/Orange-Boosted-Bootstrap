@@ -127,12 +127,12 @@ With our utilities, it is also possible to render a toggle switch with label tex
 
 {{< example >}}
 <div class="form-check form-switch ps-0">
-  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled">
-  <label class="form-check-label d-block" for="flexSwitchCheckCheckedDisabled">Default switch with label before checkbox input</label>
+  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexRightSwitchCheckDefault">
+  <label class="form-check-label d-block" for="flexRightSwitchCheckDefault">Default switch with label before checkbox input</label>
 </div>
 <div class="form-check form-switch ps-0 w-50">
-  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled">
-  <label class="form-check-label d-block" for="flexSwitchCheckCheckedDisabled">Default switch with label before checkbox input</label>
+  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexRightSwitchCheckDefault2">
+  <label class="form-check-label d-block" for="flexRightSwitchCheckDefault2">Default switch with label before checkbox input</label>
 </div>
 {{< /example >}}
 
