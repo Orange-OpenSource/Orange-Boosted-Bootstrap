@@ -44,7 +44,6 @@
 
   &:focus {
     z-index: 3;
-    color: $accordion-button-active-color; // Boosted mod
     outline-offset: -$accordion-border-width; // Boosted mod
   }
 }
