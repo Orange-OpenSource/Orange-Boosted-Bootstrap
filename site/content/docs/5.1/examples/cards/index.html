@@ -3,359 +3,569 @@ layout: examples
 title: Cards
 ---
 
-<div class="d-flex justify-content-center py-4">
-  <h1>Tests using background color utilities</h1>
-</div>
+<main>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol fill="currentColor" viewbox="0 0 1000 1000" id="heart">
+      <path d="M851.8,172.224C754.746,75.18,597.77,74.613,500,170.492l0,0v0C402.23,74.613,245.254,75.18,148.205,172.224c-96.042,96.038-97.605,250.77-4.7,348.724l0,0L500,914l0-.006V914L856.5,520.95l0,0C949.4,422.994,947.838,268.262,851.8,172.224ZM786.324,449.556L500,766.694,213.677,449.557l-0.145-.162A150.005,150.005,0,0,1,431.058,242.931q0.222,0.222.45,0.438l43.788,41.64L500,308.784v0l0,0,24.7-23.77,43.794-41.645q0.226-.216.449-0.438A149.05,149.05,0,0,1,675.018,199h0A150,150,0,0,1,786.469,449.4Z"/>
+    </symbol>
+    <symbol fill="currentColor" viewbox="0 0 1000 1000" id="share">
+      <path d="M875,775a150,150,0,1,1-296.77-31.1L369.6,616.4a150,150,0,1,1,0-232.8L578.23,256.1a150.087,150.087,0,1,1,52.17,85.3L421.77,468.9a151.338,151.338,0,0,1,0,62.2L630.4,658.6A149.993,149.993,0,0,1,875,775Z"/>
+    </symbol>
+  </svg>
 
-<hr>
-
-<div class="p-5">
-  <h1>Div without class</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="p-5 bg-white">
-  <h1>Div .bg-white</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="p-5 bg-body">
-  <h1>Div .bg-body</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="p-5 bg-transparent">
-  <h1>Div .bg-transparent</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-primary p-5">
-  <h1>Div .bg-primary</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-dark p-5">
-  <h1>Div .bg-dark</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-secondary p-5">
-  <h1>Div .bg-secondary</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-green p-5">
-  <h1>Div .bg-supporting-green</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-purple p-5">
-  <h1>Div .bg-supporting-purple</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-yellow p-5">
-  <h1>Div .bg-supporting-yellow</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-blue p-5">
-  <h1>Div .bg-supporting-blue</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-pink p-5">
-  <h1>Div .bg-supporting-pink</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="bg-supporting-light p-5">
-  <h1>Div .bg-supporting-light</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-</div>
-
-<hr>
-
-<div class="d-flex justify-content-center py-4">
-  <h1>Let's play with weird use cases</h1>
-</div>
-
-<hr>
-
-<div class="p-5">
-  <h1>Div without class</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-  <div class="bg-dark p-5">
-    <h1>Div .bg-dark</h1>
-    I'm a text.
-    <p>I'm a text in a paragraph</p>
-    <a href="#">I'm a link</a>
-    <p><a href="#">I'm a link</a> in a paragraph</p>
-    <code>I'm a code</code>
-    <p><code>I'm a code</code> in a paragraph</p>
-    <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-    <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    <div class="p-5 bg-white">
-      <h1>Div .bg-white</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-      <div class="card">
-        <div class="card-header">
-          Quote
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-          </blockquote>
+  <div class="container pt-5">
+    <div class="row mx-0">
+     <h1>Cards filed black</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+          </div>
         </div>
       </div>
-      <div class="bg-dark p-5">
-        <h1>Div .bg-dark</h1>
-        I'm a text.
-        <p>I'm a text in a paragraph</p>
-        <a href="#">I'm a link</a>
-        <p><a href="#">I'm a link</a> in a paragraph</p>
-        <code>I'm a code</code>
-        <p><code>I'm a code</code> in a paragraph</p>
-        <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-        <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer bg-dark text-light">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text fw-bold">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark text-light">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark navbar-dark text-light ">
+            <ul class="nav flex-row align-items-center navbar-nav gap-3 ">
+              <li>
+                <a href="#" class="nav-link p-0" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark text-light pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mx-0">
+      <h1>Cards outlined on white</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
         <div class="card">
-          <div class="card-header">
-            Quote
-          </div>
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
           <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p>A well-known quote, contained in a blockquote element.</p>
-              <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
+            <h4 class="card-title">Title</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="p-5 bg-body">
-      <h1>Div .bg-body</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    </div>
-    <div class="p-5 bg-transparent">
-      <h1>Div .bg-transparent</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    </div>
-    <div class="p-5">
-      <h1>Div transparent but without .bg-transparent</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    </div>
-    <div class="p-5" style="background-color: white">
-      <h1>Div with white bg inline CSS</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    </div>
-    <div class="p-5 text-body" style="background-color: white">
-      <h1>Div with white bg inline CSS but fixed with utility classes</h1>
-      I'm a text.
-      <p>I'm a text in a paragraph</p>
-      <a href="#">I'm a link</a>
-      <p><a href="#">I'm a link</a> in a paragraph</p>
-      <code>I'm a code</code>
-      <p><code>I'm a code</code> in a paragraph</p>
-      <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-      <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    </div>
   </div>
-</div>
 
-<hr>
-
-<div class="bg-dark p-5">
-  <h1>Div .bg-dark</h1>
-  I'm a text.
-  <p>I'm a text in a paragraph</p>
-  <a href="#">I'm a link</a>
-  <p><a href="#">I'm a link</a> in a paragraph</p>
-  <code>I'm a code</code>
-  <p><code>I'm a code</code> in a paragraph</p>
-  <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-  <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-  <div class="alert alert-success alert-dismissible" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-    <div>
-      <h4 class="alert-heading">Success notification text goes here containing a <a href="#">link</a>.</h4>
-      <p>Description text goes here containing a <a href="#">link</a>.</p>
+  <div class="container">
+    <div class="row mx-0">
+      <h1>Cards on white</h1>
     </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
-  </div>
-  <div class="bg-body p-5">
-    <h1>Div .bg-body</h1>
-    I'm a text.
-    <p>I'm a text in a paragraph</p>
-    <a href="#">I'm a link</a>
-    <p><a href="#">I'm a link</a> in a paragraph</p>
-    <code>I'm a code</code>
-    <p><code>I'm a code</code> in a paragraph</p>
-    <p class="text-muted"><a href="#">I'm a link</a> in a text-muted paragraph</p>
-    <p class="text-muted"><code>I'm a code</code> in a text-muted paragraph</p>
-    <div class="alert alert-success alert-dismissible" role="alert">
-      <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-      <div>
-        <h4 class="alert-heading">Success notification text goes here containing a <a href="#">link</a>.</h4>
-        <p>Description text goes here containing a <a href="#">link</a>.</p>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+        </div>
       </div>
-      <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer px-0">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer px-0">
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer px-0">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer px-0">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer px-0 pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="container bg-dark pt-4">
+    <div class="row mx-0">
+      <h1>Cards filed white</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body p-0">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-dark">
+    <div class="row mx-0">
+      <h1>Cards outlined on black</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer bg-dark">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark navbar-dark text-light ">
+            <ul class="nav flex-row align-items-center navbar-nav gap-3 ">
+              <li>
+                <a href="#" class="nav-link p-0">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-dark">
+    <div class="row mx-0">
+      <h1>Cards on black</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body px-0">
+            <h4 class="card-title">Title</h4>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <h6 class="card-text">Caption</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+      <div class="card border-0 p-0 bg-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark px-0">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <p class="card-text">Meta data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+      <div class="card border-0 p-0 bg-dark">
+        {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+        <div class="card-body bg-dark px-0">
+          <h4 class="card-title">Title</h4>
+          <h6 class="card-text">Caption</h6>
+        </div>
+        <div class="card-footer bg-dark navbar-dark px-0">
+          <ul class="nav flex-row align-items-center navbar-nav gap-3">
+            <li>
+              <a href="#" class="nav-link p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                  <use xlink:href="#heart"/>
+                </svg>
+              </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
+          <div class="card-body bg-dark px-0">
+            <h4 class="card-title">Title</h4>
+            <h6 class="card-text">Caption</h6>
+          </div>
+          <div class="card-footer bg-dark px-0 pt-2">
+            <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
