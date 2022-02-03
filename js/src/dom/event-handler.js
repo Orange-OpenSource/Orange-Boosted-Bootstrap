@@ -118,22 +118,12 @@ function bootstrapDelegationHandler(element, selector, fn) {
         return fn.apply(target, [event])
       }
     }
-
-    // To please ESLint
-    return null
   }
 }
 
 function findHandler(events, handler, delegationSelector = null) {
-  for (const uidEvent of Object.keys(events)) {
-    const event = events[uidEvent]
-
-    if (event.originalHandler === handler && event.delegationSelector === delegationSelector) {
-      return event
-    }
-  }
-
-  return null
+  return Object.values(events)
+    .find(event => event.originalHandler === handler && event.delegationSelector === delegationSelector)
 }
 
 function normalizeParameters(originalTypeEvent, handler, delegationFunction) {
@@ -284,7 +274,7 @@ const EventHandler = {
     const typeEvent = getTypeEvent(event)
     const inNamespace = event !== typeEvent
 
-    let jQueryEvent
+    let jQueryEvent = null
     let bubbles = true
     let nativeDispatch = true
     let defaultPrevented = false
@@ -319,7 +309,7 @@ const EventHandler = {
       element.dispatchEvent(evt)
     }
 
-    if (evt.defaultPrevented && typeof jQueryEvent !== 'undefined') {
+    if (evt.defaultPrevented && jQueryEvent) {
       jQueryEvent.preventDefault()
     }
 
