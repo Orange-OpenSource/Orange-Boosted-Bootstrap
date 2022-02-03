@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix, selector-max-type
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
 
 
 // Reboot
@@ -232,6 +232,7 @@ ul {
 
 // Future-proof markers' color
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
+// stylelint-disable selector-max-type
 li::marker {
   color: $accessible-orange;
   vertical-align: middle;
@@ -252,6 +253,7 @@ li::before {
 li li::before { color: $gray-600; }
 
 li li li::before { color: $gray-500; }
+// stylelint-enable selector-max-type
 // End mod
 
 dt {
