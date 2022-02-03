@@ -61,8 +61,6 @@ class QuantitySelector extends BaseComponent {
   static StepUp(event) {
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
-    const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
     const max = counterInput.getAttribute('max')
     const step = Number(counterInput.getAttribute('step'))
@@ -72,16 +70,6 @@ class QuantitySelector extends BaseComponent {
 
     if (Number(counterInput.value) < max) {
       counterInput.value = (Number(counterInput.value) + step).toFixed(round).toString()
-    } else if (Number(counterInput.value) + step > max) {
-      btnUp.setAttribute('disabled', '')
-    }
-
-    if (btnDown.hasAttribute('disabled', '')) {
-      btnDown.removeAttribute('disabled', '')
-    }
-
-    if (Number(counterInput.value) + step > max) {
-      btnUp.setAttribute('disabled', '')
     }
 
     counterInput.dispatchEvent(eventChange)
@@ -90,8 +78,6 @@ class QuantitySelector extends BaseComponent {
   static StepDown(event) {
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
-    const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
-    const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
 
     const min = counterInput.getAttribute('min')
     const step = Number(counterInput.getAttribute('step'))
@@ -101,22 +87,12 @@ class QuantitySelector extends BaseComponent {
 
     if (Number(counterInput.value) > min) {
       counterInput.value = (Number(counterInput.value) - step).toFixed(round).toString()
-    } else if (Number(counterInput.value) + step < min) {
-      btnDown.setAttribute('disabled', '')
-    }
-
-    if (btnUp.hasAttribute('disabled', '')) {
-      btnUp.removeAttribute('disabled', '')
-    }
-
-    if (Number(counterInput.value) - step < min) {
-      btnDown.setAttribute('disabled', '')
     }
 
     counterInput.dispatchEvent(eventChange)
   }
 
-  static ValueChange(event) {
+  static CheckIfDisabled(event) {
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
@@ -164,7 +140,7 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })
-EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.ValueChange)
+EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabled)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
