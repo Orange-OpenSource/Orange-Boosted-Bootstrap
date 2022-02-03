@@ -123,6 +123,19 @@ A switch has the markup of a custom checkbox but uses the `.form-switch` class t
 </div>
 {{< /example >}}
 
+With our utilities, it is also possible to render a toggle switch with label text before.
+
+{{< example >}}
+<div class="form-check form-switch ps-0">
+  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled">
+  <label class="form-check-label d-block" for="flexSwitchCheckCheckedDisabled">Default switch with label before checkbox input</label>
+</div>
+<div class="form-check form-switch ps-0 w-50">
+  <input class="form-check-input float-end ms-1" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled">
+  <label class="form-check-label d-block" for="flexSwitchCheckCheckedDisabled">Default switch with label before checkbox input</label>
+</div>
+{{< /example >}}
+
 ## Default (stacked)
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
