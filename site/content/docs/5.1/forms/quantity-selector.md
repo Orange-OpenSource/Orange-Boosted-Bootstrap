@@ -16,8 +16,6 @@ A default value can be specified with the input `value` attribute.
 
 Value will vary between the values defined for the `min` and `max` attributes (negative value are allowed). `min` and `max` values are customizable.
 
-The custom `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
-
 {{< example >}}
 <div class="input-group quantity-selector">
   <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
@@ -69,3 +67,22 @@ Add the `disabled` boolean attribute on quantity selector elements to give it a 
 For more details, please have a look at the exhaustive list of available variables:
 
 {{< scss-docs name="quantity-selector" file="scss/_variables.scss" >}}
+
+## Usage
+
+### Via data attributes
+
+The `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
+
+
+### Via jQuery
+
+You can easily have access to the input value:
+
+```js
+$(document).ready(function () {
+  $("#inputQuantitySelector").on('change', function() {
+      // do something...
+  });
+});
+```
