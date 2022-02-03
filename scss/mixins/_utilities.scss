@@ -114,7 +114,7 @@
                   }
                 }
               }
-              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value {
+              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value {
                 background-color: color-contrast($value);
               }
             }

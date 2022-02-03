@@ -739,7 +739,7 @@ progress {
   --kbd-bg: #{$kbd-bg-dark};
   --pre-color: #{$pre-color-dark};
 
-  [class*="bg-"]:not(&) {
+  [class*="bg-"]:not(&):not(.bg-transparent) {
     --link-color: #{$link-color};
     --link-hover-color: #{$link-hover-color};
     --caption-color: #{$table-caption-color};
