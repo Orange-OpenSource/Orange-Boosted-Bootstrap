@@ -454,14 +454,13 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              var(--link-color, $black) !default;
+$link-color:                              var(--link-color, $black) !default; // Boosted mod
+$link-color-dark:                         $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        var(--link-hover-color, $accessible-orange) !default;
+$link-hover-color:                        var(--link-hover-color, $accessible-orange) !default; // Boosted mod
+$link-hover-color-dark:                   $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
-
-$link-color-dark:                         $white !default;
-$link-hover-color-dark:                   $brand-orange !default;
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
@@ -711,7 +710,7 @@ $small-font-size:             .875rem !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  $gray-700 !default;
+$text-muted:               $gray-700 !default;
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -780,8 +779,8 @@ $table-border-color:          $gray-500 !default;
 
 $table-group-separator-color: currentColor !default;
 
-$table-caption-color:         var(--caption-color, $black) !default;
-$table-caption-color-dark:    $white !default;
+$table-caption-color:         var(--caption-color, $black) !default; // Boosted mod
+$table-caption-color-dark:    $white !default; // Boosted mod
 $table-caption-padding-y:     .75rem !default; // Boosted mod
 // scss-docs-end table-variables
 
@@ -1796,7 +1795,7 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // scss-docs-end offcanvas-variables
 
 // Code
-
+// Boosted mod
 $code-font-size:                    .875em !default;
 $code-color:                        var(--code-color, $gray-700) !default;
 $code-color-dark:                   $gray-600 !default;
@@ -1805,13 +1804,14 @@ $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--kbd-color, $black) !default;
-$kbd-bg:                            var(--kbd-bg, $gray-300) !default;
 $kbd-color-dark:                    $white !default;
+$kbd-bg:                            var(--kbd-bg, $gray-300) !default;
 $kbd-bg-dark:                       $gray-900 !default;
 
 $pre-color:                         var(--pre-color, $gray-900) !default;
 $pre-color-dark:                    $gray-300 !default;
-$pre-line-height:                   1.25 !default; // Boosted mod
+$pre-line-height:                   1.25 !default;
+// End mod
 
 //
 // Boosted mod
