@@ -195,7 +195,7 @@
   }
 
   .form-check-label {
-    padding-top: map-get($spacers, 1);
+    padding-top: $form-check-label-padding-top;
   }
   // End mod
 }
