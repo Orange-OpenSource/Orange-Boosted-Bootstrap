@@ -4,6 +4,7 @@ title: Approach
 description: Learn about the guiding principles, strategies, and techniques used to build and maintain Boosted so you can more easily customize and extend it yourself.
 group: extend
 aliases:
+  - "/docs/extend/"
   - "/docs/5.2/extend/"
 ---
 
