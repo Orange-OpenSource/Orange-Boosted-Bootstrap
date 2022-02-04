@@ -1206,7 +1206,7 @@ $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 $navbar-icon-size:                        $spacer * 1.5 !default;
 $navbar-brand-logo-height:                add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:      $spacer * 1.5 !default;
-$navbar-brand-margin-bottom:              .1875rem !default;
+// $navbar-brand-margin-bottom:              .1875rem !default;
 $navbar-transition-duration:              $transition-duration !default;
 $navbar-transition-timing-function:       $transition-timing !default;
 $navbar-transition:                       padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;

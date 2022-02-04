@@ -63,14 +63,12 @@
   examples:
     - name: Navbars
       description: "Demonstration of all responsive and container options for the navbar."
-    - name: Navbar static
-      description: "Single navbar example of a static top navbar along with some additional content."
-    - name: Navbar fixed
-      description: "Single navbar example with a fixed top navbar along with some additional content."
 #     - name: Navbar bottom
 #       description: "Single navbar example with a bottom navbar along with some additional content."
 #     - name: Offcanvas navbar
 #       description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
+    - name: Navbar sticky
+      description: "Single navbar example of a sticky-top navbar along with some additional content."
 
 - category: Components
   description: "Showing the possible variants of components."

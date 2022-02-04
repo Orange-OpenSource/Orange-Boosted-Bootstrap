@@ -114,17 +114,19 @@
   }
 
   .nav-link {
-    white-space: nowrap;
+    display: block;
+    max-width: 8rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 8rem;
-    display: block;
-  &.nav-icon {
-      padding: divide($spacer, 2) $spacer;
+    white-space: nowrap;
+
+    &.nav-icon {
+      padding: $spacer ($spacer * .75);
     }
   }
-  // End mod
 }
+// End mod
+
 
 // Navbar brand
 //
@@ -197,7 +199,7 @@
 
   .nav-link {
     position: relative;
-    padding-bottom: $nav-link-padding-y $nav-link-padding-x * .25; // Boosted mod
+    padding: $nav-link-padding-y $nav-link-padding-x * .5; // Boosted mod
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
@@ -205,16 +207,22 @@
       outline-offset: 0;
     }
 
-    &.active::before {
-      position: absolute;
-      right: $nav-link-padding-y * .5;
-      bottom: $h1-spacing;
-      left: $nav-link-padding-y * .5;
-      height: $border-width * 2;
-      content: "";
-      background-color: currentColor;
-      @include transition($navbar-active-transition);
+    // Boosted mod
+    @include media-breakpoint-up(md) {
+      &.active::before {
+        position: absolute;
+        right: $nav-link-padding-y * .5;
+        bottom: $h1-spacing;
+        left: $nav-link-padding-y * .5;
+        height: $border-width * 2;
+        content: "";
+        background-color: currentColor;
+        @include transition($navbar-active-transition);
+      }
+
+      padding: $nav-link-padding-y * 2 $nav-link-padding-x * .25; // Boosted mod
     }
+    // End mod
 
     &:last-child .nav-item:last-child .nav-link {
       padding-right: 0;
@@ -227,6 +235,12 @@
 
   &.flex-row .nav-item{
     border: 0;
+  }
+
+  // Boosted mod
+  &.supra-languages-hamburger {
+    margin-bottom: 3.125rem;
+    border-top: $border-width * .5 solid $gray-900;
   }
   // End mod
 
@@ -347,6 +361,7 @@
 
         .navbar-nav {
           flex-direction: row;
+          // margin-right: -20px;
 
           .dropdown-menu {
             position: absolute;
@@ -355,6 +370,11 @@
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
+
+            &.nav-icon {
+              padding-right: $navbar-nav-link-padding-x * 2;
+              padding-left: $navbar-nav-link-padding-x * 2;
+            }
 
             // Boosted mod
             &.active::before {
@@ -376,7 +396,7 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: 0 $spacer subtract($spacer, $navbar-brand-margin-bottom) 0;
+          margin: $spacer 0;
 
           img {
             width: $navbar-brand-logo-height;
@@ -396,6 +416,7 @@
         .navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
           flex-basis: auto;
+          overflow-y: hidden; // Boosted mod
         }
 
         .navbar-toggler {

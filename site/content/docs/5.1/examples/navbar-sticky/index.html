@@ -1,0 +1,31 @@
+---
+layout: examples
+title: Sticky navbar example
+extra_css:
+  - "navbar-sticky.css"
+---
+
+<!-- <main class="exclude-from-pa11y-analysis"> -->
+
+  {{< orange-supra mode="languages" >}}
+  {{< /orange-supra >}}
+
+   {{< orange-global-headers id="global-header-1" mode="actions" >}}
+  {{< /orange-global-headers >}}
+
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>Sticky to top Supra bar + Navbar example</h1>
+    <p class="lead">
+      This example is a quick exercise to illustrate how sticky to
+       top supra bar + nav bar work when put together.
+    </p>
+    <p>
+      From 'md' breakpoint to upper, as you scroll down, the navbar will disappear
+      and only the supra bar will remain visible at the top of your browser’s viewport.
+      When scrolling back up, the navbar will reappear below the supra bar.
+    </p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.1/components/navbar/" role="button">View navbar docs »</a>
+  </div>
+
+</main>

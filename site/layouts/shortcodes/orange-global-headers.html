@@ -26,9 +26,9 @@
 {{- $input := .Inner -}}
 
 <header role="banner">
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
-    <div class="container"> <!--flex-sm-wrap flex-md-nowrap-->
-      <a class="navbar-brand" href="#">
+  <nav class="navbar global navbar-dark bg-dark pt-md-0 pb-md-0 navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
+    <div class="container-lg ps-3 pe-lg-1 px-xl-0"> <!--flex-sm-wrap flex-md-nowrap-->
+      <a class="navbar-brand ps-md-3 pe-md-3 pt-md-1 pb-md-1" href="#">
         {{ if $responsive_logo }}
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <div class="d-inline-flex align-items-baseline">
@@ -99,25 +99,35 @@
       </div>
       <div id="{{ $id }}" class="navbar-collapse collapse {{ cond $labels_end "justify-content-end" ""}}">
         {{ if not $navigation }}
-        <ul class="navbar-nav">
-          {{ if $labels }}
-          <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          {{ else }}
-          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+          <ul class="navbar-nav d-flex flex-row d-md-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            {{ if $labels }}
+            <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            {{ else }}
+            <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+            {{ end }}
+          </ul>
           {{ end }}
+        <ul class="navbar-nav supra-languages-hamburger d-flex flex-row d-md-none">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
         </ul>
-        {{ end }}
       </div>
+
       {{- if eq $mode "search" }}
       <form class="d-flex d-none d-md-flex ps-2" role="search">
         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
