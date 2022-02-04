@@ -18,7 +18,7 @@
   .navbar-dark &:not(.dropdown-toggle-split) {
     color: $dropdown-bg;
     background-color: $dropdown-color;
-    border-color: $gray-700;
+    border-color: $dropdown-border-color-dark;
 
     &:hover {
       border-color: $dropdown-link-hover-color;
@@ -67,7 +67,7 @@
   // Boosted mod
   .bg-dark & {
     background-color: $dropdown-color;
-    border-color: $gray-700;
+    border-color: $dropdown-border-color-dark;
   }
   // End mod
 }
