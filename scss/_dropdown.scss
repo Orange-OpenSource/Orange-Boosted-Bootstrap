@@ -14,27 +14,7 @@
   background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
-  .bg-dark &:not(.dropdown-toggle-split) {
-    &.btn-secondary.btn-inverse {
-      border-color: $gray-700;
-    }
-
-    &:hover {
-      border-color: $dropdown-bg;
-    }
-  }
-
-  .show > &.btn {
-    background-color: $dropdown-bg;
-    border-color: $dropdown-color;
-
-    .bg-dark &:not(.dropdown-toggle-split) {
-      color: $dropdown-bg;
-      background-color: $dropdown-color;
-      border-color: $dropdown-bg;
-    }
-  }
-
+  .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
     color: $dropdown-bg;
     background-color: $dropdown-color;
@@ -86,7 +66,6 @@
   @include box-shadow($dropdown-box-shadow);
   // Boosted mod
   .bg-dark & {
-    color: $dropdown-bg;
     background-color: $dropdown-color;
     border-color: $gray-700;
   }
