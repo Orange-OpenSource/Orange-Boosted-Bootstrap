@@ -18,7 +18,7 @@ Use `.current` class to define current step, alongwith with `aria-current="step"
 
 {{< example >}}
 <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
-  <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+  <p class="float-left my-1 mr-2 font-weight-bold d-sm-none">Step</p>
   <ol>
     <li class="stepbar-item">
       <a class="stepbar-link" href="#" title="1. Sign in">Sign in</a>

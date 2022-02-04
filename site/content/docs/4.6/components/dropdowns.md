@@ -66,24 +66,9 @@ Similarly, create split button dropdowns with virtually the same markup as singl
 
 We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
 
-<div class="bd-example">
-  <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-</div>
+<!-- Boosted mod: only 1 example for Boosted so example shortcode can be used -->
 
-```html
-<!-- Example split button -->
+{{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary">Action</button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
@@ -97,7 +82,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
     <a class="dropdown-item" href="#">Separated link</a>
   </div>
 </div>
-```
+{{< /example >}}
 
 <!-- Boosted mod -->
 ### Dark background

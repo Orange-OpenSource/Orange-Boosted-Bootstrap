@@ -276,10 +276,8 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
-// stylelint-disable function-disallowed-list
-$line-height-lg:              calc(divide(20, 18)) !default; // Boosted mod
-$line-height-sm:              calc(divide(16, 14)) !default; // Boosted mod
-// stylelint-enable function-disallowed-list
+$line-height-lg:              divide(20, 18) !default; // Boosted mod
+$line-height-sm:              divide(16, 14) !default; // Boosted mod
 
 // Boosted mod: Line length for accessibility
 $line-length-sm:              40ch !default;
@@ -357,6 +355,7 @@ $h3-font-size:                $font-size-base * 1.5 !default;     // 24px
 $h4-font-size:                $font-size-xlg !default;            // 20px
 $h5-font-size:                $font-size-lg !default;             // 18px
 $h6-font-size:                $font-size-base !default;           // 16px
+
 $h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
 $h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
 $mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
@@ -364,14 +363,13 @@ $h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
-// stylelint-disable function-disallowed-list
+
 $h1-line-height:              1 !default;
-$h2-line-height:              calc(divide(32, 30)) !default;
-$h3-line-height:              calc(divide(26, 24)) !default;
-$h4-line-height:              calc(divide(22, 20)) !default;
-$h5-line-height:              calc(divide(20, 18)) !default;
+$h2-line-height:              divide(32, 30) !default;
+$h3-line-height:              divide(26, 24) !default;
+$h4-line-height:              divide(22, 20) !default;
+$h5-line-height:              divide(20, 18) !default;
 $h6-line-height:              $line-height-base !default;
-// stylelint-enable function-disallowed-list
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
@@ -399,8 +397,7 @@ $display-line-height:         1 !default;
 
 $lead-font-size:              $font-size-xlg !default; // Boosted mod
 $lead-font-weight:            400 !default; // Boosted mod
-// stylelint-disable-next-line function-disallowed-list
-$lead-line-height:            calc(divide(30, 20)) !default; // Boosted mod
+$lead-line-height:            divide(30, 20) !default; // Boosted mod
 $lead-letter-spacing:         $letter-spacing-base * 2.5 !default; // Boosted mod
 
 $small-font-size:             $font-size-sm !default; // Boosted mod → 14px
@@ -412,8 +409,7 @@ $text-muted-dark:             $gray-600 !default; // Boosted mod: ensure contras
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-xlg !default; // Boosted mod
-// stylelint-disable-next-line function-disallowed-list
-$blockquote-line-height:      calc(divide(30, 20)) !default; // Boosted mod
+$blockquote-line-height:      divide(30, 20) !default; // Boosted mod
 $blockquote-letter-spacing:   -.015625rem !default; // Boosted mod
 
 $hr-border-color:             $gray-300 !default;
@@ -1404,9 +1400,12 @@ $o-scroll-up-bottom: (
 ) !default;
 
 // Step process bar
-$o-stepbar-height:      $spacer * 2 !default;
-$o-stepbar-arrow-width: 1.0625rem !default;
-$o-stepbar-margin-r:    $border-width !default;
+$o-stepbar-padding-y:     .4375rem !default;
+$o-stepbar-padding-x:     map-get($spacers, 2) !default;
+$o-stepbar-arrow-width:   .8125rem !default;
+$o-stepbar-padding-x-xc:  divide($o-stepbar-arrow-width, 2) !default;
+$o-stepbar-height:        $line-height-sm + $o-stepbar-padding-y * 2 !default;
+$o-stepbar-margin-r:      $border-width !default;
 
 // o-table
 $o-table-icon-size:     map-get($spacers, 4) !default;
