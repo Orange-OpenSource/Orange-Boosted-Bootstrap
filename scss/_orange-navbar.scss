@@ -41,10 +41,8 @@
     }
   }
 
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: $navbar-orange-supra-link-padding-x;
-    }
+  .nav-item:last-of-type .nav-icon {
+    padding-right: $navbar-orange-supra-link-padding-x;
   }
 }
 

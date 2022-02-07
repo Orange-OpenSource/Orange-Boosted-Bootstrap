@@ -114,17 +114,19 @@
   }
 
   .nav-link {
-    white-space: nowrap;
+    display: block;
+    max-width: 8rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 8rem;
-    display: block;
-  &.nav-icon {
+    white-space: nowrap;
+
+    &.nav-icon {
       padding: divide($spacer, 2) $spacer;
     }
   }
-  // End mod
 }
+// End mod
+
 
 // Navbar brand
 //
@@ -197,7 +199,7 @@
 
   .nav-link {
     position: relative;
-    padding-bottom: $nav-link-padding-y $nav-link-padding-x * .25; // Boosted mod
+    padding: $nav-link-padding-y $nav-link-padding-x * .5; // Boosted mod
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
@@ -205,6 +207,7 @@
       outline-offset: 0;
     }
 
+    // Boosted mod
     &.active::before {
       position: absolute;
       right: $nav-link-padding-y * .5;
@@ -215,6 +218,7 @@
       background-color: currentColor;
       @include transition($navbar-active-transition);
     }
+    // End mod
 
     &:last-child .nav-item:last-child .nav-link {
       padding-right: 0;
@@ -227,6 +231,12 @@
 
   &.flex-row .nav-item{
     border: 0;
+  }
+
+  // Boosted mod
+  &.supra-languages-hamburger {
+    margin-bottom: 3.125rem;
+    border-top: $border-width * .5 solid $gray-900;
   }
   // End mod
 
