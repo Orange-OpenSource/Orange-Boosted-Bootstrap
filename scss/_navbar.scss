@@ -122,7 +122,7 @@
     white-space: nowrap;
 
     &.nav-icon {
-      padding: divide($spacer, 2) $spacer;
+      padding: $spacer * .85 $spacer;
     }
   }
 }
@@ -364,9 +364,6 @@
           }
 
           .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-
             // Boosted mod
             &.active::before {
               right: $nav-link-padding-y;
