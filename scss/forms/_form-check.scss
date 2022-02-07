@@ -105,6 +105,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $form-label-disabled-color; // Boosted mod
+      cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }
   }
