@@ -20,7 +20,7 @@
           <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link{{ if eq .Page.Layout "guidelines" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
+          <a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
         </li>
       </ul>
 
@@ -31,7 +31,7 @@
           </a>
         </li>
         <li class="nav-item col-6 col-md-auto py-3 py-md-0 align-self-center">
-          <a class="btn btn-primary my-2 ms-2 my-md-0 ms-md-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
+          <a class="btn btn-primary btn-inverse my-2 ms-2 my-md-0 ms-md-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
         </li>
       </ul>
     </div>
