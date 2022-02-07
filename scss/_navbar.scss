@@ -200,7 +200,7 @@
 
   .nav-link {
     position: relative;
-    padding: $nav-link-padding-y $nav-link-padding-x * .5; // Boosted mod
+    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .5; // Boosted mod
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
