@@ -208,16 +208,16 @@
     }
 
     // Boosted mod
-      &.active::before {
-        position: absolute;
-        right: $nav-link-padding-y * .5;
-        bottom: $h1-spacing;
-        left: $nav-link-padding-y * .5;
-        height: $border-width * 2;
-        content: "";
-        background-color: currentColor;
-        @include transition($navbar-active-transition);
-      }
+    &.active::before {
+      position: absolute;
+      right: $nav-link-padding-y * .5;
+      bottom: $h1-spacing;
+      left: $nav-link-padding-y * .5;
+      height: $border-width * 2;
+      content: "";
+      background-color: currentColor;
+      @include transition($navbar-active-transition);
+    }
     // End mod
 
     &:last-child .nav-item:last-child .nav-link {
@@ -362,20 +362,9 @@
             position: absolute;
           }
 
-          .nav-item {
-            &:last-of-type .nav-icon {
-              padding-right: 0;
-            }
-          }
-
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
-
-            &.nav-icon {
-              padding-right: $navbar-nav-link-padding-x * 2;
-              padding-left: $navbar-nav-link-padding-x * 2;
-            }
 
             // Boosted mod
             &.active::before {

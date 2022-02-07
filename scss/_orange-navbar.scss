@@ -13,8 +13,6 @@
   .container {
     padding-right: $navbar-orange-supra-padding-x;
     padding-left: $navbar-orange-supra-padding-x;
-    margin-right: 0;
-    margin-left: 0;
   }
 
   @include media-breakpoint-up(md) {
@@ -43,10 +41,8 @@
     }
   }
 
-  .nav-item:first-of-type {
-    .nav-icon {
-      padding-left: 0;
-    }
+  .nav-item:last-of-type .nav-icon {
+    padding-right: $navbar-orange-supra-link-padding-x;
   }
 }
 
