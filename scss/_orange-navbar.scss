@@ -44,6 +44,12 @@
   .nav-item:last-of-type .nav-icon {
     padding-right: $navbar-orange-supra-link-padding-x;
   }
+
+  @include media-breakpoint-up(md){
+    & ~ header {
+      top: $navbar-orange-supra-height;
+    }
+  }
 }
 
 .header-minimized {
