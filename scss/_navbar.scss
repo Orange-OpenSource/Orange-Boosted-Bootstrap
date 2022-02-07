@@ -116,7 +116,8 @@
   .nav-link {
     display: block;
     max-width: 8rem;
-    overflow: hidden;
+    // Todo : commented because not working w/ "active selector" for active nav-link
+    // overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 
