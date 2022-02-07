@@ -775,6 +775,8 @@ $table-border-factor:         .4 !default;
 $table-border-width:          $border-width * .5 !default;
 $table-border-color:          $gray-500 !default;
 
+// Boosted mod: no $table-striped-*
+
 $table-group-separator-color: currentColor !default;
 
 $table-caption-color:         $black !default;
