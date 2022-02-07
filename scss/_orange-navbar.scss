@@ -19,22 +19,6 @@
 
   @include media-breakpoint-up(md) {
     display: flex;
-
-    .navbar-nav .nav-item:first-of-type {
-      padding-left: 0;
-      margin-left: divide(-$navbar-orange-supra-icon-padding-x, 2);
-    }
-
-    .navbar-nav .nav-item:last-of-type {
-      margin-right: divide(-$navbar-orange-supra-icon-padding-x, 2);
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .container {
-      margin-right: auto;
-      margin-left: auto;
-    }
   }
 
   .navbar-nav .nav-link {

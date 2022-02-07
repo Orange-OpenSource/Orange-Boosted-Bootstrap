@@ -121,7 +121,7 @@
     white-space: nowrap;
 
     &.nav-icon {
-      padding: $spacer ($spacer * .75);
+      padding: divide($spacer, 2) $spacer;
     }
   }
 }
@@ -208,7 +208,6 @@
     }
 
     // Boosted mod
-    @include media-breakpoint-up(md) {
       &.active::before {
         position: absolute;
         right: $nav-link-padding-y * .5;
@@ -219,9 +218,6 @@
         background-color: currentColor;
         @include transition($navbar-active-transition);
       }
-
-      padding: $nav-link-padding-y * 2 $nav-link-padding-x * .25; // Boosted mod
-    }
     // End mod
 
     &:last-child .nav-item:last-child .nav-link {
@@ -361,10 +357,15 @@
 
         .navbar-nav {
           flex-direction: row;
-          // margin-right: -20px;
 
           .dropdown-menu {
             position: absolute;
+          }
+
+          .nav-item {
+            &:last-of-type .nav-icon {
+              padding-right: 0;
+            }
           }
 
           .nav-link {
@@ -396,7 +397,7 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: $spacer 0;
+          margin: 0 $spacer subtract($spacer, $navbar-brand-margin-bottom) 0;
 
           img {
             width: $navbar-brand-logo-height;
@@ -416,7 +417,6 @@
         .navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
           flex-basis: auto;
-          overflow-y: hidden; // Boosted mod
         }
 
         .navbar-toggler {
