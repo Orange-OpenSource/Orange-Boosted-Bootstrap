@@ -74,15 +74,32 @@ For more details, please have a look at the exhaustive list of available variabl
 
 The `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
 
+### Events
 
-### Via jQuery
+Boosted's quantity selector form component exposes one event for hooking into quantity selector functionality.
 
-You can easily have access to the input value:
+<table class="table">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>change.bs.quantitySelector</code>
+      </td>
+      <td>
+        Fires immediately when the value inside the input is modified.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ```js
-$(document).ready(function () {
-  $("#inputQuantitySelector").on('change', function() {
-      // do something...
-  });
-});
+var myQuantitySelector = document.getElementById('inputQuantitySelector')
+myQuantitySelector.addEventListener('change.bs.quantitySelector', function () {
+  // do something...
+})
 ```
