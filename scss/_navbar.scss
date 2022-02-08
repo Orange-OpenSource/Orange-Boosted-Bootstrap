@@ -143,7 +143,7 @@
   // End mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin: map-get($spacers, 2) $navbar-brand-margin-end; // Boosted mod
+  margin: map-get($spacers, 2) $navbar-brand-margin-end map-get($spacers, 2) 0; // Boosted mod
   @include font-size($navbar-brand-font-size);
   // Boosted mod
   font-weight: $font-weight-bold;
@@ -281,11 +281,11 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  padding: $navbar-toggler-padding-y 0 $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
-  border: $border-width solid transparent; // remove default button style
+  border: 0;
   outline-offset: $spacer; // Boosted mod
   @include border-radius($navbar-toggler-border-radius);
   @include transition($navbar-toggler-transition);
