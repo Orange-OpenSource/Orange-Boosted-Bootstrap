@@ -12,6 +12,7 @@ import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
+import OrangeNavbar from './src/orange-navbar'
 import Popover from './src/popover'
 import ScrollSpy from './src/scrollspy'
 import Tab from './src/tab'
@@ -27,6 +28,7 @@ export default {
   Dropdown,
   Modal,
   Offcanvas,
+  OrangeNavbar,
   Popover,
   ScrollSpy,
   Tab,

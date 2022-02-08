@@ -242,11 +242,8 @@
 
   // Boosted mod
   .nav-item {
-    font-size: $h5-font-size;
-
-    &:not(:first-child) {
-      border-top: $border-width * .5 solid $gray-900;
-    }
+    font-size: 1rem;
+    border-top: $border-width * .5 solid $gray-900;
   }
 
   .nav-link {
