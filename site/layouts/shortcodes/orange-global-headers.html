@@ -27,7 +27,7 @@
 {{- $input := .Inner -}}
 
   <nav class="navbar navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
-    <div class="container"> <!--flex-sm-wrap flex-md-nowrap-->
+    <div class="container">
       <a class="navbar-brand" href="#">
         {{ if $responsive_logo }}
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
@@ -58,8 +58,7 @@
               <span class="visually-hidden">Search</span>
             </a>
           </li>
-          <!--<li class="nav-item d-none d-sm-block">-->
-          <li class="nav-item">
+          <li class="nav-item {{ cond $responsive_logo "d-none" ""}}">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
                 <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy"/>
@@ -73,7 +72,6 @@
               </span>
             </a>
           </li>
-          <!--<li class="nav-item d-none d-sm-block">-->
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <img src="/docs/5.1/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
