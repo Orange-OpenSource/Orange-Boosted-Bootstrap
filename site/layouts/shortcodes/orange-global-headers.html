@@ -26,7 +26,6 @@
 {{- $supra := .Get "supra" | default false -}}
 {{- $input := .Inner -}}
 
-<header role="banner" class="sticky-top">
   <nav class="navbar global navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
     <div class="container"> <!--flex-sm-wrap flex-md-nowrap-->
       <a class="navbar-brand" href="#">
@@ -157,4 +156,3 @@
     </div>
   </div>
   {{ end }}
-</header>

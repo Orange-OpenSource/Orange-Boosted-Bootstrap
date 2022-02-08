@@ -31,6 +31,7 @@
     }
 
     &.nav-icon {
+
       padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
 
       svg,
@@ -43,12 +44,6 @@
 
   .nav-item:last-of-type .nav-icon {
     padding-right: $navbar-orange-supra-link-padding-x;
-  }
-
-  @include media-breakpoint-up(md){
-    & ~ header {
-      top: $navbar-orange-supra-height;
-    }
   }
 }
 
