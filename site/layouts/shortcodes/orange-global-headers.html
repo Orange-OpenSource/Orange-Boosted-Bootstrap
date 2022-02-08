@@ -26,7 +26,7 @@
 {{- $supra := .Get "supra" | default false -}}
 {{- $input := .Inner -}}
 
-  <nav class="navbar global navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md {{ cond $minimized "header-minimized" ""}}">
     <div class="container"> <!--flex-sm-wrap flex-md-nowrap-->
       <a class="navbar-brand" href="#">
         {{ if $responsive_logo }}
