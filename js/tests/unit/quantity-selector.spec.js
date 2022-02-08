@@ -1,5 +1,5 @@
 import QuantitySelector from '../../src/quantity-selector'
-import { clearFixture, getFixture } from '../helpers/fixture'
+import { clearFixture, getFixture, createEvent } from '../helpers/fixture'
 
 describe('QuantitySelector', () => {
   let fixtureEl
@@ -221,12 +221,14 @@ describe('QuantitySelector', () => {
     const buttonStepDownEl = fixtureEl.querySelector('[data-bs-step="down"]')
     const inputEl = fixtureEl.querySelector('[data-bs-step="counter"]')
 
-    expect(inputEl.value).toBe('0.5')
+    const loadEvent = createEvent('load')
+    window.dispatchEvent(loadEvent)
 
-    buttonStepDownEl.click()
+    expect(inputEl.value).toBe('0.5')
 
     setTimeout(() => {
       expect(buttonStepDownEl.disabled).toBeTruthy()
+      expect(inputEl.value).toBe('0.5')
       done()
     }, 10)
   })
@@ -249,10 +251,12 @@ describe('QuantitySelector', () => {
 
     expect(inputEl.value).toBe('9.5')
 
-    buttonStepUpEl.click()
+    const loadEvent = createEvent('load')
+    window.dispatchEvent(loadEvent)
 
     setTimeout(() => {
       expect(buttonStepUpEl.disabled).toBeTruthy()
+      expect(inputEl.value).toBe('9.5')
       done()
     }, 10)
   })
