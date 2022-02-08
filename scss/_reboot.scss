@@ -727,26 +727,3 @@ progress {
 [hidden] {
   display: none !important;
 }
-
-// Boosted mod
-[class*="-dark"],
-[class*="bg-secondary"] {
-  --link-color: #{$link-color-dark};
-  --link-hover-color: #{$link-hover-color-dark};
-  --caption-color: #{$table-caption-color-dark};
-  --code-color: #{$code-color-dark};
-  --kbd-color: #{$kbd-color-dark};
-  --kbd-bg: #{$kbd-bg-dark};
-  --pre-color: #{$pre-color-dark};
-
-  [class*="bg-"]:not(&):not(.bg-transparent) {
-    --link-color: #{$link-color};
-    --link-hover-color: #{$link-hover-color};
-    --caption-color: #{$table-caption-color};
-    --code-color: #{$code-color};
-    --kbd-color: #{$kbd-color};
-    --kbd-bg: #{$kbd-bg};
-    --pre-color: #{$pre-color};
-  }
-}
-// End mod

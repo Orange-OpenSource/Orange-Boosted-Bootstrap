@@ -454,11 +454,11 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              var(--link-color, $black) !default; // Boosted mod
+$link-color:                              var(--#{$boosted-variable-prefix}link-color, $black) !default; // Boosted mod
 $link-color-dark:                         $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        var(--link-hover-color, $accessible-orange) !default; // Boosted mod
+$link-hover-color:                        var(--#{$boosted-variable-prefix}link-hover-color, $accessible-orange) !default; // Boosted mod
 $link-hover-color-dark:                   $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
@@ -779,7 +779,7 @@ $table-border-color:          $gray-500 !default;
 
 $table-group-separator-color: currentColor !default;
 
-$table-caption-color:         var(--caption-color, $black) !default; // Boosted mod
+$table-caption-color:         var(--#{$boosted-variable-prefix}caption-color, $black) !default; // Boosted mod
 $table-caption-color-dark:    $white !default; // Boosted mod
 $table-caption-padding-y:     .75rem !default; // Boosted mod
 // scss-docs-end table-variables
@@ -1797,18 +1797,18 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // Code
 // Boosted mod
 $code-font-size:                    .875em !default;
-$code-color:                        var(--code-color, $gray-700) !default;
+$code-color:                        var(--#{$boosted-variable-prefix}code-color, $gray-700) !default;
 $code-color-dark:                   $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--kbd-color, $black) !default;
+$kbd-color:                         var(--#{$boosted-variable-prefix}kbd-color, $black) !default;
 $kbd-color-dark:                    $white !default;
-$kbd-bg:                            var(--kbd-bg, $gray-300) !default;
+$kbd-bg:                            var(--#{$boosted-variable-prefix}kbd-bg, $gray-300) !default;
 $kbd-bg-dark:                       $gray-900 !default;
 
-$pre-color:                         var(--pre-color, $gray-900) !default;
+$pre-color:                         var(--#{$boosted-variable-prefix}pre-color, $gray-900) !default;
 $pre-color-dark:                    $gray-300 !default;
 $pre-line-height:                   1.25 !default;
 // End mod
