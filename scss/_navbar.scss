@@ -52,17 +52,16 @@
   // Boosted mod
   @include media-breakpoint-up(md) {
     .nav-item:last-of-type {
-      .nav-icon {
+      .nav-link.nav-icon {
         padding-right: 0;
       }
     }
   }
-  :not(.navbar-brand) {
-    > svg,
-    > img {
-      width: $navbar-orange-supra-icon-size;
-      height: $navbar-orange-supra-icon-size;
-    }
+
+  > svg,
+  > img {
+    width: $navbar-orange-supra-icon-size;
+    height: $navbar-orange-supra-icon-size;
   }
 
   @include media-breakpoint-up(xs) {
@@ -105,7 +104,9 @@
     .two-lined {
       margin-left: $navbar-orange-title-margin-left;
     }
+  }
 
+  @include media-breakpoint-up(md) {
     svg,
     img {
       width: $navbar-icon-size;
@@ -122,7 +123,7 @@
     white-space: nowrap;
 
     &.nav-icon {
-      padding: $spacer * .85 $spacer;
+      padding: $spacer * .6 $spacer * .75;
     }
   }
 }
@@ -364,6 +365,10 @@
           }
 
           .nav-link {
+            &.nav-icon {
+              padding: $spacer * .85 $spacer;
+            }
+
             // Boosted mod
             &.active::before {
               right: $nav-link-padding-y;
