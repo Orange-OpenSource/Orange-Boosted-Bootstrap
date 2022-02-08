@@ -50,21 +50,19 @@
   }
 
   // Boosted mod
-  .nav-item:last-of-type .nav-link {
-    padding-right: 0;
+  @include media-breakpoint-up(lg) {
+    .nav-item:last-of-type .nav-link {
+      padding-right: 0;
 
-    &.nav-icon {
-      @include media-breakpoint-up(lg) {
+      &.nav-icon {
         padding-right: 0;
+      }
+
+      &.active::before {
+        right: 0;
       }
     }
 
-    &.active::before {
-      right: 0;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
     .nav-item:first-of-type .nav-link {
       padding-left: 0;
 
@@ -245,7 +243,10 @@
   // Boosted mod
   .nav-item {
     font-size: $h5-font-size;
-    border-top: $border-width * .5 solid $gray-900;
+
+    &:not(:first-child) {
+      border-top: $border-width * .5 solid $gray-900;
+    }
   }
 
   .nav-link {
