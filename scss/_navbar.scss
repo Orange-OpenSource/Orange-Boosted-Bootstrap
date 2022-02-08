@@ -50,7 +50,7 @@
   }
 
   // Boosted mod
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     .nav-item:last-of-type {
       .nav-link.nav-icon {
         padding-right: 0;
@@ -84,7 +84,46 @@
   }
 
   @include media-breakpoint-up(lg) {
-    display: flex;
+    .navbar-collapse {
+      display: flex;
+      flex-basis: auto;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+
+      .dropdown-menu {
+        position: absolute;
+      }
+
+      .nav-link {
+        &.nav-icon {
+          padding: $spacer * .85 $spacer;
+        }
+
+        // Boosted mod
+        &.active::before {
+          right: $nav-link-padding-y;
+          bottom: subtract(-$navbar-padding-bottom, $navbar-orange-supra-border-bottom-width);
+          left: $nav-link-padding-y;
+        }
+        // End mod
+      }
+
+      // Boosted mod
+      .nav-item {
+        font-size: $font-size-base;
+        border: 0;
+      }
+      // End mod
+    }
+  }
+
+  @include media-breakpoint-up(md) {
     .title {
       font-size: $navbar-orange-title-font-size;
       letter-spacing: $h1-spacing;
@@ -104,9 +143,7 @@
     .two-lined {
       margin-left: $navbar-orange-title-margin-left;
     }
-  }
 
-  @include media-breakpoint-up(md) {
     svg,
     img {
       width: $navbar-icon-size;
@@ -323,7 +360,7 @@
 }
 
 // Boosted mod: use a slightly different icon for sizes between xs & sm
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   .navbar-toggler-icon {
     // TODO: is it useful to have 2 SVGs for 3 rectangles?...
     background-image: escape-svg($navbar-toggler-icon-bg);
@@ -348,39 +385,10 @@
     // stylelint-disable-next-line scss/selector-no-union-class-name
     &#{$infix} {
       @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
         justify-content: flex-start;
         padding-top: $navbar-padding-y; // Boosted mod
         padding-bottom: $spacer * .4; // Boosted mod
-
-        .navbar-nav {
-          flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
-
-          .nav-link {
-            &.nav-icon {
-              padding: $spacer * .85 $spacer;
-            }
-
-            // Boosted mod
-            &.active::before {
-              right: $nav-link-padding-y;
-              bottom: subtract(-$navbar-padding-bottom, $navbar-orange-supra-border-bottom-width);
-              left: $nav-link-padding-y;
-            }
-            // End mod
-          }
-
-          // Boosted mod
-          .nav-item {
-            font-size: $font-size-base;
-            border: 0;
-          }
-          // End mod
-        }
 
         // Boosted mod
         .navbar-brand {
@@ -396,19 +404,14 @@
             margin-right: $spacer;
           }
         }
+
+        .navbar-toggler {
+          padding-left: $spacer;
+        }
         // End mod
 
         .navbar-nav-scroll {
           overflow: visible;
-        }
-
-        .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
-          flex-basis: auto;
-        }
-
-        .navbar-toggler {
-          display: none;
         }
 
         // Boosted mod: Offcanvas navbar is not allowed
