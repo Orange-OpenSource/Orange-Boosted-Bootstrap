@@ -42,10 +42,10 @@ describe('QuantitySelector', () => {
 
       const div = fixtureEl.querySelector('div')
 
-      jQueryMock.fn.quantity_selector = QuantitySelector.jQueryInterface
+      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
       jQueryMock.elements = [div]
 
-      jQueryMock.fn.quantity_selector.call(jQueryMock)
+      jQueryMock.fn.quantitySelector.call(jQueryMock)
 
       expect(QuantitySelector.getInstance(div)).not.toBeNull()
     })
@@ -54,14 +54,14 @@ describe('QuantitySelector', () => {
       fixtureEl.innerHTML = '<div></div>'
 
       const div = fixtureEl.querySelector('div')
-      const quantity_selector = new QuantitySelector(div)
+      const quantitySelector = new QuantitySelector(div)
 
-      jQueryMock.fn.quantity_selector = QuantitySelector.jQueryInterface
+      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
       jQueryMock.elements = [div]
 
-      jQueryMock.fn.quantity_selector.call(jQueryMock)
+      jQueryMock.fn.quantitySelector.call(jQueryMock)
 
-      expect(QuantitySelector.getInstance(div)).toEqual(quantity_selector)
+      expect(QuantitySelector.getInstance(div)).toEqual(quantitySelector)
     })
 
     it('should throw error on undefined method', () => {
@@ -70,11 +70,11 @@ describe('QuantitySelector', () => {
       const div = fixtureEl.querySelector('div')
       const action = 'undefinedMethod'
 
-      jQueryMock.fn.quantity_selector = QuantitySelector.jQueryInterface
+      jQueryMock.fn.quantitySelector = QuantitySelector.jQueryInterface
       jQueryMock.elements = [div]
 
       expect(() => {
-        jQueryMock.fn.quantity_selector.call(jQueryMock, action)
+        jQueryMock.fn.quantitySelector.call(jQueryMock, action)
       }).toThrowError(TypeError, `No method named "${action}"`)
     })
   })
