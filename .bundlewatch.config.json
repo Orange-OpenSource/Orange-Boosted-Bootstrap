@@ -26,15 +26,11 @@
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "29.32 kB"
+      "maxSize": "29.3 kB"
     },
     {
       "path": "./dist/css/boosted.min.css",
-<<<<<<< HEAD
-      "maxSize": "26.85 kB"
-=======
       "maxSize": "27.0 kB"
->>>>>>> 830d6a464 (Fix bundlewatch conflict)
     },
     {
       "path": "./dist/js/boosted.bundle.js",
@@ -42,23 +38,23 @@
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "24.1 kB"
+      "maxSize": "24.05 kB"
     },
     {
       "path": "./dist/js/boosted.esm.js",
-      "maxSize": "31.3 kB"
+      "maxSize": "31.25 kB"
     },
     {
       "path": "./dist/js/boosted.esm.min.js",
-      "maxSize": "19.5 kB"
+      "maxSize": "19.49 kB"
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "32.1 kB"
+      "maxSize": "32.04 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "17.25 kB"
+      "maxSize": "17.24 kB"
     }
   ],
   "ci": {
