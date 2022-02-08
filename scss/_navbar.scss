@@ -101,10 +101,6 @@
       }
 
       .nav-link {
-        &.nav-icon {
-          padding: $spacer * .85 $spacer;
-        }
-
         // Boosted mod
         &.active::before {
           right: $nav-link-padding-y;
@@ -148,6 +144,10 @@
     img {
       width: $navbar-icon-size;
       height: $navbar-icon-size;
+    }
+
+    .navbar-nav .nav-link.nav-icon {
+      padding: $spacer * .85 $spacer;
     }
   }
 
