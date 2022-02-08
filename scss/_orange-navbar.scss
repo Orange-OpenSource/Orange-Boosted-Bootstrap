@@ -10,11 +10,6 @@
   padding-top: 0;
   padding-bottom: 0;
 
-  .container {
-    padding-right: $navbar-orange-supra-padding-x;
-    padding-left: $navbar-orange-supra-padding-x;
-  }
-
   @include media-breakpoint-up(lg) {
     display: flex;
   }
@@ -31,7 +26,6 @@
     }
 
     &.nav-icon {
-
       padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
 
       svg,
@@ -40,10 +34,6 @@
         height: $navbar-orange-supra-icon-size;
       }
     }
-  }
-
-  .nav-item:last-of-type .nav-link.nav-icon {
-    padding-right: $navbar-orange-supra-link-padding-x;
   }
 }
 
@@ -67,10 +57,12 @@
       &.nav-icon {
         padding: $spacer * .75 $spacer;
       }
+    }
+  }
 
-      &.active::before {
-        bottom: 0;
-      }
+  @include media-breakpoint-up(lg){
+    .navbar-nav .nav-link.active::before {
+      bottom: 0;
     }
   }
 }

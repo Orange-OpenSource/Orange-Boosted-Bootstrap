@@ -50,10 +50,26 @@
   }
 
   // Boosted mod
-  @include media-breakpoint-up(lg) {
-    .nav-item:last-of-type {
-      .nav-link.nav-icon {
+  .nav-item:last-of-type .nav-link {
+    padding-right: 0;
+
+    &.nav-icon {
+      @include media-breakpoint-up(lg) {
         padding-right: 0;
+      }
+    }
+
+    &.active::before {
+      right: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .nav-item:first-of-type .nav-link {
+      padding-left: 0;
+
+      &.active::before {
+        left: 0;
       }
     }
   }
@@ -393,7 +409,7 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: 0 $spacer subtract($spacer, $navbar-brand-margin-bottom) 0;
+          margin: 0 map-get($spacers, 4) subtract($spacer, $navbar-brand-margin-bottom) 0;
 
           img {
             width: $navbar-brand-logo-height;
