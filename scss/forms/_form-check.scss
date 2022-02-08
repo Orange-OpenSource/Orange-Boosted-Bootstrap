@@ -105,6 +105,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $form-label-disabled-color; // Boosted mod
+      cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }
   }
@@ -144,6 +145,7 @@
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
     border-color: $white; // Boosted mod
+    outline-color: $white; // Boosted mod
     outline-offset: $spacer; // Boosted mod
     @include border-radius($form-switch-border-radius);
     @include transition($form-switch-transition);
@@ -195,7 +197,7 @@
   }
 
   .form-check-label {
-    padding-top: map-get($spacers, 1);
+    padding-top: $form-check-label-padding-top;
   }
   // End mod
 }
