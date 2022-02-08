@@ -108,14 +108,14 @@
           {{ end }}
           <ul class="navbar-nav">
             {{ if $labels }}
-            <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link {{ cond $supra "" "active"}}" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             {{ else }}
-            <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+            <li class="nav-item"><a class="nav-link {{ cond $supra "" "active"}}" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
