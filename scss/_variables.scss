@@ -1236,7 +1236,7 @@ $navbar-orange-supra-link-padding-bottom:     .6875rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-$navbar-brand-font-size:            $font-size-base !default;
+// $navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $navbar-brand-padding-y:            null !default;
 $navbar-brand-margin-end:           $spacer * .25 !default;
@@ -1254,12 +1254,14 @@ $navbar-dark-color:                  $white !default;
 $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
+$navbar-dark-toggler-icon-bg:        $burger-icon !default;
 $navbar-dark-toggler-border-color:   transparent !default;
 
 $navbar-light-color:                 $black !default;
 $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
+$navbar-light-toggler-icon-bg:       $burger-icon !default;
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1269,7 +1271,6 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-theme-variables
 
 // Boosted mod
-$navbar-toggler-icon-bg:       $burger-icon !default;
 $navbar-toggler-icon-close-bg: $cross-icon !default;
 // End mod
 

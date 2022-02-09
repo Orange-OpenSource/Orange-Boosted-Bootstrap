@@ -16,6 +16,7 @@ Here's what you need to know before getting started with the navbar:
 - Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
 - Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
 - Indicate the current item by using `aria-current="page"` for the current page or `aria-current="true"` for the current item in a set.
+- **New in v5.2.0:** Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-light` has been deprecated and `.navbar-dark` has been rewritten to override CSS variables instead of adding additional styles.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -306,7 +307,11 @@ Mix and match with other components and utilities as needed.
 
 ## Color schemes
 
-Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+{{< callout warning >}}
+**New in v5.2.0:** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
+{{< /callout >}}
+
+Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
 
 <!-- Boosted mod: hide the .navbar-light example since it is not valid by design but keep the possibility to use it anyway -->
 
@@ -478,15 +483,23 @@ When you do this, we recommend including additional JavaScript to move the focus
 
 <!-- Boosted mod: Offcanvas navbar is not allowed -->
 
-## Sass
+## CSS
 
 ### Variables
+
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.2.0</small>
+
+As part Boosted's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### Sass loop
 
 [Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
 
