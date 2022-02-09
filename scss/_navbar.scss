@@ -578,14 +578,14 @@
 
   @include media-breakpoint-up(lg) {
     margin-top: 0;
-  }
 
-  .navbar-collapse {
-    padding: $navbar-orange-navigation-padding-bottom 0;
-  }
+    .navbar-collapse {
+      padding: $navbar-orange-navigation-padding-bottom 0;
+    }
 
-  .nav-link.active::before{
-    bottom: -$navbar-orange-navigation-padding-bottom;
+    .nav-link.active::before{
+      bottom: -$navbar-orange-navigation-padding-bottom;
+    }
   }
 }
 // End mod
