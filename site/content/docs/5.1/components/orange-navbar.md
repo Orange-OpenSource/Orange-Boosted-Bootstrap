@@ -48,7 +48,7 @@ Brand-compliant navbars that are easy to use and customizable.
 
 {{< example class="p-0">}}
 <header>
-  {{< orange-global-headers id="global-header-1" mode="actions" >}}
+  {{< orange-global-headers id="global-header-1" mode="actions" demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}
@@ -64,13 +64,13 @@ It is not allowed to have a title into a [minimized global header]({{< ref "#glo
 {{< example class="p-0">}}
 <!-- On one line -->
 <header>
-  {{< orange-global-headers id="global-header-2" mode="actions" title="Title" >}}
+  {{< orange-global-headers id="global-header-2" mode="actions" title="Title" demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 <br>
 <!-- On two lines -->
 <header>
-  {{< orange-global-headers id="global-header-3" mode="actions" title="Title Line 1" title_2="Title Line 2" labels=true >}}
+  {{< orange-global-headers id="global-header-3" mode="actions" title="Title Line 1" title_2="Title Line 2" labels=true demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}
@@ -88,7 +88,7 @@ The minimized global header will **always** use the small [Master logo]().
 
 {{< example class="p-0">}}
 <header>
-  {{< orange-global-headers id="global-header-4" mode="actions" minimized=true >}}
+  {{< orange-global-headers id="global-header-4" mode="actions" minimized=true demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}
@@ -117,7 +117,7 @@ You can have a search input into your Global Header. This one will appear differ
 
 {{< example class="p-0">}}
 <header>
-  {{< orange-global-headers id="global-header-6" mode="search" >}}
+  {{< orange-global-headers id="global-header-6" mode="search" demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}
@@ -140,7 +140,7 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
 
 {{< example class="p-0">}}
 <header>
-  {{< orange-global-headers id="global-header-7" mode="actions" responsive_logo=true labels_end=true >}}
+  {{< orange-global-headers id="global-header-7" mode="actions" responsive_logo=true labels_end=true demo=true >}}
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}

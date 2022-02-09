@@ -23,7 +23,7 @@
   // Boosted mod
   padding: $navbar-padding-x; // default: null
   font-weight: $font-weight-bold;
-  box-shadow: inset 0 -.063em 0 $gray-700;
+  box-shadow: inset 0 -.0625rem 0 $gray-700;
   @include transition($navbar-transition);
   // End mod
   @include gradient-bg();
@@ -50,30 +50,8 @@
   }
 
   // Boosted mod
-  @include media-breakpoint-up(lg) {
-    .nav-item:last-of-type .nav-link {
-      padding-right: 0;
-
-      &.nav-icon {
-        padding-right: 0;
-      }
-
-      &.active::before {
-        right: 0;
-      }
-    }
-
-    .nav-item:first-of-type .nav-link {
-      padding-left: 0;
-
-      &.active::before {
-        left: 0;
-      }
-    }
-  }
-
-  > svg,
-  > img {
+  svg,
+  img {
     width: $navbar-orange-supra-icon-size;
     height: $navbar-orange-supra-icon-size;
   }
@@ -98,6 +76,26 @@
   }
 
   @include media-breakpoint-up(lg) {
+    .nav-item:last-of-type .nav-link {
+      padding-right: 0;
+
+      &.nav-icon {
+        padding-right: 0;
+      }
+
+      &.active::before {
+        right: 0;
+      }
+    }
+
+    .nav-item:first-of-type .nav-link {
+      padding-left: 0;
+
+      &.active::before {
+        left: 0;
+      }
+    }
+
     .navbar-collapse {
       display: flex;
       flex-basis: auto;
@@ -170,7 +168,7 @@
     white-space: nowrap;
 
     &.nav-icon {
-      padding: $spacer * .6 $spacer * .75;
+      padding: add($spacer * .6, 1px) $spacer * .75 $spacer * .6;
     }
   }
 }
@@ -278,11 +276,11 @@
     }
   }
 
+  // Boosted mod
   &.flex-row .nav-item{
     border: 0;
   }
 
-  // Boosted mod
   &.supra-languages-hamburger {
     margin-bottom: 3.125rem;
     border-top: $border-width * .5 solid $gray-900;
