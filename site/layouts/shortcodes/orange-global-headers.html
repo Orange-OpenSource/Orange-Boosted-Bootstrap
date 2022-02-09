@@ -19,7 +19,6 @@
 {{- $title_2 := .Get "title_2" -}}
 {{- $is_title_on_2_lines := and $title $title_2 }}
 {{- $mode := .Get "mode" -}}
-{{- $demo := .Get "demo" | default false -}}
 {{- $labels := .Get "labels" | default false -}}
 {{- $labels_end := .Get "labels_end" | default false -}}
 {{- $minimized := .Get "minimized" | default false -}}
@@ -31,7 +30,7 @@
     <div class="container">
       <a class="navbar-brand" href="#">
         {{ if $responsive_logo }}
-        <img src="/docs/5.1/assets/brand/OBS-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy" style="width: auto">
+        <img src="/docs/5.1/assets/brand/OBS-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy" style="width: 100%">
         {{ else }}
         <img src="/docs/5.1/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         {{ end }}
@@ -104,21 +103,17 @@
             {{ if $labels }}
             <li class="nav-item"><a class="nav-link {{ cond $supra "" "active"}}" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-              {{ if not $demo }}
-                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-              {{ end }}
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
             {{ else }}
             <li class="nav-item"><a class="nav-link {{ cond $supra "" "active"}}" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-              {{ if not $demo }}
-                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-              {{ end }}
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
             {{ end }}
           </ul>
           {{ if $supra }}
@@ -139,7 +134,7 @@
     </div>
   </nav>
   {{ if $navigation }}
-  <div class="navbar navbar-dark bg-dark navbar-expand-md flex-sm-wrap p-0">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md p-0">
     <!--TODO: border should be applied on the navbar (not wide enough)-->
     <div class="container">
       <div id="{{ $id }}" class="navbar-collapse collapse">
@@ -153,5 +148,5 @@
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
   {{ end }}

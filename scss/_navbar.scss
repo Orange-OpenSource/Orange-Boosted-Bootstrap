@@ -427,16 +427,6 @@
         }
 
         // Boosted mod: Offcanvas navbar is not allowed
-
-        &.flex-sm-wrap {
-          .navbar-collapse {
-            padding: $navbar-orange-navigation-padding-bottom 0;
-          }
-
-          .nav-link.active::before{
-            bottom: -$navbar-orange-navigation-padding-bottom;
-          }
-        }
       }
     }
   }
@@ -580,3 +570,22 @@
     }
   }
 }
+
+// Boosted mod
+// Handle the nav-under responsiveness
+.navbar:not(.supra) + .navbar {
+  margin-top: -1px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+
+  .navbar-collapse {
+    padding: $navbar-orange-navigation-padding-bottom 0;
+  }
+
+  .nav-link.active::before{
+    bottom: -$navbar-orange-navigation-padding-bottom;
+  }
+}
+// End mod
