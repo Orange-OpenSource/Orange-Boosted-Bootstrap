@@ -547,16 +547,14 @@
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
-  input[type="search"] {
-    color: $white;
-    background-color: transparent;
-    border: 2px solid $gray-700;
-  }
-  &::placeholder {
-    color: $gray-600;
-  }
-  &:focus {
-    border: 2px solid $white;
+  .nav-input {
+    margin-bottom: $navbar-orange-search-padding-bottom; //Boosted mod, but to be used for any input (not just type search)
+
+    & input[type="search"] {
+      color: $white;
+      background-color: transparent;
+      border: 2px solid $gray-700;
+    }
   }
 
   .navbar-toggler {
