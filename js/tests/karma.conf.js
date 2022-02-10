@@ -34,6 +34,10 @@ const detectBrowsers = {
       return ['ChromeHeadless']
     }
 
+    if (availableBrowser.includes('Firefox')) {
+      return DEBUG ? ['Firefox'] : ['FirefoxHeadless']
+    }
+
     if (availableBrowser.includes('Chrome')) {
       return DEBUG ? ['Chrome'] : ['ChromeHeadless']
     }
@@ -42,16 +46,13 @@ const detectBrowsers = {
       return DEBUG ? ['Chromium'] : ['ChromiumHeadless']
     }
 
-    if (availableBrowser.includes('Firefox')) {
-      return DEBUG ? ['Firefox'] : ['FirefoxHeadless']
-    }
-
     throw new Error('Please install Chrome, Chromium or Firefox')
   }
 }
 
 const config = {
   basePath: '../..',
+  hostname: 'localhost',
   port: 9876,
   colors: true,
   autoWatch: false,
@@ -153,7 +154,7 @@ if (BROWSERSTACK) {
   }
 
   if (DEBUG) {
-    config.hostname = ip.address()
+    config.hostname = 'localhost'
     plugins.push('karma-jasmine-html-reporter')
     reporters.push('kjhtml')
     config.singleRun = false
