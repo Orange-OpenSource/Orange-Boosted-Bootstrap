@@ -246,7 +246,12 @@
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .5; // Boosted mod
+    padding: add($nav-link-padding-y, $border-width * 3) $nav-link-padding-x * .5; // Boosted mod. Padding-y for burger menu items (50px)
+
+    @include media-breakpoint-up(lg) {
+      padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .5; // Boosted mod
+    }
+
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
