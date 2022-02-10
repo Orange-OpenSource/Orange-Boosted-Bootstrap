@@ -1254,12 +1254,14 @@ $navbar-dark-color:                  $white !default;
 $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
+$navbar-dark-toggler-icon-bg:        $burger-icon !default;
 $navbar-dark-toggler-border-color:   transparent !default;
 
 $navbar-light-color:                 $black !default;
 $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
+$navbar-light-toggler-icon-bg:       $burger-icon !default;
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1269,7 +1271,6 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-theme-variables
 
 // Boosted mod
-$navbar-toggler-icon-bg:       $burger-icon !default;
 $navbar-toggler-icon-close-bg: $cross-icon !default;
 // End mod
 
