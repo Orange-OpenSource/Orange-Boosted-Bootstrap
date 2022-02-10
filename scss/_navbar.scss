@@ -136,8 +136,8 @@
       font-size: $navbar-orange-title-font-size;
     }
     .two-lined {
-      letter-spacing: $h2-spacing;
       font-size: $navbar-orange-two-titles-font-size;
+      letter-spacing: $h2-spacing;
       & :first-child {
         line-height: $navbar-orange-two-titles-line-height;
         vertical-align: top;
