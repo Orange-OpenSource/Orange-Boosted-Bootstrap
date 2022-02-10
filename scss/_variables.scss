@@ -1236,7 +1236,7 @@ $navbar-orange-supra-link-padding-bottom:     .6875rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-// $navbar-brand-font-size:            $font-size-base !default;
+$navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $navbar-brand-padding-y:            null !default;
 $navbar-brand-margin-end:           $spacer * .25 !default;
