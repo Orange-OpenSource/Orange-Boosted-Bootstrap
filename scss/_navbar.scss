@@ -76,6 +76,9 @@
   }
 
   @include media-breakpoint-up(lg) {
+    // Boosted mod : prevent too many nav-links to vertically break the header
+    flex-wrap: nowrap;
+
     .nav-item:last-of-type .nav-link {
       padding-right: 0;
 
@@ -166,6 +169,7 @@
   .nav-link {
     display: block;
     white-space: nowrap;
+    word-break: break-all;
 
     &.nav-icon {
       padding: add($spacer * .6, 1px) $spacer * .75 $spacer * .6;
@@ -402,7 +406,6 @@
     // stylelint-disable-next-line scss/selector-no-union-class-name
     &#{$infix} {
       @include media-breakpoint-up($next) {
-        // flex-wrap: nowrap;
         justify-content: flex-start;
         padding-top: $navbar-padding-y; // Boosted mod
         padding-bottom: $spacer * .4; // Boosted mod
