@@ -71,7 +71,7 @@
 
     .title,
     .two-lined {
-      margin-left: $navbar-orange-title-margin-left;
+      margin-left: $navbar-orange-title-margin-left-xs;
     }
   }
 
@@ -134,9 +134,9 @@
   @include media-breakpoint-up(md) {
     .title {
       font-size: $navbar-orange-title-font-size;
-      letter-spacing: $h1-spacing;
     }
     .two-lined {
+      letter-spacing: $h2-spacing;
       font-size: $navbar-orange-two-titles-font-size;
       & :first-child {
         line-height: $navbar-orange-two-titles-line-height;
