@@ -113,7 +113,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 <div class="bd-example">
   <div class="row">
     <div class="col-4 col-lg-3">
-      <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch">
+      <nav id="navbar-example3" class="navbar flex-column align-items-stretch">
         <a class="navbar-brand align-self-start" href="#">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         </a>
@@ -156,7 +156,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 ```html
 <div class="row">
   <div class="col-4 col-lg-3">
-    <nav id="navbar-example3" class="navbar navbar-light flex-column align-items-stretch">
+    <nav id="navbar-example3" class="navbar flex-column align-items-stretch">
       <a class="navbar-brand align-self-start" href="#">
         <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
       </a>
