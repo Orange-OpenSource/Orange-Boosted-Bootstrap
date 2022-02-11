@@ -1206,6 +1206,7 @@ $navbar-padding-bottom:             add($spacer * .25, $border-width) !default; 
 // $navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
 
 // Boosted mod: Orange master logo & minimizing behavior
+$navbar-icon-size-xs:                     $spacer * 1.25 !default;
 $navbar-icon-size:                        $spacer * 1.5 !default;
 $navbar-brand-logo-height:                add($spacer * 1.5, $spacer) !default;
 $navbar-brand-logo-minimized-height:      $spacer * 1.5 !default;
