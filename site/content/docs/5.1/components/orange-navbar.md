@@ -21,21 +21,21 @@ A simple navigation can be added on top of Orange navbar, it is called supra bar
 This navbar is visible only on desktop view.
 {{< /callout >}}
 
-{{< example >}}
+{{< example class="p-0" >}}
 {{< orange-supra >}}
 {{< /orange-supra >}}
 {{< /example >}}
 
 Supra bar items can be added on left and right.
 
-{{< example >}}
+{{< example class="p-0" >}}
 {{< orange-supra mode="languages" >}}
 {{< /orange-supra >}}
 {{< /example >}}
 
 Icons as navigation items can be used as well.
 
-{{< example >}}
+{{< example class="p-0" >}}
 {{< orange-supra mode="actions" >}}
 {{< /orange-supra >}}
 {{< /example >}}

@@ -334,7 +334,7 @@
   align-self: flex-end; // Boosted mod
 
   &.justify-content-end li:last-child {
-    margin-right: divide($spacer, 2);
+    margin-right: $spacer;
   }
 }
 
@@ -535,10 +535,8 @@
       .badge {
         @extend .position-absolute;
         @extend .top-0;
-        @extend .bg-info;
         @extend .text-white;
         @extend .translate-middle;
-        @extend .rounded-pill;
         padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
         margin-top: $navbar-orange-badge-margin-top;
         font-size: $font-size-base;
@@ -559,6 +557,18 @@
       color: $white;
       background-color: transparent;
       border: 2px solid $gray-700;
+
+      @include media-breakpoint-up(lg) {
+        width: $spacer * 11;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: $spacer * 14;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: $spacer * 15.5;
+      }
     }
   }
 
