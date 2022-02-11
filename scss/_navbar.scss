@@ -76,6 +76,10 @@
   }
 
   @include media-breakpoint-up(lg) {
+    &.navbar-dark .navbar-brand {
+      margin-right: map-get($spacers, 4);
+    }
+
     // Boosted mod : prevent too many nav-links to vertically break the header
     flex-wrap: nowrap;
 
@@ -152,6 +156,7 @@
 
     .title,
     .two-lined {
+      margin-right: $spacer;
       margin-left: $navbar-orange-title-margin-left;
     }
 
@@ -250,7 +255,7 @@
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 3) $nav-link-padding-x * .5; // Boosted mod. Padding-y for burger menu items (50px)
+    padding: subtract(add($nav-link-padding-y, $border-width * 3), 1px) $nav-link-padding-x * .5 add(add($nav-link-padding-y, $border-width * 3), 1px); // Boosted mod. Padding-y for burger menu items (50px)
 
     @include media-breakpoint-up(lg) {
       padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .5; // Boosted mod
@@ -414,7 +419,7 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: 0 map-get($spacers, 4) subtract($spacer, $navbar-brand-margin-bottom) 0;
+          margin: 0 0 subtract($spacer, $navbar-brand-margin-bottom) 0;
 
           img {
             width: $navbar-brand-logo-height;
