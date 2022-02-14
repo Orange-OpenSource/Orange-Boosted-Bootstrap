@@ -76,7 +76,7 @@ The `data-bs-round` attribute will help you to define the number of digits to ap
 
 ### Events
 
-Boosted's quantity selector form component exposes one event for hooking into quantity selector functionality.
+Boosted's quantity selector form component exposes the classic `change` event when the value of an input has been changed.
 
 <table class="table">
   <thead>
@@ -88,7 +88,7 @@ Boosted's quantity selector form component exposes one event for hooking into qu
   <tbody>
     <tr>
       <td>
-        <code>change.bs.quantitySelector</code>
+        <code>change</code>
       </td>
       <td>
         Fires immediately when the value inside the input is modified.
@@ -99,7 +99,7 @@ Boosted's quantity selector form component exposes one event for hooking into qu
 
 ```js
 var myQuantitySelector = document.getElementById('inputQuantitySelector')
-myQuantitySelector.addEventListener('change.bs.quantitySelector', function () {
+myQuantitySelector.addEventListener('change', function () {
   // do something...
 })
 ```
