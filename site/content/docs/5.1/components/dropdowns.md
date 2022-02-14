@@ -201,9 +201,9 @@ Opt into darker dropdowns to match a dark navbar or custom style by adding `.dro
     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
       <li><a class="dropdown-item active" href="#">Action</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item disabled">Something else here</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item disabled" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div>
 </div>
@@ -216,9 +216,9 @@ Opt into darker dropdowns to match a dark navbar or custom style by adding `.dro
   <ul class="dropdown-menu dropdown-menu-dark">
     <li><a class="dropdown-item active" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item disabled">Something else here</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item disabled" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
 {{< /example >}}
