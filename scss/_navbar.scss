@@ -131,7 +131,7 @@
 
       // Boosted mod
       .nav-item {
-        font-size: $font-size-base;
+        font-size: $font-size-base; // to remove ?
         border: 0;
       }
       // End mod
@@ -193,7 +193,7 @@
   position: relative;
   display: inline-flex;
   align-items: flex-end;
-  align-self: center;
+  align-self: center; // to remove ?
   // End mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
@@ -242,7 +242,7 @@
 .navbar-nav {
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  align-self: flex-end; // Boosted mod
+  align-self: flex-end; // Boosted mod to remove ?
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -532,11 +532,8 @@
       }
 
       // Boosted mod
+      // To remove
       .badge {
-        @extend .position-absolute;
-        @extend .top-0;
-        @extend .text-white;
-        @extend .translate-middle;
         padding: $navbar-orange-badge-padding-y $navbar-orange-badge-padding-x;
         margin-top: $navbar-orange-badge-margin-top;
         font-size: $font-size-base;
