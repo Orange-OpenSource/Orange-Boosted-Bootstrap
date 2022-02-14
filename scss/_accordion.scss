@@ -122,14 +122,9 @@
 
     &:not(.collapsed) {
       color: $accordion-dark-button-active-color;
-      background-color: $accordion-dark-button-active-bg;
     }
 
     &:hover {
-      color: $accordion-dark-button-active-color;
-    }
-
-    &:focus {
       color: $accordion-dark-button-active-color;
     }
   }
@@ -140,7 +135,7 @@
   }
 
   .accordion-item {
-    color: color-contrast($accordion-dark-bg);
+    color: $accordion-dark-color;
     background-color: $accordion-dark-bg;
 
     &:last-of-type {
