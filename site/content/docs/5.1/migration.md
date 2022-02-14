@@ -355,7 +355,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
 
-- Replaced chevron icons for carousel controls with new SVGs from 
+- Replaced chevron icons for carousel controls with new SVGs from
 [Solaris]({{< docsref "/extend/icons" >}}).
 
 ### Close button
@@ -411,6 +411,12 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ### Orange navbar
 
 - <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
+
+- Removed the `.global` class for the instantiation of global headers. You just need to declare your navbar with default `.navbar-*` classes.
+
+- Changed the handling of the minimizing on scroll behavior. Initialize it on your `<header>` element by adding the `.sticky-top` class.
+
+- Classes to handle titles in the bars have been added: use `.title` for a title on a single line, or `.two-lined` for, as its name suggests, a title on two lines.
 
 ### Pagination
 
@@ -480,7 +486,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
 
 - <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
- 
+
 - Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
 
 - Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
@@ -494,7 +500,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
   - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
   - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
- 
+
 - <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
   - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
   - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`

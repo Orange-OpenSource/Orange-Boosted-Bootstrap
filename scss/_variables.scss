@@ -355,7 +355,8 @@ $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
-$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
+$burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 1 0 0 30 15 15 0 0 0 0-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
@@ -1229,66 +1230,86 @@ $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 // scss-docs-end nav-variables
 
+
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  add($spacer, $spacer * .25) !default;
+$navbar-padding-y:                  .375rem !default;
 $navbar-padding-x:                  null !default;
-$navbar-padding-bottom:             add($spacer * .25, $border-width) !default; // Boosted mod
 
-$navbar-nav-link-padding-x:         $nav-link-padding-x * .5 !default;
-
-// Boosted mod: Orange master logo & minimizing behavior
-$navbar-icon-size:                     $spacer * 1.5 !default;
-$navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
-$navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-$navbar-transition-duration:           $transition-duration !default;
-$navbar-transition-timing-function:    $transition-timing !default;
-$navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
-$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
-$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
-// End mod
+$navbar-nav-link-padding-y:         1rem !default; // Boosted mod
+$navbar-nav-link-padding-x-xs:      $spacer * .25 !default; // Boosted mod
+$navbar-nav-link-padding-x:         $spacer * .5 !default;
 
 // Boosted mod: Orange navbar
 // scss-docs-start orange-navbar-variables
-$navbar-orange-supra-padding-x:               .125rem !default;
-$navbar-orange-supra-border-bottom-width:     1px !default;
+$navbar-transition-duration:              $transition-duration !default;
+$navbar-transition-timing-function:       $transition-timing !default;
+$navbar-transition:                       padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-transition:                 margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-logo-transition:            width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-active-transition:                bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
-$navbar-orange-supra-badge-padding-y:         .125rem !default;
-$navbar-orange-supra-badge-padding-x:         .375rem !default;
-$navbar-orange-supra-badge-margin-top:        map-get($spacers, 4) * .1 !default;
+$navbar-border-width:                     $border-width * .5 !default;
+$navbar-border-color:                     $gray-700 !default;
 
-$navbar-orange-supra-icon-padding-top:        divide($spacer, 2) !default;
-$navbar-orange-supra-icon-padding-x:          .9375rem !default;
-$navbar-orange-supra-icon-padding-bottom:     .25rem !default;
-$navbar-orange-supra-icon-size:               1.5625rem !default;
+$navbar-brand-margin-end:                 $spacer * 1.5 !default;
 
-$navbar-orange-supra-link-padding-top:        .75rem !default;
-$navbar-orange-supra-link-padding-x:          map-get($spacers, 1) * 1.5 !default;
-$navbar-orange-supra-link-padding-bottom:     .6875rem !default;
+$navbar-brand-margin-y-xs:                $spacer * .5 !default;
+$navbar-brand-logo-size-xs:               $spacer * 1.5 !default;
+$navbar-brand-font-size-xs:               1.3125rem !default;
+$navbar-brand-letter-spacing-xs:          $letter-spacing-base * 5 !default;
+$navbar-brand-font-size-two-line-xs:      1.0625rem !default;
+$navbar-brand-letter-spacing-two-line-xs: $letter-spacing-base * 4 !default;
+
+$navbar-brand-margin-y:                   $spacer * .95 !default;
+$navbar-brand-logo-size:                  $spacer * 2.5 !default;
+$navbar-brand-font-size:                  2.1875rem !default;
+$navbar-brand-letter-spacing:             $letter-spacing-base * 10 !default;
+$navbar-brand-font-size-two-line:         1.8125rem !default;
+$navbar-brand-letter-spacing-two-line:    $letter-spacing-base * 8 !default;
+
+$navbar-icon-size-xs:                     $spacer * 1.25 !default;
+$navbar-icon-size:                        $spacer * 1.5 !default;
+
+$navbar-nav-icon-padding-y-xs:            $spacer * .6 !default;
+$navbar-nav-icon-padding-x-xs:            $spacer * .75 !default;
+$navbar-nav-icon-padding-y:               $navbar-brand-margin-y !default;
+$navbar-nav-icon-padding-x:               $spacer !default;
+
+$navbar-supra-link-padding-y:             $spacer * .6 !default;
+$navbar-supra-link-padding-x:             .46875rem !default;
+$navbar-supra-icon-padding-y:             $spacer * .25 !default;
+$navbar-supra-icon-padding-x:             $navbar-nav-icon-padding-x-xs !default;
+$navbar-supra-icon-size:                  $navbar-icon-size-xs !default;
+
+$navbar-minimized-brand-margin-y:         $spacer * .75 !default;
+$navbar-minimized-nav-icon-padding-y:     $navbar-minimized-brand-margin-y !default;
+$navbar-minimized-toggler-padding-y:      $navbar-minimized-brand-margin-y !default;
+
+$navbar-badge-padding-y:                  .125rem !default;
+$navbar-badge-padding-x:                  .375rem !default;
+$navbar-badge-margin-top:                 .1875rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-$navbar-brand-font-size:            $font-size-base !default;
-// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$navbar-brand-padding-y:            null !default;
-$navbar-brand-margin-end:           $spacer * .25 !default;
-
-$navbar-toggler-padding-y:          .5rem !default;
-$navbar-toggler-padding-x:          .5rem !default;
-$navbar-toggler-font-size:          $font-size-base !default;
+$navbar-toggler-icon-close-bg:      $cross-icon !default; // Boosted mod
+$navbar-toggler-padding-y:          $navbar-nav-icon-padding-y-xs !default;
+$navbar-toggler-padding-x:          $navbar-nav-icon-padding-x-xs !default;
+$navbar-toggler-font-size-xs:       1.04166666rem !default; // Boosted mod
+$navbar-toggler-font-size:          1.25rem !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        null !default;
 $navbar-toggler-transition:         $transition-focus !default;
 // scss-docs-end navbar-variables
+
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 
 // scss-docs-start navbar-theme-variables
 $navbar-dark-color:                  $white !default;
 $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
-$navbar-dark-toggler-icon-bg:        $burger-icon !default;
 $navbar-dark-toggler-border-color:   transparent !default;
 
 $navbar-light-color:                 $black !default;
@@ -1296,6 +1317,7 @@ $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
 $navbar-light-toggler-icon-bg:       $burger-icon !default;
+$navbar-light-toggler-icon-bg-small: $burger-icon-small !default;
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1304,9 +1326,6 @@ $navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-theme-variables
 
-// Boosted mod
-$navbar-toggler-icon-close-bg: $cross-icon !default;
-// End mod
 
 // Dropdowns
 //

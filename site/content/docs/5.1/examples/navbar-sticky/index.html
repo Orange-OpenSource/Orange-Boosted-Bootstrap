@@ -1,0 +1,26 @@
+---
+layout: examples
+title: Sticky navbar example
+extra_css:
+  - "navbar-sticky.css"
+extra_js:
+  - src: "navbar-sticky.js"
+---
+
+<main>
+  <h1 class="visually-hidden">Difference between sticky and fixed navbar</h1>
+  <!-- <main class="exclude-from-pa11y-analysis"> -->
+  <header class="sticky-top">
+    {{< orange-supra mode="languages" aria_label="supra-1" >}}
+    {{< /orange-supra >}}
+
+    {{< orange-global-headers id="global-header-1" mode="actions" supra=true aria_label="global-1" >}}
+    {{< /orange-global-headers >}}
+  </header>
+  <div class="container-xxl">
+    <div class="form-check form-switch py-5">
+      <input class="form-check-input" type="checkbox" role="switch" id="stickySwitch">
+      <label class="form-check-label" for="stickySwitch">Toggle sticky/fixed header</label>
+    </div>
+  </div>
+</main>

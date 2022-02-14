@@ -1,0 +1,4 @@
+/* Show it is fixed to the top */
+main {
+  min-height: 150vh;
+}

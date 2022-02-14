@@ -2,21 +2,22 @@
   Usage: `orange-supra args`
 
   `args` are all optional and can be one of the following:
-    * mode: Modes used to display specific content: ["languages", "actions"] - default = ""
+    * mode: Mode used to display specific content if defined (choose one among ["languages", "actions"])
 */ -}}
 
 {{- $mode := .Get "mode" -}}
 {{- $input := .Inner -}}
+{{- $aria_label := .Get "aria_label" -}}
 
-<nav class="navbar navbar-dark navbar-expand bg-dark supra">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="{{$aria_label}}">
   <div class="container-xxl">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
     </ul>
 {{- if eq $mode "languages" }}
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version" aria-current="true">EN</a></li>
       <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
       <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
     </ul>
@@ -38,7 +39,7 @@
           </svg>
           <span class="visually-hidden">Basket</span>
           <span class="position-relative">
-            <span class="badge">
+            <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
