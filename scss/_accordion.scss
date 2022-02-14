@@ -6,9 +6,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: add(100%, $accordion-button-padding-x * 2);
+  width: 100%;
   padding: $accordion-button-padding-y $accordion-button-padding-x;
-  margin: 0 -#{$accordion-button-padding-x}; // Boosted mod
   @include font-size($accordion-button-font-size); // Boosted mod
   font-weight: $accordion-button-font-weight; // Boosted mod
   line-height: $accordion-button-line-height; // Boosted mod
@@ -114,3 +113,34 @@
     letter-spacing: $accordion-button-letter-spacing-lg;
   }
 }
+
+// Boosted mod
+.accordion-dark {
+  .accordion-button {
+    color: $accordion-dark-button-color;
+    background-color: $accordion-dark-button-bg;
+
+    &:not(.collapsed) {
+      color: $accordion-dark-button-active-color;
+    }
+
+    &:hover {
+      color: $accordion-dark-button-active-color;
+    }
+  }
+
+  .accordion-header {
+    border: $accordion-border-width solid $accordion-dark-border-color;
+    border-width: $accordion-border-width 0 0;
+  }
+
+  .accordion-item {
+    color: $accordion-dark-color;
+    background-color: $accordion-dark-bg;
+
+    &:last-of-type {
+      border-bottom: $accordion-border-width solid $accordion-dark-border-color;
+    }
+  }
+}
+// End mod

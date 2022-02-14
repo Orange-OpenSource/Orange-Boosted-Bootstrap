@@ -1404,25 +1404,34 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     $spacer * .5 !default;
-$accordion-padding-x:                     $spacer * .5 !default;
+$accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
+$accordion-padding-x:                     0 !default; // Boosted mod
 $accordion-color:                         $body-color !default;
 $accordion-bg:                            $body-bg !default;
-$accordion-border-width:                  $border-width * .5 !default;
-$accordion-border-color:                  $gray-500 !default;
+$accordion-border-width:                  $border-width * .5 !default; // Boosted mod
+$accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 $border-radius !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
-$accordion-body-padding-y:                $spacer !default;
-$accordion-body-padding-x:                $spacer !default;
+$accordion-body-padding-y:                $spacer !default; // Boosted mod
+$accordion-body-padding-x:                $spacer !default; // Boosted mod
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     $accordion-bg !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              null !default;
-$accordion-button-active-color:           $accessible-orange !default;
+$accordion-button-active-bg:              null !default; // Boosted mod
+$accordion-button-active-color:           $accessible-orange !default; // Boosted mod
+
+// Boosted mod: dark variant
+$accordion-dark-color:                    $white !default;
+$accordion-dark-bg:                       $black !default;
+$accordion-dark-border-color:             $gray-700 !default;
+$accordion-dark-button-color:             $accordion-dark-color !default;
+$accordion-dark-button-bg:                $accordion-dark-bg !default;
+$accordion-dark-button-active-color:      $brand-orange !default;
+// End mod
 
 // Boosted mod: no $accordion-button-focus-*
 
