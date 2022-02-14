@@ -11,11 +11,28 @@ toc: true
 Orange navbar is based on the [navbar]({{<docsref "/components/navbar">}}) component. It adds some display management and introduces the supra bar component.
 You may refer to its documentation in order to properly create and use navbars.
 
+## Quick start guide
+
+- Declare a `<header>` that will contain your `<nav>` elements : 
+  - Your optional [Supra bar](#supra-bar)
+  - Your mandatory [Global Header](#global-headers)
+  - Your optional [Navigation under](#navigation-under) below the Global Header.
+- On your `<header>`, use either the `.fixed-top` or `.sticky-top` class.
+  - The latter must be used in case you want to have a ['minimize on scroll' behaviour](#minimizing-the-orange-navbar).
+
+## Minimizing the Orange Navbar
+
+An Orange Navbar will always be at the top of any page. Therefore you will always have a full-height navbar, displayed at any time.
+
+However, you will be able to decrease its height when scrolling the page by using the `.sticky-top` class onto your `<header>` element.
+
+
 ## Examples
 
 ### Supra bar
+#### Optional
 
-A simple navigation can be added on top of Orange navbar, it is called supra bar. Simply add the `.supra` class in your navbar declaration.
+A simple navigation that can be added on top of Orange Navbar. Simply add the `.supra` class in your navbar declaration.
 
 {{< callout warning >}}
 This navbar is visible only on desktop view.
@@ -40,9 +57,10 @@ Icons as navigation items can be used as well.
 {{< /orange-supra >}}
 {{< /example >}}
 
-### Global Headers (Navbars)
+### Global Headers
+#### Mandatory
 
-Brand-compliant navbars that are easy to use and customizable.
+Brand-compliant navbar that are easy to use and customizable.
 
 #### Global header standard
 
@@ -144,6 +162,11 @@ The latter may be the preferred way to do a custom logo, still, as it's *really*
   {{< /orange-global-headers >}}
 </header>
 {{< /example >}}
+
+#### Navigation under
+
+The nav under is a <nav> element that you can use below your Global header and is recommended to be used whenever your header may have too many link items.
+It simply adds a simple navbar with nav-links.
 
 ## Sass
 
