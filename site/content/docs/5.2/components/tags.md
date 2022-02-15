@@ -10,25 +10,31 @@ toc: true
 
 A tag is basically a rounded button that can contain some text, an icon and a close button.
 
-{{< example class="d-flex gap-2" >}}
-<div role="button" tabindex="0" class="tag">Label</div>
-<div role="button" tabindex="0" class="tag tag-icon">
-  <svg fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
+{{< example class="d-flex gap-2 align-items-center" >}}
+<div class="tag">
+  <button>Label</button>
 </div>
-<div role="button" tabindex="0" class="tag tag-remove">
-  Label
+<div class="tag">
+  <button>
+    <svg fill="currentColor" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </button>
+</div>
+<div class="tag tag-remove">
+  <button>Label</button>
   <button class="remove">
     <span class="visually-hidden">Close</span>
   </button>
 </div>
-<div role="button" tabindex="0" class="tag tag-icon tag-remove">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
+<div class="tag tag-remove">
+  <button>
+    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </button>
   <button class="remove">
     <span class="visually-hidden">Close</span>
   </button>
@@ -40,11 +46,13 @@ A tag is basically a rounded button that can contain some text, an icon and a cl
 To add icon to your tag, add `.tag-icon`.
 
 {{< example class="d-flex gap-2" >}}
-<div role="button" tabindex="0" class="tag tag-icon">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
+<div class="tag">
+  <button>
+    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </button>
 </div>
 {{< /example >}}
 
@@ -53,8 +61,8 @@ To add icon to your tag, add `.tag-icon`.
 Tags come with an embedded close icon : `.tag-remove`.
 
 {{< example class="d-flex gap-2" >}}
-<div role="button" tabindex="0" class="tag tag-remove">
-  Label
+<div class="tag tag-remove">
+  <button>Label</button>
   <button class="remove">
     <span class="visually-hidden">Close</span>
   </button>
@@ -66,11 +74,13 @@ Tags come with an embedded close icon : `.tag-remove`.
 Tags come with a dark variant : `.tag-dark`.
 
 {{< example class="bg-dark d-flex gap-2" >}}
-<div role="button" tabindex="0" class="tag tag-dark tag-icon tag-remove">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
+<div class="tag tag-dark tag-remove">
+  <button>
+    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible" width="1.5rem" height="1.5rem">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </button>
   <button class="remove">
     <span class="visually-hidden">Close</span>
   </button>
@@ -82,13 +92,17 @@ Tags come with a dark variant : `.tag-dark`.
 Tags come with a disabled state. Add `.disabled` or even the attribute `disabled`.
 
 {{< example class="d-flex gap-2" >}}
-<div role="button" tabindex="-1" class="tag disabled">Label</div>
-<div role="button" class="tag tag-icon tag-remove" disabled>
-  <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-  <button class="remove">
+<div class="tag">
+  <button disabled>Label</button>
+</div>
+<div class="tag tag-remove">
+  <button disabled>
+    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </button>
+  <button class="remove" disabled>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -99,8 +113,8 @@ Tags come with a disabled state. Add `.disabled` or even the attribute `disabled
 Fancy smaller tags ? Add `.tag-sm` for additional size.
 
 {{< example >}}
-<div role="button" tabindex="0" class="tag me-1">Label</div>
-<div role="button" tabindex="0" class="tag tag-sm">Label</div>
+<div class="tag me-1"><button>Label</button></div>
+<div class="tag tag-sm"><button>Label</button></div>
 {{< /example >}}
 
 ## Sass
