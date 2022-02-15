@@ -132,26 +132,22 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ### Dark background
 
-Alerts come with dark variants using `.alert-dark`.
-
 {{< example class="bg-dark" >}}
-<div class="alert-dark">
-  <div class="alert alert-success" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-    <p>Success notification text goes here.</p>
+<div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
+  <p>Success notification text goes here.</p>
+</div>
+<div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
+  <div>
+    <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
+    <p>Description text with <a href="#">a link</a> goes here.</p>
   </div>
-  <div class="alert alert-success" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-    <div>
-      <h4 class="alert-heading">Success notification text with <a href="#">a link</a> goes here.</h4>
-      <p>Description text with <a href="#">a link</a> goes here.</p>
-    </div>
-  </div>
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-    <p>Warning notification text goes here.</p>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
-  </div>
+</div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+  <p>Warning notification text goes here.</p>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 
