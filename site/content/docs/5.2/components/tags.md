@@ -16,7 +16,7 @@ A tag is basically a rounded button that can contain some text, an icon and a cl
 </div>
 <div class="tag">
   <button>
-    <svg fill="currentColor" aria-hidden="true" focusable="false">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Label
@@ -30,7 +30,7 @@ A tag is basically a rounded button that can contain some text, an icon and a cl
 </div>
 <div class="tag tag-remove">
   <button>
-    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Label
@@ -48,7 +48,7 @@ To add icon to your tag, add `.tag-icon`.
 {{< example class="d-flex gap-2" >}}
 <div class="tag">
   <button>
-    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Label
@@ -76,7 +76,7 @@ Tags come with a dark variant : `.tag-dark`.
 {{< example class="bg-dark d-flex gap-2" >}}
 <div class="tag tag-dark tag-remove">
   <button>
-    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible" width="1.5rem" height="1.5rem">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Label
@@ -97,7 +97,7 @@ Tags come with a disabled state. Add `.disabled` or even the attribute `disabled
 </div>
 <div class="tag tag-remove">
   <button disabled>
-    <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
     </svg>
     Label

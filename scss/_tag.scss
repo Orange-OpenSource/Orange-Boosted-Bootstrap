@@ -1,153 +1,3 @@
-// .tag {
-//   display: inline-flex;
-//   gap: $tag-gap;
-//   align-items: center;
-//   padding: add($tag-padding-y, .125rem) $tag-padding-x add($tag-padding-y, .25rem); // @include button-size(add($tag-padding-y, .1875rem), $tag-padding-x, $tag-font-size, 0, $tag-line-height, 0);
-//   font-size: $tag-font-size;
-//   font-weight: $font-weight-bold;
-//   line-height: $tag-line-height;
-//   color: inherit;
-//   vertical-align: bottom; // To avoid some align issues in some cases
-//   cursor: if($enable-button-pointers, pointer, null);
-//   background-color: transparent;
-//   border: $border-width solid $tag-border-color;
-//   @include border-radius($tag-border-radius, $tag-border-radius);
-
-//   svg,
-//   .remove {
-//     width: $tag-icon-size;
-//     height: $tag-icon-size;
-//     margin-bottom: -$tag-icon-shift;
-//   }
-
-//   &:hover {
-//     border-color: currentColor;
-//   }
-
-//   &:active,
-//   &.active,
-//   &:focus,
-//   &.focus {
-//     color: $tag-active-color;
-//     background-color: $tag-active-decoration-color;
-//     border-color: $tag-active-decoration-color;
-//     outline: $outline-width solid $black;
-//     outline-offset: map-get($spacers, 1);
-
-//     .remove {
-//       @include tag-remove($tag-active-color);
-//     }
-//   }
-
-//   &:disabled,
-//   &.disabled,
-//   &[disabled] {
-//     color: $tag-disabled-color;
-//     pointer-events: none;
-//     border-color: $tag-disabled-color;
-
-//     .remove {
-//       @include tag-remove($tag-disabled-color);
-//     }
-//   }
-// }
-
-// .tag-icon,
-// .tag-remove {
-//   padding: $tag-padding-y $tag-padding-x add($tag-padding-y, $tag-icon-shift);
-// }
-
-// .tag-icon { // Useless atm but useful in some user cases
-//   padding-left: subtract($tag-padding-x, .4375rem);
-// }
-
-// .tag-remove {
-//   padding-right: subtract($tag-padding-x, .4375rem);
-
-//   .remove {
-//     margin-left: .1875rem;
-//     background: no-repeat center/subtract($tag-icon-size, $tag-padding-remove-icon * 2);
-//     border-color: transparent;
-//     @include tag-remove($black);
-//     @include border-radius($tag-border-radius, $tag-border-radius);
-
-//     &:hover,
-//     &:focus {
-//       background-color: $tag-active-decoration-color;
-//       @include tag-remove($white);
-//     }
-//   }
-// }
-
-// .tag-sm {
-//   padding: add($tag-padding-y-sm, .0625rem) $tag-padding-x-sm add($tag-padding-y-sm, .1875rem);
-//   font-size: $tag-font-size-sm;
-//   line-height: $tag-line-height-sm;
-
-//   svg,
-//   .remove {
-//     width: $tag-icon-size-sm;
-//     height: $tag-icon-size-sm;
-//   }
-
-//   &.tag-icon,
-//   &.tag-remove {
-//     padding: $tag-padding-y-sm $tag-padding-x-sm add($tag-padding-y-sm, .125rem);
-//   }
-
-//   &.tag-icon {
-//     padding-left: subtract($tag-padding-x-sm, .125rem);
-//   }
-
-//   &.tag-remove {
-//     padding-right: subtract($tag-padding-x-sm, .3125rem);
-
-//     .remove {
-//       margin-left: 0;
-//       background-size: subtract($tag-icon-size-sm, $tag-padding-remove-icon * 2);
-//     }
-//   }
-// }
-
-// .tag-dark {
-//   border-color: $tag-border-color-dark;
-
-//   &:active,
-//   &.active,
-//   &:focus,
-//   &.focus {
-//     color: $tag-active-color-dark;
-//     background-color: $tag-active-decoration-color-dark;
-//     border-color: $tag-active-decoration-color-dark;
-//     outline-color: $white;
-
-//     .remove {
-//       @include tag-remove($tag-active-color-dark);
-//     }
-//   }
-
-//   &:disabled,
-//   &.disabled,
-//   &[disabled] {
-//     color: $tag-disabled-color-dark;
-//     border-color: $tag-disabled-color-dark;
-
-//     .remove {
-//       @include tag-remove($tag-disabled-color-dark);
-//     }
-//   }
-
-//   .remove{
-//     @include tag-remove($white);
-
-//     &:hover,
-//     &:focus {
-//       background-color: $tag-active-decoration-color-dark;
-//       @include tag-remove($tag-active-color-dark);
-//     }
-//   }
-// }
-
 .tag {
   --#{$variable-prefix}tag-height: 2.5rem;
   --#{$variable-prefix}tag-padding-x: #{$tag-padding-x};
@@ -172,7 +22,7 @@
     margin-left: var(--#{$variable-prefix}tag-icon-margin-start);
   }
 
-  > * {
+  > button {
     display: flex;
     flex-direction: row;
     gap: $tag-gap;
@@ -180,32 +30,47 @@
     padding: 0 var(--#{$variable-prefix}tag-padding-x) var(--#{$variable-prefix}tag-icon-shift);
     font-size: var(--#{$variable-prefix}tag-font-size);
     font-weight: $font-weight-bold;
-    line-height: $tag-line-height;
+    line-height: $line-height-base;
     color: inherit;
     background-color: transparent;
     border: $border-width solid var(--#{$variable-prefix}tag-border-color);
+    outline-offset: $spacer;
+    @include transition($transition-focus);
 
-    &:hover,
+    &:hover {
+      border-color: var(--#{$variable-prefix}tag-active-decoration-color);
+    }
+
+    &:focus {
+      outline: $border-width solid var(--#{$variable-prefix}tag-active-decoration-color);
+      outline-offset: .25rem;
+    }
+
     &:focus,
     &:active {
-      z-index: 0;
       color: var(--#{$variable-prefix}tag-active-color);
       background-color: var(--#{$variable-prefix}tag-active-decoration-color);
       border-color: var(--#{$variable-prefix}tag-active-decoration-color);
     }
 
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 0;
+    }
+
     &:not(:first-child) {
       margin-left: -$border-width;
     }
+  }
 
-    &[disabled] {
-      color: var(--#{$variable-prefix}tag-disabled-color);
-      pointer-events: none;
-      border-color: var(--#{$variable-prefix}tag-disabled-color);
+  [disabled] {
+    color: var(--#{$variable-prefix}tag-disabled-color);
+    pointer-events: none;
+    border-color: var(--#{$variable-prefix}tag-disabled-color);
 
-      &.remove {
-        @include tag-remove($tag-disabled-color);
-      }
+    &.remove {
+      @include tag-remove($tag-disabled-color);
     }
   }
 
@@ -217,7 +82,6 @@
     width: var(--#{$variable-prefix}tag-remove-size);
     @include tag-remove($black);
 
-    &:hover,
     &:focus,
     &:active {
       @include tag-remove($tag-active-color);
@@ -253,14 +117,13 @@
     --#{$variable-prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
     --#{$variable-prefix}tag-disabled-color: #{$tag-disabled-color-dark};
 
-    > [disabled].remove {
+    [disabled].remove {
       @include tag-remove($tag-disabled-color-dark);
     }
 
     .remove {
       @include tag-remove($white);
 
-      &:hover,
       &:focus,
       &:active {
         @include tag-remove($tag-active-color-dark);
