@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Quantity selector
-description: Use our custom quantity selector in forms for selecting a number.
+description: Use our custom quantity selector in forms for incremental and decremental display of small numbers.
 group: forms
 toc: true
 ---
@@ -15,6 +15,8 @@ Quantity selector is a form element used to select a number.
 A default value can be specified with the input `value` attribute.
 
 Value will vary between the values defined for the `min` and `max` attributes (negative value are allowed). `min` and `max` values are customizable.
+
+`step` attribute is also customizable and define the interval between values.
 
 {{< example >}}
 <div class="input-group quantity-selector">
@@ -30,7 +32,7 @@ Value will vary between the values defined for the `min` and `max` attributes (n
 
 ## Sizing
 
-You may also use small quantity selectors with the contextual class `.quantity-selector-sm`.
+Set small size using the contextual class `.quantity-selector-sm`.
 
 {{< example >}}
 <div class="input-group quantity-selector quantity-selector-sm">

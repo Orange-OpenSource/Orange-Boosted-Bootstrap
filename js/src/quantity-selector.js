@@ -92,7 +92,7 @@ class QuantitySelector extends BaseComponent {
     counterInput.dispatchEvent(eventChange)
   }
 
-  static ValueChange(event) {
+  static CheckIfDisabledOnChange(event) {
     const parent = event.target.closest(SELECTOR_INPUT_GROUP)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
@@ -140,7 +140,7 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })
-EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.ValueChange)
+EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
