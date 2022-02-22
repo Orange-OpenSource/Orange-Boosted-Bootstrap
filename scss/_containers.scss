@@ -12,7 +12,7 @@
 
   // Boosted mod : container-fluid aren't full width in Boosted
   .container-fluid {
-    @include make-container-fluid-widths();
+    @include make-container-fluid-margin();
   }
   // End mod
 

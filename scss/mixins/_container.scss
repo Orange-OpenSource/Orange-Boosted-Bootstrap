@@ -18,10 +18,14 @@
 }
 
 // Boosted mod : fluid containers aren't full width → include margins
-@mixin make-container-fluid-widths() {
-  @each $breakpoint, $container-max-width in $container-fluid-max-widths {
+@mixin make-container-fluid-margin() {
+  @each $breakpoint, $container-margin in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {
-      max-width: $container-max-width;
+      @if ($container-margin != "auto") {
+        width: subtract(100%, $container-margin * 2);
+      }
+      margin-right: $container-margin;
+      margin-left: $container-margin;
     }
   }
 }

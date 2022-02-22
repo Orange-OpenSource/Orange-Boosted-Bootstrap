@@ -520,13 +520,13 @@ $container-max-widths: (
   xxl: 1320px
 ) !default;
 
-$container-fluid-max-widths: (
-  xs: 97.5%,
-  sm: 97.5%,
-  md: 96.875%,
-  lg: 93.75%,
-  xl: 93.75%,
-  xxl: 1320px
+$container-fluid-margin: (
+  xs: 4px,
+  sm: 6px,
+  md: 12px,
+  lg: 32px,
+  xl: 40px,
+  xxl: auto
 ) !default;
 // scss-docs-end container-max-widths
 
