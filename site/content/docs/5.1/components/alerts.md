@@ -130,11 +130,9 @@ You can see this in action with a live demo:
 When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you're planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
 {{< /callout >}}
 
-### Dark background
+### Dark variant
 
-To get the inverted alert behavior, simply add `.bg-dark` class to your alert.
-
-Change the default `.btn-close` to be white by adding the `.btn-close-white` class.
+Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 
 {{< example class="bg-dark" >}}
 <div class="alert alert-success bg-dark" role="alert">
