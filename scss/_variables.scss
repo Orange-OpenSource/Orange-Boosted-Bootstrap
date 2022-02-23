@@ -1312,18 +1312,18 @@ $dropdown-header-padding:           $spacer $spacer * .5 !default;
 // scss-docs-end dropdown-variables
 
 // scss-docs-start dropdown-dark-variables
-$dropdown-dark-color:               $white !default;
-$dropdown-dark-bg:                  $black !default;
-$dropdown-dark-border-color:        $gray-700 !default;
-$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default;
+$dropdown-dark-color:               $white !default; // Boosted mod
+$dropdown-dark-bg:                  $black !default; // Boosted mod
+$dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
+$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Boosted mod
 $dropdown-dark-box-shadow:          null !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $black !default;
-$dropdown-dark-link-hover-bg:       rgba($white, 1) !default;
-$dropdown-dark-link-active-color:   $black !default;
-$dropdown-dark-link-active-bg:      $white !default;
-$dropdown-dark-link-disabled-color: $gray-700 !default;
-$dropdown-dark-header-color:        $white !default;
+$dropdown-dark-link-hover-color:    $black !default; // Boosted mod
+$dropdown-dark-link-hover-bg:       $white !default; // Boosted mod
+$dropdown-dark-link-active-color:   $black !default; // Boosted mod
+$dropdown-dark-link-active-bg:      $white !default; // Boosted mod
+$dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
+$dropdown-dark-header-color:        $white !default; // Boosted mod
 // scss-docs-end dropdown-dark-variables
 
 // Pagination
