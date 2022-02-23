@@ -66,7 +66,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
     </div>
     <div class="p-3 mb-2 bd-supporting-yellow">
       <strong class="d-block">$supporting-yellow</strong>
-      #fc0
+      #ffd200
     </div>
     <div class="p-3 mb-2 bd-black text-white">
       <strong class="d-block">$black</strong>
