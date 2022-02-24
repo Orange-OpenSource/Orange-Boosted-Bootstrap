@@ -171,12 +171,13 @@
   &:active,
   &.active {
     color: $accessible-orange;
-    background-color: transparent;
+    background-color: var(--#{$variable-prefix}btn-bg);
   }
 
   &:disabled,
   &.disabled {
     color: $gray-500;
+    border-color: var(--#{$variable-prefix}btn-border-color);
   }
 
   &.btn-inverse:not(:active) {
