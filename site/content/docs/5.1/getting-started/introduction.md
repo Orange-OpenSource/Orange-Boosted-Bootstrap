@@ -66,6 +66,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Modals for displaying, positioning, and scroll behavior
 - Navbar for extending our Collapse plugin to implement responsive behavior
 - Offcanvases for displaying, positioning, and scroll behavior
+- Quantity selector for incrementing/decrementing number value
 - Toasts for displaying and dismissing
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Scrollspy for scroll behavior and navigation updates

@@ -15,6 +15,7 @@ export { default as Dropdown } from './src/dropdown'
 export { default as Modal } from './src/modal'
 export { default as Offcanvas } from './src/offcanvas'
 export { default as Popover } from './src/popover'
+export { default as QuantitySelector } from './src/quantity-selector' // Boosted mod
 export { default as ScrollSpy } from './src/scrollspy'
 export { default as Tab } from './src/tab'
 export { default as Toast } from './src/toast'
