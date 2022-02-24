@@ -135,14 +135,15 @@ class QuantitySelector extends BaseComponent {
  * Data API implementation
  */
 
+EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange)
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
+
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
   for (const el of SelectorEngine.find(SELECTOR_INPUT_GROUP)) {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })
-EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange)
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp)
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
 /**
  * jQuery
