@@ -178,20 +178,22 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
-<ul class="nav nav-tabs" id="nav-tab-with-nested-tabs" role="tablist">
-  <li class="nav-item">
-    <button class="nav-link active" aria-current="page" id="nav-tab1" data-bs-toggle="tab" data-bs-target="#tab1-content" type="button" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</button>
-  </li>
-  <li class="nav-item">
-    <button class="nav-link" id="nav-tab2" data-bs-toggle="tab" data-bs-target="#tab2-content" type="button" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</button>
-  </li>
-  <li class="nav-item">
-    <button class="nav-link" id="nav-tab3" data-bs-toggle="tab" data-bs-target="#tab3-content" type="button" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</button>
-  </li>
-  <li class="nav-item">
-    <button class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" type="button" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</button>
-  </li>
-</ul>
+<div role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4">
+  <ul class="nav nav-tabs" id="nav-tab-with-nested-tabs">
+    <li class="nav-item">
+      <button class="nav-link active" aria-current="page" id="nav-tab1" data-bs-toggle="tab" data-bs-target="#tab1-content" type="button" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" id="nav-tab2" data-bs-toggle="tab" data-bs-target="#tab2-content" type="button" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" id="nav-tab3" data-bs-toggle="tab" data-bs-target="#tab3-content" type="button" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" type="button" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</button>
+    </li>
+  </ul>
+</div>
 
 <!-- Tab panes -->
 <div class="tab-content" id="nav-tabs-content">
