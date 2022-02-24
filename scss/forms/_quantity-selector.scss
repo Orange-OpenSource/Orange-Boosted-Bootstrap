@@ -4,7 +4,7 @@
   .form-control {
     max-width: $quantity-selector-input-max-width;
     text-align: center;
-    transition: none; // stylelint-disable-line property-disallowed-list
+    @include transition(none);
     appearance: textfield;
 
     &:not(:focus) {
@@ -57,7 +57,7 @@
 
   .form-control {
     max-width: $quantity-selector-input-sm-max-width;
-    padding: subtract($input-padding-x-sm, 1px) 0 $input-padding-y-sm; // Boosted mod
+    padding: subtract($input-padding-x-sm, 1px) 0 $input-padding-y-sm;
     font-size: $font-size-sm;
   }
 }
