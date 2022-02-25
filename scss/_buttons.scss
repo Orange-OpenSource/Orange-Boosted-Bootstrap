@@ -195,7 +195,6 @@
   --#{$variable-prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$variable-prefix}btn-disabled-border-color: transparent;
   --#{$variable-prefix}btn-box-shadow: none;
-  --#{$variable-prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} #{$black}; // Boosted mod
 
   text-decoration: $link-decoration;
 
@@ -205,15 +204,14 @@
   }
 
   // Boosted mod
-  &:focus:not(:hover) {
-    color: $black;
-  }
+  &:focus {
+    &:not(:hover) {
+      color: var(--#{$variable-prefix}btn-color);
+      outline-color: var(--#{$variable-prefix}btn-color);
+    }
 
-  &.btn-inverse {
-    --#{$variable-prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} #{$white};
-
-    &:focus:not(:hover) {
-      color: $white;
+    &:hover {
+      outline-color: var(--#{$variable-prefix}btn-active-color);
     }
   }
   // End mod
