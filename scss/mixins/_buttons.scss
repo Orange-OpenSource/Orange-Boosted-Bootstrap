@@ -31,9 +31,9 @@
   --#{$variable-prefix}btn-hover-border-color: #{$hover-border};
   // Boosted mod
   @if $inverted {
-    --#{$variable-prefix}btn-focus-shadow-rgb: #{$color};
+    --#{$variable-prefix}btn-focus-shadow-rgb: #{$black};
   } @else {
-    --#{$variable-prefix}btn-focus-shadow-rgb: #{$hover-color};
+    --#{$variable-prefix}btn-focus-shadow-rgb: #{$white};
   }
   // End mod
   --#{$variable-prefix}btn-active-color: #{$active-color};
