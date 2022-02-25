@@ -45,11 +45,8 @@
 // scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x) {
   --#{$boosted-variable-prefix}icon-spacing: #{$icon-spacing}; // Boosted mod: used for icons
-  // Boosted mod: can't use `--#{$variable-prefix}btn-padding-y: #{$padding-y}` here because of different values for `padding-top` and `padding-bottom`
-  padding-top: subtract($padding-y, 1px); // Boosted mod
-  padding-bottom: add($padding-y, 1px); // Boosted mod
-  // End mod
-  --#{$variable-prefix}btn-padding-x: #{$padding-x}; // Boosted mod
+  --#{$variable-prefix}btn-padding-y: #{$padding-y};
+  --#{$variable-prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$variable-prefix}btn-font-size);
   line-height: $line-height; // Boosted mod
   --#{$variable-prefix}btn-border-radius: #{$border-radius};
