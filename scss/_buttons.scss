@@ -190,10 +190,12 @@
   --#{$variable-prefix}btn-border-color: transparent;
   --#{$variable-prefix}btn-hover-color: #{$btn-link-hover-color};
   --#{$variable-prefix}btn-hover-border-color: transparent;
+  --#{$variable-prefix}btn-active-color: #{$primary}; // Boosted mod
   --#{$variable-prefix}btn-active-border-color: transparent;
   --#{$variable-prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$variable-prefix}btn-disabled-border-color: transparent;
   --#{$variable-prefix}btn-box-shadow: none;
+  --#{$variable-prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} #{$black}; // Boosted mod
 
   text-decoration: $link-decoration;
 
@@ -201,6 +203,20 @@
   &:focus {
     text-decoration: $link-hover-decoration;
   }
+
+  // Boosted mod
+  &:focus:not(:hover) {
+    color: $black;
+  }
+
+  &.btn-inverse {
+    --#{$variable-prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} #{$white};
+
+    &:focus:not(:hover) {
+      color: $white;
+    }
+  }
+  // End mod
 
   // No need for an active state here
 }
