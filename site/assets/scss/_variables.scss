@@ -1,16 +1,25 @@
 // stylelint-disable scss/dollar-variable-default
 
 // Local docs variables
-$bd-purple:        $primary;
-$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
+$bd-purple:        $primary; // Boosted mod
+$bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
-$bd-info:          $info;
-$bd-warning:       $warning;
-$bd-danger:        $danger;
+// Boosted mod: no $bd-accent
+$bd-info:          $info; // Boosted mod
+$bd-warning:       $warning; // Boosted mod
+$bd-danger:        $danger; // Boosted mod
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 // Boosted mod: no $sidebar-collapse-icon
 
 $bd-gutter-x: 1.25rem;
+
+:root {
+  --bd-purple: #{$bd-purple};
+  --bd-violet: #{$bd-violet};
+  // Boosted mod: no --bd-accent
+  --bd-violet-rgb: #{to-rgb($bd-violet)};
+  // Boosted mod: no --bd-accent-rgb
+}
 
 $zindex-skippy: 1080;
 
