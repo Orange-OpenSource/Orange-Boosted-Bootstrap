@@ -1,7 +1,11 @@
+// stylelint-disable custom-property-empty-line-before
+
 // Button variants
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
+//
+// Boosted mod: Extra parameter to handle shadow color for inverted buttons
 
 // scss-docs-start btn-variant-mixin
 @mixin button-variant(
@@ -16,63 +20,36 @@
   $active-color: color-contrast($active-background),
   $disabled-background: $gray-500, // Boosted mod
   $disabled-border: $gray-500, // Boosted mod
-  $disabled-color: $white // Boosted mod
+  $disabled-color: $white, // Boosted mod
+  $btn-focus-shadow-color: $white // Boosted mod
 ) {
-  color: $color;
-  @include gradient-bg($background);
-  border-color: $border;
-  @include box-shadow($btn-box-shadow);
-
-  &:hover {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-  }
-
-  // Boosted mod: custom styles for .btn-check
-  &:focus {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-    outline-color: $hover-border; // Boosted mod
-    // Boosted mod: buttons share the same `box-shadow` on `:focus`
-  }
-
-  // Boosted mod: custom styles for .btn-check
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $active-border;
-    outline-color: $active-border; // Boosted mod
-
-    // Boosted mod: buttons share the same `box-shadow` on `:focus`
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $disabled-color;
-    background-color: $disabled-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $disabled-border;
-  }
+  --#{$variable-prefix}btn-color: #{$color};
+  --#{$variable-prefix}btn-bg: #{$background};
+  --#{$variable-prefix}btn-border-color: #{$border};
+  --#{$variable-prefix}btn-hover-color: #{$hover-color};
+  --#{$variable-prefix}btn-hover-bg: #{$hover-background};
+  --#{$variable-prefix}btn-hover-border-color: #{$hover-border};
+  --#{$variable-prefix}btn-focus-shadow-rgb: #{$btn-focus-shadow-color}; // Boosted mod
+  --#{$variable-prefix}btn-active-color: #{$active-color};
+  --#{$variable-prefix}btn-active-bg: #{$active-background};
+  --#{$variable-prefix}btn-active-border-color: #{$active-border};
+  // Boosted mod: no definition of --#{$variable-prefix}btn-active-shadow
+  --#{$variable-prefix}btn-disabled-color: #{$disabled-color};
+  --#{$variable-prefix}btn-disabled-bg: #{$disabled-background};
+  --#{$variable-prefix}btn-disabled-border-color: #{$disabled-border};
 }
 // scss-docs-end btn-variant-mixin
 
-// Boosted mod: no .btn-outline
+// Boosted mod: no `@mixin button-outline-variant`
 
 // scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x) {
   --#{$boosted-variable-prefix}icon-spacing: #{$icon-spacing}; // Boosted mod: used for icons
-  padding: subtract($padding-y, 1px) $padding-x add($padding-y, 1px);
-  @include font-size($font-size);
-  line-height: $line-height;
-  // Manually declare to provide an override to the browser default
-  @include border-radius($border-radius, 0);
+  --#{$variable-prefix}btn-padding-y: #{$padding-y};
+  --#{$variable-prefix}btn-padding-x: #{$padding-x};
+  @include rfs($font-size, --#{$variable-prefix}btn-font-size);
+  line-height: $line-height; // Boosted mod
+  --#{$variable-prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
 

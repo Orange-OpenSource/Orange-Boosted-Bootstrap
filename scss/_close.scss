@@ -60,6 +60,12 @@
     border-color: $gray-700;
   }
 
+  &:focus {
+    &[data-focus-visible-added] {
+      box-shadow: 0 0 0 $btn-focus-width $black;
+    }
+  }
+
   &:disabled,
   &.disabled {
     color: $gray-700;
