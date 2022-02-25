@@ -91,12 +91,13 @@
     }
   }
 
+  // TODO: we should avoid using !important and find a better selector
   &:active,
   &.active {
-    border-left: 2px solid $black !important; // stylelint-disable-line declaration-no-important
+    border-left: $border-width solid $black !important; // stylelint-disable-line declaration-no-important
 
     &.btn-inverse {
-      border-left: 2px solid $primary !important; // stylelint-disable-line declaration-no-important
+      border-left: $border-width solid $primary !important; // stylelint-disable-line declaration-no-important
     }
   }
 
