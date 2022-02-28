@@ -575,7 +575,6 @@ class Carousel extends BaseComponent {
     }
 
     const config = {
-      ...Manipulator.getDataAttributes(target),
       ...Manipulator.getDataAttributes(this)
     }
     const slideIndex = this.getAttribute('data-bs-slide-to')
