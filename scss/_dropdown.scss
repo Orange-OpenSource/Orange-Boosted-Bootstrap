@@ -198,7 +198,7 @@
   &:focus {
     color: var(--#{$variable-prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-    outline-color: $dropdown-link-hover-bg; // Boosted mod
+    outline-color: var(--#{$variable-prefix}dropdown-link-hover-bg); // Boosted mod
     @include gradient-bg(var(--#{$variable-prefix}dropdown-link-hover-bg));
   }
 
