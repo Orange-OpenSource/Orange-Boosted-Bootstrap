@@ -72,7 +72,7 @@
   // Boosted mod: custom styles for .btn-check
   &:active,
   &.active,
-  .show > &.dropdown-toggle {
+  &.show {
     color: var(--#{$variable-prefix}btn-active-color);
     background-color: var(--#{$variable-prefix}btn-active-bg);
     // Remove CSS gradients if they're enabled
