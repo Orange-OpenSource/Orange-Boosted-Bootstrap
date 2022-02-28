@@ -1576,6 +1576,7 @@ $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding-y:            0 !default;
 $modal-header-padding-x:            $spacer !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+$modal-footer-bg:                   null !default;
 
 // Boosted mod
 //// Scrollable modal
