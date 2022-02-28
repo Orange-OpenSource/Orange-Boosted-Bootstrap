@@ -440,15 +440,6 @@ class Carousel extends BaseComponent {
     this._setActiveIndicatorElement(nextElement)
     this._activeElement = nextElement
 
-    const triggerSlidEvent = () => {
-      EventHandler.trigger(this._element, EVENT_SLID, {
-        relatedTarget: nextElement,
-        direction: eventDirectionName,
-        from: activeElementIndex,
-        to: nextElementIndex
-      })
-    }
-
     // Boosted mod: enable/disable prev/next controls when wrap=false
     if (!this._config.wrap) {
       const prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element)
@@ -480,7 +471,12 @@ class Carousel extends BaseComponent {
 
       this._isSliding = false
 
-      setTimeout(triggerSlidEvent, 0)
+      EventHandler.trigger(this._element, EVENT_SLID, {
+        relatedTarget: nextElement,
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
+      })
     }
 
     this._queueCallback(completeCallBack, activeElement, this._isAnimated())
