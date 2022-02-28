@@ -51,11 +51,11 @@
 
   &:hover,
   &:focus {
-    color: $bd-purple-bright;
+    color: $bd-violet;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
+    box-shadow: 0 0 0 3px rgba($bd-violet, .25);
   }
 
   .bi-collapse { display: none; }
