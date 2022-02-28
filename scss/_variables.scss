@@ -2009,35 +2009,25 @@ $footer-orange-accordion-line-height:               1.8125rem !default;
 $footer-orange-mailing-padding-top:                 1.5625rem !default;
 $footer-orange-mailing-padding-bottom:              1.8125rem !default;
 $footer-orange-mailing-padding-bottom-md:           2.4375rem !default;
-$footer-orange-mailing-title-margin-bottom:         1.0625rem !default;
-$footer-orange-mailing-input-min-width:             6.25rem !default;
-$footer-orange-mailing-input-max-width:             26.25rem !default;
+$footer-orange-title-margin-bottom:                 1.0625rem !default;
 
 $footer-orange-social-padding-top:                  1.0625rem !default;
-$footer-orange-social-padding-bottom:               1.8125rem !default;
 $footer-orange-social-padding-top-md:               1.875rem !default;
-$footer-orange-social-title-margin:                 0 0 1.0625rem !default;
+$footer-orange-social-padding-bottom:               1.8125rem !default;
 $footer-orange-social-title-margin-md:              .625rem 1.25rem .75rem 0 !default;
 
 $footer-orange-nav-padding-top:                     1.9375rem !default;
-$footer-orange-nav-list-padding-top:                .0625rem !default;
+$footer-orange-nav-list-padding:                    .0625rem 0 1.625rem !default;
 $footer-orange-nav-list-padding-bottom:             2.1875rem !default;
-$footer-orange-nav-list-padding-right:              $spacer !default;
-$footer-orange-nav-list-margin-right:               map-get($spacers, 1) !default;
 $footer-orange-nav-list-padding-bottom-md:          2.5rem !default;
-$footer-orange-nav-collapse-padding-bottom:         1.625rem !default;
-$footer-orange-nav-accordion-border-bottom:         divide($border-width, 2) solid $gray-700 !default;
 
-$footer-orange-service-padding-top:                 1.1875rem !default;
-$footer-orange-service-padding-bottom:              1.25rem !default;
-$footer-orange-service-padding-top-md:              1.5625rem !default;
-$footer-orange-service-padding-bottom-md:           1.5rem !default;
+$footer-orange-service-padding-y:                   $spacer !default;
+$footer-orange-service-padding-y-md:                1.5rem !default;
 $footer-orange-service-link-padding-top:            .125rem !default;
 
 $footer-orange-terms-padding-top:                   1.0625rem !default;
 $footer-orange-terms-padding-bottom:                1.6875rem !default;
-$footer-orange-terms-padding-top-md:                1.375rem !default;
-$footer-orange-terms-padding-bottom-md:             1.375rem !default;
+$footer-orange-terms-padding-y-md:                  1.375rem !default;
 
 $footer-orange-gap:                                 $spacer * .75 !default;
 $footer-orange-gap-xl:                              $spacer * 1.7 !default;

@@ -1,0 +1,172 @@
+{{- /*
+  Usage: `orange-footer args`
+
+  `args` are all optional and can be one of the following:
+    * mailing: Display mailing content - default = false
+    * follow: Display follow content - default = false
+    * nav: Display nav content - default = false
+    * service: Display service content - default = false
+    * mandatory: Display mandatory content - default = false
+*/ -}}
+
+{{- $mailing := .Get "mailing" | default false -}}
+{{- $follow := .Get "follow" | default false -}}
+{{- $nav := .Get "nav" | default false -}}
+{{- $service := .Get "service" | default false -}}
+{{- $mandatory := .Get "mandatory" | default false -}}
+{{- $id := .Get "id" -}}
+{{- $input := .Inner -}}
+
+<footer class="footer bg-dark navbar-dark">
+  <h2 class="visually-hidden">Site map & information</h2>
+  {{ if $mailing }}
+  <!-- Mailing list -->
+  <div class="container footer-title-content">
+    <h3 class="footer-heading">Sign up to our mailing list</h3>
+    <div class="row">
+      <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+        <label for="inputEmail{{ $id }}" class="visually-hidden">Email</label>
+        <input type="email" class="form-control bg-dark border-dark text-white" id="inputEmail{{ $id }}" placeholder="Enter your email">
+        <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
+      </form>
+    </div>
+  </div>
+  {{ if or $follow $nav $service $mandatory }}
+  <div class="border-bottom border-1 border-dark"></div>
+  {{ end }}{{ end }}
+  {{ if $follow }}
+  <!-- Follow us bar -->
+  <div class="container footer-social">
+    <h3 class="footer-heading">Follow us</h3>
+    <ul class="navbar-nav gap-2 flex-row align-self-start">
+      <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span class="visually-hidden">Pinterest</span></a></li>
+      <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li>
+    </ul>
+  </div>
+  {{ if or $nav $service $mandatory }}
+  <div class="border-bottom border-1 border-dark"></div>
+  {{ end }}{{ end }}
+  {{ if $nav }}
+  <!-- Navigation -->
+  <div class="container footer-nav">
+    <div class="accordion accordion-dark" id="accordion{{ $id }}">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
+            <button class="accordion-button collapsed container px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $id }}" aria-expanded="true" aria-controls="collapseOne{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne{{ $id }}" class="container accordion-collapse collapse" aria-labelledby="headingOne{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo{{ $id }}">
+            <button class="accordion-button collapsed container px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $id }}" aria-expanded="true" aria-controls="collapseTwo{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo{{ $id }}" class="container accordion-collapse collapse" aria-labelledby="headingTwo{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree{{ $id }}">
+            <button class="accordion-button collapsed container px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree{{ $id }}" aria-expanded="true" aria-controls="collapseThree{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree{{ $id }}" class="container accordion-collapse collapse" aria-labelledby="headingThree{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour{{ $id }}">
+            <button class="accordion-button collapsed container px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour{{ $id }}" aria-expanded="true" aria-controls="collapseFour{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour{{ $id }}" class="container accordion-collapse collapse" aria-labelledby="headingFour{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ if or $service $mandatory }}
+  <div class="border-bottom border-1 border-dark"></div>
+  {{ end }}{{ end }}
+  {{ if $service }}
+  <!-- Service links -->
+  <div class="container footer-service">
+    <ul class="navbar-nav gap-3 gap-md-4">
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#locate"/></svg><span>Locate a store</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
+    </ul>
+  </div>
+  {{ if $mandatory }}
+  <div class="border-bottom border-1 border-dark"></div>
+  {{ end }}{{ end }}
+  {{ if $mandatory }}
+  <!-- Terms & Conditions -->
+  <div class="container footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+      <li><a class="nav-link" href="#">Terms & Conditions</a></li>
+      <li><a class="nav-link" href="#">Privacy</a></li>
+      <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      <li><a class="nav-link" href="#">Cookie policy</a></li>
+    </ul>
+  </div>
+  {{ end }}
+</footer>
