@@ -270,7 +270,7 @@ describe('Carousel', () => {
     })
 
     it('should stay at the start when the prev method is called and wrap is false', () => {
-      return new Promise(resolve => {
+      return new Promise((resolve, reject) => {
         fixtureEl.innerHTML = [
           '<div id="myCarousel" class="carousel slide">',
           '  <div class="carousel-inner">',
@@ -286,7 +286,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl, { wrap: false })
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
-          throw new Error('carousel slid when it should not have slid')
+          reject(new Error('carousel slid when it should not have slid'))
         })
 
         carousel.prev()
@@ -300,7 +300,7 @@ describe('Carousel', () => {
 
     // Boosted mod
     it('should stay at the end when the next method is called and wrap is false', () => {
-      return new Promise(resolve => {
+      return new Promise((resolve, reject) => {
         fixtureEl.innerHTML = [
           '<div id="myCarousel" class="carousel slide">',
           '  <div class="carousel-inner">',
@@ -316,7 +316,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl, { wrap: false })
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
-          throw new Error('carousel slid when it should not have slid')
+          reject(new Error('carousel slid when it should not have slid'))
         })
 
         carousel.next()
@@ -415,7 +415,7 @@ describe('Carousel', () => {
     })
 
     it('should add done class when at the end, the next method is called and wrap is false', () => {
-      return new Promise(resolve => {
+      return new Promise((resolve, reject) => {
         fixtureEl.innerHTML = [
           '<div id="myCarousel" class="carousel slide">',
           '  <ol class="carousel-indicators">',
@@ -435,7 +435,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl, { wrap: false })
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
-          throw new Error('carousel slid when it should not have slid')
+          reject(new Error('carousel slid when it should not have slid'))
         })
 
         carousel.next()
@@ -448,7 +448,7 @@ describe('Carousel', () => {
     })
 
     it('should not add done class when at the start, the prev method is called and wrap is false', () => {
-      return new Promise(resolve => {
+      return new Promise((resolve, reject) => {
         fixtureEl.innerHTML = [
           '<div id="myCarousel" class="carousel slide">',
           '  <ol class="carousel-indicators">',
@@ -468,7 +468,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl, { wrap: false })
 
         carouselEl.addEventListener('slid.bs.carousel', () => {
-          throw new Error('carousel slid when it should not have slid')
+          reject(new Error('carousel slid when it should not have slid'))
         })
 
         carousel.prev()
