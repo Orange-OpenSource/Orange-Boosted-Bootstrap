@@ -24,8 +24,6 @@
       @if ($container-margin != "auto") {
         width: subtract(100%, $container-margin * 2);
       }
-      margin-right: $container-margin;
-      margin-left: $container-margin;
     }
   }
 }
