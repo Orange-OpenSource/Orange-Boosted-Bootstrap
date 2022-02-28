@@ -64,57 +64,58 @@ Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-star
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
-<details><summary>Download contents</summary>
+<details>
+  <summary>Download contents</summary>
 
-```text
-boosted/
-├── css/
-│   ├── boosted-grid.css
-│   ├── boosted-grid.css.map
-│   ├── boosted-grid.min.css
-│   ├── boosted-grid.min.css.map
-│   ├── boosted-grid.rtl.css
-│   ├── boosted-grid.rtl.css.map
-│   ├── boosted-grid.rtl.min.css
-│   ├── boosted-grid.rtl.min.css.map
-│   ├── boosted-reboot.css
-│   ├── boosted-reboot.css.map
-│   ├── boosted-reboot.min.css
-│   ├── boosted-reboot.min.css.map
-│   ├── boosted-reboot.rtl.css
-│   ├── boosted-reboot.rtl.css.map
-│   ├── boosted-reboot.rtl.min.css
-│   ├── boosted-reboot.rtl.min.css.map
-│   ├── boosted-utilities.css
-│   ├── boosted-utilities.css.map
-│   ├── boosted-utilities.min.css
-│   ├── boosted-utilities.min.css.map
-│   ├── boosted-utilities.rtl.css
-│   ├── boosted-utilities.rtl.css.map
-│   ├── boosted-utilities.rtl.min.css
-│   ├── boosted-utilities.rtl.min.css.map
-│   ├── boosted.css
-│   ├── boosted.css.map
-│   ├── boosted.min.css
-│   ├── boosted.min.css.map
-│   ├── boosted.rtl.css
-│   ├── boosted.rtl.css.map
-│   ├── boosted.rtl.min.css
-│   └── boosted.rtl.min.css.map
-└── js/
-    ├── boosted.bundle.js
-    ├── boosted.bundle.js.map
-    ├── boosted.bundle.min.js
-    ├── boosted.bundle.min.js.map
-    ├── boosted.esm.js
-    ├── boosted.esm.js.map
-    ├── boosted.esm.min.js
-    ├── boosted.esm.min.js.map
-    ├── boosted.js
-    ├── boosted.js.map
-    ├── boosted.min.js
-    └── boosted.min.js.map
-```
+  ```text
+  boosted/
+  ├── css/
+  │   ├── boosted-grid.css
+  │   ├── boosted-grid.css.map
+  │   ├── boosted-grid.min.css
+  │   ├── boosted-grid.min.css.map
+  │   ├── boosted-grid.rtl.css
+  │   ├── boosted-grid.rtl.css.map
+  │   ├── boosted-grid.rtl.min.css
+  │   ├── boosted-grid.rtl.min.css.map
+  │   ├── boosted-reboot.css
+  │   ├── boosted-reboot.css.map
+  │   ├── boosted-reboot.min.css
+  │   ├── boosted-reboot.min.css.map
+  │   ├── boosted-reboot.rtl.css
+  │   ├── boosted-reboot.rtl.css.map
+  │   ├── boosted-reboot.rtl.min.css
+  │   ├── boosted-reboot.rtl.min.css.map
+  │   ├── boosted-utilities.css
+  │   ├── boosted-utilities.css.map
+  │   ├── boosted-utilities.min.css
+  │   ├── boosted-utilities.min.css.map
+  │   ├── boosted-utilities.rtl.css
+  │   ├── boosted-utilities.rtl.css.map
+  │   ├── boosted-utilities.rtl.min.css
+  │   ├── boosted-utilities.rtl.min.css.map
+  │   ├── boosted.css
+  │   ├── boosted.css.map
+  │   ├── boosted.min.css
+  │   ├── boosted.min.css.map
+  │   ├── boosted.rtl.css
+  │   ├── boosted.rtl.css.map
+  │   ├── boosted.rtl.min.css
+  │   └── boosted.rtl.min.css.map
+  └── js/
+      ├── boosted.bundle.js
+      ├── boosted.bundle.js.map
+      ├── boosted.bundle.min.js
+      ├── boosted.bundle.min.js.map
+      ├── boosted.esm.js
+      ├── boosted.esm.js.map
+      ├── boosted.esm.min.js
+      ├── boosted.esm.min.js.map
+      ├── boosted.js
+      ├── boosted.js.map
+      ├── boosted.min.js
+      └── boosted.min.js.map
+  ```
 </details>
 
 We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
