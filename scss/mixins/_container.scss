@@ -21,9 +21,7 @@
 @mixin make-container-fluid-margin() {
   @each $breakpoint, $container-margin in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {
-      @if ($container-margin != "auto") {
-        width: subtract(100%, $container-margin * 2);
-      }
+      max-width: subtract(100vw, $container-margin * 2);
     }
   }
 }
