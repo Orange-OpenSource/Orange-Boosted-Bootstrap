@@ -5,74 +5,71 @@ extra_css:
   - "cheatsheet.css"
 extra_js:
   - src: "cheatsheet.js"
+body_class: "bg-light"
 ---
 
-<a id="top" class="position-absolute"></a><!-- Boosted mod -->
-
-<header class="bd-header navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container-fluid">
-    <h1 class="navbar-brand">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted">
-      <span class="h1">Cheatsheet</span>
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
+      Cheatsheet
     </h1>
     <a href="{{< docsref "/examples/cheatsheet-rtl" >}}" class="ms-auto link-light" hreflang="ar">RTL cheatsheet</a>
   </div>
 </header>
 <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
-  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom border-light border-1">On this page</h2>
-  <nav class="small" id="toc" aria-label="Table of contents">
+  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+  <nav class="small" id="toc">
     <ul class="list-unstyled">
       <li class="my-2">
-        <button class="btn w-100 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
-        <ul class="list-unstyled collapse" id="contents-collapse">
-          <li><a class="d-flex" href="#typography">Typography</a></li>
-          <li><a class="d-flex" href="#images">Images</a></li>
-          <li><a class="d-flex" href="#tables">Tables</a></li>
-          <li><a class="d-flex" href="#figures">Figures</a></li>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+        <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#typography">Typography</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#images">Images</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tables">Tables</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#figures">Figures</a></li>
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn w-100 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
-        <ul class="list-unstyled collapse" id="forms-collapse">
-          <li><a class="d-flex" href="#overview">Overview</a></li>
-          <li><a class="d-flex" href="#disabled-forms">Disabled forms</a></li>
-          <li><a class="d-flex" href="#sizing">Sizing</a></li>
-          <li><a class="d-flex" href="#input-group">Input group</a></li>
-          <li><a class="d-flex" href="#toggle">Radio toggle buttons</a></li>
-          <li><a class="d-flex" href="#validation">Validation</a></li>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+        <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Overview</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#disabled-forms">Disabled forms</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#sizing">Sizing</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#input-group">Input group</a></li>
+          <!--Boosted mod: No floating labels-->
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#validation">Validation</a></li>
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn w-100 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
-        <ul class="list-unstyled collapse" id="components-collapse">
-          <li><a class="d-flex" href="#accordion">Accordion</a></li>
-          <li><a class="d-flex" href="#alerts">Alerts</a></li>
-          <li><a class="d-flex" href="#back-to-top">Back to top</a></li>
-          <li><a class="d-flex" href="#badge">Badge</a></li>
-          <li><a class="d-flex" href="#breadcrumb">Breadcrumb</a></li>
-          <li><a class="d-flex" href="#buttons">Buttons</a></li>
-          <li><a class="d-flex" href="#button-group">Button group</a></li>
-          <li><a class="d-flex" href="#card">Card</a></li>
-          <li><a class="d-flex" href="#carousel">Carousel</a></li>
-          <li><a class="d-flex" href="#dropdowns">Dropdowns</a></li>
-          <li><a class="d-flex" href="#list-group">List group</a></li>
-          <li><a class="d-flex" href="#modal">Modal</a></li>
-          <li><a class="d-flex" href="#navs">Navs</a></li>
-          <li><a class="d-flex" href="#navbar">Navbar</a></li>
-          <li><a class="d-flex" href="#pagination">Pagination</a></li>
-          <li><a class="d-flex" href="#stepped-process">Stepped process</a></li>
-          <li><a class="d-flex" href="#popovers">Popovers</a></li>
-          <li><a class="d-flex" href="#progress">Progress</a></li>
-          <li><a class="d-flex" href="#scrollspy">Scrollspy</a></li>
-          <li><a class="d-flex" href="#spinners">Spinners</a></li>
-          <li><a class="d-flex" href="#toasts">Toasts</a></li>
-          <li><a class="d-flex" href="#tooltips">Tooltips</a></li>
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+        <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#accordion">Accordion</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#alerts">Alerts</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#badge">Badge</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#breadcrumb">Breadcrumb</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#buttons">Buttons</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#button-group">Button group</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#card">Card</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#carousel">Carousel</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#dropdowns">Dropdowns</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#list-group">List group</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#modal">Modal</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#navs">Navs</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#navbar">Navbar</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#pagination">Pagination</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#popovers">Popovers</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#progress">Progress</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#scrollspy">Scrollspy</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#spinners">Spinners</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#toasts">Toasts</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tooltips">Tooltips</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 </aside>
-<main class="bd-cheatsheet container-fluid bg-body">
+<div class="bd-cheatsheet container-fluid bg-body">
   <section id="content">
     <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
 
@@ -454,7 +451,22 @@ extra_js:
         </div>
         {{< /example >}}
 
-        <!-- Boosted mod: no .form-control-sm -->
+        {{< example show_markup="false" >}}
+        <div class="mb-3">
+          <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+        </div>
+        <div class="mb-3">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input type="file" class="form-control form-control-sm" aria-label="Small file input example">
+        </div>
+        {{< /example >}}
       </div>
     </article>
     <article class="my-3" id="input-group">
@@ -490,81 +502,7 @@ extra_js:
         {{< /example >}}
       </div>
     </article>
-    <article class="my-3" id="toggle">
-      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Radio toggle buttons</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/checks-radios" >}}#radio-toggle-buttons">Documentation</a>
-      </div>
-
-      <div>
-        {{< example show_markup="false" class="mt-0" >}}
-        <div class="btn-group" role="group">
-          <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-          <label class="btn btn-secondary" for="option1">Checked</label>
-
-          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-          <label class="btn btn-secondary" for="option2">Radio</label>
-
-          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-          <label class="btn btn-secondary" for="option3">Disabled</label>
-
-          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-          <label class="btn btn-secondary" for="option4">Radio</label>
-        </div>
-        {{< /example >}}
-        {{< example show_markup="false" >}}
-        <div class="btn-group" role="group">
-          <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
-          <label class="btn btn-icon" for="option5">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
-            </svg>
-            <span class="visually-hidden">Day</span>
-          </label>
-          <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
-          <label class="btn btn-icon" for="option6">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
-            </svg>
-            <span class="visually-hidden">Week</span>
-          </label>
-          <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
-          <label class="btn btn-icon" for="option7">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
-            </svg>
-            <span class="visually-hidden">Month</span>
-          </label>
-        </div>
-        {{< /example >}}
-        {{< example show_markup="false" >}}
-        <div class="btn-group" role="group">
-          <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off" checked>
-          <label class="btn btn-icon btn-no-outline" for="option8">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
-            </svg>
-            <span class="visually-hidden">Day</span>
-          </label>
-          <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
-          <label class="btn btn-icon btn-no-outline" for="option9">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
-            </svg>
-            <span class="visually-hidden">Week</span>
-          </label>
-          <input type="radio" class="btn-check" name="icons" id="option10" autocomplete="off">
-          <label class="btn btn-icon btn-no-outline" for="option10">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
-            </svg>
-            <span class="visually-hidden">Month</span>
-          </label>
-        </div>
-        {{< /example >}}
-      </div>
-    </article>
-    <!-- Boosted mod: no floating labels -->
+    <!--Boosted mod: No floating labels-->
     <article class="my-3" id="validation">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Validation</h3>
@@ -703,59 +641,21 @@ extra_js:
       <div>
         {{< example show_markup="false" >}}
         {{< alerts.inline >}}
-        {{- range where $.Site.Data.palette "category" "Functional colors" }}
-        {{- range $color := .colors }}
-        <div class="alert alert-{{ $color.level }} alert-dismissible fade show" role="alert">
-          <span class="alert-icon">
-            <span class="visually-hidden">{{ humanize $color.level }}</span>
-          </span>
-          <p>A simple {{ $color.level }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</p>
-          <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
+        {{- range (index $.Site.Data "theme-colors") }}
+        <div class="alert alert-{{ .name }} alert-dismissible fade show" role="alert">
+          A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>{{ end -}}
-        {{ end -}}
         {{< /alerts.inline >}}
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <div class="alert alert-success" role="alert">
-          <span class="alert-icon">
-            <span class="visually-hidden">Success</span>
-          </span>
-          <div>
-            <h4 class="alert-heading">Well done!</h4>
-            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-            <hr class="border-top border-1 border-light bg-transparent">
-            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-          </div>
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+          <hr>
+          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
         </div>
-        {{< /example >}}
-      </div>
-    </article>
-    <article class="my-3" id="back-to-top">
-      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Back to top</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/back-to-top" >}}">Documentation</a>
-      </div>
-
-      <div class="row row-cols-3">
-        {{< example show_markup="false" >}}
-        <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
-          <a href="#top" class="back-to-top-link btn btn-icon btn-secondary position-relative top-0" data-o-label="Back to top">
-            <span class="visually-hidden">Back to top</span>
-          </a>
-        </nav>
-        {{< /example >}}
-        {{< example show_markup="false" class="bd-example mt-0" >}}
-        <nav aria-label="Label inside back to top example" class="back-to-top position-static">
-          <a href="#top" class="back-to-top-link position-static btn btn-secondary px-3">Back to top</a>
-        </nav>
-        {{< /example >}}
-        {{< example show_markup="false" class="bd-example mt-0" >}}
-        <nav aria-label="Icon only back to top example" class="back-to-top position-static">
-          <a href="#top" class="back-to-top-link position-static btn btn-icon btn-secondary" title="Back to top">
-            <span class="visually-hidden">Back to top</span>
-          </a>
-        </nav>
         {{< /example >}}
       </div>
     </article>
@@ -821,84 +721,17 @@ extra_js:
         {{< /example >}}
 
         {{< example show_markup="false" >}}
+        {{< buttons.inline >}}
+        {{- range (index $.Site.Data "theme-colors") }}
+        <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+        {{- end -}}
+        {{< /buttons.inline >}}
+        {{< /example >}}
+
+        {{< example show_markup="false" >}}
         <button type="button" class="btn btn-primary btn-sm">Small button</button>
         <button type="button" class="btn btn-primary">Standard button</button>
         <button type="button" class="btn btn-primary btn-lg">Large button</button>
-        {{< /example >}}
-
-        {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-primary btn-sm">
-          <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          Secondary
-        </button>
-        <button type="button" class="btn btn-primary">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          Secondary
-        </button>
-        <button type="button" class="btn btn-primary btn-lg">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          Secondary
-        </button>
-        {{< /example >}}
-
-        {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-icon btn-secondary btn-sm">
-          <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">Secondary</span>
-        </button>
-        <button type="button" class="btn btn-icon btn-secondary">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">Secondary</span>
-        </button>
-        <button type="button" class="btn btn-icon btn-secondary btn-lg">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">Secondary</span>
-        </button>
-        {{< /example >}}
-
-        {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-icon btn-no-outline btn-sm">
-          <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">No outline</span>
-        </button>
-        <button type="button" class="btn btn-icon btn-no-outline">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">No outline</span>
-        </button>
-        <button type="button" class="btn btn-icon btn-no-outline btn-lg">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-          </svg>
-          <span class="visually-hidden">No outline</span>
-        </button>
-        {{< /example >}}
-
-        {{< example show_markup="false" >}}
-        <a href="/" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
-        <a href="/" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
         {{< /example >}}
       </div>
     </article>
@@ -1101,9 +934,64 @@ extra_js:
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <div class="btn-group" role="group">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
           <button type="button" class="btn btn-secondary">Secondary</button>
           <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
@@ -1159,7 +1047,7 @@ extra_js:
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <div class="btn-group" role="group">
+        <div class="btn-group">
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownRightMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
               End-aligned menu
@@ -1248,7 +1136,7 @@ extra_js:
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="nav" aria-label="First navigation example">
+        <nav class="nav">
           <a class="nav-link active" aria-current="page" href="#">Active</a>
           <a class="nav-link" href="#">Link</a>
           <a class="nav-link" href="#">Link</a>
@@ -1257,8 +1145,8 @@ extra_js:
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <nav aria-label="Second navigation example">
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <nav>
+          <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
             <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
@@ -1303,10 +1191,50 @@ extra_js:
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navbar example">
+        <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
-              <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" class="d-inline-block align-top" role="img" alt="Boosted" loading="lazy">
+              <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy"
+                   style="filter: invert(1) grayscale(100%) brightness(200%);">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-5">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -1335,8 +1263,8 @@ extra_js:
                 </li>
               </ul>
               <form class="d-flex" role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
               </form>
             </div>
           </div>
@@ -1354,13 +1282,11 @@ extra_js:
         {{< example show_markup="false" >}}
         <nav aria-label="Pagination example">
           <ul class="pagination pagination-sm">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item active" aria-current="page">
               <a class="page-link" href="#">2</a>
             </li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
           </ul>
         </nav>
         {{< /example >}}
@@ -1368,42 +1294,38 @@ extra_js:
         {{< example show_markup="false" >}}
         <nav aria-label="Standard pagination example">
           <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
           </ul>
         </nav>
         {{< /example >}}
-      </div>
-    </article>
-    <article class="my-3" id="stepped-process">
-      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Stepped process</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/stepped-process" >}}">Documentation</a>
-      </div>
-      <div>
+
         {{< example show_markup="false" >}}
-        <nav class="stepped-process" aria-label="Steps example">
-          <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
-          <ol>
-            <li class="stepped-process-item">
-              <a class="stepped-process-link" href="#" title="1. Step one">Step one</a>
+        <nav aria-label="Another pagination example">
+          <ul class="pagination pagination-lg flex-wrap">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
             </li>
-            <li class="stepped-process-item active">
-              <a class="stepped-process-link" href="#" title="2. Step two" aria-current="step">Step two</a>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
             </li>
-            <li class="stepped-process-item">
-              <a class="stepped-process-link" href="#" title="3. Step three">Step three</a>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
             </li>
-            <li class="stepped-process-item">
-              <a class="stepped-process-link" href="#" title="4. Step four">Step four</a>
-            </li>
-            <li class="stepped-process-item">
-              <a class="stepped-process-link" href="#" title="5. Step five">Step five</a>
-            </li>
-          </ol>
+          </ul>
         </nav>
         {{< /example >}}
       </div>
@@ -1476,7 +1398,7 @@ extra_js:
 
       <div>
         <div class="bd-example">
-          <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3" aria-label="Scrollspy navbar example">
+          <nav id="navbar-example2" class="navbar bg-light px-3">
             <a class="navbar-brand" href="#">Navbar</a>
             <ul class="nav nav-pills">
               <li class="nav-item">
@@ -1496,7 +1418,7 @@ extra_js:
               </li>
             </ul>
           </nav>
-        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative mt-2 overflow-auto" tabindex="0">
             <h4 id="scrollspyHeading1">First heading</h4>
             <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
             <h4 id="scrollspyHeading2">Second heading</h4>
@@ -1519,12 +1441,23 @@ extra_js:
 
       <div>
         {{< example show_markup="false" >}}
-        <div class="spinner-border text-primary" role="status">
+        {{< spinner.inline >}}
+        {{- range (index $.Site.Data "theme-colors") }}
+        <div class="spinner-border text-{{ .name }}" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-border text-secondary" role="status">
+        {{- end -}}
+        {{< /spinner.inline >}}
+        {{< /example >}}
+
+        {{< example show_markup="false" >}}
+        {{< spinner.inline >}}
+        {{- range (index $.Site.Data "theme-colors") }}
+        <div class="spinner-grow text-{{ .name }}" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
+        {{- end -}}
+        {{< /spinner.inline >}}
         {{< /example >}}
       </div>
     </article>
@@ -1538,10 +1471,10 @@ extra_js:
         {{< example show_markup="false" class="bg-dark p-5 align-items-center" >}}
         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header">
-            {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-            <strong class="me-auto">Boosted</strong>
+            {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+            <strong class="me-auto">Bootstrap</strong>
             <small class="text-muted">11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
             Hello, world! This is a toast message.
@@ -1567,14 +1500,14 @@ extra_js:
       </div>
     </article>
   </section>
-</main>
+</div>
 
 <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
@@ -1591,7 +1524,7 @@ extra_js:
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLiveLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>I will not close if you click outside me. Don't even try to press escape key.</p>
@@ -1608,7 +1541,7 @@ extra_js:
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
@@ -1627,7 +1560,7 @@ extra_js:
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
@@ -1638,11 +1571,3 @@ extra_js:
     </div>
   </div>
 </div>
-
-<!-- Boosted mod -->
-<nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
-    <span class="visually-hidden">Back to top</span>
-  </a>
-</nav>
-<!-- End mod -->
