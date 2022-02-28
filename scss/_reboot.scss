@@ -94,7 +94,8 @@ body {
 }
 
 .js-focus-visible :focus:not([data-focus-visible-added]),
-.js-focus-visible .focus:not([data-focus-visible-added]) { // 2
+.js-focus-visible .focus:not([data-focus-visible-added]),
+:focus:not(:focus-visible) { // 2
   outline: 0 !important;
 }
 // scss-docs-end focus-visibility
