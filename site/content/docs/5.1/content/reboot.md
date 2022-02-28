@@ -58,15 +58,18 @@ $font-family-sans-serif:
   // Web font
   HelvNeueOrange,
   // Helvetica Neue
-  Helvetica Neue,
+  "Helvetica Neue",
   // Web Safe Fallbacks
-  Helvetica, Arial,
-  // Ubuntu
-  Liberation Sans,
+  Helvetica,
+  // Linux,
+  "Noto Sans",
+  "Liberation Sans",
+  // Basic web fallback,
+  Arial,
   // Sans serif fallback
   sans-serif,
   // Emoji fonts
-  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 <!-- End mod -->
 
