@@ -189,27 +189,14 @@
     display: none;
   }
 
+  // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
     margin: subtract(-$spacer, -$nav-tabs-border-width);
   }
-
-  > .active {
-    display: block;
-  }
-}
-
-.nested-tab-content {
-  // Boosted mod
-  padding: subtract($spacer, $nav-tabs-border-width);
-  border-top: 0;
   // End mod
 
-  >.tab-pane {
-    display: none;
-  }
-
-  >.active {
+  > .active {
     display: block;
   }
 }
