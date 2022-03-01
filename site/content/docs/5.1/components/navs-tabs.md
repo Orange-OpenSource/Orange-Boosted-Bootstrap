@@ -178,13 +178,13 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 <div role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4">
   <ul class="nav nav-tabs" id="nav-tab-with-nested-tabs">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" type="button" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
+      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" type="button" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
+      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" type="button" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
+      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" id="nav-tab4" type="button" role="tab" aria-selected="false">Tab 4</a>
