@@ -38,7 +38,7 @@ For a better rendering you can use our margin utilities or even CSS.
 
 All the provided examples use our text utilities to facilitate the understanding and to match the examples from the Orange Design System in desktop mode.
 
-Be aware that those examples are not meant to be responsive. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you will need to set fixed font sizes in CSS.
+**Please be aware that those examples are not meant to be responsive** because they will always depend on the context. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you could for example set fixed font sizes and add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
 
 ## Sizes
