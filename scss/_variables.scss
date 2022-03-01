@@ -1199,6 +1199,7 @@ $nav-link-disabled-color:           $gray-500 !default;
 $nav-tabs-border-color:             $black !default;
 $nav-tabs-border-width:             $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-link-padding-x:           map-get($spacers, 4) !default;
 $nav-tabs-link-hover-border-color:  $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:        $black !default;
 $nav-tabs-link-active-bg:           $body-bg !default;

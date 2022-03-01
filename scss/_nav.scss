@@ -52,7 +52,7 @@
   // End mod
 
   .nav-link {
-    padding: subtract(1rem, $nav-tabs-border-width) map-get($spacers, 4); // Boosted mod
+    padding: subtract(1rem, $nav-tabs-border-width) $nav-tabs-link-padding-x; // Boosted mod
     // stylelint-disable-next-line function-disallowed-list
     margin-bottom: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
     background: none;
@@ -125,6 +125,8 @@
 
 .nav-pills {
   .nav-link {
+    padding-right: $nav-tabs-link-padding-x;
+    padding-left: $nav-tabs-link-padding-x;
     background: none;
     border: 0;
     @include border-radius($nav-pills-border-radius);
@@ -180,19 +182,27 @@
 
 .tab-content {
   // Boosted mod
-  padding: subtract($spacer, $nav-tabs-border-width);
+  padding: $spacer $nav-tabs-link-padding-x;
   border: $nav-tabs-border-width solid;
   border-top: 0;
   // End mod
 
+  > .tab-pane .active{
+    display: block;
+
+  }
   > .tab-pane {
     display: none;
   }
 
+
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: subtract(-$spacer, -$nav-tabs-border-width);
+    margin-top: -$spacer;
+    margin-right: -$nav-tabs-link-padding-x;
+    margin-bottom: -$spacer;
+    margin-left: -$nav-tabs-link-padding-x;
   }
   // End mod
 
