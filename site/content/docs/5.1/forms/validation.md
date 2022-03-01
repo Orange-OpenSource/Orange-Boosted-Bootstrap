@@ -165,7 +165,7 @@ We recommend using client-side validation, but in case you require server-side v
 
 For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional form text).
 
-To fix [issues with border radii](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
+To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
 
 {{< example >}}
 <form class="row g-3">
@@ -284,6 +284,20 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
+    <label for="inputQuantitySelector" class="form-label">Quantity selector</label>
+    <div class="input-group quantity-selector w-100">
+      <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="11" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+        <span class="visually-hidden">Step down</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+        <span class="visually-hidden">Step up</span>
+      </button>
+      <div class="invalid-feedback">Please enter a valid number.</div>
+    </div>
+  </div>
+
+  <div class="mb-3">
     <button class="btn btn-primary" type="submit" disabled>Submit form</button>
   </div>
 </form>
@@ -320,5 +334,3 @@ Used to iterate over `$form-validation-states` map values to generate our valida
 ### Customizing
 
 Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is how we generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color, icon, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.<!-- Boosted mod: no tooltips -->
-
-Please note that **we do not recommend customizing `$form-validation-states` values without also modifying the `form-validation-state` mixin**.

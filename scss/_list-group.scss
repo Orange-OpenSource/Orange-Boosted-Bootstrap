@@ -23,38 +23,6 @@
   }
 }
 
-
-// Interactive list items
-//
-// Use anchor or button elements instead of `li`s or `div`s to create interactive
-// list items. Includes an extra `.active` modifier class for selected items.
-
-.list-group-item-action {
-  width: 100%; // For `<button>`s (anchors become 100% by default though)
-  color: $list-group-action-color;
-  text-align: inherit; // For `<button>`s (anchors inherit)
-  outline-offset: $spacer; // Boosted mod
-  @include transition($transition-focus); // Boosted mod
-
-  // Hover state
-  &:hover,
-  &:focus {
-    z-index: 1; // Place hover/focus items above their siblings for proper border styling
-    color: $list-group-action-hover-color;
-    text-decoration: none;
-    outline-color: $list-group-action-color; // Boosted mod
-    outline-offset: $list-group-border-width; // Boosted mod
-    // Boosted mod: no background change
-  }
-
-  &:active {
-    color: $list-group-active-color; // Boosted mod
-    background-color: $list-group-active-bg; // Boosted mod
-    border-color: $list-group-active-border-color; // Boosted mod
-  }
-}
-
-
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
@@ -101,6 +69,35 @@
   }
 }
 
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: $list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+  outline-offset: $spacer; // Boosted mod
+  @include transition($transition-focus); // Boosted mod
+
+  // Hover state
+  &:hover,
+  &:focus {
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    color: $list-group-action-hover-color;
+    text-decoration: none;
+    outline-color: $list-group-action-color; // Boosted mod
+    outline-offset: $list-group-border-width; // Boosted mod
+    // Boosted mod: no background change
+  }
+
+  &:active {
+    color: $list-group-active-color; // Boosted mod
+    background-color: $list-group-active-bg; // Boosted mod
+    border-color: $list-group-active-border-color; // Boosted mod
+  }
+}
 
 // Horizontal
 //

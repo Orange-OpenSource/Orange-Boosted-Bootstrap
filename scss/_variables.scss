@@ -360,6 +360,11 @@ $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 1 0 0 30 15 15 0 0 0 0-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
 $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default;
+$add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
+$remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
+$add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") !default;
+$remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
+
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
@@ -368,6 +373,7 @@ $svg-as-custom-props: (
   "success": $success-icon,
   "error":   $danger-icon
 ) !default;
+
 //// Filters
 // see https://codepen.io/sosuke/pen/Pjoqqp
 $invert-filter:         invert(1) !default;
@@ -454,16 +460,16 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $black !default;
+$link-color:                              var(--#{$boosted-variable-prefix}link-color, $black) !default; // Boosted mod
+$link-color-dark:                         $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        $accessible-orange !default;
+$link-hover-color:                        var(--#{$boosted-variable-prefix}link-hover-color, $accessible-orange) !default; // Boosted mod
+$link-hover-color-dark:                   $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
-
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
-
 
 // Boosted mod
 $linked-chevron-icon-width:   subtract(.5rem, 1px) !default;
@@ -529,7 +535,7 @@ $grid-row-columns:            6 !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width * .25 !default;
+$container-padding-x: $grid-gutter-width !default;
 
 
 // Components
@@ -775,9 +781,12 @@ $table-border-factor:         .4 !default;
 $table-border-width:          $border-width * .5 !default;
 $table-border-color:          $gray-500 !default;
 
+// Boosted mod: no $table-striped-*
+
 $table-group-separator-color: currentColor !default;
 
-$table-caption-color:         $black !default;
+$table-caption-color:         var(--#{$boosted-variable-prefix}caption-color, $black) !default; // Boosted mod
+$table-caption-color-dark:    $white !default; // Boosted mod
 $table-caption-padding-y:     .75rem !default; // Boosted mod
 // scss-docs-end table-variables
 
@@ -932,7 +941,9 @@ $input-font-size:                       $input-btn-font-size !default;
 $input-font-weight:                     $font-weight-bold !default;
 $input-line-height:                     $input-btn-line-height !default;
 
-// Boosted mod: no input-sm
+$input-padding-y-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
+$input-padding-x-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
+// Boosted mod: no $input-font-size-sm
 
 $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
@@ -964,7 +975,7 @@ $input-plaintext-color:                 $body-color !default;
 // Boosted mod: no $input-height-inner-*
 
 $input-height:                          2.5rem !default;
-// Boosted mod: no input-sm
+// Boosted mod: no $input-height-sm
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
@@ -978,6 +989,7 @@ $form-check-input-width:                  1em !default;
 $form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
+$form-check-label-padding-top:            .4375rem !default; // Boosted mod
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
 $form-check-transition:                   null !default;
@@ -1251,12 +1263,14 @@ $navbar-dark-color:                  $white !default;
 $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
+$navbar-dark-toggler-icon-bg:        $burger-icon !default;
 $navbar-dark-toggler-border-color:   transparent !default;
 
 $navbar-light-color:                 $black !default;
 $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
+$navbar-light-toggler-icon-bg:       $burger-icon !default;
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1266,7 +1280,6 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-theme-variables
 
 // Boosted mod
-$navbar-toggler-icon-bg:       $burger-icon !default;
 $navbar-toggler-icon-close-bg: $cross-icon !default;
 // End mod
 
@@ -1307,18 +1320,18 @@ $dropdown-header-padding:           $spacer $spacer * .5 !default;
 // scss-docs-end dropdown-variables
 
 // scss-docs-start dropdown-dark-variables
-$dropdown-dark-color:               $gray-300 !default;
-$dropdown-dark-bg:                  $gray-800 !default;
-$dropdown-dark-border-color:        $dropdown-border-color !default;
-$dropdown-dark-divider-bg:          $dropdown-divider-bg !default;
+$dropdown-dark-color:               $white !default; // Boosted mod
+$dropdown-dark-bg:                  $black !default; // Boosted mod
+$dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
+$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Boosted mod
 $dropdown-dark-box-shadow:          null !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $white !default;
-$dropdown-dark-link-hover-bg:       rgba($white, .15) !default;
-$dropdown-dark-link-active-color:   $dropdown-link-active-color !default;
-$dropdown-dark-link-active-bg:      $dropdown-link-active-bg !default;
-$dropdown-dark-link-disabled-color: $gray-500 !default;
-$dropdown-dark-header-color:        $gray-500 !default;
+$dropdown-dark-link-hover-color:    $black !default; // Boosted mod
+$dropdown-dark-link-hover-bg:       $white !default; // Boosted mod
+$dropdown-dark-link-active-color:   $black !default; // Boosted mod
+$dropdown-dark-link-active-bg:      $white !default; // Boosted mod
+$dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
+$dropdown-dark-header-color:        $white !default; // Boosted mod
 // scss-docs-end dropdown-dark-variables
 
 // Pagination
@@ -1399,25 +1412,34 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     $spacer * .5 !default;
-$accordion-padding-x:                     $spacer * .5 !default;
+$accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
+$accordion-padding-x:                     0 !default; // Boosted mod
 $accordion-color:                         $body-color !default;
 $accordion-bg:                            $body-bg !default;
-$accordion-border-width:                  $border-width * .5 !default;
-$accordion-border-color:                  $gray-500 !default;
+$accordion-border-width:                  $border-width * .5 !default; // Boosted mod
+$accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 $border-radius !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
-$accordion-body-padding-y:                $spacer !default;
-$accordion-body-padding-x:                $spacer !default;
+$accordion-body-padding-y:                $spacer !default; // Boosted mod
+$accordion-body-padding-x:                $spacer !default; // Boosted mod
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     $accordion-bg !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              null !default;
-$accordion-button-active-color:           $accessible-orange !default;
+$accordion-button-active-bg:              null !default; // Boosted mod
+$accordion-button-active-color:           $accessible-orange !default; // Boosted mod
+
+// Boosted mod: dark variant
+$accordion-dark-color:                    $white !default;
+$accordion-dark-bg:                       $black !default;
+$accordion-dark-border-color:             $gray-700 !default;
+$accordion-dark-button-color:             $accordion-dark-color !default;
+$accordion-dark-button-bg:                $accordion-dark-bg !default;
+$accordion-dark-button-active-color:      $brand-orange !default;
+// End mod
 
 // Boosted mod: no $accordion-button-focus-*
 
@@ -1790,18 +1812,23 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // scss-docs-end offcanvas-variables
 
 // Code
-
+// Boosted mod
 $code-font-size:                    .875em !default;
-$code-color:                        $gray-700 !default;
+$code-color:                        var(--#{$boosted-variable-prefix}code-color, $gray-700) !default;
+$code-color-dark:                   $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         $black !default;
-$kbd-bg:                            $gray-300 !default;
+$kbd-color:                         var(--#{$boosted-variable-prefix}kbd-color, $black) !default;
+$kbd-color-dark:                    $white !default;
+$kbd-bg:                            var(--#{$boosted-variable-prefix}kbd-bg, $gray-300) !default;
+$kbd-bg-dark:                       $gray-900 !default;
 
-$pre-color:                         $gray-900 !default;
-$pre-line-height:                   1.25 !default; // Boosted mod
+$pre-color:                         var(--#{$boosted-variable-prefix}pre-color, $gray-900) !default;
+$pre-color-dark:                    $gray-300 !default;
+$pre-line-height:                   1.25 !default;
+// End mod
 
 //
 // Boosted mod
@@ -1862,6 +1889,30 @@ $sticker-size-lg:                       $spacer * 14 !default;
 $sticker-content-max-width-sm:          $sticker-size-sm * .7071067812 !default;
 $sticker-content-max-width-md:          $sticker-size-md * .7071067812 !default;
 $sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
-
 // scss-docs-end sticker
+
+//// Quantity selector
+// scss-docs-start quantity-selector
+$quantity-selector-width:                 7.5rem !default;
+$quantity-selector-sm-width:              5.5rem !default;
+
+$quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
+$quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x-sm, 2px) !default;
+
+$quantity-selector-icon-width:            .875rem !default;
+$quantity-selector-icon-sm-width:         .625rem !default;
+
+$quantity-selector-icon-add:              $add-icon !default;
+$quantity-selector-icon-add-sm:           $add-icon-sm !default;
+$quantity-selector-icon-add-height:       .875rem !default;
+$quantity-selector-icon-sm-add-height:    .625rem !default;
+
+$quantity-selector-icon-remove:           $remove-icon !default;
+$quantity-selector-icon-remove-sm:        $remove-icon-sm !default;
+$quantity-selector-icon-remove-height:    .125rem !default;
+$quantity-selector-icon-sm-remove-height: .125rem !default;
+
+$quantity-selector-input-max-width:       2.625rem !default;
+$quantity-selector-input-sm-max-width:    2.5rem !default;
+// scss-docs-end quantity-selector
 // End mod

@@ -1,57 +1,96 @@
+// stylelint-disable custom-property-empty-line-before
+
 //
 // Base styles
 //
 
 .btn {
+  // scss-docs-start btn-css-vars
+  --#{$variable-prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$variable-prefix}btn-padding-y: #{$btn-padding-y};
+  --#{$variable-prefix}btn-font-family: #{$btn-font-family};
+  @include rfs($btn-font-size, --#{$variable-prefix}btn-font-size);
+  --#{$variable-prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$variable-prefix}btn-line-height: #{$btn-line-height};
+  --#{$variable-prefix}btn-color: #{$body-color};
+  --#{$variable-prefix}btn-bg: transparent;
+  --#{$variable-prefix}btn-border-width: #{$btn-border-width};
+  --#{$variable-prefix}btn-border-color: transparent;
+  --#{$variable-prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$variable-prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$variable-prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$variable-prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$variable-prefix}btn-focus-shadow-rgb); // Boosted mod
+  --#{$boosted-variable-prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
+  // scss-docs-end btn-css-vars
+
   display: inline-flex; // Boosted mod
   align-items: center; // Boosted mod: for .badge proper alignment
   justify-content: center; // Boosted mod
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  line-height: $btn-line-height;
-  color: $body-color;
+  padding: subtract(var(--#{$variable-prefix}btn-padding-y), 1px) var(--#{$variable-prefix}btn-padding-x) add(var(--#{$variable-prefix}btn-padding-y), 1px); // Boosted mod
+  font-family: var(--#{$variable-prefix}btn-font-family);
+  font-size: var(--#{$variable-prefix}btn-font-size);
+  font-weight: var(--#{$variable-prefix}btn-font-weight);
+  line-height: var(--#{$variable-prefix}btn-line-height);
+  color: var(--#{$variable-prefix}btn-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
+  border: var(--#{$variable-prefix}btn-border-width) solid var(--#{$variable-prefix}btn-border-color);
   outline-offset: map-get($spacers, 1); // Boosted mod
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  @include border-radius(var(--#{$variable-prefix}btn-border-radius));
+  @include gradient-bg(var(--#{$variable-prefix}btn-bg));
+  @include box-shadow(var(--#{$variable-prefix}btn-box-shadow));
   @include transition($btn-transition);
 
   &:hover {
-    color: $body-color;
+    color: var(--#{$variable-prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--#{$variable-prefix}btn-hover-bg);
+    border-color: var(--#{$variable-prefix}btn-hover-border-color);
   }
 
   // Boosted mod: custom styles for .btn-check
   &:focus {
-    // Boosted mod
-    outline-offset: $outline-width;
-
-    &[data-focus-visible-added] {
-      box-shadow: $btn-focus-box-shadow;
+    color: var(--#{$variable-prefix}btn-hover-color);
+    @include gradient-bg(var(--#{$variable-prefix}btn-hover-bg));
+    border-color: var(--#{$variable-prefix}btn-hover-border-color);
+    // Boosted mod: no `outline` rule
+    outline-color: var(--#{$variable-prefix}btn-hover-border-color); // Boosted mod
+    outline-offset: $outline-width; // Boosted mod
+    &[data-focus-visible-added] { // Boosted mod: added `&[data-focus-visible-added]`
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: var(--#{$variable-prefix}btn-box-shadow), var(--#{$variable-prefix}btn-focus-box-shadow);
+      } @else {
+        box-shadow: var(--#{$variable-prefix}btn-focus-box-shadow);
+      }
     }
-    // End mod
   }
 
   // Boosted mod: custom styles for .btn-check
   &:active,
-  &.active {
-    @include box-shadow($btn-active-box-shadow);
-
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
+  &.active,
+  .show > &.dropdown-toggle {
+    color: var(--#{$variable-prefix}btn-active-color);
+    background-color: var(--#{$variable-prefix}btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$variable-prefix}btn-active-border-color);
+    outline-color: var(--#{$variable-prefix}btn-active-border-color); // Boosted mod
+    // Boosted mod: no box shadow modification for the active state
   }
 
   &:disabled,
   &.disabled,
   fieldset:disabled & {
+    color: var(--#{$variable-prefix}btn-disabled-color);
     pointer-events: none;
-    opacity: $btn-disabled-opacity;
+    background-color: var(--#{$variable-prefix}btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$variable-prefix}btn-disabled-border-color);
+    opacity: var(--#{$variable-prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }
 
@@ -73,7 +112,7 @@
 .btn-warning {
   @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
   &.btn-inverse {
-    @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black);
+    @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black, $black);
   }
 }
 
@@ -81,14 +120,14 @@
 .btn-secondary {
   @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
   &.btn-inverse {
-    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700);
+    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
   }
 }
 
 .btn-success {
   @include button-variant($success, $success);
   &.btn-inverse {
-    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black);
+    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
@@ -96,14 +135,14 @@
 .btn-dark {
   @include button-variant($black, $black, $white, $white, $black, $black);
   &.btn-inverse {
-    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black);
+    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
 .btn-danger {
   @include button-variant($danger, $danger);
   &.btn-inverse {
-    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black);
+    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 // scss-docs-end btn-variant-loops
@@ -123,12 +162,13 @@
   &:active,
   &.active {
     color: $accessible-orange;
-    background-color: transparent;
+    background-color: var(--#{$variable-prefix}btn-bg);
   }
 
   &:disabled,
   &.disabled {
     color: $gray-500;
+    border-color: var(--#{$variable-prefix}btn-border-color);
   }
 
   &.btn-inverse:not(:active) {
@@ -144,30 +184,37 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  color: $btn-link-color;
+  // Boosted mod: no redefinition of --#{$variable-prefix}btn-font-weight: #{$font-weight-normal}
+  --#{$variable-prefix}btn-color: #{$btn-link-color};
+  --#{$variable-prefix}btn-bg: transparent;
+  --#{$variable-prefix}btn-border-color: transparent;
+  --#{$variable-prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$variable-prefix}btn-hover-border-color: transparent;
+  --#{$variable-prefix}btn-active-color: #{$primary}; // Boosted mod
+  --#{$variable-prefix}btn-active-border-color: transparent;
+  --#{$variable-prefix}btn-disabled-color: #{$btn-link-disabled-color};
+  --#{$variable-prefix}btn-disabled-border-color: transparent;
+  --#{$variable-prefix}btn-box-shadow: none;
+
   text-decoration: $link-decoration;
-  // Boosted mod
-  // stylelint-disable-next-line declaration-no-important
-  border-color: transparent !important;
 
-  &.btn-inverse {
-    color: $white;
-  }
-  // End mod
-
-  &:hover {
-    color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-
+  &:hover,
   &:focus {
     text-decoration: $link-hover-decoration;
   }
 
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
+  // Boosted mod
+  &:focus {
+    &:not(:hover) {
+      color: var(--#{$variable-prefix}btn-color);
+      outline-color: var(--#{$variable-prefix}btn-color);
+    }
+
+    &:hover {
+      outline-color: var(--#{$variable-prefix}btn-active-color);
+    }
   }
+  // End mod
 
   // No need for an active state here
 }
@@ -212,10 +259,6 @@
     background-color: $black;
     border-color: $black;
   }
-
-  &::before {
-    transform: translateY(1px);
-  }
 }
 
 @each $name in map-keys($btn-social-networks) {
@@ -238,7 +281,7 @@
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
 
       @if "linkedin" == $name {
-        transform: none;
+        transform: translateY(-1px);
       }
     }
   }

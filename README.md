@@ -58,7 +58,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-star
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)](https://automate.browserstack.com/public-build/ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)
-[![JS Delivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
+[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included
 
@@ -161,6 +161,8 @@ Editor preferences are available in the [editor config](https://github.com/Orang
 For transparency into our release cycle and in striving to maintain backward compatibility, Boosted is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
 See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of Boosted.
+
+Our release planning is based on the [Bootstrap Release planning](https://github.com/twbs/release#upcoming-release-schedule).
 
 Our default branch is for development of our Boosted 5 release. Head to the [`v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Boosted 4.
 

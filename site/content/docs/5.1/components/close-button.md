@@ -22,7 +22,7 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 <button type="button" class="btn-close" disabled><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
-## White variant
+## Dark variant
 
 Change the default `.btn-close` to be white with the `.btn-close-white` class.
 

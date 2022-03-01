@@ -58,3 +58,26 @@
   // scss-docs-end root-body-variables
   // stylelint-enable custom-property-empty-line-before
 }
+
+// Boosted mod
+[class*="-dark"],
+.bg-secondary {
+  --#{$boosted-variable-prefix}link-color: #{$link-color-dark};
+  --#{$boosted-variable-prefix}link-hover-color: #{$link-hover-color-dark};
+  --#{$boosted-variable-prefix}caption-color: #{$table-caption-color-dark};
+  --#{$boosted-variable-prefix}code-color: #{$code-color-dark};
+  --#{$boosted-variable-prefix}kbd-color: #{$kbd-color-dark};
+  --#{$boosted-variable-prefix}kbd-bg: #{$kbd-bg-dark};
+  --#{$boosted-variable-prefix}pre-color: #{$pre-color-dark};
+
+  [class*="bg-"]:not(&):not(.bg-transparent) {
+    --#{$boosted-variable-prefix}link-color: #{$link-color};
+    --#{$boosted-variable-prefix}link-hover-color: #{$link-hover-color};
+    --#{$boosted-variable-prefix}caption-color: #{$table-caption-color};
+    --#{$boosted-variable-prefix}code-color: #{$code-color};
+    --#{$boosted-variable-prefix}kbd-color: #{$kbd-color};
+    --#{$boosted-variable-prefix}kbd-bg: #{$kbd-bg};
+    --#{$boosted-variable-prefix}pre-color: #{$pre-color};
+  }
+}
+// End mod

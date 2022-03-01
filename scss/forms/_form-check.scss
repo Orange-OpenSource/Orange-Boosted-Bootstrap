@@ -14,6 +14,18 @@
   }
 }
 
+.form-check-reverse {
+  padding-right: $form-check-padding-start;
+  padding-left: 0;
+  text-align: right;
+
+  .form-check-input {
+    float: right;
+    margin-right: $form-check-padding-start * -1;
+    margin-left: 0;
+  }
+}
+
 .form-check-input {
   width: $form-check-input-width;
   height: $form-check-input-width;
@@ -105,6 +117,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $form-label-disabled-color; // Boosted mod
+      cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }
   }
@@ -144,6 +157,7 @@
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
     border-color: $white; // Boosted mod
+    outline-color: $white; // Boosted mod
     outline-offset: $spacer; // Boosted mod
     @include border-radius($form-switch-border-radius);
     @include transition($form-switch-transition);
@@ -195,9 +209,19 @@
   }
 
   .form-check-label {
-    padding-top: map-get($spacers, 1);
+    padding-top: $form-check-label-padding-top;
   }
   // End mod
+
+  &.form-check-reverse {
+    padding-right: $form-switch-padding-start;
+    padding-left: 0;
+
+    .form-check-input {
+      margin-right: $form-switch-padding-start * -1;
+      margin-left: 0;
+    }
+  }
 }
 
 .form-check-inline {

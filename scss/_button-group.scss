@@ -80,8 +80,24 @@
   &:not(:hover):not(:focus):not(:active) {
     border-left-color: transparent;
 
-    &.btn-inverse::before {
+    &.btn-inverse {
+      color: $white;
       background-color: $black;
+      border-color: $white;
+
+      &::before {
+        background-color: $black;
+      }
+    }
+  }
+
+  // TODO: we should avoid using !important and find a better selector
+  &:active,
+  &.active {
+    border-left: $border-width solid $black !important; // stylelint-disable-line declaration-no-important
+
+    &.btn-inverse {
+      border-left: $border-width solid $primary !important; // stylelint-disable-line declaration-no-important
     }
   }
 

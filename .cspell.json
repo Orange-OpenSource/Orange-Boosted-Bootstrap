@@ -12,6 +12,7 @@
     "Blockquotes",
     "Bootstrappers",
     "borderless",
+    "Brotli",
     "browserslist",
     "browserslistrc",
     "btncheck",
@@ -49,6 +50,7 @@
     "française",
     "fullscreen",
     "getbootstrap",
+    "Gaël",
     "Grayscale",
     "Helv",
     "Hoverable",
@@ -76,8 +78,10 @@
     "offcanvas",
     "offcanvases",
     "opensource",
+    "Packagist",
     "pinterest",
     "popperjs",
+    "Poupard",
     "prebuild",
     "precompiled",
     "preconnect",
@@ -128,13 +132,17 @@
     "بالعالم",
     "مرحبًا"
   ],
-  "language": "en, en-US",
+  "language": "en-US",
   "files": [
-    "site/**/*.md"
+    "**/*.md"
   ],
   "ignorePaths": [
     ".cspell.json",
-    "*.min.*"
+    "dist/",
+    "*.min.*",
+    "**/*rtl*",
+    "**/tests/**",
+    "CHANGELOG.md"
   ],
   "useGitignore": true
 }

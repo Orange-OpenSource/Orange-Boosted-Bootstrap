@@ -13,6 +13,7 @@ import Dropdown from './src/dropdown'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
 import Popover from './src/popover'
+import QuantitySelector from './src/quantity-selector' // Boosted mod
 import ScrollSpy from './src/scrollspy'
 import Tab from './src/tab'
 import Toast from './src/toast'
@@ -28,6 +29,7 @@ export default {
   Modal,
   Offcanvas,
   Popover,
+  QuantitySelector, // Boosted mod
   ScrollSpy,
   Tab,
   Toast,
