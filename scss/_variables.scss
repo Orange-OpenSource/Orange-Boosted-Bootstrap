@@ -1879,6 +1879,18 @@ $step-item-arrow-width:  1rem !default;
 $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, $border-width 50%, 100% 100%) #{"*/"} !default; // Used in clip-path
 // scss-docs-end stepped-process
 
+//// Sticker
+// scss-docs-start sticker
+$sticker-size-sm:                       $spacer * 7 !default;
+$sticker-size-md:                       $spacer * 9 !default;
+$sticker-size-lg:                       $spacer * 14 !default;
+
+// Considering @use "sass:math", math.sqrt(2) / 2 is approximated to 0.7071067812
+$sticker-content-max-width-sm:          $sticker-size-sm * .7071067812 !default;
+$sticker-content-max-width-md:          $sticker-size-md * .7071067812 !default;
+$sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
+// scss-docs-end sticker
+
 //// Quantity selector
 // scss-docs-start quantity-selector
 $quantity-selector-width:                 7.5rem !default;

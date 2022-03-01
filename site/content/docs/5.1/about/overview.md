@@ -27,7 +27,7 @@ Boosted ships with custom accessible components to suit specific needs:
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
-
+- [Sticker]({{< docsref "/components/sticker" >}})
 
 ## Bootstrap Team
 
