@@ -52,7 +52,7 @@
   // End mod
 
   .nav-link {
-    padding: subtract(1rem, $nav-tabs-border-width) $nav-tabs-link-padding-x; // Boosted mod
+    padding: subtract(1rem, $nav-tabs-border-width) subtract($nav-tabs-link-padding-x, $nav-tabs-border-width); // Boosted mod
     // stylelint-disable-next-line function-disallowed-list
     margin-bottom: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
     background: none;
@@ -182,27 +182,19 @@
 
 .tab-content {
   // Boosted mod
-  padding: $spacer $nav-tabs-link-padding-x;
+  padding: $spacer subtract($nav-tabs-link-padding-x, $nav-tabs-border-width);
   border: $nav-tabs-border-width solid;
   border-top: 0;
   // End mod
 
-  > .tab-pane .active{
-    display: block;
-
-  }
   > .tab-pane {
     display: none;
   }
 
-
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin-top: -$spacer;
-    margin-right: -$nav-tabs-link-padding-x;
-    margin-bottom: -$spacer;
-    margin-left: -$nav-tabs-link-padding-x;
+    margin: $spacer * -1 subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1;
   }
   // End mod
 
