@@ -1,14 +1,22 @@
-.anchorjs-link {
-  // stylelint-disable-next-line declaration-no-important
-  padding: 0 map-get($spacers, 1) !important; // Boosted mod
+.anchor-link {
+  padding: 0 .175rem;
   font-weight: 400;
   color: rgba($link-color, .5);
-  @include transition(color .15s ease-in-out, $transition-focus); // Boosted mod
+  text-decoration: none;
+  opacity: 0;
+  @include transition(color .15s ease-in-out, opacity .15s ease-in-out);
+
+  &::after {
+    content: "#";
+  }
 
   &:focus,
-  &:hover {
+  &:hover,
+  :hover > &,
+  :target > & {
     color: $link-color;
     text-decoration: none;
+    opacity: 1;
   }
 
   // Boosted mod

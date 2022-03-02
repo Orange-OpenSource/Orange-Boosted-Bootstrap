@@ -86,30 +86,6 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-// scss-docs-start theme-color-variables
-$primary:       $orange !default;
-$secondary:     $black !default;
-$success:       $green !default;
-$info:          $blue !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-500 !default;
-$dark:          $black !default;
-// scss-docs-end theme-color-variables
-
-// scss-docs-start theme-colors-map
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-) !default;
-// scss-docs-end theme-colors-map
-
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio:   4.5 !default;
@@ -339,6 +315,30 @@ $cyans: (
   "cyan-900": $cyan-900
 ) !default;
 // fusv-enable
+
+// scss-docs-start theme-color-variables
+$primary:       $orange !default;
+$secondary:     $black !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-500 !default;
+$dark:          $black !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+// scss-docs-end theme-colors-map
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
@@ -608,8 +608,8 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
+$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
@@ -716,7 +716,7 @@ $small-font-size:             .875rem !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  $gray-700 !default;
+$text-muted:                  $gray-700 !default; // Boosted mod
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -729,9 +729,13 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
-// Boosted mod: no $hr-bg-color so that hr background color can't get overrided
-$hr-border-width:             0 !default;
-$hr-height:                   $border-width !default;
+// fusv-disable
+$hr-bg-color:                 null !default; // Deprecated in v5.2.0
+$hr-height:                   null !default; // Deprecated in v5.2.0
+// fusv-enable
+
+$hr-border-color:             null !default; // Allows for inherited colors
+$hr-border-width:             $border-width !default;
 $hr-opacity:                  null !default;
 
 $legend-margin-bottom:        $spacer * .25 !default;
@@ -1177,6 +1181,7 @@ $zindex-modal-backdrop:             1050 !default;
 $zindex-modal:                      1055 !default;
 $zindex-popover:                    1070 !default;
 $zindex-tooltip:                    1080 !default;
+$zindex-toast:                      1090 !default;
 // scss-docs-end zindex-stack
 
 // Navs
@@ -1576,6 +1581,7 @@ $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding-y:            0 !default;
 $modal-header-padding-x:            $spacer !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+$modal-footer-bg:                   null !default;
 
 // Boosted mod
 //// Scrollable modal

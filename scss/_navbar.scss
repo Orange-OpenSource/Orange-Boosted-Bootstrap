@@ -13,7 +13,7 @@
   --#{$variable-prefix}navbar-active-color: #{$navbar-light-active-color};
   --#{$variable-prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
   --#{$variable-prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$variable-prefix}navbar-brand-font-size: #{$navbar-brand-font-size}; // Boosted mod
+  --#{$variable-prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
   --#{$variable-prefix}navbar-brand-color: #{$navbar-light-brand-color};
   --#{$variable-prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
   --#{$variable-prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
@@ -74,7 +74,7 @@
   padding-top: var(--#{$variable-prefix}navbar-brand-padding-y);
   padding-bottom: var(--#{$variable-prefix}navbar-brand-padding-y);
   margin: map-get($spacers, 2) var(--#{$variable-prefix}navbar-brand-margin-end); // Boosted mod
-  @include font-size(var(--#{$variable-prefix}navbar-brand-font-size)); // Boosted mod
+  @include font-size(var(--#{$variable-prefix}navbar-brand-font-size));
   font-weight: $font-weight-bold; // Boosted mod
   line-height: .75; // Boosted mod
   color: var(--#{$variable-prefix}navbar-brand-color);

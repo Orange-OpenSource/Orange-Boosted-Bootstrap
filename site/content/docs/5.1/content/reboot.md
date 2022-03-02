@@ -58,15 +58,18 @@ $font-family-sans-serif:
   // Web font
   HelvNeueOrange,
   // Helvetica Neue
-  Helvetica Neue,
+  "Helvetica Neue",
   // Web Safe Fallbacks
-  Helvetica, Arial,
-  // Ubuntu
-  Liberation Sans,
+  Helvetica,
+  // Linux,
+  "Noto Sans",
+  "Liberation Sans",
+  // Basic web fallback,
+  Arial,
   // Sans serif fallback
   sans-serif,
   // Emoji fonts
-  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 <!-- End mod -->
 
@@ -124,6 +127,22 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
     </tr>
   </tbody>
 </table>
+
+
+## Horizontal rules
+
+The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
+
+{{< example >}}
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<hr class="text-danger border-2 opacity-50">
+<hr class="border-primary border-3 opacity-75">
+{{< /example >}}
 
 ## Lists
 
