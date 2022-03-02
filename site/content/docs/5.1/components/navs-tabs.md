@@ -208,7 +208,6 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <a class="nav-link disabled" id="nav-linkD" role="tab">Link D</a>
       </li>
     </ul>
-     <!-- Tab light panes -->
     <div class="tab-content border-0" id="nav-tabs-light-content">
       <div class="tab-pane fade show active" id="linkA" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
       <div class="tab-pane" id="linkB" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
