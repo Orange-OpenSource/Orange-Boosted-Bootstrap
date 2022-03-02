@@ -4,6 +4,8 @@
 
 .bd-footer {
   @include font-size(.875rem);
+  position: sticky;
+  top: 100vh;
   font-weight: 700;
 
   a {

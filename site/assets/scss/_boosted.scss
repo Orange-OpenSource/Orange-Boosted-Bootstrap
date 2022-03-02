@@ -7,6 +7,19 @@
   }
 }
 
+body {
+  padding-top: $spacer * 2.5;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacer * 5;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
 //
 // Boosted logo
 //
