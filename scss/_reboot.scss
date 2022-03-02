@@ -108,8 +108,6 @@ body {
 hr {
   margin: $hr-margin-y 0;
   color: $hr-color; // 1
-  // background-color: currentColor !important; // Boosted mod: ensure .text-* utilities can't override this
-  // border: $hr-border-width;
   border: 0;
   border-top: $hr-border-width solid $hr-border-color;
   opacity: $hr-opacity;

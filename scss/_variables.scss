@@ -730,12 +730,12 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
 // fusv-disable
-$hr-bg-color: null !default; // Deprecated in v5.2.0
-$hr-height: null !default; // Deprecated in v5.2.0
+$hr-bg-color:                 null !default; // Deprecated in v5.2.0
+$hr-height:                   null !default; // Deprecated in v5.2.0
 // fusv-enable
 
-$hr-border-color: null !default; // Allows for inherited colors
-$hr-border-width: $border-width !default;
+$hr-border-color:             null !default; // Allows for inherited colors
+$hr-border-width:             $border-width !default;
 $hr-opacity:                  null !default;
 
 $legend-margin-bottom:        $spacer * .25 !default;
