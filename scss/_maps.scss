@@ -50,6 +50,18 @@ $utilities-bg: map-merge(
 $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
 // scss-docs-end utilities-bg-colors
 
+// scss-docs-start utilities-border-colors
+$utilities-border: map-merge(
+  $utilities-colors,
+  (
+    "white": to-rgb($white),
+    "light": to-rgb($gray-500), // Boosted mod
+    "dark": to-rgb($gray-700), // Boosted mod
+  )
+) !default;
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // Boosted mod
+// scss-docs-end utilities-border-colors
+
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
 $gutters: $spacers !default;
