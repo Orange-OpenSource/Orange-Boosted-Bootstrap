@@ -149,7 +149,7 @@
     "stylelint": "14.2.0",
     "stylelint-config-twbs-bootstrap": "^3.0.1",
     "tarteaucitronjs": "^1.9.5",
-    "terser": "^5.11.0",
+    "terser": "^5.12.0",
     "vnu-jar": "21.10.12"
   },
   "files": [
