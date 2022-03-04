@@ -36,7 +36,7 @@ jobs:
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
