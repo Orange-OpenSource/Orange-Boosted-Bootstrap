@@ -977,7 +977,9 @@ $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 $input-placeholder-color:               $gray-700 !default;
 $input-plaintext-color:                 $body-color !default;
 
-// Boosted mod: no $input-height-inner-*
+$input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2) !default;
+// Boosted mod: no $input-height-inner-half
+// Boosted mod: no $input-height-inner-quarter
 
 $input-height:                          2.5rem !default;
 // Boosted mod: no $input-height-sm
