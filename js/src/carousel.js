@@ -312,9 +312,7 @@ class Carousel extends BaseComponent {
   // End mod
 
   _getItemIndex(element) {
-    this._items = element && element.parentNode ?
-      SelectorEngine.find(SELECTOR_ITEM, element.parentNode) :
-      []
+    this._items = SelectorEngine.find(SELECTOR_ITEM, this._element)
 
     return this._items.indexOf(element)
   }
