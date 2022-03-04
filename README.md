@@ -163,8 +163,6 @@ For transparency into our release cycle and in striving to maintain backward com
 
 See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of Boosted.
 
-Our release planning is based on the [Bootstrap Release planning](https://github.com/twbs/release#upcoming-release-schedule).
-
 Our default branch is for development of our Boosted 5 release. Head to the [`v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Boosted 4.
 
 
