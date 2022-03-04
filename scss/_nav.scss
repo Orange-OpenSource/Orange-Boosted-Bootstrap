@@ -97,7 +97,7 @@
 
 // Boosted mod
 .nav-tabs-light {
-  --#{$variable-prefix}tabs-spacing: #{$nav-tabs-border-width * .5};
+  --#{$variable-prefix}tabs-spacing: #{calc($nav-tabs-border-width * .5)};
   border-color: $gray-500;
 
   .nav-link {
@@ -194,7 +194,7 @@
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: $spacer * -1 subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1;
+    margin: $spacer * -1 calc(subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 

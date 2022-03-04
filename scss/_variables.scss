@@ -729,13 +729,14 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
+
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in v5.2.0
 $hr-height:                   null !default; // Deprecated in v5.2.0
 // fusv-enable
 
 $hr-border-color:             null !default; // Allows for inherited colors
-$hr-border-width:             $border-width !default;
+$hr-border-width:             var(--#{$variable-prefix}border-width) !default;
 $hr-opacity:                  null !default;
 
 $legend-margin-bottom:        $spacer * .25 !default;
@@ -1197,8 +1198,8 @@ $nav-link-transition:               null !default;
 $nav-link-disabled-color:           $gray-500 !default;
 
 $nav-tabs-border-color:             $black !default;
-$nav-tabs-border-width:             $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-border-width:             var(--#{$variable-prefix}border-width) !default;
 $nav-tabs-link-padding-x:           1.8125rem !default; // Boosted mod
 $nav-tabs-link-hover-border-color:  $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:        $black !default;
@@ -1303,7 +1304,7 @@ $dropdown-color:                    $body-color !default;
 $dropdown-bg:                       $white !default;
 $dropdown-border-color:             $gray-500 !default;
 $dropdown-border-radius:            $border-radius !default;
-$dropdown-border-width:             $border-width !default;
+$dropdown-border-width:             var(--#{$variable-prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default;
 $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default;
@@ -1348,8 +1349,8 @@ $pagination-padding-x:              null !default;
 
 $pagination-color:                  null !default;
 $pagination-bg:                     $white !default;
-$pagination-border-width:           $border-width !default;
 $pagination-border-radius:          null !default;
+$pagination-border-width:           var(--#{$variable-prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
 $pagination-margin-start:           $spacer * .5 !default;
 $pagination-border-color:           transparent !default;
@@ -1398,9 +1399,9 @@ $placeholder-opacity-min:           .2 !default;
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
-$card-border-width:                 $border-width !default;
-$card-border-color:                 $gray-500 !default; // Boosted mod
 $card-border-radius:                $border-radius !default;
+$card-border-width:                 var(--#{$variable-prefix}border-width) !default;
+$card-border-color:                 $gray-500 !default; // Boosted mod
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1422,10 +1423,10 @@ $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
 $accordion-padding-x:                     0 !default; // Boosted mod
 $accordion-color:                         $body-color !default;
 $accordion-bg:                            $body-bg !default;
-$accordion-border-width:                  $border-width * .5 !default; // Boosted mod
-$accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 $border-radius !default;
-$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
+$accordion-border-width:                  calc(var(--#{$variable-prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+$accordion-border-color:                  $gray-500 !default; // Boosted mod
+$accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
 $accordion-body-padding-y:                $spacer !default; // Boosted mod
 $accordion-body-padding-x:                $spacer !default; // Boosted mod
@@ -1495,7 +1496,7 @@ $popover-font-size:                 $font-size-sm !default;
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $gray-400 !default;
 $popover-max-width:                 17.25rem !default;
-$popover-border-width:              $border-width !default;
+$popover-border-width:              var(--#{$variable-prefix}border-width) !default;
 $popover-border-color:              $popover-bg !default;
 $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
@@ -1526,9 +1527,9 @@ $toast-padding-y:                   $spacer * .25 !default;
 $toast-font-size:                   .875rem !default;
 $toast-color:                       $black !default;
 $toast-background-color:            rgba($white, .85) !default;
-$toast-border-width:                1px !default;
-$toast-border-color:                rgba($black, .1) !default;
 $toast-border-radius:               $border-radius !default;
+$toast-border-width:                var(--#{$variable-prefix}border-width) !default;
+$toast-border-color:                var(--#{$variable-prefix}border-color) !default;
 $toast-box-shadow:                  $box-shadow !default;
 $toast-spacing:                     $container-padding-x !default;
 
@@ -1566,16 +1567,16 @@ $modal-content-padding-x:           0 !default; // Boosted mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // Boosted mod
 $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
-$modal-content-border-color:        $gray-500 !default;
-$modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-border-color:        $gray-500 !default; // Boosted mod
+$modal-content-border-width:        var(--#{$variable-prefix}border-width) !default;
 $modal-content-inner-border-radius: $border-radius !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
-$modal-header-border-color:         null !default;
+$modal-header-border-color:         null !default; // Boosted mod
 $modal-footer-border-color:         null !default;
 $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
@@ -1662,8 +1663,8 @@ $progress-height-xs:                $spacer * .25 !default;
 $list-group-color:                  $gray-900 !default;
 $list-group-bg:                     $white !default;
 $list-group-border-color:           $gray-500 !default;
-$list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
+$list-group-border-width:           var(--#{$variable-prefix}border-width) !default;
 
 $list-group-item-padding-y:         .875rem !default;
 $list-group-item-padding-x:         $spacer !default;
@@ -1685,9 +1686,9 @@ $list-group-action-hover-color:     $primary !default;
 // scss-docs-start thumbnail-variables
 $thumbnail-padding:                 $spacer * .5 !default;
 $thumbnail-bg:                      $body-bg !default;
-$thumbnail-border-width:            $border-width !default;
-$thumbnail-border-color:            $black !default;
 $thumbnail-border-radius:           $border-radius !default;
+$thumbnail-border-width:            var(--#{$variable-prefix}border-width) !default;
+$thumbnail-border-color:            var(--#{$variable-prefix}border-color) !default;
 $thumbnail-box-shadow:              $box-shadow-sm !default;
 // scss-docs-end thumbnail-variables
 

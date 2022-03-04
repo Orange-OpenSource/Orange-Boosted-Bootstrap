@@ -26,6 +26,7 @@
   &:not(.collapsed) {
     color: $accordion-button-active-color;
     background-color: $accordion-button-active-bg;
+    // Boosted mod: no `box-shadow` definition
 
     &::after {
       // Boosted mod: use caret
@@ -43,7 +44,7 @@
 
   &:focus {
     z-index: 3;
-    outline-offset: -$accordion-border-width; // Boosted mod
+    outline-offset: calc($accordion-border-width * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 
