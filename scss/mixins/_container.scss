@@ -17,7 +17,7 @@
   // End mod
 }
 
-// Boosted mod : fluid containers aren't full width → include margins
+// Boosted mod: fluid containers aren't full width → include margins
 @mixin make-container-fluid-margin() {
   @each $breakpoint, $container-margin in $container-fluid-margin {
     @include media-breakpoint-up($breakpoint) {

@@ -520,6 +520,7 @@ $container-max-widths: (
   xxl: 1320px
 ) !default;
 
+// Boosted mod
 $container-fluid-margin: (
   xs: 4px,
   sm: 6px,
@@ -528,6 +529,7 @@ $container-fluid-margin: (
   xl: 40px,
   xxl: 60px
 ) !default;
+// End mod
 // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
