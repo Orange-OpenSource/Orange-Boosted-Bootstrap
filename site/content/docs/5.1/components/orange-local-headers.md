@@ -8,7 +8,6 @@ toc: true
 
 ## Title bars
 
-
 ### How it works
 
 A title bar is designed to display the title of a page and shall be placed right below a global header.
@@ -21,7 +20,7 @@ See them in action in our [examples page]({{<docsref "/examples/title-bars">}}).
 
 To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.
 
-Background color other than white or black must be used only in title bars containing a **short title** and at least **one image**.
+Background color other than white or black must be used only in title bars containing a **short title** and at least **one image**. The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
 
 {{< example class="p-0">}}
 <div class="bg-white title-bar">
@@ -30,7 +29,7 @@ Background color other than white or black must be used only in title bars conta
   </div>
 </div>
 
-<div class="mt-3 bg-light"></div>
+<div class="mt-3 bg-body"></div>
 
 <div class="bg-dark title-bar">
   <div class="container">
@@ -38,9 +37,9 @@ Background color other than white or black must be used only in title bars conta
   </div>
 </div>
 
-<div class="mt-3 bg-light"></div>
+<div class="mt-3 bg-body"></div>
 
-<div class="bg-supporting-pink title-bar">
+<div class="bg-supporting-green title-bar">
   <div class="container">
     <h1>Title</h1>
     <picture>
@@ -59,10 +58,10 @@ Background color other than white or black must be used only in title bars conta
 ### Images
 
 Several options are available to add an image in a title bar.
-
+s
 #### `srcset` attribute
 
-We **strongly recommend** to use `srcset` attribute as it is very well supported by browsers and allows you to load an image depending on the device of the user. However, it might introduce a delay to display the image while resizing.
+We **strongly recommend** to use `srcset` attribute as it is [well supported](https://caniuse.com/srcset) by browsers and allows you to load an image depending on the device of the user. However, it might introduce a delay to display the image while resizing.
 
 {{< example class="p-0">}}
 <div class="bg-supporting-pink title-bar">
@@ -90,7 +89,6 @@ We **strongly recommend** to use `srcset` attribute as it is very well supported
     <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
   </div>
 </div>
-
 {{</ example >}}
 
 #### HTML `<img>` tag
@@ -111,25 +109,6 @@ We **strongly recommend** to use `srcset` attribute as it is very well supported
 
 #### Background image
 
-{{< callout warning >}}
+{{< callout info >}}
 Background image based title bar requires the use of `background` shorthand CSS property in some extra CSS that you can see on our [examples page]({{<docsref "/examples/title-bars">}}) as well.
 {{< /callout >}}
-
-{{< example class="p-0">}}
-<div class="bg-supporting-blue title-bar">
-  <div class="container">
-    <h1>Title</h1>
-    <div class="col m-0 example-title-bar-custom-background"></div>
-  </div>
-</div>
-{{</ example >}}
-
-### Customize
-
-The image should not overlap on title and the title shouldn't wrap. If this happens, please transform your title bar into a white one without any image. Here are some information to help you customize your CSS file:
-
-- **For background images:**
-The numbers following `bottom/number` are, for each breakpoint, the result of `image width/font-size`.
-
-- **For displaying images :**
-For each breakpoint, max-widths are calculated as follow: `(text width + image width + padding + 8)/(16)`

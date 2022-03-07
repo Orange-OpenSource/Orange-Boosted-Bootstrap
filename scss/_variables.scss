@@ -1772,7 +1772,9 @@ $figure-caption-color:              $gray-900 !default;
 // Title bars
 
 // scss-docs-start title-bars-variables
-$title-bar-image-ratio: 1.8em !default;
+$title-bar-padding-y:               .3333333em !default;
+$title-bar-image-ratio:             1.8em !default;
+$title-bar-border-width:            $border-width * .5 !default;
 // scss-docs-end title-bars-variables
 // End mod
 

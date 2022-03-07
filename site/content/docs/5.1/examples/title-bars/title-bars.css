@@ -1,12 +1,7 @@
 /* Display the right background-image */
 .example-title-bar-custom-background {
   height: 1.8em;
-  background: none;
-}
-@media (min-width: 328px) {
-  .example-title-bar-custom-background {
-    background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-320.png") right bottom/4em no-repeat;
-  }
+  background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-320.png") right bottom/4em no-repeat; /* 4em = `image_width/font_size`em */
 }
 @media (min-width: 480px) {
   .example-title-bar-custom-background {
@@ -33,70 +28,6 @@
     background: url("/docs/5.1/assets/img/title-bars-illustrations/illustration-1440.png") right bottom/8.67em no-repeat;
   }
 }
-
-
-/* Don't display image when too big */
-@media (max-width: 20.9em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-@media (min-width: 480px) and (max-width: 29.9em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-@media (min-width: 768px) and (max-width: 45em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-@media (min-width: 1024px) and (max-width: 50em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-@media (min-width: 1280px) and (max-width: 60em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-@media (min-width: 1440px) and (max-width: 65em) {
-  .title-bar {
-    color: #000;
-    background-color: #fff !important; /* stylelint-disable-line declaration-no-important */
-  }
-  .title-bar img,
-  .title-bar svg {
-    display: none !important; /* stylelint-disable-line declaration-no-important */
-  }
-}
-
 
 .b-example-divider {
   height: 3rem;

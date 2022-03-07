@@ -1,39 +1,30 @@
 .title-bar {
+  border-bottom: $title-bar-border-width solid $gray-500;
 
-  // Organize the title bar
-  %container-flex-properties {
+  &.bg-dark {
+    border-color: $gray-700;
+  }
+
+  > [class*="container"] {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
 
-  > .container,
-  > .container-fluid {
-    @extend %container-flex-properties;
-  }
-
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
-      @extend %container-flex-properties;
-    }
-  }
-
-  // Title bar's objects sizes
   img,
   svg {
     width: auto;
-    height: $title-bar-image-ratio;
+    height: $title-bar-image-ratio; // to simplify css
   }
 
   h1,
   & {
     font-size: $h2-font-size;
-    line-height: $h2-line-height;
+    line-height: $display-line-height; // to simplify css
     letter-spacing: $h2-spacing;
 
     @include media-breakpoint-up(md) {
       font-size: $display2-size;
-      line-height: $display-line-height;
       letter-spacing: $display2-spacing;
     }
 
@@ -43,28 +34,8 @@
     }
   }
 
-  // Spacing of the title
   h1 {
-    padding: $spacer * .9 0 $spacer * .45;
+    padding: subtract($title-bar-padding-y * 2, .0625rem) 0 $title-bar-padding-y;
     margin: 0;
-
-    @include media-breakpoint-up(md) {
-      padding: $spacer * 1.6 0 $spacer * .85;
-    }
-
-    @include media-breakpoint-up(xl) {
-      padding: $spacer * 1.95 0 $spacer;
-    }
-  }
-
-  // Substitute for border-bottom
-  &::after {
-    display: block;
-    height: map-get($border-widths, 1);
-    content: "";
-    background-color: $gray-500;
-  }
-  &.bg-dark::after {
-    background-color: $gray-700;
   }
 }
