@@ -7,7 +7,9 @@
 
 .badge {
   // scss-docs-start badge-css-vars
-  --#{$variable-prefix}badge-padding: #{subtract($badge-padding-y, 1px) $badge-padding-x add($badge-padding-y, 1px)}; // Boosted mod
+  --#{$variable-prefix}badge-padding: #{subtract(var(--#{$variable-prefix}badge-padding-y), 1px) var(--#{$variable-prefix}badge-padding-x) add(var(--#{$variable-prefix}badge-padding-y), 1px)}; // Boosted mod
+  --#{$variable-prefix}badge-padding-x: #{$badge-padding-x};
+  --#{$variable-prefix}badge-padding-y: #{$badge-padding-y};
   @include rfs($badge-font-size, --#{$variable-prefix}badge-font-size);
   --#{$variable-prefix}badge-font-weight: #{$badge-font-weight};
   --#{$variable-prefix}badge-color: #{$badge-color};

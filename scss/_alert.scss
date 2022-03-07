@@ -5,7 +5,8 @@
 .alert {
   // scss-docs-start alert-css-vars
   --#{$variable-prefix}alert-bg: transparent;
-  --#{$variable-prefix}alert-padding: #{$alert-padding-y $alert-padding-x};
+  --#{$variable-prefix}alert-padding-x: #{$alert-padding-x};
+  --#{$variable-prefix}alert-padding-y: #{$alert-padding-y};
   --#{$variable-prefix}alert-margin-bottom: #{$alert-margin-bottom};
   --#{$variable-prefix}alert-color: #{alert-color}; // Boosted mod
   --#{$variable-prefix}alert-border-color: transparent;
@@ -15,7 +16,7 @@
 
   position: relative;
   display: flex; // Boosted mod
-  padding: var(--#{$variable-prefix}alert-padding);
+  padding: var(--#{$variable-prefix}alert-padding-y) var(--#{$variable-prefix}alert-padding-x);
   margin-bottom: var(--#{$variable-prefix}alert-margin-bottom);
   font-weight: $font-weight-bold; // Boosted mod
   color: var(--#{$variable-prefix}alert-color);
