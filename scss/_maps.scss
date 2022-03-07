@@ -55,8 +55,8 @@ $utilities-border: map-merge(
   $utilities-colors,
   (
     "white": to-rgb($white),
-    "light": to-rgb($gray-500), // Boosted mod
-    "dark": to-rgb($gray-700), // Boosted mod
+    "light": $gray-500, // Boosted mod: handled differently within `rgba-css-var`
+    "dark": $gray-700, // Boosted mod: handled differently within `rgba-css-var`
   )
 ) !default;
 $utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // Boosted mod

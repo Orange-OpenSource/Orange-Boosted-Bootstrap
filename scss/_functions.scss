@@ -45,7 +45,7 @@
     @return rgba(var(--#{$variable-prefix}#{$identifier}-color-rgb), var(--#{$variable-prefix}#{$target}-opacity));
     // Boosted mod
   } @else if ($identifier == "light" or $identifier == "dark") and $target == "border" {
-    @return rgba($value, var(--#{$variable-prefix}#{$target}-opacity));
+    @return rgba(red($value), green($value), blue($value), var(--#{$variable-prefix}#{$target}-opacity));
     // End mod
   } @else {
     @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb), var(--#{$variable-prefix}#{$target}-opacity));
