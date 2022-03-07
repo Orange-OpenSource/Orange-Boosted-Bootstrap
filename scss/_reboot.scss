@@ -87,7 +87,8 @@ body {
 //
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
-// See https://github.com/WICG/focus-visible
+//    See https://github.com/WICG/focus-visible
+// 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
   outline: $outline-width solid; // 1
@@ -95,6 +96,10 @@ body {
 
 .js-focus-visible :focus:not([data-focus-visible-added]),
 .js-focus-visible .focus:not([data-focus-visible-added]) { // 2
+  outline: 0 !important;
+}
+
+:focus:not(:focus-visible) { // 3
   outline: 0 !important;
 }
 // scss-docs-end focus-visibility
