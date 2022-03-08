@@ -6,17 +6,17 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
-$gray-100: #fafafa !default;
-$gray-200: #f6f6f6 !default;
-$gray-300: #eee !default;
-$gray-400: #ddd !default;
-$gray-500: #ccc !default;
-$gray-600: #999 !default;
-$gray-700: #666 !default;
-$gray-800: #595959 !default;
-$gray-900: #333 !default;
-$black:    #000 !default;
+$white:    $ods-white !default;
+$gray-100: $ods-gray-100 !default;
+$gray-200: $ods-gray-200 !default;
+$gray-300: $ods-gray-300 !default;
+$gray-400: $ods-gray-400 !default;
+$gray-500: $ods-gray-500 !default;
+$gray-600: $ods-gray-600 !default;
+$gray-700: $ods-gray-700 !default;
+$gray-800: $ods-gray-800 !default;
+$gray-900: $ods-gray-900 !default;
+$black:    $ods-black !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -38,19 +38,19 @@ $grays: (
 // scss-docs-start brand-colors
 // Boosted mod
 //// Core colors
-$accessible-orange: #f16e00 !default;
-$brand-orange:      #ff7900 !default;
+$accessible-orange: $ods-accessible-orange !default;
+$brand-orange:      $ods-brand-orange !default;
 //// Functional colors
-$functional-green:  #32c832 !default;
-$functional-blue:   #527edb !default;
-$functional-yellow: #fc0 !default;
-$functional-red:    #cd3c14 !default;
+$functional-green:  $ods-functional-green !default;
+$functional-blue:   $ods-functional-blue !default;
+$functional-yellow: $ods-functional-yellow !default;
+$functional-red:    $ods-functional-red !default;
 //// Supporting colors
-$supporting-blue:   #4bb4e6 !default;
-$supporting-yellow: #ffd200 !default;
-$supporting-green:  #50be87 !default;
-$supporting-purple: #a885d8 !default;
-$supporting-pink:   #ffb4e6 !default;
+$supporting-blue:   $ods-supporting-blue !default;
+$supporting-yellow: $ods-supporting-yellow !default;
+$supporting-green:  $ods-supporting-green !default;
+$supporting-purple: $ods-supporting-purple !default;
+$supporting-pink:   $ods-supporting-pink !default;
 // scss-docs-end brand-colors
 // End mod
 

@@ -29,6 +29,7 @@
 
 // stylelint-disable font-family-name-quotes
 @import "functions";
+@import "design-tokens"; // Boosted mod
 @import "variables";
 
 $font-path: "../fonts/" !default;
