@@ -41,6 +41,10 @@
       overflow-x: auto;
     }
 
+    thead {
+      border-bottom: 2px solid currentColor;
+    }
+
     th,
     td {
       &:first-child {

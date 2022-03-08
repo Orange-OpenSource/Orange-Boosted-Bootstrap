@@ -126,12 +126,12 @@
   // Boosted mod
   .nav-item {
     font-size: $h5-font-size;
-    border-top: $border-width * .5 solid $gray-900;
+    border-top: calc(var(--#{$variable-prefix}border-width) * .5) solid $gray-900; // stylelint-disable-line function-disallowed-list
   }
 
   .nav-link {
     position: relative;
-    padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x * .25;
+    padding: add($nav-link-padding-y, calc(var(--#{$variable-prefix}border-width) * 2)) $nav-link-padding-x * .25; // stylelint-disable-line function-disallowed-list
     color: var(--#{$variable-prefix}navbar-color);
     outline-offset: $spacer;
     @include transition($navbar-transition);
@@ -151,7 +151,7 @@
       right: $nav-link-padding-y * .5;
       bottom: 0;
       left: $nav-link-padding-y * .5;
-      height: $border-width * 2;
+      height: calc(var(--#{$variable-prefix}border-width) * 2); // stylelint-disable-line function-disallowed-list
       content: "";
       background-color: currentColor;
       @include transition($navbar-active-transition);
@@ -183,8 +183,8 @@
 //
 
 .navbar-text {
-  padding-top: add($nav-link-padding-y, $border-width * 2); // Boosted mod
-  padding-bottom: add($nav-link-padding-y, $border-width * 2); // Boosted mod
+  padding-top: add($nav-link-padding-y, calc(var(--#{$variable-prefix}border-width) * 2)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  padding-bottom: add($nav-link-padding-y, calc(var(--#{$variable-prefix}border-width) * 2)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   color: var(--#{$variable-prefix}navbar-color);
 
   a,
@@ -219,7 +219,7 @@
   line-height: 1;
   color: var(--#{$variable-prefix}navbar-color);
   background-color: transparent; // remove default button style
-  border: $border-width solid var(--#{$variable-prefix}navbar-toggler-border-color); // remove default button style
+  border: var(--#{$variable-prefix}border-width) solid var(--#{$variable-prefix}navbar-toggler-border-color); // remove default button style
   outline-offset: $spacer; // Boosted mod
   @include border-radius(var(--#{$variable-prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$variable-prefix}navbar-toggler-transition));
@@ -230,7 +230,7 @@
 
   &:focus {
     text-decoration: none;
-    outline-offset: -$border-width; // Boosted mod
+    outline-offset: calc(var(--#{$variable-prefix}border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
     box-shadow: 0 0 0 var(--#{$variable-prefix}navbar-toggler-focus-width);
   }
 
@@ -312,7 +312,7 @@
         // Boosted mod
         .navbar-brand {
           align-self: flex-end;
-          margin: 0 $spacer subtract($spacer, $border-width) 0;
+          margin: 0 $spacer subtract($spacer, var(--#{$variable-prefix}border-width)) 0;
 
           img {
             width: $navbar-brand-logo-height;
