@@ -39,7 +39,7 @@
 
 // Quick fix for badges in buttons
 .btn .badge {
-  padding: $badge-padding-y $badge-padding-x; // Boosted mod
+  padding: var(--#{$variable-prefix}badge-padding-y) var(--#{$variable-prefix}badge-padding-x); // Boosted mod
   margin-left: map-get($spacers, 1); // Boosted mod
 }
 
