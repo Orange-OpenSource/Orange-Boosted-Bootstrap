@@ -1,5 +1,6 @@
 // Container mixins
 
+// scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
   --#{$variable-prefix}gutter-x: #{$gutter};
   --#{$variable-prefix}gutter-y: 0;
@@ -26,3 +27,4 @@
   }
 }
 // End mod
+// scss-docs-end container-mixins

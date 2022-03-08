@@ -4,7 +4,7 @@
   <!-- Boosted mod: Orange rendering that handles "Guidelines" page as well -->
   <main class="bd-content order-1 py-3 py-md-5 py-lg-3" id="content">
     <div class="mb-4 border-bottom border-light">
-      <div class="container pt-md-1">
+      <div class="container-xxl pt-md-1">
         <div class="row">
           <div class="col-12">
             <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="pb-4 pb-md-2">
-      <div class="container pt-md-2 pb-md-4">
+      <div class="container-xxl pt-md-2 pb-md-4">
         <div class="row">
           <div class="col-12">
             <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
@@ -33,9 +33,9 @@
       </div>
     </div>
     {{ if eq .Title "Orange Design System for web" }}
-    <div class="container-fluid p-0">
+    <div>
     {{ else }}
-    <div class="container">
+    <div class="container-xxl">
     {{ end }}
       {{ .Content }}
     </div>
