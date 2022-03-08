@@ -21,3 +21,28 @@ $ods-supporting-yellow: #ffd200 !default;
 $ods-supporting-green:  #50be87 !default;
 $ods-supporting-purple: #a885d8 !default;
 $ods-supporting-pink:   #ffb4e6 !default;
+
+:root {
+  --ods-white: #{$ods-white};
+  --ods-gray-100: #{$ods-gray-100};
+  --ods-gray-200: #{$ods-gray-200};
+  --ods-gray-300: #{$ods-gray-300};
+  --ods-gray-400: #{$ods-gray-400};
+  --ods-gray-500: #{$ods-gray-500};
+  --ods-gray-600: #{$ods-gray-600};
+  --ods-gray-700: #{$ods-gray-700};
+  --ods-gray-800: #{$ods-gray-800};
+  --ods-gray-900: #{$ods-gray-900};
+  --ods-black: #{$ods-black};
+  --ods-accessible-orange: #{$ods-accessible-orange};
+  --ods-brand-orange: #{$ods-brand-orange};
+  --ods-functional-green: #{$ods-functional-green};
+  --ods-functional-blue: #{$ods-functional-blue};
+  --ods-functional-yellow: #{$ods-functional-yellow};
+  --ods-functional-red: #{$ods-functional-red};
+  --ods-supporting-blue: #{$ods-supporting-blue};
+  --ods-supporting-yellow: #{$ods-supporting-yellow};
+  --ods-supporting-green: #{$ods-supporting-green};
+  --ods-supporting-purple: #{$ods-supporting-purple};
+  --ods-supporting-pink: #{$ods-supporting-pink};
+}
