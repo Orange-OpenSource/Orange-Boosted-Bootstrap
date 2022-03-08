@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Orange footer
+title: Footer
 description: Documentation and examples for Boosted's powerful, responsive footer. Includes support for branding, navigation and more.
 group: components
-aliases: "/docs/5.1/components/orange-footer/"
+aliases: "/docs/5.1/components/footer/"
 toc: true
 ---
 
 ## How it works
 
-Orange footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with several already built parts:
+The footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with several already built parts:
 - Title with content bar
 - Social media bar
 - Navigation bar
@@ -29,7 +29,7 @@ Feel free to develop your own part.
 The `<h2></h2>` and `<h3></h3>` tags used here are informative, you **need** to adapt those to your website's title hierarchy.
 {{< /callout >}}
 
-Orange footer parts are independent from each other. Add a dark separator between each part of the final footer.
+The footer parts are independent from each other. Add a dark separator between each part of the final footer.
 
 ```html
 <div class="border-bottom border-1 border-dark"></div>
@@ -37,7 +37,7 @@ Orange footer parts are independent from each other. Add a dark separator betwee
 
 ### Title with content bar
 
-Orange footer comes with a title with content sub-component: `.footer-title-content`. Add your content in the `.row` container. Here is an example for mailing list.
+The footer comes with a title with content sub-component: `.footer-title-content`. Add your content in the `.row` container. Here is an example for mailing list.
 
 {{< example class="p-0" >}}
 {{< orange-footer mailing=true >}}
@@ -46,7 +46,7 @@ Orange footer comes with a title with content sub-component: `.footer-title-cont
 
 ### Social media bar
 
-Orange footer comes with a social media sub-component: `.footer-social`.
+The footer comes with a social media sub-component: `.footer-social`.
 
 {{< example class="p-0" >}}
 {{< orange-footer follow=true >}}
@@ -55,7 +55,7 @@ Orange footer comes with a social media sub-component: `.footer-social`.
 
 ### Navigation bar
 
-Orange footer comes with a navigation sub-component: `.footer-nav`. You can add several categories in one footer-column by adding accordion items or its content directly inside columns. You can also change every column size depending on the breakpoint. Try to have equal sized columns length and it will wrap nicely.
+The footer comes with a navigation sub-component: `.footer-nav`. You can add several categories in one footer-column by adding accordion items or its content directly inside columns. You can also change every column size depending on the breakpoint. Try to have equal sized columns height and it will wrap nicely.
 
 {{< callout warning >}}
 This sub-component needs our Collapse JavaScript plugin to work well.
@@ -70,7 +70,7 @@ You need to write 2 times the category for accessibility concerns.
 
 ### Service bar
 
-Orange footer comes with a service links sub-component: `.footer-service`.
+The footer comes with a service links sub-component: `.footer-service`.
 
 {{< example class="p-0" >}}
 {{< orange-footer service=true >}}
@@ -79,7 +79,7 @@ Orange footer comes with a service links sub-component: `.footer-service`.
 
 ### Mandatory bar
 
-Orange footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component is **mandatory** in every Orange footer.
+The footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component or equivalent is **mandatory** in every footer and should come as the last element.
 
 {{< example class="p-0" >}}
 {{< orange-footer mandatory=true >}}

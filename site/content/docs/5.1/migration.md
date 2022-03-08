@@ -383,6 +383,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
 
+### Footer
+
+- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/footer" >}}).
+
 ### Jumbotron
 
 - <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](/docs/{{< param docs_version >}}/examples/jumbotron/)
@@ -402,10 +406,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ### Offcanvas
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
-
-### Orange footer
-
-- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/orange-footer" >}}).
 
 ### Orange navbar
 
