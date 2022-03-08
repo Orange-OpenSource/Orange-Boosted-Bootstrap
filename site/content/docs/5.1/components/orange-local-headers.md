@@ -58,10 +58,9 @@ Background color other than white or black must be used only in title bars conta
 ### Images
 
 Several options are available to add an image in a title bar.
-s
 #### `srcset` attribute
 
-We **strongly recommend** to use `srcset` attribute as it is [well supported](https://caniuse.com/srcset) by browsers and allows you to load an image depending on the device of the user. However, it might introduce a delay to display the image while resizing.
+We **strongly recommend** to use `srcset` attribute as it is [well supported](https://caniuse.com/srcset) by browsers and allows you to load an image depending on the user's device. However, it might introduce a delay to display the image while resizing.
 
 {{< example class="p-0">}}
 <div class="bg-supporting-pink title-bar">
@@ -110,5 +109,5 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 #### Background image
 
 {{< callout info >}}
-Background image based title bar requires the use of `background` shorthand CSS property in some extra CSS that you can see on our [examples page]({{<docsref "/examples/title-bars">}}) as well.
+To include a background image in a title bar, it is required to use the `background` shorthand CSS property in some extra CSS that you can see on our [examples page]({{<docsref "/examples/title-bars">}}).
 {{< /callout >}}
