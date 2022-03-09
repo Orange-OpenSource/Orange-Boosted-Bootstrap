@@ -15,7 +15,7 @@ Boosted comes with three different containers:
 - `.container`, which sets a static `max-width` between each responsive breakpoint
 - `.container-fluid`, which sets the `width: 100%` and overrides `max-width: 100vw - $breakpoint_margin` at all breakpoints
 - `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one
-  - **`.container-xxl`** is the one to use for Orange sites in order to be brand behavior compliant
+  - **`.container-xxl` is the one to use for Orange sites in order to be compliant with the Orange brand**
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
