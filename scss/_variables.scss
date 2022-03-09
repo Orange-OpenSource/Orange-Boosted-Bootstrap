@@ -952,6 +952,7 @@ $form-label-font-style:                 null !default;
 $form-label-font-weight:                $font-weight-bold !default;
 $form-label-color:                      null !default;
 $form-label-disabled-color:             $gray-500 !default; // Boosted mod
+$form-label-required-margin-left:       .1875rem !default; // Boosted mod
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
