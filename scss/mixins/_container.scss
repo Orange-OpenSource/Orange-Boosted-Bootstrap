@@ -1,5 +1,6 @@
 // Container mixins
 
+// scss-docs-start container-mixins
 @mixin make-container($gutter: $container-padding-x) {
   --#{$variable-prefix}gutter-x: #{$gutter};
   --#{$variable-prefix}gutter-y: 0;
@@ -16,3 +17,14 @@
   }
   // End mod
 }
+
+// Boosted mod: fluid containers aren't full width → include margins
+@mixin make-container-fluid-margin() {
+  @each $breakpoint, $container-margin in $container-fluid-margin {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: subtract(100vw, $container-margin * 2);
+    }
+  }
+}
+// End mod
+// scss-docs-end container-mixins

@@ -12,13 +12,16 @@ Containers are the most basic layout element in Boosted and are **required when 
 
 Boosted comes with three different containers:
 
-- `.container`, which sets a `max-width` at each responsive breakpoint
-- `.container-fluid`, which is `width: 100%` at all breakpoints
-- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- `.container`, which sets a static `max-width` between each responsive breakpoint
+- `.container-fluid`, which sets the `width: 100%` and overrides `max-width: 100vw - $breakpoint_margin` at all breakpoints
+- `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one
+  - **`.container-xxl` is the one to use for Orange sites in order to be compliant with the Orange brand**
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
 See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+
+Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
 
 <table class="table">
   <thead>
@@ -53,66 +56,66 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
   <tbody>
     <tr>
       <th scope="row" class="fw-normal"><code>.container</code></th>
-      <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
+      <td>312px</td>
+      <td>468px</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-sm</code></th>
-      <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td>468px</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-md</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td>720px</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-lg</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
       <td>960px</td>
       <td>1140px</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-xl</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
       <td>1140px</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-xxl</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 40px)</td>
       <td>1320px</td>
     </tr>
     <tr>
       <th scope="row" class="fw-normal"><code>.container-fluid</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 40px)</td>
+      <td class="text-muted">100vw -<br/>(2 * 60px)</td>
     </tr>
   </tbody>
 </table>
@@ -129,7 +132,7 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 
 ## Responsive containers
 
-Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
+Responsive containers allow you to specify a class that follows the `.container-fluid` behavior until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` behaves like the `.container-fluid` to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
 
 ```html
 <div class="container-sm">100% wide until small breakpoint</div>
@@ -141,7 +144,7 @@ Responsive containers allow you to specify a class that is 100% wide until the s
 
 ## Fluid containers
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+Use `.container-fluid` for a full width container with minimum margins, spanning almost the entire width of the viewport.
 
 ```html
 <div class="container-fluid">
@@ -151,22 +154,19 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ## Sass
 
+### Variables
+
 As shown above, Boosted generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 
+### Mixins
+
 In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
 
-```scss
-// Source mixin
-@mixin make-container($padding-x: $container-padding-x) {
-  width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
-  margin-right: auto;
-  margin-left: auto;
-}
+{{< scss-docs name="container-mixins" file="scss/mixins/_container.scss" >}}
 
+```scss
 // Usage
 .custom-container {
   @include make-container();
