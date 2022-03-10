@@ -66,6 +66,12 @@ const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
 const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // Boosted mod
 const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
+const SELECTOR_CONTROL_PAUSE = '[data-bs-control="play-button"]' // Boosted mod
+const SELECTOR_CAROUSEL_TO_PAUSE = 'data-bs-target' // Boosted mod
+const SELECTOR_CAROUSEL_PLAY_TEXT = 'data-bs-play-text' // Boosted mod
+const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // Boosted mod
+const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel' // Boosted mod
+const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel' // Boosted mod
 
 const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-prefix` in scss/_variables.scss
 
@@ -109,6 +115,8 @@ class Carousel extends BaseComponent {
 
     this._indicatorsElement = SelectorEngine.findOne(SELECTOR_INDICATORS, this._element)
 
+    this._playPauseButton = SelectorEngine.findOne(`${SELECTOR_CONTROL_PAUSE}[${SELECTOR_CAROUSEL_TO_PAUSE}="#${this._element.id}"]`) // Boosted mod
+
     this._addEventListeners()
   }
 
@@ -150,6 +158,16 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
+    // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+    if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
+      this._playPauseButton.classList.remove('pause')
+      this._playPauseButton.classList.add('play')
+      this._playPauseButton.setAttribute('title', (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT))
+      this._playPauseButton.querySelector('span.visually-hidden').innerHTML = (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT)
+      this._stayPaused = true
+    }
+    // End mod
+
     if (!event) {
       this._stayPaused = true
     }
@@ -166,6 +184,16 @@ class Carousel extends BaseComponent {
     // Boosted mod: restart the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.remove(CLASS_NAME_PAUSED)
+    }
+    // End mod
+
+    // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+    if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
+      this._playPauseButton.classList.remove('play')
+      this._playPauseButton.classList.add('pause')
+      this._playPauseButton.setAttribute('title', (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT))
+      this._playPauseButton.querySelector('span.visually-hidden').innerHTML = (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT)
+      this._stayPaused = false
     }
     // End mod
 
@@ -498,6 +526,19 @@ class Carousel extends BaseComponent {
   }
 
   // Static
+  // Boosted mod: add pause button
+  static PauseCarousel(event) {
+    const pauseButton = event.target
+    const pauseButtonAttribute = pauseButton.getAttribute(SELECTOR_CAROUSEL_TO_PAUSE)
+    const carouselToPause = Carousel.getOrCreateInstance(document.querySelector(pauseButtonAttribute))
+    if (pauseButton.classList.contains('pause')) {
+      carouselToPause.pause()
+    } else {
+      carouselToPause.cycle()
+    }
+  }
+  // End mod
+
   static jQueryInterface(config) {
     return this.each(function () {
       const data = Carousel.getOrCreateInstance(this, config)
@@ -552,6 +593,8 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (e
 
   carousel.prev()
 })
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_CONTROL_PAUSE, Carousel.PauseCarousel) // Boosted mod
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
   const carousels = SelectorEngine.find(SELECTOR_DATA_RIDE)

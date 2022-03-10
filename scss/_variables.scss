@@ -366,6 +366,8 @@ $add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
 $add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") !default;
 $remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
+$play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
+$pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (
@@ -1818,9 +1820,15 @@ $carousel-caption-spacer:            $spacer * 3 !default;
 
 $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
+//// Carousel control icon
 $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
+
+//// Play/Pause button icon
+$carousel-control-pause-icon:         $pause-icon !default;
+$carousel-control-play-icon:          $play-icon !default;
+$carousel-control-pause-icon-size:    .875rem .875rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;

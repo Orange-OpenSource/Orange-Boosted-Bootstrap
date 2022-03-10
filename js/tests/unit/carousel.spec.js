@@ -479,6 +479,22 @@ describe('Carousel', () => {
         }, 10)
       })
     })
+
+    it('should take care of element either passed as a CSS selector or DOM element (Play/Pause button)', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel"></div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Pause Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('[data-bs-control="play-button"]')
+      const buttonPlayPauselBySelector = new Carousel('[data-bs-control="play-button"]')
+      const buttonPlayPauselByElement = new Carousel(buttonPlayPauselEl)
+
+      expect(buttonPlayPauselBySelector._element).toEqual(buttonPlayPauselEl)
+      expect(buttonPlayPauselByElement._element).toEqual(buttonPlayPauselEl)
+    })
     // End mod
 
     it('should not add touch event listeners if touch = false', () => {
@@ -1079,7 +1095,326 @@ describe('Carousel', () => {
     })
     // End mod
 
-    it('should call cycle if the carousel have carousel-item-next or carousel-item-prev class, cause is sliding', () => {
+    // Boosted mod: tests for Play/Pause button
+    it('should add pause class on click on Play/Pause button when pause is on', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel is-paused"></div>',
+        '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Pause Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('.play')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl).toHaveClass('pause')
+    })
+
+    it('should add play class on click on Play/Pause button when pause is off', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel"></div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Pause Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('.pause')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl).toHaveClass('play')
+    })
+
+    it('should add pause class on carousel on click on Play/Pause button when pause is on', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide is-paused">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Play Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const buttonPlayPauselEl = fixtureEl.querySelector('.play')
+      const carousel = new Carousel(carouselEl)
+
+      buttonPlayPauselEl.click()
+
+      expect(carousel._stayPaused).toBeFalse()
+      expect(carousel._element).not.toHaveClass('is-paused')
+    })
+
+    it('should add play class on carousel on click on Play/Pause button when pause in off', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Pause Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const buttonPlayPauselEl = fixtureEl.querySelector('.pause')
+      const carousel = new Carousel(carouselEl)
+
+      buttonPlayPauselEl.click()
+
+      expect(carousel._stayPaused).toBeTrue()
+      expect(carousel._element).toHaveClass('is-paused')
+    })
+
+    it('should call pause method on mouse over with pause equal to hover even when pause is already on after a click on the pause button', () => {
+      return new Promise(resolve => {
+        fixtureEl.innerHTML = [
+          '<div id="myCarousel" class="carousel slide is-paused">',
+          '  <ol class="carousel-indicators">',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+          '  </ol>',
+          '  <div class="carousel-inner">',
+          '    <div class="carousel-item active">item 1</div>',
+          '    <div class="carousel-item">item 2</div>',
+          '    <div class="carousel-item">item 3</div>',
+          '  </div>',
+          '</div>',
+          '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+          '  <span class="visually-hidden">Play Carousel</span>',
+          '</button>'
+        ].join('')
+
+        const carouselEl = fixtureEl.querySelector('#myCarousel')
+        const carousel = new Carousel(carouselEl)
+
+        spyOn(carousel, 'pause')
+
+        const mouseOverEvent = createEvent('mouseover')
+        carouselEl.dispatchEvent(mouseOverEvent)
+
+        setTimeout(() => {
+          expect(carousel.pause).toHaveBeenCalled()
+          resolve()
+        }, 10)
+      })
+    })
+
+    it('should keep paused class with pause equal to hover even when pause is already on after a click on the pause button', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide is-paused">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Play Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const buttonPlayPauselEl = fixtureEl.querySelector('.play')
+      const carousel = new Carousel(carouselEl)
+
+      carousel.pause()
+
+      expect(carousel._stayPaused).toBeTrue()
+      expect(carousel._element).toHaveClass('is-paused')
+      expect(buttonPlayPauselEl).toHaveClass('play')
+    })
+
+    it('should call cycle on mouse out with pause equal to hover with pause equal to hover even when pause is already on after a click on the pause button', () => {
+      return new Promise(resolve => {
+        fixtureEl.innerHTML = [
+          '<div id="myCarousel" class="carousel slide is-paused">',
+          '  <ol class="carousel-indicators">',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+          '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+          '  </ol>',
+          '  <div class="carousel-inner">',
+          '    <div class="carousel-item active">item 1</div>',
+          '    <div class="carousel-item">item 2</div>',
+          '    <div class="carousel-item">item 3</div>',
+          '  </div>',
+          '</div>',
+          '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+          '  <span class="visually-hidden">Play Carousel</span>',
+          '</button>'
+        ].join('')
+
+        const carouselEl = fixtureEl.querySelector('#myCarousel')
+        const carousel = new Carousel(carouselEl)
+
+        spyOn(carousel, 'cycle').and.callThrough()
+
+        const mouseOutEvent = createEvent('mouseout')
+        carouselEl.dispatchEvent(mouseOutEvent)
+
+        setTimeout(() => {
+          expect(carousel.cycle).toHaveBeenCalled()
+          resolve()
+        }, 10)
+      })
+    })
+
+    it('should remove paused class with pause equal to hover even when pause is already on after a click on the pause button', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide is-paused">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary play" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Play Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const buttonPlayPauselEl = fixtureEl.querySelector('.play')
+      const carousel = new Carousel(carouselEl)
+
+      carousel.cycle()
+
+      expect(carousel._stayPaused).toBeFalse()
+      expect(carousel._element).not.toHaveClass('is-paused')
+      expect(buttonPlayPauselEl).toHaveClass('pause')
+    })
+
+    it('should replace button text and attributes after a click on the pause button', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '  <span class="visually-hidden">Pause Carousel</span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('.pause')
+      const buttonPlayPauselContentEl = fixtureEl.querySelector('span.visually-hidden')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual(buttonPlayPauselEl.getAttribute('data-bs-play-text'))
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual(buttonPlayPauselEl.getAttribute('data-bs-play-text'))
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual(buttonPlayPauselEl.getAttribute('data-bs-pause-text'))
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual(buttonPlayPauselEl.getAttribute('data-bs-pause-text'))
+    })
+
+    it('should replace button text and attributes by default texts after a click on the pause button when data-bs-*-text attributes are empty', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" data-bs-play-text="" data-bs-pause-text="" title="">',
+        '  <span class="visually-hidden"></span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('.pause')
+      const buttonPlayPauselContentEl = fixtureEl.querySelector('span.visually-hidden')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual('Play Carousel')
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual('Play Carousel')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual('Pause Carousel')
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual('Pause Carousel')
+    })
+
+    it('should replace button text and attributes by default texts after a click on the pause button when data-bs-*-text attributes are missing', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>',
+        '<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#myCarousel" title="">',
+        '  <span class="visually-hidden"></span>',
+        '</button>'
+      ].join('')
+
+      const buttonPlayPauselEl = fixtureEl.querySelector('.pause')
+      const buttonPlayPauselContentEl = fixtureEl.querySelector('span.visually-hidden')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual('Play Carousel')
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual('Play Carousel')
+
+      buttonPlayPauselEl.click()
+
+      expect(buttonPlayPauselEl.getAttribute('title')).toEqual('Pause Carousel')
+      expect(buttonPlayPauselContentEl.innerHTML).toEqual('Pause Carousel')
+    })
+    // End mod
+
+    it('should call cycle if the carousel have carousel-item-next and carousel-item-prev class', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <div class="carousel-inner">',
