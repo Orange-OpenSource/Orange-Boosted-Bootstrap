@@ -78,10 +78,6 @@
 }
 
 .page-item {
-  &:not(:first-child) .page-link {
-    margin-left: $pagination-margin-start;
-  }
-
   @if $pagination-margin-start == (-$pagination-border-width) {
     &:first-child {
       .page-link {
@@ -136,15 +132,16 @@
   }
 
   &:first-child .page-link {
+    margin-right: $pagination-margin-start;
+
     &:not(:empty) {
       padding-right: $pagination-padding-end;
     }
 
-    &::before {
-      /* rtl:raw:
+    /* &::before {
+      rtl:raw:
       transform: scaleX(-1);
-      */
-    }
+    } */
   }
 
   &:last-child .page-link {
@@ -157,6 +154,12 @@
 
       /* rtl:remove */
       transform: scaleX(-1);
+    }
+  }
+
+  &:last-child {
+    &:not(:nth-child(2)) .page-link{
+      margin-left: $pagination-margin-start;
     }
   }
 
