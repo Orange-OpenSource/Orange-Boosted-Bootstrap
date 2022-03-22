@@ -9,41 +9,14 @@
 }
 
 .dropdown-toggle {
-  // scss-docs-start dropdown-toggle-css-vars
-  --#{$prefix}dropdown-toggle-padding-x: #{$dropdown-padding-x}; // Boosted mod
-  --#{$prefix}dropdown-toggle-color: #{$dropdown-color}; // Boosted mod
-  --#{$prefix}dropdown-toggle-bg: #{$dropdown-bg}; // Boosted mod
-  --#{$prefix}dropdown-toggle-border-color: #{$dropdown-border-color}; // Boosted mod
-  // scss-docs-end dropdown-toggle-css-vars
-
-  // Boosted mod
-  padding-right: var(--#{$prefix}dropdown-toggle-padding-x);
-  padding-left: var(--#{$prefix}dropdown-toggle-padding-x);
-  color: var(--#{$prefix}dropdown-toggle-color);
   white-space: nowrap;
-  background-color: var(--#{$prefix}dropdown-toggle-bg);
-  border-color: var(--#{$prefix}dropdown-toggle-border-color);
 
-  .bg-dark &:not(.dropdown-toggle-split),
-  .navbar-dark &:not(.dropdown-toggle-split) {
-    // scss-docs-start dropdown-toggle-dark-variant-css-vars
-    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg}; // Boosted mod
-    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color}; // Boosted mod
-    --#{$prefix}dropdown-toggle-border-color: #{$gray-700}; // Boosted mod
-    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
-    // scss-docs-end dropdown-toggle-dark-variant-css-vars
+  // Boosted mod: handle variants
+  --#{$variable-prefix}btn-padding-x: #{$dropdown-padding-x}; // Boosted mod
+  @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $disabled-background: $dropdown-bg, $disabled-border: $gray-500, $disabled-color: $gray-500);
 
-    color: var(--#{$prefix}dropdown-toggle-color);
-    background-color: var(--#{$prefix}dropdown-toggle-bg);
-    border-color: var(--#{$prefix}dropdown-toggle-border-color);
-
-    &:hover {
-      border-color: var(--#{$prefix}dropdown-toggle-border-hover-color);
-    }
-  }
-
-  .btn-group &:not(.btn-inverse) {
-    border-color: var(--#{$prefix}dropdown-toggle-color);
+  &.btn-inverse:not(.dropdown-toggle-split) {
+    @include button-variant($black, $gray-700, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
   }
   // End mod
 
