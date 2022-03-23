@@ -179,7 +179,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
+  padding: var(--#{$variable-prefix}dropdown-item-padding-y) var(--#{$variable-prefix}dropdown-item-padding-x) add(var(--#{$variable-prefix}dropdown-item-padding-y), .125rem);
   clear: both;
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
