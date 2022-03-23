@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Footer
-description: Documentation and examples for Boosted's powerful, responsive footer. Includes support for branding, navigation and more.
+description: Documentation and examples for a powerful and responsive Boosted's footer. It includes support for branding, navigation and more.
 group: components
 aliases: "/docs/5.1/components/footer/"
 toc: true
@@ -9,27 +9,29 @@ toc: true
 
 ## How it works
 
-The footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with several already built parts:
+The footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 5 ready to use bars which should be arranged vertically in the following order:
 - Title with content bar
-- Social media bar
+- Follow us bar
 - Navigation bar
 - Service bar
-- **Mandatory** bar
+- Terms & Conditions **mandatory** bar
 
-Feel free to develop your own part.
+You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
+
+If these available parts don't meet your specific needs, feel free to develop your own custom part accordingly to the Orange Design System.
 
 ## Example
 
 {{< orange-footer mailing=true follow=true nav=true service=true mandatory=true id="1" >}}
 {{< /orange-footer >}}
 
-## Parts
+## Footer bars
 
 {{< callout info >}}
 The `<h2></h2>` and `<h3></h3>` tags used here are informative, you **need** to adapt those to your website's title hierarchy.
 {{< /callout >}}
 
-The footer parts are independent from each other. Add a dark separator between each part of the final footer.
+The footer bars are independent from each other. Just add a dark separator between each bar of the final footer.
 
 ```html
 <div class="border-bottom border-1 border-dark"></div>
@@ -37,30 +39,64 @@ The footer parts are independent from each other. Add a dark separator between e
 
 ### Title with content bar
 
-The footer comes with a title with content sub-component: `.footer-title-content`. Add your content in the `.row` container. Here is an example for mailing list.
+This footer bar is a container with a `.footer-title-content` class. This container includes a title and a `.row` container in which to add your content. See below an example with a mail form content.
 
 {{< example class="p-0" >}}
 {{< orange-footer mailing=true >}}
 {{< /orange-footer >}}
 {{< /example >}}
 
-### Social media bar
+### Follow us bar
 
-The footer comes with a social media sub-component: `.footer-social`.
+This footer bar is a container with `.footer-social` class into which a list of social media icons can be added:
 
-{{< example class="p-0" >}}
-{{< orange-footer follow=true >}}
-{{< /orange-footer >}}
-{{< /example >}}
+<div class="bd-example p-0">
+  {{< orange-footer follow=true >}}
+  {{< /orange-footer >}}
+</div>
 
+```html
+<div class="container-xxl footer-social">
+  <h3 class="footer-heading">Follow us</h3>
+  <ul class="navbar-nav gap-2 flex-row align-self-start">
+    <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span class="visually-hidden">Twitter</span></a></li>
+    <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span class="visually-hidden">Facebook</span></a></li>
+    <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span class="visually-hidden">Instagram</span></a></li>
+    <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
+    <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
+    <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
+
+    <!-- Other available social icons -->
+
+    <!-- <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li> -->
+    <!-- <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span class="visually-hidden">Pinterest</span></a></li> -->
+    <!-- <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li> -->
+  </ul>
+</div>
+```
 ### Navigation bar
 
-The footer comes with a navigation sub-component: `.footer-nav`. You can add several categories in one footer-column by adding accordion items or its content directly inside columns. You can also change every column size depending on the breakpoint. Try to have equal sized columns height and it will wrap nicely.
+This footer bar is a container with a `.footer-nav` class meant to contain  navigation links organized in columns. You can add several categories in one footer-column by adding either accordion items or their content directly inside the columns. You can also adjust every column size depending on the breakpoint. Try to have equal sized columns height and it will wrap nicely.
 
 {{< callout warning >}}
-This sub-component needs our Collapse JavaScript plugin to work well.
+This container needs our Collapse JavaScript plugin to work properly.
+{{< /callout >}}
 
-You need to write 2 times the category for accessibility concerns.
+{{< callout warning >}}
+Depending on the screen size and for accessibility concerns, you need to write each category title in 2 different ways:
+
+```html
+<h3 class="accordion-header footer-heading" id="headingOne2">
+
+  <!-- For small screens -->
+  <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+    Category
+  </button>
+
+   <!-- For large screens -->
+  <span class="d-none d-md-flex">Category</span>
+</h3>
+```
 {{< /callout >}}
 
 {{< example class="p-0" >}}
@@ -70,16 +106,16 @@ You need to write 2 times the category for accessibility concerns.
 
 ### Service bar
 
-The footer comes with a service links sub-component: `.footer-service`.
+The footer is a container with a `.footer-service` class. Its purpose is to display customer services links.
 
 {{< example class="p-0" >}}
 {{< orange-footer service=true >}}
 {{< /orange-footer >}}
 {{< /example >}}
 
-### Mandatory bar
+### Mandatory Terms & Conditions bar
 
-The footer comes with a terms & conditions sub-component: `.footer-terms`. This sub-component or equivalent is **mandatory** in every footer and should come as the last element.
+The footer is a container with a `.footer-terms` class. This footer bar is **mandatory** in every footer and should come as the last bar of the footer.
 
 {{< example class="p-0" >}}
 {{< orange-footer mandatory=true >}}

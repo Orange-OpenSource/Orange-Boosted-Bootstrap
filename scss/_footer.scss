@@ -56,6 +56,7 @@
 
   > .footer-heading {
     margin: $footer-social-title-margin-md;
+    white-space: nowrap;
 
     @include media-breakpoint-down(md) {
       margin: 0 0 $footer-title-margin-bottom;
