@@ -10,6 +10,12 @@ toc: true
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
+Boosted also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "utilities/colors#accessibility">}}):
+- success,
+- info,
+- warning,
+- danger.
+
 {{< example >}}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
@@ -94,6 +100,8 @@ Alerts come with a smaller variant: `.alert-sm`.
 ### Additional content
 
 Alerts can also contain additional HTML elements like headings, links and paragraphs.
+
+As of Boosted, it’s recommended to wrap your additional content in a `<div>` to ensure proper alignment — and, for headings, to always use the .alert-heading class.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">

@@ -79,7 +79,7 @@
 //
 
 //// Additional content
-.alert * p {
+.alert p {
   margin: 0;
 }
 
@@ -113,7 +113,9 @@
 
 //// Small alerts
 .alert-sm {
-  padding: $alert-padding-sm 0;
+  --#{$variable-prefix}alert-padding-x: 0;
+  --#{$variable-prefix}alert-padding-y: #{$alert-padding-sm};
+  --#{$variable-prefix}alert-margin-bottom: #{$alert-margin-bottom * .5};
   font-size: $font-size-sm;
   line-height: $line-height-sm;
   border: 0;
