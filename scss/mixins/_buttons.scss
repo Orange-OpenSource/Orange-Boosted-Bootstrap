@@ -62,7 +62,7 @@
   $size: $width $height,
   $pseudo: "before",
   $selector: &,
-  $position: calc(50% - 1px)
+  $position: 50%
 ) {
   min-width: $width;
   min-height: $height;
