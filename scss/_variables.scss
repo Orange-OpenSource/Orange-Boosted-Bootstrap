@@ -1366,14 +1366,14 @@ $pagination-padding-x:              null !default;
 
 $pagination-color:                  null !default;
 $pagination-bg:                     $white !default;
-$pagination-border-radius:          null !default;
+$pagination-border-radius:          null !default; // Boosted mod
 $pagination-border-width:           var(--#{$variable-prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           $spacer * .5 !default;
-$pagination-border-color:           transparent !default;
+$pagination-margin-start:           $spacer * .5 !default; // Boosted mod
+$pagination-border-color:           transparent !default; // Boosted mod
 
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
-$pagination-focus-color:            $link-color !default;
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
+$pagination-focus-color:            $link-color !default; // Boosted mod
 $pagination-focus-bg:               null !default;
 $pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
