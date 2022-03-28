@@ -510,14 +510,6 @@ class Carousel extends BaseComponent {
     return this.each(function () {
       const data = Carousel.getOrCreateInstance(this, config)
 
-      let { _config } = data
-      if (typeof config === 'object') {
-        _config = {
-          ..._config,
-          ...config
-        }
-      }
-
       if (typeof config === 'number') {
         data.to(config)
         return
@@ -532,7 +524,7 @@ class Carousel extends BaseComponent {
         return
       }
 
-      if (_config.interval && _config.ride) {
+      if (data._config.interval && data._config.ride) {
         data.pause()
         data.cycle()
       }
