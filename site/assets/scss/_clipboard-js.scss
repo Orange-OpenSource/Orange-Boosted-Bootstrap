@@ -2,7 +2,8 @@
 //
 // JS-based `Copy` buttons for code snippets.
 
-.bd-clipboard {
+.bd-clipboard,
+.bd-edit {
   position: relative;
   display: none;
   float: right;
@@ -17,10 +18,15 @@
 }
 
 // Boosted mod
-.btn-clipboard {
+.btn-clipboard,
+.btn-edit {
   position: absolute;
   right: 0;
   z-index: 10;
   @include border-radius();
 }
 // End mod
+
+.btn-edit {
+  right: 3.8rem; // Boosted mod
+}
