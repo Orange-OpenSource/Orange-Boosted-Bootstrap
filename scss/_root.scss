@@ -62,7 +62,7 @@
   --#{$variable-prefix}border-style: solid;
   --#{$variable-prefix}border-color: #{$border-color};
   --#{$variable-prefix}border-radius: #{$border-radius};
-  --#{$variable-prefix}border-opacity: 1; // Boosted mod
+  --#{$variable-prefix}border-opacity: 1;
   // scss-docs-end root-border-var
   // stylelint-enable custom-property-empty-line-before
 }
