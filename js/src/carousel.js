@@ -311,35 +311,6 @@ class Carousel extends BaseComponent {
     return this._getItems().indexOf(element)
   }
 
-  _getItemByOrder(order, activeElement) {
-    const isNext = order === ORDER_NEXT
-
-    // Boosted mod: progress indicators animation when wrapping is disabled
-    if (!this._config.wrap) {
-      const isPrev = order === ORDER_PREV
-      const activeIndex = this._getItemIndex(activeElement)
-      const lastItemIndex = this._getItems().length - 1
-      const isGoingToWrap = (isPrev && activeIndex === 0) || (isNext && activeIndex === lastItemIndex)
-
-      if (isGoingToWrap) {
-        // Reset the animation on last progress indicator when last slide is active
-        if (isNext && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
-          this._element.classList.add(CLASS_NAME_DONE)
-        }
-
-        return activeElement
-      }
-
-      // Restart animation otherwise
-      if (this._indicatorsElement) {
-        this._element.classList.remove(CLASS_NAME_DONE)
-      }
-    }
-    // End mod
-
-    return getNextActiveElement(this._getItems(), activeElement, isNext, this._config.wrap)
-  }
-
   _setActiveIndicatorElement(index) {
     if (!this._indicatorsElement) {
       return
@@ -380,10 +351,32 @@ class Carousel extends BaseComponent {
 
   _slide(order, element = null) {
     const activeElement = this._getActive()
-    const activeElementIndex = this._getItemIndex(activeElement)
+    const isNext = order === ORDER_NEXT
 
-    const nextElement = element || this._getItemByOrder(order, activeElement)
-    const nextElementIndex = this._getItemIndex(nextElement)
+    // Boosted mod: progress indicators animation when wrapping is disabled
+    if (!this._config.wrap) {
+      const isPrev = order === ORDER_PREV
+      const activeIndex = this._getItemIndex(activeElement)
+      const lastItemIndex = this._getItems().length - 1
+      const isGoingToWrap = (isPrev && activeIndex === 0) || (isNext && activeIndex === lastItemIndex)
+
+      if (isGoingToWrap) {
+        // Reset the animation on last progress indicator when last slide is active
+        if (isNext && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+          this._element.classList.add(CLASS_NAME_DONE)
+        }
+
+        return activeElement
+      }
+
+      // Restart animation otherwise
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_DONE)
+      }
+    }
+    // End mod
+
+    const nextElement = element || getNextActiveElement(this._getItems(), activeElement, isNext, this._config.wrap)
 
     if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE)) {
       this._isSliding = false
@@ -394,11 +387,13 @@ class Carousel extends BaseComponent {
       return
     }
 
+    const nextElementIndex = this._getItemIndex(nextElement)
+
     const triggerEvent = eventName => {
       return EventHandler.trigger(this._element, eventName, {
         relatedTarget: nextElement,
         direction: this._orderToDirection(order),
-        from: activeElementIndex,
+        from: this._getItemIndex(activeElement),
         to: nextElementIndex
       })
     }
@@ -440,7 +435,6 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    const isNext = order === ORDER_NEXT
     const directionalClassName = isNext ? CLASS_NAME_START : CLASS_NAME_END
     const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV
     
