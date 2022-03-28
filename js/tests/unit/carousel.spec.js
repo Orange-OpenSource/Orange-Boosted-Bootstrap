@@ -214,7 +214,7 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      spyOn(carousel, '_triggerSlideEvent')
+      spyOn(EventHandler, 'trigger')
 
       carousel._isSliding = true
 
@@ -225,7 +225,7 @@ describe('Carousel', () => {
         carouselEl.dispatchEvent(keydown)
       }
 
-      expect(carousel._triggerSlideEvent).not.toHaveBeenCalled()
+      expect(EventHandler.trigger).not.toHaveBeenCalled()
     })
 
     it('should wrap around from end to start when wrap option is true', () => {
@@ -730,7 +730,7 @@ describe('Carousel', () => {
         const carousel = new Carousel(carouselEl)
         carousel._isSliding = true
 
-        spyOn(carousel, '_triggerSlideEvent')
+        spyOn(EventHandler, 'trigger')
 
         Simulator.gestures.swipe(carouselEl, {
           deltaX: 300,
@@ -744,7 +744,7 @@ describe('Carousel', () => {
         })
 
         setTimeout(() => {
-          expect(carousel._triggerSlideEvent).not.toHaveBeenCalled()
+          expect(EventHandler.trigger).not.toHaveBeenCalled()
           delete document.documentElement.ontouchstart
           restorePointerEvents()
           resolve()
@@ -823,12 +823,12 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      spyOn(carousel, '_triggerSlideEvent')
+      spyOn(EventHandler, 'trigger')
 
       carousel._isSliding = true
       carousel.next()
 
-      expect(carousel._triggerSlideEvent).not.toHaveBeenCalled()
+      expect(EventHandler.trigger).not.toHaveBeenCalled()
     })
 
     it('should not fire slid when slide is prevented', () => {
@@ -1042,12 +1042,12 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      spyOn(carousel, '_triggerSlideEvent')
+      spyOn(EventHandler, 'trigger')
 
       carousel._isSliding = true
       carousel.prev()
 
-      expect(carousel._triggerSlideEvent).not.toHaveBeenCalled()
+      expect(EventHandler.trigger).not.toHaveBeenCalled()
     })
   })
 
