@@ -564,9 +564,13 @@ $border-color:                $black !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
+// Boosted mod: all `$border-radius*` values are `null`
 $border-radius:               null !default;
 $border-radius-sm:            null !default;
 $border-radius-lg:            null !default;
+$border-radius-xl:            null !default;
+$border-radius-2xl:           null !default;
+// End mod
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -640,6 +644,7 @@ $font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
 $font-weight-normal:          400 !default;
+$font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          null !default;
 
