@@ -436,7 +436,7 @@ class Carousel extends BaseComponent {
 
     const directionalClassName = isNext ? CLASS_NAME_START : CLASS_NAME_END
     const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV
-    
+
     nextElement.classList.add(orderClassName)
 
     reflow(nextElement)

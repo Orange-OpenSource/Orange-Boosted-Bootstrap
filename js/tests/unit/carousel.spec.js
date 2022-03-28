@@ -1500,7 +1500,7 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl, {})
 
       const spy = spyOn(carousel, '_orderToDirection').and.callThrough()
-      
+
       carousel._slide(carousel._directionToOrder('left'))
       expect(spy).toHaveBeenCalledWith('next')
 
