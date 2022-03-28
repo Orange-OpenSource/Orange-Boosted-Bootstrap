@@ -378,8 +378,7 @@ class Carousel extends BaseComponent {
 
     const nextElement = element || getNextActiveElement(this._getItems(), activeElement, isNext, this._config.wrap)
 
-    if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE)) {
-      this._isSliding = false
+    if (nextElement === activeElement) {
       return
     }
 
