@@ -169,6 +169,7 @@
   margin: var(--#{$variable-prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
   border-top: $border-width solid var(--#{$variable-prefix}dropdown-divider-bg); // Boosted mod
+  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
 }
 
 // Links, buttons, and more within the dropdown menu
