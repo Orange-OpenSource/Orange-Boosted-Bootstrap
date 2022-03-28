@@ -562,7 +562,7 @@ describe('Carousel', () => {
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).toHaveClass('active')
-          expect(carousel._slide).toHaveBeenCalledWith('right')
+          expect(carousel._slide).toHaveBeenCalledWith('prev')
           expect(event.direction).toEqual('right')
           stylesCarousel.remove()
           delete document.documentElement.ontouchstart
@@ -609,7 +609,7 @@ describe('Carousel', () => {
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).not.toHaveClass('active')
-          expect(carousel._slide).toHaveBeenCalledWith('left')
+          expect(carousel._slide).toHaveBeenCalledWith('next')
           expect(event.direction).toEqual('left')
           stylesCarousel.remove()
           delete document.documentElement.ontouchstart
@@ -651,7 +651,7 @@ describe('Carousel', () => {
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).toHaveClass('active')
-          expect(carousel._slide).toHaveBeenCalledWith('right')
+          expect(carousel._slide).toHaveBeenCalledWith('prev')
           expect(event.direction).toEqual('right')
           delete document.documentElement.ontouchstart
           restorePointerEvents()
@@ -692,7 +692,7 @@ describe('Carousel', () => {
 
         carouselEl.addEventListener('slid.bs.carousel', event => {
           expect(item).not.toHaveClass('active')
-          expect(carousel._slide).toHaveBeenCalledWith('left')
+          expect(carousel._slide).toHaveBeenCalledWith('next')
           expect(event.direction).toEqual('left')
           delete document.documentElement.ontouchstart
           restorePointerEvents()
@@ -1498,16 +1498,14 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
-      const spy = spyOn(carousel, '_directionToOrder').and.callThrough()
-      const spy2 = spyOn(carousel, '_orderToDirection').and.callThrough()
 
-      carousel._slide('left')
-      expect(spy).toHaveBeenCalledWith('left')
-      expect(spy2).toHaveBeenCalledWith('next')
+      const spy = spyOn(carousel, '_orderToDirection').and.callThrough()
+      
+      carousel._slide(carousel._directionToOrder('left'))
+      expect(spy).toHaveBeenCalledWith('next')
 
-      carousel._slide('right')
-      expect(spy).toHaveBeenCalledWith('right')
-      expect(spy2).toHaveBeenCalledWith('prev')
+      carousel._slide(carousel._directionToOrder('right'))
+      expect(spy).toHaveBeenCalledWith('prev')
     })
 
     it('"_slide" has to call "_directionToOrder" and "_orderToDirection" when rtl=true', () => {
@@ -1516,16 +1514,13 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
-      const spy = spyOn(carousel, '_directionToOrder').and.callThrough()
-      const spy2 = spyOn(carousel, '_orderToDirection').and.callThrough()
+      const spy = spyOn(carousel, '_orderToDirection').and.callThrough()
 
-      carousel._slide('left')
-      expect(spy).toHaveBeenCalledWith('left')
-      expect(spy2).toHaveBeenCalledWith('prev')
+      carousel._slide(carousel._directionToOrder('left'))
+      expect(spy).toHaveBeenCalledWith('prev')
 
-      carousel._slide('right')
-      expect(spy).toHaveBeenCalledWith('right')
-      expect(spy2).toHaveBeenCalledWith('next')
+      carousel._slide(carousel._directionToOrder('right'))
+      expect(spy).toHaveBeenCalledWith('next')
 
       document.documentElement.dir = 'ltl'
     })

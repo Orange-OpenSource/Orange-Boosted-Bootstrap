@@ -267,8 +267,8 @@ class Carousel extends BaseComponent {
     }
 
     const swipeConfig = {
-      leftCallback: () => this._slide(DIRECTION_LEFT),
-      rightCallback: () => this._slide(DIRECTION_RIGHT),
+      leftCallback: () => this._slide(this._directionToOrder(DIRECTION_LEFT)),
+      rightCallback: () => this._slide(this._directionToOrder(DIRECTION_RIGHT)),
       endCallback: endCallBack
     }
 
@@ -283,7 +283,7 @@ class Carousel extends BaseComponent {
     const direction = KEY_TO_DIRECTION[event.key]
     if (direction) {
       event.preventDefault()
-      this._slide(direction)
+      this._slide(this._directionToOrder(direction))
     }
   }
 
@@ -378,9 +378,7 @@ class Carousel extends BaseComponent {
     // End mod
   }
 
-  _slide(directionOrOrder, element) {
-    const order = this._directionToOrder(directionOrOrder)
-
+  _slide(order, element = null) {
     const activeElement = this._getActive()
     const activeElementIndex = this._getItemIndex(activeElement)
 
