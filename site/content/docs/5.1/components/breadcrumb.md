@@ -96,8 +96,16 @@ Since breadcrumbs provide a navigation, it's a good idea to add a meaningful lab
 
 For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
 
-## Sass
+## CSS
 
 ### Variables
+
+<small class="d-inline-flex px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 rounded-2">Added in v5.3.0</small>
+
+As part of Boosted's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}
