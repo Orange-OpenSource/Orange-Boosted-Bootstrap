@@ -89,7 +89,7 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-  --#{$boosted-variable-prefix}control-bg: #{rgba($carousel-indicator-active-bg, .5)}; // Boosted mod
+  --#{$boosted-prefix}control-bg: #{rgba($carousel-indicator-active-bg, .5)}; // Boosted mod
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,7 +110,7 @@
   // Hover/focus state
   &:hover,
   &:focus {
-    --#{$boosted-variable-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
+    --#{$boosted-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
     color: color-contrast($carousel-control-color);
     text-decoration: none;
     opacity: $carousel-control-hover-opacity;
@@ -124,7 +124,7 @@
   }
 
   &:active {
-    --#{$boosted-variable-prefix}control-bg: #{$carousel-control-icon-active-bg}; // Boosted mod
+    --#{$boosted-prefix}control-bg: #{$carousel-control-icon-active-bg}; // Boosted mod
     color: $carousel-control-color;
   }
   // End mod
@@ -143,7 +143,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  background-color: var(--#{$boosted-variable-prefix}control-bg); // Boosted mod
+  background-color: var(--#{$boosted-prefix}control-bg); // Boosted mod
   @include button-icon($carousel-control-icon-bg, $carousel-control-icon-width, $size: $carousel-control-icon-size, $position: subtract(50%, $spacer * .1) 50%); // Boosted mod
   @include border-radius(50%, 50%);
 }

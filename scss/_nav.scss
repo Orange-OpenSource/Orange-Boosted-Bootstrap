@@ -40,8 +40,8 @@
 //
 
 .nav-tabs {
-  --#{$variable-prefix}tabs-spacing: #{$nav-tabs-border-width};
-  border-bottom: var(--#{$variable-prefix}tabs-spacing) solid $nav-tabs-border-color;
+  --#{$prefix}tabs-spacing: #{$nav-tabs-border-width};
+  border-bottom: var(--#{$prefix}tabs-spacing) solid $nav-tabs-border-color;
 
   // Boosted mod: margins between tabs on bigger screen
   @include media-breakpoint-up(lg) {
@@ -54,9 +54,9 @@
   .nav-link {
     padding: subtract(1rem, $nav-tabs-border-width) subtract($nav-tabs-link-padding-x, $nav-tabs-border-width); // Boosted mod
     // stylelint-disable-next-line function-disallowed-list
-    margin-bottom: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
+    margin-bottom: calc(var(--#{$prefix}tabs-spacing) * -1);
     background: none;
-    border: var(--#{$variable-prefix}tabs-spacing) solid transparent;
+    border: var(--#{$prefix}tabs-spacing) solid transparent;
     border-bottom-width: 0; // Boosted mod
     @include border-top-radius($nav-tabs-border-radius);
 
@@ -68,7 +68,7 @@
       isolation: isolate;
       border-color: $nav-tabs-link-hover-border-color;
       outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
-      outline-offset: var(--#{$variable-prefix}tabs-spacing); // Boosted mod
+      outline-offset: var(--#{$prefix}tabs-spacing); // Boosted mod
     }
 
     &.disabled {
@@ -89,7 +89,7 @@
   .dropdown-menu {
     // Make dropdown border overlap tab border
     // stylelint-disable-next-line function-disallowed-list
-    margin-top: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
+    margin-top: calc(var(--#{$prefix}tabs-spacing) * -1);
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
   }
@@ -97,12 +97,12 @@
 
 // Boosted mod
 .nav-tabs-light {
-  --#{$variable-prefix}tabs-spacing: #{calc($nav-tabs-border-width * .5)};
+  --#{$prefix}tabs-spacing: #{calc($nav-tabs-border-width * .5)};
   border-color: $gray-500;
 
   .nav-link {
     // stylelint-disable-next-line function-disallowed-list
-    border-width: 0 0 calc(var(--#{$variable-prefix}tabs-spacing) * 4);
+    border-width: 0 0 calc(var(--#{$prefix}tabs-spacing) * 4);
 
     &:hover,
     &:focus {

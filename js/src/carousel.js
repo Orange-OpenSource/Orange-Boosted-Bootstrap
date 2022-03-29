@@ -67,7 +67,7 @@ const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
 const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // Boosted mod
 const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
 
-const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
+const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-prefix` in scss/_variables.scss
 
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY]: DIRECTION_RIGHT,

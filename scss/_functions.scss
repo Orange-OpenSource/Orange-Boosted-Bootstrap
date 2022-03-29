@@ -40,15 +40,15 @@
 // stylelint-disable scss/dollar-variable-pattern
 @function rgba-css-var($identifier, $target, $value: null) { // Boosted mod: $value is an extra parameter
   @if $identifier == "body" and $target == "bg" {
-    @return rgba(var(--#{$variable-prefix}#{$identifier}-bg-rgb), var(--#{$variable-prefix}#{$target}-opacity));
+    @return rgba(var(--#{$prefix}#{$identifier}-bg-rgb), var(--#{$prefix}#{$target}-opacity));
   } @else if $identifier == "body" and $target == "text" { // Boosted mod: missing @else
-    @return rgba(var(--#{$variable-prefix}#{$identifier}-color-rgb), var(--#{$variable-prefix}#{$target}-opacity));
+    @return rgba(var(--#{$prefix}#{$identifier}-color-rgb), var(--#{$prefix}#{$target}-opacity));
     // Boosted mod
   } @else if ($identifier == "light" or $identifier == "dark") and $target == "border" {
-    @return rgba(red($value), green($value), blue($value), var(--#{$variable-prefix}#{$target}-opacity));
+    @return rgba(red($value), green($value), blue($value), var(--#{$prefix}#{$target}-opacity));
     // End mod
   } @else {
-    @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb), var(--#{$variable-prefix}#{$target}-opacity));
+    @return rgba(var(--#{$prefix}#{$identifier}-rgb), var(--#{$prefix}#{$target}-opacity));
   }
 }
 
@@ -72,7 +72,7 @@
 @function varify($list) {
   $result: null;
   @each $entry in $list {
-    $result: append($result, var(--#{$variable-prefix}#{$entry}), space);
+    $result: append($result, var(--#{$prefix}#{$entry}), space);
   }
   @return $result;
 }
