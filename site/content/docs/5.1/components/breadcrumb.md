@@ -100,7 +100,7 @@ For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb p
 
 ### Variables
 
-<small class="d-inline-flex px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 rounded-2">Added in v5.3.0</small>
+{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
