@@ -75,6 +75,23 @@
     outline-color: $pagination-active-item-border;
   }
   // End mod
+
+  &.active,
+  .active > & {
+    z-index: 3;
+    color: var(--#{$variable-prefix}pagination-active-color);
+    @include gradient-bg(var(--#{$variable-prefix}pagination-active-bg));
+    border-color: var(--#{$variable-prefix}pagination-active-border-color);
+    outline-color: var(--#{$variable-prefix}pagination-active-bg); // Boosted mod
+  }
+
+  &.disabled,
+  .disabled > & {
+    color: var(--#{$variable-prefix}pagination-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$variable-prefix}pagination-disabled-bg);
+    border-color: var(--#{$variable-prefix}pagination-disabled-border-color);
+  }
 }
 
 .page-item {
@@ -101,24 +118,9 @@
     }
   }
 
-  &.active .page-link {
-    z-index: 3;
-    color: var(--#{$variable-prefix}pagination-active-color);
-    @include gradient-bg(var(--#{$variable-prefix}pagination-active-bg));
-    border-color: var(--#{$variable-prefix}pagination-active-border-color);
-    outline-color: var(--#{$variable-prefix}pagination-active-bg); // Boosted mod
-  }
-
-  &.disabled .page-link {
-    color: var(--#{$variable-prefix}pagination-disabled-color);
-    pointer-events: none;
-    background-color: var(--#{$variable-prefix}pagination-disabled-bg);
-    border-color: var(--#{$variable-prefix}pagination-disabled-border-color);
-  }
-
   // Boosted mod
-  &:first-child .page-link,
-  &:last-child .page-link {
+  &:first-child:not(.active) .page-link,
+  &:last-child:not(.active) .page-link {
     border-color: currentColor;
 
     &:hover,
@@ -128,10 +130,8 @@
       border-color: var(--#{$variable-prefix}pagination-active-border-color);
     }
 
-    &:active {
-      color: $black;
-      background-color: $primary;
-      border-color: $primary;
+    &.active {
+      border-color: var(--#{$variable-prefix}pagination-active-border-color);
     }
   }
 
