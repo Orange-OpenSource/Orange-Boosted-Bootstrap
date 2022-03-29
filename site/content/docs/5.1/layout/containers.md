@@ -23,102 +23,17 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 
 Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
 
-<table class="table">
-  <thead>
-    <tr>
-      <td class="border-dark"></td>
-      <th scope="col">
-        Extra small<br>
-        <span class="fw-normal">&lt;480px</span>
-      </th>
-      <th scope="col">
-        Small<br>
-        <span class="fw-normal">&ge;480px</span>
-      </th>
-      <th scope="col">
-        Medium<br>
-        <span class="fw-normal">&ge;768px</span>
-      </th>
-      <th scope="col">
-        Large<br>
-        <span class="fw-normal">&ge;1024px</span>
-      </th>
-      <th scope="col">
-        X-Large<br>
-        <span class="fw-normal">&ge;1280px</span>
-      </th>
-      <th scope="col">
-        XX-Large<br>
-        <span class="fw-normal">&ge;1440px</span>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container</code></th>
-      <td>312px</td>
-      <td>468px</td>
-      <td>744px</td>
-      <td>960px</td>
-      <td>1200px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-sm</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td>468px</td>
-      <td>744px</td>
-      <td>960px</td>
-      <td>1200px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-md</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
-      <td>744px</td>
-      <td>960px</td>
-      <td>1200px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-lg</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
-      <td>960px</td>
-      <td>1140px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-xl</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
-      <td>1140px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-xxl</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 40px)</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th scope="row" class="fw-normal"><code>.container-fluid</code></th>
-      <td class="text-muted">100vw -<br/>(2 * 4px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 6px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 12px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 32px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 40px)</td>
-      <td class="text-muted">100vw -<br/>(2 * 60px)</td>
-    </tr>
-  </tbody>
-</table>
+{{< bs-table "table" >}}
+|  | Extra small<div class="fw-normal">&lt;576px</div> | Small<div class="fw-normal">&ge;576px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;992px</div> | X-Large<div class="fw-normal">&ge;1200px</div> | XX-Large<div class="fw-normal">&ge;1400px</div> |
+| --- | --- | --- | --- | --- | --- | --- |
+| `.container` | <span class="text-muted">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
+| `.container-sm` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
+| `.container-md` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
+| `.container-lg` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | 960px | 1140px | 1320px |
+| `.container-xl` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | 1140px | 1320px |
+| `.container-xxl` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | <span class="text-muted">100vw -<br/>(2 * 40px)</span> | 1320px |
+| `.container-fluid` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | <span class="text-muted">100vw -<br/>(2 * 40px)</span> | <span class="text-muted">100vw -<br/>(2 * 60px)</span> |
+{{< /bs-table >}}
 
 ## Default container
 

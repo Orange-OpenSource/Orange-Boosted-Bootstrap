@@ -24,82 +24,16 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 All HTML headings, `<h1>` through `<h6>`, are available.
 
 <!-- Boosted mod -->
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Heading</th>
-      <th scope="col">Desktop size</th>
-      <th scope="col">Tablet size</th>
-      <th scope="col">Mobile size</th>
-      <th scope="col">
-        Line height
-        <small class="text-muted">Desktop</small>
-      </th>
-      <th scope="col">
-        Letter spacing
-        <small class="text-muted">Desktop</small>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{< markdown >}}`<h1></h1>`{{< /markdown >}}
-      </td>
-      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>1 <small class="text-muted">(34px)</small></td>
-      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}`<h2></h2>`{{< /markdown >}}
-      </td>
-      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td>1.067 <small class="text-muted">(32px)</small></td>
-      <td>-0.05rem <small class="text-muted">(-0.8px)</small></td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}`<h3></h3>`{{< /markdown >}}
-      </td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
-      <td>1.083 <small class="text-muted">(26px)</small></td>
-      <td>-0.03125rem <small class="text-muted">(-0.5px)</small></td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}`<h4></h4>`{{< /markdown >}}
-      </td>
-      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
-      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td>1.1 <small class="text-muted">(22px)</small></td>
-      <td>-0.025rem <small class="text-muted">(-0.4px)</small></td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}`<h5></h5>`{{< /markdown >}}
-      </td>
-      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td colspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
-      <td>1.111 <small class="text-muted">(20px)</small></td>
-      <td>-0.0125rem <small class="text-muted">(-0.2px)</small></td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}`<h6></h6>`{{< /markdown >}}
-      </td>
-      <td colspan="3">Bold 1rem <small class="text-muted">(16px)</small></td>
-      <td>1.125 <small class="text-muted">(18px)</small></td>
-      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
-    </tr>
-  </tbody>
-</table>
+{{< bs-table >}}
+| Heading | Desktop Size | Tablet Size | Mobile Size | Line Height <small class="text-muted">Desktop</small> | Letter Spacing <small class="text-muted">Desktop</small> |
+| --- | --- | --- | --- | --- | --- |
+| `<h1></h1>` | Bold 2.125rem <small class="text-muted">(34px)</small> | Bold 2.125rem <small class="text-muted">(34px)</small> | Bold 1.5rem <small class="text-muted">(24px)</small> | 1 <small class="text-muted">(34px)</small> | -0.0625rem <small class="text-muted">(-1px) |
+| `<h2></h2>` | Bold 1.875rem <small class="text-muted">(30px)</small> | Bold 1.5rem <small class="text-muted">(24px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | 1.067 <small class="text-muted">(32px)</small> | -0.05rem <small class="text-muted">(-0.8px)</small> |
+| `<h3></h3>` | Bold 1.5rem <small class="text-muted">(24px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | Bold 1rem <small class="text-muted">(16px)</small> | 1.083 <small class="text-muted">(26px)</small> | -0.03125rem <small class="text-muted">(-0.5px)</small> |
+| `<h4></h4>`</td> | Bold 1.25rem <small class="text-muted">(20px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | | 1.1 <small class="text-muted">(22px)</small> | -0.025rem <small class="text-muted">(-0.4px)</small> |
+| `<h5></h5>` | Bold 1.125rem <small class="text-muted">(18px)</small> | Bold 1rem <small class="text-muted">(16px)</small> | | 1.111 <small class="text-muted">(20px)</small> | -0.0125rem <small class="text-muted">(-0.2px)</small> |
+| `<h6></h6>` | Bold 1rem <small class="text-muted">(16px)</small> | | | 1.125 <small class="text-muted">(18px)</small> | -0.00625rem <small class="text-muted">(-0.1px)</small> |
+{{< /bs-table >}}
 <!-- End mod -->
 
 ```html

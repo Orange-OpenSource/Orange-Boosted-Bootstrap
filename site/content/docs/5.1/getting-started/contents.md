@@ -68,99 +68,25 @@ This is the most basic form of Boosted: precompiled files for quick drop-in usag
 
 Boosted includes a handful of options for including some or all of our compiled CSS.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">CSS files</th>
-      <th scope="col">Layout</th>
-      <th scope="col">Content</th>
-      <th scope="col">Components</th>
-      <th scope="col">Utilities</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted.rtl.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted.min.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted.rtl.min.css</code></div>
-      </th>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted-grid.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-grid.rtl.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-grid.min.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-grid.rtl.min.css</code></div>
-      </th>
-      <td><a class="link-secondary" href="{{< docsref "/layout/grid" >}}">Only grid system</a></td>
-      <td class="text-muted">&mdash;</td>
-      <td class="text-muted">&mdash;</td>
-      <td><a class="link-secondary" href="{{< docsref "/utilities/flex" >}}">Only flex utilities</a></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted-utilities.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-utilities.rtl.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-utilities.min.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-utilities.rtl.min.css</code></div>
-      </th>
-      <td class="text-muted">&mdash;</td>
-      <td class="text-muted">&mdash;</td>
-      <td class="text-muted">&mdash;</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted-reboot.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-reboot.rtl.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-reboot.min.css</code></div>
-        <div><code class="fw-normal text-nowrap">boosted-reboot.rtl.min.css</code></div>
-      </th>
-      <td class="text-muted">&mdash;</td>
-      <td><a class="link-secondary" href="{{< docsref "/content/reboot" >}}">Only Reboot</a></td>
-      <td class="text-muted">&mdash;</td>
-      <td class="text-muted">&mdash;</td>
-    </tr>
-  </tbody>
-</table>
+{{< bs-table "table" >}}
+| CSS files | Layout | Content | Components | Utilities |
+| --- | --- | --- | --- | --- |
+| `boosted.css`<br> `boosted.min.css`<br> `boosted.rtl.css`<br> `boosted.rtl.min.css` | Included | Included | Included | Included |
+| `boosted-grid.css`<br> `boosted-grid.rtl.css`<br> `boosted-grid.min.css`<br> `boosted-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+| `boosted-utilities.css`<br> `boosted-utilities.rtl.css`<br> `boosted-utilities.min.css`<br> `boosted-utilities.rtl.min.css` | — | — | — | Included |
+| `boosted-reboot.css`<br> `boosted-reboot.rtl.css`<br> `boosted-reboot.min.css`<br> `boosted-reboot.rtl.min.css` | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+{{< /bs-table >}}
 
 ## JS files
 
 Similarly, we have options for including some or all of our compiled JavaScript.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">JS files</th>
-      <th scope="col">`:focus-visible` polyfill</th>
-      <th scope="col">Popper</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted.bundle.js</code></div>
-        <div><code class="fw-normal text-nowrap">boosted.bundle.min.js</code></div>
-      </th>
-      <td>Included</td>
-      <td>Included</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">boosted.js</code></div>
-        <div><code class="fw-normal text-nowrap">boosted.min.js</code></div>
-      </th>
-      <td>Included</td>
-      <td class="text-muted">&mdash;</td>
-    </tr>
-  </tbody>
-</table>
+{{< bs-table "table" >}}
+| JS Files | `:focus-visible` Polyfill | Popper |
+| --- | --- | --- |
+| `boosted.bundle.js`<br> `boosted.bundle.min.js`<br> | Included | Included |
+| `boosted.js`<br> `boosted.min.js`<br> | Included | – |
+{{< /bs-table >}}
 
 ## Boosted source code
 
