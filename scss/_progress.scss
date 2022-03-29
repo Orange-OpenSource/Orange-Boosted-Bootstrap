@@ -9,22 +9,37 @@
 // scss-docs-end progress-keyframes
 
 .progress {
+  // scss-docs-start progress-css-vars
+  --#{$prefix}progress-height: #{$progress-height};
+  @include rfs($progress-font-size, --#{$prefix}progress-font-size);
+  --#{$prefix}progress-bg: #{$progress-bg}; // stylelint-disable-line custom-property-empty-line-before
+  --#{$prefix}progress-border-radius: #{$progress-border-radius};
+  --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
+  --#{$prefix}progress-bar-color: #{$progress-bar-color};
+  --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
+  --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
+  // scss-docs-end progress-css-vars
+
   display: flex;
-  height: $progress-height;
+  height: var(--#{$prefix}progress-height);
   overflow: hidden; // force rounded corners by cropping it
-  @include font-size($progress-font-size);
-  background-color: $progress-bg;
-  @include border-radius($progress-border-radius);
-  @include box-shadow($progress-box-shadow);
+  @include font-size(var(--#{$prefix}progress-font-size));
+  background-color: var(--#{$prefix}progress-bg);
+  @include border-radius(var(--#{$prefix}progress-border-radius));
+  @include box-shadow(var(--#{$prefix}progress-box-shadow));
 }
 
 // Boosted mod
 .progress-xs {
-  height: $progress-height-xs;
+  // scss-docs-start progress-border-xs-css-vars
+  --#{$prefix}progress-height: #{$progress-height-xs};
+  // scss-docs-end progress-border-xs-css-vars
 }
 
 .progress-sm {
-  height: $progress-height-sm;
+  // scss-docs-start progress-border-sm-css-vars
+  --#{$prefix}progress-height: #{$progress-height-sm};
+  // scss-docs-end progress-border-sm-css-vars
 }
 // End mod
 
@@ -34,16 +49,16 @@
   justify-content: center;
   overflow: hidden;
   font-weight: $font-weight-bold; // Boosted mod
-  color: $progress-bar-color;
+  color: var(--#{$prefix}progress-bar-color);
   text-indent: map-get($spacers, 2); // Boosted mod
   white-space: nowrap;
-  background-color: $progress-bar-bg;
-  @include transition($progress-bar-transition);
+  background-color: var(--#{$prefix}progress-bar-bg);
+  @include transition(var(--#{$prefix}progress-bar-transition));
 }
 
 .progress-bar-striped {
   @include gradient-striped();
-  background-size: $progress-height $progress-height;
+  background-size: var(--#{$prefix}progress-height) var(--#{$prefix}progress-height);
 }
 
 @if $enable-transitions {
