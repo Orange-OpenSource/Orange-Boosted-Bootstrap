@@ -85,19 +85,19 @@
 // Boosted mod
 [class*="-dark"],
 .bg-secondary {
-  --#{$boosted-prefix}link-color: #{$link-color-dark};
-  --#{$boosted-prefix}link-hover-color: #{$link-hover-color-dark};
+  --#{$prefix}link-color: #{$link-color-dark};
+  --#{$prefix}link-hover-color: #{$link-hover-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
-  --#{$boosted-prefix}code-color: #{$code-color-dark};
+  --#{$prefix}code-color: #{$code-color-dark};
   --#{$boosted-prefix}kbd-color: #{$kbd-color-dark};
   --#{$boosted-prefix}kbd-bg: #{$kbd-bg-dark};
   --#{$boosted-prefix}pre-color: #{$pre-color-dark};
 
   [class*="bg-"]:not(&):not(.bg-transparent) {
-    --#{$boosted-prefix}link-color: #{$link-color};
-    --#{$boosted-prefix}link-hover-color: #{$link-hover-color};
+    --#{$prefix}link-color: #{$link-color};
+    --#{$prefix}link-hover-color: #{$link-hover-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};
-    --#{$boosted-prefix}code-color: #{$code-color};
+    --#{$prefix}code-color: #{$code-color};
     --#{$boosted-prefix}kbd-color: #{$kbd-color};
     --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
     --#{$boosted-prefix}pre-color: #{$pre-color};

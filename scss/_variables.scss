@@ -462,11 +462,11 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              var(--#{$boosted-prefix}link-color, $black) !default; // Boosted mod
+$link-color:                              $black !default; // Boosted mod
 $link-color-dark:                         $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        var(--#{$boosted-prefix}link-hover-color, $accessible-orange) !default; // Boosted mod
+$link-hover-color:                        $accessible-orange !default; // Boosted mod
 $link-hover-color-dark:                   $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
@@ -1851,7 +1851,7 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // Code
 // Boosted mod
 $code-font-size:                    .875em !default;
-$code-color:                        var(--#{$boosted-prefix}code-color, $gray-700) !default;
+$code-color:                        $gray-700 !default;
 $code-color-dark:                   $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
