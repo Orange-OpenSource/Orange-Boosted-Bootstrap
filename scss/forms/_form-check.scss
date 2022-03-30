@@ -190,7 +190,7 @@
     }
 
     &:focus {
-      outline-offset: calc($outline-width * .5); /* stylelint-disable-line function-disallowed-list */
+      outline-offset: $outline-width * .5;
     }
 
     &:active {

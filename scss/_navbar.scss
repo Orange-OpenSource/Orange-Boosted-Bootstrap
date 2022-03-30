@@ -295,7 +295,7 @@
             // Boosted mod
             &.active::before {
               right: $nav-link-padding-y;
-              bottom: calc($navbar-padding-bottom * -1); /* stylelint-disable-line function-disallowed-list */
+              bottom: $navbar-padding-bottom * -1;
               left: $nav-link-padding-y;
             }
             // End mod

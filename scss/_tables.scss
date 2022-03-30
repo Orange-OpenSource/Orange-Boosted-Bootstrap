@@ -37,7 +37,7 @@
   }
 
   > thead > tr {
-    border-bottom-width: calc($table-border-width * 2); /* stylelint-disable-line function-disallowed-list */
+    border-bottom-width: $table-border-width * 2;
   }
 
   > tbody > th {

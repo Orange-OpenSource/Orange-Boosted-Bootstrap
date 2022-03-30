@@ -330,7 +330,7 @@ a {
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
   // Boosted mod
-  outline-offset: calc($outline-offset * 4); /* stylelint-disable-line function-disallowed-list */
+  outline-offset: $outline-offset * 4;
   @include transition($transition-focus);
 
   &:focus {
