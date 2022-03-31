@@ -1904,7 +1904,7 @@ $step-item-bg:           $black !default;
 $step-item-active-bg:    $primary !default;
 $step-item-next-bg:      $gray-400 !default;
 $step-item-shadow-size:  $border-width * 1.5 !default;
-$step-item-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(calc($step-item-shadow-size * -1) 0 0 $white) #{"*/"} !default;  /* stylelint-disable-line function-disallowed-list */
+$step-item-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(-$step-item-shadow-size 0 0 $white) #{"*/"} !default;
 $step-item-padding-end:  $step-item-padding * 2 !default;
 
 $step-link-width:        1.25ch !default; // Matches width of a single number
