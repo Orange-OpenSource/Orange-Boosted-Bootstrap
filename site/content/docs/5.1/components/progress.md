@@ -145,9 +145,25 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
+
+As part of Boosted's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}
+
+Small and extra small progress bar modifier classes are used to update the values of these CSS variables as needed. For example, the `.progress-xs` class does the following:
+
+{{< scss-docs name="progress-border-xs-css-vars" file="scss/_progress.scss" >}}
+
+And the `.progress-sm`:
+
+{{< scss-docs name="progress-border-sm-css-vars" file="scss/_progress.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
 

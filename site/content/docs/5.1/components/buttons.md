@@ -319,49 +319,14 @@ var button = document.getElementById('myButton')
 var bsButton = new boosted.Button(button)
 ```
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Method</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>toggle</code>
-      </td>
-      <td>
-        Toggles push state. Gives the button the appearance that it has been activated.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>dispose</code>
-      </td>
-      <td>
-        Destroys an element's button. (Removes stored data on the DOM element)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>getInstance</code>
-      </td>
-      <td>
-        Static method which allows you to get the button instance associated to a DOM element, you can use it like this: <code>boosted.Button.getInstance(element)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>getOrCreateInstance</code>
-      </td>
-      <td>
-        Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized.
-        You can use it like this: <code>boosted.Button.getOrCreateInstance(element)</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{< bs-table "table" >}}
+| Method | Description |
+| --- | --- |
+| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
+| `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `boosted.Button.getInstance(element)`|
+| `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)` |
+{{< /bs-table >}}
 
 For example, to toggle all buttons
 
@@ -377,7 +342,7 @@ buttons.forEach(function (button) {
 
 ### Variables
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.2.0</small>
+{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
