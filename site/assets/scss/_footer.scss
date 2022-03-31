@@ -7,11 +7,11 @@
   font-weight: 700;
 
   a {
-    color: $white;
+    color: var(--#{$prefix}link-color); // Boosted mod: use CSS var instead of $link-color
 
     &:hover,
     &:focus {
-      color: $link-hover-color;
+      color: var(--#{$prefix}link-hover-color); // Boosted mod: use CSS var instead of $link-hover-color
     }
   }
 }

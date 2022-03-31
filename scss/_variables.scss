@@ -875,7 +875,7 @@ $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;
 
 $btn-link-color:              var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of $link-color
-$btn-link-hover-color:        $link-hover-color !default;
+$btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default; // Boosted mod: use CSS var instead of $link-hover-color
 $btn-link-disabled-color:     $gray-500 !default;
 
 // Allows for customizing button radius independently from global border radius
@@ -1211,7 +1211,7 @@ $nav-link-padding-x:                $spacer !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of $link-color
-$nav-link-hover-color:              $link-hover-color !default;
+$nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default; // Boosted mod: use CSS var instead of $link-hover-color
 $nav-link-transition:               null !default;
 $nav-link-disabled-color:           $gray-500 !default;
 
