@@ -295,7 +295,7 @@
             // Boosted mod
             &.active::before {
               right: $nav-link-padding-y;
-              bottom: $navbar-padding-bottom * -1;
+              bottom: -$navbar-padding-bottom;
               left: $nav-link-padding-y;
             }
             // End mod
