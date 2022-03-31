@@ -1529,7 +1529,7 @@ $popover-inner-border-radius:       subtract($popover-border-radius, $popover-bo
 $popover-box-shadow:                null !default;
 
 $popover-header-bg:                 $popover-bg !default;
-$popover-header-color:              $headings-color !default;
+$popover-header-color:              var(--#{$prefix}heading-color) !default; // Boosted mod: use CSS var instead of $headings-color
 $popover-header-padding-y:          $spacer * .5 !default;
 $popover-header-padding-x:          $spacer * .5 !default;
 
