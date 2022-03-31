@@ -71,7 +71,8 @@
   }
 
   // Boosted mod
-  &:active {
+  &:active,
+  &:active > & {
     color: color-contrast($pagination-active-item-bg);
     background-color: $pagination-active-item-bg;
     border-color: $pagination-active-item-border;
@@ -134,7 +135,14 @@
     }
 
     &.active {
-      border-color: var(--#{$prefix}pagination-active-border-color);
+      border-color: var(--#{$prefix}pagination-border-color);
+    }
+
+    &:active {
+      color: color-contrast($pagination-active-item-bg);
+      background-color: $pagination-active-item-bg;
+      border-color: $pagination-active-item-border;
+      outline-color: $pagination-active-item-border;
     }
   }
 
