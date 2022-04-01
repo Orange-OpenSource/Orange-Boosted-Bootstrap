@@ -8,7 +8,7 @@ label {
   }
 }
 
-.is-required::after {
+.is-required:not(.form-group)::after {
   margin-left: $label-required-margin-left;
   font-weight: $font-weight-bold;
   color: $orange-2;

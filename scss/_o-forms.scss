@@ -82,7 +82,7 @@
   }
 
   &.is-required label::after {
-    margin-left: 6px;
+    margin-left: $label-required-margin-left;
     font-weight: $font-weight-bold;
     color: $orange-2;
     content: "*";
