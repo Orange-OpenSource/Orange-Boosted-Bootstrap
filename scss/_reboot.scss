@@ -27,7 +27,7 @@
 
 :root {
   @if $font-size-root != null {
-    font-size: var(--#{$variable-prefix}root-font-size);
+    font-size: var(--#{$prefix}root-font-size);
   }
 
   @if $enable-smooth-scroll {
@@ -64,17 +64,17 @@
 body {
   position: relative; // Boosted mod: required for back-to-top component
   margin: 0; // 1
-  font-family: var(--#{$variable-prefix}body-font-family);
+  font-family: var(--#{$prefix}body-font-family);
   font-synthesis: none; // Boosted mod // 5
-  font-size: var(--#{$variable-prefix}body-font-size);
-  font-weight: var(--#{$variable-prefix}body-font-weight);
-  line-height: var(--#{$variable-prefix}body-line-height);
-  color: var(--#{$variable-prefix}body-color);
-  text-align: var(--#{$variable-prefix}body-text-align);
+  font-size: var(--#{$prefix}body-font-size);
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
+  color: var(--#{$prefix}body-color);
+  text-align: var(--#{$prefix}body-text-align);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
-  background-color: var(--#{$variable-prefix}body-bg); // 2
+  background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
@@ -133,7 +133,7 @@ hr {
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: $headings-color;
+  color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
@@ -303,7 +303,7 @@ small {
 
 mark {
   padding: $mark-padding;
-  background-color: $mark-bg;
+  background-color: var(--#{$prefix}highlight-bg);
 }
 
 
@@ -327,20 +327,20 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: $link-color;
+  color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
   // Boosted mod
   outline-offset: $outline-offset * 4;
   @include transition($transition-focus);
 
   &:focus {
-    color: $link-hover-color;
+    color: var(--#{$prefix}link-hover-color);
     outline-offset: $outline-offset;
   }
   // End mod
 
   &:hover {
-    color: $link-hover-color;
+    color: var(--#{$prefix}link-hover-color);
     text-decoration: $link-hover-decoration;
   }
 }
@@ -395,7 +395,7 @@ var, // Boosted mod
 code {
   @include font-size($code-font-size);
   font-style: normal; // Boosted mod: <var> is italic in all browsers
-  color: $code-color;
+  color: var(--#{$prefix}code-color);
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more

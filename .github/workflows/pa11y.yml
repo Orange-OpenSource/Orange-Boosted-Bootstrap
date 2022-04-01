@@ -43,7 +43,7 @@ jobs:
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Set up npm cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}

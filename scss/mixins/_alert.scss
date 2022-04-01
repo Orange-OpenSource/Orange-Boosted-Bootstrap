@@ -1,8 +1,8 @@
 // scss-docs-start alert-variant-mixin
 @mixin alert-variant($background, $border, $color, $background-image) { // Boosted mod
-  --#{$variable-prefix}alert-color: #{$color};
-  --#{$variable-prefix}alert-bg: #{$background};
-  --#{$variable-prefix}alert-border: #{$border};
+  --#{$prefix}alert-color: #{$color};
+  --#{$prefix}alert-bg: #{$background};
+  --#{$prefix}alert-border: #{$border};
 
   // Boosted mod
   .alert-icon::before {
