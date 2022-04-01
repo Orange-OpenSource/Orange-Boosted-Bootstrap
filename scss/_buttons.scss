@@ -271,7 +271,8 @@
     &.btn-inverse {
       color: $white;
 
-      &:active {
+      &:active,
+      &.active {
         color: $black;
         background-color: $white;
         border-color: $white;
