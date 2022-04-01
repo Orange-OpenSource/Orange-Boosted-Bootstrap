@@ -47,7 +47,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">
     99+
     <span class="visually-hidden">shopping basket items</span>
   </span>
