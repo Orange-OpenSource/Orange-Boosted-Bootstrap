@@ -1377,7 +1377,8 @@ $pagination-bg:                     $white !default;
 $pagination-border-radius:          null !default; // Boosted mod
 $pagination-border-width:           $border-width !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           $spacer * .5 !default; // Boosted mod
+$pagination-margin-start:           0 !default; // Boosted mod
+$pagination-margin-x-first-last:    $spacer * .5 !default;
 $pagination-border-color:           transparent !default; // Boosted mod
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
