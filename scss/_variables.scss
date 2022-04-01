@@ -551,6 +551,7 @@ $btn-social-bg-size:        $spacer !default;
 // Forms
 
 $label-margin-bottom:                   .375rem !default;
+$label-required-margin-left:            .1875rem !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       map-get($spacers, 2) !default; // Boosted mod input padding x is not the same as buttons padding-x!

@@ -8,8 +8,8 @@ label {
   }
 }
 
-.is-required::after {
-  margin-left: $label-margin-bottom;
+.is-required:not(.form-group)::after {
+  margin-left: $label-required-margin-left;
   font-weight: $font-weight-bold;
   color: $orange-2;
   content: "*";
