@@ -2,21 +2,41 @@
 // Base styles
 //
 
+.accordion {
+  // scss-docs-start accordion-css-vars
+  --#{$prefix}accordion-color: #{$accordion-color};
+  --#{$prefix}accordion-bg: #{$accordion-bg};
+  --#{$prefix}accordion-border-color: #{$accordion-border-color};
+  --#{$prefix}accordion-border-width: #{$accordion-border-width};
+  --#{$prefix}accordion-border-radius: #{$accordion-border-radius};
+  --#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
+  --#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
+  --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size}; // Boosted mod
+  --#{$prefix}accordion-btn-font-weight: #{$accordion-button-font-weight}; // Boosted mod
+  --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height}; // Boosted mod
+  --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing}; // Boosted mod
+  --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
+  --#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
+  --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
+  --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
+  // scss-docs-end accordion-css-vars
+}
+
 .accordion-button {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: $accordion-button-padding-y $accordion-button-padding-x;
-  @include font-size($accordion-button-font-size); // Boosted mod
-  font-weight: $accordion-button-font-weight; // Boosted mod
-  line-height: $accordion-button-line-height; // Boosted mod
+  padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
+  @include font-size(var(--#{$prefix}accordion-btn-font-size)); // Boosted mod
+  font-weight: var(--#{$prefix}accordion-btn-font-weight); // Boosted mod
+  line-height: var(--#{$prefix}accordion-btn-line-height); // Boosted mod
   color: $accordion-button-color;
   text-align: left; // Reset button style
   text-decoration: if($link-decoration == none, null, none); // Boosted mod
 
   /* rtl:remove */
-  letter-spacing: $accordion-button-letter-spacing; // Boosted mod
+  letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // Boosted mod
   background-color: $accordion-button-bg;
   border: 0;
   @include border-radius(0);
@@ -24,8 +44,8 @@
   @include transition($accordion-transition);
 
   &:not(.collapsed) {
-    color: $accordion-button-active-color;
-    background-color: $accordion-button-active-bg;
+    color: var(--#{$prefix}accordion-active-color);
+    background-color: var(--#{$prefix}accordion-active-bg);
     // Boosted mod: no `box-shadow` definition
 
     &::after {
@@ -44,26 +64,26 @@
 
   &:focus {
     z-index: 3;
-    outline-offset: calc($accordion-border-width * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+    outline-offset: calc(var(--#{$prefix}accordion-border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 
 .accordion-header {
   margin-bottom: 0;
-  border: $accordion-border-width solid $accordion-border-color; // Boosted mod
-  border-width: $accordion-border-width 0 0; // Boosted mod
+  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod
+  border-width: var(--#{$prefix}accordion-border-width) 0 0; // Boosted mod
 }
 
 .accordion-item {
   color: color-contrast($accordion-bg);
-  background-color: $accordion-bg;
+  background-color: var(--#{$prefix}accordion-bg);
   // Boosted mod: no border
 
   &:first-of-type {
-    @include border-top-radius($accordion-border-radius);
+    @include border-top-radius(var(--#{$prefix}accordion-border-radius));
 
     .accordion-button {
-      @include border-top-radius($accordion-inner-border-radius);
+      @include border-top-radius($accordion-inner-border-radius); // todo
     }
   }
 
@@ -72,50 +92,47 @@
   // Only set a border-radius on the last item if the accordion is collapsed
   &:last-of-type {
     margin-bottom: 0; // Boosted mod
-    @include border-bottom-radius($accordion-border-radius);
-    border-bottom: $accordion-border-width solid $accordion-border-color; // Boosted mod: borders are set on .accordion-header
+    @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
+    border-bottom: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod: borders are set on .accordion-header
 
     .accordion-button {
       &.collapsed {
-        @include border-bottom-radius($accordion-inner-border-radius);
+        @include border-bottom-radius($accordion-inner-border-radius); // todo
       }
     }
 
     .accordion-collapse {
-      @include border-bottom-radius($accordion-border-radius);
+      @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
   }
 }
 
 .accordion-body {
-  padding: 0 $accordion-body-padding-x $accordion-body-padding-y 0; // Boosted mod
+  padding: 0 var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y) 0; // Boosted mod
 }
 
 //
-// Boosted mod: accordion sizes
+// Boosted mod:
+// - Sizes
+// - Dark variant
 //
 
 .accordion-sm {
-  .accordion-button {
-    @include font-size($accordion-button-font-size-sm);
-    line-height: $accordion-button-line-height-sm;
-
-    /* rtl:remove */
-    letter-spacing: $accordion-button-letter-spacing-sm;
-  }
+  // scss-docs-start accordion-sm-css-vars
+  --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size-sm};
+  --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height-sm};
+  --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing-sm};
+  // scss-docs-end accordion-sm-css-vars
 }
 
 .accordion-lg {
-  .accordion-button {
-    @include font-size($accordion-button-font-size-lg);
-    line-height: $accordion-button-line-height-lg;
-
-    /* rtl:remove */
-    letter-spacing: $accordion-button-letter-spacing-lg;
-  }
+  // scss-docs-start accordion-lg-css-vars
+  --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size-lg};
+  --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height-lg};
+  --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing-lg};
+  // scss-docs-end accordion-lg-css-vars
 }
 
-// Boosted mod
 .accordion-dark {
   .accordion-button {
     color: $accordion-dark-button-color;
@@ -131,8 +148,8 @@
   }
 
   .accordion-header {
-    border: $accordion-border-width solid $accordion-dark-border-color;
-    border-width: $accordion-border-width 0 0;
+    border: var(--#{$prefix}accordion-border-width) solid $accordion-dark-border-color;
+    border-width: var(--#{$prefix}accordion-border-width) 0 0;
   }
 
   .accordion-item {
@@ -140,7 +157,7 @@
     background-color: $accordion-dark-bg;
 
     &:last-of-type {
-      border-bottom: $accordion-border-width solid $accordion-dark-border-color;
+      border-bottom: var(--#{$prefix}accordion-border-width) solid $accordion-dark-border-color;
     }
   }
 }
