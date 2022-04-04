@@ -49,7 +49,8 @@
     $pagination-icon,
     $pagination-icon-size,
     $size: $pagination-icon-width $pagination-icon-height,
-    $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link"
+    $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link",
+    $position: calc(50% - 1px)
   );
   // End mod
 
