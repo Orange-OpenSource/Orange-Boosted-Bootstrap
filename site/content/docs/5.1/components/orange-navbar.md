@@ -4,7 +4,10 @@ title: Orange Navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
 toc: true
+added: "5.2"
 ---
+
+{{< added-in "5.2.0" >}}
 
 ## How it works
 
@@ -37,9 +40,9 @@ For more details, please refer to the [navbar supported content]({{<docsref "/co
 
 {{< example class="p-0" show_markup=false >}}
   <header>
-    {{< orange-supra mode="languages" aria_label="supra" >}}
+    {{< orange-supra mode="languages" aria_label="Supra navigation - Main example with languages" >}}
     {{< /orange-supra >}}
-    {{< orange-global-headers id="global-header" mode="actions" navigation=true supra=true aria_label="global" >}}
+    {{< orange-global-headers id="global-header" mode="actions" navigation=true supra=true aria_label="Global navigation - Standard example with nav-under" >}}
     {{< /orange-global-headers >}}
   </header>
 {{< /example >}}
@@ -58,7 +61,7 @@ Refer to [Responsive behavior](#responsive-behavior) to have more details.
 ### Standard
 
 {{< example class="p-0" >}}
-{{< orange-supra aria_label="supra-1">}}
+{{< orange-supra aria_label="Supra-navigation - Only left navbar example">}}
 {{< /orange-supra >}}
 {{< /example >}}
 
@@ -66,7 +69,7 @@ Refer to [Responsive behavior](#responsive-behavior) to have more details.
 An additional navbar (with text or icon items) can be added on the right of the Supra bar.
 
 {{< example class="p-0" >}}
-{{< orange-supra mode="languages" aria_label="supra-2">}}
+{{< orange-supra mode="languages" aria_label="Supra navigation - With an additional languages navbar example">}}
 {{< /orange-supra >}}
 {{< /example >}}
 
@@ -74,9 +77,9 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
 <div class="bd-example p-0">
   <header>
-    {{< orange-supra mode="languages" aria_label="supra-0" >}}
+    {{< orange-supra mode="languages" aria_label="Supra navigation - Responsive behavior example" >}}
     {{< /orange-supra >}}
-    {{< orange-global-headers id="global-header-0" demo=true mode="actions" supra=true aria_label="global-0" >}}
+    {{< orange-global-headers id="global-header-0" demo=true mode="actions" supra=true aria_label="Global navigation - Responsive behavior with a supra bar example" >}}
     {{< /orange-global-headers >}}
   </header>
 </div>
@@ -86,7 +89,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
   <header>
 
     <!-- Supra bar -->
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="supra-0">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Responsive behavior example">
       <div class="container-xxl">
         <!-- Left navbar of the Supra bar -->
         <ul class="navbar-nav me-auto">
@@ -100,7 +103,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
     </nav>
 
     <!-- Global header -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
       <div class="container-xxl">
 
         <!-- Orange brand logo -->
@@ -144,13 +147,13 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
 <div class="bd-example p-0">
   <header>
-    {{< orange-global-headers id="global-header-1" mode="actions" demo=true aria_label="global-1">}}
+    {{< orange-global-headers id="global-header-1" mode="actions" demo=true aria_label="Global navigation - Standard example">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
   <div class="container-xxl">
 
     <!-- Orange brand logo -->
@@ -222,13 +225,13 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
 
 <div class="bd-example p-0">
   <header>
-    {{< orange-global-headers id="global-header-2" mode="actions" responsive_logo=true labels_end=true demo=true aria_label="global-2">}}
+    {{< orange-global-headers id="global-header-2" mode="actions" responsive_logo=true labels_end=true demo=true aria_label="Global navigation - With custom logo example">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
   <div class="container-xxl">
 
     <!-- Orange brand logo -->
@@ -255,15 +258,15 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
 Next to the brand logo, you can add a title that can be displayed on one or two lines.
 
 <div class="bd-example p-0">
-<!-- On one line -->
+  <!-- On one line -->
   <header>
-    {{< orange-global-headers id="global-header-3" mode="actions" title=true demo=true aria_label="global-3">}}
+    {{< orange-global-headers id="global-header-3" mode="actions" title=true demo=true aria_label="Global navigation - With one line title example">}}
     {{< /orange-global-headers >}}
-</header>
+  </header>
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
   <div class="container-xxl">
 
     <!-- Orange brand logo -->
@@ -287,15 +290,15 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 ```
 
 <div class="bd-example p-0">
-<!-- On two lines -->
+  <!-- On two lines -->
   <header>
-    {{< orange-global-headers id="global-header-4" mode="actions" title=true title_2=true labels=true demo=true aria_label="global-4">}}
+    {{< orange-global-headers id="global-header-4" mode="actions" title=true title_2=true labels=true demo=true aria_label="Global navigation - With two lines title example">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
   <div class="container-xxl">
 
     <!-- Orange brand logo -->
@@ -322,20 +325,19 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 </nav>
 ```
 
-
 ### With search box
 
 You can add a search input into your Global header.
 
 <div class="bd-example p-0">
   <header>
-    {{< orange-global-headers id="global-header-5" mode="search" demo=true aria_label="global-5">}}
+    {{< orange-global-headers id="global-header-5" mode="search" demo=true aria_label="Global navigation - With search box example">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
   <div class="container-xxl">
 
     <!-- Orange brand logo -->
@@ -368,7 +370,6 @@ You can add a search input into your Global header.
 </nav>
 ```
 
-
 ### Minimizing behavior
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
@@ -389,14 +390,14 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 <div class="bd-example p-0">
   <header>
-    {{< orange-global-headers id="global-header-6" mode="actions" title=true title_2=true labels=true navigation=true aria_label="global-6">}}
+    {{< orange-global-headers id="global-header-6" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - Standard example with nav-under">}}
     {{< /orange-global-headers >}}
   </header>
 </div>
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="standard">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -413,7 +414,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
     </div>
   </nav>
 
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="navigation bar under">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Nav-under example">
     <div class="container-xxl">
       <div id="global-header-6.1" class="navbar-collapse collapse m-0 global-header-6">
         <ul class="navbar-nav">
@@ -430,12 +431,28 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 </header>
 ```
 
-## Sass
+## CSS
 
 ### Variables
+
+As part of Boosted's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
+
+For orange navbars, we added a responsive behavior on medium breakpoints and over.
+
+{{< scss-docs name="orange-navbar-css-vars" file="scss/_navbar.scss" >}}
+
+Supra bars just override some variables.
+
+{{< scss-docs name="supra-navbar-css-vars" file="scss/_orange-navbar.scss" >}}
+
+Minimized bars just override some variables.
+
+{{< scss-docs name="minimized-navbar-css-vars" file="scss/_orange-navbar.scss" >}}
+
+### Sass variables
 
 For more details, please have a look at the exhaustive list of available variables:
 
 {{< scss-docs name="orange-navbar-variables" file="scss/_variables.scss" >}}
-
-

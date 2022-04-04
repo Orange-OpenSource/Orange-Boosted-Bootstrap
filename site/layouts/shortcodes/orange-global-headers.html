@@ -1,16 +1,19 @@
 {{- /*
-Usage: `orange-global-headers args`
+  Usage: `orange-global-headers args`
 
-`args` are all optional and can be one of the following:
-* id: set an id to avoid duplicate ids in a same page (default: "global-header")
-* responsive_logo: display a responsive logo (default: false)
-* title: add a title if defined
-* title_2: add a second title line if defined
-* mode: Mode used to display specific content if defined (choose one among ["actions", "search"])
-* labels: use generic labels instead of real-life labels (default: false)
-* labels_end: justify labels at the end (default: false)
-* minimized: display a minimized global header (default: false)
-* navigation: add a navigation bar under the global header (default: false)
+  `args` are all optional and can be one of the following:
+    * id: set an id to avoid duplicate ids in a same page (default: "global-header")
+    * responsive_logo: display a responsive logo (default: false)
+    * title: add a title if defined
+    * title_2: add a second title line if defined
+    * mode: mode used to display specific content if defined (choose one among ["actions", "search"])
+    * demo: if the global shortcode is called from the documentation (default: false)
+    * labels: use generic labels instead of real-life labels (default: false)
+    * labels_end: justify labels at the end (default: false)
+    * minimized: display a minimized global header (default: false)
+    * navigation: add a navigation bar under the global header (default: false)
+    * supra: if the global header is used with a supra bar (default: false)
+    * aria_label: set the aria-label for the current global header
 */ -}}
 
 {{- $id := .Get "id" | default "global-header"}}
@@ -24,10 +27,10 @@ Usage: `orange-global-headers args`
 {{- $minimized := .Get "minimized" | default false -}}
 {{- $navigation := .Get "navigation" | default false -}}
 {{- $supra := .Get "supra" | default false -}}
-{{- $input := .Inner -}}
 {{- $aria_label := .Get "aria_label"}}
+{{- $input := .Inner -}}
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{$aria_label}}">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
       <a class="stretched-link" href="#">
@@ -138,7 +141,7 @@ Usage: `orange-global-headers args`
   </div>
 </nav>
 {{- if $navigation }}
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="{{$aria_label}}.2">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}.2">
   <div class="container-xxl">
     <div id="{{ $id }}.1" class="navbar-collapse collapse m-0 {{ $id }}">
 {{- if $supra }}

@@ -2,14 +2,15 @@
   Usage: `orange-supra args`
 
   `args` are all optional and can be one of the following:
-    * mode: Mode used to display specific content if defined (choose one among ["languages", "actions"])
+    * mode: mode used to display specific content if defined (choose one among ["languages", "actions"])
+    * aria_label: set the aria-label for the current supra bar
 */ -}}
 
 {{- $mode := .Get "mode" -}}
-{{- $input := .Inner -}}
 {{- $aria_label := .Get "aria_label" -}}
+{{- $input := .Inner -}}
 
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="{{$aria_label}}">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>

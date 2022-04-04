@@ -4,19 +4,7 @@
   function switchHeader() {
     var element = document.getElementsByTagName('header')[0]
     var switchEl = document.getElementById('stickySwitch')
-    if (switchEl.checked && window.innerWidth > 1023) {
-      element.classList = 'fixed-top'
-      switchEl.parentElement.style.marginTop = '140px'
-    } else if (switchEl.checked && window.innerWidth > 767) {
-      element.classList = 'fixed-top'
-      switchEl.parentElement.style.marginTop = '100px'
-    } else if (switchEl.checked) {
-      element.classList = 'fixed-top'
-      switchEl.parentElement.style.marginTop = '50px'
-    } else {
-      element.classList = 'sticky-top'
-      switchEl.parentElement.style.marginTop = '0'
-    }
+    element.classList = switchEl.checked ? 'fixed-top' : 'sticky-top'
   }
 
   switchHeader()

@@ -3,12 +3,14 @@
 // Supra bar
 // Brand exclusive thin navbar that can be used with orange navbar
 .supra {
+  // scss-docs-start supra-navbar-css-vars
   --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
   --#{$prefix}navbar-nav-link-padding-y: #{$navbar-supra-link-padding-y};
   --#{$prefix}navbar-nav-link-padding-x: #{$navbar-supra-link-padding-x};
   --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-supra-icon-padding-y};
   --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-supra-icon-padding-x};
   --#{$prefix}navbar-nav-icon-size: #{$navbar-supra-icon-size};
+  // scss-docs-end supra-navbar-css-vars
 
   display: none;
 
@@ -26,15 +28,20 @@
 }
 
 .header-minimized {
+  // scss-docs-start minimized-navbar-css-vars
   @include media-breakpoint-up(md){
     --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
     --#{$prefix}navbar-brand-margin-y: #{$navbar-minimized-brand-margin-y};
     --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs};
     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs};
     --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs};
-    --#{$prefix}navbar-brand-font-size-two-line: #{$navbar-brand-font-size-two-line-xs};
-    --#{$prefix}navbar-brand-letter-spacing-two-line: #{$navbar-brand-letter-spacing-two-line-xs};
     --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-minimized-nav-icon-padding-y};
     --#{$prefix}navbar-toggler-padding-y: #{$navbar-minimized-toggler-padding-y};
+
+    .two-lined {
+      --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
+      --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
+    }
   }
+  // scss-docs-end minimized-navbar-css-vars
 }
