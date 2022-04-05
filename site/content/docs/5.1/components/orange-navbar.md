@@ -59,20 +59,16 @@ Refer to [Responsive behavior](#responsive-behavior) to have more details.
 ### Standard
 
 {{< example class="p-0" >}}
-<header>
-  {{< orange-supra aria_label="Supra-navigation - Only left navbar example">}}
-  {{< /orange-supra >}}
-</header>
+{{< orange-supra aria_label="Supra-navigation - Only left navbar example">}}
+{{< /orange-supra >}}
 {{< /example >}}
 
 ### With additional navbar
 An additional navbar (with text or icon items) can be added on the right of the Supra bar.
 
 {{< example class="p-0" >}}
-<header>
-  {{< orange-supra mode="languages" aria_label="Supra navigation - With an additional languages navbar example">}}
-  {{< /orange-supra >}}
-</header>
+{{< orange-supra mode="languages" aria_label="Supra navigation - With an additional languages navbar example">}}
+{{< /orange-supra >}}
 {{< /example >}}
 
 ### Responsive behavior
