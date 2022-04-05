@@ -28,7 +28,7 @@ For more details, please refer to the [navbar supported content]({{<docsref "/co
 
 **Responsive behavior**: Orange navbars are designed to be responsive on all devices.
 
-  `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<nav>` will allow :
+  `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<nav>` will allow:
   - [Supra bar](#supra-bar) and [Navigation under](#navigation-under) bar to be displayed starting at the indicated breakpoint
   - [Global header](#global-header) to collapse its content behind the burger menu button. For more information, visit [Navbar/Responsive behaviors]({{<docsref "/components/navbar#responsive-behaviors">}})
 
@@ -381,10 +381,6 @@ You can add a search input into your Global header.
 
 ### Minimizing behavior
 
-{{< callout info >}}
-If you don't use this behavior, you can not load the JS file.
-{{< /callout >}}
-
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
 
 You can see a full example of the Minimizing Orange Navbar behavior in action [here]({{<docsref "/examples/navbar-sticky">}}).
@@ -393,6 +389,11 @@ The minimized global header will **always** use the small [Master logo]({{<docsr
 
 {{< callout warning >}}
 Be careful when using **`.fixed-top`**, the collapsed content should be escapable easily.
+{{< /callout >}}
+
+{{< callout info >}}
+If you don't use the sticky top version you can optimize your JavaScript by not importing this component.
+Refer to [Lean JavaScript]({{< docsref "/customize/optimize#lean-javascript" >}}) for more information.
 {{< /callout >}}
 
 ## Navigation under

@@ -242,7 +242,7 @@ Place various form controls and components within a navbar:
 </nav>
 {{< /example >}}
 
-Immediate child elements of `.navbar` use flex layout<!-- Boosted mod : no justify-content -->. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
+Immediate child elements of `.navbar` use flex layout<!-- Boosted mod: no justify-content -->. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
 
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark">
