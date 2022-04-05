@@ -15,7 +15,7 @@ An Orange navbar will always be at the top of any page.
 
 ### Structure
 
-Orange navbar is basically a `<header>` that will contain your `<nav>` elements :
+Orange navbar is basically a `<header>` that will contain your `<nav>` elements:
   - an optional [Supra bar](#supra-bar) above the Global header
   - a **mandatory** [Global header](#global-header)
   - an optional [Navigation under](#navigation-under) below the Global header
@@ -26,13 +26,13 @@ For more details, please refer to the [navbar supported content]({{<docsref "/co
 
 ### Behavior
 
-**Responsive behavior**: Orange navbars are designed to be responsive on the different devices.
+**Responsive behavior**: Orange navbars are designed to be responsive on all devices.
 
   `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<nav>` will allow :
   - [Supra bar](#supra-bar) and [Navigation under](#navigation-under) bar to be displayed starting at the indicated breakpoint
   - [Global header](#global-header) to collapse its content behind the burger menu button. For more information, visit [Navbar/Responsive behaviors]({{<docsref "/components/navbar#responsive-behaviors">}})
 
-**Behavior on scroll**: Add either `.fixed-top` or `.sticky-top` to the `<header>` to change its behavior on scroll. Please see our [dedicated part](#minimizing-the-global-header) to have more details.
+**Behavior on scroll**: Add either `.fixed-top` or `.sticky-top` to the `<header>` to change its behavior on scroll. Please see our [dedicated part](#minimizing-behavior) to have more details.
 
 ## Example
 
@@ -49,8 +49,8 @@ For more examples, visit our [examples page]({{<docsref "/examples/navbars">}}).
 
 ## Supra bar
 
-A Supra bar is a simple navigation bar `<nav>` with `.supra` that can be displayed as a first part of an Orange navbar.
-This component should be :
+A Supra bar is a simple navigation bar used with `.supra` that can be displayed as a first part of an Orange navbar.
+This component should be:
 - visible only for the **larger screens** (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 - displayed inside the burger menu for **smaller screens**. There it has to be split in 2 parts.
 
@@ -83,60 +83,57 @@ An additional navbar (with text or icon items) can be added on the right of the 
 </div>
 
 ```html
-<div class="bd-example p-0">
-  <header>
+<header>
+  <!-- Supra bar -->
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Responsive behavior example">
+    <div class="container-xxl">
+      <!-- Left navbar of the Supra bar -->
+      <ul class="navbar-nav me-auto">
+        ...
+      </ul>
+      <!-- Right navbar of the Supra bar -->
+      <ul class="navbar-nav">
+        ...
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Supra bar -->
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Responsive behavior example">
-      <div class="container-xxl">
+  <!-- Global header -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
+    <div class="container-xxl">
+
+      <!-- Orange brand logo -->
+      ...
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      <div id="global-header-0.1" class="navbar-collapse collapse me-lg-auto global-header-0">
         <!-- Left navbar of the Supra bar -->
-        <ul class="navbar-nav me-auto">
-          ...
+        <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
         </ul>
-        <!-- Right navbar of the Supra bar -->
+
         <ul class="navbar-nav">
-          ...
+          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        </ul>
+
+        <!-- Right navbar of the Supra bar -->
+        <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
         </ul>
       </div>
-    </nav>
 
-    <!-- Global header -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
-      <div class="container-xxl">
-
-        <!-- Orange brand logo -->
-        ...
-
-        <!-- Burger menu (visible on small screens) -->
-        ...
-
-        <!-- Navbar with links -->
-        <div id="global-header-0.1" class="navbar-collapse collapse me-lg-auto global-header-0">
-          <!-- Left navbar of the Supra bar -->
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          </ul>
-
-          <!-- Right navbar of the Supra bar -->
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
-          </ul>
-        </div>
-
-        <!-- Navbar with action icons -->
-        ...
-      </div>
-    </nav>
-  </header>
-</div>
+      <!-- Navbar with action icons -->
+      ...
+    </div>
+  </nav>
+</header>
 ```
 
 ## Global header
@@ -382,7 +379,7 @@ Be careful when using **`.fixed-top`**, the collapsed content should be escapabl
 
 ## Navigation under
 
-A Navigation under bar is a simple navigation bar `<nav>`, different than a Supra bar. It can be used as a last part of an Orange navbar whenever your header may have too many items to stand on one line.
+A Navigation under bar is a simple navigation bar, different than a Supra bar. It can be used as a last part of an Orange navbar whenever your header may have too many items to stand on one line.
 
 It should be visible only for the larger screens (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 
