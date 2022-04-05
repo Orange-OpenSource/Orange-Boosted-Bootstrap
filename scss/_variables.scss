@@ -1243,7 +1243,7 @@ $navbar-nav-link-padding-x-xs:      $spacer * .25 !default; // Boosted mod
 $navbar-nav-link-padding-x:         $spacer * .5 !default; // Boosted mod
 
 $navbar-brand-font-size:                  2.1875rem !default; // Boosted mod
-// Boosted mod : no nav-link-height calculation
+// Boosted mod: no nav-link-height calculation
 $navbar-brand-padding-y:                  0 !default; // Boosted mod
 $navbar-brand-margin-end:                 $spacer * 1.5 !default; // Boosted mod
 
@@ -1312,14 +1312,14 @@ $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
 $navbar-dark-toggler-border-color:   transparent !default;
-// Boosted mod : no $navbar-dark-toggler-icon-bg:        $burger-icon !default; since dark toggler are handled with filter
+// Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
 
 $navbar-light-color:                 $black !default;
 $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
 $navbar-light-toggler-icon-bg:       $burger-icon !default;
-$navbar-light-toggler-icon-bg-small: $burger-icon-small !default; // Slightly different burger icon for small breakpoints
+$navbar-light-toggler-icon-bg-small: $burger-icon-small !default; // Boosted mod: slightly different burger icon for small breakpoints
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;

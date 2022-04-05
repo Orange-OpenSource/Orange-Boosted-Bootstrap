@@ -7,8 +7,6 @@ toc: true
 added: "5.2"
 ---
 
-{{< added-in "5.2.0" >}}
-
 ## How it works
 
 Orange navbars are based on the [navbar]({{<docsref "/components/navbar">}}) component. They add some display management and introduce the Supra bar component.
@@ -434,6 +432,8 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 ## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

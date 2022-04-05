@@ -6,7 +6,7 @@
 .navbar {
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
-  --#{$prefix}navbar-padding-y: 0; // Boosted mod : no padding in small breakpoints
+  --#{$prefix}navbar-padding-y: 0; // Boosted mod: no padding in small breakpoints
   --#{$prefix}navbar-border-width: #{$navbar-border-width}; // Boosted mod
   --#{$prefix}navbar-border-color: #{$navbar-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-light-color};
@@ -49,7 +49,7 @@
   // End mod
   @include gradient-bg();
 
-  // Boosted mod : Difference between xs and md breakpoints
+  // Boosted mod: Difference between xs and md breakpoints
   // scss-docs-start orange-navbar-css-vars
   @include media-breakpoint-up(md) {
     --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
@@ -76,7 +76,7 @@
     display: flex;
     flex-wrap: inherit;
     align-items: flex-end; // Boosted mod
-    // Boosted mod : no justify-content
+    // Boosted mod: no justify-content
   }
 
   > .container,
@@ -159,7 +159,7 @@
   margin-bottom: 0;
   list-style: none;
 
-  // Boosted mod : Handle .nav-link and .nav-icon slightly differently than Bs
+  // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
     display: block;
@@ -229,7 +229,7 @@
 //
 
 .navbar-text {
-  // Boosted mod : no padding-top
+  // Boosted mod: no padding-top
   padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
@@ -240,7 +240,7 @@
   }
 }
 
-// Boosted mod : Navbar item
+// Boosted mod: Navbar item
 .navbar-item {
   margin-bottom: var(--#{$prefix}navbar-nav-icon-padding-y);
 }
@@ -254,15 +254,15 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
-.navbar-collapse.show, // Boosted mod : always keep nav-items at full width when transitioning
+.navbar-collapse.show, // Boosted mod: always keep nav-items at full width when transitioning
 .navbar-collapse.collapsing {
   flex-basis: 100%;
-  // Boosted mod : no flex-grow to avoid weird behavior in expanded breakpoints and .show
+  // Boosted mod: no flex-grow to avoid weird behavior in expanded breakpoints and .show
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
 
-  // Boosted mod : Handle icons support and padding of expanded navbars
+  // Boosted mod: Handle icons support and padding of expanded navbars
   &[class*="d-"] {
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
@@ -287,7 +287,7 @@
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
   background-color: transparent; // remove default button style
-  border: 0; // remove default button style. Boosted mod : remove border to simplify calculations
+  border: 0; // Boosted mod: remove border to simplify calculations
   outline-color: var(--#{$prefix}navbar-active-color); // Boosted mod
   outline-offset: $spacer; // Boosted mod
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
@@ -338,7 +338,7 @@
   overflow-y: auto;
 }
 
-// Boosted mod : Handle the nav-under responsiveness
+// Boosted mod: Handle the nav-under responsiveness
 .navbar:not(.supra) + .navbar {
   padding: 0;
   margin-top: calc(var(--#{$prefix}navbar-border-width) * -1); // stylelint-disable-line function-disallowed-list
@@ -404,7 +404,7 @@
           // End mod
         }
 
-        // Boosted mod : Handle the responsiveness of the collapsing content in a global header
+        // Boosted mod: Handle the responsiveness of the collapsing content in a global header
         .navbar-collapse.show,
         .navbar-collapse.collapsing {
           &[class*="d-"] {
@@ -475,7 +475,7 @@
   --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  // Boosted mod : No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
+  // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
 
   // Boosted mod
   .navbar-toggler-icon {
