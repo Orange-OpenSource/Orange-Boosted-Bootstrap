@@ -184,20 +184,23 @@ class Collapse extends BaseComponent {
     this._element.classList.add(CLASS_NAME_COLLAPSING)
     this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW)
 
-    for (const trigger of this._triggerArray) {
-      const element = getElementFromSelector(trigger)
-
-      if (element && !this._isShown(element)) {
-        this._addAriaAndCollapsedClass([trigger], false)
-      }
-    }
-
     this._isTransitioning = true
 
     const complete = () => {
       this._isTransitioning = false
       this._element.classList.remove(CLASS_NAME_COLLAPSING)
       this._element.classList.add(CLASS_NAME_COLLAPSE)
+
+      // Boosted mod: Change the moment of the appliance of .collapsed
+      for (const trigger of this._triggerArray) {
+        const element = getElementFromSelector(trigger)
+
+        if (element && !this._isShown(element)) {
+          this._addAriaAndCollapsedClass([trigger], false)
+        }
+      }
+      // End mod
+
       EventHandler.trigger(this._element, EVENT_HIDDEN)
     }
 

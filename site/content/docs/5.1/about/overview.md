@@ -23,7 +23,7 @@ Boosted can be used for all **responsive web projects** for Orange group —&nbs
 Boosted ships with custom accessible components to suit specific needs:
 
 - [Back to top]({{< docsref "/components/back-to-top" >}})
-- [Orange Navbars]({{< docsref "/components/orange-navbar" >}})
+- [Orange navbar]({{< docsref "/components/orange-navbar" >}})
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
