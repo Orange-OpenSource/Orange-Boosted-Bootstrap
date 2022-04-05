@@ -7,7 +7,7 @@ toc: true
 ---
 
 {{< ods-incompatibility-alert >}}
-This component explains the basic behavior, structure and concepts of navbars.
+This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure.
 
 In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
 {{< /ods-incompatibility-alert >}}
@@ -85,11 +85,11 @@ Here's an example of all the sub-components included in a responsive dark-themed
 </nav>
 {{< /example >}}
 
-This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-dark`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `me-2`) utility classes.
+This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-dark`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `me-2`, `ms-3`) utility classes.
 
 ### Brand
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best, as some elements might require utility classes or custom styles.
+The `.navbar-brand` can be used to contain most elements, but an anchor works best, as some elements might require utility classes or custom styles.
 
 <!-- Boosted mod: .navbar-brand must contain Orange logo -->
 {{< example >}}
