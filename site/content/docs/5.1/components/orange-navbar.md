@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Orange Navbar
+title: Orange navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
 toc: true
@@ -379,7 +379,7 @@ You can add a search input into your Global header.
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
 
-You can see a full example of the Minimizing Orange Navbar behavior in action [here]({{<docsref "/examples/navbar-sticky">}}).
+You can see a full example of the minimizing Orange navbar behavior in action [here]({{<docsref "/examples/navbar-sticky">}}).
 
 The minimized global header will **always** use the small [Master logo]({{<docsref "/about/brand#orange-logo">}}).
 

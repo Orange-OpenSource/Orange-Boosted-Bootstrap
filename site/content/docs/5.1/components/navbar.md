@@ -7,9 +7,9 @@ toc: true
 ---
 
 {{< ods-incompatibility-alert >}}
-This component explains the basic behavior, structure and concepts of navbars. To build an Orange Navbar:
+This component explains the basic behavior, structure and concepts of navbars.
 
-Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
+In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
 {{< /ods-incompatibility-alert >}}
 
 ## How it works
