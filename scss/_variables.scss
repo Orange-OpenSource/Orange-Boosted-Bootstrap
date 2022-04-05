@@ -1247,6 +1247,16 @@ $navbar-brand-font-size:                  2.1875rem !default; // Boosted mod
 $navbar-brand-padding-y:                  0 !default; // Boosted mod
 $navbar-brand-margin-end:                 $spacer * 1.5 !default; // Boosted mod
 
+$navbar-toggler-icon-close-bg:      $cross-icon !default; // Boosted mod
+$navbar-toggler-padding-y:          $spacer * .6 !default; // Boosted mod: same as $navbar-nav-icon-padding-y-xs
+$navbar-toggler-padding-x:          $spacer * .75 !default; // Boosted mod: same as $navbar-nav-icon-padding-x-xs
+$navbar-toggler-font-size-xs:       1.04166666rem !default; // Boosted mod
+$navbar-toggler-font-size:          1.25rem !default; // Boosted mod
+$navbar-toggler-border-radius:      $btn-border-radius !default;
+$navbar-toggler-focus-width:        null !default; // Boosted mod
+$navbar-toggler-transition:         $transition-focus !default; // Boosted mod
+// scss-docs-end navbar-variables
+
 // Boosted mod: Orange navbar
 // scss-docs-start orange-navbar-variables
 $navbar-transition-duration:              $transition-duration !default;
@@ -1295,16 +1305,6 @@ $navbar-badge-padding-x:                  .375rem !default;
 $navbar-badge-margin-top:                 .1875rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
-
-$navbar-toggler-icon-close-bg:      $cross-icon !default; // Boosted mod
-$navbar-toggler-padding-y:          $navbar-nav-icon-padding-y-xs !default; // Boosted mod
-$navbar-toggler-padding-x:          $navbar-nav-icon-padding-x-xs !default; // Boosted mod
-$navbar-toggler-font-size-xs:       1.04166666rem !default; // Boosted mod
-$navbar-toggler-font-size:          1.25rem !default; // Boosted mod
-$navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-focus-width:        null !default; // Boosted mod
-$navbar-toggler-transition:         $transition-focus !default; // Boosted mod
-// scss-docs-end navbar-variables
 
 // scss-docs-start navbar-theme-variables
 $navbar-dark-color:                  $white !default;

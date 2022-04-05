@@ -59,16 +59,20 @@ Refer to [Responsive behavior](#responsive-behavior) to have more details.
 ### Standard
 
 {{< example class="p-0" >}}
-{{< orange-supra aria_label="Supra-navigation - Only left navbar example">}}
-{{< /orange-supra >}}
+<header>
+  {{< orange-supra aria_label="Supra-navigation - Only left navbar example">}}
+  {{< /orange-supra >}}
+</header>
 {{< /example >}}
 
 ### With additional navbar
 An additional navbar (with text or icon items) can be added on the right of the Supra bar.
 
 {{< example class="p-0" >}}
-{{< orange-supra mode="languages" aria_label="Supra navigation - With an additional languages navbar example">}}
-{{< /orange-supra >}}
+<header>
+  {{< orange-supra mode="languages" aria_label="Supra navigation - With an additional languages navbar example">}}
+  {{< /orange-supra >}}
+</header>
 {{< /example >}}
 
 ### Responsive behavior
@@ -148,64 +152,66 @@ An additional navbar (with text or icon items) can be added on the right of the 
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
-  <div class="container-xxl">
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
+    <div class="container-xxl">
 
-    <!-- Orange brand logo -->
-    <div class="navbar-brand me-auto me-lg-4">
-      <a class="stretched-link" href="#">
-        <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-      </a>
-    </div>
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+      </div>
 
-    <!-- Burger menu (visible on small screens) -->
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Burger menu (visible on small screens) -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Navbar with links -->
-    <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-      </ul>
-    </div>
+      <!-- Navbar with links -->
+      <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        </ul>
+      </div>
 
-    <!-- Navbar with action icons -->
-    <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
-            </svg>
-            <span class="visually-hidden">Basket</span>
-            <span class="position-relative">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                1
-                <span class="visually-hidden">shopping basket items</span>
+      <!-- Navbar with action icons -->
+      <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-relative">
+                <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
               </span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link nav-icon">
-            <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
-            <span class="visually-hidden">My account</span>
-          </a>
-        </li>
-      </ul>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/{{<param docs_version>}}/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+              <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 ```
 
 ### With custom logo
@@ -226,26 +232,28 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
-  <div class="container-xxl">
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
+    <div class="container-xxl">
 
-    <!-- Orange brand logo -->
-    <div class="navbar-brand me-auto">
-      <a class="stretched-link" href="#">
-        <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-      </a>
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      ...
+
+      <!-- Navbar with action icons -->
+      ...
     </div>
-
-    <!-- Burger menu (visible on small screens) -->
-    ...
-
-    <!-- Navbar with links -->
-    ...
-
-    <!-- Navbar with action icons -->
-    ...
-  </div>
-</nav>
+  </nav>
+</header>
 ```
 
 ### With title
@@ -261,27 +269,29 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
-  <div class="container-xxl">
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
+    <div class="container-xxl">
 
-    <!-- Orange brand logo -->
-    <div class="navbar-brand me-auto me-lg-4">
-      <a class="stretched-link" href="#">
-        <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-      </a>
-      <h1 class="title">Title</h1>
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Title</h1>
+      </div>
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      ...
+
+      <!-- Navbar with action icons -->
+      ...
     </div>
-
-    <!-- Burger menu (visible on small screens) -->
-    ...
-
-    <!-- Navbar with links -->
-    ...
-
-    <!-- Navbar with action icons -->
-    ...
-  </div>
-</nav>
+  </nav>
+</header>
 ```
 
 <div class="bd-example p-0">
@@ -293,31 +303,33 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
-  <div class="container-xxl">
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
+    <div class="container-xxl">
 
-    <!-- Orange brand logo -->
-    <div class="navbar-brand me-auto me-lg-4">
-      <a class="stretched-link" href="#">
-        <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-      </a>
-      <h1 class="two-lined">
-        Title Line 1
-        <br>
-        Title Line 2
-      </h1>
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="two-lined">
+          Title Line 1
+          <br>
+          Title Line 2
+        </h1>
+      </div>
+
+      <!-- Burger menu (visible on small screens) -->
+      ...
+
+      <!-- Navbar with links -->
+      ...
+
+      <!-- Navbar with action icons -->
+      ...
     </div>
-
-    <!-- Burger menu (visible on small screens) -->
-    ...
-
-    <!-- Navbar with links -->
-    ...
-
-    <!-- Navbar with action icons -->
-    ...
-  </div>
-</nav>
+  </nav>
+</header>
 ```
 
 ### With search box
@@ -332,40 +344,46 @@ You can add a search input into your Global header.
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
-  <div class="container-xxl">
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
+    <div class="container-xxl">
 
-    <!-- Orange brand logo -->
-    ...
+      <!-- Orange brand logo -->
+      ...
 
-    <!-- Burger menu (visible on small screens) -->
-    ...
+      <!-- Burger menu (visible on small screens) -->
+      ...
 
-    <!-- Navbar with links -->
-    ...
+      <!-- Navbar with links -->
+      ...
 
-    <!-- Navbar with action icons -->
-    <form class="d-flex d-none d-lg-flex nav-item" role="search">
-      <!-- todo : reforge when .dark-input -->
-      <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
-    </form>
-    <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex global-header-5">
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item d-lg-none">
-          <a href="#" class="nav-link nav-icon">
-            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-              <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
-            </svg>
-            <span class="visually-hidden">Search</span>
-          </a>
-        </li>
-      </ul>
+      <!-- Navbar with action icons -->
+      <form class="d-flex d-none d-lg-flex nav-item" role="search">
+        <!-- todo : reforge when .dark-input -->
+        <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex global-header-5">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item d-lg-none">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#search" />
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 ```
 
 ### Minimizing behavior
+
+{{< callout info >}}
+If you don't use this behavior, you can not load the JS file.
+{{< /callout >}}
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
 
