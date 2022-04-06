@@ -8,6 +8,7 @@
     * service: Display service content - default = false
     * mandatory: Display mandatory content - default = false
     * in_examples: Display in_examples content - default = false
+    * id: Set an id for accordions and the footer itself
 */ -}}
 
 {{- $mailing := .Get "mailing" | default false -}}
@@ -62,7 +63,7 @@
 {{- if $nav }}
 <!-- Navigation bar -->
   <div class="container-xxl footer-nav">
-    <div class="accordion accordion-dark" id="accordion{{ $id }}">
+    <nav class="accordion accordion-dark" id="accordion{{ $id }}">
       <div class="row">
         <div class="footer-column col-md-3">
           <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
@@ -71,16 +72,16 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingOne{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
             </ul>
           </div>
         </div>
@@ -91,16 +92,16 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingTwo{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
             </ul>
           </div>
         </div>
@@ -111,16 +112,16 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingThree{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
             </ul>
           </div>
         </div>
@@ -131,21 +132,21 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingFour{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
-              <li><a class="nav-link" href="#">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   </div>
 {{- if or $service $mandatory }}
   <div class="border-bottom border-1 border-dark"></div>
@@ -155,10 +156,10 @@
 <!-- Service links bar-->
   <div class="container-xxl footer-service">
     <ul class="navbar-nav gap-3 gap-md-4">
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#locate"/></svg><span>Store locator</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#locate"/></svg><span>Store locator</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
     </ul>
   </div>
 {{- if $mandatory }}
