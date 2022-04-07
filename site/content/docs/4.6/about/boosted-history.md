@@ -16,12 +16,12 @@ Boosted can be used for all responsive web projects for Orange group; other deve
 
 Orange Boosted ships with custom accessible components to suit specific needs:
 
-- [Orange navbar]({{< docsref "/components/navbar-orange" >}}),
-- [Orange Megamenu]({{< docsref "/components/orange-megamenu" >}}),
-- [Orange footer]({{< docsref "/components/orange-footer" >}}),
-- [Local navigation]({{< docsref "/components/local-navigation" >}}),
-- [Priority nav]({{< docsref "/components/priority-nav" >}}),
-- [Custom carousel]({{< docsref "/components/custom-carousel" >}}),
-- [Scroll up]({{< docsref "/components/scroll-up" >}}),
-- [Stepbar]({{< docsref "/components/stepbar" >}}),
-- [Orange switches]({{< docsref "/components/forms#orange-switches" >}}).
+- [Custom carousel]({{< docsref "/components/custom-carousel" >}})
+- [Local navigation]({{< docsref "/components/local-navigation" >}})
+- [Orange footer]({{< docsref "/components/orange-footer" >}})
+- [Orange megamenu]({{< docsref "/components/orange-megamenu" >}})
+- [Orange navbar]({{< docsref "/components/navbar-orange" >}})
+- [Orange switches]({{< docsref "/components/forms#orange-switches" >}})
+- [Priority nav]({{< docsref "/components/priority-nav" >}})
+- [Scroll up]({{< docsref "/components/scroll-up" >}})
+- [Stepbar]({{< docsref "/components/stepbar" >}})
