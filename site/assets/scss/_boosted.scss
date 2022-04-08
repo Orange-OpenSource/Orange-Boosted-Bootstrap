@@ -7,14 +7,6 @@
   }
 }
 
-body {
-  padding-top: $spacer * 2.5;
-
-  @include media-breakpoint-up(lg) {
-    padding-top: $spacer * 5;
-  }
-}
-
 html,
 body {
   min-height: 100vh;
