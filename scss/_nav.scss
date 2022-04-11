@@ -146,14 +146,15 @@
 
 .nav-pills {
   // scss-docs-start nav-pills-css-vars
+  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // Border mod
   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
   // scss-docs-end nav-pills-css-vars
 
   .nav-link {
-    padding-right: var(--#{$prefix}nav-tabs-link-padding-x); // Boosted mod
-    padding-left: var(--#{$prefix}nav-tabs-link-padding-x); // Boosted mod
+    padding-right: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
+    padding-left: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
     background: none;
     border: 0;
     @include border-radius(var(--#{$prefix}nav-pills-border-radius));
