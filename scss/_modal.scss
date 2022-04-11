@@ -10,7 +10,7 @@
 .modal {
   // scss-docs-start modal-css-vars
   --#{$prefix}modal-zindex: #{$zindex-modal};
-  // --#{$prefix}modal-width: #{$modal-md};
+  --#{$prefix}modal-width: #{$modal-md};
   --#{$prefix}modal-padding: #{$modal-inner-padding};
   --#{$prefix}modal-margin: #{$modal-dialog-margin};
   --#{$prefix}modal-color: #{$modal-content-color};
@@ -26,7 +26,7 @@
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
   --#{$prefix}modal-title-line-height: #{$modal-title-line-height};
-  // --#{$prefix}modal-footer-gap: #{$modal-footer-margin-between};
+  --#{$prefix}modal-footer-gap: #{$modal-footer-margin-between};
   --#{$prefix}modal-footer-bg: #{$modal-footer-bg};
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
@@ -156,8 +156,7 @@
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    // Boosted mod: using custom properties for padding
-    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // Boosted mod
+    margin: calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) calc(#{$btn-close-padding} * -1) auto; // Boosted mod: using custom properties for padding
   }
 }
 
