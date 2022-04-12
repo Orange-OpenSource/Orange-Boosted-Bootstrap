@@ -5,16 +5,13 @@ on:
       - 'js/**'
       - 'scss/**'
       - 'site/**'
-    branches-ignore:
-      - 'dependabot/**'
   pull_request:
     types:
       - opened
       - synchronize
+      - reopened
       - labeled
       - unlabeled
-    branches-ignore:
-      - 'dependabot/**'
   workflow_dispatch:
 
 env:
@@ -27,34 +24,34 @@ jobs:
 
     steps:
       - name: Bail early
-        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
         run: exit 0
+        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'
 
       - name: Clone repository
         uses: actions/checkout@v3
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - run: java -version
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Build docs
         run: npm run docs-build
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Validate HTML
         run: npm run docs-vnu
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@v1
@@ -63,4 +60,4 @@ jobs:
           recurse: true
           verbosity: error
           skip: "^(?!http://localhost)"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
