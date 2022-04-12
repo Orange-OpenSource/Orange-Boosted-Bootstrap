@@ -146,7 +146,7 @@
 
 .nav-pills {
   // scss-docs-start nav-pills-css-vars
-  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // Border mod
+  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // Boosted mod
   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
@@ -210,8 +210,8 @@
 
 .tab-content {
   // Boosted mod
-  padding: $spacer subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width));
-  border: var(--#{$prefix}nav-tabs-border-width) solid;
+  padding: $spacer subtract($nav-tabs-link-padding-x, $nav-tabs-border-width);
+  border: $nav-tabs-border-width solid;
   border-top: 0;
   // End mod
 
@@ -222,7 +222,7 @@
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: $spacer * -1 calc(subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)) * -1); // stylelint-disable-line function-disallowed-list
+    margin: $spacer * -1 calc(subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 
