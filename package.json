@@ -138,7 +138,7 @@
     "npm-run-all": "^4.1.5",
     "pa11y-ci": "^2.4.2",
     "pa11y-ci-reporter-html": "^3.0.3",
-    "postcss": "^8.4.8",
+    "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "rollup": "^2.70.1",
     "rollup-plugin-istanbul": "^3.0.0",
