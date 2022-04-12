@@ -30,6 +30,8 @@
   --#{$prefix}modal-footer-bg: #{$modal-footer-bg};
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
+  --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // Boosted mod
+  --#{$prefix}modal-content-padding: #{$modal-content-padding}; // Boosted mod
   // scss-docs-end modal-css-vars
 
   position: fixed;
@@ -72,6 +74,11 @@
 }
 
 .modal-dialog-scrollable {
+  // scss-docs-start modal-scrollable-css-vars
+  --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // Boosted mod
+  --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // Boosted mod
+  // scss-docs-end modal-scrollable-css-vars
+
   height: calc(100% - var(--#{$prefix}modal-margin) * 2);
 
   .modal-content {
@@ -80,11 +87,11 @@
   }
 
   .modal-body {
-    padding: $modal-scrollable-inner-padding; // Boosted mod
-    margin: $modal-scrollable-inner-margin; // Boosted mod
+    padding: var(--#{$prefix}modal-scrollable-inner-padding); // Boosted mod
+    margin: var(--#{$prefix}modal-scrollable-inner-margin); // Boosted mod
     overflow-y: auto;
-    border: $modal-content-border-width solid $modal-content-border-color; // Boosted mod
-    border-width: $modal-content-border-width 0; // Boosted mod
+    border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // Boosted mod
+    border-width: var(--#{$prefix}modal-border-width) 0; // Boosted mod
   }
 }
 
@@ -106,7 +113,7 @@
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
-  padding: $modal-content-padding; // Boosted mod
+  padding: var(--#{$prefix}modal-content-padding); // Boosted mod
   // counteract the pointer-events: none; in the .modal-dialog
   color: var(--#{$prefix}modal-color);
   pointer-events: auto;
@@ -119,7 +126,6 @@
 
 // Modal background
 .modal-backdrop {
-  @include overlay-backdrop($zindex-modal-backdrop, $modal-backdrop-bg, $modal-backdrop-opacity);
   // scss-docs-start modal-backdrop-css-vars
   --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
   --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
@@ -133,12 +139,17 @@
 // Boosted mod
 //// Modal image
 .modal-img {
-  margin: $modal-img-margin;
+  // scss-docs-start modal-img-css-vars
+  --#{$prefix}modal-img-margin: #{$modal-img-margin};
+  --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
+  // scss-docs-end modal-img-css-vars
+
+  margin: var(--#{$prefix}modal-img-margin);
 
   + .modal-header .btn-close {
     position: absolute;
-    top: $modal-img-btn-close-offset;
-    right: $modal-img-btn-close-offset;
+    top: var(--#{$prefix}modal-img-btn-close-offset);
+    right: var(--#{$prefix}modal-img-btn-close-offset);
   }
 }
 // End mod
@@ -183,7 +194,7 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-footer-padding; // Boosted mod
+  padding: var(--#{$prefix}modal-footer-padding); // Boosted mod
   background-color: var(--#{$prefix}modal-footer-bg);
   border-top: if($modal-footer-border-color == null, null, var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color)); // Boosted mod
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
