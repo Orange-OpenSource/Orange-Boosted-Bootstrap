@@ -1226,6 +1226,7 @@ $nav-tabs-link-active-color:        $black !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default;
 
+$nav-pills-padding-x:               $nav-tabs-link-padding-x !default; // Boosted mod
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
@@ -1479,7 +1480,7 @@ $accordion-body-padding-x:                $spacer !default; // Boosted mod
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
-$accordion-button-bg:                     $accordion-bg !default;
+$accordion-button-bg:                     var(--#{$variable-prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
@@ -1626,14 +1627,16 @@ $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
+
 $modal-header-border-color:         null !default; // Boosted mod
-$modal-footer-border-color:         null !default;
 $modal-header-border-width:         $modal-content-border-width !default;
-$modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding-y:            0 !default;
 $modal-header-padding-x:            $spacer !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+
 $modal-footer-bg:                   null !default;
+$modal-footer-border-color:         null !default; // Boosted mod
+$modal-footer-border-width:         $modal-header-border-width !default;
 
 // Boosted mod
 //// Scrollable modal

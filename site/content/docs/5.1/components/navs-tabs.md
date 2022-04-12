@@ -381,9 +381,31 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 </ul>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
+
+As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.nav`, `.nav-tabs`, `.nav-tabs-light` and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+On the `.nav` base class:
+
+{{< scss-docs name="nav-css-vars" file="scss/_nav.scss" >}}
+
+On the `.nav-tabs` modifier class:
+
+{{< scss-docs name="nav-tabs-css-vars" file="scss/_nav.scss" >}}
+
+On the `.nav-tabs-light` modifier class:
+
+{{< scss-docs name="nav-tabs-light-css-vars" file="scss/_nav.scss" >}}
+
+On the `.nav-pills` modifier class:
+
+{{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
 
