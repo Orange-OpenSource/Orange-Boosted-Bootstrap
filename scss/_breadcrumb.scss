@@ -18,7 +18,6 @@
   padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
   @include font-size(var(--#{$prefix}breadcrumb-font-size));
-  font-size: var(--#{$prefix}breadcrumb-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   list-style: none;
   background-color: var(--#{$prefix}breadcrumb-bg);

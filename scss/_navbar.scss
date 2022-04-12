@@ -130,7 +130,7 @@
   .title,
   .two-lined {
     margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); /* stylelint-disable-line function-disallowed-list */
-    font-size: var(--#{$prefix}navbar-brand-font-size);
+    @include font-size(var(--#{$prefix}navbar-brand-font-size));
     line-height: 1;
     letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
   }

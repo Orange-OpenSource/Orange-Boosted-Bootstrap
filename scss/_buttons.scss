@@ -28,7 +28,7 @@
   justify-content: center; // Boosted mod
   padding: subtract(var(--#{$prefix}btn-padding-y), 1px) var(--#{$prefix}btn-padding-x) add(var(--#{$prefix}btn-padding-y), 1px); // Boosted mod
   font-family: var(--#{$prefix}btn-font-family);
-  font-size: var(--#{$prefix}btn-font-size);
+  @include font-size(var(--#{$prefix}btn-font-size));
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
