@@ -32,6 +32,8 @@
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
   --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // Boosted mod
   --#{$prefix}modal-content-padding: #{$modal-content-padding}; // Boosted mod
+  --#{$prefix}modal-img-margin: #{$modal-img-margin};
+  --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
   // scss-docs-end modal-css-vars
 
   position: fixed;
@@ -139,11 +141,6 @@
 // Boosted mod
 //// Modal image
 .modal-img {
-  // scss-docs-start modal-img-css-vars
-  --#{$prefix}modal-img-margin: #{$modal-img-margin};
-  --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
-  // scss-docs-end modal-img-css-vars
-
   margin: var(--#{$prefix}modal-img-margin);
 
   + .modal-header .btn-close {

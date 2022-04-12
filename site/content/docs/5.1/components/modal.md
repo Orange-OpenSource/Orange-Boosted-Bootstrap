@@ -821,15 +821,13 @@ Another override is the option to pop up a modal that covers the user viewport, 
 
 {{< added-in "5.2.0" >}}
 
-As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.modal`, `.modal-dialog-scrollable`, `.modal-backdrop` and `.modal-img` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.modal`, `.modal-dialog-scrollable` and `.modal-backdrop` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="modal-css-vars" file="scss/_modal.scss" >}}
 
 {{< scss-docs name="modal-scrollable-css-vars" file="scss/_modal.scss" >}}
 
 {{< scss-docs name="modal-backdrop-css-vars" file="scss/_modal.scss" >}}
-
-{{< scss-docs name="modal-img-css-vars" file="scss/_modal.scss" >}}
 
 ### Sass variables
 
