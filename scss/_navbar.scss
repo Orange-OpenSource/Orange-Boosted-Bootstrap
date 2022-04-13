@@ -153,6 +153,14 @@
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
+  // scss-docs-start navbar-nav-css-vars
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
+  --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
+  --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
+  // scss-docs-end navbar-nav-css-vars
+
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
@@ -163,9 +171,9 @@
   .nav-link {
     position: relative;
     display: block;
-    padding: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width)) var(--#{$prefix}navbar-nav-link-padding-x) var(--#{$prefix}navbar-nav-link-padding-y);
+    padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
+    padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y);
     margin-left: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
-    color: var(--#{$prefix}navbar-color);
     word-break: break-all;
     outline-offset: $spacer;
     @include transition($navbar-transition);
@@ -173,12 +181,7 @@
     &:hover,
     &:focus {
       z-index: 1;
-      color: var(--#{$prefix}navbar-hover-color);
       outline-offset: 0;
-    }
-
-    &.disabled {
-      color: var(--#{$prefix}navbar-disabled-color);
     }
   }
 
