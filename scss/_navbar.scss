@@ -380,7 +380,7 @@
               left: var(--#{$prefix}navbar-nav-link-padding-x);
               height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
               content: "";
-              background-color: currentColor;
+              background-color: currentcolor;
               @include transition($navbar-active-transition);
             }
           }

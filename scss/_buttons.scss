@@ -241,7 +241,7 @@
 
 // Boosted mod: social button
 .btn-social {
-  border-color: currentColor;
+  border-color: currentcolor;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$boosted-prefix}network-logo));
 

@@ -112,14 +112,14 @@
       content: "";
       background:
         linear-gradient(
-          currentColor $border-width,
+          currentcolor $border-width,
           transparent $border-width,
           transparent $border-width * 2.5,
-          currentColor $border-width * 2.5,
-          currentColor subtract(100%, $border-width * 2.5),
+          currentcolor $border-width * 2.5,
+          currentcolor subtract(100%, $border-width * 2.5),
           transparent subtract(100%, $border-width * 2.5),
           transparent subtract(100%, $border-width),
-          currentColor subtract(100%, $border-width)
+          currentcolor subtract(100%, $border-width)
         );
     }
 
@@ -148,7 +148,7 @@
 
   .btn-group.show > &:not(:focus):not(:active)::before {
     color: $primary;
-    background-color: currentColor;
+    background-color: currentcolor;
   }
 
   .dropstart > &:not(:hover):not(:focus):not(:active) {

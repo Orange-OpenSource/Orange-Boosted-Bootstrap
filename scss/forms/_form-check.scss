@@ -281,7 +281,7 @@
 
     &:checked + .btn-no-outline {
       border-color: $gray-500;
-      outline-color: currentColor;
+      outline-color: currentcolor;
     }
   }
 
@@ -326,7 +326,7 @@
       // Remove CSS gradients if they're enabled
       background-image: if($enable-gradients, none, null); // Boosted mod
       filter: none;
-      border-color: currentColor; // Boosted mod
+      border-color: currentcolor; // Boosted mod
       opacity: $form-check-btn-check-disabled-opacity;
     }
 
@@ -340,7 +340,7 @@
     &:checked + .btn-no-outline {
       color: $gray-500;
       background-color: transparent;
-      border-color: currentColor;
+      border-color: currentcolor;
     }
     // End mod
   }
