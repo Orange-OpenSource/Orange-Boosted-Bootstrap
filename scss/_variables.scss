@@ -1550,7 +1550,8 @@ $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                null !default;
 
-$popover-header-bg:                 $popover-bg !default;
+$popover-header-font-size:          $font-size-base !default;
+$popover-header-bg:                 $popover-bg !default; // Boosted mod
 $popover-header-color:              var(--#{$prefix}heading-color) !default;
 $popover-header-padding-y:          $spacer * .5 !default;
 $popover-header-padding-x:          $spacer * .5 !default;
