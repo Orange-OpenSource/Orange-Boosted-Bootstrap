@@ -1494,10 +1494,16 @@ $accordion-dark-button-bg:                $accordion-dark-bg !default;
 $accordion-dark-button-active-color:      $brand-orange !default;
 // End mod
 
-// Boosted mod: no $accordion-button-focus-*
+$accordion-button-focus-border-color:     null !default; // Boosted mod
+$accordion-button-focus-box-shadow:       null !default; // Boosted mod
 
+$accordion-icon-width:                    null !default; // Boosted mod
 // Boosted mod: use caret
+$accordion-icon-transition:               null !default; // Boosted mod
 $accordion-icon-transform:                scaleY(-1) !default;
+
+$accordion-button-icon:                   "" !default; // Boosted mod
+$accordion-button-active-icon:            "" !default; // Boosted mod
 
 // Boosted mod: accordion sizes
 $accordion-button-font-size:              $h3-font-size !default;

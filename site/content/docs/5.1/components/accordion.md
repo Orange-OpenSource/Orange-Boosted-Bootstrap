@@ -263,6 +263,10 @@ Small and large accordion modifier classes are used to update the value of these
 
 {{< scss-docs name="accordion-lg-css-vars" file="scss/_accordion.scss" >}}
 
+Customization through CSS variables can be seen on the `.accordion-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="accordion-dark-css-vars" file="scss/_accordion.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}
