@@ -44,7 +44,10 @@
   font-weight: 600;
   color: var(--base08);
 }
-.gi { color: var(--base09); }
+.gi {
+  background-color: var(--base09);
+  border: 1px solid var(--base04);
+}
 .gp {
   font-weight: 600;
   color: var(--base0A);
