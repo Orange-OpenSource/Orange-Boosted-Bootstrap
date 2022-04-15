@@ -19,13 +19,13 @@
   --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing}; // Boosted mod
   --#{$prefix}accordion-btn-color: #{$accordion-color};
   --#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
-  --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
-  --#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
+  // Boosted mod: no --#{$prefix}accordion-btn-icon
+  // Boosted mod: no --#{$prefix}accordion-btn-icon-width
   --#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
-  --#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
-  --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
-  --#{$prefix}accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
-  --#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+  // Boosted mod: no --#{$prefix}accordion-btn-icon-transition
+  // Boosted mod: no --#{$prefix}accordion-btn-active-icon
+  // Boosted mod: no --#{$prefix}accordion-btn-focus-border-color
+  // Boosted mod: no --#{$prefix}accordion-btn-focus-box-shadow
   --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
   --#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
