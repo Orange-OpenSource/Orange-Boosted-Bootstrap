@@ -37,7 +37,7 @@
   align-items: center; // Boosted mod
   justify-content: center; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
-  font-size: var(--#{$prefix}pagination-font-size);
+  @include font-size(var(--#{$prefix}pagination-font-size));
   font-weight: $font-weight-bold; // Boosted mod
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);
@@ -126,7 +126,7 @@
   // Boosted mod
   &:first-child:not(.active) .page-link,
   &:last-child:not(.active) .page-link {
-    border-color: currentColor;
+    border-color: currentcolor;
 
     &:hover,
     &:focus {

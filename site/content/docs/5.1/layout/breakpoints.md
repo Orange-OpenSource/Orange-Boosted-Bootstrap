@@ -27,7 +27,7 @@ Boosted includes six default breakpoints, sometimes referred to as _grid tiers_,
 | Medium | `md` | &ge;768px |
 | Large | `lg` | &ge;1024px |
 | Extra large | `xl` | &ge;1280px |
-| Extra extra large | <code>xxl</code> | &ge;1440px |
+| Extra extra large | `xxl` | &ge;1440px |
 {{< /bs-table >}}
 
 Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.

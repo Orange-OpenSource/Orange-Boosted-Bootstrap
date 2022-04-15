@@ -27,7 +27,7 @@
 
 :root {
   @if $font-size-root != null {
-    font-size: var(--#{$prefix}root-font-size);
+    @include font-size(var(--#{$prefix}root-font-size));
   }
 
   @if $enable-smooth-scroll {
@@ -66,7 +66,7 @@ body {
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
   font-synthesis: none; // Boosted mod // 5
-  font-size: var(--#{$prefix}body-font-size);
+  @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
   color: var(--#{$prefix}body-color);
@@ -78,7 +78,7 @@ body {
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
-  text-rendering: optimizeSpeed; // Boosted mod
+  text-rendering: optimizespeed; // Boosted mod
 }
 // scss-docs-end reboot-body-rules
 
@@ -139,7 +139,7 @@ hr {
   letter-spacing: $letter-spacing-base; // Boosted mod
   -webkit-font-smoothing: antialiased;  // Boosted mod
   -moz-osx-font-smoothing: grayscale;   // Boosted mod
-  text-rendering: optimizeLegibility;   // Boosted mod
+  text-rendering: optimizelegibility;   // Boosted mod
 }
 
 h1 {
@@ -464,7 +464,7 @@ caption {
   letter-spacing: $h1-spacing;          // Boosted mod
   -webkit-font-smoothing: antialiased;  // Boosted mod
   -moz-osx-font-smoothing: grayscale;   // Boosted mod
-  text-rendering: optimizeLegibility;   // Boosted mod
+  text-rendering: optimizelegibility;   // Boosted mod
 }
 
 // 1. Removes font-weight bold by inheriting
@@ -555,11 +555,11 @@ select {
   }
 }
 
-// Remove the dropdown arrow in Chrome from inputs built with datalists.
+// Remove the dropdown arrow only from text type inputs built with datalists in Chrome.
 // See https://stackoverflow.com/a/54997118
 
-[list]::-webkit-calendar-picker-indicator {
-  display: none;
+[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator {
+  display: none !important;
 }
 
 // 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`

@@ -130,7 +130,7 @@
   .title,
   .two-lined {
     margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); /* stylelint-disable-line function-disallowed-list */
-    font-size: var(--#{$prefix}navbar-brand-font-size);
+    @include font-size(var(--#{$prefix}navbar-brand-font-size));
     line-height: 1;
     letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
   }
@@ -153,6 +153,14 @@
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
+  // scss-docs-start navbar-nav-css-vars
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
+  --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
+  // scss-docs-end navbar-nav-css-vars
+
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
@@ -163,9 +171,8 @@
   .nav-link {
     position: relative;
     display: block;
-    padding: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width)) var(--#{$prefix}navbar-nav-link-padding-x) var(--#{$prefix}navbar-nav-link-padding-y);
+    padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
     margin-left: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
-    color: var(--#{$prefix}navbar-color);
     word-break: break-all;
     outline-offset: $spacer;
     @include transition($navbar-transition);
@@ -173,12 +180,7 @@
     &:hover,
     &:focus {
       z-index: 1;
-      color: var(--#{$prefix}navbar-hover-color);
       outline-offset: 0;
-    }
-
-    &.disabled {
-      color: var(--#{$prefix}navbar-disabled-color);
     }
   }
 
@@ -377,7 +379,7 @@
               left: var(--#{$prefix}navbar-nav-link-padding-x);
               height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
               content: "";
-              background-color: currentColor;
+              background-color: currentcolor;
               @include transition($navbar-active-transition);
             }
           }

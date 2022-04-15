@@ -805,7 +805,7 @@ $table-border-color:          $gray-500 !default; // Boosted mod
 
 // Boosted mod: no $table-striped-*
 
-$table-group-separator-color: currentColor !default;
+$table-group-separator-color: currentcolor !default;
 
 $table-caption-color:         var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
 $table-caption-color-dark:    $white !default; // Boosted mod
@@ -875,8 +875,8 @@ $btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;
 
-$btn-link-color:              var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of $link-color
-$btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default; // Boosted mod: use CSS var instead of $link-hover-color
+$btn-link-color:              var(--#{$prefix}link-color) !default;
+$btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-500 !default;
 
 // Allows for customizing button radius independently from global border radius
@@ -987,7 +987,7 @@ $input-border-radius:                   $border-radius !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              currentColor !default;
+$input-focus-border-color:              currentcolor !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
@@ -1212,8 +1212,8 @@ $nav-link-padding-y:                $spacer * .5 !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
-$nav-link-color:                    var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of $link-color
-$nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default; // Boosted mod: use CSS var instead of $link-hover-color
+$nav-link-color:                    var(--#{$prefix}link-color) !default;
+$nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               null !default;
 $nav-link-disabled-color:           $gray-500 !default;
 
@@ -1402,11 +1402,11 @@ $pagination-margin-start:           $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
-$pagination-focus-color:            var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of $link-color
+$pagination-focus-color:            var(--#{$prefix}link-color) !default;
 $pagination-focus-bg:               null !default;
 $pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod: use CSS var instead of Sass var + not use the same var
+$pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
 $pagination-hover-bg:               null !default;
 $pagination-hover-border-color:     $gray-500 !default;
 
@@ -1479,7 +1479,9 @@ $accordion-body-padding-x:                $spacer !default; // Boosted mod
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  $accordion-color !default;
+// fusv-disable
+$accordion-button-color:                  $accordion-color !default; // Deprecated in Boosted 5.2.0 for CSS variables
+// fusv-enable
 $accordion-button-bg:                     var(--#{$variable-prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
@@ -1494,10 +1496,15 @@ $accordion-dark-button-bg:                $accordion-dark-bg !default;
 $accordion-dark-button-active-color:      $brand-orange !default;
 // End mod
 
-// Boosted mod: no $accordion-button-focus-*
+// Boosted mod: no $accordion-button-focus-border-color
+// Boosted mod: no $accordion-button-focus-box-shadow
 
-// Boosted mod: use caret
+// Boosted mod: no $accordion-icon-width
+// Boosted mod: no $accordion-icon-transition
 $accordion-icon-transform:                scaleY(-1) !default;
+
+// Boosted mod: no $accordion-button-icon
+// Boosted mod: no $accordion-button-active-icon
 
 // Boosted mod: accordion sizes
 $accordion-button-font-size:              $h3-font-size !default;
@@ -1550,8 +1557,9 @@ $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                null !default;
 
-$popover-header-bg:                 $popover-bg !default;
-$popover-header-color:              var(--#{$prefix}heading-color) !default; // Boosted mod: use CSS var instead of $headings-color
+$popover-header-font-size:          $font-size-base !default;
+$popover-header-bg:                 $popover-bg !default; // Boosted mod
+$popover-header-color:              var(--#{$prefix}heading-color) !default;
 $popover-header-padding-y:          $spacer * .5 !default;
 $popover-header-padding-x:          $spacer * .5 !default;
 
@@ -1722,6 +1730,7 @@ $list-group-border-radius:          $border-radius !default;
 $list-group-item-padding-y:         .875rem !default;
 $list-group-item-padding-x:         $spacer !default;
 
+$list-group-hover-bg:               null !default; // Boosted mod
 $list-group-active-color:           $white !default;
 $list-group-active-bg:              $black !default;
 $list-group-active-border-color:    $list-group-active-bg !default;
@@ -1731,6 +1740,9 @@ $list-group-disabled-bg:            $list-group-bg !default;
 
 $list-group-action-color:           $black !default;
 $list-group-action-hover-color:     $primary !default;
+
+$list-group-action-active-color:    $list-group-active-color !default; // Boosted mod
+$list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod
 // scss-docs-end list-group-variables
 
 
