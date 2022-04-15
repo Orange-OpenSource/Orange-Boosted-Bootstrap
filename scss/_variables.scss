@@ -1742,8 +1742,8 @@ $list-group-disabled-bg:            $list-group-bg !default;
 $list-group-action-color:           $black !default;
 $list-group-action-hover-color:     $primary !default;
 
-$list-group-action-active-color:    null !default; // Boosted mod
-$list-group-action-active-bg:       null !default; // Boosted mod
+$list-group-action-active-color:    $list-group-active-color !default; // Boosted mod
+$list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod
 // scss-docs-end list-group-variables
 
 

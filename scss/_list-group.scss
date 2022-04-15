@@ -67,8 +67,8 @@
   }
 
   &:active {
-    color: var(--#{$prefix}list-group-active-color); // Boosted mod
-    background-color: var(--#{$prefix}list-group-active-bg); // Boosted mod
+    color: var(--#{$prefix}list-group-action-active-color);
+    background-color: var(--#{$prefix}list-group-action-active-bg);
     border-color: var(--#{$prefix}list-group-active-border-color); // Boosted mod
   }
 }
