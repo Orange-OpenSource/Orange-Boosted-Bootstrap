@@ -271,16 +271,29 @@
 
 // Scrollspy demo on fixed height div
 .scrollspy-example {
-  position: relative;
   height: 200px;
   margin-top: .5rem;
   overflow: auto;
 }
 
 .scrollspy-example-2 {
-  position: relative;
   height: 350px;
   overflow: auto;
+}
+
+.simple-list-example-scrollspy {
+  a {
+    padding: .25rem;
+    margin: .5rem 0;
+
+    // Boosted mod: no &:focus rule
+  }
+
+  .active {
+    // Boosted mod: no background-color
+    font-weight: $font-weight-bold; // Boosted mod
+  }
+
 }
 
 .bd-example-border-utils {
