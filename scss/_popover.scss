@@ -183,7 +183,7 @@
 .popover-header {
   padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x);
   margin-bottom: 0; // Reset the default from Reboot
-  font-size: var(--#{$prefix}popover-header-font-size);
+  @include font-size(var(--#{$prefix}popover-header-font-size));
   color: var(--#{$prefix}popover-header-color);
 
   /* rtl:remove */
