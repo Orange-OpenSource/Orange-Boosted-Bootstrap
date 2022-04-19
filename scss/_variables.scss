@@ -1820,15 +1820,13 @@ $carousel-caption-spacer:            $spacer * 3 !default;
 
 $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
-//// Carousel control icon
 $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
-//// Play/Pause button icon
-$carousel-control-pause-icon:         $pause-icon !default;
-$carousel-control-play-icon:          $play-icon !default;
-$carousel-control-pause-icon-size:    .875rem .875rem !default;
+$carousel-control-pause-icon:        $pause-icon !default;
+$carousel-control-play-icon:         $play-icon !default;
+$carousel-control-pause-icon-size:   .875rem .875rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;

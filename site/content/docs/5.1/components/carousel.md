@@ -134,7 +134,6 @@ This `button` must immediately follow your carousel and have the custom `data-bs
   <span class="visually-hidden">Pause Carousel</span>
 </button>
 {{< /example >}}
-
 <!-- End mod -->
 
 ### With captions
