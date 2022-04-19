@@ -1826,7 +1826,8 @@ $carousel-control-icon-active-bg:    $component-active-bg !default;
 
 $carousel-control-pause-icon:        $pause-icon !default;
 $carousel-control-play-icon:         $play-icon !default;
-$carousel-control-pause-icon-size:   1.25rem 1.25rem !default;// End mod
+$carousel-control-pause-icon-size:   1.25rem 1.25rem !default;
+// End mod
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration $transition-timing !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
