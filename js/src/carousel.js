@@ -66,7 +66,7 @@ const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
 const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // Boosted mod
 const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
-const SELECTOR_CONTROL_PAUSE = '.carousel-control-play-button' // Boosted mod
+const SELECTOR_CONTROL_PAUSE = '.carousel-control-play-pause' // Boosted mod
 const SELECTOR_CAROUSEL_TO_PAUSE = 'data-bs-target' // Boosted mod
 const SELECTOR_CAROUSEL_PLAY_TEXT = 'data-bs-play-text' // Boosted mod
 const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // Boosted mod
