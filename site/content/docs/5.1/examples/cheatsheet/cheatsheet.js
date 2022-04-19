@@ -1,24 +1,24 @@
 /* global boosted: false */
 
-(function () {
+(() => {
   'use strict'
 
   // Tooltip and popover demos
   document.querySelectorAll('.tooltip-demo')
-    .forEach(function (tooltip) {
+    .forEach(tooltip => {
       new boosted.Tooltip(tooltip, {
         selector: '[data-bs-toggle="tooltip"]'
       })
     })
 
   document.querySelectorAll('[data-bs-toggle="popover"]')
-    .forEach(function (popover) {
+    .forEach(popover => {
       new boosted.Popover(popover)
     })
 
   document.querySelectorAll('.toast')
-    .forEach(function (toastNode) {
-      var toast = new boosted.Toast(toastNode, {
+    .forEach(toastNode => {
+      const toast = new boosted.Toast(toastNode, {
         autohide: false
       })
 
@@ -27,27 +27,27 @@
 
   // Disable empty links and submit buttons
   document.querySelectorAll('[href="#"], [type="submit"]')
-    .forEach(function (link) {
-      link.addEventListener('click', function (event) {
+    .forEach(link => {
+      link.addEventListener('click', event => {
         event.preventDefault()
       })
     })
 
   function setActiveItem() {
-    var hash = window.location.hash
+    const { hash } = window.location
 
     if (hash === '' || hash === 'top') {
       return
     }
 
-    var link = document.querySelector('.bd-aside a[href="' + hash + '"]')
+    const link = document.querySelector(`.bd-aside a[href="${hash}"]`)
 
     if (!link) {
       return
     }
 
-    var active = document.querySelector('.bd-aside .active')
-    var parent = link.parentNode.parentNode.previousElementSibling
+    const active = document.querySelector('.bd-aside .active')
+    const parent = link.parentNode.parentNode.previousElementSibling
 
     link.classList.add('active')
 
@@ -59,7 +59,7 @@
       return
     }
 
-    var expanded = active.parentNode.parentNode.previousElementSibling
+    const expanded = active.parentNode.parentNode.previousElementSibling
 
     active.classList.remove('active')
 

@@ -23,19 +23,15 @@
 {{ if eq .Page.Layout "docs" -}}
 <script>
   // Open in StackBlitz logic
-  document.querySelectorAll('.btn-edit')
-    .forEach(function (btn) {
-      btn.addEventListener('click', function (event) {
-        var htmlSnippet = event.target.closest('.bd-edit').previousSibling.innerHTML
-
-        StackBlitzSDK.openBoostedSnippet(htmlSnippet)
-      })
+  document.querySelectorAll('.btn-edit').forEach(btn => {
+    btn.addEventListener('click', event => {
+      const htmlSnippet = event.target.closest('.bd-edit').previousSibling.innerHTML
+      StackBlitzSDK.openBoostedSnippet(htmlSnippet)
     })
+  })
 
-  StackBlitzSDK.openBoostedSnippet = function(snippet) {
-    var project = {
-        files: {
-          'index.html': `<!doctype html>
+  StackBlitzSDK.openBoostedSnippet = snippet => {
+    const markup = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -63,12 +59,16 @@ ${snippet.replace(/^/gm, '    ')}
     <${'script'} src="{{ .Site.Params.cdn.js_bundle }}"></${'script'}>
   </body>
 </html>`
-        },
-        title: 'Boosted Example',
-        description: 'Official example from ' + window.location.href,
-        template: 'html',
-        tags: ['boosted']
-      }
+
+    const project = {
+      files: {
+        'index.html': markup
+      },
+      title: 'Boosted Example',
+      description: `Official example from ${window.location.href}`,
+      template: 'html',
+      tags: ['boosted']
+    }
 
     StackBlitzSDK.openProject(project, { openFile: 'index.html' })
   }

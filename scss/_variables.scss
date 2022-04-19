@@ -80,6 +80,7 @@ $colors: (
   "green":      $green,
   "teal":       $teal,
   "cyan":       $cyan,
+  "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800
@@ -1532,7 +1533,7 @@ $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   1 !default;
 $tooltip-padding-y:                 $spacer * .5 !default;
 $tooltip-padding-x:                 $spacer * .5 !default;
-$tooltip-margin:                    $spacer * .25 !default;
+$tooltip-margin:                    null !default; // TODO: remove this in v6
 
 $tooltip-arrow-width:               $spacer * .5 !default;
 $tooltip-arrow-height:              $tooltip-arrow-width * .5 !default;
