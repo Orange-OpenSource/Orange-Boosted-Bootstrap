@@ -130,7 +130,7 @@ This `button` must immediately follow your carousel and have the custom `data-bs
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<button type="button" class="btn btn-icon btn-secondary pause" data-bs-control="play-button" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
+<button type="button" class="btn btn-icon btn-secondary carousel-control-play-button pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
   <span class="visually-hidden">Pause Carousel</span>
 </button>
 {{< /example >}}
@@ -387,6 +387,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 | `ride` | string, boolean | `false` | Autoplays the carousel after the user manually cycles the first item. If set to`"carousel"`, autoplays the carousel on load. |
 | `wrap` | boolean | `true` | Whether the carousel should cycle continuously or have hard stops. |
 | `touch` | boolean | `true` | Whether the carousel should support left/right swipe interactions on touchscreen devices. |
+| `play-text` | string | `"Play Carousel"` | Text needed for accessibility attributes of the play button. If empty or missing, the default text will be `"Play Carousel"`|
+| `pause-text` | string | `"Pause Carousel"` | Text needed for accessibility attributes of the pause button. If empty or missing, the default text will be `"Pause Carousel"`|
 {{< /bs-table >}}
 
 ### Methods

@@ -1414,7 +1414,7 @@ describe('Carousel', () => {
     })
     // End mod
 
-    it('should call cycle if the carousel have carousel-item-next and carousel-item-prev class', () => {
+    it('should call cycle if the carousel have carousel-item-next or carousel-item-prev class, cause is sliding', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <div class="carousel-inner">',

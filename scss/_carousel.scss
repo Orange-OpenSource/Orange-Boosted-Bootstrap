@@ -305,7 +305,7 @@
 // Boosted mod: no dark carousel
 
 // Boosted mod: play/pause button
-[data-bs-control="play-button"] {
+.carousel-control-play-button {
   &.pause {
     @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
   }
