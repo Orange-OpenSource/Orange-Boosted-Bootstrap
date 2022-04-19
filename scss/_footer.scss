@@ -1,4 +1,6 @@
 .footer .navbar-nav {
+  --#{$prefix}nav-link-font-weight: #{$font-weight-bold};
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
