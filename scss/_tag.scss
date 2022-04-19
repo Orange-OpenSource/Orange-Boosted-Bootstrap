@@ -1,133 +1,129 @@
 .tag {
-  --#{$variable-prefix}tag-height: 2.5rem;
-  --#{$variable-prefix}tag-padding-x: #{$tag-padding-x};
-  --#{$variable-prefix}tag-font-size: #{$tag-font-size};
-  --#{$variable-prefix}tag-icon-size: #{$tag-icon-size};
-  --#{$variable-prefix}tag-icon-shift: #{$tag-icon-shift};
-  --#{$variable-prefix}tag-remove-size: 2.125rem;
-  --#{$variable-prefix}tag-remove-padding-end: .5rem;
-  --#{$variable-prefix}tag-icon-margin-start: -.4375rem;
-  --#{$variable-prefix}tag-border-color: #{$tag-border-color};
-  --#{$variable-prefix}tag-active-color: #{$tag-active-color};
-  --#{$variable-prefix}tag-active-decoration-color: #{$tag-active-decoration-color};
-  --#{$variable-prefix}tag-disabled-color: #{$tag-disabled-color};
+  --#{$prefix}tag-gap: #{$tag-gap};
+  --#{$prefix}tag-padding-x: #{$tag-padding-x};
+  --#{$prefix}tag-padding-y: #{$tag-padding-y};
+  @include rfs($tag-font-size, --#{$prefix}tag-font-size);
+  --#{$prefix}tag-font-shift: #{$tag-font-shift}; // stylelint-disable-line custom-property-empty-line-before
+  --#{$prefix}tag-font-weight: #{$tag-font-weight};
+  --#{$prefix}tag-font-spacing: #{$tag-font-spacing};
+  --#{$prefix}tag-icon-size: #{$tag-icon-size};
+  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
+  --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
+  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end};
+  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start};
+  --#{$prefix}tag-border-width: #{$tag-border-width};
+  --#{$prefix}tag-border-radius: #{$tag-border-radius};
+  --#{$prefix}tag-border-color: #{$tag-border-color};
+  --#{$prefix}tag-active-color: #{$tag-active-color};
+  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color};
+  --#{$prefix}tag-disabled-color: #{$tag-disabled-color};
+  --#{$prefix}tag-outline-color: var(--#{$prefix}link-hover-color);
 
   display: inline-flex;
-  height: var(--#{$variable-prefix}tag-height);
+  gap: var(--#{$prefix}tag-gap);
+  align-items: center;
+  padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)); // stylelint-disable-line function-disallowed-list
+  @include font-size(var(--#{$prefix}tag-font-size));
+  font-weight: var(--#{$prefix}tag-font-weight);
+  line-height: add(var(--#{$prefix}tag-font-size), .125rem);
+  color: inherit;
+  letter-spacing: var(--#{$prefix}tag-font-spacing);
+  background-color: transparent;
+  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
+  outline-offset: $spacer;
+  @include transition($transition-focus);
+  @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
+  img,
   svg {
-    width: var(--#{$variable-prefix}tag-icon-size);
-    height: var(--#{$variable-prefix}tag-icon-size);
-    margin-bottom: calc(var(--#{$variable-prefix}tag-icon-shift) * -1);  /* stylelint-disable-line function-disallowed-list */
-    margin-left: var(--#{$variable-prefix}tag-icon-margin-start);
+    width: var(--#{$prefix}tag-icon-size);
+    min-width: var(--#{$prefix}tag-icon-size); // Here to avoid weird behavior on wrap
+    height: var(--#{$prefix}tag-icon-size);
+    margin: add(calc(var(--#{$prefix}tag-icon-size) * -.5), var(--#{$prefix}tag-font-shift)) 0 calc(var(--#{$prefix}tag-icon-size) * -.5) var(--#{$prefix}tag-icon-margin-start); // stylelint-disable-line function-disallowed-list
   }
 
-  > button {
-    display: flex;
-    flex-direction: row;
-    gap: $tag-gap;
-    align-items: center;
-    padding: 0 var(--#{$variable-prefix}tag-padding-x) var(--#{$variable-prefix}tag-icon-shift);
-    font-size: var(--#{$variable-prefix}tag-font-size);
-    font-weight: $font-weight-bold;
-    line-height: $line-height-base;
+  .close {
+    position: relative;
+    width: var(--#{$prefix}tag-close-size);
+    min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
+    height: var(--#{$prefix}tag-close-size);
+    margin: add(calc(var(--#{$prefix}tag-close-size) * -.5), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(var(--#{$prefix}tag-close-size) * -.5) var(--#{$prefix}tag-close-margin-start); // stylelint-disable-line function-disallowed-list
     color: inherit;
     background-color: transparent;
-    border: $border-width solid var(--#{$variable-prefix}tag-border-color);
+    border: 0;
     outline-offset: $spacer;
     @include transition($transition-focus);
+    @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
-    &:hover {
-      border-color: var(--#{$variable-prefix}tag-active-decoration-color);
-    }
-
-    &:focus {
-      outline: $border-width solid var(--#{$variable-prefix}tag-active-decoration-color);
-      outline-offset: .25rem;
-    }
-
-    &:focus,
-    &:active {
-      color: var(--#{$variable-prefix}tag-active-color);
-      background-color: var(--#{$variable-prefix}tag-active-decoration-color);
-      border-color: var(--#{$variable-prefix}tag-active-decoration-color);
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: currentcolor;
+      transform: translate(-50%, -50%);
+      mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M24.536 20.298a1.499 1.499 0 0 1 0 2.12l-2.119 2.118a1.499 1.499 0 0 1-2.119 0L15 19.238l-5.298 5.298a1.499 1.499 0 0 1-2.12 0l-2.118-2.119a1.499 1.499 0 0 1 0-2.119L10.762 15 5.464 9.702a1.499 1.499 0 0 1 0-2.12l2.119-2.118a1.499 1.499 0 0 1 2.119 0L15 10.762l5.298-5.298a1.499 1.499 0 0 1 2.12 0l2.118 2.119a1.499 1.499 0 0 1 0 2.119L19.238 15z'/></svg>"));
+      mask-repeat: no-repeat;
+      mask-position: 50%;
+      mask-size: subtract(var(--#{$prefix}tag-close-size), .375rem);
     }
 
     &:hover,
-    &:focus,
     &:active {
-      z-index: 0;
+      color: var(--#{$prefix}tag-active-color);
+      background-color: var(--#{$prefix}tag-active-decoration-color);
     }
 
-    &:not(:first-child) {
-      margin-left: -$border-width;
+    &:focus[data-focus-visible-added] {
+      outline: .1875rem solid var(--#{$prefix}tag-outline-color);
+      outline-offset: .1875rem;
+    }
+
+    &[disabled] {
+      pointer-events: none;
     }
   }
 
-  [disabled] {
-    color: var(--#{$variable-prefix}tag-disabled-color);
+  &[disabled],
+  &.disabled {
+    color: var(--#{$prefix}tag-disabled-color);
     pointer-events: none;
-    border-color: var(--#{$variable-prefix}tag-disabled-color);
+    border-color: var(--#{$prefix}tag-disabled-color);
+  }
+}
 
-    &.remove {
-      @include tag-remove($tag-disabled-color);
-    }
+// stylelint-disable-next-line selector-no-qualifying-type
+button.tag {
+  &:hover {
+    border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 
-  &.tag-remove button {
-    padding-right: var(--#{$variable-prefix}tag-remove-padding-end);
+  // stylelint-disable-next-line selector-no-qualifying-type
+  &:focus[data-focus-visible-added] {
+    outline: .1875rem solid var(--#{$prefix}tag-outline-color);
+    outline-offset: .1875rem;
   }
 
-  .remove {
-    width: var(--#{$variable-prefix}tag-remove-size);
-    @include tag-remove($black);
-
-    &:focus,
-    &:active {
-      @include tag-remove($tag-active-color);
-    }
+  &:active {
+    color: var(--#{$prefix}tag-active-color);
+    background-color: var(--#{$prefix}tag-active-decoration-color);
+    border-color: var(--#{$prefix}tag-active-decoration-color);
   }
+}
 
-  /* stylelint-disable property-disallowed-list */
-  > :first-child {
-    border-top-left-radius: $tag-border-radius;
-    border-bottom-left-radius: $tag-border-radius;
-  }
+.tag-sm {
+  --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
+  --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
+  --#{$prefix}tag-font-size: #{$tag-font-size-sm};
+  --#{$prefix}tag-icon-size: #{$tag-icon-size-sm};
+  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start-sm};
+  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
+  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
+}
 
-  > :last-child {
-    border-top-right-radius: $tag-border-radius;
-    border-bottom-right-radius: $tag-border-radius;
-  }
-  /* stylelint-enable property-disallowed-list */
-
-  &.tag-sm {
-    --#{$variable-prefix}tag-height: 1.875rem;
-    --#{$variable-prefix}tag-padding-x: #{$tag-padding-x-sm};
-    --#{$variable-prefix}tag-font-size: #{$tag-font-size-sm};
-    --#{$variable-prefix}tag-icon-size: #{$tag-icon-size-sm};
-    --#{$variable-prefix}tag-icon-shift: #{$tag-icon-shift * 2};
-    --#{$variable-prefix}tag-remove-size: 2.125rem;
-    --#{$variable-prefix}tag-remove-padding-end: .5rem;
-    --#{$variable-prefix}tag-icon-margin-start: -.125rem;
-  }
-
-  &.tag-dark {
-    --#{$variable-prefix}tag-border-color: #{$tag-border-color-dark};
-    --#{$variable-prefix}tag-active-color: #{$tag-active-color-dark};
-    --#{$variable-prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
-    --#{$variable-prefix}tag-disabled-color: #{$tag-disabled-color-dark};
-
-    [disabled].remove {
-      @include tag-remove($tag-disabled-color-dark);
-    }
-
-    .remove {
-      @include tag-remove($white);
-
-      &:focus,
-      &:active {
-        @include tag-remove($tag-active-color-dark);
-      }
-    }
-  }
+.tag-dark {
+  --#{$prefix}tag-border-color: #{$tag-border-color-dark};
+  --#{$prefix}tag-active-color: #{$tag-active-color-dark};
+  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
+  --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
 }

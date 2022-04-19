@@ -1615,32 +1615,6 @@ $badge-padding-x:                   .65em !default;
 $badge-border-radius:               $border-radius !default;
 // scss-docs-end badge-variables
 
-// Tags
-
-// scss-docs-start tag-variables
-
-$tag-padding-x:                     .8125rem !default;
-$tag-gap:                           map-get($spacers, 1) !default;
-$tag-icon-size:                     1.5rem !default;
-$tag-icon-shift:                    .125rem !default;
-$tag-border-radius:                 2rem !default;
-$tag-font-size:                     $font-size-base !default;
-
-$tag-padding-x-sm:                  .5rem !default;
-$tag-icon-size-sm:                  1.25rem !default;
-$tag-font-size-sm:                  $font-size-sm !default;
-
-$tag-active-color:                  $white !default;
-$tag-disabled-color:                $gray-500 !default;
-$tag-border-color:                  $gray-500 !default;
-$tag-active-decoration-color:       $black !default;
-
-$tag-active-color-dark:             $black !default;
-$tag-disabled-color-dark:           $gray-700 !default;
-$tag-border-color-dark:             $gray-700 !default;
-$tag-active-decoration-color-dark:  $white !default;
-// scss-docs-end tag-variables
-
 // Modals
 
 // scss-docs-start modal-variables
@@ -2099,3 +2073,40 @@ $footer-gap:                              $spacer * .75 !default;
 $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
 // End mod
+
+// Tags
+
+// scss-docs-start tag-variables
+$tag-gap:                           map-get($spacers, 1) !default;
+$tag-font-shift:                    .125rem !default;
+$tag-font-weight:                   $font-weight-bold !default;
+$tag-font-spacing:                  $letter-spacing-base !default;
+$tag-border-width:                  $border-width !default;
+$tag-border-radius:                 $border-radius-pill !default;
+
+$tag-padding-x:                     .8125rem !default;
+$tag-padding-y:                     .5625rem !default;
+$tag-icon-size:                     1.5rem !default;
+$tag-icon-margin-start:             -.4375rem !default;
+$tag-close-margin-end:              -.375rem !default;
+$tag-close-margin-start:            .25rem !default;
+$tag-font-size:                     $font-size-base !default;
+
+$tag-padding-x-sm:                  .5rem !default;
+$tag-padding-y-sm:                  .3125rem !default;
+$tag-icon-size-sm:                  1.25rem !default;
+$tag-icon-margin-start-sm:          -.125rem !default;
+$tag-close-margin-end-sm:           -.3125rem !default;
+$tag-close-margin-start-sm:         0 !default;
+$tag-font-size-sm:                  $font-size-sm !default;
+
+$tag-active-color:                  $white !default;
+$tag-disabled-color:                $gray-500 !default;
+$tag-border-color:                  $gray-500 !default;
+$tag-active-decoration-color:       $black !default;
+
+$tag-active-color-dark:             $black !default;
+$tag-disabled-color-dark:           $gray-700 !default;
+$tag-border-color-dark:             $gray-700 !default;
+$tag-active-decoration-color-dark:  $white !default;
+// scss-docs-end tag-variables
