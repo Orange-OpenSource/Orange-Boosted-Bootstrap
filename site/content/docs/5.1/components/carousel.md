@@ -95,6 +95,47 @@ Carousel progress indicator is paused under multiple conditions:
 </div>
 {{< /example >}}
 
+<!-- Boosted mod -->
+### With pause/play button
+
+Adding a pause and play button is recommended to setup an accessible carousel.
+This `button` must immediately follow your carousel and have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
+
+'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
+
+{{< example >}}
+<div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#4bb4e6" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#50be87" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#a885d8" text="Third slide" >}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExamplePause" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExamplePause" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
+  <span class="visually-hidden">Pause Carousel</span>
+</button>
+{{< /example >}}
+<!-- End mod -->
+
 ### With captions
 
 Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
@@ -346,6 +387,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 | `ride` | string, boolean | `false` | Autoplays the carousel after the user manually cycles the first item. If set to`"carousel"`, autoplays the carousel on load. |
 | `wrap` | boolean | `true` | Whether the carousel should cycle continuously or have hard stops. |
 | `touch` | boolean | `true` | Whether the carousel should support left/right swipe interactions on touchscreen devices. |
+| `play-text` | string | `"Play Carousel"` | Text needed for accessibility attributes of the play button. If empty or missing, the default text will be `"Play Carousel"`|
+| `pause-text` | string | `"Pause Carousel"` | Text needed for accessibility attributes of the pause button. If empty or missing, the default text will be `"Pause Carousel"`|
 {{< /bs-table >}}
 
 ### Methods

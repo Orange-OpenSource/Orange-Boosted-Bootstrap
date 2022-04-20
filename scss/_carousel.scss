@@ -303,3 +303,14 @@
 }
 
 // Boosted mod: no dark carousel
+
+// Boosted mod: play/pause button
+.carousel-control-play-pause {
+  &.pause {
+    @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+  }
+  &.play {
+    @include button-icon($carousel-control-play-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+  }
+}
+// End mod

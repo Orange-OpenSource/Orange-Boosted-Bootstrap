@@ -139,7 +139,7 @@
   }
 
   // Buttons
-  > .btn,
+  > .btn:not(.carousel-control-play-button),
   > .btn-group {
     margin: .25rem .125rem;
   }
