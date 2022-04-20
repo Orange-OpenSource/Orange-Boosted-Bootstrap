@@ -54,7 +54,7 @@ module:
       target:                       static/docs/5.1/assets/js/lang
 
 params:
-  description:                      "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.."
+  description:                      "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
   authors:                          "Orange and Boosted contributors"
   social_image_path:                /docs/5.1/assets/brand/orange-social.png
   social_logo_path:                 /docs/5.1/assets/brand/orange-social-logo.png
