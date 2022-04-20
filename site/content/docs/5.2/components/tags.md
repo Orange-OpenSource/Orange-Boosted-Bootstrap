@@ -8,7 +8,7 @@ toc: true
 
 ## Examples
 
-A tag is basically a rounded container that can contain some elements.
+A tag is basically a rounded container that can contain some elements. It can be clickable and have a close button.
 
 {{< callout warning >}}
 Each tag version shouldn't be used aside another version of a tag.
@@ -17,6 +17,20 @@ Each tag version shouldn't be used aside another version of a tag.
 {{< example class="d-flex gap-2 align-items-center" >}}
 <span class="tag">
   Label
+</span>
+
+<button class="tag">
+  Label
+</button>
+
+<span class="tag">
+  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  Label
+  <button class="close">
+    <span class="visually-hidden">Close</span>
+  </button>
 </span>
 {{< /example >}}
 
@@ -130,7 +144,7 @@ Tags come with a small variant : `.tag-sm`.
 Tags come with a disabled state. Add `.disabled` and don't forget to add the `disabled` attribute to the button.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<span class="tag disabled">
+<span class="tag disabled" aria-disabled="true">
   Label
 </span>
 
@@ -141,7 +155,7 @@ Tags come with a disabled state. Add `.disabled` and don't forget to add the `di
   Label
 </button>
 
-<span class="tag disabled">
+<span class="tag disabled" aria-disabled="true">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
