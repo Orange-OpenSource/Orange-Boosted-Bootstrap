@@ -5,13 +5,11 @@ $bd-purple:        $primary; // Boosted mod
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
 // Boosted mod: no $bd-accent
-$bd-info:          $info; // Boosted mod
-$bd-warning:       $warning; // Boosted mod
-$bd-danger:        $danger; // Boosted mod
 // $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 // Boosted mod: no $sidebar-collapse-icon
 
 $bd-gutter-x: 1.25rem;
+$bd-callout-variants: info, warning, danger !default;
 
 :root {
   --bd-purple: #{$bd-purple};
