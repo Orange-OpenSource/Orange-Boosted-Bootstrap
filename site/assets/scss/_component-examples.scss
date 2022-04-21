@@ -400,6 +400,17 @@
   // End mod
 }
 
+.bd-example-snippet {
+  .highlight {
+    @include border-top-radius(0);
+    border: 1px solid $border-color;
+  }
+  .highlight-toolbar {
+    border: solid $border-color;
+    border-width: 0 1px;
+  }
+}
+
 .bd-content .highlight {
   margin-right: $bd-gutter-x * -1;
   margin-left: $bd-gutter-x * -1;

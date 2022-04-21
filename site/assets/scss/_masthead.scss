@@ -16,6 +16,11 @@
   & + & + & {
     background-color: tint-color($yellow, 90%);
   }
+
+  .btn-clipboard {
+    margin-top: .4rem;
+    background-color: transparent;
+  }
 }
 
 .home-icon {
