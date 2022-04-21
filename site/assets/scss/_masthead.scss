@@ -1,6 +1,85 @@
 .bd-masthead {
   padding: 3rem 0;
+  // Boosted mod: no background with gardients
 
+  h1 {
+    @include font-size(4rem);
+    line-height: 1;
+  }
+
+  .lead {
+    @include font-size(1rem);
+    font-weight: 400;
+    color: $gray-700;
+  }
+
+  .highlight {
+    padding: .5rem 4rem .5rem 1rem;
+    margin-bottom: 0;
+    line-height: 1.25;
+    background-color: rgba(var(--bs-body-color-rgb), .075);
+    @include border-radius(.5rem);
+  }
+  .btn-clipboard {
+    margin-top: .4rem;
+    background-color: transparent;
+  }
+
+  // Boosted mod: no #carbonads
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.5rem);
+    }
+  }
+}
+
+.masthead-followup {
+  .lead {
+    @include font-size(1rem);
+  }
+
+  .highlight {
+    @include border-radius(.5rem);
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.25rem);
+    }
+  }
+}
+
+.bd-btn-lg {
+  padding: .8rem 2rem;
+}
+
+.masthead-followup-icon {
+  padding: 1rem;
+  color: rgba(var(--bg-rgb), 1);
+  background-color: rgba(var(--bg-rgb), .1);
+  background-blend-mode: multiple;
+  @include border-radius(1rem);
+  mix-blend-mode: darken;
+
+  svg {
+    filter: drop-shadow(0 1px 1px #fff);
+  }
+}
+
+.masthead-followup-svg {
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .125));
+}
+
+.masthead-notice {
+  background-color: var(--bd-accent);
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), .15), 0 .25rem 1.5rem rgba(var(--bs-body-bg-rgb), .75);
+}
+
+/*
+// TODO: was only in Boosted before
+
+.bd-masthead {
   @include media-breakpoint-up(sm) {
     padding: 5rem 0;
   }
@@ -28,7 +107,4 @@
   height: 6rem;
   @include border-radius(25%);
 }
-
-@include media-breakpoint-up(md) {
-  .mw-md-75 { max-width: 75%; }
-}
+*/
