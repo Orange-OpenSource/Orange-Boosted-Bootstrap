@@ -2,7 +2,7 @@
 
 .bd-toc { // Boosted mod
   @include media-breakpoint-down(lg) {
-    border: 0 !important; // stylelint-disable declaration-no-important
+    border: 0 !important; // stylelint-disable-line declaration-no-important
   }
 
   @include media-breakpoint-up(lg) {
@@ -46,7 +46,7 @@
   }
 }
 
-/* .bd-toc-toggle {
+.bd-toc-toggle {
   display: flex;
   align-items: center;
 
@@ -63,9 +63,9 @@
     &:focus,
     &:active,
     &[aria-expanded="true"] {
-      color: var(--bd-violet);
-      background-color: $white;
-      border-color: var(--bd-violet);
+      color: currentcolor; // Boosted mod
+      background-color: var(--bs-gray-100); // Boosted mod
+      border-color: currentcolor; // Boosted mod
     }
 
     &:focus,
@@ -73,9 +73,9 @@
       box-shadow: 0 0 0 3px rgba(var(--bd-violet-rgb), .25);
     }
   }
-} */
+}
 
-/* .bd-toc-collapse {
+.bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
       padding: 1.25rem;
@@ -88,4 +88,4 @@
   @include media-breakpoint-up(md) {
     display: block !important; // stylelint-disable-line declaration-no-important
   }
-} */
+}
