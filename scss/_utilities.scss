@@ -511,7 +511,7 @@ $utilities: map-merge(
     "text-transform": (
       property: text-transform,
       class: text,
-      values: lowercase capitalize
+      values: lowercase uppercase capitalize
     ),
     "white-space": (
       property: white-space,
