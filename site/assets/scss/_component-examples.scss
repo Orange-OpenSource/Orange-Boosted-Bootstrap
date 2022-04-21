@@ -403,11 +403,13 @@
 .bd-example-snippet {
   .highlight {
     @include border-top-radius(0);
-    border: 1px solid $border-color;
+    // Boosted mod: no border
   }
   .highlight-toolbar {
-    border: solid $border-color;
-    border-width: 0 1px;
+    background-color: var(--bs-gray-100); // Boosted mod
+    border: var(--#{$prefix}border-width) solid $gray-400; // Boosted mod
+    border-top-width: 1px; // Boosted mod
+    border-bottom: 0; // Boosted mod
   }
 }
 
