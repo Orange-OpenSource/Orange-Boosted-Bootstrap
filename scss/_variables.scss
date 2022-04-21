@@ -354,6 +354,7 @@ $escaped-characters: (
 //// SVG as Data-URi
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2 7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$cross-icon-smooth:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M24.536 20.298a1.499 1.499 0 0 1 0 2.12l-2.119 2.118a1.499 1.499 0 0 1-2.119 0L15 19.238l-5.298 5.298a1.499 1.499 0 0 1-2.12 0l-2.118-2.119a1.499 1.499 0 0 1 0-2.119L10.762 15 5.464 9.702a1.499 1.499 0 0 1 0-2.12l2.119-2.118a1.499 1.499 0 0 1 2.119 0L15 10.762l5.298-5.298a1.499 1.499 0 0 1 2.12 0l2.118 2.119a1.499 1.499 0 0 1 0 2.119L19.238 15z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
 $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
@@ -2078,25 +2079,25 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 
 // scss-docs-start tag-variables
 $tag-gap:                           map-get($spacers, 1) !default;
-$tag-font-shift:                    .125rem !default;
+$tag-font-shift:                    $spacer * .1 !default;
 $tag-font-weight:                   $font-weight-bold !default;
 $tag-font-spacing:                  $letter-spacing-base !default;
 $tag-border-width:                  $border-width !default;
 $tag-border-radius:                 $border-radius-pill !default;
 
-$tag-padding-x:                     .8125rem !default;
-$tag-padding-y:                     .5625rem !default;
-$tag-icon-size:                     1.5rem !default;
-$tag-icon-margin-start:             -.4375rem !default;
-$tag-close-margin-end:              -.375rem !default;
-$tag-close-margin-start:            .25rem !default;
+$tag-padding-x:                     $spacer * .65 !default;
+$tag-padding-y:                     $spacer * .45 !default;
+$tag-icon-size:                     $spacer * 1.2 !default;
+$tag-icon-margin-start:             -$spacer * .35 !default;
+$tag-close-margin-end:              -$spacer * .3 !default;
+$tag-close-margin-start:            $spacer * .2 !default;
 $tag-font-size:                     $font-size-base !default;
 
-$tag-padding-x-sm:                  .5rem !default;
-$tag-padding-y-sm:                  .3125rem !default;
-$tag-icon-size-sm:                  1.25rem !default;
-$tag-icon-margin-start-sm:          -.125rem !default;
-$tag-close-margin-end-sm:           -.3125rem !default;
+$tag-padding-x-sm:                  $spacer * .4 !default;
+$tag-padding-y-sm:                  $spacer * .25 !default;
+$tag-icon-size-sm:                  $spacer !default;
+$tag-icon-margin-start-sm:          -$spacer * .1 !default;
+$tag-close-margin-end-sm:           -$spacer * .25 !default;
 $tag-close-margin-start-sm:         0 !default;
 $tag-font-size-sm:                  $font-size-sm !default;
 

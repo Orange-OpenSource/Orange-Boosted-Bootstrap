@@ -1,4 +1,5 @@
 .tag {
+  // scss-docs-start tag-css-vars
   --#{$prefix}tag-gap: #{$tag-gap};
   --#{$prefix}tag-padding-x: #{$tag-padding-x};
   --#{$prefix}tag-padding-y: #{$tag-padding-y};
@@ -8,6 +9,7 @@
   --#{$prefix}tag-font-spacing: #{$tag-font-spacing};
   --#{$prefix}tag-icon-size: #{$tag-icon-size};
   --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
+  --#{$prefix}tag-close-icon: #{$cross-icon-smooth};
   --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
   --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end};
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start};
@@ -18,6 +20,7 @@
   --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color};
   --#{$prefix}tag-disabled-color: #{$tag-disabled-color};
   --#{$prefix}tag-outline-color: var(--#{$prefix}link-hover-color);
+  // scss-docs-end tag-css-vars
 
   display: inline-flex;
   gap: var(--#{$prefix}tag-gap);
@@ -62,7 +65,7 @@
       content: "";
       background-color: currentcolor;
       transform: translate(-50%, -50%);
-      mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M24.536 20.298a1.499 1.499 0 0 1 0 2.12l-2.119 2.118a1.499 1.499 0 0 1-2.119 0L15 19.238l-5.298 5.298a1.499 1.499 0 0 1-2.12 0l-2.118-2.119a1.499 1.499 0 0 1 0-2.119L10.762 15 5.464 9.702a1.499 1.499 0 0 1 0-2.12l2.119-2.118a1.499 1.499 0 0 1 2.119 0L15 10.762l5.298-5.298a1.499 1.499 0 0 1 2.12 0l2.118 2.119a1.499 1.499 0 0 1 0 2.119L19.238 15z'/></svg>"));
+      mask-image: escape-svg(var(--#{$prefix}tag-close-icon));
       mask-repeat: no-repeat;
       mask-position: 50%;
       mask-size: subtract(var(--#{$prefix}tag-close-size), .375rem);
@@ -112,6 +115,7 @@ button.tag {
 }
 
 .tag-sm {
+  // scss-docs-start tag-dark-css-vars
   --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
   --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
   --#{$prefix}tag-font-size: #{$tag-font-size-sm};
@@ -119,11 +123,14 @@ button.tag {
   --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start-sm};
   --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
+  // scss-docs-end tag-dark-css-vars
 }
 
 .tag-dark {
+  // scss-docs-start tag-sm-css-vars
   --#{$prefix}tag-border-color: #{$tag-border-color-dark};
   --#{$prefix}tag-active-color: #{$tag-active-color-dark};
   --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
   --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
+  // scss-docs-end tag-sm-css-vars
 }
