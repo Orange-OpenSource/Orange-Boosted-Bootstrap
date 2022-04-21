@@ -1,10 +1,7 @@
 .footer .navbar-nav {
   --#{$prefix}nav-link-font-weight: #{$font-weight-bold};
 
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
   font-size: $footer-font-size-sm;
   line-height: $footer-line-height-sm;
   letter-spacing: $footer-letter-spacing;

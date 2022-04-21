@@ -2,7 +2,7 @@
   Usage: `orange-footer args`
 
   `args` are all optional and can be one of the following:
-    * mailing: Display mailing content - default = false
+    * title_content: Display a title with content - default = false
     * follow: Display follow content - default = false
     * nav: Display nav content - default = false
     * service: Display service content - default = false
@@ -11,7 +11,7 @@
     * id: Set an id for accordions and the footer itself
 */ -}}
 
-{{- $mailing := .Get "mailing" | default false -}}
+{{- $title_content := .Get "title_content" | default false -}}
 {{- $follow := .Get "follow" | default false -}}
 {{- $nav := .Get "nav" | default false -}}
 {{- $service := .Get "service" | default false -}}
@@ -21,9 +21,8 @@
 {{- $input := .Inner -}}
 
 <footer class="footer bg-dark navbar-dark">
-  <h2 class="visually-hidden">Site map & information</h2>
-{{- if $mailing }}
-  <!-- Mailing list bar-->
+  <h2 class="visually-hidden">Sitemap & information</h2>
+{{- if $title_content }}
   <div class="container-xxl footer-title-content">
     <h3 class="footer-heading">Sign up to our mailing list</h3>
     <div class="row">
@@ -39,7 +38,6 @@
 {{- end }}
 {{- end }}
 {{- if $follow }}
-<!-- Follow us bar -->
   <div class="container-xxl footer-social">
     <h3 class="footer-heading">Follow us</h3>
     <ul class="navbar-nav gap-2 flex-row align-self-start">
@@ -61,9 +59,8 @@
 {{- end }}
 {{- end }}
 {{- if $nav }}
-<!-- Navigation bar -->
   <div class="container-xxl footer-nav">
-    <nav class="accordion accordion-dark" id="accordion{{ $id }}" aria-label="site map footer {{ $id }}">
+    <nav class="accordion accordion-dark" id="accordion{{ $id }}" aria-label="Sitemap footer {{ $id }}">
       <div class="row">
         <div class="footer-column col-md-3">
           <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
@@ -153,7 +150,6 @@
 {{- end }}
 {{- end }}
 {{- if $service }}
-<!-- Service links bar-->
   <div class="container-xxl footer-service">
     <ul class="navbar-nav gap-3 gap-md-4">
       <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#locate"/></svg><span>Store locator</span></a></li>
@@ -167,7 +163,6 @@
 {{- end }}
 {{- end }}
 {{- if $mandatory }}
-<!-- Terms & Conditions bar-->
   <div class="container-xxl footer-terms">
     <ul class="navbar-nav gap-md-3">
       <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
