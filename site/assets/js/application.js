@@ -16,7 +16,7 @@
   'use strict'
 
   // Scroll the active sidebar link into view
-  /* const sidenav = document.querySelector('.bd-sidebar')
+  const sidenav = document.querySelector('.bd-sidebar')
   if (sidenav) {
     const sidenavHeight = sidenav.clientHeight
     const sidenavActiveLink = document.querySelector('.bd-links-nav .active')
@@ -28,7 +28,7 @@
     if (sidenav.scrollTop > viewportTop || sidenav.scrollTop < viewportBottom) {
       sidenav.scrollTop = viewportTop - (sidenavHeight / 2) + (sidenavActiveLinkHeight / 2)
     }
-  } */
+  }
 
   // Tooltip and popover demos
   document.querySelectorAll('.tooltip-demo')

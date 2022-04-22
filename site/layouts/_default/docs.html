@@ -3,7 +3,16 @@
 
   <div class="container-xxl bd-layout">
     <aside class="bd-sidebar">
-      {{ partial "docs-sidebar" . }}
+      <div class="offcanvas-lg offcanvas-start" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          {{ partial "docs-sidebar" . }}
+        </div>
+      </div>
     </aside>
 
     <main class="bd-main order-1">
