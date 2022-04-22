@@ -76,11 +76,9 @@ Prevent long strings of text from breaking your components' layout by using `.te
 
 Transform text in components with text capitalization classes.
 
-<!-- Boosted mod -->
-Orange Brand — thus Boosted — does not allow uppercase text blocks.
-
 {{< example >}}
 <p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">CapiTaliZed text.</p>
 {{< /example >}}
 
