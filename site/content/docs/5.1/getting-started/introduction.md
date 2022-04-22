@@ -63,6 +63,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Carousel for all slide behaviors, controls, and indicators
 - Collapse for toggling visibility of content
 - Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
+- Footer for extending our Collapse plugin to implement responsive behavior
 - Modals for displaying, positioning, and scroll behavior
 - Navbar for extending our Collapse plugin to implement responsive behavior
 - Offcanvases for displaying, positioning, and scroll behavior
