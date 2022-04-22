@@ -198,3 +198,6 @@
   display: none;
 }
 
+.tac_visually-hidden { // stylelint-disable-line selector-class-pattern
+  @include visually-hidden();
+}
