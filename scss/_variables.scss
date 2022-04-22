@@ -2017,9 +2017,11 @@ $footer-social-padding-bottom:           $spacer * 1.45 !default;
 $footer-social-title-margin-md:          $spacer * .5 $spacer $spacer * .6 0 !default;
 
 $footer-nav-padding-top:                 $spacer * 1.55 !default;
-$footer-nav-list-padding:                $spacer * .05 0 $spacer * 1.3 !default;
-$footer-nav-list-padding-bottom:         $spacer * 1.75 !default;
-$footer-nav-list-padding-bottom-md:      $spacer * 2 !default;
+$footer-nav-list-padding-top:            $spacer * .85 !default;
+$footer-nav-list-padding-top-md:         $spacer * .05 !default;
+$footer-nav-list-padding-bottom:         $spacer * 1.3 !default;
+$footer-nav-list-padding-bottom-md:      $spacer * 1.75 !default;
+$footer-nav-list-padding-bottom-lg:      $spacer * 2 !default;
 
 $footer-service-padding-y:               $spacer !default;
 $footer-service-padding-y-md:            $spacer * 1.2 !default;
