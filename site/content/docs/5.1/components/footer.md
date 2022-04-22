@@ -42,8 +42,8 @@ The footer bars are independent from each other. Just add a dark separator betwe
 This footer bar is a container with a `.footer-title-content` class. This container includes a title and a `.row` container in which to add your content. See below an example with a mail form content.
 
 {{< example class="p-0" >}}
-  {{< orange-footer title_content=true >}}
-  {{< /orange-footer >}}
+{{< orange-footer title_content=true >}}
+{{< /orange-footer >}}
 {{< /example >}}
 
 ### Follow us bar
@@ -51,8 +51,8 @@ This footer bar is a container with a `.footer-title-content` class. This contai
 This footer bar is a container with `.footer-social` class into which a list of social media icons can be added:
 
 {{< example class="p-0" >}}
-  {{< orange-footer follow=true >}}
-  {{< /orange-footer >}}
+{{< orange-footer follow=true >}}
+{{< /orange-footer >}}
 {{< /example >}}
 
 ### Navigation bar
@@ -81,8 +81,8 @@ Depending on the screen size and for accessibility concerns, you need to write e
 {{< /callout >}}
 
 {{< example class="p-0" >}}
-  {{< orange-footer nav=true id="2" >}}
-  {{< /orange-footer >}}
+{{< orange-footer nav=true id="2" >}}
+{{< /orange-footer >}}
 {{< /example >}}
 
 ### Service bar
@@ -90,8 +90,8 @@ Depending on the screen size and for accessibility concerns, you need to write e
 The footer is a container with a `.footer-service` class. Its purpose is to display customer services links.
 
 {{< example class="p-0" >}}
-  {{< orange-footer service=true >}}
-  {{< /orange-footer >}}
+{{< orange-footer service=true >}}
+{{< /orange-footer >}}
 {{< /example >}}
 
 ### Mandatory Terms & Conditions bar
@@ -99,8 +99,8 @@ The footer is a container with a `.footer-service` class. Its purpose is to disp
 The footer is a container with a `.footer-terms` class. This footer bar is **mandatory** in every footer and should come as the last bar of the footer.
 
 {{< example class="p-0" >}}
-  {{< orange-footer mandatory=true >}}
-  {{< /orange-footer >}}
+{{< orange-footer mandatory=true >}}
+{{< /orange-footer >}}
 {{< /example >}}
 
 ## Sass
