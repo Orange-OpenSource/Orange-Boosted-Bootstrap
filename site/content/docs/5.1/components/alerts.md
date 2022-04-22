@@ -163,11 +163,17 @@ Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted 
 
 ## CSS
 
+### Variables
+
 {{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
+
+Customization through CSS variables can be seen on the `.alert-sm` class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="alert-sm-css-vars" file="scss/_alert.scss" >}}
 
 ### Sass variables
 
