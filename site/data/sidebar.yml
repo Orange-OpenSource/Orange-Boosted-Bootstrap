@@ -1,7 +1,10 @@
 # This file holds all sidebar menu's entries.
 # The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+# Boosted mod: all colors have been changed to "black"
 
 - title: Getting started
+  icon: book-half
+  icon_color: black
   pages:
     - title: Introduction
     - title: Download
@@ -16,6 +19,8 @@
     - title: Contribute
 
 - title: Customize
+  icon: palette2
+  icon_color: black
   pages:
     - title: Overview
     - title: Sass
@@ -26,6 +31,8 @@
     - title: Optimize
 
 - title: Layout
+  icon: grid-fill
+  icon_color: black
   pages:
     - title: Breakpoints
     - title: Containers
@@ -37,6 +44,8 @@
     - title: CSS Grid
 
 - title: Content
+  icon: file-earmark-richtext
+  icon_color: black
   pages:
     - title: Reboot
     - title: Typography
@@ -45,6 +54,8 @@
     - title: Figures
 
 - title: Forms
+  icon: ui-radios
+  icon_color: black
   pages:
     - title: Overview
     - title: Form control
@@ -57,6 +68,8 @@
     - title: Validation
 
 - title: Components
+  icon: menu-button-wide-fill
+  icon_color: black
   pages:
     - title: Accordion
     - title: Alerts
@@ -89,6 +102,8 @@
     - title: Tooltips
 
 - title: Helpers
+  icon: magic
+  icon_color: black
   pages:
     - title: Clearfix
     - title: Colored links
@@ -101,6 +116,8 @@
     - title: Vertical rule
 
 - title: Utilities
+  icon: braces-asterisk
+  icon_color: black
   pages:
     - title: API
     - title: Background
@@ -120,11 +137,15 @@
     - title: Visibility
 
 - title: Extend
+  icon: tools
+  icon_color: black
   pages:
     - title: Approach
     - title: Icons
 
 - title: About
+  icon: globe2
+  icon_color: black
   pages:
     - title: Overview
     - title: Team
