@@ -33,9 +33,7 @@
               <span class="visually-hidden">Github</span>
             </a>
           </li>
-          <li class="nav-item align-self-center mx-2 mx-md-3 me-lg-0">
-            <a class="btn btn-primary btn-inverse" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
-          </li>
+          {{ partial "docs-versions" . }}
         </ul>
       </div>
     </div>
