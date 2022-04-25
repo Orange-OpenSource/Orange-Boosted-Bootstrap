@@ -14,14 +14,14 @@
   }
 
   .highlight {
-    padding: .5rem 4rem .5rem 1rem;
+    padding-right: 4rem; // Boosted mod: padding-right instead of padding
     margin-bottom: 0;
     line-height: 1.25;
     background-color: rgba(var(--bs-body-color-rgb), .075);
     @include border-radius(.5rem);
   }
   .btn-clipboard {
-    margin-top: .4rem;
+    // Boosted mod: no margin-top
     background-color: transparent;
   }
 
@@ -78,12 +78,6 @@
 
 /*
 // TODO: was only in Boosted before
-
-.bd-masthead {
-  @include media-breakpoint-up(sm) {
-    padding: 5rem 0;
-  }
-}
 
 .bd-followup {
   background-color: tint-color($teal, 92%);
