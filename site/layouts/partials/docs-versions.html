@@ -2,10 +2,10 @@
 {{- $group_slug := index $url (sub (len $url) 3) -}}
 {{- $page_slug := index $url (sub (len $url) 2) -}}
 
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link py-2 px-0 px-lg-2 dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-    <span class="d-lg-none">Boosted</span> v{{ .Site.Params.docs_version }}
-  </a>
+<li class="nav-item dropdown mb-0 d-flex align-items-center">
+  <button class="btn btn-secondary px-2 dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-lg-none">Boosted</span>&nbsp;v{{ .Site.Params.docs_version }}
+  </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ .Site.Params.docs_version }}/">Latest ({{ .Site.Params.docs_version }}.x)</a></li>
