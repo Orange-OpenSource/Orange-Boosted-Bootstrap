@@ -20,10 +20,10 @@
       <svg class="bi mb-2 fs-2 text-muted"><use xlink:href="#box-seam"></use></svg>
       <h3>Install via package manager</h3>
       <p class="pe-lg-5">
-        Install Boosted’s source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor. Package managed installs don’t include documentation or our full build scripts.
+        Install Boosted’s source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don’t include documentation or our full build scripts.
       </p>
       {{ highlight "npm install boosted" "sh" "" }}
-      {{ highlight (printf ("gem install boosted -v %s") .Site.Params.current_ruby_version) "sh" "" }}
+      {{ highlight "yarn add boosted" "sh" "" }}
       <p>
         <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
       </p>
