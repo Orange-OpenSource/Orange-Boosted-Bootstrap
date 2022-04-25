@@ -286,83 +286,30 @@ $utilities: map-merge(
     </div>
 
   </section>
+
+  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-6 mb-5 mb-md-0">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-info-rgb);">
+        <div class="bi fs-1">
+          {{ partial "icons/download.svg" (dict "width" "48" "height" "48" "class" "m-auto") }}
+        </div>
+      </div>
+      <h2 class="mb-3 lh-sm">Orange Design System for web</h2>
+      <p class="lead fw-normal">
+        Streamline your workflow and improve experience consistency with this cross-platform, scalable and inspiring design system. Designers, developers, marketers and partners, start your digital creations from the ready-to-use resources here!
+      </p>
+      <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
+        <a href="https://system.design.orange.com/0c1af118d/n/76065f" class="icon-link" target="_blank" rel="noopener">
+          Visit system.design.orange.com
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+      </p>
+    </div>
+    <div class="col-lg-6">
+      <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines.png,
+                                                    /docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines@2x.png 2x"
+                                            src="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines.png"
+                                            alt="Boosted design guidelines" width="460" height="345" loading="lazy">
+    </div>
+  </section>
 </div>
-
-<section class="bd-followup">
-  <div class="container-xxl py-3 py-md-5">
-    <div class="row align-items-center">
-      <div class="col-md-5">
-        <div class="home-icon bg-success rounded-circle d-flex mb-3">
-          {{ partial "icons/import.svg" (dict "width" "48" "height" "48" "class" "m-auto") }}
-        </div>
-        <h2 class="display-2">Installation</h2>
-        <p class="lead lead-lg">
-          Include Boosted’s source Sass and JavaScript files via npm, Composer, or Meteor.
-        </p>
-        <p>Package managed installs don’t include documentation or our full build scripts.</p>
-        <a class="btn btn-lg btn-success mb-4" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read installation docs</a>
-      </div>
-      <div class="col-md-7 ps-md-5">
-        <div class="mx-md-5 px-md-5">
-{{ highlight "npm install boosted" "sh" "" }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bd-followup">
-  <div class="container-xxl py-3 py-md-5">
-    <div class="row align-items-center">
-      <div class="col-md-5">
-        <div class="home-icon bg-danger rounded-circle d-flex mb-3">
-          {{ partial "icons/download.svg" (dict "width" "48" "height" "48" "class" "m-auto") }}
-        </div>
-        <h2 class="display-2">jsDelivr</h2>
-        <p class="lead lead-lg">
-          When you only need to include Boosted’s compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/">jsDelivr</a>.
-        </p>
-        <p>
-          See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#starter-template">starter template</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper.js and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
-
-        </p>
-        <a class="btn btn-lg btn-danger mb-4" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">Explore the docs</a>
-      </div>
-      <div class="col-md-7 ps-md-5">
-        <div class="mx-md-5 px-md-5">
-{{ highlight (printf (`<!-- CSS only -->
-<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">
-`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
-{{ highlight (printf (`<!-- JavaScript Bundle with Popper.js -->
-<script src="%s" integrity=%q crossorigin="anonymous"></script>
-`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bd-followup">
-  <div class="container-xxl py-3 py-md-5">
-    <div class="row align-items-center">
-      <div class="col-md-5">
-        <div class="home-icon bg-warning rounded-circle d-flex mb-3">
-          {{ partial "icons/download.svg" (dict "width" "48" "height" "48" "class" "m-auto") }}
-        </div>
-        <h2 class="display-2">Orange Design System for web</h2>
-        <p class="lead lead-lg">
-          Streamline your workflow and improve experience consistency with this cross-platform, scalable and inspiring design system. Designers, developers, marketers and partners, start your digital creations from the ready-to-use resources here!
-        </p>
-        <a class="btn btn-lg btn-warning mb-4" href="https://system.design.orange.com/0c1af118d/n/76065f">Visit system.design.orange.com</a>
-      </div>
-      <div class="col-md-7 ps-md-5">
-        <div class="text-start mx-md-5 px-md-5">
-          <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines.png,
-                                                      /docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines@2x.png 2x"
-                                              src="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-guidelines.png"
-                                              alt="Boosted design guidelines" width="460" height="345" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
