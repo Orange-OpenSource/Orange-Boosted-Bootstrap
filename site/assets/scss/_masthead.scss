@@ -56,7 +56,7 @@
 
 .masthead-followup-icon {
   padding: 1rem;
-  color: rgba(var(--bg-rgb), 1);
+  color: var(--bs-body-color);
   background-color: rgba(var(--bg-rgb), .1);
   background-blend-mode: multiple;
   @include border-radius(1rem);
