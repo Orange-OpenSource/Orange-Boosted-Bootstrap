@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Orange local headers
+title: Local headers
 description: Documentation and examples for Boosted's exclusive Brand responsive title bars.
 group: components
 toc: true
@@ -18,13 +18,16 @@ See them in action in our [examples page]({{<docsref "/examples/title-bars">}}).
 
 ### Background color
 
-To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.
+To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.'
 
-Background color other than white or black must be used only in title bars containing a **short title** and at least **one image**. The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
+Title bars can be displayed with black or white backgrounds. When using black or white backgrounds, illustrations can be included as an option, but it's not necessary.
+Supporting colors can also be used as the background color for title bars, but not the supporting light and dark tint colors. When using one of the supporting colors, illustrations must be used.
+
+The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
 
 {{< example class="p-0">}}
 <div class="bg-white title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
   </div>
 </div>
@@ -32,7 +35,7 @@ Background color other than white or black must be used only in title bars conta
 <div class="mt-3 bg-body"></div>
 
 <div class="bg-dark title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
   </div>
 </div>
@@ -40,7 +43,7 @@ Background color other than white or black must be used only in title bars conta
 <div class="mt-3 bg-body"></div>
 
 <div class="bg-supporting-green title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
     <picture>
       <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
@@ -58,13 +61,14 @@ Background color other than white or black must be used only in title bars conta
 ### Images
 
 Several options are available to add an image in a title bar.
+
 #### `srcset` attribute
 
 We **strongly recommend** to use `srcset` attribute as it is [well supported](https://caniuse.com/srcset) by browsers and allows you to load an image depending on the user's device. However, it might introduce a delay to display the image while resizing.
 
 {{< example class="p-0">}}
 <div class="bg-supporting-pink title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
     <picture>
       <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
@@ -83,7 +87,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 
 {{< example class="p-0">}}
 <div class="bg-supporting-purple title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
     <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
   </div>
@@ -94,7 +98,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 
 {{< example class="p-0">}}
 <div class="bg-supporting-green title-bar">
-  <div class="container">
+  <div class="container-xxl">
     <h1>Title</h1>
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt="" class="d-sm-none" />
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-480.png" alt="" class="d-none d-sm-block d-md-none" />
