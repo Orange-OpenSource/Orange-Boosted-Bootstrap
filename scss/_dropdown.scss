@@ -9,19 +9,19 @@
 }
 
 .dropdown-toggle {
-  white-space: nowrap;
-
-  // Boosted mod: handle variants
   --#{$variable-prefix}btn-padding-x: #{$dropdown-padding-x}; // Boosted mod
-  @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $disabled-background: $dropdown-bg, $disabled-border: $gray-500, $disabled-color: $gray-500);
 
-  &.btn-inverse:not(.dropdown-toggle-split) {
-    @include button-variant($black, $gray-700, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
-  // End mod
-
+  white-space: nowrap;
   // Generate the caret automatically
   @include caret();
+
+  &:not(.dropdown-toggle-split) {
+    @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $black, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
+
+    &.btn-inverse {
+      @include button-variant($black, $gray-700, $white, $black, $white, $white, $black, $white, $white, transparent, $gray-700, $gray-700);
+    }
+  }
 }
 
 // The dropdown menu
