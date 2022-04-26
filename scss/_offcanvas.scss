@@ -141,7 +141,14 @@
 
 .offcanvas-title {
   margin-bottom: 0;
+  font-size: $h5-font-size;
   line-height: var(--#{$prefix}offcanvas-title-line-height); // Boosted mod
+  letter-spacing: $h5-spacing;
+
+  @include media-breakpoint-up(md) {
+    font-size: $h4-font-size;
+    letter-spacing: $h4-spacing;
+  }
 }
 
 .offcanvas-body {

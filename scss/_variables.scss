@@ -1621,7 +1621,7 @@ $badge-border-radius:               $border-radius !default;
 $modal-inner-padding:               $spacer * .5 $spacer !default;
 
 $modal-footer-margin-between:       $spacer * .5 !default;
-$modal-footer-padding:              $spacer * .5 subtract($spacer, $modal-footer-margin-between * .5) 0 !default; // Boosted mod
+$modal-footer-padding:              $spacer $spacer 0 !default; // Boosted mod
 
 $modal-dialog-margin:               $spacer * .5 !default;
 $modal-dialog-margin-y-sm-up:       $spacer * 1.5 !default;
@@ -1656,7 +1656,7 @@ $modal-footer-border-width:         $modal-header-border-width !default;
 // Boosted mod
 //// Scrollable modal
 $modal-scrollable-inner-padding:    $spacer !default;
-$modal-scrollable-inner-margin:     $spacer 0 $spacer * .5 !default;
+$modal-scrollable-inner-margin:     $spacer 0 0 !default;
 
 //// Modal with top image
 $modal-img-margin:                  -$modal-content-padding-y 0 $modal-content-padding-y !default; // Boosted mod
