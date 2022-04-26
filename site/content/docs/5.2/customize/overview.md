@@ -4,7 +4,11 @@ title: Customize
 description: Learn how to theme, customize, and extend Boosted with Sass, a boatload of global options, an expansive color system, and more.
 group: customize
 toc: false
-aliases: "/docs/5.2/customize/"
+aliases:
+  - "/customize/"
+  - "/docs/customize/"
+  - "/docs/5.2/customize/"
+  - "/docs/customize/overview/"
 sections:
   - title: Sass
     description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
