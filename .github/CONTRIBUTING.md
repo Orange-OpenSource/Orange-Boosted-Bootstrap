@@ -1,6 +1,6 @@
 # Contributing to Boosted
 
-Looking to contribute something to Bootstrap? **Here's how you can help.**
+Looking to contribute something to Boosted? **Here's how you can help.**
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -20,7 +20,8 @@ restrictions:
 
 * Please **do not** use the issue tracker for personal support requests.  Stack
   Overflow ([`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5) tag),
-  [Slack](https://bootstrap-slack.herokuapp.com/) or [IRC](/README.md#community) are better places to get help.
+  [Slack](https://bootstrap-slack.herokuapp.com/) or [IRC](/README.md#community) are better places to get help for things related to Bootstrap.
+  Regarding Boosted, please contact Boosted Core Team via Orange internal tools.
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
@@ -29,16 +30,12 @@ restrictions:
   Use [GitHub's "reactions" feature](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/)
   instead. We reserve the right to delete comments which violate this rule.
 
-* Please **do not** open issues regarding the official themes offered on <https://themes.getbootstrap.com/>.
-  Instead, please email any questions or feedback regarding those themes to `themes AT getbootstrap DOT com`.
-
-
 ## Issues and labels
 
 Our bug tracker utilizes several labels to help organize and identify issues. Here's what they represent and how we use them:
 
 - `browser bug` - Issues that are reported to us, but actually are the result of a browser-specific bug. These are diagnosed with reduced test cases and result in an issue opened on that browser's own bug tracker.
-- `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in Bootstrap.
+- `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in Boosted.
 - `css` - Issues stemming from our compiled CSS or source Sass files.
 - `docs` - Issues for improving or updating our documentation.
 - `examples` - Issues involving the example templates included in our docs.
@@ -99,7 +96,7 @@ Example:
 
 ### Reporting upstream browser bugs
 
-Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Bootstrap per se.
+Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Boosted per se.
 
 | Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                               | Notes                                                    |
 | ------------- | ---------------------------- | ---------------- | ------------------------------------------------------ | -------------------------------------------------------- |
@@ -237,3 +234,4 @@ By contributing your code, you agree to license your contribution under the [MIT
 By contributing to the documentation, you agree to license your contribution under the [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).
 
 Prior to v3.1.0, Bootstrap's code was released under the Apache License v2.0.
+However there is no prior version to v3.1.0 for Boosted.
