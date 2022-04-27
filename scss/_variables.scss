@@ -823,8 +823,7 @@ $table-border-width:                    $border-width * .5 !default; // Boosted 
 $table-border-color:                    $gray-500 !default; // Boosted mod
 
 $table-striped-order:                   odd !default;
-
-// Boosted mod: no $table-striped-columns
+$table-striped-columns-order:           even !default;
 
 $table-group-separator-color: currentcolor !default;
 

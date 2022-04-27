@@ -100,6 +100,14 @@
   }
 }
 
+// For columns
+.table-striped-columns {
+  > :not(caption) > tr > :nth-child(#{$table-striped-columns-order}) {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    color: var(--#{$prefix}table-striped-color);
+  }
+}
+
 // Boosted mod : no .table-striped-columns
 
 // Active table

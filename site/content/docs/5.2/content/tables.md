@@ -85,11 +85,17 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 
 {{< table class="table table-striped" aria="Bootstrap's developers - table with one level of row and column header" >}}
 
+### Striped columns
+
+Use .table-striped-columns to add zebra-striping to any table column.
+
+{{< table class="table table-striped-columns" aria="Bootstrap's developers - table with one level of row and column header" >}}
+
 These classes can also be added to table variants:
 
 {{< table class="table table-dark table-striped" aria="Bootstrap's developers - table with one level of row and column header" >}}
 
-<!-- Boosted mod : no .table-striped-columns -->
+{{< table class="table table-dark table-striped-columns" aria="Bootstrap's developers - table with one level of row and column header" >}}
 
 <!-- Boosted mod : no .table-success -->
 
