@@ -104,7 +104,7 @@
     margin-left: $pagination-margin-start;
   }
 
-  @if $pagination-margin-start == (-$pagination-border-width) {
+  @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
     &:first-child {
       .page-link {
         @include border-start-radius(var(--#{$prefix}pagination-border-radius));
@@ -148,7 +148,7 @@
   }
 
   &:first-child .page-link {
-    margin-right: $pagination-margin-x-first-last;
+    margin-right: $pagination-margin-x-first-last; // Boosted mod
 
     &:not(:empty) {
       padding-right: $pagination-padding-end;
@@ -174,11 +174,11 @@
     }
   }
 
-  &:last-child {
-    &:not(:nth-child(2)) .page-link {
-      margin-left: $pagination-margin-x-first-last;
-    }
+  // Boosted mod
+  &:last-child &:not(:nth-child(2)) .page-link {
+    margin-left: $pagination-margin-x-first-last;
   }
+  // End mod
 
   @include media-breakpoint-down(sm) {
     @include pagination-max-items(4);
