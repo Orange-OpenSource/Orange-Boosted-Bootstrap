@@ -72,7 +72,6 @@
     - title: Dropdowns
     - title: Footer
     - title: List group
-    - title: Local headers
     - title: Modal
     - title: Navbar
     - title: Navs & tabs
@@ -87,6 +86,7 @@
     - title: Stepped process
     - title: Sticker
     - title: Toasts
+    - title: Title bars
     - title: Tooltips
 
 - title: Helpers
