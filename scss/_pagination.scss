@@ -148,7 +148,7 @@
   }
 
   &:first-child .page-link {
-    margin-right: $pagination-margin-x-first-last; // Boosted mod
+    margin-right: $pagination-margin-x-first-last;
 
     &:not(:empty) {
       padding-right: $pagination-padding-end;
@@ -174,11 +174,9 @@
     }
   }
 
-  // Boosted mod
-  &:last-child &:not(:nth-child(2)) .page-link {
+  &:last-child:not(:nth-child(2)) .page-link {
     margin-left: $pagination-margin-x-first-last;
   }
-  // End mod
 
   @include media-breakpoint-down(sm) {
     @include pagination-max-items(4);
