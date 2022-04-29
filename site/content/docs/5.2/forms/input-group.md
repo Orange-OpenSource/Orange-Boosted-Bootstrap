@@ -66,6 +66,11 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 <!-- Boosted mod: no .input-group-sm -->
 {{< example >}}
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+
 <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
