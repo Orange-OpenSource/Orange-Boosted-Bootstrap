@@ -193,6 +193,7 @@ fieldset:disabled a.btn {
     &.btn-inverse:active {
       background-color: $white;
       background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
+      border-color: $white;
     }
 
     &:hover,
