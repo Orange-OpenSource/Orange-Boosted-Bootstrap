@@ -223,6 +223,20 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 <!-- Boosted mod: don't promote "without label" -->
 
+## Without labels
+
+Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+
+{{< example >}}
+<div>
+  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+</div>
+
+<div>
+  <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+</div>
+{{< /example >}}
+
 ## Toggle buttons
 
 Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]({{< docsref "/components/button-group" >}}) if needed.
