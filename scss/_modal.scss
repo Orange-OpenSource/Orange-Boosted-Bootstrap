@@ -170,14 +170,13 @@
 // Title text within header
 .modal-title {
   margin-bottom: 0;
-  font-size: $h5-font-size; // Boosted mod
   line-height: var(--#{$prefix}modal-title-line-height);
-  letter-spacing: $h5-spacing; // Boosted mod
 
   // Boosted mod
-  @include media-breakpoint-up(md) {
-    font-size: $h4-font-size;
-    letter-spacing: $h4-spacing;
+  @include media-breakpoint-down(sm) {
+    &.h4 {
+      font-size: $h5-font-size;
+    }
   }
   // End mod
 }
