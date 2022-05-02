@@ -64,7 +64,6 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 **Sizing on the individual input group elements isn't supported.**
 
-<!-- Boosted mod: no .input-group-sm -->
 {{< example >}}
 <div class="input-group input-group-sm mb-3">
   <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
