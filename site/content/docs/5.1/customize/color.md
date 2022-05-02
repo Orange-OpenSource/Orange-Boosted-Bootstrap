@@ -28,7 +28,7 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ## All colors
 
-All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors). Please note that in the Boosted colors,  the indigo colors are the same as the purple ones.
+All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors). Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
