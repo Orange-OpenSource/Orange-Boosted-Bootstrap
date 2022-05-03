@@ -8,28 +8,9 @@ body_class: "d-flex flex-column"
 ---
 
 <main>
-  <div class="alert alert-info mb-0" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Information</span></span>
-    <div>
-      <h4 class="alert-heading">Background image</h4>
-      <p>In order to have a correct background image in title bars, an extra class and some CSS are required. The corresponding class is prefixed with <code>.example-title-bar-custom-</code> and can be found in <a href="title-bars.css" title="Title bars example CSS file">title-bars.css</a>.</p>
-    </div>
-  </div>
-
-  <div class="b-example-divider"></div>
-
   <div class="bg-white title-bar">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
-    </div>
-  </div>
-
-  <div class="b-example-divider"></div>
-
-  <div class="bg-supporting-blue title-bar">
-    <div class="container-xxl">
-      <h1 class="display-1">Title</h1>
-      <div class="col example-title-bar-custom-background"></div>
     </div>
   </div>
 
@@ -47,6 +28,25 @@ body_class: "d-flex flex-column"
         <source media="(min-width:320px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png">
         <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt=""/>
       </picture>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="alert alert-info mb-0" role="alert">
+    <span class="alert-icon"><span class="visually-hidden">Information</span></span>
+    <div>
+      <h4 class="alert-heading">Background image</h4>
+      <p>In order to have a correct background image in the following title bar, the <code>.example-title-bar-custom-background</code> extra class and the corresponding CSS can be found in <a href="title-bars.css" title="Title bars example CSS file">title-bars.css</a>.</p>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-supporting-blue title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <div class="col example-title-bar-custom-background"></div>
     </div>
   </div>
 

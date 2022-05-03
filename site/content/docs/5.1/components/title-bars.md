@@ -30,7 +30,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
   </div>
 </div>
 
-<div class="mt-3 bg-body"></div>
+<div class="mt-3"></div>
 
 <div class="bg-dark title-bar">
   <div class="container-xxl">
@@ -38,7 +38,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
   </div>
 </div>
 
-<div class="mt-3 bg-body"></div>
+<div class="mt-3"></div>
 
 <div class="bg-supporting-green title-bar">
   <div class="container-xxl">
