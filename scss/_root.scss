@@ -18,7 +18,7 @@
   }
 
   @each $color, $value in $theme-colors-rgb {
-    --#{$variable-prefix}#{$color}-rgb: #{$value};
+    --#{$prefix}#{$color}-rgb: #{$value};
   }
 
   --#{$prefix}white-rgb: #{to-rgb($white)};
