@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-A title bar is designed to display the title of a page and shall be placed right below a global header.
+A title bar is designed to display the title of a page and shall be placed right below an [Orange navbar]({{<docsref "/components/orange-navbar">}}).
 
 Being based on spacing and backgrounds utilities, title bars were designed to take `100vw` width.
 
@@ -26,7 +26,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
 {{< example class="p-0">}}
 <div class="bg-white title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
   </div>
 </div>
 
@@ -34,7 +34,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
 
 <div class="bg-dark title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ The image should not overlap on title and the title shouldn't wrap. If this happ
 
 <div class="bg-supporting-green title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
     <picture>
       <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
       <source media="(min-width:1280px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1280.png">
@@ -67,7 +67,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 {{< example class="p-0">}}
 <div class="bg-supporting-pink title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
     <picture>
       <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
       <source media="(min-width:1280px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1280.png">
@@ -86,7 +86,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 {{< example class="p-0">}}
 <div class="bg-supporting-purple title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
     <svg aria-hidden="true" focusable="false" width="1.8em"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"/></svg>
   </div>
 </div>
@@ -97,7 +97,7 @@ We **strongly recommend** to use `srcset` attribute as it is [well supported](ht
 {{< example class="p-0">}}
 <div class="bg-supporting-green title-bar">
   <div class="container-xxl">
-    <h1>Title</h1>
+    <h1 class="display-1">Title</h1>
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt="" class="d-sm-none" />
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-480.png" alt="" class="d-none d-sm-block d-md-none" />
     <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-768.png" alt="" class="d-none d-md-block d-lg-none" />

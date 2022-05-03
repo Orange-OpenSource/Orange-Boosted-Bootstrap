@@ -21,6 +21,10 @@
 - category: Custom Components
   description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
   examples:
+    - name: Cards
+      description: "List of all card variants (content and design)."
+    - name: Stickers
+      description: "List of all sticker variants."
     - name: Title bars
       description: "Orange branded title bars to introduce titles."
 #     - name: Album
@@ -75,14 +79,6 @@
       description: "Single navbar example of a sticky-top navbar along with some additional content."
 #     - name: Offcanvas navbar
 #       description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
-
-- category: Components
-  description: "Showing the possible variants of components."
-  examples:
-    - name: Cards
-      description: "List of all card variants (content and design)."
-    - name: Stickers
-      description: "List of all sticker variants."
 
 # - category: RTL
 #   description: "See Boosted's RTL version in action with these modified Custom Components examples."
