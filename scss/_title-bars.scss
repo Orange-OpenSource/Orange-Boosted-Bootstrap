@@ -1,10 +1,14 @@
 .title-bar {
+  // scss-docs-start title-bar-css-vars
   --#{$boosted-prefix}title-bar-padding-y: #{$title-bar-padding-y};
   --#{$boosted-prefix}title-bar-font-size: #{$h2-font-size};
   --#{$boosted-prefix}title-bar-letter-spacing: #{$h2-spacing};
   --#{$boosted-prefix}title-bar-border-width: #{$title-bar-border-width};
   --#{$boosted-prefix}title-bar-border-color: #{$gray-500};
   --#{$boosted-prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
+  // scss-docs-end title-bar-css-vars
+
+  border-bottom: var(--#{$boosted-prefix}title-bar-border-width) solid var(--#{$boosted-prefix}title-bar-border-color);
 
   @include media-breakpoint-up(md) {
     --#{$boosted-prefix}title-bar-font-size: #{$display2-size};
@@ -21,8 +25,6 @@
     --#{$boosted-prefix}title-bar-border-color: #{$gray-700};
   }
 
-  border-bottom: var(--#{$boosted-prefix}title-bar-border-width) solid var(--#{$boosted-prefix}title-bar-border-color);
-
   > [class*="container"] {
     display: flex;
     align-items: flex-end;
@@ -32,13 +34,13 @@
   img,
   svg {
     width: auto;
-    height: var(--#{$boosted-prefix}title-bar-image-ratio); // to simplify css
+    height: var(--#{$boosted-prefix}title-bar-image-ratio); // Simplify CSS
   }
 
   h1,
   & {
     font-size: var(--#{$boosted-prefix}title-bar-font-size);
-    line-height: $display-line-height; // to simplify css
+    line-height: $display-line-height; // Simplify CSS
     letter-spacing: var(--#{$boosted-prefix}title-bar-letter-spacing);
   }
 
