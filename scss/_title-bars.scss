@@ -1,0 +1,51 @@
+.title-bar {
+  // scss-docs-start title-bar-css-vars
+  --#{$boosted-prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
+  --#{$boosted-prefix}title-bar-padding-y: #{$title-bar-padding-y};
+  --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size};
+  --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing};
+  --#{$boosted-prefix}title-bar-border-width: #{$title-bar-border-width};
+  --#{$boosted-prefix}title-bar-border-color: #{$title-bar-border-color};
+  // scss-docs-end title-bar-css-vars
+
+  border-bottom: var(--#{$boosted-prefix}title-bar-border-width) solid var(--#{$boosted-prefix}title-bar-border-color);
+
+  @include media-breakpoint-up(md) {
+    --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size-md};
+    --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-md};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size-xl};
+    --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
+  }
+
+  &.bg-dark,
+  &.bg-secondary {
+    --#{$boosted-prefix}title-bar-border-color: #{$title-bar-border-color-dark};
+  }
+
+  > [class*="container"] {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  img,
+  svg {
+    width: auto;
+    height: var(--#{$boosted-prefix}title-bar-image-ratio); // Simplify CSS
+  }
+
+  .display-1,
+  & {
+    font-size: var(--#{$boosted-prefix}title-bar-font-size);
+    line-height: $display-line-height; // Simplify CSS
+    letter-spacing: var(--#{$boosted-prefix}title-bar-letter-spacing);
+  }
+
+  h1 {
+    padding: calc(var(--#{$boosted-prefix}title-bar-padding-y) * 2 - var(--#{$boosted-prefix}title-bar-border-width)) 0 var(--#{$boosted-prefix}title-bar-padding-y); // stylelint-disable-line function-disallowed-list
+    margin: 0;
+  }
+}
