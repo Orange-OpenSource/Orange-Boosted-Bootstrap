@@ -16,16 +16,16 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 
 ## Accessibility
 
-For the table's accessibility, there are four main rules.
+To make a table accessible, you should respect these four main rules:
 
-The first rule is about keyboard users. To make it accessible for every users, add `tabindex="0"` attribute to the `div` tag or to the `table` tag at least.
+- add a `tabindex="0"` attribute to the `div` tag or to the `table` tag at least to make a table accessible by keyboard navigation. It will add a tabulation to this element on which to stop when  navigating using the keyboard tab key.
 
-The second rule is to give a role to the table. To do it, add `role="region"` to the `div` tag.
+- add a `role="region"` attribute to the `div` tag to give a role to the table.
 
-The third one is about the readability of the table itself. Add `scope="col"` or `scope="row"` attribute to the tags when needed.
+- add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers
 
-To complete the rules, if the `caption` isn't there or isn't enough to describe, add an `aria-label` attribute to describe the table. The `aria-label` should match the following pattern : `aria-label="Table's data description - Table's metadata description (e.g. : table with one level of column header)"`.
-Otherwise, if the caption is enough add an `aria-labelledby="idCaption"` to describe the table.
+- if the table doesn't have a `caption` or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data  - Description of table metadata (e.g.: table with one level of column header)"`.
+At the opposite, if the caption is  precise enough, add instead an `aria-labelledby="idCaption"` to describe the table.
 
 See [more about the tables structures](https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees).
 
@@ -522,7 +522,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 <div class="bd-example">
-  <div class="table-responsive" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of row and column header">
+  <div class="table-responsive" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
     <table class="table">
       <thead>
         <tr>
@@ -581,7 +581,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 
 ```html
-<div class="table-responsive" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of row and column header">
+<div class="table-responsive" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
   <table class="table">
     ...
   </table>
@@ -598,7 +598,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{ range $.Site.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of row and column header">
+  <div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
     <table class="table">
       <thead>
         <tr>
@@ -659,7 +659,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< tables.inline >}}
 {{- range $.Site.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of row and column header">
+<div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
   <table class="table">
     ...
   </table>
@@ -673,10 +673,10 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 ### Sizes
 
-Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the attribute `tabindex="0"` for the accessibility on all browsers.
+Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the  `tabindex="0"` attribute for the accessibility on all browsers.
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
@@ -722,7 +722,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-md" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+  <div class="table-height-md" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
@@ -792,7 +792,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-lg" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+  <div class="table-height-lg" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
@@ -887,17 +887,17 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table">
     ...
   </table>
 </div>
-<div class="table-height-md" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="table-height-md" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table">
     ...
   </table>
 </div>
-<div class="table-height-lg" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="table-height-lg" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table">
     ...
   </table>
@@ -909,7 +909,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 Add `.table-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
     <table class="table table-sticky">
       <thead>
         <tr>
@@ -956,7 +956,7 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-sticky">
     ...
   </table>
@@ -966,7 +966,7 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 Works also with variants :
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
     <table class="table table-sticky table-dark">
       <thead>
         <tr>
@@ -1013,7 +1013,7 @@ Works also with variants :
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-dark table-sticky">
     ...
   </table>
@@ -1031,7 +1031,7 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-sm table-hover table-responsive">
     <thead>
       <tr>
@@ -1167,7 +1167,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<div role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-sm table-hover table-responsive">
     <thead>
       <tr>
@@ -1226,7 +1226,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 Use SVG to display thumbnails or icons in your table data cell elements.
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-sm table-hover table-responsive align-middle">
     <thead>
       <tr>
@@ -1426,7 +1426,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </td>
 ```
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example table with heading/cell content - table with one level of column header">
+<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
   <table class="table table-responsive align-middle">
     <thead>
       <tr>
