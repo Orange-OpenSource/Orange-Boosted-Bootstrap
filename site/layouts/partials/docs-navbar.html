@@ -30,9 +30,18 @@
           <li class="nav-item">
             <a class="nav-link nav-icon" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg align-text-top" "width" "20" "height" "20") }}
-              <span class="visually-hidden">Github</span>
+              <span class="visually-hidden">GitHub</span>
             </a>
           </li>
+          {{ if eq .Layout "docs" }}
+          <li class="nav-item d-flex align-items-md-center mb-0 me-2">
+            <form class="bd-search navbar-item mb-0" data-shortcut="⌘K" role="search">
+              <input type="search" class="form-control bg-transparent text-white border border-2 border-dark" id="search-input" placeholder="Search docs…" aria-label="Search docs for…" autocomplete="off" data-bd-docs-version="{{ .Site.Params.docs_version }}">
+            </form>
+
+            <hr class="d-lg-none text-white-50">
+          </li>
+          {{ end }}
           {{ partial "docs-versions" . }}
         </ul>
       </div>

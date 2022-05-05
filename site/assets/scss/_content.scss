@@ -1,15 +1,14 @@
 //
-// Bootstrap docs content theming
+// Boosted docs content theming
 //
 
-// Offset for the sticky header
-@include media-breakpoint-up(md) {
-  :root {
-    scroll-padding-top: $offset-top; // Boosted mod
-  }
-}
-
 .bd-content {
+  // Offset content from fixed navbar when jumping to headings
+  > :target {
+    padding-top: $offset-top; // Boosted mod
+    margin-top: -5rem;
+  }
+
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -30,15 +29,24 @@
     // stylelint-enable selector-max-type, selector-max-compound-selectors
   }
 
-  // Override Bootstrap defaults
+  // Override Boosted defaults
   > .table,
   > .table-responsive .table {
-    max-width: 100%;
     margin-bottom: 1.5rem;
     @include font-size(.875rem);
 
+    @include media-breakpoint-down(lg) {
+      &.table-bordered {
+        border: 0;
+      }
+    }
+
     thead {
       border-bottom: 2px solid currentcolor;
+    }
+
+    tbody:not(:first-child) {
+      border-top: 2px solid currentcolor;
     }
 
     th,
@@ -48,27 +56,28 @@
       }
 
       &:not(:last-child) {
-        padding-right: 1rem; // Boosted mod
+        padding-right: 1.5rem;
       }
     }
 
     // Prevent breaking of code
     // stylelint-disable-next-line selector-max-compound-selectors
+    th,
     td:first-child > code {
       white-space: nowrap;
     }
   }
+}
 
-  // Boosted mod
-  > .table-typography {
-    white-space: nowrap;
-
-    .bs-text-standard {
-      font-size: $font-size-base;
-      line-height: $line-height-base;
-    }
+.table-options {
+  td:nth-child(2) {
+    min-width: 160px;
   }
-  // End mod
+}
+
+.table-options td:last-child,
+.table-utilities td:last-child {
+  min-width: 280px;
 }
 
 .bd-title {
@@ -77,11 +86,41 @@
 
 .bd-lead {
   @include font-size(1.5rem);
-  font-weight: 400;
+  font-weight: 300;
+}
+
+.bd-bg-violet {
+  background-color: $bd-violet;
 }
 
 .bi {
-  width: 1.4em;
-  height: 1.4em;
+  width: 1.4em; // Boosted mod
+  height: 1.4em; // Boosted mod
   fill: currentcolor;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  text-decoration-color: rgba($primary, .5);
+  text-underline-offset: .5rem;
+  backface-visibility: hidden;
+
+  .bi {
+    width: 1.5em;
+    height: 1.5em;
+    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+  }
+
+  &:hover {
+    .bi {
+      transform: translate3d(5px, 0, 0);
+    }
+  }
+}
+
+.border-lg-start {
+  @include media-breakpoint-up(lg) {
+    border-left: $border-width solid $border-color;
+  }
 }
