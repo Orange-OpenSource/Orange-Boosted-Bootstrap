@@ -1,88 +1,54 @@
 .bd-sidebar {
-  @include media-breakpoint-down(md) {
-    margin: 0 ($bd-gutter-x * -1) 1rem;
-  }
-}
-
-.bd-links {
-  overflow: auto;
-  font-weight: 700; // Boosted mod
-
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     position: sticky;
-    top: $offset-top; // Boosted mod
+    top: 5rem;
     // Override collapse behaviors
     // stylelint-disable-next-line declaration-no-important
     display: block !important;
-    height: $sidebar-height; // Boosted mod
+    height: subtract(100vh, 6rem);
     // Prevent focus styles to be cut off:
     padding-left: .25rem;
     margin-left: -.25rem;
     overflow-y: auto;
   }
+}
 
-  > ul {
-    @include media-breakpoint-down(md) {
-      padding: 1.5rem .75rem;
-      background-color: $gray-100;
-      border-bottom: 1px solid $gray-200;
-    }
+.bd-links-nav {
+  @include media-breakpoint-down(lg) {
+    font-size: .875rem;
   }
 
-  // Boosted mod
-  a {
-    padding: $sidebar-link-padding;
-    margin-top: $spacer / 10;
-    font-size: $small-font-size;
-    font-weight: 400;
-    text-decoration: if($link-decoration == none, null, none);
+  @include media-breakpoint-between(xs, lg) {
+    column-count: 2;
+    column-gap: 1.5rem;
 
-    &:hover,
-    &:focus {
-      color: $black;
-      background-color: $gray-400;
+    .bd-links-group {
+      break-inside: avoid;
+    }
+
+    .bd-links-span-all {
+      column-span: all;
     }
   }
+}
 
-  .btn {
-    // Custom styles (as we don't have a completely neutral button style)
-    padding: $sidebar-button-padding;
-    margin-top: $spacer / 10;
-    line-height: $line-height-base;
-    border: 0;
+.bd-links-link {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  // TODO: adapt this rule after having changed the size of icons
+  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  margin-left: 1.125rem; // Boosted mod: changed value
+  color: rgba($black, .65);
+  text-decoration: if($link-decoration == none, null, none);
 
-    &:hover,
-    &:focus {
-      color: $black;
-      background-color: $gray-400;
-    }
+  // Boosted mod: no special hover, focus and active rules
 
-    // Add chevron if there's a submenu
-    @include caret($accordion: true);
-
-    &::after {
-      // stylelint-disable-next-line function-disallowed-list
-      transform: scale(calc(6 / 7));
-    }
-
-    &[aria-expanded="true"] {
-      color: $accessible-orange;
-
-      &:hover,
-      &:focus {
-        color: $black;
-      }
-
-      &::after {
-        // stylelint-disable-next-line function-disallowed-list
-        transform: scale(calc(6 / 7)) rotate(180deg);
-      }
-    }
+  &.active {
+    font-weight: 600;
   }
-
-  .active {
-    font-weight: 700;
-    color: $accessible-orange;
-  }
-  // End mod
 }

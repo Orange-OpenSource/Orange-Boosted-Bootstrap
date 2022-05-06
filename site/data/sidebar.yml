@@ -2,6 +2,8 @@
 # The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
 
 - title: Getting started
+  icon: book-half
+  icon_color: black
   pages:
     - title: Introduction
     - title: Download
@@ -16,6 +18,8 @@
     - title: Contribute
 
 - title: Customize
+  icon: palette2
+  icon_color: black
   pages:
     - title: Overview
     - title: Sass
@@ -26,6 +30,8 @@
     - title: Optimize
 
 - title: Layout
+  icon: grid-fill
+  icon_color: black
   pages:
     - title: Breakpoints
     - title: Containers
@@ -37,6 +43,8 @@
     - title: CSS Grid
 
 - title: Content
+  icon: file-earmark-richtext
+  icon_color: black
   pages:
     - title: Reboot
     - title: Typography
@@ -45,6 +53,8 @@
     - title: Figures
 
 - title: Forms
+  icon: ui-radios
+  icon_color: black
   pages:
     - title: Overview
     - title: Form control
@@ -52,15 +62,16 @@
     - title: Checks & radios
     - title: Range
     - title: Input group
-    - title: Quantity selector
+    - title: Floating labels
     - title: Layout
     - title: Validation
 
 - title: Components
+  icon: menu-button-wide-fill
+  icon_color: black
   pages:
     - title: Accordion
     - title: Alerts
-    - title: Back to top
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
@@ -70,26 +81,23 @@
     - title: Close button
     - title: Collapse
     - title: Dropdowns
-    - title: Footer
     - title: List group
     - title: Modal
     - title: Navbar
     - title: Navs & tabs
     - title: Offcanvas
-    - title: Orange navbar
     - title: Pagination
     - title: Placeholders
     - title: Popovers
     - title: Progress
     - title: Scrollspy
     - title: Spinners
-    - title: Stepped process
-    - title: Sticker
     - title: Toasts
-    - title: Title bars
     - title: Tooltips
 
 - title: Helpers
+  icon: magic
+  icon_color: black
   pages:
     - title: Clearfix
     - title: Colored links
@@ -102,6 +110,8 @@
     - title: Vertical rule
 
 - title: Utilities
+  icon: braces-asterisk
+  icon_color: black
   pages:
     - title: API
     - title: Background
@@ -114,6 +124,7 @@
     - title: Opacity
     - title: Overflow
     - title: Position
+    - title: Shadows
     - title: Sizing
     - title: Spacing
     - title: Text
@@ -121,17 +132,20 @@
     - title: Visibility
 
 - title: Extend
+  icon: tools
+  icon_color: black
   pages:
     - title: Approach
     - title: Icons
 
 - title: About
+  icon: globe2
+  icon_color: black
   pages:
     - title: Overview
     - title: Team
     - title: Brand
     - title: License
     - title: Translations
-    - title: Cookies
 
 - title: Migration

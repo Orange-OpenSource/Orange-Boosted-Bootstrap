@@ -11,7 +11,7 @@ Boosted utilities are generated with our utility API and can be used to modify o
 
 The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
 
-{{< bs-table "table text-start" >}}
+{{< bs-table "table table-utitilies" >}}
 | Option | Type | Default&nbsp;value | Description |
 | --- | --- | --- | --- |
 | [`property`](#property) | **Required** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
