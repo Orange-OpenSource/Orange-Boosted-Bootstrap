@@ -135,7 +135,6 @@
       outline: 3px solid $brand-orange;
       outline-offset: 2px;
       box-shadow: 0 0 0 2px $white;
-
     }
   }
   // End mod
@@ -219,12 +218,22 @@
     &:hover,
     &:focus {
       background-color: color-contrast($carousel-indicator-active-bg);
-      transform: scale($carousel-indicator-hover-scale);
 
       &::before {
         transform: translate3d(-50%, -50%, 0) scale($carousel-indicator-active-scale);
       }
     }
+
+    &:hover {
+      transform: scale($carousel-indicator-hover-scale);
+    }
+
+    &:focus {
+      outline: 3px solid $brand-orange;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px $white;
+    }
+
   }
 
   .active {
