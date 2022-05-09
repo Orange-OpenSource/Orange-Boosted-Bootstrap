@@ -170,7 +170,6 @@
   // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
-    display: block;
     padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
     margin-left: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
     word-break: break-all;

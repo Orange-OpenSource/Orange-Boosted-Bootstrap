@@ -36,6 +36,7 @@ $enable-cssgrid: true; // stylelint-disable-line scss/dollar-variable-default
 
 // Load docs components
 @import "variables";
+@import "navbar";
 @import "search";
 @import "subnav";
 @import "masthead";

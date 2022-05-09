@@ -1,5 +1,7 @@
 .bd-search {
   position: relative;
+  display: flex; // Boosted mod
+  align-items: center; // Boosted mod
   width: 100%;
 
   &::after {
