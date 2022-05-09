@@ -104,6 +104,7 @@
   text-align: center;
   background: none;
   border: 0;
+  outline: 0;
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
@@ -126,6 +127,16 @@
   &:active {
     --#{$boosted-prefix}control-bg: #{$carousel-control-icon-active-bg}; // Boosted mod
     color: $carousel-control-color;
+  }
+
+  &:focus:focus-visible,
+  &:focus {
+    & > span {
+      outline: 3px solid $brand-orange;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px $white;
+
+    }
   }
   // End mod
 }
