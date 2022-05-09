@@ -59,90 +59,92 @@
 {{- end }}
 {{- end }}
 {{- if $nav }}
-  <nav class="accordion accordion-dark container-xxl footer-nav" id="accordion{{ $id }}" aria-label="Sitemap footer {{ $id }}">
-    <div class="row">
-      <div class="footer-column col-md-3">
-        <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
-          <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $id }}" aria-expanded="true" aria-controls="collapseOne{{ $id }}">
-            Category
-          </button>
-          <span class="d-none d-md-flex">Category</span>
-        </h3>
-        <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
-          <ul class="navbar-nav">
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
-          </ul>
+  <div class="container-xxl footer-nav">
+    <nav class="accordion accordion-dark" id="accordion{{ $id }}" aria-label="Sitemap footer {{ $id }}">
+      <div class="row">
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingOne{{ $id }}">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $id }}" aria-expanded="true" aria-controls="collapseOne{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingTwo{{ $id }}">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $id }}" aria-expanded="true" aria-controls="collapseTwo{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingThree{{ $id }}">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree{{ $id }}" aria-expanded="true" aria-controls="collapseThree{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column col-md-3">
+          <h3 class="accordion-header footer-heading" id="headingFour{{ $id }}">
+            <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour{{ $id }}" aria-expanded="true" aria-controls="collapseFour{{ $id }}">
+              Category
+            </button>
+            <span class="d-none d-md-flex">Category</span>
+          </h3>
+          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+            <ul class="navbar-nav">
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+              <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-column col-md-3">
-        <h3 class="accordion-header footer-heading" id="headingTwo{{ $id }}">
-          <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $id }}" aria-expanded="true" aria-controls="collapseTwo{{ $id }}">
-            Category
-          </button>
-          <span class="d-none d-md-flex">Category</span>
-        </h3>
-        <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
-          <ul class="navbar-nav">
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-column col-md-3">
-        <h3 class="accordion-header footer-heading" id="headingThree{{ $id }}">
-          <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree{{ $id }}" aria-expanded="true" aria-controls="collapseThree{{ $id }}">
-            Category
-          </button>
-          <span class="d-none d-md-flex">Category</span>
-        </h3>
-        <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
-          <ul class="navbar-nav">
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-column col-md-3">
-        <h3 class="accordion-header footer-heading" id="headingFour{{ $id }}">
-          <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour{{ $id }}" aria-expanded="true" aria-controls="collapseFour{{ $id }}">
-            Category
-          </button>
-          <span class="d-none d-md-flex">Category</span>
-        </h3>
-        <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
-          <ul class="navbar-nav">
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-            <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 {{- if or $service $mandatory }}
   <div class="border-bottom border-1 border-dark"></div>
 {{- end }}

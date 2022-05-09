@@ -1,9 +1,5 @@
 .footer {
   > * {
-    --#{$prefix}footer-part-gap: null;
-    --#{$prefix}footer-part-padding-top: null;
-    --#{$prefix}footer-part-padding-bottom: null;
-    --#{$prefix}footer-part-title-margin-bottom: null;
     --#{$prefix}footer-part-title-font-size: #{$footer-font-size-md};
     --#{$prefix}footer-part-title-font-weight: #{$font-weight-bold};
     --#{$prefix}footer-part-title-line-height: #{$footer-line-height-md};
@@ -14,15 +10,15 @@
 
     padding-top: var(--#{$prefix}footer-part-padding-top);
     padding-bottom: var(--#{$prefix}footer-part-padding-bottom);
+  }
 
-    .footer-heading {
-      margin-bottom: var(--#{$prefix}footer-part-title-margin-bottom);
-      font-size: var(--#{$prefix}footer-part-title-font-size);
-      font-weight: var(--#{$prefix}footer-part-title-font-weight);
-      line-height: var(--#{$prefix}footer-part-title-line-height);
-      letter-spacing: var(--#{$prefix}footer-part-title-letter-spacing);
-      white-space: nowrap;
-    }
+  .footer-heading {
+    margin-bottom: var(--#{$prefix}footer-part-title-margin-bottom);
+    font-size: var(--#{$prefix}footer-part-title-font-size);
+    font-weight: var(--#{$prefix}footer-part-title-font-weight);
+    line-height: var(--#{$prefix}footer-part-title-line-height);
+    letter-spacing: var(--#{$prefix}footer-part-title-letter-spacing);
+    white-space: nowrap;
   }
 
   .navbar-nav {
@@ -63,6 +59,8 @@
   --#{$prefix}footer-part-padding-top: #{$footer-social-padding-top};
   --#{$prefix}footer-part-padding-bottom: #{$footer-social-padding-bottom};
   --#{$prefix}footer-part-title-margin-bottom: #{$footer-title-margin-bottom};
+  --#{$prefix}footer-part-title-font-size: #{$footer-font-size-sm};
+  --#{$prefix}footer-part-title-line-height: #{$footer-line-height-sm};
 
   display: flex;
   flex-direction: column;
@@ -70,8 +68,8 @@
   @include media-breakpoint-up(md) {
     --#{$prefix}footer-part-padding-top: #{$footer-social-padding-top-md};
     --#{$prefix}footer-part-title-margin-bottom: #{$footer-social-title-margin-bottom-md};
-    --#{$prefix}footer-part-title-font-size: #{$footer-font-size-sm};
-    --#{$prefix}footer-part-title-line-height: #{$footer-line-height-sm};
+    --#{$prefix}footer-part-title-font-size: #{$footer-font-size-md};
+    --#{$prefix}footer-part-title-line-height: #{$footer-line-height-md};
 
     flex-direction: row;
     align-items: center;
@@ -80,31 +78,23 @@
 
 .footer-nav {
   --#{$prefix}footer-part-gap: #{$footer-gap-xl};
-  --#{$prefix}accordion-btn-font-size: #{$footer-font-size-sm};
-  --#{$prefix}accordion-btn-line-height: #{$footer-accordion-line-height};
-  --#{$prefix}accordion-btn-letter-spacing: #{$footer-letter-spacing};
   --#{$prefix}navbar-nav-padding-top: #{$footer-nav-list-padding-top};
+  --#{$prefix}navbar-nav-padding-x: 0;
   --#{$prefix}navbar-nav-padding-bottom: #{$footer-nav-list-padding-bottom};
-
-  @include media-breakpoint-down(md) {
-    max-width: unset;
-    padding: 0;
-
-    .row {
-      --#{$prefix}gutter-x: 0;
-    }
-  }
 
   @include media-breakpoint-up(md) {
     --#{$prefix}footer-part-gap: #{$footer-gap};
     --#{$prefix}footer-part-padding-top: #{$footer-nav-padding-top};
     --#{$prefix}footer-part-padding-bottom: #{$footer-nav-list-padding-bottom-md};
-    --#{$prefix}footer-part-title-margin-bottom: #{$spacer};
-    --#{$prefix}accordion-border-width: 0;
+    --#{$prefix}footer-part-title-margin-bottom: #{$spacer * 1.05};
     --#{$prefix}navbar-nav-padding-top: #{$footer-nav-list-padding-top-md};
     --#{$prefix}navbar-nav-padding-bottom: null;
     --#{$prefix}navbar-nav-font-size: #{$footer-font-size-md};
     --#{$prefix}navbar-nav-line-height: #{$footer-line-height-md};
+
+    .accordion {
+      --#{$prefix}accordion-border-width: 0;
+    }
 
     .accordion-collapse {
       display: flex;
@@ -122,6 +112,21 @@
 
   @include media-breakpoint-up(lg) {
     --#{$prefix}footer-part-padding-bottom: #{$footer-nav-list-padding-bottom-lg};
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: unset;
+    padding: 0;
+
+    .row {
+      --#{$prefix}gutter-x: 0;
+    }
+  }
+
+  .accordion {
+    --#{$prefix}accordion-btn-font-size: #{$footer-font-size-sm};
+    --#{$prefix}accordion-btn-line-height: #{$footer-accordion-line-height};
+    --#{$prefix}accordion-btn-letter-spacing: #{$footer-letter-spacing};
   }
 
   .footer-column:first-of-type .accordion-header:first-of-type,
