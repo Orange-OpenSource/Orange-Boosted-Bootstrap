@@ -101,7 +101,7 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 Alerts can also contain additional HTML elements like headings, links and paragraphs.
 
-As of Boosted, it’s recommended to wrap your additional content in a `<div>` to ensure proper alignment — and, for headings, to always use the .alert-heading class.
+As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment and, for headings, to always use the .alert-heading class.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
