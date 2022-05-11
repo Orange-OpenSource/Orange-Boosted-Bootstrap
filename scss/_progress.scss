@@ -16,6 +16,8 @@
   --#{$prefix}progress-border-radius: #{$progress-border-radius};
   --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
   --#{$prefix}progress-bar-color: #{$progress-bar-color};
+  --#{$prefix}progress-bar-font-weight: #{$progress-bar-font-weight}; // Boosted mod
+  --#{$prefix}progress-bar-text-indent: #{$progress-bar-text-indent}; // Boosted mod
   --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
   --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
   // scss-docs-end progress-css-vars
@@ -48,9 +50,9 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: var(--#{$prefix}progress-bar-font-weight); // Boosted mod
   color: var(--#{$prefix}progress-bar-color);
-  text-indent: map-get($spacers, 2); // Boosted mod
+  text-indent: var(--#{$prefix}progress-bar-text-indent); // Boosted mod
   white-space: nowrap;
   background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
