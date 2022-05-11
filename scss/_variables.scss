@@ -563,7 +563,8 @@ $container-padding-x: $grid-gutter-width !default;
 $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
-  2: $border-width
+  2: $border-width,
+  3: $border-width * 1.5
 ) !default;
 
 $border-style:                solid !default;
