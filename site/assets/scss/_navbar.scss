@@ -45,9 +45,9 @@
   // Boosted mod: no .dropdown-toggle
 
   .dropdown-menu {
-    --#{$variable-prefix}dropdown-min-width: 12rem;
+    --#{$prefix}dropdown-min-width: 12rem;
     // Boosted mod: background-color is already good
-    @include rfs(.875rem, --#{$variable-prefix}dropdown-font-size);
+    @include rfs(.875rem, --#{$prefix}dropdown-font-size);
     // Boosted mod: no box-shadow
   }
 
