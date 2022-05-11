@@ -85,16 +85,10 @@
 .bd-example {
   position: relative;
   padding: 1rem;
-  margin: 1rem ($bd-gutter-x * -.5) 0;
-  border: solid $gray-300; // Boosted mod: color change
-  border-width: 1px 0 0;
   @include clearfix();
 
   @include media-breakpoint-up(md) {
     padding: 1.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    border-width: 1px;
     @include border-top-radius(var(--bs-border-radius));
   }
 
@@ -362,7 +356,6 @@
   padding: .75rem ($bd-gutter-x * .5);
   margin-bottom: $spacer; // Boosted mod
   background-color: var(--bs-gray-100);
-  border: var(--#{$prefix}border-width) solid $gray-400; // Boosted mod
 
   @include media-breakpoint-up(md) {
     padding: .75rem 1.25rem;
@@ -407,25 +400,25 @@
   // End mod
 }
 
-.bd-example-snippet {
-  .highlight {
-    @include border-top-radius(0);
-    border: 1px solid $gray-300; // Boosted mod: changed color
-  }
-  .highlight-toolbar {
-    background-color: $gray-100; // Boosted mod: added this rule instead of using .bg-light
-    border: solid $gray-300; // Boosted mod: changed color
-    border-width: 0 1px;
-  }
-}
+.bd-code-snippet {
+  margin: $spacer ($bd-gutter-x * -.5);
+  border: solid $gray-400; // Boosted mod: change border color
+  border-width: 1px 0;
 
-.bd-example-snippet .highlight-toolbar, // Boosted mod: added selector
-.bd-content .highlight {
-  margin-right: $bd-gutter-x * -.5;
-  margin-left: $bd-gutter-x * -.5;
+  .highlight {
+    margin-bottom: 0;
+  }
 
   @include media-breakpoint-up(md) {
     margin-right: 0;
     margin-left: 0;
+    border-width: 1px;
+    @include border-radius($border-radius);
   }
+}
+
+.highlight-toolbar {
+  background-color: $gray-100; // Boosted mod: specify this rule instead of using .bg-light
+  border: solid $gray-400; // Booosted mod: change border color
+  border-width: 1px 0;
 }
