@@ -1,39 +1,43 @@
 .sticker {
+  // scss-docs-start sticker-css-vars
+  --#{$prefix}sticker-size: #{$sticker-size-md};
+  --#{$prefix}sticker-font-weight: #{$font-weight-bold};
+  --#{$prefix}sticker-background-color: #{$brand-orange};
+  --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-md};
+  // scss-docs-end sticker-css-vars
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: $sticker-size-md;
-  height: $sticker-size-md;
-  font-weight: $font-weight-bold;
+  width: var(--#{$prefix}sticker-size);
+  height: var(--#{$prefix}sticker-size);
+  font-weight: var(--#{$prefix}sticker-font-weight);
   text-align: center;
   word-wrap: break-word;
-  background-color: $brand-orange;
-  border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
+  background-color: var(--#{$prefix}sticker-background-color);
+  // border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
+  border-radius: var(#{$prefix}sticker-size=#{$sticker-size-lg}); // stylelint-disable-line property-disallowed-list
 
   > * {
-    max-width: $sticker-content-max-width-md;
+    max-width: var(--#{$prefix}sticker-content-max-width);
   }
 
   // Large sticker
 
   &.sticker-lg {
-    width: $sticker-size-lg;
-    height: $sticker-size-lg;
-
-    > * {
-      max-width: $sticker-content-max-width-lg;
-    }
+    // scss-docs-start sticker-lg-css-vars
+    --#{$prefix}sticker-size: #{$sticker-size-lg};
+    --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-lg};
+    // scss-docs-end sticker-lg-css-vars
   }
 
   // Small sticker
 
   &.sticker-sm {
-    width: $sticker-size-sm;
-    height: $sticker-size-sm;
-
-    > * {
-      max-width: $sticker-content-max-width-sm;
-    }
+    // scss-docs-start sticker-sm-css-vars
+    --#{$prefix}sticker-size: #{$sticker-size-sm};
+    --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-sm};
+    // scss-docs-end sticker-sm-css-vars
   }
 }
