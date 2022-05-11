@@ -38,6 +38,10 @@
     color: $primary;
   }
 
+  &:focus {
+    z-index: 3;
+  }
+
   // Boosted mod
   .bi {
     width: 1.4em;
