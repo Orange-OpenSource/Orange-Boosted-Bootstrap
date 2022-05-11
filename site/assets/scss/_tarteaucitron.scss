@@ -155,6 +155,7 @@
 @include tac("SelfLink", true) {
   position: absolute;
   right: $modal-content-padding;
+  bottom: add($spacer * -1.5, $border-width);
   padding: $spacer / 4 $spacer / 2;
   color: $white;
   background-color: $black;
@@ -163,13 +164,6 @@
 @include tac("Allow", true) {
   @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
 
-  &:hover,
-  &:focus {
-    color: $black;
-    background-color: $white;
-    border-color: $white;
-  }
-
   &::before {
     margin-right: $spacer / 4;
   }
@@ -177,13 +171,6 @@
 
 @include tac("Deny", true) {
   @include button-icon($form-switch-bg-image, $btn-font-size-sm);
-
-  &:hover,
-  &:focus {
-    color: $black;
-    background-color: $white;
-    border-color: $white;
-  }
 
   &::before {
     margin-right: $spacer / 4;
