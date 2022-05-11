@@ -634,11 +634,11 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
 
 ```js
-var triggerTabList = Array.prototype.slice.call(document.querySelectorAll('#myTab button'))
-triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new boosted.Tab(triggerEl)
+const triggerTabList = document.querySelectorAll('#myTab button')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new boosted.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (event) {
+  triggerEl.addEventListener('click', event => {
     event.preventDefault()
     tabTrigger.show()
   })
@@ -648,10 +648,10 @@ triggerTabList.forEach(function (triggerEl) {
 You can activate individual tabs in several ways:
 
 ```js
-var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
+const triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
 boosted.Tab.getInstance(triggerEl).show() // Select tab by name
 
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
+const triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
 boosted.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
@@ -702,8 +702,8 @@ Activates a tab element and content container. Tab should have either a `data-bs
 </div>
 
 <script>
-  var firstTabEl = document.querySelector('#myTab li:last-child button')
-  var firstTab = new boosted.Tab(firstTabEl)
+  const firstTabEl = document.querySelector('#myTab li:last-child button')
+  const firstTab = new boosted.Tab(firstTabEl)
 
   firstTab.show()
 </script>
@@ -714,10 +714,10 @@ Activates a tab element and content container. Tab should have either a `data-bs
 Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs).
 
 ```js
-  var someTabTriggerEl = document.querySelector('#someTabTrigger')
-  var tab = new boosted.Tab(someTabTriggerEl)
+const someTabTriggerEl = document.querySelector('#someTabTrigger')
+const tab = new boosted.Tab(someTabTriggerEl)
 
-  tab.show()
+tab.show()
 ```
 
 #### dispose
@@ -729,8 +729,7 @@ Destroys an element's tab.
 *Static* method which allows you to get the tab instance associated with a DOM element
 
 ```js
-var triggerEl = document.querySelector('#trigger')
-var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
+const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
 ```
 
 #### getOrCreateInstance
@@ -738,8 +737,7 @@ var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 *Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
 
 ```js
-var triggerEl = document.querySelector('#trigger')
-var tab = boosted.Tab.getOrCreateInstance(triggerEl) // Returns a Boosted tab instance
+const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
 ```
 
 ### Events
@@ -763,8 +761,8 @@ If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events 
 {{< /bs-table >}}
 
 ```js
-var tabEl = document.querySelector('button[data-bs-toggle="tab"]')
-tabEl.addEventListener('shown.bs.tab', function (event) {
+const tabEl = document.querySelector('button[data-bs-toggle="tab"]')
+tabEl.addEventListener('shown.bs.tab', event => {
   event.target // newly activated tab
   event.relatedTarget // previous active tab
 })

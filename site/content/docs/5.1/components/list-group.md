@@ -380,11 +380,11 @@ You can activate a list group navigation without writing any JavaScript by simpl
 Enable tabbable list item via JavaScript (each list item needs to be activated individually):
 
 ```js
-var triggerTabList = Array.prototype.slice.call(document.querySelectorAll('#myTab a'))
-triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new boosted.Tab(triggerEl)
+const triggerTabList = document.querySelectorAll('#myTab a')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new boosted.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (event) {
+  triggerEl.addEventListener('click', event => {
     event.preventDefault()
     tabTrigger.show()
   })
@@ -394,10 +394,10 @@ triggerTabList.forEach(function (triggerEl) {
 You can activate individual list item in several ways:
 
 ```js
-var triggerEl = document.querySelector('#myTab a[href="#profile"]')
+const triggerEl = document.querySelector('#myTab a[href="#profile"]')
 boosted.Tab.getInstance(triggerEl).show() // Select tab by name
 
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
+const triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 boosted.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
@@ -436,8 +436,8 @@ Activates a list item element and content container. Tab should have either a `d
 </div>
 
 <script>
-  var firstTabEl = document.querySelector('#myTab a:last-child')
-  var firstTab = new boosted.Tab(firstTabEl)
+  const firstTabEl = document.querySelector('#myTab a:last-child')
+  const firstTab = new boosted.Tab(firstTabEl)
 
   firstTab.show()
 </script>
@@ -448,10 +448,9 @@ Activates a list item element and content container. Tab should have either a `d
 Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
 
 ```js
-  var someListItemEl = document.querySelector('#someListItem')
-  var tab = new boosted.Tab(someListItemEl)
+const tab = new boosted.Tab('#someListItem')
 
-  tab.show()
+tab.show()
 ```
 
 #### dispose
@@ -463,8 +462,7 @@ Destroys an element's tab.
 *Static* method which allows you to get the tab instance associated with a DOM element
 
 ```js
-var triggerEl = document.querySelector('#trigger')
-var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
+const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
 ```
 
 #### getOrCreateInstance
@@ -472,8 +470,7 @@ var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 *Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
 
 ```js
-var triggerEl = document.querySelector('#trigger')
-var tab = boosted.Tab.getOrCreateInstance(triggerEl) // Returns a Boosted tab instance
+const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
 ```
 
 ### Events
@@ -497,11 +494,11 @@ If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will 
 {{< /bs-table >}}
 
 ```js
-var tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
-tabElms.forEach(function(tabElm) {
-  tabElm.addEventListener('shown.bs.tab', function (event) {
+const tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
+tabElms.forEach(tabElm => {
+  tabElm.addEventListener('shown.bs.tab', event => {
     event.target // newly activated tab
     event.relatedTarget // previous active tab
   })
-}
+})
 ```

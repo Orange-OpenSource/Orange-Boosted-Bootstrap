@@ -37,10 +37,8 @@ Got all that? Great, let's see how they work with some examples.
 As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their `data-bs-toggle` attribute, like so:
 
 ```js
-var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new boosted.Tooltip(tooltipTriggerEl)
-})
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new boosted.Tooltip(tooltipTriggerEl))
 ```
 
 ### Tooltips on links
@@ -161,8 +159,8 @@ The tooltip plugin generates content and markup on demand, and by default places
 Trigger the tooltip via JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new boosted.Tooltip(exampleEl, options)
+const exampleEl = document.getElementById('example')
+const tooltip = new boosted.Tooltip(exampleEl, options)
 ```
 
 {{< callout warning >}}
@@ -172,8 +170,7 @@ Tooltip position attempts to automatically change when a **parent container** ha
 
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new boosted.Tooltip(exampleEl, {
+const tooltip = new boosted.Tooltip('#example', {
   boundary: document.body // or document.querySelector('#boundary')
 })
 ```
@@ -255,9 +252,9 @@ Options for individual tooltips can alternatively be specified through the use o
 #### Using function with `popperConfig`
 
 ```js
-var tooltip = new boosted.Tooltip(element, {
-  popperConfig: function (defaultBsPopperConfig) {
-    // var newPopperConfig = {...}
+const tooltip = new boosted.Tooltip(element, {
+  popperConfig(defaultBsPopperConfig) {
+    // const newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...
     // return newPopperConfig
   }
@@ -287,9 +284,7 @@ var tooltip = new boosted.Tooltip(element, {
 {{< /bs-table >}}
 
 ```js
-// getOrCreateInstance example
-var exampleTriggerEl = document.getElementById('example')
-var tooltip = boosted.Tooltip.getInstance(exampleTriggerEl) // Returns a Boosted tooltip instance
+const tooltip = boosted.Tooltip.getInstance('#example') // Returns a Boosted tooltip instance
 
 // setContent example
 tooltip.setContent({ '.tooltip-inner': 'another title' })
@@ -313,10 +308,10 @@ The `setContent` method accepts an `object` argument, where each property-key is
 {{< /bs-table >}}
 
 ```js
-var myTooltipEl = document.getElementById('myTooltip')
-var tooltip = new boosted.Tooltip(myTooltipEl)
+const myTooltipEl = document.getElementById('myTooltip')
+const tooltip = boosted.Tooltip.getOrCreateInstance(myTooltipEl)
 
-myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+myTooltipEl.addEventListener('hidden.bs.tooltip', () => {
   // do something...
 })
 

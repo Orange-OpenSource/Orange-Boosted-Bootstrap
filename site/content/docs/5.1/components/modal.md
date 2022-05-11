@@ -18,10 +18,10 @@ Before getting started with Boosted's modal component, be sure to read the follo
 - Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Boosted modals. To achieve the same effect, use some custom JavaScript:
 
 ```js
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', function () {
+myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
 ```
@@ -526,20 +526,20 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 {{< /example >}}
 
 ```js
-var exampleModal = document.getElementById('exampleModal')
-exampleModal.addEventListener('show.bs.modal', function (event) {
+const exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
-  var button = event.relatedTarget
+  const button = event.relatedTarget
   // Extract info from data-bs-* attributes
-  var recipient = button.getAttribute('data-bs-whatever')
+  const recipient = button.getAttribute('data-bs-whatever')
   // If necessary, you could initiate an AJAX request here
   // and then do the updating in a callback.
   //
   // Update the modal's content.
-  var modalTitle = exampleModal.querySelector('.modal-title')
-  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+  const modalTitle = exampleModal.querySelector('.modal-title')
+  const modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-  modalTitle.textContent = 'New message to ' + recipient
+  modalTitle.textContent = `New message to ${recipient}`
   modalBodyInput.value = recipient
 })
 ```
@@ -866,7 +866,9 @@ While both ways to dismiss a modal are supported, keep in mind that dismissing f
 Create a modal with a single line of JavaScript:
 
 ```js
-var myModal = new boosted.Modal(document.getElementById('myModal'), options)
+const myModal = new boosted.Modal(document.getElementById('myModal'), options)
+// or
+const myModalAlternative = new boosted.Modal('#myModal', options)
 ```
 
 ### Options
@@ -894,7 +896,7 @@ var myModal = new boosted.Modal(document.getElementById('myModal'), options)
 Activates your content as a modal. Accepts an optional options `object`.
 
 ```js
-var myModal = new boosted.Modal(document.getElementById('myModal'), {
+const myModal = new boosted.Modal('#myModal', {
   keyboard: false
 })
 ```
@@ -903,7 +905,7 @@ var myModal = new boosted.Modal(document.getElementById('myModal'), {
 | Method | Description |
 | --- | --- |
 | `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |
-| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `var modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
+| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
 | `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
 | `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
@@ -926,8 +928,8 @@ Boosted's modal class exposes a few events for hooking into modal functionality.
 {{< /bs-table >}}
 
 ```js
-var myModalEl = document.getElementById('myModal')
-myModalEl.addEventListener('hidden.bs.modal', function (event) {
+const myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('hidden.bs.modal', event => {
   // do something...
 })
 ```
