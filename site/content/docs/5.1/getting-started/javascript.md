@@ -12,6 +12,16 @@ Plugins can be included individually (using Boosted's individual `js/dist/*.js`)
 
 If you use a bundler (Webpack, Rollup...), you can use `/js/dist/*.js` files which are UMD ready.
 
+## Usage with JavaScript frameworks
+
+While the Boosted CSS can be used with any framework, **the Boosted JavaScript is not fully compatible with frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Boosted and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
+
+A better alternative for those using React and similar frameworks is to use a framework-specific package **instead of** the Boosted JavaScript. Here are some of the most popular options:
+
+- React: [react-bootstrap](https://react-bootstrap.github.io/)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/)
+- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
+
 ## Using Boosted as a module
 
 We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in your browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
