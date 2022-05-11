@@ -121,15 +121,19 @@ Add classes to an element to easily round its corners.
 <hr>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+{{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Sass mixins
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
