@@ -16,11 +16,10 @@
   'use strict'
 
   // Tooltip and popover demos
-  document.querySelectorAll('.tooltip-demo')
+  // Tooltip and popover demos
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
     .forEach(tooltip => {
-      new boosted.Tooltip(tooltip, {
-        selector: '[data-bs-toggle="tooltip"]'
-      })
+      new boosted.Tooltip(tooltip)
     })
 
   document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -75,17 +74,6 @@
       alert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
-
-  // Demos within modals
-  document.querySelectorAll('.tooltip-test')
-    .forEach(tooltip => {
-      new boosted.Tooltip(tooltip)
-    })
-
-  document.querySelectorAll('.popover-test')
-    .forEach(popover => {
-      new boosted.Popover(popover)
-    })
 
   // Indeterminate checkbox example
   document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')
