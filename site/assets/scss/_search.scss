@@ -56,6 +56,10 @@
   stroke-width: 2.5;
 }
 
+.DocSearch-Cancel {
+  color: var(--docsearch-text-color);
+}
+
 .DocSearch-Button-Keys {
   @include visually-hidden();
 }
