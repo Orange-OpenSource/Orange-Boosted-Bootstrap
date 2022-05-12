@@ -1,13 +1,10 @@
 // stylelint-disable selector-class-pattern
 
+// Boosted mod: the entire file is modified and is specific to Boosted
 .bd-search {
   position: relative;
-  display: flex; // Boosted mod
-  align-items: center; // Boosted mod
-  // Boosted mod: no width: 100%;
-
-  // Boosted mod: no @include media-breakpoint-up(lg)
-  // Boosted mod: no @include media-breakpoint-up(xl)
+  display: flex;
+  align-items: center;
 }
 
 .DocSearch-Container {
@@ -22,104 +19,50 @@
 }
 
 .DocSearch-Button {
-  /* --docsearch-searchbox-background: #{rgba($black, .1)};
-  --docsearch-searchbox-color: #{$white};
-  --docsearch-searchbox-focus-background: #{rgba($black, .25)};
-  --docsearch-searchbox-shadow: null; // Boosted mod: no shadow
+  --docsearch-searchbox-background: #{$black};
+  --docsearch-searchbox-focus-background: #{$black};
   --docsearch-text-color: #{$white};
-  --docsearch-muted-color: #{rgba($white, .65)};
 
-  width: 100%; */
   margin: 0;
+  border: 0;
 
-  /* border: 1px solid rgba($white, .4);
-  @include border-radius(.375rem);
-
-  .DocSearch-Search-Icon {
-    opacity: .65;
-  } */
-
-  &:active,
-  &:focus,
   &:hover {
-    border-color: $white; // Boosted mod: no $bd-accent
+    outline: unset;
+    box-shadow: unset;
 
     .DocSearch-Search-Icon {
-      opacity: 1;
+      color: $primary;
     }
+  }
+
+  &:focus {
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    outline: $primary solid 2px;
+    outline-offset: 6px;
+    box-shadow: unset;
   }
 }
 
-// Boosted mod
 .DocSearch-Button-Placeholder {
   @include visually-hidden();
+
+  &:focus {
+    outline: unset;
+  }
 }
 
 .DocSearch-Search-Icon {
+  width: 25px;
+  height: 25px;
   color: currentcolor;
+  stroke-width: 2.5;
 }
-// End mod
 
 .DocSearch-Button-Keys {
   @include visually-hidden();
-
-  /* min-width: 0;
-  padding-right: .25rem;
-  padding-left: .25rem;
-  background: rgba($black, .25);
-  @include border-radius(.25rem); */
-}
-
-.DocSearch-Button-Key {
-  /* top: 0;
-  width: auto;
-  height: 1.25rem;
-  padding-right: .125rem;
-  padding-left: .125rem;
-  margin-right: 0;
-  font-size: .875rem;
-  background: none;
-  box-shadow: none; */
 }
 
 .DocSearch-Commands-Key {
-  /* padding-left: 1px;
-  font-size: .875rem;
-  background-color: rgba($black, .1);
-  background-image: none;
-  box-shadow: none; */
+  background-color: $white;
 }
-
-.DocSearch-Form {
-  // @include border-radius(var(--bs-border-radius));
-}
-
-.DocSearch-Hits {
-  /* mark {
-    padding: 0;
-  } */
-}
-
-.DocSearch-Hit {
-  /* padding-bottom: 0;
-  @include border-radius(0);
-
-  a {
-    @include border-radius(0);
-    border: solid var(--bs-border-color);
-    border-width: 0 1px 1px;
-  }
-
-  &:first-child a {
-    @include border-top-radius(var(--bs-border-radius));
-    border-top-width: 1px;
-  }
-  &:last-child a {
-    @include border-bottom-radius(var(--bs-border-radius));
-  } */
-}
-
-.DocSearch-Hit-icon {
-  /* display: flex;
-  align-items: center; */
-}
+// End mod
