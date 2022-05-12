@@ -8,14 +8,9 @@
 }
 
 .DocSearch-Container {
-  /* --docsearch-muted-color: #{$text-muted};
-  --docsearch-hit-shadow: none; */
+  --docsearch-hit-shadow: none;
 
   z-index: 1030;
-
-  /* @include media-breakpoint-up(lg) {
-    padding-top: 4rem;
-  } */
 }
 
 .DocSearch-Button {
@@ -41,6 +36,10 @@
     outline-offset: 6px;
     box-shadow: unset;
   }
+
+  .DocSearch-Search-Icon {
+    color: $white;
+  }
 }
 
 .DocSearch-Button-Placeholder {
@@ -54,7 +53,6 @@
 .DocSearch-Search-Icon {
   width: 25px;
   height: 25px;
-  color: currentcolor;
   stroke-width: 2.5;
 }
 
@@ -64,5 +62,19 @@
 
 .DocSearch-Commands-Key {
   background-color: $white;
+}
+
+.DocSearch-Hits {
+  .DocSearch-Hit-source {
+    color: var(--docsearch-text-color);
+  }
+}
+
+.DocSearch-MagnifierLabel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Hit {
+  padding-top: 10px;
 }
 // End mod

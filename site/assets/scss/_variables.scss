@@ -35,7 +35,7 @@ $bd-callout-variants: info, warning, danger !default;
   // --docsearch-searchbox-height;
   // --docsearch-searchbox-background;
   // --docsearch-searchbox-focus-background;
-  // --docsearch-searchbox-shadow;
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
   // --docsearch-hit-height;
   --docsearch-hit-color: #{$gray-700};
   // --docsearch-hit-active-color;
