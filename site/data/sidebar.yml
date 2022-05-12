@@ -62,6 +62,7 @@
     - title: Checks & radios
     - title: Range
     - title: Input group
+    - title: Quantity selector
     - title: Floating labels
     - title: Layout
     - title: Validation
@@ -72,6 +73,7 @@
   pages:
     - title: Accordion
     - title: Alerts
+    - title: Back to top
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
@@ -81,18 +83,23 @@
     - title: Close button
     - title: Collapse
     - title: Dropdowns
+    - title: Footer
     - title: List group
     - title: Modal
     - title: Navbar
     - title: Navs & tabs
     - title: Offcanvas
+    - title: Orange navbar
     - title: Pagination
     - title: Placeholders
     - title: Popovers
     - title: Progress
     - title: Scrollspy
     - title: Spinners
+    - title: Stepped process
+    - title: Sticker
     - title: Toasts
+    - title: Title bars
     - title: Tooltips
 
 - title: Helpers
@@ -148,5 +155,6 @@
     - title: Brand
     - title: License
     - title: Translations
+    - title: Cookies
 
 - title: Migration
