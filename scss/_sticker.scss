@@ -16,8 +16,7 @@
   text-align: center;
   word-wrap: break-word;
   background-color: var(--#{$prefix}sticker-background-color);
-  // border-radius: $sticker-size-lg; // stylelint-disable-line property-disallowed-list
-  border-radius: var(#{$prefix}sticker-size=#{$sticker-size-lg}); // stylelint-disable-line property-disallowed-list
+  border-radius: var(--#{$prefix}sticker-size); // stylelint-disable-line property-disallowed-list
 
   > * {
     max-width: var(--#{$prefix}sticker-content-max-width);
