@@ -61,7 +61,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
    ```
 
-3. **Hello, world!** Open the page in your browser of choice to see your Boosteded page. Now you can start building with Boosted by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
+3. **Hello, world!** Open the page in your browser of choice to see your Boosted page. Now you can start building with Boosted by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
 
 ## CDN links
 
