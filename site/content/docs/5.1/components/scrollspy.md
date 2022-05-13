@@ -6,12 +6,6 @@ group: components
 toc: true
 ---
 
-{{< ods-incompatibility-alert >}}
-This component gathers technical utilities linked to the Navbar component and most of those examples are not compatible with the Orange Design System.
-
-Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
-{{< /ods-incompatibility-alert >}}
-
 ## How it works
 
 Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Boosted [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
@@ -29,6 +23,12 @@ Checkout the examples below to see it in action.
 ## Examples
 
 ### Navbar
+
+{{< ods-incompatibility-alert >}}
+This navbar version of the Scrollspy component is not compatible with the Orange Design System.
+
+Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+{{< /ods-incompatibility-alert >}}
 
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
