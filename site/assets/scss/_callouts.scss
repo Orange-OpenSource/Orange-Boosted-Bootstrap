@@ -6,37 +6,28 @@
   padding: $spacer; // Boosted mod
   margin-top: $spacer; // Boosted mod
   margin-bottom: $spacer; // Boosted mod
-  background-color: $gray-200; // Boosted mod
-  border-left: $spacer / 2 solid $gray-200; // Boosted mod
-  @include border-radius();
+  background-color: var(--bd-callout-bg, var(--bs-gray-200)); // Boosted mod
+  border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-200)); // Boosted mod
 
   h4 {
     margin-bottom: .25rem;
   }
 
-  p:last-child,
-  .highlight:last-child { // Boosted mod
+  > :last-child {
     margin-bottom: 0;
-  }
-
-  code {
-    @include border-radius();
   }
 
   + .bd-callout {
     margin-top: -.25rem;
   }
+
+  // Boosted mod: no .highlight
 }
 
 // Variations
-.bd-callout-info {
-  border-left-color: $bd-info;
-}
-
-.bd-callout-warning {
-  border-left-color: $bd-warning;
-}
-
-.bd-callout-danger {
-  border-left-color: $bd-danger;
+@each $variant in $bd-callout-variants {
+  .bd-callout-#{$variant} {
+    --bd-callout-bg: var(--bs-gray-200); // Boosted mod
+    --bd-callout-border: var(--bs-#{$variant}); // Boosted mod
+  }
 }

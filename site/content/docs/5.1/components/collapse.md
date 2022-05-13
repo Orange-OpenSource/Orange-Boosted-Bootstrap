@@ -133,15 +133,15 @@ To add accordion-like group management to a collapsible area, add the data attri
 Enable manually with:
 
 ```js
-var collapseElementList = Array.prototype.slice.call(document.querySelectorAll('.collapse'))
-var collapseList = collapseElementList.map(function (collapseEl) {
-  return new boosted.Collapse(collapseEl)
-})
+const collapseElementList = document.querySelectorAll('.collapse')
+const collapseList = [...collapseElementList].map(collapseEl => new boosted.Collapse(collapseEl))
 ```
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-parent=""`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
@@ -161,8 +161,7 @@ Activates your content as a collapsible element. Accepts an optional options `ob
 You can create a collapse instance with the constructor, for example:
 
 ```js
-var myCollapse = document.getElementById('myCollapse')
-var bsCollapse = new boosted.Collapse(myCollapse, {
+const bsCollapse = new boosted.Collapse('#myCollapse', {
   toggle: false
 })
 ```
@@ -192,8 +191,8 @@ Boosted's collapse class exposes a few events for hooking into collapse function
 {{< /bs-table >}}
 
 ```js
-var myCollapsible = document.getElementById('myCollapsible')
-myCollapsible.addEventListener('hidden.bs.collapse', function () {
+const myCollapsible = document.getElementById('myCollapsible')
+myCollapsible.addEventListener('hidden.bs.collapse', event => {
   // do something...
 })
 ```
