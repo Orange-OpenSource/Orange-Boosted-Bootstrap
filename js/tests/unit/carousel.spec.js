@@ -2109,7 +2109,7 @@ describe('Carousel', () => {
     it('should create carousel and go to the next slide on click with data-bs-slide-to', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
-          '<div id="myCarousel" class="carousel slide data-bs-ride="true">',
+          '<div id="myCarousel" class="carousel slide" data-bs-ride="true">',
           '  <div class="carousel-inner">',
           '    <div class="carousel-item active">item 1</div>',
           '    <div id="item2" class="carousel-item">item 2</div>',
