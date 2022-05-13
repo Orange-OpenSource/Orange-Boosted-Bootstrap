@@ -37,20 +37,18 @@ Got all that? Great, let's see how they work with some examples.
 As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their `data-bs-toggle` attribute, like so:
 
 ```js
-var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new boosted.Tooltip(tooltipTriggerEl)
-})
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new boosted.Tooltip(tooltipTriggerEl))
 ```
 
 ### Tooltips on links
 
 Hover over the links below to see tooltips:
 
-<div class="bd-example tooltip-demo">
-  <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
-  </p>
-</div>
+{{< example class="tooltip-demo" >}}
+<p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
+</p>
+{{< /example >}}
 
 ### Custom tooltips
 
@@ -58,11 +56,7 @@ Hover over the links below to see tooltips:
 
 You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
-```scss
-.custom-tooltip {
-  --bs-tooltip-bg: var(--bs-primary);
-}
-```
+{{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example class="tooltip-demo" >}}
 <button type="button" class="btn btn-secondary"
@@ -165,8 +159,8 @@ The tooltip plugin generates content and markup on demand, and by default places
 Trigger the tooltip via JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new boosted.Tooltip(exampleEl, options)
+const exampleEl = document.getElementById('example')
+const tooltip = new boosted.Tooltip(exampleEl, options)
 ```
 
 {{< callout warning >}}
@@ -176,8 +170,7 @@ Tooltip position attempts to automatically change when a **parent container** ha
 
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new boosted.Tooltip(exampleEl, {
+const tooltip = new boosted.Tooltip('#example', {
   boundary: document.body // or document.querySelector('#boundary')
 })
 ```
@@ -220,7 +213,9 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< callout warning >}}
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
@@ -257,9 +252,9 @@ Options for individual tooltips can alternatively be specified through the use o
 #### Using function with `popperConfig`
 
 ```js
-var tooltip = new boosted.Tooltip(element, {
-  popperConfig: function (defaultBsPopperConfig) {
-    // var newPopperConfig = {...}
+const tooltip = new boosted.Tooltip(element, {
+  popperConfig(defaultBsPopperConfig) {
+    // const newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...
     // return newPopperConfig
   }
@@ -289,9 +284,7 @@ var tooltip = new boosted.Tooltip(element, {
 {{< /bs-table >}}
 
 ```js
-// getOrCreateInstance example
-var exampleTriggerEl = document.getElementById('example')
-var tooltip = boosted.Tooltip.getInstance(exampleTriggerEl) // Returns a Boosted tooltip instance
+const tooltip = boosted.Tooltip.getInstance('#example') // Returns a Boosted tooltip instance
 
 // setContent example
 tooltip.setContent({ '.tooltip-inner': 'another title' })
@@ -315,10 +308,10 @@ The `setContent` method accepts an `object` argument, where each property-key is
 {{< /bs-table >}}
 
 ```js
-var myTooltipEl = document.getElementById('myTooltip')
-var tooltip = new boosted.Tooltip(myTooltipEl)
+const myTooltipEl = document.getElementById('myTooltip')
+const tooltip = boosted.Tooltip.getOrCreateInstance(myTooltipEl)
 
-myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+myTooltipEl.addEventListener('hidden.bs.tooltip', () => {
   // do something...
 })
 

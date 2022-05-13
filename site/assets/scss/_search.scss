@@ -1,63 +1,84 @@
+// stylelint-disable selector-class-pattern
+
+// Boosted mod: the entire file is modified and is specific to Boosted
 .bd-search {
   position: relative;
-  display: flex; // Boosted mod
-  align-items: center; // Boosted mod
-  width: 100%;
+  display: flex;
+  align-items: center;
+}
 
-  &::after {
-    position: absolute;
-    top: .4rem;
-    right: .4rem;
-    bottom: .4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: .3125rem;
-    padding-left: .3125rem;
-    @include font-size(.75rem);
-    color: rgba($white, .65);
-    //////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////
-    // TODO: remove that comment in Bootstrap
-    //////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////
-    // content: "⌘K";
-    content: attr(data-shortcut);
-    background-color: rgba($white, .1);
-    @include border-radius(.125rem);
+.DocSearch-Container {
+  --docsearch-hit-shadow: none;
+
+  z-index: 1030;
+}
+
+.DocSearch-Button {
+  --docsearch-searchbox-background: #{$black};
+  --docsearch-searchbox-focus-background: #{$black};
+  --docsearch-text-color: #{$white};
+
+  margin: 0;
+  border: 0;
+
+  &:hover {
+    outline: unset;
+    box-shadow: unset;
+
+    .DocSearch-Search-Icon {
+      color: $primary;
+    }
   }
 
-  // Boosted mod: no @include media-breakpoint-up(lg)
-  // Boosted mod: no @include media-breakpoint-up(xl)
+  &:focus {
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    outline: $primary solid 2px;
+    outline-offset: 6px;
+    box-shadow: unset;
+  }
 
-  //////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-  // TODO: The content hereafter could probably be removed or integrated
-  // in the Orange navbar search input style
-  //////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-  .form-control {
-    padding-right: 2.75rem;
+  .DocSearch-Search-Icon {
     color: $white;
-    background-color: rgba($black, .1);
-    border-color: rgba($white, .4);
-    transition-property: background-color, border-color, box-shadow;
-
-    &::placeholder {
-      color: rgba($white, .65);
-    }
-
-    &::-webkit-search-cancel-button {
-      appearance: none;
-      width: 1rem;
-      height: 1rem;
-      cursor: pointer;
-      background: escape-svg($search-clear-icon) no-repeat 0 0;
-      background-size: 100% 100%;
-    }
   }
 }
+
+.DocSearch-Button-Placeholder {
+  @include visually-hidden();
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.DocSearch-Search-Icon {
+  width: 25px;
+  height: 25px;
+  stroke-width: 2.5;
+}
+
+.DocSearch-Cancel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Button-Keys {
+  @include visually-hidden();
+}
+
+.DocSearch-Commands-Key {
+  background-color: $white;
+}
+
+.DocSearch-Hits {
+  .DocSearch-Hit-source {
+    color: var(--docsearch-text-color);
+  }
+}
+
+.DocSearch-MagnifierLabel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Hit {
+  padding-top: 10px;
+}
+// End mod

@@ -1,4 +1,7 @@
-{{- "<!-- Boosted core CSS -->" | safeHTML }}
+{{ if eq .Page.Layout "docs" -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+{{- end }}
+
 {{ if eq hugo.Environment "production" -}}
 {{ if eq .Page.Params.direction "rtl" -}}
 <link href="/docs/{{ .Site.Params.docs_version }}/dist/css/orange-helvetica.rtl.min.css" rel="stylesheet" {{ printf "integrity=%q" .Site.Params.cdn.helvetica_rtl_hash | safeHTMLAttr }} crossorigin="anonymous">

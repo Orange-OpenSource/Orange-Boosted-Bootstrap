@@ -14,9 +14,13 @@
     color: $gray-700;
   }
 
+  .bd-code-snippet {
+    margin: 0;
+    @include border-radius(.5rem);
+  }
+
   .highlight {
-    padding: 1rem 4rem 1rem 1rem; // Boosted mod: changed y values
-    margin-bottom: 0;
+    padding: .5rem 4rem .5rem 1rem;
     line-height: 1.25;
     background-color: rgba(var(--bs-body-color-rgb), .075);
     @include border-radius(.5rem);

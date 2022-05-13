@@ -29,7 +29,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><span class="visually-hidden">Close</span></button>
@@ -148,35 +148,21 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 
 Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, `.offcanvas-lg` hides content in an offcanvas below the `lg` breakpoint, but shows the content above the `lg` breakpoint.
 
-<div class="bd-example">
-  <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+{{< example >}}
+<button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
 
-  <div class="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
-
-  <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
-    </div>
-  </div>
-</div>
-
-```html
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+<div class="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
 
 <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body">
     <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
   </div>
 </div>
-```
+{{< /example >}}
 
 Responsive offcanvas classes are available across for each breakpoint.
 
@@ -293,15 +279,15 @@ While both ways to dismiss an offcanvas are supported, keep in mind that dismiss
 Enable manually with:
 
 ```js
-var offcanvasElementList = Array.prototype.slice.call(document.querySelectorAll('.offcanvas'))
-var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
-  return new boosted.Offcanvas(offcanvasEl)
-})
+const offcanvasElementList = document.querySelectorAll('.offcanvas')
+const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new boosted.Offcanvas(offcanvasEl))
 ```
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
@@ -322,8 +308,7 @@ Activates your content as an offcanvas element. Accepts an optional options `obj
 You can create an offcanvas instance with the constructor, for example:
 
 ```js
-var myOffcanvas = document.getElementById('myOffcanvas')
-var bsOffcanvas = new boosted.Offcanvas(myOffcanvas)
+const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 ```
 
 {{< bs-table "table" >}}
@@ -351,8 +336,8 @@ Boosted's offcanvas class exposes a few events for hooking into offcanvas functi
 {{< /bs-table >}}
 
 ```js
-var myOffcanvas = document.getElementById('myOffcanvas')
-myOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
+const myOffcanvas = document.getElementById('myOffcanvas')
+myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
   // do something...
 })
 ```
