@@ -65,5 +65,4 @@
   {{ range .Page.Params.extra_js -}}
     <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
   {{- end -}}
-  <div class="position-fixed"><input type="text"></div>
 {{ end }}
