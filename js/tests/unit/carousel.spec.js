@@ -1159,12 +1159,11 @@ describe('Carousel', () => {
         '</div>'
       ].join('')
 
-      const carouselEl = fixtureEl.querySelector('#myCarousel')
-      const carousel = new Carousel(carouselEl)
+      const carousel = new Carousel('#myCarousel')
 
       carousel.pause()
 
-      expect(carousel._stayPaused).toBeTrue()
+      expect(carousel._interval).toBeFalsy()
       expect(carousel._element).toHaveClass('is-paused')
     })
     // End mod
@@ -1312,13 +1311,12 @@ describe('Carousel', () => {
         '</button>'
       ].join('')
 
-      const carouselEl = fixtureEl.querySelector('#myCarousel')
       const buttonPlayPauselEl = fixtureEl.querySelector('.play')
-      const carousel = new Carousel(carouselEl)
+      const carousel = new Carousel('#myCarousel')
 
       carousel.pause()
 
-      expect(carousel._stayPaused).toBeTrue()
+      expect(carousel._interval).toBeFalsy()
       expect(carousel._element).toHaveClass('is-paused')
       expect(buttonPlayPauselEl).toHaveClass('play')
     })
@@ -1344,15 +1342,15 @@ describe('Carousel', () => {
         ].join('')
 
         const carouselEl = fixtureEl.querySelector('#myCarousel')
-        const carousel = new Carousel(carouselEl)
+        const carousel = new Carousel('#myCarousel')
 
-        spyOn(carousel, 'cycle').and.callThrough()
+        spyOn(carousel, '_maybeEnableCycle').and.callThrough()
 
         const mouseOutEvent = createEvent('mouseout')
         carouselEl.dispatchEvent(mouseOutEvent)
 
         setTimeout(() => {
-          expect(carousel.cycle).toHaveBeenCalled()
+          expect(carousel._maybeEnableCycle).toHaveBeenCalled()
           resolve()
         }, 10)
       })
