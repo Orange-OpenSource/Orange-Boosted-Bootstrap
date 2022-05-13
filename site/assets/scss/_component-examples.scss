@@ -175,10 +175,11 @@
 .bd-example-ratios {
   .ratio {
     display: inline-block;
-    width: 10rem;
-    color: $gray-600;
-    background-color: $gray-100;
-    border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+    width: 9rem; // Boosted mod
+    font-weight: $font-weight-bold; // Boosted mod
+    color: $gray-800; // Boosted mod
+    background-color: $gray-400; // Boosted mod
+    border: var(--#{$prefix}border-width) solid $gray-500; // Boosted mod
 
     > div {
       display: flex;
