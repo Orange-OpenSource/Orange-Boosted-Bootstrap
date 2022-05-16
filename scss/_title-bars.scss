@@ -1,28 +1,29 @@
 .title-bar {
   // scss-docs-start title-bar-css-vars
-  --#{$boosted-prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
-  --#{$boosted-prefix}title-bar-padding-y: #{$title-bar-padding-y};
-  --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size};
-  --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing};
-  --#{$boosted-prefix}title-bar-border-width: #{$title-bar-border-width};
-  --#{$boosted-prefix}title-bar-border-color: #{$title-bar-border-color};
+  --#{prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
+  --#{prefix}title-bar-padding-y: #{$title-bar-padding-y};
+  --#{prefix}title-bar-font-size: #{$title-bar-font-size};
+  --#{prefix}title-bar-line-height: #{$title-bar-line-height};
+  --#{prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing};
+  --#{prefix}title-bar-border-width: #{$title-bar-border-width};
+  --#{prefix}title-bar-border-color: #{$title-bar-border-color};
   // scss-docs-end title-bar-css-vars
 
-  border-bottom: var(--#{$boosted-prefix}title-bar-border-width) solid var(--#{$boosted-prefix}title-bar-border-color);
+  border-bottom: var(--#{prefix}title-bar-border-width) solid var(--#{prefix}title-bar-border-color);
 
   @include media-breakpoint-up(md) {
-    --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size-md};
-    --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-md};
+    --#{prefix}title-bar-font-size: #{$title-bar-font-size-md};
+    --#{prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-md};
   }
 
   @include media-breakpoint-up(xl) {
-    --#{$boosted-prefix}title-bar-font-size: #{$title-bar-font-size-xl};
-    --#{$boosted-prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
+    --#{prefix}title-bar-font-size: #{$title-bar-font-size-xl};
+    --#{prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
   }
 
   &.bg-dark,
   &.bg-secondary {
-    --#{$boosted-prefix}title-bar-border-color: #{$title-bar-border-color-dark};
+    --#{prefix}title-bar-border-color: #{$title-bar-border-color-dark};
   }
 
   > [class*="container"] {
@@ -34,18 +35,18 @@
   img,
   svg {
     width: auto;
-    height: var(--#{$boosted-prefix}title-bar-image-ratio); // Simplify CSS
+    height: var(--#{prefix}title-bar-image-ratio); // Simplify CSS
   }
 
   .display-1,
   & {
-    font-size: var(--#{$boosted-prefix}title-bar-font-size);
-    line-height: $display-line-height; // Simplify CSS
-    letter-spacing: var(--#{$boosted-prefix}title-bar-letter-spacing);
+    font-size: var(--#{prefix}title-bar-font-size);
+    line-height: var(--#{prefix}title-bar-line-height); // Simplify CSS
+    letter-spacing: var(--#{prefix}title-bar-letter-spacing);
   }
 
   h1 {
-    padding: calc(var(--#{$boosted-prefix}title-bar-padding-y) * 2 - var(--#{$boosted-prefix}title-bar-border-width)) 0 var(--#{$boosted-prefix}title-bar-padding-y); // stylelint-disable-line function-disallowed-list
+    padding: calc(var(--#{prefix}title-bar-padding-y) * 2 - var(--#{prefix}title-bar-border-width)) 0 var(--#{prefix}title-bar-padding-y); // stylelint-disable-line function-disallowed-list
     margin: 0;
   }
 }
