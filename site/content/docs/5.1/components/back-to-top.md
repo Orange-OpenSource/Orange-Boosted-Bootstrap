@@ -95,9 +95,21 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 </nav>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Options
+### Variables
+
+{{< added-in "5.2.0" >}}
+
+As part of Boosted's evolving CSS variables approach, back-to-top now use local CSS variables on `.back-to-top` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="back-to-top-css-vars" file="scss/_back-to-top.scss" >}}
+
+As it is a responsive component, here is the overridden variables in `xl` breakpoint:
+
+{{< scss-docs name="back-to-top-xl-css-vars" file="scss/_back-to-top.scss" >}}
+
+### Sass options
 
 Back to top link can be customized in a few ways: either making it appear after more or less vertical scrolling, modify its offset from the bottom right corner, etc.
 
@@ -134,7 +146,7 @@ Back to top link can be customized in a few ways: either making it appear after 
   </tbody>
 </table>
 
-### Variables
+### Sass variables
 
 For more details, please have a look at the exhaustive list of available variables:
 
