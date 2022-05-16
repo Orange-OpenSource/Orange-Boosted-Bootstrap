@@ -103,6 +103,18 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 {{< /orange-footer >}}
 {{< /example >}}
 
+## Behavior
+
+Footer are designed to be responsive on all devices.
+
+`.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<footer>` will allow:
+  - The padding of the different bars to be changed
+  - The navigation bar to expand from an accordion to an unstyled list
+
+{{< callout info >}}
+Be careful to change all the utilities that are related to the breakpoint inside the footer.
+{{< /callout >}}
+
 ## Sass
 
 ### Variables

@@ -23,6 +23,7 @@
 
 .nav-link {
   display: flex; // Boosted mod
+  align-items: center; // Boosted mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);

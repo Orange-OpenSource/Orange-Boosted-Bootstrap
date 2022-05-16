@@ -20,7 +20,7 @@
 {{- $id := .Get "id" -}}
 {{- $input := .Inner -}}
 
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer bg-dark navbar-dark navbar-expand-md">
   <h2 class="visually-hidden">Sitemap & information</h2>
 {{- if $title_content }}
   <div class="container-xxl footer-title-content">
@@ -69,7 +69,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseOne{{ $id }}" class="container-xxl navbar-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
@@ -89,7 +89,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseTwo{{ $id }}" class="container-xxl navbar-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
@@ -109,7 +109,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseThree{{ $id }}" class="container-xxl navbar-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
@@ -129,7 +129,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseFour{{ $id }}" class="container-xxl navbar-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
