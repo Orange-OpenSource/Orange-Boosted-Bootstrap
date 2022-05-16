@@ -10,7 +10,7 @@ toc: true
 
 Boosted "back to top" provides a way to get back to the top of the page using a simple link. It's built only with HTML and CSS, meaning you don't need any JavaScript. It only requires a `.back-to-top` wrapper and a `.back-to-top-link`, at the end of your `body`— just before your scripts.
 
-For accessibility purposes, back-to-top link contains a `.visually-hidden` text content and a `data-o-label` attribute— whose **value should match hidden text content** to make sure it's usable with speech recognition software. The `data-o-label` attribute content is displayed in a `::before` pseudo-element thanks to the `attr()` CSS function.
+For accessibility purposes, back-to-top link contains a `.visually-hidden` text content and a `data-bs-label` attribute— whose **value should match hidden text content** to make sure it's usable with speech recognition software. The `data-bs-label` attribute content is displayed in a `::before` pseudo-element thanks to the `attr()` CSS function.
 
 We also recommend using a `nav` wrapper —alongside an accurate `aria-label`— to ease discoverability through landmarks.
 
@@ -29,14 +29,14 @@ Smooth scrolling does not depend on this component. It's turned on only when the
 
 <div class="bd-example">
   <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
-    <a href="#top" class="back-to-top-link btn btn-icon btn-secondary position-relative top-0" data-o-label="Back to top">
+    <a href="#top" class="back-to-top-link btn btn-icon btn-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
     </a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -55,7 +55,7 @@ Add `.position-fixed` utility to your `.back-to-top-link` to make your back-to-t
 
 {{< example show_preview="false" >}}
 <nav aria-label="Fixed back to top example" class="back-to-top">
-  <a href="#top" class="back-to-top-link position-fixed btn btn-icon btn-secondary" data-o-label="Back to top">
+  <a href="#top" class="back-to-top-link position-fixed btn btn-icon btn-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -63,7 +63,7 @@ Add `.position-fixed` utility to your `.back-to-top-link` to make your back-to-t
 
 ### Label inside
 
-Drop the `data-o-label` attribute and the `<span class="visually-hidden">` and use [spacing utilities]({{< docsref "/utilities/spacing" >}}) to fine tune your button.
+Drop the `data-bs-label` attribute and the `<span class="visually-hidden">` and use [spacing utilities]({{< docsref "/utilities/spacing" >}}) to fine tune your button.
 
 <div class="bd-example">
   <nav aria-label="Label inside back to top example" class="back-to-top position-static">
@@ -78,7 +78,7 @@ Drop the `data-o-label` attribute and the `<span class="visually-hidden">` and u
 
 ### Icon only
 
-Use a `title` attribute instead of `data-o-label` to ensure a visible label is still provided on demand for sighted users.
+Use a `title` attribute instead of `data-bs-label` to ensure a visible label is still provided on demand for sighted users.
 
 <div class="bd-example">
   <nav aria-label="Icon only back to top example" class="back-to-top position-static">
