@@ -114,8 +114,8 @@
   backface-visibility: hidden;
 
   .bi {
-    width: 1.5em;
-    height: 1.5em;
+    width: .75em; // Boosted mod
+    height: .75em; // Boosted mod
     transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
   }
 

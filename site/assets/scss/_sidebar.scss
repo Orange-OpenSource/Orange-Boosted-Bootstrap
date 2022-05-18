@@ -50,3 +50,13 @@
     font-weight: 600;
   }
 }
+
+// Boosted mod
+.bd-links-heading {
+  transform: translateX(-#{$spacer * .25});
+
+  svg {
+    font-size: 1.5625rem;
+  }
+}
+// End mod
