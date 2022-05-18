@@ -1,19 +1,14 @@
 // Boosted mod: doesn't exist anymore in Bootstrap
 
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
-// TODO: clean up and remove useless rules in this file
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
-
 .bd-subnavbar {
   --bs-gutter-x: $bd-gutter-x;
   --bs-gutter-y: $bd-gutter-x;
-  --bs-navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // Boosted mod
+  --bs-navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)};
 
   // The position and z-index are needed for the dropdown to stay on top of the content
-  position: relative;
-  z-index: $zindex-dropdown; // Boosted mod: goes under the navbar + dropdown.
+  position: sticky;
+  top: 3.125rem;
+  z-index: $zindex-dropdown; // goes under the navbar + dropdown.
 
   background-color: rgba($white, .95);
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .15);
@@ -31,15 +26,7 @@
     background-size: .75rem .75rem;
   }
 
-  //////////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////////////////
-  // TODO: since it is always displayed when there's a burger menu we should be able to
-  // get rid of this @include (not its content which would become the default)
-  //////////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////////////////
   @include media-breakpoint-up(md) {
-    position: sticky;
-    top: 60px; // Boosted mod: change value
-    z-index: 1000; // Boosted mod: add a z-index value
+    top: 3.75rem;
   }
 }
