@@ -125,17 +125,6 @@ body {
   }
 }
 
-// Docs table
-.table-guidelines {
-  tr {
-    border: 0;
-  }
-
-  th {
-    vertical-align: middle;
-  }
-}
-
 // "Added in vX.Y.Z" areas
 // stylelint-disable-next-line selector-max-class, selector-no-qualifying-type
 small.d-inline-flex.px-2.py-1.font-monospace.text-muted.border.rounded-3 {
