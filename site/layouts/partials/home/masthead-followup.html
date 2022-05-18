@@ -15,7 +15,7 @@
     </p>
   </div>
 
-  <section class="row g-3 g-md-5 mb-5 pb-5 justify-content-center">
+  <section class="row g-2 g-lg-5 mb-5 pb-5 justify-content-center">
     <div class="col-lg-6 py-lg-4 pe-lg-5">
       <svg class="bi mb-2 fs-2 text-muted"><use xlink:href="#box-seam"></use></svg>
       <h3>Install via package manager</h3>
@@ -59,7 +59,7 @@
     </p>
   </section>
 
-  <section class="row g-md-5 mb-5 pb-md-5">
+  <section class="row g-lg-5 mb-5 pb-md-5">
     <div class="col-lg-6">
       <h3>Include all of Boosted’s Sass</h3>
       <p>Import one stylesheet and you're off to the races with every feature of our CSS.</p>
@@ -102,7 +102,7 @@ $prefix: "mo-";
     </div>
   </section>
 
-  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+  <section class="row g-lg-5 pb-md-5 mb-5 align-items-center">
     <div class="col-lg-8 mb-5">
       <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
         <svg class="bi fs-1"><use xlink:href="#braces"></use></svg>
@@ -118,7 +118,7 @@ $prefix: "mo-";
         </a>
       </p>
     </div>
-    <div class="row gx-md-5">
+    <div class="row gx-lg-5">
       <div class="col-lg-6 mb-3">
         <h3>Using CSS variables</h3>
         <p>Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
@@ -151,7 +151,7 @@ $prefix: "mo-";
     </div>
   </section>
 
-  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+  <section class="row g-lg-5 pb-md-5 mb-5 align-items-center">
     <div class="col-lg-6 mb-5 mb-md-0">
       <div class="masthead-followup-icon d-inline-block mb-3 me-2" style="--bg-rgb: var(--bs-danger-rgb);">
         <svg class="bi fs-1"><use xlink:href="#menu-button-wide-fill"></use></svg>
@@ -237,7 +237,7 @@ $utilities: map-merge(
         </a>
       </p>
     </div>
-    <div class="row gx-md-5">
+    <div class="row gx-9lg-5">
       <div class="col-lg-6 mb-3">
         <h3>Data attribute API</h3>
         <p>Why write more JavaScript when you can write HTML? Nearly all of Boosted's JavaScript plugins feature a first-class data API, allowing you to use JavaScript just by adding <code>data</code> attributes.</p>
@@ -271,7 +271,7 @@ $utilities: map-merge(
         <h3>Comprehensive set of plugins</h3>
         <p>Boosted features a dozen plugins from Bootstrap that you can drop into any project. Other are specific to Boosted. Drop them in all at once, or choose just the ones you need.</p>
         <hr class="my-4">
-        <div class="row g-3">
+        <div class="row g-2">
           {{- range $plugin := .Site.Data.plugins -}}
             {{- $href := printf "/docs/%s/%s" $.Site.Params.docs_version $plugin.link }}
             <div class="col-sm-6 mb-2">
@@ -287,7 +287,7 @@ $utilities: map-merge(
 
   </section>
 
-  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+  <section class="row g-lg-5 pb-md-5 mb-5 align-items-center">
     <div class="col-lg-6 mb-5 mb-md-0">
       <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-info-rgb);">
         <div class="bi fs-1">
