@@ -4,7 +4,11 @@
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 .bd-gutter {
-  --bs-gutter-x: #{$bd-gutter-x};
+  --bs-gutter-x: #{$bd-gutter-x * 2};
+
+  @include media-breakpoint-up(md) {
+    --bs-gutter-x: #{$bd-gutter-x * 4};
+  }
 }
 
 .bd-layout {
