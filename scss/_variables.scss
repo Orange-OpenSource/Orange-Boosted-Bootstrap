@@ -932,6 +932,7 @@ $dropdown-header-padding:           $dropdown-padding-y !default; // Boosted mod
 // Pagination
 
 $pagination-margin-y:               $spacer !default;
+$pagination-margin-x:               .5rem !default;
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default; // Boosted mod
 $pagination-padding-start:          .75rem !default; // Boosted mod

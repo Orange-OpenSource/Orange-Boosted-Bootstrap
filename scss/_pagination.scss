@@ -212,11 +212,11 @@
 
   // Boosted mod
   &:nth-child(2):not(:last-child) .page-link {
-    margin-left: .5rem;
+    margin-left: $pagination-margin-x;
   }
 
   &:nth-last-child(2) .page-link {
-    margin-right: .5rem;
+    margin-right: $pagination-margin-x;
   }
   // end mod
 }
