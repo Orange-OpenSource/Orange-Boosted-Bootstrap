@@ -4,6 +4,7 @@ title: Title bars
 description: Documentation and examples for Boosted's exclusive Brand responsive title bars.
 group: components
 toc: true
+added: "5.2"
 ---
 
 ## How it works

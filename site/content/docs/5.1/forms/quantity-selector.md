@@ -4,6 +4,7 @@ title: Quantity selector
 description: Use our custom quantity selector in forms for incremental and decremental display of small numbers.
 group: forms
 toc: true
+added: "5.2"
 ---
 
 ## Default
