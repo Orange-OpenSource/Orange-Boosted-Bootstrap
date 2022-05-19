@@ -14,7 +14,6 @@
   min-width: $pagination-item-size;
   height: $pagination-item-size;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: .5rem;
   font-weight: $font-weight-bold;
   // End mod
   line-height: $pagination-line-height;
@@ -209,6 +208,17 @@
     }
   }
   // End mod
+
+
+  // Boosted mod
+  &:nth-child(2):not(:last-child) .page-link {
+    margin-left: .5rem;
+  }
+
+  &:nth-last-child(2) .page-link {
+    margin-right: .5rem;
+  }
+  // end mod
 }
 
 // Boosted mod: no sizing
