@@ -28,7 +28,7 @@
   grid-area: main;
 
   @include media-breakpoint-down(lg) {
-    max-width: 760px;
+    // Boosted mod: no max-width
     margin-inline: auto;
   }
 
