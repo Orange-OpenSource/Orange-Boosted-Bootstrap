@@ -1952,6 +1952,7 @@ $back-to-top-offset-bottom:      $back-to-top-offset !default;
 $back-to-top-link-offset-top:    subtract(100vh, $back-to-top-offset * 4) !default;
 $back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
 $back-to-top-title-offset-right: add(100%, $border-width) !default;
+$back-to-top-title-offset-top:   -1px !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
 $back-to-top-title-bg-color:     $white !default;
 $back-to-top-icon:               var(--#{$boosted-prefix}chevron-icon) !default;
