@@ -48,6 +48,14 @@
   > tbody {
     vertical-align: inherit;
   }
+
+  // Boosted mod
+  // Add negative right margin for selectable rows
+  td:first-child .form-check,
+  th:first-child .form-check {
+    margin-right: -.75rem;
+  }
+  // End mod
 }
 
 .table-group-divider {
