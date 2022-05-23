@@ -242,11 +242,11 @@
   overflow: auto;
 }
 
-.simple-list-example-scrollspy {
-  .active {
-    background-color: rgba(var(--bd-violet-rgb), .15);
-  }
+// Boosted mod
+.simple-list-example-scrollspy .active {
+  color: var(--#{$prefix}link-hover-color);
 }
+// End mod
 
 .bd-example-border-utils {
   [class^="border"] {
