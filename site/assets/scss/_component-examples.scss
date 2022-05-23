@@ -224,7 +224,7 @@
   --bs-popover-max-width: 12.5rem;
   --bs-popover-border-color: var(--bs-primary);
   --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-header-color: var(--bs-black); // Boosted mod: text-dark on primary
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
