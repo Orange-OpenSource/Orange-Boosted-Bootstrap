@@ -35,12 +35,7 @@
 .bd-links-link {
   padding: .1875rem .5rem;
   margin-top: .125rem;
-  //////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////
-  // TODO: adapt this rule after having changed the size of icons
-  //////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////
-  margin-left: 1.125rem; // Boosted mod: changed value
+  margin-left: 1.375rem; // Boosted mod: changed value
   color: rgba($black, .65);
   text-decoration: if($link-decoration == none, null, none);
 
@@ -52,11 +47,7 @@
 }
 
 // Boosted mod
-.bd-links-heading {
-  transform: translateX(-#{$spacer * .25});
-
-  svg {
-    font-size: 1.5625rem;
-  }
+.bd-links-heading svg {
+  font-size: 1.5625rem;
 }
 // End mod

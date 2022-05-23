@@ -18,13 +18,6 @@
   const btnTitle = 'Copy to clipboard'
   const btnEdit = 'Edit on StackBlitz'
 
-  // ////////////////////////////////////////////////////////
-  // ////////////////////////////////////////////////////////
-  // TODO: Bootstrap can remove width, height and
-  // fill="currentColor" of <svg class="bi"... since ".bi"
-  // already does that
-  // ////////////////////////////////////////////////////////
-  // ////////////////////////////////////////////////////////
   // Boosted mod: removed unused svg height, width and fill="currentColor"
   const btnHtml = [
     '<div class="bd-code-snippet">',

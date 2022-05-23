@@ -1,29 +1,14 @@
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-// TODO: check all those rules but normally we wouldn't need anything in this file
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
 .bd-navbar {
   // Boosted mod: no padding
-  background-color: transparent;
+  // Boosted mod: no background-color
   // Boosted mod: no background-image
   // Boosted mod: no box-shadow
 
-  // Boosted mod: no .navbar-toggler
-
-  // Boosted mod
-  .navbar-nav.flex-row {
-    @include media-breakpoint-down(lg) {
-      border-top: 1px solid #666;
-    }
-  }
-  // End mod
-
   // Boosted mod: no .navbar-brand
 
-  .navbar-toggler,
-  .nav-link {
-    display: block; // Boosted mod: no padding, no color
+  // Boosted mod: no .navbar-toggler
+  .nav-link { // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
+    // Boosted mod: no display, no padding, no color
 
     &:hover,
     &:focus {
@@ -31,7 +16,7 @@
     }
 
     &.active {
-      font-weight: 600;
+      // Boosted mod: no font-weight
       color: var(--#{$prefix}link-hover-color); // Boosted mod
     }
   }
@@ -56,4 +41,12 @@
     background-position: right $dropdown-item-padding-x top .75rem; // Boosted mod
     background-size: .75rem .75rem;
   }
+
+  // Boosted mod: Specificity
+  .navbar-nav.flex-row {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid #666;
+    }
+  }
+  // End mod
 }
