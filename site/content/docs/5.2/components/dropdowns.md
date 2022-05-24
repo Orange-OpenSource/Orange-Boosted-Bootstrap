@@ -853,10 +853,17 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 
 As part of Boosted's evolving CSS variables approach, dropdowns now use local CSS variables on `.dropdown-menu` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
+Variables for all dropdowns:
 {{< scss-docs name="dropdown-css-vars" file="scss/_dropdown.scss" >}}
 
-Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
+Customization through CSS variables can be seen on the following classes where we override specific values without adding duplicate CSS selectors:
+- on the `.dropdown-toggle` class:
+{{< scss-docs name="dropdown-toggle-css-vars" file="scss/_dropdown.scss" >}}
 
+- on the `.dropdown-item` class:
+{{< scss-docs name="dropdown-item-css-vars" file="scss/_dropdown.scss" >}}
+
+- on the `.dropdown-menu-dark` class:
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
 
 ### Sass variables

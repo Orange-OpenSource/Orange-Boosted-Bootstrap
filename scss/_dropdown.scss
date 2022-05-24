@@ -9,27 +9,36 @@
 }
 
 .dropdown-toggle {
-  padding-right: $dropdown-padding-x; // Boosted mod
-  padding-left: $dropdown-padding-x; // Boosted mod
-  color: $dropdown-color; // Boosted mod
+  // scss-docs-start dropdown-toggle-css-vars
+  --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x}; // Boosted mod
+  --#{$prefix}dropdown-color: #{$dropdown-color}; // Boosted mod
+  --#{$prefix}dropdown-bg: #{$dropdown-bg}; // Boosted mod
+  --#{$prefix}dropdown-border-color: #{$dropdown-border-color}; // Boosted mod
+  --#{$prefix}dropdown-border-color-bg-dark: #{$gray-700}; // Boosted mod
+  --#{$prefix}dropdown-link-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
+  // scss-docs-end dropdown-toggle-css-vars
+
+  padding-right: var(--#{$prefix}dropdown-padding-x); // Boosted mod
+  padding-left: var(--#{$prefix}dropdown-padding-x); // Boosted mod
+  color: var(--#{$prefix}dropdown-color); // Boosted mod
   white-space: nowrap;
-  background-color: $dropdown-bg; // Boosted mod
-  border-color: $dropdown-border-color; // Boosted mod
+  background-color: var(--#{$prefix}dropdown-bg); // Boosted mod
+  border-color: var(--#{$prefix}dropdown-border-color); // Boosted mod
 
   // Boosted mod: dark background
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
-    color: $dropdown-bg;
-    background-color: $dropdown-color;
-    border-color: $gray-700;
+    color: var(--#{$prefix}dropdown-bg); // Boosted mod
+    background-color: var(--#{$prefix}dropdown-color); // Boosted mod
+    border-color: var(--#{$prefix}dropdown-border-color-bg-dark); // Boosted mod
 
     &:hover {
-      border-color: $dropdown-link-hover-color;
+      border-color: var(--#{$prefix}dropdown-link-hover-color); // Boosted mod
     }
   }
 
   .btn-group &:not(.btn-inverse) {
-    border-color: $dropdown-color;
+    border-color: var(--#{$prefix}dropdown-color); // Boosted mod
   }
   // End mod
 
@@ -188,11 +197,14 @@
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
 .dropdown-item {
+  // scss-docs-start dropdown-item-css-vars
+  --#{$prefix}dropdown-font-weight-bold: #{$font-weight-bold}; // Boosted mod
+  // scss-docs-end dropdown-item-css-vars
   display: block;
   width: 100%; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   clear: both;
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: var(--#{$prefix}dropdown-font-weight-bold); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
