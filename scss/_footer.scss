@@ -1,16 +1,14 @@
-.footer {
-  > * {
-    --#{$prefix}footer-part-title-font-size: #{$footer-font-size-md};
-    --#{$prefix}footer-part-title-font-weight: #{$footer-part-title-font-weight};
-    --#{$prefix}footer-part-title-line-height: #{$footer-line-height-md};
-    --#{$prefix}footer-part-title-letter-spacing: #{$footer-letter-spacing};
-    --#{$prefix}navbar-nav-font-size: #{$footer-font-size-sm};
-    --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
-    --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
+.footer > * {
+  --#{$prefix}footer-part-title-font-size: #{$footer-font-size-md};
+  --#{$prefix}footer-part-title-font-weight: #{$footer-part-title-font-weight};
+  --#{$prefix}footer-part-title-line-height: #{$footer-line-height-md};
+  --#{$prefix}footer-part-title-letter-spacing: #{$footer-letter-spacing};
+  --#{$prefix}navbar-nav-font-size: #{$footer-font-size-sm};
+  --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
+  --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
 
-    padding-top: var(--#{$prefix}footer-part-padding-top);
-    padding-bottom: var(--#{$prefix}footer-part-padding-bottom);
-  }
+  padding-top: var(--#{$prefix}footer-part-padding-top);
+  padding-bottom: var(--#{$prefix}footer-part-padding-bottom);
 
   .navbar-nav {
     --#{$prefix}nav-link-padding-x: 0;
@@ -66,7 +64,7 @@
 
   .footer-column:first-of-type .accordion-header:first-of-type,
   .accordion .accordion-item {
-    --#{$prefix}accordion-border-width: 0;
+    border: 0;
   }
 
   .accordion-button::after {
@@ -79,7 +77,7 @@
   --#{$prefix}footer-part-padding-bottom: #{$footer-service-padding-y};
 
   .nav-link > span {
-    padding-top: $footer-service-link-padding-top;
+    padding-top: $footer-service-link-padding-top; // Shift due to font
   }
 }
 
@@ -89,7 +87,7 @@
   --#{$prefix}footer-part-gap: #{$footer-gap-xl};
 }
 
-.navbar-expand {
+.footer-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
@@ -126,6 +124,7 @@
           }
 
           .collapse {
+            display: flex;
             padding-left: 0;
           }
 

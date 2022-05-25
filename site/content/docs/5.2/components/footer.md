@@ -107,9 +107,9 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 
 Footer are designed to be responsive on all devices.
 
-`.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<footer>` will allow:
-  - The padding of the different bars to be changed
-  - The navigation bar to expand from an accordion to an unstyled list
+`.footer-expand{-sm|-md|-lg|-xl|-xxl}` on `<footer>` will allow:
+  - The change of the different bars padding
+  - The change of the navigation bar to expand from an accordion to an unstyled list
 
 {{< callout info >}}
 Be careful to change all the utilities that are related to the breakpoint inside the footer.

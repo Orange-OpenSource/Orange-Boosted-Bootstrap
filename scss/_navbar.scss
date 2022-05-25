@@ -169,11 +169,11 @@
 
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom);
+  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // Boosted mod
   margin-bottom: 0;
-  font-size: var(--#{$prefix}navbar-nav-font-size, $font-size-base);
-  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base);
-  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base);
+  @include font-size(var(--#{$prefix}navbar-nav-font-size, $font-size-base)); // Boosted mod
+  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // Boosted mod
+  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // Boosted mod
   list-style: none;
 
   // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
