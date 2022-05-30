@@ -10,35 +10,35 @@
 
 .dropdown-toggle {
   // scss-docs-start dropdown-toggle-css-vars
-  --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x}; // Boosted mod
-  --#{$prefix}dropdown-color: #{$dropdown-color}; // Boosted mod
-  --#{$prefix}dropdown-bg: #{$dropdown-bg}; // Boosted mod
-  --#{$prefix}dropdown-border-color: #{$dropdown-border-color}; // Boosted mod
-  --#{$prefix}dropdown-border-color-bg-dark: #{$gray-700}; // Boosted mod
-  --#{$prefix}dropdown-link-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
+  --#{$prefix}dropdown-toggle-padding-x: #{$dropdown-padding-x}; // Boosted mod
+  --#{$prefix}dropdown-toggle-color: #{$dropdown-color}; // Boosted mod
+  --#{$prefix}dropdown-toggle-bg: #{$dropdown-bg}; // Boosted mod
+  --#{$prefix}dropdown-toggle-border-color: #{$dropdown-border-color}; // Boosted mod
+  --#{$prefix}dropdown-toggle-border-color-bg-dark: #{$gray-700}; // Boosted mod
+  --#{$prefix}dropdown-toggle-link-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
   // scss-docs-end dropdown-toggle-css-vars
 
-  padding-right: var(--#{$prefix}dropdown-padding-x); // Boosted mod
-  padding-left: var(--#{$prefix}dropdown-padding-x); // Boosted mod
-  color: var(--#{$prefix}dropdown-color); // Boosted mod
+  padding-right: var(--#{$prefix}dropdown-toggle-padding-x); // Boosted mod
+  padding-left: var(--#{$prefix}dropdown-toggle-padding-x); // Boosted mod
+  color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
   white-space: nowrap;
-  background-color: var(--#{$prefix}dropdown-bg); // Boosted mod
-  border-color: var(--#{$prefix}dropdown-border-color); // Boosted mod
+  background-color: var(--#{$prefix}dropdown-toggle-bg); // Boosted mod
+  border-color: var(--#{$prefix}dropdown-toggle-border-color); // Boosted mod
 
   // Boosted mod: dark background
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
-    color: var(--#{$prefix}dropdown-bg); // Boosted mod
-    background-color: var(--#{$prefix}dropdown-color); // Boosted mod
-    border-color: var(--#{$prefix}dropdown-border-color-bg-dark); // Boosted mod
+    color: var(--#{$prefix}dropdown-toggle-bg); // Boosted mod
+    background-color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
+    border-color: var(--#{$prefix}dropdown-toggle-border-color-bg-dark); // Boosted mod
 
     &:hover {
-      border-color: var(--#{$prefix}dropdown-link-hover-color); // Boosted mod
+      border-color: var(--#{$prefix}dropdown-toggle-link-hover-color); // Boosted mod
     }
   }
 
   .btn-group &:not(.btn-inverse) {
-    border-color: var(--#{$prefix}dropdown-color); // Boosted mod
+    border-color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
   }
   // End mod
 
@@ -71,6 +71,7 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
   --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
   --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
+  --#{$prefix}dropdown-item-font-weight-bold: #{$font-weight-bold}; // Boosted mod
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -197,14 +198,11 @@
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
 .dropdown-item {
-  // scss-docs-start dropdown-item-css-vars
-  --#{$prefix}dropdown-font-weight-bold: #{$font-weight-bold}; // Boosted mod
-  // scss-docs-end dropdown-item-css-vars
   display: block;
   width: 100%; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   clear: both;
-  font-weight: var(--#{$prefix}dropdown-font-weight-bold); // Boosted mod
+  font-weight: var(--#{$prefix}dropdown-item-font-weight-bold); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
