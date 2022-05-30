@@ -93,7 +93,7 @@ As part of Boosted's evolving CSS variables approach, stickers now use local CSS
 
 {{< scss-docs name="sticker-css-vars" file="scss/_sticker.scss" >}}
 
-`sm` and `lg` modifier classes are used to update the value of these CSS variables as needed for **small** and **large** stickers:
+Small and large sticker modifier classes are used to update the value of these CSS variables as needed.
 
 {{< scss-docs name="sticker-sm-css-vars" file="scss/_sticker.scss" >}}
 
