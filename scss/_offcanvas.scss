@@ -12,7 +12,7 @@
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
   --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas}; // Boosted mod
-  --#{$prefix}offcanvas--title-line-height: #{$offcanvas-title-line-height}; // Boosted mod
+  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height}; // Boosted mod
   --#{$prefix}offcanvas-transition-duration: #{$offcanvas-transition-duration}; // Boosted mod
   // scss-docs-end offcanvas-css-vars
 }
