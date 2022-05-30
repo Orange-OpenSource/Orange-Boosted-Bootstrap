@@ -1987,8 +1987,6 @@ $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 10
 $step-link-width:        1.25ch !default; // Matches width of a single number
 $step-link-color:        $white !default;
 $step-link-active-color: $black !default;
-$step-link-marker:       counter($stepped-process-counter) "\A0" !default;
-$step-link-marker-lg:    counter($stepped-process-counter) ".\A0" !default;
 $step-link-text-decoration: $link-decoration !default;
 // scss-docs-end stepped-process
 
