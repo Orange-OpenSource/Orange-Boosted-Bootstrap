@@ -53,7 +53,7 @@
   align-items: center; // Boosted mod
   justify-content: center; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
-  @include font-size(var(--#{$prefix}pagination-font-size)); // Boosted mod
+  @include font-size(var(--#{$prefix}pagination-font-size));
   font-weight: var(--#{$prefix}pagination-font-weight); // Boosted mod
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);
@@ -91,9 +91,9 @@
   &:active,
   &:active > & {
     color: color-contrast($pagination-active-item-bg);
-    background-color: var(--#{$prefix}pagination-active-item-bg); // Boosted mod
-    border-color: var(--#{$prefix}pagination-active-item-border); // Boosted mod
-    outline-color: var(--#{$prefix}pagination-active-item-border); // Boosted mod
+    background-color: var(--#{$prefix}pagination-active-item-bg);
+    border-color: var(--#{$prefix}pagination-active-item-border);
+    outline-color: var(--#{$prefix}pagination-active-item-border);
   }
   // End mod
 
@@ -157,14 +157,14 @@
 
     &:active {
       color: color-contrast($pagination-active-item-bg);
-      background-color: var(--#{$prefix}pagination-active-item-bg); // Boosted mod
-      border-color: var(--#{$prefix}pagination-active-item-border); // Boosted mod
-      outline-color: var(--#{$prefix}pagination-active-item-border); // Boosted mod
+      background-color: var(--#{$prefix}pagination-active-item-bg);
+      border-color: var(--#{$prefix}pagination-active-item-border);
+      outline-color: var(--#{$prefix}pagination-active-item-border);
     }
   }
 
   &:first-child .page-link {
-    margin-right: var(--#{$prefix}pagination-margin-x-first-last); // Boosted mod
+    margin-right: var(--#{$prefix}pagination-margin-x-first-last);
 
     &:not(:empty) {
       padding-right: $pagination-padding-end;
@@ -191,7 +191,7 @@
   }
 
   &:last-child:not(:nth-child(2)) .page-link {
-    margin-left: var(--#{$prefix}pagination-margin-x-first-last); // Boosted mod
+    margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
   @include media-breakpoint-down(sm) {
