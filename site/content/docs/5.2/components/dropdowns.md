@@ -254,6 +254,7 @@ And putting it to use in a navbar:
 
 {{< callout info >}}
 #### RTL
+
 Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will appear on the right side.
 {{< /callout >}}
 
@@ -889,6 +890,7 @@ Mixins are used to generate the CSS-based carets and can be found in `scss/mixin
 Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent `.dropdown-menu`. The `data-bs-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.
 
 {{< callout info >}}
+
 On touch-enabled devices, opening a dropdown adds empty `mouseover` handlers to the immediate children of the `<body>` element. This admittedly ugly hack is necessary to work around a [quirk in iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty `mouseover` handlers are removed.
 {{< /callout >}}
 
