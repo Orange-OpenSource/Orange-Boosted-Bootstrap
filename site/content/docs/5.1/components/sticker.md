@@ -99,9 +99,6 @@ As part of Boosted's evolving CSS variables approach, stickers now use local CSS
 
 {{< scss-docs name="sticker-lg-css-vars" file="scss/_sticker.scss" >}}
 
-
-## Sass
-
-### Variables
+### Sass variables
 
 {{< scss-docs name="sticker" file="scss/_variables.scss" >}}
