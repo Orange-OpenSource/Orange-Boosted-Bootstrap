@@ -14,6 +14,8 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 ### Progressive enhancement
 
 Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
+
+However, if you really want to implement it, [here](https://codepen.io/louismaximepiton/pen/BaYroLE) is a way to do so using Javascript.
 {{< /callout >}}
 
 {{< example >}}
