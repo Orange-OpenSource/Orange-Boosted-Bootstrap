@@ -83,19 +83,19 @@ const KEY_TO_DIRECTION = {
 const Default = {
   interval: 5000,
   keyboard: true,
-  slide: false,
   pause: 'hover',
-  wrap: true,
-  touch: true
+  ride: false,
+  touch: true,
+  wrap: true
 }
 
 const DefaultType = {
   interval: '(number|boolean)',
   keyboard: 'boolean',
-  slide: '(boolean|string)',
+  ride: '(boolean|string)',
   pause: '(string|boolean)',
-  wrap: 'boolean',
-  touch: 'boolean'
+  touch: 'boolean',
+  wrap: 'boolean'
 }
 
 /**
@@ -108,7 +108,6 @@ class Carousel extends BaseComponent {
 
     this._interval = null
     this._activeElement = null
-    this._stayPaused = false
     this._isSliding = false
     this.touchTimeout = null
     this._swipeHelper = null
@@ -118,6 +117,10 @@ class Carousel extends BaseComponent {
     this._playPauseButton = SelectorEngine.findOne(`${SELECTOR_CONTROL_PAUSE}[${SELECTOR_CAROUSEL_TO_PAUSE}="#${this._element.id}"]`) // Boosted mod
 
     this._addEventListeners()
+
+    if (this._config.ride === CLASS_NAME_CAROUSEL) {
+      this.cycle()
+    }
   }
 
   // Getters
@@ -151,7 +154,7 @@ class Carousel extends BaseComponent {
     this._slide(ORDER_PREV)
   }
 
-  pause(event) {
+  pause() {
     // Boosted mod: reset the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.add(CLASS_NAME_PAUSED)
@@ -168,19 +171,14 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    if (!event) {
-      this._stayPaused = true
-    }
-
     if (this._isSliding) {
       triggerTransitionEnd(this._element)
-      this.cycle(true)
     }
 
     this._clearInterval()
   }
 
-  cycle(event) {
+  cycle() {
     // Boosted mod: restart the animation on progress indicator
     if (this._indicatorsElement) {
       this._element.classList.remove(CLASS_NAME_PAUSED)
@@ -197,16 +195,23 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    if (!event) {
-      this._stayPaused = false
-    }
-
     this._clearInterval()
-    if (this._config.interval && !this._stayPaused) {
-      this._updateInterval()
+    this._updateInterval()
 
-      this._interval = setInterval(() => this.nextWhenVisible(), this._config.interval)
+    this._interval = setInterval(() => this.nextWhenVisible(), this._config.interval)
+  }
+
+  _maybeEnableCycle() {
+    if (!this._config.ride) {
+      return
     }
+
+    if (this._isSliding) {
+      EventHandler.one(this._element, EVENT_SLID, () => this.cycle())
+      return
+    }
+
+    this.cycle()
   }
 
   to(index) {
@@ -228,8 +233,6 @@ class Carousel extends BaseComponent {
 
     const activeIndex = this._getItemIndex(this._getActive())
     if (activeIndex === index) {
-      this.pause()
-      this.cycle()
       return
     }
 
@@ -258,8 +261,8 @@ class Carousel extends BaseComponent {
     }
 
     if (this._config.pause === 'hover') {
-      EventHandler.on(this._element, EVENT_MOUSEENTER, event => this.pause(event))
-      EventHandler.on(this._element, EVENT_MOUSELEAVE, event => this.cycle(event))
+      EventHandler.on(this._element, EVENT_MOUSEENTER, () => this.pause())
+      EventHandler.on(this._element, EVENT_MOUSELEAVE, () => this._maybeEnableCycle())
     }
 
     if (this._config.touch && Swipe.isSupported()) {
@@ -290,7 +293,7 @@ class Carousel extends BaseComponent {
         clearTimeout(this.touchTimeout)
       }
 
-      this.touchTimeout = setTimeout(event => this.cycle(event), TOUCHEVENT_COMPAT_WAIT + this._config.interval)
+      this.touchTimeout = setTimeout(() => this._maybeEnableCycle(), TOUCHEVENT_COMPAT_WAIT + this._config.interval)
     }
 
     const swipeConfig = {
@@ -436,12 +439,10 @@ class Carousel extends BaseComponent {
       return
     }
 
-    this._isSliding = true
-
     const isCycling = Boolean(this._interval)
-    if (isCycling) {
-      this.pause()
-    }
+    this.pause()
+
+    this._isSliding = true
 
     this._setActiveIndicatorElement(nextElementIndex)
     this._activeElement = nextElement
@@ -554,12 +555,6 @@ class Carousel extends BaseComponent {
         }
 
         data[config]()
-        return
-      }
-
-      if (data._config.interval && data._config.ride) {
-        data.pause()
-        data.cycle()
       }
     })
   }
@@ -583,15 +578,18 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (e
 
   if (slideIndex) {
     carousel.to(slideIndex)
+    carousel._maybeEnableCycle()
     return
   }
 
   if (Manipulator.getDataAttribute(this, 'slide') === 'next') {
     carousel.next()
+    carousel._maybeEnableCycle()
     return
   }
 
   carousel.prev()
+  carousel._maybeEnableCycle()
 })
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_CONTROL_PAUSE, Carousel.PauseCarousel) // Boosted mod

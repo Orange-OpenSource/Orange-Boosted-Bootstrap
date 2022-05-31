@@ -74,7 +74,7 @@ Boosted includes a handful of options for including some or all of our compiled 
 | `boosted.css`<br> `boosted.min.css`<br> `boosted.rtl.css`<br> `boosted.rtl.min.css` | Included | Included | Included | Included |
 | `boosted-grid.css`<br> `boosted-grid.rtl.css`<br> `boosted-grid.min.css`<br> `boosted-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
 | `boosted-utilities.css`<br> `boosted-utilities.rtl.css`<br> `boosted-utilities.min.css`<br> `boosted-utilities.rtl.min.css` | — | — | — | Included |
-| `boosted-reboot.css`<br> `boosted-reboot.rtl.css`<br> `boosted-reboot.min.css`<br> `boosted-reboot.rtl.min.css` | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+| `boosted-reboot.css`<br> `boosted-reboot.rtl.css`<br> `boosted-reboot.min.css`<br> `boosted-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
 ## JS files

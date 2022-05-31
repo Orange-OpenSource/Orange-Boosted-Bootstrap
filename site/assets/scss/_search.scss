@@ -1,0 +1,84 @@
+// stylelint-disable selector-class-pattern
+
+// Boosted mod: the entire file is modified and is specific to Boosted
+.bd-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.DocSearch-Container {
+  --docsearch-hit-shadow: none;
+
+  z-index: 1030;
+}
+
+.DocSearch-Button {
+  --docsearch-searchbox-background: #{$black};
+  --docsearch-searchbox-focus-background: #{$black};
+  --docsearch-text-color: #{$white};
+
+  margin: 0;
+  border: 0;
+
+  &:hover {
+    outline: unset;
+    box-shadow: unset;
+
+    .DocSearch-Search-Icon {
+      color: $primary;
+    }
+  }
+
+  &:focus {
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    outline: $primary solid 2px;
+    outline-offset: 6px;
+    box-shadow: unset;
+  }
+
+  .DocSearch-Search-Icon {
+    color: $white;
+  }
+}
+
+.DocSearch-Button-Placeholder {
+  @include visually-hidden();
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.DocSearch-Search-Icon {
+  width: 25px;
+  height: 25px;
+  stroke-width: 2.5;
+}
+
+.DocSearch-Cancel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Button-Keys {
+  @include visually-hidden();
+}
+
+.DocSearch-Commands-Key {
+  background-color: $white;
+}
+
+.DocSearch-Hits {
+  .DocSearch-Hit-source {
+    color: var(--docsearch-text-color);
+  }
+}
+
+.DocSearch-MagnifierLabel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Hit {
+  padding-top: 10px;
+}
+// End mod
