@@ -8,13 +8,11 @@
 
 .page-link {
   // Boosted mod
-  // position: relative;
   display: flex;
   justify-content: center;
   min-width: $pagination-item-size;
   height: $pagination-item-size;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: .5rem;
   font-weight: $font-weight-bold;
   // End mod
   line-height: $pagination-line-height;
@@ -208,7 +206,15 @@
       display: none;
     }
   }
-  // End mod
+
+  &:nth-child(2):not(:last-child) .page-link {
+    margin-left: $pagination-margin-x;
+  }
+
+  &:nth-last-child(2) .page-link {
+    margin-right: $pagination-margin-x;
+  }
+  // end mod
 }
 
 // Boosted mod: no sizing
