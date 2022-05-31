@@ -175,6 +175,10 @@ ul {
 li::marker {
   color: $orange-2;
   vertical-align: middle;
+
+  ol & {
+    color: inherit;
+  }
 }
 
 li li::marker {
@@ -193,6 +197,10 @@ li li li::marker {
 li::before {
   color: $orange-2;
   vertical-align: text-top;
+
+  ol & {
+    color: inherit;
+  }
 }
 
 li li::before {
