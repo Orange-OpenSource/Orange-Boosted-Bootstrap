@@ -14,7 +14,7 @@
   min-height: $font-size-base * $line-height-base;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
   margin-bottom: ($spacer * .5); // Boosted mod ensure that there's at least 10px
-  color-adjust: exact; // Keep themed appearance for print
+  print-color-adjust: exact; // Keep themed appearance for print
 }
 
 .custom-control-inline {
