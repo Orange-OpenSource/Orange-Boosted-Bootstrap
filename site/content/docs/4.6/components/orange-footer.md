@@ -21,7 +21,7 @@ According to the brand, Orange footer has black background and white text color.
   <div class="o-footer-top">
     <div class="container-md">
       <ul class="nav align-items-center">
-        <li class="nav-item mb-3 mb-md-0 pl-md-0 col-12 col-md-auto">Follow us</li>
+        <li class="nav-item mb-3 mb-md-0 ml-1 ml-md-0 col-12 col-md-auto">Follow us</li>
         <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
         <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
         <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
@@ -105,7 +105,7 @@ According to the brand, Orange footer has black background and white text color.
   <div class="o-footer-bottom">
     <div class="container-md">
       <ul class="nav flex-column flex-md-row">
-        <li class="nav-item mb-2 mt-1 mr-3 my-md-0 align-self-md-center">© Orange {{< year >}}</li>
+        <li class="nav-item mb-2 mt-1 mx-2 my-md-0 align-self-md-center">© Orange {{< year >}}</li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Jobs</a></li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Advertise</a></li>
         <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Terms & Conditions</a></li>
