@@ -189,13 +189,13 @@
 
         &::before {
           color: $color !important;
-          border-color: currentColor !important;
+          border-color: currentcolor !important;
           @include transition(none);
         }
       }
 
       &:active ~ .custom-control-label::before {
-        background: currentColor !important;
+        background: currentcolor !important;
       }
     }
   }
@@ -203,7 +203,7 @@
   .custom-checkbox .custom-control-input {
     @include form-validation-state-selector($state) {
       &:checked ~ .custom-control-label::before {
-        background: currentColor !important;
+        background: currentcolor !important;
       }
     }
   }
@@ -212,7 +212,7 @@
     @include form-validation-state-selector($state) {
       ~ .custom-control-label {
         &::after {
-          border-color: currentColor !important;
+          border-color: currentcolor !important;
           @include transition(none);
         }
       }
