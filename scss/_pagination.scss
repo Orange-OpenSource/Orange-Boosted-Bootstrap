@@ -62,9 +62,9 @@
   @include transition($pagination-transition);
   // Boosted mod: embed icon as mask-image
   @include button-icon(
-    var(--#{$prefix}pagination-icon), // Boosted mod
-    var(--#{$prefix}pagination-icon-size), // Boosted mod
-    $size: var(--#{$prefix}pagination-icon-width) var(--#{$prefix}pagination-icon-height) , // Boosted mod
+    var(--#{$prefix}pagination-icon),
+    var(--#{$prefix}pagination-icon-size),
+    $size: var(--#{$prefix}pagination-icon-width) var(--#{$prefix}pagination-icon-height) ,
     $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link",
     $position: calc(50% - 1px)
   );
