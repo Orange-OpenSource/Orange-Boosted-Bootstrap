@@ -8,22 +8,22 @@ toc: true
 
 ## Examples
 
-A tag is basically a rounded container that can contain some elements. It can be clickable and have a close button.
+A tag is basically a rounded container that can contain some elements. Please adapt the html `<tag>` to be semantically correct. It can be clickable and have a close button.
 
 {{< callout warning >}}
 You shouldn't mix tags versions in the same region, since they look the same and have different behaviors.
 {{< /callout >}}
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<span class="tag">Label</span>
+<p class="tag">Label</p>
 <button class="tag">Label</button>
-<span class="tag">
+<div class="tag" role="group">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
   <button class="close"><span class="visually-hidden">Close</span></button>
-</span>
+</div>
 {{< /example >}}
 
 ## With icon
@@ -31,12 +31,12 @@ You shouldn't mix tags versions in the same region, since they look the same and
 A tag can be build with an icon (img or svg).
 
 {{< example class="d-flex gap-2" >}}
-<div class="tag">
+<span class="tag">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
-</div>
+</span>
 {{< /example >}}
 
 ## Actionable
@@ -44,24 +44,24 @@ A tag can be build with an icon (img or svg).
 A tag can be actionable either when builded with a `<button>` tag or with a close button inside.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<button class="tag">Label</button>
+<a href="#" class="tag">Label</a>
 <button class="tag">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
 </button>
-<span class="tag">
+<p class="tag" role="group">
   Label
   <button class="close"><span class="visually-hidden">Close</span></button>
-</span>
-<span class="tag">
+</p>
+<p class="tag" role="group">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
   <button class="close"><span class="visually-hidden">Close</span></button>
-</span>
+</p>
 {{< /example >}}
 
 ## Dark variant
@@ -69,20 +69,20 @@ A tag can be actionable either when builded with a `<button>` tag or with a clos
 Tags come with a dark variant: `.tag-dark`.
 
 {{< example class="d-flex gap-2 align-items-center bg-dark" >}}
-<span class="tag tag-dark">Label</span>
+<p class="tag tag-dark">Label</p>
 <button class="tag tag-dark">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
 </button>
-<span class="tag tag-dark">
+<p class="tag tag-dark" role="group">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
   <button class="close"><span class="visually-hidden">Close</span></button>
-</span>
+</p>
 {{< /example >}}
 
 ## Sizes
@@ -90,20 +90,20 @@ Tags come with a dark variant: `.tag-dark`.
 Tags come with a small variant: `.tag-sm`.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<span class="tag tag-sm">Label</span>
+<p class="tag tag-sm">Label</p>
 <button class="tag tag-sm">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
 </button>
-<span class="tag tag-sm">
+<p class="tag tag-sm" role="group">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
   <button class="close"><span class="visually-hidden">Close</span></button>
-</span>
+</p>
 {{< /example >}}
 
 ## Disabled state
@@ -111,20 +111,20 @@ Tags come with a small variant: `.tag-sm`.
 Tags come with a disabled state: `.disabled`. Don't forget to add `aria-disabled` to the `<span>` and `disabled` attribute to the `<button>` where needed.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<span class="tag disabled" aria-disabled="true">Label</span>
+<p class="tag disabled" aria-disabled="true">Label</p>
 <button class="tag" disabled>
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
 </button>
-<span class="tag disabled" aria-disabled="true">
+<p class="tag disabled" role="group" aria-disabled="true">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Label
   <button class="close" disabled><span class="visually-hidden">Close</span></button>
-</span>
+</p>
 {{< /example >}}
 
 ## CSS

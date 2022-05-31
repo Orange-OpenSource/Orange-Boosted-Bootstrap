@@ -3,6 +3,7 @@
   --#{$prefix}tag-gap: #{$tag-gap};
   --#{$prefix}tag-padding-x: #{$tag-padding-x};
   --#{$prefix}tag-padding-y: #{$tag-padding-y};
+  --#{$prefix}tag-margin: 0;
   @include rfs($tag-font-size, --#{$prefix}tag-font-size);
   --#{$prefix}tag-font-shift: #{$tag-font-shift}; // stylelint-disable-line custom-property-empty-line-before
   --#{$prefix}tag-font-weight: #{$tag-font-weight};
@@ -26,6 +27,7 @@
   gap: var(--#{$prefix}tag-gap);
   align-items: center;
   padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)); // stylelint-disable-line function-disallowed-list
+  margin: var(--#{$prefix}tag-margin);
   @include font-size(var(--#{$prefix}tag-font-size));
   font-weight: var(--#{$prefix}tag-font-weight);
   line-height: add(var(--#{$prefix}tag-font-size), .125rem);
@@ -95,16 +97,20 @@
   }
 }
 
-// stylelint-disable-next-line selector-no-qualifying-type
+// stylelint-disable selector-no-qualifying-type
+a.tag,
 button.tag {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
   &:hover {
     border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
   &:focus[data-focus-visible-added] {
     outline: .1875rem solid var(--#{$prefix}tag-outline-color);
-    outline-offset: .1875rem;
+    outline-offset: .125rem;
   }
 
   &:active {
@@ -113,6 +119,7 @@ button.tag {
     border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 }
+// stylelint-enable selector-no-qualifying-type
 
 .tag-sm {
   // scss-docs-start tag-dark-css-vars
