@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Introduction
-description: Get started with Boosted, based on Bootstrap, via CDN and a template starter page.
+title: Get started with Boosted
+description: Boosted is based on Bootstrap&#58; a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
 group: getting-started
 aliases:
   - "/docs/5.1/getting-started/"
@@ -12,46 +12,82 @@ toc: true
 
 ## Quick start
 
-Looking to quickly add Boosted to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the downloads page]({{< docsref "/getting-started/download" >}}).
+Get started by including Boosted's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
 
-### CSS
+<br>
 
-Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
+1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport>` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
 
-Boosted also provides Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+   ```html
+   <!doctype html>
+   <html lang="en">
+     <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>Boosted demo</title>
+     </head>
+     <body>
+       <h1>Hello, world!</h1>
+     </body>
+   </html>
+   ```
 
-```html
-<!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-<link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
-<link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
-```
+2. **Include Boosted's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
 
-### JS
+   Boosted also provides Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
-Many of our components require the use of JavaScript to function. Specifically, they require our own JavaScript plugins and [Popper](https://popper.js.org/). Place **one of the following `<script>`s** near the end of your pages, right before the closing `</body>` tag, to enable them.
+   ```html
+   <!doctype html>
+   <html lang="en">
+     <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>Boosted demo</title>
+       <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+       <link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
+       <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+     </head>
+     <body>
+       <h1>Hello, world!</h1>
+       <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
+     </body>
+   </html>
+   ```
 
-#### Bundle
+   You can also include [Popper](https://popper.js.org/) and our JS separately. If you don't plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
 
-Include every Boosted JavaScript plugin and dependency with one of our two bundles. Both `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Boosted, please see our [contents]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) section.
+   ```html
+   <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
+   <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+   ```
 
-```html
-<script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
-```
+3. **Hello, world!** Open the page in your browser of choice to see your Boosted page. Now you can start building with Boosted by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
 
-#### Separate
+## CDN links
 
-If you decide to go with the separate scripts solution, Popper must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
+As reference, here are our primary CDN links.
 
-```html
-<script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
-<script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
-```
+{{< bs-table >}}
+| Description | URL |
+| --- | --- |
+| CSS | `{{< param "cdn.css" >}}` |
+| CSS for Helvetica Neue | `{{< param "cdn.helvetica" >}}` |
+| JS | `{{< param "cdn.js_bundle" >}}` |
+{{< /bs-table >}}
 
-#### Modules
+You can also use the CDN to fetch any of our [additional builds listed in the Contents page]({{< docsref "/getting-started/contents" >}}).
 
-If you use `<script type="module">`, please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.
+## Next steps
 
-#### Components
+- Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
+
+- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) and the list of [components that require JavaScript](#js-components) below.
+
+- Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
+
+- Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.
+
+## JS components
 
 Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
@@ -63,8 +99,10 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Carousel for all slide behaviors, controls, and indicators
 - Collapse for toggling visibility of content
 - Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
+- Footer for extending our Collapse plugin to implement responsive behavior
 - Modals for displaying, positioning, and scroll behavior
-- Navbar for extending our Collapse plugin to implement responsive behavior
+- Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors
+- Navs with the Tab plugin for toggling content panes
 - Offcanvases for displaying, positioning, and scroll behavior
 - Orange navbar for minimizing the header
 - Quantity selector for incrementing/decrementing number value
@@ -84,70 +122,13 @@ However, if you don't need or want to use Boosted's JavaScript files, you'll sti
 ```
 {{< /callout >}}
 
-## Starter template
-
-Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Preconnect to CDN: remove if not needed -->
-    <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
-
-    <!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don't include the orangeHelvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <!-- Option 1: Use a CDN -->
-    <link href="{{< param "cdn.HelvNeue55_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue55_W1G_hash" >}}" crossorigin="anonymous">
-    <link href="{{< param "cdn.HelvNeue75_W1G" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelvNeue75_W1G_hash" >}}" crossorigin="anonymous">
-    <link href="{{< param "cdn.helvetica" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
-
-    <!-- Option 2: Embed the fonts
-    <link href="dist/fonts/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="dist/fonts/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="dist/css/orange-helvetica.min.css" rel="stylesheet" crossorigin="anonymous">
-    -->
-
-    <!-- Boosted CSS -->
-    <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Boosted Bundle with Popper -->
-    <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Boosted JS
-    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
-    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
-```
-
-For next steps, visit the [Layout docs]({{< docsref "/layout/grid" >}}) or [our official examples]({{< docsref "/examples" >}}) to start laying out your site's content and components.
-
 ## Important globals
 
-Boosted employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+Boosted employs a handful of important global styles and settings, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
 
 ### HTML5 doctype
 
-Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky and incomplete styling.
 
 ```html
 <!doctype html>
@@ -158,13 +139,13 @@ Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky
 
 ### Responsive meta tag
 
-Boosted is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
+Boosted is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-You can see an example of this in action in the [starter template](#starter-template).
+You can see an example of this in action in the [quick start](#quick-start).
 
 ### Box-sizing
 

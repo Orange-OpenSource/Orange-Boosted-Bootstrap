@@ -8,7 +8,7 @@
   --#{$prefix}alert-padding-x: #{$alert-padding-x};
   --#{$prefix}alert-padding-y: #{$alert-padding-y};
   --#{$prefix}alert-margin-bottom: #{$alert-margin-bottom};
-  --#{$prefix}alert-color: #{alert-color}; // Boosted mod
+  --#{$prefix}alert-color: #{$alert-color}; // Boosted mod
   --#{$prefix}alert-border-color: transparent;
   --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
   --#{$prefix}alert-border-radius: #{$alert-border-radius};

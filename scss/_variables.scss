@@ -568,6 +568,7 @@ $border-widths: (
 
 $border-style:                solid !default;
 $border-color:                $black !default; // Boosted mod
+$border-color-translucent:    $gray-500 !default; // Boosted mod: gray value instead of rgba($black, .175)
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -976,8 +977,8 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              $body-bg !default;
-$input-disabled-bg:                     $gray-300 !default;
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
+$input-disabled-bg:                     $gray-300 !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
@@ -1306,7 +1307,7 @@ $navbar-minimized-toggler-padding-y:      $navbar-minimized-brand-margin-y !defa
 
 $navbar-badge-padding-y:                  .125rem !default;
 $navbar-badge-padding-x:                  .375rem !default;
-$navbar-badge-margin-top:                 .1875rem !default;
+$navbar-badge-margin-top:                 .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
@@ -1345,7 +1346,7 @@ $dropdown-spacer:                   $border-width * -1 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             $gray-500 !default;
+$dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
 $dropdown-inner-border-radius:      0 !default;
@@ -1401,7 +1402,8 @@ $pagination-bg:                     $white !default;
 $pagination-border-radius:          null !default; // Boosted mod
 $pagination-border-width:           $border-width !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-start:           $spacer * .5 !default; // Boosted mod
+$pagination-margin-start:           0 !default; // Boosted mod
+$pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
@@ -1449,7 +1451,7 @@ $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
-$card-border-color:                 $gray-500 !default; // Boosted mod
+$card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
 $card-border-radius:                $border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
@@ -1485,7 +1487,7 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 // fusv-disable
 $accordion-button-color:                  $accordion-color !default; // Deprecated in Boosted 5.2.0 for CSS variables
 // fusv-enable
-$accordion-button-bg:                     var(--#{$variable-prefix}accordion-bg) !default;
+$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
@@ -1555,7 +1557,7 @@ $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $gray-400 !default;
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              $border-width !default;
-$popover-border-color:              $popover-bg !default;
+$popover-border-color:              $popover-bg !default; // Boosted mod
 $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                null !default;
@@ -1590,7 +1592,7 @@ $toast-font-size:                   .875rem !default;
 $toast-color:                       $black !default;
 $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                $border-width !default;
-$toast-border-color:                var(--#{$prefix}border-color) !default;
+$toast-border-color:                var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  $box-shadow !default;
 $toast-spacing:                     $container-padding-x !default;
@@ -1629,7 +1631,7 @@ $modal-content-padding-x:           0 !default; // Boosted mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // Boosted mod
 $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
-$modal-content-border-color:        $gray-500 !default; // Boosted mod
+$modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
 $modal-content-inner-border-radius: $border-radius !default; // Boosted mod
@@ -1766,6 +1768,27 @@ $thumbnail-box-shadow:              $box-shadow-sm !default;
 $figure-caption-font-size:          $small-font-size !default;
 $figure-caption-color:              $gray-900 !default;
 // scss-docs-end figure-variables
+
+// Boosted mod
+// Title bars
+
+// scss-docs-start title-bars-variables
+$title-bar-image-ratio:             1.8em !default;
+$title-bar-padding-y:               .3333333em !default;
+$title-bar-font-size:               $h2-font-size !default;
+$title-bar-letter-spacing:          $h2-spacing !default;
+$title-bar-border-width:            $border-width * .5 !default;
+$title-bar-border-color:            $gray-500 !default;
+
+$title-bar-font-size-md:            $display2-size !default;
+$title-bar-letter-spacing-md:       $display2-spacing !default;
+
+$title-bar-font-size-xl:            $display1-size !default;
+$title-bar-letter-spacing-xl:       $display1-spacing !default;
+
+$title-bar-border-color-dark:       $gray-700 !default;
+// scss-docs-end title-bars-variables
+// End mod
 
 
 // Breadcrumbs
@@ -1996,4 +2019,42 @@ $quantity-selector-icon-sm-remove-height: .125rem !default;
 $quantity-selector-input-max-width:       2.625rem !default;
 $quantity-selector-input-sm-max-width:    2.5rem !default;
 // scss-docs-end quantity-selector
+
+//// Footer
+// scss-docs-start footer
+$footer-font-size-sm:                    $font-size-sm !default;
+$footer-line-height-sm:                  $line-height-sm !default;
+$footer-font-size-md:                    $font-size-base !default;
+$footer-line-height-md:                  $line-height-base !default;
+$footer-letter-spacing:                  $letter-spacing-base !default;
+$footer-accordion-line-height:           $spacer * 1.45 !default;
+
+$footer-title-content-padding-top:       $spacer * 1.25 !default;
+$footer-title-content-padding-bottom:    $spacer * 1.45 !default;
+$footer-title-content-padding-bottom-md: $spacer * 1.95 !default;
+$footer-title-margin-bottom:             $spacer * .85 !default;
+
+$footer-social-padding-top:              $spacer * .85 !default;
+$footer-social-padding-top-md:           $spacer * 1.5 !default;
+$footer-social-padding-bottom:           $spacer * 1.45 !default;
+$footer-social-title-margin-md:          $spacer * .5 $spacer $spacer * .6 0 !default;
+
+$footer-nav-padding-top:                 $spacer * 1.55 !default;
+$footer-nav-list-padding-top:            $spacer * .85 !default;
+$footer-nav-list-padding-top-md:         $spacer * .05 !default;
+$footer-nav-list-padding-bottom:         $spacer * 1.3 !default;
+$footer-nav-list-padding-bottom-md:      $spacer * 1.75 !default;
+$footer-nav-list-padding-bottom-lg:      $spacer * 2 !default;
+
+$footer-service-padding-y:               $spacer !default;
+$footer-service-padding-y-md:            $spacer * 1.2 !default;
+$footer-service-link-padding-top:        $spacer * .1 !default;
+
+$footer-terms-padding-top:               $spacer * .85 !default;
+$footer-terms-padding-bottom:            $spacer * 1.35 !default;
+$footer-terms-padding-y-md:              $spacer * 1.1 !default;
+
+$footer-gap:                             $spacer * .75 !default;
+$footer-gap-xl:                          $spacer * 1.7 !default;
+// scss-docs-end footer
 // End mod

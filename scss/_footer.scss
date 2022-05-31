@@ -1,0 +1,167 @@
+.footer .navbar-nav {
+  --#{$prefix}nav-link-font-weight: #{$font-weight-bold};
+
+  flex-wrap: wrap;
+  font-size: $footer-font-size-sm;
+  line-height: $footer-line-height-sm;
+  letter-spacing: $footer-letter-spacing;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    outline-offset: map-get($spacers, 1);
+
+    &.active::before {
+      content: unset;
+    }
+  }
+}
+
+.footer-heading {
+  font-size: $footer-font-size-md;
+  font-weight: $font-weight-bold;
+  line-height: $footer-line-height-md;
+  letter-spacing: $footer-letter-spacing;
+}
+
+.footer-title-content {
+  padding-top: $footer-title-content-padding-top;
+  padding-bottom: $footer-title-content-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: $footer-title-content-padding-bottom-md;
+  }
+
+  .footer-heading {
+    margin-bottom: $footer-title-margin-bottom;
+  }
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  padding-top: $footer-social-padding-top;
+  padding-bottom: $footer-social-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    padding-top: $footer-social-padding-top-md;
+  }
+
+  > .footer-heading {
+    margin: $footer-social-title-margin-md;
+    white-space: nowrap;
+
+    @include media-breakpoint-down(md) {
+      margin: 0 0 $footer-title-margin-bottom;
+      font-size: $footer-font-size-sm;
+      line-height: $footer-line-height-sm;
+    }
+  }
+}
+
+.footer-nav {
+  @include media-breakpoint-down(md) {
+    max-width: 100vw;
+    padding: 0;
+
+    .row { // Here to replace overflow-x on parent that allow focus on parent.
+      margin-right: 0;
+      margin-left: 0;
+
+      > * {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .footer-column:first-of-type .accordion-header:first-of-type,
+  .accordion .accordion-item {
+    border: 0;
+  }
+
+  .accordion-header {
+    @include media-breakpoint-up(md) {
+      padding: $footer-nav-padding-top 0 $spacer;
+      border: 0;
+    }
+
+    .accordion-button {
+      font-size: $footer-font-size-sm;
+      line-height: $footer-accordion-line-height;
+      letter-spacing: $footer-letter-spacing;
+
+      &::after {
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        all: unset;
+        pointer-events: none;
+
+        &::after {
+          content: unset;
+        }
+      }
+    }
+  }
+
+  .navbar-nav {
+    gap: $footer-gap-xl;
+    padding: $footer-nav-list-padding-top 0 $footer-nav-list-padding-bottom;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+      gap: $footer-gap;
+      padding-top: $footer-nav-list-padding-top-md;
+      padding-bottom: $footer-nav-list-padding-bottom-md;
+      font-size: $footer-font-size-md;
+      line-height: $footer-line-height-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $footer-nav-list-padding-bottom-lg;
+    }
+  }
+
+  .accordion-collapse {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      padding-left: 0;
+    }
+  }
+}
+
+.footer-service {
+  padding-top: subtract($footer-service-padding-y, .0625rem);
+  padding-bottom: $footer-service-padding-y;
+
+  @include media-breakpoint-up(md) {
+    padding-top: add($footer-service-padding-y-md, .0625rem);
+    padding-bottom: $footer-service-padding-y-md;
+  }
+
+  .nav-link > span {
+    padding-top: $footer-service-link-padding-top;
+  }
+}
+
+.footer-terms {
+  padding-top: $footer-terms-padding-top;
+  padding-bottom: $footer-terms-padding-bottom;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $footer-terms-padding-y-md;
+    padding-bottom: $footer-terms-padding-y-md;
+  }
+
+  .navbar-nav {
+    gap: $footer-gap-xl;
+  }
+}

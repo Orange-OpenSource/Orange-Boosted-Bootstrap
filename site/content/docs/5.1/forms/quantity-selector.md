@@ -100,8 +100,8 @@ Boosted's quantity selector form component exposes the classic `change` event wh
 </table>
 
 ```js
-var myQuantitySelector = document.getElementById('inputQuantitySelector')
-myQuantitySelector.addEventListener('change', function () {
+const myQuantitySelector = document.getElementById('inputQuantitySelector')
+myQuantitySelector.addEventListener('change', () => {
   // do something...
 })
 ```

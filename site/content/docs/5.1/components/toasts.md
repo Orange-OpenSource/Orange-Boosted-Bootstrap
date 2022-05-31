@@ -88,11 +88,11 @@ Click the button below to show a toast (positioned with our utilities in the low
 We use the following JavaScript to trigger our live toast demo:
 
 ```js
-var toastTrigger = document.getElementById('liveToastBtn')
-var toastLiveExample = document.getElementById('liveToast')
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
 if (toastTrigger) {
-  toastTrigger.addEventListener('click', function () {
-    var toast = new boosted.Toast(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    const toast = new boosted.Toast(toastLiveExample)
 
     toast.show()
   })
@@ -180,10 +180,10 @@ Alternatively, you can also add additional controls and components to toasts.
 
 ### Color schemes
 
-Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.bg-secondary` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
+Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.text-bg-secondary` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
 
 {{< example class="bg-light" >}}
-<div class="toast align-items-center bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -343,10 +343,8 @@ As part of Boosted's evolving CSS variables approach, toasts now use local CSS v
 Initialize toasts via JavaScript:
 
 ```js
-var toastElList = Array.prototype.slice.call(document.querySelectorAll('.toast'))
-var toastList = toastElList.map(function (toastEl) {
-  return new boosted.Toast(toastEl, option)
-})
+const toastElList = document.querySelectorAll('.toast')
+const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, option))
 ```
 
 ### Triggers
@@ -355,7 +353,9 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
@@ -376,9 +376,10 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 | --- | --- |
 | `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
 | `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
+| `isShown` | Returns a boolean according to toast's visibility state. |
 | `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
-| `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `var myToastEl = document.getElementById('myToastEl')` `var myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance|
-| `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`var myToastEl = document.getElementById('myToastEl')`  `var myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance |
+| `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance|
+| `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`const myToastEl = document.getElementById('myToastEl')`  `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance |
 {{< /bs-table >}}
 
 ### Events
@@ -393,8 +394,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< /bs-table >}}
 
 ```js
-var myToastEl = document.getElementById('myToast')
-myToastEl.addEventListener('hidden.bs.toast', function () {
+const myToastEl = document.getElementById('myToast')
+myToastEl.addEventListener('hidden.bs.toast', () => {
   // do something...
 })
 ```
