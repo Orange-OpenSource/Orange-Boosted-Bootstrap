@@ -1,2 +1,61 @@
-// Boosted mod: no .bd-navbar
-// End mod
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+// TODO: check all those rules but normally we wouldn't need anything in this file
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+.bd-navbar {
+  // Boosted mod: no padding
+  background-color: transparent;
+  // Boosted mod: no background-image
+  // Boosted mod: no box-shadow
+
+  // Boosted mod: no .navbar-toggler
+
+  // Boosted mod
+  .navbar-nav.flex-row {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid #666;
+    }
+  }
+  // End mod
+
+  // Boosted mod: no .navbar-brand
+
+  .navbar-toggler,
+  .nav-link {
+    display: block; // Boosted mod: no padding, no color
+
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}link-hover-color); // Boosted mod
+    }
+
+    &.active {
+      font-weight: 600;
+      color: var(--#{$prefix}link-hover-color); // Boosted mod
+    }
+  }
+
+  // Boosted mod: no .navbar-nav-svg
+
+  // Boosted mod: no .offcanvas-lg
+
+  // Boosted mod: no .dropdown-toggle
+
+  .dropdown-menu {
+    --#{$prefix}dropdown-min-width: 12rem;
+    // Boosted mod: background-color is already good
+    @include rfs(.875rem, --#{$prefix}dropdown-font-size);
+    // Boosted mod: no box-shadow
+  }
+
+  .dropdown-item.current {
+    font-weight: $font-weight-bold; // Boosted mod
+    background-image: escape-svg($dropdown-active-icon);
+    background-repeat: no-repeat;
+    background-position: right $dropdown-item-padding-x top .75rem; // Boosted mod
+    background-size: .75rem .75rem;
+  }
+}

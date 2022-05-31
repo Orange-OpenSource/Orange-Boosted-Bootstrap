@@ -12,6 +12,16 @@ Plugins can be included individually (using Boosted's individual `js/dist/*.js`)
 
 If you use a bundler (Webpack, Rollup...), you can use `/js/dist/*.js` files which are UMD ready.
 
+## Usage with JavaScript frameworks
+
+While the Boosted CSS can be used with any framework, **the Boosted JavaScript is not fully compatible with frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Boosted and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
+
+A better alternative for those using React and similar frameworks is to use a framework-specific package **instead of** the Boosted JavaScript. Here are some of the most popular options:
+
+- React: [react-bootstrap](https://react-bootstrap.github.io/)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/)
+- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
+
 ## Using Boosted as a module
 
 We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in your browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
@@ -59,9 +69,9 @@ Boosted provides custom events for most plugins' unique actions. Generally, thes
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
 ```js
-var myModal = document.getElementById('myModal')
+const myModal = document.getElementById('myModal')
 
-myModal.addEventListener('show.bs.modal', function (event) {
+myModal.addEventListener('show.bs.modal', event => {
   if (!data) {
     return event.preventDefault() // stops modal from being shown
   }
@@ -74,7 +84,7 @@ myModal.addEventListener('show.bs.modal', function (event) {
 Boosted will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Boosted will emit events thanks to jQuery's event system. So if you want to listen to Boosted's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
 
 ```js
-$('#myTab a').on('shown.bs.tab', function () {
+$('#myTab a').on('shown.bs.tab', () => {
   // do something...
 })
 ```
@@ -85,10 +95,10 @@ $('#myTab a').on('shown.bs.tab', function () {
 All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):
 
 ```js
-var myModalEl = document.getElementById('myModal')
+const myModalEl = document.getElementById('myModal')
 
-var modal = new boosted.Modal(myModalEl) // initialized with defaults
-var modal = new boosted.Modal(myModalEl, { keyboard: false }) // initialized with no keyboard
+const modal = new boosted.Modal(myModalEl) // initialized with defaults
+const modal1 = new boosted.Modal(myModalEl, { keyboard: false }) // initialized with no keyboard
 ```
 
 If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. In order to retrieve it directly from an element, do this: `boosted.Popover.getInstance(myPopoverEl)`.
@@ -98,8 +108,8 @@ If you'd like to get a particular plugin instance, each plugin exposes a `getIns
 You can also use a CSS selector as the first argument instead of a DOM element to initialize the plugin. Currently the element for the plugin is found by the `querySelector` method since our plugins support a single element only.
 
 ```js
-var modal = new boosted.Modal('#myModal')
-var dropdown = new boosted.Dropdown('[data-bs-toggle="dropdown"]')
+const modal = new boosted.Modal('#myModal')
+const dropdown = new boosted.Dropdown('[data-bs-toggle="dropdown"]')
 ```
 
 ### Asynchronous functions and transitions
@@ -109,9 +119,9 @@ All programmatic API methods are **asynchronous** and return to the caller once 
 In order to execute an action once the transition is complete, you can listen to the corresponding event.
 
 ```js
-var myCollapseEl = document.getElementById('myCollapse')
+const myCollapseEl = document.getElementById('myCollapse')
 
-myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
+myCollapseEl.addEventListener('shown.bs.collapse', event => {
   // Action to execute once the collapsible area is expanded
 })
 ```
@@ -119,10 +129,10 @@ myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
 In addition a method call on a **transitioning component will be ignored**.
 
 ```js
-var myCarouselEl = document.getElementById('myCarousel')
-var carousel = boosted.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
+const myCarouselEl = document.getElementById('myCarousel')
+const carousel = boosted.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
 
-myCarouselEl.addEventListener('slid.bs.carousel', function (event) {
+myCarouselEl.addEventListener('slid.bs.carousel', event => {
   carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
 })
 
@@ -144,7 +154,7 @@ boosted.Modal.Default.keyboard = false
 Sometimes it is necessary to use Boosted plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
 
 ```js
-var boostedButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+const boostedButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
 $.fn.boostedBtn = boostedButton // give $().boostedBtn the Boosted functionality
 ```
 
@@ -173,8 +183,8 @@ Tooltips and Popovers use our built-in sanitizer to sanitize options which accep
 The default `allowList` value is the following:
 
 ```js
-var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
-var DefaultAllowlist = {
+const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
+const DefaultAllowlist = {
   // Global attributes allowed on any supplied element below.
   '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
   a: ['target', 'href', 'title', 'rel'],
@@ -212,7 +222,7 @@ var DefaultAllowlist = {
 If you want to add new values to this default `allowList` you can do the following:
 
 ```js
-var myDefaultAllowList = boosted.Tooltip.Default.allowList
+const myDefaultAllowList = boosted.Tooltip.Default.allowList
 
 // To allow table elements
 myDefaultAllowList.table = []
@@ -222,16 +232,16 @@ myDefaultAllowList.td = ['data-bs-option']
 
 // You can push your custom regex to validate your attributes.
 // Be careful about your regular expressions being too lax
-var myCustomRegex = /^data-my-app-[\w-]+/
+const myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultAllowList['*'].push(myCustomRegex)
 ```
 
 If you want to bypass our sanitizer because you prefer to use a dedicated library, for example [DOMPurify](https://www.npmjs.com/package/dompurify), you should do the following:
 
 ```js
-var yourTooltipEl = document.getElementById('yourTooltip')
-var tooltip = new boosted.Tooltip(yourTooltipEl, {
-  sanitizeFn: function (content) {
+const yourTooltipEl = document.getElementById('yourTooltip')
+const tooltip = new boosted.Tooltip(yourTooltipEl, {
+  sanitizeFn(content) {
     return DOMPurify.sanitize(content)
   }
 })

@@ -15,17 +15,58 @@
 {{- $show_markup := .Get "show_markup" | default true -}}
 {{- $input := .Inner -}}
 
-{{- if eq $show_preview true -}}
-<div{{ with $id }} id="{{ . }}"{{ end }} class="bd-example{{ with $class }} {{ . }}{{ end }}">
-  {{- $input -}}
-</div>
-{{- end -}}
-
-{{- if eq $show_markup true -}}
-  <div class="bd-edit">
-    <button type="button" class="btn btn-sm btn-secondary btn-edit text-nowrap" title="Try it on StackBlitz">Try it</button>
+<div class="bd-example-snippet bd-code-snippet">
+  {{- if eq $show_preview true -}}
+  <div{{ with $id }} id="{{ . }}"{{ end }} class="bd-example{{ with $class }} {{ . }}{{ end }}">
+    {{- $input -}}
   </div>
-  {{- $content := replaceRE `<svg class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` $input -}}
-  {{- $content = replaceRE ` (class=" *?")` "" $content -}}
-  {{- highlight (trim $content "\n") $lang "" -}}
-{{- end -}}
+  {{- end -}}
+
+  {{- if eq $show_markup true -}}
+    {{- if eq $show_preview true -}}
+      <!---------------------------------------------------->
+      <!---------------------------------------------------->
+      <!---------------------------------------------------->
+      <!--Boosted mod: remove extra space-->
+      <!-- >> to Bootstrap -->
+      <!--Boosted mod: used .align-items-baseline instead of .align-items-center-->
+      <!-- >> to Bootstrap -->
+      <!---------------------------------------------------->
+      <!---------------------------------------------------->
+      <!---------------------------------------------------->
+      <!--Boosted mod: removed .bg-light -->
+      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">{{- $lang -}}</small>
+        <div class="d-flex ms-auto">
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!-- Boosted mod: removed width, height, fill -->
+          <!-- TODO: propose it to Bootstrap -->
+          <!-- TODO: lightning aria-label shouldn't be Copy! >>> Bootstrap -->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!-- Boosted mod: added mt-0 me-0 classes -->
+          <!-- TODO: propose it to Bootstrap -->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <!---------------------------------------------------->
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div>
+    {{- end -}}
+
+    {{- $content := replaceRE `<svg class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` $input -}}
+    {{- $content = replaceRE ` (class=" *?")` "" $content -}}
+    {{- highlight (trim $content "\n") $lang "" -}}
+  {{- end -}}
+</div>
