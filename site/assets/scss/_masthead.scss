@@ -3,10 +3,7 @@
   padding: 3rem 0;
   // Boosted mod: no gradient background image
 
-  h1 {
-    @include font-size(4rem);
-    line-height: 1;
-  }
+  // Boosted mod: no extra h1 rule
 
   .lead {
     @include font-size(1rem);
