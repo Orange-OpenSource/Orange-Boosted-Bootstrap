@@ -79,7 +79,8 @@
 }
 
 // Boosted mod
-[class*="-dark"],
+.bg-black,
+[class*="-dark"]:not(.border-dark),
 .bg-secondary {
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
