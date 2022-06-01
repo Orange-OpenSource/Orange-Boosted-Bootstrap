@@ -104,7 +104,7 @@
   text-align: center;
   background: none;
   border: 0;
-  outline: 0;
+  outline: 0; // Boosted mod
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
@@ -129,7 +129,6 @@
     color: $carousel-control-color;
   }
 
-  &:focus:focus-visible,
   &:focus {
     &[data-focus-visible-added] {
       & > span {
