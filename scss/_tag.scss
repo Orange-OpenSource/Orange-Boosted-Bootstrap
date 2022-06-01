@@ -81,7 +81,7 @@
 
     &:focus[data-focus-visible-added] {
       outline: .1875rem solid var(--#{$prefix}tag-outline-color);
-      outline-offset: .1875rem;
+      outline-offset: .125rem;
     }
 
     &[disabled] {
