@@ -35,7 +35,7 @@
       const html = document.querySelector('html')
       const btt = document.querySelector('.back-to-top')
 
-      // 100(px) come from:
+      // 100(px) comes from:
       //   - 40px of back-to-top component
       //   - 40px of navbar-minimized
       //   - 20px of 'security'
