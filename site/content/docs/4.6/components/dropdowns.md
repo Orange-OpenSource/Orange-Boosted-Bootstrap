@@ -359,7 +359,7 @@ Trigger dropdown menus at the left of the elements by adding `.dropleft` to the 
     </div>
   </div>
   <div class="btn-group">
-    <div class="btn-group dropleft" role="group">
+    <div class="btn-group dropleft">
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
         <span class="sr-only">Toggle Dropleft</span>
       </button>
@@ -390,7 +390,7 @@ Trigger dropdown menus at the left of the elements by adding `.dropleft` to the 
 
 <!-- Split dropleft button -->
 <div class="btn-group">
-  <div class="btn-group dropleft" role="group">
+  <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Toggle Dropleft</span>
     </button>

@@ -11,7 +11,7 @@
   width: $spinner-width;
   height: $spinner-height;
   vertical-align: $spinner-vertical-align;
-  border: $spinner-border-width solid currentColor;
+  border: $spinner-border-width solid currentcolor;
   border-right-color: transparent;
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
@@ -58,7 +58,7 @@
   height: $spinner-height;
   vertical-align: $spinner-vertical-align;
   // stylelint-disable-next-line declaration-no-important
-  background-color: currentColor !important; // Boosted mod: ensure .text-* backgrounds don't override this
+  background-color: currentcolor !important; // Boosted mod: ensure .text-* backgrounds don't override this
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
   opacity: 0;

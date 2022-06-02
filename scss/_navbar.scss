@@ -181,7 +181,7 @@
       left: map-get($spacers, 1);
       height: $border-width * 2;
       content: "";
-      background-color: currentColor;
+      background-color: currentcolor;
       @include transition($navbar-active-transition);
     }
   }

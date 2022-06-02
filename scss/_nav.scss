@@ -57,6 +57,8 @@
     @include hover-focus() {
       color: $nav-tabs-link-hover-color; // Boosted mod
       background-color: $nav-tabs-link-hover-bg; // Boosted mod
+      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+      isolation: isolate;
       border-color: $nav-tabs-link-hover-border-color;
     }
 
@@ -112,7 +114,7 @@
     }
 
     &:not(.disabled):focus {
-      outline-color: currentColor;
+      outline-color: currentcolor;
     }
   }
 }
@@ -125,6 +127,8 @@
 
 .nav-pills {
   .nav-link {
+    background: none;
+    border: 0;
     @include border-radius($nav-pills-border-radius);
 
     &:focus {
