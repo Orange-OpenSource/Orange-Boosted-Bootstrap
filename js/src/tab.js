@@ -291,7 +291,7 @@ class Tab {
   // Boosted mod
   static _dataApiKeydownHandler(e) {
     const $this = $(this)
-    const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
+    const Items = $this.closest('[role=tablist] ').find('[role=tab]:visible')
     const k = e.which || e.keyCode
 
     let index = 0
