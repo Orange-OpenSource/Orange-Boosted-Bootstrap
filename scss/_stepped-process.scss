@@ -1,5 +1,3 @@
-@use "sass:meta"; // Preserve strings quotes in specific contexts (https://sass-lang.com/documentation/breaking-changes/css-vars)
-
 //
 // Orange stepped process
 //
@@ -21,7 +19,7 @@
   --#{$prefix}stepped-process-link-width: #{$step-link-width};
   --#{$prefix}stepped-process-link-color: #{$step-link-color};
   --#{$prefix}stepped-process-link-active-color: #{$step-link-active-color};
-  --#{$prefix}stepped-process-link-marker: #{meta.inspect($step-link-marker)};
+  --#{$prefix}stepped-process-link-marker: #{$step-link-marker};
   --#{$prefix}stepped-process-link-text-decoration: #{$step-link-text-decoration};
   // scss-docs-end stepped-process-css-vars
 
@@ -34,7 +32,7 @@
 
   @include media-breakpoint-up(xl) {
     --#{$prefix}stepped-process-link-width: none;
-    --#{$prefix}stepped-process-link-marker: #{meta.inspect($step-link-marker-lg)};
+    --#{$prefix}stepped-process-link-marker: #{$step-link-marker-lg};
   }
 
   ol {
@@ -132,7 +130,7 @@
 
 @include media-breakpoint-up(sm) {
   .active .stepped-process-link {
-    --#{$prefix}stepped-process-link-marker: #{meta.inspect($step-link-marker-lg)};
+    --#{$prefix}stepped-process-link-marker: #{$step-link-marker-lg};
     max-width: none;
   }
 }
