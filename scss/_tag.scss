@@ -35,8 +35,7 @@
   letter-spacing: var(--#{$prefix}tag-font-spacing);
   background-color: transparent;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
-  outline-offset: $spacer;
-  @include transition($transition-focus);
+  outline-offset: 2px;
   @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
   img,
@@ -56,8 +55,7 @@
     color: inherit;
     background-color: transparent;
     border: 0;
-    outline-offset: $spacer;
-    @include transition($transition-focus);
+    outline-offset: 2px;
     @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
     &::after {
@@ -113,6 +111,7 @@ button.tag {
     outline-offset: .125rem;
   }
 
+  &.active,
   &:active {
     color: var(--#{$prefix}tag-active-color);
     background-color: var(--#{$prefix}tag-active-decoration-color);
