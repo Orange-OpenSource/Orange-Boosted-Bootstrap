@@ -315,8 +315,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 You can create a button instance with the button constructor, for example:
 
 ```js
-var button = document.getElementById('myButton')
-var bsButton = new boosted.Button(button)
+const bsButton = new boosted.Button('#myButton')
 ```
 
 {{< bs-table "table" >}}
@@ -331,9 +330,8 @@ var bsButton = new boosted.Button(button)
 For example, to toggle all buttons
 
 ```js
-var buttons = document.querySelectorAll('.btn')
-buttons.forEach(function (button) {
-  var button = new boosted.Button(button)
+document.querySelectorAll('.btn').forEach(buttonElement => {
+  const button = boosted.Button.getOrCreateInstance(buttonElement)
   button.toggle()
 })
 ```

@@ -18,10 +18,10 @@ Before getting started with Boosted's modal component, be sure to read the follo
 - Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Boosted modals. To achieve the same effect, use some custom JavaScript:
 
 ```js
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', function () {
+myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
 ```
@@ -38,8 +38,8 @@ Keep reading for demos and usage guidelines.
 
 Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
-<div class="bd-example bd-example-modal">
-  <div class="modal" tabindex="-1">
+<div class="bd-example bg-light">
+  <div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -373,10 +373,10 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-body">
         <h5>Popover in a modal</h5>
-        <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</a> triggers a popover on click.</p>
+        <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</a> triggers a popover on click.</p>
         <hr>
         <h5>Tooltips in a modal</h5>
-        <p><a href="#" class="tooltip-test" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" class="tooltip-test" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
+        <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -395,10 +395,10 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 ```html
 <div class="modal-body">
   <h5>Popover in a modal</h5>
-  <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+  <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
   <hr>
   <h5>Tooltips in a modal</h5>
-  <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+  <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
 </div>
 ```
 
@@ -526,20 +526,20 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 {{< /example >}}
 
 ```js
-var exampleModal = document.getElementById('exampleModal')
-exampleModal.addEventListener('show.bs.modal', function (event) {
+const exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
-  var button = event.relatedTarget
+  const button = event.relatedTarget
   // Extract info from data-bs-* attributes
-  var recipient = button.getAttribute('data-bs-whatever')
+  const recipient = button.getAttribute('data-bs-whatever')
   // If necessary, you could initiate an AJAX request here
   // and then do the updating in a callback.
   //
   // Update the modal's content.
-  var modalTitle = exampleModal.querySelector('.modal-title')
-  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+  const modalTitle = exampleModal.querySelector('.modal-title')
+  const modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-  modalTitle.textContent = 'New message to ' + recipient
+  modalTitle.textContent = `New message to ${recipient}`
   modalBodyInput.value = recipient
 })
 ```
@@ -866,12 +866,16 @@ While both ways to dismiss a modal are supported, keep in mind that dismissing f
 Create a modal with a single line of JavaScript:
 
 ```js
-var myModal = new boosted.Modal(document.getElementById('myModal'), options)
+const myModal = new boosted.Modal(document.getElementById('myModal'), options)
+// or
+const myModalAlternative = new boosted.Modal('#myModal', options)
 ```
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
@@ -892,7 +896,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 Activates your content as a modal. Accepts an optional options `object`.
 
 ```js
-var myModal = new boosted.Modal(document.getElementById('myModal'), {
+const myModal = new boosted.Modal('#myModal', {
   keyboard: false
 })
 ```
@@ -901,7 +905,7 @@ var myModal = new boosted.Modal(document.getElementById('myModal'), {
 | Method | Description |
 | --- | --- |
 | `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |
-| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `var modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
+| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
 | `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
 | `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
@@ -924,8 +928,8 @@ Boosted's modal class exposes a few events for hooking into modal functionality.
 {{< /bs-table >}}
 
 ```js
-var myModalEl = document.getElementById('myModal')
-myModalEl.addEventListener('hidden.bs.modal', function (event) {
+const myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('hidden.bs.modal', event => {
   // do something...
 })
 ```

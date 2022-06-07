@@ -2,14 +2,13 @@
 // Bootstrap docs content theming
 //
 
-// Offset for the sticky header
-@include media-breakpoint-up(md) {
-  :root {
-    scroll-padding-top: $offset-top; // Boosted mod
-  }
-}
-
 .bd-content {
+  // Offset content from fixed navbar when jumping to headings
+  > :target {
+    padding-top: 5rem;
+    margin-top: -5rem;
+  }
+
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -41,6 +40,10 @@
       border-bottom: 2px solid currentcolor;
     }
 
+    tbody:not(:first-child) {
+      border-top: 2px solid currentcolor;
+    }
+
     th,
     td {
       &:first-child {
@@ -54,6 +57,7 @@
 
     // Prevent breaking of code
     // stylelint-disable-next-line selector-max-compound-selectors
+    th,
     td:first-child > code {
       white-space: nowrap;
     }
@@ -71,6 +75,17 @@
   // End mod
 }
 
+.table-options {
+  td:nth-child(2) {
+    min-width: 160px;
+  }
+}
+
+.table-options td:last-child,
+.table-utilities td:last-child {
+  min-width: 280px;
+}
+
 .bd-title {
   @include font-size(3rem);
 }
@@ -78,4 +93,50 @@
 .bd-lead {
   @include font-size(1.5rem);
   font-weight: 400;
+}
+
+.bi {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+// TODO: test into Bootstrap if there's not a conflict with .icon-link in features.css
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+.icon-link {
+  display: flex;
+  align-items: center;
+  // Boosted mod: no text-decoration-color
+  text-underline-offset: .5rem;
+  backface-visibility: hidden;
+
+  .bi {
+    width: 1.5em;
+    height: 1.5em;
+    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+  }
+
+  /////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  // TODO: Do we keep this animation in Boosted?
+  /////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  &:hover {
+    .bi {
+      transform: translate3d(5px, 0, 0);
+    }
+  }
+}
+
+.border-lg-start {
+  @include media-breakpoint-up(lg) {
+    border-left: $border-width solid $border-color;
+  }
 }

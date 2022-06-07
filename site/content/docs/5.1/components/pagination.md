@@ -80,7 +80,7 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 
 ## Alignment
 
-Change the alignment of pagination components with [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+Change the alignment of pagination components with [flexbox utilities]({{< docsref "/utilities/flex" >}}). For example, with `.justify-content-center`:
 
 {{< example >}}
 <nav aria-label="Page navigation example">
@@ -97,6 +97,8 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
   </ul>
 </nav>
 {{< /example >}}
+
+Or with `.justify-content-end`:
 
 {{< example >}}
 <nav aria-label="Page navigation example">
