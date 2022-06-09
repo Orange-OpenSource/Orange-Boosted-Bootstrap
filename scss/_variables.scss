@@ -1714,6 +1714,8 @@ $progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               $box-shadow-inset !default;
 $progress-bar-color:                $black !default;
+$progress-bar-font-weight:          $font-weight-bold !default; // Boosted mod
+$progress-bar-text-indent:          map-get($spacers, 2) !default; // Boosted mod
 $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
