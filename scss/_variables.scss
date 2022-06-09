@@ -563,11 +563,13 @@ $container-padding-x: $grid-gutter-width !default;
 $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
-  2: $border-width
+  2: $border-width,
+  3: $border-width * 1.5
 ) !default;
 
 $border-style:                solid !default;
 $border-color:                $black !default; // Boosted mod
+$border-color-translucent:    $gray-500 !default; // Boosted mod: gray value instead of rgba($black, .175)
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -976,8 +978,8 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              $body-bg !default;
-$input-disabled-bg:                     $gray-300 !default;
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
+$input-disabled-bg:                     $gray-300 !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
@@ -1306,7 +1308,7 @@ $navbar-minimized-toggler-padding-y:      $navbar-minimized-brand-margin-y !defa
 
 $navbar-badge-padding-y:                  .125rem !default;
 $navbar-badge-padding-x:                  .375rem !default;
-$navbar-badge-margin-top:                 .1875rem !default;
+$navbar-badge-margin-top:                 .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
@@ -1345,7 +1347,7 @@ $dropdown-spacer:                   $border-width * -1 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             $gray-500 !default;
+$dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
 $dropdown-inner-border-radius:      0 !default;
@@ -1450,7 +1452,7 @@ $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
-$card-border-color:                 $gray-500 !default; // Boosted mod
+$card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
 $card-border-radius:                $border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
@@ -1487,7 +1489,7 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 // fusv-disable
 $accordion-button-color:                  $accordion-color !default; // Deprecated in Boosted 5.2.0 for CSS variables
 // fusv-enable
-$accordion-button-bg:                     var(--#{$variable-prefix}accordion-bg) !default;
+$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
@@ -1557,7 +1559,7 @@ $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $gray-400 !default;
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              $border-width !default;
-$popover-border-color:              $popover-bg !default;
+$popover-border-color:              $popover-bg !default; // Boosted mod
 $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                null !default;
@@ -1592,7 +1594,7 @@ $toast-font-size:                   .875rem !default;
 $toast-color:                       $black !default;
 $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                $border-width !default;
-$toast-border-color:                var(--#{$prefix}border-color) !default;
+$toast-border-color:                var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  $box-shadow !default;
 $toast-spacing:                     $container-padding-x !default;
@@ -1631,7 +1633,7 @@ $modal-content-padding-x:           0 !default; // Boosted mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // Boosted mod
 $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
-$modal-content-border-color:        $gray-500 !default; // Boosted mod
+$modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
 $modal-content-inner-border-radius: $border-radius !default; // Boosted mod
@@ -1795,6 +1797,7 @@ $title-bar-border-color-dark:       $gray-700 !default;
 
 // scss-docs-start breadcrumb-variables
 $breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-font-weight:            $font-weight-bold !default; // Boosted mod
 
 $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;

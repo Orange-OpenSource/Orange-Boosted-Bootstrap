@@ -47,18 +47,30 @@ We use the following JavaScript to trigger our live alert demo:
 <!-- Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() -->
 
 ```js
-var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-var alertTrigger = document.getElementById('liveAlertBtn')
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
-function alert(message, type, typeVisuallyHidden) {
-  var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert"><span class="alert-icon"><span class="visually-hidden">' + typeVisuallyHidden + '</span></span><p>' + message + '</p><button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button></div>'
+const alert = (message, type, typeVisuallyHidden) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    '   <span class="alert-icon">',
+    `      <span class="visually-hidden">${typeVisuallyHidden}</span>`,
+    '   </span>',
+    '   <p>',
+    `     ${message}`,
+    '   </p>',
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert">',
+    '      <span class="visually-hidden">Close</span>',
+    '   </button>',
+    '</div>'
+  ].join('')
 
   alertPlaceholder.append(wrapper)
 }
 
+const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
-  alertTrigger.addEventListener('click', function () {
+  alertTrigger.addEventListener('click', () => {
     alert('Nice, you triggered this alert message!', 'success', 'Success')
   })
 }
@@ -184,10 +196,8 @@ Loop that generates the modifier classes with the `alert-variant()` mixin.
 Initialize elements as alerts
 
 ```js
-var alertList = document.querySelectorAll('.alert')
-var alerts = Array.prototype.slice.call(alertList).map(function (element) {
-  return new boosted.Alert(element)
-})
+const alertList = document.querySelectorAll('.alert')
+const alerts = [...alertList].map(element => new boosted.Alert(element))
 ```
 
 {{< callout info >}}
@@ -207,8 +217,7 @@ See the [triggers](#triggers) section for more details.
 You can create an alert instance with the alert constructor, for example:
 
 ```js
-var myAlert = document.getElementById('myAlert')
-var bsAlert = new boosted.Alert(myAlert)
+const bsAlert = new boosted.Alert('#myAlert')
 ```
 
 This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
@@ -225,8 +234,7 @@ This makes an alert listen for click events on descendant elements which have th
 Basic usage:
 
 ```js
-var alertNode = document.querySelector('.alert')
-var alert = boosted.Alert.getOrCreateInstance(alertNode)
+const alert = boosted.Alert.getOrCreateInstance('#myAlert')
 alert.close()
 ```
 
@@ -242,8 +250,8 @@ Boosted's alert plugin exposes a few events for hooking into alert functionality
 {{< /bs-table >}}
 
 ```js
-var myAlert = document.getElementById('myAlert')
-myAlert.addEventListener('closed.bs.alert', function () {
+const myAlert = document.getElementById('myAlert')
+myAlert.addEventListener('closed.bs.alert', event => {
   // do something, for instance, explicitly move focus to the most appropriate element,
   // so it doesn't get lost/reset to the start of the page
   // document.getElementById('...').focus()

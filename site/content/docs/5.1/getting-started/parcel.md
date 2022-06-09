@@ -23,7 +23,8 @@ project-name/
 ├── build/
 ├── node_modules/
 │   └── boosted/
-│   └── popper.js/
+│   └── @popperjs/
+|       └── core/
 ├── scss/
 │   └── custom.scss
 ├── src/
@@ -36,6 +37,7 @@ project-name/
 
 Import [Boosted's JavaScript]({{< docsref "/getting-started/javascript" >}}) in your app's entry point (usually `src/index.js`). You can import all our plugins in one file or separately if you require only a subset of them.
 
+<!-- eslint-skip -->
 ```js
 // Import all plugins
 import * as boosted from 'boosted';
