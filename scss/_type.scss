@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: $letter-spacing-base; // Boosted mod
   -webkit-font-smoothing: antialiased; // Boosted mod
   -moz-osx-font-smoothing: grayscale; // Boosted mod
-  text-rendering: optimizeLegibility; // Boosted mod
+  text-rendering: optimizelegibility; // Boosted mod
 }
 
 // Boosted mod: headings and displays together
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: $display-weight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 .display-1 {
