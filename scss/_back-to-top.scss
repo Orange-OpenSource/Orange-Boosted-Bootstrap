@@ -24,12 +24,7 @@
   position: sticky;
   top: $back-to-top-link-offset-top;
   pointer-events: all;
-  @include button-icon(
-    $back-to-top-icon,
-    $size: $back-to-top-icon-width $back-to-top-icon-height,
-    $pseudo: "after",
-    $position: calc(50% - 1px)
-  );
+  @include button-icon($back-to-top-icon, $size: $back-to-top-icon-width $back-to-top-icon-height, $pseudo: "after", $position: calc(50% - 1px));
 
   &::after {
     transform: rotate(.25turn) #{"/* rtl:ignore */"};
