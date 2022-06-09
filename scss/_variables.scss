@@ -563,7 +563,8 @@ $container-padding-x: $grid-gutter-width !default;
 $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
-  2: $border-width
+  2: $border-width,
+  3: $border-width * 1.5
 ) !default;
 
 $border-style:                solid !default;
@@ -1713,6 +1714,8 @@ $progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               $box-shadow-inset !default;
 $progress-bar-color:                $black !default;
+$progress-bar-font-weight:          $font-weight-bold !default; // Boosted mod
+$progress-bar-text-indent:          map-get($spacers, 2) !default; // Boosted mod
 $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
@@ -1796,6 +1799,7 @@ $title-bar-border-color-dark:       $gray-700 !default;
 
 // scss-docs-start breadcrumb-variables
 $breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-font-weight:            $font-weight-bold !default; // Boosted mod
 
 $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
