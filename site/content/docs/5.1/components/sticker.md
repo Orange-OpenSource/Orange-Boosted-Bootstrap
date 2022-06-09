@@ -68,7 +68,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 Since stickers only provide a container, accessibility becomes specific to the sticker content:
 * [Showing and vocalizing prices](https://a11y-guidelines.orange.com/en/web/components-examples/price-vocalization) can help when stickers contain prices.
 * [Accessibility and SVGs](https://a11y-guidelines.orange.com/en/articles/accessible-svg) can help with the SVGs.
-* You must semantize the informative content in context with HTML elements, such as `<p>` (as shown in our examples), `<h1>` to `<h6>`, etc. 
+* You must semantize the informative content in context with HTML elements, such as `<p>` (as shown in our examples), `<h1>` to `<h6>`, etc.
 
 ### Focus on one use case
 
@@ -83,8 +83,22 @@ Since stickers only provide a container, accessibility becomes specific to the s
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
+
+As part of Boosted's evolving CSS variables approach, stickers now use local CSS variables on `.sticker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="sticker-css-vars" file="scss/_sticker.scss" >}}
+
+Small and large sticker modifier classes are used to update the value of these CSS variables as needed.
+
+{{< scss-docs name="sticker-sm-css-vars" file="scss/_sticker.scss" >}}
+
+{{< scss-docs name="sticker-lg-css-vars" file="scss/_sticker.scss" >}}
+
+### Sass variables
 
 {{< scss-docs name="sticker" file="scss/_variables.scss" >}}

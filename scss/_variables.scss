@@ -563,7 +563,8 @@ $container-padding-x: $grid-gutter-width !default;
 $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
-  2: $border-width
+  2: $border-width,
+  3: $border-width * 1.5
 ) !default;
 
 $border-style:                solid !default;
@@ -1795,6 +1796,7 @@ $title-bar-border-color-dark:       $gray-700 !default;
 
 // scss-docs-start breadcrumb-variables
 $breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-font-weight:            $font-weight-bold !default; // Boosted mod
 
 $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;

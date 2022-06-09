@@ -108,6 +108,7 @@ Or, choose from any of the `.border-opacity` utilities:
 <span class="border border-0"></span>
 <span class="border border-1"></span>
 <span class="border border-2"></span>
+<span class="border border-3"></span>
 {{< /example >}}
 
 ## Radius
