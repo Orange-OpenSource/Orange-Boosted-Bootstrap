@@ -121,6 +121,7 @@
     outline: 0;
   }
 
+  &.form-control-sm,
   &.form-control-lg {
     padding-right: 0;
     padding-left: 0;
@@ -134,7 +135,18 @@
 //
 // Repeated in `_input_group.scss` to avoid Sass extend issues.
 
-// Boosted mod: no .form-control-sm
+.form-control-sm {
+  min-height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // Boosted mod
+  @include font-size($input-font-size-sm);
+  @include border-radius($input-border-radius-sm);
+
+  &::file-selector-button {
+    padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // Boosted mod
+    margin: (-$input-padding-y-sm) (-$input-padding-x-sm);
+    margin-inline-end: $input-padding-x-sm;
+  }
+}
 
 .form-control-lg {
   min-height: $input-height-lg;
@@ -155,6 +167,10 @@
 textarea {
   &.form-control {
     min-height: $input-height;
+  }
+
+  &.form-control-sm {
+    min-height: $input-height-sm;
   }
 
   &.form-control-lg {

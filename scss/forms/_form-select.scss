@@ -55,10 +55,16 @@
   }
 }
 
-// Boosted mod: no .form-select-sm
+.form-select-sm {
+  padding-top: $form-select-padding-y-sm;
+  padding-bottom: add($form-select-padding-y-sm, 1px); // Boosted mod
+  padding-left: $form-select-padding-x-sm;
+  @include font-size($form-select-font-size-sm);
+  @include border-radius($form-select-border-radius-sm);
+}
 
 .form-select-lg {
-  padding-top: subtract($form-select-padding-y-lg, 1px); // Boosted mod
+  padding-top: $form-select-padding-y-lg;
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;
   @include font-size($form-select-font-size-lg);
