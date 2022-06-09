@@ -1715,6 +1715,8 @@ $progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               $box-shadow-inset !default;
 $progress-bar-color:                $black !default;
+$progress-bar-font-weight:          $font-weight-bold !default; // Boosted mod
+$progress-bar-text-indent:          map-get($spacers, 2) !default; // Boosted mod
 $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
@@ -1778,6 +1780,7 @@ $figure-caption-color:              $gray-900 !default;
 $title-bar-image-ratio:             1.8em !default;
 $title-bar-padding-y:               .3333333em !default;
 $title-bar-font-size:               $h2-font-size !default;
+$title-bar-line-height:             $display-line-height !default;
 $title-bar-letter-spacing:          $h2-spacing !default;
 $title-bar-border-width:            $border-width * .5 !default;
 $title-bar-border-color:            $gray-500 !default;
