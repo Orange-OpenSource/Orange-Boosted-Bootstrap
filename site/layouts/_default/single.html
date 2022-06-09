@@ -2,21 +2,30 @@
   <!-- Boosted mod: no Header tag here to avoid duplicate banner landmark accessibility error -->
 
   <!-- Boosted mod: Orange rendering that handles "Guidelines" page as well -->
-  <main class="bd-content order-1" id="content">
-    <div class="bg-white title-bar mb-2 mb-md-0">
-      <div class="container-xxl">
-        <h1 class="display-1">{{ .Title | markdownify }}</h1>
+  <main class="bd-content order-1 py-3 py-md-5 py-lg-3" id="content">
+    <div class="mb-4 border-bottom border-light">
+      <div class="container-xxl bd-gutter pt-md-1">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
+          </div>
+        </div>
       </div>
     </div>
     <div class="pb-4 pb-md-2">
-      <div class="container-xxl pt-md-2 pb-md-4">
+      <div class="container-xxl bd-gutter pt-md-2 pb-md-4">
         <div class="row">
           <div class="col-12">
             <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
             {{ if eq .Title "Examples" }}
             <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary">Download examples</a>
-              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3">Download source code</a>
+              <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+                <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                Download examples
+              </a>
+              <a href="{{ .Site.Params.download.source }}" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+                Download source code
+              </a>
             </div>
             {{ else if eq .Title "Orange Design System for web" }}
             <div class="d-flex flex-column flex-sm-row">
@@ -31,7 +40,7 @@
     {{ if eq .Title "Orange Design System for web" }}
     <div>
     {{ else }}
-    <div class="container-xxl">
+    <div class="container-xxl bd-gutter">
     {{ end }}
       {{ .Content }}
     </div>

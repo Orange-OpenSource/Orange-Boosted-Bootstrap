@@ -181,16 +181,14 @@ p {
 
 // Abbreviations
 //
-// 1. Duplicate behavior to the data-bs-* attribute for our tooltip plugin
-// 2. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
-// 3. Add explicit cursor to indicate changed behavior.
-// 4. Prevent the text-decoration to be skipped.
+// 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
+// 2. Add explicit cursor to indicate changed behavior.
+// 3. Prevent the text-decoration to be skipped.
 
-abbr[title],
-abbr[data-bs-original-title] { // 1
-  text-decoration: underline dotted; // 2
-  cursor: help; // 3
-  text-decoration-skip-ink: none; // 4
+abbr[title] {
+  text-decoration: underline dotted; // 1
+  cursor: help; // 2
+  text-decoration-skip-ink: none; // 3
 }
 
 
@@ -234,8 +232,12 @@ ul {
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
 li::marker {
-  color: $accessible-orange;
+  color: var(--#{$prefix}link-hover-color);
   vertical-align: middle;
+
+  ol & {
+    color: inherit;
+  }
 }
 
 li li::marker { color: $gray-600; }
@@ -246,8 +248,12 @@ li li li::marker { color: $gray-500; }
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: $accessible-orange;
+  color: var(--#{$prefix}link-hover-color);
   vertical-align: text-top;
+
+  ol & {
+    color: inherit;
+  }
 }
 
 li li::before { color: $gray-600; }

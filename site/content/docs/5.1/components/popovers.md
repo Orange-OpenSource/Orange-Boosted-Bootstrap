@@ -38,10 +38,8 @@ Keep reading to see how popovers work with some examples.
 As mentioned above, you must initialize popovers before they can be used. One way to initialize all popovers on a page would be to select them by their `data-bs-toggle` attribute, like so:
 
 ```js
-var popoverTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new boosted.Popover(popoverTriggerEl)
-})
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new boosted.Popover(popoverTriggerEl))
 ```
 
 ### Live demo
@@ -79,7 +77,7 @@ Four options are available: top, right, bottom, and left. Directions are mirrore
 When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead. This is common in responsive tables, input groups, and the like.
 
 ```js
-var popover = new boosted.Popover(document.querySelector('.example-popover'), {
+const popover = new boosted.Popover('.example-popover', {
   container: 'body'
 })
 ```
@@ -117,7 +115,7 @@ For proper cross-browser and cross-platform behavior, you must use the `<a>` tag
 {{< /example >}}
 
 ```js
-var popover = new boosted.Popover(document.querySelector('.popover-dismiss'), {
+const popover = new boosted.Popover('.popover-dismiss', {
   trigger: 'focus'
 })
 ```
@@ -153,8 +151,8 @@ As part of Boosted's evolving CSS variables approach, popovers now use local CSS
 Enable popovers via JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var popover = new boosted.Popover(exampleEl, options)
+const exampleEl = document.getElementById('example')
+const popover = new boosted.Popover(exampleEl, options)
 ```
 
 {{< callout warning >}}
@@ -169,7 +167,9 @@ Additionally, while it is possible to also include interactive controls (such as
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
+{{< markdown >}}
+{{< partial "js-data-attributes.md" >}}
+{{< /markdown >}}
 
 {{< callout warning >}}
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
@@ -207,9 +207,9 @@ Options for individual popovers can alternatively be specified through the use o
 #### Using function with `popperConfig`
 
 ```js
-var popover = new boosted.Popover(element, {
-  popperConfig: function (defaultBsPopperConfig) {
-    // var newPopperConfig = {...}
+const popover = new boosted.Popover(element, {
+  popperConfig(defaultBsPopperConfig) {
+    // const newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...
     // return newPopperConfig
   }
@@ -240,8 +240,7 @@ var popover = new boosted.Popover(element, {
 
 ```js
 // getOrCreateInstance example
-var exampleTriggerEl = document.getElementById('example')
-var popover = boosted.Popover.getOrCreateInstance(exampleTriggerEl) // Returns a Boosted popover instance
+const popover = boosted.Popover.getOrCreateInstance('#example') // Returns a Boosted popover instance
 
 // setContent example
 myPopover.setContent({
@@ -268,8 +267,8 @@ The `setContent` method accepts an `object` argument, where each property-key is
 {{< /bs-table >}}
 
 ```js
-var myPopoverTrigger = document.getElementById('myPopover')
-myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
+const myPopoverTrigger = document.getElementById('myPopover')
+myPopoverTrigger.addEventListener('hidden.bs.popover', () => {
   // do something...
 })
 ```
