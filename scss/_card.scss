@@ -16,6 +16,7 @@
   --#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
   --#{$prefix}card-cap-bg: #{$card-cap-bg};
   --#{$prefix}card-cap-color: #{$card-cap-color};
+  --#{$prefix}card-cap-font-weight: #{$card-cap-font-weight}; // Boosted mod
   --#{$prefix}card-height: #{$card-height};
   --#{$prefix}card-color: #{$card-color};
   --#{$prefix}card-bg: #{$card-bg};
@@ -108,7 +109,7 @@
 .card-header {
   padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: var(--#{$prefix}card-cap-font-weight); // Boosted mod
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
   border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-cap-bg); // Boosted mod
@@ -121,7 +122,7 @@
 .card-footer {
   // Boosted mod
   padding: 0 var(--#{$prefix}card-cap-padding-x) var(--#{$prefix}card-cap-padding-x);
-  font-weight: $font-weight-bold;
+  font-weight: var(--#{$prefix}card-cap-font-weight);
   color: var(--#{$prefix}card-footer-color);
   background-color: var(--#{$prefix}card-cap-color);
   // End mod
