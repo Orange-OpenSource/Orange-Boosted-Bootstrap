@@ -82,4 +82,4 @@ To customize breadcrumb, simply use our [background utilities]({{< docsref "/uti
 Since breadcrumbs provide a navigation, it's a good idea to add **a meaningful label** such as `<p class="sr-only" id="breadcrumb-title">You are here:</p>` to describe the type of navigation provided in the `<nav aria-labelledby="breadcrumb-title">` element 
 — please notice the `id` attribute on `<p>`, then referenced in `aria-labelledby` on `<nav>` — as well as applying an `aria-current="location"` to the last item of the set to **indicate the current page**.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+For more information, see the [ARIA Authoring Practices Guide breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/).
