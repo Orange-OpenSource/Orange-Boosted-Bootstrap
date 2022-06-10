@@ -31,38 +31,53 @@ You shouldn't mix tags versions in the same region, since they look the same and
 
 A tag can be build with an icon (img or svg).
 
+You should add semantics to tags. For a list of tags of an article, for example, add a heading (`hn`) to explain that we are in a tag list and use `ul` or `ol` (if tags are ordered).
+
 {{< example class="d-flex gap-2" >}}
-<p class="tag">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-</p>
+<h2>Tags list</h2>
+<ul>
+  <li class="tag">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+  </li>
+</ul>
 {{< /example >}}
 
 ## Actionable
 
 A tag can be actionable either when builded with a `<button>` tag or with a close button inside.
 
+To add semantics for buttons filter, for example, you should use `button` (if it triggers an inside the same page action) or a `a` tag (if a new URL is launched) and put a explicit heading. The text of the button or link must be clear enough to explain the function or the destination of the tag.
+Most of the time, tags must be inside a list (`ul` or `ol`).
+
 {{< example class="d-flex gap-2 align-items-center" >}}
-<a href="#" class="tag">Label</a>
-<button class="tag">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-</button>
-<p class="tag" id="labelTag2" role="group">
-  Label
-  <button class="close" aria-labelledby="labelTag2"><span class="visually-hidden">Close</span></button>
-</p>
-<p class="tag" id="labelTag3" role="group">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Label
-  <button class="close" aria-labelledby="labelTag3"><span class="visually-hidden">Close</span></button>
-</p>
+<h2>Choose your tag filters</h2>
+<ul>
+  <li>
+    <a href="#" class="tag">Label</a>
+  </li>
+  <li>
+    <button class="tag">
+      <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Label
+    </button>
+  </li>
+  <li class="tag" id="labelTag2">
+    Label
+    <button class="close" aria-labelledby="labelTag2"><span class="visually-hidden">Close</span></button>
+  </li>
+  <li class="tag" id="labelTag3">
+    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+    </svg>
+    Label
+    <button class="close" aria-labelledby="labelTag3"><span class="visually-hidden">Close</span></button>
+  </li>
+</ul>
 {{< /example >}}
 
 ## Dark variant
