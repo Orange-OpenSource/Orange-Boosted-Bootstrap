@@ -1,9 +1,9 @@
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer bg-dark navbar-dark bd-footer">
   <h2 class="visually-hidden">Boosted sitemap & information</h2>
   <div class="container-xxl footer-nav">
     <nav class="accordion accordion-dark" id="sitemapAccordion" aria-label="Boosted sitemap footer">
       <div class="row">
-        <div class="footer-column col-md-2 offset-md-1">
+        <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingLinks">
             <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseLinks" aria-expanded="true"
@@ -23,7 +23,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-2">
+        <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingGuides">
             <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseGuides" aria-expanded="true"
@@ -46,7 +46,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-2">
+        <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingProjects">
             <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseProjects" aria-expanded="true"
@@ -68,7 +68,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-2">
+        <div class="footer-column col-md-6 col-lg-2">
           <h3 class="accordion-header footer-heading" id="headingFour2">
             <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseCommunity" aria-expanded="true"
@@ -86,11 +86,11 @@
             </ul>
           </div>
         </div>
-        <div class="footer-column col-md-3 mb-3 pt-3 pt-md-4 px-1 px-md-0 fw-bold small">
-          <p class="mb-md-1">This documentation is an adaptation made by Orange. Original version designed and built with
+        <div class="footer-column bd-footer-info col-md-12 col-lg-3 mb-3 pt-3 pt-lg-4 px-1 px-lg-0 fw-bold small"> <!-- col-lg-3 -->
+          <p class="mb-lg-1">This documentation is an adaptation made by Orange. Original version designed and built with
             all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with
             the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
-          <p class="mb-md-1">
+          <p class="mb-lg-1">
             Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank"
                                              rel="license noopener">MIT</a>
             -&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank"
@@ -98,8 +98,8 @@
             docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY
             3.0</a>.
           </p>
-          <p class="mb-md-1">Currently v{{ .Site.Params.current_version }}</p>
-          <p class="mb-md-1">
+          <p class="mb-lg-1">Currently v{{ .Site.Params.current_version }}</p>
+          <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89"
                    height="40"/>

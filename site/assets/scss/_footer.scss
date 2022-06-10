@@ -3,17 +3,13 @@
 //
 
 .bd-footer {
-  @include font-size(.875rem);
-  position: sticky;
-  top: 100vh;
-  font-weight: 700;
+  // Boosted mod
+  .bd-footer-info {
+    border-top: var(--#{$prefix}accordion-border-color) solid var(--#{$prefix}accordion-border-width);
 
-  a {
-    color: var(--#{$prefix}link-color); // Boosted mod: use CSS var instead of $link-color
-
-    &:hover,
-    &:focus {
-      color: var(--#{$prefix}link-hover-color); // Boosted mod: use CSS var instead of $link-hover-color
+    @include media-breakpoint-up(lg) {
+      border-top: none;
     }
   }
+  // End mod
 }
