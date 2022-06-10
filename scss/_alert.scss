@@ -113,10 +113,15 @@
 
 //// Small alerts
 .alert-sm {
-  padding: $alert-padding-sm 0;
+  // scss-docs-start alert-sm-css-vars
+  --#{$prefix}alert-padding-x: 0;
+  --#{$prefix}alert-padding-y: #{$alert-padding-sm};
+  --#{$prefix}alert-margin-bottom: 0;
+  --#{$prefix}alert-border: 0;
+  // scss-docs-end alert-sm-css-vars
+
   font-size: $font-size-sm;
   line-height: $line-height-sm;
-  border: 0;
 
   .alert-icon {
     width: $alert-icon-size * .5;
