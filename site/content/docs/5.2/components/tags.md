@@ -18,9 +18,10 @@ You shouldn't mix tags versions in the same region, since they look the same and
 {{< /callout >}}
 
 {{< example class="d-flex gap-2 align-items-center" >}}
+<h3 class="visually-hidden">List of the different tag variants</h3>
 <p class="tag">Informative</p>
 <button class="tag">Actionable</button>
-<p class="tag" id="labelTag1" role="group">
+<p class="tag" id="labelTag1">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
@@ -37,6 +38,7 @@ Here is an example with a table.
 
 {{< example >}}
 <table class="table">
+  <caption class="visually-hidden">Present tags in a table context</caption>
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -68,24 +70,6 @@ Here is an example with a table.
     </tr>
   </tbody>
 </table>
-{{< /example >}}
-
-Here is an example for an article title.
-
-{{< example >}}
-<h2>Article about Larry the bird</h2>
-<h3 class="mb-2">Tags list</h3>
-<ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
-  <li class="tag">
-    <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-    </svg>
-    Shop
-  </li>
-  <li class="tag">
-    Twitter
-  </li>
-</ul>
 {{< /example >}}
 
 ## Actionable
@@ -146,6 +130,21 @@ The same result could be obtained with additional Javascript and the `.active` c
 </ul>
 {{< /example >}}
 
+Here is an example for an article and its sub-titles anchors.
+
+{{< example >}}
+<h2>Article about Larry the bird</h2>
+<h3 class="visually-hidden">Links to anchor in an imaginary page</h3>
+<ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+  <li>
+    <a class="tag" href="#">1. Introduction</a>
+  </li>
+  <li>
+    <a class="tag" href="#">2. Exposure</a>
+  </li>
+</ul>
+{{< /example >}}
+
 ## Closable
 
 This kind of tag can be built on top of any `<tag>` but `<button>`, `<a>` or `<label>` and you should add semantics to tags. For a list of selected items use `<ul>` or `<ol>` (if tags are ordered). Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/components-examples/tags/examples/filter-by-brand/) of a component that can be built on top of this variant.
@@ -155,14 +154,17 @@ This kind of tag can be built on top of any `<tag>` but `<button>`, `<a>` or `<l
 Closable tags come with a strongly recommended variant `.close-whole`.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
-<p class="tag" id="labelTag2" role="group">
-  Closable on cross
-  <button class="close" aria-labelledby="labelTag2"><span class="visually-hidden">Close</span></button>
-</p>
-<p class="tag" id="labelTag3" role="group">
-  Closable on tag
-  <button class="close close-whole" aria-labelledby="labelTag3"><span class="visually-hidden">Close</span></button>
-</p>
+<h3 class="visually-hidden">Different ways to display close button</h3>
+<ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+  <li class="tag" id="labelTag2">
+    Closable on cross
+    <button class="close" aria-labelledby="labelTag2"><span class="visually-hidden">Close</span></button>
+  </li>
+  <li class="tag" id="labelTag3">
+    Closable on tag
+    <button class="close close-whole" aria-labelledby="labelTag3"><span class="visually-hidden">Close</span></button>
+  </li>
+</ul>
 {{< /example >}}
 
 ## Dark variant
@@ -170,6 +172,7 @@ Closable tags come with a strongly recommended variant `.close-whole`.
 Tags come with a dark variant: `.tag-dark`.
 
 {{< example class="d-flex gap-2 align-items-center bg-dark" >}}
+<h3 class="visually-hidden">Dark tag variant</h3>
 <p class="tag tag-dark">Informative</p>
 <button class="tag tag-dark">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
@@ -177,7 +180,7 @@ Tags come with a dark variant: `.tag-dark`.
   </svg>
   Actionable
 </button>
-<p class="tag tag-dark" id="labelTag4" role="group">
+<p class="tag tag-dark" id="labelTag4">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
@@ -191,6 +194,7 @@ Tags come with a dark variant: `.tag-dark`.
 Tags come with a small variant: `.tag-sm`.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
+<h3 class="visually-hidden">Small tag variant</h3>
 <p class="tag tag-sm">Informative</p>
 <button class="tag tag-sm">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
@@ -198,7 +202,7 @@ Tags come with a small variant: `.tag-sm`.
   </svg>
   Actionable
 </button>
-<p class="tag tag-sm" id="labelTag5" role="group">
+<p class="tag tag-sm" id="labelTag5">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
@@ -212,6 +216,7 @@ Tags come with a small variant: `.tag-sm`.
 Tags come with a disabled state: `.disabled`. Don't forget to add `aria-disabled` to the `<span>` and `disabled` attribute to the `<button>` where needed.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
+<h3 class="visually-hidden">Disabled tags for the different variants</h3>
 <p class="tag disabled" aria-disabled="true">Informative</p>
 <button class="tag" disabled>
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
@@ -219,7 +224,7 @@ Tags come with a disabled state: `.disabled`. Don't forget to add `aria-disabled
   </svg>
   Actionable
 </button>
-<p class="tag disabled" id="labelTag6" role="group" aria-disabled="true">
+<p class="tag disabled" id="labelTag6" aria-disabled="true">
   <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
