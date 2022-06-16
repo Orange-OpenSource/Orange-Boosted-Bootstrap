@@ -9,7 +9,7 @@ added: "5.2"
 
 ## Examples
 
-A tag is basically a rounded container that can contain text, `<img>`/`<svg>` and/or a close button. Please adapt the html `<tag>` to be semantically correct. Here are some hints to build [accessible tags](https://a11y-guidelines.orange.com/en/web/components-examples/tags/).
+A tag is basically a rounded container that can contain text, `<img>`/`<svg>` and/or a close button. Please adapt the html `<tag>` to be semantically correct. Here are some hints to build [accessible tags on A11y guidelines Orange](https://a11y-guidelines.orange.com/en/web/components-examples/tags/).
 
 Here is a small sample of the tags that can be built.
 
@@ -74,7 +74,7 @@ Here is an example with a table.
 
 ## Actionable
 
-A tag can be actionable either when builded on top of a `<button>`, a `<label` or an `<a>` tag. `.actionable-tag` can be used too but it shouldn't since you have to implement semantics too. These tags are usually used as filters.
+A tag can be actionable either when builded on top of a `<button>`, a `<label>` and `<input>` or an `<a>` tag. `.actionable-tag` can be used too but it shouldn't since you have to implement semantics too. These tags are usually used as filters.
 
 To add semantics for buttons filter, for example, you should use `<button>` (if it triggers an inside the same page action) or a `<a>` tag (if a new URL is launched) and put an explicit heading. The text of the button or link must be clear enough to explain the function or the destination of the tag.
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
@@ -95,7 +95,7 @@ Mix with other components can be done. Here is an example of tag filtering using
   <li>
     <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" checked>
     <label class="tag" for="btncheck3">
-      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000">
+      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
       </svg>
       TV
@@ -121,7 +121,7 @@ The same result could be obtained with additional Javascript and the `.active` c
   <li><button class="tag">Computer</button></li>
   <li>
     <button class="tag active">
-      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000">
+      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
       </svg>
       TV
