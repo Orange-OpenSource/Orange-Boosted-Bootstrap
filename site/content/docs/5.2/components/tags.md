@@ -22,7 +22,7 @@ You shouldn't mix tags versions in the same region, since they look the same and
 <p class="tag">Informative</p>
 <button class="tag">Actionable</button>
 <p class="tag" id="labelTag1">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Closable
@@ -175,13 +175,13 @@ Tags come with a dark variant: `.tag-dark`.
 <h3 class="visually-hidden">Dark tag variant</h3>
 <p class="tag tag-dark">Informative</p>
 <button class="tag tag-dark">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Actionable
 </button>
 <p class="tag tag-dark" id="labelTag4">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Closable
@@ -197,13 +197,13 @@ Tags come with a small variant: `.tag-sm`.
 <h3 class="visually-hidden">Small tag variant</h3>
 <p class="tag tag-sm">Informative</p>
 <button class="tag tag-sm">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Actionable
 </button>
 <p class="tag tag-sm" id="labelTag5">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Closable
@@ -219,13 +219,13 @@ Tags come with a disabled state: `.disabled`. Don't forget to add `aria-disabled
 <h3 class="visually-hidden">Disabled tags for the different variants</h3>
 <p class="tag disabled" aria-disabled="true">Informative</p>
 <button class="tag" disabled>
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Actionable
 </button>
 <p class="tag disabled" id="labelTag6" aria-disabled="true">
-  <svg fill="currentColor" aria-hidden="true" focusable="false" width="1.5rem" height="1.5rem">
+  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   Closable

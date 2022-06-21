@@ -134,6 +134,12 @@ label.tag,
     border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 }
+
+input:focus + label.tag {
+  z-index: 3;
+  outline: .1875rem solid var(--#{$prefix}tag-outline-color);
+  outline-offset: .125rem;
+}
 // stylelint-enable selector-no-qualifying-type
 
 .tag-sm {
