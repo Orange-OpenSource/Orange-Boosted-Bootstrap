@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It provides touch support, extended setup and works great on mobile devices.
+This carousel is based on [Swiper](https://swiperjs.com/) which provides touch support, extended setup and works great on mobile devices.
 
 ## Demo
 
