@@ -564,7 +564,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -623,7 +623,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <button class="btn btn btn-primary btn-inverse" type="submit">Search</button>
         </form>
       </div>
     </div>
