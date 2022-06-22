@@ -1,9 +1,11 @@
 .bd-gutter {
-  --bs-gutter-x: #{$bd-gutter-x * 2};
+  --bs-gutter-x: #{$bd-gutter-x * 2}; // Boosted mod: changed value
 
+  // Boosted mod
   @include media-breakpoint-up(md) {
     --bs-gutter-x: #{$bd-gutter-x * 4};
   }
+  // End mod
 }
 
 .bd-layout {
