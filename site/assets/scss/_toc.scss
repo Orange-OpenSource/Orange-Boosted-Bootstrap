@@ -46,18 +46,19 @@
   }
 }
 
-// Boosted mod: no breakpoint md+
+
 .bd-toc-toggle {
   display: flex;
   align-items: center;
-  border-width: 1px;
+  border-width: 1px; // Boosted mod
 
   @include media-breakpoint-down(sm) {
     justify-content: space-between;
     width: 100%;
   }
+
+  // Boosted mod: no md+ breakpoint
 }
-// End mod
 
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
