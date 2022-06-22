@@ -48,8 +48,9 @@
     </div>
   </nav>
 
-{{- if eq .Layout "docs" }}
   <!--Boosted mod: docs-subnav doesn't exist anymore in Bootstrap-->
-  {{ partial "docs-subnav" }}
-{{- end }}
+  {{- if eq .Layout "docs" }}
+    {{ partial "docs-subnav" }}
+  {{- end }}
+  <!--End mod-->
 </header>
