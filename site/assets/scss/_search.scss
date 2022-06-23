@@ -10,7 +10,7 @@
 .DocSearch-Container {
   --docsearch-hit-shadow: none;
 
-  z-index: 1100; // value 11000000000 seems to hide scrollbars under the backdrop
+  z-index: 1100;
 }
 
 .DocSearch-Button {
