@@ -2,42 +2,38 @@
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
-
   @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
-  --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // Boosted mod
-
   --#{$prefix}pagination-color: #{$pagination-color};
   --#{$prefix}pagination-bg: #{$pagination-bg};
-  --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
   --#{$prefix}pagination-border-width: #{$pagination-border-width};
-  --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
-  --#{$prefix}pagination-margin-start: #{$pagination-margin-start}; // Boosted mod
-  --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // Boosted mod
   --#{$prefix}pagination-border-color: #{$pagination-border-color};
-
-  --#{$prefix}pagination-focus-color: #{$pagination-focus-color};
-  --#{$prefix}pagination-focus-bg: #{$pagination-focus-bg};
-  --#{$prefix}pagination-focus-box-shadow: #{$pagination-focus-box-shadow};
-  --#{$prefix}pagination-focus-outline: #{$pagination-focus-outline}; // Boosted mod
-
+  --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
   --#{$prefix}pagination-hover-color: #{$pagination-hover-color};
   --#{$prefix}pagination-hover-bg: #{$pagination-hover-bg};
   --#{$prefix}pagination-hover-border-color: #{$pagination-hover-border-color};
-
+  --#{$prefix}pagination-focus-color: #{$pagination-focus-color};
+  --#{$prefix}pagination-focus-bg: #{$pagination-focus-bg};
+  --#{$prefix}pagination-focus-box-shadow: #{$pagination-focus-box-shadow};
   --#{$prefix}pagination-active-color: #{$pagination-active-color};
   --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
   --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
-
   --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
   --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
   --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
 
-  --#{$prefix}pagination-icon: #{$pagination-icon}; // Boosted mod
-  --#{$prefix}pagination-icon-size: #{$pagination-icon-size}; // Boosted mod
-  --#{$prefix}pagination-icon-width: #{$pagination-icon-width}; // Boosted mod
-  --#{$prefix}pagination-icon-height: #{$pagination-icon-height}; // Boosted mod
-  --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // Boosted mod
-  --#{$prefix}pagination-active-item-border: #{$pagination-active-item-border}; // Boosted mod
+  // Boosted mod
+  --#{$prefix}pagination-font-weight: #{$font-weight-bold};
+  --#{$prefix}pagination-margin-y: #{$pagination-margin-y};
+  --#{$prefix}pagination-margin-start: #{$pagination-margin-start};
+  --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last};
+  --#{$prefix}pagination-focus-outline: #{$pagination-focus-outline};
+  --#{$prefix}pagination-icon: #{$pagination-icon};
+  --#{$prefix}pagination-icon-size: #{$pagination-icon-size};
+  --#{$prefix}pagination-icon-width: #{$pagination-icon-width};
+  --#{$prefix}pagination-icon-height: #{$pagination-icon-height};
+  --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg};
+  --#{$prefix}pagination-active-item-border: #{$pagination-active-item-border};
+  // End mod
   // scss-docs-end pagination-css-vars
 
   display: flex;
