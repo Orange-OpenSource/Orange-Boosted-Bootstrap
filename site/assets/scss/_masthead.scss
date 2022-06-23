@@ -17,12 +17,13 @@
   }
 
   .highlight {
-    padding: .5rem 4rem .5rem 1rem;
+    // Boosted mod
+    padding: .72rem 4rem .5rem 1rem;
     line-height: 1.25;
     background-color: rgba(var(--bs-body-color-rgb), .075);
     @include border-radius(.5rem);
+    // End mod
   }
-
   .btn-clipboard {
     margin-top: .4rem;
     background-color: transparent;
