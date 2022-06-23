@@ -5,6 +5,7 @@ description: Documentation and examples for a powerful and responsive Boosted's 
 group: components
 aliases: "/docs/5.1/components/footer/"
 toc: true
+added: "5.2"
 ---
 
 ## How it works

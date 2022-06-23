@@ -10,7 +10,7 @@
 .DocSearch-Container {
   --docsearch-hit-shadow: none;
 
-  z-index: 1030;
+  z-index: 1100;
 }
 
 .DocSearch-Button {
@@ -26,14 +26,14 @@
     box-shadow: unset;
 
     .DocSearch-Search-Icon {
-      color: $primary;
+      color: var(--#{$prefix}link-hover-color);
     }
   }
 
   &:focus {
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    outline: $primary solid 2px;
-    outline-offset: 6px;
+    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
+    outline-offset: .375rem; // replace when focus will be active
     box-shadow: unset;
   }
 
@@ -51,9 +51,29 @@
 }
 
 .DocSearch-Search-Icon {
-  width: 25px;
-  height: 25px;
-  stroke-width: 2.5;
+  width: 1.875rem;
+  height: 1.875rem;
+  stroke-width: 2;
+}
+
+.DocSearch-Form {
+  box-shadow: $gray-500 0 0 0 .125rem inset;
+
+  &:focus-within {
+    box-shadow: $black 0 0 0 .125rem inset;
+  }
+}
+
+.DocSearch-Input:focus {
+  outline: 0;
+}
+
+.DocSearch-Reset {
+  border-radius: 0; // stylelint-disable-line property-disallowed-list
+
+  &:focus {
+    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
+  }
 }
 
 .DocSearch-Cancel {
@@ -65,7 +85,7 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: $white;
+  background-color: var(--#{$prefix}white);
 }
 
 .DocSearch-Hits {
@@ -79,6 +99,6 @@
 }
 
 .DocSearch-Hit {
-  padding-top: 10px;
+  padding-top: .625rem;
 }
 // End mod

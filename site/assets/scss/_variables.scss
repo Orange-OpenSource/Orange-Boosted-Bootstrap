@@ -7,7 +7,7 @@ $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-
 // Boosted mod: no $bd-accent
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 
-$bd-gutter-x: 3rem;
+$bd-gutter-x: .625rem; // Boosted mod
 $bd-callout-variants: info, warning, danger !default;
 
 :root {

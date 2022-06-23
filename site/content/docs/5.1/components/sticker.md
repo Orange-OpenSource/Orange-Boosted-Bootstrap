@@ -4,6 +4,7 @@ title: Sticker
 description: Use Boosted's custom stickers to inform people about new offers.
 group: components
 toc: true
+added: "5.2"
 ---
 
 ## Example

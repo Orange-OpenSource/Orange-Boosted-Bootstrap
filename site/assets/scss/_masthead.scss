@@ -3,10 +3,7 @@
   padding: 3rem 0;
   // Boosted mod: no gradient background image
 
-  h1 {
-    @include font-size(4rem);
-    line-height: 1;
-  }
+  // Boosted mod: no extra h1 rule
 
   .lead {
     @include font-size(1rem);
@@ -20,14 +17,15 @@
   }
 
   .highlight {
-    padding: .5rem 4rem .5rem 1rem;
+    // Boosted mod
+    padding: .72rem 4rem .5rem 1rem;
     line-height: 1.25;
     background-color: rgba(var(--bs-body-color-rgb), .075);
     @include border-radius(.5rem);
+    // End mod
   }
-
   .btn-clipboard {
-    margin-top: .4rem;
+    margin-top: .5rem;
     background-color: transparent;
   }
 
@@ -71,12 +69,4 @@
   }
 }
 
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-// Boosted mod: no .masthead-followup-svg
 // Boosted mod: no .masthead-notice
-// TODO: check if it's the case in Bootstrap as well
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////

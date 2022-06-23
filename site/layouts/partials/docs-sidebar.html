@@ -19,7 +19,7 @@
       <li class="bd-links-group py-2">
         <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
           {{- if $group.icon }}
-            <svg class="bi me-2"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
+            <svg class="bi me-1"{{- if $group.icon_color }} style="color: var(--bs-{{ $group.icon_color }});"{{- end }} aria-hidden="true"><use xlink:href="#{{ $group.icon }}"></use></svg>
           {{- end }}
           {{ $group.title }}
         </strong>
@@ -34,7 +34,7 @@
         </ul>
       </li>
     {{- else }}
-      <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+      <li class="bd-links-span-all mt-1 mb-3 mx-2 border-top"></li>
       <li class="bd-links-span-all">
         <a href="/docs/{{ $.Site.Params.docs_version }}/{{ $group_slug }}/" class="bd-links-link d-inline-block rounded small {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
           {{ $group.title }}

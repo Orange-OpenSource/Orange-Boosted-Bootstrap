@@ -40,8 +40,6 @@
           {{ if eq .Layout "docs" }}
           <li class="nav-item d-flex align-items-md-center mb-0 me-2">
             <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
-
-            <hr class="d-lg-none text-white-50">
           </li>
           {{ end }}
           {{ partial "docs-versions" . }}
@@ -49,4 +47,10 @@
       </div>
     </div>
   </nav>
+
+  <!--Boosted mod: docs-subnav doesn't exist anymore in Bootstrap-->
+  {{- if eq .Layout "docs" }}
+    {{ partial "docs-subnav" }}
+  {{- end }}
+  <!--End mod-->
 </header>

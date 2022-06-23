@@ -1,7 +1,4 @@
 {{ define "main" }}
-  <!--Boosted mod: docs-subnav doesn't exist anymore in Bootstrap-->
-  {{ partial "docs-subnav" }}
-
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
     <aside class="bd-sidebar">
       <div class="offcanvas-lg offcanvas-start" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
@@ -30,7 +27,7 @@
 
       {{ if (eq .Page.Params.toc true) }}
         <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-muted">
-          <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+          <button class="btn btn-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
             On this page
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
@@ -65,4 +62,5 @@
   {{ range .Page.Params.extra_js -}}
     <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
   {{- end -}}
+  <div class="position-fixed"><input type="text" tabindex="-1"></div>
 {{ end }}

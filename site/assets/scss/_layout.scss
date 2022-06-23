@@ -1,12 +1,11 @@
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-// TODO: check me! Not sure what's the purpose of --bs-gutter-x
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
 .bd-gutter {
-  --bs-gutter-x: #{$bd-gutter-x};
+  --bs-gutter-x: #{$bd-gutter-x * 2}; // Boosted mod: changed value
+
+  // Boosted mod
+  @include media-breakpoint-up(md) {
+    --bs-gutter-x: #{$bd-gutter-x * 4};
+  }
+  // End mod
 }
 
 .bd-layout {
@@ -26,7 +25,7 @@
   grid-area: main;
 
   @include media-breakpoint-down(lg) {
-    max-width: 760px;
+    // Boosted mod: no max-width
     margin-inline: auto;
   }
 
