@@ -39,9 +39,17 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 </nav>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
+
+As part of Boosted's evolving CSS variables approach, stepped process now use local CSS variables on `.stepped-process` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="stepped-process-css-vars" file="scss/_stepped-process.scss" >}}
+
+### Sass variables
 
 For more details, please have a look at the exhaustive list of available variables:
 

@@ -1,6 +1,7 @@
 //
 // Orange stepped process
 //
+
 .stepped-process {
   // scss-docs-start stepped-process-css-vars
   --#{$prefix}stepped-process-font-size: #{$stepped-process-font-size};
@@ -21,7 +22,6 @@
   --#{$prefix}stepped-process-link-active-color: #{$step-link-active-color};
   --#{$prefix}stepped-process-link-marker: #{$step-link-marker};
   --#{$prefix}stepped-process-link-text-decoration: #{$step-link-text-decoration};
-  // scss-docs-end stepped-process-css-vars
 
   @include media-breakpoint-up(sm) {
     --#{$prefix}stepped-process-item-padding-x: 0;
@@ -34,6 +34,7 @@
     --#{$prefix}stepped-process-link-width: none;
     --#{$prefix}stepped-process-link-marker: #{$step-link-marker-lg};
   }
+  // scss-docs-end stepped-process-css-vars
 
   ol {
     display: flex;
@@ -91,7 +92,7 @@
   max-width: var(--#{$prefix}stepped-process-link-width);
   margin: auto;
   overflow: hidden;
-  line-height: 1; // not enough
+  line-height: 1;
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
@@ -101,7 +102,7 @@
     content: var(--#{$prefix}stepped-process-link-marker);
   }
 
-  &:hover, // to remove ?
+  &:hover,
   &:focus {
     color: var(--#{$prefix}stepped-process-link-color);
   }
