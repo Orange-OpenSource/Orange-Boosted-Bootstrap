@@ -76,9 +76,9 @@
   }
 
   // Indeterminate checkbox example
-  document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')
-    .forEach(checkbox => {
-      checkbox.indeterminate = true
+  document.querySelectorAll('.bd-example-indeterminate')
+    .forEach(example => {
+      example.querySelector('[type="checkbox"]').indeterminate = true
     })
 
   // Disable empty links in docs examples
