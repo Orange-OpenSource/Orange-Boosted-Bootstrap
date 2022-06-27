@@ -10,6 +10,12 @@
     height: 1.4rem;
     vertical-align: text-top;
   }
+
+  @include media-breakpoint-down(sm) {
+    .navbar-nav:last-child {
+      border-top: 1px solid #333;
+    }
+  }
 }
 
 // Boosted mod: use HTML+CSS for Boosted 3D logo
