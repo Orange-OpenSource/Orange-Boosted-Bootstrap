@@ -49,15 +49,16 @@
     border-radius: $form-check-radio-border-radius;
   }
 
-  &:focus {
-    border-color: $form-check-input-focus-border;
-    box-shadow: $form-check-input-focus-box-shadow;
-  }
-
   &:active {
     background-color: $form-check-input-active-bg-color; // Boosted mod
     filter: $form-check-input-active-filter;
     border-color: $form-check-input-active-bg-color; // Boosted mod
+  }
+
+  &:focus {
+    border-color: $form-check-input-focus-border;
+    // Boosted mod: default outline
+    box-shadow: $form-check-input-focus-box-shadow;
   }
 
   &:checked {
@@ -87,11 +88,9 @@
 
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$prefix}gradient);
-      background-position: 50% add(50%, $border-width * .25), center; // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
-      background-position: 50% add(50%, $border-width * .25); // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5; // Boosted mod
     }
   }
@@ -100,6 +99,7 @@
     pointer-events: none;
     background-color: $input-disabled-bg; // Boosted mod
     filter: none;
+    border-color: $gray-500; // Boosted mod
     opacity: $form-check-input-disabled-opacity;
 
     // Boosted mod
