@@ -124,7 +124,7 @@
   padding: 0 var(--#{$prefix}card-cap-padding-x) var(--#{$prefix}card-cap-padding-x);
   font-weight: var(--#{$prefix}card-cap-font-weight);
   color: var(--#{$prefix}card-footer-color);
-  background-color: var(--#{$prefix}card-cap-color);
+  background-color: var(--#{$prefix}card-bg);
   // End mod
 
   &:last-child {
