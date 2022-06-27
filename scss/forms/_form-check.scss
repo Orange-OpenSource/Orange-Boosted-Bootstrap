@@ -103,7 +103,8 @@
     opacity: $form-check-input-disabled-opacity;
 
     // Boosted mod
-    &:checked {
+    &:checked,
+    &:indeterminate {
       background-color: $form-check-input-disabled-color;
       filter: $invert-filter;
       border-color: $form-check-input-disabled-color;
