@@ -1,0 +1,14 @@
+.themed-grid-col {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: #eee; /* Boosted mod */
+  outline: 1px solid #ddd; /* Boosted mod */
+}
+
+.themed-container {
+  padding-top: .75rem; /* Boosted mod */
+  padding-bottom: .75rem; /* Boosted mod */
+  margin-bottom: 1.5rem;
+  background-color: #b5e8f7;
+  outline: 1px solid #4bb4e6; /* Boosted mod */
+}
