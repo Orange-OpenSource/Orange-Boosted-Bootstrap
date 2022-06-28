@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.1.3 (https://boosted.orange.com/)
-  * Copyright 2015-2021 The Boosted Authors
-  * Copyright 2015-2021 Orange
+  * Boosted v5.2.0-beta1 (https://boosted.orange.com/)
+  * Copyright 2015-2022 The Boosted Authors
+  * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap data.js v5.1.3 (https://boosted.orange.com/)
-  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap data.js v5.2.0-beta1 (https://boosted.orange.com/)
+  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -16,15 +16,13 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.3): dom/data.js
+   * Bootstrap (v5.2.0-beta1): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
   const elementMap = new Map();
   const data = {
