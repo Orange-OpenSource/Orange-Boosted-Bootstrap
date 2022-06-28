@@ -20,12 +20,12 @@ You shouldn't mix tags versions in the same region, since they look the same and
 {{< example class="d-flex gap-2 align-items-center" >}}
 <h3 class="visually-hidden">List of the different tag variants</h3>
 <p class="tag">Informative</p>
-<button class="tag">Actionable</button>
+<button class="tag">Filter</button>
 <p class="tag" id="labelTag1">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Closable
+  Input
   <button class="close close-whole" aria-labelledby="labelTag1"><span class="visually-hidden">Close</span></button>
 </p>
 {{< /example >}}
@@ -72,7 +72,7 @@ Here is an example with a table.
 </table>
 {{< /example >}}
 
-## Actionable
+## Filter
 
 A tag can be actionable either when builded on top of a `<button>`, a `<label>` and `<input>` or an `<a>` tag. `.actionable-tag` can be used too but it shouldn't since you have to implement semantics too. These tags are usually used as filters.
 
@@ -145,11 +145,11 @@ Here is an example for an article and its sub-titles anchors.
 </ul>
 {{< /example >}}
 
-## Closable
+## Input
 
 This kind of tag can be built on top of any `<tag>` but `<button>`, `<a>` or `<label>` and you should add semantics to tags. For a list of selected items use `<ul>` or `<ol>` (if tags are ordered). Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/components-examples/tags/examples/filter-by-brand/) of a component that can be built on top of this variant.
 
-<!-- Add a link to dropdown with multiple selection -->
+<!-- TODO: Add a link to dropdown with multiple selection -->
 
 Closable tags come with a strongly recommended variant `.close-whole`.
 
@@ -178,13 +178,13 @@ Tags come with a dark variant: `.tag-dark`.
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Actionable
+  Filter
 </button>
 <p class="tag tag-dark" id="labelTag4">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Closable
+  Input
   <button class="close close-whole" aria-labelledby="labelTag4"><span class="visually-hidden">Close</span></button>
 </p>
 {{< /example >}}
@@ -200,13 +200,13 @@ Tags come with a small variant: `.tag-sm`.
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Actionable
+  Filter
 </button>
 <p class="tag tag-sm" id="labelTag5">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Closable
+  Input
   <button class="close close-whole" aria-labelledby="labelTag5"><span class="visually-hidden">Close</span></button>
 </p>
 {{< /example >}}
@@ -222,13 +222,13 @@ Tags come with a disabled state: `.disabled`. Don't forget to add `aria-disabled
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Actionable
+  Filter
 </button>
 <p class="tag disabled" id="labelTag6" aria-disabled="true">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
-  Closable
+  Input
   <button class="close close-whole" aria-labelledby="labelTag6" disabled><span class="visually-hidden">Close</span></button>
 </p>
 {{< /example >}}

@@ -1,3 +1,5 @@
+// stylelint-disable function-disallowed-list
+
 .tag {
   // scss-docs-start tag-css-vars
   --#{$prefix}tag-gap: #{$tag-gap};
@@ -27,7 +29,7 @@
   display: inline-flex;
   gap: var(--#{$prefix}tag-gap);
   align-items: center;
-  padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)); // stylelint-disable-line function-disallowed-list
+  padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5));
   margin: var(--#{$prefix}tag-margin);
   @include font-size(var(--#{$prefix}tag-font-size));
   font-weight: var(--#{$prefix}tag-font-weight);
@@ -44,14 +46,14 @@
     width: var(--#{$prefix}tag-icon-size);
     min-width: var(--#{$prefix}tag-icon-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-icon-size);
-    margin: add(calc(var(--#{$prefix}tag-icon-size) * -.5), var(--#{$prefix}tag-font-shift)) 0 calc(var(--#{$prefix}tag-icon-size) * -.5) var(--#{$prefix}tag-icon-margin-start); // stylelint-disable-line function-disallowed-list
+    margin: add(calc(var(--#{$prefix}tag-icon-size) * -.5), var(--#{$prefix}tag-font-shift)) 0 calc(var(--#{$prefix}tag-icon-size) * -.5) var(--#{$prefix}tag-icon-margin-start);
   }
 
   .close {
     width: var(--#{$prefix}tag-close-size);
     min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-close-size);
-    margin: add(calc(var(--#{$prefix}tag-close-size) * -.5), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(var(--#{$prefix}tag-close-size) * -.5) var(--#{$prefix}tag-close-margin-start); // stylelint-disable-line function-disallowed-list
+    margin: add(calc(var(--#{$prefix}tag-close-size) * -.5), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(var(--#{$prefix}tag-close-size) * -.5) var(--#{$prefix}tag-close-margin-start);
     color: inherit;
     background-color: transparent;
     border: 0;
@@ -60,10 +62,10 @@
 
     &.close-whole::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      top: calc(var(--#{$prefix}tag-border-width) * -1);
+      right: calc(var(--#{$prefix}tag-border-width) * -1);
+      bottom: calc(var(--#{$prefix}tag-border-width) * -1);
+      left: calc(var(--#{$prefix}tag-border-width) * -1);
       content: "";
       @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
     }
@@ -85,8 +87,7 @@
       background-color: var(--#{$prefix}tag-active-decoration-color);
 
       &.close-whole::before {
-        outline: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-active-decoration-color);
-        outline-offset: 0;
+        border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-active-decoration-color);
       }
     }
 
@@ -135,7 +136,7 @@ label.tag,
   }
 }
 
-input:focus + label.tag {
+input:focus[data-focus-visible-added] + label.tag {
   z-index: 3;
   outline: .1875rem solid var(--#{$prefix}tag-outline-color);
   outline-offset: .125rem;
