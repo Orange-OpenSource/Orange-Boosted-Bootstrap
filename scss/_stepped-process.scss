@@ -17,6 +17,7 @@
   --#{$prefix}stepped-process-item-arrow-width: 0;
   --#{$prefix}stepped-process-item-arrow-shape: #{$step-item-arrow-shape};
   --#{$prefix}stepped-process-link-width: #{$step-link-width};
+  --#{$prefix}stepped-process-link-line-height: #{$step-link-line-height};
   --#{$prefix}stepped-process-link-color: #{$step-link-color};
   --#{$prefix}stepped-process-link-active-color: #{$step-link-active-color};
   --#{$prefix}stepped-process-link-marker: #{$step-link-marker};
@@ -91,7 +92,7 @@
   max-width: var(--#{$prefix}stepped-process-link-width);
   margin: auto;
   overflow: hidden;
-  line-height: 1;
+  line-height: var(--#{$prefix}stepped-process-link-line-height);
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
