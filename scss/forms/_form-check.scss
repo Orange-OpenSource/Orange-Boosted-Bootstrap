@@ -286,6 +286,12 @@
       border-color: $gray-500;
       outline-color: currentcolor;
     }
+
+    + .tag {
+      z-index: 3;
+      outline: .1875rem solid var(--#{$prefix}tag-outline-color);
+      outline-offset: .125rem;
+    }
   }
 
   &:checked {
@@ -305,6 +311,12 @@
         color: $accessible-orange;
         background-color: transparent;
       }
+    }
+
+    + .tag {
+      color: var(--bs-tag-active-color);
+      background-color: var(--bs-tag-active-decoration-color);
+      border-color: var(--bs-tag-active-decoration-color);
     }
   }
 
@@ -344,6 +356,17 @@
       color: $gray-500;
       background-color: transparent;
       border-color: currentcolor;
+    }
+
+    + .tag {
+      color: var(--#{$prefix}tag-disabled-color);
+      pointer-events: none;
+      border-color: var(--#{$prefix}tag-disabled-color);
+    }
+
+    &:checked + .tag {
+      color: var(--#{$prefix}tag-active-color);
+      background-color: var(--#{$prefix}tag-disabled-color);
     }
     // End mod
   }
