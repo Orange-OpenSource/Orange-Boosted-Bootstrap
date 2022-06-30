@@ -27,8 +27,9 @@
   }
 
   window.docsearch({
-    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
+    apiKey: 'd04e794979727856a09d53f12ead9069',
     indexName: 'boosted-orange',
+    appId: 'F4PKENW3TB',
     inputSelector: '#search-input',
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
