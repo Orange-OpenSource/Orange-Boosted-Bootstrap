@@ -56,8 +56,8 @@
 {{- end }}
 
 {{ if (or (eq .Page.Title "Boostwatch") (and (eq .Page.Layout "docs") (eq .Page.Title "Custom carousel"))) -}}
-<script src="{{ .Site.Params.cdn.js_swiper }}" integrity="{{ .Site.Params.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
-<script>window.Swiper || document.write('<script src="https://unpkg.com/swiper@8.2.6/swiper-bundle.min.js"><\/script>')</script>
+<!--<script src="{{ .Site.Params.cdn.js_swiper }}" integrity="{{ .Site.Params.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>-->
+<script>window.Swiper || document.write('<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/swiper-bundle.min.js"><\/script>')</script>
 <script>
   new Swiper('.swiper-container', {
     autoplay: {
