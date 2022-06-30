@@ -1,0 +1,83 @@
+.side-nav {
+  --#{$prefix}side-nav-width: 18.75rem;
+  --#{$prefix}side-nav-color: #{$black};
+  --#{$prefix}side-nav-bg-color: #{$white};
+  --#{$prefix}side-nav-hover-bg-color: #{$gray-300};
+  --#{$prefix}side-nav-active-bg-color: #{$gray-500};
+  --#{$prefix}side-nav-active-border-color: var(--#{$prefix}link-hover-color);
+  --#{$prefix}side-nav-icon-size: 1.5625rem;
+  --#{$prefix}side-nav-item-height: 2.5rem;
+  --#{$prefix}side-nav-item-padding-left: 15px;
+  --#{$prefix}offcanvas-padding-x: 0;
+  --#{$prefix}offcanvas-padding-y: 0;
+  --#{$prefix}offcanvas-border-width: 1px;
+  --#{$prefix}offcanvas-border-color: #{$gray-500};
+
+  width: var(--#{$prefix}side-nav-width);
+  height: 100%;
+  border-right: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+
+  svg,
+  img {
+    width: var(--#{$prefix}side-nav-icon-size);
+    height: var(--#{$prefix}side-nav-icon-size);
+    margin-right: 15px;
+  }
+
+  .offcanvas-header {
+    justify-content: flex-end;
+    background-color: var(--#{$prefix}side-nav-bg-color);
+  }
+
+  .offcanvas-body {
+    background-color: var(--#{$prefix}side-nav-bg-color);
+  }
+
+  .accordion {
+    --#{$prefix}accordion-border-width: 0;
+    --#{$prefix}accordion-body-padding-x: 0;
+    --#{$prefix}accordion-body-padding-y: 0;
+    --#{$prefix}accordion-btn-font-size: 1rem;
+
+    .accordion-body {
+      --#{$prefix}side-nav-item-padding-left: 55px;
+
+      .accordion-body {
+        --#{$prefix}side-nav-item-padding-left: 95px;
+      }
+    }
+  }
+
+  .side-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--#{$prefix}side-nav-item-height);
+    padding-left: var(--#{$prefix}side-nav-item-padding-left);
+    color: var(--#{$prefix}side-nav-color);
+    text-decoration: none;
+    background-color: var(--#{$prefix}side-nav-bg-color);
+    border: 0;
+
+    &:hover {
+      background-color: var(--#{$prefix}side-nav-hover-bg-color);
+    }
+
+    &.active {
+      background: linear-gradient(to right, var(--#{$prefix}side-nav-active-border-color), var(--#{$prefix}side-nav-active-border-color) 4px, var(--#{$prefix}side-nav-active-bg-color) 4px, var(--#{$prefix}side-nav-active-bg-color));
+    }
+  }
+}
+
+// .side-nav-collapsible {
+
+// }
+
+.side-nav-dark {
+  --#{$prefix}side-nav-color: #{$white};
+  --#{$prefix}side-nav-bg-color: #{$gray-900};
+  --#{$prefix}side-nav-hover-bg-color: #{$black};
+  --#{$prefix}side-nav-active-bg-color: #{$gray-700};
+  --#{$prefix}offcanvas-border-color: #{$gray-700};
+}
