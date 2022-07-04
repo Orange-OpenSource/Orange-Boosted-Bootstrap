@@ -15,7 +15,7 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 
 Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
 
-However, if you really want to implement it, [here](https://codepen.io/louismaximepiton/pen/BaYroLE) is a way to do so using Javascript.
+However, if you really want to implement it, there's a way to do it with Javascript. Please see our [Javascript section](#via-javascript).
 {{< /callout >}}
 
 {{< example >}}
@@ -49,6 +49,41 @@ By default, range inputs "snap" to integer values. To change this, you can speci
 <label for="customRange3" class="form-label">Example range</label>
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
+
+## Via javascript
+
+Range is not implemented with Javascript in Boosted. Here is a way to do so to have the same behavior on all browsers.
+
+Build a range input with `min` and `max` attributes.
+
+```html
+<label for="jsRange" class="form-label">Example range</label>
+<input type="range" class="form-range" id="jsRange" min="0" max="100">
+```
+
+The input backgrounds must be initialized in a different way.
+
+```scss
+.form-range {
+  height: .375rem;
+  background: linear-gradient(to right, #ff7900 0%, #ff7900 50%, #eee 50%, #eee 100%); // Change the 50%s in order to change the initialization.
+}
+```
+
+Introduce event listeners on the input to make it dynamic.
+
+```js
+// Getting all the range inputs
+const ranges = document.querySelectorAll('input[type=range]')
+
+// Adding a listener to every input in order to have a dynamic progress
+for (const range of ranges) {
+  range.addEventListener('input', () => {
+    const value = (range.value - range.min) / (range.max - range.min) * 100
+    range.style = `background: linear-gradient(to right, #ff7900 0%, #ff7900 ${value}%, #eee ${value}%, #eee 100%);`
+  })
+}
+```
 
 ## Sass
 
