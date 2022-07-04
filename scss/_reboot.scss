@@ -35,21 +35,7 @@
       scroll-behavior: smooth;
     }
   }
-
-  // Boosted mod: Improve focus visibility when fixed/sticky header is used
-  // See https://caniuse.com/?search=scroll-padding
-  // scss-docs-start scroll-offset
-  @if $enable-fixed-header {
-    scroll-padding-top: $scroll-offset-top * .5;
-
-    @include media-breakpoint-up(lg) {
-      scroll-padding-top: $scroll-offset-top;
-    }
-  }
-  // scss-docs-end scroll-offset
-  // End mod
 }
-
 
 // Body
 //
