@@ -8,6 +8,10 @@ toc: true
 
 ## How it works
 
+Side navigation is based on `.offcanvas-*` class. Please refer to [its documentation]({{< docsref "/components/offcanvas#responsive" >}}) to learn more about its behavior.
+
+Side navigation may need the Javascript from Accordions, Collapse, Tabs or Tooltips (in addition of its own), depending on the implemented navigation, to work correctly.
+
 ## Basic
 
 {{< example class="p-0" >}}
@@ -22,8 +26,8 @@ toc: true
       <div class="accordion-item">
         <h3 class="accordion-header" id="dashboardHeader">
           <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse" aria-expanded="true" aria-controls="dashboardCollapse">
-            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000">
-              <path fill="currentColor" d="M175,125H425a50,50,0,0,1,50,50V425a50,50,0,0,1-50,50H175a50,50,0,0,1-50-50V175A50,50,0,0,1,175,125Zm0,400H425a50,50,0,0,1,50,50V825a50,50,0,0,1-50,50H175a50,50,0,0,1-50-50V575A50,50,0,0,1,175,525ZM575,125H825a50,50,0,0,1,50,50V425a50,50,0,0,1-50,50H575a50,50,0,0,1-50-50V175A50,50,0,0,1,575,125Zm0,400H825a50,50,0,0,1,50,50V825a50,50,0,0,1-50,50H575a50,50,0,0,1-50-50V575A50,50,0,0,1,575,525Z"/>
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
             </svg>
             Dashboard
           </button>
@@ -40,11 +44,11 @@ toc: true
                 <div id="labelOneCollapse" class="accordion-collapse collapse show" aria-labelledby="labelOneHeader" data-bs-parent="#labels">
                   <div class="accordion-body">
                     <ul class="list-unstyled m-0">
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item active" aria-current="true">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
                     </ul>
                   </div>
                 </div>
@@ -58,11 +62,11 @@ toc: true
                 <div id="labelTwoCollapse" class="accordion-collapse collapse" aria-labelledby="labelTwoHeader" data-bs-parent="#labels">
                   <div class="accordion-body">
                     <ul class="list-unstyled m-0">
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
                     </ul>
                   </div>
                 </div>
@@ -76,11 +80,11 @@ toc: true
                 <div id="labelThreeCollapse" class="accordion-collapse collapse" aria-labelledby="labelThreeHeader" data-bs-parent="#labels">
                   <div class="accordion-body">
                     <ul class="list-unstyled m-0">
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
-                      <a href="#" class="side-nav-item">Label</a>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
                     </ul>
                   </div>
                 </div>
@@ -92,8 +96,8 @@ toc: true
       <div class="accordion-item">
         <h3 class="accordion-header" id="financialHeader">
           <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapse" aria-expanded="false" aria-controls="financialCollapse">
-            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000">
-              <path fill="currentColor" d="M415.417,386.092L557.28,528.036,880.094,229.885a60.246,60.246,0,0,0,1.735-86.834l-0.445-.445a60.162,60.162,0,0,0-82.822-2.179L557.28,357.7l-99.3-99.361a60.163,60.163,0,0,0-85.118,0L117.5,513.841a60.246,60.246,0,0,0,0,85.166h0a60.165,60.165,0,0,0,85.118,0ZM124.863,780v-41L414.711,446.981,555.637,588.988,874.47,297.975V780H124.863ZM874.47,825H124.863a24.994,24.994,0,0,0-24.987,25h0a24.994,24.994,0,0,0,24.987,25H874.47a24.994,24.994,0,0,0,24.987-25h0A24.994,24.994,0,0,0,874.47,825Z"/>
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
             </svg>
             Financial
           </button>
@@ -101,11 +105,11 @@ toc: true
         <div id="financialCollapse" class="accordion-collapse collapse" aria-labelledby="financialHeader" data-bs-parent="#sideNavAccordion">
           <div class="accordion-body">
             <ul class="list-unstyled m-0">
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
             </ul>
           </div>
         </div>
@@ -113,8 +117,8 @@ toc: true
       <div class="accordion-item">
         <h3 class="accordion-header" id="chartsHeader">
           <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapse" aria-expanded="false" aria-controls="chartsCollapse">
-            <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000">
-              <path fill="currentColor" d="M525,76V475H924C911.542,260.257,739.743,88.458,525,76Zm49.842,56.774A375.23,375.23,0,0,1,867.226,425.158H574.842V132.774ZM475,76C251.987,88.937,75,273.878,75,500.135c0,0.052,0,.1,0,0.156C75.086,734.866,265.271,925,499.866,925a423.194,423.194,0,0,0,182.226-40.961L475,525V76ZM725.9,859.943C838.738,788.907,915.812,666.134,924,525H533Z"/>
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
             </svg>
             Charts
           </button>
@@ -122,11 +126,11 @@ toc: true
         <div id="chartsCollapse" class="accordion-collapse collapse" aria-labelledby="chartsHeader" data-bs-parent="#sideNavAccordion">
           <div class="accordion-body">
             <ul class="list-unstyled m-0">
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
-              <a href="#" class="side-nav-item">Label</a>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
             </ul>
           </div>
         </div>
@@ -138,12 +142,230 @@ toc: true
 
 ## Collapsible with title
 
-{{< example >}}
+{{< example class="p-0 scrollspy-example-2" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
 
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu2">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-inline-flex flex-column">
+    <div class="position-absolute">
+      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"></button>
+      <ul id="collapsible-list" class="list-unstyled m-0 collapse collapse-horizontal">
+        <li>
+          <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+            </svg>
+            Dashboard
+          </button>
+        </li>
+        <li>
+          <button class="side-nav-item active fw-bold" data-bs-toggle="tooltip" title="Financial" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+            </svg>
+            Financial
+          </button>
+        </li>
+        <li>
+          <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Charts" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+            </svg>
+            Charts
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 {{< /example >}}
 
 ## Collapsible with content
 
-{{< example >}}
+Strongly WIP, onclick functions are a test without extra JS. But fully working example atm.
 
+{{< example class="p-0 scrollspy-example-2" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu3" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">Collapsing side navigation with content</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu3">
+  <div class="offcanvas-header justify-content-end">
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu3" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-row">
+    <div class="position-absolute top-0 bottom-0 d-flex flex-column flex-wrap">
+      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"></button>
+      <div class="d-flex flex-row">
+        <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
+          <li role="presentation" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
+            <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#dashboardTab" type="button" role="tab" aria-controls="dashboardTab" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">
+              <svg width="1.5rem" height="1.5rem">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+              </svg>
+            </button>
+          </li>
+          <li role="presentation" data-bs-toggle="tooltip" title="Financial" data-bs-placement="right">
+            <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#financialTab" type="button" role="tab" aria-controls="financialTab" aria-selected="true" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">
+              <svg width="1.5rem" height="1.5rem">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+              </svg>
+            </button>
+          </li>
+          <li role="presentation" data-bs-toggle="tooltip" title="Charts" data-bs-placement="right">
+            <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab" type="button" role="tab" aria-controls="chartsTab" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">
+              <svg width="1.5rem" height="1.5rem">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="collapse collapse-horizontal" id="collapsingTab">
+          <div class="tab-content d-flex flex-column side-nav-collapse">
+            <div class="tab-pane" id="dashboardTab" role="tabpanel" tabindex="0">
+              <div class="tab-pane-content"><h3 class="tab-pane-title">Dashboard</h3></div>
+            </div>
+            <div class="tab-pane active" id="financialTab" role="tabpanel" tabindex="0">
+              <div class="tab-pane-content"><h3 class="tab-pane-title">Financial</h3></div>
+            </div>
+            <div class="tab-pane" id="chartsTab" role="tabpanel" tabindex="0">
+              <div class="tab-pane-content"><h3 class="tab-pane-title">Charts</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
+## Dark variant
+
+Side navigation comes with a dark variant: `.side-nav-dark`.
+
+{{< example class="p-0" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu4" data-bs-toggle="offcanvas">With icon and accordions</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-dark" id="sidebarMenu4">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu4" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion w-100" id="sideNavAccordionDark">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="dashboardHeaderDark">
+          <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+            </svg>
+            Dashboard
+          </button>
+        </h3>
+        <div id="dashboardCollapseDark" class="accordion-collapse collapse show" aria-labelledby="dashboardHeaderDark" data-bs-parent="#sideNavAccordionDark">
+          <div class="accordion-body">
+            <div class="accordion" id="labelsDark">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelOneHeaderDark">
+                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseDark" aria-expanded="true" aria-controls="labelOneCollapseDark">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelOneCollapseDark" class="accordion-collapse collapse show" aria-labelledby="labelOneHeaderDark" data-bs-parent="#labelsDark">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelTwoHeaderDark">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapseDark" aria-expanded="false" aria-controls="labelTwoCollapseDark">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelTwoCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelTwoHeaderDark" data-bs-parent="#labelsDark">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelThreeHeaderDark">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapseDark" aria-expanded="false" aria-controls="labelThreeCollapseDark">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelThreeCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelThreeHeaderDark" data-bs-parent="#labelsDark">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="financialHeaderDark">
+          <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapseDark" aria-expanded="false" aria-controls="financialCollapseDark">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+            </svg>
+            Financial
+          </button>
+        </h3>
+        <div id="financialCollapseDark" class="accordion-collapse collapse" aria-labelledby="financialHeaderDark" data-bs-parent="#sideNavAccordionDark">
+          <div class="accordion-body">
+            <ul class="list-unstyled m-0">
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="chartsHeaderDark">
+          <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapseDark" aria-expanded="false" aria-controls="chartsCollapseDark">
+            <svg width="1.5rem" height="1.5rem">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+            </svg>
+            Charts
+          </button>
+        </h3>
+        <div id="chartsCollapseDark" class="accordion-collapse collapse" aria-labelledby="chartsHeaderDark" data-bs-parent="#sideNavAccordionDark">
+          <div class="accordion-body">
+            <ul class="list-unstyled m-0">
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{< /example >}}
