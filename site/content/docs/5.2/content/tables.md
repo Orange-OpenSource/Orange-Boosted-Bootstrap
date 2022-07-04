@@ -12,20 +12,17 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Boosted.
 
-{{< table class="table" simplified="false" aria="Boosted tables basic look - table with one level of column header" >}}
+{{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
 
 ## Accessibility
 
-To make a table accessible, you should respect these four main rules:
+To make a table accessible, you should respect these three main rules:
 
-- add a `tabindex="0"` attribute to the `div` tag or to the `table` tag at least to make a table accessible by keyboard navigation. It will add a tabulation to this element on which to stop when  navigating using the keyboard tab key.
-
-- add a `role="region"` attribute to the `div` tag to give a role to the table.
+- If the table is an important one, add a `role="region"` attribute to help screen readers.
 
 - add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers
 
-- if the table doesn't have a `caption` or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data  - Description of table metadata (e.g.: table with one level of column header)"`.
-At the opposite, if the caption is  precise enough, add instead an `aria-labelledby="idCaption"` to describe the table.
+- add a `<caption>` on each table. If the table doesn't have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata are mandatory for complex tables.
 
 See [more about the tables structures](https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees).
 
@@ -35,8 +32,8 @@ See [more about the tables structures](https://a11y-guidelines.orange.com/fr/web
 Use contextual class to color tables, table rows or individual cells.
 
 <div class="bd-example">
-<div tabindex="0" role="region" aria-label="Table's data description - Table's metadata description e.g : table with one level of row and column header">
   <table class="table">
+    <caption class="visually-hidden">Boosted table variants</caption>
     <thead>
       <tr>
         <th scope="col">Class</th>
@@ -57,7 +54,6 @@ Use contextual class to color tables, table rows or individual cells.
     </tr>
     </tbody>
   </table>
-</div>
 </div>
 
 {{< highlight html >}}
@@ -83,19 +79,19 @@ Use contextual class to color tables, table rows or individual cells.
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
-{{< table class="table table-striped" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-striped" caption="Boosted striped rows table" >}}
 
 ### Striped columns
 
 Use .table-striped-columns to add zebra-striping to any table column.
 
-{{< table class="table table-striped-columns" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
 
 These classes can also be added to table variants:
 
-{{< table class="table table-dark table-striped" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
 
-{{< table class="table table-dark table-striped-columns" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
 
 <!-- Boosted mod : no .table-success -->
 
@@ -103,23 +99,23 @@ These classes can also be added to table variants:
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-{{< table class="table table-hover" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
-{{< table class="table table-dark table-hover" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
 
 These hoverable rows can also be combined with the striped rows variant:
 
-{{< table class="table table-striped table-hover" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
 
-{{< table class="table table-dark table-striped table-hover" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
 
 ### Active tables
 
 Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
-<div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table">
+    <caption class="visually-hidden">Boosted table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -149,11 +145,10 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tbody>
   </table>
 </div>
-</div>
 
 ```html
-<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table">
+  <caption class="visually-hidden">Boosted table with an active row and cell</caption>
   <thead>
     ...
   </thead>
@@ -171,12 +166,11 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
-</div>
 ```
 
 <div class="bd-example">
-<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table table-dark">
+    <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -206,11 +200,10 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tbody>
   </table>
 </div>
-</div>
 
 ```html
-<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-dark">
+  <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
   <thead>
     ...
   </thead>
@@ -228,7 +221,6 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
-</div>
 ```
 
 ## How do the variants and accented tables work?
@@ -251,9 +243,9 @@ Behind the scenes it looks like this:
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
-{{< table class="table table-sm" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-sm" caption="Boosted small table" >}}
 
-{{< table class="table table-dark table-sm" aria="Bootstrap's developers - table with one level of row and column header" >}}
+{{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
 
 <!-- Boosted mod : No table group dividers -->
 
@@ -262,37 +254,36 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<tfoot>`—with `.table-group-divider`. Customize the color by changing the `border-top-color` (which we don't currently provide a utility class for at this time).
 
 {{< example >}}
-<div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one table group divider">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody class="table-group-divider">
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="table">
+  <caption class="visually-hidden">Boosted group divided table</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 {{< /example >}}
 
 ## Vertical alignment
@@ -300,8 +291,9 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0" role="region" aria-label="Vertical alignment examples - table with one level of column header">
+  <div class="table-responsive">
     <table class="table align-middle">
+      <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
       <thead>
         <tr>
           <th scope="col" class="w-25">Heading 1</th>
@@ -335,8 +327,9 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0" role="region" aria-label="Vertical alignment examples - table with one level of column header">
+<div class="table-responsive">
   <table class="table align-middle">
+    <caption class="visually-hidden">...</caption>
     <thead>
       <tr>
         ...
@@ -365,67 +358,67 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
-<div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one level of row and column header">
-<table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <table class="table mb-0" tabindex="0" role="region" aria-label="Example of nesting - table with one level of row and column header">
-          <thead>
-            <tr>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">A</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">B</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">C</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+  <table class="table table-striped table-dark">
+    <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <table class="table mb-0">
+          <caption class="visually-hidden">Boosted nested table</caption>
+            <thead>
+              <tr>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">A</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">B</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">C</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ```html
-<div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-striped table-dark">
+  <caption class="visually-hidden">...</caption>
   <thead>
     ...
   </thead>
@@ -433,7 +426,8 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
     <tr>
       <td colspan="4">
-        <table class="table mb-0" tabindex="0" role="region" aria-label="Example of nesting - table with one level of row and column header">
+        <table class="table mb-0">
+          <caption class="visually-hidden">...</caption>
           ...
         </table>
       </td>
@@ -441,7 +435,6 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
   </tbody>
 </table>
-</div>
 ```
 
 ## How nesting works
@@ -459,18 +452,15 @@ Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be
 A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
 <div class="bd-example">
-  <div role="region" tabindex="0" aria-labelledby="idCaption1">
-    <table class="table">
-      <caption id="idCaption1">List of users</caption>
-      {{< partial "table-content" >}}
-    </table>
-  </div>
+  <table class="table">
+    <caption>List of users</caption>
+    {{< partial "table-content" >}}
+  </table>
 </div>
 
 ```html
-<div role="region" tabindex="0" aria-labelledby="idCaption1">
 <table class="table table-sm">
-  <caption id="idCaption1">List of users</caption>
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
@@ -478,25 +468,21 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
     ...
   </tbody>
 </table>
-</div>
 ```
 
 <!-- Boosted mod: default caption-side is top -->
 You can also put the `<caption>` on the bottom of the table with `.caption-bottom`.
 
 <div class="bd-example">
-  <div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one level of row and column header">
-    <table class="table caption-bottom">
-      <caption aria-hidden="true">List of users</caption>
-      {{< partial "table-content" >}}
-    </table>
-  </div>
+  <table class="table caption-bottom">
+    <caption>List of users</caption>
+    {{< partial "table-content" >}}
+  </table>
 </div>
 
 ```html
-<div role="region" tabindex="0" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table caption-bottom">
-  <caption aria-hidden="true">List of users</caption>
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
@@ -504,7 +490,6 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
     ...
   </tbody>
 </table>
-</div>
 ```
 
 ## Responsive tables
@@ -522,8 +507,9 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 <div class="bd-example">
-  <div class="table-responsive" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
+  <div class="table-responsive">
     <table class="table">
+      <caption class="visually-hidden">Boosted responsive table</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -581,8 +567,9 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 
 ```html
-<div class="table-responsive" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
+<div class="table-responsive">
   <table class="table">
+    <caption class="visually-hidden">...</caption>
     ...
   </table>
 </div>
@@ -598,8 +585,9 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{ range $.Site.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
+  <div class="table-responsive{{ .abbr }}">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -659,8 +647,9 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< tables.inline >}}
 {{- range $.Site.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of row and column header">
+<div class="table-responsive{{ .abbr }}">
   <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
     ...
   </table>
 </div>
@@ -673,11 +662,12 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 ### Sizes
 
-Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the  `tabindex="0"` attribute for the accessibility on all browsers.
+Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content.
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm">
     <table class="table">
+      <caption class="visually-hidden">Boosted limited height small table</caption>
       <thead>
         <tr>
           <th scope="col">Header</th>
@@ -722,8 +712,9 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-md" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+  <div class="table-height-md">
     <table class="table">
+      <caption class="visually-hidden">Boosted limited height medium table</caption>
       <thead>
         <tr>
           <th scope="col">Header</th>
@@ -792,8 +783,9 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-lg" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+  <div class="table-height-lg">
     <table class="table">
+      <caption class="visually-hidden">Boosted limited height large table</caption>
       <thead>
         <tr>
           <th scope="col">Header</th>
@@ -887,18 +879,21 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="table-height-sm">
   <table class="table">
+    <caption class="visually-hidden">Boosted limited height small table</caption>
     ...
   </table>
 </div>
-<div class="table-height-md" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="table-height-md">
   <table class="table">
+    <caption class="visually-hidden">Boosted limited height medium table</caption>
     ...
   </table>
 </div>
-<div class="table-height-lg" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="table-height-lg">
   <table class="table">
+    <caption class="visually-hidden">Boosted limited height large table</caption>
     ...
   </table>
 </div>
@@ -909,8 +904,9 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 Add `.table-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm">
     <table class="table table-sticky">
+      <caption class="visually-hidden">Boosted table with a sticky header</caption>
       <thead>
         <tr>
           <th scope="col">Header</th>
@@ -956,8 +952,9 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="table-height-sm">
   <table class="table table-sticky">
+    <caption class="visually-hidden">Boosted table with a sticky header</caption>
     ...
   </table>
 </div>
@@ -966,8 +963,9 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 Works also with variants :
 
 <div class="bd-example">
-  <div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+  <div class="table-height-sm">
     <table class="table table-sticky table-dark">
+      <caption class="visually-hidden">Boosted dark table with a sticky header</caption>
       <thead>
         <tr>
           <th scope="col">Header</th>
@@ -1013,8 +1011,9 @@ Works also with variants :
 </div>
 
 ```html
-<div class="table-height-sm" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="table-height-sm">
   <table class="table table-dark table-sticky">
+    <caption class="visually-hidden">Boosted dark table with a sticky header</caption>
     ...
   </table>
 </div>
@@ -1031,8 +1030,9 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="bd-example">
   <table class="table table-sm table-hover table-responsive">
+    <caption class="visually-hidden">Boosted table with a selection feature</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -1167,67 +1167,67 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<div role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
-  <table class="table table-sm table-hover table-responsive">
-    <thead>
-      <tr>
-        <th scope="col">
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck">
-            <label class="form-check-label" for="customCheck">
-              <span class="visually-hidden">Select all</span>
-            </label>
-          </div>
-        </th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck1">
-            <label class="form-check-label" for="customCheck1">
-                <span class="visually-hidden">Select first row</span>
-            </label>
-          </div>
-        </td>
-        ...
-      </tr>
-      <tr>...</tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck3" checked>
-            <label class="form-check-label" for="customCheck3">
-                <span class="visually-hidden">Select third row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">...</tr>
-      <tr>...</tr>
-      <tr>...</tr>
-      <tr>...</tr>
-      <tr>...</tr>
-    </tbody>
-  </table>
-</div>
+<table class="table table-sm table-hover table-responsive">
+  <thead>
+    <caption class="visually-hidden">Boosted table with a selection feature</caption>
+    <tr>
+      <th scope="col">
+        <div class="form-check mb-0">
+          <input class="form-check-input" type="checkbox" id="customCheck">
+          <label class="form-check-label" for="customCheck">
+            <span class="visually-hidden">Select all</span>
+          </label>
+        </div>
+      </th>
+      <th scope="col">Column header</th>
+      <th scope="col">Column header</th>
+      <th scope="col">Column header</th>
+      <th scope="col">Column header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-check mb-0">
+          <input class="form-check-input" type="checkbox" id="customCheck1">
+          <label class="form-check-label" for="customCheck1">
+              <span class="visually-hidden">Select first row</span>
+          </label>
+        </div>
+      </td>
+      ...
+    </tr>
+    <tr>...</tr>
+    <tr class="table-active">
+      <td>
+        <div class="form-check mb-0">
+          <input class="form-check-input" type="checkbox" id="customCheck3" checked>
+          <label class="form-check-label" for="customCheck3">
+              <span class="visually-hidden">Select third row</span>
+          </label>
+        </div>
+      </td>
+      <td>Cell text</td>
+      <td>Cell text</td>
+      <td>Cell text</td>
+      <td>Cell text</td>
+    </tr>
+    <tr class="table-active">...</tr>
+    <tr>...</tr>
+    <tr>...</tr>
+    <tr>...</tr>
+    <tr>...</tr>
+  </tbody>
+</table>
 ```
 
 ### With icons or thumbnails
 
 Use SVG to display thumbnails or icons in your table data cell elements.
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="bd-example">
   <table class="table table-sm table-hover table-responsive align-middle">
+    <caption class="visually-hidden">Boosted table with icons in a row</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -1426,8 +1426,9 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </td>
 ```
 
-<div class="bd-example" role="region" tabindex="0" aria-label="Example of table with heading/cell content - table with one level of column header">
+<div class="bd-example">
   <table class="table table-responsive align-middle">
+    <caption class="visually-hidden">Boosted table with icons inside a row</caption>
     <thead>
       <tr>
         <th scope="col">Column header</th>
