@@ -88,9 +88,11 @@
 
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$prefix}gradient);
+      background-position: 50% add(50%, $border-width * .25), center; // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
+      background-position: 50% add(50%, $border-width * .25); // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5; // Boosted mod
     }
   }
@@ -99,7 +101,6 @@
     pointer-events: none;
     background-color: $input-disabled-bg; // Boosted mod
     filter: none;
-    border-color: $gray-500; // Boosted mod
     opacity: $form-check-input-disabled-opacity;
 
     // Boosted mod
@@ -118,6 +119,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $form-label-disabled-color; // Boosted mod
+      pointer-events: none;
       cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }

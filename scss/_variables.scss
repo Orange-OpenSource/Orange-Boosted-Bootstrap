@@ -1041,8 +1041,8 @@ $form-check-input-checked-bg-image:       var(--#{$boosted-prefix}check-icon) !d
 $form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
-$form-check-input-indeterminate-color:          color-contrast($brand-orange) !default;
-$form-check-input-indeterminate-bg-color:       $brand-orange !default;
+$form-check-input-indeterminate-color:          $form-check-input-checked-color !default;
+$form-check-input-indeterminate-bg-color:       $form-check-input-checked-bg-color !default;
 $form-check-input-indeterminate-border-color:   $form-check-input-indeterminate-bg-color !default;
 $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'><path fill='#{$form-check-input-indeterminate-color}' d='M0 0h10v3H0z'/></svg>") !default;
 
