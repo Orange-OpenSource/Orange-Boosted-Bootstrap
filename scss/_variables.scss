@@ -1005,7 +1005,7 @@ $input-height-inner-half:               $spacer !default; // Boosted mod
 $input-height-inner-quarter:            map-get($spacers, 2) !default; // Boosted mod
 
 $input-height:                          2.5rem !default;
-// Boosted mod: no $input-height-sm
+$input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
