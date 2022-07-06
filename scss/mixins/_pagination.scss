@@ -18,10 +18,44 @@
 @mixin pagination-max-items($pagination-max-items) {
   display: none;
 
-  &.active,
   &:nth-child(-n+#{$pagination-max-items * .5}),
   &:nth-last-child(-n+#{$pagination-max-items * .5}) {
-    display: list-item;
+    display: flex;
+  }
+
+  &:nth-child(#{$pagination-max-items * .5}):not(:nth-last-child(#{$pagination-max-items * .5 + 1}))::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    color: var(--#{$prefix}pagination-color);
+    pointer-events: none;
+    content: "...";
+  }
+
+  &.active {
+    display: flex;
+
+    &:not(:nth-child(-n+#{$pagination-max-items * .5})):not(:nth-last-child(-n+#{$pagination-max-items * .5})) {
+      margin-left: -40px;
+
+      &:not(:nth-child(#{$pagination-max-items * .5 + 1}))::before,
+      &:not(:nth-last-child(#{$pagination-max-items * .5 + 1}))::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 100%;
+        color: var(--#{$prefix}pagination-color);
+        pointer-events: none;
+        content: "...";
+      }
+
+      &:not(:nth-last-child(#{$pagination-max-items * .5 + 1})) ~ :nth-last-child(#{$pagination-max-items * .5}) {
+        display: none;
+      }
+    }
   }
 }
 // scss-docs-end pagination-max-items-mixin
