@@ -30,6 +30,18 @@
           background: $icon no-repeat right map-get($spacers, 2) center / $spacer;
         }
       }
+
+      .form-select {
+        @include form-validation-state-selector($state) {
+          &:not([multiple]):not([size]),
+          &:not([multiple])[size="1"] {
+            padding-right: $form-select-feedback-icon-padding-end;
+            background-image: escape-svg($form-select-indicator), escape-svg($icon);
+            background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+            background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+          }
+        }
+      }
     }
   } @else {
     .#{$state}-feedback {
