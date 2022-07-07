@@ -70,7 +70,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 </div>
 
 ```html
-<nav id="navbar-example2" class="navbar px-3">
+<nav id="navbar-example2" class="navbar px-3 mb-3">
   <a class="navbar-brand" href="#">
     <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
   </a>
@@ -92,7 +92,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Second heading</h4>
@@ -174,10 +174,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 ```html
 <div class="row">
   <div class="col-4 col-lg-3">
-    <nav id="navbar-example3" class="navbar flex-column align-items-stretch">
-      <a class="navbar-brand align-self-start" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-      </a>
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
       <nav class="nav nav-pills flex-column">
         <a class="nav-link" href="#item-1">Item 1</a>
         <nav class="nav nav-pills flex-column">
@@ -258,21 +255,27 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 </div>
 
 ```html
-<div id="list-example" class="list-group">
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-</div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="list-item-1">Item 1</h4>
-  <p>...</p>
-  <h4 id="list-item-2">Item 2</h4>
-  <p>...</p>
-  <h4 id="list-item-3">Item 3</h4>
-  <p>...</p>
-  <h4 id="list-item-4">Item 4</h4>
-  <p>...</p>
+<div class="row">
+  <div class="col-4">    
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="list-item-1">Item 1</h4>
+      <p>...</p>
+      <h4 id="list-item-2">Item 2</h4>
+      <p>...</p>
+      <h4 id="list-item-3">Item 3</h4>
+      <p>...</p>
+      <h4 id="list-item-4">Item 4</h4>
+      <p>...</p>
+    </div>
+  </div>
 </div>
 ```
 
@@ -309,21 +312,28 @@ Scrollspy is not limited to nav components and list groups, so it will work on a
 </div>
 
 ```html
-<div id="list-example" class="d-flex flex-column">
-  <a href="#item-1">Item 1</a>
-  <a href="#item-2">Item 2</a>
-  <a href="#item-3">Item 3</a>
-  <a href="#item-4">Item 4</a>
-</div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="item-1">Item 1</h4>
-  <p>...</p>
-  <h4 id="item-2">Item 2</h4>
-  <p>...</p>
-  <h4 id="item-3">Item 3</h4>
-  <p>...</p>
-  <h4 id="item-4">Item 4</h4>
-  <p>...</p>
+<div class="row">
+  <div class="col-4">
+    <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+      <a class="p-1" href="#simple-list-item-1">Item 1</a>
+      <a class="p-1" href="#simple-list-item-2">Item 2</a>
+      <a class="p-1" href="#simple-list-item-3">Item 3</a>
+      <a class="p-1" href="#simple-list-item-4">Item 4</a>
+      <a class="p-1" href="#simple-list-item-5">Item 5</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="item-1">Item 1</h4>
+      <p>...</p>
+      <h4 id="item-2">Item 2</h4>
+      <p>...</p>
+      <h4 id="item-3">Item 3</h4>
+      <p>...</p>
+      <h4 id="item-4">Item 4</h4>
+      <p>...</p>
+    </div>
+  </div>
 </div>
 ```
 
@@ -379,10 +389,10 @@ To keep backwards compatibility, we will continue to parse a given `offset` to `
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `refresh` | When adding or removing elements in the DOM, you'll need to call the refresh method. |
 | `dispose` | Destroys an element's scrollspy. (Removes stored data on the DOM element) |
 | `getInstance` | *Static* method to get the scrollspy instance associated with a DOM element |
 | `getOrCreateInstance` | *Static* method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn't initialized. |
+| `refresh` | When adding or removing elements in the DOM, you'll need to call the refresh method. |
 {{< /bs-table >}}
 
 Here's an example using the refresh method:
