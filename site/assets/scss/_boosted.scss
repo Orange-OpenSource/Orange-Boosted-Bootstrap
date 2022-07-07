@@ -22,8 +22,7 @@ body {
   height: 25em;
   font-size: 36%; // 1
   box-shadow: -2em 2em $gray-600, -4em 4em $gray-300;
-  transform: rotateX(50deg) rotateY(0deg) rotateZ(-45deg);
-  scale: .7;
+  transform: rotateX(50deg) rotateY(0deg) rotateZ(-45deg) scale(.7);
 
   @include media-breakpoint-up(sm) {
     font-size: xx-small;
