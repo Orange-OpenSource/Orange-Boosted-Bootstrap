@@ -25,6 +25,8 @@
       description: "List of all card variants (content and design)."
     - name: Stickers
       description: "List of all sticker variants."
+    - name: Tags
+      description: "Some tags use cases from links to filter."
     - name: Title bars
       description: "Orange branded title bars to introduce titles."
 #     - name: Album
