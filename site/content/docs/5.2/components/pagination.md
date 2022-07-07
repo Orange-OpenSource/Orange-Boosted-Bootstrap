@@ -124,7 +124,7 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 {{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item disabled"><a class="page-link" aria-label="Previous"></a></li>
+    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
