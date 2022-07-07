@@ -190,7 +190,7 @@
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
   --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-active-color: #{$primary}; // Boosted mod
+  --#{$prefix}btn-active-color: var(--#{$prefix}btn-hover-color); // Boosted mod
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
