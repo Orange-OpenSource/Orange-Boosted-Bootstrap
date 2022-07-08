@@ -2,14 +2,4 @@
 // Footer
 //
 
-.bd-footer {
-  // Boosted mod
-  .bd-footer-info {
-    border-top: var(--#{$prefix}accordion-border-color) solid var(--#{$prefix}accordion-border-width);
-
-    @include media-breakpoint-up(lg) {
-      border-top: none;
-    }
-  }
-  // End mod
-}
+// Boosted mod: no .bd-footer
