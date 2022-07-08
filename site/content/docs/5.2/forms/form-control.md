@@ -25,10 +25,10 @@ toc: true
 
 Set heights using classes like `.form-control-lg`.
 
-<!-- Boosted mod: no .form-control-sm -->
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
 ## Disabled
@@ -97,6 +97,10 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 <div class="mb-3">
   <label for="formFileDisabled" class="form-label">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
+</div>
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
 </div>
 <div>
   <label for="formFileLg" class="form-label">Large file input example</label>

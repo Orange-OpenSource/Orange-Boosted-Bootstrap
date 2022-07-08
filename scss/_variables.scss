@@ -1018,7 +1018,7 @@ $input-height-inner-half:               $spacer !default; // Boosted mod
 $input-height-inner-quarter:            map-get($spacers, 2) !default; // Boosted mod
 
 $input-height:                          2.5rem !default;
-$input-height-sm:                       2rem !default;
+$input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
@@ -1138,7 +1138,7 @@ $form-select-box-shadow:          $box-shadow-inset !default;
 $form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
 $form-select-focus-box-shadow:    null !default;
 
-$form-select-padding-y-sm:        $input-padding-y-sm !default;
+$form-select-padding-y-sm:        add($input-padding-y-sm, 1px) !default; // Boosted mod
 $form-select-padding-x-sm:        $input-padding-x-sm !default;
 $form-select-font-size-sm:        $input-font-size-sm !default;
 $form-select-border-radius-sm:    $input-border-radius-sm !default;

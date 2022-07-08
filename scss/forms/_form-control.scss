@@ -138,12 +138,13 @@
 .form-control-sm {
   min-height: $input-height-sm;
   padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // Boosted mod
+  line-height: $line-height-sm; // Boosted mod
   @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 
   &::file-selector-button {
     padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // Boosted mod
-    margin: (-$input-padding-y-sm) (-$input-padding-x-sm);
+    margin: add(-$input-padding-y-sm, -1px) (-$input-padding-x-sm) add(-$input-padding-y-sm, -3px); // Boosted mod
     margin-inline-end: $input-padding-x-sm;
   }
 }
