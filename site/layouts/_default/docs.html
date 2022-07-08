@@ -21,8 +21,8 @@
           </a>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
-        <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-        {{ partial "ads" . }}
+        <p class="bd-lead mt-2">{{ .Page.Params.Description | markdownify }}</p>
+        <!-- Boosted mod: No ads -->
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
