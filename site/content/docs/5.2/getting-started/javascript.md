@@ -24,7 +24,11 @@ A better alternative for those using this type of frameworks is to use a framewo
 
 ## Using Boosted as a module
 
-We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in your browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
+{{< callout >}}
+**Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
+{{< /callout >}}
+
+We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
 
 ```html
 <script type="module">
@@ -35,11 +39,50 @@ We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.es
 </script>
 ```
 
-{{< callout warning >}}
-## Incompatible plugins
+Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'boosted.esm.min.js'` instead of `'boosted'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
 
-Due to browser limitations, some of our plugins, namely Dropdown, Tooltip and Popover plugins, cannot be used in a `<script>` tag with `module` type because they depend on Popper. For more information about the issue see [here](https://v8.dev/features/modules#specifiers).
-{{< /callout >}}
+<!-- eslint-skip -->
+```js
+import * as Popper from "@popperjs/core"
+```
+
+If you try this as-is, you'll see an error in the console like the following:
+
+```text
+Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".
+```
+
+To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for Boosted and Popper:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+    <title>Hello, modularity!</title>
+  </head>
+  <body>
+    <h1>Hello, modularity!</h1>
+    <button id="popoverButton" type="button" class="btn btn-primary btn-lg" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button>
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "{{< param "cdn.popper" >}}",
+        "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as boosted from 'boosted'
+      new boosted.Popover(document.getElementById('popoverButton'))
+    </script>
+  </body>
+</html>
+```
 
 ## Dependencies
 
