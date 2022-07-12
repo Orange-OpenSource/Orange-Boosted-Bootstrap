@@ -43,7 +43,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-{{< example >}}
+{{< example js_snippet="true" >}}
 <div id="liveAlertPlaceholder"></div>
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
 {{< /example >}}
