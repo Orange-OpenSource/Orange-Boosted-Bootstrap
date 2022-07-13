@@ -6,6 +6,13 @@ group: components
 toc: true
 ---
 
+{{< callout warning >}}
+### Internet Explorer support dropped
+
+From Boosted 4.6.2, our Swiper dependency version is 5.0+ due to a security issue in 4.5.1.
+Unfortunately Internet Explorer support was dropped from in Swiper 5.0.
+{{< /callout warning >}}
+
 ## How it works
 
 This carousel is based on [Swiper](https://swiperjs.com/) which provides touch support, extended setup and works great on mobile devices.
