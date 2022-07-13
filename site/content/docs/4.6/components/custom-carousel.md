@@ -13,7 +13,7 @@ This carousel is based on [Swiper](https://swiperjs.com/) which provides touch s
 ## Demo
 
 {{< example >}}
-<div class="swiper-container">
+<div class="swiper swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide" id="slide1">
       <div class="card">

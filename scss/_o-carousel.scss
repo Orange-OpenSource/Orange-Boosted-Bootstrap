@@ -6,7 +6,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: subtract(50%, 10px) !important;
+  top: subtract(50%, 20px) !important;
   bottom: 0;
   z-index: 1;
   display: inline-block;
@@ -49,6 +49,10 @@
   /* rtl:raw:
   transform: rotate(180deg);
   */
+
+  &::after {
+    display: none;
+  }
 }
 
 .swiper-button-next {
@@ -57,6 +61,10 @@
 
   /* rtl:remove */
   transform: rotate(180deg);
+
+  &::after {
+    display: none;
+  }
 }
 
 .swiper-container {
