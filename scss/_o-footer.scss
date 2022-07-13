@@ -20,7 +20,7 @@
 
   .nav-link {
     align-items: center;
-    padding: $nav-link-padding-y / 2 $nav-link-padding-x $nav-link-padding-y / 2 0;
+    padding: $nav-link-padding-y / 2 $nav-link-padding-x / 2;
 
     &:hover,
     &:focus {
@@ -31,6 +31,10 @@
       margin-right: map-get($spacers, 1);
       font-size: $h2-font-size;
     }
+  }
+
+  .nav {
+    margin: 0 $nav-link-padding-x / -2;
   }
 }
 

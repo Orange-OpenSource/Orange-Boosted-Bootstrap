@@ -190,14 +190,21 @@ fieldset:disabled a.btn {
     }
 
     &,
-    &.btn-inverse:active {
+    &.btn-inverse:active,
+    &.btn-inverse.active {
       background-color: $white;
       background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
+    }
+
+    &.btn-inverse:active,
+    &.btn-inverse.active {
+      border-color: $white;
     }
 
     &:hover,
     &:focus,
     &:active,
+    &.active,
     &.btn-inverse {
       background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
       border-color: $white;
@@ -215,7 +222,8 @@ fieldset:disabled a.btn {
       outline-color: icon-conf($network, "color");
     }
 
-    &:active {
+    &:active,
+    &.active {
       background-color: $black;
       border-color: $black;
       outline-color: $black;
