@@ -11,7 +11,7 @@ toc: true
 
 From Boosted 4.6.2, our Swiper dependency version is 5.0+ due to a security issue in 4.5.1.
 Unfortunately Internet Explorer support was dropped from in Swiper 5.0.
-{{< /callout warning >}}
+{{< /callout >}}
 
 ## How it works
 
