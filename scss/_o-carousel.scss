@@ -5,8 +5,6 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  position: absolute;
-  top: subtract(50%, 20px) !important;
   bottom: 0;
   z-index: 1;
   display: inline-block;
