@@ -24,12 +24,12 @@ Because Boosted's components are purposely designed to be fairly generic, author
 
 ### Color contrast
 
-<!-- Boosted mod -->
-Some colors that currently make up [Boosted's default palette]({{< docsref "/about/brand#color-palette" >}}) —used throughout the framework for things such as button variations, alert variations, form validation indicators— may lead to *insufficient* color contrast.
+Some combinations of colors that currently make up [Boosted's default palette]({{< docsref "/about/brand#color-palette" >}})—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)), particularly when used against a light background. Authors are encouraged to test their specific uses of color and, where necessary, manually modify/extend these default colors to ensure adequate color contrast ratios.
 
+<!-- Boosted mod -->
 #### Ensuring contrasts
 
-Each of the text colors shown are combined with background colors from the Orange digital palette in order to meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+Each of the text colors shown are combined with background colors from the Orange digital palette in order to meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 Please note that contrasts are locked when using [`.text-*` and `.bg-*` utilities]({{< docsref "/utilities/colors" >}}), to ensure sufficient contrasts.
 
 <div class="container">
