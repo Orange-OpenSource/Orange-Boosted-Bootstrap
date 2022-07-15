@@ -97,9 +97,11 @@
   // Checks & Radios
   // -------------------------------
   // Indeterminate checkbox example in docs and StackBlitz
-  document.querySelectorAll('.bd-example-indeterminate')
-    .forEach(example => {
-      example.querySelector('[type="checkbox"]').indeterminate = true
+  document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')
+    .forEach(checkbox => {
+      if (checkbox.id.includes('Indeterminate')) {
+        checkbox.indeterminate = true
+      }
     })
 
   // -------------------------------

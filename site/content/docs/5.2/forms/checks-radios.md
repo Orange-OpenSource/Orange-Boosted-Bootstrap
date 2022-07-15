@@ -53,7 +53,7 @@ Add the `disabled` attribute and the associated `<label>`s are automatically sty
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
   <label class="form-check-label" for="flexCheckIndeterminateDisabled">
-    Indeterminate checkbox
+    Disabled indeterminate checkbox
   </label>
 </div>
 <div class="form-check">
