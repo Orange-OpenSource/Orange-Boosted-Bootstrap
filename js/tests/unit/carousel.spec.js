@@ -583,14 +583,14 @@ describe('Carousel', () => {
 
       const carouselEl = fixtureEl.querySelector('div')
 
-      const spy = spyOn(Carousel.prototype, '_addTouchEventListeners')
+      spyOn(Carousel.prototype, '_addTouchEventListeners')
 
       // Headless browser does not support touch events, so need to fake it
       // to test that touch events are add properly.
       document.documentElement.ontouchstart = noop
       const carousel = new Carousel(carouselEl)
 
-      expect(spy).toHaveBeenCalled()
+      expect(carousel._addTouchEventListeners).toHaveBeenCalled()
     })
 
     it('should allow swiperight and call _slide (prev) with pointer events', () => {
@@ -1034,11 +1034,11 @@ describe('Carousel', () => {
       const spy = spyOn(carousel, 'cycle')
 
       carousel.next()
-      expect(carousel.cycle).not.toHaveBeenCalled()
+      expect(spy).not.toHaveBeenCalled()
 
       carousel.cycle()
       carousel.next()
-      expect(carousel.cycle).toHaveBeenCalled()
+      expect(spy).toHaveBeenCalled()
     })
 
     it('should update indicators if present', () => {
