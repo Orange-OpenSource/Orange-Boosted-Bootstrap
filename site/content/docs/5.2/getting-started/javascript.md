@@ -10,7 +10,7 @@ toc: true
 
 Plugins can be included individually (using Boosted's individual `js/dist/*.js`), or all at once using `boosted.js` or the minified `boosted.min.js` (don't include both).
 
-If you use a bundler (Webpack, Rollup...), you can use `/js/dist/*.js` files which are UMD ready.
+If you use a bundler (Webpack, Parcel, Vite...), you can use `/js/dist/*.js` files which are UMD ready.
 
 ## Usage with JavaScript frameworks
 
