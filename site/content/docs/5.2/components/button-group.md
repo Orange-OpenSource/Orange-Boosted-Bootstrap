@@ -166,10 +166,10 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
@@ -198,10 +198,10 @@ Make a set of buttons appear vertically stacked rather than horizontally.
   <button type="button" class="btn btn-secondary">Button</button>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
-    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
@@ -210,30 +210,30 @@ Make a set of buttons appear vertically stacked rather than horizontally.
   <button type="button" class="btn btn-secondary">Button</button>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
-    <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
   </div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
-    <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
   </div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
-    <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>

@@ -11,10 +11,10 @@
 {{- end }}
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none">Boosted</span> v{{ .Site.Params.docs_version }}
   </a>
-  <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bd-versions">
+  <ul class="dropdown-menu dropdown-menu-end position-absolute">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item current" aria-current="true" href="{{ if .IsHome }}/{{ else }}/docs/{{ .Site.Params.docs_version }}/{{ $versions_link }}{{ end }}">
