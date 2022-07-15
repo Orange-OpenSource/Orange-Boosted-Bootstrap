@@ -305,4 +305,3 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
 defineJQueryPlugin(Tab)
 
 export default Tab
- 

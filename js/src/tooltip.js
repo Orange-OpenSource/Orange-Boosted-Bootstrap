@@ -651,4 +651,3 @@ class Tooltip extends BaseComponent {
 defineJQueryPlugin(Tooltip)
 
 export default Tooltip
- 
