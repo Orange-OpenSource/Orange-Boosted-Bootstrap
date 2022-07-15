@@ -118,5 +118,5 @@
   color: var(--#{$prefix}tooltip-color);
   // Boosted mod: no `text-align: center`
   background-color: var(--#{$prefix}tooltip-bg);
-  border-radius: var(--#{$prefix}tooltip-border-radius, 0); // stylelint-disable-line property-disallowed-list
+  @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }
