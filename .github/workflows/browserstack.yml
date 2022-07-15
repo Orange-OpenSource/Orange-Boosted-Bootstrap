@@ -1,11 +1,6 @@
 name: BrowserStack
 on:
   push:
-    paths:
-      - 'js/**'
-    branches:
-      - main
-      - v4-dev
   workflow_dispatch:
 
 env:
