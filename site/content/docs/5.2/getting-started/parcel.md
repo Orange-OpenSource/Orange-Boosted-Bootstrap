@@ -149,7 +149,7 @@ Importing Boosted into Parcel requires two imports, one into our `styles.scss` a
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
 
-3. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this.
+3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted">
 
