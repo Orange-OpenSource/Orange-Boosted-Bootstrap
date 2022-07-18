@@ -63,77 +63,79 @@ Boosted's grid system can adapt across all six default breakpoints, and any brea
 
 As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
 
-<table class="table mb-4">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">
-        xs<br>
-        <span class="fw-normal">&lt;480px</span>
-      </th>
-      <th scope="col">
-        sm<br>
-        <span class="fw-normal">&ge;480px</span>
-      </th>
-      <th scope="col">
-        md<br>
-        <span class="fw-normal">&ge;768px</span>
-      </th>
-      <th scope="col">
-        lg<br>
-        <span class="fw-normal">&ge;1024px</span>
-      </th>
-      <th scope="col">
-        xl<br>
-        <span class="fw-normal">&ge;1280px</span>
-      </th>
-      <th scope="col">
-        xxl<br>
-        <span class="fw-normal">&ge;1440px</span>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-      <td>320px</td>
-      <td>480px</td>
-      <td>768px</td>
-      <td>1024px</td>
-      <td>1280px</td>
-      <td>1440px</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Class prefix</th>
-      <td><code>.col-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-      <td><code>.col-xl-</code></td>
-      <td><code>.col-xxl-</code></td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
-      <td colspan="6">12</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">1.5rem (.75rem on left and right)</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Custom gutters</th>
-      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="6"><a href="#nesting">Yes</a></td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table mb-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">
+          xs<br>
+          <span class="fw-normal">&lt;480px</span>
+        </th>
+        <th scope="col">
+          sm<br>
+          <span class="fw-normal">&ge;480px</span>
+        </th>
+        <th scope="col">
+          md<br>
+          <span class="fw-normal">&ge;768px</span>
+        </th>
+        <th scope="col">
+          lg<br>
+          <span class="fw-normal">&ge;1024px</span>
+        </th>
+        <th scope="col">
+          xl<br>
+          <span class="fw-normal">&ge;1280px</span>
+        </th>
+        <th scope="col">
+          xxl<br>
+          <span class="fw-normal">&ge;1440px</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+        <td>320px</td>
+        <td>480px</td>
+        <td>768px</td>
+        <td>1024px</td>
+        <td>1280px</td>
+        <td>1440px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Class prefix</th>
+        <td><code>.col-</code></td>
+        <td><code>.col-sm-</code></td>
+        <td><code>.col-md-</code></td>
+        <td><code>.col-lg-</code></td>
+        <td><code>.col-xl-</code></td>
+        <td><code>.col-xxl-</code></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># of columns</th>
+        <td colspan="6">12</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Gutter width</th>
+        <td colspan="6">1.5rem (.75rem on left and right)</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Custom gutters</th>
+        <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Nestable</th>
+        <td colspan="6"><a href="#nesting">Yes</a></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Column ordering</th>
+        <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Auto-layout columns
 

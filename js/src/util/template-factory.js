@@ -17,23 +17,23 @@ import Config from './config'
 const NAME = 'TemplateFactory'
 
 const Default = {
-  extraClass: '',
-  template: '<div></div>',
+  allowList: DefaultAllowlist,
   content: {}, // { selector : text ,  selector2 : text2 , }
+  extraClass: '',
   html: false,
   sanitize: true,
   sanitizeFn: null,
-  allowList: DefaultAllowlist
+  template: '<div></div>'
 }
 
 const DefaultType = {
-  extraClass: '(string|function)',
-  template: 'string',
+  allowList: 'object',
   content: 'object',
+  extraClass: '(string|function)',
   html: 'boolean',
   sanitize: 'boolean',
   sanitizeFn: '(null|function)',
-  allowList: 'object'
+  template: 'string'
 }
 
 const DefaultContentType = {
