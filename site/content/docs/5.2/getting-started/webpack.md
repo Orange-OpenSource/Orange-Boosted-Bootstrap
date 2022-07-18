@@ -12,6 +12,7 @@ thumbnail: webpack.png
 </div>
 
 {{< callout >}}
+
 **Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
 {{< /callout >}}
 
