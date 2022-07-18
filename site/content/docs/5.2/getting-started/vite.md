@@ -6,7 +6,9 @@ group: getting-started
 toc: true
 ---
 
-<img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/boosted-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/boosted-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/boosted-vite.png" width="2000" height="1000" alt="">
+<div class="d-flex justify-content-center">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.png" alt="Vite logo" loading="lazy">
+</div>
 
 {{< callout >}}
 **Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) for live editing.
