@@ -492,7 +492,7 @@ Have a bunch of buttons that all trigger the same modal with slightly different 
 
 Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
@@ -858,7 +858,7 @@ Activate a modal without writing JavaScript. Set `data-bs-toggle="modal"` on a c
 {{% js-dismiss "modal" %}}
 
 {{< callout warning >}}
-While both ways to dismiss a modal are supported, keep in mind that dismissing from outside a modal does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
+While both ways to dismiss a modal are supported, keep in mind that dismissing from outside a modal does not match the [ARIA Authoring Practices Guide dialog (modal) pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/). Do this at your own risk.
 {{< /callout >}}
 
 ### Via JavaScript
@@ -881,8 +881,8 @@ const myModalAlternative = new boosted.Modal('#myModal', options)
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `backdrop` | boolean, `'static'` | `true` | Includes a modal-backdrop element. Alternatively, specify `static` for a backdrop which doesn't close the modal when clicked. |
-| `keyboard` | boolean | `true` | Closes the modal when escape key is pressed. |
 | `focus` | boolean | `true` | Puts the focus on the modal when initialized. |
+| `keyboard` | boolean | `true` | Closes the modal when escape key is pressed. |
 {{< /bs-table >}}
 
 ### Methods
@@ -904,13 +904,13 @@ const myModal = new boosted.Modal('#myModal', {
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |
-| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
-| `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
-| `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
+| `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
 | `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
 | `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
+| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)` |
+| `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |
 {{< /bs-table >}}
 
 ### Events
@@ -920,11 +920,11 @@ Boosted's modal class exposes a few events for hooking into modal functionality.
 {{< bs-table >}}
 | Event | Description |
 | --- | --- |
+| `hidden.bs.modal` | This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete). |
+| `hide.bs.modal` | This event is fired immediately when the `hide` instance method has been called. |
+| `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
 | `show.bs.modal` | This event fires immediately when the `show` instance method is called. If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |
 | `shown.bs.modal` | This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |
-| `hide.bs.modal` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.modal` | This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
 {{< /bs-table >}}
 
 ```js

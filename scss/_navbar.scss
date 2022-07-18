@@ -156,6 +156,8 @@
   // scss-docs-start navbar-nav-css-vars
   --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
   --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);

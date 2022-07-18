@@ -25,7 +25,7 @@ jobs:
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run cspell
-        uses: streetsidesoftware/cspell-action@v1
+        uses: streetsidesoftware/cspell-action@v2
         with:
           config: ".cspell.json"
           files: "**/*.md"
