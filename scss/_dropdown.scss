@@ -71,7 +71,7 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
   --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
   --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
-  --#{$prefix}dropdown-item-font-weight-bold: #{$font-weight-bold}; // Boosted mod
+  --#{$prefix}dropdown-item-font-weight: #{$font-weight-bold}; // Boosted mod
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -202,7 +202,7 @@
   width: 100%; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   clear: both;
-  font-weight: var(--#{$prefix}dropdown-item-font-weight-bold); // Boosted mod
+  font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
