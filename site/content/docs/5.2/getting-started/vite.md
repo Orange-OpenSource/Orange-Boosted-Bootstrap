@@ -192,7 +192,7 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-boosted.png" alt="Vite dev server running with Boosted">
 
-   Now you can start adding any Boosted components you want to use. Be sure to [checkout the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}
