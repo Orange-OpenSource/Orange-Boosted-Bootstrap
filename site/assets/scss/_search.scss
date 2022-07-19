@@ -10,7 +10,7 @@
 .DocSearch-Container {
   --docsearch-hit-shadow: none;
 
-  z-index: 1100;
+  z-index: 2000; // Make sure to be over all components showcased in the documentation
 }
 
 .DocSearch-Button {

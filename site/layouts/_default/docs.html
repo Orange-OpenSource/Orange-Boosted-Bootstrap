@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
     <aside class="bd-sidebar">
-      <div class="offcanvas-lg offcanvas-start" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
@@ -21,8 +21,8 @@
           </a>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
-        <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-        {{ partial "ads" . }}
+        <p class="bd-lead mt-2">{{ .Page.Params.Description | markdownify }}</p>
+        <!-- Boosted mod: No ads -->
       </div>
 
       {{ if (eq .Page.Params.toc true) }}

@@ -32,20 +32,20 @@ Where *value* is one of:
 - `flex`
 - `inline-flex`
 
-The display values can be altered by changing the `$displays` variable and recompiling the SCSS.
+The display values can be altered by changing the `display` values defined in `$utilities` and recompiling the SCSS.
 
 The media queries affect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, and `xxl` screens.
 
 ## Examples
 
 {{< example >}}
-<div class="d-inline p-2 bg-primary">d-inline</div>
-<div class="d-inline p-2 bg-dark">d-inline</div>
+<div class="d-inline p-2 text-bg-primary">d-inline</div>
+<div class="d-inline p-2 text-bg-dark">d-inline</div>
 {{< /example >}}
 
 {{< example >}}
-<span class="d-block p-2 bg-primary">d-block</span>
-<span class="d-block p-2 bg-dark">d-block</span>
+<span class="d-block p-2 text-bg-primary">d-block</span>
+<span class="d-block p-2 text-bg-dark">d-block</span>
 {{< /example >}}
 
 ## Hiding elements

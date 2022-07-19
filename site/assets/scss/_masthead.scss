@@ -17,15 +17,22 @@
   }
 
   .highlight {
-    // Boosted mod
-    padding: .72rem 4rem .5rem 1rem;
-    line-height: 1.25;
+    width: 100%;
+    padding: .625rem 1rem; // Boosted mod
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     background-color: rgba(var(--bs-body-color-rgb), .075);
     @include border-radius(.5rem);
-    // End mod
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 4rem;
+    }
   }
   .btn-clipboard {
-    margin-top: .5rem;
+    position: absolute;
+    top: .3125rem; // Boosted mod
+    right: 0;
     background-color: transparent;
   }
 
