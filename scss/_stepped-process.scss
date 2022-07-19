@@ -6,7 +6,6 @@
   // scss-docs-start stepped-process-css-vars
   --#{$prefix}stepped-process-font-size: #{$stepped-process-font-size};
   --#{$prefix}stepped-process-font-weight: #{$stepped-process-font-weight};
-  --#{$prefix}stepped-process-max-items: #{$stepped-process-max-items};
   --#{$prefix}stepped-process-counter: #{$stepped-process-counter};
   --#{$prefix}stepped-process-item-padding-y: #{$step-item-padding};
   --#{$prefix}stepped-process-item-padding-x: 0;
@@ -124,7 +123,7 @@
 
 @for $i from 1 through $stepped-process-max-items {
   .stepped-process-item:nth-child(#{$i}) {
-    $index: subtract(var(--#{$prefix}stepped-process-max-items), $i);
+    $index: subtract($stepped-process-max-items, $i);
     z-index: if($index == 0, null, $index);
   }
 }
@@ -138,6 +137,6 @@
 
 @include media-breakpoint-between(sm, xl) {
   .stepped-process-item.active {
-    flex: calc(var(--#{$prefix}stepped-process-max-items) - 1); // stylelint-disable-line function-disallowed-list
+    flex: $stepped-process-max-items - 1;
   }
 }
