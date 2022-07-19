@@ -1973,15 +1973,15 @@ $stepped-process-max-items:   5 !default;
 $stepped-process-counter:     step !default; // Used as a counter name
 
 $step-item-padding:           .5rem !default;
+// fusv-disable
+$step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
+// fusv-enable
 $step-item-margin-end:        $border-width !default;
 $step-item-bg:                $black !default;
 $step-item-active-bg:         $primary !default;
 $step-item-next-bg:           $gray-400 !default;
 $step-item-shadow-size:       $border-width * 1.5 !default;
 $step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(-$step-item-shadow-size 0 0 $white) #{"*/"} !default;
-// fusv-disable
-$step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
-// fusv-enable
 
 $step-item-arrow-width:       1rem !default;
 $step-item-arrow-shape:       polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, $border-width 50%, 100% 100%) #{"*/"} !default; // Used in clip-path
