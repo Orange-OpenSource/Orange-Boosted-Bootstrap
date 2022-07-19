@@ -6,24 +6,6 @@
 (function () {
   'use strict'
 
-  document.addEventListener(
-    'googletagmanager_added',
-    () => {
-      const ask = document.querySelector(
-        '#googletagmanagerLine .tarteaucitronAsk'
-      )
-      const choiceEvent =
-        'tarteaucitron.userInterface.respond(document.getElementById(\'googletagmanagerAllowed\'),document.getElementById(\'googletagmanagerAllowed\').checked);'
-      const toggle = document
-        .createRange()
-        .createContextualFragment(
-          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!googletagmanager=true' ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
-        )
-      ask.innerHTML = ''
-      ask.append(toggle)
-    },
-    { once: true }
-  )
 })()
 
 if (typeof tarteaucitron !== 'undefined') {
