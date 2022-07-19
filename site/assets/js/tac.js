@@ -88,6 +88,7 @@ if (typeof tarteaucitron !== 'undefined') {
     hashtag: '#cookie-consent',
     cookieName: 'cookie-consent',
     orientation: 'bottom',
+    groupServices: false,
     bodyPosition: 'top',
     cookieslist: true,
     highPrivacy: false,
