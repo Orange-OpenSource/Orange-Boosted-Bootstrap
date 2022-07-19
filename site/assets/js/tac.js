@@ -95,7 +95,6 @@ if (typeof tarteaucitron !== 'undefined') {
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
-    useExternalJs: false,
     mandatory: false
   })
 
