@@ -22,8 +22,8 @@ if (typeof tarteaucitron !== 'undefined') {
     mandatory: false
   })
 
-  tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+  // tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+  // (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
   dataLayer = [{
     site_name: 'accessibility-boosted',
     phase: 'prod',
