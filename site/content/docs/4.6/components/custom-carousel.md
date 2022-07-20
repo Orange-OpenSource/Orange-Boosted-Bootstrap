@@ -21,7 +21,7 @@ This carousel is based on [Swiper](https://swiperjs.com/) which provides touch s
 ## Demo
 
 {{< example >}}
-<div class="swiper swiper-container">
+<div class="swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" id="slide1">
       <div class="card">
@@ -96,7 +96,7 @@ Make sure to add the vendor <abbr title="Cascading Stylesheet">CSS</abbr> and <a
 Here is the recommended setup for an accessible carousel:
 
 ```javascript
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.swiper', {
     autoplay: {
     delay: 3500,
   },
@@ -136,7 +136,7 @@ Find below an example for our custom button
 
 ```javascript
   $("#swiperPlayButton").click(function () {
-    var MySwiper = document.querySelector('.swiper-container').swiper;
+    var MySwiper = document.querySelector('.swiper').swiper;
     if ($("span",this).hasClass("icon-Pause")) {
       MySwiper.autoplay.stop();
       $(this).attr("aria-label", "Play Carousel");

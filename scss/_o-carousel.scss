@@ -47,10 +47,6 @@
   /* rtl:raw:
   transform: rotate(180deg);
   */
-
-  &::after {
-    display: none;
-  }
 }
 
 .swiper-button-next {
@@ -59,13 +55,9 @@
 
   /* rtl:remove */
   transform: rotate(180deg);
-
-  &::after {
-    display: none;
-  }
 }
 
-.swiper-container {
+.swiper {
   width: 100% !important;
   margin-bottom: map-get($spacers, 4);
   overflow: hidden;
@@ -138,7 +130,7 @@
     display: none;
   }
 
-  .swiper-container {
+  .swiper {
     overflow-x: hidden;
     overflow-y: visible;/* used for displaying pagination outside of container */
   }
