@@ -26,10 +26,10 @@
 
 <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
-<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU" crossorigin="anonymous">
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ" crossorigin="anonymous">
 
 <!-- Documentation extras -->
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -132,12 +132,12 @@
           <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
         </li>
       </ul>
-      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
-            v4.6
+      <ul class="navbar-nav flex-row ml-md-auto">
+        <li class="nav-item dropdown border-top">
+          <button class="btn btn-link btn-inverse nav-link dropdown-toggle mr-md-2" data-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only">Boosted&nbsp;</span> v4.6 <span class="sr-only">(switch to other versions)</span>
           </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <div class="dropdown-menu dropdown-menu-md-right mt-1 mt-md-0">
             <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.x)</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
@@ -145,9 +145,9 @@
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/5.1/">5.1.x</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
           </div>
         </li>
@@ -295,13 +295,13 @@
           <p class="bd-lead">Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.</p>
           
           <h2 id="compiled-css-and-js">Compiled CSS and JS</h2>
-<p>Download ready-to-use compiled code for <strong>Boosted v4.6.1</strong> to easily drop into your project, which includes:</p>
+<p>Download ready-to-use compiled code for <strong>Boosted v4.6.2</strong> to easily drop into your project, which includes:</p>
 <ul>
 <li>Compiled and minified CSS bundles (see <a href="/docs/4.6/getting-started/contents/#css-files">CSS files comparison</a>)</li>
 <li>Compiled and minified JavaScript plugins (see <a href="/docs/4.6/getting-started/contents/#js-files">JS files comparison</a>)</li>
 </ul>
 <p>This doesn&rsquo;t include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper).</p>
-<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.1/boosted-4.6.1-dist.zip" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download boosted'});">Download Boosted</a></p>
+<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.2/boosted-4.6.2-dist.zip" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download boosted'});">Download Boosted</a></p>
 <h2 id="source-files">Source files</h2>
 <p>Compile Boosted with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:</p>
 <ul>
@@ -309,26 +309,26 @@
 <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> for CSS vendor prefixing</li>
 </ul>
 <p>Should you require our full set of <a href="/docs/4.6/getting-started/build-tools/#tooling-setup">build tools</a>, they are included for developing Boosted and its docs, but they&rsquo;re likely unsuitable for your own purposes.</p>
-<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.1.zip" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a></p>
+<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.2.zip" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a></p>
 <h2 id="examples">Examples</h2>
 <p>If you want to download and examine our <a href="/docs/4.6/examples/">examples</a>, you can grab the already built examples:</p>
-<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.1/boosted-4.6.1-examples.zip" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples'});">Download Examples</a></p>
+<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.2/boosted-4.6.2-examples.zip" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples'});">Download Examples</a></p>
 <h2 id="jsdelivr">jsDelivr</h2>
 <p>Skip the download with <a href="https://www.jsdelivr.com/">jsDelivr</a> to deliver cached version of Boosted&rsquo;s compiled CSS and JS to your project.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><p>If you&rsquo;re using our compiled JavaScript and prefer to include Popper.js separately, add Popper.js before our JS, via a CDN preferably.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- In your &lt;head&gt; --&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- Just before &lt;/body&gt; --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-llVNZVxgabZyf5ZeGs3m2QcNbEE0UK1PBKM6ZoJmWK5BuBpqZUXpN1nWXd0SrAC5&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nA6MbWePtuF/n0KO3a9RpSnTs22PIP2h8xjOsh9jX6wtZrXvD4VIwNkqCKlc9myo&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><div class="bd-callout bd-callout-info">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>If you&rsquo;re using our compiled JavaScript and prefer to include Popper.js separately, add Popper.js before our JS, via a CDN preferably.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- In your &lt;head&gt; --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Just before &lt;/body&gt; --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@8.3.1/swiper-bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-fz/+nLUpAlHOqN8kbJpfALeiJedm/CSmBrZrxbHAq17ik0fBZxQchA1uCsxAWVlt&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9FuTk2FQCe3cMtjQJ7M96wm1t2cRlWSQ6EoxCMXNQmEVpR66qASkSXRKfPuTeiTC&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="bd-callout bd-callout-info">
 <h3 id="resource-hints">Resource Hints</h3>
 <p>Make sure to use <a href="https://www.w3.org/TR/resource-hints/#preconnect"><code>preconnect</code> resource hint</a> where appropriate (<strong>only</strong> when given URL <strong>will</strong> be used).
 </div>
@@ -337,8 +337,8 @@
 <p>Pull in Boosted&rsquo;s <strong>source files</strong> into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will <strong>require a <a href="/docs/4.6/getting-started/build-tools/#sass">Sass compiler</a> and <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></strong> for a setup that matches our official compiled versions.</p>
 <h3 id="npm">npm</h3>
 <p>Install Boosted in your Node.js powered apps with <a href="https://www.npmjs.com/package/boosted">the npm package</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm install boosted
-</code></pre></div><p><code>require('boosted')</code> will load all of Boosted&rsquo;s jQuery plugins onto the jQuery object. The <code>boosted</code> module itself does not export anything. You can manually load Boosted&rsquo;s jQuery plugins individually by loading the <code>/js/*.js</code> files under the package&rsquo;s top-level directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install boosted
+</span></span></code></pre></div><p><code>require('boosted')</code> will load all of Boosted&rsquo;s jQuery plugins onto the jQuery object. The <code>boosted</code> module itself does not export anything. You can manually load Boosted&rsquo;s jQuery plugins individually by loading the <code>/js/*.js</code> files under the package&rsquo;s top-level directory.</p>
 <p>Boosted&rsquo;s <code>package.json</code> contains some additional metadata under the following keys:</p>
 <ul>
 <li><code>sass</code> - path to Boosted&rsquo;s main <a href="https://sass-lang.com/">Sass</a> source file</li>
@@ -351,15 +351,15 @@
 
 <h3 id="yarn">yarn</h3>
 <p>Install Boosted in your Node.js powered apps with <a href="https://yarnpkg.com/en/package/yarn">the yarn package</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">yarn add boosted
-</code></pre></div><h3 id="composer">Composer</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add boosted
+</span></span></code></pre></div><h3 id="composer">Composer</h3>
 <p>You can also install and manage Boosted&rsquo;s Sass and JavaScript using <a href="https://getcomposer.org/">Composer</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">composer require orange-opensource/orange-boosted-bootstrap:4.6.1
-</code></pre></div><h3 id="nuget">NuGet</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">composer require orange-opensource/orange-boosted-bootstrap:4.6.2
+</span></span></code></pre></div><h3 id="nuget">NuGet</h3>
 <p>If you develop in .NET, you can also install and manage Boosted&rsquo;s <a href="https://www.nuget.org/packages/boosted/">CSS</a> or <a href="https://www.nuget.org/packages/boosted.sass/">Sass</a> and JavaScript using <a href="https://www.nuget.org/">NuGet</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Install-Package</span> <span class="n">boosted</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Install-Package</span> <span class="n">boosted</span><span class="p">.</span><span class="n">sass</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">boosted</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">boosted</span><span class="p">.</span><span class="n">sass</span>
+</span></span></code></pre></div>
         </main>
       </div>
     </div>
@@ -374,7 +374,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

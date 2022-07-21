@@ -26,10 +26,10 @@
 
 <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
-<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU" crossorigin="anonymous">
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ" crossorigin="anonymous">
 
 <!-- Documentation extras -->
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -132,12 +132,12 @@
           <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
         </li>
       </ul>
-      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
-            v4.6
+      <ul class="navbar-nav flex-row ml-md-auto">
+        <li class="nav-item dropdown border-top">
+          <button class="btn btn-link btn-inverse nav-link dropdown-toggle mr-md-2" data-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only">Boosted&nbsp;</span> v4.6 <span class="sr-only">(switch to other versions)</span>
           </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <div class="dropdown-menu dropdown-menu-md-right mt-1 mt-md-0">
             <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.x)</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
@@ -145,9 +145,9 @@
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/5.1/">5.1.x</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
           </div>
         </li>
@@ -333,70 +333,70 @@
 <p>Utilize our source Sass files to take advantage of variables, maps, mixins, and more when <a href="/docs/4.6/getting-started/build-tools/#sass">compiling Sass</a> using your own asset pipeline.</p>
 <h3 id="file-structure">File structure</h3>
 <p>Whenever possible, avoid modifying Boosted&rsquo;s core files. For Sass, that means creating your own stylesheet that imports Boosted so you can modify and extend it. Assuming you&rsquo;re using a package manager like npm, you&rsquo;ll have a file structure that looks like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">your-project/
-├── scss
-│   └── custom.scss
-└── node_modules/
-    └── boosted
-        ├── js
-        └── scss
-</code></pre></div><p>If you&rsquo;ve downloaded our source files and aren&rsquo;t using a package manager, you&rsquo;ll want to manually setup something similar to that structure, keeping Boosted&rsquo;s source files separate from your own.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">your-project/
-├── scss
-│   └── custom.scss
-└── boosted/
-    ├── js
-    └── scss
-</code></pre></div><h3 id="importing">Importing</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
+</span></span><span class="line"><span class="cl">├── scss
+</span></span><span class="line"><span class="cl">│   └── custom.scss
+</span></span><span class="line"><span class="cl">└── node_modules/
+</span></span><span class="line"><span class="cl">    └── boosted
+</span></span><span class="line"><span class="cl">        ├── js
+</span></span><span class="line"><span class="cl">        └── scss
+</span></span></code></pre></div><p>If you&rsquo;ve downloaded our source files and aren&rsquo;t using a package manager, you&rsquo;ll want to manually setup something similar to that structure, keeping Boosted&rsquo;s source files separate from your own.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
+</span></span><span class="line"><span class="cl">├── scss
+</span></span><span class="line"><span class="cl">│   └── custom.scss
+</span></span><span class="line"><span class="cl">└── boosted/
+</span></span><span class="line"><span class="cl">    ├── js
+</span></span><span class="line"><span class="cl">    └── scss
+</span></span></code></pre></div><h3 id="importing">Importing</h3>
 <p>In your <code>custom.scss</code>, you&rsquo;ll import Boosted&rsquo;s source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-</span><span class="c1">// Option A: Include all of Boosted
-</span><span class="c1"></span>
-<span class="c1">// Include any default variable overrides here (though functions won&#39;t be available)
-</span><span class="c1"></span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/boosted&#34;</span><span class="p">;</span>
-
-<span class="c1">// Then add additional custom code here
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-</span><span class="c1">// Option B: Include parts of Boosted
-</span><span class="c1"></span>
-<span class="c1">// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
-
-<span class="c1">// 2. Include any default variable overrides here
-</span><span class="c1"></span>
-<span class="c1">// 3. Include remainder of required Boosted stylesheets
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
-
-<span class="c1">// 4. Include any optional Boosted components as you like
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/images&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/code&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/grid&#34;</span><span class="p">;</span>
-</code></pre></div><p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code>custom.scss</code>. You can also start to add parts of Boosted under the <code>// Optional</code> section as needed. We suggest using the full import stack from our <code>boosted.scss</code> file as your starting point.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Custom.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Option A: Include all of Boosted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Include any default variable overrides here (though functions won&#39;t be available)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/boosted&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Then add additional custom code here
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Custom.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Option B: Include parts of Boosted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. Include any default variable overrides here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 3. Include remainder of required Boosted stylesheets
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 4. Include any optional Boosted components as you like
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/images&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/code&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/grid&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code>custom.scss</code>. You can also start to add parts of Boosted under the <code>// Optional</code> section as needed. We suggest using the full import stack from our <code>boosted.scss</code> file as your starting point.</p>
 <h3 id="variable-defaults">Variable defaults</h3>
 <p>Every Sass variable in Boosted includes the <code>!default</code> flag allowing you to override the variable&rsquo;s default value in your own Sass without modifying Boosted&rsquo;s source code. Copy and paste variables as needed, modify their values, and remove the <code>!default</code> flag. If a variable has already been assigned, then it won&rsquo;t be re-assigned by the default values in Boosted.</p>
 <p>You will find the complete list of Boosted&rsquo;s variables in <code>scss/_variables.scss</code>. Some variables are set to <code>null</code>, these variables don&rsquo;t output the property unless they are overridden in your configuration.</p>
 <p>Variable overrides must come after our functions, variables, and mixins are imported, but before the rest of the imports.</p>
 <p>Here&rsquo;s an example that changes the <code>background-color</code> and <code>color</code> for the <code>&lt;body&gt;</code> when importing and compiling Boosted via npm:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
-
-<span class="c1">// Default variable overrides
-</span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
-<span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
-
-<span class="c1">// Required
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
-
-<span class="c1">// Optional Boosted components here
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
-<span class="c1">// etc
-</span></code></pre></div><p>Repeat as necessary for any variable in Boosted, including the global options below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Default variable overrides
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Optional Boosted components here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// etc
+</span></span></span></code></pre></div><p>Repeat as necessary for any variable in Boosted, including the global options below.</p>
 <div class="bd-callout bd-callout-info">
 <h4 id="bootstrap-starter-project">Bootstrap starter project</h4>
 <p>Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstrap-npm-starter</a> template repository to see how to build and customize Bootstrap in your own npm project. Includes Sass compiler, Autoprefixer, Stylelint, PurgeCSS, and Bootstrap Icons.
@@ -407,80 +407,80 @@
 <p>Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making <em>removing</em> items from a map slightly more difficult.</p>
 <h4 id="modify-map">Modify map</h4>
 <p>To modify an existing color in our <code>$theme-colors</code> map, add the following to your custom Sass file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
-  <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="mh">#ff4136</span>
-<span class="p">);</span>
-</code></pre></div><h4 id="add-to-map">Add to map</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="mh">#ff4136</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><h4 id="add-to-map">Add to map</h4>
 <p>To add a new color to <code>$theme-colors</code>, add the new key and value:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#900</span>
-<span class="p">);</span>
-</code></pre></div><h4 id="remove-from-map">Remove from map</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#900</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><h4 id="remove-from-map">Remove from map</h4>
 <p>To remove colors from <code>$theme-colors</code>, or any other map, use <code>map-remove</code>. Be aware you must insert it between our requirements and options:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Required
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
-
-<span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;info&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
-
-<span class="c1">// Optional
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
-<span class="nc">...</span>
-</code></pre></div><h4 id="required-keys">Required keys</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;info&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Optional
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nc">...</span>
+</span></span></code></pre></div><h4 id="required-keys">Required keys</h4>
 <p>Boosted assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map&rsquo;s key is being used.</p>
 <p>For example, we use the <code>primary</code>, <code>success</code>, and <code>danger</code> keys from <code>$theme-colors</code> for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you&rsquo;ll need to modify the Sass code that makes use of those values.</p>
 <h3 id="functions">Functions</h3>
 <p>Boosted utilizes several Sass functions, but only a subset are applicable to general theming. We&rsquo;ve included three functions for getting values from the color maps:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@function</span><span class="nf"> color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;blue&#34;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">@function</span><span class="nf"> theme-color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;primary&#34;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">@function</span><span class="nf"> gray</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;100&#34;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$grays</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>These allow you to pick one color from a Sass map much like how you&rsquo;d use a color variable from v3.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">gray</span><span class="p">(</span><span class="s2">&#34;100&#34;</span><span class="p">);</span>
-  <span class="na">background-color</span><span class="o">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>We also have another function for getting a particular <em>level</em> of color from the <code>$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@function</span><span class="nf"> theme-color-level</span><span class="p">(</span><span class="nv">$color-name</span><span class="o">:</span> <span class="s2">&#34;primary&#34;</span><span class="o">,</span> <span class="nv">$level</span><span class="o">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nv">$color</span><span class="o">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$color-name</span><span class="p">);</span>
-  <span class="nv">$color-base</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$level</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="mh">#000</span><span class="o">,</span> <span class="mh">#fff</span><span class="p">);</span>
-  <span class="nv">$level</span><span class="o">:</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$level</span><span class="p">);</span>
-
-  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color-base</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$level</span> <span class="o">*</span> <span class="nv">$theme-color-interval</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>In practice, you&rsquo;d call the function and pass in two parameters: the name of the color from <code>$theme-colors</code> (e.g., primary or danger) and a numeric level.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="n">primary</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;blue&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> theme-color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;primary&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> gray</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">&#34;100&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$grays</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>These allow you to pick one color from a Sass map much like how you&rsquo;d use a color variable from v3.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">gray</span><span class="p">(</span><span class="s2">&#34;100&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>We also have another function for getting a particular <em>level</em> of color from the <code>$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> theme-color-level</span><span class="p">(</span><span class="nv">$color-name</span><span class="o">:</span> <span class="s2">&#34;primary&#34;</span><span class="o">,</span> <span class="nv">$level</span><span class="o">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$color</span><span class="o">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$color-name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$color-base</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$level</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="mh">#000</span><span class="o">,</span> <span class="mh">#fff</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$level</span><span class="o">:</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$level</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color-base</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$level</span> <span class="o">*</span> <span class="nv">$theme-color-interval</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In practice, you&rsquo;d call the function and pass in two parameters: the name of the color from <code>$theme-colors</code> (e.g., primary or danger) and a numeric level.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="n">primary</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.</p>
 <h4 id="color-contrast">Color contrast</h4>
 <p>An additional function we include in Boosted is the color contrast function, <code>color-yiq</code>. It utilizes the <a href="https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests">WCAG 2.0 algorithm</a> for calculating contrast thresholds based on <a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">relative luminance</a> in a <code>sRGB</code> colorspace to automatically return a light (<code>#fff</code>) or dark (<code>#000</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you&rsquo;re generating multiple classes.</p>
 <p>For example, to generate color swatches from our <code>$theme-colors</code> map:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-    <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>It can also be used for one-off contrast needs:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div><p>You can also specify a base color with our color map functions:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div><div class="bd-callout bd-callout-info">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>It can also be used for one-off contrast needs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>You can also specify a base color with our color map functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">&#34;dark&#34;</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><div class="bd-callout bd-callout-info">
 <h5 id="accessibility">Accessibility</h5>
 <p>In order to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 accessibility standards for color contrast</a>, authors <strong>must</strong> provide <a href="https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast">a contrast ratio of at least 4.5:1</a>, with very few exceptions.
 </div>
@@ -490,32 +490,32 @@
 <h4 id="add-and-subtract-functions">Add and Subtract functions</h4>
 <p>We use the <code>add</code> and <code>subtract</code> functions to wrap the CSS <code>calc</code> function. The primary purpose of these functions is to avoid errors when a &ldquo;unitless&rdquo; <code>0</code> value is passed into a <code>calc</code> expression. Expressions like <code>calc(10px - 0)</code> will return an error in all browsers, despite being mathematically correct.</p>
 <p>Example where the calc is valid:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output calc(.25rem - 1px) is valid
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output the same calc(.25rem - 1px) as above
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>Example where the calc is invalid:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output calc(.25rem - 0) is invalid
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.element</span> <span class="p">{</span>
-  <span class="c1">// Output .25rem
-</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="sass-options">Sass options</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Output calc(.25rem - 1px) is valid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Output the same calc(.25rem - 1px) as above
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Example where the calc is invalid:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Output calc(.25rem - 0) is invalid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Output .25rem
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="sass-options">Sass options</h2>
 <p>Customize Boosted 4 with our built-in custom variables file and easily toggle global CSS preferences with new <code>$enable-*</code> Sass variables. Override a variable&rsquo;s value and recompile with <code>npm run test</code> as needed.</p>
 <p>You can find and customize these variables for key global options in Boosted&rsquo;s <code>scss/_variables.scss</code> file.</p>
 <table>
@@ -555,7 +555,7 @@
 <tr>
 <td><code>$enable-prefers-reduced-motion-media-query</code></td>
 <td><code>true</code> (default) or <code>false</code></td>
-<td>Enables the <a href="/docs/4.6/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users' browser/operating system preferences.</td>
+<td>Enables the <a href="/docs/4.6/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users&rsquo; browser/operating system preferences.</td>
 </tr>
 <tr>
 <td><code>$enable-hover-media-query</code></td>
@@ -677,12 +677,12 @@
     
 </div>
 <p>Here&rsquo;s how you can use these in your Sass:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// With variable
-</span><span class="c1"></span><span class="nc">.alpha</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="c1">// From the Sass map with our `color()` function
-</span><span class="c1"></span><span class="nc">.beta</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">&#34;purple&#34;</span><span class="p">);</span> <span class="p">}</span>
-</code></pre></div><p><a href="/docs/4.6/utilities/colors/">Color utility classes</a> are also available for setting <code>color</code> and <code>background-color</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// With variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.alpha</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// From the Sass map with our `color()` function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.beta</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">&#34;purple&#34;</span><span class="p">);</span> <span class="p">}</span>
+</span></span></code></pre></div><p><a href="/docs/4.6/utilities/colors/">Color utility classes</a> are also available for setting <code>color</code> and <code>background-color</code>.</p>
 <div class="bd-callout bd-callout-info">
 In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of each color as we&rsquo;ve done with the grayscale colors below.
 </div>
@@ -794,55 +794,55 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
   </div>
 </div>
 <p>Within <code>scss/_variables.scss</code>, you&rsquo;ll find Boosted&rsquo;s color variables and Sass map. Here&rsquo;s an example of the <code>$colors</code> Sass map:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">&#34;blue&#34;</span><span class="o">:</span> <span class="nv">$blue</span><span class="o">,</span>
-  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span> <span class="nv">$indigo</span><span class="o">,</span>
-  <span class="s2">&#34;purple&#34;</span><span class="o">:</span> <span class="nv">$purple</span><span class="o">,</span>
-  <span class="s2">&#34;pink&#34;</span><span class="o">:</span> <span class="nv">$pink</span><span class="o">,</span>
-  <span class="s2">&#34;red&#34;</span><span class="o">:</span> <span class="nv">$red</span><span class="o">,</span>
-  <span class="s2">&#34;orange&#34;</span><span class="o">:</span> <span class="nv">$orange</span><span class="o">,</span>
-  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span> <span class="nv">$yellow</span><span class="o">,</span>
-  <span class="s2">&#34;green&#34;</span><span class="o">:</span> <span class="nv">$green</span><span class="o">,</span>
-  <span class="s2">&#34;teal&#34;</span><span class="o">:</span> <span class="nv">$teal</span><span class="o">,</span>
-  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span> <span class="nv">$cyan</span><span class="o">,</span>
-  <span class="s2">&#34;white&#34;</span><span class="o">:</span> <span class="nv">$white</span><span class="o">,</span>
-  <span class="s2">&#34;gray&#34;</span><span class="o">:</span> <span class="nv">$gray-600</span><span class="o">,</span>
-  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span> <span class="nv">$gray-800</span>
-<span class="p">)</span> <span class="k">!default</span><span class="p">;</span>
-</code></pre></div><p>Add, remove, or modify values within the map to update how they&rsquo;re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code>${color}</code> variables and this Sass map.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;blue&#34;</span><span class="o">:</span> <span class="nv">$blue</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span> <span class="nv">$indigo</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;purple&#34;</span><span class="o">:</span> <span class="nv">$purple</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;pink&#34;</span><span class="o">:</span> <span class="nv">$pink</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;red&#34;</span><span class="o">:</span> <span class="nv">$red</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;orange&#34;</span><span class="o">:</span> <span class="nv">$orange</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span> <span class="nv">$yellow</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;green&#34;</span><span class="o">:</span> <span class="nv">$green</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;teal&#34;</span><span class="o">:</span> <span class="nv">$teal</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span> <span class="nv">$cyan</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;white&#34;</span><span class="o">:</span> <span class="nv">$white</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;gray&#34;</span><span class="o">:</span> <span class="nv">$gray-600</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span> <span class="nv">$gray-800</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="k">!default</span><span class="p">;</span>
+</span></span></code></pre></div><p>Add, remove, or modify values within the map to update how they&rsquo;re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code>${color}</code> variables and this Sass map.</p>
 <h2 id="components">Components</h2>
 <p>Many of Boosted&rsquo;s components and utilities are built with <code>@each</code> loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our <code>$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you&rsquo;ll automatically see your changes reflected in these loops.</p>
 <h3 id="modifiers">Modifiers</h3>
 <p>Many of Boosted&rsquo;s components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., <code>.btn</code>) while style variations are confined to modifier classes (e.g., <code>.btn-danger</code>). These modifier classes are built from the <code>$theme-colors</code> map to make customizing the number and name of our modifier classes.</p>
 <p>Here are two examples of how we loop over the <code>$theme-colors</code> map to generate modifiers to the <code>.alert</code> component and all our <code>.bg-*</code> background utilities.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes
-</span><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">6</span><span class="p">));</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Generate `.bg-*` color utilities
-</span><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> bg-variant</span><span class="p">(</span><span class="s1">&#39;.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">&#39;</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="responsive">Responsive</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Generate alert modifier classes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">6</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Generate `.bg-*` color utilities
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> bg-variant</span><span class="p">(</span><span class="s1">&#39;.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">&#39;</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="responsive">Responsive</h3>
 <p>These Sass loops aren&rsquo;t limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an <code>@each</code> loop for the <code>$grid-breakpoints</code> Sass map with a media query include.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
-
-    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-left</span>   <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">left</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-right</span>  <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">right</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-center</span> <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">center</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Should you need to modify your <code>$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-left</span>   <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">left</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-right</span>  <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">right</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-center</span> <span class="p">{</span> <span class="na">text-align</span><span class="o">:</span> <span class="ni">center</span> <span class="k">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Should you need to modify your <code>$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
 <h2 id="css-variables">CSS variables</h2>
 <p>Boosted 4 includes around two dozen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties (variables)</a> in its compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser&rsquo;s Inspector, a code sandbox, or general prototyping.</p>
 <h3 id="available-variables">Available variables</h3>
 <p>Here are the variables we include (note that the <code>:root</code> is required). They&rsquo;re located in our <code>_root.scss</code> file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">:root {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">:root {
   --blue: #527edb;
   --indigo: #a885d8;
   --purple: #a885d8;
@@ -874,27 +874,27 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
   --font-family-sans-serif: HelvNeueOrange/*rtl:insert:Arabic*/, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }</span>
-</code></pre></div><h3 id="examples">Examples</h3>
+</span></span></code></pre></div><h3 id="examples">Examples</h3>
 <p>CSS variables offer similar flexibility to Sass&rsquo;s variables, but without the need for compilation before being served to the browser. For example, here we&rsquo;re resetting our page&rsquo;s font and link styles with CSS variables.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="breakpoint-variables">Breakpoint variables</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="breakpoint-variables">Breakpoint variables</h3>
 <p>While we originally included breakpoints in our CSS variables (e.g., <code>--breakpoint-md</code>), <strong>these are not supported in media queries</strong>, but they can still be used <em>within</em> rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. <a href="https://www.w3.org/TR/css-variables-1/#using-variables">Learn more in the spec</a>.</p>
 <p>Here&rsquo;s an example of <strong>what&rsquo;s not supported:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--breakpoint-sm</span><span class="o">))</span> <span class="p">{</span>
-  <span class="o">...</span>
-<span class="p">}</span>
-</code></pre></div><p>And here&rsquo;s an example of <strong>what is supported:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">custom-element</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--breakpoint-sm</span><span class="o">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And here&rsquo;s an example of <strong>what is supported:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">custom-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
         </main>
       </div>
     </div>
@@ -909,7 +909,7 @@ In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

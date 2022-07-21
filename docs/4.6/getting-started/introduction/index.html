@@ -26,10 +26,10 @@
 
 <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
-<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU" crossorigin="anonymous">
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ" crossorigin="anonymous">
 
 <!-- Documentation extras -->
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -132,12 +132,12 @@
           <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
         </li>
       </ul>
-      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
-            v4.6
+      <ul class="navbar-nav flex-row ml-md-auto">
+        <li class="nav-item dropdown border-top">
+          <button class="btn btn-link btn-inverse nav-link dropdown-toggle mr-md-2" data-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only">Boosted&nbsp;</span> v4.6 <span class="sr-only">(switch to other versions)</span>
           </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <div class="dropdown-menu dropdown-menu-md-right mt-1 mt-md-0">
             <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.x)</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
@@ -145,9 +145,9 @@
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/5.1/">5.1.x</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
           </div>
         </li>
@@ -314,26 +314,26 @@
 <p>Looking to quickly add Boosted to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? <a href="/docs/4.6/getting-started/download/">Head to the downloads page</a>.</p>
 <h3 id="css">CSS</h3>
 <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> before all other stylesheets to load our CSS. You can also add <code>orangeHelvetica</code> and <code>orangeIcons</code> if needed, be careful both files are under copyright, see NOTICE.txt for more information.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/orangeHelvetica.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- Copyright © 2016 Orange SA. All rights reserved --&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/orangeIcons.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="js">JS</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/orangeHelvetica.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Copyright © 2016 Orange SA. All rights reserved --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/orangeIcons.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="js">JS</h3>
 <p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com/">jQuery</a>, <a href="https://popper.js.org/">Popper</a>, and our own JavaScript plugins. We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery&rsquo;s slim build</a>, but the full version is also supported.</p>
 <p>Place <strong>one of the following <code>&lt;script&gt;</code>s</strong> near the end of your pages, right before the closing <code>&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper, and then our JavaScript plugins.</p>
 <h4 id="bundle">Bundle</h4>
 <p>Include every Boosted JavaScript plugin with one of our two bundles. Both <code>boosted.bundle.js</code> and <code>boosted.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a> for our tooltips and popovers, but not <a href="https://jquery.com/">jQuery</a>. Include jQuery first, then a Boosted JavaScript bundle. For more information about what&rsquo;s included in Boosted, please see our <a href="/docs/4.6/getting-started/contents/#precompiled-boosted">contents</a> section.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><h4 id="separate">Separate</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="separate">Separate</h4>
 <p>If you decide to go with the separate scripts solution, Popper must come first (if you&rsquo;re using tooltips or popovers), and then our JavaScript plugins.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-llVNZVxgabZyf5ZeGs3m2QcNbEE0UK1PBKM6ZoJmWK5BuBpqZUXpN1nWXd0SrAC5&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nA6MbWePtuF/n0KO3a9RpSnTs22PIP2h8xjOsh9jX6wtZrXvD4VIwNkqCKlc9myo&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><h4 id="components">Components</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@8.3.1/swiper-bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-fz/+nLUpAlHOqN8kbJpfALeiJedm/CSmBrZrxbHAq17ik0fBZxQchA1uCsxAWVlt&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-9FuTk2FQCe3cMtjQJ7M96wm1t2cRlWSQ6EoxCMXNQmEVpR66qASkSXRKfPuTeiTC&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="components">Components</h4>
 <p>Curious which components explicitly require jQuery, our JavaScript, and Popper? Click the show components link below. If you&rsquo;re unsure about the page structure, keep reading for an example page template.</p>
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -345,9 +345,9 @@
 <li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper</a>)</li>
 <li>Modals for displaying, positioning, and scroll behavior</li>
 <li>Navbar for extending our Collapse plugin to implement responsive behavior</li>
+<li>Scrollspy for scroll behavior and navigation updates</li>
 <li>Toasts for displaying and dismissing</li>
 <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper</a>)</li>
-<li>Scrollspy for scroll behavior and navigation updates</li>
 </ul>
 
 </details>
@@ -355,96 +355,96 @@
 <h4 id="required-script">Required script</h4>
 <p>Boosted includes a <a href="https://github.com/WICG/focus-visible">focus-visible polyfill</a> to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 However, if you don&rsquo;t need or want to use Boosted&rsquo;s JavaScript files, you&rsquo;ll still need to use focus-visible.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 </div>
 
 <h2 id="starter-template">Starter template</h2>
 <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- Required meta tags --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Preconnect to CDNs: remove if not needed --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    
-    <span class="c">&lt;!--
-</span><span class="c">      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-</span><span class="c">      Patent and Trademark Office and may be registered in certain other jurisdictions.
-</span><span class="c">      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-</span><span class="c">      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-</span><span class="c">      If you are not authorized to used it, don&#39;t include the orangeHelvetica.css.
-</span><span class="c">      See NOTICE.txt for more information.
-</span><span class="c">    --&gt;</span>
-    <span class="c">&lt;!-- Option 1: Use a CDN --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/fonts/HelvNeue55_W1G.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/fonts/HelvNeue75_W1G.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4/Goeqz&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/orangeHelvetica.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Option 2: Embed the fonts&gt;
-</span><span class="c">    &lt;link rel=&#34;preload&#34; href=&#34;dist/fonts/HelvNeue55_W1G.woff2&#34; as=&#34;font&#34; type=&#34;font/woff2&#34; crossorigin=&#34;anonymous&#34;&gt;
-</span><span class="c">    &lt;link rel=&#34;preload&#34; href=&#34;dist/fonts/HelvNeue75_W1G.woff2&#34; as=&#34;font&#34; type=&#34;font/woff2&#34; crossorigin=&#34;anonymous&#34;&gt;
-</span><span class="c">    &lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/orangeHelvetica.min.css&#34; crossorigin=&#34;anonymous&#34;&gt;
-</span><span class="c">    --&gt;</span>
-
-    <span class="c">&lt;!--
-</span><span class="c">      Orange Icons
-</span><span class="c">      Copyright (C) 2016 - 2021 Orange SA All rights reserved
-</span><span class="c">      See NOTICE.txt for more information.
-</span><span class="c">    --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/orangeIcons.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Boosted CSS --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
-      My page content start here
-    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
-
-    <span class="c">&lt;!-- Option 1: jQuery and Boosted Bundle (includes Popper) --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Option 2: jQuery, Popper, and Boosted JS --&gt;</span>
-    <span class="c">&lt;!--
-</span><span class="c">    &lt;script src=&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34; integrity=&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34; integrity=&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34; integrity=&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js&#34; integrity=&#34;sha384-llVNZVxgabZyf5ZeGs3m2QcNbEE0UK1PBKM6ZoJmWK5BuBpqZUXpN1nWXd0SrAC5&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.1/dist/js/boosted.min.js&#34; integrity=&#34;sha384-nA6MbWePtuF/n0KO3a9RpSnTs22PIP2h8xjOsh9jX6wtZrXvD4VIwNkqCKlc9myo&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    --&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><p>That&rsquo;s all you need for overall page requirements. Visit the <a href="/docs/4.6/layout/overview/">Layout docs</a> or <a href="/docs/4.6/examples/">our official examples</a> to start laying out your site&rsquo;s content and components.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Required meta tags --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Preconnect to CDNs: remove if not needed --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
+</span></span></span><span class="line"><span class="cl"><span class="c">      Patent and Trademark Office and may be registered in certain other jurisdictions.
+</span></span></span><span class="line"><span class="cl"><span class="c">      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+</span></span></span><span class="line"><span class="cl"><span class="c">      Orange has purchased the right to use Helvetica in its websites and mobile applications.
+</span></span></span><span class="line"><span class="cl"><span class="c">      If you are not authorized to used it, don&#39;t include the orangeHelvetica.css.
+</span></span></span><span class="line"><span class="cl"><span class="c">      See NOTICE.txt for more information.
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 1: Use a CDN --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/fonts/HelvNeue55_W1G.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/fonts/HelvNeue75_W1G.woff2&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4/Goeqz&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/orangeHelvetica.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 2: Embed the fonts&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;link rel=&#34;preload&#34; href=&#34;dist/fonts/HelvNeue55_W1G.woff2&#34; as=&#34;font&#34; type=&#34;font/woff2&#34; crossorigin=&#34;anonymous&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;link rel=&#34;preload&#34; href=&#34;dist/fonts/HelvNeue75_W1G.woff2&#34; as=&#34;font&#34; type=&#34;font/woff2&#34; crossorigin=&#34;anonymous&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/orangeHelvetica.min.css&#34; crossorigin=&#34;anonymous&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">      Orange Icons
+</span></span></span><span class="line"><span class="cl"><span class="c">      Copyright (C) 2016 - 2022 Orange SA All rights reserved
+</span></span></span><span class="line"><span class="cl"><span class="c">      See NOTICE.txt for more information.
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/orangeIcons.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Boosted CSS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/css/boosted.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      My page content start here
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 1: jQuery and Boosted Bundle (includes Popper) --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 2: jQuery, Popper, and Boosted JS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34; integrity=&#34;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#34; integrity=&#34;sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js&#34; integrity=&#34;sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/swiper@8.3.1/swiper-bundle.min.js&#34; integrity=&#34;sha384-fz/+nLUpAlHOqN8kbJpfALeiJedm/CSmBrZrxbHAq17ik0fBZxQchA1uCsxAWVlt&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/boosted@4.6.2/dist/js/boosted.min.js&#34; integrity=&#34;sha384-9FuTk2FQCe3cMtjQJ7M96wm1t2cRlWSQ6EoxCMXNQmEVpR66qASkSXRKfPuTeiTC&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>That&rsquo;s all you need for overall page requirements. Visit the <a href="/docs/4.6/layout/overview/">Layout docs</a> or <a href="/docs/4.6/examples/">our official examples</a> to start laying out your site&rsquo;s content and components.</p>
 <h2 id="important-globals">Important globals</h2>
 <p>Boosted employs a handful of important global styles and settings that you&rsquo;ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let&rsquo;s dive in.</p>
 <h3 id="html5-doctype">HTML5 doctype</h3>
 <p>Boosted requires the use of the HTML5 doctype. Without it, you&rsquo;ll see some funky incomplete styling, but including it shouldn&rsquo;t cause any considerable hiccups.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-  ...
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="responsive-meta-tag">Responsive meta tag</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="responsive-meta-tag">Responsive meta tag</h3>
 <p>Boosted is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34;</span><span class="p">&gt;</span>
-</code></pre></div><p>You can see an example of this in action in the <a href="#starter-template">starter template</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>You can see an example of this in action in the <a href="#starter-template">starter template</a>.</p>
 <h3 id="box-sizing">Box-sizing</h3>
 <p>For more straightforward sizing in CSS, we switch the global <code>box-sizing</code> value from <code>content-box</code> to <code>border-box</code>. This ensures <code>padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
 <p>On the rare occasion you need to override it, use something like the following:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">selector-for-some-widget</span> <span class="p">{</span>
-  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">content-box</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>With the above snippet, nested elements—including generated content via <code>::before</code> and <code>::after</code>—will all inherit the specified <code>box-sizing</code> for that <code>.selector-for-some-widget</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">selector-for-some-widget</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">content-box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>With the above snippet, nested elements—including generated content via <code>::before</code> and <code>::after</code>—will all inherit the specified <code>box-sizing</code> for that <code>.selector-for-some-widget</code>.</p>
 <p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
 <h3 id="reboot">Reboot</h3>
 <p>For improved cross-browser rendering, we use <a href="/docs/4.6/content/reboot/">Reboot</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
@@ -452,11 +452,11 @@ However, if you don&rsquo;t need or want to use Boosted&rsquo;s JavaScript files
 <p><a href="https://www.w3.org/TR/resource-hints/">Resource hints</a> are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and <strong>only to hint resources you&rsquo;ll really be using soon</strong>.
 It should be used for critical resources only.</p>
 <h4 id="preload-fonts"><code>preload</code> fonts</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../../../fonts/HelvNeue75_W1G.woff2&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h4 id="preconnect-to-cdns"><code>preconnect</code> to CDNs</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="bootstrap-community">Bootstrap Community</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../../../fonts/HelvNeue75_W1G.woff2&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/woff2&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="preconnect-to-cdns"><code>preconnect</code> to CDNs</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="bootstrap-community">Bootstrap Community</h2>
 <p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
 <ul>
 <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
@@ -482,7 +482,7 @@ It should be used for critical resources only.</p>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

@@ -1,0 +1,136 @@
+/* Gauges */
+.gauge {
+  position: relative;
+  text-align: center;
+}
+.gauge .gauge-label {
+  display: block;
+  padding: 10px 0;
+  font-weight: 700;
+}
+.gauge .gauge-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transform: translateY(-50%) translateX(-50%);
+}
+.gauge svg {
+  transform: rotate(-90deg);
+}
+.gauge .progress-meter,
+.gauge .progress-value {
+  fill: none;
+}
+.gauge .progress-meter {
+  stroke: #eee;
+}
+.gauge .progress-value {
+  stroke-dasharray: 326.725;
+  stroke-dashoffset: 326.725;
+  -webkit-animation: progress 4s;
+  animation: progress 4s;
+}
+.gauge.inverse .gauge-value {
+  color: #fff;
+}
+.gauge.inverse .progress-meter {
+  stroke: #333;
+}
+.gauge.green .progress-value {
+  stroke: #50be87;
+}
+.gauge.pink .progress-value {
+  stroke: #ffb4e6;
+}
+.gauge.yellow .progress-value {
+  stroke: #ffd200;
+}
+
+.gauge-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* for demonstration, not part of gauge component */
+.light-bg,
+.dark-bg {
+  display: inline-block;
+  padding: 10px;
+}
+
+.light-bg {
+  margin-right: 20px;
+}
+
+.dark-bg {
+  background-color: #000;
+}
+.dark-bg .gauge-label {
+  color: #fff;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 326.725;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 326.725;
+  }
+}
+
+/* Native accordions */
+details {
+  padding: 1px 0;
+  margin-bottom: -1px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+}
+details summary {
+  position: relative;
+  display: block;
+  padding: 13px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+details summary:focus {
+  outline: 1px dotted #000;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::after {
+  position: absolute;
+  top: 1.3125rem;
+  right: .625rem;
+  width: .875rem;
+  height: .4375rem;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}
+details summary::before {
+  display: none;
+}
+details p {
+  padding-right: 24px;
+  margin: 0;
+}
+
+details[open] {
+  padding-bottom: 20px;
+}
+details[open] summary {
+  margin-bottom: 7px;
+}
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details:last-child {
+  border-bottom: 1px solid #ccc;
+}

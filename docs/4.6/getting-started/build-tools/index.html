@@ -26,10 +26,10 @@
 
 <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
-<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kxx4xTEyEes73vvgGSQXD873xYKXoGlnB58hUzvDpwW8H+CgsfUjjo8WDvcKJCmU" crossorigin="anonymous">
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gf+Y5XR9AaDz8jxrG8h6a3BYpN7fOpxA97a0i8QHgwnRKNOuahm7ZQfqzxaNW+aJ" crossorigin="anonymous">
 
 <!-- Documentation extras -->
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -132,12 +132,12 @@
           <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
         </li>
       </ul>
-      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
-            v4.6
+      <ul class="navbar-nav flex-row ml-md-auto">
+        <li class="nav-item dropdown border-top">
+          <button class="btn btn-link btn-inverse nav-link dropdown-toggle mr-md-2" data-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only">Boosted&nbsp;</span> v4.6 <span class="sr-only">(switch to other versions)</span>
           </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <div class="dropdown-menu dropdown-menu-md-right mt-1 mt-md-0">
             <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.x)</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
@@ -145,9 +145,9 @@
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/5.1/">5.1.x</a>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider m-0"></div>
             <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
           </div>
         </li>
@@ -289,16 +289,16 @@
           <p class="bd-lead">Learn how to use Boosted&rsquo;s included npm scripts to build our documentation, compile source code, run tests, and more.</p>
           
           <h2 id="tooling-setup">Tooling setup</h2>
-<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.1/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
+<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.2/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
 <p>To use our build system and run our documentation locally, you&rsquo;ll need a copy of Boosted&rsquo;s source files and Node. Follow these steps and you should be ready to rock:</p>
 <ol>
 <li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.1.zip">download Boosted&rsquo;s sources</a> or fork <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
-<li>Navigate to the root <code>/boosted</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.1/package.json">package.json</a>.</li>
+<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.2.zip">download Boosted&rsquo;s sources</a> or fork <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
+<li>Navigate to the root <code>/boosted</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.2/package.json">package.json</a>.</li>
 </ol>
 <p>When completed, you&rsquo;ll be able to run the various commands provided from the command line.````</p>
 <h2 id="using-npm-scripts">Using npm scripts</h2>
-<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.1/package.json">package.json</a> includes the following commands and tasks:</p>
+<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.2/package.json">package.json</a> includes the following commands and tasks:</p>
 <table>
 <thead>
 <tr>
@@ -333,7 +333,7 @@
 <p>We increase the Sass rounding precision to 6 (by default, it&rsquo;s 5 in Node Sass) to prevent issues with browser rounding. If you use Dart Sass this won&rsquo;t be something you need to adjust, as that compiler uses a rounding precision of 10 and for efficiency reasons does not allow it to be adjusted.</p>
 <h2 id="autoprefixer">Autoprefixer</h2>
 <p>Boosted uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.1/.browserslistrc">.browserslistrc</a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.2/.browserslistrc">.browserslistrc</a> for details.</p>
 <h2 id="local-documentation">Local documentation</h2>
 <p>Running our documentation locally requires the use of Hugo, which gets installed via the <a href="https://www.npmjs.com/package/hugo-bin">hugo-bin</a> npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here&rsquo;s how to get it started:</p>
 <ol>
@@ -359,7 +359,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

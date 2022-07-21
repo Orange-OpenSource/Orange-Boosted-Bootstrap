@@ -1,0 +1,6 @@
+/* Show it's not fixed to the top */
+body {
+  min-height: 75rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1uYXZiYXItc3RhdGljIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG9DQUFvQztBQUNwQztFQUNFLGtCQUFrQjtDQUNuQiIsImZpbGUiOiJydGwtbmF2YmFyLXN0YXRpYyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFNob3cgaXQncyBub3QgZml4ZWQgdG8gdGhlIHRvcCAqL1xuYm9keSB7XG4gIG1pbi1oZWlnaHQ6IDc1cmVtO1xufVxuIl19 */

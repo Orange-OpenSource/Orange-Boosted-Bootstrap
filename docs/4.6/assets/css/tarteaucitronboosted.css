@@ -1,4 +1,4 @@
-/* stylelint-disable selector-max-id, declaration-no-important, selector-class-pattern, order/properties-order */
+/* stylelint-disable selector-max-id, declaration-no-important, selector-class-pattern, selector-id-pattern, order/properties-order */
 .modal-open {
   overflow: hidden;
   height: 100%;

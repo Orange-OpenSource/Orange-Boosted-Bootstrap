@@ -1,0 +1,15 @@
+.themed-grid-col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+.themed-container {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 123, 255, .15);
+  border: 1px solid rgba(0, 123, 255, .2);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1ncmlkIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0VBQ2xCLHFCQUFxQjtFQUNyQix5Q0FBeUM7RUFDekMsd0NBQXdDO0NBQ3pDOztBQUVEO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtFQUNwQix5Q0FBeUM7RUFDekMsd0NBQXdDO0NBQ3pDIiwiZmlsZSI6InJ0bC1ncmlkIiwic291cmNlc0NvbnRlbnQiOlsiLnRoZW1lZC1ncmlkLWNvbCB7XG4gIHBhZGRpbmctdG9wOiAxNXB4O1xuICBwYWRkaW5nLWJvdHRvbTogMTVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg4NiwgNjEsIDEyNCwgLjE1KTtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSg4NiwgNjEsIDEyNCwgLjIpO1xufVxuXG4udGhlbWVkLWNvbnRhaW5lciB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMTIzLCAyNTUsIC4xNSk7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMCwgMTIzLCAyNTUsIC4yKTtcbn1cbiJdfQ== */

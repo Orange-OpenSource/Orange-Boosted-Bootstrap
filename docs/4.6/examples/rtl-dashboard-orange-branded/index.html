@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <title>Dashboard Orange branded · Boosted v4.6</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/4.6/examples/dashboard-orange-branded/">
+
+    
+
+    
+    <link rel="preload" href="/docs/4.6/dist/fonts/HelveticaNeueW20-55Roman.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/docs/4.6/dist/fonts/HelveticaNeueW20-75Bold.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    
+
+    <!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted-rtl.min.css" rel="stylesheet">
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard-orange.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="skiplinks container-fluid">
+  <a href="#search" class="sr-only sr-only-focusable">Skip to search</a>
+  <a href="#alerts" class="sr-only sr-only-focusable">Skip to my alerts</a>
+  <a href="#sysInfo" class="sr-only sr-only-focusable">Skip to system informations</a>
+</div>
+
+<header role="banner">
+  <nav role="navigation" id="mainNav" class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/4.6/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy"/>
+        <span class="h1 mb-0">Dashboard</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-between collapse" id="orange-navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Manage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Parameters</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link btn btn-link btn-inverse dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
+              <span class="icon-international-globe h4 mb-0 mr-1" aria-hidden="true"></span>
+              <span>Language</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a class="dropdown-item" href="#" lang="fr" hreflang="fr">Français</a></li>
+              <li><a class="dropdown-item" href="#" aria-current="page">English</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link btn btn-link btn-inverse dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
+              <span class="svg-avatar mr-1" aria-hidden="true"></span>
+              <span>Hello <span class="text-primary">Admin</span></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+              <li><a class="dropdown-item" href="#">Preferences</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+<main role="main" id="content" class="container-fluid my-5">
+  <div class="row mb-5">
+    <div class="col col-md-6">
+      <h1 id="search">Search</h1>
+      <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active" href="#users" data-toggle="tab">Users</a></li>
+        <li class="nav-item"><a class="nav-link" href="#devices" data-toggle="tab">Devices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#messages" data-toggle="tab">Messages</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="users">
+          <form id="search-users" name="searchUsers" method="post" action="/">
+            <div class="row">
+              <div class="form-group col-12 col-lg-6">
+                <label for="phone" class="is-required">Phone</label>
+                <input class="form-control required" required aria-required="true" name="phone" id="phone" maxlength="3" type="tel">
+              </div>
+              <div class="form-group col-12 col-lg-6">
+                <label class="is-required" for="location">Location</label>
+                <select class="custom-select" id="location" name="location">
+                  <option value="AF">Afghanistan</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ">Antarctica</option>
+                  <option value="AG">Antigua and Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="OT">…</option>
+                </select>
+              </div>
+              <div class="form-group col-12 col-lg-6 mb-lg-0">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="pro-check" autocomplete="off">
+                  <label class="custom-control-label" for="pro-check">Pro</label>
+                </div>
+              </div>
+              <div class="form-group col-12 col-lg-6 mb-0">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane" id="devices">
+          <form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
+            <div class="row">
+              <div class="form-group col-12 col-md-10">
+                <label for="mac" class="is-required">MAC</label>
+                <input class="form-control required" required aria-required="true" name="mac" id="mac" maxlength="10">
+              </div>
+              <div class="col-12 col-md-2">
+                <button type="submit" class="btn btn-primary mt-4">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane" id="messages">
+          <form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
+            <div class="row">
+              <div class="form-group col-12 mb-0">
+                <label for="regexp" class="is-required">Regular expression</label>
+              </div>
+              <div class="input-group col-12 col-md-10">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input type="text" class="form-control" id="regexp" placeholder="regexp" title="Found a message by regexp">
+              </div>
+              <div class="col-12 col-md-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-md-6 pl-lg-5">
+      <table id="myTable" class="table tablesorter table-responsive">
+        <caption>Alerts received</caption>
+        <thead class="cf">
+          <tr>
+            <th class="header" scope="col">Status</th>
+            <th class="header" scope="col">Date</th>
+            <th class="header hide-when-small" scope="col">ID</th>
+            <th class="header" scope="col">Type</th>
+            <th class="header hide-when-small" scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
+            <td class="align-middle">08/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
+            <td class="align-middle">BT</td>
+            <td class="align-middle">0:05:40</td>
+          </tr>
+          <tr>
+            <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+            <td class="align-middle">09/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
+            <td class="align-middle">Warn</td>
+            <td class="align-middle">0:19:09</td>
+          </tr>
+          <tr>
+            <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
+            <td class="align-middle">10/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
+            <td class="align-middle">MMK</td>
+            <td class="align-middle">0:10:06</td>
+          </tr>
+          <tr>
+            <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+            <td class="align-middle">11/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
+            <td class="align-middle">YYI</td>
+            <td class="align-middle">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h1 id="sysInfo">Systems information</h1>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <table id="sys1" class="table">
+          <caption>System A</caption>
+          <thead class="cf">
+          <tr>
+            <th class="header" scope="col">Status</th>
+            <th class="header" scope="col">Date</th>
+            <th class="header hide-when-small" scope="col">ID</th>
+            <th class="header" scope="col">Type</th>
+            <th class="header hide-when-small" scope="col">Duration</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
+            <td class="align-middle">08/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
+            <td class="align-middle">BT</td>
+            <td class="align-middle">0:05:40</td>
+          </tr>
+          <tr>
+            <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
+            <td class="align-middle">10/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
+            <td class="align-middle">MMK</td>
+            <td class="align-middle">0:10:06</td>
+          </tr>
+          <tr>
+            <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+            <td class="align-middle">11/10/12</td>
+            <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
+            <td class="align-middle">YYI</td>
+            <td class="align-middle">-</td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <table id="sys2" class="table">
+        <caption>System B</caption>
+        <thead class="cf">
+        <tr>
+          <th class="header" scope="col">Status</th>
+          <th class="header" scope="col">Date</th>
+          <th class="header hide-when-small" scope="col">ID</th>
+          <th class="header" scope="col">Type</th>
+          <th class="header hide-when-small" scope="col">Duration</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
+          <td class="align-middle">08/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
+          <td class="align-middle">BT</td>
+          <td class="align-middle">0:05:40</td>
+        </tr>
+        <tr>
+          <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+          <td class="align-middle">09/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
+          <td class="align-middle">Warn</td>
+          <td class="align-middle">0:19:09</td>
+        </tr>
+        <tr>
+          <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
+          <td class="align-middle">10/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
+          <td class="align-middle">MMK</td>
+          <td class="align-middle">0:10:06</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <table id="sys3" class="table">
+        <caption>System C</caption>
+        <thead class="cf">
+        <tr>
+          <th class="header" scope="col">Status</th>
+          <th class="header" scope="col">Date</th>
+          <th class="header hide-when-small" scope="col">ID</th>
+          <th class="header" scope="col">Type</th>
+          <th class="header hide-when-small" scope="col">Duration</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
+          <td class="align-middle">08/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
+          <td class="align-middle">BT</td>
+          <td class="align-middle">0:05:40</td>
+        </tr>
+        <tr>
+          <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+          <td class="align-middle">09/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
+          <td class="align-middle">Warn</td>
+          <td class="align-middle">0:19:09</td>
+        </tr>
+        <tr>
+          <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+          <td class="align-middle">11/10/12</td>
+          <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
+          <td class="align-middle">YYI</td>
+          <td class="align-middle">-</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- fin de la row globale-->
+</main>
+<!--/.container-->
+
+<footer role="contentinfo" class="o-footer">
+  <div class="o-footer-bottom">
+    <div class="container-fluid">
+      <div class="row mb-0">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link"><span>Contact</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><span>Help</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js"></script>
+        <script src="dashboard-orange.js"></script>
+  </body>
+</html>
