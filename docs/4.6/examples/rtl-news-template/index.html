@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <title>News template · Boosted v4.6</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/4.6/examples/news-template/">
+
+    
+
+    
+    <link rel="preload" href="/docs/4.6/dist/fonts/HelveticaNeueW20-55Roman.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/docs/4.6/dist/fonts/HelveticaNeueW20-75Bold.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    
+
+    <!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted-rtl.min.css" rel="stylesheet">
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<div class="skiplinks container-fluid">
+  <a href="#main-nav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+  <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  <a href="#footer" class="sr-only sr-only-focusable">Skip to footer</a>
+</div>
+
+<header role="banner">
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand supra" aria-label="Complementary navigation">
+    <div class="container-lg">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link">Personal</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon svg-buy">
+            <span class="sr-only">Basket</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon svg-avatar">
+            <span class="sr-only">My account</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <button type="button" class="btn btn-link btn-inverse nav-link dropdown-toggle d-flex flex-nowrap align-items-center" data-toggle="dropdown">Language</button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a class="dropdown-item" href="#" lang="fr" hreflang="fr">Français</a></li>
+            <li><a class="dropdown-item" href="#" lang="es" hreflang="es">Español</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-dark navbar-expand-md" role="navigation">
+    <div class="container-lg">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/4.6/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy"/>
+      </a>
+      <button class="navbar-toggler d-md-none collapsed" type="button"
+              data-toggle="collapse" data-target="#megamenu"
+              aria-controls="megamenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+      </button>
+      <div class="mega-menu navbar-collapse collapse" id="megamenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#mega-level-1-collapse" data-toggle="collapse">Shop</a>
+            <div class="mega-menu-panel collapse" id="mega-level-1-collapse">
+              <div class="container-lg">
+                <a class="nav-link all" href="#">View all shop</a>
+                <a class="nav-link close ml-auto" data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="false" aria-controls="mega-level-1-collapse" title="Close shop menu">
+                  <span class="sr-only">Close shop menu</span>
+                </a>
+              </div>
+              <div class="container-lg">
+                <ul class="navbar-nav">
+                  <li class="nav-item col col-md-4">
+                    <a class="nav-link" href="#">Mobile</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                      <li class="nav-item"><span class="nav-heading text-primary">Mobile</span></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Phones</a>
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                          <li class="nav-item"><span class="nav-heading text-primary">Phone</span></li>
+                          <li class="nav-item"><a class="nav-link" href="#">iPhone</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">FairPhone</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Samsung</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#">Plans</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col col-md-4">
+                    <a class="nav-link" href="#">Internet</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                      <li class="nav-item"><span class="nav-heading text-primary">Internet</span></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Pay monthly offers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Shared plans</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Orange TV</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col col-md-4">
+                    <a class="nav-link" href="#">Link 3</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                      <li class="nav-item"><span class="nav-heading text-primary">Link 3</span></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 1</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 3</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 4</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 5</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 6</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 7</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 8</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 9</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 10</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 11</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 12</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Item 13</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mega-level-2-collapse" data-toggle="collapse">Discover</a>
+            <div class="mega-menu-panel collapse" id="mega-level-2-collapse">
+              <div class="container-lg">
+                <a class="nav-link all" href="#">View all discoveries</a>
+                <a class="nav-link close ml-auto" data-toggle="collapse" href="#mega-level-2-collapse" aria-expanded="false" aria-controls="mega-level-2-collapse" title="Close discover menu">
+                  <span class="sr-only">Close discover menu</span>
+                </a>
+              </div>
+              <div class="container-lg">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Test 1</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main role="main" id="content">
+  <div class="container mt-3">
+    <h1>News</h1>
+  </div>
+
+  <div class="o-nav-local">
+    <nav role="navigation" class="container" aria-label="News categories navigation">
+      <ul class="nav">
+        <li class="nav-item active"><a class="nav-link" href="#">News home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">World</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Weather</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pictures</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+        <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <svg class="img-fluid mt-3 mb-4 h5" width="860" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <rect width="100%" height="100%" fill="#999"/>
+          <text x="50%" y="50%" fill="#fff" dy=".3em" dominant-baseline="middle" text-anchor="middle">Lorem ipsum</text>
+        </svg>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec augue tempor, vestibulum nulla eget, lobortis
+          sem. Duis nulla libero, tristique id nisi eget, dictum facilisis arcu. Duis eu felis lacinia, vestibulum est
+          in, molestie nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Mauris ultrices id justo et pulvinar. Suspendisse potenti. Sed et nisl non lorem ultrices ullamcorper sit amet
+          eu nisl.</p>
+        <p>Proin lacinia blandit nunc. Ut at metus dictum, faucibus dolor et, bibendum libero. In quis lacinia risus, vitae
+          elementum nisl. Etiam nec tincidunt purus. Aenean malesuada aliquam mauris vitae pellentesque. Maecenas a tortor
+          volutpat, sagittis ipsum quis, volutpat lacus. Proin sit amet leo in lorem malesuada porttitor ut quis dolor.
+          Vestibulum ante lectus, elementum a nibh at, rhoncus semper enim. Nam nec ligula erat. Donec tincidunt elit
+          sit amet lacus consequat, in luctus ipsum ornare. Ut pulvinar congue viverra. Sed ipsum sem, fringilla in orci
+          sit amet, eleifend vestibulum est. Nunc tempor, purus vitae porttitor scelerisque, ante ipsum pellentesque
+          turpis, non volutpat dolor metus id sapien. Proin laoreet bibendum semper. Integer vehicula rhoncus faucibus.
+          Nulla in urna condimentum massa ultrices luctus at vitae lacus.</p>
+
+        <div id="comments">
+          <h3 class="h2 mt-5">Comments</h3>
+          <ul class="list-unstyled">
+            <li class="card mb-3">
+              <div class="card-body">
+                <h4 class="card-title">Lorem!!!</h4>
+                <p class="card-text">
+                  Duis faucibus justo sit amet placerat porttitor. Suspendisse adipiscing tincidunt
+                  laoreet. Pellentesque fermentum bibendum diam, eget accumsan nisi faucibus sit amet. In scelerisque sodales
+                  massa vel ultrices. Duis eget metus vel est accumsan varius hendrerit ut libero. Mauris quis viverra nisl.
+                  Etiam nunc mauris, egestas ut fermentum eget, ornare nec purus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at auctor enim, in auctor risus. Curabitur quis adipiscing velit.
+                </p>
+                <a href="#" class="card-link">0 comment</a>
+              </div>
+              <p class="card-footer text-muted mb-0">De <span class="text-primary">Truc</span> — 17 June 2014 13:37</p>
+            </li>
+            <li class="card mb-3">
+              <div class="card-body">
+                <h4 class="card-title">Ipsum</h4>
+                <p class="card-text">
+                  In ut libero a nisl hendrerit commodo. Vivamus sit amet libero eget tellus scelerisque
+                  tincidunt. Nullam et magna tellus. Ut fringilla congue mauris, ut vestibulum neque luctus a. Vestibulum volutpat
+                  placerat tincidunt. Nam fermentum arcu vel felis faucibus, id dapibus lectus ornare. Nunc sed libero nisi.
+                  Ut auctor sem sed tristique cursus.
+                </p>
+                <a href="#" class="card-link">1 comment</a>
+              </div>
+              <p class="card-footer text-muted mb-0">De <span class="text-primary">Geohisto</span> — 16 June 2014 19:22</p>
+            </li>
+            <li class="card mb-3">
+              <div class="card-body">
+                <h4 class="card-title">Another comment</h4>
+                <p class="card-text">
+                  Donec auctor felis vitae elit tempus ultrices at vitae lorem. Phasellus
+                  luctus nibh urna, sed pellentesque arcu fringilla nec. Sed elementum nisl orci, quis tincidunt leo semper
+                  eu. In tincidunt iaculis elit eget hendrerit. Fusce ut molestie dolor, ac lobortis est. Aenean consequat,
+                  tortor ac pellentesque dapibus, quam ipsum suscipit est, at sodales lorem diam in nisi. Vivamus in enim dignissim,
+                  posuere ligula eu, mattis libero. Nulla sagittis varius urna, a cursus urna feugiat ac.
+                  Vivamus porttitor luctus nisi vitae pretium. Suspendisse lacinia metus nisi, nec ornare arcu tincidunt eu…
+                </p>
+                <a href="#" class="card-link">3 comments</a>
+              </div>
+              <p class="card-footer text-muted mb-0">De <span class="text-primary">Machin</span> — 16 June 2014 7:44</p>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <ul class="pagination ml-auto">
+              <li class="page-item disabled">
+                <a class="page-link has-label">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link active" href="#" aria-label="Current page 1">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Go to next page">
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- fin comments -->
+      </div>
+      <!-- fin de la div de 8 colonnes -->
+
+      <aside role="complementary" id="infos" class="col-12 col-lg-4 mt-5 mt-lg-0 pl-lg-5">
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link active" href="#mostRead" data-toggle="tab">Popular</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mostShared" data-toggle="tab">Trends</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mostRecent" data-toggle="tab">Latest</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="mostRead">
+            <ol>
+              <li><a href="#">iPad mini UP pricing will start at 249€, screenshot suggests</a></li>
+              <li><a href="#">Facebook users raise privacy concerns</a></li>
+              <li><a href="#">Dishonored - reviewed</a></li>
+              <li><a href="#">20 Best Android apps this week</a></li>
+              <li><a href="#">Winsor McCay: Little Nemo in Slumberland Doodle celebates a comics great</a></li>
+            </ol>
+            <a class="o-link-arrow ml-4" href="#">More popular</a>
+          </div>
+          <div class="tab-pane" id="mostShared">
+            <ol>
+              <li><a href="#">Facebook users raise privacy concerns</a></li>
+              <li><a href="#">Winsor McCay: Little Nemo in Slumberland Doodle celebates a comics great</a></li>
+              <li><a href="#">20 Best Android apps this week</a></li>
+              <li><a href="#">Dishonored - reviewed</a></li>
+              <li><a href="#">iPad mini UP pricing will start at 249€, screenshot suggests</a></li>
+            </ol>
+            <a class="o-link-arrow ml-4" href="#">More trends</a>
+          </div>
+          <div class="tab-pane" id="mostRecent">No recent news.</div>
+        </div>
+
+        <h2 class="h3 mt-5">Related stories</h2>
+        <div id="accordion" class="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne" aria-controls="collapseOne" role="button"> Collapsible #1 </a>
+              </h5>
+            </div>
+            <div id="collapseOne" data-parent="#accordion" class="collapse show" aria-labelledby="headingOne">
+              <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                you probably haven't heard of them accusamus labore sustainable VHS.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseTwo" aria-controls="collapseTwo" role="button"> Collapsible #2 </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" data-parent="#accordion" class="collapse" aria-labelledby="headingTwo">
+              <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                you probably haven't heard of them accusamus labore sustainable VHS.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseThree" aria-controls="collapseThree" role="button"> Collapsible #2 </a>
+              </h5>
+            </div>
+            <div id="collapseThree" data-parent="#accordion" class="collapse" aria-labelledby="headingThree">
+              <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                you probably haven't heard of them accusamus labore sustainable VHS.</div>
+            </div>
+          </div>
+        </div>
+        <!-- fin de la div accordéon -->
+      </aside>
+      <!--fin de la div de 4 colonnes -->
+    </div>
+    <!-- fin de la row globale-->
+  </section>
+
+  <div class="bg-light py-5 border-top mt-3">
+    <div class="container-fluid">
+      <h2>Latest news</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6" id="newsSupp">
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 1</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 1</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 2</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 2</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 3</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 3</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 4</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 4</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 5</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 5</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">News 6</h2>
+              <p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                dui. </p>
+              <a class="btn btn-primary" href="#">View details<span class="sr-only"> about News 6</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin row news supp -->
+</main>
+
+<footer class="o-footer mt-0" role="contentinfo">
+  <h2 class="sr-only">Site map & informations</h2>
+  <div class="o-footer-top">
+    <div class="container-lg">
+      <ul class="nav align-items-center">
+        <li class="nav-item mb-3 mb-md-0 ml-1 ml-md-0 col-12 col-md-auto">Follow us</li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="o-footer-body">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h3>Discover</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Shop</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Services</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Support</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-3 mb-0">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="o-footer-bottom">
+    <div class="container-lg">
+      <ul class="nav flex-column flex-md-row">
+        <li class="nav-item mb-2 mt-1 mx-2 my-md-0 align-self-md-center">© Orange 2018-2022</li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Jobs</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Advertise</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Terms & Conditions</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Privacy</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Cookies</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Access for all</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Safety online</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
+
+      
+        <script src="news.js"></script>
+  </body>
+</html>

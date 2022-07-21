@@ -1,0 +1,7 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1uYXZiYXItZml4ZWQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsaUNBQWlDO0FBQ2pDO0VBQ0Usa0JBQWtCO0VBQ2xCLG9CQUFvQjtDQUNyQiIsImZpbGUiOiJydGwtbmF2YmFyLWZpeGVkIiwic291cmNlc0NvbnRlbnQiOlsiLyogU2hvdyBpdCBpcyBmaXhlZCB0byB0aGUgdG9wICovXG5ib2R5IHtcbiAgbWluLWhlaWdodDogNzVyZW07XG4gIHBhZGRpbmctdG9wOiA0LjVyZW07XG59XG4iXX0= */

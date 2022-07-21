@@ -1,0 +1,11 @@
+[class*="col-"],
+[class*="col-"] > div {
+  min-height: calc((100vh - 12 * .625rem) / 6);
+  background-color: rgba(75, 180, 230, .5);
+}
+
+[class*="col-"] > div {
+  margin: .625rem 0;
+  line-height: calc((100vh - 12 * .625rem) / 6);
+  text-align: center;
+}

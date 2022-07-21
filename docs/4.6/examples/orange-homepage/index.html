@@ -22,9 +22,9 @@
 
     <!--Tarteaucitron -->
 <link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
-<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
-<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-z0bdPLSiW/bYhwS3H9T5pMb8d4v1F26PQaoJuxwXcIs41OUiYyVFqqDtiCBR/16F" crossorigin="anonymous">
-<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-mgglGNxVI6j8fOak53wkGeEs7ngj0IN6qD88eQ8CyP+PZO7shqoaKQld5OODo9p+" crossorigin="anonymous">
+<link href="/docs/4.6/assets/css/vendor/swiper-bundle.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-6rPwIH6o8roADEALG0VtZOLfj0bDJ8KUOX7N+cjS+7NkwAaBQOZwRPOIiKWJa0aL" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-XQ+QuxWl/eBTAPcvP8xjhUXg+GB+kArKZpnDyXUz1pLOe6yAfZzxkSygkYxNfKHT" crossorigin="anonymous">
 <link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet">
 
 
@@ -72,7 +72,7 @@
 <header role="banner">
   <!-- Primary navigation bar -->
   <nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Main navigation">
-    <div class="container">
+    <div class="container-md">
       <a class="navbar-brand" href="#">
         <img src="/docs/4.6/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy"/>
       </a>
@@ -134,7 +134,7 @@
 
   <div class="bg-light pt-5 pb-3">
     <div class="container">
-      <div id="discovery-carousel" class="swiper-container">
+      <div id="discovery-carousel" class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide" id="slide1">
             <!-- Header title + link to see all -->
@@ -296,25 +296,23 @@
 <footer class="o-footer" id="footer" role="contentinfo">
   <h2 class="sr-only">Site map & informations</h2>
   <div class="o-footer-top">
-    <div class="container">
-      <div class="row mb-0">
-        <ul class="nav align-items-center">
-          <li class="nav-item"><span class="nav-link">Follow us:</span></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a></li>
-          <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a></li>
-        </ul>
-      </div>
+    <div class="container-md">
+      <ul class="nav align-items-center">
+        <li class="nav-item mb-3 mb-md-0 ml-1 ml-md-0 col-12 col-md-auto">Follow us</li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a></li>
+      </ul>
     </div>
   </div>
   <div class="o-footer-body">
-    <div class="container">
+    <div class="container-md">
       <div class="row">
         <div class="col-md-3 col-sm-6">
           <h3>Discover</h3>
@@ -385,29 +383,27 @@
     </div>
   </div>
   <div class="o-footer-bottom">
-    <div class="container">
-      <div class="row mb-0">
-        <ul class="nav">
-          <li class="nav-item"><span class="nav-link">© Orange 2018-2021</span></li>
-          <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
-        </ul>
-      </div>
+    <div class="container-md">
+      <ul class="nav flex-column flex-md-row">
+        <li class="nav-item mb-2 mt-1 mx-2 my-md-0 align-self-md-center">© Orange 2018-2022</li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Jobs</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Advertise</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Terms & Conditions</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Privacy</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Cookies</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Access for all</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Safety online</a></li>
+      </ul>
     </div>
   </div>
 </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-2jsvnZnyYAg6xCGTSIdBPoEt3xP64FauXZlBK9PAYsneWVkqXT/5keQRlbdfXkCL" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-HkgWGiFvphHyETaofVWXX2SP64Dbtv237puflDWHKGBrQg9mSRWItJIt2JkJrPlL" crossorigin="anonymous"></script>
 
       
-        <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.1/swiper-bundle.min.js"></script>
         <script src="homepage.js"></script>
   </body>
 </html>

@@ -1,0 +1,15 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1zdGlja3ktZm9vdGVyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO3FEQUNxRDtBQUNyRCx3REFBd0Q7O0FBRXhEO0VBQ0UsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixnQkFBZ0I7Q0FDakI7O0FBRUQ7RUFDRSwwQkFBMEI7Q0FDM0IiLCJmaWxlIjoicnRsLXN0aWNreS1mb290ZXIiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBDdXN0b20gcGFnZSBDU1Ncbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICovXG4vKiBOb3QgcmVxdWlyZWQgZm9yIHRlbXBsYXRlIG9yIHN0aWNreSBmb290ZXIgbWV0aG9kLiAqL1xuXG4uY29udGFpbmVyIHtcbiAgd2lkdGg6IGF1dG87XG4gIG1heC13aWR0aDogNjgwcHg7XG4gIHBhZGRpbmc6IDAgMTVweDtcbn1cblxuLmZvb3RlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XG59XG4iXX0= */
