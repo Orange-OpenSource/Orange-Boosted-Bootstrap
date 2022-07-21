@@ -6,14 +6,22 @@ group: components
 toc: true
 ---
 
+{{< callout warning >}}
+### Internet Explorer support dropped
+
+From Boosted 4.6.2 our Swiper dependency version is 5.0+ due to a security issue in 4.5.1.
+
+Unfortunately Internet Explorer support was dropped in Swiper 5.0.
+{{< /callout >}}
+
 ## How it works
 
-This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It provides touch support, extended setup and works great on mobile devices.
+This carousel is based on [Swiper](https://swiperjs.com/) which provides touch support, extended setup and works great on mobile devices.
 
 ## Demo
 
 {{< example >}}
-<div class="swiper-container">
+<div class="swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" id="slide1">
       <div class="card">
@@ -88,7 +96,7 @@ Make sure to add the vendor <abbr title="Cascading Stylesheet">CSS</abbr> and <a
 Here is the recommended setup for an accessible carousel:
 
 ```javascript
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.swiper', {
     autoplay: {
     delay: 3500,
   },
@@ -128,7 +136,7 @@ Find below an example for our custom button
 
 ```javascript
   $("#swiperPlayButton").click(function () {
-    var MySwiper = document.querySelector('.swiper-container').swiper;
+    var MySwiper = document.querySelector('.swiper').swiper;
     if ($("span",this).hasClass("icon-Pause")) {
       MySwiper.autoplay.stop();
       $(this).attr("aria-label", "Play Carousel");
