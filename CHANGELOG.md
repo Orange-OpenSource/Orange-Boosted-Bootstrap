@@ -1,4 +1,4 @@
-## [4.6.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.6.0...v4.6.1) (2021-10-29)
+## [4.6.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.6.0...v4.6.1) (2021-10-29)
 
 
 ### Bug Fixes
