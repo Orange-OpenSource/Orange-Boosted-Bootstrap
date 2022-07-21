@@ -47,6 +47,10 @@
   /* rtl:raw:
   transform: rotate(180deg);
   */
+
+  &::after {
+    display: none;
+  }
 }
 
 .swiper-button-next {
@@ -55,6 +59,10 @@
 
   /* rtl:remove */
   transform: rotate(180deg);
+
+  &::after {
+    display: none;
+  }
 }
 
 .swiper {
