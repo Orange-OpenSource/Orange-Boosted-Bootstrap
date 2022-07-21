@@ -36,11 +36,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.1.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.2.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com): `npm install boosted`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.6.1`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.6.1`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.6.2`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.6.2`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
 Read the [Getting started page](https://boosted.orange.com/docs/4.6/getting-started/introduction/) for information on the framework contents, CDN, templates and examples, and more.

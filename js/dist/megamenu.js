@@ -1,12 +1,12 @@
 /*!
-  * Boosted v4.6.1 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Copyright 2014-2021 Orange SA
+  * Boosted v4.6.2 (https://boosted.orange.com)
+  * Copyright 2014-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2022 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   **
   * This a fork of Bootstrap:
-  * Bootstrap megamenu.js v4.6.1 (https://getbootstrap.com/)
-  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap megamenu.js v4.6.2 (https://getbootstrap.com/)
+  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -33,6 +33,9 @@
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
     return Constructor;
   }
 
@@ -45,7 +48,7 @@
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.6.1';
+  var VERSION = '4.6.2';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
