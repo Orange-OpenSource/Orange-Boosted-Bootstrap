@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.6.1): o-megamenu.js
+ * Boosted (v4.6.2): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ import Util from './util'
  */
 
 const NAME = 'megamenu'
-const VERSION = '4.6.1'
+const VERSION = '4.6.2'
 const DATA_KEY = 'bs.megamenu'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 const ARROW_LEFT_KEYCODE = 37 // KeyboardEvent.which value for left arrow key
