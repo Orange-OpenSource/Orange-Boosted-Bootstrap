@@ -289,9 +289,27 @@ class Tab {
 
   // Static
   // Boosted mod
+  static nextTabIndex(items, index, step) {
+    const indexInit = index
+
+    do {
+      index += step
+
+      if (index < 0) {
+        index = items.length - 1
+      }
+
+      if (index === items.length) {
+        index = 0
+      }
+    } while ((items[index].classList.contains('disabled') || items[index].disabled) && index !== indexInit)
+
+    return index
+  }
+
   static _dataApiKeydownHandler(e) {
     const $this = $(this)
-    const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
+    const Items = $this.closest('[role=tablist]').find('[role=tab]:visible')
     const k = e.which || e.keyCode
 
     let index = 0
@@ -299,19 +317,11 @@ class Tab {
     index = Items.index(Items.filter(':focus'))
 
     if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
-      index--
+      index = Tab.nextTabIndex(Items, index, -1)
     }
 
     if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
-      index++
-    }
-
-    if (index < 0) {
-      index = Items.length - 1
-    }
-
-    if (index === Items.length) {
-      index = 0
+      index = Tab.nextTabIndex(Items, index, 1)
     }
 
     const nextTab = Items.eq(index)
