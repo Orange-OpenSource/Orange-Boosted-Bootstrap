@@ -326,7 +326,9 @@ class Tab {
 
     const nextTab = Items.eq(index)
 
-    nextTab.tab('show').trigger('focus')
+    if (nextTab.attr('role') === 'tab') {
+      nextTab.tab('show').trigger('focus')
+    }
 
     e.preventDefault()
     e.stopPropagation()
