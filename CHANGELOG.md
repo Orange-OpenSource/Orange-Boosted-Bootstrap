@@ -1,3 +1,34 @@
+## [4.6.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.6.1...v4.6.2) (2022-07-21)
+
+
+### Bug Fixes
+
+* **#1005:** restore line heights var values by fixing `calc(divide())` ([#1070](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1070)) ([e37940c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e37940c4a3fa0b2874240b5ecc789949ec36011d)), closes [#1005](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1005)
+* **#657:** dropdowns on `.bg-dark` ([#658](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/658)) ([1eafdca](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1eafdcac510f057a5405127c9b1018852880633e)), closes [#657](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/657)
+* **#822:** replace HTML dropdown definition used in dropdown tabs Boostwatch example ([#881](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/881)) ([cf77611](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cf77611e04064363787a1a37b483d187d1d8e3aa)), closes [#822](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/822)
+* **#903:** missing `.has-label`s in some `.page-item` list elements ([bda1351](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bda13518f916a86f43837b083aedd118fd316073)), closes [#903](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/903)
+* **a11y:** apply the right colors for ordered and unordered lists ([#1291](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1291)) ([33299f1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/33299f1bc983846d92b43d61d313fe6f42a63e4a))
+* **build:** force swiper reinstall ([#1303](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1303)) ([9f52f69](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9f52f696081d59cf06ef04463907963c03aa6d11))
+* **dependencies:** focus-visible import ([#673](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/673)) ([fdd398c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fdd398cf5f1d3c1ad89a07bba88c7b3110bf7916))
+* **deps:** bump Swiper from 4.5.1/6.5.1 to 8.3.1 ([#1314](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1314)) ([6cb47c5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6cb47c5a71a19da46e1718d27839969028aacb53))
+* **docs:** enhance split button doc example and fix button wording ([#1051](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1051)) ([da3e781](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/da3e78160dfeb23e8b01e47cf0b79d6efd16f3e0))
+* **examples:** remove bad sentence in grid example ([#1079](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1079)) ([75aefa5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/75aefa528e617229a0fbb5e962e746c95022f743))
+* **footer:** behave as it should when elements are focused ([#1292](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1292)) ([fa12fc7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fa12fc7f685d66e25f9493d41edb3f3cc243d191))
+* **forms:** change the margin left value between the required symbol and the label ([#1177](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1177)) ([35e106c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/35e106c068e25db7f2a7d8da45d13f08b91b1244))
+* **nav:** JS tabs keyboard tab navigation ([#1296](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1296)) ([c4adc0f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c4adc0f0311d143085886b79e6d97e3006d264d5))
+* **pagination:** Remove space between pagination numbers ([#1269](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1269)) ([a03cb49](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a03cb49b720faf85e155b92fc1ae2d611d6ea96b))
+* **social btn:** add white border on dark variant for active state ([#1224](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1224)) ([5f53467](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5f53467c9f498801ca30b78100e4ff819e14dbd0))
+
+
+### Features
+
+* **embed:** add 9x16 aspect ratio for portrait videos ([#908](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/908)) ([116c5d8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/116c5d8d9d9f23336c6c6658e3fc66079517588b))
+* **stepped process:** update rendering to respect design guidelines ([#1039](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1039)) ([3c2b176](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3c2b1761a2162e063b1cc55e6e8ed02ce14bf2ff))
+* **utilities:** add classes to limit the extent of line lengths ([#931](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/931)) ([921f052](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/921f05207d92e7aa7ff188136a4f5dee80ec1114))
+* **utilities:** reintroduce `.text-uppercase` ([#1218](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1218)) ([9575d68](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9575d685b84cb65cceb0ec61a446eed1103cf228))
+
+
+
 ## [4.6.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.6.0...v4.6.1) (2021-10-29)
 
 
