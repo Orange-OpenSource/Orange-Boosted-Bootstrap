@@ -1,12 +1,12 @@
 /*!
   * Boosted v4.6.2 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Copyright 2014-2021 Orange SA
+  * Copyright 2014-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2022 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   **
   * This a fork of Bootstrap:
   * Bootstrap tab.js v4.6.2 (https://getbootstrap.com/)
-  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -33,6 +33,9 @@
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
     return Constructor;
   }
 
@@ -95,7 +98,7 @@
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED) || this._element.hasAttribute('disabled')) {
         return;
       }
 
@@ -297,27 +300,37 @@
     // Boosted mod
     ;
 
+    Tab.nextTabIndex = function nextTabIndex(items, index, step) {
+      var indexInit = index;
+
+      do {
+        index += step;
+
+        if (index < 0) {
+          index = items.length - 1;
+        }
+
+        if (index === items.length) {
+          index = 0;
+        }
+      } while ((items[index].classList.contains('disabled') || items[index].disabled) && index !== indexInit);
+
+      return index;
+    };
+
     Tab._dataApiKeydownHandler = function _dataApiKeydownHandler(e) {
       var $this = $__default["default"](this);
-      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
+      var Items = $this.closest('[role=tablist]').find('[role=tab]:visible');
       var k = e.which || e.keyCode;
       var index = 0;
       index = Items.index(Items.filter(':focus'));
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
-        index--;
+        index = Tab.nextTabIndex(Items, index, -1);
       }
 
       if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
-        index++;
-      }
-
-      if (index < 0) {
-        index = Items.length - 1;
-      }
-
-      if (index === Items.length) {
-        index = 0;
+        index = Tab.nextTabIndex(Items, index, 1);
       }
 
       var nextTab = Items.eq(index);

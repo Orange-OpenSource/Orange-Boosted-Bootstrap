@@ -1,12 +1,12 @@
 /*!
   * Boosted v4.6.2 (https://boosted.orange.com)
-  * Copyright 2014-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Copyright 2014-2021 Orange SA
+  * Copyright 2014-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Copyright 2014-2022 Orange SA
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   **
   * This a fork of Bootstrap:
   * Bootstrap v4.6.2 (https://getbootstrap.com/)
-  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -32,11 +32,14 @@
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
     return Constructor;
   }
 
   function _extends$1() {
-    _extends$1 = Object.assign || function (target) {
+    _extends$1 = Object.assign ? Object.assign.bind() : function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
 
@@ -49,7 +52,6 @@
 
       return target;
     };
-
     return _extends$1.apply(this, arguments);
   }
 
@@ -61,11 +63,10 @@
   }
 
   function _setPrototypeOf(o, p) {
-    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
       o.__proto__ = p;
       return o;
     };
-
     return _setPrototypeOf(o, p);
   }
 
@@ -6413,9 +6414,7 @@
         }
 
         return null;
-      }).filter(function (item) {
-        return item;
-      }).sort(function (a, b) {
+      }).filter(Boolean).sort(function (a, b) {
         return a[0] - b[0];
       }).forEach(function (item) {
         _this2._offsets.push(item[0]);
@@ -6669,7 +6668,7 @@
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE$1) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE$1) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED) || this._element.hasAttribute('disabled')) {
         return;
       }
 
@@ -6871,27 +6870,37 @@
     // Boosted mod
     ;
 
+    Tab.nextTabIndex = function nextTabIndex(items, index, step) {
+      var indexInit = index;
+
+      do {
+        index += step;
+
+        if (index < 0) {
+          index = items.length - 1;
+        }
+
+        if (index === items.length) {
+          index = 0;
+        }
+      } while ((items[index].classList.contains('disabled') || items[index].disabled) && index !== indexInit);
+
+      return index;
+    };
+
     Tab._dataApiKeydownHandler = function _dataApiKeydownHandler(e) {
       var $this = $__default["default"](this);
-      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
+      var Items = $this.closest('[role=tablist]').find('[role=tab]:visible');
       var k = e.which || e.keyCode;
       var index = 0;
       index = Items.index(Items.filter(':focus'));
 
       if (k === ARROW_UP_KEYCODE$1 || k === ARROW_LEFT_KEYCODE$1) {
-        index--;
+        index = Tab.nextTabIndex(Items, index, -1);
       }
 
       if (k === ARROW_RIGHT_KEYCODE$1 || k === ARROW_DOWN_KEYCODE$1) {
-        index++;
-      }
-
-      if (index < 0) {
-        index = Items.length - 1;
-      }
-
-      if (index === Items.length) {
-        index = 0;
+        index = Tab.nextTabIndex(Items, index, 1);
       }
 
       var nextTab = Items.eq(index);
