@@ -11,6 +11,9 @@
   --#{$prefix}offcanvas-border-width: #{$offcanvas-border-width};
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
+  --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas}; // Boosted mod
+  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height}; // Boosted mod
+  --#{$prefix}offcanvas-transition-duration: #{$offcanvas-transition-duration}; // Boosted mod
   // scss-docs-end offcanvas-css-vars
 }
 
@@ -31,7 +34,7 @@
     @include media-breakpoint-down($next) {
       position: fixed;
       bottom: 0;
-      z-index: $zindex-offcanvas;
+      z-index: var(--#{$prefix}offcanvas-zindex); // Boosted mod
       display: flex;
       flex-direction: column;
       max-width: 100%;
@@ -41,7 +44,7 @@
       background-clip: padding-box;
       outline: 0;
       @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
-      @include transition(transform $offcanvas-transition-duration ease-in-out);
+      @include transition(transform var(--#{$prefix}offcanvas-transition-duration) ease-in-out); // Boosted mod
 
       &.offcanvas-start {
         top: 0;
@@ -114,7 +117,12 @@
 }
 
 .offcanvas-backdrop {
-  @include overlay-backdrop($zindex-offcanvas-backdrop, $offcanvas-backdrop-bg, $offcanvas-backdrop-opacity);
+  // scss-docs-start offcanvas-backdrop-css-vars
+  --#{$prefix}offcanvas-backdrop-bg: #{$offcanvas-backdrop-bg}; // Boosted mod
+  --#{$prefix}offcanvas-backdrop-opacity: #{$offcanvas-backdrop-opacity}; // Boosted mod
+  --#{$prefix}offcanvas-backdrop-zindex: #{$zindex-offcanvas-backdrop}; // Boosted mod
+  // scss-docs-end offcanvas-backdrop-css-vars
+  @include overlay-backdrop(var(--#{$prefix}offcanvas-backdrop-zindex), var(--#{$prefix}offcanvas-backdrop-bg), var(--#{$prefix}offcanvas-backdrop-opacity)); // Boosted mod
 }
 
 .offcanvas-header {
@@ -133,7 +141,7 @@
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: $offcanvas-title-line-height;
+  line-height: var(--#{$prefix}offcanvas-title-line-height); // Boosted mod
 }
 
 .offcanvas-body {
