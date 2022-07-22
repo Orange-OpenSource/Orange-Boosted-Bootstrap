@@ -118,11 +118,11 @@
 
 .offcanvas-backdrop {
   // scss-docs-start offcanvas-backdrop-css-vars
-  --#{$prefix}offcanvas-zindex-backdrop: #{$zindex-offcanvas-backdrop}; // Boosted mod
   --#{$prefix}offcanvas-backdrop-bg: #{$offcanvas-backdrop-bg}; // Boosted mod
   --#{$prefix}offcanvas-backdrop-opacity: #{$offcanvas-backdrop-opacity}; // Boosted mod
+  --#{$prefix}offcanvas-backdrop-zindex: #{$zindex-offcanvas-backdrop}; // Boosted mod
   // scss-docs-end offcanvas-backdrop-css-vars
-  @include overlay-backdrop(var(--#{$prefix}offcanvas-zindex-backdrop), var(--#{$prefix}offcanvas-backdrop-bg), var(--#{$prefix}offcanvas-backdrop-opacity)); // Boosted mod
+  @include overlay-backdrop(var(--#{$prefix}offcanvas-backdrop-zindex), var(--#{$prefix}offcanvas-backdrop-bg), var(--#{$prefix}offcanvas-backdrop-opacity)); // Boosted mod
 }
 
 .offcanvas-header {
