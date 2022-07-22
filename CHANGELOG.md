@@ -132,7 +132,7 @@
 
 ## Features
 
-* **back to top:** brand new component :tada: ([893944d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/893944d3aaa250b41f6cecf7f36fe2ed8c44d936))
+* **back to top:** brand-new component :tada: ([893944d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/893944d3aaa250b41f6cecf7f36fe2ed8c44d936))
 * **back-to-top:** use .btn-icon, match .btn-close pattern & fix icon in RTL ([6cd7c9e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6cd7c9e6422c0f710f924e86178e8dd386831e47))
 * **buttons:** buttons with icon, branded :tada: ([d399331](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d399331db6f8093ba7b190f4a75a054879449983))
 * **carousel:** Orange branded :tada: ([7f320f6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7f320f69539ef1f2424e50d8eda41ffcd447bf38))
