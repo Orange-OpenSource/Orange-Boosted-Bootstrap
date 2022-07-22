@@ -9,27 +9,41 @@
 }
 
 .dropdown-toggle {
-  padding-right: $dropdown-padding-x; // Boosted mod
-  padding-left: $dropdown-padding-x; // Boosted mod
-  color: $dropdown-color; // Boosted mod
-  white-space: nowrap;
-  background-color: $dropdown-bg; // Boosted mod
-  border-color: $dropdown-border-color; // Boosted mod
+  // scss-docs-start dropdown-toggle-css-vars
+  --#{$prefix}dropdown-toggle-padding-x: #{$dropdown-padding-x}; // Boosted mod
+  --#{$prefix}dropdown-toggle-color: #{$dropdown-color}; // Boosted mod
+  --#{$prefix}dropdown-toggle-bg: #{$dropdown-bg}; // Boosted mod
+  --#{$prefix}dropdown-toggle-border-color: #{$dropdown-border-color}; // Boosted mod
+  // scss-docs-end dropdown-toggle-css-vars
 
-  // Boosted mod: dark background
+  // Boosted mod
+  padding-right: var(--#{$prefix}dropdown-toggle-padding-x);
+  padding-left: var(--#{$prefix}dropdown-toggle-padding-x);
+  color: var(--#{$prefix}dropdown-toggle-color);
+  white-space: nowrap;
+  background-color: var(--#{$prefix}dropdown-toggle-bg);
+  border-color: var(--#{$prefix}dropdown-toggle-border-color);
+
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
-    color: $dropdown-bg;
-    background-color: $dropdown-color;
-    border-color: $gray-700;
+    // scss-docs-start dropdown-toggle-dark-variant-css-vars
+    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg};
+    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color};
+    --#{$prefix}dropdown-toggle-border-color: #{$gray-700};
+    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color};
+    // scss-docs-end dropdown-toggle-dark-variant-css-vars
+
+    color: var(--#{$prefix}dropdown-toggle-color);
+    background-color: var(--#{$prefix}dropdown-toggle-bg);
+    border-color: var(--#{$prefix}dropdown-toggle-border-color);
 
     &:hover {
-      border-color: $dropdown-link-hover-color;
+      border-color: var(--#{$prefix}dropdown-toggle-border-hover-color);
     }
   }
 
   .btn-group &:not(.btn-inverse) {
-    border-color: $dropdown-color;
+    border-color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
   }
   // End mod
 
@@ -62,6 +76,7 @@
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
   --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
   --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
+  --#{$prefix}dropdown-item-font-weight: #{$font-weight-bold}; // Boosted mod
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -192,7 +207,7 @@
   width: 100%; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   clear: both;
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
