@@ -1,101 +1,160 @@
 ---
 layout: docs
-title: Parcel
-description: Learn how to include Boosted in your project using Parcel.
+title: "Boosted & Parcel"
+description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
 group: getting-started
 toc: true
 ---
 
-## Install Parcel
+<div class="d-flex justify-content-center">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/parcel.png" alt="Parcel logo" loading="lazy">
+</div>
 
-Install [Parcel Bundler](https://parceljs.org/getting-started/webapp/).
+{{< callout >}}
+**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html) but not run it because Parcel isn't currently supported there.
+{{< /callout >}}
 
-## Install Boosted
+## Setup
 
-[Install boosted]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
+We're building a Parcel project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
-Boosted depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property. This means that you will have to make sure to add both of them to your `package.json` using `npm install @popperjs/core`.
+1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
-When all will be completed, your project will be structured like this:
+   ```sh
+   mkdir my-project && cd my-project
+   npm init -y
+   ```
+
+2. **Install Parcel.** Unlike our Webpack guide, there's only a single build tool dependency here. Parcel will automatically install language transformers (like Sass) as it detects them. We use `--save-dev` to signal that this dependency is only for development use and not for production.
+
+   ```sh
+   npm i --save-dev parcel
+   ```
+
+3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+
+   ```sh
+   npm i --save boosted @popperjs/core
+   ```
+
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted.
+
+## Project structure
+
+We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` folder, stylesheet, and JavaScript file to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
+
+```sh
+mkdir {src,src/js,src/scss}
+touch src/index.html src/js/main.js src/scss/styles.scss
+```
+
+When you're done, your complete project should look like this:
 
 ```text
-project-name/
-├── build/
-├── node_modules/
-│   └── boosted/
-│   └── @popperjs/
-|       └── core/
-├── scss/
-│   └── custom.scss
+my-project/
 ├── src/
+│   ├── js/
+│   │   └── main.js
+│   ├── scss/
+│   │   └── styles.scss
 │   └── index.html
-│   └── index.js
+├── package-lock.json
 └── package.json
 ```
 
-## Importing JavaScript
+At this point, everything is in the right place, but Parcel needs an HTML page and npm script to start our server.
 
-Import [Boosted's JavaScript]({{< docsref "/getting-started/javascript" >}}) in your app's entry point (usually `src/index.js`). You can import all our plugins in one file or separately if you require only a subset of them.
+## Configure Parcel
 
-<!-- eslint-skip -->
-```js
-// Import all plugins
-import * as boosted from 'boosted';
+With dependencies installed and our project folder ready for us to start coding, we can now configure Parcel and run our project locally. Parcel itself requires no configuration file by design, but we do need an npm script and an HTML file to start our server.
 
-// Or import only needed plugins
-import { Tooltip as Tooltip, Toast as Toast, Popover as Popover } from 'boosted';
+1. **Fill in the `src/index.html` file.** Parcel needs a page to render, so we use our `index.html` page to set up some basic HTML, including our CSS and JavaScript files.
 
-// Or import just one
-import Alert as Alert from '../node_modules/boosted/js/dist/alert';
-```
+   ```html
+   <!doctype html>
+   <html lang="en">
+     <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>Boosted w/ Parcel</title>
+       <link rel="stylesheet" href="scss/styles.scss">
+       <script type="module" src="js/main.js"></script>
+     </head>
+     <body>
+       <div class="container py-4 px-3 mx-auto">
+         <h1>Hello, Boosted and Parcel!</h1>
+         <button class="btn btn-primary">Primary button</button>
+       </div>
+     </body>
+   </html>
+   ```
 
-## Importing CSS
+   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
 
-To utilize the full potential of Boosted and customize it to your needs, use the source files as a part of your project's bundling process.
+   Parcel will automatically detect we're using Sass and install the [Sass Parcel plugin](https://parceljs.org/languages/sass/) to support it. However, if you wish, you can also manually run `npm i --save-dev @parcel/transformer-sass`.
 
-Create your own `scss/custom.scss` to [import Boosted's Sass files]({{< docsref "/customize/sass#importing" >}}) and then override the [built-in custom variables]({{< docsref "/customize/sass#variable-defaults" >}}).
+2. **Add the Parcel npm scripts.** Open the `package.json` and add the following `start` script to the `scripts` object. We'll use this script to start our Parcel development server and render the HTML file we created after it's compiled into the `dist` directory.
 
-## Build app
+   ```json
+   {
+      // ...
+      "scripts": {
+        "start": "parcel serve src/index.html --public-url / --dist-dir dist",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      // ...
+   }
+   ```
 
-Include `src/index.js` before the closing `</body>` tag.
+3. **And finally, we can start Parcel.** From the `my-project` folder in your terminal, run that newly added npm script:
 
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <script type="module" src="./index.js"></script>
-  </body>
-</html>
-```
+   ```sh
+   npm start
+   ```
 
-### Edit `package.json`
+   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server.png" alt="Parcel dev server running">
 
-Add `dev` and `build` scripts in your `package.json` file.
+In the next and final section to this guide, we'll import all of Boosted's CSS and JavaScript.
 
-```json
-"scripts": {
-  "dev": "parcel ./src/index.html",
-  "prebuild": "npx rimraf build",
-  "build": "parcel build --public-url ./ ./src/index.html --dist-dir build"
-}
-```
+## Import Boosted
 
-### Run dev script
+Importing Boosted into Parcel requires two imports, one into our `styles.scss` and one into our `main.js`.
 
-Your app will be accessible at `http://127.0.0.1:1234`.
+1. **Import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
-```sh
-npm run dev
-```
+   ```scss
+   // Import all of Boosted's CSS
+   @import "~boosted/scss/boosted";
+   ```
 
-### Build app files
+   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-Built files are in the `build/` folder.
+2. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
-```sh
-npm run build
-```
+   <!-- eslint-skip -->
+   ```js
+   // Import all of Boosted's JS
+   import * as boosted from 'boosted'
+   ```
+
+   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
+
+   <!-- eslint-skip -->
+   ```js
+   import Alert from 'boosted/js/dist/alert'
+
+   // or, specify which plugins you need:
+   import { Tooltip, Toast, Popover } from 'boosted'
+   ```
+
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+
+3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+
+   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted">
+
+   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+
+{{< markdown >}}
+{{< partial "guide-footer.md" >}}
+{{< /markdown >}}

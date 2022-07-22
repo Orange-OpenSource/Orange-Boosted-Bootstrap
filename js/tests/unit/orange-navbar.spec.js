@@ -85,11 +85,11 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const loadEvent = createEvent('load')
-    spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
 
     window.dispatchEvent(loadEvent)
 
-    expect(OrangeNavbar.enableMinimizing).toHaveBeenCalled()
+    expect(spy).toHaveBeenCalled()
   })
 
   it('should call enableMinimizing when there is a scroll on the page', () => {
@@ -98,12 +98,12 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const scrollEvent = createEvent('scroll')
-    spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
     window.scrollY = 1
 
     window.dispatchEvent(scrollEvent)
 
-    expect(OrangeNavbar.enableMinimizing).toHaveBeenCalled()
+    expect(spy).toHaveBeenCalled()
   })
 
   it('should not call enableMinimizing when there is a scroll on the page and the header does not have .sticky-top', () => {
@@ -112,12 +112,12 @@ describe('OrangeNavbar', () => {
     ].join('')
 
     const scrollEvent = createEvent('scroll')
-    spyOn(OrangeNavbar, 'enableMinimizing')
+    const spy = spyOn(OrangeNavbar, 'enableMinimizing')
     window.scrollY = 1
 
     window.dispatchEvent(scrollEvent)
 
-    expect(OrangeNavbar.enableMinimizing).not.toHaveBeenCalled()
+    expect(spy).not.toHaveBeenCalled()
   })
 
   it('should add .header-minimized to the global header non-supra first <nav> when enableMinimizing is called not at the top of the page', () => {

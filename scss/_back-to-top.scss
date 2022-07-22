@@ -36,6 +36,7 @@
   right: var(--#{$prefix}back-to-top-right);
   bottom: var(--#{$prefix}back-to-top-bottom);
   z-index: var(--#{$prefix}back-to-top-zindex);
+  pointer-events: none;
 }
 
 .back-to-top-link {

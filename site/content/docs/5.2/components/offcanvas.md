@@ -68,15 +68,31 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </div>
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
         Dropdown button
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
         <li><a class="dropdown-item" href="#">Something else here</a></li>
       </ul>
     </div>
+  </div>
+</div>
+{{< /example >}}
+
+### Dark offcanvas
+
+Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
+
+{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+<div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Place offcanvas content here.</p>
   </div>
 </div>
 {{< /example >}}
@@ -243,6 +259,10 @@ As part of Bootstrap's evolving CSS variables approach, offcanvas now uses local
 
 {{< scss-docs name="offcanvas-css-vars" file="scss/_offcanvas.scss" >}}
 
+Customization of the offcanvas backdrop visibility through CSS variables can be seen on the `.offcanvas-backdrop` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="offcanvas-backdrop-css-vars" file="scss/_offcanvas.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
@@ -271,7 +291,7 @@ Add `data-bs-toggle="offcanvas"` and a `data-bs-target` or `href` to the element
 {{% js-dismiss "offcanvas" %}}
 
 {{< callout warning >}}
-While both ways to dismiss an offcanvas are supported, keep in mind that dismissing from outside an offcanvas does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
+While both ways to dismiss an offcanvas are supported, keep in mind that dismissing from outside an offcanvas does not match the [ARIA Authoring Practices Guide dialog (modal) pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/). Do this at your own risk.
 {{< /callout >}}
 
 ### Via JavaScript
@@ -314,11 +334,11 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
-| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
-| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
 | `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
 | `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized |
+| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
+| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
+| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
 {{< /bs-table >}}
 
 ### Events
@@ -328,11 +348,11 @@ Boosted's offcanvas class exposes a few events for hooking into offcanvas functi
 {{< bs-table "table" >}}
 | Event type | Description |
 | --- | --- |
+| `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
+| `hidePrevented.bs.offcanvas` | This event is fired when the offcanvas is shown, its backdrop is `static` and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
+| `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
 | `show.bs.offcanvas` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
-| `hidePrevented.bs.offcanvas` | This event is fired when the offcanvas is shown, its backdrop is `static` and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
 {{< /bs-table >}}
 
 ```js

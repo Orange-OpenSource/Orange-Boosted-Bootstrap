@@ -16,7 +16,7 @@ Get started by including Boosted's production-ready CSS and JavaScript via CDN w
 
 <br>
 
-1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport>` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
+1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport">` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
 
    ```html
    <!doctype html>
@@ -188,7 +188,7 @@ For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/rebo
 
 ## Bootstrap Community
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Stay up-to-date on the development of Bootstrap and reach out to the community with these helpful resources.
 
 - Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
 - Join [the official Slack room]({{< param slack >}}).

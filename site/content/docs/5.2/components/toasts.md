@@ -197,7 +197,7 @@ Building on the above example, you can create different toast color schemes with
 
 Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <form>
   <div class="mb-3">
     <label for="selectToastPlacement">Toast placement</label>
@@ -374,12 +374,12 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
-| `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
-| `isShown` | Returns a boolean according to toast's visibility state. |
 | `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
 | `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance|
 | `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`const myToastEl = document.getElementById('myToastEl')`  `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance |
+| `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
+| `isShown` | Returns a boolean according to toast's visibility state. |
+| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
 {{< /bs-table >}}
 
 ### Events
@@ -387,10 +387,10 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Event | Description |
 | --- | --- |
+| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
+| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
 | `show.bs.toast` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.toast` | This event is fired when the toast has been made visible to the user. |
-| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
 {{< /bs-table >}}
 
 ```js
