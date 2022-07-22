@@ -14,26 +14,31 @@
   --#{$prefix}dropdown-toggle-color: #{$dropdown-color}; // Boosted mod
   --#{$prefix}dropdown-toggle-bg: #{$dropdown-bg}; // Boosted mod
   --#{$prefix}dropdown-toggle-border-color: #{$dropdown-border-color}; // Boosted mod
-  --#{$prefix}dropdown-toggle-border-color-bg-dark: #{$gray-700}; // Boosted mod
-  --#{$prefix}dropdown-toggle-link-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
   // scss-docs-end dropdown-toggle-css-vars
 
-  padding-right: var(--#{$prefix}dropdown-toggle-padding-x); // Boosted mod
-  padding-left: var(--#{$prefix}dropdown-toggle-padding-x); // Boosted mod
-  color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
+  // Boosted mod
+  padding-right: var(--#{$prefix}dropdown-toggle-padding-x);
+  padding-left: var(--#{$prefix}dropdown-toggle-padding-x);
+  color: var(--#{$prefix}dropdown-toggle-color);
   white-space: nowrap;
-  background-color: var(--#{$prefix}dropdown-toggle-bg); // Boosted mod
-  border-color: var(--#{$prefix}dropdown-toggle-border-color); // Boosted mod
+  background-color: var(--#{$prefix}dropdown-toggle-bg);
+  border-color: var(--#{$prefix}dropdown-toggle-border-color);
 
-  // Boosted mod: dark background
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
-    color: var(--#{$prefix}dropdown-toggle-bg); // Boosted mod
-    background-color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
-    border-color: var(--#{$prefix}dropdown-toggle-border-color-bg-dark); // Boosted mod
+    // scss-docs-start dropdown-toggle-dark-variant-css-vars
+    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg};
+    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color};
+    --#{$prefix}dropdown-toggle-border-color: #{$gray-700};
+    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color};
+    // scss-docs-end dropdown-toggle-dark-variant-css-vars
+
+    color: var(--#{$prefix}dropdown-toggle-color);
+    background-color: var(--#{$prefix}dropdown-toggle-bg);
+    border-color: var(--#{$prefix}dropdown-toggle-border-color);
 
     &:hover {
-      border-color: var(--#{$prefix}dropdown-toggle-link-hover-color); // Boosted mod
+      border-color: var(--#{$prefix}dropdown-toggle-border-hover-color);
     }
   }
 
