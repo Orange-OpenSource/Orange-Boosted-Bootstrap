@@ -188,7 +188,7 @@ For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/rebo
 
 ## Bootstrap Community
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Stay up-to-date on the development of Bootstrap and reach out to the community with these helpful resources.
 
 - Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
 - Join [the official Slack room]({{< param slack >}}).
