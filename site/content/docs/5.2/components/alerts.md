@@ -152,6 +152,8 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ### Dark variant
 
+{{< added-in "5.2.0" >}}
+
 Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 
 {{< example class="bg-dark" >}}

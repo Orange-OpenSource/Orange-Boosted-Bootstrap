@@ -355,6 +355,8 @@ Drop borders using `.btn-no-outline`, too.
 
 ## Star rating
 
+{{< added-in "5.2.0" >}}
+
 Star rating system is built on top of radios. Simply add `.star-rating` to a `<fieldset>` element to use predefined glyphs and compose your star rating system with as much stars as needed.
 
 {{< example >}}
