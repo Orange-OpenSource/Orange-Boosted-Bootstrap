@@ -144,7 +144,7 @@ By default there is no icon in this new project.
 Click on `Import icons` and import icons in SVG.
 
 {{< callout warning >}}
-SVG icons must be within a square layout to preserve icons consistency. Otherwise you will have some suprises!
+SVG icons must be within a square layout to preserve icons consistency. Otherwise you will have some surprises!
 {{< /callout >}}
 
 <img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-import-icons.png" alt="IcoMoon - Import Icons" loading="lazy">
@@ -166,7 +166,7 @@ Now you have a `Download` button at the bottom right of the page but **WAIT!**.
 You need to make some changes into `Preferences` to name your font with a name dedicated to your project.
 
 1. Click on `Preferences` on the top menu bar.
-2. The default font name is `icomoon`. Rename it for you project (e.g. "myproject-icons") and customize the class prefix by adding your project name to create a unique CSS selector.
+2. The default font name is `icomoon`. Rename it for you project (e.g. `myproject-icons`) and customize the class prefix by adding your project name to create a unique CSS selector.
 3. You can also change the version, get SCSS variables, etc.
 4. Don't forget to **uncheck IE8 support**!
 
@@ -180,7 +180,7 @@ You are now ready to download your font with the button at the bottom right of t
 
 <img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-download-font.png" alt="IcoMoon - Download Font" loading="lazy">
 
-The zip file will be named in function of what has been defined in the preferences modal (e.g. myproject-icons-v1.0.zip).
+The zip file will be named in function of what has been defined in the preferences modal (e.g. `myproject-icons-v1.0.zip`).
 
 Unzip it:
 * `demo.html` and `demo-files` fold offer a sample page displaying the icons — they are not mandatory for your project.
