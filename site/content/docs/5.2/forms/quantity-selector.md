@@ -7,6 +7,8 @@ toc: true
 added: "5.2"
 ---
 
+{{< added-in "5.2.0" >}}
+
 ## Default
 
 Quantity selector is a form element used to select a number.
