@@ -87,7 +87,7 @@
   --#{$prefix}footer-part-gap: #{$footer-gap-xl};
 }
 
-.footer-expand {
+.navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
