@@ -859,6 +859,14 @@ Customization through CSS variables can be seen on the `.dropdown-menu-dark` cla
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
 
+Dropdowns also use local CSS variables on `.dropdown-toggle` for enhanced real-time customization.
+
+{{< scss-docs name="dropdown-toggle-css-vars" file="scss/_dropdown.scss" >}}
+
+Customization through CSS variables can be seen on the `.dropdown-toggle` dark variant where we override specific values.
+
+{{< scss-docs name="dropdown-toggle-dark-variant-css-vars" file="scss/_dropdown.scss" >}}
+
 ### Sass variables
 
 Variables for all dropdowns:
