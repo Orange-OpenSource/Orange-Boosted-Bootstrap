@@ -9,7 +9,11 @@ added: "5.2"
 
 ## How it works
 
-The footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 5 ready to use bars which should be arranged vertically in the following order:
+{{< callout warning >}}
+Be careful, the footer component is based on navbar component. Please import the corresponding css if this is not the case.
+{{< /callout >}}
+
+The footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 5 ready to use fully responsive bars which should be arranged vertically in the following order:
 - Title with content bar
 - Follow us bar
 - Navigation bar
@@ -103,21 +107,58 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 {{< /orange-footer >}}
 {{< /example >}}
 
-## Behavior
-
-The footer component is designed to be responsive on all devices.
-
-`.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<footer>` will allow:
-  - The change of the different bars padding
-  - The change of the navigation bar to expand from an accordion to an unstyled list
-
-{{< callout info >}}
-Be careful to change all the utilities that are related to the breakpoint inside the footer.
-{{< /callout >}}
-
-## Sass
+## CSS
 
 ### Variables
+
+As part of Boosted’s evolving CSS variables approach, footers now use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="footer-part-css-vars" file="scss/_footer.scss" >}}
+
+Each bar redefines its own CSS variables:
+
+- **Title with content bar**:
+
+{{< scss-docs name="footer-title-css-vars" file="scss/_footer.scss" >}}
+
+and its responsive part:
+
+{{< scss-docs name="footer-title-md-css-vars" file="scss/_footer.scss" >}}
+
+- **Follow us bar**:
+
+{{< scss-docs name="footer-social-css-vars" file="scss/_footer.scss" >}}
+
+and its responsive part:
+
+{{< scss-docs name="footer-social-md-css-vars" file="scss/_footer.scss" >}}
+
+- **Navigation bar**:
+
+{{< scss-docs name="footer-nav-css-vars" file="scss/_footer.scss" >}}
+
+and its responsive part:
+
+{{< scss-docs name="footer-nav-md-css-vars" file="scss/_footer.scss" >}}
+
+- **Service bar**:
+
+{{< scss-docs name="footer-service-css-vars" file="scss/_footer.scss" >}}
+
+and its responsive part:
+
+{{< scss-docs name="footer-service-md-css-vars" file="scss/_footer.scss" >}}
+
+- **Terms & Conditions**:
+
+{{< scss-docs name="footer-terms-css-vars" file="scss/_footer.scss" >}}
+
+and its responsive part:
+
+{{< scss-docs name="footer-terms-md-css-vars" file="scss/_footer.scss" >}}
+
+
+### Sass Variables
 
 For more details, please have a look at the exhaustive list of available variables:
 
