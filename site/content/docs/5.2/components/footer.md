@@ -105,7 +105,7 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 
 ## Behavior
 
-Footer are designed to be responsive on all devices.
+The footer component is designed to be responsive on all devices.
 
 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<footer>` will allow:
   - The change of the different bars padding
