@@ -98,6 +98,8 @@ Carousel progress indicator is paused under multiple conditions:
 <!-- Boosted mod -->
 ### With pause/play button
 
+{{< added-in "5.2.0" >}}
+
 Adding a pause and play button is recommended to setup an accessible carousel.
 This `button` must immediately follow your carousel and have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
 
