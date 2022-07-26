@@ -57,6 +57,22 @@ And with `<a>` elements:
 </div>
 {{< /example >}}
 
+
+Please note that `.dropdown-item` can be either `<a>` or `<button>` depending of your needs. If your goal is to use the dropdown menu to perform actions in the same page then the best choice will be to use `<button>`. However, for a link to a new page `<a>` is the best option.
+
+{{< example >}}
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="btn-secondary dropdown-item">Action</button></li>
+    <li><button class="btn-secondary dropdown-item">Another action</button></li>
+    <li><button class="btn-secondary dropdown-item">Something else here</button></li>
+  </ul>
+</div>
+{{< /example >}}
+
 <!-- Boosted mod: do not show button's variants for dropdown -->
 
 ### Split button
