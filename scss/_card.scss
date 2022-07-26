@@ -84,7 +84,7 @@
 }
 
 .card-subtitle {
-  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-top: 0; // Boosted mod
   margin-bottom: 0;
 }
 

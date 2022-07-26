@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+<!-- Boosted mod: use of h4 instead of h5 + add .fw-bold where needed -->
+
 ## About
 
 A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Boosted 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
@@ -20,8 +22,8 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 <div class="card" style="width: 18rem;">
   {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <div class="card-footer mt-2">
     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -54,8 +56,8 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <h4 class="card-title">Card title</h4>
+    <h5 class="card-subtitle mb-3 h6">Card subtitle</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
@@ -124,8 +126,8 @@ Mix and match multiple content types to create the card you need, or throw every
 <div class="card" style="width: 18rem;">
   {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">An item</li>
@@ -149,8 +151,8 @@ Add an optional header and/or footer within a card.
     Featured
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -160,10 +162,10 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 
 {{< example >}}
 <div class="card">
-  <h5 class="card-header">Featured</h5>
+  <h4 class="card-header">Featured</h4>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -189,8 +191,8 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     Featured
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
   <div class="card-footer">
@@ -212,8 +214,8 @@ Using the grid, wrap cards in columns and rows as needed.
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
@@ -221,8 +223,8 @@ Using the grid, wrap cards in columns and rows as needed.
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
@@ -237,16 +239,16 @@ Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" 
 {{< example >}}
 <div class="card w-75">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
 </div>
 
 <div class="card w-50">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
 </div>
@@ -259,8 +261,8 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -273,24 +275,24 @@ You can quickly change the text alignment of any card—in its entirety or speci
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
 <div class="card text-center" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
 <div class="card text-end" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -316,8 +318,8 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -339,8 +341,8 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text fw-bold">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -358,15 +360,15 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 <div class="card mb-3">
   {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
   {{< placeholder width="100%" height="180" class="card-img-bottom" text="Image cap" >}}
@@ -381,8 +383,8 @@ Turn an image into a card background and overlay your card's text. Depending on 
 <div class="card">
   {{< placeholder width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" >}}
   <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text">Last updated 3 mins ago</p>
   </div>
 </div>
@@ -404,8 +406,8 @@ Using a combination of grid and utility classes, cards can be made horizontal in
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
@@ -429,8 +431,8 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 <div class="card text-bg-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
-    <h5 class="card-title">{{ .name | title }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">{{ .name | title }} card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {{- end -}}
@@ -451,8 +453,8 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
-    <h5 class="card-title">{{ .name | title }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">{{ .name | title }} card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {{- end }}
@@ -460,8 +462,8 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 <div class="card border-0 mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
-    <h5 class="card-title">Borderless card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">Borderless card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 <!-- End mod -->
@@ -476,8 +478,8 @@ You can also change the borders on the card header and footer as needed, and eve
 <div class="card border-success mb-3" style="max-width: 18rem;">
   <div class="card-header bg-transparent border-success text-body">Header</div>
   <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h4 class="card-title">Success card title</h4>
+    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <div class="card-footer bg-transparent border-success">Footer</div>
 </div>
@@ -496,24 +498,24 @@ Use card groups to render cards as a single, attached element with equal width a
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
@@ -527,8 +529,8 @@ When using card groups with footers, their content will automatically line up.
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
       <small>Last updated 3 mins ago</small>
@@ -537,8 +539,8 @@ When using card groups with footers, their content will automatically line up.
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
       <small>Last updated 3 mins ago</small>
@@ -547,8 +549,8 @@ When using card groups with footers, their content will automatically line up.
   <div class="card">
     {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
       <small>Last updated 3 mins ago</small>
@@ -567,8 +569,8 @@ Use the Boosted grid system and its [`.row-cols` classes]({{< docsref "/layout/g
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -576,8 +578,8 @@ Use the Boosted grid system and its [`.row-cols` classes]({{< docsref "/layout/g
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -585,8 +587,8 @@ Use the Boosted grid system and its [`.row-cols` classes]({{< docsref "/layout/g
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
@@ -594,8 +596,8 @@ Use the Boosted grid system and its [`.row-cols` classes]({{< docsref "/layout/g
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -610,8 +612,8 @@ Change it to `.row-cols-3` and you'll see the fourth card wrap.
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -619,8 +621,8 @@ Change it to `.row-cols-3` and you'll see the fourth card wrap.
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -628,8 +630,8 @@ Change it to `.row-cols-3` and you'll see the fourth card wrap.
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
@@ -637,8 +639,8 @@ Change it to `.row-cols-3` and you'll see the fourth card wrap.
     <div class="card">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -653,8 +655,8 @@ When you need equal height, add `.h-100` to the cards. If you want equal heights
     <div class="card h-100">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -662,8 +664,8 @@ When you need equal height, add `.h-100` to the cards. If you want equal heights
     <div class="card h-100">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a short card.</p>
       </div>
     </div>
   </div>
@@ -671,8 +673,8 @@ When you need equal height, add `.h-100` to the cards. If you want equal heights
     <div class="card h-100">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
@@ -680,8 +682,8 @@ When you need equal height, add `.h-100` to the cards. If you want equal heights
     <div class="card h-100">
       {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -696,8 +698,8 @@ Just like with card groups, card footers will automatically line up.
     <div class="card h-100">
       {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
       <div class="card-footer">
         <small>Last updated 3 mins ago</small>
@@ -708,8 +710,8 @@ Just like with card groups, card footers will automatically line up.
     <div class="card h-100">
       {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This card has supporting text below as a natural lead-in to additional content.</p>
       </div>
       <div class="card-footer">
         <small>Last updated 3 mins ago</small>
@@ -720,8 +722,8 @@ Just like with card groups, card footers will automatically line up.
     <div class="card h-100">
       {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       </div>
       <div class="card-footer">
         <small>Last updated 3 mins ago</small>
