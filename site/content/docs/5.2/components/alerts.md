@@ -43,7 +43,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 
 Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div id="liveAlertPlaceholder"></div>
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
 {{< /example >}}
@@ -151,6 +151,8 @@ When an alert is dismissed, the element is completely removed from the page stru
 {{< /callout >}}
 
 ### Dark variant
+
+{{< added-in "5.2.0" >}}
 
 Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 

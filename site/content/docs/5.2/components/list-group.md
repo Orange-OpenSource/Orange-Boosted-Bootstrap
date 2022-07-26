@@ -244,31 +244,57 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
-However, we recommend to use `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+{{< example >}}
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+  </li>
+</ul>
+{{< /example >}}
 
 {{< example >}}
-<div class="list-group">
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    First checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Second checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Third checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fourth checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fifth checkbox
-  </label>
-</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+    <label class="form-check-label" for="firstRadio">First radio</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+    <label class="form-check-label" for="secondRadio">Second radio</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+    <label class="form-check-label" for="thirdRadio">Third radio</label>
+  </li>
+</ul>
+{{< /example >}}
+
+You can use `.stretched-link` on `<label>`s to make the whole list group item clickable.
+
+{{< example >}}
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+    <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+    <label class="form-check-label stretched-link" for="secondCheckboxStretched">Second checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+    <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Third checkbox</label>
+  </li>
+</ul>
 {{< /example >}}
 
 ## CSS

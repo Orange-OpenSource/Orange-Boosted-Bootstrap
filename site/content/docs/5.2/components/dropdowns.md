@@ -14,7 +14,7 @@ Dropdowns are built on a third party library, [Popper](https://popper.js.org/), 
 
 ## Accessibility
 
-The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
+The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/TR/wai-aria/#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
 
 Boosted's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Boosted does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
 
@@ -30,10 +30,10 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown button
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -45,11 +45,11 @@ And with `<a>` elements:
 
 {{< example >}}
 <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown link
   </a>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -195,10 +195,10 @@ Opt into darker dropdowns to match a dark navbar or custom style by adding `.dro
 {{< example class="bg-dark" >}}
 <div class="btn-group">
   <div class="dropdown">
-    <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
     </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+    <ul class="dropdown-menu dropdown-menu-dark">
       <li><a class="dropdown-item active" href="#">Action</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -235,10 +235,10 @@ And putting it to use in a navbar:
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -263,10 +263,10 @@ Make the dropdown menu centered below the toggle with `.dropdown-center` on the 
 
 {{< example >}}
 <div class="dropdown-center">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Centered dropdown
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Action two</a></li>
     <li><a class="dropdown-item" href="#">Action three</a></li>
@@ -339,10 +339,10 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 
 {{< example >}}
 <div class="dropup-center dropup">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropupCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Centered dropup
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropupCenterBtn">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Action two</a></li>
     <li><a class="dropdown-item" href="#">Action three</a></li>
@@ -474,10 +474,10 @@ You can use `<a>` or `<button>` elements as dropdown items.
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  <ul class="dropdown-menu">
     <li><button class="dropdown-item" type="button">Action</button></li>
     <li><button class="dropdown-item" type="button">Another action</button></li>
     <li><button class="dropdown-item" type="button">Something else here</button></li>
@@ -585,10 +585,10 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 
 {{< example >}}
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -770,10 +770,10 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown me-1">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
       Offset
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -781,10 +781,10 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Reference</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Action</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -801,10 +801,10 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 
 {{< example >}}
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
     Default dropdown
   </button>
-  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -812,10 +812,10 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
     Clickable outside
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -823,10 +823,10 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
     Clickable inside
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -834,10 +834,10 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
     Manual close
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -858,6 +858,14 @@ As part of Boosted's evolving CSS variables approach, dropdowns now use local CS
 Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
+
+Dropdowns also use local CSS variables on `.dropdown-toggle` for enhanced real-time customization.
+
+{{< scss-docs name="dropdown-toggle-css-vars" file="scss/_dropdown.scss" >}}
+
+Customization through CSS variables can be seen on the `.dropdown-toggle` dark variant where we override specific values.
+
+{{< scss-docs name="dropdown-toggle-dark-variant-css-vars" file="scss/_dropdown.scss" >}}
 
 ### Sass variables
 
@@ -893,10 +901,10 @@ Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 
 ```html
 <div class="dropdown">
-  <button id="dLabel" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown trigger
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dLabel">
+  <ul class="dropdown-menu">
     ...
   </ul>
 </div>
