@@ -866,7 +866,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
             <title id="svg1">Thumbnail</title>
             <rect width="100%" height="100%" fill="#ffd200"></rect>
           </svg>
@@ -886,7 +886,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
             <title id="svg2">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -906,7 +906,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
             <title id="svg3">Thumbnail</title>
             <rect width="100%" height="100%" fill="#4bb4e6"></rect>
           </svg>
@@ -926,7 +926,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
             <title id="svg4">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -946,7 +946,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.55rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
             <title id="svg5">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -966,7 +966,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
             <title id="svg6">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -986,7 +986,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
             <title id="svg7">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -1006,7 +1006,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
             <title id="svg8">Document</title>
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
@@ -1022,14 +1022,14 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 
 ```html
 <td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
     <title id="svg1">Thumbnail</title>
     <rect width="100%" height="100%" fill="#ffd200"></rect>
   </svg>
   Cell text
 </td>
 <td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
     <title id="svg2">Document</title>
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
   </svg>
