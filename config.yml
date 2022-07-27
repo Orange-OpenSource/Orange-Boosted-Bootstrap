@@ -65,7 +65,6 @@ params:
   rfs_version:                      "v9.0.6"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
-  slack:                            "https://bootstrap-slack.herokuapp.com/"
   blog:                             "https://blog.getbootstrap.com/"
   icons:                            "https://design.orange.com/icons-libraries/"
   bootstrap:                        "https://getbootstrap.com"
