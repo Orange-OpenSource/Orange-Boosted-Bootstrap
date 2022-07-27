@@ -5,6 +5,8 @@
 .supra {
   // scss-docs-start supra-navbar-css-vars
   --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
+  --#{$prefix}navbar-nav-font-size: #{$font-size-sm};
+  --#{$prefix}navbar-nav-line-height: #{$line-height-sm};
   --#{$prefix}navbar-nav-link-padding-y: #{$navbar-supra-link-padding-y};
   --#{$prefix}navbar-nav-link-padding-x: #{$navbar-supra-link-padding-x};
   --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-supra-icon-padding-y};
@@ -14,15 +16,11 @@
 
   display: none;
 
-  .navbar-nav {
-    .nav-link {
-      padding-top: var(--#{$prefix}navbar-nav-link-padding-y);
-      font-size: $font-size-sm;
-      line-height: $line-height-sm;
+  .navbar-nav .nav-link {
+    padding-top: var(--#{$prefix}navbar-nav-link-padding-y);
 
-      &.nav-icon {
-        padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
-      }
+    &.nav-icon {
+      padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
     }
   }
 }
