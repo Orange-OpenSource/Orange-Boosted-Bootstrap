@@ -33,19 +33,13 @@ tarteaucitron.lang = {
 
     "toggleInfoBox": "Show/hide informations about cookie storage",
     "title": "Панель управления cookies",
-    "cookieDetail": "Информация о файлах cookie для",
-    "ourSite": "на нашем сайте",
-    "modalWindow": "(модальное окно)",
-    "newWindow": "(новое окно)",
+    "cookieDetail": "Cookie detail for",
+    "ourSite": "on our site",
+    "newWindow": "(new window)",
     "allowAll": "Разрешить использование cookies",
     "denyAll": "Запретить использование cookies",
-
-    "icon": "Cookies",
-    
     
     "fallback": "Деактивирован.",
-    "allowed": "разрешается",
-    "disallowed": "запрещено",
 
     "ads": {
         "title": "Рекламная сеть",

@@ -35,16 +35,11 @@ tarteaucitron.lang = {
     "title": "Cookie- hanteringspanel",
     "cookieDetail": "cookie- detalj för",
     "ourSite": "på vår webbplats",
-    "modalWindow": "(modalt fönster)",
     "newWindow": "(nytt fönster)",
     "allowAll": "Tillåt alla cookie",
     "denyAll": "Neka alla cookies",
 
-    "icon": "Cookies",
-
     "fallback": "är ur funktion.",
-    "allowed": "tillåten",
-    "disallowed": "tillåtet",
 
     "ads": {
         "title": "Annonsnätverk",

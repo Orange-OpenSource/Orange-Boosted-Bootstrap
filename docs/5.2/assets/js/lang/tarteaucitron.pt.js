@@ -1,7 +1,7 @@
 /*global tarteaucitron */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
-    "adblock": "Olá! Em uma ação de transparência, este site permite que você escolha quais serviços de terceiros ativar.",
+    "adblock": "Olá! Em uma ação de transparência, este site lhe dá a opção de quais serviços de terceiros deseje ativar.",
     "adblock_call": "Por favor, desative seu bloqueador de publicidades para poder personalizar.",
     "reload": "Atualizar esta página",
     
@@ -34,19 +34,13 @@ tarteaucitron.lang = {
     "title": "Painel de Gerenciamento de Cookies",
     "cookieDetail": "Detalhe do Cookie",
     "ourSite": "em nosso site",
-    "modalWindow": "(janela modal)",
-    "newWindow": "(janela nova)",
+    "newWindow": "(nova janela)",
     "allowAll": "Permite todos os cookies",
-    "denyAll": "Proíbe todos cookies",
-
-    "icon": "Cookies",
+    "denyAll": "Proibe todos cookies",
 
     "fallback": "está desativado.",
-    "allowed": "permitido",
-    "disallowed": "não permitido",
-    
     "ads": {
-        "title": "Redes de anúncios",
+        "title": "Rede de anúncios",
         "details": "As redes de anúncios podem gerar receitas com a venda de espaço publicitário no site."
     },
     "analytic": {
@@ -54,8 +48,8 @@ tarteaucitron.lang = {
         "details": "Serviços de medição de audiência usados para gerar estatísticas no intuito de melhorar o site."
     },
     "social": {
-        "title": "Redes sociais",
-        "details": "Redes sociais podem melhorar a utilização do site e ajudar a promovê-lo via compartilhamentos."
+        "title": "Rede sociais",
+        "details": "Rede sociais podem ameliorar o utilização do site e ajudar a promove-lo via compartilhamentos."
     },
     "video": {
         "title": "Vídeos",
@@ -71,13 +65,13 @@ tarteaucitron.lang = {
     },
     "api": {
         "title": "APIs",
-        "details": "APIs são usadas para carregar scripts: geolocalização, motores de pesquisa, traduções..."
+        "details": "APIs são usadas para carregar scripts: geolocalização, motores de pesquisa, traduções, ..."
     },
     "other": {
         "title": "De outros",
         "details": "Serviços para exibir conteúdo da web."
     },
     
-    "mandatoryTitle": "Cookies obrigatórios",
-    "mandatoryText": "Este site utiliza alguns cookies que são necessários ao seu funcionamento e não podem ser desativados."
+    "mandatoryTitle": "Mandatory cookies",
+    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
 };

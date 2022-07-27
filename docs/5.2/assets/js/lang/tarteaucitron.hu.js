@@ -36,16 +36,11 @@ tarteaucitron.lang = {
     "title": "Süti preferenciák",
     "cookieDetail": "Süti adatok a következőhöz:",
     "ourSite": "weboldalunkon",
-    "modalWindow": "(modális ablak)",
     "newWindow": "(új ablak)",
     "allowAll": "Elfogadom az öszeset",
     "denyAll": "Elutasítom",
-
-    "icon": "Cookies",
     
     "fallback": "letiltott.",
-    "allowed": "megengedett",
-    "disallowed": "nem engedélyezett",
 
     "ads": {
         "title": "Reklámhálózat",
