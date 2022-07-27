@@ -1243,6 +1243,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 // scss-docs-start navbar-variables
 $navbar-padding-y:                  .375rem !default; // Boosted mod
 $navbar-padding-x:                  null !default;
+$navbar-font-weight:                $font-weight-bold !default; // Boosted mod
 
 $navbar-nav-link-padding-y:         1rem !default; // Boosted mod
 $navbar-nav-link-padding-x-xs:      $spacer * .25 !default; // Boosted mod
