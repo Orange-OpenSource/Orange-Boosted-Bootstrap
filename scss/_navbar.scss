@@ -21,6 +21,12 @@
   --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs}; // Boosted mod
   --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --#{$prefix}navbar-nav-padding-top: 0; // Boosted mod
+  --#{$prefix}navbar-nav-padding-x: 0; // Boosted mod
+  --#{$prefix}navbar-nav-padding-bottom: 0; // Boosted mod
+  --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // Boosted mod
+  --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // Boosted mod
+  --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // Boosted mod
   --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // Boosted mod
   --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // Boosted mod
   --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // Boosted mod
@@ -165,8 +171,11 @@
 
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
+  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // Boosted mod
   margin-bottom: 0;
+  @include font-size(var(--#{$prefix}navbar-nav-font-size, $font-size-base)); // Boosted mod
+  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // Boosted mod
+  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // Boosted mod
   list-style: none;
 
   // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
@@ -186,7 +195,6 @@
   }
 
   .nav-item {
-    font-size: $font-size-base;
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
     .badge {

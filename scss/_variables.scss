@@ -2034,39 +2034,42 @@ $quantity-selector-input-sm-max-width:    2.5rem !default;
 
 //// Footer
 // scss-docs-start footer
-$footer-font-size-sm:                    $font-size-sm !default;
-$footer-line-height-sm:                  $line-height-sm !default;
-$footer-font-size-md:                    $font-size-base !default;
-$footer-line-height-md:                  $line-height-base !default;
-$footer-letter-spacing:                  $letter-spacing-base !default;
-$footer-accordion-line-height:           $spacer * 1.45 !default;
+$footer-font-size-sm:                     $font-size-sm !default;
+$footer-line-height-sm:                   $line-height-sm !default;
+$footer-font-size-md:                     $font-size-base !default;
+$footer-line-height-md:                   $line-height-base !default;
+$footer-title-font-weight:                $font-weight-bold !default;
+$footer-letter-spacing:                   $letter-spacing-base !default;
+$footer-accordion-line-height:            $spacer * 1.45 !default;
+$footer-nav-link-font-weight:             $font-weight-bold !default;
 
-$footer-title-content-padding-top:       $spacer * 1.25 !default;
-$footer-title-content-padding-bottom:    $spacer * 1.45 !default;
-$footer-title-content-padding-bottom-md: $spacer * 1.95 !default;
-$footer-title-margin-bottom:             $spacer * .85 !default;
+$footer-title-content-padding-top:        $spacer * 1.25 !default;
+$footer-title-content-padding-bottom:     $spacer * 1.45 !default;
+$footer-title-content-padding-bottom-md:  $spacer * 1.95 !default;
+$footer-title-margin-bottom:              $spacer * .85 !default;
 
-$footer-social-padding-top:              $spacer * .85 !default;
-$footer-social-padding-top-md:           $spacer * 1.5 !default;
-$footer-social-padding-bottom:           $spacer * 1.45 !default;
-$footer-social-title-margin-md:          $spacer * .5 $spacer $spacer * .6 0 !default;
+$footer-social-padding-top:               $spacer * .85 !default;
+$footer-social-padding-top-md:            $spacer * 1.5 !default;
+$footer-social-padding-bottom:            $spacer * 1.45 !default;
+$footer-social-title-margin-bottom-md:    $spacer * .1 !default;
 
-$footer-nav-padding-top:                 $spacer * 1.55 !default;
-$footer-nav-list-padding-top:            $spacer * .85 !default;
-$footer-nav-list-padding-top-md:         $spacer * .05 !default;
-$footer-nav-list-padding-bottom:         $spacer * 1.3 !default;
-$footer-nav-list-padding-bottom-md:      $spacer * 1.75 !default;
-$footer-nav-list-padding-bottom-lg:      $spacer * 2 !default;
+$footer-title-margin-bottom-md:           $spacer * 1.05 !default;
+$footer-nav-padding-top:                  $spacer * 1.55 !default;
+$footer-nav-list-padding-top:             $spacer * .85 !default;
+$footer-nav-list-padding-top-md:          $spacer * .05 !default;
+$footer-nav-list-padding-bottom:          $spacer * 1.3 !default;
+$footer-nav-list-padding-bottom-md:       $spacer * 1.75 !default;
+$footer-nav-list-padding-bottom-lg:       $spacer * 2 !default;
 
-$footer-service-padding-y:               $spacer !default;
-$footer-service-padding-y-md:            $spacer * 1.2 !default;
-$footer-service-link-padding-top:        $spacer * .1 !default;
+$footer-service-padding-y:                $spacer !default;
+$footer-service-padding-y-md:             $spacer * 1.2 !default;
+$footer-service-link-padding-top:         $spacer * .1 !default;
 
-$footer-terms-padding-top:               $spacer * .85 !default;
-$footer-terms-padding-bottom:            $spacer * 1.35 !default;
-$footer-terms-padding-y-md:              $spacer * 1.1 !default;
+$footer-terms-padding-top:                $spacer * .85 !default;
+$footer-terms-padding-bottom:             $spacer * 1.35 !default;
+$footer-terms-padding-y-md:               $spacer * 1.1 !default;
 
-$footer-gap:                             $spacer * .75 !default;
-$footer-gap-xl:                          $spacer * 1.7 !default;
+$footer-gap:                              $spacer * .75 !default;
+$footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
 // End mod
