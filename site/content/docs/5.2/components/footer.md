@@ -143,6 +143,8 @@ and its responsive part:
 
 {{< scss-docs name="footer-nav-md-css-vars" file="scss/_footer.scss" >}}
 
+{{< scss-docs name="footer-nav-lg-css-vars" file="scss/_footer.scss" >}}
+
 - Service bar:
 
 {{< scss-docs name="footer-service-css-vars" file="scss/_footer.scss" >}}

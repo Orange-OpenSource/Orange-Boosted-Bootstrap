@@ -25,8 +25,12 @@
       flex-wrap: wrap;
       gap: var(--#{$prefix}footer-gap);
 
-      .nav-link.active::before {
-        content: unset;
+      .nav-link {
+        outline-offset: 5px;
+
+        &.active::before {
+          content: unset;
+        }
       }
     }
 
@@ -169,6 +173,14 @@
       --#{$prefix}footer-padding-top: #{$footer-terms-padding-y-md};
       --#{$prefix}footer-padding-bottom: #{$footer-terms-padding-y-md};
       // scss-docs-end footer-terms-md-css-vars
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .footer-nav {
+      // scss-docs-start footer-nav-lg-css-vars
+      --#{$prefix}footer-padding-bottom: #{$footer-nav-list-padding-bottom-lg};
+      // scss-docs-end footer-nav-lg-css-vars
     }
   }
 
