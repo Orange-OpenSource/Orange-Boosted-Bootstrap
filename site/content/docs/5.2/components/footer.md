@@ -119,45 +119,47 @@ As part of Boosted’s evolving CSS variables approach, footers use local CSS va
 
 Each bar redefines its own CSS variables.
 
-- Title with content bar:
+Some additional CSS variables are also present on `.footer-title-content`:
 
 {{< scss-docs name="footer-title-css-vars" file="scss/_footer.scss" >}}
 
-and its responsive part:
+and from the medium breakpoint:
 
 {{< scss-docs name="footer-title-md-css-vars" file="scss/_footer.scss" >}}
 
-- Follow us bar:
+Some additional CSS variables are also present on `.footer-social`:
 
 {{< scss-docs name="footer-social-css-vars" file="scss/_footer.scss" >}}
 
-and its responsive part:
+and from the medium breakpoint:
 
 {{< scss-docs name="footer-social-md-css-vars" file="scss/_footer.scss" >}}
 
-- Navigation bar:
+Some additional CSS variables are also present on `.footer-nav`:
 
 {{< scss-docs name="footer-nav-css-vars" file="scss/_footer.scss" >}}
 
-and its responsive part:
+from the medium breakpoint:
 
 {{< scss-docs name="footer-nav-md-css-vars" file="scss/_footer.scss" >}}
 
+and from the large breakpoint:
+
 {{< scss-docs name="footer-nav-lg-css-vars" file="scss/_footer.scss" >}}
 
-- Service bar:
+Some additional CSS variables are also present on `.footer-service`:
 
 {{< scss-docs name="footer-service-css-vars" file="scss/_footer.scss" >}}
 
-and its responsive part:
+and from the medium breakpoint:
 
 {{< scss-docs name="footer-service-md-css-vars" file="scss/_footer.scss" >}}
 
-- Terms & Conditions:
+Some additional CSS variables are also present on `.footer-terms`:
 
 {{< scss-docs name="footer-terms-css-vars" file="scss/_footer.scss" >}}
 
-and its responsive part:
+and from the medium breakpoint:
 
 {{< scss-docs name="footer-terms-md-css-vars" file="scss/_footer.scss" >}}
 
