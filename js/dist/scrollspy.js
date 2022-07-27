@@ -142,7 +142,8 @@
 
           if (root.scrollTo) {
             root.scrollTo({
-              top: height
+              top: height,
+              behavior: 'smooth'
             });
             return;
           } // Chrome 60 doesn't support `scrollTo`

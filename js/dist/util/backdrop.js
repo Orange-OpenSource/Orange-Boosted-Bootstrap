@@ -35,19 +35,19 @@
   const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`;
   const Default = {
     className: 'modal-backdrop',
+    clickCallback: null,
+    isAnimated: false,
     isVisible: true,
     // if false, we use the backdrop helper without adding any element to the dom
-    isAnimated: false,
-    rootElement: 'body',
-    // give the choice to place backdrop under different elements
-    clickCallback: null
+    rootElement: 'body' // give the choice to place backdrop under different elements
+
   };
   const DefaultType = {
     className: 'string',
-    isVisible: 'boolean',
+    clickCallback: '(function|null)',
     isAnimated: 'boolean',
-    rootElement: '(element|string)',
-    clickCallback: '(function|null)'
+    isVisible: 'boolean',
+    rootElement: '(element|string)'
   };
   /**
    * Class definition

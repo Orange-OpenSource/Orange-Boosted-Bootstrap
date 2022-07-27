@@ -8,7 +8,6 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 :root {
   --bs-blue: #527edb;
@@ -78,7 +77,6 @@
   --bs-border-radius-xl: ;
   --bs-border-radius-2xl: ;
   --bs-border-radius-pill: 50rem;
-  --bs-heading-color: ;
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
   --bs-code-color: #666;
@@ -174,7 +172,6 @@ h6, h2, h1 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.125;
-  color: var(--bs-heading-color);
   /* rtl:remove */
   letter-spacing: -0.00625rem;
   -webkit-font-smoothing: antialiased;

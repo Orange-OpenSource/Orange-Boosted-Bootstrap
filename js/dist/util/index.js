@@ -22,7 +22,7 @@
    */
   const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
-  const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  const TRANSITION_END = 'transitionend'; // Shout-out AngusCroll (https://goo.gl/pxwQGp)
 
   const toType = object => {
     if (object === null || object === undefined) {

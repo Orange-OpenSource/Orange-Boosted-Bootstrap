@@ -123,15 +123,9 @@
       this._activate(index.getElementFromSelector(element)); // Search and activate/show the proper section
 
 
-      const isAnimated = element.classList.contains(CLASS_NAME_FADE);
-
       const complete = () => {
-        if (isAnimated) {
-          // todo: maybe is redundant
-          element.classList.add(CLASS_NAME_SHOW);
-        }
-
         if (element.getAttribute('role') !== 'tab') {
+          element.classList.add(CLASS_NAME_SHOW);
           return;
         }
 
@@ -146,7 +140,7 @@
         });
       };
 
-      this._queueCallback(complete, element, isAnimated);
+      this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE));
     }
 
     _deactivate(element, relatedElem) {
@@ -160,15 +154,9 @@
       this._deactivate(index.getElementFromSelector(element)); // Search and deactivate the shown section too
 
 
-      const isAnimated = element.classList.contains(CLASS_NAME_FADE);
-
       const complete = () => {
-        if (isAnimated) {
-          // todo maybe is redundant
-          element.classList.remove(CLASS_NAME_SHOW);
-        }
-
         if (element.getAttribute('role') !== 'tab') {
+          element.classList.remove(CLASS_NAME_SHOW);
           return;
         }
 
@@ -182,7 +170,7 @@
         });
       };
 
-      this._queueCallback(complete, element, isAnimated);
+      this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE));
     }
 
     _keydown(event) {

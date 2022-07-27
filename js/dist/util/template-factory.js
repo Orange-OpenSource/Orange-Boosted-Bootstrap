@@ -31,23 +31,23 @@
 
   const NAME = 'TemplateFactory';
   const Default = {
-    extraClass: '',
-    template: '<div></div>',
+    allowList: sanitizer.DefaultAllowlist,
     content: {},
     // { selector : text ,  selector2 : text2 , }
+    extraClass: '',
     html: false,
     sanitize: true,
     sanitizeFn: null,
-    allowList: sanitizer.DefaultAllowlist
+    template: '<div></div>'
   };
   const DefaultType = {
-    extraClass: '(string|function)',
-    template: 'string',
+    allowList: 'object',
     content: 'object',
+    extraClass: '(string|function)',
     html: 'boolean',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-    allowList: 'object'
+    template: 'string'
   };
   const DefaultContentType = {
     selector: '(string|element)',
