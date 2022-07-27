@@ -4,7 +4,7 @@ title: "Boosted & Vite"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
 group: getting-started
 toc: true
-thumbnail: guides/vite.png
+thumbnail: vite.png
 ---
 
 <div class="d-flex justify-content-center">

@@ -4,7 +4,7 @@ title: "Boosted & Parcel"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
 group: getting-started
 toc: true
-thumbnail: guides/parcel.png
+thumbnail: parcel.png
 ---
 
 <div class="d-flex justify-content-center">
