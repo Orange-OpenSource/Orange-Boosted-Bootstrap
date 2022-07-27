@@ -113,13 +113,13 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 
 ### Variables
 
-As part of Boosted’s evolving CSS variables approach, footers now use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="footer-part-css-vars" file="scss/_footer.scss" >}}
 
-Each bar redefines its own CSS variables:
+Each bar redefines its own CSS variables.
 
-- **Title with content bar**:
+- Title with content bar:
 
 {{< scss-docs name="footer-title-css-vars" file="scss/_footer.scss" >}}
 
@@ -127,7 +127,7 @@ and its responsive part:
 
 {{< scss-docs name="footer-title-md-css-vars" file="scss/_footer.scss" >}}
 
-- **Follow us bar**:
+- Follow us bar:
 
 {{< scss-docs name="footer-social-css-vars" file="scss/_footer.scss" >}}
 
@@ -135,7 +135,7 @@ and its responsive part:
 
 {{< scss-docs name="footer-social-md-css-vars" file="scss/_footer.scss" >}}
 
-- **Navigation bar**:
+- Navigation bar:
 
 {{< scss-docs name="footer-nav-css-vars" file="scss/_footer.scss" >}}
 
@@ -143,7 +143,7 @@ and its responsive part:
 
 {{< scss-docs name="footer-nav-md-css-vars" file="scss/_footer.scss" >}}
 
-- **Service bar**:
+- Service bar:
 
 {{< scss-docs name="footer-service-css-vars" file="scss/_footer.scss" >}}
 
@@ -151,7 +151,7 @@ and its responsive part:
 
 {{< scss-docs name="footer-service-md-css-vars" file="scss/_footer.scss" >}}
 
-- **Terms & Conditions**:
+- Terms & Conditions:
 
 {{< scss-docs name="footer-terms-css-vars" file="scss/_footer.scss" >}}
 
