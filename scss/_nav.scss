@@ -127,7 +127,7 @@
     // stylelint-disable-next-line function-disallowed-list
     border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4);
 
-    &:hover,
+    &:not(.active):hover,
     &:focus {
       color: $accessible-orange;
       background: none;
