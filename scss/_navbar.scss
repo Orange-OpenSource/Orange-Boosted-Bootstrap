@@ -7,7 +7,7 @@
   // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
   --#{$prefix}navbar-padding-y: 0; // Boosted mod: no padding in small breakpoints
-  --#{$prefix}navbar-font--weight: #{$navbar-font-weight}; // Boosted mod
+  --#{$prefix}navbar-font-weight: #{$navbar-font-weight}; // Boosted mod
   --#{$prefix}navbar-border-width: #{$navbar-border-width}; // Boosted mod
   --#{$prefix}navbar-border-color: #{$navbar-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-light-color};
@@ -506,6 +506,7 @@
 }
 
 .navbar-dark {
+  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
