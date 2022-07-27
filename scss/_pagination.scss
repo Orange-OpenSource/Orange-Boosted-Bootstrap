@@ -2,6 +2,7 @@
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
+  --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // Boosted mod
   --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
   --#{$prefix}pagination-margin-start: #{$pagination-margin-start}; // Boosted mod
   --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // Boosted mod
@@ -160,7 +161,7 @@
     margin-right: var(--#{$prefix}pagination-margin-x-first-last);
 
     &:not(:empty) {
-      padding-right: $pagination-padding-end;
+      padding-right: var(--#{$prefix}pagination-padding-end);
     }
 
     &::before {
@@ -172,7 +173,7 @@
 
   &:last-child .page-link {
     &:not(:empty) {
-      padding-left: $pagination-padding-end;
+      padding-left: var(--#{$prefix}pagination-padding-end);
     }
 
     &::before {
