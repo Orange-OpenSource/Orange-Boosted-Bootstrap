@@ -172,6 +172,8 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 
 ### Nested tabs
 
+{{< added-in "5.2.0" >}}
+
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}

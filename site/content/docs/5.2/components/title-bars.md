@@ -7,6 +7,8 @@ toc: true
 added: "5.2"
 ---
 
+{{< added-in "5.2.0" >}}
+
 ## How it works
 
 A title bar is designed to display the title of a page and shall be placed right below an [Orange navbar]({{<docsref "/components/orange-navbar">}}).
