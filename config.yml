@@ -54,10 +54,9 @@ module:
       target:                       static/docs/5.2/assets/js/lang
 
 params:
-  description:                      "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
+  subtitle:                         "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
+  description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
   authors:                          "Orange and Boosted contributors"
-  social_image_path:                /docs/5.2/assets/brand/orange-social.png
-  social_logo_path:                 /docs/5.2/assets/brand/orange-social-logo.png
 
   current_version:                  "5.2.0"
   current_ruby_version:             "5.2.0"
