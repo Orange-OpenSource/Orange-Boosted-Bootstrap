@@ -1,3 +1,31 @@
+# [5.2.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.2.0-beta1...v5.2.0) (2022-07-27)
+
+
+### Bug Fixes
+
+* **back to top:** allow clicking under the transparent surface ([#1346](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1346)) ([ead5230](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ead5230a2d133c876e0352590ffb4fe2795b56ae))
+* **buttons:** active color of button links ([#1363](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1363)) ([6e40877](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e4087755f3f86328c6df119afd4d67192b8fcaf))
+* **cards:** card footer bg color is linked to the card bg color ([#1340](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1340)) ([64f0eb4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64f0eb4b66e4d2af9a986b911ef1c05e8d1c8eb5))
+* **checkbox:** fix colors for indeterminate checkboxes ([#1339](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1339)) ([0d94817](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d94817c760831932f2380dc214605c5b6a47146))
+* **forms:** set background color for validated inputs ([#1361](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1361)) ([ff301e1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ff301e1de3a975d77887c7c3254f5d6d38a34081))
+* scale down Boosted logo on homepage for all browsers ([#1366](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1366)) ([ecf1144](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ecf1144df47000016dafdb8acff94fc3f0c80e40))
+* **stepped process:** coherent line height display on all platforms/browsers ([#1347](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1347)) ([7c93d7d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7c93d7d263d2110f38e8b8b4049e6f49593b878a))
+* **tac:** buttons colors enhancement by using `.btn-inverse` ([#1249](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1249)) ([a689f2a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a689f2a34f300338ac0e2eaa3c575fd02ea7e53d))
+
+
+### Features
+
+* **css:** Add CSS vars for `.dropdown-toggle` ([#1279](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1279)) ([82ed37d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/82ed37d1a26c1dc97c1112908d329cd03efd3012))
+* **css:** Add CSS vars for Footer ([#1239](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1239)) ([4260603](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4260603dd70cf699e2b13aba7aafa77be2931443))
+* **css:** add missing CSS vars for `%offcanvas-css-vars` and add some for `.offcanvas-backdrop` ([#1271](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1271)) ([bce7d10](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bce7d1029ff1bc2ce1ecb7723c80c5b457871f58))
+* **css:** add new CSS vars for Pagination ([#1268](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1268)) ([1047f02](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1047f02583ad02a4b744d32bb9b079f099005b36))
+* **css:** CSS variables for Stepped process ([#1281](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1281)) ([45a280e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/45a280e9e09e5cbeb6a41691b7f6abd4056ea0f9))
+* **docs:** 'Added in v5.2.0' label for all new features ([#1406](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1406)) ([cf20110](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cf201106dbdfbe7b367ad3728e3bbb6031d45c3f))
+* **docs:** guide to embed Solaris icons in an icon font ([#1405](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1405)) ([1962041](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1962041444ec14ead767e5e54a5a54610615d723))
+* **docs:** use Footer component in docs ([#1280](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1280)) ([bc91bbe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bc91bbee77ccda6a33a33f0124c7b9b21ac00807))
+
+
+
 ## [5.1.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.1.2...v5.1.3) (2021-10-11)
 
 
