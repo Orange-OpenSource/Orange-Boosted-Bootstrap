@@ -1739,7 +1739,7 @@ $list-group-border-radius:          $border-radius !default;
 $list-group-item-padding-y:         .875rem !default;
 $list-group-item-padding-x:         $spacer !default;
 
-$list-group-hover-bg:               null !default; // Boosted mod
+// Boosted mod: no $list-group-hover-bg:
 $list-group-active-color:           $white !default;
 $list-group-active-bg:              $black !default;
 $list-group-active-border-color:    $list-group-active-bg !default;
