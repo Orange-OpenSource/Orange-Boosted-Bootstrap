@@ -205,6 +205,10 @@
       outline-color: var(--#{$prefix}btn-active-color);
     }
   }
+
+  &.btn-inverse {
+    --#{$prefix}btn-disabled-color: #{$gray-700};
+  }
   // End mod
 
   // No need for an active state here
