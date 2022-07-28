@@ -213,8 +213,14 @@
 
 .tab-content {
   // Boosted mod
-  padding: $spacer subtract($nav-tabs-link-padding-x, $nav-tabs-border-width);
-  border: $nav-tabs-border-width solid;
+  // scss-docs-start tab-content-css-vars
+  --#{$prefix}tab-content-padding-y: #{$spacer};
+  --#{$prefix}tab-content-padding-x: #{subtract($nav-tabs-link-padding-x, var(--#{$prefix}tab-content-border-width))};
+  --#{$prefix}tab-content-border-width: #{$nav-tabs-border-width};
+  // scss-docs-end tab-content-css-vars
+
+  padding: var(--#{$prefix}tab-content-padding-y) var(--#{$prefix}tab-content-padding-x);
+  border: var(--#{$prefix}tab-content-border-width) solid;
   border-top: 0;
   // End mod
 
@@ -225,7 +231,7 @@
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: $spacer * -1 calc(subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
+    margin: calc(var(--#{$prefix}tab-content-padding-y) * -1) calc(var(--#{$prefix}tab-content-padding-x) * -1); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 
