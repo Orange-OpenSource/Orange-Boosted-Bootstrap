@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0-beta1 (https://boosted.orange.com/)
+  * Boosted v5.2.0 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tab.js v5.2.0-beta1 (https://boosted.orange.com/)
+  * Bootstrap tab.js v5.2.0 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -22,7 +22,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0-beta1): tab.js
+   * Bootstrap (v5.2.0): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -123,15 +123,9 @@
       this._activate(index.getElementFromSelector(element)); // Search and activate/show the proper section
 
 
-      const isAnimated = element.classList.contains(CLASS_NAME_FADE);
-
       const complete = () => {
-        if (isAnimated) {
-          // todo: maybe is redundant
-          element.classList.add(CLASS_NAME_SHOW);
-        }
-
         if (element.getAttribute('role') !== 'tab') {
+          element.classList.add(CLASS_NAME_SHOW);
           return;
         }
 
@@ -146,7 +140,7 @@
         });
       };
 
-      this._queueCallback(complete, element, isAnimated);
+      this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE));
     }
 
     _deactivate(element, relatedElem) {
@@ -160,15 +154,9 @@
       this._deactivate(index.getElementFromSelector(element)); // Search and deactivate the shown section too
 
 
-      const isAnimated = element.classList.contains(CLASS_NAME_FADE);
-
       const complete = () => {
-        if (isAnimated) {
-          // todo maybe is redundant
-          element.classList.remove(CLASS_NAME_SHOW);
-        }
-
         if (element.getAttribute('role') !== 'tab') {
+          element.classList.remove(CLASS_NAME_SHOW);
           return;
         }
 
@@ -182,7 +170,7 @@
         });
       };
 
-      this._queueCallback(complete, element, isAnimated);
+      this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE));
     }
 
     _keydown(event) {
