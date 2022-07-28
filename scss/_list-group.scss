@@ -13,7 +13,7 @@
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
-  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
+  // Boosted mod: no --#{$prefix}list-group-action-hover-bg
   --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
   --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
   --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
