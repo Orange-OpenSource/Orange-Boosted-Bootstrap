@@ -136,6 +136,7 @@
     }
 
     &.active {
+      color: var(--#{$prefix}nav-link-color);
       border-bottom-color: $accessible-orange;
     }
   }
