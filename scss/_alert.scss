@@ -31,6 +31,7 @@
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
+  line-height: 1.125;
   // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
@@ -85,6 +86,7 @@
 
 .alert-heading ~ p {
   font-weight: $font-weight-normal;
+  line-height: 1.5rem;
 }
 
 //// Icons
@@ -94,7 +96,7 @@
   margin: -#{$alert-icon-margin-y * .5} 0;
 
   + * {
-    margin: $alert-icon-margin-y 0;
+    margin: $alert-icon-margin-y 0 0;
   }
 
   &::before {
