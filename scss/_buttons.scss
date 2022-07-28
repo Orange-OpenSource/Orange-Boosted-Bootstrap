@@ -150,27 +150,19 @@
 
 // Boosted mod: border-only on :hover, :focus and :active
 .btn-no-outline {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    border-color: $gray-500;
-  }
+  --#{$prefix}btn-hover-border-color: #{$gray-500};
+  --#{$prefix}btn-active-color: #{$accessible-orange};
+  --#{$prefix}btn-active-bg: var(--#{$prefix}btn-bg); // not sure it's useful
+  --#{$prefix}btn-active-border-color: #{$gray-500};
+  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
 
-  &:active,
-  &.active {
-    color: $accessible-orange;
-    background-color: var(--#{$prefix}btn-bg);
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $gray-500;
-    border-color: var(--#{$prefix}btn-border-color);
-  }
-
-  &.btn-inverse:not(:active) {
-    color: $white;
+  &.btn-inverse {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-hover-border-color: #{$gray-700};
+    --#{$prefix}btn-active-color: #{$brand-orange};
+    --#{$prefix}btn-active-border-color: #{$gray-700};
+    --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
 // End mod
@@ -182,7 +174,7 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight: #{$font-weight-normal}
+  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
