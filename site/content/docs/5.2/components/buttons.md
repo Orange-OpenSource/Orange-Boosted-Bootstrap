@@ -211,7 +211,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {{< /example >}}
 
 {{< ods-incompatibility-alert >}}
-in some cases you could roll your own custom sizing with CSS variables like in the example just under this alert.
+In some cases you could roll your own custom sizing with CSS variables like in the example just under this alert.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
