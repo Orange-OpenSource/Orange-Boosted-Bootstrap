@@ -41,6 +41,12 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 </div>
 {{< /example >}}
 
+{{< ods-incompatibility-alert >}}
+Please note that using a `<button>` element as a dropdown toggle should be your go to option.
+
+If you have to use a `<a>` to do that you will have to change his semantic by adding a `role="button"` first. Then you will need to implement an event listener via JavaScript to be able to use it by using the space bar on focus.
+{{< /ods-incompatibility-alert >}}
+
 And with `<a>` elements:
 
 {{< example >}}
@@ -53,22 +59,6 @@ And with `<a>` elements:
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-{{< /example >}}
-
-
-Please note that `.dropdown-item` can be either `<a>` or `<button>` depending of your needs. If your goal is to use the dropdown menu to perform actions in the same page then the best choice will be to use `<button>`. However, for a link to a new page `<a>` is the best option.
-
-{{< example >}}
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><button class="btn-secondary dropdown-item">Action</button></li>
-    <li><button class="btn-secondary dropdown-item">Another action</button></li>
-    <li><button class="btn-secondary dropdown-item">Something else here</button></li>
   </ul>
 </div>
 {{< /example >}}
@@ -486,7 +476,7 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
 
 ## Menu items
 
-You can use `<a>` or `<button>` elements as dropdown items.
+You can use `<a>` or `<button>` elements as dropdown items depending of your needs. If your goal is to use the dropdown menu to perform actions in the same page then the best choice will be to use `<button>`. However, for a link to a new page `<a>` is the best option.
 
 {{< example >}}
 <div class="dropdown">
