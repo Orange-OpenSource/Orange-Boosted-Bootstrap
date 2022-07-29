@@ -148,38 +148,40 @@ As it is a responsive component, here is the overridden variables in `xl` breakp
 
 Back to top link can be customized in a few ways: either making it appear after more or less vertical scrolling, modify its offset from the bottom right corner, etc.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>$back-to-top-display-threshold</code></td>
-      <td>
-        Defines the vertical threshold at which "back to top" link appears.
-      </td>
-      <td><code>100vh</code></td>
-    </tr>
-    <tr>
-      <td><code>$back-to-top-target-id</code></td>
-      <td>
-        Target's <code>id</code>, used to apply <code>scroll-margin-top</code> when anchor is active.
-      </td>
-      <td><code>"top"</code></td>
-    </tr>
-    <tr>
-      <td><code>$back-to-top-offset</code></td>
-      <td>
-        Base offset, used to place "back to top" link in the bottom right corner of the page.
-      </td>
-      <td><code>$spacer * 1.5</code></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>$back-to-top-display-threshold</code></td>
+        <td>
+          Defines the vertical threshold at which "back to top" link appears.
+        </td>
+        <td><code>100vh</code></td>
+      </tr>
+      <tr>
+        <td><code>$back-to-top-target-id</code></td>
+        <td>
+          Target's <code>id</code>, used to apply <code>scroll-margin-top</code> when anchor is active.
+        </td>
+        <td><code>"top"</code></td>
+      </tr>
+      <tr>
+        <td><code>$back-to-top-offset</code></td>
+        <td>
+          Base offset, used to place "back to top" link in the bottom right corner of the page.
+        </td>
+        <td><code>$spacer * 1.5</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Sass variables
 
