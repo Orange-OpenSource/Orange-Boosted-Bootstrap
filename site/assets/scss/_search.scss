@@ -100,5 +100,9 @@
 
 .DocSearch-Hit {
   padding-top: .625rem;
+
+  &[aria-selected="true"] a {
+    background-color: var(--#{$prefix}black);
+  }
 }
 // End mod
