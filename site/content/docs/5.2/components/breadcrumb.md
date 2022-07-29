@@ -90,6 +90,20 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 $breadcrumb-divider: none;
 ```
 
+## Dark variant
+
+Breadcrumbs come with a dark variant: `.breadcrumb-dark`.
+
+{{< example class="bg-dark" >}}
+<nav aria-label="dark breadcrumb">
+  <ol class="breadcrumb breadcrumb-dark">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+{{< /example >}}
+
 ## Accessibility
 
 Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.

@@ -46,3 +46,7 @@
     color: var(--#{$prefix}breadcrumb-item-active-color);
   }
 }
+
+.breadcrumb-dark .breadcrumb-item::before {
+  filter: $invert-filter;
+}
