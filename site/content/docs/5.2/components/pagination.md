@@ -141,6 +141,26 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
   </ul>
 </nav>
 {{< /example >}}
+
+## Dark variant
+
+Pagination comes with a dark variant: `.pagination-dark`.
+
+{{< example class="bg-dark" >}}
+<nav aria-label="Dark page navigation example">
+  <ul class="pagination pagination-dark">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+{{< /example >}}
 <!-- End mod -->
 
 ## CSS
@@ -152,6 +172,10 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 As part of Boosted's evolving CSS variables approach, pagination now uses local CSS variables on `.pagination` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="pagination-css-vars" file="scss/_pagination.scss" >}}
+
+Modifier class `.pagination-dark`:
+
+{{< scss-docs name="pagination-dark-css-vars" file="scss/_pagination.scss" >}}
 
 ### Sass variables
 
