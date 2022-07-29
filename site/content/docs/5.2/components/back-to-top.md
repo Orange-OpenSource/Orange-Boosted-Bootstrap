@@ -95,6 +95,41 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 </nav>
 {{< /example >}}
 
+## Dark variant
+
+Back to top component comes with a dark variant: Add `.btn-inverse` on `.back-to-top-link`.
+
+<div class="bd-example bg-dark d-flex gap-3 flex-wrap">
+  <nav aria-label="Standard dark back to top example" class="back-to-top position-static ps-5 ms-5">
+    <a href="#top" class="back-to-top-link btn btn-icon btn-secondary btn-inverse position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Label inside dark back to top example" class="back-to-top position-static">
+    <a href="#top" class="back-to-top-link position-static btn btn-secondary btn-inverse px-3">Back to top</a>
+  </nav>
+  <nav aria-label="Icon only dark back to top example" class="back-to-top position-static">
+    <a href="#top" class="back-to-top-link position-static btn btn-icon btn-secondary btn-inverse" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+{{< example show_preview="false" >}}
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary btn-inverse" data-bs-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-secondary btn-inverse px-3">Back to top</a>
+</nav>
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary btn-inverse" title="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+{{< /example >}}
+
 ## CSS
 
 ### Variables

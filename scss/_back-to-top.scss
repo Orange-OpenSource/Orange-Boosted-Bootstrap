@@ -19,6 +19,7 @@
   --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
   --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
   --#{$prefix}back-to-top-title-padding: #{$back-to-top-title-padding};
+  --#{$prefix}back-to-top-title-color: #{color-contrast($back-to-top-title-bg-color)};
   --#{$prefix}back-to-top-title-bg-color: #{$back-to-top-title-bg-color};
   --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
   // scss-docs-end back-to-top-css-vars
@@ -54,12 +55,17 @@
   }
 
   @include media-breakpoint-up(xl) {
+    &.btn-inverse {
+      --#{$prefix}back-to-top-title-color: #{$white};
+      --#{$prefix}back-to-top-title-bg-color: #{$black};
+    }
+
     &[data-#{$prefix}label]::before {
       position: absolute;
       right: var(--#{$prefix}back-to-top-title-offset-right);
       z-index: -1; // To ensure focus indicator appears above
       padding: var(--#{$prefix}back-to-top-title-padding);
-      color: color-contrast($back-to-top-title-bg-color);
+      color: var(--#{$prefix}back-to-top-title-color);
       white-space: nowrap;
       content: attr(data-#{$prefix}label);
       background-color: var(--#{$prefix}back-to-top-title-bg-color);
