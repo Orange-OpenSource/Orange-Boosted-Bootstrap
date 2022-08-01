@@ -1432,7 +1432,9 @@ $pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !defau
 $pagination-icon-size:              subtract($spacer * 2, $border-width * 2) !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
+
 $pagination-active-item-bg:         $primary !default;
+$pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
 
 // Dark variant

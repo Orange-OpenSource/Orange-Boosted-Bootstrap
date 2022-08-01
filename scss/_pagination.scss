@@ -23,7 +23,7 @@
   --#{$prefix}pagination-active-color: #{$pagination-active-color};
   --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
   --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
-  --#{$prefix}pagination-active-item-color: #{color-contrast($pagination-active-item-bg)}; // Boosted mod
+  --#{$prefix}pagination-active-item-color: #{$pagination-active-item-color}; // Boosted mod
   --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // Boosted mod
   --#{$prefix}pagination-active-item-border-color: #{$pagination-active-item-border}; // Boosted mod
   --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};

@@ -173,7 +173,7 @@ As part of Boosted's evolving CSS variables approach, pagination now uses local 
 
 {{< scss-docs name="pagination-css-vars" file="scss/_pagination.scss" >}}
 
-Modifier class `.pagination-dark`:
+Customization through CSS variables can be seen on the `.pagination-dark` modifier class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="pagination-dark-css-vars" file="scss/_pagination.scss" >}}
 
