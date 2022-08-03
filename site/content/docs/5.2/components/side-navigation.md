@@ -142,17 +142,20 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
 ## Collapsible with title
 
-{{< example class="p-0 scrollspy-example-2" >}}
+{{< example class="p-0 scrollspy-example-2 d-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
 
 <div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu2">
   <div class="offcanvas-header">
     <button type="button" class="btn-close" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body d-inline-flex flex-column">
-    <div class="position-absolute">
+  <div class="offcanvas-body">
+    <div id="collapsible-list" class="collapse collapse-horizontal">
+      <div class="fake">&nbsp;</div>
+    </div>
+    <div class="position-absolute w-100 h-100 bg-body">
       <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"></button>
-      <ul id="collapsible-list" class="list-unstyled m-0 collapse collapse-horizontal">
+      <ul class="list-unstyled m-0">
         <li>
           <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
             <svg width="1.5rem" height="1.5rem">
@@ -181,16 +184,17 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
     </div>
   </div>
 </div>
+<div class="d-none d-lg-flex">test</div>
 {{< /example >}}
 
 ## Collapsible with content
 
 Strongly WIP, onclick functions are a test without extra JS. But fully working example atm.
 
-{{< example class="p-0 scrollspy-example-2" >}}
+{{< example class="p-0 scrollspy-example-2 d-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu3" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">Collapsing side navigation with content</button>
 
-<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu3">
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible-content" id="sidebarMenu3">
   <div class="offcanvas-header justify-content-end">
     <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu3" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
   </div>
@@ -238,6 +242,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
     </div>
   </div>
 </div>
+<div class="d-none d-lg-flex">test</div>
 {{< /example >}}
 
 ## Dark variant

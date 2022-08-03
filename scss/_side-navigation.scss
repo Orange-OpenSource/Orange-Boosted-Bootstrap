@@ -15,6 +15,7 @@
 
   width: var(--#{$prefix}side-nav-width);
   height: 100%;
+  overflow: auto;
   border: 0 !important; // stylelint-disable-line declaration-no-important
 
   svg,
@@ -72,6 +73,7 @@
     overflow: hidden;
     color: var(--#{$prefix}side-nav-color);
     text-decoration: none;
+    white-space: nowrap;
     background-color: var(--#{$prefix}side-nav-bg-color);
     border: 0;
 
@@ -85,29 +87,55 @@
   }
 }
 
+[class*="side-nav-collapsible"] [data-bs-toggle="collapse"] {
+  align-self: flex-end;
+  width: 54px;
+  height: 40px;
+  margin-left: auto;
+  @include transition(transform .3s ease);
+  @include caret(start);
+
+  &::before {
+    border-right-color: #000;
+  }
+
+  &.collapsed {
+    transform: rotateZ(180deg);
+  }
+}
+
 .side-nav-collapsible {
-  --#{$prefix}side-nav-width: 3.5rem;
-  --#{$prefix}offcanvas-width: 326px;
+  display: inline-flex;
+  --#{$prefix}side-nav-width: 54px;
+  --#{$prefix}offcanvas-width: 300px;
 
-  [data-bs-toggle="collapse"] {
-    align-self: flex-end;
-    width: 55px;
-    height: 40px;
-    @include transition(transform .3s ease);
-    @include caret(start);
+  .offcanvas-body {
+    display: inline-flex;
+    width: auto;
+    min-width: 54px;
+    border-right: #ccc solid 1px;
 
-    &::before {
-      border-right-color: #000;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
     }
 
-    &.collapsed {
-      transform: rotateZ(180deg);
-
-      &::before {
-        border-right-color: #fff;
-      }
+    > * {
+      border: 0;
     }
   }
+
+  .collapse-horizontal {
+    margin-left: 54px;
+
+    .fake {
+      width: 245px;
+    }
+  }
+}
+
+.side-nav-collapsible-content {
+  --#{$prefix}side-nav-width: 3.5rem;
+  --#{$prefix}offcanvas-width: 326px;
 
   .offcanvas-header,
   .offcanvas-body > * {
@@ -116,6 +144,10 @@
 
   .side-nav-collapse {
     width: 270px;
+  }
+
+  [data-bs-toggle="collapse"].collapsed::before {
+    border-right-color: #fff;
   }
 }
 
