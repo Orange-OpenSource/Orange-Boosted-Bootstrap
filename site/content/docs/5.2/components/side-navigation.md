@@ -153,7 +153,7 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
     <div id="collapsible-list" class="collapse collapse-horizontal">
       <div class="fake">&nbsp;</div>
     </div>
-    <div class="position-absolute w-100 h-100 bg-body">
+    <div class="position-absolute w-100">
       <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"></button>
       <ul class="list-unstyled m-0">
         <li>
@@ -199,7 +199,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
     <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu3" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
   </div>
   <div class="offcanvas-body d-flex flex-row">
-    <div class="position-absolute top-0 bottom-0 d-flex flex-column flex-wrap">
+    <div class="position-absolute d-flex flex-column flex-wrap">
       <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"></button>
       <div class="d-flex flex-row">
         <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
@@ -226,7 +226,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
           </li>
         </ul>
         <div class="collapse collapse-horizontal" id="collapsingTab">
-          <div class="tab-content d-flex flex-column side-nav-collapse">
+          <div class="tab-content d-flex flex-column">
             <div class="tab-pane" id="dashboardTab" role="tabpanel" tabindex="0">
               <div class="tab-pane-content"><h3 class="tab-pane-title">Dashboard</h3></div>
             </div>
