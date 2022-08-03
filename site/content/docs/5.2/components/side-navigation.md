@@ -154,7 +154,7 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
       <div class="fake">&nbsp;</div>
     </div>
     <div class="position-absolute w-100">
-      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"></button>
+      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"><span class="visually-hidden">Open/Close side navigation</span></button>
       <ul class="list-unstyled m-0">
         <li>
           <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
@@ -200,7 +200,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
   </div>
   <div class="offcanvas-body d-flex flex-row">
     <div class="position-absolute d-flex flex-column flex-wrap">
-      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"></button>
+      <button class="btn btn-link d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"><span class="visually-hidden">Open/Close side navigation</span></button>
       <div class="d-flex flex-row">
         <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
           <li role="presentation" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
@@ -208,6 +208,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
               <svg width="1.5rem" height="1.5rem">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
               </svg>
+              <span class="visually-hidden">Open dashboard tab</span>
             </button>
           </li>
           <li role="presentation" data-bs-toggle="tooltip" title="Financial" data-bs-placement="right">
@@ -215,6 +216,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
               <svg width="1.5rem" height="1.5rem">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
               </svg>
+              <span class="visually-hidden">Open financial tab</span>
             </button>
           </li>
           <li role="presentation" data-bs-toggle="tooltip" title="Charts" data-bs-placement="right">
@@ -222,6 +224,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
               <svg width="1.5rem" height="1.5rem">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
               </svg>
+              <span class="visually-hidden">Open charts tab</span>
             </button>
           </li>
         </ul>
