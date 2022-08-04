@@ -54,13 +54,8 @@
   // Boosted mod: no .btn-check + &:hover
 
   &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    // Boosted mod: no outline: 0;
-    outline-color: var(--#{$prefix}btn-hover-border-color); // Boosted mod
-    outline-offset: $outline-width; // Boosted mod
-    &[data-focus-visible-added] { // Boosted mod: added `&[data-focus-visible-added]`
+    // Boosted mod: added `&[data-focus-visible-added]`
+    &[data-focus-visible-added] {
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows {
         box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
