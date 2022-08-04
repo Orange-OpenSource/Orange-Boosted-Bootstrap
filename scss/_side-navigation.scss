@@ -8,15 +8,15 @@
   --#{$prefix}side-nav-icon-size: 1.5625rem;
   --#{$prefix}side-nav-item-height: 2.5rem;
   --#{$prefix}side-nav-item-padding-left: 15px;
+  --#{$prefix}side-nav-border-width: 1px;
+  --#{$prefix}side-nav-border-color: #{$gray-500};
   --#{$prefix}offcanvas-padding-x: 0;
   --#{$prefix}offcanvas-padding-y: 0;
-  --#{$prefix}offcanvas-border-width: 1px;
-  --#{$prefix}offcanvas-border-color: #{$gray-500};
 
   width: var(--#{$prefix}side-nav-width);
   height: 100%;
   overflow: auto;
-  border: 0 !important; // stylelint-disable-line declaration-no-important
+  @extend .border-0;
 
   svg,
   img {
@@ -29,17 +29,18 @@
   .offcanvas-header {
     justify-content: flex-end;
     background-color: var(--#{$prefix}side-nav-bg-color);
-    border-right: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+    border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
   }
 
   .offcanvas-body {
     position: relative;
     width: 100%;
     height: 100%;
+    background-color: var(--#{$prefix}side-nav-bg-color);
 
     > * {
       background-color: var(--#{$prefix}side-nav-bg-color);
-      border-right: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+      border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
     }
 
     .position-absolute {
@@ -96,27 +97,33 @@
     outline: var(--#{$prefix}side-nav-active-border-color) solid 3px;
     outline-offset: -3px;
   }
+
+  .collapse-horizontal > * {
+    /* stylelint-disable-next-line function-disallowed-list */
+    max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width));
+  }
 }
 
 [class*="side-nav-collapsible"] [data-bs-toggle="collapse"] {
-  width: var(--#{$prefix}side-nav-width);
+  width: subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width));
   height: var(--#{$prefix}side-nav-item-height);
   margin-left: auto;
-  @include transition(transform .35s ease);
+  background-color: transparent;
   @include caret(start);
 
   &::before {
     margin: 0;
     border-right-color: var(--#{$prefix}side-nav-color);
+    @include transition(transform .35s ease);
   }
 
-  &.collapsed {
+  &.collapsed::before {
     transform: rotateZ(180deg);
   }
 }
 
 .side-nav-collapsible {
-  --#{$prefix}side-nav-width: 3.375rem;
+  --#{$prefix}side-nav-width: 3.4375rem;
   --#{$prefix}offcanvas-width: 300px;
 
   .offcanvas-body {
@@ -137,13 +144,13 @@
 
     .fake {
       /* stylelint-disable-next-line function-disallowed-list */
-      width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}offcanvas-border-width) - var(--#{$prefix}side-nav-width));
+      width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-border-width) - var(--#{$prefix}side-nav-width));
     }
   }
 }
 
 .side-nav-collapsible-content {
-  --#{$prefix}side-nav-width: 3.375rem;
+  --#{$prefix}side-nav-width: 3.4375rem;
   --#{$prefix}offcanvas-width: 326px;
 
   .offcanvas-body {
@@ -171,5 +178,5 @@
   --#{$prefix}side-nav-bg-color: #{$gray-900};
   --#{$prefix}side-nav-hover-bg-color: #{$black};
   --#{$prefix}side-nav-active-bg-color: #{$gray-700};
-  --#{$prefix}offcanvas-border-color: #{$gray-700};
+  --#{$prefix}side-nav-border-color: #{$gray-700};
 }
