@@ -1004,7 +1004,11 @@ $input-border-radius:                   $border-radius !default;
 // Boosted mod: no input-sm
 $input-border-radius-lg:                $border-radius-lg !default;
 
+$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              currentcolor !default;
+$input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
 $input-placeholder-color:               $gray-700 !default;
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;

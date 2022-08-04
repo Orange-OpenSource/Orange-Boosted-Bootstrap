@@ -43,7 +43,6 @@
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
@@ -68,6 +67,7 @@
       } @else {
         box-shadow: var(--#{$prefix}btn-focus-box-shadow);
       }
+      @include focus-visible();
     }
   }
 
@@ -207,6 +207,9 @@
     &:not(:hover) {
       color: var(--#{$prefix}btn-color);
       outline-color: var(--#{$prefix}btn-color);
+      &[data-focus-visible-added] {
+        @include focus-visible();
+      }
     }
 
     &:hover {
