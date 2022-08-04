@@ -60,20 +60,22 @@
 }
 
 
+// Boosted mod: values changed + call to icons inside the mixin directly
 // scss-docs-start alert-modifiers
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $state, $value in $alert-colors {
-  $alert-background: transparent; // Boosted mod
-  $alert-border: $alert-border-width solid $value; // Boosted mod
+  $alert-background: transparent;
+  $alert-border: $alert-border-width solid $value;
   // Boosted mod: no $alert-color change
 
   // Boosted mod: no contrast-ratio test
   .alert-#{$state} {
-    @include alert-variant($alert-background, $alert-border, $alert-color, map-get($alert-icons, $state)); // Boosted mod
+    @include alert-variant($alert-background, $alert-border, $alert-color, map-get($alert-icons, $state));
   }
 }
 // scss-docs-end alert-modifiers
+// End mod
 
 //
 // Boosted mod

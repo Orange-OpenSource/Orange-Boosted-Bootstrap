@@ -187,6 +187,7 @@
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
+
 @each $color, $value in $background-colors {
   @include list-group-item-variant($color, $value, color-contrast($value));
 }
