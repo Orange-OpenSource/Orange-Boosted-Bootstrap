@@ -97,12 +97,12 @@ As noted above, each of these breakpoints have their own container, unique class
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>320px</td>
-        <td>480px</td>
-        <td>768px</td>
-        <td>1024px</td>
-        <td>1280px</td>
-        <td>1440px</td>
+        <td>302px</td>
+        <td>458px</td>
+        <td>724px</td>
+        <td>940px</td>
+        <td>1180px</td>
+        <td>1300px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
@@ -118,8 +118,18 @@ As noted above, each of these breakpoints have their own container, unique class
         <td colspan="6">12</td>
       </tr>
       <tr>
+        <th class="text-nowrap" scope="row">Column width</th>
+        <td>16px</td>
+        <td>29px</td>
+        <td>42px</td>
+        <td>60px</td>
+        <td>80px</td>
+        <td>90px</td>
+      </tr>
+      <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="6">1.5rem (.75rem on left and right)</td>
+        <td colspan="2">.625rem (.3125rem on left and right)</td>
+        <td colspan="4">1.25rem (.625rem on left and right)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
