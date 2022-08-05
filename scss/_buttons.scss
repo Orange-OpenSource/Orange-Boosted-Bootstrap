@@ -256,7 +256,10 @@
   @include button-icon(var(--#{$boosted-prefix}network-logo));
 
   &:focus {
-    outline-color: var(--#{$boosted-prefix}network-color, $black);
+    &[data-focus-visible-added] {
+      color: var(--#{$prefix}btn-color);
+      @include focus-visible();
+    }
   }
 
   &.btn-inverse {
