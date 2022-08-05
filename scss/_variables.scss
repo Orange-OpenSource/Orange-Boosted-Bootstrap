@@ -606,7 +606,7 @@ $input-height-lg:                       add($input-height-inner-lg, $input-heigh
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$form-text-margin-top:                  map-get($spacers, 2) !default;
+$form-text-margin-top:                  .25rem !default; // Boosted mod
 
 $form-check-input-gutter:               $spacer !default;
 $form-check-input-margin-y:             .15rem !default;
