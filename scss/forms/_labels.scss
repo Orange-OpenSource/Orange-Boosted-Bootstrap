@@ -8,6 +8,10 @@
   font-style: $form-label-font-style;
   font-weight: $form-label-font-weight;
   color: $form-label-color;
+
+  & + [data-bs-toggle="tooltip"] {
+    margin-bottom: $form-label-tooltip-margin-bottom;
+  }
 }
 
 // Boosted mod: states for labels

@@ -160,6 +160,38 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
 </form>
 {{< /example >}}
 
+## Tooltip
+
+{{< example >}}
+<form>
+  <fieldset>
+    <div class="mb-3">
+      <label for="tooltipTextInput" class="form-label">Tooltip input</label>
+      <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.125rem" height="1.125rem" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+        </svg>
+        <span class="visually-hidden">Helper for input</span>
+      </button>
+      <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input" required>
+    </div>
+    <div class="mb-3">
+      <label for="tooltipSelect" class="form-label is-required">Tooltip select menu</label>
+      <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.125rem" height="1.125rem" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+        </svg>
+        <span class="visually-hidden">Helper for select menu</span>
+      </button>
+      <select id="tooltipSelect" class="form-select" required>
+        <option value="">Tooltip select</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+  </fieldset>
+</form>
+{{< /example >}}
+
 ## Accessibility
 
 Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
