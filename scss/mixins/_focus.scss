@@ -1,4 +1,4 @@
 @mixin focus-visible {
-  outline: $brand-orange solid 3px;
-  outline-offset: 3px;
+  outline: $brand-orange solid map-get($border-widths, 3);
+  outline-offset: map-get($border-widths, 3);
 }
