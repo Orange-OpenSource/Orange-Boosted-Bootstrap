@@ -336,13 +336,9 @@ sup { top: -.5em; }
 a {
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
-  // Boosted mod
-  outline-offset: $outline-offset * 4;
-  @include transition($transition-focus);
 
   &:focus {
     color: var(--#{$prefix}link-hover-color);
-    outline-offset: $outline-offset;
   }
   // End mod
 

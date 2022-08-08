@@ -39,7 +39,6 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  outline-offset: map-get($spacers, 1); // Boosted mod
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
@@ -149,7 +148,7 @@
 
 // Boosted mod: no .btn-outline
 
-// Boosted mod: border-only on :hover, :focus and :active
+// Boosted mod: border-only on :hover and :active
 .btn-no-outline {
   --#{$prefix}btn-hover-border-color: #{$gray-500};
   --#{$prefix}btn-active-color: #{$accessible-orange};

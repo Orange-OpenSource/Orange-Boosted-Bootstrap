@@ -1,4 +1,4 @@
 @mixin focus-visible {
-  outline: $brand-orange solid map-get($border-widths, 3);
+  outline: var(--#{$prefix}link-hover-color) solid map-get($border-widths, 3);
   outline-offset: map-get($border-widths, 3);
 }
