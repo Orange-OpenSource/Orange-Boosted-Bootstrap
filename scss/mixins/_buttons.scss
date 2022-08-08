@@ -41,12 +41,13 @@
 // Boosted mod: no `@mixin button-outline-variant`
 
 // scss-docs-start btn-size-mixin
-@mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x) {
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $letter-spacing: $letter-spacing-base, $icon-spacing: $btn-icon-padding-x) {
   --#{$boosted-prefix}icon-spacing: #{$icon-spacing}; // Boosted mod: used for icons
   --#{$prefix}btn-padding-y: #{$padding-y};
   --#{$prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}btn-font-size);
-  line-height: $line-height; // Boosted mod
+  --#{$prefix}btn-line-height: #{$line-height}; // Boosted mod
+  --#{$prefix}btn-letter-spacing: #{$letter-spacing}; // Boosted mod
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
 // scss-docs-end btn-size-mixin
