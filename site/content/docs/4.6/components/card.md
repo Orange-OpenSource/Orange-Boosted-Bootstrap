@@ -202,7 +202,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>A well-known quote, contained in a blockquote element.</p>
+      <p class="mb-0">A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
@@ -771,7 +771,7 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
   </div>
   <div class="card p-3">
     <blockquote class="blockquote mb-0 card-body">
-      <p>A well-known quote, contained in a blockquote element.</p>
+      <p class="mb-0">A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
           Someone famous in <cite title="Source Title">Source Title</cite>
@@ -789,7 +789,7 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
   </div>
   <div class="card bg-primary border-primary text-center p-3">
     <blockquote class="blockquote mb-0">
-      <p>A well-known quote, contained in a blockquote element.</p>
+      <p class="mb-0">A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer bg-primary">
         <small>
           Someone famous in <cite title="Source Title">Source Title</cite>
@@ -809,7 +809,7 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
-      <p>A well-known quote, contained in a blockquote element.</p>
+      <p class="mb-0">A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
           Someone famous in <cite title="Source Title">Source Title</cite>
