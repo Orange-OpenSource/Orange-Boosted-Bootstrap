@@ -11,6 +11,10 @@
     @if $contrast != $black {
       a {
         color: $contrast;
+
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }
