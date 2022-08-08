@@ -1448,6 +1448,7 @@ $placeholder-opacity-min:           .2 !default;
 // Cards
 
 // scss-docs-start card-variables
+$card-spacer-top:                   $spacer * .75 !default; // Boosted mod
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;

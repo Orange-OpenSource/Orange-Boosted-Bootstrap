@@ -4,6 +4,7 @@
 
 .card {
   // scss-docs-start card-css-vars
+  --#{$prefix}card-spacer-top: #{$card-spacer-top}; // Boosted mod
   --#{$prefix}card-spacer-y: #{$card-spacer-y};
   --#{$prefix}card-spacer-x: #{$card-spacer-x};
   --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
@@ -69,7 +70,7 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
-  padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+  padding: var(--#{$prefix}card-spacer-top) var(--#{$prefix}card-spacer-x) var(--#{$prefix}card-spacer-y);
   color: var(--#{$prefix}card-color);
 }
 
