@@ -48,7 +48,7 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
   Secondary
 </button>
 <button type="button" class="btn btn-primary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   Secondary
@@ -73,7 +73,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
   <span class="visually-hidden">Secondary</span>
 </button>
 <button type="button" class="btn btn-icon btn-secondary btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
@@ -98,7 +98,7 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
   <span class="visually-hidden">No outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline btn-lg">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">No outline</span>

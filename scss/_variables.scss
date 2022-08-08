@@ -866,10 +866,10 @@ $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
 $btn-line-height-sm:          $line-height-sm !default; // Boosted mod
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-y-lg:            subtract($input-btn-padding-y-lg, .125rem) !default; // Boosted mod: handle icon
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
-$btn-line-height-lg:          $h5-line-height !default; // Boosted mod
+$btn-line-height-lg:          divide(4, 3) !default; // Boosted mod
 
 $btn-border-width:            $input-btn-border-width !default;
 
@@ -895,7 +895,7 @@ $btn-transition:              $transition-focus !default;
 // Boosted mod: icon button
 $btn-icon-padding-x:          subtract($spacer * .5, $border-width) !default;
 $btn-icon-padding-x-sm:       $spacer * .25 !default;
-$btn-icon-padding-x-lg:       add($spacer * .5, $border-width * 1.5) !default;
+$btn-icon-padding-x-lg:       add($spacer * .5, $border-width * .5) !default;
 // Boosted mod: social button
 // scss-docs-start social-buttons
 $btn-social-networks: (
