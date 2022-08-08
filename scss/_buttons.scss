@@ -32,7 +32,7 @@
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
   text-decoration: if($link-decoration == none, null, none);
-  letter-spacing: var(--#{$prefix}btn-letter-spacing);
+  letter-spacing: var(--#{$prefix}btn-letter-spacing); // Boosted mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -223,7 +223,8 @@
 
 //
 // Button Sizes
-// Boosted mod: 6th argument to set .btn-icon padding
+// Boosted mod: 6th argument to set .btn-letter-spacing
+// Boosted mod: 7th argument to set .btn-icon padding
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-letter-spacing-lg, $btn-icon-padding-x-lg);
