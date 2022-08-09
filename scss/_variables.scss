@@ -1132,11 +1132,6 @@ $form-select-feedback-icon-size:        $input-height-inner-half $input-height-i
 
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
-$form-select-border-radius:       $input-border-radius !default;
-$form-select-box-shadow:          $box-shadow-inset !default;
-
-$form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
-$form-select-focus-box-shadow:    null !default;
 
 // Boosted mod: no .form-select-sm
 
@@ -1145,7 +1140,6 @@ $form-select-padding-x-lg:        $input-padding-x-lg !default;
 $form-select-font-size-lg:        $input-font-size-lg !default;
 $form-select-border-radius-lg:    $input-border-radius-lg !default;
 
-$form-select-transition:          $input-transition !default;
 // scss-docs-end form-select-variables
 
 // scss-docs-start form-range-variables
