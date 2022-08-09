@@ -255,8 +255,9 @@
   @include button-icon(var(--#{$boosted-prefix}network-logo));
 
   &:focus {
+    // Boosted mod: added `&[data-focus-visible-added]`
+    color: var(--#{$prefix}btn-hover-color);
     &[data-focus-visible-added] {
-      color: var(--#{$prefix}btn-color);
       @include focus-visible();
     }
   }
