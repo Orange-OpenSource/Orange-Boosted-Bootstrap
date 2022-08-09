@@ -1022,8 +1022,6 @@ $input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
-$input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
-
 $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
 
@@ -1035,7 +1033,6 @@ $form-check-margin-bottom:                .125rem !default;
 $form-check-label-padding-top:            .4375rem !default; // Boosted mod
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
-$form-check-transition:                   null !default;
 
 $form-check-input-active-filter:          null !default;
 $form-check-input-active-bg-color:        $component-active-bg !default; // Boosted mod
@@ -1044,8 +1041,6 @@ $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 $border-width solid $input-border-color !default;
 $form-check-input-border-radius:          0 !default;
 $form-check-radio-border-radius:          50% !default;
-$form-check-input-focus-border:           null !default;
-$form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;

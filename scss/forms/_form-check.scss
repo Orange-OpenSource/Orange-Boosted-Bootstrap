@@ -38,7 +38,6 @@
   border: $form-check-input-border;
   appearance: none;
   print-color-adjust: exact; // Keep themed appearance for print
-  @include transition($form-check-transition);
 
   &[type="checkbox"] {
     @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // Boosted mod
@@ -56,9 +55,10 @@
   }
 
   &:focus {
-    border-color: $form-check-input-focus-border;
-    // Boosted mod: default outline
-    box-shadow: $form-check-input-focus-box-shadow;
+    // Boosted mod : update focus for WCAG
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 
   &:checked {
