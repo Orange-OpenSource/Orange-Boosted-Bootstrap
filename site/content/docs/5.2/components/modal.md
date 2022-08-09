@@ -50,7 +50,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
           <p>Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-link justify-content-start justify-content-md-center ps-0 ps-md-3" data-bs-dismiss="modal">Text link</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
@@ -70,7 +70,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-link justify-content-start justify-content-md-center ps-0 ps-md-3" data-bs-dismiss="modal">Text link</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
