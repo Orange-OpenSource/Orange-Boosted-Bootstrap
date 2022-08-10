@@ -272,6 +272,10 @@ h2,
     &::after {
       filter: var(--#{$prefix}link-hover-color);
     }
+
+    &:hover {
+      filter: $orange-filter;
+    }
   }
 }
 // End mod
