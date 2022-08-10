@@ -258,12 +258,19 @@ h2,
     transform: $linked-chevron-transform;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: $link-decoration;
 
     &::after {
       filter: $orange-filter;
+    }
+  }
+
+  &:focus {
+    text-decoration: $link-decoration;
+
+    &::after {
+      filter: var(--#{$prefix}link-hover-color);
     }
   }
 }

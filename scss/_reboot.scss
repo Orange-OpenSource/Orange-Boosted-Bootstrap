@@ -338,7 +338,7 @@ a {
   text-decoration: $link-decoration;
 
   &:focus {
-    color: var(--#{$prefix}link-hover-color);
+    @include focus-visible();
   }
   // End mod
 
