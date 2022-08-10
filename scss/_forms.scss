@@ -205,7 +205,7 @@ textarea.form-control {
 
 .form-text {
   display: block;
-  margin-top: $form-text-margin-top;
+  margin: $form-text-margin-top 0 0; // Boosted mod
 }
 
 
