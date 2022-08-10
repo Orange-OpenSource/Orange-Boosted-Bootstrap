@@ -794,10 +794,6 @@ $table-color:                 var(--#{$prefix}body-color) !default;
 $table-bg:                    $body-bg !default;
 $table-accent-bg:             transparent !default;
 
-$table-height-sm:             $spacer * 10 !default; // Boosted mod
-$table-height-md:             $spacer * 20 !default; // Boosted mod
-$table-height-lg:             $spacer * 30 !default; // Boosted mod
-
 $table-th-font-weight:        null !default;
 
 $table-striped-color:                   $table-color !default;

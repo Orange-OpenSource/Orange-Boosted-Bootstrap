@@ -40,7 +40,7 @@
     box-shadow: inset 0 0 0 9999px var(--#{$prefix}table-accent-bg);
   }
 
-  > thead > tr {
+  > thead:not(.thead-sticky) > tr {
     border-bottom-width: $table-border-width * 2;
   }
 
@@ -136,29 +136,13 @@
   }
 }
 
-.table-height-sm {
-  max-height: $table-height-sm;
-  overflow: auto;
-}
-
-.table-height-md {
-  max-height: $table-height-md;
-  overflow: auto;
-}
-
-.table-height-lg {
-  max-height: $table-height-lg;
-  overflow: auto;
-}
-
-.table-sticky > thead > tr {
+.thead-sticky {
   position: sticky;
   top: 0;
-  z-index: 2;
-  border-width: 0;
+  z-index: 5;
 
   // Redraw the border-bottom, otherwise it doesn't stick.
-  > th { // stylelint-disable-line
+  > * > th {
     $border-bottom-thead: subtract(100%, ($table-border-width * 2));
     background: linear-gradient(transparent 0%, transparent $border-bottom-thead, var(--#{$prefix}table-border-color) $border-bottom-thead, var(--#{$prefix}table-border-color) 100%);
     background-color: var(--#{$prefix}table-bg);

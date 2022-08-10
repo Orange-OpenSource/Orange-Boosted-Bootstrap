@@ -492,6 +492,68 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
 </table>
 ```
 
+## Sticky table headers
+
+Add `.thead-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
+
+<div class="bd-example">
+  <div class="overflow-auto" style="height: 200px">
+    <table class="table">
+      <caption class="visually-hidden">Boosted table with a sticky header</caption>
+      <thead class="thead-sticky">
+        <tr>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+```html
+<div class="overflow-auto" style="height: 200px">
+  <table class="table">
+    <caption class="visually-hidden">Boosted table with a sticky header</caption>
+    <thead class="thead-sticky">...</thead>
+    ...
+  </table>
+</div>
+```
+
 ## Responsive tables
 
 Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
@@ -657,367 +719,6 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{- end -}}
 {{< /tables.inline >}}
 {{< /highlight >}}
-
-## Sizing
-
-### Sizes
-
-Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content.
-
-<div class="bd-example">
-  <div class="table-height-sm">
-    <table class="table">
-      <caption class="visually-hidden">Boosted limited height small table</caption>
-      <thead>
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="bd-example">
-  <div class="table-height-md">
-    <table class="table">
-      <caption class="visually-hidden">Boosted limited height medium table</caption>
-      <thead>
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="bd-example">
-  <div class="table-height-lg">
-    <table class="table">
-      <caption class="visually-hidden">Boosted limited height large table</caption>
-      <thead>
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-```html
-<div class="table-height-sm">
-  <table class="table">
-    <caption class="visually-hidden">Boosted limited height small table</caption>
-    ...
-  </table>
-</div>
-<div class="table-height-md">
-  <table class="table">
-    <caption class="visually-hidden">Boosted limited height medium table</caption>
-    ...
-  </table>
-</div>
-<div class="table-height-lg">
-  <table class="table">
-    <caption class="visually-hidden">Boosted limited height large table</caption>
-    ...
-  </table>
-</div>
-```
-
-### Sticky thead
-
-Add `.table-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
-
-<div class="bd-example">
-  <div class="table-height-sm">
-    <table class="table table-sticky">
-      <caption class="visually-hidden">Boosted table with a sticky header</caption>
-      <thead>
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-```html
-<div class="table-height-sm">
-  <table class="table table-sticky">
-    <caption class="visually-hidden">Boosted table with a sticky header</caption>
-    ...
-  </table>
-</div>
-```
-
-Works also with variants :
-
-<div class="bd-example">
-  <div class="table-height-sm">
-    <table class="table table-sticky table-dark">
-      <caption class="visually-hidden">Boosted dark table with a sticky header</caption>
-      <thead>
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-```html
-<div class="table-height-sm">
-  <table class="table table-dark table-sticky">
-    <caption class="visually-hidden">Boosted dark table with a sticky header</caption>
-    ...
-  </table>
-</div>
-```
 
 ## Rich content tables
 
