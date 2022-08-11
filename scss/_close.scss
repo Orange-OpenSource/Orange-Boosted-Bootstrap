@@ -32,17 +32,13 @@
 
   // Boosted mod: matching .btn-no-outline
   &:hover,
-  &:focus,
   &:active {
     border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-active-border-color);
   }
 
   &:focus {
-    outline-offset: $outline-width;
-    @include transition($transition-focus);
-
     &[data-focus-visible-added] {
-      box-shadow: $btn-close-focus-shadow;
+      @include focus-visible();
     }
   }
 
@@ -73,7 +69,7 @@
 
   &:focus {
     &[data-focus-visible-added] {
-      box-shadow: 0 0 0 $btn-focus-width $black;
+      @include focus-visible();
     }
   }
 }
