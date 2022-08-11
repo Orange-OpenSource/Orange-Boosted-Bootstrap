@@ -3,10 +3,6 @@
 //
 
 .star-rating {
-  &:focus-within {
-    outline: $form-star-focus-outline;
-    box-shadow: $form-star-focus-box-shadow;
-  }
 
   &.disabled,
   &:disabled {
@@ -41,6 +37,8 @@
 
   > input:focus + label {
     @include form-star-rating($accessible-orange);
+    @include focus-visible();
+    // outline-offset: -1px;
   }
 
   &:hover input + label {
@@ -57,9 +55,6 @@
 }
 
 .star-rating-dark {
-  &:focus-within {
-    outline: $form-star-focus-outline-dark;
-  }
 
   > label {
     @include form-star-rating($brand-orange);
@@ -79,6 +74,8 @@
 
   > input:focus + label {
     @include form-star-rating($brand-orange);
+    @include focus-visible();
+    // outline-offset: -1px;
   }
 
   &:hover input + label {
