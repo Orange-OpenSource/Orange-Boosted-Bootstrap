@@ -278,9 +278,7 @@
 
   &[data-focus-visible-added] {
     + .btn {
-      outline: $outline-width solid;
-      outline-offset: $outline-width;
-      box-shadow: $btn-focus-box-shadow;
+      @include focus-visible();
     }
 
     &:checked + .btn-no-outline {
