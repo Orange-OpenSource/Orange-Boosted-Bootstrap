@@ -19,7 +19,7 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
 <div class="offcanvas-lg offcanvas-start side-nav" id="sidebarMenu1">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu1" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu1" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div class="accordion w-100" id="sideNavAccordion">
@@ -142,19 +142,17 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
 ## Collapsible with title
 
-{{< example class="p-0 scrollspy-example-2 d-flex" >}}
+{{< example class="p-0 scrollspy-example-2 d-block d-lg-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
 
 <div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu2">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div id="collapsible-list" class="collapse collapse-horizontal">
-      <div class="fake">&nbsp;</div>
-    </div>
+    <div id="collapsible-list" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
     <div class="position-absolute w-100">
-      <button class="btn side-nav-item p-0 bg-transparent d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <button class="side-nav-item p-0 d-none d-lg-flex collapsed side-nav-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-list" aria-expanded="false" aria-controls="collapsible-list"><span class="visually-hidden">Open/Close side navigation</span></button>
       <ul class="list-unstyled m-0">
         <li>
           <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
@@ -191,7 +189,7 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
 Strongly WIP, onclick functions are a test without extra JS. But fully working example atm.
 
-{{< example class="p-0 scrollspy-example-2 d-flex" >}}
+{{< example class="p-0 scrollspy-example-2 d-block d-lg-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu3" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">Collapsing side navigation with content</button>
 
 <div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible-content" id="sidebarMenu3">
@@ -199,8 +197,8 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
     <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu3" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
   </div>
   <div class="offcanvas-body d-flex flex-row">
-    <div class="position-absolute d-flex flex-column flex-wrap">
-      <button class="btn side-nav-item p-0 bg-transparent d-none d-lg-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"><span class="visually-hidden">Open/Close side navigation</span></button>
+    <div class="position-absolute w-100 d-flex flex-column flex-wrap">
+      <button class="side-nav-item p-0 bg-transparent d-none d-lg-flex collapsed side-nav-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"><span class="visually-hidden">Open/Close side navigation</span></button>
       <div class="d-flex flex-row">
         <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
           <li role="presentation" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
@@ -257,7 +255,7 @@ Side navigation comes with a dark variant: `.side-nav-dark`.
 
 <div class="offcanvas-lg offcanvas-start side-nav side-nav-dark" id="sidebarMenu4">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu4" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu4" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div class="accordion w-100" id="sideNavAccordionDark">

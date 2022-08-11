@@ -1,51 +1,39 @@
 .side-nav {
   --#{$prefix}side-nav-width: 18.75rem;
   --#{$prefix}side-nav-color: #{$black};
-  --#{$prefix}side-nav-bg-color: #{$white};
-  --#{$prefix}side-nav-hover-bg-color: #{$gray-300};
-  --#{$prefix}side-nav-active-bg-color: #{$gray-500};
+  --#{$prefix}side-nav-bg: #{$white};
+  --#{$prefix}side-nav-hover-bg: #{$gray-300};
+  --#{$prefix}side-nav-active-bg: #{$gray-500};
   --#{$prefix}side-nav-active-border-color: var(--#{$prefix}link-hover-color);
   --#{$prefix}side-nav-icon-size: 1.5625rem;
+  --#{$prefix}side-nav-icon-margin-x: 15px;
   --#{$prefix}side-nav-item-height: 2.5rem;
-  --#{$prefix}side-nav-item-padding-left: 15px;
+  --#{$prefix}side-nav-item-padding-left: var(--#{$prefix}side-nav-icon-margin-x);
   --#{$prefix}side-nav-border-width: 1px;
   --#{$prefix}side-nav-border-color: #{$gray-500};
   --#{$prefix}offcanvas-padding-x: 0;
   --#{$prefix}offcanvas-padding-y: 0;
 
   width: var(--#{$prefix}side-nav-width);
-  height: 100%;
-  overflow: auto;
-  @extend .border-0;
+  min-height: 100%;
+  border: 0 !important; // stylelint-disable-line declaration-no-important
 
   svg,
   img {
     width: var(--#{$prefix}side-nav-icon-size);
     min-width: var(--#{$prefix}side-nav-icon-size);
     height: var(--#{$prefix}side-nav-icon-size);
-    margin-right: 15px;
+    margin-right: var(--#{$prefix}side-nav-icon-margin-x);
   }
 
-  .offcanvas-header {
-    justify-content: flex-end;
-    background-color: var(--#{$prefix}side-nav-bg-color);
+  .offcanvas-header,
+  .offcanvas-body > * {
+    background: var(--#{$prefix}side-nav-bg);
     border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
   }
 
-  .offcanvas-body {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: var(--#{$prefix}side-nav-bg-color);
-
-    > * {
-      background-color: var(--#{$prefix}side-nav-bg-color);
-      border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
-    }
-
-    .position-absolute {
-      min-height: 100%;
-    }
+  .offcanvas-body > * {
+    min-height: 100%;
   }
 
   .accordion {
@@ -55,21 +43,22 @@
     --#{$prefix}accordion-btn-font-size: 1rem;
 
     .accordion-body {
-      --#{$prefix}side-nav-item-padding-left: 55px;
+      --#{$prefix}side-nav-item-padding-left: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
 
       .accordion-body {
-        --#{$prefix}side-nav-item-padding-left: 95px;
+        --#{$prefix}side-nav-item-padding-left: calc(var(--#{$prefix}side-nav-icon-size) * 2 + var(--#{$prefix}side-nav-icon-margin-x) * 3); // stylelint-disable-line function-disallowed-list
       }
     }
   }
 
-  .tab-content {
+  .collapse-horizontal > * {
+    width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-width) - var(--#{$prefix}side-nav-border-width)); // stylelint-disable-line function-disallowed-list
+    max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
     padding: 0;
     border: 0;
   }
 
-  .side-nav-item {
-    position: relative;
+  .side-nav-item { // Here to be more specific than other classes
     display: flex;
     align-items: center;
     width: 100%;
@@ -79,17 +68,39 @@
     color: var(--#{$prefix}side-nav-color);
     text-decoration: none;
     white-space: nowrap;
-    background-color: var(--#{$prefix}side-nav-bg-color);
+    background: var(--#{$prefix}side-nav-bg);
     border: 0;
-    @include transition(unset);
 
     &:hover {
-      background-color: var(--#{$prefix}side-nav-hover-bg-color);
+      background: var(--#{$prefix}side-nav-hover-bg);
     }
 
     &.active {
-      background: linear-gradient(to right, var(--#{$prefix}side-nav-active-border-color), var(--#{$prefix}side-nav-active-border-color) 4px, var(--#{$prefix}side-nav-active-bg-color) 4px, var(--#{$prefix}side-nav-active-bg-color));
+      background: linear-gradient(to right, var(--#{$prefix}side-nav-active-border-color), var(--#{$prefix}side-nav-active-border-color) 4px, var(--#{$prefix}side-nav-active-bg) 4px, var(--#{$prefix}side-nav-active-bg));
     }
+  }
+
+  .side-nav-collapse {
+    justify-content: center;
+    width: subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width));
+    margin: 0 0 0 auto;
+    background: unset !important; // stylelint-disable-line declaration-no-important
+    @include caret(start);
+
+    &::before {
+      margin: 0;
+      border-right-color: var(--#{$prefix}side-nav-color);
+      @include transition(transform .35s ease);
+    }
+
+    &.collapsed::before {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &.offcanvas-end .side-nav-collapse {
+    margin: 0 auto 0 0;
+    @include caret(end);
   }
 
   .focus-visible {
@@ -97,38 +108,24 @@
     outline: var(--#{$prefix}side-nav-active-border-color) solid 3px;
     outline-offset: -3px;
   }
-
-  .collapse-horizontal > * {
-    /* stylelint-disable-next-line function-disallowed-list */
-    max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width));
-  }
 }
 
-[class*="side-nav-collapsible"] [data-bs-toggle="collapse"] {
-  width: subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width));
-  height: var(--#{$prefix}side-nav-item-height);
-  margin-left: auto;
-  background-color: transparent;
-  @include caret(start);
-
-  &::before {
-    margin: 0;
-    border-right-color: var(--#{$prefix}side-nav-color);
-    @include transition(transform .35s ease);
-  }
-
-  &.collapsed::before {
-    transform: rotateZ(180deg);
-  }
+.side-nav-dark {
+  --#{$prefix}side-nav-color: #{$white};
+  --#{$prefix}side-nav-bg: #{$gray-900};
+  --#{$prefix}side-nav-hover-bg: #{$black};
+  --#{$prefix}side-nav-active-bg: #{$gray-700};
+  --#{$prefix}side-nav-border-color: #{$gray-700};
 }
 
 .side-nav-collapsible {
-  --#{$prefix}side-nav-width: 3.4375rem;
+  --#{$prefix}side-nav-width: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
   --#{$prefix}offcanvas-width: 300px;
 
   .offcanvas-body {
     width: auto;
     min-width: var(--#{$prefix}side-nav-width);
+    height: 100%;
 
     @include media-breakpoint-up(lg) {
       position: absolute;
@@ -141,42 +138,28 @@
     @include media-breakpoint-down(lg) {
       display: none;
     }
-
-    .fake {
-      /* stylelint-disable-next-line function-disallowed-list */
-      width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-border-width) - var(--#{$prefix}side-nav-width));
-    }
   }
 }
 
 .side-nav-collapsible-content {
-  --#{$prefix}side-nav-width: 3.4375rem;
+  --#{$prefix}side-nav-width: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
+  --#{$prefix}side-nav-bg: #{linear-gradient(to right, $gray-900, $gray-900 subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width)), $white subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width)))};
   --#{$prefix}offcanvas-width: 326px;
 
   .offcanvas-body {
+    height: 100%;
+
     @include media-breakpoint-up(lg) {
       position: absolute;
     }
   }
 
-  .offcanvas-header,
-  .offcanvas-body > * {
-    background: linear-gradient(to right, #333, #333 add(var(--#{$prefix}side-nav-width), 1px), #fff add(var(--#{$prefix}side-nav-width), 1px));
-  }
-
-  .tab-content {
-    width: 270px;
+  svg,
+  img {
+    margin-right: subtract(var(--#{$prefix}side-nav-icon-margin-x), var(--#{$prefix}side-nav-border-width));
   }
 
   [data-bs-toggle="collapse"].collapsed::before {
-    border-right-color: #fff;
+    border-right-color: $white;
   }
-}
-
-.side-nav-dark {
-  --#{$prefix}side-nav-color: #{$white};
-  --#{$prefix}side-nav-bg-color: #{$gray-900};
-  --#{$prefix}side-nav-hover-bg-color: #{$black};
-  --#{$prefix}side-nav-active-bg-color: #{$gray-700};
-  --#{$prefix}side-nav-border-color: #{$gray-700};
 }
