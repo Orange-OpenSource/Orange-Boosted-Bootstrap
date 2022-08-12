@@ -13,10 +13,11 @@
   --#{$prefix}side-nav-border-color: #{$gray-500};
   --#{$prefix}offcanvas-padding-x: 0;
   --#{$prefix}offcanvas-padding-y: 0;
+  --#{$prefix}offcanvas-border-width: 0;
 
   width: var(--#{$prefix}side-nav-width);
-  min-height: 100%;
-  border: 0 !important; // stylelint-disable-line declaration-no-important
+  height: 100%;
+  overflow: auto;
 
   svg,
   img {
@@ -27,12 +28,15 @@
   }
 
   .offcanvas-header,
-  .offcanvas-body > * {
+  .offcanvas-body > :not(.collapse-horizontal) {
+    width: 100%;
     background: var(--#{$prefix}side-nav-bg);
     border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
   }
 
-  .offcanvas-body > * {
+  .offcanvas-body,
+  .offcanvas-body > :not(.collapse-horizontal) {
+    min-width: var(--#{$prefix}side-nav-width);
     min-height: 100%;
   }
 
@@ -51,11 +55,20 @@
     }
   }
 
-  .collapse-horizontal > * {
-    width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-width) - var(--#{$prefix}side-nav-border-width)); // stylelint-disable-line function-disallowed-list
-    max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
+  .tab-content { // to change after #1427 is merged
     padding: 0;
     border: 0;
+  }
+
+  .collapse-horizontal {
+    height: 0;
+    min-height: unset;
+    margin-left: var(--#{$prefix}side-nav-width);
+
+    > * {
+      width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
+      max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
+    }
   }
 
   .side-nav-item { // Here to be more specific than other classes
@@ -81,11 +94,16 @@
   }
 
   .side-nav-collapse {
+    display: none;
     justify-content: center;
     width: subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width));
-    margin: 0 0 0 auto;
+    padding-left: 0;
     background: unset !important; // stylelint-disable-line declaration-no-important
     @include caret(start);
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
 
     &::before {
       margin: 0;
@@ -98,12 +116,7 @@
     }
   }
 
-  &.offcanvas-end .side-nav-collapse {
-    margin: 0 auto 0 0;
-    @include caret(end);
-  }
-
-  .focus-visible {
+  [data-focus-visible-added] {
     z-index: 3;
     outline: var(--#{$prefix}side-nav-active-border-color) solid 3px;
     outline-offset: -3px;
@@ -123,43 +136,23 @@
   --#{$prefix}offcanvas-width: 300px;
 
   .offcanvas-body {
-    width: auto;
-    min-width: var(--#{$prefix}side-nav-width);
-    height: 100%;
-
     @include media-breakpoint-up(lg) {
       position: absolute;
-    }
-  }
-
-  .collapse-horizontal {
-    margin-left: var(--#{$prefix}side-nav-width);
-
-    @include media-breakpoint-down(lg) {
-      display: none;
     }
   }
 }
 
 .side-nav-collapsible-content {
-  --#{$prefix}side-nav-width: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
-  --#{$prefix}side-nav-bg: #{linear-gradient(to right, $gray-900, $gray-900 subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width)), $white subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width)))};
-  --#{$prefix}offcanvas-width: 326px;
+  --#{$prefix}side-nav-bg: #{linear-gradient(to right, $gray-900, $gray-900 var(--#{$prefix}side-nav-width), $white var(--#{$prefix}side-nav-width))};
+  --#{$prefix}side-nav-border-color: #{$gray-700};
+  --#{$prefix}offcanvas-width: 325px;
 
-  .offcanvas-body {
-    height: 100%;
-
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-    }
+  .offcanvas-header,
+  .show + * {
+    --#{$prefix}side-nav-border-color: #{$gray-500};
   }
 
-  svg,
-  img {
-    margin-right: subtract(var(--#{$prefix}side-nav-icon-margin-x), var(--#{$prefix}side-nav-border-width));
-  }
-
-  [data-bs-toggle="collapse"].collapsed::before {
+  .side-nav-collapse.collapsed::before {
     border-right-color: $white;
   }
 }
