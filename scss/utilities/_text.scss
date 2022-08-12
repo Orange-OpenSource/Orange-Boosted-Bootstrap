@@ -114,10 +114,13 @@
 
 .text-decoration-none { text-decoration: none !important; }
 
+/* rtl:begin:remove */
 .text-break {
   word-break: break-word !important; // Deprecated, but avoids issues with flex containers
   word-wrap: break-word !important; // Used instead of `overflow-wrap` for IE & Edge Legacy
 }
+
+/* rtl:end:remove */
 
 // Reset
 

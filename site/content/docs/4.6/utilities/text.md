@@ -72,6 +72,10 @@ Prevent long strings of text from breaking your components' layout by using `.te
 <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 {{< /example >}}
 
+{{< callout warning >}}
+Note that [breaking words isn't possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
+{{< /callout >}}
+
 ## Text transform
 
 Transform text in components with text capitalization classes.
