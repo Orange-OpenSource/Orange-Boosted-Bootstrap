@@ -270,7 +270,7 @@ Side navigation comes with a dark variant: `.side-nav-dark`.
         <h3 class="accordion-header" id="dashboardHeaderDark">
           <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}/assets/img/boosted-sprite.svg#dashboard"/>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
             </svg>
             Dashboard
           </button>
