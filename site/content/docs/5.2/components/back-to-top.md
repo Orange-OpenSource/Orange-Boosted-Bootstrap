@@ -97,7 +97,7 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 
 ## Dark variant
 
-Back to top component comes with a dark variant: Add `.btn-inverse` on `.back-to-top-link`.
+Back to top component comes with a dark variant: add `.btn-inverse` on `.back-to-top-link`.
 
 <div class="bd-example bg-dark d-flex gap-3 flex-wrap">
   <nav aria-label="Standard dark back to top example" class="back-to-top position-static ps-5 ms-5">
