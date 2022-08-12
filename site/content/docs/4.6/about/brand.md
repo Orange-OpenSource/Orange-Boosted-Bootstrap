@@ -36,10 +36,10 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Clear space
 
 <div class="row mb-5">
-  <div class="col-lg-2 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150" loading="lazy"/>
   </div>
-  <div class="col-lg-10">
+  <div class="col-lg-9 col-xxl-10">
     <p>The Master logo should always have <strong>clear space around</strong> it to protect it from other graphic elements and help it stand out.</p>
     <p>Always aim to set the clear space to <code>0.5×</code>. Where the space is limited (e.g. web) or when you need maximum visibility (e.g. perimeter boards), set your clear space to <code>0.25×</code> instead.</p>
     <p>To maintain clarity and legibility, we have set <strong>minimum sizes</strong> for the Master logo.</p>
