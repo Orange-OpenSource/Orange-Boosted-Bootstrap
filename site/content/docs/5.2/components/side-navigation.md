@@ -155,7 +155,55 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
     <div id="collapsible-element" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
     <div class="position-absolute">
 
-      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element" aria-expanded="false" aria-controls="collapsible-list"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element" aria-expanded="false" aria-controls="collapsible-element"><span class="visually-hidden">Open/Close side navigation</span></button>
+
+      <ul class="list-unstyled m-0">
+        <li>
+          <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" title="Dashboard" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+            </svg>
+            Dashboard
+          </button>
+        </li>
+        <li>
+          <button class="side-nav-item active fw-bold" data-bs-toggle="tooltip" title="Financial" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+            </svg>
+            Financial
+          </button>
+        </li>
+        <li>
+          <button class="side-nav-item fw-bold" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
+            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+            </svg>
+            Charts
+          </button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<div class="d-none d-lg-flex">test</div>
+{{< /example >}}
+
+## Static collapsible with title
+
+{{< example class="p-0 scrollspy-example-2 d-block d-lg-flex" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible side-nav-static" id="sidebarMenu2">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div id="collapsible-element-2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
+    <div class="position-absolute">
+
+      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-2" aria-expanded="false" aria-controls="collapsible-element-2"><span class="visually-hidden">Open/Close side navigation</span></button>
 
       <ul class="list-unstyled m-0">
         <li>
@@ -235,13 +283,13 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
           </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane" id="dashboardTab" role="tabpanel">
+          <div class="tab-pane" id="dashboardTab" role="tabpanel" tabindex="0">
             <div class="tab-pane-content"><h3 class="tab-pane-title">Dashboard</h3></div>
           </div>
-          <div class="tab-pane active" id="financialTab" role="tabpanel">
+          <div class="tab-pane active" id="financialTab" role="tabpanel" tabindex="0">
             <div class="tab-pane-content"><h3 class="tab-pane-title">Financial</h3></div>
           </div>
-          <div class="tab-pane" id="chartsTab" role="tabpanel">
+          <div class="tab-pane" id="chartsTab" role="tabpanel" tabindex="0">
             <div class="tab-pane-content"><h3 class="tab-pane-title">Charts</h3></div>
           </div>
         </div>

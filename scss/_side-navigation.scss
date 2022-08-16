@@ -38,6 +38,11 @@
   .offcanvas-body > :not(.collapse-horizontal) {
     min-width: var(--#{$prefix}side-nav-width);
     min-height: 100%;
+    background: var(--#{$prefix}side-nav-bg);
+  }
+
+  .offcanvas-body {
+    min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
   }
 
   .accordion {
@@ -68,6 +73,10 @@
     > * {
       width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
       max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
+    }
+
+    &:not(.show):not(.collapsing) + * .tab-content {
+      display: none;
     }
   }
 
@@ -136,8 +145,17 @@
   --#{$prefix}offcanvas-width: 300px;
 
   .offcanvas-body {
+    & > :not(.collapse-horizontal) {
+      min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
+    }
+
     @include media-breakpoint-up(lg) {
       position: absolute;
+      min-height: 100%;
+
+      & > :not(.collapse-horizontal) {
+        min-height: 100%;
+      }
     }
   }
 }
@@ -154,5 +172,15 @@
 
   .side-nav-collapse.collapsed::before {
     border-right-color: $white;
+  }
+}
+
+.side-nav-static {
+  width: auto;
+
+  .offcanvas-body {
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
   }
 }
