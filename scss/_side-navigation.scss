@@ -3,7 +3,7 @@
   --#{$prefix}side-nav-color: #{$black};
   --#{$prefix}side-nav-bg: #{$white};
   --#{$prefix}side-nav-hover-bg: #{$gray-300};
-  --#{$prefix}side-nav-active-bg: #{$gray-500};
+  --#{$prefix}side-nav-active-bg: #{$gray-400};
   --#{$prefix}side-nav-active-border-color: var(--#{$prefix}link-hover-color);
   --#{$prefix}side-nav-icon-size: 1.5625rem;
   --#{$prefix}side-nav-icon-margin-x: 15px;
@@ -17,7 +17,7 @@
 
   width: var(--#{$prefix}side-nav-width);
   height: 100%;
-  overflow: auto;
+  overflow: hidden auto;
 
   svg,
   img {
@@ -86,15 +86,16 @@
     width: 100%;
     height: var(--#{$prefix}side-nav-item-height);
     padding: 0 0 0 var(--#{$prefix}side-nav-item-padding-left);
+    margin: 0;
     overflow: hidden;
     color: var(--#{$prefix}side-nav-color);
     text-decoration: none;
     white-space: nowrap;
-    background: var(--#{$prefix}side-nav-bg);
+    background-color: var(--#{$prefix}side-nav-bg);
     border: 0;
 
     &:hover {
-      background: var(--#{$prefix}side-nav-hover-bg);
+      background-color: var(--#{$prefix}side-nav-hover-bg);
     }
 
     &.active {
@@ -152,6 +153,7 @@
     @include media-breakpoint-up(lg) {
       position: absolute;
       min-height: 100%;
+      overflow: hidden auto;
 
       & > :not(.collapse-horizontal) {
         min-height: 100%;
