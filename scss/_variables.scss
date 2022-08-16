@@ -1075,8 +1075,6 @@ $form-switch-bg-image:            var(--#{$boosted-prefix}close-icon) !default; 
 $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
-$form-switch-border-radius:       null !default; // Boosted mod
-$form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // Boosted mod
 
 // Boosted mod: no $form-switch-focus-color
 // Boosted mod: no $form-switch-focus-bg-image
