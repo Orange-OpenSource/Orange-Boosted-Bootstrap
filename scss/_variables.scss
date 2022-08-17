@@ -416,6 +416,8 @@ $blockquote-letter-spacing:   -.015625rem !default; // Boosted mod
 $hr-border-color:             $gray-300 !default;
 $hr-border-width:             $border-width * .5 !default;
 
+$mark-padding:                0 .2em !default;
+
 $dt-font-weight:              $font-weight-bold !default;
 
 $kbd-box-shadow:              null !default;
