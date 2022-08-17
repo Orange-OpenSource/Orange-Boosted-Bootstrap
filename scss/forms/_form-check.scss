@@ -205,7 +205,7 @@
     &:focus {
       &[data-focus-visible-added] {
         @include focus-visible();
-        outline-color: #0e91ff; /* Inverted color of var(--#{$prefix}link-hover-color) to compose with filter: invert(1)*/
+        outline-color: #0e91ff; /* Inverted color of var(--#{$prefix}link-hover-color) to compose with filter: invert(1) */
       }
     }
 
