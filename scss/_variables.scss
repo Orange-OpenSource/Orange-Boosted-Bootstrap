@@ -1730,25 +1730,26 @@ $progress-height-xs:                $spacer * .25 !default;
 // List group
 
 // scss-docs-start list-group-variables
+$list-group-font-weight:            $font-weight-bold !default; // Boosted mod
 $list-group-color:                  $gray-900 !default;
 $list-group-bg:                     $white !default;
-$list-group-border-color:           $gray-500 !default;
+$list-group-border-color:           $gray-500 !default; // Boosted mod
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         .875rem !default;
-$list-group-item-padding-x:         $spacer !default;
+$list-group-item-padding-y:         .625rem !default; // Boosted mod
+$list-group-item-padding-x:         $spacer * .75 !default; // Boosted mod
 
-// Boosted mod: no $list-group-hover-bg:
-$list-group-active-color:           $white !default;
-$list-group-active-bg:              $black !default;
-$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-hover-bg:               $gray-300 !default; // Boosted mod
+$list-group-active-color:           $black !default; // Boosted mod
+$list-group-active-bg:              no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-400 4px) !default; // Boosted mod
+$list-group-active-border-color:    $list-group-border-color !default; // Boosted mod
 
-$list-group-disabled-color:         $gray-500 !default;
+$list-group-disabled-color:         $gray-500 !default; // Boosted mod
 $list-group-disabled-bg:            $list-group-bg !default;
 
-$list-group-action-color:           $black !default;
-$list-group-action-hover-color:     $primary !default;
+$list-group-action-color:           $black !default; // Boosted mod
+$list-group-action-hover-color:     $black !default; // Boosted mod
 
 $list-group-action-active-color:    $list-group-active-color !default; // Boosted mod
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod

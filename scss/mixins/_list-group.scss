@@ -1,20 +1,17 @@
 // List Groups
 
+// Boosted mod: only add an icon on the right instead of changing the cackground-color
 // scss-docs-start list-group-mixin
-@mixin list-group-item-variant($state, $background, $color) {
+@mixin list-group-item-variant($state, $icon) {
   .list-group-item-#{$state} {
-    color: $color;
-    background-color: $background;
+    padding-right: calc($spacer * .9 + 20px); // stylelint-disable-line function-disallowed-list
+    background: no-repeat subtract(100%, 10px) / calc($spacer * .9) $icon; // stylelint-disable-line function-disallowed-list
 
-    &.list-group-item-action {
-      &:hover,
-      &:focus {
-        color: $color;
-        background-color: if($color == $white, shade-color($background, 10%), tint-color($background, 10%)); // Boosted mod
-      }
-
-      // Boosted mod: no variant for active state
+    &:active,
+    &.active {
+      background: no-repeat subtract(100%, 10px) / calc($spacer * .9) $icon, var(--#{$prefix}list-group-action-active-bg); // stylelint-disable-line function-disallowed-list
     }
   }
 }
 // scss-docs-end list-group-mixin
+// End mod
