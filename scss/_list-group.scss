@@ -53,17 +53,21 @@
   color: var(--#{$prefix}list-group-action-color);
   text-align: inherit; // For `<button>`s (anchors inherit)
   outline-offset: $spacer; // Boosted mod
-  @include transition($transition-focus); // Boosted mod
 
   // Hover state
-  &:hover,
-  &:focus {
+  &:hover{
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-action-hover-color);
     text-decoration: none;
     outline-color: var(--#{$prefix}list-group-action-color); // Boosted mod
     outline-offset: var(--#{$prefix}list-group-border-width); // Boosted mod
     // Boosted mod: no background change
+  }
+
+  &:focus {
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 
   &:active {
