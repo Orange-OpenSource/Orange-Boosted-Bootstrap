@@ -1737,8 +1737,9 @@ $list-group-border-color:           $gray-500 !default; // Boosted mod
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         .625rem !default; // Boosted mod
-$list-group-item-padding-x:         $spacer * .75 !default; // Boosted mod
+$list-group-item-padding-y:         10px !default; // Boosted mod
+$list-group-item-padding-x:         15px !default; // Boosted mod
+$list-group-item-icon-size:         $spacer * .85 !default; // Boosted mod
 
 $list-group-hover-bg:               $gray-300 !default; // Boosted mod
 $list-group-active-color:           $black !default; // Boosted mod

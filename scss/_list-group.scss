@@ -12,6 +12,8 @@
   --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
   --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
+  --#{$prefix}list-group-item-icon-margin-x: #{subtract(var(--#{$prefix}list-group-item-padding-x), 5px)}; // Boosted mod
+  --#{$prefix}list-group-item-icon-size: #{$list-group-item-icon-size}; // Boosted mod
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
   --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
@@ -206,7 +208,7 @@
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 @each $state, $value in $alert-colors {
-  @include list-group-item-variant($state, map-get($alert-icons, $state));
+  @include list-group-item-variant($state, $value, map-get($alert-icons, $state));
 }
 // scss-docs-end list-group-modifiers
 // End mod
