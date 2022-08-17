@@ -131,6 +131,10 @@
     .table-responsive#{$infix} {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+
+      &[data-focus-visible-added] {
+        @include focus-visible();
+      }
     }
   }
 }
