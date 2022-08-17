@@ -14,6 +14,7 @@
       height: var(--#{$prefix}list-group-item-icon-size);
       content: "";
       background-color: $color;
+      -webkit-mask: no-repeat $icon; // stylelint-disable-line property-no-vendor-prefix
       mask: no-repeat $icon;
     }
 
