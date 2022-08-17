@@ -1421,8 +1421,6 @@ $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
-$pagination-transition:             $transition-focus !default;
-
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !default;

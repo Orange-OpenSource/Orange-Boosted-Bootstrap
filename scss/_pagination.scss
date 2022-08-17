@@ -52,7 +52,6 @@
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}pagination-bg);
   border: var(--#{$prefix}pagination-border-width) solid var(--#{$prefix}pagination-border-color);
-  @include transition($pagination-transition);
   // Boosted mod: embed icon as mask-image
   @include button-icon(
     var(--#{$prefix}pagination-icon),
@@ -71,13 +70,8 @@
     border-color: var(--#{$prefix}pagination-hover-border-color);
   }
 
-  &:focus {
-    z-index: 3;
-    color: var(--#{$prefix}pagination-focus-color);
-    background-color: var(--#{$prefix}pagination-focus-bg);
-    border-color: var(--#{$prefix}pagination-hover-border-color); // Boosted mod
-    outline: $pagination-focus-outline;
-    box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
+  &[data-focus-visible-added] {
+    @include focus-visible();
   }
 
   // Boosted mod
@@ -97,6 +91,10 @@
     @include gradient-bg(var(--#{$prefix}pagination-active-bg));
     border-color: var(--#{$prefix}pagination-active-border-color);
     outline-color: var(--#{$prefix}pagination-active-bg); // Boosted mod
+
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 
   &.disabled,
@@ -137,11 +135,14 @@
   &:last-child:not(.active) .page-link {
     border-color: currentcolor;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--#{$prefix}pagination-active-color);
       background-color: var(--#{$prefix}pagination-active-bg);
       border-color: var(--#{$prefix}pagination-active-border-color);
+    }
+
+    &[data-focus-visible-added] {
+      @include focus-visible();
     }
 
     &.active {
