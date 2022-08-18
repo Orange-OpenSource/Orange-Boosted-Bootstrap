@@ -40,6 +40,9 @@
   counter-reset: section;
 
   > .list-group-item::before {
+    // Boosted mod
+    margin-right: calc(var(--#{$prefix}list-group-item-padding-x) * 2 / 3); // stylelint-disable-line function-disallowed-list
+    // End mod
     // Increments only this instance of the section counter
     content: counters(section, ".") ". ";
     counter-increment: section;
@@ -95,6 +98,7 @@
   }
 
   &:last-child {
+    border-bottom-width: var(--#{$prefix}list-group-border-width); // Boosted mod
     @include border-bottom-radius(inherit);
   }
 
@@ -121,12 +125,6 @@
       border-top-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
     }
   }
-
-  // Boosted mod
-  &:last-of-type {
-    border-bottom-width: var(--#{$prefix}list-group-border-width);
-  }
-  // End mod
 }
 
 // Horizontal
@@ -152,6 +150,7 @@
         }
 
         &:last-child {
+          border-right-width: var(--#{$prefix}list-group-border-width); // Boosted mod
           @include border-top-end-radius(var(--#{$prefix}list-group-border-radius));
           @include border-bottom-start-radius(0);
         }
@@ -169,12 +168,6 @@
             border-left-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
           }
         }
-
-        // Boosted mod
-        &:last-of-type {
-          border-right-width: var(--#{$prefix}list-group-border-width);
-        }
-        // End mod
       }
     }
   }
