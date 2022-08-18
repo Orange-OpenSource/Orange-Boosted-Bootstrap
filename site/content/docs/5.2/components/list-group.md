@@ -174,7 +174,7 @@ Use contextual classes to style list items with a stateful icon.
   {{- end -}}
 {{- end -}}
 {{< /list.inline >}}
-  <li class="list-group-item list-group-item-info disabled">A simple disabled info list group item</li>
+  <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
 </ul>
 {{< /example >}}
 
@@ -192,8 +192,8 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
   {{- end -}}
 {{- end -}}
 {{< /list.inline >}}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-success active">A simple active success list group item</li>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-info disabled">A simple disabled info list group item</li>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success active">A simple active success list group item</a>
+  <a class="list-group-item list-group-item-action list-group-item-info disabled">A simple disabled info list group item</a>
 </div>
 {{< /example >}}
 <!-- End mod -->
