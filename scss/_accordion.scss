@@ -48,11 +48,11 @@
 
   /* rtl:remove */
   letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // Boosted mod
-  background-color: var(--#{$prefix}accordion-btn-bg);
+  background-color: transparent;
   border: 0;
   @include border-radius(0);
   overflow-anchor: none;
-  @include transition(var(--#{$prefix}accordion-transition));
+  outline: 0;
 
   &:not(.collapsed) {
     color: var(--#{$prefix}accordion-active-color);
@@ -71,11 +71,6 @@
   &:hover {
     z-index: 2;
     color: var(--#{$prefix}accordion-active-color); // Boosted mod
-  }
-
-  &:focus {
-    z-index: 3;
-    outline-offset: calc(-1 * var(--#{$prefix}accordion-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 
@@ -115,6 +110,10 @@
     .accordion-collapse {
       @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
+  }
+
+  &:focus-within {
+    @include focus-visible();
   }
 }
 
