@@ -1,42 +1,18 @@
 .nav-local {
-  --#{$prefix}nav-local-border-color: #{$gray-500};
-  --#{$prefix}nav-local-border-width: 1px;
-
-  border-bottom: var(--#{$prefix}nav-local-border-width) var(--#{$prefix}nav-local-border-color) solid;
-
-  .dropdown-toggle {
-    --#{$prefix}dropdown-toggle-padding-x: 0;
-    --#{$prefix}btn-padding-y: 14.5px;
-
-    justify-content: space-between;
-    width: 100%;
-    text-decoration: none;
-    border: 0;
-
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
-
-    &.show {
-      color: var(--#{$prefix}link-hover-color);
-
-      &::after {
-        transform: rotate(180deg);
-      }
-    }
+  &.accordion {
+    --bs-accordion-btn-padding-y: 15.5px;
   }
 
-  .dropdown-menu {
-    width: 100%;
-    border: var(--#{$prefix}nav-local-border-color) solid;
-    border-width: var(--#{$prefix}nav-local-border-width) 0;
+  .accordion-button::after {
+    margin-right: 0;
+  }
+
+  .accordion-collapse {
+    border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 
     @include media-breakpoint-up(lg) {
-      position: static !important; // stylelint-disable-line declaration-no-important
-      display: flex;
-      background-color: transparent;
+      display: block;
       border: 0;
-      transform: unset !important; // stylelint-disable-line declaration-no-important
     }
   }
 
@@ -44,14 +20,16 @@
     --bs-navbar-padding-y: 0px; // stylelint-disable-line length-zero-no-unit
     --bs-navbar-border-color: transparent;
 
-    margin-bottom: calc(var(--#{$prefix}nav-local-border-width) * -1); // stylelint-disable-line function-disallowed-list
-
-    .navbar-nav {
-      width: 100%;
-    }
+    margin-bottom: calc(var(--bs-accordion-border-width) * -1); // stylelint-disable-line function-disallowed-list
   }
 }
 
 .nav-local-dark {
-  --#{$prefix}nav-local-border-color: #{$gray-700};
+  &.accordion {
+    @extend .accordion-dark;
+  }
+
+  .navbar {
+    @extend .navbar-dark;
+  }
 }
