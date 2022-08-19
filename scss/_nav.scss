@@ -30,7 +30,6 @@
   color: var(--#{$prefix}nav-link-color);
   text-decoration: if($link-decoration == none, null, none);
   background: none; // Boosted mod: Prevent dropdown's background to interfere
-  @include transition($nav-link-transition);
 
   &:hover {
     color: var(--#{$prefix}nav-link-hover-color);

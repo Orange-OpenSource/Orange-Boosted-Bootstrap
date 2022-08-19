@@ -187,10 +187,8 @@
     margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
     word-break: break-all;
     outline-offset: $spacer;
-    @include transition($navbar-transition);
 
-    &:hover,
-    &:focus {
+    &:hover {
       z-index: 1;
       outline-offset: 0;
     }
