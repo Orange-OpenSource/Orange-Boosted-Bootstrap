@@ -82,7 +82,8 @@
     background-color: var(--#{$prefix}stepped-process-item-next-bg);
   }
 
-  & + & {
+  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+  & + .stepped-process-item {
     padding-left: var(--#{$prefix}stepped-process-item-arrow-width);
   }
 }
