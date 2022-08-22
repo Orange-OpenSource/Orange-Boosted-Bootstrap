@@ -242,6 +242,12 @@
 }
 
 // Boosted mod
+.side-nav-example {
+  @include media-breakpoint-up(lg) {
+    height: 21.875rem;
+  }
+}
+
 .simple-list-example-scrollspy .active {
   color: var(--#{$prefix}link-hover-color);
 }
