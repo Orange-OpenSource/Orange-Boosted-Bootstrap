@@ -157,9 +157,9 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 <!-- Boosted mod -->
 
 {{< callout >}}
-## Responsive behaviour
+## Responsive behavior
 
-Despite the fact that Bootstrap does not offer any responsive behaviour for pagination, Boosted does with a very simple behaviour.
+Despite the fact that Bootstrap does not offer any responsive behavior for pagination, Boosted does with a very simple behavior.
 
 1. First things first, pagination is able to **wrap** if needed, to prevent it from overflowing the page.
 2. Then on smaller breakpoints, a limited amount of items is displayed — always ensuring the `.active` one is shown, alongside the first and last items:
