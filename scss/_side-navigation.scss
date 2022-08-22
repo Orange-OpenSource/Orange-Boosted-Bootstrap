@@ -44,6 +44,16 @@
 
   .offcanvas-body {
     min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+      background-color: $gray-300;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-500;
+    }
   }
 
   .accordion {
