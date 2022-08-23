@@ -1,16 +1,19 @@
 .side-nav {
-  --#{$prefix}side-nav-width: 18.75rem;
-  --#{$prefix}side-nav-color: #{$black};
-  --#{$prefix}side-nav-bg: #{$white};
-  --#{$prefix}side-nav-hover-bg: #{$gray-300};
-  --#{$prefix}side-nav-active-bg: #{$gray-400};
-  --#{$prefix}side-nav-active-border-color: var(--#{$prefix}link-hover-color);
-  --#{$prefix}side-nav-icon-size: 1.5625rem;
-  --#{$prefix}side-nav-icon-margin-x: 15px;
-  --#{$prefix}side-nav-item-height: 2.5rem;
-  --#{$prefix}side-nav-item-padding-left: var(--#{$prefix}side-nav-icon-margin-x);
-  --#{$prefix}side-nav-border-width: 1px;
-  --#{$prefix}side-nav-border-color: #{$gray-500};
+  // scss-docs-start side-nav-css-vars
+  --#{$prefix}side-nav-width: #{$side-nav-width};
+  --#{$prefix}side-nav-color: #{$side-nav-color};
+  --#{$prefix}side-nav-bg: #{$side-nav-bg};
+  --#{$prefix}side-nav-border-width: #{$side-nav-border-width};
+  --#{$prefix}side-nav-border-color: #{$side-nav-border-color};
+  --#{$prefix}side-nav-icon-size: #{$side-nav-icon-size};
+  --#{$prefix}side-nav-icon-margin-x: #{$side-nav-icon-margin-x};
+  --#{$prefix}side-nav-item-height: #{$side-nav-item-height};
+  --#{$prefix}side-nav-item-padding-left: #{$side-nav-item-padding-left};
+  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg};
+  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg};
+  --#{$prefix}side-nav-item-active-border-color: #{$side-nav-item-active-border-color};
+  // scss-docs-end side-nav-css-vars
+  --#{$prefix}offcanvas-width: var(--#{$prefix}side-nav-width);
   --#{$prefix}offcanvas-padding-x: 0;
   --#{$prefix}offcanvas-padding-y: 0;
   --#{$prefix}offcanvas-border-width: 0;
@@ -19,6 +22,16 @@
   width: var(--#{$prefix}side-nav-width);
   height: 100%;
   overflow: hidden auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    background-color: $gray-300;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-500;
+  }
 
   svg,
   img {
@@ -46,6 +59,10 @@
     min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
     scrollbar-width: thin;
 
+    @include media-breakpoint-up(lg) {
+      min-height: 100%;
+    }
+
     &::-webkit-scrollbar {
       width: 9px;
       background-color: $gray-300;
@@ -60,7 +77,7 @@
     --#{$prefix}accordion-border-width: 0;
     --#{$prefix}accordion-body-padding-x: 0;
     --#{$prefix}accordion-body-padding-y: 0;
-    --#{$prefix}accordion-btn-font-size: 1rem;
+    --#{$prefix}accordion-btn-font-size: #{$font-size-base};
     --#{$prefix}accordion-btn-font-weight: #{$font-weight-normal};
 
     .accordion-body {
@@ -106,11 +123,11 @@
     border: 0;
 
     &:hover {
-      background-color: var(--#{$prefix}side-nav-hover-bg);
+      background-color: var(--#{$prefix}side-nav-item-hover-bg);
     }
 
     &.active {
-      background: linear-gradient(to right, var(--#{$prefix}side-nav-active-border-color), var(--#{$prefix}side-nav-active-border-color) 4px, var(--#{$prefix}side-nav-active-bg) 4px, var(--#{$prefix}side-nav-active-bg));
+      background: linear-gradient(to right, var(--#{$prefix}side-nav-item-active-border-color), var(--#{$prefix}side-nav-item-active-border-color) 4px, var(--#{$prefix}side-nav-item-active-bg) 4px, var(--#{$prefix}side-nav-item-active-bg));
     }
   }
 
@@ -139,22 +156,26 @@
 
   [data-focus-visible-added] {
     z-index: 3;
-    outline: var(--#{$prefix}side-nav-active-border-color) solid 3px;
+    outline: var(--#{$prefix}side-nav-item-active-border-color) solid 3px;
     outline-offset: -3px;
   }
 }
 
 .side-nav-dark {
-  --#{$prefix}side-nav-color: #{$white};
-  --#{$prefix}side-nav-bg: #{$gray-900};
-  --#{$prefix}side-nav-hover-bg: #{$black};
-  --#{$prefix}side-nav-active-bg: #{$gray-700};
-  --#{$prefix}side-nav-border-color: #{$gray-700};
+  // scss-docs-start side-nav-dark-css-vars
+  --#{$prefix}side-nav-color: #{$side-nav-dark-color};
+  --#{$prefix}side-nav-bg: #{$side-nav-dark-bg};
+  --#{$prefix}side-nav-border-color: #{$side-nav-dark-border-color};
+  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-dark-item-hover-bg};
+  --#{$prefix}side-nav-item-active-bg: #{$side-nav-dark-item-active-bg};
+  // scss-docs-end side-nav-dark-css-vars
 }
 
 .side-nav-collapsible {
-  --#{$prefix}side-nav-width: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
-  --#{$prefix}offcanvas-width: 300px;
+  // scss-docs-start side-nav-collapsible-css-vars
+  --#{$prefix}side-nav-width: #{$side-nav-collapsible-closed-width};
+  --#{$prefix}offcanvas-width: #{$side-nav-collapsible-opened-width};
+  // scss-docs-end side-nav-collapsible-css-vars
 
   .offcanvas-body {
     & > :not(.collapse-horizontal) {
@@ -174,9 +195,11 @@
 }
 
 .side-nav-collapsible-content {
-  --#{$prefix}side-nav-bg: #{linear-gradient(to right, $gray-900, $gray-900 var(--#{$prefix}side-nav-width), $white var(--#{$prefix}side-nav-width))};
-  --#{$prefix}side-nav-border-color: #{$gray-700};
-  --#{$prefix}offcanvas-width: 325px;
+  // scss-docs-start side-nav-collapsible-content-css-vars
+  --#{$prefix}side-nav-bg: #{$side-nav-collapsible-content-bg};
+  --#{$prefix}side-nav-border-color: #{$side-nav-collapsible-content-border-color};
+  --#{$prefix}offcanvas-width: #{$side-nav-collapsible-content-opened-width};
+  // scss-docs-end side-nav-collapsible-content-css-vars
 
   .offcanvas-header,
   .show + * {

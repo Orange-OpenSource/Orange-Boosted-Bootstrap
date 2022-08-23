@@ -4,22 +4,29 @@ title: Side Navigation
 description: Documentation and examples for Boosted's exclusive Brand responsive side navigation.
 group: components
 toc: true
+added: "5.3"
 ---
 
 ## How it works
 
-Side navigation is based on `.offcanvas-*` class. Please refer to [its documentation]({{< docsref "/components/offcanvas#responsive" >}}) to learn more about its behavior.
+Side navigation is based on `.offcanvas-lg` class. Please refer to [Offcanvas]({{< docsref "/components/offcanvas#responsive" >}}) to learn more about its behavior. Since it uses [responsive offcanvas]({{< docsref "/components/offcanvas#responsive" >}}), please resize your browser to see its responsive behavior.
 
-Side navigation may need the Javascript from Accordions, Collapse, Tabs or Tooltips, depending on the implemented navigation, to work correctly.
+In the side navigation, each displayed element should have `.side-nav-item` to ensure correct size and behavior.
 
-## Basic
+{{< callout warning >}}
+In order to make side navigation work properly, please make sure that the Javascript files from [Collapse]({{< docsref "/components/collapse#usage" >}}) and [Tabs]({{< docsref "/components/navs-tabs#javascript-behavior" >}}) are imported in your project.
+{{< /callout >}}
 
-{{< example class="p-0 d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu1" data-bs-toggle="offcanvas">With icon and accordions</button>
+## Examples
 
-<div class="offcanvas-lg offcanvas-start side-nav overflow-auto" id="sidebarMenu1">
+### Basic
+
+{{< example class="p-lg-0 d-block d-lg-flex side-nav-example" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu" data-bs-toggle="offcanvas">With icon and accordions</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav" id="sidebarMenu">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu1" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
 
@@ -27,27 +34,156 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
       <div class="accordion-item">
         <h3 class="accordion-header" id="dashboardHeader">
           <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse" aria-expanded="true" aria-controls="dashboardCollapse">
+            Dashboard
+          </button>
+        </h3>
+        <div id="dashboardCollapse" class="accordion-collapse collapse show" aria-labelledby="dashboardHeader" data-bs-parent="#sideNavAccordion">
+          <div class="accordion-body">
+            <div class="accordion" id="labels">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelOneHeader">
+                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapse" aria-expanded="true" aria-controls="labelOneCollapse">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelOneCollapse" class="accordion-collapse collapse show" aria-labelledby="labelOneHeader" data-bs-parent="#labels">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelTwoHeader">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapse" aria-expanded="false" aria-controls="labelTwoCollapse">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelTwoCollapse" class="accordion-collapse collapse" aria-labelledby="labelTwoHeader" data-bs-parent="#labels">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelThreeHeader">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapse" aria-expanded="false" aria-controls="labelThreeCollapse">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelThreeCollapse" class="accordion-collapse collapse" aria-labelledby="labelThreeHeader" data-bs-parent="#labels">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                      <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="chartsHeader">
+          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapse" aria-expanded="false" aria-controls="chartsCollapse">
+            Charts
+          </button>
+        </h3>
+        <div id="chartsCollapse" class="accordion-collapse collapse" aria-labelledby="chartsHeader" data-bs-parent="#sideNavAccordion">
+          <div class="accordion-body">
+            <ul class="list-unstyled m-0">
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="financialHeader">
+          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapse" aria-expanded="false" aria-controls="financialCollapse">
+            Financial
+          </button>
+        </h3>
+        <div id="financialCollapse" class="accordion-collapse collapse" aria-labelledby="financialHeader" data-bs-parent="#sideNavAccordion">
+          <div class="accordion-body">
+            <ul class="list-unstyled m-0">
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+              <li><a href="#" class="side-nav-item">Label</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
+{{< /example >}}
+
+### Basic with icons
+
+{{< example class="p-lg-0 d-block d-lg-flex side-nav-example" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuWithIcons" data-bs-toggle="offcanvas">With icon and accordions</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav" id="sidebarMenuWithIcons">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenuWithIcons" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <div class="accordion" id="sideNavAccordionWithIcons">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="dashboardHeaderWithIcons">
+          <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseWithIcons" aria-expanded="true" aria-controls="dashboardCollapseWithIcons">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
             </svg>
             Dashboard
           </button>
         </h3>
-        <div id="dashboardCollapse" class="accordion-collapse collapse show" aria-labelledby="dashboardHeader" data-bs-parent="#sideNavAccordion">
+        <div id="dashboardCollapseWithIcons" class="accordion-collapse collapse show" aria-labelledby="dashboardHeaderWithIcons" data-bs-parent="#sideNavAccordionWithIcons">
           <div class="accordion-body">
-            <div class="accordion" id="labels">
+            <div class="accordion" id="labelsWithIcons">
               <div class="accordion-item">
-                <h4 class="accordion-header" id="labelOneHeader">
-                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapse" aria-expanded="true" aria-controls="labelOneCollapse">
+                <h4 class="accordion-header" id="labelOneHeaderWithIcons">
+                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseWithIcons" aria-expanded="true" aria-controls="labelOneCollapseWithIcons">
                     Label
                   </button>
                 </h4>
-                <div id="labelOneCollapse" class="accordion-collapse collapse show" aria-labelledby="labelOneHeader" data-bs-parent="#labels">
+                <div id="labelOneCollapseWithIcons" class="accordion-collapse collapse show" aria-labelledby="labelOneHeaderWithIcons" data-bs-parent="#labelsWithIcons">
                   <div class="accordion-body">
                     <ul class="list-unstyled m-0">
                       <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="labelTwoHeaderWithIcons">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapseWithIcons" aria-expanded="false" aria-controls="labelTwoCollapseWithIcons">
+                    Label
+                  </button>
+                </h4>
+                <div id="labelTwoCollapseWithIcons" class="accordion-collapse collapse" aria-labelledby="labelTwoHeaderWithIcons" data-bs-parent="#labelsWithIcons">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled m-0">
+                      <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
                     </ul>
@@ -55,34 +191,14 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
                 </div>
               </div>
               <div class="accordion-item">
-                <h4 class="accordion-header" id="labelTwoHeader">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapse" aria-expanded="false" aria-controls="labelTwoCollapse">
+                <h4 class="accordion-header" id="labelThreeHeaderWithIcons">
+                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapseWithIcons" aria-expanded="false" aria-controls="labelThreeCollapseWithIcons">
                     Label
                   </button>
                 </h4>
-                <div id="labelTwoCollapse" class="accordion-collapse collapse" aria-labelledby="labelTwoHeader" data-bs-parent="#labels">
+                <div id="labelThreeCollapseWithIcons" class="accordion-collapse collapse" aria-labelledby="labelThreeHeaderWithIcons" data-bs-parent="#labelsWithIcons">
                   <div class="accordion-body">
                     <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelThreeHeader">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapse" aria-expanded="false" aria-controls="labelThreeCollapse">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelThreeCollapse" class="accordion-collapse collapse" aria-labelledby="labelThreeHeader" data-bs-parent="#labels">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
                       <li><a href="#" class="side-nav-item">Label</a></li>
@@ -94,20 +210,19 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
           </div>
         </div>
       </div>
+
       <div class="accordion-item">
-        <h3 class="accordion-header" id="chartsHeader">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapse" aria-expanded="false" aria-controls="chartsCollapse">
+        <h3 class="accordion-header" id="chartsHeaderWithIcons">
+          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapseWithIcons" aria-expanded="false" aria-controls="chartsCollapseWithIcons">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
             </svg>
             Charts
           </button>
         </h3>
-        <div id="chartsCollapse" class="accordion-collapse collapse" aria-labelledby="chartsHeader" data-bs-parent="#sideNavAccordion">
+        <div id="chartsCollapseWithIcons" class="accordion-collapse collapse" aria-labelledby="chartsHeaderWithIcons" data-bs-parent="#sideNavAccordionWithIcons">
           <div class="accordion-body">
             <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
@@ -115,20 +230,19 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
           </div>
         </div>
       </div>
+
       <div class="accordion-item">
-        <h3 class="accordion-header" id="financialHeader">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapse" aria-expanded="false" aria-controls="financialCollapse">
+        <h3 class="accordion-header" id="financialHeaderWithIcons">
+          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapseWithIcons" aria-expanded="false" aria-controls="financialCollapseWithIcons">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
             </svg>
             Financial
           </button>
         </h3>
-        <div id="financialCollapse" class="accordion-collapse collapse" aria-labelledby="financialHeader" data-bs-parent="#sideNavAccordion">
+        <div id="financialCollapseWithIcons" class="accordion-collapse collapse" aria-labelledby="financialHeaderWithIcons" data-bs-parent="#sideNavAccordionWithIcons">
           <div class="accordion-body">
             <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
               <li><a href="#" class="side-nav-item">Label</a></li>
@@ -140,137 +254,28 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
   </div>
 </div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 {{< /example >}}
 
-{{< example class="p-0 d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu1" data-bs-toggle="offcanvas">With icon and accordions</button>
+### Collapsible
 
-<div class="offcanvas-lg offcanvas-start side-nav overflow-auto" id="sidebarMenu1">
+To use the collapsible behavior, know that:
+
+- The toggle arrow is displayed by adding `.side-nav-collapse` to an empty `.side-nav-item`.
+- The collapsible navigation width can be set by:
+  - `--bs-side-nav-width` for the closed state.
+  - `--bs-offcanvas-width` for the opened state.
+- The collapsible side navigation uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally.
+
+#### Collapsible basic
+
+{{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuWithTitle" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenuWithTitle">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu1" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-
-    <div class="accordion" id="sideNavAccordion">
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="dashboardHeader">
-          <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse" aria-expanded="true" aria-controls="dashboardCollapse">
-            Dashboard
-          </button>
-        </h3>
-        <div id="dashboardCollapse" class="accordion-collapse collapse show" aria-labelledby="dashboardHeader" data-bs-parent="#sideNavAccordion">
-          <div class="accordion-body">
-            <div class="accordion" id="labels">
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelOneHeader">
-                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapse" aria-expanded="true" aria-controls="labelOneCollapse">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelOneCollapse" class="accordion-collapse collapse show" aria-labelledby="labelOneHeader" data-bs-parent="#labels">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelTwoHeader">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapse" aria-expanded="false" aria-controls="labelTwoCollapse">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelTwoCollapse" class="accordion-collapse collapse" aria-labelledby="labelTwoHeader" data-bs-parent="#labels">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelThreeHeader">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapse" aria-expanded="false" aria-controls="labelThreeCollapse">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelThreeCollapse" class="accordion-collapse collapse" aria-labelledby="labelThreeHeader" data-bs-parent="#labels">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="chartsHeader">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapse" aria-expanded="false" aria-controls="chartsCollapse">
-            Charts
-          </button>
-        </h3>
-        <div id="chartsCollapse" class="accordion-collapse collapse" aria-labelledby="chartsHeader" data-bs-parent="#sideNavAccordion">
-          <div class="accordion-body">
-            <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="financialHeader">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapse" aria-expanded="false" aria-controls="financialCollapse">
-            Financial
-          </button>
-        </h3>
-        <div id="financialCollapse" class="accordion-collapse collapse" aria-labelledby="financialHeader" data-bs-parent="#sideNavAccordion">
-          <div class="accordion-body">
-            <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-{{< /example >}}
-
-## Collapsible with title
-
-{{< example class="p-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu2">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenuWithTitle" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div id="collapsible-element" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
@@ -280,47 +285,51 @@ Side navigation may need the Javascript from Accordions, Collapse, Tabs or Toolt
 
       <ul class="list-unstyled m-0 w-100">
         <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
+          <a href="#" class="side-nav-item fw-bold">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
             </svg>
             Dashboard
-          </button>
+          </a>
         </li>
         <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
+          <a href="#" class="side-nav-item fw-bold">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
             </svg>
             Charts
-          </button>
+          </a>
         </li>
         <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-          <button class="side-nav-item active fw-bold">
+          <a href="#" class="side-nav-item active fw-bold">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
             </svg>
             Financial
-          </button>
+          </a>
         </li>
       </ul>
 
     </div>
   </div>
 </div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 {{< /example >}}
 
-## Collapsible with content
+#### Collapsible with drawer content
 
-Strongly WIP, onclick functions are a test without extra JS. But fully working example atm.
+The collapsible side navigation comes with ready to use `onclick` calls:
+- On the Offcanvas toggler button to `show` its content.
+- On the Offcanvas close button to `hide` its content.
+- On each menu item to `show` its content. (nav-item)
 
-{{< example class="p-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu3" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">Collapsing side navigation with content</button>
+{{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuWithContent" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').show()">Collapsing side navigation with content</button>
 
-<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible side-nav-collapsible-content" id="sidebarMenu3">
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible side-nav-collapsible-content" id="sidebarMenuWithContent">
   <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu3" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenuWithContent" data-bs-dismiss="offcanvas" aria-label="Close" onclick="boosted.Collapse.getOrCreateInstance('#collapsingTab').hide()"></button>
   </div>
   <div class="offcanvas-body">
     <div id="collapsingTab" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
@@ -360,6 +369,18 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
           <div class="tab-pane" id="dashboardTab" role="tabpanel">
             <div class="tab-pane-content"><h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light">Dashboard</h3></div>
           </div>
+
+          <div class="tab-pane" id="chartsTab" role="tabpanel">
+            <div class="tab-pane-content">
+              <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light">Charts</h3>
+              <ul class="list-unstyled m-0">
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item active">Label</a></li>
+              </ul>
+            </div>
+          </div>
+
           <div class="tab-pane active" id="financialTab" role="tabpanel">
             <div class="tab-pane-content">
               <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light">Financial</h3>
@@ -381,6 +402,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelTwoContentHeader">
                     <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoContentCollapse" aria-expanded="false" aria-controls="labelTwoContentCollapse">
@@ -397,6 +419,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelThreeContentHeader">
                     <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeContentCollapse" aria-expanded="false" aria-controls="labelThreeContentCollapse">
@@ -413,6 +436,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelFourContentHeader">
                     <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelFourContentCollapse" aria-expanded="false" aria-controls="labelFourContentCollapse">
@@ -429,6 +453,7 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
                     </div>
                   </div>
                 </div>
+
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelFiveContentHeader">
                     <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelFiveContentCollapse" aria-expanded="false" aria-controls="labelFiveContentCollapse">
@@ -449,250 +474,338 @@ Strongly WIP, onclick functions are a test without extra JS. But fully working e
             </div>
 
           </div>
-          <div class="tab-pane" id="chartsTab" role="tabpanel">
-            <div class="tab-pane-content">
-              <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light">Charts</h3>
-              <ul class="list-unstyled m-0">
-                <li><a href="#" class="side-nav-item">Label</a></li>
-                <li><a href="#" class="side-nav-item">Label</a></li>
-                <li><a href="#" class="side-nav-item active">Label</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
 
     </div>
   </div>
 </div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 {{< /example >}}
 
-## Right side
+## Static
 
-Collapsible side navigation come with a static variant: `.side-nav-static`.
+Collapsible side navigation comes with a static variant: `.side-nav-static`.
 
-{{< example class="p-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu4" data-bs-toggle="offcanvas">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-end side-nav side-nav-collapsible side-nav-static" id="sidebarMenu4">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div id="collapsible-element-2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-    <div class="position-absolute">
-
-      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-2" aria-expanded="false" aria-controls="collapsible-element-2"><span class="visually-hidden">Open/Close side navigation</span></button>
-
-      <ul class="list-unstyled m-0 mw-100">
-        <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-            </svg>
-            Dashboard
-          </button>
-        </li>
-        <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-            </svg>
-            Charts
-          </button>
-        </li>
-        <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-          <button class="side-nav-item active fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-            </svg>
-            Financial
-          </button>
-        </li>
-      </ul>
-
+<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+  <div class="offcanvas-lg offcanvas-start side-nav side-nav-static side-nav-collapsible" id="sidebarMenuStatic">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenuStatic" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="collapsible-element-2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
+      <div class="position-absolute">
+        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-2" aria-expanded="false" aria-controls="collapsible-element-2"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <ul class="list-unstyled m-0 mw-100">
+          <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
+            <a href="#" class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
+            <a href="#" class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+              </svg>
+              Charts
+            </a>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
+            <a href="#" class="side-nav-item active fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+              </svg>
+              Financial
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 </div>
+
+```html
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-static side-nav-collapsible" id="sidebarMenuStatic">
+  <div class="offcanvas-header">...</div>
+  <div class="offcanvas-body">...</div>
+</div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-{{< /example >}}
+```
 
-## Collapsible with title
+## Right sided
 
-{{< example class="p-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenu2" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+Side navigation comes with a right sided variant: `.offcanvas-end`.
 
-<div class="offcanvas-lg offcanvas-start side-nav side-nav-collapsible" id="sidebarMenu2">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenu2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div id="collapsible-element" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-    <div class="position-absolute">
-
-      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element" aria-expanded="false" aria-controls="collapsible-element"><span class="visually-hidden">Open/Close side navigation</span></button>
-
-      <ul class="list-unstyled m-0 w-100">
-        <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-            </svg>
-            Dashboard
-          </button>
-        </li>
-        <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-          <button class="side-nav-item fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-            </svg>
-            Charts
-          </button>
-        </li>
-        <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-          <button class="side-nav-item active fw-bold">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-            </svg>
-            Financial
-          </button>
-        </li>
-      </ul>
-
+<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuRight" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+  <div class="offcanvas-lg offcanvas-end side-nav side-nav-collapsible" id="sidebarMenuRight">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenuRight" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="collapsible-element-right" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
+      <div class="position-absolute">
+        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-right" aria-expanded="false" aria-controls="collapsible-element-right"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <ul class="list-unstyled m-0 w-100">
+          <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
+            <button class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+              </svg>
+              Dashboard
+            </button>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
+            <button class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+              </svg>
+              Charts
+            </button>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
+            <button class="side-nav-item active fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+              </svg>
+              Financial
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 </div>
+
+```html
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuRight" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-end side-nav side-nav-collapsible" id="sidebarMenuRight">
+  <div class="offcanvas-header">...</div>
+  <div class="offcanvas-body">...</div>
+</div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-{{< /example >}}
+```
 
 ## Dark variant
 
 Side navigation comes with a dark variant: `.side-nav-dark`.
 
-{{< example class="p-0 d-block d-lg-flex bg-dark" >}}
-<button class="btn btn-primary btn-inverse d-lg-none" data-bs-target="#sidebarMenu5" data-bs-toggle="offcanvas">With icon and accordions</button>
+{{< callout info >}}
+Dark variant can be applied on any example except the [Collapsible with drawer content](#collapsible-with-drawer-content) one.
+{{< /callout >}}
 
-<div class="offcanvas-lg offcanvas-start side-nav side-nav-dark" id="sidebarMenu5">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu5" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="accordion w-100" id="sideNavAccordionDark">
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="dashboardHeaderDark">
-          <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-            </svg>
-            Dashboard
-          </button>
-        </h3>
-        <div id="dashboardCollapseDark" class="accordion-collapse collapse show" aria-labelledby="dashboardHeaderDark" data-bs-parent="#sideNavAccordionDark">
-          <div class="accordion-body">
-            <div class="accordion" id="labelsDark">
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelOneHeaderDark">
-                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseDark" aria-expanded="true" aria-controls="labelOneCollapseDark">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelOneCollapseDark" class="accordion-collapse collapse show" aria-labelledby="labelOneHeaderDark" data-bs-parent="#labelsDark">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
+<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuDark" data-bs-toggle="offcanvas">With icon and accordions</button>
+  <div class="offcanvas-lg offcanvas-start side-nav side-nav-dark" id="sidebarMenuDark">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenuDark" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="accordion w-100" id="sideNavAccordionDark">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="dashboardHeaderDark">
+            <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+              </svg>
+              Dashboard
+            </button>
+          </h3>
+          <div id="dashboardCollapseDark" class="accordion-collapse collapse show" aria-labelledby="dashboardHeaderDark" data-bs-parent="#sideNavAccordionDark">
+            <div class="accordion-body">
+              <div class="accordion" id="labelsDark">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="labelOneHeaderDark">
+                    <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseDark" aria-expanded="true" aria-controls="labelOneCollapseDark">
+                      Label
+                    </button>
+                  </h4>
+                  <div id="labelOneCollapseDark" class="accordion-collapse collapse show" aria-labelledby="labelOneHeaderDark" data-bs-parent="#labelsDark">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled m-0">
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                        <li><a href="#" class="side-nav-item active" aria-current="true">Label</a></li>
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelTwoHeaderDark">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapseDark" aria-expanded="false" aria-controls="labelTwoCollapseDark">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelTwoCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelTwoHeaderDark" data-bs-parent="#labelsDark">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="labelTwoHeaderDark">
+                    <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelTwoCollapseDark" aria-expanded="false" aria-controls="labelTwoCollapseDark">
+                      Label
+                    </button>
+                  </h4>
+                  <div id="labelTwoCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelTwoHeaderDark" data-bs-parent="#labelsDark">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled m-0">
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="labelThreeHeaderDark">
-                  <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapseDark" aria-expanded="false" aria-controls="labelThreeCollapseDark">
-                    Label
-                  </button>
-                </h4>
-                <div id="labelThreeCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelThreeHeaderDark" data-bs-parent="#labelsDark">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="labelThreeHeaderDark">
+                    <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelThreeCollapseDark" aria-expanded="false" aria-controls="labelThreeCollapseDark">
+                      Label
+                    </button>
+                  </h4>
+                  <div id="labelThreeCollapseDark" class="accordion-collapse collapse" aria-labelledby="labelThreeHeaderDark" data-bs-parent="#labelsDark">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled m-0">
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                        <li><a href="#" class="side-nav-item">Label</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="chartsHeaderDark">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapseDark" aria-expanded="false" aria-controls="chartsCollapseDark">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-            </svg>
-            Charts
-          </button>
-        </h3>
-        <div id="chartsCollapseDark" class="accordion-collapse collapse" aria-labelledby="chartsHeaderDark" data-bs-parent="#sideNavAccordionDark">
-          <div class="accordion-body">
-            <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-            </ul>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="chartsHeaderDark">
+            <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#chartsCollapseDark" aria-expanded="false" aria-controls="chartsCollapseDark">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+              </svg>
+              Charts
+            </button>
+          </h3>
+          <div id="chartsCollapseDark" class="accordion-collapse collapse" aria-labelledby="chartsHeaderDark" data-bs-parent="#sideNavAccordionDark">
+            <div class="accordion-body">
+              <ul class="list-unstyled m-0">
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="financialHeaderDark">
-          <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapseDark" aria-expanded="false" aria-controls="financialCollapseDark">
-            <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-            </svg>
-            Financial
-          </button>
-        </h3>
-        <div id="financialCollapseDark" class="accordion-collapse collapse" aria-labelledby="financialHeaderDark" data-bs-parent="#sideNavAccordionDark">
-          <div class="accordion-body">
-            <ul class="list-unstyled m-0">
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-              <li><a href="#" class="side-nav-item">Label</a></li>
-            </ul>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="financialHeaderDark">
+            <button class="accordion-button collapsed side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#financialCollapseDark" aria-expanded="false" aria-controls="financialCollapseDark">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+              </svg>
+              Financial
+            </button>
+          </h3>
+          <div id="financialCollapseDark" class="accordion-collapse collapse" aria-labelledby="financialHeaderDark" data-bs-parent="#sideNavAccordionDark">
+            <div class="accordion-body">
+              <ul class="list-unstyled m-0">
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 </div>
+
+```html
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuDark" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-dark" id="sidebarMenuDark">
+  <div class="offcanvas-header">...</div>
+  <div class="offcanvas-body">...</div>
+</div>
+
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-{{< /example >}}
+```
+
+<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuDarkWithTitle" data-bs-toggle="offcanvas">With icon and accordions</button>
+  <div class="offcanvas-lg offcanvas-start side-nav side-nav-dark side-nav-collapsible" id="sidebarMenuDarkWithTitle">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close ms-auto" data-bs-target="#sidebarMenuDarkWithTitle" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="collapsible-element-dark" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
+      <div class="position-absolute">
+        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-dark" aria-expanded="false" aria-controls="collapsible-element-dark"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <ul class="list-unstyled m-0 w-100">
+          <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
+            <a href="#" class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
+            <a href="#" class="side-nav-item fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
+              </svg>
+              Charts
+            </a>
+          </li>
+          <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
+            <a href="#" class="side-nav-item active fw-bold">
+              <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
+              </svg>
+              Financial
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
+</div>
+
+```html
+<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuDarkWithTitle" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+
+<div class="offcanvas-lg offcanvas-start side-nav side-nav-dark side-nav-collapsible" id="sidebarMenuDarkWithTitle">
+  <div class="offcanvas-header">...</div>
+  <div class="offcanvas-body">...</div>
+</div>
+
+<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
+```
+
+## CSS
+
+### Variables
+
+As part of Boosted's evolving CSS variables approach, side navigation now use local CSS variables on `.side-nav` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="side-nav-css-vars" file="scss/_side-navigation.scss" >}}
+
+Some additional CSS variables are also present on `.side-nav-collapsible`:
+
+{{< scss-docs name="side-nav-collapsible-css-vars" file="scss/_side-navigation.scss" >}}
+
+Some additional CSS variables are also present on `.side-nav-collapsible-content`:
+
+{{< scss-docs name="side-nav-collapsible-content-css-vars" file="scss/_side-navigation.scss" >}}
+
+Customization through CSS variables can be seen on the `.side-nav-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="side-nav-dark-css-vars" file="scss/_side-navigation.scss" >}}
+
+### Sass variables
+
+{{< scss-docs name="side-nav-variables" file="scss/_variables.scss" >}}
