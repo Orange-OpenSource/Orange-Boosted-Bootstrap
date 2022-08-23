@@ -1186,7 +1186,7 @@ $alert-icon-margin-y:               $spacer * .1 !default;
 
 // Progress bars
 
-$progress-height:                   map-get($spacers, 4) !default; // Boosted mod
+$progress-height:                   map-get($spacers, 3) !default; // Boosted mod
 $progress-font-size:                $font-size-base !default;
 $progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
