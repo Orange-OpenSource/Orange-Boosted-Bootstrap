@@ -144,7 +144,7 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 
 ## Dark variant
 
-Pagination comes with a dark variant: `.pagination-dark`.
+Add `.pagination-dark` to the `.pagination` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <nav aria-label="Dark page navigation example">
