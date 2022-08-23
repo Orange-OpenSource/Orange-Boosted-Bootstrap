@@ -23,7 +23,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Master artwork
 
 <div class="row mb-5">
-  <div class="col-lg-3 col-xxl-2 mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/orange_logo.svg" alt="Master Orange logo" width="50" height="50" loading="lazy"/>
   </div>
   <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
@@ -36,7 +36,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Clear space
 
 <div class="row mb-5">
-  <div class="col-lg-3 col-xxl-2 mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150" loading="lazy"/>
   </div>
   <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
@@ -97,7 +97,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Small logo
 
 <div class="row">
-  <div class="col-lg-3 col-xxl-2 mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/logo-rule-4b.png" alt="Small Orange logo" width="100" loading="lazy"/>
   </div>
   <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
