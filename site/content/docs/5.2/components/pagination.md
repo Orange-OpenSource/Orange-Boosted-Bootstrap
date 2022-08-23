@@ -181,7 +181,13 @@ Customization through CSS variables can be seen on the `.pagination-dark` modifi
 
 ### Sass variables
 
+Variables for all pagination:
+
 {{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
+
+Variables for the [dark pagination](#dark-variant):
+
+{{< scss-docs name="pagination-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
 

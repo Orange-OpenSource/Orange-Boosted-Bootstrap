@@ -1436,8 +1436,11 @@ $pagination-icon-height:            subtract(1rem, 1px) !default;
 $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
+// End mod
+// scss-docs-end pagination-variables
 
-// Dark variant
+// scss-docs-start pagination-dark-variables
+// Boosted mod
 $pagination-dark-bg:                        $black !default;
 $pagination-dark-color:                     color-contrast($pagination-dark-bg) !default;
 $pagination-dark-border-color:              transparent !default;
@@ -1461,7 +1464,7 @@ $pagination-dark-disabled-bg:               $black !default;
 $pagination-dark-disabled-color:            $gray-700 !default;
 $pagination-dark-disabled-border-color:     $gray-700 !default;
 // End mod
-// scss-docs-end pagination-variables
+// scss-docs-end pagination-dark-variables
 
 
 // Placeholders
