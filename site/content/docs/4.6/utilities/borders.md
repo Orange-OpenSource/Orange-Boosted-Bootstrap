@@ -23,12 +23,12 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 
 ### Subtractive
 
-{{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
-<span class="border-0"></span>
-<span class="border-top-0"></span>
-<span class="border-right-0"></span>
-<span class="border-bottom-0"></span>
-<span class="border-left-0"></span>
+{{< example class="bd-example-border-utils" >}}
+<span class="border border-0"></span>
+<span class="border border-top-0"></span>
+<span class="border border-right-0"></span>
+<span class="border border-bottom-0"></span>
+<span class="border border-left-0"></span>
 {{< /example >}}
 
 ## Border color
