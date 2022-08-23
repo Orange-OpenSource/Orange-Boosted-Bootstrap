@@ -66,7 +66,7 @@ Class names and semantic changed, see [Orange stepbar]({{< docsref "/components/
 
 ### Accordions
 
-[Accordions]({{< docsref "/components/collapse#accordion-example" >}}) are now based on card structure. Be sure to use `.card-header` and `.card-body` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.
+[Accordions]({{< docsref "/components/collapse#accordion-example" >}}) are now based on card structure. Be sure to use `.card-header` and `.card-body` on the main container. To get multiple openable behavior just add `.multi` class on each `.card` item.
 
 ### Tablesorter
 [Tablesorter]({{< docsref "/boostwatch#complextable" >}}) add a template on tablesorter header, need to be added separatly by each project.
