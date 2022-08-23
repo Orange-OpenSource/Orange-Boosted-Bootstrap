@@ -16,17 +16,17 @@ Our logo is made up of the orange block, the logotype and the TM sign. When usin
 
 * The Master logo is a bespoke design — always use original artwork.
 * The Master logo sits on the grid and (in most cases) is positioned in one of the corners.
-* The Small logo is used for minimum size work and has animated behaviours.
+* The Small logo is used for minimum size work and has animated behaviors.
 
 To find out how you can use our mark to make yours, read the [core guideline](https://brand.orange.com/guidelines/logo/).
 
 ### Master artwork
 
 <div class="row mb-5">
-  <div class="col-lg-2 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/orange_logo.svg" alt="Master Orange logo" width="50" height="50" loading="lazy"/>
   </div>
-  <div class="col-lg-10">
+  <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
     <p>The basic elements of the Master logo are <strong>the square and the word mark <mark>Orange™</mark></strong>.</p>
     <p>Together they make up the Master logo, a trademark that is legally registered and protected.</p>
     <p>These elements must never be altered in any way and the Master logo must always be applied using original artwork. The word mark never appears outside of the square. Always write our brand name with a leading cap (Orange) in all other cases. To protect its integrity, the Master logo may not be altered, distorted or animated in any way.</p>
@@ -36,10 +36,10 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Clear space
 
 <div class="row mb-5">
-  <div class="col-lg-2 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150" loading="lazy"/>
   </div>
-  <div class="col-lg-10">
+  <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
     <p>The Master logo should always have <strong>clear space around</strong> it to protect it from other graphic elements and help it stand out.</p>
     <p>Always aim to set the clear space to <code>0.5×</code>. Where the space is limited (e.g. web) or when you need maximum visibility (e.g. perimeter boards), set your clear space to <code>0.25×</code> instead.</p>
     <p>To maintain clarity and legibility, we have set <strong>minimum sizes</strong> for the Master logo.</p>
@@ -97,30 +97,32 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 ### Small logo
 
 <div class="row">
-  <div class="col-lg-2 d-flex align-items-center justify-content-center">
+  <div class="col-lg-3 col-xxl-2 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
     <img src="/docs/{{< param docs_version >}}/assets/brand/logo-rule-4b.png" alt="Small Orange logo" width="100" loading="lazy"/>
   </div>
-  <div class="col-lg-10">
+  <div class="col-lg-9 col-xxl-10 pl-xxl-4 ps-3">
     <p>The Small logo is used for minimum size work <strong>when the Master logo is no longer clearly visible</strong>.</p>
     <ul>
       <li>The Small logo is used when the size of the Master logo appears less than <code>50px</code> on desktops or tablet screens, <code>30px</code> on mobile screens and <code>10mm</code> in printed media or product branding.</li>
       <li>The clear space area around the Small logo is equal to <code>0.25×</code>.</li>
       <li>The basic elements of the Small logo are the square and a line with solid white fill. Together they make up the Small logo.</li>
-      <li>The Small logo follows the same colourways as the Master logo.</li>
+      <li>The Small logo follows the same colorways as the Master logo.</li>
     </ul>
+    <p>
+        These elements must never be altered in any way and must always be applied using original artwork.
+        It’s possible to animate the Small logo; however this process is strictly managed by the Global brand team.
+        Apply the Small logo correctly by avoiding the following:
+    </p>
+    <ol>
+      <li>Never change the color of the line, even in animation.</li> 
+      <li>The line always has a solid, white fill. It is never transparent.</li>
+      <li>Never use the trademark symbol.</li>
+      <li>Never change the size of the line - it allows optimal readability in small sizes and represents the name “Orange” from the Master logo.</li>
+      <li>Never change the colorways of the Small logo.</li>
+    </ol>
   </div>
 </div>
 
-These elements must never be altered in any way and must always be applied using original artwork.
-It’s possible to animate the Small logo; however this process is strictly managed by the Global brand team.
-Apply the Small logo correctly by avoiding the following:
-
-
-1. Never change the color of the line, even in animation.
-2. The line always has a solid, white fill. It is never transparent.
-3. Never use the trademark symbol.
-4. Never change the size of the line - it allows optimal readability in small sizes and represents the name “Orange” from the Master logo.
-5. Never change the colourways of the Small logo.
 
 
 ## Color palette
