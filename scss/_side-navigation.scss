@@ -178,7 +178,7 @@
   // scss-docs-end side-nav-collapsible-css-vars
 
   .offcanvas-body {
-    & > :not(.collapse-horizontal) {
+    > :not(.collapse-horizontal) {
       min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
     }
 
@@ -187,7 +187,7 @@
       min-height: 100%;
       overflow: hidden auto;
 
-      & > :not(.collapse-horizontal) {
+      > :not(.collapse-horizontal) {
         min-height: 100%;
       }
     }
