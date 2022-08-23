@@ -8,6 +8,7 @@
 }
 
 .DocSearch-Container {
+  --docsearch-spacing: 20px;
   --docsearch-hit-shadow: none;
   --docsearch-muted-color: var(--docsearch-text-color);
   --docsearch-hit-color: var(--docsearch-text-color);
