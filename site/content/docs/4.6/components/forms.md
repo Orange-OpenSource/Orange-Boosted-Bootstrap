@@ -19,7 +19,7 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
@@ -488,9 +488,9 @@ Help text below inputs can be styled with `.form-text`. This class includes `dis
 {{< example >}}
 <label for="inputPassword5">Password</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-<p id="passwordHelpBlock" class="form-text">
+<small id="passwordHelpBlock" class="form-text">
   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-</p>
+</small>
 {{< /example >}}
 
 Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
