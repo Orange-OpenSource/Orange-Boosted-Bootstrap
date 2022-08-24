@@ -1835,6 +1835,7 @@ $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         $spacer * .5 !default;
 $breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-color:                  $black !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
@@ -1842,6 +1843,10 @@ $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://w
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
+
+// scss-docs-start breadcrumb-dark-variables
+$breadcrumb-dark-color:             $white !default; // Boosted mod
+// scss-docs-end breadcrumb-dark-variables
 
 
 // Carousel

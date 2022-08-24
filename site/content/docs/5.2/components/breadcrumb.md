@@ -90,9 +90,12 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 $breadcrumb-divider: none;
 ```
 
+<!-- Boosted mod: Dark variant -->
 ## Dark variant
 
-Breadcrumbs come with a dark variant: `.breadcrumb-dark`.
+{{< added-in "5.2.1" >}}
+
+Add `.breadcrumb-dark` to the `.breadcrumb` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <nav aria-label="dark breadcrumb">
@@ -103,6 +106,7 @@ Breadcrumbs come with a dark variant: `.breadcrumb-dark`.
   </ol>
 </nav>
 {{< /example >}}
+<!-- End mod -->
 
 ## Accessibility
 
@@ -120,6 +124,20 @@ As part of Boosted's evolving CSS variables approach, breadcrumbs now use local 
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 
+<!-- Boosted mod: Dark variant -->
+Customization through CSS variables can be seen on the `.breadcrumb-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="breadcrumb-dark-css-vars" file="scss/_breadcrumb.scss" >}}
+<!-- End mod -->
+
 ### Sass variables
 
+Variables for all breadcrumbs:
+
 {{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}
+
+<!-- Boosted mod: Dark variant -->
+Variables for [dark breadcrumb](#dark-variant):
+
+{{< scss-docs name="breadcrumb-dark-variables" file="scss/_variables.scss" >}}
+<!-- End mod -->
