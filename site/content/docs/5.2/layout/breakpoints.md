@@ -20,14 +20,14 @@ toc: true
 Boosted includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
 {{< bs-table "table" >}}
-| Breakpoint | Class infix | Dimensions | Device |
-| --- | --- | --- | --- |
-| Extra small | <em>None</em>  |&lt;480px | Mobile portrait |
-| Small | `sm` | &ge;480px | Mobile landscape |
-| Medium | `md` | &ge;768px | Tablet portrait |
-| Large | `lg` | &ge;1024px | Small desktop / Tablet landscape |
-| Extra large | `xl` | &ge;1280px | Medium desktop |
-| Extra extra large | `xxl` | &ge;1440px | Large desktop |
+| Breakpoint | Class infix | Dimensions |
+| --- | --- | --- |
+| Extra small | <em>None</em>  |&lt;480px |
+| Small | `sm` | &ge;480px |
+| Medium | `md` | &ge;768px |
+| Large | `lg` | &ge;1024px |
+| Extra large | `xl` | &ge;1280px |
+| Extra extra large | `xxl` | &ge;1440px |
 {{< /bs-table >}}
 
 Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.

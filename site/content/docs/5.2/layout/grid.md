@@ -97,12 +97,12 @@ As noted above, each of these breakpoints have their own container, unique class
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>302px</td>
-        <td>458px</td>
-        <td>724px</td>
-        <td>940px</td>
-        <td>1180px</td>
-        <td>1300px</td>
+        <td>312px</td>
+        <td>468px</td>
+        <td>744px</td>
+        <td>960px</td>
+        <td>1200px</td>
+        <td>1320px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
