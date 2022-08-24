@@ -4,6 +4,7 @@ title: "Boosted & Webpack"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Webpack.
 group: getting-started
 toc: true
+thumbnail: webpack.png
 ---
 
 <div class="d-flex justify-content-center">

@@ -141,6 +141,8 @@ Add classes to an element to easily round its corners.
 
 ### Variables
 
+{{< added-in "5.2.0" >}}
+
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 
 ### Sass variables
