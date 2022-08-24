@@ -17,7 +17,8 @@
   --#{$prefix}alert-logo-size: #{$alert-logo-size}; // Boosted mod
   --#{$prefix}alert-icon-size: #{$alert-icon-size}; // Boosted mod
   --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // Boosted mod
-  --#{$prefix}alert-heading-font-weight: #{$alert-link-font-weight}; // Boosted mod
+  --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight}; // Boosted mod
+  --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight}; // Boosted mod
   --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r}; // Boosted mod
   --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset}; // Boosted mod
   // scss-docs-end alert-css-vars
@@ -40,6 +41,7 @@
   margin: 0;
   font-size: inherit;
   font-weight: var(--#{$prefix}alert-heading-font-weight);
+  line-height: inherit;
   // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
@@ -47,7 +49,7 @@
 
 // Provide class for links that match alerts
 .alert-link {
-  font-weight: var(--#{$prefix}alert-heading-font-weight);
+  font-weight: var(--#{$prefix}alert-link-font-weight);
 }
 
 
@@ -93,6 +95,10 @@
   margin: 0;
 }
 
+.alert-heading ~ p {
+  line-height: 1.5;
+}
+
 //// Icons
 .alert-icon {
   flex-shrink: 0;
@@ -100,7 +106,11 @@
   margin: calc(var(--#{$prefix}alert-icon-margin-y) * -.5) 0; // stylelint-disable-line function-disallowed-list
 
   + * {
-    margin: var(--#{$prefix}alert-icon-margin-y) 0;
+    margin: var(--#{$prefix}alert-icon-margin-y) 0 0;
+  }
+
+  + p {
+    font-weight: var(--#{$prefix}alert-heading-font-weight);
   }
 
   &::before {
