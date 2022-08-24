@@ -41,7 +41,7 @@ Boosted includes several predefined button styles, each serving its own semantic
 <!-- Boosted mod -->
 ### Dark backgrounds
 
-To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
+To get the inversed button behavior, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
 {{< example class="bg-dark" >}}
 {{< buttons.inline >}}
