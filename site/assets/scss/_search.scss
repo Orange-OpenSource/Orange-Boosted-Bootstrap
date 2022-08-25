@@ -113,8 +113,21 @@
     @include border-radius(0, 0);
   }
 
-  &[aria-selected="true"] a {
-    background-color: var(--#{$prefix}black);
+  mark {
+    color: var(--#{$prefix}white);
+    background: var(--#{$prefix}black);
+  }
+
+  &[aria-selected="true"] {
+    a {
+      background-color: var(--#{$prefix}black);
+    }
+
+    mark {
+      --docsearch-hit-active-color: var(--#{$prefix}black);
+      text-decoration: none;
+      background: var(--#{$prefix}white);
+    }
   }
 }
 
