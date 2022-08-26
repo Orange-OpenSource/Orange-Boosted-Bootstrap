@@ -91,7 +91,7 @@ body {
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
-  outline: $outline-width solid; // 1
+  outline: map-get($border-widths, 3) solid var(--#{$prefix}link-hover-color); // 1
 }
 
 .js-focus-visible :focus:not([data-focus-visible-added]),
@@ -337,15 +337,16 @@ a {
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
 
-  &:focus {
-    @include focus-visible();
-  }
-  // End mod
-
   &:hover {
     color: var(--#{$prefix}link-hover-color);
     text-decoration: $link-hover-decoration;
   }
+
+  // Boosted mod
+  &:focus {
+    @include focus-visible();
+  }
+  // End mod
 }
 
 // And undo these styles for placeholder links/named anchors (without href).

@@ -883,7 +883,8 @@ $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
-$btn-focus-width:             $border-width !default;
+$btn-focus-width:             map-get($border-widths, 3) !default;
+$btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;
 
@@ -896,7 +897,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              $transition-focus !default;
+$btn-transition:              null !default; // boosted mod
 // scss-docs-end btn-variables
 
 // Boosted mod: icon button
@@ -1021,6 +1022,8 @@ $input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
+$input-transition:                      border-color $transition-duration $transition-timing !default; // Boosted mod
+
 $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
 
@@ -1032,6 +1035,7 @@ $form-check-margin-bottom:                .125rem !default;
 $form-check-label-padding-top:            .4375rem !default; // Boosted mod
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
+$form-check-transition:                   null !default;
 
 $form-check-input-active-filter:          null !default;
 $form-check-input-active-bg-color:        $component-active-bg !default; // Boosted mod
@@ -1040,6 +1044,8 @@ $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 $border-width solid $input-border-color !default;
 $form-check-input-border-radius:          0 !default;
 $form-check-radio-border-radius:          50% !default;
+$form-check-input-focus-border:           null !default;
+$form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
@@ -1075,6 +1081,8 @@ $form-switch-bg-image:            var(--#{$boosted-prefix}close-icon) !default; 
 $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
+$form-switch-border-radius:       null !default; // Boosted mod
+$form-switch-transition:          background-position .15s ease-in-out !default; // Boosted mod
 
 // Boosted mod: no $form-switch-focus-color
 // Boosted mod: no $form-switch-focus-bg-image
@@ -1118,14 +1126,21 @@ $form-select-feedback-icon-size:        $input-height-inner-half $input-height-i
 
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
+$form-select-border-radius:       $input-border-radius !default;
+$form-select-box-shadow:          $box-shadow-inset !default;
+
+$form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
+// Boosted mod: no $form-select-focus-width
+$form-select-focus-box-shadow:    null !default; // Boosted mod
 
 // Boosted mod: no .form-select-sm
 
-$form-select-padding-y-lg:        $spacer * .5 !default;
+$form-select-padding-y-lg:        $spacer * .5 !default; // Boosted mod
 $form-select-padding-x-lg:        $input-padding-x-lg !default;
 $form-select-font-size-lg:        $input-font-size-lg !default;
 $form-select-border-radius-lg:    $input-border-radius-lg !default;
 
+$form-select-transition:          $input-transition !default;
 // scss-docs-end form-select-variables
 
 // scss-docs-start form-range-variables
@@ -1215,6 +1230,7 @@ $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
+$nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           $gray-500 !default;
 
 $nav-tabs-border-color:             $black !default;
@@ -1256,7 +1272,7 @@ $navbar-toggler-font-size-xs:         1.04166666rem !default; // Boosted mod
 $navbar-toggler-font-size:            1.25rem !default; // Boosted mod
 $navbar-toggler-border-radius:        $btn-border-radius !default;
 $navbar-toggler-focus-width:          null !default; // Boosted mod
-$navbar-toggler-transition:           $transition-focus !default; // Boosted mod
+$navbar-toggler-transition:           null !default; // Boosted mod
 
 $navbar-light-color:                  $black !default;
 $navbar-light-hover-color:            $accessible-orange !default;
@@ -1406,7 +1422,7 @@ $pagination-border-color:           transparent !default; // Boosted mod
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
 $pagination-focus-color:            var(--#{$prefix}link-color) !default;
 $pagination-focus-bg:               null !default;
-$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
+$pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
 $pagination-hover-bg:               null !default;
@@ -1419,6 +1435,8 @@ $pagination-active-border-color:    $pagination-active-bg !default;
 $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
+
+$pagination-transition:             null !default; // Boosted mod
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
@@ -1510,10 +1528,19 @@ $accordion-body-padding-x:                $spacer !default; // Boosted mod
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
-$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
+$accordion-button-bg:                     transparent !default; // Boosted mod
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
+
+// Boosted mod: dark variant
+$accordion-dark-color:                    $white !default;
+$accordion-dark-bg:                       $black !default;
+$accordion-dark-border-color:             $gray-700 !default;
+$accordion-dark-button-color:             $accordion-dark-color !default;
+$accordion-dark-button-bg:                transparent !default;
+$accordion-dark-button-active-color:      $brand-orange !default;
+// End mod
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1944,6 +1971,7 @@ $btn-close-border-width:        $border-width !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               $black !default;
 $btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
+$btn-close-focus-shadow:        $btn-focus-box-shadow !default;
 // Boosted mod: no opacity/filter
 
 // Boosted mod

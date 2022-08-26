@@ -22,6 +22,11 @@
   //// Set line-height everywhere
   tr {
     border-bottom: $table-border-width solid var(--#{$prefix}table-border-color);
+
+    // &:focus-within {
+    //   @include focus-visible();
+    //   outline-offset: -3px;
+    // }
   }
 
   // Target th & td
@@ -131,10 +136,6 @@
     .table-responsive#{$infix} {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-
-      &[data-focus-visible-added] {
-        @include focus-visible();
-      }
     }
   }
 }

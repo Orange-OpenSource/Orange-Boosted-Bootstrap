@@ -22,6 +22,7 @@
 }
 
 .nav-link {
+  position: relative; // Boosted mod: ensure that the outline goes over the next elements.
   display: flex; // Boosted mod
   align-items: center; // Boosted mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
@@ -30,17 +31,21 @@
   color: var(--#{$prefix}nav-link-color);
   text-decoration: if($link-decoration == none, null, none);
   background: none; // Boosted mod: Prevent dropdown's background to interfere
+  @include transition($nav-link-transition);
 
+  // Boosted mod: no focus
   &:hover {
     color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
+  // Boosted mod
   &:focus {
     &[data-focus-visible-added] {
       @include focus-visible();
     }
   }
+  // End mod
 
   // Disabled state lightens text
   &.disabled {
@@ -87,20 +92,13 @@
     border-width: var(--#{$prefix}nav-tabs-link-border-width); // Boosted mod
     @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
 
+    // Boosted mod: no focus
     &:hover {
       color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
       background-color: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
       isolation: isolate;
       border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
-      outline-color: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
-      outline-offset: var(--#{$prefix}nav-tabs-border-width); // Boosted mod
-    }
-
-    &:focus {
-      &[data-focus-visible-added] {
-        @include focus-visible();
-      }
     }
 
     &.disabled,
@@ -116,7 +114,6 @@
     color: var(--#{$prefix}nav-tabs-link-active-color);
     background-color: var(--#{$prefix}nav-tabs-link-active-bg);
     border-color: var(--#{$prefix}nav-tabs-link-active-border-color);
-    outline-color: var(--#{$prefix}nav-tabs-link-active-border-color); // Boosted mod
   }
 
   .dropdown-menu {
@@ -148,17 +145,10 @@
       color: $accessible-orange;
       background: none;
       border-color: transparent;
-      outline-color: currentcolor;
     }
 
     &.active {
       border-bottom-color: $accessible-orange;
-    }
-
-    &:focus {
-      &[data-focus-visible-added] {
-        @include focus-visible();
-      }
     }
   }
 }
@@ -193,7 +183,6 @@
   .nav-link.active,
   .show > .nav-link {
     color: var(--#{$prefix}nav-pills-link-active-color);
-    outline-color: var(--#{$prefix}nav-pills-link-active-bg); // Boosted mod
     @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
   }
 

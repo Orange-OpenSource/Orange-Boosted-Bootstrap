@@ -48,11 +48,10 @@
 
   /* rtl:remove */
   letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // Boosted mod
-  background-color: transparent;
+  background-color: var(--#{$prefix}accordion-btn-bg);
   border: 0;
   @include border-radius(0);
   overflow-anchor: none;
-  outline: 0;
 
   &:not(.collapsed) {
     color: var(--#{$prefix}accordion-active-color);
@@ -71,6 +70,13 @@
   &:hover {
     z-index: 2;
     color: var(--#{$prefix}accordion-active-color); // Boosted mod
+  }
+
+  &:focus {
+    z-index: 3;
+    // Boosted mod: no border-color
+    outline: 0;
+    // Boosted mod: no box-shadow
   }
 }
 
@@ -112,9 +118,11 @@
     }
   }
 
+  // Boosted mod: outline the item instead of button only
   &:focus-within {
     @include focus-visible();
   }
+  // End mod
 }
 
 .accordion-body {

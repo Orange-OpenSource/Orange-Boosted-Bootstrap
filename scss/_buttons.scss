@@ -42,6 +42,7 @@
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  @include transition($btn-transition);
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
@@ -76,7 +77,6 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
-    outline-color: var(--#{$prefix}btn-active-border-color); // Boosted mod
     // Boosted mod: no box shadow modification for the active state
   }
 
@@ -196,25 +196,11 @@
     text-decoration: $link-hover-decoration;
   }
 
-  // Boosted mod
-  &:focus-visible {
-    &:not(:hover) {
-      color: var(--#{$prefix}btn-color);
-      outline-color: var(--#{$prefix}btn-color);
-      &[data-focus-visible-added] {
-        @include focus-visible();
-      }
-    }
-
-    &:hover {
-      outline-color: var(--#{$prefix}btn-active-color);
-    }
-  }
+  // Boosted mod: no focus/hover color
 
   &.btn-inverse {
     --#{$prefix}btn-disabled-color: #{$gray-700};
   }
-  // End mod
 
   // No need for an active state here
 }
@@ -253,14 +239,6 @@
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$boosted-prefix}network-logo));
-
-  &:focus {
-    // Boosted mod: added `&[data-focus-visible-added]`
-    color: var(--#{$prefix}btn-hover-color);
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
-  }
 
   &.btn-inverse {
     --#{$prefix}btn-color: #{$white};

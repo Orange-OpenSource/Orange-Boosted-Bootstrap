@@ -216,18 +216,21 @@
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
 
+  // Boosted mod: no focus
   &:hover {
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-    outline-color: var(--#{$prefix}dropdown-link-hover-bg); // Boosted mod
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
   }
 
+  // Boosted mod
   &:focus {
     &[data-focus-visible-added] {
       @include focus-visible();
+      outline-offset: -3px;
     }
   }
+  // End mod
 
   &.active,
   &:active {

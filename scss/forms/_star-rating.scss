@@ -3,13 +3,13 @@
 //
 
 .star-rating {
-
   &.disabled,
   &:disabled {
     pointer-events: none;
   }
 
   > label {
+    position: relative;
     display: block;
     float: left;
     width: 1em;
@@ -55,7 +55,6 @@
 }
 
 .star-rating-dark {
-
   > label {
     @include form-star-rating($brand-orange);
   }
@@ -74,8 +73,6 @@
 
   > input:focus + label {
     @include form-star-rating($brand-orange);
-    @include focus-visible();
-    // outline-offset: -1px;
   }
 
   &:hover input + label {

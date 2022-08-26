@@ -20,7 +20,6 @@
   color: var(--#{$prefix}btn-close-color); // Boosted mod
   background-color: var(--#{$prefix}btn-close-bg); // Boosted mod
   border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // Boosted mod
-  outline-offset: map-get($spacers, 2); // Boosted mod
   @include border-radius();
   @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // Boosted mod: using mask instead of background
 
@@ -38,6 +37,7 @@
 
   &:focus {
     &[data-focus-visible-added] {
+      box-shadow: $btn-close-focus-shadow;
       @include focus-visible();
     }
   }

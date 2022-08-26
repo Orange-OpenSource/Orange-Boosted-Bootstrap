@@ -38,6 +38,7 @@
   border: $form-check-input-border;
   appearance: none;
   print-color-adjust: exact; // Keep themed appearance for print
+  @include transition($form-check-transition);
 
   &[type="checkbox"] {
     @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // Boosted mod
@@ -55,10 +56,14 @@
   }
 
   &:focus {
+    border-color: $form-check-input-focus-border;
+    outline: 0;
+    box-shadow: $form-check-input-focus-box-shadow;
     // Boosted mod : update focus for WCAG
     &[data-focus-visible-added] {
       @include focus-visible();
     }
+    // End mod
   }
 
   &:checked {
@@ -161,8 +166,8 @@
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
     border-color: $white; // Boosted mod
-    outline-color: $white; // Boosted mod
-    outline-offset: $spacer; // Boosted mod
+    @include border-radius($form-switch-border-radius);
+    @include transition($form-switch-transition);
 
     &:checked {
       background-color: $primary;
@@ -179,21 +184,16 @@
         background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
       }
 
-      &:active {
-        outline-color: $primary;
-      }
-
+      // Boosted mod
       &:focus {
         &[data-focus-visible-added] {
           @include focus-visible();
         }
       }
 
-      // Boosted mod
       &:not(:disabled) {
         --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
       }
-      // End mod
     }
 
     &:active {
@@ -209,13 +209,11 @@
       }
     }
 
-    // Boosted mod
     &:disabled {
       background-color: $form-check-input-disabled-color;
       filter: $invert-filter;
       border-color: $form-check-input-disabled-color;
     }
-    // End mod
   }
 
   .form-check-label {
@@ -283,18 +281,9 @@
   }
 
   &[data-focus-visible-added] {
-    + .btn {
-      @include focus-visible();
-    }
-
-    &:checked + .btn-no-outline {
-      border-color: $gray-500;
-      outline-color: currentcolor;
-    }
-
+    + .btn,
     + .tag {
-      outline: $outline-width * 1.5 solid var(--#{$prefix}tag-outline-color);
-      outline-offset: .125rem;
+      @include focus-visible();
     }
   }
 
@@ -305,13 +294,11 @@
       // Remove CSS gradients if they're enabled
       background-image: if($enable-gradients, none, null);
       border-color: $black;
-      outline-color: $black;
     }
 
     + .btn-no-outline {
       &,
-      &:hover,
-      &:focus {
+      &:hover {
         color: $accessible-orange;
         background-color: transparent;
       }
@@ -332,7 +319,6 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: $primary;
-    outline-color: $primary;
   }
   // End mod
 
@@ -383,7 +369,6 @@
     }
 
     &:hover,
-    &:focus,
     &:active,
     &.active {
       color: $black;

@@ -20,6 +20,7 @@
   @include border-radius($input-border-radius, 0);
 
   @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
 
   &[type="file"] {
     overflow: hidden; // prevent pseudo element button overlap
@@ -29,6 +30,7 @@
     }
   }
 
+  // Customize the `:focus` state to imitate native WebKit styles.
   &:focus {
     color: $input-focus-color;
     background-color: $input-focus-bg;
@@ -45,6 +47,7 @@
     &[data-focus-visible-added] {
       @include focus-visible();
     }
+    // End mod
   }
 
   // Add some height to date inputs on iOS

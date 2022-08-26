@@ -265,18 +265,6 @@ h2,
       filter: $orange-filter;
     }
   }
-
-  &:focus {
-    text-decoration: $link-decoration;
-
-    &::after {
-      filter: var(--#{$prefix}link-hover-color);
-    }
-
-    &:hover {
-      filter: $orange-filter;
-    }
-  }
 }
 // End mod
 
