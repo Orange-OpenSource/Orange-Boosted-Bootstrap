@@ -155,6 +155,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">First slide label</h5>
         <p class="mb-0">Some representative placeholder content for the first slide.</p>
+        <a href="#" title="Example link #1">Example link #1</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -162,6 +163,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">Second slide label</h5>
         <p class="mb-0">Some representative placeholder content for the second slide.</p>
+        <a href="#" title="Example link #2">Example link #2</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -169,6 +171,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">Third slide label</h5>
         <p class="mb-0">Some representative placeholder content for the third slide.</p>
+        <a href="#" title="Example link #3">Example link #3</a>
       </div>
     </div>
   </div>
