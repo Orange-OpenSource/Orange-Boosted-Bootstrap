@@ -26,7 +26,6 @@
         "ignore": "local"
       }
     ],
-    "scss/selector-no-union-class-name": true,
-    "scss/selector-no-redundant-nesting-selector": null
+    "scss/selector-no-union-class-name": true
   }
 }
