@@ -47,7 +47,7 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary mt-2">Submit</button>
 </form>
 {{< /example >}}
 
@@ -126,7 +126,7 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
   </fieldset>
 </form>
 {{< /example >}}
@@ -155,7 +155,7 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
         <label class="form-check-label" for="requiredFieldsetCheck">Must check this</label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
   </fieldset>
 </form>
 {{< /example >}}
