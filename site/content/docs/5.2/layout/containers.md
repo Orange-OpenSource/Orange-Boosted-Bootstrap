@@ -24,7 +24,7 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
 
 {{< bs-table "table" >}}
-|  | Extra small<div class="fw-normal">&lt;576px</div> | Small<div class="fw-normal">&ge;576px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;992px</div> | X-Large<div class="fw-normal">&ge;1200px</div> | XX-Large<div class="fw-normal">&ge;1400px</div> |
+|  | Extra small<div class="fw-normal">&lt;480px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1280px</div> | XX-Large<div class="fw-normal">&ge;1440px</div> |
 | --- | --- | --- | --- | --- | --- | --- |
 | `.container` | <span class="text-muted">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
 | `.container-sm` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
