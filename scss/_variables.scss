@@ -1424,7 +1424,7 @@ $pagination-border-color:           transparent !default; // Boosted mod
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
 $pagination-focus-color:            var(--#{$prefix}link-color) !default;
 $pagination-focus-bg:               null !default;
-$pagination-focus-outline:          0 !default;
+// Boosted mod: no $pagination-focus-outline
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
 $pagination-hover-bg:               null !default;
