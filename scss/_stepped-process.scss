@@ -98,14 +98,12 @@
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
-  outline-offset: $spacer;
 
   &::before {
     content: var(--#{$prefix}stepped-process-link-marker);
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--#{$prefix}stepped-process-link-color);
   }
 
@@ -115,7 +113,14 @@
 
   &:focus {
     text-decoration: var(--#{$prefix}stepped-process-link-text-decoration);
-    outline-offset: $spacer * .25;
+
+    &[data-focus-visible-added] {
+      @include focus-visible();
+
+      .active & {
+        outline-color: var(--#{$prefix}stepped-process-link-active-color);
+      }
+    }
   }
 
   .active & {
