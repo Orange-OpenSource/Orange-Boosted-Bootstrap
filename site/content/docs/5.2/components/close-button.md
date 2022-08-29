@@ -33,7 +33,7 @@ Change the default `.btn-close` to be white with the `.btn-close-white` class.
 
 ## Without specific class
 
-Close buttons can also be created without `.btn-close`.
+Close buttons can also be created without `.btn-close` in Boosted.
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline">
@@ -42,6 +42,38 @@ Close buttons can also be created without `.btn-close`.
 </button>
 
 <button type="button" class="btn btn-icon btn-no-outline" disabled>
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary" disabled>
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+{{< /example >}}
+
+{{< example class="bg-dark" >}}
+<button type="button" class="btn btn-icon btn-no-outline btn-inverse">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-no-outline btn-inverse" disabled>
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-inverse btn-secondary">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-inverse btn-secondary" disabled>
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
