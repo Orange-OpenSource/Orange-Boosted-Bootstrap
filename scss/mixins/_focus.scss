@@ -1,5 +1,5 @@
 @mixin focus-visible {
-  z-index: 5;
-  outline: var(--#{$prefix}link-hover-color) solid map-get($border-widths, 3);
-  outline-offset: map-get($border-widths, 3);
+  z-index: $outline-zindex;
+  outline: $outline-color solid $outline-width;
+  outline-offset: $outline-offset;
 }

@@ -192,7 +192,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-      outline-offset: -3px;
+      outline-offset: -$outline-offset;
     }
   }
 
@@ -311,7 +311,7 @@
   &:focus {
     text-decoration: none;
     // Boosted mod: no outline;
-    outline-offset: -3px; // Boosted mod
+    outline-offset: -$outline-offset; // Boosted mod
     box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
   }
 

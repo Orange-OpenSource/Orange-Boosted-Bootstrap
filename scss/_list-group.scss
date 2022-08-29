@@ -64,9 +64,7 @@
 
   // Boosted mod
   &:focus {
-    &[data-focus-visible-added] {
-      outline-offset: -3px;
-    }
+    outline-offset: -$outline-offset;
   }
   // End mod
 

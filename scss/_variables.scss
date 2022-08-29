@@ -584,8 +584,10 @@ $border-radius-2xl:           null !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
-$outline-width:               $border-width !default;  // Boosted mod
-$outline-offset:              $outline-width !default; // Boosted mod
+$outline-zindex:              5 !default; // Boosted mod
+$outline-width:               map-get($border-widths, 3) !default;  // Boosted mod
+$outline-offset:              map-get($border-widths, 3) !default; // Boosted mod
+$outline-color:               var(--#{$prefix}link-hover-color) !default; // Boosted mod
 
 // scss-docs-start box-shadow-variables
 $box-shadow:                  null !default;
@@ -883,7 +885,7 @@ $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
-$btn-focus-width:             map-get($border-widths, 3) !default;
+$btn-focus-width:             $outline-offset !default;
 $btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;

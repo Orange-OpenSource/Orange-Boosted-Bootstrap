@@ -225,7 +225,7 @@
 
   // Boosted mod
   &:focus {
-    outline-offset: -3px;
+    outline-offset: -$outline-offset;
   }
   // End mod
 

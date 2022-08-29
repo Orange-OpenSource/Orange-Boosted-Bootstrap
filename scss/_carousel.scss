@@ -131,7 +131,7 @@
       // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
       & > span {
         @include focus-visible();
-        box-shadow: 0 0 0 map-get($border-widths, 3) $white;
+        box-shadow: 0 0 0 $outline-offset $white;
       }
     }
   }
@@ -228,7 +228,7 @@
     &:focus {
       &[data-focus-visible-added] {
         @include focus-visible();
-        box-shadow: 0 0 0 map-get($border-widths, 3) $white;
+        box-shadow: 0 0 0 outline-offset $white;
         transform: none;
       }
     }
