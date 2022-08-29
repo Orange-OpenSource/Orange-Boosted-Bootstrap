@@ -39,19 +39,19 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
   <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  Secondary
+  Primary
 </button>
 <button type="button" class="btn btn-primary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  Secondary
+  Primary
 </button>
 <button type="button" class="btn btn-primary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  Secondary
+  Primary
 </button>
 {{< /example >}}
 
@@ -146,7 +146,7 @@ To get the inverted button behavior, simply add `.btn-inverse` to a `<button>` o
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  Secondary
+  Primary
 </button>
 <button type="button" class="btn btn-icon btn-inverse btn-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
