@@ -40,8 +40,7 @@
 
   &:focus {
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
-    outline-offset: .375rem; // replace when focus will be active
+    @include focus-visible();
     box-shadow: unset;
   }
 
@@ -81,7 +80,7 @@
   @include border-radius(0, 0);
 
   &:focus {
-    outline: 3px solid $accessible-orange;
+    @include focus-visible();
   }
 }
 

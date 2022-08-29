@@ -69,7 +69,7 @@
 
   &:focus {
     &[data-focus-visible-added] {
-      @include focus-visible();
+      box-shadow: none;
     }
   }
 }
