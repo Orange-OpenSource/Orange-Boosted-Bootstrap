@@ -1758,7 +1758,7 @@ $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted m
 // Image thumbnails
 
 // scss-docs-start thumbnail-variables
-$thumbnail-padding:                 $spacer !default; // Boosted mod
+$thumbnail-padding:                 $spacer * .5 !default;
 $thumbnail-bg:                      $body-bg !default;
 $thumbnail-border-width:            $border-width !default;
 $thumbnail-border-color:            var(--#{$prefix}border-color) !default;
