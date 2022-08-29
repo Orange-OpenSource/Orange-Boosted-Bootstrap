@@ -71,14 +71,7 @@
     border-color: var(--#{$prefix}pagination-hover-border-color);
   }
 
-  &:focus {
-    // Boosted mod: handle focus differently
-    &[data-focus-visible-added] {
-      @include focus-visible();
-      z-index: 4;
-    }
-    // End mod
-  }
+  // Boosted mod: no specific focus
 
   // Boosted mod
   &:active,

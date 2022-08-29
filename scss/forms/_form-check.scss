@@ -27,6 +27,7 @@
 }
 
 .form-check-input {
+  position: relative; // Boosted mod: here to handle focus state when to close from each other
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
@@ -57,13 +58,8 @@
 
   &:focus {
     border-color: $form-check-input-focus-border;
-    outline: 0;
+    // Boosted mod: default outline
     box-shadow: $form-check-input-focus-box-shadow;
-    // Boosted mod : update focus for WCAG
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
-    // End mod
   }
 
   &:checked {
@@ -186,9 +182,7 @@
 
       // Boosted mod
       &:focus {
-        &[data-focus-visible-added] {
-          @include focus-visible();
-        }
+        outline-color: #ff7900;
       }
 
       &:not(:disabled) {
@@ -203,10 +197,7 @@
     }
 
     &:focus {
-      &[data-focus-visible-added] {
-        @include focus-visible();
-        outline-color: #0e91ff; /* Inverted color of var(--#{$prefix}link-hover-color) to compose with filter: invert(1) */
-      }
+      outline-color: #0e91ff; /* Inverted color of var(--#{$prefix}link-hover-color) to compose with filter: invert(1) */
     }
 
     &:disabled {

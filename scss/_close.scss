@@ -38,7 +38,6 @@
   &:focus {
     &[data-focus-visible-added] {
       box-shadow: $btn-close-focus-shadow;
-      @include focus-visible();
     }
   }
 

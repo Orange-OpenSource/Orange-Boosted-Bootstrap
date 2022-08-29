@@ -39,14 +39,6 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  // Boosted mod
-  &:focus {
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
-  }
-  // End mod
-
   // Disabled state lightens text
   &.disabled {
     color: var(--#{$prefix}nav-link-disabled-color);

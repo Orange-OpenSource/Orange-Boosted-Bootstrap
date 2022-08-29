@@ -192,12 +192,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-      &:focus {
-        &[data-focus-visible-added] {
-          @include focus-visible();
-          outline-offset: -3px;
-        }
-      }
+      outline-offset: -3px;
     }
   }
 
@@ -316,14 +311,8 @@
   &:focus {
     text-decoration: none;
     // Boosted mod: no outline;
+    outline-offset: -3px; // Boosted mod
     box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
-
-    // Boosted mod
-    &[data-focus-visible-added] {
-      @include focus-visible();
-      outline-offset: -3px;
-    }
-    // End mod
   }
 
   // Boosted mod: close icon when opened & color state

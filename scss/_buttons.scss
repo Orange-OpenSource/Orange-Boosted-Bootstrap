@@ -62,7 +62,6 @@
       } @else {
         box-shadow: var(--#{$prefix}btn-focus-box-shadow);
       }
-      @include focus-visible();
     }
   }
 
