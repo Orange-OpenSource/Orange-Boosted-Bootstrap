@@ -131,6 +131,7 @@
 
   &:focus {
     &[data-focus-visible-added] {
+      // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
       & > span {
         outline: map-get($border-widths, 3) solid $brand-orange;
         outline-offset: $outline-offset;
