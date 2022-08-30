@@ -7,7 +7,7 @@
   --#{$prefix}tag-padding-y: #{$tag-padding-y};
   --#{$prefix}tag-margin: 0;
   @include rfs($tag-font-size, --#{$prefix}tag-font-size);
-  --#{$prefix}tag-font-shift: #{$tag-font-shift}; // stylelint-disable-line custom-property-empty-line-before
+  --#{$prefix}tag-font-shift: #{$tag-font-shift};
   --#{$prefix}tag-font-weight: #{$tag-font-weight};
   --#{$prefix}tag-font-spacing: #{$tag-font-spacing};
   --#{$prefix}tag-icon-size: #{$tag-icon-size};
