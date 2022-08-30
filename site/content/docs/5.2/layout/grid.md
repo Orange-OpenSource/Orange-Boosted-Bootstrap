@@ -97,12 +97,12 @@ As noted above, each of these breakpoints have their own container, unique class
     <tbody>
       <tr>
         <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-        <td>320px</td>
-        <td>480px</td>
-        <td>768px</td>
-        <td>1024px</td>
-        <td>1280px</td>
-        <td>1440px</td>
+        <td>312px</td>
+        <td>468px</td>
+        <td>744px</td>
+        <td>960px</td>
+        <td>1200px</td>
+        <td>1320px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
@@ -118,8 +118,18 @@ As noted above, each of these breakpoints have their own container, unique class
         <td colspan="6">12</td>
       </tr>
       <tr>
+        <th class="text-nowrap" scope="row">Column width</th>
+        <td>16px</td>
+        <td>29px</td>
+        <td>42px</td>
+        <td>60px</td>
+        <td>80px</td>
+        <td>90px</td>
+      </tr>
+      <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="6">1.5rem (.75rem on left and right)</td>
+        <td colspan="2">.625rem (.3125rem on left and right)</td>
+        <td colspan="4">1.25rem (.625rem on left and right)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Custom gutters</th>
@@ -420,6 +430,7 @@ Variables and maps determine the number of columns, the gutter width, and the me
 ```scss
 $grid-columns:      12;
 $grid-gutter-width: 1.25rem;
+$grid-row-columns:  6;
 ```
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
@@ -499,11 +510,12 @@ Using our built-in grid Sass variables and maps, it's possible to completely cus
 
 ### Columns and gutters
 
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters.
+The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters. `$grid-row-columns` is used to set the maximum number of columns of `.row-cols-*`, any number over this limit is ignored.
 
 ```scss
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
 ```
 
 ### Grid tiers

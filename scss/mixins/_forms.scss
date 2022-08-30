@@ -84,6 +84,7 @@
         border-right: none;
         border-left: none;
 
+        // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
           border-color: $color;
         }

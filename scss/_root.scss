@@ -89,6 +89,7 @@
   --#{$boosted-prefix}kbd-bg: #{$kbd-bg-dark};
   --#{$boosted-prefix}pre-color: #{$pre-color-dark};
 
+  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {
     --#{$prefix}link-color: #{$link-color};
     --#{$prefix}link-hover-color: #{$link-hover-color};

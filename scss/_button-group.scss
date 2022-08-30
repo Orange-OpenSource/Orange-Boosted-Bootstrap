@@ -73,6 +73,7 @@
 //
 
 .dropdown-toggle-split {
+  min-width: $dropdown-padding-x * 2 + $caret-width * 2; // Boosted mod
   padding-right: subtract($dropdown-padding-x, $border-width);
   padding-left: subtract($dropdown-padding-x, $border-width);
   border-color: $black;
