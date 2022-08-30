@@ -37,8 +37,11 @@
 
   > input:focus + label {
     @include form-star-rating($accessible-orange);
+  }
+
+  > [data-focus-visible-added]:focus + label {
     @include focus-visible();
-    // outline-offset: -1px;
+    outline-offset: -1px;
   }
 
   &:hover input + label {

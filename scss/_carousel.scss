@@ -126,6 +126,7 @@
     color: $carousel-control-color;
   }
 
+  // scss-docs-start focus-visible-carousel
   &:focus {
     &[data-focus-visible-added] {
       // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
@@ -135,6 +136,7 @@
       }
     }
   }
+  // scss-docs-end focus-visible-carousel
   // End mod
 }
 
@@ -228,7 +230,7 @@
     &:focus {
       &[data-focus-visible-added] {
         @include focus-visible();
-        box-shadow: 0 0 0 outline-offset $white;
+        box-shadow: 0 0 0 $outline-offset $white;
         transform: none;
       }
     }

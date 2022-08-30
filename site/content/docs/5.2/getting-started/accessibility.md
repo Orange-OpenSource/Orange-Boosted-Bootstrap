@@ -62,9 +62,15 @@ Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focu
 
 {{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
 
-Each component then specifies its own focus style, usually a solid `2px` outline with an `outline-offset` transition.
+{{< added-in "5.2.1" >}}
 
-{{< scss-docs name="focus-transition" file="scss/_variables.scss" >}}
+Boosted provides `focus-visible()` mixin to ensure a proper focus state, usually a solid `3px` orange outline with an `outline-offset` of `2px`.
+
+{{< scss-docs name="focus-visible" file="scss/mixins/_focus.scss" >}}
+
+Each component then specifies its own focus style when needed, for example [carousels]({{< docsref "/components/carousel#with-indicators" >}}).
+
+{{< scss-docs name="focus-visible-carousel" file="scss/_carousel.scss" >}}
 
 #### Under a fixed header
 

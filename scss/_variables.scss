@@ -585,8 +585,8 @@ $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
 $outline-zindex:              5 !default; // Boosted mod
-$outline-width:               map-get($border-widths, 3) !default;  // Boosted mod
-$outline-offset:              map-get($border-widths, 3) !default; // Boosted mod
+$outline-width:               3px !default;  // Boosted mod
+$outline-offset:              2px !default; // Boosted mod
 $outline-color:               var(--#{$prefix}link-hover-color) !default; // Boosted mod
 
 // scss-docs-start box-shadow-variables
@@ -613,9 +613,6 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
-// scss-docs-start focus-transition
-$transition-focus:    outline-offset $transition-duration $transition-timing !default; // Boosted mod
-// scss-docs-end focus-transition
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
@@ -1084,7 +1081,7 @@ $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
 $form-switch-border-radius:       null !default; // Boosted mod
-$form-switch-transition:          background-position .15s ease-in-out !default; // Boosted mod
+$form-switch-transition:          background-position .15s ease-in-out !default;
 
 // Boosted mod: no $form-switch-focus-color
 // Boosted mod: no $form-switch-focus-bg-image
@@ -1291,8 +1288,8 @@ $navbar-light-brand-hover-color:      $navbar-light-active-color !default;
 // scss-docs-start orange-navbar-variables
 $navbar-transition-duration:                $transition-duration !default;
 $navbar-transition-timing-function:         $transition-timing !default;
-$navbar-transition:                         padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
-$navbar-brand-transition:                   margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-transition:                         padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-brand-transition:                   margin $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-brand-logo-transition:              width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
@@ -1899,7 +1896,7 @@ $carousel-control-color:             $black !default;
 $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
-$carousel-control-transition:        $transition-focus !default;
+$carousel-control-transition:        null !default;
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;
