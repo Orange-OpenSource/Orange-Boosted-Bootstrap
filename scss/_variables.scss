@@ -1989,10 +1989,19 @@ $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, $border-widt
 $step-link-width:             1.25ch !default; // Matches width of a single number
 $step-link-color:             $white !default;
 $step-link-active-color:      $black !default;
+$step-link-next-color:        $black !default;
 $step-link-line-height:       $line-height-sm !default;
 $step-link-marker:            counter(var(--bs-stepped-process-counter)) inspect("\A0") !default;
 $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect(".\A0") !default;
 $step-link-text-decoration:   $link-decoration !default;
+
+$step-item-dark-bg:           $white !default;
+$step-item-dark-active-bg:    $brand-orange !default;
+$step-item-dark-next-bg:      $gray-700 !default;
+$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(-$step-item-shadow-size 0 0 $black) #{"*/"} !default;
+$step-link-dark-color:        $black !default;
+$step-link-dark-active-color: $black !default;
+$step-link-dark-next-color:   $white !default;
 // scss-docs-end stepped-process
 
 //// Sticker
