@@ -97,6 +97,8 @@ Use a `title` attribute instead of `data-bs-label` to ensure a visible label is 
 
 ## Dark variant
 
+{{< added-in "5.2.1" >}}
+
 Back to top component comes with a dark variant: add `.btn-inverse` on `.back-to-top-link`.
 
 <div class="bd-example bg-dark d-flex gap-3 flex-wrap">
