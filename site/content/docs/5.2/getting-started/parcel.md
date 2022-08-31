@@ -12,8 +12,12 @@ thumbnail: parcel.png
 </div>
 
 {{< callout >}}
+**Want to skip to the end?** Download the **Bootstrap** source code and working **Bootstrap** demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel). You can also [open the **Bootstrap** example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html) for live editing.
+{{< /callout >}}
 
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html) but not run it because Parcel isn't currently supported there.
+{{< callout warning >}}
+**To get a working Boosted demo from the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+You may need to tweak a bit `src/scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted](#import-boosted) to know more.
 {{< /callout >}}
 
 ## Setup
@@ -91,7 +95,7 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
+   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Parcel.
 
    Parcel will automatically detect we're using Sass and install the [Sass Parcel plugin](https://parceljs.org/languages/sass/) to support it. However, if you wish, you can also manually run `npm i --save-dev @parcel/transformer-sass`.
 
@@ -122,10 +126,13 @@ In the next and final section to this guide, we'll import all of Boosted's CSS a
 
 Importing Boosted into Parcel requires two imports, one into our `styles.scss` and one into our `main.js`.
 
-1. **Import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Import Boosted's font and CSS.** Assuming that you already have the fonts inside your project, add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
+   $font-path: "relative-path-to/font-folder/";
+
+   @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
 

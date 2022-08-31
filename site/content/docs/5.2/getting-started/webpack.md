@@ -12,8 +12,12 @@ thumbnail: webpack.png
 </div>
 
 {{< callout >}}
+**Want to skip to the end?** Download the **Bootstrap** source code and working **Bootstrap** demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the **Bootstrap** example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+{{< /callout >}}
 
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+{{< callout warning >}}
+**To get a working Boosted demo from the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+You may need to tweak a bit `src/scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted](#import-boosted) to know more.
 {{< /callout >}}
 
 ## Setup
@@ -195,10 +199,13 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Now, let's import Boosted's font and CSS.** Assuming that you already have the fonts inside your project, add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
+   $font-path: "relative-path-to/font-folder/";
+
+   @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
 
