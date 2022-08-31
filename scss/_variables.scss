@@ -1432,10 +1432,39 @@ $pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !defau
 $pagination-icon-size:              subtract($spacer * 2, $border-width * 2) !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
+
 $pagination-active-item-bg:         $primary !default;
+$pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
 // End mod
 // scss-docs-end pagination-variables
+
+// scss-docs-start pagination-dark-variables
+// Boosted mod
+$pagination-dark-bg:                        $black !default;
+$pagination-dark-color:                     color-contrast($pagination-dark-bg) !default;
+$pagination-dark-border-color:              transparent !default;
+
+$pagination-dark-hover-bg:                  $black !default;
+$pagination-dark-hover-color:               color-contrast($pagination-dark-hover-bg) !default;
+$pagination-dark-hover-border-color:        $gray-700 !default;
+
+$pagination-dark-focus-bg:                  $black !default;
+$pagination-dark-focus-color:               color-contrast($pagination-dark-focus-bg) !default;
+
+$pagination-dark-active-bg:                 $white !default;
+$pagination-dark-active-color:              color-contrast($pagination-dark-active-bg) !default;
+$pagination-dark-active-border-color:       $white !default;
+
+$pagination-dark-active-item-bg:            $brand-orange !default;
+$pagination-dark-active-item-color:         color-contrast($pagination-dark-active-item-bg) !default;
+$pagination-dark-active-item-border-color:  $brand-orange !default;
+
+$pagination-dark-disabled-bg:               $black !default;
+$pagination-dark-disabled-color:            $gray-700 !default;
+$pagination-dark-disabled-border-color:     $gray-700 !default;
+// End mod
+// scss-docs-end pagination-dark-variables
 
 
 // Placeholders
@@ -1806,6 +1835,7 @@ $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         $spacer * .5 !default;
 $breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-color:                  $black !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
@@ -1813,6 +1843,13 @@ $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://w
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
+
+// scss-docs-start breadcrumb-dark-variables
+$breadcrumb-dark-color:             $white !default; // Boosted mod
+$breadcrumb-dark-bg:                null !default; // Boosted mod
+$breadcrumb-dark-divider-color:     $black !default; // Boosted mod: since the divider is inverted for SVG reasons
+$breadcrumb-dark-active-color:      null !default; // Boosted mod
+// scss-docs-end breadcrumb-dark-variables
 
 
 // Carousel
@@ -1989,10 +2026,19 @@ $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, $border-widt
 $step-link-width:             1.25ch !default; // Matches width of a single number
 $step-link-color:             $white !default;
 $step-link-active-color:      $black !default;
+$step-link-next-color:        $black !default;
 $step-link-line-height:       $line-height-sm !default;
 $step-link-marker:            counter(var(--bs-stepped-process-counter)) inspect("\A0") !default;
 $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect(".\A0") !default;
 $step-link-text-decoration:   $link-decoration !default;
+
+$step-item-dark-bg:           $white !default;
+$step-item-dark-active-bg:    $brand-orange !default;
+$step-item-dark-next-bg:      $gray-700 !default;
+$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(-$step-item-shadow-size 0 0 $black) #{"*/"} !default;
+$step-link-dark-color:        $black !default;
+$step-link-dark-active-color: $black !default;
+$step-link-dark-next-color:   $white !default;
 // scss-docs-end stepped-process
 
 //// Sticker
