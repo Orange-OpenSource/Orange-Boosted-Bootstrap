@@ -118,6 +118,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 * Nested lists have no bottom margin
   * This way they have a more even appearance
   * Particularly when followed by more list items
+    * Even with a third level list
 * The left padding has also been reset
 
 1. Here's an ordered list

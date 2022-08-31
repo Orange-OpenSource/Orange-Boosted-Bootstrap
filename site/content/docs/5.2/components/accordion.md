@@ -198,7 +198,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 </div>
 {{< /example >}}
 
-### Dark variant
+## Dark variant
 
 {{< added-in "5.2.0" >}}
 
