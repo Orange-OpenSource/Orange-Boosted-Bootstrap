@@ -773,7 +773,11 @@ $dt-font-weight:              $font-weight-bold !default;
 $list-inline-padding:         $spacer * .25 !default;
 
 $mark-padding:                0 .1875em !default; // Boosted mod
-$mark-bg:                     $primary !default;
+$mark-color:                  $white !default; // Boosted mod
+$mark-bg:                     $black !default; // Boosted mod
+
+$mark-color-dark:             $black !default; // Boosted mod
+$mark-bg-dark:                $white !default; // Boosted mod
 // scss-docs-end type-variables
 // End mod
 
