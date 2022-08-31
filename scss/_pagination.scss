@@ -21,6 +21,7 @@
   --#{$prefix}pagination-active-color: #{$pagination-active-color};
   --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
   --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
+  --#{$prefix}pagination-active-item-color: #{$pagination-active-item-color}; // Boosted mod
   --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // Boosted mod
   --#{$prefix}pagination-active-item-border-color: #{$pagination-active-item-border}; // Boosted mod
   --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
@@ -82,7 +83,7 @@
   // Boosted mod
   &:active,
   &:active > & {
-    color: color-contrast($pagination-active-item-bg);
+    color: var(--#{$prefix}pagination-active-item-color);
     background-color: var(--#{$prefix}pagination-active-item-bg);
     border-color: var(--#{$prefix}pagination-active-item-border-color);
     outline-color: var(--#{$prefix}pagination-active-item-border-color);
@@ -148,7 +149,7 @@
     }
 
     &:active {
-      color: color-contrast($pagination-active-item-bg);
+      color: var(--#{$prefix}pagination-active-item-color);
       background-color: var(--#{$prefix}pagination-active-item-bg);
       border-color: var(--#{$prefix}pagination-active-item-border-color);
       outline-color: var(--#{$prefix}pagination-active-item-border-color);
@@ -206,3 +207,27 @@
 //
 
 // Boosted mod: no pagination sizes
+
+// Boosted mod: dark variant
+.pagination-dark {
+  // scss-docs-start pagination-dark-css-vars
+  --#{$prefix}pagination-color: #{$pagination-dark-color};
+  --#{$prefix}pagination-bg: #{$pagination-dark-bg};
+  --#{$prefix}pagination-border-color: #{$pagination-dark-border-color};
+  --#{$prefix}pagination-hover-color: #{$pagination-dark-hover-color};
+  --#{$prefix}pagination-hover-bg: #{$pagination-dark-hover-bg};
+  --#{$prefix}pagination-hover-border-color: #{$pagination-dark-hover-border-color};
+  --#{$prefix}pagination-focus-color: #{$pagination-dark-focus-color};
+  --#{$prefix}pagination-focus-bg: #{$pagination-dark-focus-bg};
+  --#{$prefix}pagination-active-color: #{$pagination-dark-active-color};
+  --#{$prefix}pagination-active-bg: #{$pagination-dark-active-bg};
+  --#{$prefix}pagination-active-border-color: #{$pagination-dark-active-border-color};
+  --#{$prefix}pagination-active-item-color: #{$pagination-dark-active-item-color};
+  --#{$prefix}pagination-active-item-bg: #{$pagination-dark-active-item-bg};
+  --#{$prefix}pagination-active-item-border-color: #{$pagination-dark-active-item-border-color};
+  --#{$prefix}pagination-disabled-color: #{$pagination-dark-disabled-color};
+  --#{$prefix}pagination-disabled-bg: #{$pagination-dark-disabled-bg};
+  --#{$prefix}pagination-disabled-border-color: #{$pagination-dark-disabled-border-color};
+  // scss-docs-end pagination-dark-css-vars
+}
+// End mod
