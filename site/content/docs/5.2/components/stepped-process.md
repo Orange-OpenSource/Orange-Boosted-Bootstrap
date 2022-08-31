@@ -41,6 +41,8 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 
 ## Dark variant
 
+{{< added-in "5.2.1" >}}
+
 Stepped process comes with a dark variant: `.stepped-process-dark`.
 
 {{< example class="bg-dark" >}}

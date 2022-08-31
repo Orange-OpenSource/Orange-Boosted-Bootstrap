@@ -144,6 +144,8 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 
 ## Dark variant
 
+{{< added-in "5.2.1" >}}
+
 Add `.pagination-dark` to the `.pagination` for a dark variant.
 
 {{< example class="bg-dark" >}}
