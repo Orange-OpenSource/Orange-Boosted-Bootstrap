@@ -33,7 +33,7 @@ Change the default `.btn-close` to be white with the `.btn-close-white` class.
 
 ## Without specific class
 
-Close buttons can also be created without `.btn-close` in Boosted.
+Close buttons can also be created without `.btn-close`.
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline">
