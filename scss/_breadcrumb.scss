@@ -52,10 +52,10 @@
 // Boosted mod
 .breadcrumb-dark {
   // scss-docs-start breadcrumb-dark-css-vars
-  --#{$prefix}breadcrumb-color: #{$breadcrumb-dark-color};
-  --#{$prefix}breadcrumb-bg: #{$breadcrumb-dark-bg};
-  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-dark-divider-color};
-  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-dark-active-color};
+  --#{$prefix}breadcrumb-color: #{$breadcrumb-dark-color}; // Boosted mod
+  --#{$prefix}breadcrumb-bg: #{$breadcrumb-dark-bg}; // Boosted mod
+  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-dark-divider-color}; // Boosted mod
+  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-dark-active-color}; // Boosted mod
   // scss-docs-end breadcrumb-dark-css-vars
 
   .breadcrumb-item::before {
