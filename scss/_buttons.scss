@@ -55,7 +55,6 @@
     color: var(--#{$prefix}btn-hover-color);
     @include gradient-bg(var(--#{$prefix}btn-hover-bg));
     border-color: var(--#{$prefix}btn-hover-border-color);
-    // Boosted mod: no `outline` rule
     outline-color: var(--#{$prefix}btn-hover-border-color); // Boosted mod
     outline-offset: $outline-width; // Boosted mod
     &[data-focus-visible-added] { // Boosted mod: added `&[data-focus-visible-added]`
@@ -69,6 +68,7 @@
   }
 
   // Boosted mod: custom styles for .btn-check
+
   &:active,
   &.active,
   &.show {
