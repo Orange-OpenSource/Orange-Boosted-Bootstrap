@@ -88,6 +88,6 @@ Variables for all stepped processes:
 
 {{< scss-docs name="stepped-process" file="scss/_variables.scss" >}}
 
-Variables for the [dark stepped process](#dark-variant)
+Variables for the [dark stepped process](#dark-variant):
 
 {{< scss-docs name="stepped-process-dark-variables" file="scss/_variables.scss" >}}
