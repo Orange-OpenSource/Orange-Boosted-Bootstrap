@@ -50,7 +50,7 @@
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
 
-  // Boosted mod: custom styles for .btn-check
+  // Boosted mod: no custom styles for .btn-check (.btn-check:focus + &,)
   &:focus {
     color: var(--#{$prefix}btn-hover-color);
     @include gradient-bg(var(--#{$prefix}btn-hover-bg));
@@ -67,8 +67,9 @@
     }
   }
 
-  // Boosted mod: custom styles for .btn-check
+  // Boosted mod: no :focus:not(:focus-visible) rule to remove the outline
 
+  // Boosted mod: no custom styles for .btn-check (.btn-check:checked + &, .btn-check:active + &,)
   &:active,
   &.active,
   &.show {
