@@ -202,7 +202,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 
 {{< added-in "5.2.0" >}}
 
-Add `.accordion-dark`to the `.accordion` for a dark variant.
+Add `.accordion-dark` to the `.accordion` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <div class="accordion accordion-dark" id="accordionPanelsDarkExample">
