@@ -129,7 +129,7 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 {{< added-in "5.2.0" >}}
 
-Add `.btn-inverse` to a `<button>` or `<a>` for a dark variant.
+Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< example class="bg-dark" >}}
 {{< buttons.inline >}}
