@@ -409,9 +409,9 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 </form>
 {{< /example >}}
 
-### Dark background
+### Dark variant
 
-Star ratings come with a dark background variant: `.star-rating-dark`.
+Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <form>
