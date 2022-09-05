@@ -43,18 +43,19 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  &:hover {
+  :not(.btn-check) + &:hover,
+  &:first-child:hover {
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
 
-  // Boosted mod: no custom styles for .btn-check (.btn-check:focus + &,)
-  &:focus {
+  &:focus-visible {
     color: var(--#{$prefix}btn-hover-color);
     @include gradient-bg(var(--#{$prefix}btn-hover-bg));
     border-color: var(--#{$prefix}btn-hover-border-color);
+    // Boosted mod: no outline: 0;
     outline-color: var(--#{$prefix}btn-hover-border-color); // Boosted mod
     outline-offset: $outline-width; // Boosted mod
     &[data-focus-visible-added] { // Boosted mod: added `&[data-focus-visible-added]`
@@ -67,10 +68,11 @@
     }
   }
 
-  // Boosted mod: no :focus:not(:focus-visible) rule to remove the outline
+  // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
 
   // Boosted mod: no custom styles for .btn-check (.btn-check:checked + &, .btn-check:active + &,)
-  &:active,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
   &.active,
   &.show {
     color: var(--#{$prefix}btn-active-color);
@@ -200,12 +202,12 @@
   text-decoration: $link-decoration;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     text-decoration: $link-hover-decoration;
   }
 
   // Boosted mod
-  &:focus {
+  &:focus-visible {
     &:not(:hover) {
       color: var(--#{$prefix}btn-color);
       outline-color: var(--#{$prefix}btn-color);
