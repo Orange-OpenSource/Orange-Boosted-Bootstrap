@@ -10,18 +10,15 @@
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
+  outline: 0;
 
   &:focus {
     // Boosted mod: better focus visibility
-    // Pseudo-elements must be split across multiple rulesets to have an effect.
-    // No box-shadow() mixin for focus accessibility.
     &::-webkit-slider-thumb {
-      border-color: $form-range-thumb-active-border;
-      box-shadow: $form-range-thumb-focus-box-shadow;
+      @include focus-visible();
     }
     &::-moz-range-thumb {
-      border-color: $form-range-thumb-active-border;
-      box-shadow: $form-range-thumb-focus-box-shadow;
+      @include focus-visible();
     }
     // End mod
   }

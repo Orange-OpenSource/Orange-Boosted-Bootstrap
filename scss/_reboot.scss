@@ -90,7 +90,7 @@ body {
 //    See https://github.com/WICG/focus-visible
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
-:focus {
+:not([type="range"]):focus {
   @include focus-visible(); // 1
 }
 
