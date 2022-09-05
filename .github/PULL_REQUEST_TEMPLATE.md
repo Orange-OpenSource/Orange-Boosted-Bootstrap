@@ -1,3 +1,7 @@
+### Related issues
+
+<!-- Please link any related issues here. -->
+
 ### Description
 
 <!-- Describe your changes in detail -->
@@ -6,14 +10,21 @@
 
 <!-- Why is this change required? What problem does it solve? -->
 
-### Types of changes
+### Types of change
 
-<!-- What types of changes does your code introduce? Put an `x` in all the boxes that apply. -->
+<!-- What types of changes does you code introduce? -->
+<!-- Please remove the unused items in the list -->
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Refactoring (non-breaking change)
-- [ ] Breaking change (fix or feature that would change existing functionality)
+- Bug fix (non-breaking which fixes an issues)
+- New feature (non-breaking change which adds functionality)
+- Refactoring (non-breaking change)
+- Breaking change (fix or feature that would change existing functionality)
+
+### Live previews
+
+<!-- Please add direct links where your modifications can be seen in the documentation -->
+
+* https://deploy-preview-{your pr number}--twbs-bootstrap.netlify.app/
 
 ### Checklist
 
@@ -27,8 +38,12 @@
 - [ ] I have added tests to cover my changes
 - [ ] All new and existing tests passed
 
+<!------------------------->
+<!-- /!\ Core Team Only -->
+<!------------------------->
 
-<!-- /!\ Core Team only: Uncomment the following for a feature DoD -->
+<!-- Uncomment the following for a feature DoD -->
+
 <!--
 ### Development
 
@@ -48,10 +63,13 @@
 - [ ] Manually run BrowserStack test
 - [ ] Manually run Percy test
 - [ ] Cross-browser test:
-  - Firefox ESR
-  - Latest Edge, Chrome, Firefox, Safari
-  - iOS Safari
-  - Chrome & Firefox on Android
+  - [ ] Chrome
+  - [ ] Firefox (including ESR)
+  - [ ] Edge
+  - [ ] Safari
+  - [ ] iOS Safari
+  - [ ] Chrome & Firefox on Android
+- [ ] Responsive tests: desktop and small screens
 - [ ] Clean up the branch using `rebase -i`
 - [ ] Commited with `feat(…): …` message
 - [ ] Mention it in Migration Guide (if `back-from-v4`): renamed variables, changes in markup requirement,  etc.
@@ -63,7 +81,10 @@
 - [ ] Design review
 -->
 
-<!-- /!\ Core Team only: Uncomment the following for a release DoD -->
+
+
+<!-- Uncomment the following for a release DoD -->
+
 <!--
 - [ ] Run linters;
 - [ ] Run compilers;
@@ -122,9 +143,3 @@
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurences
 - [ ] make an announcement in Plazza :tada:
 -->
-
-### Related issues
-
-<!-- Please link any related issues here. -->
-
-### [Live preview](https://deploy-preview-{your pr number}--boosted.netlify.app/)
