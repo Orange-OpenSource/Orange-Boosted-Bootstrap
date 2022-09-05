@@ -22,7 +22,7 @@ Boosted includes six default breakpoints, sometimes referred to as _grid tiers_,
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra small | <em>None</em>  |&lt;480px |
+| Extra small | <em>None</em> |&lt;480px |
 | Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;768px |
 | Large | `lg` | &ge;1024px |
