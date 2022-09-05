@@ -200,6 +200,9 @@
   // Boosted mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
 
   text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
 
   &:hover,
   &:focus-visible {
