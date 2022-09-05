@@ -13,14 +13,16 @@
   outline: 0;
 
   &:focus {
-    // Boosted mod: better focus visibility
-    &::-webkit-slider-thumb {
-      @include focus-visible();
+    &[data-focus-visible-added] {
+      // Boosted mod: better focus visibility
+      &::-webkit-slider-thumb {
+        @include focus-visible();
+      }
+      &::-moz-range-thumb {
+        @include focus-visible();
+      }
+      // End mod
     }
-    &::-moz-range-thumb {
-      @include focus-visible();
-    }
-    // End mod
   }
 
   &::-moz-focus-outer {
