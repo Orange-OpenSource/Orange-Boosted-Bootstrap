@@ -75,7 +75,7 @@
 
   &:focus {
     z-index: 3;
-    outline-offset: calc(var(--#{$prefix}accordion-border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+    outline-offset: calc(-1 * var(--#{$prefix}accordion-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 
