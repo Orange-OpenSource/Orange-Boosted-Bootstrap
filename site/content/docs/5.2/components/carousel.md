@@ -183,34 +183,6 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 </div>
 {{< /example >}}
 
-### Disable touch swiping
-
-Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute so it doesn't autoplay.
-
-{{< example >}}
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-{{< /example >}}
-
 ### Crossfade
 
 Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide. Depending on your carousel content (e.g., text only slides), you may want to add `.bg-body` or some custom CSS to the `.carousel-item`s for proper crossfading.
@@ -268,6 +240,34 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{{< /example >}}
+
+### Disable touch swiping
+
+Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute so it doesn't autoplay.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -386,8 +386,8 @@ const carousel = new boosted.Carousel('#myCarousel')
 | `interval` | number | `5000` | The amount of time to delay between automatically cycling an item. |
 | `keyboard` | boolean | `true` | Whether the carousel should react to keyboard events. |
 | `pause` | string, boolean | `"hover"` | If set to `"hover"`, pauses the cycling of the carousel on `mouseenter` and resumes the cycling of the carousel on `mouseleave`. If set to `false`, hovering over the carousel won't pause it. On touch-enabled devices, when set to `"hover"`, cycling will pause on `touchend` (once the user finished interacting with the carousel) for two intervals, before automatically resuming. This is in addition to the mouse behavior. |
-| `pause-text` | string | `"Pause Carousel"` | Text needed for accessibility attributes of the pause button. If empty or missing, the default text will be `"Pause Carousel"`|
-| `play-text` | string | `"Play Carousel"` | Text needed for accessibility attributes of the play button. If empty or missing, the default text will be `"Play Carousel"`|
+| `pause-text` | string | `"Pause Carousel"` | Text needed for accessibility attributes of the pause button. If empty or missing, the default text will be `"Pause Carousel"`. |
+| `play-text` | string | `"Play Carousel"` | Text needed for accessibility attributes of the play button. If empty or missing, the default text will be `"Play Carousel"`. |
 | `ride` | string, boolean | `false` | If set to `true`, autoplays the carousel after the user manually cycles the first item. If set to `"carousel"`, autoplays the carousel on load. |
 | `touch` | boolean | `true` | Whether the carousel should support left/right swipe interactions on touchscreen devices. |
 | `wrap` | boolean | `true` | Whether the carousel should cycle continuously or have hard stops. |
@@ -414,10 +414,10 @@ const carousel = new boosted.Carousel(myCarouselElement, {
 | --- | --- |
 | `cycle` | Cycles through the carousel items from left to right. |
 | `dispose` | Destroys an element's carousel. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the carousel instance associated to a DOM element, you can use it like this: `boosted.Carousel.getInstance(element)` |
-| `getOrCreateInstance` | Static method which returns a carousel instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Carousel.getOrCreateInstance(element)` |
+| `getInstance` | Static method which allows you to get the carousel instance associated to a DOM element, you can use it like this: `boosted.Carousel.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a carousel instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Carousel.getOrCreateInstance(element)`. |
 | `next` | Cycles to the next item. **Returns to the caller before the next item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |
-| `nextWhenVisible` | Don't cycle carousel to next when the page isn't visible or the carousel or its parent isn't visible. **Returns to the caller before the target item has been shown** |
+| `nextWhenVisible` | Don't cycle carousel to next when the page isn't visible or the carousel or its parent isn't visible. **Returns to the caller before the target item has been shown**. |
 | `pause` | Stops the carousel from cycling through items. |
 | `prev` | Cycles to the previous item. **Returns to the caller before the previous item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |
 | `to` | Cycles the carousel to a particular frame (0 based, similar to an array). **Returns to the caller before the target item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |

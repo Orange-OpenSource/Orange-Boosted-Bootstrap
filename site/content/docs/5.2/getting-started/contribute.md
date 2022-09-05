@@ -28,7 +28,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 | --- | --- |
 | `npm start` | Compiles CSS and JavaScript, builds the documentation, and starts a local server. |
 | `npm run dist` | Creates the `dist/` directory with compiled files. Uses [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), and [terser](https://github.com/terser/terser). |
-| `npm test` | Runs tests locally after running `npm run dist` |
+| `npm test` | Runs tests locally after running `npm run dist`. |
 | `npm run docs-serve` | Builds and runs the documentation locally. |
 {{< /bs-table >}}
 
