@@ -43,8 +43,7 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  :not(.btn-check) + &:hover,
-  &:first-child:hover {
+  &:hover { // Boosted mod: simpler rule
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
@@ -70,9 +69,8 @@
 
   // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
 
-  // Boosted mod: no custom styles for .btn-check (.btn-check:checked + &, .btn-check:active + &,)
-  :not(.btn-check) + &:active,
-  &:first-child:active,
+  // Boosted mod: simpler rule
+  &:active,
   &.active,
   &.show {
     color: var(--#{$prefix}btn-active-color);
