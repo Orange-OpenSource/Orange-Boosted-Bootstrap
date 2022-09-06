@@ -133,9 +133,9 @@
 
   .btn-close {
     // Boosted mod: no extra padding rule
-    margin-top: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
-    margin-right: calc(var(--#{$prefix}offcanvas-padding-x) * -.5);
-    margin-bottom: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
+    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
+    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
   }
 }
 
