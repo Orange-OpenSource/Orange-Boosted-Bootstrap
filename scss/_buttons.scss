@@ -50,7 +50,7 @@
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
 
-  &:focus-visible {
+  &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
     color: var(--#{$prefix}btn-hover-color);
     @include gradient-bg(var(--#{$prefix}btn-hover-bg));
     border-color: var(--#{$prefix}btn-hover-border-color);
