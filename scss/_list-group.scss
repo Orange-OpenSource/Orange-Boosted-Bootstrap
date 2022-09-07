@@ -112,8 +112,10 @@
   }
 
   &:focus-within {
+    &[data-focus-visible-added] {
     @include focus-visible();
     outline-offset: -$outline-offset;
+    }
   }
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
