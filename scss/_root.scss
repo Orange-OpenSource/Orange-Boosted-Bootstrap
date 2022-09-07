@@ -82,15 +82,15 @@
 // Boosted mod
 [class*="-dark"],
 .bg-secondary {
-  --#{$prefix}link-color: #{$link-color-dark};
-  --#{$prefix}link-hover-color: #{$link-hover-color-dark};
-  --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
-  --#{$prefix}code-color: #{$code-color-dark};
-  --#{$prefix}highlight-color: #{$mark-color-dark};
-  --#{$prefix}highlight-bg: #{$mark-bg-dark};
-  --#{$boosted-prefix}kbd-color: #{$kbd-color-dark};
-  --#{$boosted-prefix}kbd-bg: #{$kbd-bg-dark};
-  --#{$boosted-prefix}pre-color: #{$pre-color-dark};
+  --#{$prefix}link-color: #{$link-dark-color};
+  --#{$prefix}link-hover-color: #{$link-hover-dark-color};
+  --#{$boosted-prefix}caption-color: #{$table-caption-dark-color};
+  --#{$prefix}code-color: #{$code-dark-color};
+  --#{$prefix}highlight-color: #{$mark-dark-color};
+  --#{$prefix}highlight-bg: #{$mark-dark-bg};
+  --#{$boosted-prefix}kbd-color: #{$kbd-dark-color};
+  --#{$boosted-prefix}kbd-bg: #{$kbd-dark-bg};
+  --#{$boosted-prefix}pre-color: #{$pre-dark-color};
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {

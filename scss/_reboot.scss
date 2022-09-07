@@ -309,6 +309,7 @@ small {
 
 mark {
   padding: $mark-padding;
+  font-weight: $mark-font-weight; // Boosted mod
   color: var(--#{$prefix}highlight-color); // Boosted mod
   background-color: var(--#{$prefix}highlight-bg);
 }
