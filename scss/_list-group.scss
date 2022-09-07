@@ -111,6 +111,11 @@
     border-color: var(--#{$prefix}list-group-active-border-color);
   }
 
+  &:focus-within {
+    @include focus-visible();
+    outline-offset: -$outline-offset;
+  }
+
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   & + .list-group-item {
     border-top-width: 0;
