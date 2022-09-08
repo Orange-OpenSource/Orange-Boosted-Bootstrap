@@ -74,7 +74,7 @@
 
   .nav-link {
     padding: subtract(1rem, var(--#{$prefix}nav-tabs-border-width)) subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)); // Boosted mod
-    margin-bottom: calc(var(--#{$prefix}nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
+    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     background: none;
     border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
     border-bottom-width: 0; // Boosted mod
@@ -109,7 +109,7 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    margin-top: calc(var(--#{$prefix}nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
   }

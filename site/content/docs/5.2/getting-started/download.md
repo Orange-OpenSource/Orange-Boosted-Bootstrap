@@ -74,7 +74,7 @@ The `boosted` module itself exports all of our plugins. You can manually load Bo
 Boosted's `package.json` contains some additional metadata under the following keys:
 
 - `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
-- `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
+- `style` - path to Boosted's non-minified CSS that's been compiled using the default settings (no customization)
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}

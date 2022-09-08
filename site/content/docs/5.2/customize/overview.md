@@ -53,4 +53,4 @@ Several Boosted components include embedded SVGs in our CSS to style components 
 - [Quantity selector buttons]({{< docsref "/forms/quantity-selector" >}}) <!-- Boosted mod -->
 - [Select menus]({{< docsref "/forms/select" >}})
 
-Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include replacing the URLs with locally hosted assets, removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.
+Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include [replacing the URLs with locally hosted assets]({{< docsref "/getting-started/webpack#extracting-svg-files" >}}), removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.
