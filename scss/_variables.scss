@@ -1514,9 +1514,7 @@ $accordion-body-padding-x:                $spacer !default; // Boosted mod
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-// fusv-disable
-$accordion-button-color:                  $accordion-color !default; // Deprecated in Boosted 5.2.0 for CSS variables
-// fusv-enable
+$accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
