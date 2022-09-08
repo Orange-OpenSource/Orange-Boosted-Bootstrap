@@ -4,7 +4,7 @@
 
 .accordion {
   // scss-docs-start accordion-css-vars
-  --#{$prefix}accordion-color: #{color-contrast($accordion-bg)};
+  --#{$prefix}accordion-color: #{$accordion-color};
   --#{$prefix}accordion-bg: #{$accordion-bg};
   --#{$prefix}accordion-transition: #{$accordion-transition};
   --#{$prefix}accordion-border-color: #{$accordion-border-color};
@@ -75,7 +75,7 @@
 
   &:focus {
     z-index: 3;
-    outline-offset: calc(var(--#{$prefix}accordion-border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+    outline-offset: calc(-1 * var(--#{$prefix}accordion-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 
@@ -121,6 +121,8 @@
 .accordion-body {
   padding: 0 var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y) 0; // Boosted mod
 }
+
+// Boosted mod: no Flush accordion items
 
 //
 // Boosted mod:

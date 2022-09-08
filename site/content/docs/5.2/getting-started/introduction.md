@@ -81,7 +81,7 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
 
-- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) and the list of [components that require JavaScript](#js-components) below.
+- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
 
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
 
