@@ -368,6 +368,7 @@ $add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
 $play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
 $pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
+$helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#{$info}' d='M10 1.5a8.5 8.5 0 1 0 .001 17.001A8.5 8.5 0 0 0 10 1.5zm.616 13.613a1.086 1.086 0 0 1-.741.285c-.28.004-.55-.097-.76-.282-.216-.187-.324-.45-.324-.787 0-.3.105-.552.314-.756.209-.204.465-.306.77-.306.3 0 .551.102.755.306.205.204.307.456.307.756 0 .332-.107.594-.321.784zm2.662-6.601c-.153.29-.35.556-.584.787-.226.221-.63.593-1.216 1.116a4.911 4.911 0 0 0-.388.389 1.6 1.6 0 0 0-.217.306 1.476 1.476 0 0 0-.11.278c-.027.093-.066.256-.119.488-.09.495-.372.742-.848.742a.867.867 0 0 1-.624-.243c-.168-.161-.253-.401-.253-.72 0-.399.062-.745.186-1.037.117-.283.284-.544.492-.77.204-.22.48-.483.827-.788.304-.266.523-.466.659-.602a2.02 2.02 0 0 0 .342-.453c.093-.165.14-.352.14-.541 0-.38-.142-.701-.425-.963-.283-.261-.648-.392-1.094-.392-.523 0-.908.132-1.155.396s-.456.652-.627 1.165c-.162.537-.469.806-.92.806a.906.906 0 0 1-.674-.282c-.183-.187-.274-.39-.274-.609 0-.451.145-.909.435-1.372.29-.464.713-.847 1.269-1.151.556-.305 1.204-.457 1.946-.457.689 0 1.297.127 1.825.382.527.254.934.6 1.222 1.037.288.437.431.912.431 1.426 0 .404-.082.758-.246 1.062z'/></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (
@@ -959,8 +960,13 @@ $form-label-font-weight:                $font-weight-bold !default;
 $form-label-color:                      null !default;
 $form-label-disabled-color:             $gray-500 !default; // Boosted mod
 $form-label-required-margin-left:       .1875rem !default; // Boosted mod
-$form-label-tooltip-margin-bottom:      .1875rem !default; // Boosted mod
 // scss-docs-end form-label-variables
+
+// scss-docs-start form-helper-variables
+$form-helper-size:                      1.125rem !default; // Boosted mod
+$form-label-helper-margin-bottom:       .3125rem !default; // Boosted mod
+$form-label-helper-margin-left:         .125rem !default; // Boosted mod
+// scss-docs-end form-helper-variables
 
 // scss-docs-start form-input-variables
 $input-padding-y:                       $input-btn-padding-y !default;
