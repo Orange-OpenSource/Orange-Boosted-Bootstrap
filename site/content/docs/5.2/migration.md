@@ -9,6 +9,127 @@ aliases:
 toc: true
 ---
 
+## v5.2.1
+
+<hr class="mb-4">
+
+### Components
+
+<!--* fix(back to top): remove 'Label inside' variant (#1520) -->
+- <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
+
+<!--
+  * <mark>/.mark: Improve rendering for accessibility (#1506)
+  * chore(workflows): replace percy/snapshot-action by Percy CLI (#1530)
+  * chore: add a PR template (#1007) 
+  * feat(list group): add dark variant (#1525)
+  * fix(css): add workaround for postcss value parser error (#1524) 
+    - Note: linked to previous chore(merge) from Bootstrap. Just forgot to fix this one
+  * chore(merge main patched commit) → 23fb7a7 (#1521)
+    - https://github.com/twbs/bootstrap/commit/97a9060a8fa643484fbe70d1e527267841670c9d
+    - https://github.com/twbs/bootstrap/commit/9b943880fc38ccde372973111fe5872b5960e75d
+    - https://github.com/twbs/bootstrap/commit/7a7469b8ab3e86dc522d3cf030b307364b1ada0b
+    - https://github.com/twbs/bootstrap/commit/949456984aa21536afd35eddf7ea38b3648830a3
+    - https://github.com/twbs/bootstrap/commit/23fb7a79156d1ea4ce2ab5713debbbc251b4e22f
+  * chore(merge main) patched commit → 2504b89 (#1513)
+    - https://github.com/twbs/bootstrap/commit/a329575d82a65660ffa7b18cbd9f291e0ee7eef5
+    - https://github.com/twbs/bootstrap/commit/585146a6a7aa70faf25442d7d28636ce57e29588
+    - https://github.com/twbs/bootstrap/commit/75e09b1c0f5ae5f51078c7a25fe36d892c5cfcfe
+    - https://github.com/twbs/bootstrap/commit/b8880e5eec6bb4f33578578ba2413f0d91424382
+    - https://github.com/twbs/bootstrap/commit/32c457db4b6ff389efbd35772b24746c7ffb0b6d
+    - https://github.com/twbs/bootstrap/commit/2504b8995095d2bb41c9686afa175f9eaa91bec2
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+  * fix(docs): change responsive values in utility API examples (#1488) 
+  * chore(merge main) patched commit → 337068f (#1510)
+    - https://github.com/twbs/bootstrap/commit/3ad8551f8b736be024a533aa281a89995258021f
+    - https://github.com/twbs/bootstrap/commit/77e17e3b8deb4d5467203f4e3cd903b7cd06bde4
+    - https://github.com/twbs/bootstrap/commit/b5f2d5a31e24455447939c3a7487a4fe89a66ba6
+    - https://github.com/twbs/bootstrap/commit/4f97d8fabda142685e36391da2c37c7e09955ac6
+    - https://github.com/twbs/bootstrap/commit/279363783759323c988d227145d5f6bc6c683efd
+    - https://github.com/twbs/bootstrap/commit/8c380b2676eb5eb76716b94763ef21e98c86b9b7
+    - https://github.com/twbs/bootstrap/commit/54b4b2c66a6f0f403a8120a0c7720f29aaa71f7c
+    - https://github.com/twbs/bootstrap/commit/337068f8b1044004f4b9abfffbb433694ae87993
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+  * chore(merge main) patched commit → 3ad8551 (#1507)
+    - ~~https://github.com/twbs/bootstrap/commit/af1bd974bba7f6e7f90c5ed3f42738bd101926cb~~ - Was already done via Dependabot
+    - https://github.com/twbs/bootstrap/commit/29332a954f86671d39f60007fb0c2ea633731e88
+    - https://github.com/twbs/bootstrap/commit/15318674fb086214e095c61af780a7d889f0f11e
+    - https://github.com/twbs/bootstrap/commit/995df354f260ccf46672e4dc9e7b2c242bd4c02d
+    - https://github.com/twbs/bootstrap/commit/4cea8b1786ddbe365747cabebe9bee44d70a3b6d
+    - https://github.com/twbs/bootstrap/commit/a0238d126b385044bd7cb16bdc9118f3d44e016f
+    - https://github.com/twbs/bootstrap/commit/465cc2da4f028c36f6b1dc7887776af0db4f9176
+    - https://github.com/twbs/bootstrap/commit/bc2ec7c7583bed6f51571501739c9e7d57e3ba2f
+    - https://github.com/twbs/bootstrap/commit/a138bc3fb9ff3495a8d63d776e0ad21ed2aaa1ca
+    - ~~https://github.com/twbs/bootstrap/commit/ebbed79df7bb4735894f31bc558377a531c93710~~ Probably nothing to do. Linked to https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1508
+    - https://github.com/twbs/bootstrap/commit/2f3aec819ae7bd04c00cc55fee977d12e11a46c6
+    - https://github.com/twbs/bootstrap/commit/87aaf9499620c9a7b592711a6e8d86e9a30467b6
+    - https://github.com/twbs/bootstrap/commit/cda901f2444d6b09cfa3261c84ef98288e3b9834
+    - https://github.com/twbs/bootstrap/commit/db3490788775ac88cc8dcc32f9b8bcd66f95859e
+    - https://github.com/twbs/bootstrap/commit/a12453a0ffe38af0e273e559ec4ced396d39feba
+    - https://github.com/twbs/bootstrap/commit/3ad8551f8b736be024a533aa281a89995258021f
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+  * fix(docs): reorder Carousel doc parts (#1491) 
+  * feat(breadcrumb): add dark variant (#1430) 
+  * feat(pagination): add dark variant (#1433)
+  * fix(dropdowns): add and trim CSS vars (#1423)
+  * fix(docs): fix Orange Helvetica CSS file name in docs (#1487)
+  * chore(deps): update package-lock.json (#1503)
+  * feat(stepped process): add dark variant (#1434)
+  * fix(docs): move 'Dark variant' sections out of 'Example' for alerts and accordions (#1502)
+  * docs(search): enhance Algolia search results for a11y (#1432) 
+  * chore(deps-dev): bump @rollup/plugin-commonjs from 22.0.1 to 22.0.2 (#1474)
+  * fix(cards): refine rendering of cards with image overlays (#1493) 
+  * fix(docs): add missing points and Markdown formatting in some tables (#1499)
+  * docs(content): show a third-level list (#1497) 
+  * fix(docs): replace 'Secondary' by 'Primary' label for some buttons when inconsistent (#1494)
+  * fix(dropdown toggle split): same width for all `.dropdown-toggle-split`s orientations (#1451)
+  * fix(css): set .mark and <mark> y padding to 0 (#1484) 
+  * fix(stepped process): improve rendering of arrow shapes (#1485)
+  * fix(docs): update values in grids/breakpoints tables (#1440) 
+  * fix(modal): remove unused CSS variables (#1418) 
+  * fix(pagination): remove CSS variables (#1457) 
+  * fix(alerts): increase height when additional content (#1425) 
+  * chore(deps): bump actions/cache from 3.0.5 to 3.0.8 (#1473)
+  * fix(docs): remove navbar box shadow version selector overlap [#1438](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1438)
+  * chore(merge main) patched commit → c3c6591 [#1469](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469)
+    - https://github.com/twbs/bootstrap/commit/dfae892801ffc194de6aec34d543d908db3dd8e1
+    - ~~https://github.com/twbs/bootstrap/commit/3feaf6ca0b0c6b6e134a8937ca132d43ed949a68~~ - Nothing to do in Boosted. We want to keep the search icon as it is contrary to what's done in Bootstrap
+    - ~~https://github.com/twbs/bootstrap/commit/90c50ab198a4ecffdda6a5ff10fe58cab2c816b2~~ - Nothing to do in Boosted since we don't have this modified section
+    - https://github.com/twbs/bootstrap/commit/db86607c088bd307aa21f4b4bd0258262262a4e4
+    - ~~https://github.com/twbs/bootstrap/commit/17aa6732ab83653501e70dc88afcccead1dc0892~~ - Was already done in Boosted
+    - https://github.com/twbs/bootstrap/commit/85530309fabf6c7316e8511016d3daed1ab3aee4
+    - https://github.com/twbs/bootstrap/commit/a4f81c04b5da87b9b05ceeeee87ae235f836d4e6
+    - ~~https://github.com/twbs/bootstrap/commit/c22dd50e1b3539685c609e0e0b37ba52bb2312cf~~ - `_floating-labels.scss` doesn't exist in Boosted
+    - https://github.com/twbs/bootstrap/commit/7432f2a9224ed173d04930df3f02fd5a37e962c0
+    - https://github.com/twbs/bootstrap/commit/6c221aa043e0bd14db31fb047c57c714e92605de
+    - https://github.com/twbs/bootstrap/commit/4018fac20ebd0adeb65f6b01a13851098e94309a
+    - https://github.com/twbs/bootstrap/commit/8730ef0f8eec576a56b99ceb785da09f0c54b2ac
+    - https://github.com/twbs/bootstrap/commit/e57a94cd664aa7b819da9408053bfbdf414a78e4
+    - https://github.com/twbs/bootstrap/commit/9e57dfadac9cd924c35b7ff5b3d82981b59502de
+    - https://github.com/twbs/bootstrap/commit/aad77f32bd58175ab5c3577aed558adf8598b394
+    - https://github.com/twbs/bootstrap/commit/a685b9648bf14c853b9a417c7c68f95d93e1aabc
+    - https://github.com/twbs/bootstrap/commit/c3c65911665ab64bdaa15d405db65ee81655dbf3
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+  * feat(pagination): new --#{$prefix}pagination-padding-end CSS var [#1416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1416)
+  * fix(css): drop unused $list-group-hover-bg and `--#{$prefix}list-group-action-hover-bg` [#1417](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1417)
+  * chore(merge main) patched commit → 44c9c8d [#1421](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421)
+    - https://github.com/twbs/bootstrap/commit/04b5d099b3643e08e6f92311a89a29861ff0191a
+    - https://github.com/twbs/bootstrap/commit/d12bcf7bc0f0cb55aa98db3a03f754c5a4d9001f
+    - https://github.com/twbs/bootstrap/commit/b6d27899fc03fe9c3be87a34e9d19696fb716f44
+    - https://github.com/twbs/bootstrap/commit/7688c84b8a881f1fe131b204d16ba13246d25da5
+    - https://github.com/twbs/bootstrap/commit/e547c9c2e90549ffec84b8c2c293770c5c213e39
+    - ~~https://github.com/twbs/bootstrap/commit/99cd8ca8a0f2cb0db8276316943fdd1a2199e791~~: already done in Boosted
+    - https://github.com/twbs/bootstrap/commit/14e705d9ae700030242c9cc7191e6e6d376eda39
+    - https://github.com/twbs/bootstrap/commit/01bf7a9b86e6cffcf8f7436f8afa898a9453bd19
+    - https://github.com/twbs/bootstrap/commit/dc901d25fa663807886a9564765bae0f6fe47f8f
+    - https://github.com/twbs/bootstrap/commit/a153f360eea855f29947ac14be14e29380ddebeb
+    - https://github.com/twbs/bootstrap/commit/00aa1a5c6e04629955ee45780b86f6ce8fd48ebf
+    - https://github.com/twbs/bootstrap/commit/501faa2c966632f31b919faf3fa78e9adbe6fe5b
+    - https://github.com/twbs/bootstrap/commit/02f1c628f11122a4c2a40df6d2e1bc1fe6ec202a
+    - https://github.com/twbs/bootstrap/commit/44c9c8df8d8e5be84d5bea47f8ee110b64e86e62
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+-->
+
 ## v5.2.0
 
 <hr class="mb-4">
