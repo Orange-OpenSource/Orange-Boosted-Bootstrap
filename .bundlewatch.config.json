@@ -42,7 +42,7 @@
     },
     {
       "path": "./dist/js/boosted.esm.js",
-      "maxSize": "33 kB"
+      "maxSize": "33.25 kB"
     },
     {
       "path": "./dist/js/boosted.esm.min.js",
