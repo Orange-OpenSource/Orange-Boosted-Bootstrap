@@ -53,7 +53,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse align-items-end" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -323,7 +323,7 @@ Mix and match with other components and utilities as needed.
           <a class="nav-link" href="#">Pricing</a>
         </li>
       </ul>
-      <span class="navbar-text ms-3">
+      <span class="navbar-text">
         Navbar text with an inline element
       </span>
     </div>
@@ -465,7 +465,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse align-items-end" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-items-end" style="--bs-scroll-height: 100px;">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -484,7 +484,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
           </ul>
         </li>
       </ul>
-      <form class="d-flex navbar-item ms-3 mt-md-4" role="search">
+      <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary btn-inverse" type="submit">Search</button>
       </form>
