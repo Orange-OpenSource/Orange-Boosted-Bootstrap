@@ -14,6 +14,7 @@
 
   &:focus {
     &[data-focus-visible-added] {
+      outline: 0;
       // Boosted mod: better focus visibility
       &::-webkit-slider-thumb {
         @include focus-visible();
