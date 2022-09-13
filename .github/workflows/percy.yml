@@ -1,15 +1,15 @@
 name: Percy
-on:
-  push:
-    paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/content/docs/**/components/**'
-      - 'site/content/docs/**/forms/**'
-    branches:
-      - main
-      - v4-dev
-  workflow_dispatch:
+#on:
+  #push:
+  #  paths:
+  #    - 'js/**'
+  #    - 'scss/**'
+  #    - 'site/content/docs/**/components/**'
+  #    - 'site/content/docs/**/forms/**'
+  #  branches:
+  #    - main
+  #    - v4-dev
+  #workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
@@ -46,10 +46,11 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "_site/"
-          flags: "--snapshot-files ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
-          verbose: true
+        run: npx percy snapshot _site/ --include ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
+        # uses: percy/snapshot-action@v0.1.2
+        # with:
+          # build-directory: "_site/"
+          # flags: "--snapshot-files ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
+          # verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
