@@ -46,10 +46,6 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "_site/"
-          flags: "--snapshot-files ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
-          verbose: true
+        run: npx percy snapshot _site/ --include '/docs/**/components/**/*.html' --include '/docs/**/forms/**/*.html'
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
