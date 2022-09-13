@@ -46,7 +46,7 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-        run: npx percy snapshot _site/
+        run: npx percy snapshot _site/ --include="./docs/**/components/**/*.html"
         # run: npx percy snapshot _site/ --include ./docs/**/components/**/*.html --include ./docs/**/forms/**/*.html -v
         # uses: percy/snapshot-action@v0.1.2
         # with:
