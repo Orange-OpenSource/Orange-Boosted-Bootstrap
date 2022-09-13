@@ -231,7 +231,7 @@
   // Boosted mod
   > .tab-pane-with-nested-tab {
     display: none;
-    margin: calc(var(--#{$prefix}tab-content-padding-y) * -1) calc(var(--#{$prefix}tab-content-padding-x) * -1); // stylelint-disable-line function-disallowed-list
+    margin: calc(-1 * var(--#{$prefix}tab-content-padding-y)) calc(-1 * var(--#{$prefix}tab-content-padding-x)); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 
