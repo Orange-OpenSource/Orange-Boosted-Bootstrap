@@ -55,7 +55,7 @@
 
   &:disabled,
   &.disabled {
-    color: var(--#{$prefix}btn-close-disabled-color);
+    color: var(--#{$prefix}btn-close-disabled-color); // Boosted mod
     pointer-events: none;
     user-select: none;
   }
