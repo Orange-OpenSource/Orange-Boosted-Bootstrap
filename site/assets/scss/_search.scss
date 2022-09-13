@@ -115,6 +115,7 @@
   }
 
   mark {
+    font-weight: $font-weight-normal;
     color: var(--#{$prefix}white);
     background: var(--#{$prefix}black);
   }
