@@ -1,6 +1,6 @@
 name: Percy
-#on:
-  #push:
+on:
+  push:
   #  paths:
   #    - 'js/**'
   #    - 'scss/**'
@@ -9,7 +9,7 @@ name: Percy
   #  branches:
   #    - main
   #    - v4-dev
-  #workflow_dispatch:
+  workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
