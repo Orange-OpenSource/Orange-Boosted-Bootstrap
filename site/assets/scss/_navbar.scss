@@ -1,2 +1,52 @@
-// Boosted mod: no .bd-navbar
-// End mod
+.bd-navbar {
+  // Boosted mod: no padding
+  // Boosted mod: no background-color
+  // Boosted mod: no background-image
+  // Boosted mod: no box-shadow
+
+  // Boosted mod: no .bd-navbar-toggle
+
+  // Boosted mod: no .navbar-toggler
+  .nav-link { // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
+    // Boosted mod: no display, no padding, no color
+
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}link-hover-color); // Boosted mod
+    }
+
+    &.active {
+      // Boosted mod: no font-weight
+      color: var(--#{$prefix}link-hover-color); // Boosted mod
+    }
+  }
+
+  // Boosted mod: no .navbar-nav-svg
+
+  // Boosted mod: no .offcanvas-lg
+
+  // Boosted mod: no .dropdown-toggle
+
+  .dropdown-menu {
+    --#{$prefix}dropdown-min-width: 12rem;
+    // Boosted mod: background-color is already good
+    @include rfs(.875rem, --#{$prefix}dropdown-font-size);
+    // Boosted mod: no box-shadow
+  }
+
+  .dropdown-item.current {
+    font-weight: $font-weight-bold; // Boosted mod
+    background-image: escape-svg($dropdown-active-icon);
+    background-repeat: no-repeat;
+    background-position: right $dropdown-item-padding-x top .75rem; // Boosted mod
+    background-size: .75rem .75rem;
+  }
+
+  // Boosted mod: Specificity
+  .navbar-nav.flex-row {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid #666;
+    }
+  }
+  // End mod
+}

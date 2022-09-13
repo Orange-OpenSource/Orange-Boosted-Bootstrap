@@ -18,9 +18,15 @@
 #     - name: Modals
 #       description: "Transform modals to serve any purpose, from feature tours to dialogs."
 
-# - category: Custom Components
-#   description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
-#   examples:
+- category: Custom Components
+  description: "Brand-new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
+  examples:
+    - name: Cards
+      description: "List of all card variants (content and design)."
+    - name: Stickers
+      description: "List of all sticker variants."
+    - name: Title bars
+      description: "Orange branded title bars to introduce titles."
 #     - name: Album
 #       description: "Simple one-page template for photo galleries, portfolios, and more."
 #     - name: Pricing
@@ -63,20 +69,18 @@
   examples:
     - name: Navbars
       description: "Demonstration of all responsive and container options for the navbar."
+#     - name: Navbars offcanvas
+#       description: "Same as the Navbars example, but with our offcanvas component."
 #     - name: Navbar static
 #       description: "Single navbar example of a static top navbar along with some additional content."
 #     - name: Navbar fixed
 #       description: "Single navbar example with a fixed top navbar along with some additional content."
 #     - name: Navbar bottom
 #       description: "Single navbar example with a bottom navbar along with some additional content."
+    - name: Navbar sticky
+      description: "Single navbar example of a sticky-top navbar along with some additional content."
 #     - name: Offcanvas navbar
 #       description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
-
-- category: Components
-  description: "Showing the possible variants of components."
-  examples:
-    - name: Cards
-      description: "List of all card variants (content and design)."
 
 # - category: RTL
 #   description: "See Boosted's RTL version in action with these modified Custom Components examples."

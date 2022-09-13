@@ -7,51 +7,68 @@
 }
 
 .back-to-top {
-  position: absolute;
-  top: $back-to-top-display-threshold;
-  right: $back-to-top-offset-right;
-  bottom: $back-to-top-offset-bottom;
-  z-index: $zindex-back-to-top;
-  pointer-events: none;
+  // scss-docs-start back-to-top-css-vars
+  --#{$prefix}back-to-top-top: #{$back-to-top-display-threshold};
+  --#{$prefix}back-to-top-right: #{$back-to-top-offset-right};
+  --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom};
+  --#{$prefix}back-to-top-zindex: #{$zindex-back-to-top};
+  --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top};
+  --#{$prefix}back-to-top-link-icon: #{$back-to-top-icon};
+  --#{$prefix}back-to-top-link-icon-margin-left: #{$spacer * .5};
+  --#{$prefix}back-to-top-link-width: #{$back-to-top-icon-width};
+  --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
+  --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
+  --#{$prefix}back-to-top-title-padding: #{$back-to-top-title-padding};
+  --#{$prefix}back-to-top-title-color: #{color-contrast($back-to-top-title-bg-color)};
+  --#{$prefix}back-to-top-title-bg-color: #{$back-to-top-title-bg-color};
+  --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
+  // scss-docs-end back-to-top-css-vars
 
+  // scss-docs-start back-to-top-xl-css-vars
   @include media-breakpoint-up(xl) {
-    right: $back-to-top-offset-right * 2;
-    bottom: $back-to-top-offset-bottom * 2;
+    --#{$prefix}back-to-top-right: #{$back-to-top-offset-right * 2};
+    --#{$prefix}back-to-top-bottom: #{$back-to-top-offset-bottom * 2};
+    --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top-xl};
   }
+  // scss-docs-end back-to-top-xl-css-vars
+
+  position: absolute;
+  top: var(--#{$prefix}back-to-top-top);
+  right: var(--#{$prefix}back-to-top-right);
+  bottom: var(--#{$prefix}back-to-top-bottom);
+  z-index: var(--#{$prefix}back-to-top-zindex);
+  pointer-events: none;
 }
 
 .back-to-top-link {
   position: sticky;
-  top: $back-to-top-link-offset-top;
+  top: var(--#{$prefix}back-to-top-link-offset-top);
   pointer-events: all;
-  @include button-icon($back-to-top-icon, $size: $back-to-top-icon-width $back-to-top-icon-height, $pseudo: "after");
+  @include button-icon(var(--#{$prefix}back-to-top-link-icon), $size: var(--#{$prefix}back-to-top-link-width) var(--#{$prefix}back-to-top-link-height), $pseudo: "after", $position: calc(50% - 1px));
 
   &::after {
     transform: rotate(.25turn) #{"/* rtl:ignore */"};
   }
 
-  &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
-    margin-left: $spacer * .5;
+  &:not([title]):not([data-#{$prefix}label])::after {
+    margin-left: var(--#{$prefix}back-to-top-link-icon-margin-left);
   }
 
   @include media-breakpoint-up(xl) {
-    top: $back-to-top-link-offset-top-xl;
-
-    &[data-#{$boosted-variable-prefix}label]::before {
+    &[data-#{$prefix}label]::before {
       position: absolute;
-      right: $back-to-top-title-offset-right;
+      right: var(--#{$prefix}back-to-top-title-offset-right);
       z-index: -1; // To ensure focus indicator appears above
-      padding: $back-to-top-title-padding;
-      color: color-contrast($back-to-top-title-bg-color);
+      padding: var(--#{$prefix}back-to-top-title-padding);
+      color: var(--#{$prefix}back-to-top-title-color);
       white-space: nowrap;
-      content: attr(data-#{$boosted-variable-prefix}label);
-      background-color: $back-to-top-title-bg-color;
-      transform: translateY(1px);
+      content: attr(data-#{$prefix}label);
+      background-color: var(--#{$prefix}back-to-top-title-bg-color);
     }
 
-    &[data-#{$boosted-variable-prefix}label]:hover::before,
-    &[data-#{$boosted-variable-prefix}label]:focus::before {
-      text-decoration: $link-decoration;
+    &[data-#{$prefix}label]:hover::before,
+    &[data-#{$prefix}label]:focus::before {
+      text-decoration: var(--#{$prefix}back-to-top-title-active-decoration);
     }
   }
 }

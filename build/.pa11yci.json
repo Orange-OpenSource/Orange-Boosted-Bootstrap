@@ -5,7 +5,7 @@
     "runners": [
       "axe"
     ],
-    "hideElements": ".bd-search, [id*='tarteaucitron'], #TableOfContents, .text-primary, .navbar-light .navbar-brand, .accordion-button:not(.collapsed), .active, [aria-current], select:disabled, [disabled] label, [disabled] + label, .modal, .bd-example nav, .badge.rounded-pill.bg-info.text-white, .exclude-from-pa11y-analysis, a.disabled, .form-check.form-switch",
+    "hideElements": "[id*='tarteaucitron'], #TableOfContents, .text-primary, .accordion-button:not(.collapsed), .active, [aria-current], select:disabled, [disabled] label, [disabled] + label, .modal, .bd-example nav, .badge.rounded-pill.bg-info.text-white, .exclude-from-pa11y-analysis, a.disabled, .form-check.form-switch, .nav-tabs .nav-item .nav-link.disabled, body > div.position-fixed:last-of-type",
     "ignore": [
       "heading-order",
       "scrollable-region-focusable"

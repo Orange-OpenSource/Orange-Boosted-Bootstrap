@@ -164,13 +164,6 @@
 @include tac("Allow", true) {
   @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
 
-  &:hover,
-  &:focus {
-    color: $black;
-    background-color: $white;
-    border-color: $white;
-  }
-
   &::before {
     margin-right: $spacer / 4;
   }
@@ -178,13 +171,6 @@
 
 @include tac("Deny", true) {
   @include button-icon($form-switch-bg-image, $btn-font-size-sm);
-
-  &:hover,
-  &:focus {
-    color: $black;
-    background-color: $white;
-    border-color: $white;
-  }
 
   &::before {
     margin-right: $spacer / 4;
@@ -198,3 +184,6 @@
   display: none;
 }
 
+.tac_visually-hidden { // stylelint-disable-line selector-class-pattern
+  @include visually-hidden();
+}

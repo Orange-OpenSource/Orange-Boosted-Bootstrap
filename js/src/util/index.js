@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.1.3): util/index.js
+ * Bootstrap (v5.2.0): util/index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -9,7 +9,7 @@ const MAX_UID = 1_000_000
 const MILLISECONDS_MULTIPLIER = 1000
 const TRANSITION_END = 'transitionend'
 
-// Shoutout AngusCroll (https://goo.gl/pxwQGp)
+// Shout-out AngusCroll (https://goo.gl/pxwQGp)
 const toType = object => {
   if (object === null || object === undefined) {
     return `${object}`
@@ -128,7 +128,26 @@ const isVisible = element => {
     return false
   }
 
-  return getComputedStyle(element).getPropertyValue('visibility') === 'visible'
+  const elementIsVisible = getComputedStyle(element).getPropertyValue('visibility') === 'visible'
+  // Handle `details` element as its content may falsie appear visible when it is closed
+  const closedDetails = element.closest('details:not([open])')
+
+  if (!closedDetails) {
+    return elementIsVisible
+  }
+
+  if (closedDetails !== element) {
+    const summary = element.closest('summary')
+    if (summary && summary.parentNode !== closedDetails) {
+      return false
+    }
+
+    if (summary === null) {
+      return false
+    }
+  }
+
+  return elementIsVisible
 }
 
 const isDisabled = element => {

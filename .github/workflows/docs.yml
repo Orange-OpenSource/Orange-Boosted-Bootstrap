@@ -33,11 +33,11 @@ jobs:
         run: exit 0
 
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
@@ -50,6 +50,19 @@ jobs:
         run: npm ci
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
-      - name: Test docs
-        run: npm run docs
+      - name: Build docs
+        run: npm run docs-build
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+
+      - name: Validate HTML
+        run: npm run docs-vnu
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+
+      - name: Run linkinator
+        uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: _site
+          recurse: true
+          verbosity: error
+          skip: "^(?!http://localhost)"
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))

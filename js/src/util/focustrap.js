@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.1.3): util/focustrap.js
+ * Bootstrap (v5.2.0): util/focustrap.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -24,13 +24,13 @@ const TAB_NAV_FORWARD = 'forward'
 const TAB_NAV_BACKWARD = 'backward'
 
 const Default = {
-  trapElement: null, // The element to trap focus inside of
-  autofocus: true
+  autofocus: true,
+  trapElement: null // The element to trap focus inside of
 }
 
 const DefaultType = {
-  trapElement: 'element',
-  autofocus: 'boolean'
+  autofocus: 'boolean',
+  trapElement: 'element'
 }
 
 /**
@@ -60,14 +60,12 @@ class FocusTrap extends Config {
 
   // Public
   activate() {
-    const { trapElement, autofocus } = this._config
-
     if (this._isActive) {
       return
     }
 
-    if (autofocus) {
-      trapElement.focus()
+    if (this._config.autofocus) {
+      this._config.trapElement.focus()
     }
 
     EventHandler.off(document, EVENT_KEY) // guard against infinite focus loop
@@ -88,10 +86,9 @@ class FocusTrap extends Config {
 
   // Private
   _handleFocusin(event) {
-    const { target } = event
     const { trapElement } = this._config
 
-    if (target === document || target === trapElement || trapElement.contains(target)) {
+    if (event.target === document || event.target === trapElement || trapElement.contains(event.target)) {
       return
     }
 

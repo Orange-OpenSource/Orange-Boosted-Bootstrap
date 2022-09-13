@@ -2,16 +2,4 @@
 // Footer
 //
 
-.bd-footer {
-  @include font-size(.875rem);
-  font-weight: 700;
-
-  a {
-    color: $white;
-
-    &:hover,
-    &:focus {
-      color: $link-hover-color;
-    }
-  }
-}
+// Boosted mod: no .bd-footer

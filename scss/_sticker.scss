@@ -1,0 +1,42 @@
+.sticker {
+  // scss-docs-start sticker-css-vars
+  --#{$prefix}sticker-size: #{$sticker-size-md};
+  --#{$prefix}sticker-font-weight: #{$font-weight-bold};
+  --#{$prefix}sticker-background-color: #{$brand-orange};
+  --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-md};
+  // scss-docs-end sticker-css-vars
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}sticker-size);
+  height: var(--#{$prefix}sticker-size);
+  font-weight: var(--#{$prefix}sticker-font-weight);
+  text-align: center;
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}sticker-background-color);
+  border-radius: var(--#{$prefix}sticker-size); // stylelint-disable-line property-disallowed-list
+
+  > * {
+    max-width: var(--#{$prefix}sticker-content-max-width);
+  }
+
+  // Large sticker
+
+  &.sticker-lg {
+    // scss-docs-start sticker-lg-css-vars
+    --#{$prefix}sticker-size: #{$sticker-size-lg};
+    --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-lg};
+    // scss-docs-end sticker-lg-css-vars
+  }
+
+  // Small sticker
+
+  &.sticker-sm {
+    // scss-docs-start sticker-sm-css-vars
+    --#{$prefix}sticker-size: #{$sticker-size-sm};
+    --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-sm};
+    // scss-docs-end sticker-sm-css-vars
+  }
+}

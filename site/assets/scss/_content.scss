@@ -2,14 +2,13 @@
 // Bootstrap docs content theming
 //
 
-// Offset for the sticky header
-@include media-breakpoint-up(md) {
-  :root {
-    scroll-padding-top: $offset-top; // Boosted mod
-  }
-}
-
 .bd-content {
+  // Offset content from fixed navbar when jumping to headings
+  > :target {
+    padding-top: 5rem;
+    margin-top: -5rem;
+  }
+
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -31,14 +30,18 @@
   }
 
   // Override Bootstrap defaults
-  > .table {
+  > .table,
+  > .table-responsive .table {
     max-width: 100%;
     margin-bottom: 1.5rem;
     @include font-size(.875rem);
 
-    @include media-breakpoint-down(lg) {
-      display: block;
-      overflow-x: auto;
+    thead {
+      border-bottom: 2px solid currentcolor;
+    }
+
+    tbody:not(:first-child) {
+      border-top: 2px solid currentcolor;
     }
 
     th,
@@ -48,11 +51,13 @@
       }
 
       &:not(:last-child) {
-        padding-right: 1.5rem;
+        padding-right: 1rem; // Boosted mod
       }
     }
 
     // Prevent breaking of code
+    // stylelint-disable-next-line selector-max-compound-selectors
+    th,
     td:first-child > code {
       white-space: nowrap;
     }
@@ -70,6 +75,17 @@
   // End mod
 }
 
+.table-options {
+  td:nth-child(2) {
+    min-width: 160px;
+  }
+}
+
+.table-options td:last-child,
+.table-utilities td:last-child {
+  min-width: 280px;
+}
+
 .bd-title {
   @include font-size(3rem);
 }
@@ -77,4 +93,36 @@
 .bd-lead {
   @include font-size(1.5rem);
   font-weight: 400;
+}
+
+.bi {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  // Boosted mod: no text-decoration-color
+  text-underline-offset: .5rem;
+  backface-visibility: hidden;
+
+  .bi {
+    width: .75em; // Boosted mod
+    height: .75em; // Boosted mod
+    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+  }
+
+  &:hover {
+    .bi {
+      transform: translate3d(5px, 0, 0);
+    }
+  }
+}
+
+.border-lg-start {
+  @include media-breakpoint-up(lg) {
+    border-left: $border-width solid $border-color;
+  }
 }

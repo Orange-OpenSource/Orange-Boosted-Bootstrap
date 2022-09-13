@@ -2,8 +2,8 @@
 
 /*!
  * Script to run vnu-jar if Java is available.
- * Copyright 2017-2021 The Bootstrap Authors
- * Copyright 2017-2021 Twitter, Inc.
+ * Copyright 2017-2022 The Bootstrap Authors
+ * Copyright 2017-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -32,7 +32,8 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // and offer more robust alternatives, but also need to show a less-than-ideal example
     'An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.',
     // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
-    'The “img” role is unnecessary for element “img”.'
+    'The “img” role is unnecessary for element “img”.',
+    '.*Consider using the “h1” element as a top-level heading only.*'
   ].join('|')
 
   const args = [

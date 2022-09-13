@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/5.1/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
+    <img src="https://boosted.orange.com/docs/5.2/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/docs/5.1/"><strong>Visit Boosted</strong></a>
+  <a href="https://boosted.orange.com/docs/5.2/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
@@ -36,14 +36,14 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.1.3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.0.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.1.3`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.2.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.2.0`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.2.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
-Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/5.2/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
 
 ## Status
@@ -58,63 +58,64 @@ Read the [Getting started page](https://boosted.orange.com/docs/5.1/getting-star
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![JS Brotli size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/main/dist/js/boosted.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/dist/js/boosted.min.js)
 [![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)](https://automate.browserstack.com/public-build/ZGR2VnBvQ1F6ajhoNDIwWEF3Wm1RcjJlak1rdFZpRXJSdFZjTjJxQU9udz0tLU5wS2lrODNRTkswdzZZVUxjSHFpTHc9PQ==--714e60c953cf25bd52082a2b494eb881db1736c0)
-[![JS Delivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
+[![JSDelivr](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
-<details><summary>Download contents</summary>
+<details>
+  <summary>Download contents</summary>
 
-```text
-boosted/
-├── css/
-│   ├── boosted-grid.css
-│   ├── boosted-grid.css.map
-│   ├── boosted-grid.min.css
-│   ├── boosted-grid.min.css.map
-│   ├── boosted-grid.rtl.css
-│   ├── boosted-grid.rtl.css.map
-│   ├── boosted-grid.rtl.min.css
-│   ├── boosted-grid.rtl.min.css.map
-│   ├── boosted-reboot.css
-│   ├── boosted-reboot.css.map
-│   ├── boosted-reboot.min.css
-│   ├── boosted-reboot.min.css.map
-│   ├── boosted-reboot.rtl.css
-│   ├── boosted-reboot.rtl.css.map
-│   ├── boosted-reboot.rtl.min.css
-│   ├── boosted-reboot.rtl.min.css.map
-│   ├── boosted-utilities.css
-│   ├── boosted-utilities.css.map
-│   ├── boosted-utilities.min.css
-│   ├── boosted-utilities.min.css.map
-│   ├── boosted-utilities.rtl.css
-│   ├── boosted-utilities.rtl.css.map
-│   ├── boosted-utilities.rtl.min.css
-│   ├── boosted-utilities.rtl.min.css.map
-│   ├── boosted.css
-│   ├── boosted.css.map
-│   ├── boosted.min.css
-│   ├── boosted.min.css.map
-│   ├── boosted.rtl.css
-│   ├── boosted.rtl.css.map
-│   ├── boosted.rtl.min.css
-│   └── boosted.rtl.min.css.map
-└── js/
-    ├── boosted.bundle.js
-    ├── boosted.bundle.js.map
-    ├── boosted.bundle.min.js
-    ├── boosted.bundle.min.js.map
-    ├── boosted.esm.js
-    ├── boosted.esm.js.map
-    ├── boosted.esm.min.js
-    ├── boosted.esm.min.js.map
-    ├── boosted.js
-    ├── boosted.js.map
-    ├── boosted.min.js
-    └── boosted.min.js.map
-```
+  ```text
+  boosted/
+  ├── css/
+  │   ├── boosted-grid.css
+  │   ├── boosted-grid.css.map
+  │   ├── boosted-grid.min.css
+  │   ├── boosted-grid.min.css.map
+  │   ├── boosted-grid.rtl.css
+  │   ├── boosted-grid.rtl.css.map
+  │   ├── boosted-grid.rtl.min.css
+  │   ├── boosted-grid.rtl.min.css.map
+  │   ├── boosted-reboot.css
+  │   ├── boosted-reboot.css.map
+  │   ├── boosted-reboot.min.css
+  │   ├── boosted-reboot.min.css.map
+  │   ├── boosted-reboot.rtl.css
+  │   ├── boosted-reboot.rtl.css.map
+  │   ├── boosted-reboot.rtl.min.css
+  │   ├── boosted-reboot.rtl.min.css.map
+  │   ├── boosted-utilities.css
+  │   ├── boosted-utilities.css.map
+  │   ├── boosted-utilities.min.css
+  │   ├── boosted-utilities.min.css.map
+  │   ├── boosted-utilities.rtl.css
+  │   ├── boosted-utilities.rtl.css.map
+  │   ├── boosted-utilities.rtl.min.css
+  │   ├── boosted-utilities.rtl.min.css.map
+  │   ├── boosted.css
+  │   ├── boosted.css.map
+  │   ├── boosted.min.css
+  │   ├── boosted.min.css.map
+  │   ├── boosted.rtl.css
+  │   ├── boosted.rtl.css.map
+  │   ├── boosted.rtl.min.css
+  │   └── boosted.rtl.min.css.map
+  └── js/
+      ├── boosted.bundle.js
+      ├── boosted.bundle.js.map
+      ├── boosted.bundle.min.js
+      ├── boosted.bundle.min.js.map
+      ├── boosted.esm.js
+      ├── boosted.esm.js.map
+      ├── boosted.esm.min.js
+      ├── boosted.esm.min.js.map
+      ├── boosted.js
+      ├── boosted.js.map
+      ├── boosted.min.js
+      └── boosted.min.js.map
+  ```
 </details>
 
 We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
@@ -122,14 +123,14 @@ We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified C
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new/choose).
 
 
 ## Documentation
 
 Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/assets/js/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/). Working on our search? Be sure to set `debug: true` in `site/assets/js/search.js` file.
 
 ### Running documentation locally
 
@@ -190,21 +191,20 @@ Our default branch is for development of our Boosted 5 release. Head to the [`v4
 ## Thanks
 
 <a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42">
 </a>
 
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
-
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
 </a>
 
-Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com) and auto-deploy pull requests.
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2021 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Code and documentation copyright 2011-2022 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-Boosted code and documentation copyright 2015-2021 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Boosted code and documentation copyright 2015-2022 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

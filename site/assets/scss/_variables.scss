@@ -1,25 +1,59 @@
 // stylelint-disable scss/dollar-variable-default
 
 // Local docs variables
-$bd-purple:        $primary;
-$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
-$bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
-$bd-info:          $info;
-$bd-warning:       $warning;
-$bd-danger:        $danger;
+$bd-purple:        $primary; // Boosted mod
+$bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
+// Boosted mod: np $bd-purple-light
+// Boosted mod: no $bd-accent
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
-// Boosted mod: no $sidebar-collapse-icon
 
-$bd-gutter-x: 1.25rem;
+$bd-gutter-x: .625rem; // Boosted mod
+$bd-callout-variants: info, warning, danger !default;
+
+:root {
+  --bd-purple: #{$bd-purple};
+  --bd-violet: #{$bd-violet};
+  // Boosted mod: no --bd-accent
+  --bd-violet-rgb: #{to-rgb($bd-violet)};
+  // Boosted mod: no --bd-accent-rgb
+  --bd-pink-rgb: #{to-rgb($pink-500)};
+  --bd-teal-rgb: #{to-rgb($teal-500)};
+
+  // Boosted mod: all available CSS vars and specific modifications for Boosted
+  --docsearch-primary-color: #{$primary};
+  --docsearch-text-color: #{$black};
+  // --docsearch-spacing
+  // --docsearch-icon-stroke-width
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-muted-color: #{$text-muted};
+  // --docsearch-container-background
+  // --docsearch-logo-color
+  // --docsearch-modal-width
+  // --docsearch-modal-height
+  --docsearch-modal-background: #{$modal-content-bg};
+  // --docsearch-modal-shadow;
+  // --docsearch-searchbox-height;
+  // --docsearch-searchbox-background;
+  // --docsearch-searchbox-focus-background;
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
+  // --docsearch-hit-height;
+  --docsearch-hit-color: #{$gray-700};
+  // --docsearch-hit-active-color;
+  // --docsearch-hit-background;
+  // --docsearch-hit-shadow;
+  --docsearch-key-gradient: null;
+  --docsearch-key-shadow: null;
+  // --docsearch-footer-height;
+  --docsearch-footer-background: #{$modal-footer-bg};
+  --docsearch-footer-shadow: 0 -1px #{$black};
+  // End mod
+}
 
 $zindex-skippy: 1080;
 
-$offset-top: 10rem;
+$offset-top: 7rem;
 
 $sidebar-height:         subtract(100vh, $offset-top);
-$sidebar-base-padding:   $spacer / 2;
-$sidebar-button-padding: $sidebar-base-padding $sidebar-base-padding add($sidebar-base-padding, $border-width);
-$sidebar-link-padding:   $sidebar-base-padding / 2 $sidebar-base-padding $sidebar-base-padding / 2 $spacer;
 
 $documentation-link-color:    shade-color($info, 20%);
 $documentation-link-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$documentation-link-color}' fill-rule='evenodd' d='M9.26 25a1.77 1.77 0 0 1-1.76-1.76V6.76A1.77 1.77 0 0 1 9.26 5h12.36v2.35h1.17V25M20.44 6.18H9.26a.59.59 0 0 0-.58.58.59.59 0 0 0 .58.6h1.18V15l1.77-1.76L13.97 15V7.35h6.47z'/></svg>");

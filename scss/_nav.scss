@@ -4,6 +4,16 @@
 // `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav {
+  // scss-docs-start nav-css-vars
+  --#{$prefix}nav-link-padding-x: #{$nav-link-padding-x};
+  --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
+  @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-color: #{$nav-link-color};
+  --#{$prefix}nav-link-hover-color: #{$nav-link-hover-color};
+  --#{$prefix}nav-link-disabled-color: #{$nav-link-disabled-color};
+  // scss-docs-end nav-css-vars
+
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -13,23 +23,24 @@
 
 .nav-link {
   display: flex; // Boosted mod
-  padding: $nav-link-padding-y $nav-link-padding-x;
-  @include font-size($nav-link-font-size);
-  font-weight: $nav-link-font-weight;
-  color: $nav-link-color;
+  align-items: center; // Boosted mod
+  padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
+  @include font-size(var(--#{$prefix}nav-link-font-size));
+  font-weight: var(--#{$prefix}nav-link-font-weight);
+  color: var(--#{$prefix}nav-link-color);
   text-decoration: if($link-decoration == none, null, none);
   background: none; // Boosted mod: Prevent dropdown's background to interfere
   @include transition($nav-link-transition);
 
   &:hover,
   &:focus {
-    color: $nav-link-hover-color;
+    color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
   // Disabled state lightens text
   &.disabled {
-    color: $nav-link-disabled-color;
+    color: var(--#{$prefix}nav-link-disabled-color);
     pointer-events: none;
     cursor: default;
   }
@@ -40,39 +51,49 @@
 //
 
 .nav-tabs {
-  --#{$variable-prefix}tabs-spacing: #{$nav-tabs-border-width};
-  border-bottom: var(--#{$variable-prefix}tabs-spacing) solid $nav-tabs-border-color;
+  // scss-docs-start nav-tabs-css-vars
+  --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
+  --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
+  --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
+  --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
+  --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+  --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
+  --#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
+  --#{$prefix}nav-tabs-link-padding-x: #{$nav-tabs-link-padding-x}; // Boosted mod
+  // scss-docs-end nav-tabs-css-vars
+
+  border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
 
   // Boosted mod: margins between tabs on bigger screen
   @include media-breakpoint-up(lg) {
     .nav-item + .nav-item {
-      margin-left: $nav-link-padding-y;
+      margin-left: var(--#{$prefix}nav-link-padding-y);
     }
   }
   // End mod
 
   .nav-link {
-    padding: subtract(1rem, $nav-tabs-border-width) map-get($spacers, 4); // Boosted mod
-    // stylelint-disable-next-line function-disallowed-list
-    margin-bottom: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
+    padding: subtract(1rem, var(--#{$prefix}nav-tabs-border-width)) subtract(var(--#{$prefix}nav-tabs-link-padding-x), var(--#{$prefix}nav-tabs-border-width)); // Boosted mod
+    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     background: none;
-    border: var(--#{$variable-prefix}tabs-spacing) solid transparent;
+    border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
     border-bottom-width: 0; // Boosted mod
-    @include border-top-radius($nav-tabs-border-radius);
+    @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
 
     &:hover,
     &:focus {
       color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
-      background-color: $nav-tabs-link-hover-border-color; // Boosted mod
+      background-color: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
       isolation: isolate;
-      border-color: $nav-tabs-link-hover-border-color;
-      outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
-      outline-offset: var(--#{$variable-prefix}tabs-spacing); // Boosted mod
+      border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
+      outline-color: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
+      outline-offset: var(--#{$prefix}nav-tabs-border-width); // Boosted mod
     }
 
-    &.disabled {
-      color: $nav-link-disabled-color;
+    &.disabled,
+    &:disabled {
+      color: var(--#{$prefix}nav-link-disabled-color);
       background-color: transparent;
       border-color: transparent;
     }
@@ -80,16 +101,15 @@
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    color: $nav-tabs-link-active-color;
-    background-color: $nav-tabs-link-active-bg;
-    border-color: $nav-tabs-link-active-border-color;
-    outline-color: $nav-tabs-link-active-border-color; // Boosted mod
+    color: var(--#{$prefix}nav-tabs-link-active-color);
+    background-color: var(--#{$prefix}nav-tabs-link-active-bg);
+    border-color: var(--#{$prefix}nav-tabs-link-active-border-color);
+    outline-color: var(--#{$prefix}nav-tabs-link-active-border-color); // Boosted mod
   }
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    // stylelint-disable-next-line function-disallowed-list
-    margin-top: calc(var(--#{$variable-prefix}tabs-spacing) * -1);
+    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
   }
@@ -97,19 +117,22 @@
 
 // Boosted mod
 .nav-tabs-light {
-  --#{$variable-prefix}tabs-spacing: #{$nav-tabs-border-width * .5};
-  border-color: $gray-600;
+  // scss-docs-start nav-tabs-light-css-vars
+  --#{$prefix}nav-tabs-border-width: #{calc($nav-tabs-border-width * .5)};
+  // scss-docs-end nav-tabs-light-css-vars
+
+  border-color: $gray-500;
 
   .nav-link {
     // stylelint-disable-next-line function-disallowed-list
-    border-width: 0 0 calc(var(--#{$variable-prefix}tabs-spacing) * 4);
+    border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4);
 
     &:hover,
     &:focus {
       color: $accessible-orange;
       background: none;
       border-color: transparent;
-      outline-color: currentColor;
+      outline-color: currentcolor;
     }
 
     &.active {
@@ -124,22 +147,37 @@
 //
 
 .nav-pills {
+  // scss-docs-start nav-pills-css-vars
+  --#{$prefix}nav-pills-padding-x: #{$nav-pills-padding-x}; // Boosted mod
+  --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
+  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
+  --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
+  // scss-docs-end nav-pills-css-vars
+
   .nav-link {
+    padding-right: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
+    padding-left: var(--#{$prefix}nav-pills-padding-x); // Boosted mod
     background: none;
     border: 0;
-    @include border-radius($nav-pills-border-radius);
+    @include border-radius(var(--#{$prefix}nav-pills-border-radius));
+
+    &:disabled {
+      color: var(--#{$prefix}nav-link-disabled-color);
+      background-color: transparent;
+      border-color: transparent;
+    }
   }
 
   .nav-link.active,
   .show > .nav-link {
-    color: $nav-pills-link-active-color;
-    outline-color: $nav-pills-link-active-bg; // Boosted mod
-    @include gradient-bg($nav-pills-link-active-bg);
+    color: var(--#{$prefix}nav-pills-link-active-color);
+    outline-color: var(--#{$prefix}nav-pills-link-active-bg); // Boosted mod
+    @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
   }
 
   // Boosted mod
   .nav-item + .nav-item {
-    margin-left: $nav-link-padding-y * .5;
+    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); /* stylelint-disable-line function-disallowed-list */
   }
   // End mod
 }
@@ -180,7 +218,7 @@
 
 .tab-content {
   // Boosted mod
-  padding: subtract($spacer, $nav-tabs-border-width);
+  padding: $spacer subtract($nav-tabs-link-padding-x, $nav-tabs-border-width);
   border: $nav-tabs-border-width solid;
   border-top: 0;
   // End mod
@@ -188,6 +226,14 @@
   > .tab-pane {
     display: none;
   }
+
+  // Boosted mod
+  > .tab-pane-with-nested-tab {
+    display: none;
+    margin: $spacer * -1 calc(subtract($nav-tabs-link-padding-x, $nav-tabs-border-width) * -1); // stylelint-disable-line function-disallowed-list
+  }
+  // End mod
+
   > .active {
     display: block;
   }

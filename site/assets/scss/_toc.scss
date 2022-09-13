@@ -2,7 +2,7 @@
 
 .bd-toc { // Boosted mod
   @include media-breakpoint-down(lg) {
-    border: 0 !important; // stylelint-disable declaration-no-important
+    border: 0 !important; // stylelint-disable-line declaration-no-important
   }
 
   @include media-breakpoint-up(lg) {
@@ -19,6 +19,7 @@
 
     ul {
       padding-left: 0;
+      margin-bottom: 0;
       list-style: none;
 
       ul {
@@ -42,5 +43,33 @@
         font: inherit;
       }
     }
+  }
+}
+
+.bd-toc-toggle {
+  display: flex;
+  align-items: center;
+  border-width: 1px; // Boosted mod
+
+  @include media-breakpoint-down(sm) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  // Boosted mod: no md+ breakpoint
+}
+
+.bd-toc-collapse {
+  @include media-breakpoint-down(md) {
+    nav {
+      padding: 1.25rem;
+      background-color: var(--bs-gray-100);
+      border: 1px solid $border-color;
+      @include border-radius(.25rem);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block !important; // stylelint-disable-line declaration-no-important
   }
 }

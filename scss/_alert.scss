@@ -4,24 +4,25 @@
 
 .alert {
   // scss-docs-start alert-css-vars
-  --#{$variable-prefix}alert-bg: transparent;
-  --#{$variable-prefix}alert-padding: #{$alert-padding-y $alert-padding-x};
-  --#{$variable-prefix}alert-margin-bottom: #{$alert-margin-bottom};
-  --#{$variable-prefix}alert-color: #{alert-color}; // Boosted mod
-  --#{$variable-prefix}alert-border-color: transparent;
-  --#{$variable-prefix}alert-border: #{$alert-border-width} solid var(--#{$variable-prefix}alert-border-color);
-  --#{$variable-prefix}alert-border-radius: #{$alert-border-radius};
+  --#{$prefix}alert-bg: transparent;
+  --#{$prefix}alert-padding-x: #{$alert-padding-x};
+  --#{$prefix}alert-padding-y: #{$alert-padding-y};
+  --#{$prefix}alert-margin-bottom: #{$alert-margin-bottom};
+  --#{$prefix}alert-color: #{$alert-color}; // Boosted mod
+  --#{$prefix}alert-border-color: transparent;
+  --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
+  --#{$prefix}alert-border-radius: #{$alert-border-radius};
   // scss-docs-end alert-css-vars
 
   position: relative;
   display: flex; // Boosted mod
-  padding: var(--#{$variable-prefix}alert-padding);
-  margin-bottom: var(--#{$variable-prefix}alert-margin-bottom);
+  padding: var(--#{$prefix}alert-padding-y) var(--#{$prefix}alert-padding-x);
+  margin-bottom: var(--#{$prefix}alert-margin-bottom);
   font-weight: $font-weight-bold; // Boosted mod
-  color: var(--#{$variable-prefix}alert-color);
-  background-color: var(--#{$variable-prefix}alert-bg);
-  border: var(--#{$variable-prefix}alert-border);
-  border-radius: var(--#{$variable-prefix}alert-border-radius, 0); // stylelint-disable-line property-disallowed-list
+  color: var(--#{$prefix}alert-color);
+  background-color: var(--#{$prefix}alert-bg);
+  border: var(--#{$prefix}alert-border);
+  @include border-radius(var(--#{$prefix}alert-border-radius));
 }
 
 // Headings for larger alerts
@@ -30,6 +31,7 @@
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
   // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
@@ -84,6 +86,7 @@
 
 .alert-heading ~ p {
   font-weight: $font-weight-normal;
+  line-height: 1.5;
 }
 
 //// Icons
@@ -93,7 +96,7 @@
   margin: -#{$alert-icon-margin-y * .5} 0;
 
   + * {
-    margin: $alert-icon-margin-y 0;
+    margin: $alert-icon-margin-y 0 0;
   }
 
   &::before {
@@ -112,10 +115,15 @@
 
 //// Small alerts
 .alert-sm {
-  padding: $alert-padding-sm 0;
+  // scss-docs-start alert-sm-css-vars
+  --#{$prefix}alert-padding-x: 0;
+  --#{$prefix}alert-padding-y: #{$alert-padding-sm};
+  --#{$prefix}alert-margin-bottom: 0;
+  --#{$prefix}alert-border: 0;
+  // scss-docs-end alert-sm-css-vars
+
   font-size: $font-size-sm;
   line-height: $line-height-sm;
-  border: 0;
 
   .alert-icon {
     width: $alert-icon-size * .5;
@@ -128,7 +136,7 @@
   }
 
   .btn-close {
-    --#{$boosted-variable-prefix}icon-spacing: #{$btn-close-padding-sm};
+    --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
     top: $alert-btn-close-offset-sm;
     right: -$alert-btn-close-offset-sm;
   }

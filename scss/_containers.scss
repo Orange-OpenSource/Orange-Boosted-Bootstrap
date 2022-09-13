@@ -10,6 +10,12 @@
     @include make-container();
   }
 
+  // Boosted mod: `.container-fluid` is not full width in Boosted
+  .container-fluid {
+    @include make-container-fluid-margin();
+  }
+  // End mod
+
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
     .container-#{$breakpoint} {

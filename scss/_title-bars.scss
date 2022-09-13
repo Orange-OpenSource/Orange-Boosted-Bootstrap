@@ -1,0 +1,52 @@
+.title-bar {
+  // scss-docs-start title-bar-css-vars
+  --#{$prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
+  --#{$prefix}title-bar-padding-y: #{$title-bar-padding-y};
+  --#{$prefix}title-bar-font-size: #{$title-bar-font-size};
+  --#{$prefix}title-bar-line-height: #{$title-bar-line-height};
+  --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing};
+  --#{$prefix}title-bar-border-width: #{$title-bar-border-width};
+  --#{$prefix}title-bar-border-color: #{$title-bar-border-color};
+  // scss-docs-end title-bar-css-vars
+
+  border-bottom: var(--#{$prefix}title-bar-border-width) solid var(--#{$prefix}title-bar-border-color);
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}title-bar-font-size: #{$title-bar-font-size-md};
+    --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-md};
+  }
+
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}title-bar-font-size: #{$title-bar-font-size-xl};
+    --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
+  }
+
+  &.bg-dark,
+  &.bg-secondary {
+    --#{$prefix}title-bar-border-color: #{$title-bar-border-color-dark};
+  }
+
+  > [class*="container"] {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  img,
+  svg {
+    width: auto;
+    height: var(--#{$prefix}title-bar-image-ratio); // Simplify CSS
+  }
+
+  .display-1,
+  & {
+    font-size: var(--#{$prefix}title-bar-font-size);
+    line-height: var(--#{$prefix}title-bar-line-height); // Simplify CSS
+    letter-spacing: var(--#{$prefix}title-bar-letter-spacing);
+  }
+
+  h1 {
+    padding: calc(var(--#{$prefix}title-bar-padding-y) * 2 - var(--#{$prefix}title-bar-border-width)) 0 var(--#{$prefix}title-bar-padding-y); // stylelint-disable-line function-disallowed-list
+    margin: 0;
+  }
+}
