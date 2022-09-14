@@ -1287,7 +1287,7 @@ $navbar-brand-logo-transition:              width $navbar-transition-duration $n
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
 $navbar-border-width:                       $border-width * .5 !default;
-$navbar-border-color:                       $gray-700 !default;
+$navbar-border-color:                       $gray-500 !default;
 
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
@@ -1327,6 +1327,7 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
+$navbar-dark-border-color:          $gray-700 !default;
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
