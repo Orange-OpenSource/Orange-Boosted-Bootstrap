@@ -10,11 +10,17 @@
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
-  outline: 0;
 
   &:focus {
+    outline: 0;
+
+    // Pseudo-elements must be split across multiple rulesets to have an effect.
+    // No box-shadow() mixin for focus accessibility.
+    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
+    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
+
+    // Boosted mod: added `&[data-focus-visible-added]`
     &[data-focus-visible-added] {
-      outline: 0;
       // Boosted mod: better focus visibility
       &::-webkit-slider-thumb {
         @include focus-visible();
@@ -24,6 +30,7 @@
       }
       // End mod
     }
+    // End mod
   }
 
   &::-moz-focus-outer {

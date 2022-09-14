@@ -10,7 +10,6 @@
     content: "#";
   }
 
-  &:focus,
   &:hover,
   :hover > &,
   :target > & {
@@ -21,7 +20,9 @@
 
   // Boosted mod
   &:focus {
-    outline-offset: 0;
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
   // End mod
 }

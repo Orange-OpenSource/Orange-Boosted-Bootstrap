@@ -838,7 +838,7 @@ $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-focus-width:       .125rem !default;
+$input-btn-focus-width:       $outline-offset !default;
 // Boosted mod: no need for a blur variable
 $input-btn-focus-box-shadow:  null !default;
 
@@ -1157,8 +1157,12 @@ $form-range-thumb-bg:                      $white !default;
 $form-range-thumb-border:                  $border-width solid $black !default;
 $form-range-thumb-border-radius:           50% !default;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
+$form-range-thumb-focus-box-shadow:        null !default;
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg:               null !default;
+// fusv-disable
+$form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod // Deprecated in v5.2.0
+// fusv-enable
 $form-range-thumb-disabled-bg:             $gray-500 !default;
 $form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing !default;
 // scss-docs-end form-range-variables
@@ -1419,6 +1423,9 @@ $pagination-border-color:           transparent !default; // Boosted mod
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
 $pagination-focus-color:            var(--#{$prefix}link-color) !default;
 $pagination-focus-bg:               null !default;
+// fusv-disable
+$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default; // Deprecated in v5.2.0
+// fusv-enable
 // Boosted mod: no $pagination-focus-outline
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
@@ -1894,7 +1901,7 @@ $carousel-control-color:             $black !default;
 $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
-$carousel-control-transition:        null !default;
+$carousel-control-transition:        null !default; // Boosted mod
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;

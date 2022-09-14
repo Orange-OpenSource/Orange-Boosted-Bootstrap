@@ -230,7 +230,7 @@
     &:focus {
       &[data-focus-visible-added] {
         @include focus-visible();
-        box-shadow: 0 0 0 $outline-offset $white;
+        @include focus-box();
         transform: none;
       }
     }

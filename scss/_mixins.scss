@@ -38,11 +38,9 @@
 @import "mixins/box-shadow";
 @import "mixins/gradients";
 @import "mixins/transition";
+@import "mixins/focus"; // Boosted mod
 
 // Layout
 @import "mixins/clearfix";
 @import "mixins/container";
 @import "mixins/grid";
-
-// Utilities
-@import "mixins/focus" // Boosted mod

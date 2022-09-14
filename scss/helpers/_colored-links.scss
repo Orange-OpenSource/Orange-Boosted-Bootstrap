@@ -5,8 +5,7 @@
     background-color: color-contrast($value) !important; // Boosted mod: ensure contrast
 
     @if $link-shade-percentage != 0 {
-      &:hover,
-      &:focus {
+      &:hover {
         color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage)) !important; // stylelint-disable-line declaration-no-important
       }
     }
