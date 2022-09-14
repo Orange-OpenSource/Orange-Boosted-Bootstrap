@@ -65,11 +65,5 @@
   --#{$prefix}btn-close-active-border-color: #{$btn-close-white-active-border-color}; // Boosted mod
   --#{$prefix}btn-close-disabled-color: #{$btn-close-white-disabled-color}; // Boosted mod
   // scss-docs-end btn-close-white-css-vars
-
-  &:focus {
-    &[data-focus-visible-added] {
-      box-shadow: none;
-    }
-  }
 }
 // End mod

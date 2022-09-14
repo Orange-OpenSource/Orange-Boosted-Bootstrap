@@ -112,8 +112,6 @@
   }
 
   &:focus {
-    text-decoration: var(--#{$prefix}stepped-process-link-text-decoration);
-
     .active &[data-focus-visible-added] {
       outline-color: var(--#{$prefix}stepped-process-link-active-color);
     }

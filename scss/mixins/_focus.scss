@@ -4,8 +4,10 @@
   outline: $outline-color solid $outline-width;
   outline-offset: $outline-offset;
 }
-
-@mixin focus-box {
-  box-shadow: 0 0 0 $outline-offset $white;
-}
 // scss-docs-end focus-visible
+
+// scss-docs-start focus-box
+@mixin focus-box {
+  box-shadow: 0 0 0 $outline-offset $outline-box-color;
+}
+// scss-docs-end focus-box

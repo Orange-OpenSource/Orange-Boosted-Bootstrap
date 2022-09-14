@@ -22,11 +22,6 @@
   //// Set line-height everywhere
   tr {
     border-bottom: $table-border-width solid var(--#{$prefix}table-border-color);
-
-    // &:focus-within {
-    //   @include focus-visible();
-    //   outline-offset: -$outline-offset;
-    // }
   }
 
   // Target th & td

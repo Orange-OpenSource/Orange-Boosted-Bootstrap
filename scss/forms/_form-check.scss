@@ -181,8 +181,9 @@
       }
 
       // Boosted mod
+      &:active,
       &:focus {
-        outline-color: #ff7900;
+        outline-color: $accessible-orange;
       }
 
       &:not(:disabled) {
@@ -197,7 +198,7 @@
     }
 
     &:focus {
-      outline-color: #0e91ff; /* Inverted color of var(--#{$prefix}link-hover-color) to compose with filter: invert(1) */
+      outline-color: #0e91ff; // Inverted color of $accessible-orange to compose with filter: invert(1)
     }
 
     &:disabled {
