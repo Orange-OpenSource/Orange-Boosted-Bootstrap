@@ -68,7 +68,7 @@ Boosted provides `focus-visible()` mixin to ensure a proper focus state, usually
 
 {{< scss-docs name="focus-visible" file="scss/mixins/_focus.scss" >}}
 
-Boosted also provides `focus-visible()` mixin to create a solid `2px` white box-shadow between the component and the outline when focused.
+Boosted also provides `focus-box()` mixin to create a solid `2px` white box-shadow between the component and the outline when focused.
 
 {{< scss-docs name="focus-box" file="scss/mixins/_focus.scss" >}}
 

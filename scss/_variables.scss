@@ -839,7 +839,7 @@ $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-focus-width:       $outline-offset !default;
+$input-btn-focus-width:       $outline-offset !default; // Boosted mod
 // Boosted mod: no need for a blur variable
 $input-btn-focus-box-shadow:  null !default;
 
@@ -1158,7 +1158,7 @@ $form-range-thumb-bg:                      $white !default;
 $form-range-thumb-border:                  $border-width solid $black !default;
 $form-range-thumb-border-radius:           50% !default;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
-$form-range-thumb-focus-box-shadow:        null !default;
+$form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg:               null !default;
 // fusv-disable
@@ -1385,9 +1385,8 @@ $dropdown-header-color:             $black !default;
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // Boosted mod
 // fusv-disable
-$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0
+$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.3.0
 // fusv-enable
-// scss-docs-end dropdown-variables
 
 // scss-docs-start dropdown-dark-variables
 $dropdown-dark-color:               $white !default; // Boosted mod
@@ -1976,7 +1975,11 @@ $btn-close-border-width:        $border-width !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               $black !default;
 $btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
-$btn-close-focus-shadow:        $btn-focus-box-shadow !default;
+// Boosted mod
+// fusv-disable
+$btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
+// fusv-enable
+// End mod
 // Boosted mod: no opacity/filter
 
 // Boosted mod

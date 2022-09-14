@@ -17,12 +17,4 @@
     text-decoration: none;
     opacity: 1;
   }
-
-  // Boosted mod
-  &:focus {
-    &[data-focus-visible-added] {
-      @include focus-visible();
-    }
-  }
-  // End mod
 }

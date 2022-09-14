@@ -52,6 +52,7 @@
   width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: var(--#{$prefix}list-group-action-color);
   text-align: inherit; // For `<button>`s (anchors inherit)
+  outline-offset: -$outline-width; // Boosted mod
 
   // Boosted mod: default focus
   // Hover state
@@ -61,12 +62,6 @@
     text-decoration: none;
     // Boosted mod: no background change
   }
-
-  // Boosted mod
-  &:focus {
-    outline-offset: -$outline-offset;
-  }
-  // End mod
 
   &:active {
     color: var(--#{$prefix}list-group-action-active-color);

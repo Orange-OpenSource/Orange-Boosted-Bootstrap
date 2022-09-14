@@ -35,12 +35,6 @@
     border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-active-border-color);
   }
 
-  &:focus {
-    &[data-focus-visible-added] {
-      box-shadow: $btn-close-focus-shadow;
-    }
-  }
-
   &:active {
     color: var(--#{$prefix}btn-close-active-color);
   }

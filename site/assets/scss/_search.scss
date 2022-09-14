@@ -134,13 +134,9 @@
 .DocSearch-Hit-action-button {
   @include border-radius(0, 0);
 
-  &:hover {
-    background: transparent;
-  }
-
+  &:hover,
   &:focus {
     background: transparent;
-    outline: 3px solid $accessible-orange;
   }
 }
 
@@ -151,10 +147,6 @@
 
   &:hover {
     color: var(--docsearch-highlight-color);
-  }
-
-  &:focus {
-    outline: 3px solid $accessible-orange;
   }
 }
 // End mod
