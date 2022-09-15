@@ -897,7 +897,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              null !default; // boosted mod
+$btn-transition:              null !default; // Boosted mod
 // scss-docs-end btn-variables
 
 // Boosted mod: icon button
@@ -1385,8 +1385,9 @@ $dropdown-header-color:             $black !default;
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // Boosted mod
 // fusv-disable
-$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.3.0
+$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0
 // fusv-enable
+// scss-docs-end dropdown-variables
 
 // scss-docs-start dropdown-dark-variables
 $dropdown-dark-color:               $white !default; // Boosted mod
@@ -1424,9 +1425,8 @@ $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boo
 $pagination-focus-color:            var(--#{$prefix}link-color) !default;
 $pagination-focus-bg:               null !default;
 // fusv-disable
-$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default; // Deprecated in v5.2.0
+$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default; // Deprecated in v5.3.0
 // fusv-enable
-// Boosted mod: no $pagination-focus-outline
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
 $pagination-hover-bg:               null !default;
