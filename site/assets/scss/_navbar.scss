@@ -10,8 +10,7 @@
   .nav-link { // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
     // Boosted mod: no display, no padding, no color
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--#{$prefix}link-hover-color); // Boosted mod
     }
 

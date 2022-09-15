@@ -39,7 +39,7 @@
     @include form-star-rating($accessible-orange);
   }
 
-  > [data-focus-visible-added]:focus + label {
+  > :focus-visible + label {
     @include focus-visible();
     outline-offset: -1px;
   }

@@ -12,14 +12,13 @@ import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
-import OrangeNavbar from './src/orange-navbar'
+import OrangeNavbar from './src/orange-navbar' // Boosted mod
 import Popover from './src/popover'
 import QuantitySelector from './src/quantity-selector' // Boosted mod
 import ScrollSpy from './src/scrollspy'
 import Tab from './src/tab'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
-import '../node_modules/focus-visible/dist/focus-visible.js' // Boosted mod
 
 export default {
   Alert,
@@ -29,7 +28,7 @@ export default {
   Dropdown,
   Modal,
   Offcanvas,
-  OrangeNavbar,
+  OrangeNavbar, // Boosted mod
   Popover,
   QuantitySelector, // Boosted mod
   ScrollSpy,

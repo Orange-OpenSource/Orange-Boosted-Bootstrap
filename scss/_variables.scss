@@ -841,7 +841,7 @@ $input-btn-line-height:       1.25 !default;
 
 $input-btn-focus-width:       $outline-offset !default; // Boosted mod
 // Boosted mod: no need for a blur variable
-$input-btn-focus-box-shadow:  null !default;
+$input-btn-focus-box-shadow:  null !default; // Boosted mod
 
 $input-btn-padding-y-sm:      $spacer * .25 !default;
 $input-btn-padding-x-sm:      $spacer * .5 !default;
@@ -883,7 +883,7 @@ $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
-$btn-focus-width:             $outline-offset !default;
+$btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;
@@ -1536,15 +1536,6 @@ $accordion-button-bg:                     transparent !default; // Boosted mod
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
-
-// Boosted mod: dark variant
-$accordion-dark-color:                    $white !default;
-$accordion-dark-bg:                       $black !default;
-$accordion-dark-border-color:             $gray-700 !default;
-$accordion-dark-button-color:             $accordion-dark-color !default;
-$accordion-dark-button-bg:                transparent !default;
-$accordion-dark-button-active-color:      $brand-orange !default;
-// End mod
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow

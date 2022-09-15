@@ -10,6 +10,7 @@
     content: "#";
   }
 
+  &:focus,
   &:hover,
   :hover > &,
   :target > & {
