@@ -102,7 +102,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.18.10",
     "@percy/cli": "^1.10.2",
     "@popperjs/core": "^2.11.6",
