@@ -1,15 +1,12 @@
 ---
 layout: docs
 title: Footer
-description: Documentation and examples for a powerful and responsive Boosted's footer. It includes support for branding, navigation and more.
+description: Documentation and examples for a powerful and responsive Boosted Innovation Cup's footer. It includes support for branding, navigation and more.
 group: components
 aliases:
   - "/docs/components/footer/"
 toc: true
-added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## How it works
 
@@ -22,7 +19,7 @@ Our footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 
 
 You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
 
-If these available parts don't meet your specific needs, feel free to develop your own custom part accordingly to the Orange Design System.
+If these available parts don't meet your specific needs, feel free to develop your own custom part
 
 {{< callout warning >}}
 This footer component is based on the [navbar component]({{< docsref "/components/navbar" >}}). Don't forget to import the corresponding SCSS file if you're using [Lean Sass imports]({{< docsref "/customize/optimize#lean-sass-imports" >}}).
@@ -115,7 +112,7 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 
 ### Variables
 
-As part of Boosted’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup’s evolving CSS variables approach, footers use local CSS variables on every footer part for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="footer-part-css-vars" file="scss/_footer.scss" >}}
 

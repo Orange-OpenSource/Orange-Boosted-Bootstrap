@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for Boosted typography, including global settings, headings, body text, lists, and more.
+description: Documentation and examples for Boosted Innovation Cup typography, including global settings, headings, body text, lists, and more.
 group: content
 aliases:
   - "/docs/content/typography/"
@@ -10,9 +10,9 @@ toc: true
 
 ## Global settings
 
-Boosted sets basic global display, typography, and link styles. Please refer to [**our brand**]({{< param ods.web >}}) to use it carefully. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Boosted Innovation Cup sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
-- Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
+- Use Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
@@ -38,23 +38,23 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 <!-- End mod -->
 
 ```html
-<h1>h1. Boosted heading</h1>
-<h2>h2. Boosted heading</h2>
-<h3>h3. Boosted heading</h3>
-<h4>h4. Boosted heading</h4>
-<h5>h5. Boosted heading</h5>
-<h6>h6. Boosted heading</h6>
+<h1>h1. Boosted Innovation Cup heading</h1>
+<h2>h2. Boosted Innovation Cup heading</h2>
+<h3>h3. Boosted Innovation Cup heading</h3>
+<h4>h4. Boosted Innovation Cup heading</h4>
+<h5>h5. Boosted Innovation Cup heading</h5>
+<h6>h6. Boosted Innovation Cup heading</h6>
 ```
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {{< example >}}
-<p class="h1">h1. Boosted heading</p>
-<p class="h2">h2. Boosted heading</p>
-<p class="h3">h3. Boosted heading</p>
-<p class="h4">h4. Boosted heading</p>
-<p class="h5">h5. Boosted heading</p>
-<p class="h6">h6. Boosted heading</p>
+<p class="h1">h1. Boosted Innovation Cup heading</p>
+<p class="h2">h2. Boosted Innovation Cup heading</p>
+<p class="h3">h3. Boosted Innovation Cup heading</p>
+<p class="h4">h4. Boosted Innovation Cup heading</p>
+<p class="h5">h5. Boosted Innovation Cup heading</p>
+<p class="h6">h6. Boosted Innovation Cup heading</p>
 {{< /example >}}
 
 ### Customizing headings
@@ -379,7 +379,7 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 ## Responsive font sizes
 
 In Bootstrap 5, they enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({{< docsref "/getting-started/rfs" >}}) to find out how this works.
-**However in Boosted 5, RFS is disabled by default.**
+**However in Boosted Innovation Cup, RFS is disabled by default.**
 
 ## Sass
 

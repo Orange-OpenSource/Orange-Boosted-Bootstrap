@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Boosted & Webpack"
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Webpack.
+title: "Boosted Innovation Cup & Webpack"
+description: The official guide for how to include and bundle Boosted Innovation Cup's CSS and JavaScript in your project using Webpack.
 group: getting-started
 aliases:
   - "/docs/getting-started/webpack/"
@@ -19,7 +19,7 @@ thumbnail: webpack.png
 
 ## Setup
 
-We're building a Webpack project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Webpack project with Boosted Innovation Cup from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -34,19 +34,19 @@ We're building a Webpack project with Boosted from scratch, so there are some pr
    npm i --save-dev webpack webpack-cli webpack-dev-server
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install Boosted Innovation Cup.** Now we can install Boosted Innovation Cup. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
-   npm i --save boosted @popperjs/core
+   npm i --save boosted-innovation-cup @popperjs/core
    ```
 
-4. **Install additional dependencies.** In addition to Webpack and Boosted, we need a few more dependencies to properly import and bundle Boosted's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
+4. **Install additional dependencies.** In addition to Webpack and Boosted Innovation Cup, we need a few more dependencies to properly import and bundle Boosted Innovation Cup's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
 
    ```sh
    npm i --save-dev autoprefixer css-loader postcss-loader sass sass-loader style-loader
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted Innovation Cup.
 
 ## Project structure
 
@@ -106,11 +106,11 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Webpack</title>
+       <title>Boosted Innovation Cup w/ Webpack</title>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Webpack!</h1>
+         <h1>Hello, Boosted Innovation Cup and Webpack!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
        <script src="./main.js"></script>
@@ -118,7 +118,7 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
+   We're including a little bit of Boosted Innovation Cup styling here with the `div class="container"` and `<button>` so that we see when Boosted Innovation Cup's CSS is loaded by Webpack.
 
 3. **Now we need an npm script to run Webpack.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Webpack dev server.
 
@@ -141,11 +141,11 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server.png" alt="Webpack dev server running">
 
-In the next and final section to this guide, we'll set up the Webpack loaders and import all of Boosted's CSS and JavaScript.
+In the next and final section to this guide, we'll set up the Webpack loaders and import all of Boosted Innovation Cup's CSS and JavaScript.
 
-## Import Boosted
+## Import Boosted Innovation Cup
 
-Importing Boosted into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
+Importing Boosted Innovation Cup into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
 
 1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
 
@@ -196,23 +196,23 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Now, let's import Boosted Innovation Cup's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted Innovation Cup's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
-   @import "~boosted/scss/boosted";
+   // Import all of Boosted Innovation Cup
+   @import "~boosted-innovation-cup/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+3. **Next we load the CSS and import Boosted Innovation Cup's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted Innovation Cup's JS. Popper will be imported automatically through Boosted Innovation Cup.
 
    <!-- eslint-skip -->
    ```js
    // Import our custom CSS
    import '../scss/styles.scss'
 
-   // Import all of Boosted's JS
+   // Import all of Boosted Innovation Cup's JS
    import * as boosted from 'boosted'
    ```
 
@@ -226,13 +226,13 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
    import { Tooltip, Toast, Popover } from 'boosted'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted Innovation Cup's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+4. **And you're done! 🎉** With Boosted Innovation Cup's source Sass and JS fully loaded, your local development server should now look like this.
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-boosted.png" alt="Webpack dev server running with Boosted">
+   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-boosted.png" alt="Webpack dev server running with Boosted Innovation Cup">
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any Boosted Innovation Cup components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted Innovation Cup's CSS and JS that you need.
 
 ## Production optimizations
 
@@ -258,7 +258,7 @@ Then instantiate and use the plugin in the Webpack configuration:
 @@ -1,8 +1,10 @@
 +const miniCssExtractPlugin = require('mini-css-extract-plugin')
  const path = require('path')
- 
+
  module.exports = {
    mode: 'development',
    entry: './src/js/main.js',
@@ -288,14 +288,14 @@ After running `npm run build` again, there will be a new file `dist/main.css`, w
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 +    <link rel="stylesheet" href="./main.css">
-     <title>Boosted w/ Webpack</title>
+     <title>Boosted Innovation Cup w/ Webpack</title>
    </head>
    <body>
 ```
 
 ### Extracting SVG files
 
-Boosted's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
+Boosted Innovation Cup's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
 
 Configure Webpack to extract inline SVG files like this:
 

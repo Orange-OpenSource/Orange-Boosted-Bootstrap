@@ -12,111 +12,111 @@ Utilize our source Sass files to take advantage of variables, maps, mixins, and 
 
 ## File structure
 
-Whenever possible, avoid modifying Boosted's core files. For Sass, that means creating your own stylesheet that imports Boosted so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
+Whenever possible, avoid modifying Boosted Innovation Cup's core files. For Sass, that means creating your own stylesheet that imports Boosted Innovation Cup so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
 
 ```text
 your-project/
 ├── scss
 │   └── custom.scss
 └── node_modules/
-    └── boosted
+    └── boosted-innovation-cup
         ├── js
         └── scss
 ```
 
-If you've downloaded our source files and aren't using a package manager, you'll want to manually create something similar to that structure, keeping Boosted's source files separate from your own.
+If you've downloaded our source files and aren't using a package manager, you'll want to manually create something similar to that structure, keeping Boosted Innovation Cup's source files separate from your own.
 
 ```text
 your-project/
 ├── scss
 │   └── custom.scss
-└── boosted/
+└── boosted-innovation-cup/
     ├── js
     └── scss
 ```
 
 ## Importing
 
-In your `custom.scss`, you'll import Boosted's source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
+In your `custom.scss`, you'll import Boosted Innovation Cup's source Sass files. You have two options: include all of Boosted Innovation Cup, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
 
 ```scss
 // Custom.scss
-// Option A: Include all of Boosted
+// Option A: Include all of Boosted Innovation Cup
 
 // Include any default variable overrides here (though functions won't be available)
 
-@import "../node_modules/boosted/scss/boosted";
+@import "../node_modules/boosted-innovation-cup/scss/boosted";
 
 // Then add additional custom code here
 ```
 
 ```scss
 // Custom.scss
-// Option B: Include parts of Boosted
+// Option B: Include parts of Boosted Innovation Cup
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/boosted/scss/functions";
+@import "../node_modules/boosted-innovation-cup/scss/functions";
 
 // 2. Include any default variable overrides here
 
-// 3. Include remainder of required Boosted stylesheets
-@import "../node_modules/boosted/scss/variables";
+// 3. Include remainder of required Boosted Innovation Cup stylesheets
+@import "../node_modules/boosted-innovation-cup/scss/variables";
 
 // 4. Include any default map overrides here
 
 // 5. Include remainder of required parts
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "../node_modules/boosted-innovation-cup/scss/maps";
+@import "../node_modules/boosted-innovation-cup/scss/mixins";
+@import "../node_modules/boosted-innovation-cup/scss/root";
 
 // 6. Optionally include any other parts as needed
-@import "../node_modules/boosted/scss/utilities";
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
-@import "../node_modules/boosted/scss/images";
-@import "../node_modules/boosted/scss/containers";
-@import "../node_modules/boosted/scss/grid";
-@import "../node_modules/boosted/scss/helpers";
+@import "../node_modules/boosted-innovation-cup/scss/utilities";
+@import "../node_modules/boosted-innovation-cup/scss/reboot";
+@import "../node_modules/boosted-innovation-cup/scss/type";
+@import "../node_modules/boosted-innovation-cup/scss/images";
+@import "../node_modules/boosted-innovation-cup/scss/containers";
+@import "../node_modules/boosted-innovation-cup/scss/grid";
+@import "../node_modules/boosted-innovation-cup/scss/helpers";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "../node_modules/boosted/scss/utilities/api";
+@import "../node_modules/boosted-innovation-cup/scss/utilities/api";
 
 // 8. Add additional custom code here
 ```
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
+With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted Innovation Cup under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
 
 ## Variable defaults
 
-Every Sass variable in Boosted includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted.
+Every Sass variable in Boosted Innovation Cup includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted Innovation Cup's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted Innovation Cup.
 
-You will find the complete list of Boosted's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
+You will find the complete list of Boosted Innovation Cup's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
 
 Variable overrides must come after our functions are imported, but before the rest of the imports.
 
-Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Boosted via npm:
+Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Boosted Innovation Cup via npm:
 
 ```scss
 // Required
-@import "../node_modules/boosted/scss/functions";
+@import "../node_modules/boosted-innovation-cup/scss/functions";
 
 // Your variable overrides
 $body-bg: #000;
 $body-color: #111;
 
 // Required
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "../node_modules/boosted-innovation-cup/scss/variables";
+@import "../node_modules/boosted-innovation-cup/scss/maps";
+@import "../node_modules/boosted-innovation-cup/scss/mixins";
+@import "../node_modules/boosted-innovation-cup/scss/root";
 
-// Optional Boosted components here
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
+// Optional Boosted Innovation Cup components here
+@import "../node_modules/boosted-innovation-cup/scss/reboot";
+@import "../node_modules/boosted-innovation-cup/scss/type";
 // etc
 ```
 
-Repeat as necessary for any variable in Boosted, including the global options below.
+Repeat as necessary for any variable in Boosted Innovation Cup, including the global options below.
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}
@@ -124,7 +124,7 @@ Repeat as necessary for any variable in Boosted, including the global options be
 
 ## Maps and loops
 
-Boosted includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
+Boosted Innovation Cup includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
 
 Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making _removing_ items from a map slightly more difficult.
 
@@ -137,7 +137,7 @@ $primary: #0074d9;
 $danger: #ff4136;
 ```
 
-Later on, these variables are set in Boosted's `$theme-colors` map:
+Later on, these variables are set in Boosted Innovation Cup's `$theme-colors` map:
 
 ```scss
 $theme-colors: (
@@ -166,24 +166,24 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 
 ```scss
 // Required
-@import "../node_modules/boosted/scss/functions";
-@import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted-innovation-cup/scss/functions";
+@import "../node_modules/boosted-innovation-cup/scss/variables";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
-@import "../node_modules/boosted/scss/maps";
-@import "../node_modules/boosted/scss/mixins";
-@import "../node_modules/boosted/scss/root";
+@import "../node_modules/boosted-innovation-cup/scss/maps";
+@import "../node_modules/boosted-innovation-cup/scss/mixins";
+@import "../node_modules/boosted-innovation-cup/scss/root";
 
 // Optional
-@import "../node_modules/boosted/scss/reboot";
-@import "../node_modules/boosted/scss/type";
+@import "../node_modules/boosted-innovation-cup/scss/reboot";
+@import "../node_modules/boosted-innovation-cup/scss/type";
 // etc
 ```
 
 ## Required keys
 
-Boosted assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
+Boosted Innovation Cup assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
 
 For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
 
@@ -200,7 +200,7 @@ Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we h
 }
 ```
 
-You can lighten or darken colors with Boosted's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
+You can lighten or darken colors with Boosted Innovation Cup's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
 
 {{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
 
@@ -220,7 +220,7 @@ In practice, you'd call the function and pass in the color and weight parameters
 
 In order to meet the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG/) contrast requirements, authors **must** provide a minimum [text color contrast of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and a minimum [non-text color contrast of 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast), with very few exceptions.
 
-To help with this, we included the `color-contrast` function in Boosted. It uses the [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) in an `sRGB` color space to automatically return a light (`#fff`), dark (`#212529`) or black (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+To help with this, we included the `color-contrast` function in Boosted Innovation Cup. It uses the [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) in an `sRGB` color space to automatically return a light (`#fff`), dark (`#212529`) or black (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
 For example, to generate color swatches from our `$theme-colors` map:
 
@@ -292,7 +292,7 @@ $border-width: 0;
 
 ## Mixins
 
-Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted and can also be used across your own project.
+Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted Innovation Cup and can also be used across your own project.
 
 ### Color schemes
 

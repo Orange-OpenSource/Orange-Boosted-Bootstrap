@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Color
-description: Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+description: Boosted Innovation Cup is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
 aliases:
   - "/docs/customize/color/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Theme colors
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted Innovation Cup's `scss/_variables.scss` file.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -30,7 +30,7 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ## All colors
 
-All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors). Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
+All Boosted Innovation Cup colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors). Please note that in the Boosted Innovation Cup colors, the indigo colors are the same as the purple ones.
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
@@ -64,11 +64,11 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   <div class="col-md-4 mb-3">
     <div class="p-3 mb-2 bd-accessible-orange">
       <strong class="d-block">$accessible-orange</strong>
-      #f16e00
+      #1976d2
     </div>
     <div class="p-3 mb-2 bd-supporting-yellow">
       <strong class="d-block">$supporting-yellow</strong>
-      #ffd200
+      #ff0
     </div>
     <div class="p-3 mb-2 bd-black text-white">
       <strong class="d-block">$black</strong>
@@ -82,9 +82,9 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 </div>
 
 <!-- Boosted mod -->
-## Orange's colors
+## Innovation Cup's colors
 
-Color palette is used throughout Boosted in multiple ways, either in components or as utilities for both [`background-color`]({{< docsref "/utilities/background" >}}) and [`color`]({{< docsref "/utilities/colors" >}}).
+Color palette is used throughout Boosted Innovation Cup in multiple ways, either in components or as utilities for both [`background-color`]({{< docsref "/utilities/background" >}}) and [`color`]({{< docsref "/utilities/colors" >}}).
 
 ### Core colors
 
@@ -159,7 +159,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -178,11 +178,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 {{ end -}}
 {{< /palette.inline >}}
 
-### OBS Gray
-
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "OBS Gray" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -203,12 +201,12 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 ### Usage
 
-Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
-Boosted core uses Bootstrap's naming for maintenance ease, but **you're encouraged to use Orange color tokens when it comes to custom code**.
+Boosted Innovation Cup sets an additional layer to use Innovation Cup's color tokens names—defined first and mapped to Bootstrap core variables.
+Boosted Innovation Cup core uses Bootstrap's naming for maintenance ease, but **you're encouraged to use Innovation Cup color tokens when it comes to custom code**.
 
 <div class="row row-cols-1 row-cols-lg-2 mt-4">
     <div class="col">
-        <h4>Orange color tokens</h4>
+        <h4>Innovation Cup color tokens</h4>
         {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
     </div>
     <div class="col">
@@ -228,14 +226,14 @@ Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$the
 
 ## Color Sass maps
 
-Boosted's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
+Boosted Innovation Cup's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
 
 - `$colors` lists all our available base (`500`) colors
 - `$theme-colors` lists all semantically named theme colors (shown below)
 - `$background-colors` overrides `$theme-colors` specifically for usage in `.bg-*` utilities
 - `$grays` lists all tints and shades of gray
 
-Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
+Within `scss/_variables.scss`, you'll find Boosted Innovation Cup's color variables and Sass map. Here's an example of the `$colors` Sass map:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
@@ -257,9 +255,7 @@ Here's how you can use these in your Sass:
 
 ## Generating utilities
 
-{{< added-in "5.1.0" >}}
-
-Boosted doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
+Boosted Innovation Cup doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps.
 
 1. To start, make sure you've imported our functions, variables, mixins, and utilities.
 2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: JavaScript
-description: Bring Boosted to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
+description: Bring Boosted Innovation Cup to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
 group: getting-started
 aliases:
   - "/docs/getting-started/javascript/"
@@ -10,27 +10,27 @@ toc: true
 
 ## Individual or compiled
 
-Plugins can be included individually (using Boosted's individual `js/dist/*.js`), or all at once using `boosted.js` or the minified `boosted.min.js` (don't include both).
+Plugins can be included individually (using Boosted Innovation Cup's individual `js/dist/*.js`), or all at once using `boosted.js` or the minified `boosted.min.js` (don't include both).
 
 If you use a bundler (Webpack, Parcel, Vite...), you can use `/js/dist/*.js` files which are UMD ready.
 
 ## Usage with JavaScript frameworks
 
-While the Boosted CSS can be used with any framework, **the Boosted JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Boosted and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
+While the Boosted Innovation Cup CSS can be used with any framework, **the Boosted Innovation Cup JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Boosted Innovation Cup and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
 
-A better alternative for those using this type of frameworks is to use a framework-specific package **instead of** the Boosted JavaScript. Here are some of the most popular options:
+A better alternative for those using this type of frameworks is to use a framework-specific package **instead of** the Boosted Innovation Cup JavaScript. Here are some of the most popular options:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
 - Vue: [BootstrapVue](https://bootstrap-vue.org/) (currently only supports Vue 2 and Bootstrap 4)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
-## Using Boosted as a module
+## Using Boosted Innovation Cup as a module
 
 {{< callout >}}
 **Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
 {{< /callout >}}
 
-We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
+We provide a version of Boosted Innovation Cup built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted Innovation Cup as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
 
 ```html
 <script type="module">
@@ -54,7 +54,7 @@ If you try this as-is, you'll see an error in the console like the following:
 Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".
 ```
 
-To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for Boosted and Popper:
+To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for Boosted Innovation Cup and Popper:
 
 ```html
 <!doctype html>
@@ -74,7 +74,7 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     {
       "imports": {
         "@popperjs/core": "{{< param "cdn.popper" >}}",
-        "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
+        "boosted-innovation-cup": "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
       }
     }
     </script>
@@ -94,7 +94,7 @@ Our dropdowns, popovers, and tooltips also depend on [Popper](https://popper.js.
 
 ## Data attributes
 
-Nearly all Boosted plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Nearly all Boosted Innovation Cup plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
@@ -106,7 +106,7 @@ We use the native `querySelector` and `querySelectorAll` methods to query DOM el
 
 ## Events
 
-Boosted provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Boosted Innovation Cup provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
 
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
@@ -210,7 +210,7 @@ boosted.Modal.Default.keyboard = false
 
 ## Methods and properties
 
-Every Boosted plugin exposes the following methods and static properties.
+Every Boosted Innovation Cup plugin exposes the following methods and static properties.
 
 {{< bs-table "table" >}}
 | Method | Description |
@@ -224,7 +224,7 @@ Every Boosted plugin exposes the following methods and static properties.
 | Static property | Description |
 | --- | --- |
 | `NAME` | Returns the plugin name. (Example: `boosted.Tooltip.NAME`) |
-| `VERSION` | The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
+| `VERSION` | The version of each of Boosted Innovation Cup's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer
@@ -300,7 +300,7 @@ const tooltip = new boosted.Tooltip(yourTooltipEl, {
 
 ## Optionally using jQuery
 
-**You don't need jQuery in Boosted 5**, but it's still possible to use our components with jQuery. If Boosted detects `jQuery` in the `window` object, it'll add all of our components in jQuery's plugin system. This allows you to do the following:
+**You don't need jQuery in Boosted Innovation Cup**, but it's possible to use our components with jQuery. If Boosted Innovation Cup detects `jQuery` in the `window` object, it'll add all of our components in jQuery's plugin system. This allows you to do the following:
 
 ```js
 $('[data-bs-toggle="tooltip"]').tooltip() // to enable tooltips, with default configuration
@@ -312,18 +312,18 @@ The same goes for our other components.
 
 ### No conflict
 
-Sometimes it is necessary to use Boosted plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+Sometimes it is necessary to use Boosted Innovation Cup plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
 
 ```js
 const boostedButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
 $.fn.boostedBtn = boostedButton // give $().boostedBtn the Boosted functionality
 ```
 
-Boosted does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+Boosted Innovation Cup does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
 
 ### jQuery events
 
-Boosted will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Boosted will emit events thanks to jQuery's event system. So if you want to listen to Boosted's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
+Boosted Innovation Cup will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Boosted Innovation Cup will emit events thanks to jQuery's event system. So if you want to listen to Boosted Innovation Cup's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
 
 ```js
 $('#myTab a').on('shown.bs.tab', () => {
@@ -333,4 +333,4 @@ $('#myTab a').on('shown.bs.tab', () => {
 
 ## Disabled JavaScript
 
-Boosted's plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+Boosted Innovation Cup's plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.

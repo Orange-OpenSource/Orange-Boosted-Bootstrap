@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Progress
-description: Documentation and examples for using Boosted custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+description: Documentation and examples for using Boosted Innovation Cup custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 group: components
 aliases:
   - "/docs/components/progress/"
@@ -37,7 +37,7 @@ Put that all together, and you have the following examples.
 </div>
 {{< /example >}}
 
-Boosted provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
+Boosted Innovation Cup provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
 
 {{< example >}}
 <div class="progress">
@@ -71,7 +71,7 @@ We only set a `height` value on the `.progress`, so if you change that value the
 <!-- Boosted mod -->
 ### Sizes
 
-Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
+Boosted Innovation Cup also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
 
 {{< example >}}
 <div class="progress progress-xs">
@@ -114,7 +114,7 @@ Include multiple progress bars in a progress component if you need.
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-label="Segment one" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
   <div class="progress-bar bg-success" role="progressbar" aria-label="Segment two" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-info" role="progressbar" aria-label="Segment three" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" aria-label="Segment three" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{< /example >}}
 
@@ -154,9 +154,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}
 

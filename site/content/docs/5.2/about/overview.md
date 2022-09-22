@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: About
-description: Boosted is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud Boosted maintainers and contributors.
+description: Boosted Innovation Cup is based on Bootstrap — maintained by its founding team and a small group of invaluable core contributors, with the massive support and involvement of their community, including some proud Boosted Innovation Cup maintainers and contributors.
 group: about
 aliases:
   - "/about/"
@@ -10,23 +10,23 @@ aliases:
   - "/docs/about/overview/"
 ---
 
-## Boosted history
+## Boosted Innovation Cup history
 
-"Orange Boosted with Bootstrap" (aka Boosted) is an Orange-branded version of Twitter Bootstrap framework.
+"Boosted Innovation Cup with Bootstrap" (aka Boosted) is an Innovation Cup-branded version of Twitter Bootstrap framework.
 
-In addition to the Orange brand recommendations compliance, **Boosted aims at bringing accessibility improvements** as well as some Orange-specific components and user interactions while complying with the framework standards. The components and samples included in Boosted are regularly enhanced with real-life projects feedbacks and components.
+In addition to the Innovation Cup brand recommendations compliance, **Boosted Innovation Cup aims at bringing accessibility improvements** as well as some Innovation Cup specific components and user interactions while complying with the framework standards. The components and samples included in Boosted Innovation Cup are regularly enhanced with real-life projects feedbacks and components.
 
 Using a common core leverages **a unique brand experience** for our customers in all their interactions.
 
-Boosted can be used for all **responsive web projects** for Orange group —&nbsp;but other developers may also take advantage of the proposed accessibility improvements and additional components.
+Boosted Innovation Cup can be used for all **responsive web projects** to take advantage of the proposed accessibility improvements and additional components.
 
 ### Custom components
 
-Boosted ships with custom accessible components to suit specific needs:
+Boosted Innovation Cup ships with custom accessible components to suit specific needs:
 
 - [Back to top]({{< docsref "/components/back-to-top" >}})
 - [Footer]({{< docsref "/components/footer" >}})
-- [Orange navbar]({{< docsref "/components/orange-navbar" >}})
+- [Innovation Cup navbar]({{< docsref "/components/innovation-cup-navbar" >}})
 - [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
@@ -52,4 +52,4 @@ Their latest release, Bootstrap 5, focuses on improving v4's codebase with as fe
 
 ## Get involved in Bootstrap
 
-Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new/choose) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how they develop.
+Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new/choose) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md) for information on how they develop.

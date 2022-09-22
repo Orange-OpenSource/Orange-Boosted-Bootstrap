@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Scrollspy
-description: Automatically update Boosted navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
+description: Automatically update Boosted Innovation Cup navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 group: components
 aliases:
   - "/docs/components/scrollspy/"
@@ -10,7 +10,7 @@ toc: true
 
 ## How it works
 
-Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Boosted [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
+Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Boosted Innovation Cup [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
 
 - To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
 
@@ -24,18 +24,12 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 
 ### Navbar
 
-{{< ods-incompatibility-alert >}}
-This navbar version of the Scrollspy component is not compatible with the Orange Design System.
-
-Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
-{{< /ods-incompatibility-alert >}}
-
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3 mb-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" role="img" alt="Boosted Innovation Cup" loading="lazy" style="filter: invert(1);">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -72,7 +66,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 ```html
 <nav id="navbar-example2" class="navbar px-3 mb-3">
   <a class="navbar-brand" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" role="img" alt="Boosted Innovation Cup" loading="lazy" style="filter: invert(1);">
   </a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -355,7 +349,7 @@ document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
 
 ### Via data attributes
 
-To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the `id` or class name of the parent element of any Boosted `.nav` component.
+To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the `id` or class name of the parent element of any Boosted Innovation Cup `.nav` component.
 
 ```html
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -391,13 +385,6 @@ const scrollSpy = new boosted.ScrollSpy(document.body, {
 | `target` | string, DOM element | `null` | Specifies element to apply Scrollspy plugin. |
 | `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) valid input, when calculating scroll position.|
 {{< /bs-table >}}
-
-{{< callout warning >}}
-**Deprecated Options**
-
-Up until v5.1.3 we were using `offset` & `method` options, which are now deprecated and replaced by `rootMargin`.
-To keep backwards compatibility, we will continue to parse a given `offset` to `rootMargin`, but this feature will be removed in **v6**.
-{{< /callout >}}
 
 ### Methods
 

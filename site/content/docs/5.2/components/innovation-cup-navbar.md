@@ -1,25 +1,22 @@
 ---
 layout: docs
-title: Orange navbar
-description: Documentation and examples for Boosted's exclusive responsive navbars.
+title: Innovation Cup navbar
+description: Documentation and examples for Boosted Innovation Cup's exclusive responsive navbars.
 group: components
 aliases:
   - "/docs/components/orange-navbar/"
 toc: true
-added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## How it works
 
-Orange navbars are based on the [navbar]({{<docsref "/components/navbar">}}) component. They add some display management and introduce the Supra bar component.
+Innovation Cup navbars are based on the [navbar]({{<docsref "/components/navbar">}}) component. They add some display management and introduce the Supra bar component.
 
-An Orange navbar will always be at the top of any page.
+An Innovation Cup navbar will always be at the top of any page.
 
 ### Structure
 
-Orange navbar is basically a `<header>` that will contain your `<nav>` elements:
+Innovation Cup navbar is basically a `<header>` that will contain your `<nav>` elements:
   - an optional [Supra bar](#supra-bar) above the Global header
   - a **mandatory** [Global header](#global-header)
   - an optional [Navigation under](#navigation-under) below the Global header
@@ -30,7 +27,7 @@ For more details, please refer to the [navbar supported content]({{<docsref "/co
 
 ### Behavior
 
-**Responsive behavior**: Orange navbars are designed to be responsive on all devices.
+**Responsive behavior**: Innovation Cup navbars are designed to be responsive on all devices.
 
   `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` on `<nav>` will allow:
   - [Supra bar](#supra-bar) and [Navigation under](#navigation-under) bar to be displayed starting at the indicated breakpoint
@@ -53,7 +50,7 @@ For more examples, visit our [examples page]({{<docsref "/examples/navbars">}}).
 
 ## Supra bar
 
-A Supra bar is a simple navigation bar used with `.supra` that can be displayed as a first part of an Orange navbar.
+A Supra bar is a simple navigation bar used with `.supra` that can be displayed as a first part of an Innovation Cup navbar.
 This component should be:
 - visible only for the **larger screens** (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 - displayed inside the burger menu for **smaller screens**. There it has to be split in 2 parts.
@@ -106,7 +103,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       ...
 
       <!-- Burger menu (visible on small screens) -->
@@ -156,10 +153,10 @@ An additional navbar (with text or icon items) can be added on the right of the 
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup - Back to Home" loading="lazy">
         </a>
       </div>
 
@@ -214,48 +211,6 @@ An additional navbar (with text or icon items) can be added on the right of the 
 </header>
 ```
 
-### With custom logo
-
-Even though you should use the Master or Small logo, you can still replace it by an other one depending on your needs.
-
-{{< callout warning >}}
-You should consider having a **responsive SVG logo**. In order to do so, you may set up a responsive rendering into your SVG, [as we do with the Master logo]({{< docsref "/about/brand#orange-logo" >}}).
-
-If you do not intend to use your own SVG, you should explore the DOM solution and therefore do as if you had a [title on one or two lines]({{< ref "#global-header-with-title" >}}).
-{{< /callout >}}
-
-<div class="bd-example p-0">
-  <header>
-    {{< orange-global-headers id="global-header-2" mode="actions" responsive_logo=true labels_end=true demo=true aria_label="Global navigation - With custom logo example">}}
-    {{< /orange-global-headers >}}
-  </header>
-</div>
-
-```html
-<header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
-    <div class="container-xxl">
-
-      <!-- Orange brand logo -->
-      <div class="navbar-brand me-auto">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-      </div>
-
-      <!-- Burger menu (visible on small screens) -->
-      ...
-
-      <!-- Navbar with links -->
-      ...
-
-      <!-- Navbar with action icons -->
-      ...
-    </div>
-  </nav>
-</header>
-```
-
 ### With title
 
 Next to the brand logo, you can add a title that can be displayed on one or two lines.
@@ -273,10 +228,10 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup - Back to Home" loading="lazy">
         </a>
         <h1 class="title">Title</h1>
       </div>
@@ -307,10 +262,10 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       <div class="navbar-brand me-auto me-lg-4">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{<param docs_version>}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+          <img src="/docs/{{<param docs_version>}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup - Back to Home" loading="lazy">
         </a>
         <h1 class="two-lined">
           Title Line 1
@@ -348,7 +303,7 @@ You can add a search input into your Global header.
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       ...
 
       <!-- Burger menu (visible on small screens) -->
@@ -383,9 +338,7 @@ You can add a search input into your Global header.
 
 When scrolling the page, for breakpoints from `md` to `xxl`, the Global header's height decreases when `.sticky-top` is used on `<header>`.
 
-You can see a full example of the minimizing Orange navbar behavior in action [here]({{<docsref "/examples/navbar-sticky">}}).
-
-The minimized global header will **always** use the small [Master logo]({{<docsref "/about/brand#orange-logo">}}).
+You can see a full example of the minimizing Innovation Cup navbar behavior in action [here]({{<docsref "/examples/navbar-sticky">}}).
 
 {{< callout warning >}}
 Be careful when using **`.fixed-top`**, the collapsed content should be escapable easily.
@@ -398,7 +351,7 @@ Refer to [Lean JavaScript]({{< docsref "/customize/optimize#lean-javascript" >}}
 
 ## Navigation under
 
-A Navigation under bar is a simple navigation bar, different than a Supra bar. It can be used as a last part of an Orange navbar whenever your header may have too many items to stand on one line.
+A Navigation under bar is a simple navigation bar, different than a Supra bar. It can be used as a last part of an Innovation Cup navbar whenever your header may have too many items to stand on one line.
 
 It should be visible only for the larger screens (`lg` to `xxl` breakpoints) using `.navbar-expand-*`.
 
@@ -414,7 +367,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under">
     <div class="container-xxl">
 
-      <!-- Orange brand logo -->
+      <!-- Innovation Cup brand logo -->
       ...
 
       <!-- Burger menu (visible on small screens) -->
@@ -449,13 +402,11 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, orange navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, Innovation Cup navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 
-For orange navbars, we added a responsive behavior on medium breakpoints and over.
+For Innovation Cup  navbars, we added a responsive behavior on medium breakpoints and over.
 
 {{< scss-docs name="orange-navbar-css-vars" file="scss/_navbar.scss" >}}
 

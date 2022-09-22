@@ -244,7 +244,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 ## Checkboxes and radios
 
-Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+Place Boosted Innovation Cup's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
 {{< example >}}
 <ul class="list-group">
@@ -302,8 +302,6 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 <!-- Boosted mod -->
 ## Dark variant
 
-{{< added-in "5.2.1" >}}
-
 {{< callout warning >}}
 Dark variant won't support [contextual classes](#contextual-classes) until next release.
 {{< /callout >}}
@@ -333,9 +331,7 @@ Dark variant also work with `.list-group-item-action`.
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 

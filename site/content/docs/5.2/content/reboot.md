@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Reboot
-description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Boosted to provide an elegant, consistent, and simple baseline to build upon.
+description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Boosted Innovation Cup to provide an elegant, consistent, and simple baseline to build upon.
 group: content
 aliases:
   - "/content/"
@@ -24,9 +24,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## CSS variables
 
-{{< added-in "5.2.0" >}}
-
-With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `boosted.css`, `boosted-reboot.css`, and `boosted-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Boosted 5 will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+We standardize our required `@import`s across all our CSS bundles (including `boosted.css`, `boosted-reboot.css`, and `boosted-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Boosted Innovation Cup will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
 For example, consider these `:root` CSS variables for common `<body>` styles:
 
@@ -55,16 +53,11 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 
 ## Native font stack
 <!-- Boosted mod -->
-Boosted utilizes a "native font stack" or "system font stack" — as a fallback for Orange’s Helvetica Neue — for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+Boosted Innovation Cup utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ```scss
 $font-family-sans-serif:
-  // Web font
-  HelvNeueOrange,
-  // Helvetica Neue
-  "Helvetica Neue",
   // Web Safe Fallbacks
-  Helvetica,
   // Linux,
   "Noto Sans",
   "Liberation Sans",
@@ -79,7 +72,7 @@ $font-family-sans-serif:
 
 Note that because the font stack includes emoji fonts, many common symbol/dingbat Unicode characters will be rendered as multicolored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
 
-This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
+This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted Innovation Cup. To switch the global `font-family`, update `$font-family-base` and recompile Boosted Innovation Cup.
 
 ## Headings and paragraphs
 
@@ -88,12 +81,12 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 {{< bs-table "table" >}}
 | Heading | Example |
 | --- | --- |
-| `<h1></h1>` | <span class="h1">h1. Boosted heading</span> |
-| `<h2></h2>` | <span class="h2">h2. Boosted heading</span> |
-| `<h3></h3>` | <span class="h3">h3. Boosted heading</span> |
-| `<h4></h4>` | <span class="h4">h4. Boosted heading</span> |
-| `<h5></h5>` | <span class="h5">h5. Boosted heading</span> |
-| `<h6></h6>` | <span class="h6">h6. Boosted heading</span> |
+| `<h1></h1>` | <span class="h1">h1. Boosted Innovation Cup heading</span> |
+| `<h2></h2>` | <span class="h2">h2. Boosted Innovation Cup heading</span> |
+| `<h3></h3>` | <span class="h3">h3. Boosted Innovation Cup heading</span> |
+| `<h4></h4>` | <span class="h4">h4. Boosted Innovation Cup heading</span> |
+| `<h5></h5>` | <span class="h5">h5. Boosted Innovation Cup heading</span> |
+| `<h6></h6>` | <span class="h6">h6. Boosted Innovation Cup heading</span> |
 {{< /bs-table >}}
 
 ## Horizontal rules

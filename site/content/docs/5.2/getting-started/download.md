@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Download
-description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+description: Download Boosted Innovation Cup Innovation Cup to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
 group: getting-started
 aliases:
   - "/docs/getting-started/download/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Compiled CSS and JS
 
-Download ready-to-use compiled code for **Boosted v{{< param current_version >}}** to easily drop into your project, which includes:
+Download ready-to-use compiled code for **Boosted Innovation Cup** to easily drop into your project, which includes:
 
 - Compiled and minified CSS bundles (see [CSS files comparison]({{< docsref "/getting-started/contents#css-files" >}}))
 - Compiled and minified JavaScript plugins (see [JS files comparison]({{< docsref "/getting-started/contents#js-files" >}}))
@@ -21,12 +21,12 @@ This doesn't include documentation, source files, or any optional JavaScript dep
 
 ## Source files
 
-Compile Boosted with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+Compile Boosted Innovation Cup with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
 
 - [Sass compiler]({{< docsref "/getting-started/contribute#sass" >}}) for compiling Sass source files into CSS files
 - [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
 
-Should you require our full set of [build tools]({{< docsref "/getting-started/contribute#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
+Should you require our full set of [build tools]({{< docsref "/getting-started/contribute#tooling-setup" >}}), they are included for developing Boosted Innovation Cup and its docs, but they're likely unsuitable for your own purposes.
 
 <a href="{{< param "download.source" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
@@ -38,7 +38,7 @@ If you want to download and examine our [examples]({{< docsref "/examples" >}}),
 
 ## CDN via jsDelivr
 
-Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
+Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted Innovation Cup's compiled CSS and JS to your project.
 
 ```html
 <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
@@ -60,23 +60,23 @@ Make sure to use [`preconnect` resource hint](https://www.w3.org/TR/resource-hin
 
 ## Package managers
 
-Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a [Sass compiler]({{< docsref "/getting-started/contribute#sass" >}}) and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Pull in Boosted Innovation Cup's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted Innovation Cup will **require a [Sass compiler]({{< docsref "/getting-started/contribute#sass" >}}) and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled version.
 
 ### npm
 
-Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
+Install Boosted Innovation Cup in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted-innovation-cup):
 
 ```sh
-npm install boosted@v5.2.1
+npm install boosted-innovation-cup@v5.2.1
 ```
 
-`const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted's plugins onto a `boosted` object.
-The `boosted` module itself exports all of our plugins. You can manually load Boosted's plugins individually by loading the `/js/dist/*.js` files under the package's top-level directory.
+`const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted Innovation Cup's plugins onto a `boosted` object.
+The `boosted` module itself exports all of our plugins. You can manually load Boosted Innovation Cup's plugins individually by loading the `/js/dist/*.js` files under the package's top-level directory.
 
-Boosted's `package.json` contains some additional metadata under the following keys:
+Boosted Innovation Cup's `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
-- `style` - path to Boosted's non-minified CSS that's been compiled using the default settings (no customization)
+- `sass` - path to Boosted Innovation Cup's main [Sass](https://sass-lang.com/) source file
+- `style` - path to Boosted Innovation Cup's non-minified CSS that's been compiled using the default settings (no customization)
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}
@@ -84,28 +84,8 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 ### yarn
 
-Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
+Install Boosted Innovation Cup in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/Boosted):
 
 ```sh
-yarn add boosted@v5.2.1
-```
-
-### Composer
-
-You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):
-
-```sh
-composer require orange-opensource/orange-boosted-bootstrap:{{< param current_version >}}
-```
-
-### NuGet
-
-If you develop in .NET Framework, you can also install and manage Boosted's [CSS](https://www.nuget.org/packages/boosted/) or [Sass](https://www.nuget.org/packages/boosted.sass/) and JavaScript using [NuGet](https://www.nuget.org/). Newer projects should use [libman](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
-
-```powershell
-Install-Package boosted
-```
-
-```powershell
-Install-Package boosted.sass
+yarn add boosted-innovation-cup@v5.2.1
 ```

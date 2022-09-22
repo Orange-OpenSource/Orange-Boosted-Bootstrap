@@ -1,19 +1,19 @@
 {{- /*
-  Usage: `svg-docs file="img/orange-logo.svg" downloadable="true"`
+  Usage: `svg-docs file="img/boosted-innovation-cup-logo.png" downloadable="true"`
 
     Prints SVG content.
 
     Optional parameters:
-      file: SVG file path - default: `img/orange-logo.svg`
+      file: SVG file path - default: `img/boosted-innovation-cup-logo.png`
       downloadable: is the file downloadable? - default: `true`
 */ -}}
 
-{{- $file := .Get "file"| default "img/orange-logo.svg" -}}
+{{- $file := .Get "file"| default "img/boosted-innovation-cup-logo.png" -}}
 {{- $svg := readFile $file -}}
 {{- $code := $svg -}}
 {{- $downloadable := .Get "downloadable" | default true -}}
 
-{{- if eq $file "img/orange-logo.svg" -}}
+{{- if eq $file "img/boosted-innovation-cup-logo.png" -}}
   {{- /* Line feed */ -}}
   {{- $code = replace $code ">" ">\n" -}}
   {{- $code = replace $code "{" " {\n" -}}

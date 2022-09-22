@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Buttons
-description: Use Boosted's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+description: Use Boosted Innovation Cup's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 group: components
 aliases:
   - "/docs/components/buttons/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Examples
 
-Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Boosted Innovation Cup includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -129,8 +129,6 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
-
 Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< example class="bg-dark" >}}
@@ -212,7 +210,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {{< /example >}}
 
-**It is not recommended by Orange Design System** but in some cases you could even roll your own custom sizing with CSS variables:
+You can even roll your own custom sizing with CSS variables:
 
 {{< example >}}
 <button type="button" class="btn btn-primary"
@@ -254,7 +252,7 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -343,8 +341,6 @@ document.querySelectorAll('.btn').forEach(buttonElement => {
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

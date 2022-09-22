@@ -6,10 +6,7 @@ group: components
 aliases:
   - "/docs/components/sticker/"
 toc: true
-added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## Example
 
@@ -41,7 +38,7 @@ For a better rendering you can use our margin utilities or even CSS.
 {{< callout warning >}}
 **Font sizes and responsiveness**
 
-All the provided examples use our text utilities to facilitate the understanding and to match the examples from the Orange Design System in desktop mode.
+All the provided examples use our text utilities to facilitate the understanding.
 
 **Please be aware that those examples are not meant to be responsive** because they will always depend on the context. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you could for example set fixed font sizes and add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
@@ -91,8 +88,6 @@ Since stickers only provide a container, accessibility becomes specific to the s
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 As part of Boosted's evolving CSS variables approach, stickers now use local CSS variables on `.sticker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 

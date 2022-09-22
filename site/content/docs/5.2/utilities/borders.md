@@ -61,16 +61,14 @@ Or modify the default `border-color` of a component:
   Dangerous heading
 </div>
 
-<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end text-body">
   Changing border color and width
 </div>
 {{< /example >}}
 
 ## Opacity
 
-{{< added-in "5.2.0" >}}
-
-Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+Boosted Innovation Cup `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
 ### How it works
 
@@ -142,8 +140,6 @@ Add classes to an element to easily round its corners.
 ## CSS
 
 ### Variables
-
-{{< added-in "5.2.0" >}}
 
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 

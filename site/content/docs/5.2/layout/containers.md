@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Containers
-description: Containers are a fundamental building block of Boosted that contain, pad, and align your content within a given device or viewport.
+description: Containers are a fundamental building block of Boosted Innovation Cup that contain, pad, and align your content within a given device or viewport.
 group: layout
 aliases:
   - "/docs/layout/containers/"
@@ -10,13 +10,12 @@ toc: true
 
 ## How they work
 
-Containers are the most basic layout element in Boosted and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Containers are the most basic layout element in Boosted Innovation Cup and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-Boosted comes with three different containers:
+Boosted Innovation Cup comes with three different containers:
 
 - `.container`, which sets a static `max-width` between each responsive breakpoint
 - `.container-{breakpoint}`, which follow the `.container-fluid` behavior until the specified breakpoint, then it follows the `.container` one
-  - **`.container-xxl` is the one to use for Orange sites in order to be compliant with the Orange brand**
 - `.container-fluid`, which sets the `width: 100%` and overrides `max-width: 100vw - $breakpoint_margin` at all breakpoints
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
@@ -73,7 +72,7 @@ Use `.container-fluid` for a full width container with minimum margins, spanning
 
 ### Variables
 
-As shown above, Boosted generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
+As shown above, Boosted Innovation Cup generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 

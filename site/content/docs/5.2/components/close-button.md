@@ -39,12 +39,12 @@ Close buttons can also be created without `.btn-close` to reduce the size of you
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 
 <button type="button" class="btn btn-icon btn-no-outline" disabled>
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 {{< /example >}}
@@ -54,9 +54,7 @@ Close buttons can also be created without `.btn-close` to reduce the size of you
 <!-- Boosted mod: CSS var -->
 ### Variables
 
-{{< added-in "5.2.1" >}}
-
-As part of Boosted’s evolving CSS variables approach, close buttons now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup’s evolving CSS variables approach, close buttons now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-close-css-vars" file="scss/_close.scss" >}}
 

@@ -1,22 +1,16 @@
 ---
 layout: docs
 title: Spinners
-description: Indicate the loading state of a component or page with Boosted spinners, built entirely with HTML, CSS, and no JavaScript.
+description: Indicate the loading state of a component or page with Boosted Innovation Cup spinners, built entirely with HTML, CSS, and no JavaScript.
 group: components
 aliases:
   - "/docs/components/spinners/"
 toc: true
 ---
 
-{{< ods-incompatibility-alert >}}
-This component contains some spinners that should not be used on Orange sites.
-
-**Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
-{{< /ods-incompatibility-alert >}}
-
 ## About
 
-Boosted "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
+Boosted Innovation Cup "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
 
 For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
 
@@ -64,8 +58,6 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 
 ## Growing spinner
 
-{{< added-in "5.2.0" >}}
-
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 {{< example >}}
@@ -98,7 +90,7 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 
 ## Alignment
 
-Spinners in Boosted are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
+Spinners in Boosted Innovation Cup are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
 
 ### Margin
 
@@ -202,9 +194,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 Border spinner variables:
 

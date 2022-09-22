@@ -50,21 +50,6 @@ body {
   text-rendering: optimizelegibility;
 }
 
-//
-// Design Guidelines
-//
-#orange-logo ~ .row .ratio .figure-caption {
-  bottom: -#{$spacer * 1.5};
-
-  @include media-breakpoint-up(lg) {
-    bottom: -#{$spacer};
-  }
-}
-
-#orange-business-services-logo ~ .row .ratio img {
-  margin-bottom: $spacer / 10;
-}
-
 // stylelint-disable
 .bd-alerts .bd-content > h2 ~ p,
 #with-labels + p,

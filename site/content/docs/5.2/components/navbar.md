@@ -1,18 +1,12 @@
 ---
 layout: docs
 title: Navbar
-description: Documentation and examples for Boosted's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+description: Documentation and examples for Boosted Innovation Cup's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
 aliases:
   - "/docs/components/navbar/"
 toc: true
 ---
-
-{{< ods-incompatibility-alert >}}
-This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure.
-
-In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
-{{< /ods-incompatibility-alert >}}
 
 ## How it works
 
@@ -24,7 +18,7 @@ Here's what you need to know before getting started with the navbar:
 - Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
 - Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
 - Indicate the current item by using `aria-current="page"` for the current page or `aria-current="true"` for the current item in a set.
-- **New in v5.2.0:** Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-light` has been deprecated and `.navbar-dark` has been rewritten to override CSS variables instead of adding additional styles.
+- Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-dark` has been written to override CSS variables instead of adding additional styles.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -34,7 +28,7 @@ Here's what you need to know before getting started with the navbar:
 
 Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
 
-- `.navbar-brand` for [Orange logo]({{< docsref "/about/brand" >}}#orange-logo), and your product or project name.
+- `.navbar-brand` for [Innovation Cup logo]({{< docsref "/about/brand" >}}#innovation-cup-logo), and your product or project name.
 - `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
 - `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
 - Flex and spacing utilities for any form controls and actions.
@@ -49,7 +43,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +87,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-dar
 
 The `.navbar-brand` can be used to contain most elements, but an anchor works best, as some elements might require utility classes or custom styles.
 
-<!-- Boosted mod: .navbar-brand must contain Orange logo -->
+<!-- Boosted mod: .navbar-brand must contain Innovation Cup logo -->
 {{< example >}}
 <!-- As a link -->
 <header>
@@ -101,7 +95,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
         </a>
         <h1 class="title">Navbar</h1>
       </div>
@@ -115,7 +109,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <span class="stretched-link">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
         </span>
         <h1 class="title">Navbar</h1>
       </div>
@@ -138,7 +132,7 @@ Please note that you should also add the `aria-current` attribute on the active 
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,7 +165,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +190,7 @@ You can also use dropdowns in your navbar. Dropdown menus require a wrapping ele
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -251,7 +245,7 @@ Immediate child elements of `.navbar` use flex layout<!-- Boosted mod: no justif
   <div class="container-fluid">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
     <form class="d-flex navbar-item" role="search">
@@ -307,7 +301,7 @@ Mix and match with other components and utilities as needed.
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -336,14 +330,12 @@ Mix and match with other components and utilities as needed.
 ## Color schemes
 
 {{< callout warning >}}
-**New in v5.2.0:** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
+Navbar theming is powered by CSS variables. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
 {{< /callout >}}
 
-Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, you can also apply `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+Navbar themes are easier than ever thanks to Boosted Innovation Cup's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, you can also apply `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
 
-Please note that "light navbar" is not compatible with Orange Design System. You will mostly find examples using a combination of `.navbar-dark` and `.bg-dark`.
-
-<!-- Boosted mod: hide the .navbar-light example since it is not valid by design but keep the possibility to use it anyway -->
+You will mostly find examples using a combination of `.navbar-dark` and `.bg-dark` for consistency.
 
 ## Containers
 
@@ -355,7 +347,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
         </a>
       </div>
     </div>
@@ -370,7 +362,7 @@ Use any of the responsive containers to change how wide the content in your navb
   <div class="container-md">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
     </div>
   </div>
@@ -388,7 +380,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
       <h1 class="title">Default</h1>
     </div>
@@ -401,7 +393,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
       <h1 class="title">Fixed top</h1>
     </div>
@@ -414,7 +406,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
       <h1 class="title">Fixed bottom</h1>
     </div>
@@ -427,7 +419,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
       <h1 class="title">Sticky top</h1>
     </div>
@@ -440,7 +432,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup " loading="lazy">
       </a>
       <h1 class="title">Sticky bottom</h1>
     </div>
@@ -637,9 +629,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part Boosted's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part Boosted Innovation Cup's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 

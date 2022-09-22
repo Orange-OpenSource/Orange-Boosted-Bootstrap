@@ -31,7 +31,7 @@ const jsFiles = [
   'boosted.bundle.min.js.map'
 ]
 const imgFiles = [
-  'orange-logo.svg'
+  'boosted-innovation-cup-logo.png'
 ]
 
 sh.config.fatal = true

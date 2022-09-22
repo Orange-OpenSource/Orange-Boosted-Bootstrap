@@ -100,8 +100,6 @@ Carousel progress indicator is paused under multiple conditions:
 <!-- Boosted mod -->
 ### With pause/play button
 
-{{< added-in "5.2.0" >}}
-
 Adding a pause and play button is recommended to setup an accessible carousel.
 This `button` must immediately follow your carousel and have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
 
@@ -427,7 +425,7 @@ const carousel = new boosted.Carousel(myCarouselElement, {
 
 ### Events
 
-Boosted's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
+Boosted Innovation Cup's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
 
 - `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
 - `relatedTarget`: The DOM element that is being slid into place as the active item.

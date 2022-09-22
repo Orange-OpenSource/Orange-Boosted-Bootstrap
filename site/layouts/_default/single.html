@@ -13,7 +13,6 @@
         <div class="row">
           <div class="col-12">
             <p class="ll-sm h3 mb-4">{{ .Page.Params.Description | markdownify }}</p>
-            {{ if eq .Title "Examples" }}
             <div class="d-flex flex-column flex-sm-row">
               <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
                 <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
@@ -23,11 +22,6 @@
                 Download source code
               </a>
             </div>
-            {{ else if eq .Title "Orange Design System for web" }}
-            <div class="d-flex flex-column flex-sm-row">
-              <a href="{{ .Site.Params.ods.web }}" class="btn btn-primary" aria-label="Design system for web" title="Design system for web">Visit system.design.orange.com</a>
-            </div>
-            {{ end }}
           </div>
           <!-- Boosted mod: No ads -->
         </div>

@@ -68,8 +68,10 @@
     &[type="checkbox"] {
       @if $enable-gradients {
         background-image: $form-check-input-checked-bg-image, var(--#{$prefix}gradient);
+        background-size: 1rem, auto;
       } @else {
         background-image: $form-check-input-checked-bg-image;
+        background-size: 1rem;
       }
     }
 

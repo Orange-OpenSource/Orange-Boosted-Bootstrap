@@ -38,19 +38,19 @@ $grays: (
 // scss-docs-start brand-colors
 // Boosted mod
 //// Core colors
-$accessible-orange: #f16e00 !default;
-$brand-orange:      #ff7900 !default;
+$accessible-orange: #1976d2 !default;
+$brand-orange:      #63a4ff !default;
 //// Functional colors
-$functional-green:  #32c832 !default;
-$functional-blue:   #527edb !default;
+$functional-green:  #328532 !default;
+$functional-blue:   #4170d8 !default;
 $functional-yellow: #fc0 !default;
-$functional-red:    #cd3c14 !default;
+$functional-red:    #e32800 !default;
 //// Supporting colors
-$supporting-blue:   #4bb4e6 !default;
-$supporting-yellow: #ffd200 !default;
-$supporting-green:  #50be87 !default;
-$supporting-purple: #a885d8 !default;
-$supporting-pink:   #ffb4e6 !default;
+$supporting-blue:   #87cefa !default; // TODO: change it with the real hexa
+$supporting-yellow: #ff0 !default; // TODO: change it with the real hexa
+$supporting-green:  #9acd32 !default; // TODO: change it with the real hexa
+$supporting-purple: #9370db !default; // TODO: change it with the real hexa
+$supporting-pink:   #ffe4e1 !default; // TODO: change it with the real hexa
 // scss-docs-end brand-colors
 // End mod
 
@@ -352,22 +352,22 @@ $escaped-characters: (
 
 // Boosted mod
 //// SVG as Data-URi
-$chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2 7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767' fill='#{$black}'><path d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/></svg>") !default;
-$check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
-$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M28 21v2H2v-2h26Zm0-7v2H2v-2h26Zm0-7v2H2V7h26Z'/></svg>") !default;
-$burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
-$success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
-$info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
-$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 1 0 0 30 15 15 0 0 0 0-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
-$danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default;
-$add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
-$remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
-$add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M10 4H6V0H4v4H0v2h4v4h2V6h4V4z'/></svg>") !default;
-$remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
-$play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
-$pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
+$chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
+$cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z'/></svg>") !default;
+$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg>") !default;
+$burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/></svg>") !default;
+$success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$success}'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/></svg>") !default;
+$info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$info}'><path d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg>") !default;
+$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$warning}'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/></svg>") !default;
+$danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$danger}'><path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg>") !default;
+$add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>") !default;
+$remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>") !default;
+$add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>") !default;
+$remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>") !default;
+$play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z'/></svg>") !default;
+$pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'><path d='M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z'/></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (
@@ -381,7 +381,7 @@ $svg-as-custom-props: (
 //// Filters
 // see https://codepen.io/sosuke/pen/Pjoqqp
 $invert-filter:         invert(1) !default;
-$orange-filter:         invert(46%) sepia(60%) saturate(2878%) hue-rotate(6deg) brightness(98%) contrast(104%) !default;
+$orange-filter:         invert(56%) sepia(58%) saturate(1421%) hue-rotate(192deg) brightness(102%) contrast(102%) !default;
 // End mod
 
 // Options
@@ -408,9 +408,9 @@ $enable-fixed-header:         true !default; // Boosted mod: used to apply scrol
 
 // Prefix for :root CSS variables
 
-$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$variable-prefix:             bs- !default;
 $prefix:                      $variable-prefix !default;
-$boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$boosted-prefix`
+$boosted-variable-prefix:     o- !default;
 $boosted-prefix:              $boosted-variable-prefix !default;
 
 // Gradient
@@ -478,8 +478,8 @@ $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
 
 // Boosted mod
-$linked-chevron-icon-width:   subtract(.5rem, 1px) !default;
-$linked-chevron-icon-height:  $spacer * .5 !default;
+$linked-chevron-icon-width:   1rem !default;
+$linked-chevron-icon-height:  1rem !default;
 $linked-chevron-transform:    rotate(.5turn) translateY(1px) !default;
 $linked-chevron-margin-left:  $spacer * .25 !default;
 // End mod
@@ -632,7 +632,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -756,8 +756,8 @@ $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
 
 // fusv-disable
-$hr-bg-color:                 null !default; // Deprecated in v5.2.0
-$hr-height:                   null !default; // Deprecated in v5.2.0
+$hr-bg-color:                 null !default;
+$hr-height:                   null !default;
 // fusv-enable
 
 $hr-border-color:             null !default; // Allows for inherited colors
@@ -1048,7 +1048,7 @@ $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='ht
 $form-check-input-indeterminate-color:          $form-check-input-checked-color !default;
 $form-check-input-indeterminate-bg-color:       $form-check-input-checked-bg-color !default;
 $form-check-input-indeterminate-border-color:   $form-check-input-indeterminate-bg-color !default;
-$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'><path fill='#{$form-check-input-indeterminate-color}' d='M0 0h10v3H0z'/></svg>") !default;
+$form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 1'><path fill='#{$form-check-input-indeterminate-color}' d='M0 0h10v3H0z'/></svg>") !default;
 
 $form-check-input-disabled-opacity:        null !default;
 $form-check-label-disabled-opacity:        null !default;
@@ -1075,8 +1075,8 @@ $form-star-focus-outline-dark:    $border-width solid $form-star-focus-color-dar
 $form-switch-width:               $spacer * 3 !default; // Boosted mod
 $form-switch-padding-start:       $form-switch-width + .5rem !default;
 $form-switch-bg-image:            var(--#{$boosted-prefix}close-icon) !default;  // Boosted mod
-$form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
-$form-switch-bg-size:             .75rem !default;  // Boosted mod
+$form-switch-bg-position:         right 0 top 50% !default;  // Boosted mod
+$form-switch-bg-size:             1.75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
 $form-switch-border-radius:       null !default; // Boosted mod
 $form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // Boosted mod
@@ -1086,8 +1086,8 @@ $form-switch-transition:          background-position .15s ease-in-out, $transit
 
 // Boosted mod: no $form-switch-checked-color
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default; // Boosted mod
-$form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default; // Boosted mod
-$form-switch-checked-bg-position: $border-width * 3 50% !default; // Boosted mod
+$form-switch-checked-bg-size:     $spacer !default; // Boosted mod
+$form-switch-checked-bg-position: map-get($border-widths, 3) 50% !default; // Boosted mod
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
@@ -1378,7 +1378,7 @@ $dropdown-header-color:             $black !default;
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // Boosted mod
 // fusv-disable
-$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0
+$dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default;
 // fusv-enable
 // scss-docs-end dropdown-variables
 
@@ -1437,8 +1437,8 @@ $pagination-transition:             $transition-focus !default;
 $pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !default;
 $pagination-icon-size:              subtract($spacer * 2, $border-width * 2) !default;
-$pagination-icon-width:             add(.5rem, 1px) !default;
-$pagination-icon-height:            subtract(1rem, 1px) !default;
+$pagination-icon-width:             $spacer !default;
+$pagination-icon-height:            $spacer !default;
 
 $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
@@ -1578,7 +1578,7 @@ $tooltip-margin:                    null !default; // TODO: remove this in v6
 $tooltip-arrow-width:               $spacer * .5 !default;
 $tooltip-arrow-height:              $tooltip-arrow-width * .5 !default;
 // fusv-disable
-$tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.0 for CSS variables
+$tooltip-arrow-color:               null !default;
 // fusv-enable
 // scss-docs-end tooltip-variables
 
@@ -1613,7 +1613,6 @@ $popover-arrow-height:              $popover-arrow-width * .5 !default;
 // scss-docs-end popover-variables
 
 // fusv-disable
-// Deprecated in Boosted 5.2.0 for CSS variables
 $popover-arrow-color:               $popover-bg !default;
 $popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
 // fusv-enable
@@ -1863,7 +1862,7 @@ $breadcrumb-color:                  $black !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
-$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='12' height='12'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
@@ -1910,13 +1909,13 @@ $carousel-caption-spacer:            $spacer * 3 !default;
 
 $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
-$carousel-control-icon-size:         1rem 1.5rem !default;
+$carousel-control-icon-size:         2rem 2rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
 $carousel-control-pause-icon:        $pause-icon !default;
 $carousel-control-play-icon:         $play-icon !default;
-$carousel-control-pause-icon-size:   1.25rem 1.25rem !default;
+$carousel-control-pause-icon-size:   1.5rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;
@@ -1966,7 +1965,7 @@ $btn-close-active-color:        $primary !default;
 $btn-close-active-border-color: $gray-500 !default;
 $btn-close-disabled-color:      $gray-500 !default;
 
-$btn-close-icon-size:           1rem auto !default;
+$btn-close-icon-size:           2.25rem auto !default;
 $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !default;
 // End mod
 // scss-docs-end close-variables
@@ -2012,7 +2011,7 @@ $kbd-color:                         var(--#{$boosted-prefix}kbd-color, $black) !
 $kbd-color-dark:                    $white !default;
 $kbd-bg:                            var(--#{$boosted-prefix}kbd-bg, $gray-300) !default;
 $kbd-bg-dark:                       $gray-900 !default;
-$nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
+$nested-kbd-font-weight:            null !default;
 
 $pre-color:                         var(--#{$boosted-prefix}pre-color, $gray-900) !default;
 $pre-color-dark:                    $gray-300 !default;
@@ -2040,8 +2039,8 @@ $back-to-top-title-offset-right: add(100%, $border-width) !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
 $back-to-top-title-bg-color:     $white !default;
 $back-to-top-icon:               var(--#{$boosted-prefix}chevron-icon) !default;
-$back-to-top-icon-width:         add(.5rem, 1px) !default;
-$back-to-top-icon-height:        subtract(1rem, 1px) !default;
+$back-to-top-icon-width:         $spacer !default;
+$back-to-top-icon-height:        $spacer !default;
 // scss-docs-end back-to-top
 
 //// Stepped process
@@ -2053,7 +2052,7 @@ $stepped-process-counter:     step !default; // Used as a counter name
 
 $step-item-padding:           7px !default;
 // fusv-disable
-$step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
+$step-item-padding-end:       $step-item-padding * 2 !default;
 // fusv-enable
 $step-item-margin-end:        $border-width !default;
 $step-item-bg:                $black !default;
@@ -2105,18 +2104,18 @@ $quantity-selector-sm-width:              5.5rem !default;
 $quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
 $quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x-sm, 2px) !default;
 
-$quantity-selector-icon-width:            .875rem !default;
-$quantity-selector-icon-sm-width:         .625rem !default;
+$quantity-selector-icon-width:            1.5rem !default;
+$quantity-selector-icon-sm-width:         1.375rem !default;
 
 $quantity-selector-icon-add:              $add-icon !default;
 $quantity-selector-icon-add-sm:           $add-icon-sm !default;
-$quantity-selector-icon-add-height:       .875rem !default;
-$quantity-selector-icon-sm-add-height:    .625rem !default;
+$quantity-selector-icon-add-height:       1.5rem !default;
+$quantity-selector-icon-sm-add-height:    1.375rem !default;
 
 $quantity-selector-icon-remove:           $remove-icon !default;
 $quantity-selector-icon-remove-sm:        $remove-icon-sm !default;
-$quantity-selector-icon-remove-height:    .125rem !default;
-$quantity-selector-icon-sm-remove-height: .125rem !default;
+$quantity-selector-icon-remove-height:    1.5rem !default;
+$quantity-selector-icon-sm-remove-height: 1.375rem !default;
 
 $quantity-selector-input-max-width:       2.625rem !default;
 $quantity-selector-input-sm-max-width:    2.5rem !default;

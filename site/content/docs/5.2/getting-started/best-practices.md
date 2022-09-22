@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Best practices
-description: Learn about some of the best practices we've gathered from years of working on and using Boosted.
+description: Learn about some of the best practices we've gathered from years of working on and using Boosted Innovation Cup.
 group: getting-started
 aliases:
   - "/docs/getting-started/best-practices/"
 ---
 
-We've designed and developed Boosted to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
+We've designed and developed Boosted Innovation Cup to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
 
 {{< callout info >}}
 **Heads up!** This copy is a work in progress.

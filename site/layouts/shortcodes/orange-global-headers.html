@@ -3,7 +3,6 @@
 
   `args` are all optional and can be one of the following:
     * id: set an id to avoid duplicate ids in a same page (default: "global-header")
-    * responsive_logo: display a responsive logo (default: false)
     * title: add a title if defined
     * title_2: add a second title line if defined
     * mode: mode used to display specific content if defined (choose one among ["actions", "search"])
@@ -17,7 +16,6 @@
 */ -}}
 
 {{- $id := .Get "id" | default "global-header"}}
-{{- $responsive_logo := .Get "responsive_logo" | default false -}}
 {{- $title := .Get "title" | default false -}}
 {{- $title_2 := .Get "title_2" | default false -}}
 {{- $mode := .Get "mode" -}}
@@ -32,13 +30,9 @@
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
-    <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
+    <div class="navbar-brand me-auto{{ cond $navigation "" " me-lg-4" }}">
       <a class="stretched-link" href="#">
-{{- if $responsive_logo }}
-        <img src="/docs/{{ $.Site.Params.docs_version }}/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-{{- else }}
-        <img src="/docs/{{ $.Site.Params.docs_version }}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-{{- end }}
+        <img src="/docs/{{ $.Site.Params.docs_version }}/assets/brand/boosted-innovation-cup-logo.png" width="50" height="50" alt="Boosted Innovation Cup - Back to Home" loading="lazy">
       </a>
 {{- if and $title $title_2 }}
       <h1 class="two-lined">
@@ -52,7 +46,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 {{- if not $navigation }}
-    <div id="{{ $id }}.1" class="navbar-collapse collapse {{ cond $responsive_logo "me-lg-3" "me-lg-auto" }} {{ $id }}">
+    <div id="{{ $id }}.1" class="navbar-collapse collapse me-lg-auto {{ $id }}">
 {{- if $supra }}
       <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -95,7 +89,7 @@
       <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
     </form>
 {{- end }}
-    <div id="{{ $id }}.2" class="navbar-collapse collapse d-sm-flex{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
+    <div id="{{ $id }}.2" class="navbar-collapse collapse d-sm-flex {{ $id }}">
       <ul class="navbar-nav flex-row">
 {{- if eq $mode "actions" }}
         <li class="nav-item">
@@ -106,14 +100,14 @@
             <span class="visually-hidden">Search</span>
           </a>
         </li>
-        <li class="nav-item{{ cond $responsive_logo " d-none" "" }}">
+        <li class="nav-item">
           <a href="#" class="nav-link nav-icon">
             <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
               <use xlink:href="/docs/{{ $.Site.Params.docs_version }}/assets/img/boosted-sprite.svg#buy" />
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge text-bg-warning rounded-pill position-absolute top-0 fs-6 translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>

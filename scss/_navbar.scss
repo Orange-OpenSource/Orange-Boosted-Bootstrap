@@ -343,7 +343,11 @@
   filter: var(--#{$prefix}navbar-toggler-icon-filter); // Boosted mod
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 3rem;
+
+  .navbar-toggler.collapsed & {
+    background-size: 2.5rem;
+  }
 }
 
 .navbar-nav-scroll {
@@ -500,10 +504,6 @@
 // Navbar themes
 //
 // Styles for switching between navbars with light or dark background.
-
-.navbar-light {
-  @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
-}
 
 .navbar-dark {
   // scss-docs-start navbar-dark-css-vars

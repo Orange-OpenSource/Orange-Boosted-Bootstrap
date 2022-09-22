@@ -6,14 +6,11 @@ group: components
 aliases:
   - "/docs/components/title-bars/"
 toc: true
-added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## How it works
 
-A title bar is designed to display the title of a page and shall be placed right below an [Orange navbar]({{<docsref "/components/orange-navbar">}}).
+A title bar is designed to display the title of a page and shall be placed right below an [Innovation Cup navbar]({{<docsref "/components/innovation-cup-navbar">}}).
 
 Being based on spacing and backgrounds utilities, title bars were designed to take `100vw` width.
 
@@ -21,12 +18,11 @@ See them in action in our [examples page]({{<docsref "/examples/title-bars">}}).
 
 ## Background color
 
-To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.'
+To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}).
 
-Title bars can be displayed with black or white backgrounds. When using black or white backgrounds, illustrations can be included as an option, but it's not necessary.
-Supporting colors can also be used as the background color for title bars, but not the supporting light and dark tint colors. When using one of the supporting colors, illustrations must be used.
+Title bars can be displayed with black, white or supporting backgrounds. Illustrations can be included as an option, but aren't necessary.
 
-The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
+The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into one without any image.
 
 {{< example class="p-0">}}
 <div class="bg-white title-bar">

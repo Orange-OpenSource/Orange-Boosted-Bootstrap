@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Spacing
-description: Boosted includes a wide range of shorthand responsive margin, padding and gap utility classes to modify an element's appearance.
+description: Boosted Innovation Cup includes a wide range of shorthand responsive margin, padding and gap utility classes to modify an element's appearance.
 group: utilities
 aliases:
   - "/docs/utilities/spacing/"
@@ -74,7 +74,7 @@ Here are some representative examples of these classes:
 
 ### Horizontal centering
 
-Additionally, Boosted also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+Additionally, Boosted Innovation Cup also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
@@ -112,7 +112,7 @@ When using `display: grid`, you can make use of `gap` utilities on the parent gr
 </div>
 {{< /example >}}
 
-Support includes responsive options for all of Boosted's grid breakpoints, as well as six sizes from the `$spacers` map (`0`–`5`). There is no `.gap-auto` utility class as it's effectively the same as `.gap-0`.
+Support includes responsive options for all of Boosted Innovation Cup's grid breakpoints, as well as six sizes from the `$spacers` map (`0`–`5`). There is no `.gap-auto` utility class as it's effectively the same as `.gap-0`.
 
 ## Sass
 

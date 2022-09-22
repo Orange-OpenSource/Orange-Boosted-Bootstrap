@@ -117,8 +117,8 @@
 .bd-example-cssgrid .grid > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: rgba(var(--bd-violet-rgb), .1);
-  border: map-get($border-widths, 1) solid rgba(var(--bd-violet-rgb), .25);
+  background-color: rgba(var(--bd-violet-rgb), .4);
+  border: map-get($border-widths, 1) solid rgba(var(--bd-violet-rgb), 1);
 }
 
 .bd-example-row .row + .row,

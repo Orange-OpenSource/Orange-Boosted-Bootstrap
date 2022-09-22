@@ -100,7 +100,7 @@ Be sure to add `aria-expanded` to the control element. This attribute explicitly
 
 If your control element is targeting a single collapsible element – i.e. the `data-bs-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
-Note that Boosted's current implementation does not cover the various *optional* keyboard interactions described in the [ARIA Authoring Practices Guide accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - you will need to include these yourself with custom JavaScript.
+Note that Boosted Innovation Cup's current implementation does not cover the various *optional* keyboard interactions described in the [ARIA Authoring Practices Guide accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - you will need to include these yourself with custom JavaScript.
 
 ## Sass
 
@@ -181,7 +181,7 @@ const bsCollapse = new boosted.Collapse('#myCollapse', {
 
 ### Events
 
-Boosted's collapse class exposes a few events for hooking into collapse functionality.
+Boosted Innovation Cup's collapse class exposes a few events for hooking into collapse functionality.
 
 {{< bs-table >}}
 | Event type | Description |

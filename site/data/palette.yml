@@ -9,13 +9,13 @@
       class: black
       hex: "#000"
       variable: $secondary
-    - name: Accessible orange
+    - name: Accessible blue
       class: orange
-      hex: "#f16e00"
+      hex: "#1976d2"
       variable: $accessible-orange
-    - name: Brand orange
+    - name: Brand blue
       class: orange-2
-      hex: "#ff7900"
+      hex: "#63a4ff"
       variable: $brand-orange
 - category: Supporting colors
   name: "Supporting colors"
@@ -53,12 +53,12 @@
     - name: Green
       class: green
       level: success
-      hex: "#32c832"
+      hex: "#328532"
       variable: $functional-green
     - name: Blue
       class: blue
       level: info
-      hex: "#527edb"
+      hex: "#4170d8"
       variable: $functional-blue
     - name: Yellow
       class: yellow
@@ -68,7 +68,7 @@
     - name: Red
       class: red
       level: danger
-      hex: "#cd3c14"
+      hex: "#e32800"
       variable: $functional-red
 - category: Grays
   name: "Grays"

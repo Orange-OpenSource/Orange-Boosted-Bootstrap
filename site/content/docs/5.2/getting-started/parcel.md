@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Boosted & Parcel"
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
+title: "Boosted Innovation Cup & Parcel"
+description: The official guide for how to include and bundle Boosted Innovation Cup's CSS and JavaScript in your project using Parcel.
 group: getting-started
 aliases:
   - "/docs/getting-started/parcel/"
@@ -19,7 +19,7 @@ thumbnail: parcel.png
 
 ## Setup
 
-We're building a Parcel project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Parcel project with Boosted Innovation Cup from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -34,13 +34,13 @@ We're building a Parcel project with Boosted from scratch, so there are some pre
    npm i --save-dev parcel
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install Boosted Innovation Cup.** Now we can install Boosted Innovation Cup. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
-   npm i --save boosted @popperjs/core
+   npm i --save boosted-innovation-cup @popperjs/core
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Boosted Innovation Cup.
 
 ## Project structure
 
@@ -79,20 +79,20 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Parcel</title>
+       <title>Boosted Innovation Cup w/ Parcel</title>
        <link rel="stylesheet" href="scss/styles.scss">
        <script type="module" src="js/main.js"></script>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Parcel!</h1>
+         <h1>Hello, Boosted Innovation Cup and Parcel!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
      </body>
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
+   We're including a little bit of Boosted Innovation Cup styling here with the `div class="container"` and `<button>` so that we see when Boosted Innovation Cup's CSS is loaded by Webpack.
 
    Parcel will automatically detect we're using Sass and install the [Sass Parcel plugin](https://parceljs.org/languages/sass/) to support it. However, if you wish, you can also manually run `npm i --save-dev @parcel/transformer-sass`.
 
@@ -117,26 +117,26 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server.png" alt="Parcel dev server running">
 
-In the next and final section to this guide, we'll import all of Boosted's CSS and JavaScript.
+In the next and final section to this guide, we'll import all of Boosted Innovation Cup's CSS and JavaScript.
 
-## Import Boosted
+## Import Boosted Innovation Cup
 
-Importing Boosted into Parcel requires two imports, one into our `styles.scss` and one into our `main.js`.
+Importing Boosted Innovation Cup into Parcel requires two imports, one into our `styles.scss` and one into our `main.js`.
 
-1. **Import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Import Boosted Innovation Cup's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted Innovation Cup's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
-   @import "~boosted/scss/boosted";
+   // Import all of Boosted Innovation Cup's CSS
+   @import "~boosted-innovation-cup/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-2. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
+2. **Import Boosted Innovation Cup's JS.** Add the following to `src/js/main.js` to import all of Boosted Innovation Cup's JS. Popper will be imported automatically through Boosted Innovation Cup.
 
    <!-- eslint-skip -->
    ```js
-   // Import all of Boosted's JS
+   // Import all of Boosted Innovation Cup's JS
    import * as boosted from 'boosted'
    ```
 
@@ -150,13 +150,13 @@ Importing Boosted into Parcel requires two imports, one into our `styles.scss` a
    import { Tooltip, Toast, Popover } from 'boosted'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted Innovation Cup's plugins.*
 
-3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+3. **And you're done! 🎉** With Boosted Innovation Cup's source Sass and JS fully loaded, your local development server should now look like this.
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted">
+   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted Innovation Cup">
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any Boosted Innovation Cup components you want to use. Be sure to [check out the complete Parcel example project](https://github.com/twbs/examples/tree/main/parcel) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted Innovation Cup's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

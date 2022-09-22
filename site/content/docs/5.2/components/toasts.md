@@ -32,8 +32,8 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-    <strong class="me-auto">Boosted</strong>
+    {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+    <strong class="me-auto">Boosted Innovation Cup</strong>
     <small>11 mins ago</small>
     <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
@@ -44,7 +44,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 {{< /example >}}
 
 {{< callout warning >}}
-Previously, our scripts dynamically added the `.hide` class to completely hide a toast (with `display:none`, rather than just with `opacity:0`). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
+Previously, our scripts dynamically added the `.hide` class to completely hide a toast (with `display:none`, rather than just with `opacity:0`). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it).
 {{< /callout >}}
 
 ### Live example
@@ -54,8 +54,8 @@ Click the button below to show a toast (positioned with our utilities in the low
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#ff7900" class="rounded me-2" text="false" title="false" >}}
-      <strong class="me-auto">Boosted</strong>
+      {{< placeholder width="20" height="20" background="#63a4ff" class="rounded me-2" text="false" title="false" >}}
+      <strong class="me-auto">Boosted Innovation Cup</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
     </div>
@@ -76,7 +76,7 @@ Click the button below to show a toast (positioned with our utilities in the low
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
-      <strong class="me-auto">Boosted</strong>
+      <strong class="me-auto">Boosted Innovation Cup</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
     </div>
@@ -108,8 +108,8 @@ Toasts are slightly translucent to blend in with what's below them.
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-    <strong class="me-auto">Boosted</strong>
+    {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+    <strong class="me-auto">Boosted Innovation Cup</strong>
     <small>11 mins ago</small>
     <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
@@ -127,8 +127,8 @@ You can stack toasts by wrapping them in a toast container, which will verticall
 <div class="toast-container position-static">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-      <strong class="me-auto">Boosted</strong>
+      {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+      <strong class="me-auto">Boosted Innovation Cup</strong>
       <small>just now</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
     </div>
@@ -139,8 +139,8 @@ You can stack toasts by wrapping them in a toast container, which will verticall
 
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-      <strong class="me-auto">Boosted</strong>
+      {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+      <strong class="me-auto">Boosted Innovation Cup</strong>
       <small>2 seconds ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
     </div>
@@ -153,7 +153,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
 
 ### Custom content
 
-Customize your toasts by removing sub-components, tweaking them with [utilities]({{< docsref "/utilities/api" >}}), or by adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Solaris]({{< docsref "/extend/icons" >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
+Customize your toasts by removing sub-components, tweaking them with [utilities]({{< docsref "/utilities/api" >}}), or by adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Bootstrap icons]({{< docsref "/extend/icons" >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
@@ -221,8 +221,8 @@ Place toasts with custom CSS as you need them. The top right is often used for n
   <div class="toast-container p-3" id="toastPlacement">
     <div class="toast">
       <div class="toast-header">
-        {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-        <strong class="me-auto">Boosted</strong>
+        {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+        <strong class="me-auto">Boosted Innovation Cup</strong>
         <small>11 mins ago</small>
       </div>
       <div class="toast-body">
@@ -246,8 +246,8 @@ For systems that generate more notifications, consider using a wrapping element 
     <!-- Then put toasts within -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-        <strong class="me-auto">Boosted</strong>
+        {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+        <strong class="me-auto">Boosted Innovation Cup</strong>
         <small>just now</small>
         <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
       </div>
@@ -258,8 +258,8 @@ For systems that generate more notifications, consider using a wrapping element 
 
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-        <strong class="me-auto">Boosted</strong>
+        {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+        <strong class="me-auto">Boosted Innovation Cup</strong>
         <small>2 seconds ago</small>
         <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
       </div>
@@ -280,8 +280,8 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
   <!-- Then put toasts within -->
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-      <strong class="me-auto">Boosted</strong>
+      {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+      <strong class="me-auto">Boosted Innovation Cup</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
     </div>
@@ -313,8 +313,8 @@ When using `autohide: false`, you must add a close button to allow users to dism
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
-    <strong class="me-auto">Boosted</strong>
+    {{< placeholder width="20" height="20" background="#63a4ff" class="me-2" text="false" title="false" >}}
+    <strong class="me-auto">Boosted Innovation Cup</strong>
     <small>11 mins ago</small>
     <button type="button" class="btn-close ms-2" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
@@ -330,9 +330,7 @@ While technically it's possible to add focusable/actionable controls (such as ad
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, toasts now use local CSS variables on `.toast` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, toasts now use local CSS variables on `.toast` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="toast-css-vars" file="scss/_toasts.scss" >}}
 
@@ -377,8 +375,8 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 | Method | Description |
 | --- | --- |
 | `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
-| `getInstance` | *Static* method which allows you to get the toast instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance. |
-| `getOrCreateInstance` | *Static* method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn't initialized. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance. |
+| `getInstance` | *Static* method which allows you to get the toast instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted Innovation Cup toast instance. |
+| `getOrCreateInstance` | *Static* method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn't initialized. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted Innovation Cup toast instance. |
 | `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
 | `isShown` | Returns a boolean according to toast's visibility state. |
 | `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |

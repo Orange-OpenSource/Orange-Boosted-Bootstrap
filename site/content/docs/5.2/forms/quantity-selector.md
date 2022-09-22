@@ -6,10 +6,7 @@ group: forms
 aliases:
   - "/docs/forms/quantity-selector/"
 toc: true
-added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## Default
 
@@ -83,7 +80,7 @@ The `data-bs-round` attribute will help you to define the number of digits to ap
 
 ### Events
 
-Boosted's quantity selector form component exposes the classic `change` event when the value of an input has been changed.
+Boosted Innovation Cup's quantity selector form component exposes the classic `change` event when the value of an input has been changed.
 
 <table class="table">
   <thead>

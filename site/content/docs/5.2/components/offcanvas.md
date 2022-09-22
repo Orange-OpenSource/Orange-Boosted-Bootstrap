@@ -37,7 +37,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body">
-    Content for the offcanvas goes here. You can place just about any Boosted component or custom elements here.
+    Content for the offcanvas goes here. You can place just about any Boosted Innovation Cup component or custom elements here.
   </div>
 </div>
 {{< /example >}}
@@ -146,8 +146,6 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 
 ## Dark offcanvas
 
-{{< added-in "5.2.0" >}}
-
 Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
 
 {{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
@@ -163,8 +161,6 @@ Change the appearance of offcanvases with utilities to better match them to diff
 {{< /example >}}
 
 ## Responsive
-
-{{< added-in "5.2.0" >}}
 
 Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, `.offcanvas-lg` hides content in an offcanvas below the `lg` breakpoint, but shows the content above the `lg` breakpoint.
 
@@ -257,8 +253,6 @@ Since the offcanvas panel is conceptually a modal dialog, be sure to add `aria-l
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
 As part of Bootstrap's evolving CSS variables approach, offcanvas now uses local CSS variables on `.offcanvas` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="offcanvas-css-vars" file="scss/_offcanvas.scss" >}}
@@ -347,7 +341,7 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 
 ### Events
 
-Boosted's offcanvas class exposes a few events for hooking into offcanvas functionality.
+Boosted Innovation Cup's offcanvas class exposes a few events for hooking into offcanvas functionality.
 
 {{< bs-table "table" >}}
 | Event type | Description |

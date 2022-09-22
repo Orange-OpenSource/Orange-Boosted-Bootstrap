@@ -14,7 +14,7 @@
     - name: Tags
       description: "Some tags use cases from links to filter."
     - name: Title bars
-      description: "Orange branded title bars to introduce titles."
+      description: "Innovation Cup branded title bars to introduce titles."
 
 - category: Framework
   description: "Examples that focus on implementing uses of built-in components provided by Boosted."

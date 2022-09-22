@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.
+description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted Innovation Cup.
 group: content
 aliases:
   - "/docs/content/tables/"
@@ -10,9 +10,9 @@ toc: true
 
 ## Overview
 
-Due to the widespread use of `<table>` elements across third-party widgets like calendars and date pickers, Boosted's tables are **opt-in**. Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Boosted, meaning any nested tables can be styled independent from the parent.
+Due to the widespread use of `<table>` elements across third-party widgets like calendars and date pickers, Boosted Innovation Cup's tables are **opt-in**. Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Boosted Innovation Cup, meaning any nested tables can be styled independent from the parent.
 
-Using the most basic table markup, here's how `.table`-based tables look in Boosted.
+Using the most basic table markup, here's how `.table`-based tables look in Boosted Innovation Cup.
 
 {{< table class="table" simplified="false" >}}
 

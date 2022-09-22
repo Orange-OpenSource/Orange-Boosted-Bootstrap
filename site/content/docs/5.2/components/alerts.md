@@ -12,7 +12,7 @@ toc: true
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
-Boosted also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color#functional-colors">}}):
+Boosted Innovation Cup also adds a dedicated icon for each contextual class using `.alert-icon`, matching [functional colors in palette]({{<docsref "customize/color#functional-colors">}}):
 - success,
 - info,
 - warning,
@@ -115,7 +115,7 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 Alerts can also contain additional HTML elements like headings, links and paragraphs.
 
-As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment and, for headings, to always use the .alert-heading class.
+As of Boosted Innovation Cup, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment and, for headings, to always use the .alert-heading class.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
@@ -154,8 +154,6 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
-
 Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 
 {{< example class="bg-dark" >}}
@@ -181,9 +179,7 @@ Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted 
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
 
@@ -258,7 +254,7 @@ alert.close()
 
 ### Events
 
-Boosted's alert plugin exposes a few events for hooking into alert functionality.
+Boosted Innovation Cup's alert plugin exposes a few events for hooking into alert functionality.
 
 {{< bs-table >}}
 | Event | Description |

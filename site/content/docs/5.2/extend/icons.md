@@ -1,27 +1,22 @@
 ---
 layout: docs
 title: Icons
-description: Guidance and suggestions for using Solaris icon libraries with Boosted.
+description: Guidance and suggestions for using Bootstrap icons libraries with Boosted Innovation Cup.
 group: extend
 aliases:
   - "/docs/extend/icons/"
 toc: true
 ---
 
-While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+While Boosted Innovation Cup doesn't include an icon set by default. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
-## Solaris
+## Bootstrap Icons
 
-Solaris is a growing library of SVG icons that are designed by [Orange's Global Design Language Team](https://design.orange.com/).
+Bootstrap Icons is a growing library of SVG icons that are designed by [@mdo](https://github.com/mdo) and maintained by [the Bootstrap Team](https://github.com/orgs/twbs/people). The beginnings of this icon set come from Bootstrap's very own components—our forms, carousels, and more. Bootstrap has very few icon needs out of the box, so we didn't need much. However, once we got going, we couldn't stop making more.
 
-They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal information]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+Oh, and did we mention they're completely open source? Licensed under MIT, just like Bootstrap, our icon set is available to everyone.
 
-[Learn more about Solaris]({{< param icons >}}) (requires an `@orange.com` email to sign-up).
-
-### Use Solaris icons
-
-<!-- NOTE: this is partially copied from bootstrap Icons homepage → https://icons.getbootstrap.com -->
-Solaris provides both PNGs and SVGs, but we strongly recommend to use SVGs. There are quite a few ways to include SVG icons into your HTML—depending on how your project is setup.
+[Learn more about Bootstrap Icons](https://icons.getbootstrap.com), including how to install them and recommended usage.
 
 <div class="row my-4">
   <div class="col-md-4">
@@ -34,7 +29,7 @@ Embed your icons within the HTML of your page (as opposed to an external image f
   <div class="col-md-8">
 
 {{< example class="mt-0" >}}
-<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 9 14" role="img" aria-label="Left arrow"><path d="M9 2L7 0 0 7l7 7 2-2-5-5 5-5z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16" role="img" aria-label="Left arrow"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
 {{< /example >}}
   </div>
 </div>
@@ -73,7 +68,7 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
 
 #### External image
 
-Copy the Solaris icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
+Copy the Bootstrap icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
 
   </div>
   <div class="col-md-8">
@@ -127,7 +122,7 @@ Known issues include:
 
 ### Icon font
 
-You can also embed Solaris icons in an icon font by using [IcoMoon App](https://icomoon.io/app/).
+You can also embed icons in an icon font by using [IcoMoon App](https://icomoon.io/app/).
 
 #### Create your own project
 

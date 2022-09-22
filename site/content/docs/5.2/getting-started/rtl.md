@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: RTL
-description: Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.
+description: Learn how to enable support for right-to-left text in Boosted Innovation Cup across our layout, components, and utilities.
 group: getting-started
 aliases:
   - "/docs/getting-started/rtl/"
@@ -10,7 +10,7 @@ toc: true
 
 ## Get familiar
 
-We recommend getting familiar with Boosted first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
+We recommend getting familiar with Boosted Innovation Cup first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
 
 You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
 
@@ -22,7 +22,7 @@ The RTL feature is still **experimental** and will probably evolve according to 
 
 ## Required HTML
 
-There are two strict requirements for enabling RTL in Boosted-powered pages.
+There are two strict requirements for enabling RTL in Boosted Innovation Cup-powered pages.
 
 1. Set `dir="rtl"` on the `<html>` element.
 2. Add an appropriate `lang` attribute, like `lang="ar"`, on the `<html>` element.
@@ -48,26 +48,7 @@ You can see the above requirements reflected in this modified RTL starter templa
     <!-- Preconnect to CDN: remove if not needed -->
     <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
 
-    <!--
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
-      Patent and Trademark Office and may be registered in certain other jurisdictions.
-      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don't include the orange-helvetica.css
-      See NOTICE.txt for more information.
-    -->
-    <!-- Option 1: Use a CDN -->
-    <link href="{{< param "cdn.HelveticaNeueW20-55Roman" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-55Roman_hash" >}}" crossorigin="anonymous">
-    <link href="{{< param "cdn.HelveticaNeueW20-75Bold" >}}" rel="preload" as="font" type="font/woff2" integrity="{{< param "cdn.HelveticaNeueW20-75Bold_hash" >}}" crossorigin="anonymous">
-    <link href="{{< param "cdn.helvetica_rtl" >}}" rel="stylesheet" integrity="{{< param "cdn.helvetica_rtl_hash" >}}" crossorigin="anonymous">
-
-    <!-- Option 2: Embed the fonts
-    <link href="dist/fonts/HelveticaNeueW20-55Roman.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="dist/fonts/HelveticaNeueW20-75Bold.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="dist/css/orange-helvetica.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
-    -->
-
-    <!-- Boosted CSS -->
+    <!-- Boosted Innovation Cup CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 
     <title>مرحبًا بالعالم!</title>
@@ -77,10 +58,10 @@ You can see the above requirements reflected in this modified RTL starter templa
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Boosted Bundle with Popper -->
+    <!-- Option 1: Boosted Innovation Cup Bundle with Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Boosted JS -->
+    <!-- Option 2: Separate Popper and Boosted Innovation Cup JS -->
     <!--
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
@@ -91,7 +72,7 @@ You can see the above requirements reflected in this modified RTL starter templa
 
 ## Approach
 
-Our approach to building RTL support into Boosted comes with two important decisions that impact how we write and use our CSS:
+Our approach to building RTL support into Boosted Innovation Cup comes with two important decisions that impact how we write and use our CSS:
 
 1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.
 
@@ -131,11 +112,8 @@ dt {
 
 In the case you're using a custom font, be aware that not all fonts support the non-Latin alphabet. To switch from Pan-European to Arabic family, you may need to use `/*rtl:insert: {value}*/` in your font stack to modify the names of font families.
 
-For example, to switch from `Helvetica Neue` font for LTR to `Helvetica Neue Arabic` for RTL, your Sass code could look like this:
-
 ```scss
 $font-family-sans-serif:
-  Helvetica Neue#{"/* rtl:insert:Arabic */"},
   // Cross-platform generic font family (default user interface font)
   system-ui,
   // Safari for macOS and iOS (San Francisco)
@@ -157,9 +135,9 @@ $font-family-sans-serif:
 ```
 
 {{< callout warning >}}
-#### Boosted RTL assumes Arabic content
+#### Boosted Innovation Cup RTL assumes Arabic content
 
-Helvetica Neue Arabic is used as default font in Boosted RTL: if you need our RTL files for a non-arabic content, you'll need to override the `font-family` and ensure to include a more appropriate font.
+If you need our RTL files for a non-arabic content, you'll need to override the `font-family` and ensure to include a more appropriate font.
 {{< /callout >}}
 
 ### LTR and RTL at the same time
@@ -181,7 +159,7 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
   } ]
 } */
 .ltr {
-  @import "../node_modules/boosted/scss/boosted";
+  @import "../node_modules/boosted-innovation-cup/scss/boosted";
 }
 /*rtl:end:options*/
 ```

@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Boosted & Vite"
-description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
+title: "Boosted Innovation Cup & Vite"
+description: The official guide for how to include and bundle Boosted Innovation Cup's CSS and JavaScript in your project using Vite.
 group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
@@ -19,7 +19,7 @@ thumbnail: vite.png
 
 ## Setup
 
-We're building a Vite project with Boosted from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+We're building a Vite project with Boosted Innovation Cup from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
 1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
@@ -34,18 +34,18 @@ We're building a Vite project with Boosted from scratch, so there are some prere
    npm i --save-dev vite
    ```
 
-3. **Install Boosted.** Now we can install Boosted. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Install Boosted Innovation Cup.** Now we can install Boosted Innovation Cup. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
-   npm i --save boosted @popperjs/core
+   npm i --save boosted-innovation-cup @popperjs/core
    ```
-4. **Install additional dependency.** In addition to Vite and Boosted, we need another dependency (Sass) to properly import and bundle Boosted's CSS.
+4. **Install additional dependency.** In addition to Vite and Boosted Innovation Cup, we need another dependency (Sass) to properly import and bundle Boosted Innovation Cup's CSS.
 
    ```sh
    npm i --save-dev sass
    ```
 
-Now that we have all the necessary dependencies installed and setup, we can get to work creating the project files and importing Boosted.
+Now that we have all the necessary dependencies installed and setup, we can get to work creating the project files and importing Boosted Innovation Cup.
 
 ## Project structure
 
@@ -100,11 +100,11 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Boosted w/ Vite</title>
+       <title>Boosted Innovation Cup w/ Vite</title>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Boosted and Vite!</h1>
+         <h1>Hello, Boosted Innovation Cup and Vite!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
        <script type="module" src="./js/main.js"></script>
@@ -112,7 +112,7 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Vite.
+   We're including a little bit of Boosted Innovation Cup styling here with the `div class="container"` and `<button>` so that we see when Boosted Innovation Cup's CSS is loaded by Vite.
 
 3. **Now we need an npm script to run Vite.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Vite dev server.
 
@@ -135,11 +135,11 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server.png" alt="Vite dev server running">
 
-In the next and final section to this guide, we’ll import all of Boosted’s CSS and JavaScript.
+In the next and final section to this guide, we’ll import all of Boosted Innovation Cup’s CSS and JavaScript.
 
-## Import Boosted
+## Import Boosted Innovation Cup
 
-1. **Set up Boosted's Sass import in `vite.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `resolve` section—we use this to add an alias to our source files inside `node_modules` to keep imports as simple as possible.
+1. **Set up Boosted Innovation Cup's Sass import in `vite.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `resolve` section—we use this to add an alias to our source files inside `node_modules` to keep imports as simple as possible.
 
    <!-- eslint-skip -->
    ```js
@@ -149,7 +149,7 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
      root: path.resolve(__dirname, 'src'),
      resolve: {
        alias: {
-         '~boosted': path.resolve(__dirname, 'node_modules/boosted'),
+         '~boosted': path.resolve(__dirname, 'node_modules/boosted-innovation-cup'),
        }
      },
      server: {
@@ -159,23 +159,23 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
    }
    ```
 
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Now, let's import Boosted Innovation Cup's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted Innovation Cup's source Sass.
 
    ```scss
-   // Import all of Boosted's CSS
+   // Import all of Boosted Innovation Cup's CSS
    @import "~boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+3. **Next we load the CSS and import Boosted Innovation Cup's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted Innovation Cup's JS. Popper will be imported automatically through Boosted Innovation Cup.
 
    <!-- eslint-skip -->
    ```js
    // Import our custom CSS
    import '../scss/styles.scss'
 
-   // Import all of Boosted's JS
+   // Import all of Boosted Innovation Cup's JS
    import * as boosted from 'boosted'
    ```
 
@@ -183,19 +183,19 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
 
    <!-- eslint-skip -->
    ```js
-   import Alert from 'boosted/js/dist/alert';
+   import Alert from 'boosted-innovation-cup/js/dist/alert';
 
    // or, specify which plugins you need:
    import { Tooltip, Toast, Popover } from 'boosted';
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted Innovation Cup's plugins.*
 
-4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+4. **And you're done! 🎉** With Boosted Innovation Cup's source Sass and JS fully loaded, your local development server should now look like this.
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-boosted.png" alt="Vite dev server running with Boosted">
+   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-boosted.png" alt="Vite dev server running with Boosted Innovation Cup">
 
-   Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+   Now you can start adding any Boosted Innovation Cup components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted Innovation Cup's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

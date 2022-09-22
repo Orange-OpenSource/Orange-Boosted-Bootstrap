@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Browsers and devices
-description: Learn about the browsers and devices, from modern to old, that are supported by Boosted, including known quirks and bugs for each.
+description: Learn about the browsers and devices, from modern to old, that are supported by Boosted Innovation Cup, including known quirks and bugs for each.
 group: getting-started
 aliases:
   - "/docs/getting-started/browsers-devices/"
@@ -10,11 +10,11 @@ toc: true
 
 ## Supported browsers
 
-Boosted supports the **latest, stable releases** of all major browsers and platforms.
+Boosted Innovation Cup supports the **latest, stable releases** of all major browsers and platforms.
 
-Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Boosted should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
+Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Boosted Innovation Cup should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
 
-You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc):
+You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{< param repo >}}/blob/main-jd-innovation-cup/.browserslistrc):
 
 ```text
 {{< rf.inline >}}
@@ -26,7 +26,7 @@ We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intende
 
 ### Mobile devices
 
-Generally speaking, Boosted supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+Generally speaking, Boosted Innovation Cup supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
 
 {{< bs-table "table" >}}
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
@@ -48,11 +48,11 @@ Similarly, the latest versions of most desktop browsers are supported.
 
 For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) version of Firefox.
 
-Unofficially, Boosted should look and behave well enough in Chromium and Chrome for Linux, and Firefox for Linux, though they are not officially supported.
+Unofficially, Boosted Innovation Cup should look and behave well enough in Chromium and Chrome for Linux, and Firefox for Linux, though they are not officially supported.
 
 ## Internet Explorer
 
-Internet Explorer is not supported. **If you require Internet Explorer support, please use Boosted v4.**
+Internet Explorer is not supported.
 
 ## Modals and dropdowns on mobile
 
@@ -70,11 +70,11 @@ The `.dropdown-backdrop` element isn't used on iOS in the nav because of the com
 
 ## Browser zooming
 
-Page zooming inevitably presents rendering artifacts in some components, both in Boosted and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
+Page zooming inevitably presents rendering artifacts in some components, both in Boosted Innovation Cup and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
 
 ## Validators
 
-In order to provide the best possible experience to old and buggy browsers, Boosted uses [CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+In order to provide the best possible experience to old and buggy browsers, Boosted Innovation Cup uses [CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
 
 These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
 

@@ -10,7 +10,7 @@ toc: true
 
 ## Examples
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
+Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. Badges don't have focus or hover styles for links.
 
 ### Headings
 
@@ -49,7 +49,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-warning">
     99+
     <span class="visually-hidden">shopping basket items</span>
   </span>
@@ -61,8 +61,6 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 <!-- End mod -->
 
 ## Background colors
-
-{{< added-in "5.2.0" >}}
 
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
@@ -92,9 +90,7 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 
 ### Variables
 
-{{< added-in "5.2.0" >}}
-
-As part of Boosted's evolving CSS variables approach, badges now use local CSS variables on `.badge` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted Innovation Cup's evolving CSS variables approach, badges now use local CSS variables on `.badge` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="badge-css-vars" file="scss/_badge.scss" >}}
 
