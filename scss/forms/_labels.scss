@@ -22,9 +22,9 @@
   content: "*";
 }
 
-.btn-helper {
+.form-helper {
   display: inline-block;
-  flex-shrink: 0; // Defensive CSS
+  flex-shrink: 0;
   width: $form-helper-size;
   height: $form-helper-size;
   background: no-repeat center/100% escape-svg($helper-icon);

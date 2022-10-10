@@ -162,32 +162,23 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
 
 ## Form helper
 
-Provide some help on an input with `.btn-helper`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
+Form helper is a button using `.form-helper` that provides extra help information to a form control. Be sure to include text for screen readers with a visually hidden text.
 
-On top on this button, apply a [popover]({{< docsref "/components/popovers" >}}) to display the help. A [tooltip]({{< docsref "/components/tooltips" >}}) can also be applied for small and simple text helpers without any link, button, etc...
+On top of this button, apply a [popover]({{< docsref "/components/popovers" >}}) to display the help. A [tooltip]({{< docsref "/components/tooltips" >}}) can also be applied for small and simple text helpers without any actionable element inside.
 
-{{< example >}}
-<button type="button" class="btn-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help with popover that could be very long with various content.">
-  <span class="visually-hidden">Helper for input</span>
-</button>
-<button type="button" class="btn-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help with tooltip.">
-  <span class="visually-hidden">Helper for input</span>
-</button>
-{{< /example >}}
-
-The helper button should be displayed right after a label.
+The helper button should be displayed right after the label.
 
 {{< example >}}
 <div class="mb-3">
-  <label for="tooltipTextInput" class="form-label">Tooltip input</label>
-  <button type="button" class="btn-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
+  <label for="tooltipTextInput" class="form-label">Input with helper inside a Popover</label>
+  <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
     <span class="visually-hidden">Helper for input</span>
   </button>
   <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
 </div>
 <div>
-  <label for="tooltipSelect" class="form-label is-required">Tooltip select menu</label>
-  <button type="button" class="btn-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
+  <label for="tooltipSelect" class="form-label is-required">Select menu with helper inside a Tooltip</label>
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
     <span class="visually-hidden">Helper for select menu</span>
   </button>
   <select id="tooltipSelect" class="form-select" required>
@@ -195,31 +186,6 @@ The helper button should be displayed right after a label.
   </select>
 </div>
 {{< /example >}}
-
-<!-- To remove just here to show that it could be well and easily integrated everywhere -->
-{{< example >}}
-<div class="mb-3">
-  <label for="tooltipTextInput" class="form-label">Tooltip input</label>
-  <div class="d-flex gap-2 align-items-center">
-    <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
-    <button type="button" class="btn-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
-      <span class="visually-hidden">Helper for input</span>
-    </button>
-  </div>
-</div>
-<div>
-  <label for="tooltipSelect" class="form-label is-required">Tooltip select menu</label>
-  <div class="d-flex gap-2 align-items-center">
-    <select id="tooltipSelect" class="form-select" required>
-      <option value="">Tooltip select</option>
-    </select>
-    <button type="button" class="btn-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
-      <span class="visually-hidden">Helper for select menu</span>
-    </button>
-  </div>
-</div>
-{{< /example >}}
-<!-- -->
 
 ## Accessibility
 
