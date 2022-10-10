@@ -8,8 +8,6 @@
 
 // scss-docs-start focus-box
 @mixin focus-box($offset: $outline-offset, $box-color: $outline-box-color) {
-  @if $enable-shadows {
-    box-shadow: 0 0 0 $offset $box-color;
-  }
+  box-shadow: 0 0 0 $offset $box-color;
 }
 // scss-docs-end focus-box

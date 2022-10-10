@@ -194,6 +194,10 @@
     @include media-breakpoint-down(lg) {
       outline-offset: -$outline-width;
     }
+
+    @include media-breakpoint-down(md) {
+      outline-offset: 0;
+    }
   }
 
   .nav-item {
