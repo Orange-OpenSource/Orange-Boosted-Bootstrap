@@ -53,12 +53,12 @@
 .nav-tabs {
   // scss-docs-start nav-tabs-css-vars
   --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
-  --#{$prefix}nav-tabs-border-widths: var(--#{$prefix}nav-tabs-border-width) var(--#{$prefix}nav-tabs-border-width) 0; // Boosted mod
   --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
   --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
   --#{$prefix}nav-tabs-link-padding-x: #{$nav-tabs-link-padding-x}; // Boosted mod
   --#{$prefix}nav-tabs-link-hover-color: #{color-contrast($nav-tabs-link-hover-border-color)}; // Boosted mod
   --#{$prefix}nav-tabs-link-hover-bg: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
+  --#{$prefix}nav-tabs-link-border-width: var(--#{$prefix}nav-tabs-border-width) var(--#{$prefix}nav-tabs-border-width) 0; // Boosted mod
   --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
   --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
@@ -80,7 +80,7 @@
     margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
     background: none;
     border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
-    border-width: var(--#{$prefix}nav-tabs-border-widths); // Boosted mod
+    border-width: var(--#{$prefix}nav-tabs-link-border-width); // Boosted mod
     @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
 
     &:hover,
@@ -122,9 +122,9 @@
 .nav-tabs-light {
   // scss-docs-start nav-tabs-light-css-vars
   --#{$prefix}nav-tabs-border-width: #{calc($nav-tabs-border-width * .5)};
-  --#{$prefix}nav-tabs-border-widths: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4); // stylelint-disable-line function-disallowed-list
   --#{$prefix}nav-tabs-border-color: #{$gray-500};
   --#{$prefix}nav-tabs-link-hover-color: #{$accessible-orange};
+  --#{$prefix}nav-tabs-link-border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4); // stylelint-disable-line function-disallowed-list
   --#{$prefix}nav-tabs-link-hover-border-color: transparent;
   --#{$prefix}nav-tabs-link-active-border-color: #{$accessible-orange};
   // scss-docs-end nav-tabs-light-css-vars
