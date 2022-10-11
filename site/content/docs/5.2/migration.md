@@ -19,6 +19,8 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!--
+  * feat(css): add CSS vars to handle `.nav-tabs-light` and `.tab-content`
+    - New --#{$prefix}nav-tabs-link-hover-color, --#{$prefix}nav-tabs-link-hover-bg, --#{$prefix}nav-tabs-link-border-width CSS variables
   * fix(toast): adjust the layout of custom content (#1490)
     - Changed some utilities in the markup of "Toast > Custom content" example to adjust the layout
         Summary: Change custom toast example in the doc.
