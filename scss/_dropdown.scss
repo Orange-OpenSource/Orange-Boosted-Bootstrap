@@ -27,10 +27,10 @@
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
     // scss-docs-start dropdown-toggle-dark-variant-css-vars
-    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg};
-    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color};
-    --#{$prefix}dropdown-toggle-border-color: #{$gray-700};
-    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color};
+    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg}; // Boosted mod
+    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color}; // Boosted mod
+    --#{$prefix}dropdown-toggle-border-color: #{$gray-700}; // Boosted mod
+    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
     // scss-docs-end dropdown-toggle-dark-variant-css-vars
 
     color: var(--#{$prefix}dropdown-toggle-color);
@@ -43,7 +43,7 @@
   }
 
   .btn-group &:not(.btn-inverse) {
-    border-color: var(--#{$prefix}dropdown-toggle-color); // Boosted mod
+    border-color: var(--#{$prefix}dropdown-toggle-color);
   }
   // End mod
 
@@ -54,8 +54,9 @@
 // The dropdown menu
 .dropdown-menu {
   // scss-docs-start dropdown-css-vars
+  --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
   --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
-  --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
+  // Boosted mod: no --#{$prefix}dropdown-padding-x
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
   @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
@@ -83,7 +84,7 @@
   // scss-docs-end dropdown-css-vars
 
   position: absolute;
-  z-index: $zindex-dropdown;
+  z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
@@ -195,7 +196,7 @@
   height: 0;
   margin: var(--#{$prefix}dropdown-divider-margin-y) 0;
   overflow: hidden;
-  border-top: $border-width solid var(--#{$prefix}dropdown-divider-bg); // Boosted mod
+  border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-divider-bg); // Boosted mod
   opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
 }
 
