@@ -385,7 +385,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Jumbotron
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](/docs/{{< param docs_version >}}/examples/jumbotron/)
+- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
 
 ### List group
 
