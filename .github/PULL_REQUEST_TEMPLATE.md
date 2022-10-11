@@ -24,7 +24,7 @@
 
 <!-- Please add direct links where your modifications can be seen in the documentation -->
 
-* https://deploy-preview-{your pr number}--twbs-bootstrap.netlify.app/
+* https://deploy-preview-{your pr number}--boosted.netlify.app/
 
 ### Checklist
 
