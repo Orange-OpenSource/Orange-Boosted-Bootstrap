@@ -33,7 +33,7 @@ Add `.btn-close-white` to the `.btn-close` for a dark variant.
 
 ## Without specific class
 
-Close buttons can also be created without `.btn-close` to avoid importing too much CSS bundle.
+Close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle.
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline">
@@ -61,7 +61,6 @@ As part of Boosted’s evolving CSS variables approach, close buttons now use lo
 Customization through CSS variables can be seen on the `.btn-close-white` modifier class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="btn-close-white-css-vars" file="scss/_close.scss" >}}
-<!-- End mod -->
 
 ### Sass variables
 
@@ -69,8 +68,7 @@ Variables for all close buttons:
 
 {{< scss-docs name="close-variables" file="scss/_variables.scss" >}}
 
-<!-- Boosted mod -->
-Variables for the [white close button](#dark-variant):
+Variables for the [dark close button](#dark-variant):
 
 {{< scss-docs name="close-white-variables" file="scss/_variables.scss" >}}
 <!-- End mod -->
