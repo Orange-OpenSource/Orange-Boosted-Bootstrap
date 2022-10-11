@@ -773,7 +773,11 @@ $dt-font-weight:              $font-weight-bold !default;
 $list-inline-padding:         $spacer * .25 !default;
 
 $mark-padding:                0 .1875em !default; // Boosted mod
-$mark-bg:                     $primary !default;
+$mark-color:                  $white !default; // Boosted mod
+$mark-bg:                     $black !default; // Boosted mod
+
+$mark-color-dark:             $black !default; // Boosted mod
+$mark-bg-dark:                $white !default; // Boosted mod
 // scss-docs-end type-variables
 // End mod
 
@@ -1283,7 +1287,7 @@ $navbar-brand-logo-transition:              width $navbar-transition-duration $n
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
 $navbar-border-width:                       $border-width * .5 !default;
-$navbar-border-color:                       $gray-700 !default;
+$navbar-border-color:                       $gray-500 !default;
 
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
@@ -1323,6 +1327,7 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
+$navbar-dark-border-color:          $gray-700 !default;
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
