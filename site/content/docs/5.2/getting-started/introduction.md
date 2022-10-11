@@ -113,16 +113,6 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 {{< /markdown >}}
 </details>
 
-{{< callout warning >}}
-#### Required script
-
-Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
-However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use the polyfill.
-```html
-<script src="{{< param "cdn.focus_visible" >}}" integrity="{{< param "cdn.focus_visible_hash" >}}" crossorigin="anonymous"></script>
-```
-{{< /callout >}}
-
 ## Important globals
 
 Boosted employs a handful of important global styles and settings, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
