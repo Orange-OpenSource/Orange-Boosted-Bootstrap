@@ -52,10 +52,6 @@ const files = [
   {
     file: 'node_modules/@popperjs/core/dist/umd/popper.min.js',
     configPropertyName: 'popper_hash'
-  },
-  {
-    file: 'node_modules/focus-visible/dist/focus-visible.min.js',
-    configPropertyName: 'focus_visible_hash'
   }
 ]
 
