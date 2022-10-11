@@ -773,7 +773,11 @@ $dt-font-weight:              $font-weight-bold !default;
 $list-inline-padding:         $spacer * .25 !default;
 
 $mark-padding:                0 .1875em !default; // Boosted mod
-$mark-bg:                     $primary !default;
+$mark-color:                  $white !default; // Boosted mod
+$mark-bg:                     $black !default; // Boosted mod
+
+$mark-color-dark:             $black !default; // Boosted mod
+$mark-bg-dark:                $white !default; // Boosted mod
 // scss-docs-end type-variables
 // End mod
 
@@ -1283,7 +1287,7 @@ $navbar-brand-logo-transition:              width $navbar-transition-duration $n
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
 $navbar-border-width:                       $border-width * .5 !default;
-$navbar-border-color:                       $gray-700 !default;
+$navbar-border-color:                       $gray-500 !default;
 
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
@@ -1323,6 +1327,7 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
+$navbar-dark-border-color:          $gray-700 !default;
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
@@ -1756,29 +1761,46 @@ $progress-height-xs:                $spacer * .25 !default;
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-color:                  $gray-900 !default;
+$list-group-color:                  $black !default; // Boosted mod
 $list-group-bg:                     $white !default;
-$list-group-border-color:           $gray-500 !default;
+$list-group-border-color:           $gray-500 !default; // Boosted mod
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         .875rem !default;
-$list-group-item-padding-x:         $spacer !default;
+$list-group-item-padding-y:         .875rem !default; // Boosted mod
+$list-group-item-padding-x:         $spacer !default; // Boosted mod
+// Boosted mod: no $list-group-item-bg-scale
+// Boosted mod: no $list-group-item-color-scale
 
-// Boosted mod: no $list-group-hover-bg:
-$list-group-active-color:           $white !default;
-$list-group-active-bg:              $black !default;
+// Boosted mod: no $list-group-hover-bg
+$list-group-active-color:           $white !default; // Boosted mod
+$list-group-active-bg:              $black !default; // Boosted mod
 $list-group-active-border-color:    $list-group-active-bg !default;
 
-$list-group-disabled-color:         $gray-500 !default;
+$list-group-disabled-color:         $gray-500 !default; // Boosted mod
 $list-group-disabled-bg:            $list-group-bg !default;
 
-$list-group-action-color:           $black !default;
-$list-group-action-hover-color:     $primary !default;
+$list-group-action-color:           $black !default; // Boosted mod
+$list-group-action-hover-color:     $primary !default; // Boosted mod
 
 $list-group-action-active-color:    $list-group-active-color !default; // Boosted mod
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod
 // scss-docs-end list-group-variables
+
+// scss-docs-start list-group-dark-variables
+$list-group-dark-color:               $white !default; // Boosted mod
+$list-group-dark-bg:                  $black !default; // Boosted mod
+$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
+$list-group-dark-action-color:        $white !default; // Boosted mod
+$list-group-dark-action-hover-color:  $primary !default; // Boosted mod
+$list-group-dark-action-active-color: $black !default; // Boosted mod
+$list-group-dark-action-active-bg:    $white !default; // Boosted mod
+$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
+$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Boosted mod
+$list-group-dark-active-color:        $black !default; // Boosted mod
+$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Boosted mod
+$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Boosted mod
+// scss-docs-end list-group-dark-variables
 
 
 // Image thumbnails
