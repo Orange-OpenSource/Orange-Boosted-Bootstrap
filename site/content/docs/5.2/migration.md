@@ -19,6 +19,10 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!--
+  * fix(css):
+    - Changed the CSS rule to apply text style with a dark variant (was it already there in v5.2.0?)
+    - Added a section Customize > CSS variables > Dark text rule in docs
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1293
   * feat(css): add CSS vars for Close button
     - Several new `--#{$prefix}btn-close-*` CSS variables
     - Several new `$btn-close-*` Sass variables
