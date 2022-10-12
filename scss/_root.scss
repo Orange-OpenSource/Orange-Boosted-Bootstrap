@@ -79,9 +79,11 @@
   --#{$prefix}highlight-bg: #{$mark-bg};
 }
 
+// scss-docs-start root-dark-rule
 // Boosted mod
-[class*="-dark"],
-.bg-secondary {
+[class*="bg-black"],
+[class*="-dark"]:not(.border-dark):not(.text-dark),
+[class*="bg-secondary"] {
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
@@ -106,3 +108,4 @@
   }
 }
 // End mod
+// scss-docs-end root-dark-rule
