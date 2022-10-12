@@ -407,6 +407,10 @@ On the `.nav-pills` modifier class:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
 
+On the `.tab-content` modifier class:
+
+{{< scss-docs name="tab-content-css-vars" file="scss/_nav.scss" >}}
+
 ### Sass variables
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
