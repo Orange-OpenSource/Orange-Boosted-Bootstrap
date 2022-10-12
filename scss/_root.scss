@@ -79,6 +79,7 @@
   --#{$prefix}highlight-bg: #{$mark-bg};
 }
 
+// scss-docs-start root-dark-rule
 // Boosted mod
 [class*="bg-black"],
 [class*="-dark"]:not(.border-dark):not(.text-dark),
@@ -107,3 +108,4 @@
   }
 }
 // End mod
+// scss-docs-end root-dark-rule
