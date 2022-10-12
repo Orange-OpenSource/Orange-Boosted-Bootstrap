@@ -87,8 +87,6 @@ You can see the above requirements reflected in this modified RTL starter templa
 </html>
 ```
 
-### RTL
-
 ## Approach
 
 Our approach to building RTL support into Boosted comes with two important decisions that impact how we write and use our CSS:
