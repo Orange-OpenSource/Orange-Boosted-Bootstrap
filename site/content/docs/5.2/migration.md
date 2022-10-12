@@ -15,11 +15,14 @@ toc: true
 
 ### Components
 
-<!--* fix(back to top): remove 'Label inside' variant (#1520) -->
+<!--- * fix(back to top): remove 'Label inside' variant (#1520) -->
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
-<!--
-  * fix(css):
+<!---
+  * doc(examples): remove Bootstrap examples unused in Boosted
+    - Mainly removed the files. No impact for the user. Only concerns the docs.
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
+  * fix(css): reduce the scope of root dark text rule
     - Changed the CSS rule to apply text style with a dark variant (was it already there in v5.2.0?)
     - Added a section Customize > CSS variables > Dark text rule in docs
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1293
@@ -551,7 +554,7 @@ toc: true
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/1d00904aec9702cf9c23525658b7752c935eb4a2
         Topics: Dependency
         K/R: ?
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide -> Done
+    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide >> Done
 -->
 
 ## v5.2.0
@@ -811,7 +814,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ## Forms
 
-<!-- Boosted mod: no floating labels -->
+<!--- Boosted mod: no floating labels -->
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
