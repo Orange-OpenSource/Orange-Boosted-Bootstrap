@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0-beta1 (https://boosted.orange.com/)
+  * Boosted v5.2.0 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v5.2.0-beta1 (https://boosted.orange.com/)
+  * Bootstrap dropdown.js v5.2.0 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -42,7 +42,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0-beta1): dropdown.js
+   * Bootstrap (v5.2.0): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -88,20 +88,20 @@
   const PLACEMENT_TOPCENTER = 'top';
   const PLACEMENT_BOTTOMCENTER = 'bottom';
   const Default = {
-    offset: [0, 2],
+    autoClose: true,
     boundary: 'clippingParents',
-    reference: 'toggle',
     display: 'dynamic',
+    offset: [0, 2],
     popperConfig: null,
-    autoClose: true
+    reference: 'toggle'
   };
   const DefaultType = {
-    offset: '(array|string|function)',
+    autoClose: '(boolean|string)',
     boundary: '(string|element)',
-    reference: '(string|element|object)',
     display: 'string',
+    offset: '(array|string|function)',
     popperConfig: '(null|object|function)',
-    autoClose: '(boolean|string)'
+    reference: '(string|element|object)'
   };
   /**
    * Class definition

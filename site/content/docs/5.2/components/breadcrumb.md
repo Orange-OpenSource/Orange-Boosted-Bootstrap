@@ -90,11 +90,29 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 $breadcrumb-divider: none;
 ```
 
+<!-- Boosted mod: Dark variant -->
+## Dark variant
+
+{{< added-in "5.2.1" >}}
+
+Add `.breadcrumb-dark` to the `.breadcrumb` for a dark variant.
+
+{{< example class="bg-dark" >}}
+<nav aria-label="dark breadcrumb">
+  <ol class="breadcrumb breadcrumb-dark">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+{{< /example >}}
+<!-- End mod -->
+
 ## Accessibility
 
 Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+For more information, see the [ARIA Authoring Practices Guide breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/).
 
 ## CSS
 
@@ -106,6 +124,20 @@ As part of Boosted's evolving CSS variables approach, breadcrumbs now use local 
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 
+<!-- Boosted mod: Dark variant -->
+Customization through CSS variables can be seen on the `.breadcrumb-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="breadcrumb-dark-css-vars" file="scss/_breadcrumb.scss" >}}
+<!-- End mod -->
+
 ### Sass variables
 
+Variables for all breadcrumbs:
+
 {{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}
+
+<!-- Boosted mod: Dark variant -->
+Variables for [dark breadcrumb](#dark-variant):
+
+{{< scss-docs name="breadcrumb-dark-variables" file="scss/_variables.scss" >}}
+<!-- End mod -->

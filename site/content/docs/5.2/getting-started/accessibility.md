@@ -75,7 +75,7 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 
 ### Minimum target size
 
-Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (eg. different width and height, using `::after` instead of `::before`, etc.).
+Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (e.g. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
 

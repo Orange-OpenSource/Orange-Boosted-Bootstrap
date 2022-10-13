@@ -1,11 +1,7 @@
 name: BrowserStack
 on:
-  push:
-    paths:
-      - 'js/**'
-    branches:
-      - main
-      - v4-dev
+  # BrowserStack is for now deactivated when triggered by a push action because always failing
+  # push:
   workflow_dispatch:
 
 env:

@@ -50,4 +50,4 @@ Their latest release, Bootstrap 5, focuses on improving v4's codebase with as fe
 
 ## Get involved in Bootstrap
 
-Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how they develop.
+Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new/choose) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how they develop.

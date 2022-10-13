@@ -21,6 +21,12 @@
   --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs}; // Boosted mod
   --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --#{$prefix}navbar-nav-padding-top: 0; // Boosted mod
+  --#{$prefix}navbar-nav-padding-x: 0; // Boosted mod
+  --#{$prefix}navbar-nav-padding-bottom: 0; // Boosted mod
+  --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // Boosted mod
+  --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // Boosted mod
+  --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // Boosted mod
   --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // Boosted mod
   --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // Boosted mod
   --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // Boosted mod
@@ -44,7 +50,7 @@
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
   // Boosted mod
   font-weight: $font-weight-bold;
-  box-shadow: inset 0 calc(var(--#{$prefix}navbar-border-width) * -1) 0 var(--#{$prefix}navbar-border-color); /* stylelint-disable-line function-disallowed-list */
+  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); /* stylelint-disable-line function-disallowed-list */
   @include transition($navbar-transition);
   // End mod
   @include gradient-bg();
@@ -156,6 +162,8 @@
   // scss-docs-start navbar-nav-css-vars
   --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
   --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
@@ -163,15 +171,18 @@
 
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
+  padding: var(--#{$prefix}navbar-nav-padding-top) var(--#{$prefix}navbar-nav-padding-x) var(--#{$prefix}navbar-nav-padding-bottom); // Boosted mod
   margin-bottom: 0;
+  @include font-size(var(--#{$prefix}navbar-nav-font-size, $font-size-base)); // Boosted mod
+  line-height: var(--#{$prefix}navbar-nav-line-height, $line-height-base); // Boosted mod
+  letter-spacing: var(--#{$prefix}navbar-nav-letter-spacing, $letter-spacing-base); // Boosted mod
   list-style: none;
 
   // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
     padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
-    margin-left: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+    margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
     word-break: break-all;
     outline-offset: $spacer;
     @include transition($navbar-transition);
@@ -184,7 +195,6 @@
   }
 
   .nav-item {
-    font-size: $font-size-base;
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
     .badge {
@@ -194,7 +204,7 @@
 
     .nav-link.nav-icon {
       padding: var(--#{$prefix}navbar-nav-icon-padding-y) var(--#{$prefix}navbar-nav-icon-padding-x);
-      margin-left: calc(var(--#{$prefix}navbar-nav-icon-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
       white-space: nowrap;
 
       svg,
@@ -268,7 +278,7 @@
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
     @include media-breakpoint-up(md) {
-      margin-bottom: calc(var(--#{$prefix}navbar-padding-y) * -1); /* stylelint-disable-line function-disallowed-list */
+      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); /* stylelint-disable-line function-disallowed-list */
     }
   }
 
@@ -283,7 +293,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
-  margin-right: calc(var(--#{$prefix}navbar-toggler-padding-x) / -2); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
@@ -300,7 +310,7 @@
 
   &:focus {
     text-decoration: none;
-    outline-offset: calc(var(--#{$prefix}navbar-border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+    outline-offset: calc(-1 * var(--#{$prefix}navbar-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
     box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
   }
 
@@ -342,7 +352,7 @@
 // Boosted mod: Handle the nav-under responsiveness
 .navbar:not(.supra) + .navbar {
   padding: 0;
-  margin-top: calc(var(--#{$prefix}navbar-border-width) * -1); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(-1 * var(--#{$prefix}navbar-border-width)); // stylelint-disable-line function-disallowed-list
 }
 // End mod
 
@@ -374,7 +384,7 @@
             &.active::before {
               position: absolute;
               right: var(--#{$prefix}navbar-nav-link-padding-x);
-              bottom: calc(var(--#{$prefix}navbar-padding-y) * -1); // stylelint-disable-line function-disallowed-list
+              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
               left: var(--#{$prefix}navbar-nav-link-padding-x);
               height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
               content: "";
@@ -387,19 +397,19 @@
             border: 0;
 
             &:first-child > .nav-link {
-              margin-left: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
             }
 
             &:last-child > .nav-link {
-              margin-right: calc(var(--#{$prefix}navbar-nav-link-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
             }
 
             &:first-child > .nav-icon {
-              margin-left: calc(var(--#{$prefix}navbar-nav-icon-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
             }
 
             &:last-child > .nav-icon {
-              margin-right: calc(var(--#{$prefix}navbar-nav-icon-padding-x) * -1); /* stylelint-disable-line function-disallowed-list */
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
             }
           }
           // End mod
@@ -494,6 +504,8 @@
 }
 
 .navbar-dark {
+  // scss-docs-start navbar-dark-css-vars
+  --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
@@ -502,6 +514,7 @@
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
+  // scss-docs-end navbar-dark-css-vars
 
   // Boosted mod
   .navbar-toggler-icon {

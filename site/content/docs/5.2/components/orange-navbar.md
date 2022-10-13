@@ -7,6 +7,8 @@ toc: true
 added: "5.2"
 ---
 
+{{< added-in "5.2.0" >}}
+
 ## How it works
 
 Orange navbars are based on the [navbar]({{<docsref "/components/navbar">}}) component. They add some display management and introduce the Supra bar component.
@@ -189,7 +191,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-relative">
+              <span class="position-relative align-self-start">
                 <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>

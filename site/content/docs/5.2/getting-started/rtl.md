@@ -15,7 +15,7 @@ You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it
 {{< callout warning >}}
 ### Experimental feature
 
-The RTL feature is still **experimental** and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new), we'd love to get your insights.
+The RTL feature is still **experimental** and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new/choose), we'd love to get your insights.
 {{< /callout >}}
 
 ## Required HTML
@@ -51,7 +51,7 @@ You can see the above requirements reflected in this modified RTL starter templa
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don't include the orangeHelvetica.css
+      If you are not authorized to used it, don't include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
     <!-- Option 1: Use a CDN -->
@@ -86,10 +86,6 @@ You can see the above requirements reflected in this modified RTL starter templa
   </body>
 </html>
 ```
-
-### RTL examples
-
-Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
 
 ## Approach
 
@@ -202,7 +198,7 @@ While this approach is understandable, please pay attention to the following:
 
 ## The breadcrumb case
 
-The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
+The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand-new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
 
 ## Additional resources
 

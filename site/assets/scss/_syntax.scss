@@ -32,7 +32,7 @@
 
   .language-bash,
   .language-sh {
-    &::before {
+    .line::before {
       color: var(--base12);
       content: "$ ";
       user-select: none;

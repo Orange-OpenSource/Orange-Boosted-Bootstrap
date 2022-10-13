@@ -27,7 +27,10 @@
     @if $enable-validation-icons {
       .form-control {
         @include form-validation-state-selector($state) {
-          background: $icon no-repeat right map-get($spacers, 2) center / $spacer;
+          background-image: escape-svg($icon);
+          background-repeat: no-repeat;
+          background-position: right $input-height-inner-quarter center;
+          background-size: $input-height-inner-half $input-height-inner-half;
         }
       }
 
@@ -93,6 +96,7 @@
         border-right: none;
         border-left: none;
 
+        // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
           border-color: $color;
         }
@@ -143,16 +147,16 @@
     }
   }
   // End mod
-  .input-group .form-control,
-  .input-group .form-select {
-    @include form-validation-state-selector($state) {
-      @if $state == "valid" {
-        z-index: 1;
-      } @else if $state == "invalid" {
-        z-index: 2;
-      }
-      &:focus {
-        z-index: 3;
+  .input-group {
+    > .form-control:not(:focus),
+    > .form-select:not(:focus),
+    > .form-floating:not(:focus-within) {
+      @include form-validation-state-selector($state) {
+        @if $state == "valid" {
+          z-index: 3;
+        } @else if $state == "invalid" {
+          z-index: 4;
+        }
       }
     }
   }

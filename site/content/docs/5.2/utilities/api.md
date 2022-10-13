@@ -281,7 +281,7 @@ Output:
 .opacity-75 { opacity: .75 !important; }
 .opacity-100 { opacity: 1 !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .opacity-sm-0 { opacity: 0 !important; }
   .opacity-sm-25 { opacity: .25 !important; }
   .opacity-sm-50 { opacity: .5 !important; }
@@ -297,7 +297,7 @@ Output:
   .opacity-md-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .opacity-lg-0 { opacity: 0 !important; }
   .opacity-lg-25 { opacity: .25 !important; }
   .opacity-lg-50 { opacity: .5 !important; }
@@ -305,7 +305,7 @@ Output:
   .opacity-lg-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .opacity-xl-0 { opacity: 0 !important; }
   .opacity-xl-25 { opacity: .25 !important; }
   .opacity-xl-50 { opacity: .5 !important; }
@@ -313,7 +313,7 @@ Output:
   .opacity-xl-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .opacity-xxl-0 { opacity: 0 !important; }
   .opacity-xxl-25 { opacity: .25 !important; }
   .opacity-xxl-50 { opacity: .5 !important; }
@@ -392,7 +392,6 @@ New utilities can be added to the default `$utilities` map with a `map-merge`. M
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
-@import "boosted/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities,
@@ -405,6 +404,8 @@ $utilities: map-merge(
     )
   )
 );
+
+@import "boosted/scss/utilities/api";
 ```
 
 ### Modify utilities
@@ -417,7 +418,6 @@ Modify existing utilities in the default `$utilities` map with `map-get` and `ma
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
-@import "boosted/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities,
@@ -433,6 +433,8 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "boosted/scss/utilities/api";
 ```
 
 #### Enable responsive
@@ -445,7 +447,6 @@ You can enable responsive classes for an existing set of utilities that are not 
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
-@import "boosted/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities, (
@@ -455,6 +456,8 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "boosted/scss/utilities/api";
 ```
 
 This will now generate responsive variations of `.border` and `.border-0` for each breakpoint. Your generated CSS will look like this:
@@ -463,7 +466,7 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 .border { ... }
 .border-0 { ... }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .border-sm { ... }
   .border-sm-0 { ... }
 }
@@ -473,17 +476,17 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
   .border-md-0 { ... }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .border-lg { ... }
   .border-lg-0 { ... }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .border-xl { ... }
   .border-xl-0 { ... }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .border-xxl { ... }
   .border-xxl-0 { ... }
 }
@@ -499,7 +502,6 @@ Missing v4 utilities, or used to another naming convention? The utilities API ca
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
-@import "boosted/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities, (
@@ -509,11 +511,13 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "boosted/scss/utilities/api";
 ```
 
 ### Remove utilities
 
-Remove any of the default utilities by setting the group key to `null`. For example, to remove all our `width` utilities, create a `$utilities` `map-merge` and add `"width": null` within.
+Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map#remove).
 
 ```scss
 @import "boosted/scss/functions";
@@ -521,14 +525,60 @@ Remove any of the default utilities by setting the group key to `null`. For exam
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
-@import "boosted/scss/utilities/api";
 
+// Remove multiple utilities with a comma-separated list
+$utilities: map-remove($utilities, "width", "float");
+
+@import "boosted/scss/utilities/api";
+```
+
+You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map#merge) and set the group key to `null` to remove the utility.
+
+```scss
+@import "boosted/scss/functions";
+@import "boosted/scss/variables";
+@import "boosted/scss/maps";
+@import "boosted/scss/mixins";
+@import "boosted/scss/utilities";
 $utilities: map-merge(
   $utilities,
   (
     "width": null
   )
 );
+@import "boosted/scss/utilities/api";
+```
+
+### Add, remove, modify
+
+You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map#merge). Here's how you can combine the previous examples into one larger map.
+
+```scss
+@import "boosted/scss/functions";
+@import "boosted/scss/variables";
+@import "boosted/scss/maps";
+@import "boosted/scss/mixins";
+@import "boosted/scss/utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    // Remove the `width` utility
+    "width": null,
+    // Make an existing utility responsive
+    "border": map-merge(
+      map-get($utilities, "border"),
+      ( responsive: true ),
+    ),
+    // Add new utilities
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )
+  )
+);
+@import "boosted/scss/utilities/api";
 ```
 
 #### Remove utility in RTL

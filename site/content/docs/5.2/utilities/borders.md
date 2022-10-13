@@ -26,12 +26,12 @@ Add borders to custom elements:
 
 Or remove borders:
 
-{{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
-<span class="border-0"></span>
-<span class="border-top-0"></span>
-<span class="border-end-0"></span>
-<span class="border-bottom-0"></span>
-<span class="border-start-0"></span>
+{{< example class="bd-example-border-utils" >}}
+<span class="border border-0"></span>
+<span class="border border-top-0"></span>
+<span class="border border-end-0"></span>
+<span class="border border-bottom-0"></span>
+<span class="border border-start-0"></span>
 {{< /example >}}
 
 ## Color
@@ -140,6 +140,8 @@ Add classes to an element to easily round its corners.
 ## CSS
 
 ### Variables
+
+{{< added-in "5.2.0" >}}
 
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 

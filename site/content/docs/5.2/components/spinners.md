@@ -62,6 +62,8 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 
 ## Growing spinner
 
+{{< added-in "5.2.0" >}}
+
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
 {{< example >}}
