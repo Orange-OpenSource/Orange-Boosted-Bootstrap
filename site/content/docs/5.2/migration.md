@@ -19,6 +19,10 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
+  * feat(utilities): revamp `.img-thumbnail` and add desc in docs
+    - Revamp rendering of `.img-thumbnail`
+    - Add a new section in the Content > Images > Image thumbnails docs
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1441
   * doc(examples): remove Bootstrap examples unused in Boosted
     - Mainly removed the files. No impact for the user. Only concerns the docs.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
