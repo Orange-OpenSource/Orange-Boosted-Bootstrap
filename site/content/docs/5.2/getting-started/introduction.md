@@ -81,7 +81,7 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
 
-- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) and the list of [components that require JavaScript](#js-components) below.
+- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
 
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
 
@@ -191,7 +191,7 @@ For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/rebo
 Stay up-to-date on the development of Bootstrap and reach out to the community with these helpful resources.
 
 - Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
-- Join [the official Slack room]({{< param slack >}}).
+- Ask and explore [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
 - Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Developers should use the keyword `bootstrap` on packages that modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.

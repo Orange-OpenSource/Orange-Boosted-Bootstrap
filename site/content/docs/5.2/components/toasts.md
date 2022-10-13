@@ -156,10 +156,10 @@ Customize your toasts by removing sub-components, tweaking them with [utilities]
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
-    <div class="toast-body">
+    <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
 {{< /example >}}
@@ -185,10 +185,10 @@ Building on the above example, you can create different toast color schemes with
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
-    <div class="toast-body">
+    <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
 {{< /example >}}
@@ -360,9 +360,9 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `animation` | boolean | `true` | Apply a CSS fade transition to the toast |
-| `autohide` | boolean | `true`  | Automatically hide the toast after the delay |
-| `delay` | number | `5000` | Delay in milliseconds before hiding the toast |
+| `animation` | boolean | `true` | Apply a CSS fade transition to the toast. |
+| `autohide` | boolean | `true` | Automatically hide the toast after the delay. |
+| `delay` | number | `5000` | Delay in milliseconds before hiding the toast. |
 {{< /bs-table >}}
 
 ### Methods
@@ -375,8 +375,8 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 | Method | Description |
 | --- | --- |
 | `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
-| `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance|
-| `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`const myToastEl = document.getElementById('myToastEl')`  `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance |
+| `getInstance` | *Static* method which allows you to get the toast instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance. |
+| `getOrCreateInstance` | *Static* method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn't initialized. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance. |
 | `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
 | `isShown` | Returns a boolean according to toast's visibility state. |
 | `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
