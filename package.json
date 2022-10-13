@@ -48,7 +48,6 @@
     "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-prefix-examples": "postcss --config build/postcss.config.js --replace \"site/content/**/*.css\"",
-    "css-prefix-examples-rtl": "cross-env-shell NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"site/content/docs/$npm_package_config_version_short/examples/\" --ext \".rtl.css\" --base \"site/content/docs/$npm_package_config_version_short/examples/\" \"site/content/docs/$npm_package_config_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.css\" \"!site/content/docs/$npm_package_config_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.rtl.css\"",
     "fonts": "cross-env mkdir -p dist/fonts && cp -r ./fonts/* dist/fonts/",
     "img": "cross-env mkdir -p dist/img && cp -r ./img/* dist/img/",
     "js": "npm-run-all js-compile js-minify",
@@ -98,23 +97,24 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\""
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.5"
+    "@popperjs/core": "^2.11.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.9",
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@popperjs/core": "^2.11.5",
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@percy/cli": "^1.10.2",
+    "@popperjs/core": "^2.11.6",
     "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.8",
     "bundlewatch": "^0.3.3",
     "clean-css-cli": "^5.6.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.20.0",
-    "eslint-config-xo": "^0.41.0",
+    "eslint": "^8.23.0",
+    "eslint-config-xo": "^0.42.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-unicorn": "^42.0.0",
@@ -124,7 +124,7 @@
     "hammer-simulator": "0.0.1",
     "hugo-bin": "^0.89.0",
     "ip": "^2.0.0",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.1",
     "karma": "^6.4.0",
     "karma-browserstack-launcher": "1.4.0",
     "karma-chrome-launcher": "^3.1.1",
@@ -134,23 +134,23 @@
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.0.0",
     "karma-rollup-preprocessor": "7.0.7",
-    "lockfile-lint": "^4.7.7",
+    "lockfile-lint": "^4.8.0",
     "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
     "pa11y-ci": "^2.4.2",
     "pa11y-ci-reporter-html": "^3.0.3",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
-    "rollup": "^2.77.0",
+    "rollup": "^2.79.0",
     "rollup-plugin-istanbul": "^3.0.0",
-    "rtlcss": "^3.5.0",
-    "sass": "^1.54.0",
+    "rtlcss": "^4.0.0",
+    "sass": "^1.54.8",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
-    "stylelint": "^14.9.1",
+    "stylelint": "^14.11.0",
     "stylelint-config-twbs-bootstrap": "^5.0.0",
     "tarteaucitronjs": "^1.8.4",
-    "terser": "^5.14.2",
+    "terser": "^5.15.0",
     "vnu-jar": "21.10.12"
   },
   "files": [
@@ -178,7 +178,7 @@
     },
     "dependencies": {},
     "peerDependencies": {
-      "@popperjs/core": "^2.11.5"
+      "@popperjs/core": "^2.11.6"
     }
   }
 }
