@@ -152,27 +152,18 @@
 
 // Boosted mod: border-only on :hover, :focus and :active
 .btn-no-outline {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    border-color: $gray-500;
-  }
+  --#{$prefix}btn-hover-border-color: #{$gray-500};
+  --#{$prefix}btn-active-color: #{$accessible-orange};
+  --#{$prefix}btn-active-border-color: #{$gray-500};
+  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
 
-  &:active,
-  &.active {
-    color: $accessible-orange;
-    background-color: var(--#{$prefix}btn-bg);
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $gray-500;
-    border-color: var(--#{$prefix}btn-border-color);
-  }
-
-  &.btn-inverse:not(:active) {
-    color: $white;
+  &.btn-inverse {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-hover-border-color: #{$gray-700};
+    --#{$prefix}btn-active-color: #{$brand-orange};
+    --#{$prefix}btn-active-border-color: #{$gray-700};
+    --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
 // End mod
@@ -184,7 +175,7 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight: #{$font-weight-normal}
+  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
@@ -218,6 +209,10 @@
       outline-color: var(--#{$prefix}btn-active-color);
     }
   }
+
+  &.btn-inverse {
+    --#{$prefix}btn-disabled-color: #{$gray-700};
+  }
   // End mod
 
   // No need for an active state here
@@ -245,23 +240,28 @@
 
 // Boosted mod: social button
 .btn-social {
-  border-color: currentcolor;
+  --#{$prefix}btn-border-color: currentcolor;
+  --#{$prefix}btn-hover-color: #{$white};
+  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, $black);
+  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, $black);
+  --#{$prefix}btn-active-color: #{$white};
+  --#{$prefix}btn-active-bg: #{$black};
+  --#{$prefix}btn-active-border-color: #{$black};
+  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$boosted-prefix}network-logo));
 
-  &:hover,
   &:focus {
-    color: $white;
-    background-color: var(--#{$boosted-prefix}network-color, $black);
-    border-color: var(--#{$boosted-prefix}network-color, $black);
     outline-color: var(--#{$boosted-prefix}network-color, $black);
   }
 
-  &:active,
-  &.active {
-    color: $white;
-    background-color: $black;
-    border-color: $black;
+  &.btn-inverse {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-active-color: #{$black};
+    --#{$prefix}btn-active-bg: #{$white};
+    --#{$prefix}btn-active-border-color: #{$white};
+    --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
 
@@ -271,17 +271,6 @@
   .btn-#{$name} {
     --#{$boosted-prefix}network-color: #{map-get($network, "color")};
     --#{$boosted-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
-
-    &.btn-inverse {
-      color: $white;
-
-      &:active,
-      &.active {
-        color: $black;
-        background-color: $white;
-        border-color: $white;
-      }
-    }
 
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
