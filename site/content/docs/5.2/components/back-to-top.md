@@ -61,21 +61,6 @@ Add `.position-fixed` utility to your `.back-to-top-link` to make your back-to-t
 </nav>
 {{< /example >}}
 
-### Label inside
-
-Drop the `data-bs-label` attribute and the `<span class="visually-hidden">` and use [spacing utilities]({{< docsref "/utilities/spacing" >}}) to fine tune your button.
-
-<div class="bd-example">
-  <nav aria-label="Label inside back to top example" class="back-to-top position-static">
-    <a href="#top" class="back-to-top-link position-static btn btn-secondary px-3">Back to top</a>
-  </nav>
-</div>
-{{< example show_preview="false" >}}
-<nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-secondary px-3">Back to top</a>
-</nav>
-{{< /example >}}
-
 ### Icon only
 
 Use a `title` attribute instead of `data-bs-label` to ensure a visible label is still provided on demand for sighted users.

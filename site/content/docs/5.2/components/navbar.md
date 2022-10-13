@@ -541,7 +541,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -600,7 +600,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -645,11 +645,19 @@ Some additional CSS variables are also present on `.navbar-nav`:
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
+Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
+
 ### Sass variables
+
+Variables for all navbars:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+Variables for the [dark navbar](#color-schemes):
+
+{{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass loop
 

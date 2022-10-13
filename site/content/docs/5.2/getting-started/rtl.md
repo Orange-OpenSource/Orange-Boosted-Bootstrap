@@ -51,7 +51,7 @@ You can see the above requirements reflected in this modified RTL starter templa
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don't include the orangeHelvetica.css
+      If you are not authorized to used it, don't include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
     <!-- Option 1: Use a CDN -->
@@ -86,10 +86,6 @@ You can see the above requirements reflected in this modified RTL starter templa
   </body>
 </html>
 ```
-
-### RTL examples
-
-Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
 
 ## Approach
 
