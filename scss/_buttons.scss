@@ -154,7 +154,6 @@
 .btn-no-outline {
   --#{$prefix}btn-hover-border-color: #{$gray-500};
   --#{$prefix}btn-active-color: #{$accessible-orange};
-  --#{$prefix}btn-active-bg: var(--#{$prefix}btn-bg); // not sure it's useful
   --#{$prefix}btn-active-border-color: #{$gray-500};
   --#{$prefix}btn-disabled-color: #{$gray-500};
   --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
