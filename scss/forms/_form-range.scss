@@ -11,18 +11,24 @@
   background-color: transparent;
   appearance: none;
 
-  &:focus-visible {
+  &:focus {
     outline: 0;
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb {
-      box-shadow: $form-range-thumb-focus-box-shadow;
-      @include focus-visible(); // Boosted mod
-    }
-    &::-moz-range-thumb     {
-      box-shadow: $form-range-thumb-focus-box-shadow;
-      @include focus-visible(); // Boosted mod
+    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
+    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
+
+    // Boosted mod: added `&[data-focus-visible-added]`
+    &[data-focus-visible-added] {
+      // Boosted mod: better focus visibility
+      &::-webkit-slider-thumb {
+        @include focus-visible();
+      }
+      &::-moz-range-thumb {
+        @include focus-visible();
+      }
+      // End mod
     }
   }
 

@@ -264,7 +264,7 @@
     z-index: 0;
   }
 
-  &:focus-visible {
+  &[data-focus-visible-added] {
     + .btn,
     + .tag {
       @include focus-visible();

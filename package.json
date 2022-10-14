@@ -136,6 +136,7 @@
     "eslint-plugin-storybook": "^0.6.8",
     "eslint-plugin-unicorn": "^44.0.0",
     "find-unused-sass-variables": "^4.0.4",
+    "focus-visible": "^5.2.0",
     "globby": "^11.1.0",
     "hammer-simulator": "0.0.1",
     "hugo-bin": "^0.92.2",

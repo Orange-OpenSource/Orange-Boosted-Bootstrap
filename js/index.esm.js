@@ -5,6 +5,8 @@
  * --------------------------------------------------------------------------
  */
 
+import '../node_modules/focus-visible/dist/focus-visible.js' // Boosted mod
+
 export { default as Alert } from './src/alert'
 export { default as Button } from './src/button'
 export { default as Carousel } from './src/carousel'

@@ -111,6 +111,12 @@
     text-decoration: if($link-hover-decoration == underline, null, underline);
   }
 
+  &:focus {
+    .active &[data-focus-visible-added] {
+      outline-color: var(--#{$prefix}stepped-process-link-active-color);
+    }
+  }
+
   .active & {
     color: var(--#{$prefix}stepped-process-link-active-color);
     outline-color: var(--#{$prefix}stepped-process-link-active-color);

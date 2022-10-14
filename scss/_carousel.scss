@@ -127,10 +127,13 @@
   }
 
   // scss-docs-start focus-visible-carousel
-  &:focus-visible {
-    > span {
-      @include focus-visible();
-      @include focus-box();
+  &:focus {
+    &[data-focus-visible-added] {
+      // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+      & > span {
+        @include focus-visible();
+        @include focus-box();
+      }
     }
   }
   // scss-docs-end focus-visible-carousel
@@ -224,10 +227,12 @@
       }
     }
 
-    &:focus-visible {
-      @include focus-visible();
-      @include focus-box();
-      transform: none;
+    &:focus {
+      &[data-focus-visible-added] {
+        @include focus-visible();
+        @include focus-box();
+        transform: none;
+      }
     }
 
   }
