@@ -3,7 +3,7 @@
 
   // Tooltip
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new boosted.Tooltip(tooltipTriggerEl))
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new boosted.Tooltip(tooltipTriggerEl)) // stylelint-disable-line no-unused-vars, no-undef
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll('.needs-validation')
