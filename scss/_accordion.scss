@@ -17,7 +17,7 @@
   --#{$prefix}accordion-btn-font-weight: #{$accordion-button-font-weight}; // Boosted mod
   --#{$prefix}accordion-btn-line-height: #{$accordion-button-line-height}; // Boosted mod
   --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing}; // Boosted mod
-  --#{$prefix}accordion-btn-color: #{$accordion-color};
+  --#{$prefix}accordion-btn-color: #{$accordion-button-color};
   --#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
   // Boosted mod: no --#{$prefix}accordion-btn-icon
   // Boosted mod: no --#{$prefix}accordion-btn-icon-width
@@ -75,7 +75,7 @@
 
   &:focus {
     z-index: 3;
-    outline-offset: calc(var(--#{$prefix}accordion-border-width) * -1); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+    outline-offset: calc(-1 * var(--#{$prefix}accordion-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   }
 }
 

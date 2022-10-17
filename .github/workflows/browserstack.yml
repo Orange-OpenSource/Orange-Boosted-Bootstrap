@@ -1,6 +1,7 @@
 name: BrowserStack
 on:
-  push:
+  # BrowserStack is for now deactivated when triggered by a push action because always failing
+  # push:
   workflow_dispatch:
 
 env:
