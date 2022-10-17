@@ -133,7 +133,7 @@ hr {
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: var(--#{$prefix}heading-color);
+  color: $headings-color;
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
@@ -309,6 +309,7 @@ small {
 
 mark {
   padding: $mark-padding;
+  color: var(--#{$prefix}highlight-color); // Boosted mod
   background-color: var(--#{$prefix}highlight-bg);
 }
 

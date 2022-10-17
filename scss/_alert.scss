@@ -22,7 +22,7 @@
   color: var(--#{$prefix}alert-color);
   background-color: var(--#{$prefix}alert-bg);
   border: var(--#{$prefix}alert-border);
-  border-radius: var(--#{$prefix}alert-border-radius, 0); // stylelint-disable-line property-disallowed-list
+  @include border-radius(var(--#{$prefix}alert-border-radius));
 }
 
 // Headings for larger alerts
@@ -31,6 +31,7 @@
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
   // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
@@ -85,6 +86,7 @@
 
 .alert-heading ~ p {
   font-weight: $font-weight-normal;
+  line-height: 1.5;
 }
 
 //// Icons
@@ -94,7 +96,7 @@
   margin: -#{$alert-icon-margin-y * .5} 0;
 
   + * {
-    margin: $alert-icon-margin-y 0;
+    margin: $alert-icon-margin-y 0 0;
   }
 
   &::before {

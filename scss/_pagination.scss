@@ -1,10 +1,12 @@
-// stylelint-disable custom-property-empty-line-before
-
 .pagination {
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
+  --#{$prefix}pagination-padding-end: #{$pagination-padding-end}; // Boosted mod
+  --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
+  --#{$prefix}pagination-margin-x-first-last: #{$pagination-margin-x-first-last}; // Boosted mod
   @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
+  --#{$prefix}pagination-font-weight: #{$font-weight-bold}; // Boosted mod
   --#{$prefix}pagination-color: #{$pagination-color};
   --#{$prefix}pagination-bg: #{$pagination-bg};
   --#{$prefix}pagination-border-width: #{$pagination-border-width};
@@ -19,14 +21,21 @@
   --#{$prefix}pagination-active-color: #{$pagination-active-color};
   --#{$prefix}pagination-active-bg: #{$pagination-active-bg};
   --#{$prefix}pagination-active-border-color: #{$pagination-active-border-color};
+  --#{$prefix}pagination-active-item-color: #{$pagination-active-item-color}; // Boosted mod
+  --#{$prefix}pagination-active-item-bg: #{$pagination-active-item-bg}; // Boosted mod
+  --#{$prefix}pagination-active-item-border-color: #{$pagination-active-item-border}; // Boosted mod
   --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
   --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
   --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
+  --#{$prefix}pagination-icon: #{$pagination-icon}; // Boosted mod
+  --#{$prefix}pagination-icon-size: #{$pagination-icon-size}; // Boosted mod
+  --#{$prefix}pagination-icon-width: #{$pagination-icon-width}; // Boosted mod
+  --#{$prefix}pagination-icon-height: #{$pagination-icon-height}; // Boosted mod
   // scss-docs-end pagination-css-vars
 
   display: flex;
   flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // Boosted mod
-  margin: $pagination-margin-y 0; // Boosted mod
+  margin: var(--#{$prefix}pagination-margin-y) 0; // Boosted mod
   @include list-unstyled();
 }
 
@@ -38,7 +47,7 @@
   justify-content: center; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
   @include font-size(var(--#{$prefix}pagination-font-size));
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: var(--#{$prefix}pagination-font-weight); // Boosted mod
   color: var(--#{$prefix}pagination-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}pagination-bg);
@@ -46,9 +55,9 @@
   @include transition($pagination-transition);
   // Boosted mod: embed icon as mask-image
   @include button-icon(
-    $pagination-icon,
-    $pagination-icon-size,
-    $size: $pagination-icon-width $pagination-icon-height,
+    var(--#{$prefix}pagination-icon),
+    var(--#{$prefix}pagination-icon-size),
+    $size: var(--#{$prefix}pagination-icon-width) var(--#{$prefix}pagination-icon-height) ,
     $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link",
     $position: calc(50% - 1px)
   );
@@ -74,10 +83,10 @@
   // Boosted mod
   &:active,
   &:active > & {
-    color: color-contrast($pagination-active-item-bg);
-    background-color: $pagination-active-item-bg;
-    border-color: $pagination-active-item-border;
-    outline-color: $pagination-active-item-border;
+    color: var(--#{$prefix}pagination-active-item-color);
+    background-color: var(--#{$prefix}pagination-active-item-bg);
+    border-color: var(--#{$prefix}pagination-active-item-border-color);
+    outline-color: var(--#{$prefix}pagination-active-item-border-color);
   }
   // End mod
 
@@ -104,7 +113,7 @@
     margin-left: $pagination-margin-start;
   }
 
-  @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
+  @if $pagination-margin-start == ($pagination-border-width * -1) {
     &:first-child {
       .page-link {
         @include border-start-radius(var(--#{$prefix}pagination-border-radius));
@@ -140,18 +149,18 @@
     }
 
     &:active {
-      color: color-contrast($pagination-active-item-bg);
-      background-color: $pagination-active-item-bg;
-      border-color: $pagination-active-item-border;
-      outline-color: $pagination-active-item-border;
+      color: var(--#{$prefix}pagination-active-item-color);
+      background-color: var(--#{$prefix}pagination-active-item-bg);
+      border-color: var(--#{$prefix}pagination-active-item-border-color);
+      outline-color: var(--#{$prefix}pagination-active-item-border-color);
     }
   }
 
   &:first-child .page-link {
-    margin-right: $pagination-margin-x-first-last;
+    margin-right: var(--#{$prefix}pagination-margin-x-first-last);
 
     &:not(:empty) {
-      padding-right: $pagination-padding-end;
+      padding-right: var(--#{$prefix}pagination-padding-end);
     }
 
     &::before {
@@ -163,7 +172,7 @@
 
   &:last-child .page-link {
     &:not(:empty) {
-      padding-left: $pagination-padding-end;
+      padding-left: var(--#{$prefix}pagination-padding-end);
     }
 
     &::before {
@@ -175,7 +184,7 @@
   }
 
   &:last-child:not(:nth-child(2)) .page-link {
-    margin-left: $pagination-margin-x-first-last;
+    margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
   @include media-breakpoint-down(sm) {
@@ -206,3 +215,27 @@
 //
 
 // Boosted mod: no pagination sizes
+
+// Boosted mod: dark variant
+.pagination-dark {
+  // scss-docs-start pagination-dark-css-vars
+  --#{$prefix}pagination-color: #{$pagination-dark-color}; // Boosted mod
+  --#{$prefix}pagination-bg: #{$pagination-dark-bg}; // Boosted mod
+  --#{$prefix}pagination-border-color: #{$pagination-dark-border-color}; // Boosted mod
+  --#{$prefix}pagination-hover-color: #{$pagination-dark-hover-color}; // Boosted mod
+  --#{$prefix}pagination-hover-bg: #{$pagination-dark-hover-bg}; // Boosted mod
+  --#{$prefix}pagination-hover-border-color: #{$pagination-dark-hover-border-color}; // Boosted mod
+  --#{$prefix}pagination-focus-color: #{$pagination-dark-focus-color}; // Boosted mod
+  --#{$prefix}pagination-focus-bg: #{$pagination-dark-focus-bg}; // Boosted mod
+  --#{$prefix}pagination-active-color: #{$pagination-dark-active-color}; // Boosted mod
+  --#{$prefix}pagination-active-bg: #{$pagination-dark-active-bg}; // Boosted mod
+  --#{$prefix}pagination-active-border-color: #{$pagination-dark-active-border-color}; // Boosted mod
+  --#{$prefix}pagination-active-item-color: #{$pagination-dark-active-item-color}; // Boosted mod
+  --#{$prefix}pagination-active-item-bg: #{$pagination-dark-active-item-bg}; // Boosted mod
+  --#{$prefix}pagination-active-item-border-color: #{$pagination-dark-active-item-border-color}; // Boosted mod
+  --#{$prefix}pagination-disabled-color: #{$pagination-dark-disabled-color}; // Boosted mod
+  --#{$prefix}pagination-disabled-bg: #{$pagination-dark-disabled-bg}; // Boosted mod
+  --#{$prefix}pagination-disabled-border-color: #{$pagination-dark-disabled-border-color}; // Boosted mod
+  // scss-docs-end pagination-dark-css-vars
+}
+// End mod

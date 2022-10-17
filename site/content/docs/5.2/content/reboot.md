@@ -73,7 +73,7 @@ $font-family-sans-serif:
 ```
 <!-- End mod -->
 
-Note that because the font stack includes emoji fonts, many common symbol/dingbat unicode characters will be rendered as multi-colored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
+Note that because the font stack includes emoji fonts, many common symbol/dingbat Unicode characters will be rendered as multicolored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
 
@@ -103,8 +103,8 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
   <hr>
 </div>
 
-<hr class="text-danger border-2 opacity-50">
-<hr class="border-primary border-3 opacity-75">
+<hr class="border border-danger border-2 opacity-50">
+<hr class="border border-primary border-3 opacity-75">
 {{< /example >}}
 
 ## Lists
@@ -118,6 +118,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 * Nested lists have no bottom margin
   * This way they have a more even appearance
   * Particularly when followed by more list items
+    * Even with a third level list
 * The left padding has also been reset
 
 1. Here's an ordered list
