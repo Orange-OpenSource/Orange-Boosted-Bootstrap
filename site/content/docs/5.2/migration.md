@@ -19,6 +19,10 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
+  * fix(a11y): fix(a11y): add aria-hidden=true and focusable=false to SVGs in tooltips examples
+    - SVGs in tooltips do not carry any specific information so they should not be readable by screen reader so we should add 'aria-hidden=true'
+    - In addition, replaced the missing 'focusable=false' on the first svg
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1555
   * fix(forms): add validation icons for <select>s and fix its position for `<textarea>`
     - Reset to Bootstrap default for feedback icon on select
     - Setting the icon in the top right corner instead of center right
