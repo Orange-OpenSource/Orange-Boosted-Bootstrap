@@ -19,6 +19,10 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
+  * fix(forms): add validation icons for <select>s and fix its position for `<textarea>`
+    - Reset to Bootstrap default for feedback icon on select
+    - Setting the icon in the top right corner instead of center right
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
   * feat(css): add CSS vars to alerts
     - NEW CSS vars:
         - --#{$prefix}alert-line-height
