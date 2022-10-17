@@ -49,7 +49,7 @@
 
 // Provide class for links that match alerts
 .alert-link {
-  font-weight: var(--#{$prefix}alert-link-font-weight);
+  font-weight: var(--#{$prefix}alert-link-font-weight); // Boosted mod
 }
 
 
@@ -58,7 +58,7 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: var(--#{$prefix}alert-dismissible-padding-right);
+  padding-right: var(--#{$prefix}alert-dismissible-padding-right); // Boosted mod
 
   // Adjust close link position
   .btn-close {
@@ -103,7 +103,7 @@
 .alert-icon {
   flex-shrink: 0;
   width: var(--#{$prefix}alert-icon-size);
-  margin: calc(var(--#{$prefix}alert-icon-margin-y) * -.5) 0; // stylelint-disable-line function-disallowed-list
+  margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0; // stylelint-disable-line function-disallowed-list
 
   + * {
     margin: var(--#{$prefix}alert-icon-margin-y) 0 0;
@@ -137,7 +137,7 @@
   --#{$prefix}alert-line-height: #{$line-height-sm};
   --#{$prefix}alert-border: 0;
   --#{$prefix}alert-logo-size: #{$alert-logo-size-sm};
-  --#{$prefix}alert-icon-size: #{divide($alert-icon-size, 2)};
+  --#{$prefix}alert-icon-size: #{$alert-icon-size * .5};
   --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
   // scss-docs-end alert-sm-css-vars
   --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
