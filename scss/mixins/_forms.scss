@@ -46,6 +46,12 @@
           }
         }
       }
+
+      .form-control-color {
+        @include form-validation-state-selector($state) {
+          width: add($form-color-width, $input-height-inner);
+        }
+      }
     }
   } @else {
     .#{$state}-feedback {
@@ -129,6 +135,7 @@
 
     .form-check-input {
       @include form-validation-state-selector($state) {
+        filter: none; // Boosted mod: remove filter to avoid having a blue border (invert of red border)
         border-color: $color;
 
         &:checked,
