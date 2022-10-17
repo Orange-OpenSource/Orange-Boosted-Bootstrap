@@ -1,0 +1,114 @@
+---
+layout: examples
+title: Form example
+extra_js:
+  - src: "form.js"
+---
+
+<div class="container-xxl pt-md-2 pb-md-4">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <form class="needs-validation mb-4 pb-4 pb-md-2" novalidate>
+        <div class="row">
+          <div class="col-12 mb-2">
+            <p class="display-6">
+              <span class="text-primary">*</span> indicates required
+            </p>
+          </div>
+          <div class="col-md-4 col-6 mb-3">
+            <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title</label>
+            <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback"
+              required>
+              <option selected disabled value="" aria-hidden="true">Select a title</option>
+              <option value="1">Miss</option>
+              <option value="2">Ms.</option>
+              <option value="3">Mrs.</option>
+            </select>
+            <div id="selectTitleFeedback" class="invalid-feedback">
+              Please select a valid title.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="inputFirstName" class="form-label is-required">First name</label>
+              <input type="text" class="form-control" id="inputFirstName" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputLastName" id="inputLastNameLabel" class="form-label is-required">Last name</label>
+              <input type="text" class="form-control" id="inputLastName" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail" id="inputEmailLabel" class="form-label is-required">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com"
+                aria-labelledby="inputEmailLabel inputEmailFeedback" required>
+              <div id="inputEmailFeedback" class="invalid-feedback">
+                Please provide a valid email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="selectCountry" id="selectCountryLabel" class="form-label is-required">Country</label>
+              <select class="form-select" id="selectCountry"
+                aria-labelledby="selectCountryLabel selectCountryFeedback" required>
+                <option selected disabled value="" aria-hidden="true">Select a country</option>
+                <option value="1">France</option>
+                <option value="2">Canada</option>
+                <option value="3">USA</option>
+                <option value="4">Australia</option>
+              </select>
+              <div id="selectCountryFeedback" class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputCompany" id="inputCompanyLabel" class="form-label is-required">Name of
+                company</label>
+              <input type="text" class="form-control" id="inputCompany" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="selectBusiness" id="selectBusinessLabel" class="form-label is-required">Business
+                type</label>
+              <select class="form-select" id="selectBusiness"
+                aria-labelledby="selectBusinessLabel selectBusinessFeedback" required>
+                <option selected disabled value="" aria-hidden="true">Select a type</option>
+                <option value="1">Sole proprietorship</option>
+                <option value="2">Partnership</option>
+                <option value="3">Corporation</option>
+                <option value="4">Limited liability company</option>
+              </select>
+              <div id="selectBusinessFeedback" class="invalid-feedback">
+                Please select a valid business type.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="textareaMessage" id="textareaMessageLabel" class="form-label is-required">Message</label>
+              <button type="button" class="btn btn-link p-0 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Help message for textarea">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem"
+                  focusable="false" aria-hidden="true">
+                  <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#tooltip"></use>
+                </svg>
+                <span class="visually-hidden">Help message for textarea</span>
+              </button>
+              <textarea class="form-control" id="textareaMessage" rows="5"
+                placeholder="Describe your business and your motivation in becoming on Orange reseller"
+                required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

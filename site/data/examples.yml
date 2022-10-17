@@ -41,3 +41,9 @@
   examples:
     - name: "Masonry"
       description: "Combine the powers of the Boosted grid and the Masonry layout."
+
+- category: Forms
+  description: "Example that shows a form built with Boosted"
+  examples:
+    - name: "Form"
+      description: "How to build a form with Boosted"
