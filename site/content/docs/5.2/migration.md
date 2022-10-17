@@ -19,7 +19,12 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
-  * feat(css):  feat(css): define `.btn-no-outline`, `.btn-link` and `.btn-social` with CSS vars
+  * feat(css): add CSS vars to navbars
+    - NEW `$navbar-font-weight` for SCSS vars.
+    - NEW `--#{$prefix}navbar-nav-font-size` and `--#{$prefix}navbar-nav-line-height` for .supra
+    - NEW `--#{$prefix}navbar-toggler-icon-filter` and `--#{$prefix}navbar-font-weight` for .navbar
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1422
+  * feat(css): define `.btn-no-outline`, `.btn-link` and `.btn-social` with CSS vars
     - Reuse of buttons CSS variables to define `.btn-no-outline`, `.btn-link` and `.btn-social`
     - Probably not any impacts for the users
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1426
