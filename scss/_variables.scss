@@ -1117,7 +1117,9 @@ $form-select-bg-size:               .875rem 1rem !default; // In pixels because 
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7 0 0h14L7 7z'/></svg>") !default;
 $form-select-disabled-indicator:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$form-select-disabled-color}' d='M7 7 0 0h14L7 7z'/></svg>") !default; // Boosted mod
 
-// Boosted mod: no icon for validated select
+$form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
+$form-select-feedback-icon-position:    center right $form-select-indicator-padding !default;
+$form-select-feedback-icon-size:        $input-height-inner-half $input-height-inner-half !default;
 
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
@@ -1247,6 +1249,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 // scss-docs-start navbar-variables
 $navbar-padding-y:                    .375rem !default; // Boosted mod
 $navbar-padding-x:                    null !default;
+$navbar-font-weight:                  $font-weight-bold !default; // Boosted mod
 
 $navbar-nav-link-padding-y:           1rem !default; // Boosted mod
 $navbar-nav-link-padding-x-xs:        $spacer * .25 !default; // Boosted mod
@@ -1710,12 +1713,13 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-color:                       inherit !default; // Boosted mod
 $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
 $alert-margin-bottom:               $spacer !default;
+$alert-color:                       inherit !default; // Boosted mod
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            null !default; // Boosted mod
+$alert-heading-font-weight:         $font-weight-bold !default; // Boosted mod
 $alert-border-width:                $border-width !default;
 
 // Boosted mod
@@ -1729,6 +1733,7 @@ $alert-icons: (
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
+$alert-icon-size-sm:                $alert-icon-size * .5 !default;
 $alert-icon-margin-y:               $spacer * .1 !default;
 $alert-btn-close-offset:            .5rem !default;
 $alert-btn-close-offset-sm:         $spacer * .25 !default;
