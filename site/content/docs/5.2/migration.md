@@ -19,6 +19,17 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
+  * feat(css): add CSS vars to alerts
+    - NEW CSS vars:
+        - --#{$prefix}alert-line-height
+        - --#{$prefix}alert-logo-size: #{$alert-logo-size};
+        - --#{$prefix}alert-icon-size: #{$alert-icon-size};
+        - --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y};
+        - --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight};
+        - --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight};
+        - --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r};
+        - --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset};
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1424
   * feat(css): add CSS vars to navbars
     - NEW `$navbar-font-weight` for SCSS vars.
     - NEW `--#{$prefix}navbar-nav-font-size` and `--#{$prefix}navbar-nav-line-height` for .supra
