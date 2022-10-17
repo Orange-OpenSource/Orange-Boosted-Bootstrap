@@ -221,8 +221,8 @@ Every Boosted plugin exposes the following methods and static properties.
 {{< bs-table "table" >}}
 | Static property | Description |
 | --- | --- |
-| `NAME`  | Returns the plugin name. (Example: `boosted.Tooltip.NAME`) |
-| `VERSION`  | The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
+| `NAME` | Returns the plugin name. (Example: `boosted.Tooltip.NAME`) |
+| `VERSION` | The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer

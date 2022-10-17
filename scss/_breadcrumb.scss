@@ -5,6 +5,7 @@
   --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
   @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
   --#{$prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight}; // Boosted mod
+  --#{$prefix}breadcrumb-color: #{$breadcrumb-color}; // Boosted mod
   --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
   --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
   --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
@@ -18,6 +19,7 @@
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
   @include font-size(var(--#{$prefix}breadcrumb-font-size));
   font-weight: var(--#{$prefix}breadcrumb-font-weight); // Boosted mod
+  color: var(--#{$prefix}breadcrumb-color); // Boosted mod
   list-style: none;
   background-color: var(--#{$prefix}breadcrumb-bg);
   @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
@@ -46,3 +48,18 @@
     color: var(--#{$prefix}breadcrumb-item-active-color);
   }
 }
+
+// Boosted mod
+.breadcrumb-dark {
+  // scss-docs-start breadcrumb-dark-css-vars
+  --#{$prefix}breadcrumb-color: #{$breadcrumb-dark-color}; // Boosted mod
+  --#{$prefix}breadcrumb-bg: #{$breadcrumb-dark-bg}; // Boosted mod
+  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-dark-divider-color}; // Boosted mod
+  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-dark-active-color}; // Boosted mod
+  // scss-docs-end breadcrumb-dark-css-vars
+
+  .breadcrumb-item::before {
+    filter: $invert-filter;
+  }
+}
+// End mod
