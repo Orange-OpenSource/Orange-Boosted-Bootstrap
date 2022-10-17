@@ -1711,12 +1711,13 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-color:                       inherit !default; // Boosted mod
 $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
 $alert-margin-bottom:               $spacer !default;
+$alert-color:                       inherit !default; // Boosted mod
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            null !default; // Boosted mod
+$alert-heading-font-weight:         $font-weight-bold !default; // Boosted mod
 $alert-border-width:                $border-width !default;
 
 // Boosted mod
@@ -1730,6 +1731,7 @@ $alert-icons: (
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
+$alert-icon-size-sm:                $alert-icon-size * .5 !default;
 $alert-icon-margin-y:               $spacer * .1 !default;
 $alert-btn-close-offset:            .5rem !default;
 $alert-btn-close-offset-sm:         $spacer * .25 !default;
