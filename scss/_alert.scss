@@ -137,7 +137,7 @@
   --#{$prefix}alert-line-height: #{$line-height-sm};
   --#{$prefix}alert-border: 0;
   --#{$prefix}alert-logo-size: #{$alert-logo-size-sm};
-  --#{$prefix}alert-icon-size: #{$alert-icon-size * .5};
+  --#{$prefix}alert-icon-size: #{$alert-icon-size-sm};
   --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
   // scss-docs-end alert-sm-css-vars
   --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};

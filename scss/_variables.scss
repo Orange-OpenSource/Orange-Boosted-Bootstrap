@@ -1730,6 +1730,7 @@ $alert-icons: (
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
+$alert-icon-size-sm:                $alert-icon-size * .5 !default;
 $alert-icon-margin-y:               $spacer * .1 !default;
 $alert-btn-close-offset:            .5rem !default;
 $alert-btn-close-offset-sm:         $spacer * .25 !default;
