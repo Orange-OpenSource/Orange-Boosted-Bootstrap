@@ -2181,6 +2181,13 @@ $tag-close-margin-end:              -$spacer * .3 !default;
 $tag-close-margin-start:            $spacer * .2 !default;
 $tag-font-size:                     $font-size-base !default;
 
+$tag-active-color:                  $white !default;
+$tag-disabled-color:                $gray-500 !default;
+$tag-border-color:                  $gray-500 !default;
+$tag-active-decoration-color:       $black !default;
+// scss-docs-end tag-variables
+
+// scss-docs-start tag-sm-variables
 $tag-padding-x-sm:                  $spacer * .4 !default;
 $tag-padding-y-sm:                  $spacer * .25 !default;
 $tag-icon-size-sm:                  $spacer !default;
@@ -2188,14 +2195,11 @@ $tag-icon-margin-start-sm:          -$spacer * .1 !default;
 $tag-close-margin-end-sm:           -$spacer * .25 !default;
 $tag-close-margin-start-sm:         0 !default;
 $tag-font-size-sm:                  $font-size-sm !default;
+// scss-docs-end tag-sm-variables
 
-$tag-active-color:                  $white !default;
-$tag-disabled-color:                $gray-500 !default;
-$tag-border-color:                  $gray-500 !default;
-$tag-active-decoration-color:       $black !default;
-
+// scss-docs-start tag-dark-variables
 $tag-active-color-dark:             $black !default;
 $tag-disabled-color-dark:           $gray-700 !default;
 $tag-border-color-dark:             $gray-700 !default;
 $tag-active-decoration-color-dark:  $white !default;
-// scss-docs-end tag-variables
+// scss-docs-end tag-dark-variables
