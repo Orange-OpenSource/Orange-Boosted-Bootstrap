@@ -25,8 +25,9 @@
     }
 
     @if $enable-validation-icons {
-      .form-control {
+      :not(.quantity-selector) > .form-control {
         @include form-validation-state-selector($state) {
+          padding-right: $input-height-inner;
           background-image: escape-svg($icon);
           background-repeat: no-repeat;
           background-position: right $input-height-inner-quarter top subtract($input-height-inner-quarter, 2px);
@@ -43,6 +44,12 @@
             background-position: $form-select-bg-position, $form-select-feedback-icon-position;
             background-size: $form-select-bg-size, $form-select-feedback-icon-size;
           }
+        }
+      }
+
+      .form-control-color {
+        @include form-validation-state-selector($state) {
+          width: add($form-color-width, $input-height-inner);
         }
       }
     }
@@ -118,16 +125,9 @@
       }
     }
 
-    .form-control-color {
-      @include form-validation-state-selector($state) {
-        @if $enable-validation-icons {
-          width: add($form-color-width, $input-height-inner);
-        }
-      }
-    }
-
     .form-check-input {
       @include form-validation-state-selector($state) {
+        filter: none; // Boosted mod: remove filter to avoid having a blue border (invert of red border)
         border-color: $color;
 
         &:checked,
