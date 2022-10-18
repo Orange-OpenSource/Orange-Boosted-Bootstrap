@@ -16,7 +16,7 @@ Our footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 
 - Follow us bar
 - Navigation bar
 - Service bar
-- Terms & Conditions **mandatory** bar
+- Terms and conditions **mandatory** bar
 
 You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
 
