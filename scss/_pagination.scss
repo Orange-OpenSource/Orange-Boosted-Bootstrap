@@ -206,6 +206,16 @@
   @include media-breakpoint-up(xl) {
     @include pagination-max-items(12);
   }
+
+  display: none;
+
+  &.active,
+  &:first-child,
+  &:last-child,
+  &:nth-child(2),
+  &:nth-last-child(2) {
+    display: flex !important; // stylelint-disable-line declaration-no-important
+  }
   // End mod
 }
 
