@@ -167,15 +167,15 @@ Add `.disabled` to the `.tag` for a disabled variant. Don't forget to add `aria-
 
 Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
-{{< scss-docs name="tag-css-vars" file="scss/_tag.scss" >}}
+{{< scss-docs name="tag-css-vars" file="scss/_tags.scss" >}}
 
 Customization through CSS variables can be seen on the `.tag-dark` class where we override specific values without adding duplicate CSS selectors.
 
-{{< scss-docs name="tag-dark-css-vars" file="scss/_tag.scss" >}}
+{{< scss-docs name="tag-dark-css-vars" file="scss/_tags.scss" >}}
 
 Customization through CSS variables can be seen on the `.tag-sm` class where we override specific values without adding duplicate CSS selectors.
 
-{{< scss-docs name="tag-sm-css-vars" file="scss/_tag.scss" >}}
+{{< scss-docs name="tag-sm-css-vars" file="scss/_tags.scss" >}}
 
 ### Sass Variables
 
