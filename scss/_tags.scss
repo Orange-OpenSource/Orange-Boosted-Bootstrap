@@ -5,11 +5,9 @@
   --#{$prefix}tag-gap: #{$tag-gap};
   --#{$prefix}tag-padding-x: #{$tag-padding-x};
   --#{$prefix}tag-padding-y: #{$tag-padding-y};
-  --#{$prefix}tag-margin: 0;
   @include rfs($tag-font-size, --#{$prefix}tag-font-size);
   --#{$prefix}tag-font-shift: #{$tag-font-shift};
   --#{$prefix}tag-font-weight: #{$tag-font-weight};
-  --#{$prefix}tag-font-spacing: #{$tag-font-spacing};
   --#{$prefix}tag-icon-size: #{$tag-icon-size};
   --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
   --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
@@ -28,15 +26,12 @@
   gap: var(--#{$prefix}tag-gap);
   align-items: center;
   padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5));
-  margin: var(--#{$prefix}tag-margin);
   @include font-size(var(--#{$prefix}tag-font-size));
   font-weight: var(--#{$prefix}tag-font-weight);
   line-height: add(var(--#{$prefix}tag-font-size), .125rem);
   color: inherit;
-  letter-spacing: var(--#{$prefix}tag-font-spacing);
   background-color: transparent;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
-  outline-offset: 2px;
   @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
   img,
@@ -56,7 +51,7 @@
     color: inherit;
     background-color: transparent;
     border: 0;
-    outline-offset: 2px;
+    outline-offset: $outline-offset;
     @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
 
     &::before {
@@ -77,7 +72,7 @@
       mask-image: escape-svg(var(--#{$boosted-prefix}close-icon));
       mask-repeat: no-repeat;
       mask-position: 50%;
-      mask-size: subtract(var(--#{$prefix}tag-close-size), .5rem);
+      mask-size: subtract(var(--#{$prefix}tag-close-size), .625rem);
     }
 
     &:hover,
@@ -87,8 +82,8 @@
     }
 
     &:focus[data-focus-visible-added] {
-      outline: 3px solid var(--#{$prefix}tag-outline-color);
-      outline-offset: 2px;
+      outline: $outline-width * 1.5 solid var(--#{$prefix}tag-outline-color);
+      outline-offset: $outline-offset;
     }
 
     &[disabled] {
@@ -111,15 +106,15 @@ label.tag {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  outline-offset: $outline-offset;
 
   &:hover {
     border-color: var(--#{$prefix}tag-active-decoration-color);
   }
 
   &:focus[data-focus-visible-added] {
-    z-index: 3;
-    outline: .1875rem solid var(--#{$prefix}tag-outline-color);
-    outline-offset: .125rem;
+    outline: $outline-width * 1.5 solid var(--#{$prefix}tag-outline-color);
+    outline-offset: $outline-offset;
   }
 
   &.active,
@@ -138,7 +133,7 @@ label.tag {
 // stylelint-enable selector-no-qualifying-type
 
 .tag-sm {
-  // scss-docs-start tag-dark-css-vars
+  // scss-docs-start tag-sm-css-vars
   --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
   --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
   --#{$prefix}tag-font-size: #{$tag-font-size-sm};
@@ -146,14 +141,14 @@ label.tag {
   --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start-sm};
   --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
-  // scss-docs-end tag-dark-css-vars
+  // scss-docs-end tag-sm-css-vars
 }
 
 .tag-dark {
-  // scss-docs-start tag-sm-css-vars
+  // scss-docs-start tag-dark-css-vars
   --#{$prefix}tag-border-color: #{$tag-border-color-dark};
   --#{$prefix}tag-active-color: #{$tag-active-color-dark};
   --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
   --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
-  // scss-docs-end tag-sm-css-vars
+  // scss-docs-end tag-dark-css-vars
 }

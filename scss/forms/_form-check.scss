@@ -288,8 +288,7 @@
     }
 
     + .tag {
-      z-index: 3;
-      outline: .1875rem solid var(--#{$prefix}tag-outline-color);
+      outline: $outline-width * 1.5 solid var(--#{$prefix}tag-outline-color);
       outline-offset: .125rem;
     }
   }

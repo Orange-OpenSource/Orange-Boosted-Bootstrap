@@ -358,9 +358,3 @@
   border: solid $gray-400; // Boosted mod: change border color
   border-width: map-get($border-widths, 1) 0;
 }
-
-.btn-check:checked + .tag {
-  color: var(--bs-tag-active-color);
-  background-color: var(--bs-tag-active-decoration-color);
-  border-color: var(--bs-tag-active-decoration-color);
-}

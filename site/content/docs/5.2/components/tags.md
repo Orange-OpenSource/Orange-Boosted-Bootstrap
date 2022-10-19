@@ -14,7 +14,7 @@ A tag is basically a rounded `<span>` that can contain text, `<img>`/`<svg>` and
 There are some built-in example that you can find on [our example page]({{< docsref "/examples/tags" >}})
 
 {{< callout warning >}}
-You shouldn't mix the different tags versions in the same region, since they look the same and have different behaviors.
+You shouldn't mix the different tags versions in the same area, since they look the same and have different behaviors.
 {{< /callout >}}
 
 ### Informative
@@ -45,10 +45,24 @@ Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 {{< example >}}
 <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
   <li>
-    <input type="checkbox" class="btn-check" id="btncheck" autocomplete="off">
-    <label class="tag" for="btncheck"><span class="visually-hidden">Filter by</span>Mobile</label>
+    <input type="checkbox" class="btn-check" id="btncheck-mobile" autocomplete="off">
+    <label class="tag" for="btncheck-mobile"><span class="visually-hidden">Filter by</span>Mobile</label>
   </li>
-  <li><button class="tag"><span class="visually-hidden">Filter by</span>Computer</button></li>
+  <li>
+    <input type="checkbox" class="btn-check" id="btncheck-tv" autocomplete="off" checked>
+    <label class="tag" for="btncheck-tv">
+      <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+      </svg>
+      <span class="visually-hidden">Filter by</span>TV
+    </label>
+  </li>
+</ul>
+{{< /example >}}
+
+{{< example >}}
+<ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+  <li><button class="tag"><span class="visually-hidden">Filter by</span>Mobile</button></li>
   <li>
     <button class="tag active">
       <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
@@ -68,10 +82,10 @@ To add semantics for navigation `<a>` tag (if a new URL is launched), put an exp
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
 {{< example >}}
-<ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+<ol class="list-unstyled d-flex gap-2 flex-wrap m-0">
   <li><a class="tag" href="#">1. Introduction</a></li>
   <li><a class="tag" href="#">2. Exposure</a></li>
-</ul>
+</ol>
 {{< /example >}}
 
 ### Input
@@ -145,13 +159,20 @@ Add `.tag-sm` to the `.tag` for a small variant.
 We add an extra `<p>` around the `<span>` here for accessibility concerns.
 {{< /callout >}}
 
-Add `.disabled` to the `.tag` for a disabled variant. Don't forget to add `aria-disabled` to the `<span>`, remove the `href` attribute for links and `disabled` attribute to the `<button>`.
+Add `.disabled` to the `.tag` for a disabled variant. Don't forget to add `aria-disabled` to `<span>` and `disabled` attribute to `<button>`.
+
+Disabled tags using the `<a>` element behave a bit different:
+
+- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
+- Some future-friendly styles are included to disable all `pointer-events` on anchor tags.
+- Disabled tags using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- Disabled tags using `<a>` *should not* include the `href` attribute.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
 <h3 class="visually-hidden">Disabled tags for the different variants</h3>
 <p class="mb-0"><span class="tag disabled" aria-disabled="true">Informative</span></p>
 <button class="tag" disabled>Filter</button>
-<a class="tag disabled">Navigation</a>
+<a class="tag disabled" aria-disabled="true">Navigation</a>
 <p><span class="tag disabled" id="labelTag5" aria-disabled="true">
   <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
