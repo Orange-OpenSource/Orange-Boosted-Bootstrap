@@ -19,7 +19,10 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
-  * fix(forms): fix(forms): prevent that valid icon hides input content
+  * fix(icons): use the right close icon
+    - Change the SVG of the close icon used in modal, offcanvas and close buttons
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1566
+  * fix(forms): prevent that valid icon hides input content
     - Valid icons don't hide anymore content in inputs when too long
     - Quantity selector doesn't display valid icon anymore
     - .form-control-color display the valid icon correctly and doesn't change its width when invalid
