@@ -77,7 +77,7 @@
       mask-image: escape-svg(var(--#{$boosted-prefix}close-icon));
       mask-repeat: no-repeat;
       mask-position: 50%;
-      mask-size: subtract(var(--#{$prefix}tag-close-size), .375rem);
+      mask-size: subtract(var(--#{$prefix}tag-close-size), .5rem);
     }
 
     &:hover,
