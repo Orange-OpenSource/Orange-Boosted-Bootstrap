@@ -38,7 +38,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: calc(-1 * (var(--#{$prefix}pagination-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+      width: calc((var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
       content: "...";
       background-color: var(--#{$prefix}pagination-bg);
     }
@@ -47,7 +47,7 @@
   // Pagination with more than n items:
   //  - rule 3: hiding 3 dots of the rule 2 above if the active element is exactly the (n/2 + 1)th first item
   &.active:nth-child(#{$half-items + 1}):not(:nth-last-child(-n+#{$half-items})) {
-    margin-left: calc(-1 * (var(--#{$prefix}pagination-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(-1 * (var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
   }
 
   // Pagination with more than (n - 1) items:
