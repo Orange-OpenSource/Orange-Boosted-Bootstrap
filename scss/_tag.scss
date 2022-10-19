@@ -12,7 +12,6 @@
   --#{$prefix}tag-font-spacing: #{$tag-font-spacing};
   --#{$prefix}tag-icon-size: #{$tag-icon-size};
   --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
-  --#{$prefix}tag-close-icon: #{$cross-icon-smooth};
   --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
   --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end};
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start};
@@ -45,7 +44,7 @@
     width: var(--#{$prefix}tag-icon-size);
     min-width: var(--#{$prefix}tag-icon-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-icon-size);
-    margin: add(calc(var(--#{$prefix}tag-icon-size) * -.5), var(--#{$prefix}tag-font-shift)) 0 calc(var(--#{$prefix}tag-icon-size) * -.5) var(--#{$prefix}tag-icon-margin-start);
+    margin: add(calc(-.5 * var(--#{$prefix}tag-icon-size)), var(--#{$prefix}tag-font-shift)) 0 calc(-.5 * var(--#{$prefix}tag-icon-size)) var(--#{$prefix}tag-icon-margin-start);
   }
 
   .close {
@@ -53,7 +52,7 @@
     width: var(--#{$prefix}tag-close-size);
     min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-close-size);
-    margin: add(calc(var(--#{$prefix}tag-close-size) * -.5), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(var(--#{$prefix}tag-close-size) * -.5) var(--#{$prefix}tag-close-margin-start);
+    margin: add(calc(-.5 * var(--#{$prefix}tag-close-size)), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(-.5 * var(--#{$prefix}tag-close-size)) var(--#{$prefix}tag-close-margin-start);
     color: inherit;
     background-color: transparent;
     border: 0;
@@ -62,10 +61,10 @@
 
     &::before {
       position: absolute;
-      top: calc(var(--#{$prefix}tag-padding-y) * -1);
-      right: calc(var(--#{$prefix}tag-padding-y) * -1);
-      bottom: calc(var(--#{$prefix}tag-padding-y) * -1);
-      left: calc(var(--#{$prefix}tag-padding-y) * -1);
+      top: calc(-1 * var(--#{$prefix}tag-padding-y));
+      right: calc(-1 * var(--#{$prefix}tag-padding-y));
+      bottom: calc(-1 * var(--#{$prefix}tag-padding-y));
+      left: calc(-1 * var(--#{$prefix}tag-padding-y));
       content: "";
       @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
     }
@@ -75,7 +74,7 @@
       height: 100%;
       content: "";
       background-color: currentcolor;
-      mask-image: escape-svg(var(--#{$prefix}tag-close-icon));
+      mask-image: escape-svg(var(--#{$boosted-prefix}close-icon));
       mask-repeat: no-repeat;
       mask-position: 50%;
       mask-size: subtract(var(--#{$prefix}tag-close-size), .375rem);
