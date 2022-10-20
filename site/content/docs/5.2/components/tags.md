@@ -37,7 +37,7 @@ For a list of tags of an article, for example, add a heading (`<h1>–<h6>`) to 
 
 ### Filter
 
-A tag can be actionable either when built on top of a `<button>`, `<label>` or `<input>`. These tags are usually used as filters and have an `.active` state.
+A tag can be actionable either when built on top of a `<button>` or a `<label>`. These `<label>`s are based on either checkboxes or radios `<input>`. These tags are usually used as filters and have an `.active` state.
 
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
