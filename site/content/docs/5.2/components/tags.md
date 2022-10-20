@@ -9,19 +9,19 @@ added: "5.2"
 
 ## Examples
 
-A tag is basically a rounded `<span>` that can contain text, `<img>`/`<svg>` and/or a close button. Please **adapt the html** to be semantically correct. Here are some hints to build [accessible tags on A11y guidelines Orange](https://a11y-guidelines.orange.com/en/web/components-examples/tags/).
+A tag is basically a rounded `<span>` that can contain text, and optionally an image and/or a close button. Please **adapt the HTML** to be semantically correct. Here are some hints to build [accessible tags](https://a11y-guidelines.orange.com/en/web/components-examples/tags/).
 
-There are some built-in example that you can find on [our example page]({{< docsref "/examples/tags" >}})
+There are some built-in examples that you can find on [our tags example page]({{< docsref "/examples/tags" >}})
 
 {{< callout warning >}}
-You shouldn't mix the different tags versions in the same area, since they look the same and have different behaviors.
+You shouldn't mix the different tags versions in the same area since they look the same and have different behaviors.
 {{< /callout >}}
 
 ### Informative
 
-This kind of tag are built on `<span>`. These tags are usually used to display category. They have no specific interaction.
+Informative tags are built on top of `<span>` and are usually used to display categories. They have no specific interaction.
 
-For a list of tags of an article, for example, add a heading (`<hn>`) to explain that we are in a tag list and use `<ul>` or `<ol>` (if tags are ordered).
+For a list of tags of an article, for example, add a heading (`<h1>–<h6>`) to explain that we are in a tags list and use `<ul>` or `<ol>` depending on the use case.
 
 {{< example >}}
 <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap m-0">
@@ -37,9 +37,8 @@ For a list of tags of an article, for example, add a heading (`<hn>`) to explain
 
 ### Filter
 
-A tag can be actionable either when builded on top of a `<button>` or a `<label>` and `<input>`. These tags are usually used as filters and have an `.active` state.
+A tag can be actionable either when built on top of a `<button>`, `<label>` or `<input>`. These tags are usually used as filters and have an `.active` state.
 
-To add semantics for buttons filter, you should use `<button>` (if it triggers an inside the same page action). The text of the button must be clear enough to explain the function.
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
 {{< example >}}
@@ -60,6 +59,9 @@ Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 </ul>
 {{< /example >}}
 
+If the tag filter triggers some action, you should use the version built on top of a `<button>`.
+The text of the button must be clear enough to explain the function.
+
 {{< example >}}
 <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
   <li><button class="tag"><span class="visually-hidden">Filter by</span>Mobile</button></li>
@@ -78,7 +80,7 @@ Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
 Another way to build actionable tags is to build them on top of `<a>`. These kind of tags are usually used as anchor links.
 
-To add semantics for navigation `<a>` tag (if a new URL is launched), put an explicit heading. The text of the link must be clear enough to explain the destination of the tag.
+Put an explicit heading to add semantics. The text of the link must be clear enough to explain the destination of the tag.
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
 {{< example >}}
@@ -90,9 +92,11 @@ Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
 ### Input
 
-This kind of tag are built on `<span>`.
+This kind of tags are built on `<span>`.
 
-For a list of selected items use `<ul>` or `<ol>` (if tags are ordered). Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/components-examples/tags/examples/filter-by-brand/) of a component that can be built on top of this variant.
+For a list of selected items use `<ul>` or `<ol>`.
+
+Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/components-examples/tags/examples/filter-by-brand/) of a component that can be built on top of this variant.
 
 {{< example class="d-flex gap-2 align-items-center" >}}
 <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
