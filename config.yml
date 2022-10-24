@@ -58,8 +58,8 @@ params:
   description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
   authors:                          "Orange and Boosted contributors"
 
-  current_version:                  "5.2.0"
-  current_ruby_version:             "5.2.0"
+  current_version:                  "5.2.1"
+  current_ruby_version:             "5.2.1"
   docs_version:                     "5.2"
   rfs_version:                      "v9.0.6"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
