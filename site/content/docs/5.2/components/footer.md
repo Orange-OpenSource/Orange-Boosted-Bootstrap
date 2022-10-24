@@ -16,7 +16,7 @@ Our footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 
 - Follow us bar
 - Navigation bar
 - Service bar
-- Terms & Conditions **mandatory** bar
+- Terms and conditions **mandatory** bar
 
 You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.
 
@@ -100,7 +100,7 @@ The footer is a container with a `.footer-service` class. Its purpose is to disp
 {{< /orange-footer >}}
 {{< /example >}}
 
-### Mandatory Terms & Conditions bar
+### Mandatory terms and conditions bar
 
 The footer is a container with a `.footer-terms` class. This footer bar is **mandatory** in every footer and should come as the last bar of the footer.
 
