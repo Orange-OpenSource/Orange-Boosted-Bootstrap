@@ -19,6 +19,8 @@ toc: true
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
 <!---
+  * fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
   * feat(components): new Tags component
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
   * fix(icons): use the right close icon
