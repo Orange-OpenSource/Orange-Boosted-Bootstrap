@@ -100,7 +100,7 @@ The footer is a container with a `.footer-service` class. Its purpose is to disp
 {{< /orange-footer >}}
 {{< /example >}}
 
-### Mandatory Terms & Conditions bar
+### Mandatory terms and conditions bar
 
 The footer is a container with a `.footer-terms` class. This footer bar is **mandatory** in every footer and should come as the last bar of the footer.
 
