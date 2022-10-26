@@ -65,22 +65,15 @@ toc: true
   - `--bs-alert-logo-size`
   - `--bs-navbar-font-weight`
   - `--bs-navbar-toggler-icon-filter`
+- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
 
 - <span class="badge bg-info align-text-top">New</span> Here is an exhaustive list of new Sass variables:
   - `$alert-heading-font-weight`
   - `$alert-icon-size-sm`
   - `$navbar-font-weight`
 
-
 <!--
 ### TODO
-  * doc(examples): remove Bootstrap examples unused in Boosted
-    - Mainly removed the files. No impact for the user. Only concerns the docs.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
-  * fix(css): reduce the scope of root dark text rule
-    - Changed the CSS rule to apply text style with a dark variant (was it already there in v5.2.0?)
-    - Added a section Customize > CSS variables > Dark text rule in docs
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1293
   * feat(css): add CSS vars for Close button
     - Several new `#{$prefix}btn-close-*` CSS variables
     - Several new `$btn-close-*` Sass variables
@@ -626,6 +619,10 @@ toc: true
     - Reset to Bootstrap default for feedback icon on select
     - Setting the icon in the top right corner instead of center right
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
+
+* doc(examples): remove Bootstrap examples unused in Boosted
+    - Mainly removed the files. No impact for the user. Only concerns the docs.
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
 -->
 
 ## v5.2.0
