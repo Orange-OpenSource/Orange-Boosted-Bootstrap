@@ -48,106 +48,114 @@ toc: true
 
 ### CSS and Sass variables
 
-- <span class="badge bg-info">New</span> Here is an exhaustive list of new CSS variables:
-  - `--bs-alert-btn-close-offset`
-  - `--bs-alert-dismissible-padding-right`
-  - `--bs-alert-heading-font-weight`
-  - `--bs-alert-icon-margin-y`
-  - `--bs-alert-icon-size`
-  - `--bs-alert-line-height`
-  - `--bs-alert-link-font-weight`
-  - `--bs-alert-logo-size`
-  - `--bs-breadcrumb-color`
-  - `--bs-btn-close-active-border-color`
-  - `--bs-btn-close-active-color`
-  - `--bs-btn-close-bg`
-  - `--bs-btn-close-border-color`
-  - `--bs-btn-close-border-width`
-  - `--bs-btn-close-color`
-  - `--bs-btn-close-disabled-color`
-  - `--bs-btn-close-hover-color`
-  - `--bs-btn-close-padding`
-  - `--bs-btn-hover-border-color`
-  - `--bs-dropdown-zindex`
-  - `--bs-highlight-color`
-  - `--bs-pagination-active-item-color`
-  - `--bs-pagination-padding-end`
-  - `--bs-tab-content-border-width`
-  - `--bs-tab-content-padding-x`
-  - `--bs-tab-content-padding-y`
-  - `--bs-nav-tabs-link-border-width`
-  - `--bs-nav-tabs-link-hover-bg`
-  - `--bs-nav-tabs-link-hover-color`
-  - `--bs-nav-tabs-link-padding-x`
-  - `--bs-navbar-font-weight`
-  - `--bs-navbar-toggler-icon-filter`
-  - `--bs-stepped-process-link-next-color`
-  - `--bs-toast-zindex`
+- <details>
+    <summary><span class="badge bg-info">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-alert-btn-close-offset</code></li>
+      <li><code>--bs-alert-dismissible-padding-right</code></li>
+      <li><code>--bs-alert-heading-font-weight</code></li>
+      <li><code>--bs-alert-icon-margin-y</code></li>
+      <li><code>--bs-alert-icon-size</code></li>
+      <li><code>--bs-alert-line-height</code></li>
+      <li><code>--bs-alert-link-font-weight</code></li>
+      <li><code>--bs-alert-logo-size</code></li>
+      <li><code>--bs-breadcrumb-color</code></li>
+      <li><code>--bs-btn-close-active-border-color</code></li>
+      <li><code>--bs-btn-close-active-color</code></li>
+      <li><code>--bs-btn-close-bg</code></li>
+      <li><code>--bs-btn-close-border-color</code></li>
+      <li><code>--bs-btn-close-border-width</code></li>
+      <li><code>--bs-btn-close-color</code></li>
+      <li><code>--bs-btn-close-disabled-color</code></li>
+      <li><code>--bs-btn-close-hover-color</code></li>
+      <li><code>--bs-btn-close-padding</code></li>
+      <li><code>--bs-btn-hover-border-color</code></li>
+      <li><code>--bs-dropdown-zindex</code></li>
+      <li><code>--bs-highlight-color</code></li>
+      <li><code>--bs-pagination-active-item-color</code></li>
+      <li><code>--bs-pagination-padding-end</code></li>
+      <li><code>--bs-tab-content-border-width</code></li>
+      <li><code>--bs-tab-content-padding-x</code></li>
+      <li><code>--bs-tab-content-padding-y</code></li>
+      <li><code>--bs-nav-tabs-link-border-width</code></li>
+      <li><code>--bs-nav-tabs-link-hover-bg</code></li>
+      <li><code>--bs-nav-tabs-link-hover-color</code></li>
+      <li><code>--bs-nav-tabs-link-padding-x</code></li>
+      <li><code>--bs-navbar-font-weight</code></li>
+      <li><code>--bs-navbar-toggler-icon-filter</code></li>
+      <li><code>--bs-stepped-process-link-next-color</code></li>
+      <li><code>--bs-toast-zindex</code></li>
+    </ul>
+  </details>
 
-- <span class="badge bg-info">New</span> Here is an exhaustive list of new Sass variables:
-  - `$alert-heading-font-weight`
-  - `$alert-icon-size-sm`
-  - `$breadcrumb-color`
-  - `$breadcrumb-dark-active-color`
-  - `$breadcrumb-dark-bg`
-  - `$breadcrumb-dark-color`
-  - `$breadcrumb-dark-divider-color`
-  - `$btn-close-active-border-color`
-  - `$btn-close-active-color`
-  - `$btn-close-border-color`
-  - `$btn-close-border-width`
-  - `$btn-close-disabled-color`
-  - `$btn-close-hover-color`
-  - `$btn-close-white-active-border-color`
-  - `$btn-close-white-active-color`
-  - `$btn-close-white-bg`
-  - `$btn-close-white-border-color`
-  - `$btn-close-white-color`
-  - `$btn-close-white-disabled-color`
-  - `$btn-close-white-hover-color`
-  - `$list-group-dark-action-active-bg`
-  - `$list-group-dark-action-active-color`
-  - `$list-group-dark-action-color`
-  - `$list-group-dark-action-hover-color`
-  - `$list-group-dark-active-bg`
-  - `$list-group-dark-active-border-color`
-  - `$list-group-dark-active-color`
-  - `$list-group-dark-bg`
-  - `$list-group-dark-border-color`
-  - `$list-group-dark-color`
-  - `$list-group-dark-disabled-bg`
-  - `$list-group-dark-disabled-color`
-  - `$mark-bg-dark`
-  - `$mark-color`
-  - `$mark-color-dark`
-  - `$navbar-dark-border-color`
-  - `$navbar-font-weight`
-  - `$pagination-active-item-color`
-  - `$pagination-dark-active-bg`
-  - `$pagination-dark-active-border-color`
-  - `$pagination-dark-active-color`
-  - `$pagination-dark-active-item-bg`
-  - `$pagination-dark-active-item-border-color`
-  - `$pagination-dark-active-item-color`
-  - `$pagination-dark-bg`
-  - `$pagination-dark-border-color`
-  - `$pagination-dark-color`
-  - `$pagination-dark-disabled-bg`
-  - `$pagination-dark-disabled-border-color`
-  - `$pagination-dark-disabled-color`
-  - `$pagination-dark-focus-bg`
-  - `$pagination-dark-focus-color`
-  - `$pagination-dark-hover-bg`
-  - `$pagination-dark-hover-border-color`
-  - `$pagination-dark-hover-color`
-  - `$step-item-dark-active-bg`
-  - `$step-item-dark-bg`
-  - `$step-item-dark-drop-shadow`
-  - `$step-item-dark-next-bg`
-  - `$step-link-dark-active-color`
-  - `$step-link-dark-color`
-  - `$step-link-dark-next-color`
-  - `$step-link-next-color`
+- <details>
+    <summary><span class="badge bg-info">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$alert-heading-font-weight</code></li>
+      <li><code>$alert-icon-size-sm</code></li>
+      <li><code>$breadcrumb-color</code></li>
+      <li><code>$breadcrumb-dark-active-color</code></li>
+      <li><code>$breadcrumb-dark-bg</code></li>
+      <li><code>$breadcrumb-dark-color</code></li>
+      <li><code>$breadcrumb-dark-divider-color</code></li>
+      <li><code>$btn-close-active-border-color</code></li>
+      <li><code>$btn-close-active-color</code></li>
+      <li><code>$btn-close-border-color</code></li>
+      <li><code>$btn-close-border-width</code></li>
+      <li><code>$btn-close-disabled-color</code></li>
+      <li><code>$btn-close-hover-color</code></li>
+      <li><code>$btn-close-white-active-border-color</code></li>
+      <li><code>$btn-close-white-active-color</code></li>
+      <li><code>$btn-close-white-bg</code></li>
+      <li><code>$btn-close-white-border-color</code></li>
+      <li><code>$btn-close-white-color</code></li>
+      <li><code>$btn-close-white-disabled-color</code></li>
+      <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$list-group-dark-action-active-bg</code></li>
+      <li><code>$list-group-dark-action-active-color</code></li>
+      <li><code>$list-group-dark-action-color</code></li>
+      <li><code>$list-group-dark-action-hover-color</code></li>
+      <li><code>$list-group-dark-active-bg</code></li>
+      <li><code>$list-group-dark-active-border-color</code></li>
+      <li><code>$list-group-dark-active-color</code></li>
+      <li><code>$list-group-dark-bg</code></li>
+      <li><code>$list-group-dark-border-color</code></li>
+      <li><code>$list-group-dark-color</code></li>
+      <li><code>$list-group-dark-disabled-bg</code></li>
+      <li><code>$list-group-dark-disabled-color</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color</code></li>
+      <li><code>$mark-color-dark</code></li>
+      <li><code>$navbar-dark-border-color</code></li>
+      <li><code>$navbar-font-weight</code></li>
+      <li><code>$pagination-active-item-color</code></li>
+      <li><code>$pagination-dark-active-bg</code></li>
+      <li><code>$pagination-dark-active-border-color</code></li>
+      <li><code>$pagination-dark-active-color</code></li>
+      <li><code>$pagination-dark-active-item-bg</code></li>
+      <li><code>$pagination-dark-active-item-border-color</code></li>
+      <li><code>$pagination-dark-active-item-color</code></li>
+      <li><code>$pagination-dark-bg</code></li>
+      <li><code>$pagination-dark-border-color</code></li>
+      <li><code>$pagination-dark-color</code></li>
+      <li><code>$pagination-dark-disabled-bg</code></li>
+      <li><code>$pagination-dark-disabled-border-color</code></li>
+      <li><code>$pagination-dark-disabled-color</code></li>
+      <li><code>$pagination-dark-focus-bg</code></li>
+      <li><code>$pagination-dark-focus-color</code></li>
+      <li><code>$pagination-dark-hover-bg</code></li>
+      <li><code>$pagination-dark-hover-border-color</code></li>
+      <li><code>$pagination-dark-hover-color</code></li>
+      <li><code>$step-item-dark-active-bg</code></li>
+      <li><code>$step-item-dark-bg</code></li>
+      <li><code>$step-item-dark-drop-shadow</code></li>
+      <li><code>$step-item-dark-next-bg</code></li>
+      <li><code>$step-link-dark-active-color</code></li>
+      <li><code>$step-link-dark-color</code></li>
+      <li><code>$step-link-dark-next-color</code></li>
+      <li><code>$step-link-next-color</code></li>
+    </ul>
+  </details>
 
 - <span class="badge bg-danger">Breaking</span> `--bs-pagination-margin-start` and `--bs-pagination-focus-outline` are now deprecated.
 
