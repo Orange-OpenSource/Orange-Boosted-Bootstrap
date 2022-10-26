@@ -3,7 +3,10 @@ layout: docs
 title: Navs and tabs
 description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
-aliases: "/docs/5.2/components/navs/"
+aliases:
+  - "/docs/components/navs/"
+  - "/docs/components/navs-tabs/"
+  - "/docs/5.2/components/navs/"
 toc: true
 ---
 

@@ -3,6 +3,8 @@ layout: docs
 title: Contents
 description: Discover what's included in Boosted, including our compiled and source code flavors.
 group: getting-started
+aliases:
+  - "/docs/getting-started/contents/"
 toc: true
 ---
 

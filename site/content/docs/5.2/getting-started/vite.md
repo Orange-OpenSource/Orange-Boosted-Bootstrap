@@ -3,6 +3,8 @@ layout: docs
 title: "Boosted & Vite"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
 group: getting-started
+aliases:
+  - "/docs/getting-started/vite/"
 toc: true
 thumbnail: vite.png
 ---
