@@ -69,6 +69,7 @@
       height: 100%;
       content: "";
       background-color: currentcolor;
+      -webkit-mask-image: escape-svg(var(--#{$boosted-prefix}close-icon)); //stylelint-disable-line property-no-vendor-prefix
       mask-image: escape-svg(var(--#{$boosted-prefix}close-icon));
       mask-repeat: no-repeat;
       mask-position: 50%;
