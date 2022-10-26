@@ -21,6 +21,8 @@ toc: true
 
 - <span class="badge bg-warning">Warning</span> Changed the markup for **Toasts** with a custom content (toast message and close button). Please reflect this modification into your websites.
 
+- <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
+
 - <span class="badge bg-info">New</span> **Tags** component.
 
 ### Icons and images
@@ -53,6 +55,7 @@ toc: true
   - `--bs-btn-close-disabled-color`
   - `--bs-btn-close-hover-color`
   - `--bs-btn-close-padding`
+  - `--bs-highlight-color`
   - `--bs-tab-content-border-width`
   - `--bs-tab-content-padding-x`
   - `--bs-tab-content-padding-y`
@@ -79,35 +82,16 @@ toc: true
   - `$btn-close-white-color`
   - `$btn-close-white-disabled-color`
   - `$btn-close-white-hover-color`
+  - `$mark-bg-dark`
+  - `$mark-color`
+  - `$mark-color-dark`
+  - `$navbar-dark-border-color`
   - `$navbar-font-weight`
 
 - Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
 
 <!--
 ### TODO
-  * fix(navbar): minor fixes (#1498)
-    - Add a .mb-3 to offcanvases navbar examples to add some space between the last link and the search bar in mobile viewport
-    - New $navbar-dark-border-color used in `-bs-navbar-border-color` for .navbar-dark
-    - Change the default value of $navbar-border-color now used only for light navbars
-        Summary: Change the border-color management in navbar + small fix in example.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1498
-        Topics: Docs, Sass, Add functionality, Breaking change, Navbar
-        K/R: Keep
-  * <mark>/.mark: Improve rendering for accessibility (#1506)
-        Summary: Change the rendering for .mark.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1506
-        Topics: Sass, Add functionality, Reboot
-        K/R: Keep
-  * chore(workflows): replace percy/snapshot-action by Percy CLI (#1530)
-        Summary: Remove percy/snapshot and add @percy/cli dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1530
-        Topics: CI, Dependencies
-        K/R: Remove
-  * chore: add a PR template (#1007)
-        Summary: Add a PR template on Github.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1007
-        Topics: Git
-        K/R: Remove
   * feat(list group): add dark variant (#1525)
         Summary: Add a dark variant to list group.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1525
