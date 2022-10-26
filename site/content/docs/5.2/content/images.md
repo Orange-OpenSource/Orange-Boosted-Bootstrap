@@ -21,7 +21,7 @@ Images in Boosted are made responsive with `.img-fluid`. This applies `max-width
 In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a 2px border appearance.
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
+{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a gray border around it" >}}
 {{< /example >}}
 
 ## Aligning images
