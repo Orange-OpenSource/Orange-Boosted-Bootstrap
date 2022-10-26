@@ -3,6 +3,8 @@ layout: docs
 title: Figures
 description: Documentation and examples for displaying related images and text with the figure component in Boosted.
 group: content
+aliases:
+  - "/docs/content/figures/"
 toc: true
 ---
 

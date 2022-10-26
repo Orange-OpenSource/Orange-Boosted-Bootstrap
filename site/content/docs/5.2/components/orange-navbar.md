@@ -3,6 +3,8 @@ layout: docs
 title: Orange navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
+aliases:
+  - "/docs/components/orange-navbar/"
 toc: true
 added: "5.2"
 ---

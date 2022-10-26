@@ -3,8 +3,12 @@ layout: docs
 title: Forms
 description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
 group: forms
+aliases:
+  - "/forms/"
+  - "/docs/forms/"
+  - "/docs/5.2/forms/"
+  - "/docs/forms/overview/"
 toc: true
-aliases: "/docs/5.2/forms/"
 sections:
   - title: Form control
     description: Style textual inputs and textareas with support for multiple states.
