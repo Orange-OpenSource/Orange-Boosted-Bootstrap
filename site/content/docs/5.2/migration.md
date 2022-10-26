@@ -25,6 +25,10 @@ toc: true
 
 - <span class="badge bg-info">New</span> **Tags** component.
 
+#### Dark variants
+
+- <span class="badge bg-info">New</span> **List group** dark variant.
+
 ### Icons and images
 
 - <span class="badge bg-warning">Warning</span> **Tooltips** examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
@@ -82,6 +86,18 @@ toc: true
   - `$btn-close-white-color`
   - `$btn-close-white-disabled-color`
   - `$btn-close-white-hover-color`
+  - `$list-group-dark-action-active-bg`
+  - `$list-group-dark-action-active-color`
+  - `$list-group-dark-action-color`
+  - `$list-group-dark-action-hover-color`
+  - `$list-group-dark-active-bg`
+  - `$list-group-dark-active-border-color`
+  - `$list-group-dark-active-color`
+  - `$list-group-dark-bg`
+  - `$list-group-dark-border-color`
+  - `$list-group-dark-color`
+  - `$list-group-dark-disabled-bg`
+  - `$list-group-dark-disabled-color`
   - `$mark-bg-dark`
   - `$mark-color`
   - `$mark-color-dark`
@@ -92,17 +108,6 @@ toc: true
 
 <!--
 ### TODO
-  * feat(list group): add dark variant (#1525)
-        Summary: Add a dark variant to list group.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1525
-        Topics: Docs, Sass, Add a functionality, List group
-        K/R: Keep
-  * fix(css): add workaround for postcss value parser error (#1524)
-    - Note: linked to previous chore(merge) from Bootstrap. Just forgot to fix this one
-        Summary: Update Sass file for postcss parser.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1524
-        Topics: Sass, Fix, Navbar
-        K/R: Remove
   * chore(merge main patched commit) → 23fb7a7 (#1521)
     - https://github.com/twbs/bootstrap/commit/97a9060a8fa643484fbe70d1e527267841670c9d (same as the one following, should have been squashed)
     - https://github.com/twbs/bootstrap/commit/9b943880fc38ccde372973111fe5872b5960e75d
@@ -161,64 +166,17 @@ toc: true
         Topics: Sass, Button
         K/R: ?
     - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-  * fix(docs): change responsive values in utility API examples (#1488)
-        Summary: Change the responsive values in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1488
-        Topics: Docs, API
-        K/R: Remove
   * chore(merge main) patched commit → 337068f (#1510)
     - https://github.com/twbs/bootstrap/commit/b14190b5095195fbe803f81bf4ce56d09be5378d
         Summary: Update popperjs dependency.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/363e4fee27febd22630716e8d88d716fe45b8cea
         Topics: Dependencies
         K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/77e17e3b8deb4d5467203f4e3cd903b7cd06bde4
-        Summary: Fix typo in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/9e31e675975fd0a135f571268bba4f26f6407be1
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/b5f2d5a31e24455447939c3a7487a4fe89a66ba6
-        Summary: Fix typo in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/349987f4f76e2fa66231abbb8300f640c6c3d2fa
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/4f97d8fabda142685e36391da2c37c7e09955ac6
-        Summary: Update Webpack guide doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/22ad93727a051a3f11b9459e300766e4a985f0b6
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/279363783759323c988d227145d5f6bc6c683efd
-        Summary: Fix 'precompiled' in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/0da15f756831a113c89a043ece5f094864d19849
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/8c380b2676eb5eb76716b94763ef21e98c86b9b7
-        Summary: Update the accordion Sass for accordion-flush.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/ab72fa70bb78d0bfc4ca6639070403c10bba82f0
-        Topics: Sass
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/54b4b2c66a6f0f403a8120a0c7720f29aaa71f7c
-        Summary: Explain a bit better vertical gutters.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/72d7d58f5feb514cc8c38ad219d29e9d763a5fb2
-        Topics: Docs, Gutters
-        K/R: Remove
     - https://github.com/twbs/bootstrap/commit/337068f8b1044004f4b9abfffbb433694ae87993
         Summary: Fix wrong dropdown menu opening when severals dropdowns in one element.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/7961a7acb10d49a0831711b983169641a3e30571
         Topics: Javascript, Fix, Dropdown
         K/R: ?
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-  * chore(merge main) patched commit → 3ad8551 (#1507)
-    - ~~https://github.com/twbs/bootstrap/commit/af1bd974bba7f6e7f90c5ed3f42738bd101926cb~~ - Was already done via Dependabot
-        Summary: Update @rollup dependency.
-        Boosted: None
-        Topics: Dependencies
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/29332a954f86671d39f60007fb0c2ea633731e88
-        Summary: Doc update in tables.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/33c99bde00d0fe76202ffaf48f5634a5e388afd5
-        Topics: Docs
-        K/R: Remove
     - https://github.com/twbs/bootstrap/commit/15318674fb086214e095c61af780a7d889f0f11e
         Summary: Reorder offcanvas doc.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/125f0f1b83dfc334049a355724a72aa793e16dcb
