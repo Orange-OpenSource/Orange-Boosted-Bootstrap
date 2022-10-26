@@ -11,10 +11,10 @@
 
 // scss-docs-start pagination-max-items-mixin
 // Boosted mod
-// The pagination list has (n) items and is built in 3 parts:
+// The pagination list ((m) items) should display exactly (n) items and is built in 3 parts:
 // - the begining of the list is made of the first (n/2) items
-// - the end of the list is made of the first (n/2) items
-// - the last part of the list is made of the active element (so maybe not the (n/2)th last item)
+// - the end of the list is made of the last (n/2) items (or (n/2 - 1) depending on the active element)
+// - the last part of the list is made of the active element
 @mixin pagination-max-items($pagination-max-items) {
   @if $enable-responsive-pagination {
     $half-items: $pagination-max-items * .5;
@@ -30,7 +30,7 @@
       display: flex;
     }
 
-    // Pagination with more than n items:
+    // Pagination with m > n:
     //  - rule 1: adding 3 dots after the active element if situated between the first (n/2) items and the last (n/2 - 1) items
     //            no dots added if the active element is exactly the (n/2 + 1)th first item and exactly the (n/2)th last item
     //  - rule 2: adding 3 dots after the (n/2)th first element of the list
@@ -46,25 +46,25 @@
       }
     }
 
-    // Pagination with more than n items:
+    // Pagination with m > n:
     //  - rule 3: hiding 3 dots of the rule 2 above if the active element is exactly the (n/2 + 1)th first item
     &.active:nth-child(#{$half-items + 1}):not(:nth-last-child(-n+#{$half-items})) {
       margin-left: calc(-1 * (var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
     }
 
-    // Pagination with more than (n - 1) items:
+    // Pagination with m > (n - 1):
     //  - rule 4: hiding the (n/2 - 1)th last item if the active element is situated between the (n/2) first items and the (n/2 - 1) last items
     &:nth-child(#{$half-items}) ~ .active:not(:nth-last-child(-n+#{$half-items - 1})) ~ :nth-last-child(#{$half-items - 1}) {
       display: none;
     }
 
-    // Pagination with more than n items:
+    // Pagination with m > n:
     //  - rule 5: hiding the (n/2 - 2)th last item if the active element is situated between the (n/2 + 1) first items and the (n/2 - 1) last items
     &:nth-child(#{$half-items + 1}) ~ .active:not(:nth-last-child(-n+#{$half-items - 1})) ~ :nth-last-child(#{$half-items - 2}) {
       display: none;
     }
 
-    // Pagination with equal or less than n items:
+    // Pagination with m <= n:
     //  - rule 6: cancel the hiding made by the rule 4 above if the active element
     //            is exactly the (n/2 + 1)th first item and exactly the (n/2)th last item
     //            resulting in the display of the (n/2 - 1)th last item
