@@ -132,26 +132,6 @@ toc: true
         Topics: Javascript, Fix, Modal
         K/R: ?
   * chore(merge main) patched commit → 2504b89 (#1513)
-    - https://github.com/twbs/bootstrap/commit/a329575d82a65660ffa7b18cbd9f291e0ee7eef5
-        Summary: Put some doc inside a table.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/8eb7321b5fa2847a919ae8968f28395f5e1a5c44
-        Topics: Docs, List group, Navs tabs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/585146a6a7aa70faf25442d7d28636ce57e29588
-        Summary: Update eslint-config-xo dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/7b69e857675288a38005be1f217e6f9098ed8040
-        Topics: Dependencies
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/75e09b1c0f5ae5f51078c7a25fe36d892c5cfcfe
-        Summary: Update rtlcss dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/db7dfad165b642c689e88f95a4ab73d0a958b1ac
-        Topics: Dependencies
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/b8880e5eec6bb4f33578578ba2413f0d91424382
-        Summary: Workaround for postcss parser. (-1 * ...)
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/f5ceeb59dd270208acaa0ff63e9382a70ab12cb3
-        Topics: Sass
-        K/R: ?
     - https://github.com/twbs/bootstrap/commit/32c457db4b6ff389efbd35772b24746c7ffb0b6d
         Summary: Change the focus management of buttons (use of :focus-visible instead of :focus).
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/f225846843ba8708980c1c4bf9c993845172acb0
@@ -160,104 +140,30 @@ toc: true
                  https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/a3fa822704747ee61a895a8151ae88f789b19e2f
         Topics: Sass, Breaking changes, Button
         K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/2504b8995095d2bb41c9686afa175f9eaa91bec2
-        Summary: Remove gradient for .btn-link.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/d3d66c45bbd42f2c9a5471fcbfd147fc6c7d050e
-        Topics: Sass, Button
-        K/R: ?
     - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
+        - TODO
   * chore(merge main) patched commit → 337068f (#1510)
     - https://github.com/twbs/bootstrap/commit/b14190b5095195fbe803f81bf4ce56d09be5378d
         Summary: Update popperjs dependency.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/363e4fee27febd22630716e8d88d716fe45b8cea
         Topics: Dependencies
         K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/337068f8b1044004f4b9abfffbb433694ae87993
-        Summary: Fix wrong dropdown menu opening when severals dropdowns in one element.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/7961a7acb10d49a0831711b983169641a3e30571
-        Topics: Javascript, Fix, Dropdown
-        K/R: ?
-    - https://github.com/twbs/bootstrap/commit/15318674fb086214e095c61af780a7d889f0f11e
-        Summary: Reorder offcanvas doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/125f0f1b83dfc334049a355724a72aa793e16dcb
-        Topics: Docs, Offcanvas
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/995df354f260ccf46672e4dc9e7b2c242bd4c02d
-        Summary: Change the cursor for search modal in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/a645786913577a1af25d743a50550a23578661f0
-        Topics: Sass
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/4cea8b1786ddbe365747cabebe9bee44d70a3b6d
-        Summary: Add a comment in Sass file.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/a645786913577a1af25d743a50550a23578661f0
-        Topics: Sass
-        K/R: Remove
     - https://github.com/twbs/bootstrap/commit/a0238d126b385044bd7cb16bdc9118f3d44e016f
         Summary: Add a CSS var to toast.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/405215a187e037eee4f1192d31681c4bf317e2c6
         Topics: Sass, Add functionality, Toast
         K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/465cc2da4f028c36f6b1dc7887776af0db4f9176
-        Summary: Change one example that wasn't correct in the card doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/64befa9347a80d4d13b2ee6f7839994547410110
-        Topics: Docs, Card
-        K/R: Remove since it only change the markup for one example.
     - https://github.com/twbs/bootstrap/commit/bc2ec7c7583bed6f51571501739c9e7d57e3ba2f
         Summary: Initialize a CSS var for button.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/290a0e37a09c23a45df6193147eee9b3933e60b2
         Topics: Sass
-        K/R: Remove but not sure
-    - https://github.com/twbs/bootstrap/commit/a138bc3fb9ff3495a8d63d776e0ad21ed2aaa1ca
-        Summary: Change the way to display the dark variant doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/2936702a90fe147aa4808a9edbefeb0c77508e7b
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/9be3cdf265a800555b385e606c6f825859bd5476
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/df67fb2e976b70ab338a8da5623e2710aad41357
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/4e5130ecfe0d48f1d1e5ffefb48f36f787fff819
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/4330c7a1efb201e065e722ea828aedeee0bfeef8
-        Topics: Docs, Sass
-        K/R: Remove
-    - ~~https://github.com/twbs/bootstrap/commit/ebbed79df7bb4735894f31bc558377a531c93710~~ Probably nothing to do. Linked to https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1508
-        Summary: Solve a rounded issue for list group when there's only one.
-        Boosted: None
-        Topics: Sass
-        K/R: Remove
     - https://github.com/twbs/bootstrap/commit/2f3aec819ae7bd04c00cc55fee977d12e11a46c6
         Summary: Fix z-index issues on input group + support z-index for floating labels.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/da975b0442a063ed4530adea167ba30a89b02734
         Topics: Sass, Add functionality, Input group
         K/R: Keep to prevent issues with zindex
-    - https://github.com/twbs/bootstrap/commit/87aaf9499620c9a7b592711a6e8d86e9a30467b6
-        Summary: Add a form select example.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/4f72cdaf526e3d2f7dba4a271095db1b4f5c0ce7
-        Topics: Example
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/cda901f2444d6b09cfa3261c84ef98288e3b9834
-        Summary: Change a bit the applied focus on `pre`.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/ea88a59023f311ad02be852b0617f72dba67a20d
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/97c768c9e2aff3469ca0667288d2dab045a1d5ef
-        Topics: Sass, Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/db3490788775ac88cc8dcc32f9b8bcd66f95859e
-        Summary: Update @babel/core, @popperjs/core, eslint, jquery, lockfile-lint, postcss, rollup, sass, stylelint and terser dependencies
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/3fbf956cb237236493a825e08f2c328fc06fad73
-        Topics: Dependencies
-        K/R: ?
-    - https://github.com/twbs/bootstrap/commit/a12453a0ffe38af0e273e559ec4ced396d39feba
-        Summary: Change the starter template padding.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/abc0dc596e0379c9cc1e0ad4a88d9a40c7c5467f
-        Topics: Example
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/3ad8551f8b736be024a533aa281a89995258021f
-        Summary: Change the initialization of an accordion CSS var.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/840c96209c18aafe8d4cb31d92457d04fb123e37
-        Topics: Sass, Add functionality, Accordion
-        K/R: Remove
     - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-  * fix(docs): reorder Carousel doc parts (#1491)
-        Summary: Reorder the carousel doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1491
-        Topics: Docs, Carousel
-        K/R: Remove
+        - TODO
   * feat(breadcrumb): add dark variant (#1430)
         Summary: Add a dark variant and a CSS var for breadcrumb.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1430
@@ -278,71 +184,16 @@ toc: true
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1487
         Topics: Docs
         K/R: Keep (Don't know if this is mentioned anywhere)
-  * chore(deps): update package-lock.json (#1503)
-        Summary: Update package-lock.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1503
-        Topics: Dependencies
-        K/R: Remove
   * feat(stepped process): add dark variant (#1434)
         Summary: Add a dark variant for stepped process.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1434
         Topics: Docs, Sass, Add functionality, Stepped process
         K/R: Keep
-  * fix(docs): move 'Dark variant' sections out of 'Example' for alerts and accordions (#1502)
-        Summary: Change the 'Dark variant' doc in Alerts and Accordions.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1502
-        Topics: Docs, Alerts, Accordions
-        K/R: Remove
-  * docs(search): enhance Algolia search results for a11y (#1432)
-        Summary: Changed the Algolia search modal look.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1432
-        Topics: Docs
-        K/R: Remove
-  * chore(deps-dev): bump @rollup/plugin-commonjs from 22.0.1 to 22.0.2 (#1474)
-        Summary: Update @rollup dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1474
-        Topics: Dependencies
-        K/R: Remove
-  * fix(cards): refine rendering of cards with image overlays (#1493)
-        Summary: Backport of an example from v4.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1493
-        Topics: Docs, Card
-        K/R: Remove since it doesn't change the markup of each card
-  * fix(docs): add missing points and Markdown formatting in some tables (#1499)
-        Summary: Fix typo in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1499
-        Topics: Docs
-        K/R: Remove
-  * docs(content): show a third-level list (#1497)
-        Summary: Add a third-level list item in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1497
-        Topics: Docs, Reboot
-        K/R: Remove
-  * fix(docs): replace 'Secondary' by 'Primary' label for some buttons when inconsistent (#1494)
-        Summary: Change typo in the doc
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1494
-        Topics: Docs, Buttons
-        K/R: Remove
   * fix(dropdown toggle split): same width for all `.dropdown-toggle-split`s orientations (#1451)
         Summary: Add `min-width` to `.dropdown-toggle-split`.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1451
         Topics: Sass, Add functionality, Dropdown
         K/R: Keep
-  * fix(css): set .mark and <mark> y padding to 0 (#1484)
-        Summary: Change the y padding- default value in `.mark`.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1484
-        Topics: Sass, Reboot
-        K/R: Remove
-  * fix(stepped process): improve rendering of arrow shapes (#1485)
-        Summary: Changing the default values of the arrow in stepped-process.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1485
-        Topics: Sass, Stepped-process
-        K/R: Remove
-  * fix(docs): update values in grids/breakpoints tables (#1440)
-        Summary: Syncing the values in Sass and the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1440
-        Topics: Docs
-        K/R: Remove
   * fix(modal): remove unused CSS variables (#1418)
         Summary: Remove some CSS var in modal.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1418
@@ -358,106 +209,12 @@ toc: true
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1425
         Topics: Sass, Add functionality, Alerts
         K/R: Keep
-  * chore(deps): bump actions/cache from 3.0.5 to 3.0.8 (#1473)
-        Summary: Update actions/cache dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1473
-        Topics: Dependencies
-        K/R: Remove
-  * fix(docs): remove navbar box shadow version selector overlap [#1438](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1438)
-        Summary: remove navbar box shadow version selector overlap.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1438
-        Topics: Docs
-        K/R: Remove
   * chore(merge main) patched commit → c3c6591 [#1469](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469)
-    - https://github.com/twbs/bootstrap/commit/dfae892801ffc194de6aec34d543d908db3dd8e1
-        Summary: Set title on element if needed when tooltip is closing.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/a769496787bbf22fb5532df78a733815520b7c53
-        Topics: Javascript, Add functionality, Tooltip
-        K/R: Keep
-    - ~~https://github.com/twbs/bootstrap/commit/3feaf6ca0b0c6b6e134a8937ca132d43ed949a68~~ - Nothing to do in Boosted. We want to keep the search icon as it is contrary to what's done in Bootstrap
-        Summary: Changes the management of the Algolia search icon in the navbar.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/9eafd577523b55965066dbbf9ce825e0dbeced5e
-        Topics: Docs
-        K/R: Remove
-    - ~~https://github.com/twbs/bootstrap/commit/90c50ab198a4ecffdda6a5ff10fe58cab2c816b2~~ - Nothing to do in Boosted since we don't have this modified section
-        Summary: Adding some missing `alt`.
-        Boosted: None
-        Topics: Docs, markup
-        K/R: Remove
     - https://github.com/twbs/bootstrap/commit/db86607c088bd307aa21f4b4bd0258262262a4e4
         Summary: Add a threshold option on Scrollspy.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/399ba677af1bf46098c797bf0419302e8b58dc03
         Topics: Javascript, Add functionality, Scrollspy
         K/R: Keep
-    - ~~https://github.com/twbs/bootstrap/commit/17aa6732ab83653501e70dc88afcccead1dc0892~~ - Was already done in Boosted
-        Summary: Fix some typo error in the doc.
-        Boosted: None
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/85530309fabf6c7316e8511016d3daed1ab3aee4
-        Summary: Change the value of a Sass variable.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/71855c8c70070f805ec358bd303c150d74af255b
-        Topics: Sass
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/a4f81c04b5da87b9b05ceeeee87ae235f836d4e6
-        Summary: Update autoprefixer dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/956586b6846c67e59fb021e20ec6e54ba8386ff8
-        Topics: Dependencies
-        K/R: Remove
-    - ~~https://github.com/twbs/bootstrap/commit/c22dd50e1b3539685c609e0e0b37ba52bb2312cf~~ - `_floating-labels.scss` doesn't exist in Boosted
-        Summary: Align start for floating labels.
-        Boosted: None
-        Topics: Sass, Add functionality, Floating labels
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/7432f2a9224ed173d04930df3f02fd5a37e962c0
-        Summary: Fix typo error for a class in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/604f29949ce36209682377c634c94152a9df3286
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/6c221aa043e0bd14db31fb047c57c714e92605de
-        Summary: Fix border for floating labels inside input groups.
-        Boosted:https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/471d5f4d0a21dd7a4f60ed08c2048022be353315
-        Topics: Sass, Fix, Floating labels
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/4018fac20ebd0adeb65f6b01a13851098e94309a
-        Summary: Add doc for popover explanation.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/537b26f040347e40ccda2d061718f37e487eab48
-        Topics: Docs, Popover
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/8730ef0f8eec576a56b99ceb785da09f0c54b2ac
-        Summary: Adding no redundant selector to linter.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/7eea3cbe0ed6bead5b2d1385b0fe862224bf2769
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/7fa36229e80c84d3c531fdc44ca12667a70a4876
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/8bc1f66b1f5f57108391ae316e818a3bbcf2ab79
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/bcdcf5a9735874241fc441c7c1f5270ec74ca888
-        Topics: Sass, Lint
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/e57a94cd664aa7b819da9408053bfbdf414a78e4
-        Summary: Better explanation for grid row columns.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/e46024281f529fee43904942b4844a6092842cf4
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/9e57dfadac9cd924c35b7ff5b3d82981b59502de
-        Summary: Update features example.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/0b66371788d8b4031d9f720a5a99a0b8e2b63702
-        Topics: CSS, Example
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/aad77f32bd58175ab5c3577aed558adf8598b394
-        Summary: Update rollup dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/938e1b33700f3bf61b3cb34619d19f0fd7ab47d6
-        Topics: Dependencies
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/a685b9648bf14c853b9a417c7c68f95d93e1aabc
-        Summary: Update eslint, @babel package and sass dependencies.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/02269b39e7c3f8cef2b2340d37906c06b413e699
-        Topics: Dependencies
-        K/R: ?
-    - https://github.com/twbs/bootstrap/commit/c3c65911665ab64bdaa15d405db65ee81655dbf3
-        Summary: Change author of Sass function.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/71701ed4fed9d0f9fcaf0044933dfe49281c153c
-        Topics: Sass
-        K/R: Remove
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
   * feat(pagination): new `#{$prefix}pagination-padding-end` CSS var [#1416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1416)
         Summary: new `#{$prefix}pagination-padding-end` CSS var
         Boosted: None
@@ -468,100 +225,6 @@ toc: true
         Boosted: None
         Topics: Sass, Deprecated, List-group
         K/R: Keep
-  * chore(merge main) patched commit → 44c9c8d [#1421](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421)
-    - https://github.com/twbs/bootstrap/commit/04b5d099b3643e08e6f92311a89a29861ff0191a
-        Summary: Remove unused parameter of a mixin.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/66694da38a7a1d12f1634968a409c11388783685
-        Topics: Sass
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/d12bcf7bc0f0cb55aa98db3a03f754c5a4d9001f
-        Summary: Change a deprecated link in doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/a98274d6c81e7e6e270de5d2ac735614b1bec78e
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/b6d27899fc03fe9c3be87a34e9d19696fb716f44
-        Summary: Change for a good wording in doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/eed7a8d12db58b5c1e27fc8878ecf2313d8a2103
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/7688c84b8a881f1fe131b204d16ba13246d25da5
-        Summary: Change the titles structure in a Bootstrap example.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/c52d795234fb5ee55f99d4b69ec981297a7595cc
-        Topics: Example
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/e547c9c2e90549ffec84b8c2c293770c5c213e39
-        Summary: Adding a missing parenthesis in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/965442d68ff83cc9c404ada83f084e1e4e1475a2
-        Topics: Docs
-        K/R: Remove
-    - ~~https://github.com/twbs/bootstrap/commit/99cd8ca8a0f2cb0db8276316943fdd1a2199e791~~: already done in Boosted
-        Summary: Change the added-in short-code in doc.
-        Boosted: None
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/14e705d9ae700030242c9cc7191e6e6d376eda39
-        Summary: Change the link to create a new issue in Boosted.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/e78ee0cd3274acd0010e52202dfbfc824c027713
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/01bf7a9b86e6cffcf8f7436f8afa898a9453bd19
-        Summary: Add a missing added-in short-code in doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/050d91b7e548d74b42310362788628ef36502fa9
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/dc901d25fa663807886a9564765bae0f6fe47f8f
-        Summary: Add a missing added-in short-code in doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/a2792f5d41860b26e568e8b9a2bfc412b7128854
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/a153f360eea855f29947ac14be14e29380ddebeb
-        Summary: Remove useless calc in a Sass file.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/5b4e9c74631c97c67db9bf10b4500b84cac8cbf5
-        Topics: Sass
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/00aa1a5c6e04629955ee45780b86f6ce8fd48ebf
-        Summary: Remove Slack references in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/fd118dada5e46a25344f87636533ba6ff92811bc
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/501faa2c966632f31b919faf3fa78e9adbe6fe5b
-        Summary: Bring some new images to Webpack/Vite/Parcel and change the way they're managed.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/0bc25dd543d2962207663053c0261a265acd0297
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/5171f9985af857ffdd263a23d59f54b5d2bd1f46
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/1e44f5b8683fb613a748a0e7f6bbc3818ac1fd68
-        Topics: Docs
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/02f1c628f11122a4c2a40df6d2e1bc1fe6ec202a
-        Summary: Update lockfile-lint dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/7a734d09b603c258d8c173dd8d4a9e4c3d3a2f64
-        Topics: Dependencies
-        K/R: Remove
-    - https://github.com/twbs/bootstrap/commit/44c9c8df8d8e5be84d5bea47f8ee110b64e86e62
-        Summary: Update Sass dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1421/commits/1d00904aec9702cf9c23525658b7752c935eb4a2
-        Topics: Dependency
-        K/R: ?
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide >> Done
-
-
-### Elements that should not appear in this migration guide because it has no impact for the developers
-
-* fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
-* fix(forms): prevent that valid icon hides input content
-    - Valid icons don't hide anymore content in inputs when too long
-    - Quantity selector doesn't display valid icon anymore
-    - .form-control-color display the valid icon correctly and doesn't change its width when invalid
-    - .form-check-input -> switches are displayed correctly when invalid (no blue border)
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1306
-* fix(forms): add validation icons for <select>s and fix its position for `<textarea>`
-    - Reset to Bootstrap default for feedback icon on select
-    - Setting the icon in the top right corner instead of center right
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
-
-* doc(examples): remove Bootstrap examples unused in Boosted
-    - Mainly removed the files. No impact for the user. Only concerns the docs.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
 -->
 
 ## v5.2.0
