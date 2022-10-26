@@ -21,58 +21,59 @@ toc: true
 <!--
   * fix(footers): change 'Terms & Conditions' to 'Terms and conditions'
     This information is important for the users in order to change the label they could have used
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1564
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1564
 -->
 - <span class="badge bg-warning align-text-top">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
+<!--
+  * feat(components): new Tags component
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
+-->
 - <span class="badge bg-info align-text-top">New</span> **Tags** component.
+
+### Icons and images
+
+<!--
+* fix(a11y): fix(a11y): add aria-hidden=true and focusable=false to SVGs in tooltips examples
+  - SVGs in tooltips do not carry any specific information so they should not be readable by screen reader so we should add 'aria-hidden=true'
+  - In addition, replaced the missing 'focusable=false' on the first svg
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1555
+-->
+- <span class="badge bg-warning align-text-top">Warning</span> **Tooltips** examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
+
+<!--
+* fix(icons): use the right close icon
+  - Change the SVG of the close icon used in modal, offcanvas and close buttons
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1566
+-->
+- The close icon SVG has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+
+### Helpers
+
+- <span class="badge bg-info align-text-top">New</span> `.img-thumbnail` officially supported.
+
+### CSS and Sass variables
+
+- <span class="badge bg-info align-text-top">New</span> Here is an exhaustive list of new CSS variables:
+  - `--bs-alert-btn-close-offset`
+  - `--bs-alert-dismissible-padding-right`
+  - `--bs-alert-heading-font-weight`
+  - `--bs-alert-icon-margin-y`
+  - `--bs-alert-icon-size`
+  - `--bs-alert-line-height`
+  - `--bs-alert-link-font-weight`
+  - `--bs-alert-logo-size`
+  - `--bs-navbar-font-weight`
+  - `--bs-navbar-toggler-icon-filter`
+
+- <span class="badge bg-info align-text-top">New</span> Here is an exhaustive list of new Sass variables:
+  - `$alert-heading-font-weight`
+  - `$alert-icon-size-sm`
+  - `$navbar-font-weight`
 
 
 <!--
 ### TODO
-  * feat(components): new Tags component
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
-  * fix(icons): use the right close icon
-    - Change the SVG of the close icon used in modal, offcanvas and close buttons
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1566
-  * fix(forms): prevent that valid icon hides input content
-    - Valid icons don't hide anymore content in inputs when too long
-    - Quantity selector doesn't display valid icon anymore
-    - .form-control-color display the valid icon correctly and doesn't change its width when invalid
-    - .form-check-input -> switches are displayed correctly when invalid (no blue border)
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1306
-  * fix(a11y): fix(a11y): add aria-hidden=true and focusable=false to SVGs in tooltips examples
-    - SVGs in tooltips do not carry any specific information so they should not be readable by screen reader so we should add 'aria-hidden=true'
-    - In addition, replaced the missing 'focusable=false' on the first svg
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1555
-  * fix(forms): add validation icons for <select>s and fix its position for `<textarea>`
-    - Reset to Bootstrap default for feedback icon on select
-    - Setting the icon in the top right corner instead of center right
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
-  * feat(css): add CSS vars to alerts
-    - NEW CSS vars:
-        - #{$prefix}alert-line-height
-        - #{$prefix}alert-logo-size: #{$alert-logo-size};
-        - #{$prefix}alert-icon-size: #{$alert-icon-size};
-        - #{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y};
-        - #{$prefix}alert-link-font-weight: #{$alert-link-font-weight};
-        - #{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight};
-        - #{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r};
-        - #{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset};
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1424
-  * feat(css): add CSS vars to navbars
-    - NEW `$navbar-font-weight` for SCSS vars.
-    - NEW `#{$prefix}navbar-nav-font-size` and `#{$prefix}navbar-nav-line-height` for .supra
-    - NEW `#{$prefix}navbar-toggler-icon-filter` and `#{$prefix}navbar-font-weight` for .navbar
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1422
-  * feat(css): define `.btn-no-outline`, `.btn-link` and `.btn-social` with CSS vars
-    - Reuse of buttons CSS variables to define `.btn-no-outline`, `.btn-link` and `.btn-social`
-    - Probably not any impacts for the users
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1426
-  * feat(utilities): revamp `.img-thumbnail` and add desc in docs
-    - Revamp rendering of `.img-thumbnail`
-    - Add a new section in the Content > Images > Image thumbnails docs
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1441
   * doc(examples): remove Bootstrap examples unused in Boosted
     - Mainly removed the files. No impact for the user. Only concerns the docs.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1542
@@ -615,6 +616,16 @@ toc: true
 
 * fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
     Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
+* fix(forms): prevent that valid icon hides input content
+    - Valid icons don't hide anymore content in inputs when too long
+    - Quantity selector doesn't display valid icon anymore
+    - .form-control-color display the valid icon correctly and doesn't change its width when invalid
+    - .form-check-input -> switches are displayed correctly when invalid (no blue border)
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1306
+* fix(forms): add validation icons for <select>s and fix its position for `<textarea>`
+    - Reset to Bootstrap default for feedback icon on select
+    - Setting the icon in the top right corner instead of center right
+        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
 -->
 
 ## v5.2.0
