@@ -17,13 +17,22 @@ toc: true
 
 <!--- * fix(back to top): remove 'Label inside' variant (#1520) -->
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
-
 <!---
   * fix(footers): change 'Terms & Conditions' to 'Terms and conditions'
     This information is important for the users in order to change the label they could have used
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1564
-  * fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
+-->
+- <span class="badge bg-warning">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+
+
+<!--
+### Elements that should not appear in this migration guide because it has no impact for the developers
+
+* fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
+
+### TODO
+  
   * feat(components): new Tags component
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
   * fix(icons): use the right close icon
@@ -45,19 +54,19 @@ toc: true
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1371
   * feat(css): add CSS vars to alerts
     - NEW CSS vars:
-        - --#{$prefix}alert-line-height
-        - --#{$prefix}alert-logo-size: #{$alert-logo-size};
-        - --#{$prefix}alert-icon-size: #{$alert-icon-size};
-        - --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y};
-        - --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight};
-        - --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight};
-        - --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r};
-        - --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset};
+        - #{$prefix}alert-line-height
+        - #{$prefix}alert-logo-size: #{$alert-logo-size};
+        - #{$prefix}alert-icon-size: #{$alert-icon-size};
+        - #{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y};
+        - #{$prefix}alert-link-font-weight: #{$alert-link-font-weight};
+        - #{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight};
+        - #{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r};
+        - #{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset};
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1424
   * feat(css): add CSS vars to navbars
     - NEW `$navbar-font-weight` for SCSS vars.
-    - NEW `--#{$prefix}navbar-nav-font-size` and `--#{$prefix}navbar-nav-line-height` for .supra
-    - NEW `--#{$prefix}navbar-toggler-icon-filter` and `--#{$prefix}navbar-font-weight` for .navbar
+    - NEW `#{$prefix}navbar-nav-font-size` and `#{$prefix}navbar-nav-line-height` for .supra
+    - NEW `#{$prefix}navbar-toggler-icon-filter` and `#{$prefix}navbar-font-weight` for .navbar
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1422
   * feat(css): define `.btn-no-outline`, `.btn-link` and `.btn-social` with CSS vars
     - Reuse of buttons CSS variables to define `.btn-no-outline`, `.btn-link` and `.btn-social`
@@ -75,12 +84,12 @@ toc: true
     - Added a section Customize > CSS variables > Dark text rule in docs
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1293
   * feat(css): add CSS vars for Close button
-    - Several new `--#{$prefix}btn-close-*` CSS variables
+    - Several new `#{$prefix}btn-close-*` CSS variables
     - Several new `$btn-close-*` Sass variables
     - Creation of new `$btn-close-white-*` Sass variables
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1531
   * feat(css): add CSS vars to handle `.nav-tabs-light` and `.tab-content`
-    - New --#{$prefix}nav-tabs-link-hover-color, --#{$prefix}nav-tabs-link-hover-bg, --#{$prefix}nav-tabs-link-border-width CSS variables
+    - New #{$prefix}nav-tabs-link-hover-color, #{$prefix}nav-tabs-link-hover-bg, #{$prefix}nav-tabs-link-border-width CSS variables
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1427
   * fix(toast): adjust the layout of custom content (#1490)
     - Changed some utilities in the markup of "Toast > Custom content" example to adjust the layout
@@ -90,7 +99,7 @@ toc: true
         K/R: Remove since these are only example to show what is possible.
   * fix(navbar): minor fixes (#1498)
     - Add a .mb-3 to offcanvases navbar examples to add some space between the last link and the search bar in mobile viewport
-    - New $navbar-dark-border-color used in `--bs-navbar-border-color` for .navbar-dark
+    - New $navbar-dark-border-color used in `-bs-navbar-border-color` for .navbar-dark
     - Change the default value of $navbar-border-color now used only for light navbars
         Summary: Change the border-color management in navbar + small fix in example.
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1498
@@ -519,13 +528,13 @@ toc: true
         Topics: Sass
         K/R: Remove
     - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-  * feat(pagination): new `--#{$prefix}pagination-padding-end` CSS var [#1416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1416)
-        Summary: new `--#{$prefix}pagination-padding-end` CSS var
+  * feat(pagination): new `#{$prefix}pagination-padding-end` CSS var [#1416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1416)
+        Summary: new `#{$prefix}pagination-padding-end` CSS var
         Boosted: None
         Topics: Sass, Minor change, Pagination
         K/R: Keep
-  * fix(css): drop unused $list-group-hover-bg and `--#{$prefix}list-group-action-hover-bg` [#1417](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1417)
-        Summary: drop unused $list-group-hover-bg and `--#{$prefix}list-group-action-hover-bg`
+  * fix(css): drop unused $list-group-hover-bg and `#{$prefix}list-group-action-hover-bg` [#1417](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1417)
+        Summary: drop unused $list-group-hover-bg and `#{$prefix}list-group-action-hover-bg`
         Boosted: None
         Topics: Sass, Deprecated, List-group
         K/R: Keep
