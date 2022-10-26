@@ -15,37 +15,18 @@ toc: true
 
 ### Components
 
-<!-- * fix(back to top): remove 'Label inside' variant (#1520) -->
 - <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
-<!--
-  * fix(footers): change 'Terms & Conditions' to 'Terms and conditions'
-    This information is important for the users in order to change the label they could have used
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1564
--->
 - <span class="badge bg-warning">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
-<!--
-  * feat(components): new Tags component
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
--->
+- <span class="badge bg-warning">Warning</span> Changed the markup for **Toasts** with a custom content (toast message and close button). Please reflect this modification into your websites.
+
 - <span class="badge bg-info">New</span> **Tags** component.
 
 ### Icons and images
 
-<!--
-* fix(a11y): fix(a11y): add aria-hidden=true and focusable=false to SVGs in tooltips examples
-  - SVGs in tooltips do not carry any specific information so they should not be readable by screen reader so we should add 'aria-hidden=true'
-  - In addition, replaced the missing 'focusable=false' on the first svg
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1555
--->
 - <span class="badge bg-warning">Warning</span> **Tooltips** examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
 
-<!--
-* fix(icons): use the right close icon
-  - Change the SVG of the close icon used in modal, offcanvas and close buttons
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1566
--->
 - The close icon SVG has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
 
 ### Helpers
@@ -72,8 +53,16 @@ toc: true
   - `--bs-btn-close-disabled-color`
   - `--bs-btn-close-hover-color`
   - `--bs-btn-close-padding`
+  - `--bs-tab-content-border-width`
+  - `--bs-tab-content-padding-x`
+  - `--bs-tab-content-padding-y`
+  - `--bs-nav-tabs-link-border-width`
+  - `--bs-nav-tabs-link-hover-bg`
+  - `--bs-nav-tabs-link-hover-color`
+  - `--bs-nav-tabs-link-padding-x`
   - `--bs-navbar-font-weight`
   - `--bs-navbar-toggler-icon-filter`
+
 - <span class="badge bg-info">New</span> Here is an exhaustive list of new Sass variables:
   - `$alert-heading-font-weight`
   - `$alert-icon-size-sm`
@@ -91,19 +80,11 @@ toc: true
   - `$btn-close-white-disabled-color`
   - `$btn-close-white-hover-color`
   - `$navbar-font-weight`
+
 - Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
 
 <!--
 ### TODO
-  * feat(css): add CSS vars to handle `.nav-tabs-light` and `.tab-content`
-    - New #{$prefix}nav-tabs-link-hover-color, #{$prefix}nav-tabs-link-hover-bg, #{$prefix}nav-tabs-link-border-width CSS variables
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1427
-  * fix(toast): adjust the layout of custom content (#1490)
-    - Changed some utilities in the markup of "Toast > Custom content" example to adjust the layout
-        Summary: Change custom toast example in the doc.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1490
-        Topics: Docs, Markup, Toast
-        K/R: Remove since these are only example to show what is possible.
   * fix(navbar): minor fixes (#1498)
     - Add a .mb-3 to offcanvases navbar examples to add some space between the last link and the search bar in mobile viewport
     - New $navbar-dark-border-color used in `-bs-navbar-border-color` for .navbar-dark
