@@ -358,3 +358,27 @@
   border: solid $gray-400; // Boosted mod: change border color
   border-width: map-get($border-widths, 1) 0;
 }
+
+.bd-example-responsive-pagination {
+  .page-item {
+    @include media-breakpoint-down(sm) {
+      @include pagination-max-items(4);
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      @include pagination-max-items(6);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      @include pagination-max-items(8);
+    }
+
+    @include media-breakpoint-between(lg, xl) {
+      @include pagination-max-items(10);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include pagination-max-items(12);
+    }
+  }
+}

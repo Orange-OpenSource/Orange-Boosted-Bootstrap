@@ -25,6 +25,10 @@
 
 // Load Bootstrap variables and mixins
 @import "../../../scss/functions";
+
+// fusv-disable
+$enable-responsive-pagination: true; // stylelint-disable-line scss/dollar-variable-default
+// fusv-enable
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
 
