@@ -27,7 +27,14 @@ toc: true
 
 #### Dark variants
 
+- <span class="badge bg-info">New</span> **Breadcrumb** dark variant.
 - <span class="badge bg-info">New</span> **List group** dark variant.
+- <span class="badge bg-info">New</span> **Pagination** dark variant.
+- <span class="badge bg-info">New</span> **Stepped process** dark variant.
+
+#### Usage
+
+- <span class="badge bg-info">New</span> `data-bs-threshold` data attribute for the Scrollspy.
 
 ### Icons and images
 
@@ -50,6 +57,7 @@ toc: true
   - `--bs-alert-line-height`
   - `--bs-alert-link-font-weight`
   - `--bs-alert-logo-size`
+  - `--bs-breadcrumb-color`
   - `--bs-btn-close-active-border-color`
   - `--bs-btn-close-active-color`
   - `--bs-btn-close-bg`
@@ -59,7 +67,11 @@ toc: true
   - `--bs-btn-close-disabled-color`
   - `--bs-btn-close-hover-color`
   - `--bs-btn-close-padding`
+  - `--bs-btn-hover-border-color`
+  - `--bs-dropdown-zindex`
   - `--bs-highlight-color`
+  - `--bs-pagination-active-item-color`
+  - `--bs-pagination-padding-end`
   - `--bs-tab-content-border-width`
   - `--bs-tab-content-padding-x`
   - `--bs-tab-content-padding-y`
@@ -69,10 +81,17 @@ toc: true
   - `--bs-nav-tabs-link-padding-x`
   - `--bs-navbar-font-weight`
   - `--bs-navbar-toggler-icon-filter`
+  - `--bs-stepped-process-link-next-color`
+  - `--bs-toast-zindex`
 
 - <span class="badge bg-info">New</span> Here is an exhaustive list of new Sass variables:
   - `$alert-heading-font-weight`
   - `$alert-icon-size-sm`
+  - `$breadcrumb-color`
+  - `$breadcrumb-dark-active-color`
+  - `$breadcrumb-dark-bg`
+  - `$breadcrumb-dark-color`
+  - `$breadcrumb-dark-divider-color`
   - `$btn-close-active-border-color`
   - `$btn-close-active-color`
   - `$btn-close-border-color`
@@ -103,129 +122,38 @@ toc: true
   - `$mark-color-dark`
   - `$navbar-dark-border-color`
   - `$navbar-font-weight`
+  - `$pagination-active-item-color`
+  - `$pagination-dark-active-bg`
+  - `$pagination-dark-active-border-color`
+  - `$pagination-dark-active-color`
+  - `$pagination-dark-active-item-bg`
+  - `$pagination-dark-active-item-border-color`
+  - `$pagination-dark-active-item-color`
+  - `$pagination-dark-bg`
+  - `$pagination-dark-border-color`
+  - `$pagination-dark-color`
+  - `$pagination-dark-disabled-bg`
+  - `$pagination-dark-disabled-border-color`
+  - `$pagination-dark-disabled-color`
+  - `$pagination-dark-focus-bg`
+  - `$pagination-dark-focus-color`
+  - `$pagination-dark-hover-bg`
+  - `$pagination-dark-hover-border-color`
+  - `$pagination-dark-hover-color`
+  - `$step-item-dark-active-bg`
+  - `$step-item-dark-bg`
+  - `$step-item-dark-drop-shadow`
+  - `$step-item-dark-next-bg`
+  - `$step-link-dark-active-color`
+  - `$step-link-dark-color`
+  - `$step-link-dark-next-color`
+  - `$step-link-next-color`
+
+- <span class="badge bg-danger">Breaking</span> `--bs-pagination-margin-start` and `--bs-pagination-focus-outline` are now deprecated.
+
+- <span class="badge bg-warning">Warning</span> `$accordion-color` was announced a deprecated in v5.2.0 but is finally not removed.
 
 - Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
-
-<!--
-### TODO
-  * chore(merge main patched commit) → 23fb7a7 (#1521)
-    - https://github.com/twbs/bootstrap/commit/97a9060a8fa643484fbe70d1e527267841670c9d (same as the one following, should have been squashed)
-    - https://github.com/twbs/bootstrap/commit/9b943880fc38ccde372973111fe5872b5960e75d
-        Summary: Remove the left margin when not necessary in first button group button.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1521/commits/8cc92657fca4a62966ad6185df2811a2e70c7f19
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1521/commits/fb182fcbc702c869437065b50422be2e1b6caaea
-        Topics: Sass, Fix, Button group
-        K/R: ?
-    - https://github.com/twbs/bootstrap/commit/7a7469b8ab3e86dc522d3cf030b307364b1ada0b
-        Summary: Use the good Sass variable to initialize the CSS var in accordion.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1521/commits/efdf62a61304e0e4f63f6a9665245b6a3757ed4b
-        Topics: Sass, Add a functionality, Breaking changes, Accordion
-        K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/949456984aa21536afd35eddf7ea38b3648830a3
-        Summary: Manage the hover state on manual triggering in tooltip.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1521/commits/145b93615b461b598bc820397be5a88f7eff3e1d
-        Topics: Javascript, Fix, Tooltips
-        K/R: ?
-    - https://github.com/twbs/bootstrap/commit/23fb7a79156d1ea4ce2ab5713debbbc251b4e22f
-        Summary: Fix the click on scrollbar inside modal.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1521/commits/896a692e9b27e828309b47ad69abe6b8bebea856
-        Topics: Javascript, Fix, Modal
-        K/R: ?
-  * chore(merge main) patched commit → 2504b89 (#1513)
-    - https://github.com/twbs/bootstrap/commit/32c457db4b6ff389efbd35772b24746c7ffb0b6d
-        Summary: Change the focus management of buttons (use of :focus-visible instead of :focus).
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/f225846843ba8708980c1c4bf9c993845172acb0
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/a9bce73086fedf34cc3fdd50b0016754a50572a9
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/ee874a7fabbaa3da45a1595b68a196c6ea54cb2b
-                 https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1513/commits/a3fa822704747ee61a895a8151ae88f789b19e2f
-        Topics: Sass, Breaking changes, Button
-        K/R: Keep
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-        - TODO
-  * chore(merge main) patched commit → 337068f (#1510)
-    - https://github.com/twbs/bootstrap/commit/b14190b5095195fbe803f81bf4ce56d09be5378d
-        Summary: Update popperjs dependency.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1510/commits/363e4fee27febd22630716e8d88d716fe45b8cea
-        Topics: Dependencies
-        K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/a0238d126b385044bd7cb16bdc9118f3d44e016f
-        Summary: Add a CSS var to toast.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/405215a187e037eee4f1192d31681c4bf317e2c6
-        Topics: Sass, Add functionality, Toast
-        K/R: Keep
-    - https://github.com/twbs/bootstrap/commit/bc2ec7c7583bed6f51571501739c9e7d57e3ba2f
-        Summary: Initialize a CSS var for button.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/290a0e37a09c23a45df6193147eee9b3933e60b2
-        Topics: Sass
-    - https://github.com/twbs/bootstrap/commit/2f3aec819ae7bd04c00cc55fee977d12e11a46c6
-        Summary: Fix z-index issues on input group + support z-index for floating labels.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1507/commits/da975b0442a063ed4530adea167ba30a89b02734
-        Topics: Sass, Add functionality, Input group
-        K/R: Keep to prevent issues with zindex
-    - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide
-        - TODO
-  * feat(breadcrumb): add dark variant (#1430)
-        Summary: Add a dark variant and a CSS var for breadcrumb.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1430
-        Topics: Docs, Sass, Add functionality, Breadcrumb
-        K/R: Keep
-  * feat(pagination): add dark variant (#1433)
-        Summary: Add a dark variant and a CSS var for pagination.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1433
-        Topics: Docs, Sass, Add functionality, Pagination
-        K/R: Keep
-  * fix(dropdowns): add and trim CSS vars (#1423)
-        Summary: Add and remove some CSS var in dropdown.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1423
-        Topics: Sass, Add functionality, Breaking changes, Dropdowns
-        K/R: Keep
-  * fix(docs): fix Orange Helvetica CSS file name in docs (#1487)
-        Summary: Fix documentation for Helvetica files.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1487
-        Topics: Docs
-        K/R: Keep (Don't know if this is mentioned anywhere)
-  * feat(stepped process): add dark variant (#1434)
-        Summary: Add a dark variant for stepped process.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1434
-        Topics: Docs, Sass, Add functionality, Stepped process
-        K/R: Keep
-  * fix(dropdown toggle split): same width for all `.dropdown-toggle-split`s orientations (#1451)
-        Summary: Add `min-width` to `.dropdown-toggle-split`.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1451
-        Topics: Sass, Add functionality, Dropdown
-        K/R: Keep
-  * fix(modal): remove unused CSS variables (#1418)
-        Summary: Remove some CSS var in modal.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1418
-        Topics: Sass, Breaking changes, Modal
-        K/R: Keep
-  * fix(pagination): remove CSS variables (#1457)
-        Summary: Remove some CSS var in pagination.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1457
-        Topics: Sass, Breaking changes, Pagination
-        K/R: Keep
-  * fix(alerts): increase height when additional content (#1425)
-        Summary: Change the line-height inside alerts.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1425
-        Topics: Sass, Add functionality, Alerts
-        K/R: Keep
-  * chore(merge main) patched commit → c3c6591 [#1469](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469)
-    - https://github.com/twbs/bootstrap/commit/db86607c088bd307aa21f4b4bd0258262262a4e4
-        Summary: Add a threshold option on Scrollspy.
-        Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1469/commits/399ba677af1bf46098c797bf0419302e8b58dc03
-        Topics: Javascript, Add functionality, Scrollspy
-        K/R: Keep
-  * feat(pagination): new `#{$prefix}pagination-padding-end` CSS var [#1416](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1416)
-        Summary: new `#{$prefix}pagination-padding-end` CSS var
-        Boosted: None
-        Topics: Sass, Minor change, Pagination
-        K/R: Keep
-  * fix(css): drop unused $list-group-hover-bg and `#{$prefix}list-group-action-hover-bg` [#1417](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1417)
-        Summary: drop unused $list-group-hover-bg and `#{$prefix}list-group-action-hover-bg`
-        Boosted: None
-        Topics: Sass, Deprecated, List-group
-        K/R: Keep
--->
 
 ## v5.2.0
 
