@@ -15,24 +15,21 @@ toc: true
 
 ### Components
 
-<!--- * fix(back to top): remove 'Label inside' variant (#1520) -->
-- <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
-<!---
+<!-- * fix(back to top): remove 'Label inside' variant (#1520) -->
+- <span class="badge bg-danger align-text-top">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
+
+<!--
   * fix(footers): change 'Terms & Conditions' to 'Terms and conditions'
     This information is important for the users in order to change the label they could have used
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1564
 -->
-- <span class="badge bg-warning">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- <span class="badge bg-warning align-text-top">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+
+- <span class="badge bg-info align-text-top">New</span> **Tags** component.
 
 
 <!--
-### Elements that should not appear in this migration guide because it has no impact for the developers
-
-* fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
-    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
-
 ### TODO
-  
   * feat(components): new Tags component
         Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/988
   * fix(icons): use the right close icon
@@ -612,6 +609,12 @@ toc: true
         Topics: Dependency
         K/R: ?
     - Check also the content of the diff to see if anything specific to Boosted was done and must be mentioned in the guide >> Done
+
+
+### Elements that should not appear in this migration guide because it has no impact for the developers
+
+* fix(css): rename `$prefix` by `$func-prefix` in `get-color-from-rgba-string` function
+    Boosted: https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1567
 -->
 
 ## v5.2.0
@@ -697,7 +700,7 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - Added [striped columns]({{< docsref "/content/tables#striped-columns" >}}) support to tables via the new `.table-striped-columns` class.
 
-- <span class="badge bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
+- <span class="badge bg-danger align-text-top">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
 For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
 
@@ -765,27 +768,27 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
 
-- <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
   - `$yiq-text-dark` and `$yiq-text-light` are respectively renamed to `$color-contrast-dark` and `$color-contrast-light`.
 
-- <span class="badge bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.
+- <span class="badge bg-danger align-text-top">Breaking</span> Media query mixins parameters have changed for a more logical approach.
   - `media-breakpoint-down()` uses the breakpoint itself instead of the next breakpoint (e.g., `media-breakpoint-down(lg)` instead of `media-breakpoint-down(md)` targets viewports smaller than `lg`).
   - Similarly, the second parameter in `media-breakpoint-between()` also uses the breakpoint itself instead of the next breakpoint (e.g., `media-between(sm, lg)` instead of `media-breakpoint-between(sm, md)` targets viewports between `sm` and `lg`).
 
-- <span class="badge bg-danger">Breaking</span> Removed print styles and `$enable-print-styles` variable. Print display classes are still around. [See #28339](https://github.com/twbs/bootstrap/pull/28339).
+- <span class="badge bg-danger align-text-top">Breaking</span> Removed print styles and `$enable-print-styles` variable. Print display classes are still around. [See #28339](https://github.com/twbs/bootstrap/pull/28339).
 
 
-- <span class="badge bg-danger">Breaking</span> Dropped `color()`, `theme-color()`, and `gray()` functions in favor of variables. [See #29083](https://github.com/twbs/bootstrap/pull/29083).
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `color()`, `theme-color()`, and `gray()` functions in favor of variables. [See #29083](https://github.com/twbs/bootstrap/pull/29083).
 
-- <span class="badge bg-danger">Breaking</span> Renamed `theme-color-level()` function to `color-level()` and now accepts any color you want instead of only `$theme-color` colors. [See #29083](https://github.com/twbs/bootstrap/pull/29083) **Watch out:** `color-level()` was later on dropped in `v5.0.0-alpha3`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `theme-color-level()` function to `color-level()` and now accepts any color you want instead of only `$theme-color` colors. [See #29083](https://github.com/twbs/bootstrap/pull/29083) **Watch out:** `color-level()` was later on dropped in `v5.0.0-alpha3`.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `$enable-prefers-reduced-motion-media-query` and `$enable-pointer-cursor-for-buttons` to `$enable-reduced-motion` and `$enable-button-pointers` for brevity.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `$enable-prefers-reduced-motion-media-query` and `$enable-pointer-cursor-for-buttons` to `$enable-reduced-motion` and `$enable-button-pointers` for brevity.
 
 
-- <span class="badge bg-danger">Breaking</span> Removed the `bg-gradient-variant()` mixin. Use the `.bg-gradient` class to add gradients to elements instead of the generated `.bg-gradient-*` classes.
+- <span class="badge bg-danger align-text-top">Breaking</span> Removed the `bg-gradient-variant()` mixin. Use the `.bg-gradient` class to add gradients to elements instead of the generated `.bg-gradient-*` classes.
 
-- <span class="badge bg-danger">Breaking</span> **Removed previously deprecated mixins:**
+- <span class="badge bg-danger align-text-top">Breaking</span> **Removed previously deprecated mixins:**
   - `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active`
   - `float()`
   - `form-control-mixin()`
@@ -795,7 +798,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - `visibility()`
   - `form-control-focus()`
 
-- <span class="badge bg-danger">Breaking</span> Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
 
 - `box-shadow` mixins now allow `null` values and drop `none` from multiple arguments. [See #30394](https://github.com/twbs/bootstrap/pull/30394).
 
@@ -817,15 +820,15 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system's gutters with our spacing utilities.
   - Added new [gutter class](/docs/{{< param docs_version >}}/layout/gutters/) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
-  - <span class="badge bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
+  - <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
 
 - Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
 
-- <span class="badge bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
 
-- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
 
-- <span class="badge bg-danger">Breaking</span> `boosted-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
+- <span class="badge bg-danger align-text-top">Breaking</span> `boosted-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
 
 - `$enable-grid-classes` no longer disables the generation of container classes anymore. [See #29146.](https://github.com/twbs/bootstrap/pull/29146)
 
@@ -833,11 +836,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ## Content, Reboot, etc
 
-- <span class="badge bg-danger">Breaking</span> Orange Helvetica CSS file names changed from `orangeHelvetica.*.css` to `orange-helvetica.*.css`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Orange Helvetica CSS file names changed from `orangeHelvetica.*.css` to `orange-helvetica.*.css`.
 
 - **[RFS]({{< docsref "/getting-started/rfs" >}}) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
 
-- <span class="badge bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
+- <span class="badge bg-danger align-text-top">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
 
 - Added two new `.display-*` heading sizes, `.display-5` and `.display-6`.
 
@@ -845,21 +848,21 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
 
-- <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
+- <span class="badge bg-danger align-text-top">Breaking</span> Nested tables do not inherit styles anymore.
 
-- <span class="badge bg-danger">Breaking</span> `.thead-light` and `.thead-dark` are dropped in favor of the `.table-*` variant classes which can be used for all table elements (`thead`, `tbody`, `tfoot`, `tr`, `th` and `td`).
+- <span class="badge bg-danger align-text-top">Breaking</span> `.thead-light` and `.thead-dark` are dropped in favor of the `.table-*` variant classes which can be used for all table elements (`thead`, `tbody`, `tfoot`, `tr`, `th` and `td`).
 
-- <span class="badge bg-danger">Breaking</span> The `table-row-variant()` mixin is renamed to `table-variant()` and accepts only 2 parameters: `$color` (color name) and `$value` (color code). The border color and accent colors are automatically calculated based on the table factor variables.
+- <span class="badge bg-danger align-text-top">Breaking</span> The `table-row-variant()` mixin is renamed to `table-variant()` and accepts only 2 parameters: `$color` (color name) and `$value` (color code). The border color and accent colors are automatically calculated based on the table factor variables.
 
 - Split table cell padding variables into `-y` and `-x`.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.pre-scrollable` class. [See #29135](https://github.com/twbs/bootstrap/pull/29135)
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `.pre-scrollable` class. [See #29135](https://github.com/twbs/bootstrap/pull/29135)
 
-- <span class="badge bg-danger">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [See #29267](https://github.com/twbs/bootstrap/pull/29267)
+- <span class="badge bg-danger align-text-top">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [See #29267](https://github.com/twbs/bootstrap/pull/29267)
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.text-justify` class. [See #29793](https://github.com/twbs/bootstrap/pull/29793)
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `.text-justify` class. [See #29793](https://github.com/twbs/bootstrap/pull/29793)
 
-- <span class="badge bg-danger">Breaking</span> ~~`<hr>` elements now use `height` instead of `border` to better support the `size` attribute. This also enables use of padding utilities to create thicker dividers (e.g., `<hr class="py-1">`).~~
+- <span class="badge bg-danger align-text-top">Breaking</span> ~~`<hr>` elements now use `height` instead of `border` to better support the `size` attribute. This also enables use of padding utilities to create thicker dividers (e.g., `<hr class="py-1">`).~~
 
 - Reset default horizontal `padding-left` on `<ul>` and `<ol>` elements from browser default `40px` to `2rem`.
 
@@ -873,7 +876,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <!--- Boosted mod: no floating labels -->
 
-- <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
+- <span class="badge bg-danger align-text-top">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
   - `.custom-control.custom-custom-radio` is now `.form-check`.
   - `.custom-control.custom-switch` is now `.form-check.form-switch`.
@@ -882,15 +885,15 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - `.custom-range` is now `.form-range`.
   - Dropped native `.form-control-file` and `.form-control-range`.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.input-group-append` and `.input-group-prepend`. You can now just add buttons and `.input-group-text` as direct children of the input groups.
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `.input-group-append` and `.input-group-prepend`. You can now just add buttons and `.input-group-text` as direct children of the input groups.
 
 - The longstanding [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) is finally fixed by adding an additional `.has-validation` class to input groups with validation.
 
-- <span class="badge bg-danger">Breaking</span> **Dropped form-specific layout classes for our grid system.** Use our grid and utilities instead of `.form-group`, `.form-row`, or `.form-inline`.
+- <span class="badge bg-danger align-text-top">Breaking</span> **Dropped form-specific layout classes for our grid system.** Use our grid and utilities instead of `.form-group`, `.form-row`, or `.form-inline`.
 
-- <span class="badge bg-danger">Breaking</span> Form labels now require `.form-label`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Form labels now require `.form-label`.
 
-- <span class="badge bg-danger">Breaking</span> `.form-text` no longer sets `display`, allowing you to create inline or block help text as you wish just by changing the HTML element.
+- <span class="badge bg-danger align-text-top">Breaking</span> `.form-text` no longer sets `display`, allowing you to create inline or block help text as you wish just by changing the HTML element.
 
 - Form controls no longer used fixed `height` when possible, instead deferring to `min-height` to improve customization and compatibility with other components.
 
@@ -916,11 +919,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Badges
 
-- <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.badge-pill`—use the `.rounded-pill` utility instead.
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `.badge-pill`—use the `.rounded-pill` utility instead.
 
-- <span class="badge bg-danger">Breaking</span> Removed hover and focus styles for `<a>` and `<button>` elements.
+- <span class="badge bg-danger align-text-top">Breaking</span> Removed hover and focus styles for `<a>` and `<button>` elements.
 
 - Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
 
@@ -932,9 +935,9 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Buttons
 
-- <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
+- <span class="badge bg-danger align-text-top">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
-- <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
+- <span class="badge bg-danger align-text-top">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -944,11 +947,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Card
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
 
 - [#31035](https://github.com/twbs/bootstrap/pull/31035): Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
 
-- <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
+- <span class="badge bg-danger align-text-top">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
 
 ### Carousel
 
@@ -958,7 +961,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Close button
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
 
 - Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
 
@@ -976,11 +979,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Darkened the dropdown divider for improved contrast.
 
-- <span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
+- <span class="badge bg-danger align-text-top">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
 
 - Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static, or dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
 
 - Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
 
@@ -988,11 +991,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Footer
 
-- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/footer" >}}).
+- <span class="badge bg-danger align-text-top">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/footer" >}}).
 
 ### Jumbotron
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
+- <span class="badge bg-danger align-text-top">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
 
 ### List group
 
@@ -1004,8 +1007,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Navbars
 
-- <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
-- <span class="badge bg-danger">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
+- <span class="badge bg-danger align-text-top">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
+- <span class="badge bg-danger align-text-top">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
 
 ### Offcanvas
 
@@ -1013,7 +1016,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Orange navbar
 
-- <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
+- <span class="badge bg-danger align-text-top">Breaking</span> Supra bars now require a `.bg-dark` class.
 
 - Removed the `.global` class for the instantiation of global headers. You just need to declare your navbar with default `.navbar-*` classes.
 
@@ -1029,7 +1032,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Popovers
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
 
 - Renamed `whiteList` option to `allowList`.
 
@@ -1049,15 +1052,15 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Tooltips
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
 
-- <span class="badge bg-danger">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+- <span class="badge bg-danger align-text-top">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `whiteList` option to `allowList`.
 
 ## Utilities
 
-- <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
   - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
   - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
   - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
@@ -1066,7 +1069,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
   - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
 
-- <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
+- <span class="badge bg-danger align-text-top">Breaking</span> Disabled negative margins by default.
 
 - Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
 
@@ -1076,19 +1079,19 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
+- <span class="badge bg-danger align-text-top">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
 
 - Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger align-text-top">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
 
 - Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
+- <span class="badge bg-danger align-text-top">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
 
 - Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
 
@@ -1098,13 +1101,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ## Helpers
 
-- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
+- <span class="badge bg-danger align-text-top">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
   - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
   - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
   - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
   - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
 
-- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
+- <span class="badge bg-danger align-text-top">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
   - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
   - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
   - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
@@ -1115,7 +1118,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
 
-- <span class="badge bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Boosted functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- <span class="badge bg-danger align-text-top">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Boosted functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
 
 - **All plugins can now accept a CSS selector as the first argument.** You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
 
