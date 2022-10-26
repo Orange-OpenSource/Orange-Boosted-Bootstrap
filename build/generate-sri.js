@@ -56,6 +56,7 @@ const files = [
   {
     file: 'node_modules/focus-visible/dist/focus-visible.min.js',
     configPropertyName: 'focus_visible_hash'
+  }
 ]
 
 for (const file of files) {
