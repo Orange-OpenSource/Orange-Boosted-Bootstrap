@@ -41,41 +41,24 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
   - <span class="badge bg-success">New</span> Stepped process now has a dark variant.
 
 - **Tags**
-  - <span class="badge bg-success">New</span> Tags now have a dark variant.
+  - <span class="badge bg-success">New</span> Tags are now a component.
 
 - **Toasts**
   - <span class="badge bg-warning">Warning</span> Changed the markup for Toasts with a custom content (toast message and close button). Please reflect this modification into your websites.
-    <details>
+    <details class="mt-2">
       <summary>More info</summary>
       {{< markdown >}}
 ```diff
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
--    <div class="toast-body">
-+    <div class="toast-body my-auto">
+-   <div class="toast-body">
++   <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
--    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
-+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+-   <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
++   <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
-```
-      {{< /markdown >}}
-    </details>
-
-- **Tooltips**
-  - <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
-    <details>
-      <summary>More info</summary>
-      {{< markdown >}}
-```diff
-<a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
--  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
-    <rect width="100%" height="100%" fill="#563d7c"/>
-    <circle cx="50" cy="50" r="30" fill="#007bff"/>
-  </svg>
-</a>
 ```
       {{< /markdown >}}
     </details>
@@ -83,6 +66,23 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 ### Contents
 
 - <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
+
+- <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
+  <details class="mb-3">
+    <summary>More info</summary>
+    {{< markdown >}}
+```diff
+<a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
+- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
++ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
+    <rect width="100%" height="100%" fill="#563d7c"/>
+    <circle cx="50" cy="50" r="30" fill="#007bff"/>
+  </svg>
+</a>
+```
+    {{< /markdown >}}
+  </details>
+  By the way check all the SVGs in your websites in order to apply this same modification if needed.
 
 - The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
 
@@ -96,7 +96,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 
 - <span class="badge bg-warning">Warning</span> `$accordion-color` was announced a deprecated in v5.2.0 but is finally not removed.
 
-- <details>
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-alert-btn-close-offset</code></li>
@@ -136,7 +136,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     </ul>
   </details>
 
-- <details>
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$alert-heading-font-weight</code></li>
@@ -205,7 +205,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     </ul>
   </details>
 
-- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
+- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule]({{< docsref "/customize/css-variables#dark-text-rule" >}}).
 
 ## v5.2.0
 
@@ -464,7 +464,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ## Forms
 
-<!--- Boosted mod: no floating labels -->
+<!-- Boosted mod: no floating labels -->
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
