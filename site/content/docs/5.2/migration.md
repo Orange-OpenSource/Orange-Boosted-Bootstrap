@@ -80,7 +80,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
       {{< /markdown >}}
     </details>
 
-### Content
+### Contents
 
 - <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
 
