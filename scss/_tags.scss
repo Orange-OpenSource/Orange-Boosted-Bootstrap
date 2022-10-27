@@ -47,7 +47,7 @@
     width: var(--#{$prefix}tag-close-size);
     min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-close-size);
-    padding: 0;
+    padding: 0; // Force padding on button to have a circle on iOS - Safari and Chrome
     margin: add(calc(-.5 * var(--#{$prefix}tag-close-size)), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(-.5 * var(--#{$prefix}tag-close-size)) var(--#{$prefix}tag-close-margin-start);
     color: inherit;
     background-color: transparent;
