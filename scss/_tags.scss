@@ -47,6 +47,7 @@
     width: var(--#{$prefix}tag-close-size);
     min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
     height: var(--#{$prefix}tag-close-size);
+    padding: 0; // Force padding on button to have a circle on iOS - Safari and Chrome
     margin: add(calc(-.5 * var(--#{$prefix}tag-close-size)), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(-.5 * var(--#{$prefix}tag-close-size)) var(--#{$prefix}tag-close-margin-start);
     color: inherit;
     background-color: transparent;
@@ -66,13 +67,12 @@
 
     &::after {
       display: block;
-      height: 100%;
+      min-width: subtract(var(--#{$prefix}tag-close-size), .625rem);
+      min-height: subtract(var(--#{$prefix}tag-close-size), .625rem);
       content: "";
       background-color: currentcolor;
-      mask-image: escape-svg(var(--#{$boosted-prefix}close-icon));
-      mask-repeat: no-repeat;
-      mask-position: 50%;
-      mask-size: subtract(var(--#{$prefix}tag-close-size), .625rem);
+      -webkit-mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem); // stylelint-disable-line property-no-vendor-prefix
+      mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
     }
 
     &:hover,
