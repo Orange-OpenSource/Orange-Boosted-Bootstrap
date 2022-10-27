@@ -13,43 +13,91 @@ toc: true
 
 <hr class="mb-4">
 
+Boosted v5.2.1 is here with fixes from our latest minor release, v5.2. These changes include bug fixes, documentation updates, and some dependency updates, but also a new Tags component and a lot of new dark variants for our components.
+
+If you need more details about the changes, please refer to the [v5.2.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.0).
+
 ### Components
 
-- <span class="badge bg-danger">Breaking</span> **Back to top** 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
+- **Back to top**
+  - <span class="badge bg-danger">Breaking</span> Back to top 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
-- <span class="badge bg-warning">Warning</span> All **Footers** examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- **Breacrumb**
+  - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
-- <span class="badge bg-warning">Warning</span> Changed the markup for **Toasts** with a custom content (toast message and close button). Please reflect this modification into your websites.
+- **Footers**
+  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+
+- **List group**
+  - <span class="badge bg-success">New</span> List group now has a dark variant.
+
+- **Pagination**
+  - <span class="badge bg-success">New</span> Pagination now has a dark variant.
+
+- **Scrollspy**
+  - <span class="badge bg-success">New</span> Scrollspy has a new `data-bs-threshold` data attribute.
+
+- **Stepped process**
+  - <span class="badge bg-success">New</span> Stepped process now has a dark variant.
+
+- **Tags**
+  - <span class="badge bg-success">New</span> Tags now have a dark variant.
+
+- **Toasts**
+  - <span class="badge bg-warning">Warning</span> Changed the markup for Toasts with a custom content (toast message and close button). Please reflect this modification into your websites.
+    <details>
+      <summary>More info</summary>
+      {{< markdown >}}
+```diff
+<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+-    <div class="toast-body">
++    <div class="toast-body my-auto">
+      Hello, world! This is a toast message.
+    </div>
+-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
++    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+  </div>
+</div>
+```
+      {{< /markdown >}}
+    </details>
+
+- **Tooltips**
+  - <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
+    <details>
+      <summary>More info</summary>
+      {{< markdown >}}
+```diff
+<a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
+-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
++  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
+    <rect width="100%" height="100%" fill="#563d7c"/>
+    <circle cx="50" cy="50" r="30" fill="#007bff"/>
+  </svg>
+</a>
+```
+      {{< /markdown >}}
+    </details>
+
+### Content
 
 - <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
 
-- <span class="badge bg-info">New</span> **Tags** component.
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
 
-#### Dark variants
+### Helpers and utilities
 
-- <span class="badge bg-info">New</span> **Breadcrumb** dark variant.
-- <span class="badge bg-info">New</span> **List group** dark variant.
-- <span class="badge bg-info">New</span> **Pagination** dark variant.
-- <span class="badge bg-info">New</span> **Stepped process** dark variant.
-
-#### Usage
-
-- <span class="badge bg-info">New</span> `data-bs-threshold` data attribute for the Scrollspy.
-
-### Icons and images
-
-- <span class="badge bg-warning">Warning</span> **Tooltips** examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
-
-- The close icon SVG has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
-
-### Helpers
-
-- <span class="badge bg-info">New</span> `.img-thumbnail` officially supported.
+- <span class="badge bg-success">New</span> `.img-thumbnail` is now officially supported.
 
 ### CSS and Sass variables
 
+- <span class="badge bg-danger">Breaking</span> `--bs-pagination-margin-start` and `--bs-pagination-focus-outline` are now deprecated.
+
+- <span class="badge bg-warning">Warning</span> `$accordion-color` was announced a deprecated in v5.2.0 but is finally not removed.
+
 - <details>
-    <summary><span class="badge bg-info">New</span> CSS variables:</summary>
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-alert-btn-close-offset</code></li>
       <li><code>--bs-alert-dismissible-padding-right</code></li>
@@ -89,7 +137,7 @@ toc: true
   </details>
 
 - <details>
-    <summary><span class="badge bg-info">New</span> Sass variables:</summary>
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$alert-heading-font-weight</code></li>
       <li><code>$alert-icon-size-sm</code></li>
@@ -156,10 +204,6 @@ toc: true
       <li><code>$step-link-next-color</code></li>
     </ul>
   </details>
-
-- <span class="badge bg-danger">Breaking</span> `--bs-pagination-margin-start` and `--bs-pagination-focus-outline` are now deprecated.
-
-- <span class="badge bg-warning">Warning</span> `$accordion-color` was announced a deprecated in v5.2.0 but is finally not removed.
 
 - Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables/#dark-text-rule).
 
