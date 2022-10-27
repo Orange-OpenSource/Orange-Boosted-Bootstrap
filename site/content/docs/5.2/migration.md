@@ -22,7 +22,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 - **Back to top**
   - <span class="badge bg-danger">Breaking</span> Back to top 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
 
-- **Breacrumb**
+- **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
 - **Footers**
