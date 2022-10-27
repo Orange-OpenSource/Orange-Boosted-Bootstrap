@@ -122,10 +122,10 @@ Or with `.justify-content-end`:
 ## Responsive behavior
 
 {{< callout warning >}}
-**Heads up—our responsive pagination is experimental and opt-in as of v5.2.1!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default. Keep reading to learn how to enable it in your projects.
+**Heads up—our smart responsive pagination is experimental and opt-in as of v5.2.1!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default. Keep reading to learn how to enable it in your projects.
 {{< /callout >}}
 
-By default, every item is visible. Here is an example **without** our responsive behavior.
+By default, every item is visible. Here is an example with our basic responsive behavior.
 
 {{< example >}}
 <nav aria-label="Page navigation example">
@@ -143,16 +143,13 @@ By default, every item is visible. Here is an example **without** our responsive
     <li class="page-item"><a class="page-link" href="#">8</a></li>
     <li class="page-item"><a class="page-link" href="#">9</a></li>
     <li class="page-item"><a class="page-link" href="#">10</a></li>
-    <li class="page-item"><a class="page-link" href="#">11</a></li>
-    <li class="page-item"><a class="page-link" href="#">12</a></li>
-    <li class="page-item"><a class="page-link" href="#">13</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
   </ul>
 </nav>
 {{< /example >}}
 
 {{< callout warning >}}
-**Responsive pagination is opt-in.**
+**Smart responsive pagination is opt-in.**
 <details class="border-top border-bottom border-1 border-light">
 <summary class="fw-bold p-2 mb-0">
 {{< markdown >}}
@@ -181,10 +178,10 @@ Then, recompile your Sass.
 </details>
 {{< /callout >}}
 
-Here is the same example **with** our responsive pagination activated. To avoid pagination wrapping or overflowing, we limit the number or pagination item to display depending on breakpoint.
+Here is the almost same example with our smart responsive pagination activated. To avoid pagination wrapping or overflowing, we limit the number or pagination item to display depending on breakpoint.
 
 {{< example class="bd-example-responsive-pagination" >}}
-<nav aria-label="Responsive page navigation example">
+<nav aria-label="Smart responsive page navigation example">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
