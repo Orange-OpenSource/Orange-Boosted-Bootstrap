@@ -5,7 +5,9 @@ description: Boosted is based on Bootstrap — maintained by its founding team a
 group: about
 aliases:
   - "/about/"
+  - "/docs/about/"
   - "/docs/5.2/about/"
+  - "/docs/about/overview/"
 ---
 
 ## Boosted history

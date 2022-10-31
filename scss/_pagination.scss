@@ -198,6 +198,14 @@
   @include media-breakpoint-between(md, lg) {
     @include pagination-max-items(8);
   }
+
+  @include media-breakpoint-between(lg, xl) {
+    @include pagination-max-items(10);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include pagination-max-items(12);
+  }
   // End mod
 }
 

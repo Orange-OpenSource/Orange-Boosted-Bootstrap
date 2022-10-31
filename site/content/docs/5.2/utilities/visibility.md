@@ -3,6 +3,8 @@ layout: docs
 title: Visibility
 description: Control the visibility of elements, without modifying their display, with visibility utilities.
 group: utilities
+aliases:
+  - "/docs/utilities/visibility/"
 ---
 
 Set the `visibility` of elements with our visibility utilities. These utility classes do not modify the `display` value at all and do not affect layout – `.invisible` elements still take up space in the page.

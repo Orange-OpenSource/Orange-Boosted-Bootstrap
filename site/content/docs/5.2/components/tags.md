@@ -3,6 +3,8 @@ layout: docs
 title: Tags
 description: Use tags to convey information, apply filters or display a selection of items.
 group: components
+aliases:
+  - "/docs/components/tags/"
 toc: true
 added: "5.2"
 ---
@@ -122,7 +124,7 @@ We add an extra `<p>` around the `<span>` here for accessibility concerns.
 
 Add `.tag-dark` to the `.tag` for a dark variant.
 
-{{< example class="d-flex gap-2 align-items-center bg-dark" >}}
+{{< example class="d-flex flex-wrap gap-2 align-items-center bg-dark" >}}
 <p class="mb-0"><span class="tag tag-dark">Informative</span></p>
 <button class="tag tag-dark">Filter</button>
 <a class="tag tag-dark" href="#">Navigation</a>
@@ -143,7 +145,7 @@ We add an extra `<p>` around the `<span>` here for accessibility concerns.
 
 Add `.tag-sm` to the `.tag` for a small variant.
 
-{{< example class="d-flex gap-2 align-items-center" >}}
+{{< example class="d-flex flex-wrap gap-2 align-items-center" >}}
 <h3 class="visually-hidden">Small tag variant</h3>
 <p class="mb-0"><span class="tag tag-sm">Informative</span></p>
 <button class="tag tag-sm">Filter</button>
@@ -172,7 +174,7 @@ Disabled tags using the `<a>` element behave a bit different:
 - Disabled tags using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 - Disabled tags using `<a>` *should not* include the `href` attribute.
 
-{{< example class="d-flex gap-2 align-items-center" >}}
+{{< example class="d-flex flex-wrap gap-2 align-items-center" >}}
 <h3 class="visually-hidden">Disabled tags for the different variants</h3>
 <p class="mb-0"><span class="tag disabled" aria-disabled="true">Informative</span></p>
 <button class="tag" disabled>Filter</button>

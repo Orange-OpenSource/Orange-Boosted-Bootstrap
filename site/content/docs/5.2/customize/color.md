@@ -3,6 +3,8 @@ layout: docs
 title: Color
 description: Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
+aliases:
+  - "/docs/customize/color/"
 toc: true
 ---
 
