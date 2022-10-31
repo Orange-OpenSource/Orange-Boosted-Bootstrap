@@ -10,9 +10,6 @@
     <loc>https://boosted.orange.com/docs/5.2/components/accordion/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/album/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/components/alerts/</loc>
   </url>
   <url>
@@ -31,9 +28,6 @@
     <loc>https://boosted.orange.com/docs/5.2/getting-started/best-practices/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/blog/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/</loc>
   </url>
   <url>
@@ -47,9 +41,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/utilities/borders/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/navbar-bottom/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/components/breadcrumb/</loc>
@@ -74,15 +65,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/components/carousel/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/carousel/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/cheatsheet/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/checkout/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/forms/checks-radios/</loc>
@@ -127,9 +109,6 @@
     <loc>https://boosted.orange.com/docs/5.2/about/cookies/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/cover/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/layout/css-grid/</loc>
   </url>
   <url>
@@ -137,9 +116,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/customize/overview/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/dashboard/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/utilities/display/</loc>
@@ -151,19 +127,10 @@
     <loc>https://boosted.orange.com/docs/5.2/components/dropdowns/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/dropdowns/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/examples/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/features/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/content/figures/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/navbar-fixed/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/utilities/flex/</loc>
@@ -196,12 +163,6 @@
     <loc>https://boosted.orange.com/docs/5.2/layout/gutters/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/headers/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/heroes/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/extend/icons/</loc>
   </url>
   <url>
@@ -217,9 +178,6 @@
     <loc>https://boosted.orange.com/docs/5.2/getting-started/javascript/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/jumbotron/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/forms/layout/</loc>
   </url>
   <url>
@@ -227,9 +185,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/components/list-group/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/list-groups/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/examples/masonry/</loc>
@@ -241,13 +196,7 @@
     <loc>https://boosted.orange.com/docs/5.2/components/modal/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/modals/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/components/navbar/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/navbars-offcanvas/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/examples/navbars/</loc>
@@ -257,9 +206,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/components/offcanvas/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/offcanvas-navbar/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/utilities/opacity/</loc>
@@ -298,12 +244,6 @@
     <loc>https://boosted.orange.com/docs/5.2/utilities/position/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/pricing/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/product/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/components/progress/</loc>
   </url>
   <url>
@@ -337,12 +277,6 @@
     <loc>https://boosted.orange.com/docs/5.2/utilities/shadows/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/sidebars/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/sign-in/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/utilities/sizing/</loc>
   </url>
   <url>
@@ -355,9 +289,6 @@
     <loc>https://boosted.orange.com/docs/5.2/helpers/stacks/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/starter-template/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/components/stepped-process/</loc>
   </url>
   <url>
@@ -367,12 +298,6 @@
     <loc>https://boosted.orange.com/docs/5.2/examples/stickers/</loc>
   </url>
   <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/sticky-footer-navbar/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/sticky-footer/</loc>
-  </url>
-  <url>
     <loc>https://boosted.orange.com/docs/5.2/examples/navbar-sticky/</loc>
   </url>
   <url>
@@ -380,6 +305,12 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/content/tables/</loc>
+  </url>
+  <url>
+    <loc>https://boosted.orange.com/docs/5.2/components/tags/</loc>
+  </url>
+  <url>
+    <loc>https://boosted.orange.com/docs/5.2/examples/tags/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/about/team/</loc>
@@ -401,9 +332,6 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/components/tooltips/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/navbar-static/</loc>
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/about/translations/</loc>
@@ -437,23 +365,5 @@
   </url>
   <url>
     <loc>https://boosted.orange.com/docs/5.2/layout/z-index/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/carousel-rtl/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/blog-rtl/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/dashboard-rtl/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/checkout-rtl/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/album-rtl/</loc>
-  </url>
-  <url>
-    <loc>https://boosted.orange.com/docs/5.2/examples/cheatsheet-rtl/</loc>
   </url>
 </urlset>

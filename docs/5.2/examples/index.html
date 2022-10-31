@@ -25,7 +25,7 @@
 
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Examples">
 <meta name="twitter:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/examples/">
 <meta property="og:title" content="Examples">
 <meta property="og:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -185,7 +183,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -238,11 +236,11 @@
             <p class="ll-sm h3 mb-4">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
             
             <div class="d-flex flex-column flex-sm-row">
-              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.2.0/boosted-5.2.0-examples.zip" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.2.1/boosted-5.2.1-examples.zip" class="btn btn-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
                 <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                 Download examples
               </a>
-              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.0.zip" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+              <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.1.zip" class="btn btn-secondary mt-3 mt-sm-0 ms-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
                 Download source code
               </a>
             </div>
@@ -267,7 +265,7 @@
   <div class="bd-content col-lg-3">
     <h2 id="snippets">Snippets</h2>
     <p>Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more.</p>
-    </div>
+  </div>
 
   <div class="col-lg-9">
     <div class="row">
@@ -290,7 +288,7 @@
   <div class="bd-content col-lg-3">
     <h2 id="custom-components">Custom Components</h2>
     <p>Brand-new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework.</p>
-    </div>
+  </div>
 
   <div class="col-lg-9">
     <div class="row">
@@ -323,6 +321,20 @@
       
     
         <div class="col-sm-6 col-md-4 mb-3">
+          <a class="d-block" href="/docs/5.2/examples/tags/">
+            <img class="img-thumbnail mb-3" srcset="/docs/5.2/assets/img/examples/tags.png,
+                                                    /docs/5.2/assets/img/examples/tags@2x.png 2x"
+                                            src="/docs/5.2/assets/img/examples/tags.png"
+                                            alt=""
+                                            width="480" height="300"
+                                            loading="lazy">
+            <h3 class="h5 mb-1">Tags</h3>
+          </a>
+          <p class="text-muted">Some tags use cases from links to filter.</p>
+        </div>
+      
+    
+        <div class="col-sm-6 col-md-4 mb-3">
           <a class="d-block" href="/docs/5.2/examples/title-bars/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.2/assets/img/examples/title-bars.png,
                                                     /docs/5.2/assets/img/examples/title-bars@2x.png 2x"
@@ -341,7 +353,7 @@
   <div class="bd-content col-lg-3">
     <h2 id="framework">Framework</h2>
     <p>Examples that focus on implementing uses of built-in components provided by Boosted.</p>
-    </div>
+  </div>
 
   <div class="col-lg-9">
     <div class="row">
@@ -364,7 +376,7 @@
   <div class="bd-content col-lg-3">
     <h2 id="navbars">Navbars</h2>
     <p>Taking the default navbar component and showing how it can be moved, placed, and extended.</p>
-    </div>
+  </div>
 
   <div class="col-lg-9">
     <div class="row">
@@ -401,7 +413,7 @@
   <div class="bd-content col-lg-3">
     <h2 id="integrations">Integrations</h2>
     <p>Integrations with external libraries.</p>
-    </div>
+  </div>
 
   <div class="col-lg-9">
     <div class="row">
@@ -502,7 +514,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -521,7 +533,7 @@
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 

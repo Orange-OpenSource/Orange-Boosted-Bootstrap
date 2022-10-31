@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="List group">
 <meta name="twitter:description" content="List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/components/list-group/">
 <meta property="og:title" content="List group">
 <meta property="og:description" content="List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -492,6 +491,7 @@
     <li><a href="#with-badges">With badges</a></li>
     <li><a href="#custom-content">Custom content</a></li>
     <li><a href="#checkboxes-and-radios">Checkboxes and radios</a></li>
+    <li><a href="#dark-variant">Dark variant</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
@@ -505,15 +505,7 @@
         <li><a href="#using-data-attributes">Using data attributes</a></li>
         <li><a href="#via-javascript">Via JavaScript</a></li>
         <li><a href="#fade-effect">Fade effect</a></li>
-        <li><a href="#methods">Methods</a>
-          <ul>
-            <li><a href="#constructor">constructor</a></li>
-            <li><a href="#show">show</a></li>
-            <li><a href="#dispose">dispose</a></li>
-            <li><a href="#getinstance">getInstance</a></li>
-            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
-          </ul>
-        </li>
+        <li><a href="#methods">Methods</a></li>
         <li><a href="#events">Events</a></li>
       </ul>
     </li>
@@ -1205,10 +1197,70 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
+<!-- Boosted mod -->
+<h2 id="dark-variant">Dark variant <a class="anchor-link" href="#dark-variant" aria-label="Link to this section: Dark variant"></a></h2>
+
+<p><span class="tag tag-sm">Added in v5.2.1</span></p>
+
+<div class="bd-callout bd-callout-warning">
+Dark variant won&rsquo;t support <a href="#contextual-classes">contextual classes</a> until next release.
+</div>
+
+<p>Add <code>.list-group-dark</code> to the <code>.list-group</code> for a dark variant.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example bg-dark">
+<ul class="list-group list-group-dark">
+  <li class="list-group-item">A simple default list group item</li>
+  <li class="list-group-item active">A simple active list group item</li>
+  <li class="list-group-item disabled" aria-disabled="true">A simple disabled list group item</li>
+</ul>
+</div>
+      
+      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group list-group-dark&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item&#34;</span><span class="p">&gt;</span>A simple default list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item active&#34;</span><span class="p">&gt;</span>A simple active list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>A simple disabled list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
+<p>Dark variant also work with <code>.list-group-item-action</code>.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example bg-dark">
+<div class="list-group list-group-dark">
+  <a class="list-group-item list-group-item-action" href="#">A simple default link list group item</a>
+  <a class="list-group-item list-group-item-action active" href="#">A simple active link list group item</a>
+  <a class="list-group-item list-group-item-action disabled">A simple disabled link list group item</a>
+</div>
+</div>
+      
+      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group list-group-dark&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>A simple default link list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action active&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>A simple active link list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action disabled&#34;</span><span class="p">&gt;</span>A simple disabled link list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
+<!-- End mod -->
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v5.2.0</small>
+<p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <p>As part of Boosted&rsquo;s evolving CSS variables approach, list groups now use local CSS variables on <code>.list-group</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-color</span><span class="si">}</span><span class="p">;</span>
@@ -1220,8 +1272,8 @@
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-item-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-item-padding-y</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-action-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-action-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-action-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-action-hover-color</span><span class="si">}</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-action-hover-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-hover-bg</span><span class="si">}</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-action-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-action-active-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Boosted mod: no --#{$prefix}list-group-action-hover-bg
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-action-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-action-active-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-action-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-action-active-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-disabled-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-disabled-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-disabled-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-disabled-bg</span><span class="si">}</span><span class="p">;</span>
@@ -1229,30 +1281,65 @@
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-active-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-active-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-active-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  </span></span></code></pre></div>
+<!-- Boosted mod -->
+<p>Customization through CSS variables can be seen on the <code>.list-group-dark</code> modifier class where we override specific values without adding duplicate CSS selectors.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}list-group-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-action-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-action-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-action-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-action-hover-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-action-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-action-active-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-action-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-action-active-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-disabled-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-disabled-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-disabled-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-disabled-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-active-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-active-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}list-group-active-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$list-group-dark-active-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  </span></span></code></pre></div>
+<!-- End mod -->
 <h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$list-group-color</span><span class="o">:</span>                  <span class="nv">$gray-900</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-bg</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-border-color</span><span class="o">:</span>           <span class="nv">$gray-500</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-border-width</span><span class="o">:</span>           <span class="nv">$border-width</span><span class="p">;</span>
+<p>Variables for all list groups:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$list-group-color</span><span class="o">:</span>                  <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-bg</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$list-group-border-color</span><span class="o">:</span>           <span class="nv">$gray-500</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-border-width</span><span class="o">:</span>           <span class="nv">$border-width</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$list-group-border-radius</span><span class="o">:</span>          <span class="nv">$border-radius</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-item-padding-y</span><span class="o">:</span>         <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-item-padding-x</span><span class="o">:</span>         <span class="nv">$spacer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$list-group-item-padding-y</span><span class="o">:</span>         <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-item-padding-x</span><span class="o">:</span>         <span class="nv">$spacer</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $list-group-item-bg-scale
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $list-group-item-color-scale
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $list-group-hover-bg
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-active-color</span><span class="o">:</span>           <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-active-bg</span><span class="o">:</span>              <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-active-border-color</span><span class="o">:</span>    <span class="nv">$list-group-active-bg</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-hover-bg</span><span class="o">:</span>               <span class="n">null</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-active-color</span><span class="o">:</span>           <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-active-bg</span><span class="o">:</span>              <span class="nv">$black</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-active-border-color</span><span class="o">:</span>    <span class="nv">$list-group-active-bg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$list-group-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-500</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-disabled-bg</span><span class="o">:</span>            <span class="nv">$list-group-bg</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-500</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-disabled-bg</span><span class="o">:</span>            <span class="nv">$list-group-bg</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-action-color</span><span class="o">:</span>           <span class="nv">$black</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$list-group-action-hover-color</span><span class="o">:</span>     <span class="nv">$primary</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$list-group-action-color</span><span class="o">:</span>           <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-action-hover-color</span><span class="o">:</span>     <span class="nv">$primary</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$list-group-action-active-color</span><span class="o">:</span>    <span class="nv">$list-group-active-color</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-action-active-bg</span><span class="o">:</span>       <span class="nv">$list-group-active-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span></code></pre></div>
+<!-- Boosted mod -->
+<p>Variables for the <a href="#dark-variant">dark list group</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$list-group-dark-color</span><span class="o">:</span>               <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-bg</span><span class="o">:</span>                  <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-border-color</span><span class="o">:</span>        <span class="nv">$gray-700</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-action-color</span><span class="o">:</span>        <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-action-hover-color</span><span class="o">:</span>  <span class="nv">$primary</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-action-active-color</span><span class="o">:</span> <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-action-active-bg</span><span class="o">:</span>    <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-disabled-color</span><span class="o">:</span>      <span class="nv">$gray-700</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-disabled-bg</span><span class="o">:</span>         <span class="nv">$list-group-dark-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-active-color</span><span class="o">:</span>        <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-active-bg</span><span class="o">:</span>           <span class="nv">$list-group-dark-action-active-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$list-group-dark-active-border-color</span><span class="o">:</span> <span class="nv">$list-group-dark-active-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span></code></pre></div>
+<!-- End mod -->
 <h3 id="mixins">Mixins <a class="anchor-link" href="#mixins" aria-label="Link to this section: Mixins"></a></h3>
 <p>Used in combination with <code>$theme-colors</code> to generate the <a href="#contextual-classes">contextual variant classes</a> for <code>.list-group-item</code>s.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
@@ -1375,42 +1462,44 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;settings&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="methods">Methods <a class="anchor-link" href="#methods" aria-label="Link to this section: Methods"></a></h3>
-<h4 id="constructor">constructor <a class="anchor-link" href="#constructor" aria-label="Link to this section: constructor"></a></h4>
-<p>Activates a list item element and content container. Tab should have either a <code>data-bs-target</code> or an <code>href</code> targeting a container node in the DOM.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myList&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action active&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;list&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#home&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;list&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Profile<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;list&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#messages&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Messages<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;list&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#settings&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Settings<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-content&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;home&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;messages&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;settings&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">firstTabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myTab a:last-child&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">firstTab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">firstTabEl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">firstTab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h4 id="show">show <a class="anchor-link" href="#show" aria-label="Link to this section: show"></a></h4>
-<p>Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. <strong>Returns to the caller before the tab pane has actually been shown</strong> (for example, before the <code>shown.bs.tab</code> event occurs).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">tab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="s1">&#39;#someListItem&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">tab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="dispose">dispose <a class="anchor-link" href="#dispose" aria-label="Link to this section: dispose"></a></h4>
-<p>Destroys an element&rsquo;s tab.</p>
-<h4 id="getinstance">getInstance <a class="anchor-link" href="#getinstance" aria-label="Link to this section: getInstance"></a></h4>
-<p><em>Static</em> method which allows you to get the tab instance associated with a DOM element</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span> <span class="c1">// Returns a Boosted tab instance
-</span></span></span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance <a class="anchor-link" href="#getorcreateinstance" aria-label="Link to this section: getOrCreateInstance"></a></h4>
-<p><em>Static</em> method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span> <span class="c1">// Returns a Boosted tab instance
-</span></span></span></code></pre></div><h3 id="events">Events <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
+<div class="bd-callout bd-callout-danger">
+<h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions <a class="anchor-link" href="#asynchronous-methods-and-transitions" aria-label="Link to this section: Asynchronous methods and transitions"></a></h4>
+<p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
+<p><a href="/docs/5.2/getting-started/javascript/#asynchronous-functions-and-transitions">See our JavaScript documentation for more information</a>.</p>
+
+</div>
+
+<p>Activates your content as a tab element.</p>
+<p>You can create a tab instance with the constructor, for example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bsTab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">boosted</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="s1">&#39;#myTab&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="table-responsive"><table class="table">
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dispose</code></td>
+<td>Destroys an element&rsquo;s tab.</td>
+</tr>
+<tr>
+<td><code>getInstance</code></td>
+<td>Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: <code>boosted.Tab.getInstance(element)</code>.</td>
+</tr>
+<tr>
+<td><code>getOrCreateInstance</code></td>
+<td>Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn&rsquo;t initialized. You can use it like this: <code>boosted.Tab.getOrCreateInstance(element)</code>.</td>
+</tr>
+<tr>
+<td><code>show</code></td>
+<td>Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. <strong>Returns to the caller before the tab pane has actually been shown</strong> (i.e. before the <code>shown.bs.tab</code> event occurs).</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 id="events">Events <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
 <p>When showing a new tab, the events fire in the following order:</p>
 <ol>
 <li><code>hide.bs.tab</code> (on the current active tab)</li>
@@ -1418,7 +1507,7 @@
 <li><code>hidden.bs.tab</code> (on the previous active tab, the same one as for the <code>hide.bs.tab</code> event)</li>
 <li><code>shown.bs.tab</code> (on the newly-active just-shown tab, the same one as for the <code>show.bs.tab</code> event)</li>
 </ol>
-<p>If no tab was already active, the <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.</p>
+<p>If no tab was already active, then <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
@@ -1534,7 +1623,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1553,7 +1642,7 @@
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1587,17 +1676,17 @@
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

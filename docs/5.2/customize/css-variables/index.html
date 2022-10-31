@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="CSS variables">
 <meta name="twitter:description" content="Use Boosted&rsquo;s CSS custom properties for fast and forward-looking design and development.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/customize/css-variables/">
 <meta property="og:title" content="CSS variables">
 <meta property="og:description" content="Use Boosted&rsquo;s CSS custom properties for fast and forward-looking design and development.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -482,7 +481,11 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#root-variables">Root variables</a></li>
-    <li><a href="#component-variables">Component variables</a></li>
+    <li><a href="#component-variables">Component variables</a>
+      <ul>
+        <li><a href="#dark-text-rule">Dark text rule</a></li>
+      </ul>
+    </li>
     <li><a href="#prefix">Prefix</a></li>
     <li><a href="#deduping-embedded-svgs">Deduping embedded SVGs</a></li>
     <li><a href="#examples">Examples</a></li>
@@ -545,7 +548,7 @@
   --bs-body-color-rgb: 0, 0, 0;
   --bs-body-bg-rgb: 255, 255, 255;
   --o-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2 7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
-  --o-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23000'%3e%3cpath stroke='%23000' stroke-width='5' stroke-linecap='round' d='m15 17.121-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/%3e%3c/svg%3e");
+  --o-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='116 116 767 767' fill='%23000'%3e%3cpath d='M817.493 676.165a49.977 49.977 0 0 1 0 70.664l-70.664 70.664a49.977 49.977 0 0 1-70.664 0L499.5 640.828 322.835 817.493a49.977 49.977 0 0 1-70.664 0l-70.664-70.664a49.977 49.977 0 0 1 0-70.664L358.172 499.5 181.507 322.835a49.977 49.977 0 0 1 0-70.664l70.664-70.664a49.977 49.977 0 0 1 70.664 0L499.5 358.172l176.665-176.665a49.977 49.977 0 0 1 70.664 0l70.664 70.664a49.977 49.977 0 0 1 0 70.664L640.828 499.5Z'/%3e%3c/svg%3e");
   --o-check-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'%3e%3cpath fill='%23000' d='M13 0 5 8 2 5 0 7l5 5L15 2z'/%3e%3c/svg%3e");
   --o-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'%3e%3cpath fill='%2332c832' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/%3e%3c/svg%3e");
   --o-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'%3e%3cpath fill='%23cd3c14' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/%3e%3c/svg%3e");
@@ -571,12 +574,45 @@
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
   --bs-code-color: #666;
-  --bs-highlight-bg: #ff7900;
+  --bs-highlight-color: #fff;
+  --bs-highlight-bg: #000;
 }</span>
 </span></span></code></pre></div><h2 id="component-variables">Component variables <a class="anchor-link" href="#component-variables" aria-label="Link to this section: Component variables"></a></h2>
 <p>Boosted 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren&rsquo;t inherited in places like nested tables, and allow some basic restyling and extending of Boosted components after Sass compilation.</p>
 <p>Have a look at our table documentation for some <a href="/docs/5.2/content/tables/#how-do-the-variants-and-accented-tables-work">insight into how we&rsquo;re using CSS variables</a>. Our <a href="/docs/5.2/components/navbar/#css">navbars also use CSS variables</a> as of v5.2.0. We&rsquo;re also using CSS variables across our grids—primarily for gutters the <a href="/docs/5.2/layout/css-grid/">new opt-in CSS grid</a>—with more component usage coming in the future.</p>
 <p>Whenever possible, we&rsquo;ll assign CSS variables at the base component level (e.g., <code>.navbar</code> for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.</p>
+<h3 id="dark-text-rule">Dark text rule <a class="anchor-link" href="#dark-text-rule" aria-label="Link to this section: Dark text rule"></a></h3>
+<p>Using CSS variables allows a better flexibility on certain rules. This way we adapt our text variant color to our dark variants components instead of rewriting rules for each component. This process implies to override some existing CSS variables and to re-initialize those in some cases.</p>
+<p>Here is our proposal to handle the different text variants over the website:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">&#34;bg-black&#34;</span><span class="o">],</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">&#34;-dark&#34;</span><span class="o">]</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.border-dark</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.text-dark</span><span class="o">),</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">&#34;bg-secondary&#34;</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}link-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$link-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}link-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$link-hover-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$boosted-prefix}caption-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$table-caption-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}code-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$code-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}highlight-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$mark-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}highlight-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$mark-bg-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$boosted-prefix}kbd-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$kbd-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$boosted-prefix}kbd-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$kbd-bg-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$boosted-prefix}pre-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$pre-color-dark</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">&#34;bg-&#34;</span><span class="o">]</span><span class="nd">:not</span><span class="o">(</span><span class="k">&amp;</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.bg-transparent</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}link-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$link-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}link-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$link-hover-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$boosted-prefix}caption-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$table-caption-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}code-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$code-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}highlight-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$mark-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}highlight-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$mark-bg</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$boosted-prefix}kbd-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$kbd-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$boosted-prefix}kbd-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$kbd-bg</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$boosted-prefix}pre-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$pre-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// End mod
+</span></span></span></code></pre></div>
 <h2 id="prefix">Prefix <a class="anchor-link" href="#prefix" aria-label="Link to this section: Prefix"></a></h2>
 <p>Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the <code>--</code> that&rsquo;s required on every CSS variable.</p>
 <p>Customize the prefix via the <code>$prefix</code> Sass variable. By default, it&rsquo;s set to <code>bs-</code> (note the trailing dash).</p>
@@ -686,7 +722,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -705,7 +741,7 @@
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -739,17 +775,17 @@
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

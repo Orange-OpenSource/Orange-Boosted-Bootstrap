@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Contribute">
 <meta name="twitter:description" content="Help develop Boosted with our documentation build scripts and tests.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/getting-started/contribute/">
 <meta property="og:title" content="Contribute">
 <meta property="og:description" content="Help develop Boosted with our documentation build scripts and tests.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -498,16 +497,16 @@
         
 
         <h2 id="tooling-setup">Tooling setup <a class="anchor-link" href="#tooling-setup" aria-label="Link to this section: Tooling setup"></a></h2>
-<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> to build the documentation and compile source files. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.0/package.json">package.json</a> houses these scripts for compiling code, running tests, and more. These aren&rsquo;t intended for use outside our repository and documentation.</p>
+<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> to build the documentation and compile source files. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.1/package.json">package.json</a> houses these scripts for compiling code, running tests, and more. These aren&rsquo;t intended for use outside our repository and documentation.</p>
 <p>To use our build system and run our documentation locally, you&rsquo;ll need a copy of Boosted&rsquo;s source files and Node. Follow these steps and you should be ready to rock:</p>
 <ol>
 <li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.0.zip">download Boosted&rsquo;s sources</a> or fork <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
-<li>Navigate to the root <code>/Orange-Boosted-Bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.0/package.json">package.json</a>.</li>
+<li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.1.zip">download Boosted&rsquo;s sources</a> or fork <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted&rsquo;s repository</a>.</li>
+<li>Navigate to the root <code>/Orange-Boosted-Bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.1/package.json">package.json</a>.</li>
 </ol>
 <p>When completed, you&rsquo;ll be able to run the various commands provided from the command line.</p>
 <h2 id="using-npm-scripts">Using npm scripts <a class="anchor-link" href="#using-npm-scripts" aria-label="Link to this section: Using npm scripts"></a></h2>
-<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.0/package.json">package.json</a> includes numerous tasks for developing the project. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
+<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.1/package.json">package.json</a> includes numerous tasks for developing the project. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
@@ -526,7 +525,7 @@
 </tr>
 <tr>
 <td><code>npm test</code></td>
-<td>Runs tests locally after running <code>npm run dist</code></td>
+<td>Runs tests locally after running <code>npm run dist</code>.</td>
 </tr>
 <tr>
 <td><code>npm run docs-serve</code></td>
@@ -545,7 +544,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 <p>Dart Sass uses a rounding precision of 10 and for efficiency reasons does not allow adjustment of this value. We don&rsquo;t lower this precision during further processing of our generated CSS, such as during minification, but if you chose to do so we recommend maintaining a precision of at least 6 to prevent issues with browser rounding.</p>
 <h2 id="autoprefixer">Autoprefixer <a class="anchor-link" href="#autoprefixer" aria-label="Link to this section: Autoprefixer"></a></h2>
 <p>Boosted uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.0/.browserslistrc">.browserslistrc</a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.1/.browserslistrc">.browserslistrc</a> for details.</p>
 <h2 id="rtlcss">RTLCSS <a class="anchor-link" href="#rtlcss" aria-label="Link to this section: RTLCSS"></a></h2>
 <p>Boosted uses <a href="https://rtlcss.com/">RTLCSS</a> to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (e.g. <code>padding-left</code>) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS <a href="https://rtlcss.com/learn/usage-guide/control-directives/">control</a> and <a href="https://rtlcss.com/learn/usage-guide/value-directives/">value</a> directives.</p>
 <h2 id="local-documentation">Local documentation <a class="anchor-link" href="#local-documentation" aria-label="Link to this section: Local documentation"></a></h2>
@@ -639,7 +638,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -658,7 +657,7 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -692,17 +691,17 @@ Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstr
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
