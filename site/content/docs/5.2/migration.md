@@ -67,7 +67,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 
 - <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
 
-- <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites.
+- <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites. By the way please check all the SVGs in your websites in order to apply this same modification if needed.
   <details class="mb-3">
     <summary>More info</summary>
     {{< markdown >}}
@@ -82,7 +82,6 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 ```
     {{< /markdown >}}
   </details>
-  By the way check all the SVGs in your websites in order to apply this same modification if needed.
 
 - The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
 
