@@ -26,11 +26,16 @@
 // Load Bootstrap variables and mixins
 @import "../../../scss/functions";
 
-// The definition of this variable require a replay of the mixin in the doc we import the Boosted CSS that disable the option.
-// This won't affect normal use since people would import the pagination file.
+// Boosted mod
+// To display a smart responsive pagination example in our docs, we can enable `$enable-responsive-pagination` here.
+// It won't have any effects on the normal use cases since boosted.css is generated with `$enable-responsive-pagination: false` by default.
+// Since for this docs.scss we don't import "_pagination.scss" the definition of this variable requires a replay of the mixins
+// related to the smart responsive pagination (see site/assets/scss/_component-examples.scss).
 // fusv-disable
 $enable-responsive-pagination: true; // stylelint-disable-line scss/dollar-variable-default
 // fusv-enable
+// End mod
+
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
 

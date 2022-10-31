@@ -359,6 +359,8 @@
   border-width: map-get($border-widths, 1) 0;
 }
 
+// Boosted mod: allow to display smart responsive pagination behavior in the docs
+// when `$enable-responsive-pagination` is enabled (see site/assets/scss/docs.scss)
 .bd-example-responsive-pagination {
   .page-item {
     @include media-breakpoint-down(sm) {
@@ -382,3 +384,4 @@
     }
   }
 }
+// End mod

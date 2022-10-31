@@ -145,7 +145,9 @@ By default, every item is visible. Here is an example with our basic responsive 
 {{< /example >}}
 
 {{< callout warning >}}
-**Heads up—our smart responsive pagination is opt-in as of v5.2.1!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default.
+**Heads up—our smart responsive pagination is opt-in as of v5.2.1!**
+
+It means that it is disabled by default in order to have a lighter CSS bundle. We included it here in our documentation's CSS for this specific use case just as a demonstration of the rendering.
 
 <details class="border-top border-bottom border-1 border-light">
 <summary class="fw-bold p-2 mb-0">
@@ -175,7 +177,7 @@ Then, recompile your Sass.
 </details>
 {{< /callout >}}
 
-Here is the almost same example with our smart responsive pagination activated. To avoid pagination wrapping or overflowing, we limit the number or pagination item to display depending on breakpoint.
+The following example uses our smart responsive pagination. To avoid pagination wrapping or overflowing, we limit the number of displayed pagination items depending on the breakpoints by displaying automatically some ellipsis.
 
 {{< example class="bd-example-responsive-pagination" >}}
 <nav aria-label="Smart responsive page navigation example">
