@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Footer">
 <meta name="twitter:description" content="Documentation and examples for a powerful and responsive Boosted&rsquo;s footer. It includes support for branding, navigation and more.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/components/footer/">
 <meta property="og:title" content="Footer">
 <meta property="og:description" content="Documentation and examples for a powerful and responsive Boosted&rsquo;s footer. It includes support for branding, navigation and more.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -489,7 +488,7 @@
         <li><a href="#follow-us-bar">Follow us bar</a></li>
         <li><a href="#navigation-bar">Navigation bar</a></li>
         <li><a href="#service-bar">Service bar</a></li>
-        <li><a href="#mandatory-terms--conditions-bar">Mandatory Terms &amp; Conditions bar</a></li>
+        <li><a href="#mandatory-terms-and-conditions-bar">Mandatory terms and conditions bar</a></li>
       </ul>
     </li>
     <li><a href="#css">CSS</a>
@@ -508,7 +507,7 @@
         
 
         
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v5.2.0</small>
+<p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
 <p>Our footer is basically a <code>&lt;footer&gt;</code> tag with a <code>.bg-dark</code> class. It comes with 5 ready-to-use fully responsive bars which should be arranged vertically in the following order:</p>
@@ -517,7 +516,7 @@
 <li>Follow us bar</li>
 <li>Navigation bar</li>
 <li>Service bar</li>
-<li>Terms &amp; Conditions <strong>mandatory</strong> bar</li>
+<li>Terms and conditions <strong>mandatory</strong> bar</li>
 </ul>
 <p>You can choose to display each part or not, except the last one which is mandatory. No matter how many parts you use, they should follow the order listed above.</p>
 <p>If these available parts don&rsquo;t meet your specific needs, feel free to develop your own custom part accordingly to the Orange Design System.</p>
@@ -650,7 +649,7 @@ This footer component is based on the <a href="/docs/5.2/components/navbar/">nav
   <div class="container-xxl footer-terms">
     <ul class="navbar-nav gap-md-3">
       <li class="fw-bold">© Orange 2022</li>
-      <li><a class="nav-link" href="#">Terms & Conditions</a></li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
       <li><a class="nav-link" href="#">Privacy</a></li>
       <li><a class="nav-link" href="#">Accessibility statement</a></li>
       <li><a class="nav-link" href="#">Cookie policy</a></li>
@@ -1006,7 +1005,7 @@ This container needs our Collapse JavaScript plugin to work properly.
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="mandatory-terms--conditions-bar">Mandatory Terms &amp; Conditions bar <a class="anchor-link" href="#mandatory-terms--conditions-bar" aria-label="Link to this section: Mandatory Terms &amp; Conditions bar"></a></h3>
+<h3 id="mandatory-terms-and-conditions-bar">Mandatory terms and conditions bar <a class="anchor-link" href="#mandatory-terms-and-conditions-bar" aria-label="Link to this section: Mandatory terms and conditions bar"></a></h3>
 <p>The footer is a container with a <code>.footer-terms</code> class. This footer bar is <strong>mandatory</strong> in every footer and should come as the last bar of the footer.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example p-0">
 <footer class="footer bg-dark navbar-dark">
@@ -1014,7 +1013,7 @@ This container needs our Collapse JavaScript plugin to work properly.
   <div class="container-xxl footer-terms">
     <ul class="navbar-nav gap-md-3">
       <li class="fw-bold">© Orange 2022</li>
-      <li><a class="nav-link" href="#">Terms & Conditions</a></li>
+      <li><a class="nav-link" href="#">Terms and conditions</a></li>
       <li><a class="nav-link" href="#">Privacy</a></li>
       <li><a class="nav-link" href="#">Accessibility statement</a></li>
       <li><a class="nav-link" href="#">Cookie policy</a></li>
@@ -1039,7 +1038,7 @@ This container needs our Collapse JavaScript plugin to work properly.
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-xxl footer-terms&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-nav gap-md-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-bold&#34;</span><span class="p">&gt;</span>© Orange 2022<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Terms <span class="err">&amp;</span> Conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Privacy<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Accessibility statement<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Cookie policy<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1231,7 +1230,7 @@ This container needs our Collapse JavaScript plugin to work properly.
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1250,7 +1249,7 @@ This container needs our Collapse JavaScript plugin to work properly.
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1284,17 +1283,17 @@ This container needs our Collapse JavaScript plugin to work properly.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

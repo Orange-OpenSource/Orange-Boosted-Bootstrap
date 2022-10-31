@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Images">
 <meta name="twitter:description" content="Documentation and examples for opting images into responsive behavior (so they never become wider than their parent) and add lightweight styles to them—all via classes.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/content/images/">
 <meta property="og:title" content="Images">
 <meta property="og:description" content="Documentation and examples for opting images into responsive behavior (so they never become wider than their parent) and add lightweight styles to them—all via classes.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -482,6 +481,7 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#responsive-images">Responsive images</a></li>
+    <li><a href="#image-thumbnails">Image thumbnails</a></li>
     <li><a href="#aligning-images">Aligning images</a></li>
     <li><a href="#picture">Picture</a></li>
     <li><a href="#sass">Sass</a>
@@ -517,7 +517,25 @@
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;img-fluid&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<!-- Boosted mod: no rounded thumbnails -->
+<h2 id="image-thumbnails">Image thumbnails <a class="anchor-link" href="#image-thumbnails" aria-label="Link to this section: Image thumbnails"></a></h2>
+<p>In addition to our <a href="/docs/5.2/utilities/borders/">border-radius utilities</a>, you can use <code>.img-thumbnail</code> to give an image a 2px border appearance.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+<svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+
+</div>
+      
+      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;img-thumbnail&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
 <h2 id="aligning-images">Aligning images <a class="anchor-link" href="#aligning-images" aria-label="Link to this section: Aligning images"></a></h2>
 <p>Align images with the <a href="/docs/5.2/utilities/float/">helper float classes</a> or <a href="/docs/5.2/utilities/text/#text-alignment">text alignment classes</a>. <code>block</code>-level images can be centered using <a href="/docs/5.2/utilities/spacing/#horizontal-centering">the <code>.mx-auto</code> margin utility class</a>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
@@ -587,11 +605,11 @@
 </span></span></code></pre></div><h2 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 <p>Variables are available for image thumbnails.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$thumbnail-padding</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-bg</span><span class="o">:</span>                      <span class="nv">$body-bg</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$thumbnail-padding</span><span class="o">:</span>                 <span class="mi">0</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$thumbnail-bg</span><span class="o">:</span>                      <span class="nv">$body-bg</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-border-width</span><span class="o">:</span>            <span class="nv">$border-width</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-border-color</span><span class="o">:</span>            <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-color</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-border-radius</span><span class="o">:</span>           <span class="nv">$border-radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-border-color</span><span class="o">:</span>            <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-color-translucent</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$thumbnail-border-radius</span><span class="o">:</span>           <span class="nv">$border-radius</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$thumbnail-box-shadow</span><span class="o">:</span>              <span class="nv">$box-shadow-sm</span><span class="p">;</span>
 </span></span></code></pre></div>
 
@@ -675,7 +693,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -694,7 +712,7 @@
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -728,17 +746,17 @@
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

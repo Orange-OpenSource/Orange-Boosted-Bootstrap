@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Orange navbar">
 <meta name="twitter:description" content="Documentation and examples for Boosted&rsquo;s exclusive responsive navbars.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/components/orange-navbar/">
 <meta property="og:title" content="Orange navbar">
 <meta property="og:description" content="Documentation and examples for Boosted&rsquo;s exclusive responsive navbars.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -521,7 +520,7 @@
         
 
         
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v5.2.0</small>
+<p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
 <p>Orange navbars are based on the <a href="/docs/5.2/components/navbar/">navbar</a> component. They add some display management and introduce the Supra bar component.</p>
@@ -1407,11 +1406,12 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
 </span></span></code></pre></div><h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v5.2.0</small>
+<p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <p>As part of Boosted&rsquo;s evolving CSS variables approach, orange navbars now use local CSS variables on <code>.navbar</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nf">if</span><span class="p">(</span><span class="nv">$navbar-padding-x</span> <span class="o">==</span> <span class="n">null</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="nv">$navbar-padding-x</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-padding-y</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Boosted mod: no padding in small breakpoints
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-font-weight</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-font-weight</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-border-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-border-width</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-light-color</span><span class="si">}</span><span class="p">;</span>
@@ -1441,6 +1441,7 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-padding-x</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-font-size</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-font-size-xs</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-icon-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$navbar-light-toggler-icon-bg-small</span><span class="p">)</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-icon-filter</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-light-toggler-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-border-radius</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-border-radius</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-focus-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-focus-width</span><span class="si">}</span><span class="p">;</span>
@@ -1465,6 +1466,8 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
 </span></span><span class="line"><span class="cl">  </span></span></code></pre></div>
 <p>Supra bars just override some variables.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-padding-y</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span> <span class="cm">/* stylelint-disable-line length-zero-no-unit */</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-nav-font-size</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$font-size-sm</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-nav-line-height</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$line-height-sm</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-nav-link-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-supra-link-padding-y</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-nav-link-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-supra-link-padding-x</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-nav-icon-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-supra-icon-padding-y</span><span class="si">}</span><span class="p">;</span>
@@ -1489,50 +1492,50 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
 </span></span><span class="line"><span class="cl">  </span></span></code></pre></div>
 <h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <p>For more details, please have a look at the exhaustive list of available variables:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-transition-duration</span><span class="o">:</span>              <span class="nv">$transition-duration</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-transition-timing-function</span><span class="o">:</span>       <span class="nv">$transition-timing</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-transition</span><span class="o">:</span>                       <span class="n">padding-top</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">padding-bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-transition</span><span class="o">:</span>                 <span class="n">margin</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-transition</span><span class="o">:</span>            <span class="ni">width</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">height</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-active-transition</span><span class="o">:</span>                <span class="ni">bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-transition-duration</span><span class="o">:</span>                <span class="nv">$transition-duration</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-transition-timing-function</span><span class="o">:</span>         <span class="nv">$transition-timing</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-transition</span><span class="o">:</span>                         <span class="n">padding-top</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">padding-bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-transition</span><span class="o">:</span>                   <span class="n">margin</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="nv">$transition-focus</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-transition</span><span class="o">:</span>              <span class="ni">width</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="o">,</span> <span class="n">height</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-active-transition</span><span class="o">:</span>                  <span class="ni">bottom</span> <span class="nv">$navbar-transition-duration</span> <span class="nv">$navbar-transition-timing-function</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-border-width</span><span class="o">:</span>                     <span class="nv">$border-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-border-color</span><span class="o">:</span>                     <span class="nv">$gray-700</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-border-width</span><span class="o">:</span>                       <span class="nv">$border-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-border-color</span><span class="o">:</span>                       <span class="nv">$gray-500</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-margin-y-xs</span><span class="o">:</span>                <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-size-xs</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-xs</span><span class="o">:</span>               <span class="mi">1</span><span class="mf">.3125</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-xs</span><span class="o">:</span>          <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-two-lined-xs</span><span class="o">:</span>     <span class="mi">1</span><span class="mf">.0625</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-two-lined-xs</span><span class="o">:</span> <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-margin-y-xs</span><span class="o">:</span>                  <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-size-xs</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-xs</span><span class="o">:</span>                 <span class="mi">1</span><span class="mf">.3125</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-xs</span><span class="o">:</span>            <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-two-lined-xs</span><span class="o">:</span>       <span class="mi">1</span><span class="mf">.0625</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-two-lined-xs</span><span class="o">:</span>  <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">4</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-margin-y</span><span class="o">:</span>                   <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.95</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-size</span><span class="o">:</span>                  <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">2</span><span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing</span><span class="o">:</span>             <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-two-lined</span><span class="o">:</span>        <span class="mi">1</span><span class="mf">.8125</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-two-lined</span><span class="o">:</span>   <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-margin-y</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.95</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-logo-size</span><span class="o">:</span>                    <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">2</span><span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing</span><span class="o">:</span>               <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size-two-lined</span><span class="o">:</span>          <span class="mi">1</span><span class="mf">.8125</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-letter-spacing-two-lined</span><span class="o">:</span>     <span class="nv">$letter-spacing-base</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-icon-size-xs</span><span class="o">:</span>                     <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-icon-size</span><span class="o">:</span>                        <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-icon-size-xs</span><span class="o">:</span>                       <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-icon-size</span><span class="o">:</span>                          <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-y-xs</span><span class="o">:</span>            <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-x-xs</span><span class="o">:</span>            <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-y</span><span class="o">:</span>               <span class="nv">$navbar-brand-margin-y</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-x</span><span class="o">:</span>               <span class="nv">$spacer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-y-xs</span><span class="o">:</span>              <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-x-xs</span><span class="o">:</span>              <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-y</span><span class="o">:</span>                 <span class="nv">$navbar-brand-margin-y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-icon-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-link-padding-y</span><span class="o">:</span>             <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-link-padding-x</span><span class="o">:</span>             <span class="mf">.46875</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-padding-y</span><span class="o">:</span>             <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-padding-x</span><span class="o">:</span>             <span class="nv">$navbar-nav-icon-padding-x-xs</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-size</span><span class="o">:</span>                  <span class="nv">$navbar-icon-size-xs</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-link-padding-y</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-link-padding-x</span><span class="o">:</span>               <span class="mf">.46875</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-padding-y</span><span class="o">:</span>               <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-padding-x</span><span class="o">:</span>               <span class="nv">$navbar-nav-icon-padding-x-xs</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-supra-icon-size</span><span class="o">:</span>                    <span class="nv">$navbar-icon-size-xs</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-brand-margin-y</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-nav-icon-padding-y</span><span class="o">:</span>     <span class="nv">$navbar-minimized-brand-margin-y</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-toggler-padding-y</span><span class="o">:</span>      <span class="nv">$navbar-minimized-brand-margin-y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-brand-margin-y</span><span class="o">:</span>           <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-nav-icon-padding-y</span><span class="o">:</span>       <span class="nv">$navbar-minimized-brand-margin-y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-minimized-toggler-padding-y</span><span class="o">:</span>        <span class="nv">$navbar-minimized-brand-margin-y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-padding-y</span><span class="o">:</span>                  <span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-padding-x</span><span class="o">:</span>                  <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-margin-top</span><span class="o">:</span>                 <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-padding-y</span><span class="o">:</span>                    <span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-padding-x</span><span class="o">:</span>                    <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-badge-margin-top</span><span class="o">:</span>                   <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span>
 </span></span></code></pre></div>
 
       </div>
@@ -1615,7 +1618,7 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1634,7 +1637,7 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1668,17 +1671,17 @@ Refer to <a href="/docs/5.2/customize/optimize/#lean-javascript">Lean JavaScript
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

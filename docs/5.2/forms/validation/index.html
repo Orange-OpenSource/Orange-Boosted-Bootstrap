@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Validation">
 <meta name="twitter:description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/forms/validation/">
 <meta property="og:title" content="Validation">
 <meta property="og:description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -1110,12 +1109,31 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nc">.form-control</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nd">:not</span><span class="o">(</span><span class="nc">.quantity-selector</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nc">.form-control</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$input-height-inner</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">          <span class="na">background-image</span><span class="o">:</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$icon</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">          <span class="na">background-repeat</span><span class="o">:</span> <span class="ni">no-repeat</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">          <span class="na">background-position</span><span class="o">:</span> <span class="ni">right</span> <span class="nv">$input-height-inner-quarter</span> <span class="ni">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">background-position</span><span class="o">:</span> <span class="ni">right</span> <span class="nv">$input-height-inner-quarter</span> <span class="ni">top</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$input-height-inner-quarter</span><span class="o">,</span> <span class="mi">2</span><span class="kt">px</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">          <span class="na">background-size</span><span class="o">:</span> <span class="nv">$input-height-inner-half</span> <span class="nv">$input-height-inner-half</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nc">.form-select</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="na">&amp;</span><span class="o">:</span><span class="nf">not</span><span class="p">([</span><span class="n">multiple</span><span class="p">])</span><span class="o">:</span><span class="nf">not</span><span class="p">([</span><span class="n">size</span><span class="p">])</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="o">&amp;:</span><span class="nf">not</span><span class="p">([</span><span class="n">multiple</span><span class="p">])[</span><span class="n">size</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$form-select-feedback-icon-padding-end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">background-image</span><span class="o">:</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$form-select-indicator</span><span class="p">)</span><span class="o">,</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$icon</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="na">background-position</span><span class="o">:</span> <span class="nv">$form-select-bg-position</span><span class="o">,</span> <span class="nv">$form-select-feedback-icon-position</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">background-size</span><span class="o">:</span> <span class="nv">$form-select-bg-size</span><span class="o">,</span> <span class="nv">$form-select-feedback-icon-size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nc">.form-control-color</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="na">width</span><span class="o">:</span> <span class="nf">add</span><span class="p">(</span><span class="nv">$form-color-width</span><span class="o">,</span> <span class="nv">$input-height-inner</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -1169,7 +1187,8 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">        <span class="na">border-right</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="na">border-left</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">&amp;</span> <span class="o">~</span> <span class="nt">button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">&amp;</span> <span class="o">~</span> <span class="nt">button</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">          <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
@@ -1190,17 +1209,10 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nc">.form-control-color</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="na">width</span><span class="o">:</span> <span class="nf">add</span><span class="p">(</span><span class="nv">$form-color-width</span><span class="o">,</span> <span class="nv">$input-height-inner</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nc">.form-check-input</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">filter</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// Boosted mod: remove filter to avoid having a blue border (invert of red border)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="na">&amp;</span><span class="o">:</span><span class="n">checked</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">        <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
@@ -1219,16 +1231,16 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// End mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nc">.input-group</span> <span class="nc">.form-control</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.input-group</span> <span class="nc">.form-select</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">@if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">z-index</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">@else if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">z-index</span><span class="o">:</span> <span class="mi">3</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nc">.input-group</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&gt;</span> <span class="nc">.form-control</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&gt;</span> <span class="nc">.form-select</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:focus</span><span class="o">),</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&gt;</span> <span class="nc">.form-floating</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:focus-within</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">@if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="na">z-index</span><span class="o">:</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">@else if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="na">z-index</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
@@ -1337,7 +1349,7 @@ We are aware that currently the client-side custom validation styles and tooltip
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1356,7 +1368,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1390,17 +1402,17 @@ We are aware that currently the client-side custom validation styles and tooltip
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

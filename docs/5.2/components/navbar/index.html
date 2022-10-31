@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-pOS5XpkcgtRr25C31i+y6ge+1U4oBWadkcnugQSoW6Ba2cYORcVNCwTOGqngyl1v" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -39,23 +39,21 @@
 <meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Navbar">
 <meta name="twitter:description" content="Documentation and examples for Boosted&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
-<meta name="twitter:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/orange-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://boosted.orange.com/docs/5.2/components/navbar/">
 <meta property="og:title" content="Navbar">
 <meta property="og:description" content="Documentation and examples for Boosted&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://boosted.orange.com/docs/5.2/assets/brand/orange-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/orange-social.png">
 
 
 <script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-4o4LP2LWQy/aM9KyfZ2PDzEEu8fIumFDyCBuJHfR4D2gLV/f47UuYxqSkgheJ5eZ" crossorigin="anonymous"></script>
@@ -189,7 +187,7 @@
           
 
 <li class="nav-item dropdown mb-0 d-flex align-items-center">
-  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+  <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
   <ul class="dropdown-menu dropdown-menu-end position-absolute">
@@ -369,6 +367,7 @@
             <li><a href="/docs/5.2/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
             <li><a href="/docs/5.2/components/stepped-process/" class="bd-links-link d-inline-block rounded">Stepped process</a></li>
             <li><a href="/docs/5.2/components/sticker/" class="bd-links-link d-inline-block rounded">Sticker</a></li>
+            <li><a href="/docs/5.2/components/tags/" class="bd-links-link d-inline-block rounded">Tags</a></li>
             <li><a href="/docs/5.2/components/title-bars/" class="bd-links-link d-inline-block rounded">Title bars</a></li>
             <li><a href="/docs/5.2/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
             <li><a href="/docs/5.2/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
@@ -1570,7 +1569,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -1622,7 +1621,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-body&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-nav justify-content-end flex-grow-1 pe-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-nav justify-content-end flex-grow-1 pe-3 mb-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1675,7 +1674,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -1728,7 +1727,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-body&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-nav justify-content-end flex-grow-1 pe-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-nav justify-content-end flex-grow-1 pe-3 mb-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1761,11 +1760,12 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v5.2.0</small>
+<p><span class="tag tag-sm">Added in v5.2.0</span></p>
 
 <p>As part Boosted&rsquo;s evolving CSS variables approach, navbars now use local CSS variables on <code>.navbar</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nf">if</span><span class="p">(</span><span class="nv">$navbar-padding-x</span> <span class="o">==</span> <span class="n">null</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="nv">$navbar-padding-x</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-padding-y</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Boosted mod: no padding in small breakpoints
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-font-weight</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-font-weight</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-border-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-border-width</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-light-color</span><span class="si">}</span><span class="p">;</span>
@@ -1795,6 +1795,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-padding-x</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-font-size</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-font-size-xs</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-icon-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$navbar-light-toggler-icon-bg-small</span><span class="p">)</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-icon-filter</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-light-toggler-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-border-radius</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-border-radius</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-focus-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-focus-width</span><span class="si">}</span><span class="p">;</span>
@@ -1803,52 +1804,67 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>Some additional CSS variables are also present on <code>.navbar-nav</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}nav-link-padding-x</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}nav-link-padding-y</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-y</span><span class="p">);</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="nv">$nav-link-font-size</span><span class="o">,</span> <span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">nav-link-font-size</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}nav-link-font-weight</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-link-font-weight</span><span class="si">}</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-font-size</span><span class="o">,</span> <span class="nv">$font-size-base</span><span class="p">)</span><span class="o">,</span> <span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">nav-link-font-size</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}nav-link-font-weight</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-link-font-weight</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}nav-link-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}nav-link-hover-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-hover-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}nav-link-disabled-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-disabled-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  </span></span></code></pre></div>
+<p>Customization through CSS variables can be seen on the <code>.navbar-dark</code> class where we override specific values without adding duplicate CSS selectors.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-hover-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-disabled-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-disabled-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-active-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-brand-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-brand-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-brand-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-brand-hover-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}navbar-toggler-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-toggler-border-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}navbar-toggler-icon-filter</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$invert-filter</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  </span></span></code></pre></div>
 <h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-padding-y</span><span class="o">:</span>                  <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-padding-x</span><span class="o">:</span>                  <span class="n">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-link-padding-y</span><span class="o">:</span>         <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-nav-link-padding-x-xs</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-nav-link-padding-x</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
+<p>Variables for all navbars:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-padding-y</span><span class="o">:</span>                    <span class="mf">.375</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-padding-x</span><span class="o">:</span>                    <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-font-weight</span><span class="o">:</span>                  <span class="nv">$font-weight-bold</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size</span><span class="o">:</span>                  <span class="mi">2</span><span class="mf">.1875</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-nav-link-padding-y</span><span class="o">:</span>           <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-nav-link-padding-x-xs</span><span class="o">:</span>        <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-nav-link-padding-x</span><span class="o">:</span>           <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-brand-font-size</span><span class="o">:</span>              <span class="mi">2</span><span class="mf">.1875</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no nav-link-height calculation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-brand-padding-y</span><span class="o">:</span>                  <span class="mi">0</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-brand-margin-end</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-brand-padding-y</span><span class="o">:</span>              <span class="mi">0</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-brand-margin-end</span><span class="o">:</span>             <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-toggler-icon-close-bg</span><span class="o">:</span>      <span class="nv">$cross-icon</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-padding-y</span><span class="o">:</span>          <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span> <span class="c1">// Boosted mod: same as $navbar-nav-icon-padding-y-xs
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-padding-x</span><span class="o">:</span>          <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span> <span class="c1">// Boosted mod: same as $navbar-nav-icon-padding-x-xs
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-font-size-xs</span><span class="o">:</span>       <span class="mi">1</span><span class="mf">.04166666</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-font-size</span><span class="o">:</span>          <span class="mi">1</span><span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-border-radius</span><span class="o">:</span>      <span class="nv">$btn-border-radius</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-toggler-focus-width</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-transition</span><span class="o">:</span>         <span class="nv">$transition-focus</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span></code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-dark-color</span><span class="o">:</span>                  <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-hover-color</span><span class="o">:</span>            <span class="nv">$primary</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-active-color</span><span class="o">:</span>           <span class="nv">$primary</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-400</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-toggler-border-color</span><span class="o">:</span>   <span class="ni">transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-toggler-icon-close-bg</span><span class="o">:</span>        <span class="nv">$cross-icon</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-padding-y</span><span class="o">:</span>            <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.6</span><span class="p">;</span> <span class="c1">// Boosted mod: same as $navbar-nav-icon-padding-y-xs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-padding-x</span><span class="o">:</span>            <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.75</span><span class="p">;</span> <span class="c1">// Boosted mod: same as $navbar-nav-icon-padding-x-xs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-font-size-xs</span><span class="o">:</span>         <span class="mi">1</span><span class="mf">.04166666</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-font-size</span><span class="o">:</span>            <span class="mi">1</span><span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-border-radius</span><span class="o">:</span>        <span class="nv">$btn-border-radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-toggler-focus-width</span><span class="o">:</span>          <span class="n">null</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-toggler-transition</span><span class="o">:</span>           <span class="nv">$transition-focus</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-color</span><span class="o">:</span>                  <span class="nv">$black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-hover-color</span><span class="o">:</span>            <span class="nv">$accessible-orange</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-active-color</span><span class="o">:</span>           <span class="nv">$accessible-orange</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-toggler-icon-bg</span><span class="o">:</span>        <span class="nv">$burger-icon</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-toggler-icon-bg-small</span><span class="o">:</span>  <span class="nv">$burger-icon-small</span><span class="p">;</span> <span class="c1">// Boosted mod: slightly different burger icon for small breakpoints
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-light-toggler-border-color</span><span class="o">:</span>   <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-color</span><span class="o">:</span>            <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-hover-color</span><span class="o">:</span>      <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
+</span></span></code></pre></div>
+<p>Variables for the <a href="#color-schemes">dark navbar</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$navbar-dark-border-color</span><span class="o">:</span>          <span class="nv">$gray-700</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-color</span><span class="o">:</span>                 <span class="nv">$white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-hover-color</span><span class="o">:</span>           <span class="nv">$primary</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-active-color</span><span class="o">:</span>          <span class="nv">$primary</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-disabled-color</span><span class="o">:</span>        <span class="nv">$gray-400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-toggler-border-color</span><span class="o">:</span>  <span class="ni">transparent</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-color</span><span class="o">:</span>                 <span class="nv">$black</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-hover-color</span><span class="o">:</span>           <span class="nv">$accessible-orange</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-active-color</span><span class="o">:</span>          <span class="nv">$accessible-orange</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-disabled-color</span><span class="o">:</span>        <span class="nv">$gray-500</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-toggler-icon-bg</span><span class="o">:</span>       <span class="nv">$burger-icon</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-toggler-icon-bg-small</span><span class="o">:</span> <span class="nv">$burger-icon-small</span><span class="p">;</span> <span class="c1">// Boosted mod: slightly different burger icon for small breakpoints
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-light-toggler-border-color</span><span class="o">:</span>  <span class="n">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-color</span><span class="o">:</span>          <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-hover-color</span><span class="o">:</span>    <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-brand-color</span><span class="o">:</span>           <span class="ni">inherit</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$navbar-dark-brand-color</span><span class="o">:</span>           <span class="ni">inherit</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-brand-hover-color</span><span class="o">:</span>     <span class="nv">$navbar-dark-active-color</span><span class="p">;</span>
 </span></span></code></pre></div>
 <h3 id="sass-loop">Sass loop <a class="anchor-link" href="#sass-loop" aria-label="Link to this section: Sass loop"></a></h3>
@@ -1880,7 +1896,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">            <span class="k">&amp;</span><span class="nc">.active</span><span class="nd">::before</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">              <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">              <span class="na">right</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">              <span class="na">bottom</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-padding-y</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// stylelint-disable-line function-disallowed-list
+</span></span><span class="line"><span class="cl">              <span class="na">bottom</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-padding-y</span><span class="p">));</span> <span class="c1">// stylelint-disable-line function-disallowed-list
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>              <span class="na">left</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">              <span class="na">height</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-border-width</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// stylelint-disable-line function-disallowed-list
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>              <span class="na">content</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
@@ -1893,19 +1909,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">            <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">&amp;</span><span class="nd">:first-child</span> <span class="o">&gt;</span> <span class="nc">.nav-link</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="na">margin-left</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
+</span></span><span class="line"><span class="cl">              <span class="na">margin-left</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">));</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">&amp;</span><span class="nd">:last-child</span> <span class="o">&gt;</span> <span class="nc">.nav-link</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="na">margin-right</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
+</span></span><span class="line"><span class="cl">              <span class="na">margin-right</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-link-padding-x</span><span class="p">));</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">&amp;</span><span class="nd">:first-child</span> <span class="o">&gt;</span> <span class="nc">.nav-icon</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="na">margin-left</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-icon-padding-x</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
+</span></span><span class="line"><span class="cl">              <span class="na">margin-left</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-icon-padding-x</span><span class="p">));</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">&amp;</span><span class="nd">:last-child</span> <span class="o">&gt;</span> <span class="nc">.nav-icon</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="na">margin-right</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-icon-padding-x</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
+</span></span><span class="line"><span class="cl">              <span class="na">margin-right</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-nav-icon-padding-x</span><span class="p">));</span> <span class="cm">/* stylelint-disable-line function-disallowed-list */</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">          <span class="p">}</span>
 </span></span><span class="line"><span class="cl">          <span class="c1">// End mod
@@ -2071,7 +2087,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.0.</p>
+          <p class="mb-lg-1">Currently v5.2.1.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -2090,7 +2106,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-FQV2xeDatbh7g/Hg/XDDwYs/sTeXu/cIX2GBtqGmlATkYQZSt8Rm7MhvHqELj3Bk" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -2124,17 +2140,17 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange has purchased the right to use Helvetica in its websites and mobile applications.
-      If you are not authorized to used it, don’t include the orangeHelvetica.css
+      If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.0\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.1\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.0\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.1\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
