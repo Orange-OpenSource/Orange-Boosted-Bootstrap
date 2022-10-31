@@ -15,7 +15,7 @@ toc: true
 
 Boosted v5.2.1 is here with fixes from our latest minor release, v5.2. These changes include bug fixes, documentation updates, and some dependency updates, but also a new Tags component and a lot of new dark variants for our components.
 
-If you need more details about the changes, please refer to the [v5.2.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.0).
+If you need more details about the changes, please refer to the [v5.2.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.1).
 
 ### Components
 
