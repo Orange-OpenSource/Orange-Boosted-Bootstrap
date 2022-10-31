@@ -18,15 +18,16 @@
 @mixin pagination-max-items($pagination-max-items) {
   @if $enable-responsive-pagination {
     $half-items: $pagination-max-items * .5;
-    display: none;
+
+    &:not(.active){
+      display: none;
+    }
 
     // rule 0:
     //  - adding the (n/2) first items
-    //  - adding the (n/2 - 1) last items
-    //  - adding the (n/2) last item if the list contains exactly (n) items, i.e. all items are displayed
+    //  - adding the (n/2) last items
     &:nth-child(-n + #{$half-items}),
-    &:nth-last-child(-n + #{$half-items - 1}),
-    &:nth-child(#{$half-items + 1}):nth-last-child(#{$half-items}) {
+    &:nth-last-child(-n + #{$half-items}) {
       display: flex;
     }
 
@@ -44,6 +45,11 @@
         content: "...";
         background-color: var(--#{$prefix}pagination-bg);
       }
+
+      // Remove the extra page-item due to the three dots
+      ~ :nth-last-child(#{$half-items}):not(:last-child):not(:nth-last-child(2)) {
+        display: none;
+      }
     }
 
     // Pagination with m > n:
@@ -53,22 +59,19 @@
     }
 
     // Pagination with m > (n - 1):
-    //  - rule 4: hiding the (n/2 - 1)th last item if the active element is situated between the (n/2) first items and the (n/2 - 1) last items
-    &:nth-child(#{$half-items}) ~ .active:not(:nth-last-child(-n + #{$half-items - 1})) ~ :nth-last-child(#{$half-items - 1}) {
-      display: none;
-    }
-
+    //  - rule 4: hiding the (n/2 - 1)th last item if nor the last or the penultimate if the active element is situated between the (n/2) first items and the (n/2 - 1) last items
     // Pagination with m > n:
-    //  - rule 5: hiding the (n/2 - 2)th last item if the active element is situated between the (n/2 + 1) first items and the (n/2 - 1) last items
-    &:nth-child(#{$half-items + 1}) ~ .active:not(:nth-last-child(-n + #{$half-items - 1})) ~ :nth-last-child(#{$half-items - 2}) {
+    //  - rule 5: hiding the (n/2 - 2)th last item if nor the last or the penultimate if the active element is situated between the (n/2 + 1) first items and the (n/2 - 1) last items
+    &:nth-child(#{$half-items}) ~ .active:not(:nth-last-child(-n + #{$half-items - 1})) ~ :nth-last-child(#{$half-items - 1}):not(:last-child):not(:nth-last-child(2)),
+    &:nth-child(#{$half-items + 1}) ~ .active:not(:nth-last-child(-n + #{$half-items - 1})) ~ :nth-last-child(#{$half-items - 2}):not(:last-child):not(:nth-last-child(2)) {
       display: none;
     }
 
     // Pagination with m <= n:
     //  - rule 6: cancel the hiding made by the rule 4 above if the active element
     //            is exactly the (n/2 + 1)th first item and exactly the (n/2)th last item
-    //            resulting in the display of the (n/2 - 1)th last item
-    &.active:nth-child(#{$half-items + 1}):nth-last-child(-n + #{$half-items}) ~ :nth-last-child(#{$half-items - 1}) {
+    //            resulting in the display of the (n/2 - 1)th last item if nor the last or the penultimate (for specifity)
+    &.active:nth-child(#{$half-items + 1}):nth-last-child(-n + #{$half-items}) ~ :nth-last-child(#{$half-items - 1}):not(:last-child):not(:nth-last-child(2)) {
       display: flex;
     }
   }

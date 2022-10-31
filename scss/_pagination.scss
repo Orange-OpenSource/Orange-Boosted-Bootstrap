@@ -109,6 +109,8 @@
 }
 
 .page-item {
+  display: flex; // Boosted mod
+
   &:not(:first-child) .page-link {
     margin-left: $pagination-margin-start;
   }
@@ -205,14 +207,6 @@
 
   @include media-breakpoint-up(xl) {
     @include pagination-max-items(12);
-  }
-
-  &.active,
-  &:first-child,
-  &:last-child,
-  &:nth-child(2),
-  &:nth-last-child(2) {
-    display: flex !important; // stylelint-disable-line declaration-no-important
   }
   // End mod
 }

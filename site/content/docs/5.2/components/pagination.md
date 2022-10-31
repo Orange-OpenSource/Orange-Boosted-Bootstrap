@@ -121,10 +121,6 @@ Or with `.justify-content-end`:
 <!-- Boosted mod -->
 ## Responsive behavior
 
-{{< callout warning >}}
-**Heads up—our smart responsive pagination is experimental and opt-in as of v5.2.1!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default. Keep reading to learn how to enable it in your projects.
-{{< /callout >}}
-
 By default, every item is visible. Here is an example with our basic responsive behavior.
 
 {{< example >}}
@@ -149,7 +145,8 @@ By default, every item is visible. Here is an example with our basic responsive 
 {{< /example >}}
 
 {{< callout warning >}}
-**Smart responsive pagination is opt-in.**
+**Heads up—our smart responsive pagination is opt-in as of v5.2.1!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default.
+
 <details class="border-top border-bottom border-1 border-light">
 <summary class="fw-bold p-2 mb-0">
 {{< markdown >}}
