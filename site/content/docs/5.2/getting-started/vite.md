@@ -6,11 +6,11 @@ group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: vite.png
+thumbnail: vite.svg
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.png" alt="Vite logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.svg" alt="Vite logo" width="145" loading="lazy">
 </div>
 
 {{< callout >}}

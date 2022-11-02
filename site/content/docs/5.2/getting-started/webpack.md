@@ -6,11 +6,11 @@ group: getting-started
 aliases:
   - "/docs/getting-started/webpack/"
 toc: true
-thumbnail: webpack.png
+thumbnail: webpack.svg
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.png" alt="Webpack logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.svg" alt="Webpack logo" width="145" loading="lazy">
 </div>
 
 {{< callout >}}
