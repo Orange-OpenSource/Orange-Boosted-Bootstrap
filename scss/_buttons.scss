@@ -43,12 +43,14 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  &:hover { // Boosted mod: simpler rule
+  &:hover {
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
+
+  // Boosted mod: no .btn-check + &:hover
 
   &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
     color: var(--#{$prefix}btn-hover-color);
