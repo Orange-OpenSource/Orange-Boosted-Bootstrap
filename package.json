@@ -148,7 +148,7 @@
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
     "stylelint": "^14.11.0",
-    "stylelint-config-twbs-bootstrap": "^5.0.0",
+    "stylelint-config-twbs-bootstrap": "^6.0.0",
     "tarteaucitronjs": "^1.8.4",
     "terser": "^5.15.0",
     "vnu-jar": "21.10.12"
