@@ -33,6 +33,8 @@
 
     <script src="../../../dist/js/boosted.bundle.js"></script>
     <script>
+      /* global boosted: false */
+
       document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new boosted.Popover(popoverEl))
     </script>
   </body>

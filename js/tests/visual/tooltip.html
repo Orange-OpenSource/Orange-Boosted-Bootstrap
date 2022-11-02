@@ -85,6 +85,8 @@
 
     <script src="../../../dist/js/boosted.bundle.js"></script>
     <script>
+      /* global boosted: false */
+
       if (typeof document.body.attachShadow === 'function') {
         const shadowRoot = document.getElementById('shadow').attachShadow({ mode: 'open' })
         shadowRoot.innerHTML =
@@ -106,26 +108,30 @@
       })
 
       const targetTooltip = new boosted.Tooltip('#target', {
-        placement : 'top',
-        trigger : 'manual'
+        placement: 'top',
+        trigger: 'manual'
       })
       targetTooltip.show()
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl=>  new boosted.Tooltip(tooltipEl))
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipEl => new boosted.Tooltip(tooltipEl))
     </script>
 
     <script>
+      /* global boosted: false */
+
       new boosted.Tooltip('#wrapperTriggeredBySelector', {
         animation: false,
         selector: '.bs-dynamic-tooltip'
       })
 
+      /* eslint-disable no-unused-vars */
       function duplicateButtons() {
         const buttonsBlock = document.querySelector('.selectorButtonsBlock')// get first
         const buttonsBlockClone = buttonsBlock.cloneNode(true)
-        buttonsBlockClone.innerHTML+= new Date().toLocaleString()
-      document.querySelector('#wrapperTriggeredBySelector').append(buttonsBlockClone)
+        buttonsBlockClone.innerHTML += new Date().toLocaleString()
+        document.querySelector('#wrapperTriggeredBySelector').append(buttonsBlockClone)
       }
+      /* eslint-enable no-unused-vars */
     </script>
 
   </body>
