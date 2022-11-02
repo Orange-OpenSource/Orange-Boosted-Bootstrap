@@ -52,26 +52,15 @@
 
     <script src="../../../dist/js/boosted.bundle.js"></script>
     <script>
-      window.addEventListener('load', function () {
-        var toastElements = document.querySelectorAll('.toast')
-        for (const toastEl of toastElements) {
-          new boosted.Toast(toastEl)
-        }
+      window.addEventListener('load', () => {
+        document.querySelectorAll('.toast').forEach(toastEl => new boosted.Toast(toastEl))
 
-        document.getElementById('btnShowToast').addEventListener('click', function () {
-          var toastElements = document.querySelectorAll('.toast')
-          for (const toastEl of toastElements) {
-            var toast = boosted.Toast.getInstance(toastEl)
-            toast.show()
-          }
+        document.getElementById('btnShowToast').addEventListener('click', () => {
+          document.querySelectorAll('.toast').forEach(toastEl =>  boosted.Toast.getInstance(toastEl).show())
         })
 
-        document.getElementById('btnHideToast').addEventListener('click', function () {
-          var toastElements = document.querySelectorAll('.toast')
-          for (const toastEl of toastElements) {
-            var toast = boosted.Toast.getInstance(toastEl)
-            toast.hide()
-          }
+        document.getElementById('btnHideToast').addEventListener('click', () => {
+          document.querySelectorAll('.toast').forEach(toastEl =>  boosted.Toast.getInstance(toastEl).hide())
         })
       })
     </script>

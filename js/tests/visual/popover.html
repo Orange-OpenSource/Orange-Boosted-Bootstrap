@@ -33,10 +33,7 @@
 
     <script src="../../../dist/js/boosted.bundle.js"></script>
     <script>
-      var popoverElements = document.querySelectorAll('[data-bs-toggle="popover"]')
-      for (const popoverEl of popoverElements) {
-        new boosted.Popover(popoverEl)
-      }
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(popoverEl => new boosted.Popover(popoverEl))
     </script>
   </body>
 </html>
