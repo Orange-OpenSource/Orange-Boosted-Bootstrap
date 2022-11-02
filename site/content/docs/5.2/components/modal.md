@@ -140,7 +140,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalLiveLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -171,7 +171,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -194,7 +194,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Modal title</h1>
+        <h1 class="modal-title h5" id="staticBackdropLiveLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -225,7 +225,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title h5" id="staticBackdropLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -248,7 +248,7 @@ When modals become too long for the user's viewport or device, they scroll indep
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLongTitle">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalLongTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body" style="min-height: 1500px">
@@ -274,7 +274,7 @@ You can also create a scrollable modal that allows scroll the modal body by addi
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalScrollableTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -311,7 +311,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalCenterTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -329,7 +329,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -374,14 +374,14 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalPopoversLabel">Modal title</h1>
+        <h1 class="modal-title h5" id="exampleModalPopoversLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
-        <h2 class="fs-5">Popover in a modal</h2>
+        <h2 class="h5">Popover in a modal</h2>
         <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</a> triggers a popover on click.</p>
         <hr>
-        <h2 class="fs-5">Tooltips in a modal</h2>
+        <h2 class="h5">Tooltips in a modal</h2>
         <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
       </div>
       <div class="modal-footer">
@@ -400,10 +400,10 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 ```html
 <div class="modal-body">
-  <h2 class="fs-5">Popover in a modal</h2>
+  <h2 class="h5">Popover in a modal</h2>
   <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
   <hr>
-  <h2 class="fs-5">Tooltips in a modal</h2>
+  <h2 class="h5">Tooltips in a modal</h2>
   <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
 </div>
 ```
@@ -416,7 +416,7 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="gridModalLabel">Grids in modals</h1>
+        <h1 class="modal-title h5" id="gridModalLabel">Grids in modals</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -507,7 +507,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+        <h1 class="modal-title h5" id="exampleModalLabel">New message</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -560,7 +560,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+        <h1 class="modal-title h5" id="exampleModalToggleLabel">Modal 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -576,7 +576,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <h1 class="modal-title h5" id="exampleModalToggleLabel2">Modal 2</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -650,7 +650,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalXlLabel">Extra large modal</h1>
+        <h1 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -664,7 +664,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalLgLabel">Large modal</h1>
+        <h1 class="modal-title h4" id="exampleModalLgLabel">Large modal</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -678,7 +678,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalSmLabel">Small modal</h1>
+        <h1 class="modal-title h4" id="exampleModalSmLabel">Small modal</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -723,7 +723,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Full screen modal</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -740,7 +740,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-sm-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenSmLabel">Full screen below sm</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenSmLabel">Full screen below sm</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -757,7 +757,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-md-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenMdLabel">Full screen below md</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenMdLabel">Full screen below md</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -774,7 +774,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-lg-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenLgLabel">Full screen below lg</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenLgLabel">Full screen below lg</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -791,7 +791,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-xl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenXlLabel">Full screen below xl</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenXlLabel">Full screen below xl</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -808,7 +808,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-xxl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-4" id="exampleModalFullscreenXxlLabel">Full screen below xxl</h1>
+        <h1 class="modal-title h4" id="exampleModalFullscreenXxlLabel">Full screen below xxl</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">

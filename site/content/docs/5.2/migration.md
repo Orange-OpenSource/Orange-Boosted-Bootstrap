@@ -20,7 +20,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 ### Components
 
 - **Modals**
-  - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s. Please reflect this modification into your websites by choosing the right header level.
+  - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
 ## v5.2.1
 
