@@ -108,7 +108,6 @@
     - [ ] Move `site/content/docs/5.x` to `site/content/docs/5.x+1`
     - [ ] Increment `site/static/docs/{version}` version
     - [ ] Increment version in `nuget/boosted.nuspec`
-    - [ ] Ensure Algolia indexes new release content ([probably requires a PR](https://github.com/algolia/docsearch-configs/pull/1954))
     - [ ] (Major version) Manually update the version in `nuget/boosted.nuspec` and `nuget/boosted.sass.nuspec`
   - check wrong matches in `CHANGELOG.md`, and maybe `site/content/docs/<version>/migration.md`
   - :warning: check the `package-lock.json` and `package.json` content, only "boosted" should have its version changed!
