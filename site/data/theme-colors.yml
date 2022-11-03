@@ -1,12 +1,12 @@
 - name: primary
-  hex: "#63a4ff"
+  hex: "#5093ff"
   contrast_color: dark
 - name: secondary
   hex: "#000"
 - name: success
-  hex: "#328532"
+  hex: "#3baa3c"
 - name: danger
-  hex: "#e32800"
+  hex: "#ff2828"
 - name: warning
   hex: "#fc0"
   contrast_color: dark

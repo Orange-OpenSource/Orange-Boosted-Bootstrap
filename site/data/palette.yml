@@ -15,30 +15,30 @@
       variable: $accessible-orange
     - name: Brand blue
       class: orange-2
-      hex: "#63a4ff"
+      hex: "#5093ff"
       variable: $brand-orange
 - category: Supporting colors
   name: "Supporting colors"
   colors:
     - name: Blue
       class: cyan
-      hex: "#4bb4e6"
+      hex: "#71c2f6"
       variable: $supporting-blue
     - name: Yellow
       class: yellow-2
-      hex: "#ffd200"
+      hex: "#fee100"
       variable: $supporting-yellow
     - name: Green
       class: teal
-      hex: "#50be87"
+      hex: "#4fc887"
       variable: $supporting-green
     - name: Purple
       class: purple
-      hex: "#a885d8"
+      hex: "#b181d8"
       variable: $supporting-purple
     - name: Pink
       class: pink
-      hex: "#ffb4e6"
+      hex: "#ffabd4"
       variable: $supporting-pink
 - category: OBS Gray
   name: "OBS Gray"
@@ -53,7 +53,7 @@
     - name: Green
       class: green
       level: success
-      hex: "#328532"
+      hex: "#3baa3c"
       variable: $functional-green
     - name: Blue
       class: blue
@@ -68,7 +68,7 @@
     - name: Red
       class: red
       level: danger
-      hex: "#e32800"
+      hex: "#ff2828"
       variable: $functional-red
 - category: Grays
   name: "Grays"

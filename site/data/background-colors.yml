@@ -1,19 +1,19 @@
 - name: primary
-  hex: "#63a4ff"
+  hex: "#5093ff"
 - name: secondary
   hex: "#000"
 - name: dark
   hex: "#000"
 - name: supporting-green
-  hex: "#50be87"
+  hex: "#4fc887"
 - name: supporting-purple
-  hex: "#a885d8"
+  hex: "#b181d8"
 - name: supporting-yellow
-  hex: "#ffd200"
+  hex: "#fee100"
 - name: supporting-blue
-  hex: "#4bb4e6"
+  hex: "#71c2f6"
 - name: supporting-pink
-  hex: "#ffb4e6"
+  hex: "#ffabd4"
 - name: light
   hex: "#ddd"
 - name: white
