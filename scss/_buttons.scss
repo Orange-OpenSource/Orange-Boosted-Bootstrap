@@ -140,9 +140,10 @@
 }
 
 .btn-danger {
+  @debug color-contrast($danger);
   @include button-variant($danger, $danger);
   &.btn-inverse {
-    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+    @include button-variant($danger, $danger, $black, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 // scss-docs-end btn-variant-loops
