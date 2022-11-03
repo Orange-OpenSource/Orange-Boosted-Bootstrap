@@ -1,5 +1,5 @@
 {
-  "name": "boosted",
+  "name": "boosted-innovation-cup",
   "description": "Boosted Innovation Cup with Bootstrap is a Bootstrap based, accessible and ergonomic components library.",
   "version": "0.1.0",
   "config": {
@@ -83,7 +83,7 @@
     "release": "npm-run-all dist release-sri docs-build release-zip*",
     "release-sri": "node build/generate-sri.js",
     "release-version": "node build/change-version.js",
-    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist && cp -r dist/ boosted-$npm_package_version-dist && zip -r9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf boosted-innovation-cup-$npm_package_version-dist && cp -r dist/ boosted-innovation-cup-$npm_package_version-dist && zip -r9 boosted-innovation-cup-$npm_package_version-dist.zip boosted-innovation-cup-$npm_package_version-dist && rm -rf boosted-innovation-cup-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.js",
     "dist": "npm-run-all --aggregate-output --parallel css js img",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
