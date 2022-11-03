@@ -9,6 +9,19 @@ aliases:
 toc: true
 ---
 
+## v5.2.2
+
+<hr class="mb-4">
+
+Boosted v5.2.2 has landed with new bug fixes and documentation updates.
+
+If you need more details about the changes, please refer to the [v5.2.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2).
+
+### Components
+
+- **Modals**
+  - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
+
 ## v5.2.1
 
 <hr class="mb-4">

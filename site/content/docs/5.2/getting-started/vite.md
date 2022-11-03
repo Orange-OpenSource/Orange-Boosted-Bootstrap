@@ -6,11 +6,11 @@ group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: vite.png
+thumbnail: vite.svg
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.png" alt="Vite logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.svg" alt="Vite logo" width="145" loading="lazy">
 </div>
 
 {{< callout >}}
@@ -77,7 +77,7 @@ At this point, everything is in the right place, but Vite won't work because we 
 
 With dependencies installed and our project folder ready for us to start coding, we can now configure Vite and run our project locally.
 
-1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite were to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
+1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite where to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
 
    <!-- eslint-skip -->
    ```js

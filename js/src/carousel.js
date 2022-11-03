@@ -165,8 +165,15 @@ class Carousel extends BaseComponent {
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
       this._playPauseButton.classList.remove('pause')
       this._playPauseButton.classList.add('play')
-      this._playPauseButton.setAttribute('title', (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT))
-      this._playPauseButton.querySelector('span.visually-hidden').innerHTML = (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT)
+
+      if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT)) {
+        this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT))
+        this._playPauseButton.querySelector('span.visually-hidden').innerHTML = this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PLAY_TEXT)
+      } else {
+        this._playPauseButton.setAttribute('title', SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT)
+        this._playPauseButton.querySelector('span.visually-hidden').innerHTML = SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT
+      }
+
       this._stayPaused = true
     }
     // End mod
@@ -189,8 +196,15 @@ class Carousel extends BaseComponent {
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
       this._playPauseButton.classList.remove('play')
       this._playPauseButton.classList.add('pause')
-      this._playPauseButton.setAttribute('title', (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT))
-      this._playPauseButton.querySelector('span.visually-hidden').innerHTML = (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) ? this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT) : SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT)
+
+      if (this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT)) {
+        this._playPauseButton.setAttribute('title', this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT))
+        this._playPauseButton.querySelector('span.visually-hidden').innerHTML = this._playPauseButton.getAttribute(SELECTOR_CAROUSEL_PAUSE_TEXT)
+      } else {
+        this._playPauseButton.setAttribute('title', SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT)
+        this._playPauseButton.querySelector('span.visually-hidden').innerHTML = SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT
+      }
+
       this._stayPaused = false
     }
     // End mod
