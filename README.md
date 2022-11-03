@@ -36,10 +36,9 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.1.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.2.1`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.2.1`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v0.1.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v0.1.0`
 
 Read the [Getting started page](https://deploy-preview-1536--boosted.netlify.app/docs/5.2/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 

@@ -67,7 +67,7 @@ Pull in Boosted Innovation Cup's **source files** into nearly any project with s
 Install Boosted Innovation Cup in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted-innovation-cup):
 
 ```sh
-npm install boosted-innovation-cup@v5.2.1
+npm install boosted-innovation-cup@v0.1.0
 ```
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted Innovation Cup's plugins onto a `boosted` object.
@@ -87,5 +87,5 @@ Boosted Innovation Cup's `package.json` contains some additional metadata under 
 Install Boosted Innovation Cup in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/Boosted):
 
 ```sh
-yarn add boosted-innovation-cup@v5.2.1
+yarn add boosted-innovation-cup@v0.1.0
 ```

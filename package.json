@@ -1,7 +1,7 @@
 {
   "name": "boosted",
   "description": "Boosted Innovation Cup with Bootstrap is a Bootstrap based, accessible and ergonomic components library.",
-  "version": "5.2.1",
+  "version": "0.1.0",
   "config": {
     "version_short": "5.2"
   },
