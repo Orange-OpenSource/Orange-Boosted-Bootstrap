@@ -31,7 +31,7 @@ publishDir:                         "_site"
 module:
   mounts:
     - source:                       dist
-      target:                       static/docs/5.2/dist
+      target:                       static/docs/0.1/dist
     - source:                       site/assets
       target:                       assets
     - source:                       site/content
@@ -42,16 +42,16 @@ module:
       target:                       layouts
     - source:                       site/static
       target:                       static
-    - source:                       site/static/docs/5.2/assets/img/favicons/apple-touch-icon.png
+    - source:                       site/static/docs/0.1/assets/img/favicons/apple-touch-icon.png
       target:                       static/apple-touch-icon.png
-    - source:                       site/static/docs/5.2/assets/img/favicons/favicon.ico
+    - source:                       site/static/docs/0.1/assets/img/favicons/favicon.ico
       target:                       static/favicon.ico
 
       # Boosted mod
     - source:                       node_modules/tarteaucitronjs/tarteaucitron.js
       target:                       assets/js/vendor/tarteaucitron.js
     - source:                       node_modules/tarteaucitronjs/lang
-      target:                       static/docs/5.2/assets/js/lang
+      target:                       static/docs/0.1/assets/js/lang
 
 params:
   subtitle:                         "Boosted Innovation Cup with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
@@ -60,7 +60,7 @@ params:
 
   current_version:                  "0.1.0"
   current_ruby_version:             "0.1.0"
-  docs_version:                     "5.2"
+  docs_version:                     "0.1"
   rfs_version:                      "v9.0.6"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://deploy-preview-1536--boosted.netlify.app/">
-    <img src="https://deploy-preview-1536--boosted.netlify.app/docs/5.2/assets/brand/boosted-innovation-cup-logo.png" alt="Boosted Innovation Cup" width="50" height="50">
+    <img src="https://deploy-preview-1536--boosted.netlify.app/docs/0.1/assets/brand/boosted-innovation-cup-logo.png" alt="Boosted Innovation Cup" width="50" height="50">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://deploy-preview-1536--boosted.netlify.app/docs/5.2/"><strong>Visit Boosted</strong></a>
+  <a href="https://deploy-preview-1536--boosted.netlify.app/docs/0.1/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
@@ -40,7 +40,7 @@ Several quick start options are available:
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@v0.1.0`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v0.1.0`
 
-Read the [Getting started page](https://deploy-preview-1536--boosted.netlify.app/docs/5.2/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+Read the [Getting started page](https://deploy-preview-1536--boosted.netlify.app/docs/0.1/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
 
 ## Status
