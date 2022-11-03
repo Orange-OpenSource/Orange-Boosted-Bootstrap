@@ -13,7 +13,7 @@ toc: true
 
 ## Quick start
 
-Get started by including Boosted Innovation Cup's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Boosted CodePen demo](https://codepen.io/julien-deramond/pen/WNMxywB).
+Get started by including Boosted Innovation Cup's production-ready CSS and JavaScript via CDN without the need for any build steps.
 
 <br>
 
