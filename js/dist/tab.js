@@ -1,10 +1,10 @@
 /*!
-  * Boosted v0.1.0 (https://boosted.orange.com/)
+  * Boosted v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main-jd-innovation-cup/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tab.js v0.1.0 (https://boosted.orange.com/)
+  * Bootstrap tab.js v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */

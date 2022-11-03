@@ -75,13 +75,13 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:                            "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/css/boosted.min.css"
-    css_hash:                       "sha384-CYwBBOBitXWralvRBTTEteu86YHHydT/+Wsv4kmxP6oF/SaesPQeMxLbblEUyZf/"
+    css_hash:                       "sha384-dWJYvB5mYZVFaLi25o5jut/yCfwx16haEKavruAeQ+xRFWYQIWhOm3lWVB5uEsOq"
     css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:                   "sha384-dmnbBbP2SVkMFPx/rM/ySY8ibT3vQlnqL3pS2VGfxR6Ts0zQlKYUqnPXyJ9Q7kyG"
+    css_rtl_hash:                   "sha384-FJLWEFhjFQpyqi3zdC53frxFZTfjvxX/g+ajGHt86p/9B/VeGoNLrDF5baroZpQ7"
     js:                             "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/js/boosted.min.js"
-    js_hash:                        "sha384-GBfyQzRj/34bRvjbWfsgvYvEqkV+YniZdXAuu66ZVhSPIdzVzVouXBJBjpd58tcY"
+    js_hash:                        "sha384-Yb/eaIhiWHtC5ZwEitaNdOmkd+aGkBhHzjEnz+hT/9HJ1M1RRoXR/AZRDYX5/nck"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:                 "sha384-NkAB+hiFHsv6dxwL0C4lJtfq1RblxY6+DRFn5QZDpgCdwB5RiOGjaJB0Weq0uCy3"
+    js_bundle_hash:                 "sha384-Nz1loFQLXwQQxWaz0kofBD8kwCgVGzOZwbVe2UT3e+G2kXbhq/btnMhKfsFG11la"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     popper_hash:                    "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"

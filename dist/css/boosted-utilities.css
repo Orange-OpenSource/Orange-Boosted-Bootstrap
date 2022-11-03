@@ -1,8 +1,8 @@
 /*!
- * Boosted Utilities v0.1.0 (https://boosted.orange.com/)
+ * Boosted Utilities v0.1.0(https://deploy-preview-1536--boosted.netlify.app/)
  * Copyright 2014-2022 The Boosted Authors
  * Copyright 2014-2022 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Utilities v0.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -1164,13 +1164,13 @@
 .bg-success {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
-  color: #000;
+  color: #fff;
 }
 
 .bg-info {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
-  color: #000;
+  color: #fff;
 }
 
 .bg-warning {
@@ -1222,31 +1222,31 @@
 
 .bg-supporting-green {
   --bs-bg-opacity: 1;
-  background-color: #50be87 !important;
+  background-color: #9acd32 !important;
   color: #000;
 }
 
 .bg-supporting-blue {
   --bs-bg-opacity: 1;
-  background-color: #4bb4e6 !important;
+  background-color: #87cefa !important;
   color: #000;
 }
 
 .bg-supporting-yellow {
   --bs-bg-opacity: 1;
-  background-color: #ffd200 !important;
+  background-color: #ff0 !important;
   color: #000;
 }
 
 .bg-supporting-pink {
   --bs-bg-opacity: 1;
-  background-color: #ffb4e6 !important;
+  background-color: #ffe4e1 !important;
   color: #000;
 }
 
 .bg-supporting-purple {
   --bs-bg-opacity: 1;
-  background-color: #a885d8 !important;
+  background-color: #9370db !important;
   color: #000;
 }
 
