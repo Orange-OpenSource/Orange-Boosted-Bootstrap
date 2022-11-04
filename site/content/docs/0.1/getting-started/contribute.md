@@ -17,7 +17,7 @@ Boosted Innovation Cup uses [npm scripts](https://docs.npmjs.com/misc/scripts/) 
 To use our build system and run our documentation locally, you'll need a copy of Boosted Innovation Cup's source files and Node. Follow these steps and you should be ready to rock:
 
 1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Boosted Innovation Cup's sources]({{< param "download.source" >}}) or fork [Boosted's repository]({{< param repo >}}). Before next step, make sure to checkout `main-jd-innovation-cup`.
+2. Fork [Boosted's repository]({{< param repo >}}) and checkout `main-jd-innovation-cup` branch.
 3. Navigate to the root `/Orange-Boosted-Bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/main-jd-innovation-cup/package.json).
 
 When completed, you'll be able to run the various commands provided from the command line.

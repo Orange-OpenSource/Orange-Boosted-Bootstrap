@@ -7,14 +7,6 @@ aliases:
   - "/docs/examples/"
 ---
 
-{{< callout info >}}
-**Some examples are missing here.**
-
-They are tracked in [#410](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410) and will be shipped as soon as possible.
-
-One of the missing examples has priority? Feel free to contact a member of the [Core team]({{< docsref "/about/team" >}}) or add a comment directly [in the corresponding issue](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410) to let us know.
-{{</ callout >}}
-
 {{< list-examples.inline >}}
 {{ range $entry := $.Site.Data.examples -}}
 <div class="row g-lg-5 mb-5 mt-1">

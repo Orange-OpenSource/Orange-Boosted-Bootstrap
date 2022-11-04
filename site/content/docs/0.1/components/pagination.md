@@ -46,7 +46,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link" aria-disabled="true">Previous</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -88,7 +88,7 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link" aria-disabled="true">Previous</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -106,7 +106,7 @@ Or with `.justify-content-end`:
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link" aria-disabled="true">Previous</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -126,7 +126,7 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 {{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+    <li class="page-item disabled"><a class="page-link" aria-disabled="true">Previous</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -152,7 +152,7 @@ Add `.pagination-dark` to the `.pagination` for a dark variant.
 <nav aria-label="Dark page navigation example">
   <ul class="pagination pagination-dark">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link" aria-disabled="true">Previous</a>
     </li>
     <li class="page-item active" aria-current="page">
       <a class="page-link" href="#">1</a>

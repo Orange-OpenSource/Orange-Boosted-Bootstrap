@@ -36,7 +36,7 @@ To convey the active state to assistive technologies, use the `aria-current` att
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -48,7 +48,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -74,7 +74,7 @@ Centered with `.justify-content-center`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -93,7 +93,7 @@ Right-aligned with `.justify-content-end`:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -114,7 +114,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -126,7 +126,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -146,7 +146,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -168,7 +168,7 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -190,14 +190,14 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
       <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" id="nav-tab4" role="tab" aria-selected="false">Tab 4</a>
+      <a class="nav-link disabled" id="nav-tab4" role="tab" aria-selected="false" aria-disabled="true">Tab 4</a>
     </li>
   </ul>
 </div>
 
 <div class="tab-content" id="nav-tabs-content">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist" aria-labelledby="nav-tab1">
-    <ul class="nav nav-tabs nav-tabs-light mt-0">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" aria-labelledby="nav-tab1">
+    <ul class="nav nav-tabs nav-tabs-light mt-0" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
       </li>
@@ -208,7 +208,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" id="nav-linkD" role="tab">Link D</a>
+        <a class="nav-link disabled" aria-disabled="true" id="nav-linkD" role="tab">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0" id="nav-tabs-light-content">
@@ -242,7 +242,7 @@ Take that same HTML, but use `.nav-pills` instead:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -263,7 +263,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -275,7 +275,7 @@ When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -293,7 +293,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -305,7 +305,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
   <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 
 {{< /example >}}
@@ -318,7 +318,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -353,7 +353,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -379,7 +379,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
