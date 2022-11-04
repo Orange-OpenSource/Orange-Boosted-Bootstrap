@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Download
-description: Download Boosted Innovation Cup Innovation Cup to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+description: Include Boosted Innovation Cup via CDN or with your favorite package managers like npm or yarn.
 group: getting-started
 aliases:
   - "/docs/getting-started/download/"

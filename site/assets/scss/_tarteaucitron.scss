@@ -170,7 +170,7 @@
 }
 
 @include tac("Deny", true) {
-  @include button-icon($form-switch-bg-image, $btn-font-size-sm);
+  @include button-icon($form-switch-bg-image, $spacer);
 
   &::before {
     margin-right: $spacer / 4;
