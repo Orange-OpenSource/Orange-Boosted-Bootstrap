@@ -42,8 +42,8 @@
     - name: "Masonry"
       description: "Combine the powers of the Boosted grid and the Masonry layout."
 
-- category: Forms
-  description: "Example that shows a form built with Boosted"
+- category: Pages
+  description: "Complete reusable pages that can be found in the DSM"
   examples:
-    - name: "Form"
+    - name: Form
       description: "How to build a form with Boosted"

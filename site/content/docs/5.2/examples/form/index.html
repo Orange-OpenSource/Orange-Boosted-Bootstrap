@@ -2,116 +2,387 @@
 layout: examples
 title: Form example
 extra_js:
-  - src: "form.js"
+- src: "form.js"
 ---
 
-<main>
-  <h1 class="visually-hidden">How to build a form with Boosted</h1>
-  <div class="container-xxl pt-md-2 pb-md-4">
-  <div class="row">
-    <div class="col-md-8 mx-auto">
-      <form class="needs-validation mb-4 pb-4 pb-md-2" novalidate>
-        <div class="row">
-          <div class="col-12 mb-2">
-            <p class="display-6">
-              <span class="text-primary">*</span> indicates required
-            </p>
-          </div>
-          <div class="col-md-4 col-6 mb-3">
-            <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title</label>
-            <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback"
-              required>
-              <option selected disabled value="" aria-hidden="true">Select a title</option>
-              <option value="1">Miss</option>
-              <option value="2">Ms.</option>
-              <option value="3">Mrs.</option>
-            </select>
-            <div id="selectTitleFeedback" class="invalid-feedback">
-              Please select a valid title.
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="inputFirstName" class="form-label is-required">First name</label>
-              <input type="text" class="form-control" id="inputFirstName" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="inputLastName" id="inputLastNameLabel" class="form-label is-required">Last name</label>
-              <input type="text" class="form-control" id="inputLastName" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="inputEmail" id="inputEmailLabel" class="form-label is-required">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com"
-                aria-labelledby="inputEmailLabel inputEmailFeedback" required>
-              <div id="inputEmailFeedback" class="invalid-feedback">
-                Please provide a valid email.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="selectCountry" id="selectCountryLabel" class="form-label is-required">Country</label>
-              <select class="form-select" id="selectCountry"
-                aria-labelledby="selectCountryLabel selectCountryFeedback" required>
-                <option selected disabled value="" aria-hidden="true">Select a country</option>
-                <option value="1">France</option>
-                <option value="2">Canada</option>
-                <option value="3">USA</option>
-                <option value="4">Australia</option>
-              </select>
-              <div id="selectCountryFeedback" class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="inputCompany" id="inputCompanyLabel" class="form-label is-required">Name of
-                company</label>
-              <input type="text" class="form-control" id="inputCompany" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="selectBusiness" id="selectBusinessLabel" class="form-label is-required">Business
-                type</label>
-              <select class="form-select" id="selectBusiness"
-                aria-labelledby="selectBusinessLabel selectBusinessFeedback" required>
-                <option selected disabled value="" aria-hidden="true">Select a type</option>
-                <option value="1">Sole proprietorship</option>
-                <option value="2">Partnership</option>
-                <option value="3">Corporation</option>
-                <option value="4">Limited liability company</option>
-              </select>
-              <div id="selectBusinessFeedback" class="invalid-feedback">
-                Please select a valid business type.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="textareaMessage" id="textareaMessageLabel" class="form-label is-required">Message</label>
-              <button type="button" class="btn btn-link p-0 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"
-                data-bs-title="Help message for textarea">
-                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem"
-                  focusable="false" aria-hidden="true">
-                  <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#tooltip"></use>
+<body>
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
+      <div class="container-xxl">
+        <!-- Orange brand logo -->
+        <div class="navbar-brand me-auto me-lg-4">
+          <a class="stretched-link" href="#">
+            <img src="/docs/5.2/assets/img/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home"
+              loading="lazy">
+          </a>
+        </div>
+        <!-- Burger menu (visible on small screens) -->
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar with links -->
+        <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          </ul>
+        </div>
+        <!-- Navbar with action icons -->
+        <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false"
+                  class="overflow-visible">
+                  <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#search" />
                 </svg>
-                <span class="visually-hidden">Help message for textarea</span>
-              </button>
-              <textarea class="form-control" id="textareaMessage" rows="5"
-                placeholder="Describe your business and your motivation in becoming on Orange reseller"
-                required></textarea>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false"
+                  class="overflow-visible">
+                  <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#buy" />
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/5.2/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User"
+                  loading="lazy">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Main -->
+  <main class="bd-content order-1">
+    <div class="bg-white title-bar mb-2 mb-md-0">
+      <div class="container-xxl d-block">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h1 class="display-1">Become a resseler</h1>
           </div>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-</main>
+    <div class="container-xxl pt-md-2 pb-md-4">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p class="ll-sm h3 mb-4 pb-0 pb-md-2">You are a professional and wish to resell Orange products to your
+            customers?
+            <br />Please fill the form and we will get back to you shortly.
+          </p>
+          <form class="needs-validation mb-4 pb-4 pb-md-2" novalidate>
+            <div class="row">
+              <div class="col-12">
+                <p class="fw-bold mb-4">
+                  <span class="text-primary">*</span> indicates required
+                </p>
+              </div>
+              <div class="col-md-4 col-6 mb-3">
+                <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title</label>
+                <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback"
+                  required>
+                  <option selected disabled value="" aria-hidden="true">Select a title</option>
+                  <option value="1">Miss</option>
+                  <option value="2">Ms.</option>
+                  <option value="3">Mrs.</option>
+                </select>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div id="selectTitleFeedback" class="invalid-feedback">
+                  Please select a valid title.
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="inputFirstName" id="inputFirstNameLabel" class="form-label is-required">First name</label>
+                  <input type="text" class="form-control" id="inputFirstName"
+                    aria-labelledby="inputFirstNameLabel inputFirstNameFeedback" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="inputFirstNameFeedback" class="invalid-feedback">
+                    Please enter a valid first name.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputLastName" id="inputLastNameLabel" class="form-label is-required">Last name</label>
+                  <input type="text" class="form-control" id="inputLastName"
+                    aria-labelledby="inputLastNameLabel inputLastNameFeedback" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="inputLastNameFeedback" class="invalid-feedback">
+                    Please enter a valid last name.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputEmail" id="inputEmailLabel" class="form-label is-required">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com"
+                    aria-labelledby="inputEmailLabel inputEmailFeedback" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="inputEmailFeedback" class="invalid-feedback">
+                    Please provide a valid email.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="selectCountry" id="selectCountryLabel" class="form-label is-required">Country</label>
+                  <select class="form-select" id="selectCountry"
+                    aria-labelledby="selectCountryLabel selectCountryFeedback" required>
+                    <option selected disabled value="" aria-hidden="true">Select a country</option>
+                    <option value="1">France</option>
+                    <option value="2">Canada</option>
+                    <option value="3">USA</option>
+                    <option value="4">Australia</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="selectCountryFeedback" class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputCompany" id="inputCompanyLabel" class="form-label is-required">Name of
+                    company</label>
+                  <input type="text" class="form-control" id="inputCompany"
+                    aria-labelledby="inputCompanyLabel inputCompanyFeedback" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="inputCompanyFeedback" class="invalid-feedback">
+                    Please enter a valid company name.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="selectBusiness" id="selectBusinessLabel" class="form-label is-required">Business
+                    type</label>
+                  <select class="form-select" id="selectBusiness"
+                    aria-labelledby="selectBusinessLabel selectBusinessFeedback" required>
+                    <option selected disabled value="" aria-hidden="true">Select a type</option>
+                    <option value="1">Sole proprietorship</option>
+                    <option value="2">Partnership</option>
+                    <option value="3">Corporation</option>
+                    <option value="4">Limited liability company</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="selectBusinessFeedback" class="invalid-feedback">
+                    Please select a valid business type.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="textareaMessage" id="textareaMessageLabel" class="form-label is-required">Message</label>
+                  <button type="button" class="btn btn-link p-0 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="Help message for textarea">
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem"
+                      focusable="false" aria-hidden="true">
+                      <use xlink:href="assets/img/boosted-sprite.svg#tooltip"></use>
+                    </svg>
+                    <span class="visually-hidden">Help message for textarea</span>
+                  </button>
+                  <textarea class="form-control" id="textareaMessage" rows="5"
+                    placeholder="Describe your business and your motivation in becoming on Orange reseller"
+                    aria-labelledby="textareaMessageLabel textareaMessageFeedback" required></textarea>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div id="textareaMessageFeedback" class="invalid-feedback">
+                    Please select a valid business type.
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="footer bg-dark navbar-dark">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail5" class="visually-hidden">Email</label>
+          <input type="email" class="form-control text-bg-dark border-dark" id="inputEmail5"
+            placeholder="Enter your email">
+          <button type="submit" class="btn btn-secondary btn-inverse text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter btn-inverse"><span
+              class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook btn-inverse"><span
+              class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram btn-inverse"><span
+              class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span
+              class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span
+              class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span
+              class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span
+              class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span
+              class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span
+              class="visually-hidden">Mail</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion accordion-dark" id="accordion5" aria-label="Sitemap footer 5">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
+                aria-controls="collapseOne5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="true"
+                aria-controls="collapseTwo5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="true"
+                aria-controls="collapseThree5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="true"
+                aria-controls="collapseFour5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"
+              aria-hidden="true">
+              <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#locate"></use>
+            </svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"
+              aria-hidden="true">
+              <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#coverage"></use>
+            </svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"
+              aria-hidden="true">
+              <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#contact"></use>
+            </svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false"
+              aria-hidden="true">
+              <use xlink:href="/docs/5.2/assets/img/boosted-sprite.svg#protection"></use>
+            </svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange 2022</li>
+        <li><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
