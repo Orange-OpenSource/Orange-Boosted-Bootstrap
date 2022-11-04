@@ -53,3 +53,11 @@ Boosted Innovation Cup's `package.json` contains some additional metadata under 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}
 {{< /callout >}}
+
+### yarn
+
+Install Boosted Innovation Cup in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/Boosted):
+
+```sh
+yarn add boosted-innovation-cup@v0.1.0
+```
