@@ -1,6 +1,6 @@
 languageCode:                       "en"
 title:                              "Boosted"
-baseURL:                            "https://boosted.orange.com/innovation-cup"
+baseURL:                            "https://boosted.orange.com"
 
 security:
   enableInlineShortcodes: true
@@ -31,7 +31,7 @@ publishDir:                         "_site"
 module:
   mounts:
     - source:                       dist
-      target:                       static/docs/0.1/dist
+      target:                       static/docs/0.2/dist
     - source:                       site/assets
       target:                       assets
     - source:                       site/content
@@ -42,25 +42,25 @@ module:
       target:                       layouts
     - source:                       site/static
       target:                       static
-    - source:                       site/static/docs/0.1/assets/img/favicons/apple-touch-icon.png
+    - source:                       site/static/docs/0.2/assets/img/favicons/apple-touch-icon.png
       target:                       static/apple-touch-icon.png
-    - source:                       site/static/docs/0.1/assets/img/favicons/favicon.ico
+    - source:                       site/static/docs/0.2/assets/img/favicons/favicon.ico
       target:                       static/favicon.ico
 
       # Boosted mod
     - source:                       node_modules/tarteaucitronjs/tarteaucitron.js
       target:                       assets/js/vendor/tarteaucitron.js
     - source:                       node_modules/tarteaucitronjs/lang
-      target:                       static/docs/0.1/assets/js/lang
+      target:                       static/docs/0.2/assets/js/lang
 
 params:
   subtitle:                         "Boosted Innovation Cup with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
   description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
   authors:                          "Orange and Boosted contributors"
 
-  current_version:                  "0.1.0"
-  current_ruby_version:             "0.1.0"
-  docs_version:                     "0.1"
+  current_version:                  "0.2.0"
+  current_ruby_version:             "0.2.0"
+  docs_version:                     "0.2"
   rfs_version:                      "v9.0.6"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
@@ -68,20 +68,20 @@ params:
   bootstrap:                        "https://getbootstrap.com"
 
   download:
-    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.1.0.zip"
-    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.1.0/boosted-innovation-cup-0.1.0-dist.zip"
-    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.1.0/boosted-innovation-cup-0.1.0-examples.zip"
+    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v0.2.0.zip"
+    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.2.0/boosted-innovation-cup-0.2.0-dist.zip"
+    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v0.2.0/boosted-innovation-cup-0.2.0-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:                            "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/css/boosted.min.css"
-    css_hash:                       "sha384-dWJYvB5mYZVFaLi25o5jut/yCfwx16haEKavruAeQ+xRFWYQIWhOm3lWVB5uEsOq"
-    css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:                   "sha384-FJLWEFhjFQpyqi3zdC53frxFZTfjvxX/g+ajGHt86p/9B/VeGoNLrDF5baroZpQ7"
-    js:                             "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/js/boosted.min.js"
-    js_hash:                        "sha384-Yb/eaIhiWHtC5ZwEitaNdOmkd+aGkBhHzjEnz+hT/9HJ1M1RRoXR/AZRDYX5/nck"
-    js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.1.0/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:                 "sha384-Nz1loFQLXwQQxWaz0kofBD8kwCgVGzOZwbVe2UT3e+G2kXbhq/btnMhKfsFG11la"
+    css:                            "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.2.0/dist/css/boosted.min.css"
+    css_hash:                       "sha384-C0lIBXTYwQ+Y0KEO4aObdBe4EjZtkXboD/YXJFboAgEa80o2GhMcoNy/ulmPlB87"
+    css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.2.0/dist/css/boosted.rtl.min.css"
+    css_rtl_hash:                   "sha384-crEJYpYIb6+hR8s+DB/kpLxXecNW4CesbuDQ5d0zfOdzoWYvZ/YDMmihM0Sk0WVG"
+    js:                             "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.2.0/dist/js/boosted.min.js"
+    js_hash:                        "sha384-KTprGk3P/G9PhvRyQ9N5Jo/xS++LElHoAweU8tWtKgtXO0bIvJlQCcCbJc2Bzzyl"
+    js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted-innovation-cup@0.2.0/dist/js/boosted.bundle.min.js"
+    js_bundle_hash:                 "sha384-9dB2H9dNdTHmEHfXuN4MtK59lBhItgzv4p2GfYpYYA/Wg6YcE/tZLN0tswiyTtp4"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     popper_hash:                    "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"

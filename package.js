@@ -5,7 +5,7 @@
 Package.describe({
   name: 'Orange-OpenSource:Orange-Boosted-Bootstrap', // https://atmospherejs.com/Orange-OpenSource/Orange-Boosted-Bootstrap
   summary: 'Boosted Innovation Cup with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.',
-  version: '0.1.0',
+  version: '0.2.0',
   git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
 })
 

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v0.1.0): orange-navbar.js
+ * Boosted (v0.2.0): orange-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
  * --------------------------------------------------------------------------
  */

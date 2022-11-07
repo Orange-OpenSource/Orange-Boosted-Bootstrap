@@ -1,10 +1,10 @@
 /*!
-  * Boosted v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Boosted v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main-jd-innovation-cup/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap component-functions.js v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Bootstrap component-functions.js v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,7 +20,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/component-functions.js
+   * Bootstrap (v0.2.0): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

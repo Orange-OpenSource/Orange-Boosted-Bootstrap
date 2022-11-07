@@ -1,10 +1,10 @@
 /*!
-  * Boosted v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Boosted v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main-jd-innovation-cup/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Bootstrap v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -36,7 +36,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/index.js
+   * Bootstrap (v0.2.0): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -351,7 +351,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): dom/event-handler.js
+   * Bootstrap (v0.2.0): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -620,7 +620,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): dom/data.js
+   * Bootstrap (v0.2.0): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -672,7 +672,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): dom/manipulator.js
+   * Bootstrap (v0.2.0): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -742,7 +742,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/config.js
+   * Bootstrap (v0.2.0): util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -803,7 +803,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): base-component.js
+   * Bootstrap (v0.2.0): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -811,7 +811,7 @@
    * Constants
    */
 
-  const VERSION = '0.1.0';
+  const VERSION = '0.2.0';
   /**
    * Class definition
    */
@@ -882,7 +882,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/component-functions.js
+   * Bootstrap (v0.2.0): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -908,7 +908,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): alert.js
+   * Bootstrap (v0.2.0): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -988,7 +988,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): button.js
+   * Bootstrap (v0.2.0): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1050,7 +1050,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): dom/selector-engine.js
+   * Bootstrap (v0.2.0): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1121,7 +1121,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/swipe.js
+   * Bootstrap (v0.2.0): util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1257,7 +1257,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): carousel.js
+   * Bootstrap (v0.2.0): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1858,7 +1858,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): collapse.js
+   * Bootstrap (v0.2.0): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2150,7 +2150,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): dropdown.js
+   * Bootstrap (v0.2.0): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2582,7 +2582,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/scrollBar.js
+   * Bootstrap (v0.2.0): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2701,7 +2701,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/backdrop.js
+   * Bootstrap (v0.2.0): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2847,7 +2847,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/focustrap.js
+   * Bootstrap (v0.2.0): util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2956,7 +2956,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): modal.js
+   * Bootstrap (v0.2.0): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3332,7 +3332,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): offcanvas.js
+   * Bootstrap (v0.2.0): offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3606,7 +3606,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v0.1.0): orange-navbar.js
+   * Boosted (v0.2.0): orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3688,7 +3688,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/sanitizer.js
+   * Bootstrap (v0.2.0): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3793,7 +3793,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): util/template-factory.js
+   * Bootstrap (v0.2.0): util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3951,7 +3951,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): tooltip.js
+   * Bootstrap (v0.2.0): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4577,7 +4577,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): popover.js
+   * Bootstrap (v0.2.0): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4660,7 +4660,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v0.1.0): quantity-selector.js
+   * Boosted (v0.2.0): quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4796,7 +4796,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): scrollspy.js
+   * Bootstrap (v0.2.0): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5087,7 +5087,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): tab.js
+   * Bootstrap (v0.2.0): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5400,7 +5400,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): toast.js
+   * Bootstrap (v0.2.0): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5929,7 +5929,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v0.1.0): index.umd.js
+   * Bootstrap (v0.2.0): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

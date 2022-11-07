@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/innovation-cup/">
-    <img src="https://boosted.orange.com/innovation-cup/docs/0.1/assets/brand/boosted-innovation-cup-logo.png" alt="Boosted Innovation Cup" width="50" height="50">
+    <img src="https://boosted.orange.com/innovation-cup/docs/0.2/assets/brand/boosted-innovation-cup-logo.png" alt="Boosted Innovation Cup" width="50" height="50">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/innovation-cup/docs/0.1/"><strong>Visit Boosted</strong></a>
+  <a href="https://boosted.orange.com/innovation-cup/docs/0.2/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
@@ -37,10 +37,10 @@
 Several quick start options are available:
 
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v0.1.0`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v0.1.0`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v0.2.0`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v0.2.0`
 
-Read the [Getting started page](https://boosted.orange.com/innovation-cup/docs/0.1/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+Read the [Getting started page](https://boosted.orange.com/innovation-cup/docs/0.2/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
 
 
 ## Status

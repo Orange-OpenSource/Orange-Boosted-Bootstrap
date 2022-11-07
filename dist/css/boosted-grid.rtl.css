@@ -1,25 +1,25 @@
 /*!
- * Boosted Grid v0.1.0(https://deploy-preview-1536--boosted.netlify.app/)
+ * Boosted Grid v0.2.0(https://boosted.orange.com/innovation-cup/)
  * Copyright 2014-2022 The Boosted Authors
  * Copyright 2014-2022 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v0.1.0 (https://getbootstrap.com/)
+ * Bootstrap Grid v0.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
   --bs-blue: #4170d8;
-  --bs-indigo: #9370db;
-  --bs-purple: #9370db;
-  --bs-pink: #ffe4e1;
-  --bs-red: #e32800;
-  --bs-orange: #63a4ff;
+  --bs-indigo: #b181d8;
+  --bs-purple: #b181d8;
+  --bs-pink: #ffabd4;
+  --bs-red: #ff2828;
+  --bs-orange: #5093ff;
   --bs-yellow: #fc0;
-  --bs-green: #328532;
-  --bs-teal: #9acd32;
-  --bs-cyan: #87cefa;
+  --bs-green: #3baa3c;
+  --bs-teal: #4fc887;
+  --bs-cyan: #71c2f6;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #999;
@@ -33,20 +33,20 @@
   --bs-gray-700: #666;
   --bs-gray-800: #595959;
   --bs-gray-900: #333;
-  --bs-primary: #63a4ff;
+  --bs-primary: #5093ff;
   --bs-secondary: #000;
-  --bs-success: #328532;
+  --bs-success: #3baa3c;
   --bs-info: #4170d8;
   --bs-warning: #fc0;
-  --bs-danger: #e32800;
+  --bs-danger: #ff2828;
   --bs-light: #ccc;
   --bs-dark: #000;
-  --bs-primary-rgb: 99, 164, 255;
+  --bs-primary-rgb: 80, 147, 255;
   --bs-secondary-rgb: 0, 0, 0;
-  --bs-success-rgb: 50, 133, 50;
+  --bs-success-rgb: 59, 170, 60;
   --bs-info-rgb: 65, 112, 216;
   --bs-warning-rgb: 255, 204, 0;
-  --bs-danger-rgb: 227, 40, 0;
+  --bs-danger-rgb: 255, 40, 40;
   --bs-light-rgb: 204, 204, 204;
   --bs-dark-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
@@ -56,8 +56,8 @@
   --o-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
   --o-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --o-check-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z'/%3e%3c/svg%3e");
-  --o-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23328532'%3e%3cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3e%3c/svg%3e");
-  --o-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e32800'%3e%3cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/%3e%3c/svg%3e");
+  --o-success-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233baa3c'%3e%3cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3e%3c/svg%3e");
+  --o-error-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff2828'%3e%3cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/%3e%3c/svg%3e");
   --bs-font-sans-serif: "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -88,7 +88,7 @@
 [class*=-dark]:not(.border-dark):not(.text-dark),
 [class*=bg-secondary] {
   --bs-link-color: #fff;
-  --bs-link-hover-color: #63a4ff;
+  --bs-link-hover-color: #5093ff;
   --o-caption-color: #fff;
   --bs-code-color: #999;
   --bs-highlight-color: #000;
@@ -2421,7 +2421,7 @@
 .bg-success {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
-  color: #fff;
+  color: #000;
 }
 
 .bg-info {
@@ -2439,7 +2439,7 @@
 .bg-danger {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
-  color: #fff;
+  color: #000;
 }
 
 .bg-light {
@@ -2479,31 +2479,31 @@
 
 .bg-supporting-green {
   --bs-bg-opacity: 1;
-  background-color: #9acd32 !important;
+  background-color: #4fc887 !important;
   color: #000;
 }
 
 .bg-supporting-blue {
   --bs-bg-opacity: 1;
-  background-color: #87cefa !important;
+  background-color: #71c2f6 !important;
   color: #000;
 }
 
 .bg-supporting-yellow {
   --bs-bg-opacity: 1;
-  background-color: #ff0 !important;
+  background-color: #fee100 !important;
   color: #000;
 }
 
 .bg-supporting-pink {
   --bs-bg-opacity: 1;
-  background-color: #ffe4e1 !important;
+  background-color: #ffabd4 !important;
   color: #000;
 }
 
 .bg-supporting-purple {
   --bs-bg-opacity: 1;
-  background-color: #9370db !important;
+  background-color: #b181d8 !important;
   color: #000;
 }
 

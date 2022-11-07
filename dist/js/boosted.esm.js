@@ -1,10 +1,10 @@
 /*!
-  * Boosted v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Boosted v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main-jd-innovation-cup/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v0.1.0 (https://deploy-preview-1536--boosted.netlify.app)
+  * Bootstrap v0.2.0 (https://boosted.orange.com/innovation-cup)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -324,7 +324,7 @@ import * as Popper from '@popperjs/core';
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/index.js
+ * Bootstrap (v0.2.0): util/index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -639,7 +639,7 @@ const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): dom/event-handler.js
+ * Bootstrap (v0.2.0): dom/event-handler.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -908,7 +908,7 @@ function hydrateObj(obj, meta) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): dom/data.js
+ * Bootstrap (v0.2.0): dom/data.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -960,7 +960,7 @@ const Data = {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): dom/manipulator.js
+ * Bootstrap (v0.2.0): dom/manipulator.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1030,7 +1030,7 @@ const Manipulator = {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/config.js
+ * Bootstrap (v0.2.0): util/config.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1091,7 +1091,7 @@ class Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): base-component.js
+ * Bootstrap (v0.2.0): base-component.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1099,7 +1099,7 @@ class Config {
  * Constants
  */
 
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 /**
  * Class definition
  */
@@ -1170,7 +1170,7 @@ class BaseComponent extends Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/component-functions.js
+ * Bootstrap (v0.2.0): util/component-functions.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1196,7 +1196,7 @@ const enableDismissTrigger = (component, method = 'hide') => {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): alert.js
+ * Bootstrap (v0.2.0): alert.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1276,7 +1276,7 @@ defineJQueryPlugin(Alert);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): button.js
+ * Bootstrap (v0.2.0): button.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1338,7 +1338,7 @@ defineJQueryPlugin(Button);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): dom/selector-engine.js
+ * Bootstrap (v0.2.0): dom/selector-engine.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1409,7 +1409,7 @@ const SelectorEngine = {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/swipe.js
+ * Bootstrap (v0.2.0): util/swipe.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1545,7 +1545,7 @@ class Swipe extends Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): carousel.js
+ * Bootstrap (v0.2.0): carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2146,7 +2146,7 @@ defineJQueryPlugin(Carousel);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): collapse.js
+ * Bootstrap (v0.2.0): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2438,7 +2438,7 @@ defineJQueryPlugin(Collapse);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): dropdown.js
+ * Bootstrap (v0.2.0): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2870,7 +2870,7 @@ defineJQueryPlugin(Dropdown);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/scrollBar.js
+ * Bootstrap (v0.2.0): util/scrollBar.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2989,7 +2989,7 @@ class ScrollBarHelper {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/backdrop.js
+ * Bootstrap (v0.2.0): util/backdrop.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3135,7 +3135,7 @@ class Backdrop extends Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/focustrap.js
+ * Bootstrap (v0.2.0): util/focustrap.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3244,7 +3244,7 @@ class FocusTrap extends Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): modal.js
+ * Bootstrap (v0.2.0): modal.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3620,7 +3620,7 @@ defineJQueryPlugin(Modal);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): offcanvas.js
+ * Bootstrap (v0.2.0): offcanvas.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3894,7 +3894,7 @@ defineJQueryPlugin(Offcanvas);
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v0.1.0): orange-navbar.js
+ * Boosted (v0.2.0): orange-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3976,7 +3976,7 @@ defineJQueryPlugin(OrangeNavbar);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/sanitizer.js
+ * Bootstrap (v0.2.0): util/sanitizer.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4081,7 +4081,7 @@ function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): util/template-factory.js
+ * Bootstrap (v0.2.0): util/template-factory.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4239,7 +4239,7 @@ class TemplateFactory extends Config {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): tooltip.js
+ * Bootstrap (v0.2.0): tooltip.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4865,7 +4865,7 @@ defineJQueryPlugin(Tooltip);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): popover.js
+ * Bootstrap (v0.2.0): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4948,7 +4948,7 @@ defineJQueryPlugin(Popover);
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v0.1.0): quantity-selector.js
+ * Boosted (v0.2.0): quantity-selector.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main-jd-innovation-cup/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5084,7 +5084,7 @@ defineJQueryPlugin(QuantitySelector);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): scrollspy.js
+ * Bootstrap (v0.2.0): scrollspy.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5375,7 +5375,7 @@ defineJQueryPlugin(ScrollSpy);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): tab.js
+ * Bootstrap (v0.2.0): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5688,7 +5688,7 @@ defineJQueryPlugin(Tab);
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v0.1.0): toast.js
+ * Bootstrap (v0.2.0): toast.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
