@@ -23,7 +23,7 @@
     },
     transformItems(items) {
       return items.map(item => {
-        const liveUrl = 'https://deploy-preview-1536--boosted.netlify.app/'
+        const liveUrl = 'https://boosted.orange.com/innovation-cup/'
 
         item.url = window.location.origin.startsWith(liveUrl) ?
           // On production, return the result as is

@@ -1,6 +1,6 @@
 languageCode:                       "en"
 title:                              "Boosted"
-baseURL:                            "https://deploy-preview-1536--boosted.netlify.app"
+baseURL:                            "https://boosted.orange.com/innovation-cup"
 
 security:
   enableInlineShortcodes: true
