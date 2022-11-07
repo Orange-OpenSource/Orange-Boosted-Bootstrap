@@ -107,7 +107,7 @@
     --#{$prefix}footer-gap: #{$footer-gap-xl};
     // scss-docs-end footer-terms-css-vars
 
-    font-size: $footer-terms-font-size;
+    font-size: $footer-font-size-sm;
   }
 
   @include media-breakpoint-up(md) {
