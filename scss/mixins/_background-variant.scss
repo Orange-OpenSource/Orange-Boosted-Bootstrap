@@ -9,7 +9,7 @@
     background-color: $color !important;
 
     @if $contrast != $black {
-      a {
+      a:not(:hover) {
         color: $contrast;
       }
     }
