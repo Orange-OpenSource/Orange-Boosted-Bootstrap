@@ -34,6 +34,7 @@
 - [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
 - [ ] My code follows the code style of the project _(using `npm run lint`)_
 - [ ] My change introduces changes to the documentation
+- [ ] My change introduces changes to the migration guide
 - [ ] I have updated the documentation accordingly
 - [ ] I have added tests to cover my changes
 - [ ] All new and existing tests passed
