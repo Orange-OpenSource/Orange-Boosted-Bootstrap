@@ -1,3 +1,5 @@
+@use "sass:list"; // Boosted mod: needed by $carousel-indicator-active-radius with $enable-rounded: true
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -1896,7 +1898,7 @@ $carousel-indicator-transition:      null !default;
 // Boosted mod
 $carousel-indicator-hover-scale:        1.5 !default;
 $carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
-$carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
+$carousel-indicator-active-radius:      0 100% 100% list.slash(0, 50%) !default;
 $carousel-indicator-animation-duration: 5000ms !default;
 $carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;

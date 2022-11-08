@@ -17,6 +17,7 @@
 // scss-docs-start border-radius-mixins
 @mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
   @if $enable-rounded {
+    @debug $radius;
     border-radius: valid-radius($radius);
   }
   @else if $fallback-border-radius != false {
