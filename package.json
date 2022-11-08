@@ -150,7 +150,7 @@
     "sirv-cli": "^2.0.2",
     "stylelint": "^14.13.0",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
-    "tarteaucitronjs": "^1.9.9",
+    "tarteaucitronjs": "^1.9.7",
     "terser": "^5.15.0",
     "vnu-jar": "^22.9.29"
   },
