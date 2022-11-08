@@ -141,6 +141,8 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 ### Examples
 
+- <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
+
 - <span class="badge bg-success">New</span> There is a new RTL section in the examples.
 
 - **RTL**
