@@ -103,9 +103,13 @@ Carousel progress indicator is paused under multiple conditions:
 {{< added-in "5.2.0" >}}
 
 Adding a pause and play button is recommended to setup an accessible carousel.
-This `button` must immediately follow your carousel and have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
+This `button` must have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
 
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
+
+{{< callout warning >}}
+For accessibility purposes, the pause/play button must be placed before the carousel.
+{{< /callout >}}
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
