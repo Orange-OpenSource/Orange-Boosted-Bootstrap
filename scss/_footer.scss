@@ -106,8 +106,6 @@
     --#{$prefix}footer-padding-bottom: #{$footer-terms-padding-bottom};
     --#{$prefix}footer-gap: #{$footer-gap-xl};
     // scss-docs-end footer-terms-css-vars
-
-    font-size: $footer-font-size-sm;
   }
 
   @include media-breakpoint-up(md) {
