@@ -108,7 +108,7 @@ This `button` must have the custom `data-bs-control="play-button"` attribute. In
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
 
 {{< callout warning >}}
-For accessibility purposes, the pause/play button must be placed before the carousel.
+For accessibility purposes, the pause/play button should be placed before the carousel.
 {{< /callout >}}
 
 {{< example >}}
