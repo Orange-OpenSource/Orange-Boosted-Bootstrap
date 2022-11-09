@@ -139,6 +139,12 @@ Button dropdowns work with buttons of all sizes, including default and split dro
   </ul>
 </div>
 ```
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This small variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 <div class="bd-example">
   <div class="btn-group">
@@ -263,6 +269,13 @@ Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will app
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="dropdown-center">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -338,6 +351,13 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 ### Dropup centered
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropup-center dropup">
@@ -696,6 +716,13 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
@@ -710,6 +737,13 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -769,6 +803,13 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown me-1">
@@ -800,6 +841,11 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 ### Auto close behavior
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+The variants Clickable outside, Clickable inside and Manual close can not be used because featuring a single selection, they do no respect the Orange Design System specifications. They can be used only if featuring multiple selections.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-group">

@@ -256,6 +256,12 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These screen width buttons can not be used on desktop screens because they do not respect the Orange Design System specifications.
+For the correct design, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="d-grid gap-2">
   <button class="btn btn-primary" type="button">Button</button>
@@ -297,6 +303,13 @@ The button plugin allows you to create simple on/off toggle buttons.
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant with only one toggle button can not be used because it does not respect the Orange Design System specifications.
+
+**Watch out**: The component named "toggle buttons" in Boosted is not the same component as the one in ODS which behaves like a radio button.
+{{< /ods-incompatibility-alert >}}
 
 ### Toggle states
 

@@ -62,6 +62,13 @@ Hover over the links below to see tooltips:
 
 You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example class="tooltip-demo" stackblitz_add_js="true" >}}

@@ -10,6 +10,25 @@ aliases:
   - "/docs/getting-started/introduction/"
 toc: true
 ---
+## About Orange Brand
+
+As Boosted is based on/inherited from Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
+
+Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't.Those later ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
+
+As for technical reasons we have to keep them in/we can't remove them from this documentation, we tagged them with informational design callouts to inform you of what can be used or not from an Orange design point of view.
+Thanks for taking their information into account.
+
+These callouts look like that (e.g.: scrollspy component callout):
+
+{{< ods-incompatibility-alert >}}
+This navbar version of the Scrollspy component is not compatible with the Orange Design System.
+
+Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+{{< /ods-incompatibility-alert >}}
+
+
+**Note** : The entire Boosted doc is preserved and enhanced when necessary with Orange brand specifics, i.e. [navbar](https://boosted.orange.com/docs/4.3/components/navbar/) page contains unsupported features, check out [navbar orange](https://boosted.orange.com/docs/4.3/components/navbar-orange/) page to find out what to use.
 
 ## Quick start
 

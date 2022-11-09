@@ -66,6 +66,13 @@ By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can 
 
 More complex layouts can also be created with the grid system.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+The browser generated appearance of the `<select>` dropdown menu does not respect the Orange Design System and cannot be changed due to browser limitations.
+
+For the correct appearance, refer to the Boosted [Dropdowns]({{< docsref "/components/dropdowns" >}}) component. Be aware that this Dropdowns component, because using an `<ul>` tag, can not be a replacement here for technical and accessibility reasons.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-6">
@@ -118,6 +125,13 @@ More complex layouts can also be created with the grid system.
 Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
 
 At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form>
@@ -174,6 +188,13 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <!-- Boosted mod: no .col-form-label-sm -->
 {{< example >}}
 <div class="row mb-3">
@@ -211,6 +232,13 @@ As shown in the previous examples, our grid system allows you to place any numbe
 ## Auto-sizing
 
 The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">
@@ -289,6 +317,13 @@ You can then remix that once again with size-specific column classes.
 ## Inline forms
 
 Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-check` align properly.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">

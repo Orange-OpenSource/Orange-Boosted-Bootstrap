@@ -14,6 +14,11 @@ Badges scale to match the size of the immediate parent element by using relative
 
 ### Headings
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component can not be used because it does not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
 <h2>Example heading <span class="badge bg-secondary">New</span></h2>
@@ -26,6 +31,11 @@ Badges scale to match the size of the immediate parent element by using relative
 ### Buttons
 
 Badges can be used as part of links or buttons to provide a counter.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component can not be used because it does not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -42,6 +52,13 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 <!-- Boosted mod: replace the button with a link with an icon because notifiers are only authorized with icons -->
 
 Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component can be used **only** inside a header component. For the correct design, please refer to our [Boosted navbars examples](http://localhost:9001/docs/5.2/examples/navbars/).
+
+For other usages, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <a href="#" class="position-relative">
@@ -80,6 +97,13 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 ## Pill badges
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component can not be used because it does not exist in the Orange Design System specifications.
+
+Instead, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 {{< badge.inline >}}

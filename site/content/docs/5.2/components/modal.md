@@ -244,6 +244,13 @@ When backdrop is set to static, the modal will not close when clicking outside o
 
 When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -412,6 +419,13 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 Utilize the Boosted grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <div class="modal fade" id="gridSystemModal" tabindex="-1" aria-labelledby="gridModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -498,6 +512,13 @@ Have a bunch of buttons that all trigger the same modal with slightly different 
 
 Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
@@ -553,6 +574,13 @@ exampleModal.addEventListener('show.bs.modal', event => {
 ### Toggle between modals
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example >}}
@@ -702,6 +730,14 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-xl-down` | `1280px` |
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>

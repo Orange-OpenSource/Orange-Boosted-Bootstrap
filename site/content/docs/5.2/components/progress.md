@@ -49,6 +49,13 @@ Boosted provides a handful of [utilities for setting width]({{< docsref "/utilit
 
 Add labels to your progress bars by placing text within the `.progress-bar`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="progress">
   <div class="progress-bar" role="progressbar"  aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -58,6 +65,13 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 ## Height
 
 We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+The 1px height variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="progress" style="height: 1px;">
@@ -87,6 +101,13 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 
 Use background utility classes to change the appearance of individual progress bars.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These backgrounds color variants can not be used because they do not respect the Orange Design System specifications. The only background color to use only is #ff7900.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="progress">
   <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -110,6 +131,13 @@ Use background utility classes to change the appearance of individual progress b
 
 Include multiple progress bars in a progress component if you need.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-label="Segment one" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
@@ -121,6 +149,13 @@ Include multiple progress bars in a progress component if you need.
 ## Striped
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="progress">
@@ -143,6 +178,13 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 ## Animated stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="progress">

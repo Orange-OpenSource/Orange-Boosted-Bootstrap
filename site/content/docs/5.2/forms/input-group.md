@@ -12,6 +12,13 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">@</span>
@@ -101,6 +108,13 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used with this design because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="input-group">
   <span class="input-group-text">First and last name</span>
@@ -112,6 +126,13 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 ## Multiple addons
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -154,6 +175,13 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {{< /example >}}
 
 ## Buttons with dropdowns
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -241,6 +269,13 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These 3 first form variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupSelect01">Options</label>
@@ -284,6 +319,13 @@ Input groups include support for custom selects and custom file inputs. Browser 
 {{< /example >}}
 
 ### Custom file input
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These form variants can not be used because they do not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">

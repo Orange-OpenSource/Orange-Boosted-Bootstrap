@@ -52,6 +52,11 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct `margin` and `padding`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This input readonly plain text element can not be used with this design in your forms because it does no respect the Orange Design System specifications. If you really need it, before using ask the Boosted team on Mattermost to have it modified by one of its designers.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
   <div class="mb-3 row">
     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>

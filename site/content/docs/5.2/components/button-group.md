@@ -40,6 +40,13 @@ These classes can also be added to groups of links, as an alternative to the [`.
 
 ## Mixed styles
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to the [buttons standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) component on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
   <button type="button" class="btn btn-danger">Left</button>
@@ -53,6 +60,15 @@ These classes can also be added to groups of links, as an alternative to the [`.
 ## Checkbox and radio button groups
 
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This checkbox variant can not be used because it does not respect the Orange Design System specifications.
+
+Instead use Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) components.
+
+For the correct design, you can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) component on on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -83,6 +99,11 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 ## Button toolbar
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -161,6 +182,11 @@ Instead of applying button sizing classes to every button in a group, just add `
 
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant can not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
   <button type="button" class="btn btn-secondary">1</button>
@@ -182,6 +208,11 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 ## Vertical variation
 
 Make a set of buttons appear vertically stacked rather than horizontally.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants, split buttons included, can not be used because they do not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

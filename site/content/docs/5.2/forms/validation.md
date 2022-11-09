@@ -36,6 +36,13 @@ For custom Boosted form validation messages, you'll need to add the `novalidate`
 
 Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
@@ -115,6 +122,15 @@ Not interested in custom validation feedback messages or writing JavaScript to c
 
 While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+To add an alert message to an input field, use the [Alert]({{< docsref "/components/alerts" >}}).
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
@@ -168,6 +184,13 @@ We recommend using client-side validation, but in case you require server-side v
 For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional form text).
 
 To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant can not be used because it does not respect the Orange Design System specifications.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form class="row g-3">

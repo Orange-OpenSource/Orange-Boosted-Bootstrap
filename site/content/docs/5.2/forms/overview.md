@@ -77,6 +77,14 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This inline version of the form text input component can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
+
 {{< example >}}
 <div class="row g-3 align-items-center">
   <div class="col-auto">
@@ -139,6 +147,13 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
 ## Required field
 
 Use the `.is-required` class on `label` to add a `*` symbol after it.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+The browser generated appearance of the `<select>` dropdown menu does not respect the Orange Design System and cannot be changed due to browser limitations.
+
+For the correct appearance, refer to the Boosted [Dropdowns]({{< docsref "/components/dropdowns" >}}) component. Be aware that this Dropdowns component, because using an `<ul>` tag, can not be a replacement here for technical and accessibility reasons.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form>
