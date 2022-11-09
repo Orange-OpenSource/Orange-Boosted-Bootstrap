@@ -24,12 +24,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
 
       - name: Set up npm cache
-        uses: actions/cache@v3.0.8
+        uses: actions/cache@v3.0.11
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
@@ -46,10 +46,6 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "_site/"
-          flags: "--snapshot-files ./docs/**/components/**/*.html,./docs/**/forms/**/*.html"
-          verbose: true
+        run: npx percy snapshot _site/ --include '/docs/**/components/**/*.html' --include '/docs/**/forms/**/*.html'
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"

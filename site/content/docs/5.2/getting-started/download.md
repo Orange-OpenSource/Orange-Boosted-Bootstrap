@@ -3,6 +3,8 @@ layout: docs
 title: Download
 description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
 group: getting-started
+aliases:
+  - "/docs/getting-started/download/"
 toc: true
 ---
 
@@ -65,7 +67,7 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
 
 ```sh
-npm install boosted@v5.2.0
+npm install boosted@v5.2.1
 ```
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted's plugins onto a `boosted` object.
@@ -74,7 +76,7 @@ The `boosted` module itself exports all of our plugins. You can manually load Bo
 Boosted's `package.json` contains some additional metadata under the following keys:
 
 - `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
-- `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
+- `style` - path to Boosted's non-minified CSS that's been compiled using the default settings (no customization)
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}
@@ -85,7 +87,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
 
 ```sh
-yarn add boosted@v5.2.0
+yarn add boosted@v5.2.1
 ```
 
 ### Composer
