@@ -3,6 +3,8 @@ layout: docs
 title: Buttons
 description: Use Boosted's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 group: components
+aliases:
+  - "/docs/components/buttons/"
 toc: true
 ---
 
@@ -125,11 +127,11 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 {{< scss-docs name="social-buttons" file="scss/_variables.scss" >}}
 
-## Dark background
+## Dark variant
 
 {{< added-in "5.2.0" >}}
 
-To get the inverted button behavior, simply add `.btn-inverse` to a `<button>` or `<a>`.
+Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< example class="bg-dark" >}}
 {{< buttons.inline >}}

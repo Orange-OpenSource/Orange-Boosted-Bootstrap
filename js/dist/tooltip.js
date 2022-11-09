@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.1 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap tooltip.js v5.2.1 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -42,7 +42,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): tooltip.js
+   * Bootstrap (v5.2.1): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -131,7 +131,7 @@
 
       this._isEnabled = true;
       this._timeout = 0;
-      this._isHovered = false;
+      this._isHovered = null;
       this._activeTrigger = {};
       this._popper = null;
       this._templateFactory = null;
@@ -204,6 +204,10 @@
         this.tip.remove();
       }
 
+      if (this._config.originalTitle) {
+        this._element.setAttribute('title', this._config.originalTitle);
+      }
+
       this._disposePopper();
 
       super.dispose();
@@ -264,13 +268,13 @@
       }
 
       const complete = () => {
-        const previousHoverState = this._isHovered;
-        this._isHovered = false;
         EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_SHOWN));
 
-        if (previousHoverState) {
+        if (this._isHovered === false) {
           this._leave();
         }
+
+        this._isHovered = false;
       };
 
       this._queueCallback(complete, this.tip, this._isAnimated());
@@ -301,7 +305,7 @@
       this._activeTrigger[TRIGGER_CLICK] = false;
       this._activeTrigger[TRIGGER_FOCUS] = false;
       this._activeTrigger[TRIGGER_HOVER] = false;
-      this._isHovered = false;
+      this._isHovered = null; // it is a trick to support manual triggering
 
       const complete = () => {
         if (this._isWithActiveTrigger()) {

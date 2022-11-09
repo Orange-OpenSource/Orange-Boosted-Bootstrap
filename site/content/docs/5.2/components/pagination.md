@@ -3,6 +3,8 @@ layout: docs
 title: Pagination
 description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
 group: components
+aliases:
+  - "/docs/components/pagination/"
 toc: true
 ---
 
@@ -141,6 +143,30 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
   </ul>
 </nav>
 {{< /example >}}
+
+## Dark variant
+
+{{< added-in "5.2.1" >}}
+
+Add `.pagination-dark` to the `.pagination` for a dark variant.
+
+{{< example class="bg-dark" >}}
+<nav aria-label="Dark page navigation example">
+  <ul class="pagination pagination-dark">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+{{< /example >}}
 <!-- End mod -->
 
 ## CSS
@@ -153,9 +179,19 @@ As part of Boosted's evolving CSS variables approach, pagination now uses local 
 
 {{< scss-docs name="pagination-css-vars" file="scss/_pagination.scss" >}}
 
+Customization through CSS variables can be seen on the `.pagination-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="pagination-dark-css-vars" file="scss/_pagination.scss" >}}
+
 ### Sass variables
 
+Variables for all paginations:
+
 {{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
+
+Variables for the [dark pagination](#dark-variant):
+
+{{< scss-docs name="pagination-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
 

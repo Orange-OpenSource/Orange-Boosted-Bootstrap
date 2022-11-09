@@ -3,6 +3,8 @@ layout: docs
 title: Navbar
 description: Documentation and examples for Boosted's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
+aliases:
+  - "/docs/components/navbar/"
 toc: true
 ---
 
@@ -562,7 +564,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
@@ -621,7 +623,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn btn-primary btn-inverse" type="submit">Search</button>
         </form>
@@ -645,11 +647,19 @@ Some additional CSS variables are also present on `.navbar-nav`:
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
+Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
+
 ### Sass variables
+
+Variables for all navbars:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+Variables for the [dark navbar](#color-schemes):
+
+{{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass loop
 

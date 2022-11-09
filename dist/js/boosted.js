@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.1 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap v5.2.1 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -36,7 +36,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/index.js
+   * Bootstrap (v5.2.1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -351,7 +351,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/event-handler.js
+   * Bootstrap (v5.2.1): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -620,7 +620,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/data.js
+   * Bootstrap (v5.2.1): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -672,7 +672,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/manipulator.js
+   * Bootstrap (v5.2.1): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -742,7 +742,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/config.js
+   * Bootstrap (v5.2.1): util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -803,7 +803,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): base-component.js
+   * Bootstrap (v5.2.1): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -811,7 +811,7 @@
    * Constants
    */
 
-  const VERSION = '5.2.0';
+  const VERSION = '5.2.1';
   /**
    * Class definition
    */
@@ -882,7 +882,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/component-functions.js
+   * Bootstrap (v5.2.1): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -908,7 +908,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): alert.js
+   * Bootstrap (v5.2.1): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -988,7 +988,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): button.js
+   * Bootstrap (v5.2.1): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1050,7 +1050,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/selector-engine.js
+   * Bootstrap (v5.2.1): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1121,7 +1121,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/swipe.js
+   * Bootstrap (v5.2.1): util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1257,7 +1257,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): carousel.js
+   * Bootstrap (v5.2.1): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1858,7 +1858,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): collapse.js
+   * Bootstrap (v5.2.1): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2150,7 +2150,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dropdown.js
+   * Bootstrap (v5.2.1): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2220,8 +2220,9 @@
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
+      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
 
-      this._menu = SelectorEngine.findOne(SELECTOR_MENU, this._parent);
+      this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0];
       this._inNavbar = this._detectNavbar();
     } // Getters
 
@@ -2537,8 +2538,9 @@
         return;
       }
 
-      event.preventDefault();
-      const getToggleButton = SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
+      event.preventDefault(); // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
+
+      const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0];
       const instance = Dropdown.getOrCreateInstance(getToggleButton);
 
       if (isUpOrDownEvent) {
@@ -2580,7 +2582,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/scrollBar.js
+   * Bootstrap (v5.2.1): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2699,7 +2701,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/backdrop.js
+   * Bootstrap (v5.2.1): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2845,7 +2847,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/focustrap.js
+   * Bootstrap (v5.2.1): util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2954,7 +2956,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): modal.js
+   * Bootstrap (v5.2.1): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2973,6 +2975,7 @@
   const EVENT_SHOW$4 = `show${EVENT_KEY$6}`;
   const EVENT_SHOWN$4 = `shown${EVENT_KEY$6}`;
   const EVENT_RESIZE$1 = `resize${EVENT_KEY$6}`;
+  const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY$6}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$6}`;
   const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$6}`;
   const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$6}${DATA_API_KEY$4}`;
@@ -3165,20 +3168,22 @@
         }
       });
       EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
-        if (event.target !== event.currentTarget) {
-          // click is inside modal-dialog
-          return;
-        }
+        EventHandler.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+          // a bad trick to segregate clicks that may start inside dialog but end outside, and avoid listen to scrollbar clicks
+          if (this._dialog.contains(event.target) || this._dialog.contains(event2.target)) {
+            return;
+          }
 
-        if (this._config.backdrop === 'static') {
-          this._triggerBackdropTransition();
+          if (this._config.backdrop === 'static') {
+            this._triggerBackdropTransition();
 
-          return;
-        }
+            return;
+          }
 
-        if (this._config.backdrop) {
-          this.hide();
-        }
+          if (this._config.backdrop) {
+            this.hide();
+          }
+        });
       });
     }
 
@@ -3327,7 +3332,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): offcanvas.js
+   * Bootstrap (v5.2.1): offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3601,7 +3606,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.0): orange-navbar.js
+   * Boosted (v5.2.1): orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3683,7 +3688,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/sanitizer.js
+   * Bootstrap (v5.2.1): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3788,7 +3793,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/template-factory.js
+   * Bootstrap (v5.2.1): util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3946,7 +3951,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): tooltip.js
+   * Bootstrap (v5.2.1): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4035,7 +4040,7 @@
 
       this._isEnabled = true;
       this._timeout = 0;
-      this._isHovered = false;
+      this._isHovered = null;
       this._activeTrigger = {};
       this._popper = null;
       this._templateFactory = null;
@@ -4108,6 +4113,10 @@
         this.tip.remove();
       }
 
+      if (this._config.originalTitle) {
+        this._element.setAttribute('title', this._config.originalTitle);
+      }
+
       this._disposePopper();
 
       super.dispose();
@@ -4168,13 +4177,13 @@
       }
 
       const complete = () => {
-        const previousHoverState = this._isHovered;
-        this._isHovered = false;
         EventHandler.trigger(this._element, this.constructor.eventName(EVENT_SHOWN$2));
 
-        if (previousHoverState) {
+        if (this._isHovered === false) {
           this._leave();
         }
+
+        this._isHovered = false;
       };
 
       this._queueCallback(complete, this.tip, this._isAnimated());
@@ -4205,7 +4214,7 @@
       this._activeTrigger[TRIGGER_CLICK] = false;
       this._activeTrigger[TRIGGER_FOCUS] = false;
       this._activeTrigger[TRIGGER_HOVER] = false;
-      this._isHovered = false;
+      this._isHovered = null; // it is a trick to support manual triggering
 
       const complete = () => {
         if (this._isWithActiveTrigger()) {
@@ -4568,7 +4577,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): popover.js
+   * Bootstrap (v5.2.1): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4651,7 +4660,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.0): quantity-selector.js
+   * Boosted (v5.2.1): quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4787,7 +4796,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): scrollspy.js
+   * Bootstrap (v5.2.1): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4818,14 +4827,16 @@
     // TODO: v6 @deprecated, keep it for backwards compatibility reasons
     rootMargin: '0px 0px -25%',
     smoothScroll: false,
-    target: null
+    target: null,
+    threshold: [0.1, 0.5, 1]
   };
   const DefaultType$1 = {
     offset: '(number|null)',
     // TODO v6 @deprecated, keep it for backwards compatibility reasons
     rootMargin: 'string',
     smoothScroll: 'boolean',
-    target: 'element'
+    target: 'element',
+    threshold: 'array'
   };
   /**
    * Class definition
@@ -4886,7 +4897,14 @@
 
     _configAfterMerge(config) {
       // TODO: on v6 target should be given explicitly & remove the {target: 'ss-target'} case
-      config.target = getElement(config.target) || document.body;
+      config.target = getElement(config.target) || document.body; // TODO: v6 Only for backwards compatibility reasons. Use rootMargin only
+
+      config.rootMargin = config.offset ? `${config.offset}px 0px -30%` : config.rootMargin;
+
+      if (typeof config.threshold === 'string') {
+        config.threshold = config.threshold.split(',').map(value => Number.parseFloat(value));
+      }
+
       return config;
     }
 
@@ -4922,8 +4940,8 @@
     _getNewObserver() {
       const options = {
         root: this._rootElement,
-        threshold: [0.1, 0.5, 1],
-        rootMargin: this._getRootMargin()
+        threshold: this._config.threshold,
+        rootMargin: this._config.rootMargin
       };
       return new IntersectionObserver(entries => this._observerCallback(entries), options);
     } // The logic of selection
@@ -4968,11 +4986,6 @@
           activate(entry);
         }
       }
-    } // TODO: v6 Only for backwards compatibility reasons. Use rootMargin only
-
-
-    _getRootMargin() {
-      return this._config.offset ? `${this._config.offset}px 0px -30%` : this._config.rootMargin;
     }
 
     _initializeTargetsAndObservables() {
@@ -5074,7 +5087,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): tab.js
+   * Bootstrap (v5.2.1): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5387,7 +5400,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): toast.js
+   * Bootstrap (v5.2.1): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5916,7 +5929,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): index.umd.js
+   * Bootstrap (v5.2.1): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

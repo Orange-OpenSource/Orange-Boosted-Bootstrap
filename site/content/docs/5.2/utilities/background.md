@@ -3,6 +3,8 @@ layout: docs
 title: Background
 description: Convey meaning through `background-color` and add decoration with gradients.
 group: utilities
+aliases:
+  - "/docs/utilities/background/"
 toc: true
 ---
 
