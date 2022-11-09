@@ -5,7 +5,9 @@ description: Boosted is based on Bootstrap — maintained by its founding team a
 group: about
 aliases:
   - "/about/"
+  - "/docs/about/"
   - "/docs/5.2/about/"
+  - "/docs/about/overview/"
 ---
 
 ## Boosted history
@@ -29,6 +31,7 @@ Boosted ships with custom accessible components to suit specific needs:
 - [Star rating]({{< docsref "/forms/checks-radios#star-rating" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
 - [Sticker]({{< docsref "/components/sticker" >}})
+- [Tags]({{< docsref "/components/tags" >}})
 - [Title bars]({{< docsref "/components/title-bars" >}})
 
 ## Bootstrap Team
@@ -47,7 +50,6 @@ With Bootstrap 4, they once again rewrote the project to account for two key arc
 
 Their latest release, Bootstrap 5, focuses on improving v4's codebase with as few major breaking changes as possible. They improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of their tooling.
 
-
 ## Get involved in Bootstrap
 
-Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how they develop.
+Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new/choose) or submitting a pull request. Read their [contributing guidelines](https://github.com/twbs/bootstrap/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how they develop.

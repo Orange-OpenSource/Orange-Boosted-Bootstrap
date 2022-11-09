@@ -4,12 +4,15 @@ title: Approach
 description: Learn about the guiding principles, strategies, and techniques used to build and maintain Boosted so you can more easily customize and extend it yourself.
 group: extend
 aliases:
+  - "/extend/"
+  - "/docs/extend/"
   - "/docs/5.2/extend/"
+  - "/docs/extend/approach/"
 ---
 
 While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on _why_ we do the things we do in Boosted. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
 
-See something that doesn't sound right, or perhaps could be done better? [Open an issue]({{< param repo >}}/issues/new)—we'd love to discuss it with you.
+See something that doesn't sound right, or perhaps could be done better? [Open an issue]({{< param repo >}}/issues/new/choose)—we'd love to discuss it with you.
 
 ## Summary
 

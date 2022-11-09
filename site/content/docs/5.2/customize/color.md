@@ -3,6 +3,8 @@ layout: docs
 title: Color
 description: Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
+aliases:
+  - "/docs/customize/color/"
 toc: true
 ---
 
@@ -96,9 +98,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       </svg>
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
-        <br/>
+        <br>
         <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}/>
+        <hr class="my-2 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
         <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
@@ -119,9 +121,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       </svg>
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
-        <br/>
+        <br>
         <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
         <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
@@ -142,9 +144,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       </svg>
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
-        <br/>
+        <br>
         <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
         <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
@@ -165,9 +167,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       </svg>
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
-        <br/>
+        <br>
         <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
         <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
@@ -188,9 +190,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       </svg>
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
-        <br/>
+        <br>
         <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
         <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>

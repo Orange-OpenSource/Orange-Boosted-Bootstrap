@@ -3,6 +3,8 @@ layout: docs
 title: Orange navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
+aliases:
+  - "/docs/components/orange-navbar/"
 toc: true
 added: "5.2"
 ---
@@ -191,7 +193,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-relative">
+              <span class="position-relative align-self-start">
                 <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>

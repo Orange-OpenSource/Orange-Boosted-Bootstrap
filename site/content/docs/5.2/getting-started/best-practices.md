@@ -3,6 +3,8 @@ layout: docs
 title: Best practices
 description: Learn about some of the best practices we've gathered from years of working on and using Boosted.
 group: getting-started
+aliases:
+  - "/docs/getting-started/best-practices/"
 ---
 
 We've designed and developed Boosted to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
@@ -17,4 +19,4 @@ We've designed and developed Boosted to work in a number of environments. Here a
 - Working with Sass files
 - Building new CSS components
 - Working with flexbox
-- Ask in [Slack](https://bootstrap-slack.herokuapp.com/)
+- Ask in [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions)
