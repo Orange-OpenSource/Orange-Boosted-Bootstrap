@@ -89,6 +89,10 @@ You can see the above requirements reflected in this modified RTL starter templa
 </html>
 ```
 
+### RTL examples
+
+Get started with one of our [RTL examples]({{< docsref "/examples/#rtl" >}}).
+
 ## Approach
 
 Our approach to building RTL support into Boosted comes with two important decisions that impact how we write and use our CSS:
