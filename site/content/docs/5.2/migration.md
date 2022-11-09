@@ -22,6 +22,10 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 - **Modals**
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
+### Forms
+
+- <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
+
 ## v5.2.1
 
 <hr class="mb-4">

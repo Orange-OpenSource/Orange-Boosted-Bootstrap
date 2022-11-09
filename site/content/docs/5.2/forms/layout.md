@@ -108,7 +108,7 @@ More complex layouts can also be created with the grid system.
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </div>
 </form>
 {{< /example >}}
@@ -166,7 +166,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary mt-2">Sign in</button>
 </form>
 {{< /example >}}
 
