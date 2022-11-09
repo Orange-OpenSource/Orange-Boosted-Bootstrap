@@ -43,10 +43,19 @@
     @include transition($form-range-thumb-transition);
     appearance: none;
 
+    // Boosted mod
+    &:hover {
+      border: $form-range-thumb-border;
+      @include gradient-bg($form-range-thumb-hover-bg);
+    }
+    // End mod
+
     &:active {
       cursor: grabbing; // Boosted mod
+      border: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
+
   }
 
   &::-webkit-slider-runnable-track {
@@ -71,8 +80,16 @@
     @include transition($form-range-thumb-transition);
     appearance: none;
 
+    // Boosted mod
+    &:hover {
+      border: $form-range-thumb-border;
+      @include gradient-bg($form-range-thumb-hover-bg);
+    }
+    // End mod
+
     &:active {
       cursor: grabbing; // Boosted mod
+      border: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
