@@ -274,7 +274,7 @@
         transform-origin: left;
         // stylelint-disable-next-line function-disallowed-list
         animation: carousel-progress calc(#{$carousel-indicator-animation-interval} / 2) linear infinite, carousel-progress-half $carousel-indicator-animation-interval step-end infinite;
-        @include border-radius($carousel-indicator-active-radius, $carousel-indicator-active-radius);
+        @include border-radius(inspect($carousel-indicator-active-radius), $carousel-indicator-active-radius);
       }
 
       @keyframes carousel-progress {
