@@ -22,6 +22,9 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 - **Modals**
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
+- **Orange Navbar**
+  - <span class="badge bg-danger">Breaking</span> The minimizing behavior with `.header-minimized` is applied on top of the `<header>` instead of one of his child directly.
+
 ## v5.2.1
 
 <hr class="mb-4">
