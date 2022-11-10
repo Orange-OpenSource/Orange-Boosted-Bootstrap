@@ -8,79 +8,6 @@ aliases:
 toc: true
 ---
 
-## Theme colors
-
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
-
-<div class="row">
-  {{< theme-colors.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-    <div class="col-md-4">
-      <div class="p-3 mb-3 fw-bold bg-{{ .name }}">{{ .name | title }}</div>
-    </div>
-  {{ end -}}
-  {{< /theme-colors.inline >}}
-</div>
-
-All these colors are available as a Sass map, `$theme-colors`.
-
-{{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
-
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
-
-## All colors
-
-All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors). Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
-
-Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
-
-<div class="row font-monospace">
-  {{< theme-colors.inline >}}
-  {{- range $color := $.Site.Data.colors }}
-    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
-    <div class="col-md-4 mb-3">
-      <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
-        <strong class="d-block">${{ $color.name }}</strong>
-        {{ $color.hex }}
-      </div>
-      {{ range (seq 100 100 900) }}
-      <div class="p-3 bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
-      {{ end }}
-    </div>
-    {{ end -}}
-  {{ end -}}
-
-  <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 position-relative swatch-gray-500">
-      <strong class="d-block">$gray-500</strong>
-      #ccc
-    </div>
-  {{- range $.Site.Data.grays }}
-    <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
-  {{ end -}}
-  </div>
-  {{< /theme-colors.inline >}}
-
-  <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 bd-accessible-orange">
-      <strong class="d-block">$accessible-orange</strong>
-      #f16e00
-    </div>
-    <div class="p-3 mb-2 bd-supporting-yellow">
-      <strong class="d-block">$supporting-yellow</strong>
-      #ffd200
-    </div>
-    <div class="p-3 mb-2 bd-black text-white">
-      <strong class="d-block">$black</strong>
-      #000
-    </div>
-    <div class="p-3 mb-2 bd-white border">
-      <strong class="d-block">$white</strong>
-      #fff
-    </div>
-  </div>
-</div>
-
 <!-- Boosted mod -->
 ## Orange's colors
 
@@ -225,6 +152,83 @@ Sass cannot programmatically generate variables, so we manually created variable
 Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
 
 Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
+<!-- End of Boosted mod: Orange's colors -->
+
+## Theme colors
+
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
+
+<div class="row">
+  {{< theme-colors.inline >}}
+  {{- range (index $.Site.Data "theme-colors") }}
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-{{ .name }}">{{ .name | title }}</div>
+    </div>
+  {{ end -}}
+  {{< /theme-colors.inline >}}
+</div>
+
+All these colors are available as a Sass map, `$theme-colors`.
+
+{{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
+
+Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
+
+## All colors
+<div class="bd-callout bd-callout-warning small">
+  <p>All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
+    <strong>Please note that in the Boosted colors, the indigo colors are the same as the purple ones.</strong>
+  </p>
+</div>
+
+Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
+
+<div class="row font-monospace">
+  {{< theme-colors.inline >}}
+  {{- range $color := $.Site.Data.colors }}
+    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
+        <strong class="d-block">${{ $color.name }}</strong>
+        {{ $color.hex }}
+      </div>
+      {{ range (seq 100 100 900) }}
+      <div class="p-3 bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
+      {{ end }}
+    </div>
+    {{ end -}}
+  {{ end -}}
+
+  <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 position-relative swatch-gray-500">
+      <strong class="d-block">$gray-500</strong>
+      #ccc
+    </div>
+  {{- range $.Site.Data.grays }}
+    <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
+  {{ end -}}
+  </div>
+  {{< /theme-colors.inline >}}
+
+  <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 bd-accessible-orange">
+      <strong class="d-block">$accessible-orange</strong>
+      #f16e00
+    </div>
+    <div class="p-3 mb-2 bd-supporting-yellow">
+      <strong class="d-block">$supporting-yellow</strong>
+      #ffd200
+    </div>
+    <div class="p-3 mb-2 bd-black text-white">
+      <strong class="d-block">$black</strong>
+      #000
+    </div>
+    <div class="p-3 mb-2 bd-white border">
+      <strong class="d-block">$white</strong>
+      #fff
+    </div>
+  </div>
+</div>
 
 ## Color Sass maps
 
