@@ -33,6 +33,26 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 - **RTL**
   - <span class="badge bg-success">New</span> Cards RTL example is now available.
 
+### CSS and Sass variables
+
+- `@mixin button-size()` has a new interface including a new optional parameter for button spacing.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-btn-letter-spacing</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$btn-letter-spacing</code></li>
+      <li><code>$btn-letter-spacing-lg</code></li>
+      <li><code>$btn-letter-spacing-sm</code></li>
+    </ul>
+  </details>
+
 ## v5.2.1
 
 <hr class="mb-4">
