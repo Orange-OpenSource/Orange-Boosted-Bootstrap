@@ -212,7 +212,14 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {{< /example >}}
 
-**It is not recommended by Orange Design System** but in some cases you could even roll your own custom sizing with CSS variables:
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Nevertheless, in some cases where it would be really needed, you could roll your own custom sizing with CSS variables.
+
+For the allowed variants, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary"
