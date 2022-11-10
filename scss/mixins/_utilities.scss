@@ -1,6 +1,6 @@
 // Boosted mod
 @function get-color-from-rgba-string($value) {
-  $func-prefix: "rgba(var(--bs-";
+  $func-prefix: "rgba(var(--" + $prefix;
   $rgba-string-index-before-color-name: str-index($value, $func-prefix);
   @if $rgba-string-index-before-color-name == 1 {
     $rgba-string-index-after-color-name: str-index($value, "-rgb");
