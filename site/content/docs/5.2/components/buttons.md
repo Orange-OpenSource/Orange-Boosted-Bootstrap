@@ -259,6 +259,7 @@ Create responsive stacks of full-width, "block buttons" like those in Boosted 4 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These screen width buttons can not be used on desktop screens because they do not respect the Orange Design System specifications.
+
 For the correct design, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
