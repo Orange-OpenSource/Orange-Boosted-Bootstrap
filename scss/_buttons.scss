@@ -225,15 +225,15 @@
 
 //
 // Button Sizes
-// Boosted mod: 6th argument to set .btn-letter-spacing
-// Boosted mod: 7th argument to set .btn-icon padding
+// Boosted mod: 6th argument to set .btn-icon padding
+// Boosted mod: 7th argument to set .btn-letter-spacing
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-letter-spacing-lg, $btn-icon-padding-x-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-letter-spacing-sm, $btn-icon-padding-x-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
 }
 
 

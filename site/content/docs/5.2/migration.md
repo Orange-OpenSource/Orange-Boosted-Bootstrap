@@ -35,7 +35,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 ### CSS and Sass variables
 
-- `@mixin button-size()` has a new interface including a new optional parameter for button spacing.
+- `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
