@@ -4,7 +4,11 @@ title: Customize
 description: Learn how to theme, customize, and extend Boosted with Sass, a boatload of global options, an expansive color system, and more.
 group: customize
 toc: false
-aliases: "/docs/5.2/customize/"
+aliases:
+  - "/customize/"
+  - "/docs/customize/"
+  - "/docs/5.2/customize/"
+  - "/docs/customize/overview/"
 sections:
   - title: Sass
     description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
@@ -52,5 +56,6 @@ Several Boosted components include embedded SVGs in our CSS to style components 
 - [Pagination]({{< docsref "/components/pagination" >}}) <!-- Boosted mod -->
 - [Quantity selector buttons]({{< docsref "/forms/quantity-selector" >}}) <!-- Boosted mod -->
 - [Select menus]({{< docsref "/forms/select" >}})
+- [Tags]({{< docsref "/components/tags" >}}) <!-- Boosted mod -->
 
-Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include replacing the URLs with locally hosted assets, removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.
+Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include [replacing the URLs with locally hosted assets]({{< docsref "/getting-started/webpack#extracting-svg-files" >}}), removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.

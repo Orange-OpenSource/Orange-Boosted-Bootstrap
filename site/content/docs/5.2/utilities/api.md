@@ -3,7 +3,11 @@ layout: docs
 title: Utility API
 description: The utility API is a Sass-based tool to generate utility classes.
 group: utilities
-aliases: "/docs/5.2/utilities/"
+aliases:
+  - "/utilities/"
+  - "/docs/utilities/"
+  - "/docs/5.2/utilities/"
+  - "/docs/utilities/api/"
 toc: true
 ---
 
@@ -281,7 +285,7 @@ Output:
 .opacity-75 { opacity: .75 !important; }
 .opacity-100 { opacity: 1 !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .opacity-sm-0 { opacity: 0 !important; }
   .opacity-sm-25 { opacity: .25 !important; }
   .opacity-sm-50 { opacity: .5 !important; }
@@ -297,7 +301,7 @@ Output:
   .opacity-md-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .opacity-lg-0 { opacity: 0 !important; }
   .opacity-lg-25 { opacity: .25 !important; }
   .opacity-lg-50 { opacity: .5 !important; }
@@ -305,7 +309,7 @@ Output:
   .opacity-lg-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .opacity-xl-0 { opacity: 0 !important; }
   .opacity-xl-25 { opacity: .25 !important; }
   .opacity-xl-50 { opacity: .5 !important; }
@@ -313,7 +317,7 @@ Output:
   .opacity-xl-100 { opacity: 1 !important; }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .opacity-xxl-0 { opacity: 0 !important; }
   .opacity-xxl-25 { opacity: .25 !important; }
   .opacity-xxl-50 { opacity: .5 !important; }
@@ -466,7 +470,7 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 .border { ... }
 .border-0 { ... }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .border-sm { ... }
   .border-sm-0 { ... }
 }
@@ -476,17 +480,17 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
   .border-md-0 { ... }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .border-lg { ... }
   .border-lg-0 { ... }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .border-xl { ... }
   .border-xl-0 { ... }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .border-xxl { ... }
   .border-xxl-0 { ... }
 }

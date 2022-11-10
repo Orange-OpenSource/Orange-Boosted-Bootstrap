@@ -3,6 +3,8 @@ layout: docs
 title: Sticker
 description: Use Boosted's custom stickers to inform people about new offers.
 group: components
+aliases:
+  - "/docs/components/sticker/"
 toc: true
 added: "5.2"
 ---
