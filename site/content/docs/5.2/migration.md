@@ -26,6 +26,33 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 - <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
 
+### Examples
+
+- <span class="badge bg-success">New</span> There is a new RTL section in the examples.
+
+- **RTL**
+  - <span class="badge bg-success">New</span> Cards RTL example is now available.
+
+### CSS and Sass variables
+
+- `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-btn-letter-spacing</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$btn-letter-spacing</code></li>
+      <li><code>$btn-letter-spacing-lg</code></li>
+      <li><code>$btn-letter-spacing-sm</code></li>
+    </ul>
+  </details>
+
 ## v5.2.1
 
 <hr class="mb-4">
