@@ -175,6 +175,13 @@ Please note that in the Boosted colors, the indigo colors are the same as the pu
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+Some of the colors below do not respect the Orange Design System specifications.
+
+For the correct colors to use, please refer to our [Orange colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Colour](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
   {{- range $color := $.Site.Data.colors }}
