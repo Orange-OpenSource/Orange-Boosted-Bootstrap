@@ -12,18 +12,12 @@
   appearance: none;
 
   &:focus {
-    // Boosted mod: better focus visibility
+    outline: 0;
+
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb {
-      border-color: $form-range-thumb-active-border;
-      box-shadow: $form-range-thumb-focus-box-shadow;
-    }
-    &::-moz-range-thumb {
-      border-color: $form-range-thumb-active-border;
-      box-shadow: $form-range-thumb-focus-box-shadow;
-    }
-    // End mod
+    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
+    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
   }
 
   &::-moz-focus-outer {
@@ -45,17 +39,15 @@
 
     // Boosted mod
     &:hover {
-      border: $form-range-thumb-border;
       @include gradient-bg($form-range-thumb-hover-bg);
     }
     // End mod
 
     &:active {
       cursor: grabbing; // Boosted mod
-      border: $form-range-thumb-active-border; // Boosted mod
+      border-color: $form-range-thumb-active-border-color; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
-
   }
 
   &::-webkit-slider-runnable-track {
@@ -89,7 +81,7 @@
 
     &:active {
       cursor: grabbing; // Boosted mod
-      border: $form-range-thumb-active-border; // Boosted mod
+      border-color: $form-range-thumb-active-border-color; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
