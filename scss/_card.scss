@@ -85,7 +85,7 @@
 
 .card-subtitle {
   margin-top: 0; // Boosted mod
-  margin-bottom: 0;
+  margin-bottom: var(--#{$prefix}card-title-spacer-y); // Boosted mod
 }
 
 .card-text:last-child {
