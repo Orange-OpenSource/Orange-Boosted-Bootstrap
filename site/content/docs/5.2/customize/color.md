@@ -152,7 +152,6 @@ Sass cannot programmatically generate variables, so we manually created variable
 Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
 
 Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
-<!-- End of Boosted mod: Orange's colors -->
 
 ## Theme colors
 
@@ -175,11 +174,12 @@ All these colors are available as a Sass map, `$theme-colors`.
 Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
 ## All colors
-<div class="bd-callout bd-callout-warning small">
-  <p>All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
-    <strong>Please note that in the Boosted colors, the indigo colors are the same as the purple ones.</strong>
-  </p>
-</div>
+
+{{< callout warning >}}
+All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
+
+Please note that in the Boosted colors, the indigo colors are the same as the purple ones.
+{{< /callout >}}
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
