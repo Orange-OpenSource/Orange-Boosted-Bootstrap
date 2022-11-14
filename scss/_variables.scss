@@ -1112,8 +1112,8 @@ $form-select-font-weight:           $input-font-weight !default;
 $form-select-line-height:           $input-line-height !default;
 $form-select-color:                 $input-color !default;
 $form-select-bg:                    $input-bg !default;
-$form-select-disabled-color:        $gray-700 !default;
-$form-select-disabled-bg:           $gray-300 !default;
+$form-select-disabled-color:        $gray-500 !default;
+$form-select-disabled-bg:           $white !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x top add(50%, 1px) !default;
 $form-select-bg-size:               .875rem 1rem !default; // In pixels because image dimensions
