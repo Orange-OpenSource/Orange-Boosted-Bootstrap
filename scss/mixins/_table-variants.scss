@@ -7,11 +7,11 @@
     $striped-bg: mix($color, $background, percentage($table-variant-striped-bg-factor));
     $striped-hover-bg: mix($color, $background, percentage($table-variant-striped-hover-bg-factor)); // Boosted mod
     $active-bg: mix($color, $background, percentage($table-variant-active-bg-factor));
-    $border-color: mix($color, $background, percentage($table-border-factor));
+    $table-border-color: mix($color, $background, percentage($table-border-factor));
 
     --#{$prefix}table-color: #{$color};
     --#{$prefix}table-bg: #{$background};
-    --#{$prefix}table-border-color: #{$border-color};
+    --#{$prefix}table-border-color: #{$table-border-color};
     --#{$prefix}table-striped-bg: #{$striped-bg};
     --#{$prefix}table-striped-color: #{color-contrast($striped-bg)};
     --#{$prefix}table-striped-hover-bg: #{$striped-hover-bg}; // Boosted mod

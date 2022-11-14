@@ -3,6 +3,8 @@ layout: docs
 title: Icons
 description: Guidance and suggestions for using Solaris icon libraries with Boosted.
 group: extend
+aliases:
+  - "/docs/extend/icons/"
 toc: true
 ---
 
