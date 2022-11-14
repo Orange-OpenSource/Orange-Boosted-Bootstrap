@@ -147,6 +147,7 @@
 .form-switch {
   // Boosted mod
   --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
 
@@ -158,7 +159,7 @@
     background-image: $form-switch-bg-image, var(--#{$boosted-prefix}switch-gradient);
     filter: $invert-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
-    background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
+    background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
     border-color: $white; // Boosted mod
     outline-color: $white; // Boosted mod
     outline-offset: $spacer; // Boosted mod
@@ -173,11 +174,11 @@
       @if $enable-gradients {
         background-image: $form-switch-checked-bg-image, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
-        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size;
+        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size 100%;
       } @else {
         background-image: $form-switch-checked-bg-image, var(--#{$boosted-prefix}switch-gradient);
         background-position: $form-switch-checked-bg-position, 100% 0;
-        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size;
+        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
       }
 
       &:active,
