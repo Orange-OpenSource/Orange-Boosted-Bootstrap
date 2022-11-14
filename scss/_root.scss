@@ -76,17 +76,22 @@
 
   --#{$prefix}code-color: #{$code-color};
 
+  --#{$prefix}highlight-color: #{$mark-color}; // Boosted mod
   --#{$prefix}highlight-bg: #{$mark-bg};
 }
 
+// scss-docs-start root-dark-rule
 // Boosted mod
-[class*="-dark"],
-.bg-secondary {
+[class*="bg-black"],
+[class*="-dark"]:not(.border-dark):not(.text-dark),
+[class*="bg-secondary"] {
   --#{$prefix}accessible-orange: #{$brand-orange};
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
   --#{$prefix}code-color: #{$code-color-dark};
+  --#{$prefix}highlight-color: #{$mark-color-dark};
+  --#{$prefix}highlight-bg: #{$mark-bg-dark};
   --#{$boosted-prefix}kbd-color: #{$kbd-color-dark};
   --#{$boosted-prefix}kbd-bg: #{$kbd-bg-dark};
   --#{$boosted-prefix}pre-color: #{$pre-color-dark};
@@ -98,9 +103,12 @@
     --#{$prefix}link-hover-color: #{$link-hover-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
+    --#{$prefix}highlight-color: #{$mark-color};
+    --#{$prefix}highlight-bg: #{$mark-bg};
     --#{$boosted-prefix}kbd-color: #{$kbd-color};
     --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
     --#{$boosted-prefix}pre-color: #{$pre-color};
   }
 }
 // End mod
+// scss-docs-end root-dark-rule

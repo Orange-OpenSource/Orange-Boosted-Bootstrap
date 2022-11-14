@@ -4,7 +4,10 @@ title: Contribute
 description: Help develop Boosted with our documentation build scripts and tests.
 group: getting-started
 toc: true
-aliases: "/docs/5.2/getting-started/build-tools/"
+aliases:
+  - "/docs/getting-started/contribute/"
+  - "/docs/getting-started/build-tools/"
+  - "/docs/5.2/getting-started/build-tools/"
 ---
 
 ## Tooling setup

@@ -3,6 +3,8 @@ layout: docs
 title: Dropdowns
 description: Toggle contextual overlays for displaying lists of links and more with the Boosted dropdown plugin.
 group: components
+aliases:
+  - "/docs/components/dropdowns/"
 toc: true
 ---
 
@@ -728,7 +730,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">New around here? Sign up</a>
@@ -758,7 +760,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
 </div>
 {{< /example >}}

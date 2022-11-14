@@ -3,6 +3,8 @@ layout: docs
 title: RTL
 description: Learn how to enable support for right-to-left text in Boosted across our layout, components, and utilities.
 group: getting-started
+aliases:
+  - "/docs/getting-started/rtl/"
 toc: true
 ---
 
@@ -89,7 +91,7 @@ You can see the above requirements reflected in this modified RTL starter templa
 
 ### RTL examples
 
-Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
+Get started with one of our [RTL examples]({{< docsref "/examples/#rtl" >}}).
 
 ## Approach
 
