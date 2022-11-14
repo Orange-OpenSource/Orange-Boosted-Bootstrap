@@ -66,9 +66,9 @@ Build a range input with `min` and `max` attributes.
 The input backgrounds must be initialized in a different way.
 
 ```scss
-.form-range {
+.form-range::-webkit-slider-runnable-track {
   height: .375rem;
-  background: linear-gradient(to right, #ff7900 0%, #ff7900 50%, #eee 50%, #eee 100%); // Change the 50%s in order to change the initialization.
+  background-image: linear-gradient(to right, #ff7900 0%, #ff7900 var(--value, 0%), #eee var(--value, 0%), #eee 100%);
 }
 ```
 
@@ -82,9 +82,16 @@ const ranges = document.querySelectorAll('input[type=range]')
 for (const range of ranges) {
   range.addEventListener('input', () => {
     const value = (range.value - range.min) / (range.max - range.min) * 100
-    range.style = `background: linear-gradient(to right, #ff7900 0%, #ff7900 ${value}%, #eee ${value}%, #eee 100%);`
+    range.style.setProperty('--value', `${value}%`)
   })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  for (const range of ranges) {
+    const value = (range.value - range.min) / (range.max - range.min) * 100
+    range.style.setProperty('--value', `${value}%`)
+  }
+})
 ```
 
 ## Sass
