@@ -8,35 +8,10 @@
       downloadable: is the file downloadable? - default: `true`
 */ -}}
 
-{{- $file := .Get "file"| default "img/orange-logo.svg" -}}
+{{- $file := .Get "file" | default "img/orange-logo.svg" -}}
 {{- $svg := readFile $file -}}
 {{- $code := $svg -}}
 {{- $downloadable := .Get "downloadable" | default true -}}
-
-{{- if eq $file "img/orange-logo.svg" -}}
-  {{- /* Line feed */ -}}
-  {{- $code = replace $code ">" ">\n" -}}
-  {{- $code = replace $code "{" " {\n" -}}
-  {{- $code = replace $code "}}" "\n\t}\n}" -}}
-  {{- $code = replace $code "}@" "}\n@" -}}
-  {{- $code = replace $code "}<" "}\n<" -}}
-
-  {{- /* Indentation */ -}}
-  {{- $code = replace $code "<path" "\t<path" -}}
-  {{- $code = replace $code "<defs" "\t<defs" -}}
-  {{- $code = replace $code "</defs" "\t</defs" -}}
-  {{- $code = replace $code "<style" "\t\t<style" -}}
-  {{- $code = replace $code "</style" "\t\t</style" -}}
-  {{- $code = replace $code "@" "\t\t\t@" -}}
-  {{- $code = replace $code "#b" "\t\t\t\t#b" -}}
-  {{- $code = replace $code "#c" "\t\t\t\t#c" -}}
-  {{- $code = replace $code "display" "\t\t\t\t\tdisplay" -}}
-  {{- $code = replace $code "}" "\t\t\t}" -}}
-
-  {{- /* Content */ -}}
-  {{- $code = replace $code ":none" ": none" -}}
-  {{- $code = replace $code "none" "none;" -}}
-{{- end -}}
 
 {{- highlight $code "html" "" }}
 
