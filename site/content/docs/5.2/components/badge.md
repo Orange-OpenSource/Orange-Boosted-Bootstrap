@@ -81,6 +81,11 @@ For other usages, you will have to use the [Tags](https://system.design.orange.c
 
 {{< added-in "5.2.0" >}}
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These component variants can not be used because they do not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
 {{< example >}}
