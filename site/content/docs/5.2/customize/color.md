@@ -179,7 +179,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 {{< ods-incompatibility-alert >}}
 Some of the colors below do not respect the Orange Design System specifications.
 
-For the correct colors to use, please refer to our [Orange colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Colour](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
+For the correct colors to use, please refer to our [Orange colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 <div class="row font-monospace">
