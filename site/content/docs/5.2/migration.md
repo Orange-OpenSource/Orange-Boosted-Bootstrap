@@ -37,7 +37,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 - `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
 
-- <span class="badge bg-danger">Breaking</span> `$form-range-thumb-active-border` does'nt exist any more. It has been replaced by `$form-range-thumb-active-border-color`.
+- <span class="badge bg-danger">Breaking</span> `$form-range-thumb-active-border` doesn't exist any more. It has been replaced by `$form-range-thumb-active-border-color`.
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
