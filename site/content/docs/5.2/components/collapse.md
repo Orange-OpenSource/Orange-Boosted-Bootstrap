@@ -3,6 +3,8 @@ layout: docs
 title: Collapse
 description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
 group: components
+aliases:
+  - "/docs/components/collapse/"
 toc: true
 ---
 
@@ -146,7 +148,7 @@ const collapseList = [...collapseElementList].map(collapseEl => new boosted.Coll
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-`parent` | selector, jQuery object, DOM element | `false` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
+`parent` | selector, DOM element | `null` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
 `toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
 {{< /bs-table >}}
 

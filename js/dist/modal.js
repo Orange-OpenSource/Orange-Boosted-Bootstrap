@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.1 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap modal.js v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap modal.js v5.2.1 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -25,7 +25,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): modal.js
+   * Bootstrap (v5.2.1): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -44,6 +44,7 @@
   const EVENT_SHOW = `show${EVENT_KEY}`;
   const EVENT_SHOWN = `shown${EVENT_KEY}`;
   const EVENT_RESIZE = `resize${EVENT_KEY}`;
+  const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY}`;
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY}`;
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
@@ -236,20 +237,22 @@
         }
       });
       EventHandler__default.default.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
-        if (event.target !== event.currentTarget) {
-          // click is inside modal-dialog
-          return;
-        }
+        EventHandler__default.default.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+          // a bad trick to segregate clicks that may start inside dialog but end outside, and avoid listen to scrollbar clicks
+          if (this._dialog.contains(event.target) || this._dialog.contains(event2.target)) {
+            return;
+          }
 
-        if (this._config.backdrop === 'static') {
-          this._triggerBackdropTransition();
+          if (this._config.backdrop === 'static') {
+            this._triggerBackdropTransition();
 
-          return;
-        }
+            return;
+          }
 
-        if (this._config.backdrop) {
-          this.hide();
-        }
+          if (this._config.backdrop) {
+            this.hide();
+          }
+        });
       });
     }
 
