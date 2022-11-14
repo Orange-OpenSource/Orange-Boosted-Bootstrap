@@ -55,7 +55,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component can be used **only** inside a header component. For the correct design, please refer to our [Boosted navbars examples](http://localhost:9001/docs/5.2/examples/navbars/).
+This component can be used **only** inside a header component. For the correct design, please refer to our [Boosted navbars examples]({{< docsref "/examples/navbars" >}})
 
 For other usages, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
 {{< /ods-incompatibility-alert >}}
