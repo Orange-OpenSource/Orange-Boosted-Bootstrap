@@ -148,7 +148,7 @@
     "sass": "^1.55.0",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
-    "stylelint": "^14.13.0",
+    "stylelint": "^14.15.0",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
     "tarteaucitronjs": "^1.9.9",
     "terser": "^5.15.0",
