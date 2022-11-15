@@ -81,6 +81,7 @@ const outputDirectory = __dirname + '/auto'
 createDirectoryIfNeeded(outputDirectory);
 
 (async () => {
+  // Note: `{ headless: true, args: ['--no-sandbox'] }` is needed only for some Windows configurations with strong security policies
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] })
   // console.log(await browser.version())
 
