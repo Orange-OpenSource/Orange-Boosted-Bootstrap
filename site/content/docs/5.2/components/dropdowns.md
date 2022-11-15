@@ -230,9 +230,9 @@ And putting it to use in a navbar:
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <div class="navbar-brand me-auto me-lg-4">
+    <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/5.2/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Navbar</h1>
     </div>
