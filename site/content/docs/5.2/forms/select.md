@@ -23,7 +23,7 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 
 ## Sizing
 
-You may also use large custom selects to match our similarly sized text inputs.
+You may also choose from small and large custom selects to match our similarly sized text inputs.
 
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">

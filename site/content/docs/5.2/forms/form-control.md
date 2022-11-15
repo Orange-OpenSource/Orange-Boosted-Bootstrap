@@ -23,7 +23,7 @@ toc: true
 
 ## Sizing
 
-Set heights using classes like `.form-control-lg`.
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">

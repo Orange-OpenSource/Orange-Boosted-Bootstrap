@@ -172,7 +172,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ### Horizontal form label sizing
 
-Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
 <!-- Boosted mod: no .col-form-label-sm -->
 {{< example >}}
