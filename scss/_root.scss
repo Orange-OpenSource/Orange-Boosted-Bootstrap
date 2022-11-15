@@ -21,7 +21,7 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  --#{$prefix}accessible-orange: #{$accessible-orange}; // Boosted mod
+  --#{$prefix}primary-text: #{$accessible-orange}; // Boosted mod
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
   --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
@@ -85,7 +85,7 @@
 [class*="bg-black"],
 [class*="-dark"]:not(.border-dark):not(.text-dark),
 [class*="bg-secondary"] {
-  --#{$prefix}accessible-orange: #{$brand-orange};
+  --#{$prefix}primary-text: #{$brand-orange};
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
@@ -98,7 +98,7 @@
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {
-    --#{$prefix}accessible-orange: #{$accessible-orange};
+    --#{$prefix}primary-text: #{$accessible-orange};
     --#{$prefix}link-color: #{$link-color};
     --#{$prefix}link-hover-color: #{$link-hover-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};

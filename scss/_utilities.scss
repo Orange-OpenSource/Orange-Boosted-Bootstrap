@@ -542,7 +542,7 @@ $utilities: map-merge(
           "black-50": rgba($black, .5), // deprecated
           "white-50": rgba($white, .5), // deprecated
           "reset": inherit,
-          "primary": var(--#{$prefix}accessible-orange),
+          "primary": var(--#{$prefix}primary-text),
         )
       )
     ),
