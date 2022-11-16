@@ -19,6 +19,13 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 ### Components
 
+- **Dropdowns**
+  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
+  ```diff
+  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
+  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+  ```
+
 - **Modals**
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
@@ -43,6 +50,17 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 ### CSS and Sass variables
 
 - `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-dropdown-toggle-padding-x</code></li>
+      <li><code>--bs-dropdown-toggle-color</code></li>
+      <li><code>--bs-dropdown-toggle-bg</code></li>
+      <li><code>--bs-dropdown-toggle-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
+    </ul>
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>

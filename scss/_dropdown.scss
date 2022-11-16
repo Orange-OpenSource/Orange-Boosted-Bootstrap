@@ -15,6 +15,7 @@
   // Generate the caret automatically
   @include caret();
 
+  // Boosted mod: Should be a btn-* class
   &:not(.dropdown-toggle-split) {
     @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $black, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
 
@@ -22,6 +23,7 @@
       @include button-variant($black, $gray-700, $white, $black, $white, $white, $black, $white, $white, transparent, $gray-700, $gray-700);
     }
   }
+  // End mod
 }
 
 // The dropdown menu
@@ -179,7 +181,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$variable-prefix}dropdown-item-padding-y) var(--#{$variable-prefix}dropdown-item-padding-x) add(var(--#{$variable-prefix}dropdown-item-padding-y), .125rem);
+  padding: var(--#{$variable-prefix}dropdown-item-padding-y) var(--#{$variable-prefix}dropdown-item-padding-x) add(var(--#{$variable-prefix}dropdown-item-padding-y), .125rem); // Boosted mod
   clear: both;
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
