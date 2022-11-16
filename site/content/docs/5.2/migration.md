@@ -29,6 +29,14 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
   +        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
   ```
 
+### Content
+
+- **Tables**
+  - <span class="badge bg-warning">Warning</span> Every table now has a caption with `.visually-hidden` on it. Please reflect this modification into your websites.
+  - <span class="badge bg-success">New</span> Tables now fully support striped rows and columns.
+  - <span class="badge bg-success">New</span> Tables now fully support branded hover on every tables.
+  - <span class="badge bg-success">New</span> Tables now fully support sticky `<thead>` using `.thead-sticky` on `<thead>`.
+
 ### Forms
 
 - <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
@@ -48,6 +56,11 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-letter-spacing</code></li>
+      <li><code>--bs-table-accent-bg</code></li>
+      <li><code>--bs-table-striped-color</code></li>
+      <li><code>--bs-table-striped-bg</code></li>
+      <li><code>--bs-table-striped-hover-color</code></li>
+      <li><code>--bs-table-striped-hover-bg</code></li>
     </ul>
   </details>
 
@@ -57,6 +70,19 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>$btn-letter-spacing</code></li>
       <li><code>$btn-letter-spacing-lg</code></li>
       <li><code>$btn-letter-spacing-sm</code></li>
+      <li><code>$table-accent-bg</code></li>
+      <li><code>$table-striped-color</code></li>
+      <li><code>$table-striped-bg-factor</code></li>
+      <li><code>$table-striped-bg</code></li>
+      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-hover-bg</code></li>
+      <li><code>$table-striped-bg</code></li>
+      <li><code>$table-variant-striped-hover-bg-factor</code></li>
+      <li><code>$table-variant-striped-hover-bg</code></li>
+      <li><code>$table-variant-active-bg-factor</code></li>
+      <li><code>$table-variant-hover-bg-factor</code></li>
+      <li><code>$table-striped-order</code></li>
+      <li><code>$table-striped-columns-order</code></li>
     </ul>
   </details>
 

@@ -748,7 +748,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </th>
         <th scope="col">Column header</th>
         <th scope="col">Column header</th>
-        <th scope="col">  Column header</th>
+        <th scope="col">Column header</th>
         <th scope="col">Column header</th>
       </tr>
     </thead>
