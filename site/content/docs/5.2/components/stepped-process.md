@@ -3,6 +3,8 @@ layout: docs
 title: Stepped process
 description: Stepped process bar used for multiple steps forms process
 group: components
+aliases:
+  - "/docs/components/stepped-process/"
 toc: true
 ---
 
@@ -41,7 +43,9 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 
 ## Dark variant
 
-Stepped process comes with a dark variant: `.stepped-process-dark`.
+{{< added-in "5.2.1" >}}
+
+Add `.stepped-process-dark` to the `.stepped-process` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <nav class="stepped-process stepped-process-dark" aria-label="Checkout process">
@@ -82,6 +86,10 @@ Customization through CSS variables can be seen on the `.stepped-process-dark` m
 
 ### Sass variables
 
-For more details, please have a look at the exhaustive list of available variables:
+Variables for all stepped processes:
 
 {{< scss-docs name="stepped-process" file="scss/_variables.scss" >}}
+
+Variables for the [dark stepped process](#dark-variant):
+
+{{< scss-docs name="stepped-process-dark-variables" file="scss/_variables.scss" >}}
