@@ -6,6 +6,8 @@
     <title>{{ . }}</title>
     <link rel="canonical" href="{{ . }}">
     <meta name="robots" content="noindex">
-    <meta http-equiv="refresh" content="0; url={{ . }}">
+    <script>
+      window.location = "{{ . }}" + window.location.search + window.location.hash;
+    </script>
   </head>
 </html>

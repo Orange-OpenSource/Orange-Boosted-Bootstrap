@@ -8,17 +8,27 @@
   --#{$prefix}alert-padding-x: #{$alert-padding-x};
   --#{$prefix}alert-padding-y: #{$alert-padding-y};
   --#{$prefix}alert-margin-bottom: #{$alert-margin-bottom};
+  @include rfs($font-size-base, --#{$prefix}alert-font-size); // Boosted mod
+  --#{$prefix}alert-line-height: #{$line-height-base}; // Boosted mod
   --#{$prefix}alert-color: #{$alert-color}; // Boosted mod
   --#{$prefix}alert-border-color: transparent;
   --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
   --#{$prefix}alert-border-radius: #{$alert-border-radius};
+  --#{$prefix}alert-logo-size: #{$alert-logo-size}; // Boosted mod
+  --#{$prefix}alert-icon-size: #{$alert-icon-size}; // Boosted mod
+  --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // Boosted mod
+  --#{$prefix}alert-link-font-weight: #{$alert-link-font-weight}; // Boosted mod
+  --#{$prefix}alert-heading-font-weight: #{$alert-heading-font-weight}; // Boosted mod
+  --#{$prefix}alert-dismissible-padding-right: #{$alert-dismissible-padding-r}; // Boosted mod
+  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset}; // Boosted mod
   // scss-docs-end alert-css-vars
 
   position: relative;
   display: flex; // Boosted mod
   padding: var(--#{$prefix}alert-padding-y) var(--#{$prefix}alert-padding-x);
   margin-bottom: var(--#{$prefix}alert-margin-bottom);
-  font-weight: $font-weight-bold; // Boosted mod
+  @include font-size(var(--#{$prefix}alert-font-size));
+  line-height: var(--#{$prefix}alert-line-height);
   color: var(--#{$prefix}alert-color);
   background-color: var(--#{$prefix}alert-bg);
   border: var(--#{$prefix}alert-border);
@@ -30,7 +40,8 @@
   // Boosted mod: ensure headings look like paragraphs
   margin: 0;
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: var(--#{$prefix}alert-heading-font-weight);
+  line-height: inherit;
   // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
@@ -38,7 +49,7 @@
 
 // Provide class for links that match alerts
 .alert-link {
-  font-weight: $alert-link-font-weight;
+  font-weight: var(--#{$prefix}alert-link-font-weight); // Boosted mod
 }
 
 
@@ -47,14 +58,15 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: $alert-dismissible-padding-r;
+  padding-right: var(--#{$prefix}alert-dismissible-padding-right); // Boosted mod
 
   // Adjust close link position
   .btn-close {
     position: absolute;
-    top: $alert-btn-close-offset; // Boosted mod
-    right: $alert-btn-close-offset; // Boosted mod
+    top: var(--#{$prefix}alert-btn-close-offset); // Boosted mod
+    right: var(--#{$prefix}alert-btn-close-offset); // Boosted mod
     z-index: $stretched-link-z-index + 1;
+    // Boosted mod: no padding
   }
 }
 
@@ -84,30 +96,34 @@
 }
 
 .alert-heading ~ p {
-  font-weight: $font-weight-normal;
+  line-height: 1.5;
 }
 
 //// Icons
 .alert-icon {
   flex-shrink: 0;
-  width: $alert-icon-size;
-  margin: -#{$alert-icon-margin-y * .5} 0;
+  width: var(--#{$prefix}alert-icon-size);
+  margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0; // stylelint-disable-line function-disallowed-list
 
   + * {
-    margin: $alert-icon-margin-y 0;
+    margin: var(--#{$prefix}alert-icon-margin-y) 0 0;
+  }
+
+  + p {
+    font-weight: var(--#{$prefix}alert-heading-font-weight);
   }
 
   &::before {
     display: block;
     order: -1;
-    height: $alert-logo-size;
+    height: var(--#{$prefix}alert-logo-size);
     content: "";
     background-repeat: no-repeat;
 
     /* rtl:raw:
     background-position: top right;
     */
-    background-size: $alert-logo-size;
+    background-size: var(--#{$prefix}alert-logo-size);
   }
 }
 
@@ -117,26 +133,17 @@
   --#{$prefix}alert-padding-x: 0;
   --#{$prefix}alert-padding-y: #{$alert-padding-sm};
   --#{$prefix}alert-margin-bottom: 0;
+  @include rfs($font-size-sm, --#{$prefix}alert-font-size);
+  --#{$prefix}alert-line-height: #{$line-height-sm};
   --#{$prefix}alert-border: 0;
+  --#{$prefix}alert-logo-size: #{$alert-logo-size-sm};
+  --#{$prefix}alert-icon-size: #{$alert-icon-size-sm};
+  --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
   // scss-docs-end alert-sm-css-vars
-
-  font-size: $font-size-sm;
-  line-height: $line-height-sm;
+  --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
 
   .alert-icon {
-    width: $alert-icon-size * .5;
-    margin: $alert-icon-margin-y 0;
-
-    &::before {
-      height: $alert-logo-size-sm;
-      background-size: $alert-logo-size-sm;
-    }
-  }
-
-  .btn-close {
-    --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
-    top: $alert-btn-close-offset-sm;
-    right: -$alert-btn-close-offset-sm;
+    margin: var(--#{$prefix}alert-icon-margin-y) 0;
   }
 }
 // End mod
