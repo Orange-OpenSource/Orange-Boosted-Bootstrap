@@ -23,7 +23,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
 - **Orange navbar**
-  - Languages selection's `aria-label`s have been slighlty changed in some supra bars examples. It might be a useful modification to propagate into your websites if you have this same kind of languages selection.
+  - Languages selection's `aria-label`s have been slightly changed in some supra bars examples. It might be a useful modification to propagate into your websites if you have this same kind of languages selection.
 
 ### Forms
 
