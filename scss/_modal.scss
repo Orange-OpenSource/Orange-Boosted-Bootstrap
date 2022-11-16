@@ -20,8 +20,8 @@
   --#{$prefix}modal-border-radius: #{$modal-content-border-radius};
   --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-xs};
   --#{$prefix}modal-inner-border-radius: #{$modal-content-inner-border-radius};
-  --#{$prefix}modal-header-padding-x: #{$modal-header-padding-x};
-  --#{$prefix}modal-header-padding-y: #{$modal-header-padding-y};
+  // Boosted mod: no --#{$prefix}modal-header-padding-x
+  // Boosted mod: no --#{$prefix}modal-header-padding-y
   --#{$prefix}modal-header-padding: #{$modal-header-padding}; // Todo in v6: Split this padding into x and y
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};

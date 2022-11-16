@@ -2,8 +2,5 @@
 
 {{- $version := .Get 0 -}}
 
-<!--
-  Boosted mod: style is different
-  TODO: use Tag component when it will be available
--->
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold bg-light border border-light">Added in v{{ $version }}</small>
+<!-- Boosted mod: use tag component -->
+<p><span class="tag tag-sm">Added in v{{ $version }}</span></p>
