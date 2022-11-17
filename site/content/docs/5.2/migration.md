@@ -342,13 +342,15 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - <span class="badge bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
+- <span class="badge bg-danger">Breaking</span> Re-introducing footer component but tweaking a bit the classes. Dropped `.o-footer-*` and use `.footer-*` instead.
+
 For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
 
 ## v5.1.0
 
 <hr class="mb-4">
 
-- <span class="badge bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges).
+- <span class="badge bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges). `$supporting-colors` is replaced by `$background-colors`.
 
 - **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
 
@@ -567,7 +569,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Back to top
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [back to top page]({{< docsref "/components/back-to-top" >}}) for more information.
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. The javascript part has been dropped too.
 
 ### Badges
 
@@ -590,6 +592,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
 - <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
+
+- <span class="badge bg-danger">Breaking</span> Social buttons need an extra `.btn-icon` class now.
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -695,6 +699,14 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
+
+### Stepped process
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
+
+- <span class="badge bg-danger">Breaking</span> Renamed respectively `$o-stepbar-margin-r`and `$o-stepbar-arrow-width` to `$step-item-margin-end` and `$step-item-arrow-width`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
 ### Toasts
 
