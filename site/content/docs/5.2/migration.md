@@ -348,6 +348,8 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 <hr class="mb-4">
 
+- <span class="badge bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges).
+
 - **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
 
 - **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]({{< docsref "/components/navbar#offcanvas" >}}) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
@@ -407,6 +409,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ## Sass
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
+
+- <span class="badge bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange` instead.
+
+- <span class="badge bg-danger">Breaking</span> Removed `$container-fluid-margin-widths` to use `$container-fluid-margin` instead.
 
 - <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
@@ -486,6 +492,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Links are underlined by default** (not just on hover), unless they're part of specific components.
 
+- <span class="badge bg-danger">Breaking</span> `.o-link-arrow` is renamed to `.link-chevron`. `.o-link-arrow.back` has been dropped.
+
 - **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
 
 - <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
@@ -556,6 +564,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
+
+### Back to top
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [back to top page]({{< docsref "/components/back-to-top" >}}) for more information.
 
 ### Badges
 
@@ -666,6 +678,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Pagination
 
+- <span class="badge bg-danger">Breaking</span> The support of `.has-label` has been dropped since you don't need it anymore.
+
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
 
 - Added `transition`s to pagination links.
@@ -720,6 +734,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.rounded`, `.rounded-top`, `.rounded-right`, `.rounded-bottom`, `.rounded-left`, `.rounded-0`, `.rounded-sm` and `.rounded-lg` to reduce bundle size since we shouldn't use those classes in Boosted.
 
 - <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
 
