@@ -55,6 +55,8 @@ site/docs/**/assets/brand/logo-rule-4b.png
 site/docs/**/assets/brand/orange-logo.svg
 site/docs/**/assets/brand/orange-social.svg
 site/docs/**/assets/brand/orange-social.png
+site/layouts/partials/icons/download.svg
+site/layouts/partials/icons.html
 
 End of the parts list under Orange SA Copyright
 
