@@ -34,7 +34,7 @@
     box-sizing: content-box; // Boosted mod
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    margin-top: subtract(($form-range-track-height - $form-range-thumb-height) * .5, $form-range-thumb-focus-box-shadow-width); // Webkit specific // Boosted mod
+    margin-top: ($form-range-track-height - ($form-range-thumb-height + $border-width * 2)) * .5; // Webkit specific // Boosted mod
     cursor: grab; // Boosted mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
