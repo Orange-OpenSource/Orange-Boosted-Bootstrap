@@ -633,7 +633,12 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 ## Rich content tables
 
 ### Row selection
-Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute.
+Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute and `<colgroup>` inside `<table>` (before `<thead>`) to force first column to be 2.5rem large to comply with Orange Design System.
+```html
+<colgroup>
+    <col style="width:2.5rem;">
+</colgroup>
+```
 
 {{< callout info >}}
 #### Selection feature
@@ -643,6 +648,9 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 <div>
   <table class="table table-sm table-hover table-responsive">
+    <colgroup>
+      <col style="width:2.5rem;">
+    </colgroup>
     <thead>
       <tr>
         <th scope="col">
@@ -779,6 +787,9 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 ```html
 <div>
   <table class="table table-sm table-hover table-responsive">
+    <colgroup>
+      <col style="width:2.5rem;">
+    </colgroup>
     <thead>
       <tr>
         <th scope="col">
@@ -841,6 +852,9 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 
 <div>
   <table class="table table-sm table-hover table-responsive align-middle">
+    <colgroup>
+      <col style="width:2.5rem;">
+    </colgroup>
     <thead>
       <tr>
         <th scope="col">
