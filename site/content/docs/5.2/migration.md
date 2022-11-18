@@ -342,7 +342,7 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - <span class="badge bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
-- <span class="badge bg-danger">Breaking</span> Re-introducing footer component but tweaking a bit the classes. Dropped `.o-footer-*` and use `.footer-*` instead.
+- <span class="badge bg-danger">Breaking</span> Re-introduced footer component by tweaking a bit the classes: replaced `.o-footer-*` by `.footer-*`.
 
 For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
 
@@ -412,9 +412,9 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
 
-- <span class="badge bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange` instead.
+- <span class="badge bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange`.
 
-- <span class="badge bg-danger">Breaking</span> Removed `$container-fluid-margin-widths` to use `$container-fluid-margin` instead.
+- <span class="badge bg-danger">Breaking</span> Removed `$container-fluid-margin-widths`. Please use `$container-fluid-margin` instead.
 
 - <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
@@ -569,7 +569,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Back to top
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. The javascript part has been dropped too.
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. Back to top component doesn't use JavaScript anymore.
 
 ### Badges
 
@@ -593,7 +593,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
 
-- <span class="badge bg-danger">Breaking</span> Social buttons need an extra `.btn-icon` class now.
+- <span class="badge bg-danger">Breaking</span> Social buttons now need an extra `.btn-icon`.
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -682,7 +682,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Pagination
 
-- <span class="badge bg-danger">Breaking</span> The support of `.has-label` has been dropped since you don't need it anymore.
+- <span class="badge bg-danger">Breaking</span> Dropped `.has-label` support.
 
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
 
