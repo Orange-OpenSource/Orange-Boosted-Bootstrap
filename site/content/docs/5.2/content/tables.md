@@ -633,7 +633,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 ## Rich content tables
 
 ### Row selection
-Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute and `<colgroup>` inside `<table>` (before `<thead>`) to force first column to be 2.5rem large to comply with Orange Design System.
+Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute, and add `<colgroup>` inside `<table>` (before `<thead>`) to force first column to be 2.5rem large to comply with Orange Design System.
 ```html
 <colgroup>
     <col style="width:2.5rem;">
