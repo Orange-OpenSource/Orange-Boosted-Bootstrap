@@ -33,7 +33,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 - <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
 
-### Content
+### Contents
 
 - **Tables**
   - When using row selection (checkboxes), use `.has-checkbox` on the table to get correct spacing on the first column.
