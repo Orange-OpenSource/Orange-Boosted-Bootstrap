@@ -42,7 +42,6 @@ site/docs/**/assets/img/boosted-guidelines.png
 site/docs/**/assets/img/boosted-guidelines@2x.png
 site/docs/**/assets/img/boosted-sprite.svg
 site/docs/**/assets/img/navbar-contact.png
-site/docs/**/assets/img/orange-logo.svg
 site/docs/**/assets/img/favicons/android-chrome-192x192.png
 site/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/docs/**/assets/img/favicons/apple-touch-icon.png
