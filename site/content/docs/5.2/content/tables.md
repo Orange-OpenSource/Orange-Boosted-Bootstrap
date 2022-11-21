@@ -851,6 +851,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
   <table class="table table-sm table-hover table-responsive align-middle">
     <colgroup>
       <col style="width:2.5rem;">
+      <col span="4">
     </colgroup>
     <thead>
       <tr>
