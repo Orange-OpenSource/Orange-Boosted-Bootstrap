@@ -634,11 +634,6 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 ### Row selection
 Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute, and add `<colgroup>` inside `<table>` (before `<thead>`) to force first column to be 2.5rem large to comply with Orange Design System.
-```html
-<colgroup>
-    <col style="width:2.5rem;">
-</colgroup>
-```
 
 {{< callout info >}}
 #### Selection feature
@@ -650,6 +645,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
   <table class="table table-sm table-hover table-responsive">
     <colgroup>
       <col style="width:2.5rem;">
+      <col span="4">
     </colgroup>
     <thead>
       <tr>
@@ -789,6 +785,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
   <table class="table table-sm table-hover table-responsive">
     <colgroup>
       <col style="width:2.5rem;">
+      <col span="4">
     </colgroup>
     <thead>
       <tr>
