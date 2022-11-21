@@ -16,7 +16,7 @@ Solaris is a growing library of SVG icons that are designed by [Orange's Global 
 
 They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal information]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
-[Learn more about Solaris]({{< param icons >}}) (requires an `@orange.com` email to sign-up).
+[Learn more about Solaris]({{< param icons >}}).
 
 ### Use Solaris icons
 
