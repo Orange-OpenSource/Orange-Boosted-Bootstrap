@@ -803,22 +803,23 @@ $table-th-font-weight:        null !default;
 $table-striped-color:                   $table-color !default;
 $table-striped-bg-factor:               .065 !default;
 $table-striped-bg:                      rgba($black, $table-striped-bg-factor) !default;
+$table-striped-hover-color:             $table-color !default; // Boosted mod
 $table-striped-hover-bg-factor:         .4 !default; // Boosted mod
 $table-striped-hover-bg:                rgba($black, $table-striped-hover-bg-factor) !default; // Boosted mod
 $table-variant-striped-bg-factor:       .2 !default; // Boosted mod
 $table-variant-striped-hover-bg-factor: .87 !default; // Boosted mod
 
 $table-active-color:                    $table-color !default;
-$table-active-bg-factor:                .13 !default;
+$table-active-bg-factor:                .13 !default; // Boosted mod
 $table-active-bg:                       rgba($black, $table-active-bg-factor) !default;
 $table-variant-active-bg-factor:        .6 !default; // Boosted mod
 
 $table-hover-color:                     $table-color !default;
-$table-hover-bg-factor:                 .065 !default;
+$table-hover-bg-factor:                 .065 !default; // Boosted mod
 $table-hover-bg:                        rgba($black, $table-hover-bg-factor) !default;
 $table-variant-hover-bg-factor:         .2 !default; // Boosted mod
 
-$table-border-factor:                   .4 !default;
+$table-border-factor:                   .4 !default; // Boosted mod
 $table-border-width:                    $border-width * .5 !default; // Boosted mod
 $table-border-color:                    $gray-500 !default; // Boosted mod
 

@@ -22,11 +22,11 @@ To make a table accessible, you should respect these three main rules:
 
 - If the table is an important one, add a `role="region"` attribute to help screen readers.
 
-- add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers
+- add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers.
 
-- add a `<caption>` on each table. If the table doesn't have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata are mandatory for complex tables.
+- add a `<caption>` on each table. If the table doesn't have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
 
-See [more about the tables structures](https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees).
+See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
 
 ## Variants
 
@@ -492,68 +492,6 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
     ...
   </tbody>
 </table>
-```
-
-## Sticky table headers
-
-Add `.thead-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
-
-<div class="bd-example">
-  <div class="overflow-auto" style="height: 200px">
-    <table class="table">
-      <caption class="visually-hidden">Boosted table with a sticky header</caption>
-      <thead class="thead-sticky">
-        <tr>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-```html
-<div class="overflow-auto" style="height: 200px">
-  <table class="table">
-    <caption class="visually-hidden">Boosted table with a sticky header</caption>
-    <thead class="thead-sticky">...</thead>
-    ...
-  </table>
-</div>
 ```
 
 ## Responsive tables

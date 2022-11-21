@@ -75,6 +75,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>$table-striped-color</code></li>
       <li><code>$table-striped-bg-factor</code></li>
       <li><code>$table-striped-bg</code></li>
+      <li><code>$table-striped-hover-color</code></li>
       <li><code>$table-striped-hover-bg-factor</code></li>
       <li><code>$table-striped-hover-bg</code></li>
       <li><code>$table-striped-bg</code></li>
