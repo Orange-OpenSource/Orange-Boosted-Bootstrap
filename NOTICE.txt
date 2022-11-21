@@ -53,6 +53,8 @@ site/docs/**/assets/img/favicons/mstile-310x310.png
 site/docs/**/assets/brand/orange-logo.svg
 site/docs/**/assets/brand/orange-social.svg
 site/docs/**/assets/brand/orange-social.png
+site/layouts/partials/icons/download.svg
+site/layouts/partials/icons.html
 
 End of the parts list under Orange SA Copyright
 
