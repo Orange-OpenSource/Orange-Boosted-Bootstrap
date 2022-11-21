@@ -29,7 +29,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
   +        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
   ```
 
-### Content
+### Contents
 
 - **Tables**
   - <span class="badge bg-warning">Warning</span> Every table now has a caption with `.visually-hidden` on it. Please reflect this modification into your websites.
