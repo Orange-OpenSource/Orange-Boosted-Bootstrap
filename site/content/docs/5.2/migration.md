@@ -57,6 +57,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>$btn-letter-spacing</code></li>
       <li><code>$btn-letter-spacing-lg</code></li>
       <li><code>$btn-letter-spacing-sm</code></li>
+      <li><code>$form-feedback-line-height</code></li>
     </ul>
   </details>
 
