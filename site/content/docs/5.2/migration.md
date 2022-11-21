@@ -75,6 +75,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 - <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
 
+- <span class="badge bg-success">New</span> New small size inputs examples have been added
+
 ### Examples
 
 - **Cards and Cards RTL**
@@ -106,7 +108,13 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     <ul>
       <li><code>$form-helper-label-margin-bottom</code></li>
       <li><code>$form-helper-size</code></li>
+      <li><code>$form-select-border-radius-sm</code></li>
+      <li><code>$form-select-font-size-sm</code></li>
+      <li><code>$form-select-padding-x-sm</code></li>
+      <li><code>$form-select-padding-y-sm</code></li>
       <li><code>$helper-icon</code></li>
+      <li><code>$input-border-radius-sm</code></li>
+      <li><code>$input-font-size-sm</code></li>
     </ul>
   </details>
 
