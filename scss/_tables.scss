@@ -50,10 +50,14 @@
   }
 
   // Boosted mod
-  // Add negative right margin for selectable rows
-  td:first-child .form-check,
-  th:first-child .form-check {
-    margin-right: -$spacer * .8;
+  //  When using checkboxes in the first column, force width of this column and add negative right margin
+  //  to checkbox, to ensure correct spacing on the first column.
+  &.has-checkbox tr > :first-child {
+    width: $spacer * 2;
+
+    .form-check {
+      margin-right: -$spacer * .8;
+    }
   }
   // End mod
 }
