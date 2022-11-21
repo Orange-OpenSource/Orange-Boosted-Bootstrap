@@ -50,8 +50,6 @@ site/docs/**/assets/img/favicons/mstile-144x144.png
 site/docs/**/assets/img/favicons/mstile-150x150.png
 site/docs/**/assets/img/favicons/mstile-310x150.png
 site/docs/**/assets/img/favicons/mstile-310x310.png
-site/docs/**/assets/brand/logo-rule-3a.png
-site/docs/**/assets/brand/logo-rule-4b.png
 site/docs/**/assets/brand/orange-logo.svg
 site/docs/**/assets/brand/orange-social.svg
 site/docs/**/assets/brand/orange-social.png
