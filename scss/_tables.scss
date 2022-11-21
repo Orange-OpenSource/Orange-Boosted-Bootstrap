@@ -134,8 +134,10 @@
     --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-hover-bg);
     color: var(--#{$prefix}table-striped-hover-color);
   }
+  // End mod
 }
 
+// Boosted mod
 .thead-sticky {
   position: sticky;
   top: 0;
