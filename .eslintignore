@@ -6,3 +6,5 @@
 /js/tests/integration/
 /site/static/sw.js
 /site/layouts/
+/site/storybook/
+/stories/auto/
