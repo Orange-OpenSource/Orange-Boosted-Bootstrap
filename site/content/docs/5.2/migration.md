@@ -35,9 +35,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 
 ### CSS and Sass variables
 
-- `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
-
-- <span class="badge bg-danger">Breaking</span> `$form-range-thumb-active-border` doesn't exist any more. It has been replaced by `$form-range-thumb-active-border-color`.
+- <span class="badge bg-danger">Breaking</span> `$form-range-thumb-active-border` is now deprecated and will be removed in V5.3.0. It has been replaced by `$form-range-thumb-active-border-color`.
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
@@ -45,7 +43,6 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>--bs-btn-letter-spacing</code></li>
     </ul>
   </details>
-
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
@@ -57,6 +54,12 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
     </ul>
   </details>
 
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> @mixin:</summary>
+    <ul>
+      <li><code>@mixin button-size()</code> has a new interface including a new optional parameter for button letter spacing.</li>
+    </ul>
+</details>
 
 ## v5.2.1
 
