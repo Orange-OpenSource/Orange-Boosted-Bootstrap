@@ -49,7 +49,7 @@
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-prefix-examples": "postcss --config build/postcss.config.js --replace \"site/content/**/*.css\"",
     "fonts": "cross-env mkdir -p dist/fonts && cp -r ./fonts/* dist/fonts/",
-    "img": "cross-env mkdir -p dist/img && cp -r dist/img/",
+    "img": "cross-env mkdir -p dist/img",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
