@@ -57,25 +57,3 @@ Orange Business Services has its own logo that contains the Orange logo and the 
 </div>
 
 {{< svg-docs file="img/OBS-logo.svg" >}}
-
-## Build your own logo
-
-If no logo exists as a SVG file Boosted [flex]({{< docsref "/utilities/flex" >}}) and [spacing]({{< docsref "/utilities/spacing" >}}) utilities allows to use semantic markup to implement it.
-
-{{< example show_preview="false" >}}
-<div class="d-inline-flex align-items-baseline">
-  <img id="example" src="orange-logo.svg" width="50" height="50" alt="" aria-hidden="true" loading="lazy">
-  <span class="h5 ms-2 mb-0 align-self-end">
-    <span class="visually-hidden">Orange </span>
-    Example<br>Service
-  </span>
-</div>
-{{< /example >}}
-
-A single CSS property is required for proper alignment:
-
-{{< example show_preview="false" lang="scss" >}}
-#example {
-  margin-bottom: $spacer / 10;
-}
-{{< /example >}}
