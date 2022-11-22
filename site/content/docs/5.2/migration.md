@@ -36,7 +36,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 ### Contents
 
 - **Tables**
-  - When using row selection (checkboxes), use `.has-checkbox` on the table to get correct spacing on the first column.
+  - <span class="badge bg-warning">Warning</span> Reintroduction of `.has-checkbox` from v4 to correct spacing of first column when having row selection.
 
 ### Examples
 
