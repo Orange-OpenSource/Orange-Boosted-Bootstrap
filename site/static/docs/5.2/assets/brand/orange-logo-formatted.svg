@@ -6,16 +6,16 @@
         }
 
         #b, #c {
-          fill:#fff
+          fill: #fff;
         }
 
-        @media (max-width:49.98px) {
+        @media (max-width: 49.98px) {
           #b {
             display: none;
           }
         }
 
-        @media (min-width:50px) {
+        @media (min-width: 50px) {
           #c {
             display: none;
           }
