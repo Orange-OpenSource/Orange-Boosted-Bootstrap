@@ -50,8 +50,8 @@
   }
 
   // Boosted mod
-  //  When using checkboxes in the first column, force width of this column and add negative right margin
-  //  to checkbox, to ensure correct spacing on the first column.
+  // When using checkboxes in the first column, force width of this column and add negative right margin
+  // to checkbox, to ensure correct spacing on the first column.
   &.has-checkbox tr > :first-child {
     width: $spacer * 2;
 
