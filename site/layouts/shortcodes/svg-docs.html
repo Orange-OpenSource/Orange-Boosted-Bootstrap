@@ -1,14 +1,14 @@
 {{- /*
-  Usage: `svg-docs file="site/static/docs/5.2/assets/brand/orange-logo" downloadable="true"`
+  Usage: `svg-docs file="site/static/docs/{version}/assets/brand/orange-logo" downloadable="true"`
 
     Prints SVG content.
 
     Optional parameters:
-      file: SVG file path without file extension - default: `site/static/docs/5.2/assets/brand/orange-logo`
+      file: SVG file path without file extension - default: `site/static/docs/{version}/assets/brand/orange-logo`
       downloadable: is the file downloadable? - default: `true`
 */ -}}
 
-{{- $file := .Get "file" | default "site/static/docs/5.2/assets/brand/orange-logo" -}}
+{{- $file := .Get "file" | default (print "site/static/docs/" .Site.Params.docs_version "/assets/brand/orange-logo") -}}
 {{- $svgFormatted := readFile (print $file "-formatted.svg") -}}
 {{- $svg := readFile (print $file ".svg") -}}
 {{- $code := $svgFormatted -}}
