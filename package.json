@@ -163,7 +163,7 @@
     "rollup-plugin-istanbul": "^3.0.0",
     "rtlcss": "^4.0.0",
     "sass": "^1.55.0",
-    "sass-loader": "^10.1.1",
+    "sass-loader": "^13.2.0",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
     "stylelint": "^14.13.0",
