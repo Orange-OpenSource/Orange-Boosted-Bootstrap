@@ -1,7 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
   <defs>
     <style>
-      @media (max-width:49.98px){#b{display:none}}@media (min-width:50px){#c{display:none}}
+      @media (max-width: 49.98px) {
+        #b {
+          display: none;
+        }
+      }
+
+      @media (min-width:50px) {
+        #c {
+          display: none;
+        }
+      }
     </style>
   </defs>
   <path fill="#ff7900" d="M0 0h50v50H0z"/>

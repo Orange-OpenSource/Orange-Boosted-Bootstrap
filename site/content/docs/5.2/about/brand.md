@@ -56,4 +56,4 @@ Orange Business Services has its own logo that contains the Orange logo and the 
   </div>
 </div>
 
-{{< svg-docs file="img/OBS-logo.svg" >}}
+{{< svg-docs file="site/static/docs/5.2/assets/brand/OBS-logo" >}}

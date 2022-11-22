@@ -35,13 +35,13 @@ and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 dist/img/orange-logo.svg
-img/OBS-logo.svg
-img/orange-logo.svg
 nuget/boosted.png
 site/layouts/partials/icons.html
 site/layouts/partials/icons/download.svg
 site/static/docs/**/assets/brand/OBS-logo.svg
+site/static/docs/**/assets/brand/OBS-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-logo.svg
+site/static/docs/**/assets/brand/orange-logo-formatted.svg
 site/static/docs/**/assets/brand/orange-social.png
 site/static/docs/**/assets/brand/orange-social.svg
 site/static/docs/**/assets/img/boosted-cross.svg
