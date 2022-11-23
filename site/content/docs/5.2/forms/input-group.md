@@ -216,12 +216,12 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
-  <input type="text" class="form-control ms-0" aria-label="Text input with segmented dropdown button">
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
 </div>
 
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-  <button type="button" class="btn btn-secondary ms-0">Action</button>
+  <button type="button" class="btn btn-secondary">Action</button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
