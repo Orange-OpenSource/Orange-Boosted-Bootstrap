@@ -58,9 +58,10 @@
       display: none;
       width: 100%;
       margin-top: $form-feedback-margin-top;
-      font-style: $form-feedback-font-style;
       @include font-size($form-feedback-font-size);
+      font-style: $form-feedback-font-style;
       font-weight: $font-weight-bold; // Boosted mod
+      line-height: $form-feedback-line-height; // Boosted mod
 
       // Boosted mod: status should not rely on color only
       @if $enable-validation-icons {

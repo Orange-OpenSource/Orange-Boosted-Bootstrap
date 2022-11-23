@@ -52,6 +52,8 @@ module:
       target:                       assets/js/vendor/tarteaucitron.js
     - source:                       node_modules/tarteaucitronjs/lang
       target:                       static/docs/5.2/assets/js/lang
+    - source:                       site/storybook
+      target:                       static/storybook
 
 params:
   subtitle:                         "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
@@ -65,7 +67,7 @@ params:
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
   blog:                             "https://blog.getbootstrap.com/"
-  icons:                            "https://design.orange.com/icons-libraries/"
+  icons:                            "https://system.design.orange.com/0c1af118d/p/847054-solaris-icons/b/84c5ca"
   bootstrap:                        "https://getbootstrap.com"
   ods:
     web:                            "https://system.design.orange.com/0c1af118d/n/76065f"
