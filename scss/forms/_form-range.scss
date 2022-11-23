@@ -12,13 +12,16 @@
   appearance: none;
 
   &:focus {
-    // Boosted mod: better focus visibility
-    outline: 0;
-
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
-    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
+    &::-webkit-slider-thumb {
+      border-color: $form-range-thumb-active-border-color;
+      box-shadow: $form-range-thumb-focus-box-shadow;
+    }
+    &::-moz-range-thumb {
+      border-color: $form-range-thumb-active-border-color;
+      box-shadow: $form-range-thumb-focus-box-shadow;
+    }
   }
 
   &::-moz-focus-outer {
