@@ -26,6 +26,7 @@
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Constants
    */
@@ -41,6 +42,7 @@
   const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]';
   const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]';
   const SELECTOR_INPUT_GROUP = '.input-group';
+
   /**
    * Class definition
    */
@@ -49,9 +51,9 @@
     // Getters
     static get NAME() {
       return NAME;
-    } // Public
+    }
 
-
+    // Public
     ValueOnLoad(element) {
       const counterInput = element.querySelector(SELECTOR_COUNTER_INPUT);
       const btnUp = element.querySelector(SELECTOR_STEP_UP_BUTTON);
@@ -59,17 +61,15 @@
       const min = counterInput.getAttribute('min');
       const max = counterInput.getAttribute('max');
       const step = Number(counterInput.getAttribute('step'));
-
       if (Number(counterInput.value) - step < min) {
         btnDown.setAttribute('disabled', '');
       }
-
       if (Number(counterInput.value) + step > max) {
         btnUp.setAttribute('disabled', '');
       }
-    } // Static
+    }
 
-
+    // Static
     static StepUp(event) {
       const parent = event.target.closest(SELECTOR_INPUT_GROUP);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
@@ -77,14 +77,11 @@
       const step = Number(counterInput.getAttribute('step'));
       const round = Number(counterInput.getAttribute('data-bs-round'));
       const eventChange = new Event('change');
-
       if (Number(counterInput.value) < max) {
         counterInput.value = (Number(counterInput.value) + step).toFixed(round).toString();
       }
-
       counterInput.dispatchEvent(eventChange);
     }
-
     static StepDown(event) {
       const parent = event.target.closest(SELECTOR_INPUT_GROUP);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
@@ -92,14 +89,11 @@
       const step = Number(counterInput.getAttribute('step'));
       const round = Number(counterInput.getAttribute('data-bs-round'));
       const eventChange = new Event('change');
-
       if (Number(counterInput.value) > min) {
         counterInput.value = (Number(counterInput.value) - step).toFixed(round).toString();
       }
-
       counterInput.dispatchEvent(eventChange);
     }
-
     static CheckIfDisabledOnChange(event) {
       const parent = event.target.closest(SELECTOR_INPUT_GROUP);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
@@ -110,37 +104,30 @@
       const step = Number(counterInput.getAttribute('step'));
       btnUp.removeAttribute('disabled', '');
       btnDown.removeAttribute('disabled', '');
-
       if (Number(counterInput.value) - step < min) {
         btnDown.setAttribute('disabled', '');
       }
-
       if (Number(counterInput.value) + step > max) {
         btnUp.setAttribute('disabled', '');
       }
     }
-
     static jQueryInterface(config) {
       return this.each(function () {
         const data = QuantitySelector.getOrCreateInstance(this, config);
-
         if (typeof config !== 'string') {
           return;
         }
-
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`);
         }
-
         data[config]();
       });
     }
-
   }
+
   /**
    * Data API implementation
    */
-
 
   EventHandler__default.default.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange);
   EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp);
@@ -150,6 +137,7 @@
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
+
   /**
    * jQuery
    */

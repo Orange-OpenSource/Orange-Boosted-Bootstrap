@@ -25,6 +25,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Constants
    */
@@ -36,6 +37,7 @@
   const CLASS_NAME_ACTIVE = 'active';
   const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="button"]';
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+
   /**
    * Class definition
    */
@@ -44,30 +46,28 @@
     // Getters
     static get NAME() {
       return NAME;
-    } // Public
+    }
 
-
+    // Public
     toggle() {
       // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
       this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE));
-    } // Static
+    }
 
-
+    // Static
     static jQueryInterface(config) {
       return this.each(function () {
         const data = Button.getOrCreateInstance(this);
-
         if (config === 'toggle') {
           data[config]();
         }
       });
     }
-
   }
+
   /**
    * Data API implementation
    */
-
 
   EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
     event.preventDefault();
@@ -75,6 +75,7 @@
     const data = Button.getOrCreateInstance(button);
     data.toggle();
   });
+
   /**
    * jQuery
    */

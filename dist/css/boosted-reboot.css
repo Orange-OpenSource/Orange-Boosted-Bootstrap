@@ -49,6 +49,7 @@
   --bs-danger-rgb: 205, 60, 20;
   --bs-light-rgb: 204, 204, 204;
   --bs-dark-rgb: 0, 0, 0;
+  --bs-primary-text-rgb: 241, 110, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 0, 0, 0;
@@ -87,6 +88,7 @@
 [class*=bg-black],
 [class*=-dark]:not(.border-dark):not(.text-dark),
 [class*=bg-secondary] {
+  --bs-primary-text-rgb: 255, 121, 0;
   --bs-link-color: #fff;
   --bs-link-hover-color: #ff7900;
   --o-caption-color: #fff;
@@ -100,6 +102,7 @@
 [class*=bg-]:not([class*=bg-black],
 [class*=-dark]:not(.border-dark):not(.text-dark),
 [class*=bg-secondary]):not(.bg-transparent) {
+  --bs-primary-text-rgb: 241, 110, 0;
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
   --o-caption-color: var(--o-caption-color, #000);

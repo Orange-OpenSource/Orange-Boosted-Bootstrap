@@ -1090,7 +1090,7 @@
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-primary-text-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-light {

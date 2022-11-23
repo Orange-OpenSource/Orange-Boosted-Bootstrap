@@ -24,7 +24,6 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -32,14 +31,13 @@
       if (['A', 'AREA'].includes(this.tagName)) {
         event.preventDefault();
       }
-
       if (index.isDisabled(this)) {
         return;
       }
-
       const target = index.getElementFromSelector(this) || this.closest(`.${name}`);
-      const instance = component.getOrCreateInstance(target); // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
+      const instance = component.getOrCreateInstance(target);
 
+      // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
       instance[method]();
     });
   };
