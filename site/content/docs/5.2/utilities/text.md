@@ -3,6 +3,8 @@ layout: docs
 title: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
+aliases:
+  - "/docs/utilities/text/"
 toc: true
 ---
 
@@ -103,6 +105,8 @@ Change the line height with `.lh-*` utilities.
 {{< /example >}}
 
 ## Line length
+
+{{< added-in "5.2.0" >}}
 
 Limit the line length with `.ll-*` utilities. It applies `max-width` property to an element with a width based on `ch` unit. This one was chosen because it is a font-based unit and because `1ch` is the width of "0" (which is around an average character width). It requires anything but `inline` to be applied.
 

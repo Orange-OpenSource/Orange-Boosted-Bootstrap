@@ -49,15 +49,16 @@
     border-radius: $form-check-radio-border-radius;
   }
 
-  &:focus {
-    border-color: $form-check-input-focus-border;
-    box-shadow: $form-check-input-focus-box-shadow;
-  }
-
   &:active {
     background-color: $form-check-input-active-bg-color; // Boosted mod
     filter: $form-check-input-active-filter;
     border-color: $form-check-input-active-bg-color; // Boosted mod
+  }
+
+  &:focus {
+    border-color: $form-check-input-focus-border;
+    // Boosted mod: default outline
+    box-shadow: $form-check-input-focus-box-shadow;
   }
 
   &:checked {
@@ -103,7 +104,8 @@
     opacity: $form-check-input-disabled-opacity;
 
     // Boosted mod
-    &:checked {
+    &:checked,
+    &:indeterminate {
       background-color: $form-check-input-disabled-color;
       filter: $invert-filter;
       border-color: $form-check-input-disabled-color;
@@ -117,6 +119,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $form-label-disabled-color; // Boosted mod
+      pointer-events: none;
       cursor: default;
       opacity: $form-check-label-disabled-opacity;
     }
@@ -144,6 +147,7 @@
 .form-switch {
   // Boosted mod
   --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
 
@@ -155,7 +159,7 @@
     background-image: $form-switch-bg-image, var(--#{$boosted-prefix}switch-gradient);
     filter: $invert-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
-    background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
+    background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
     border-color: $white; // Boosted mod
     outline-color: $white; // Boosted mod
     outline-offset: $spacer; // Boosted mod
@@ -170,11 +174,11 @@
       @if $enable-gradients {
         background-image: $form-switch-checked-bg-image, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
-        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size;
+        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size 100%;
       } @else {
         background-image: $form-switch-checked-bg-image, var(--#{$boosted-prefix}switch-gradient);
         background-position: $form-switch-checked-bg-position, 100% 0;
-        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size;
+        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
       }
 
       &:active,
@@ -283,6 +287,11 @@
       border-color: $gray-500;
       outline-color: currentcolor;
     }
+
+    + .tag {
+      outline: $outline-width * 1.5 solid var(--#{$prefix}tag-outline-color);
+      outline-offset: .125rem;
+    }
   }
 
   &:checked {
@@ -302,6 +311,12 @@
         color: $accessible-orange;
         background-color: transparent;
       }
+    }
+
+    + .tag {
+      color: var(--bs-tag-active-color);
+      background-color: var(--bs-tag-active-decoration-color);
+      border-color: var(--bs-tag-active-decoration-color);
     }
   }
 
@@ -341,6 +356,17 @@
       color: $gray-500;
       background-color: transparent;
       border-color: currentcolor;
+    }
+
+    + .tag {
+      color: var(--#{$prefix}tag-disabled-color);
+      pointer-events: none;
+      border-color: var(--#{$prefix}tag-disabled-color);
+    }
+
+    &:checked + .tag {
+      color: var(--#{$prefix}tag-active-color);
+      background-color: var(--#{$prefix}tag-disabled-color);
     }
     // End mod
   }

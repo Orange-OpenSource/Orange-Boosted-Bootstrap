@@ -3,6 +3,8 @@ layout: docs
 title: Range
 description: Use our custom range inputs for consistent cross-browser styling and built-in customization.
 group: forms
+aliases:
+  - "/docs/forms/range/"
 toc: true
 ---
 
@@ -23,7 +25,7 @@ Only Firefox supports “filling” their track from the left or right of the th
 
 ## Disabled
 
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
 {{< example >}}
 <label for="disabledRange" class="form-label is-disabled">Disabled range</label>

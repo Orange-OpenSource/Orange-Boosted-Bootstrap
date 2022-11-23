@@ -1,12 +1,14 @@
 ---
 layout: docs
 title: Contents
-description: Discover what's included in Boosted, including our precompiled and source code flavors.
+description: Discover what's included in Boosted, including our compiled and source code flavors.
 group: getting-started
+aliases:
+  - "/docs/getting-started/contents/"
 toc: true
 ---
 
-## Precompiled Boosted
+## Compiled Boosted
 
 Once downloaded, unzip the compressed folder and you'll see something like this:
 
@@ -62,9 +64,9 @@ boosted/
     └── boosted.min.js.map
 ```
 
-This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
+This is the most basic form of Boosted: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
 
-## CSS files
+### CSS files
 
 Boosted includes a handful of options for including some or all of our compiled CSS.
 
@@ -77,7 +79,7 @@ Boosted includes a handful of options for including some or all of our compiled 
 | `boosted-reboot.css`<br> `boosted-reboot.rtl.css`<br> `boosted-reboot.min.css`<br> `boosted-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
-## JS files
+### JS files
 
 Similarly, we have options for including some or all of our compiled JavaScript.
 
@@ -90,7 +92,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 
 ## Boosted source code
 
-The Boosted source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+The Boosted source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
 boosted/
@@ -108,4 +110,4 @@ boosted/
 └── scss/
 ```
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Boosted usage. Beyond that, any other included file provides support for packages, license information, and development.
+The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the compiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Boosted usage. Beyond that, any other included file provides support for packages, license information, and development.

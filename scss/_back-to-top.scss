@@ -19,6 +19,7 @@
   --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
   --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
   --#{$prefix}back-to-top-title-padding: #{$back-to-top-title-padding};
+  --#{$prefix}back-to-top-title-color: #{color-contrast($back-to-top-title-bg-color)};
   --#{$prefix}back-to-top-title-bg-color: #{$back-to-top-title-bg-color};
   --#{$prefix}back-to-top-title-active-decoration: #{$link-decoration};
   // scss-docs-end back-to-top-css-vars
@@ -36,6 +37,7 @@
   right: var(--#{$prefix}back-to-top-right);
   bottom: var(--#{$prefix}back-to-top-bottom);
   z-index: var(--#{$prefix}back-to-top-zindex);
+  pointer-events: none;
 }
 
 .back-to-top-link {
@@ -58,7 +60,7 @@
       right: var(--#{$prefix}back-to-top-title-offset-right);
       z-index: -1; // To ensure focus indicator appears above
       padding: var(--#{$prefix}back-to-top-title-padding);
-      color: color-contrast($back-to-top-title-bg-color);
+      color: var(--#{$prefix}back-to-top-title-color);
       white-space: nowrap;
       content: attr(data-#{$prefix}label);
       background-color: var(--#{$prefix}back-to-top-title-bg-color);

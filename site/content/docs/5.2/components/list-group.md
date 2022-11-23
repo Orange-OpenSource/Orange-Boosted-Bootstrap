@@ -3,6 +3,8 @@ layout: docs
 title: List group
 description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
 group: components
+aliases:
+  - "/docs/components/list-group/"
 toc: true
 ---
 
@@ -244,32 +246,88 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
-However, we recommend to use `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+{{< example >}}
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+  </li>
+</ul>
+{{< /example >}}
 
 {{< example >}}
-<div class="list-group">
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    First checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Second checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Third checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fourth checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fifth checkbox
-  </label>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+    <label class="form-check-label" for="firstRadio">First radio</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+    <label class="form-check-label" for="secondRadio">Second radio</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+    <label class="form-check-label" for="thirdRadio">Third radio</label>
+  </li>
+</ul>
+{{< /example >}}
+
+You can use `.stretched-link` on `<label>`s to make the whole list group item clickable.
+
+{{< example >}}
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+    <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+    <label class="form-check-label stretched-link" for="secondCheckboxStretched">Second checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+    <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Third checkbox</label>
+  </li>
+</ul>
+{{< /example >}}
+
+<!-- Boosted mod -->
+## Dark variant
+
+{{< added-in "5.2.1" >}}
+
+{{< callout warning >}}
+Dark variant won't support [contextual classes](#contextual-classes) until next release.
+{{< /callout >}}
+
+Add `.list-group-dark` to the `.list-group` for a dark variant.
+
+{{< example class="bg-dark" >}}
+<ul class="list-group list-group-dark">
+  <li class="list-group-item">A simple default list group item</li>
+  <li class="list-group-item active">A simple active list group item</li>
+  <li class="list-group-item disabled" aria-disabled="true">A simple disabled list group item</li>
+</ul>
+{{< /example >}}
+
+Dark variant also work with `.list-group-item-action`.
+
+{{< example class="bg-dark" >}}
+<div class="list-group list-group-dark">
+  <a class="list-group-item list-group-item-action" href="#">A simple default link list group item</a>
+  <a class="list-group-item list-group-item-action active" href="#">A simple active link list group item</a>
+  <a class="list-group-item list-group-item-action disabled">A simple disabled link list group item</a>
 </div>
 {{< /example >}}
+<!-- End mod -->
 
 ## CSS
 
@@ -281,9 +339,23 @@ As part of Boosted's evolving CSS variables approach, list groups now use local 
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
+<!-- Boosted mod -->
+Customization through CSS variables can be seen on the `.list-group-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="list-group-dark-css-vars" file="scss/_list-group.scss" >}}
+<!-- End mod -->
+
 ### Sass variables
 
+Variables for all list groups:
+
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
+
+<!-- Boosted mod -->
+Variables for the [dark list group](#dark-variant):
+
+{{< scss-docs name="list-group-dark-variables" file="scss/_variables.scss" >}}
+<!-- End mod -->
 
 ### Mixins
 
@@ -416,62 +488,26 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 ### Methods
 
-#### constructor
+{{< callout danger >}}
+{{< partial "callout-danger-async-methods.md" >}}
+{{< /callout >}}
 
-Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
+Activates your content as a tab element.
 
-```html
-<div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
-</div>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab a:last-child')
-  const firstTab = new boosted.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+You can create a tab instance with the constructor, for example:
 
 ```js
-const tab = new boosted.Tab('#someListItem')
-
-tab.show()
+const bsTab = new boosted.Tab('#myTab')
 ```
 
-#### dispose
-
-Destroys an element's tab.
-
-#### getInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element
-
-```js
-const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
-```
-
-#### getOrCreateInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
-
-```js
-const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
-```
+{{< bs-table >}}
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element's tab. |
+| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `boosted.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Tab.getOrCreateInstance(element)`. |
+| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+{{< /bs-table >}}
 
 ### Events
 
@@ -482,15 +518,15 @@ When showing a new tab, the events fire in the following order:
 3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
 4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+If no tab was already active, then `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
 
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
+| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
+| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
 | `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
 | `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
 {{< /bs-table >}}
 
 ```js

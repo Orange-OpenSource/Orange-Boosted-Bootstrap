@@ -3,17 +3,8 @@
 //
 
 .bd-footer {
-  @include font-size(.875rem);
-  position: sticky;
-  top: 100vh;
-  font-weight: 700;
+  position: sticky; // Boosted mod
+  top: 100vh; // Boosted mod
 
-  a {
-    color: var(--#{$prefix}link-color); // Boosted mod: use CSS var instead of $link-color
-
-    &:hover,
-    &:focus {
-      color: var(--#{$prefix}link-hover-color); // Boosted mod: use CSS var instead of $link-hover-color
-    }
-  }
+  // Boosted mod: no a selector
 }

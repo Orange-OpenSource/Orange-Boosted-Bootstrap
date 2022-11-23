@@ -3,6 +3,8 @@ layout: docs
 title: Spinners
 description: Indicate the loading state of a component or page with Boosted spinners, built entirely with HTML, CSS, and no JavaScript.
 group: components
+aliases:
+  - "/docs/components/spinners/"
 toc: true
 ---
 
@@ -61,6 +63,8 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 {{< /callout >}}
 
 ## Growing spinner
+
+{{< added-in "5.2.0" >}}
 
 If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 

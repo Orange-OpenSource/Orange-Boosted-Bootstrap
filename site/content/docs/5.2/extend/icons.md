@@ -3,6 +3,8 @@ layout: docs
 title: Icons
 description: Guidance and suggestions for using Solaris icon libraries with Boosted.
 group: extend
+aliases:
+  - "/docs/extend/icons/"
 toc: true
 ---
 
@@ -14,7 +16,7 @@ Solaris is a growing library of SVG icons that are designed by [Orange's Global 
 
 They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal information]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
-[Learn more about Solaris]({{< param icons >}}) (requires an `@orange.com` email to sign-up).
+[Learn more about Solaris]({{< param icons >}}).
 
 ### Use Solaris icons
 
@@ -122,3 +124,67 @@ Known issues include:
 
 <!-- Boosted mod: link to Orange Accessibility Guidelines -->
 **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
+
+### Icon font
+
+You can also embed Solaris icons in an icon font by using [IcoMoon App](https://icomoon.io/app/).
+
+#### Create your own project
+
+Go to the top left menu and select `Manage Projects`:
+
+<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-manage-projects.png" alt="IcoMoon - Manage Projects menu" loading="lazy">
+
+Create a `New Project` and click on `Load`:
+
+<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-new-project.png" alt="IcoMoon - New Project" loading="lazy">
+
+#### Select your icons
+
+By default there is no icon in this new project.
+
+Click on `Import icons` and import icons in SVG.
+
+{{< callout warning >}}
+SVG icons must be within a square layout to preserve icons consistency. Otherwise you will have some surprises!
+{{< /callout >}}
+
+<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-import-icons.png" alt="IcoMoon - Import Icons" loading="lazy">
+
+By default there is no selected icon. Check that you are in selection mode (third icon in the top bar, after `Import Icons` and the icon library) and then click on the icons to embed in your font. When an icon is selected, its border becomes yellow.
+
+<img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-select-icons.png" alt="IcoMoon - Select Icons" loading="lazy">
+
+#### Download and adapt your font
+
+Now you can create your font. Click on `Generate Font` at the bottom right of the page. Depending of the number of selected icons, it can take some time!
+
+<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-generate-font.png" alt="IcoMoon - Generate Font" loading="lazy">
+
+Now you have a `Download` button at the bottom right of the page but **WAIT!**.
+
+##### Setting your font preferences
+
+You need to make some changes into `Preferences` to name your font with a name dedicated to your project.
+
+1. Click on `Preferences` on the top menu bar.
+2. The default font name is `icomoon`. Rename it for you project (e.g. `myproject-icons`) and customize the class prefix by adding your project name to create a unique CSS selector.
+3. You can also change the version, get SCSS variables, etc.
+4. Don't forget to **uncheck IE8 support**!
+
+<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-preferences.png" alt="IcoMoon - Preferences" loading="lazy">
+
+##### Download your font
+
+Close the preferences modal.
+
+You are now ready to download your font with the button at the bottom right of the page.
+
+<img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-download-font.png" alt="IcoMoon - Download Font" loading="lazy">
+
+The zip file will be named in function of what has been defined in the preferences modal (e.g. `myproject-icons-v1.0.zip`).
+
+Unzip it:
+* `demo.html` and `demo-files` fold offer a sample page displaying the icons — they are not mandatory for your project.
+* `fonts` folder contains `myproject-icons.woff`. You can create the `woff2` corresponding file by using [Everything Fonts](https://everythingfonts.com/).
+* `style.css` contains all the CSS classes. Rename it to `myproject-icons.css` and adapt it for SCSS if needed.

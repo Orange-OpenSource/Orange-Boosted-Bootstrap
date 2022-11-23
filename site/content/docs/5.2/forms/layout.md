@@ -3,6 +3,8 @@ layout: docs
 title: Layout
 description: Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
 group: forms
+aliases:
+  - "/docs/forms/layout/"
 toc: true
 ---
 
@@ -106,7 +108,7 @@ More complex layouts can also be created with the grid system.
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </div>
 </form>
 {{< /example >}}
@@ -164,7 +166,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary mt-2">Sign in</button>
 </form>
 {{< /example >}}
 
@@ -286,7 +288,7 @@ You can then remix that once again with size-specific column classes.
 
 ## Inline forms
 
-Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-checkbox` align properly.
+Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-check` align properly.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">

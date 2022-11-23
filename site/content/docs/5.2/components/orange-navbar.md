@@ -3,9 +3,13 @@ layout: docs
 title: Orange navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
+aliases:
+  - "/docs/components/orange-navbar/"
 toc: true
 added: "5.2"
 ---
+
+{{< added-in "5.2.0" >}}
 
 ## How it works
 
@@ -123,9 +127,9 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
         <!-- Right navbar of the Supra bar -->
         <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>
         </ul>
       </div>
 
@@ -189,7 +193,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
                 <use xlink:href="/docs/{{<param docs_version>}}/assets/img/boosted-sprite.svg#buy" />
               </svg>
               <span class="visually-hidden">Basket</span>
-              <span class="position-relative">
+              <span class="position-relative align-self-start">
                 <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>

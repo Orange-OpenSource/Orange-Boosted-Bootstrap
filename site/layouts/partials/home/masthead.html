@@ -1,11 +1,11 @@
 <div class="bd-masthead mb-3" id="content">
   <div class="container-xxl bd-gutter">
     <div class="col-md-8 mx-auto text-center">
-      <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none">
-        <small class="d-inline-flex me-2 mb-2 mb-lg-0 px-2 py-1 fw-bold bg-light border border-light">New in v5.2</small>
+      <p class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none">
+        <span class="tag me-2">New in v5.2</span>
         <span class="text-muted">CSS variables, responsive offcanvas, new utilities, and more!</span>
-      </div>
-      <div id="boosted" class="bg-dark text-white d-flex align-items-end justify-content-center mx-auto my-3" role="presentation">
+      </p>
+      <div id="boosted" class="text-bg-dark d-flex align-items-end justify-content-center mx-auto my-3" role="presentation">
         <span class="d-inline-flex mb-3 display-0">B<span class="text-primary bg-transparent">oo</span>sted</span>
       </div>
       <h1 class="mb-3 display-1">Orange B<span class="text-primary">oo</span>sted<br>with Bootstrap</h1>
@@ -15,9 +15,9 @@
       <p class="lead mb-4">
         Orange Boosted is a Bootstrap based, Orange branded accessible and ergonomic components library.
       </p>
-      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-center gap-3 mb-4">
+      <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
         <div class="d-inline-block v-align-middle fs-5" style="min-width: fit-content;">
-          {{ highlight (printf ("npm install boosted@%s") .Site.Params.current_version) "sh" "" }}
+          {{ highlight (printf ("npm i boosted@%s") .Site.Params.current_version) "sh" "" }}
         </div>
         <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-primary" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">
           <svg class="bi me-2 fs-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>

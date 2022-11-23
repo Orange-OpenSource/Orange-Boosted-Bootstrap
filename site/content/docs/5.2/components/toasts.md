@@ -3,6 +3,8 @@ layout: docs
 title: Toasts
 description: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
 group: components
+aliases:
+  - "/docs/components/toasts/"
 toc: true
 ---
 
@@ -156,10 +158,10 @@ Customize your toasts by removing sub-components, tweaking them with [utilities]
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
-    <div class="toast-body">
+    <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
 {{< /example >}}
@@ -185,10 +187,10 @@ Building on the above example, you can create different toast color schemes with
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
-    <div class="toast-body">
+    <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
 {{< /example >}}
@@ -197,7 +199,7 @@ Building on the above example, you can create different toast color schemes with
 
 Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <form>
   <div class="mb-3">
     <label for="selectToastPlacement">Toast placement</label>
@@ -360,9 +362,9 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `animation` | boolean | `true` | Apply a CSS fade transition to the toast |
-| `autohide` | boolean | `true`  | Automatically hide the toast after the delay |
-| `delay` | number | `5000` | Delay in milliseconds before hiding the toast |
+| `animation` | boolean | `true` | Apply a CSS fade transition to the toast. |
+| `autohide` | boolean | `true` | Automatically hide the toast after the delay. |
+| `delay` | number | `5000` | Delay in milliseconds before hiding the toast. |
 {{< /bs-table >}}
 
 ### Methods
@@ -374,12 +376,12 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
+| `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
+| `getInstance` | *Static* method which allows you to get the toast instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance. |
+| `getOrCreateInstance` | *Static* method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn't initialized. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance. |
 | `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
 | `isShown` | Returns a boolean according to toast's visibility state. |
-| `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
-| `getInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = boosted.Toast.getInstance(myToastEl)` Returns a Boosted toast instance|
-| `getOrCreateInstance` | *Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one, in case it wasn't initialized.  <br>`const myToastEl = document.getElementById('myToastEl')`  `const myToast = boosted.Toast.getOrCreateInstance(myToastEl)` Returns a Boosted toast instance |
+| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
 {{< /bs-table >}}
 
 ### Events
@@ -387,10 +389,10 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 {{< bs-table "table" >}}
 | Event | Description |
 | --- | --- |
+| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
+| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
 | `show.bs.toast` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.toast` | This event is fired when the toast has been made visible to the user. |
-| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
 {{< /bs-table >}}
 
 ```js

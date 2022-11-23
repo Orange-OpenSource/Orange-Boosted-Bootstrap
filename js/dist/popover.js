@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0-beta1 (https://boosted.orange.com/)
+  * Boosted v5.2.1 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap popover.js v5.2.0-beta1 (https://boosted.orange.com/)
+  * Bootstrap popover.js v5.2.1 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,7 +20,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0-beta1): popover.js
+   * Bootstrap (v5.2.1): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -32,11 +32,11 @@
   const SELECTOR_TITLE = '.popover-header';
   const SELECTOR_CONTENT = '.popover-body';
   const Default = { ...Tooltip__default.default.Default,
-    placement: 'right',
-    offset: [0, 8],
-    trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+    offset: [0, 8],
+    placement: 'right',
+    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
+    trigger: 'click'
   };
   const DefaultType = { ...Tooltip__default.default.DefaultType,
     content: '(null|string|element|function)'

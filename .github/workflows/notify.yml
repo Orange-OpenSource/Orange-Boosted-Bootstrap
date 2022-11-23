@@ -18,10 +18,3 @@ jobs:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           MATTERMOST_USERNAME: "Boosted Release"
           MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
-
-      - name: Notify slack for release
-        uses: pullreminders/slack-action@master
-        with:
-          args: '{\"channel\":\"GKHT1PV7X\",\"text\":\"Release *${{ github.event.release.tag_name }}* :tada:\n<${{ github.event.release.html_url }}|Changelog> — <${{ github.event.release.zipball_url }}|Download (zip)>\"}'
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

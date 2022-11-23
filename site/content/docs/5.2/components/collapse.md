@@ -3,6 +3,8 @@ layout: docs
 title: Collapse
 description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
 group: components
+aliases:
+  - "/docs/components/collapse/"
 toc: true
 ---
 
@@ -98,7 +100,7 @@ Be sure to add `aria-expanded` to the control element. This attribute explicitly
 
 If your control element is targeting a single collapsible element – i.e. the `data-bs-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
-Note that Boosted's current implementation does not cover the various keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript.
+Note that Boosted's current implementation does not cover the various *optional* keyboard interactions described in the [ARIA Authoring Practices Guide accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - you will need to include these yourself with custom JavaScript.
 
 ## Sass
 
@@ -146,8 +148,8 @@ const collapseList = [...collapseElementList].map(collapseEl => new boosted.Coll
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-`parent` | selector, jQuery object, DOM element | `false` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
-`toggle` | boolean | `true` | Toggles the collapsible element on invocation |
+`parent` | selector, DOM element | `null` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
+`toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
 {{< /bs-table >}}
 
 ### Methods
@@ -169,12 +171,12 @@ const bsCollapse = new boosted.Collapse('#myCollapse', {
 {{< bs-table >}}
 | Method | Description |
 | --- | --- |
-| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). |
-| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.bs.collapse` event occurs). |
-| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.bs.collapse` event occurs). |
 | `dispose` | Destroys an element's collapse. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `boosted.Collapse.getInstance(element)` |
-| `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Collapse.getOrCreateInstance(element)` |
+| `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `boosted.Collapse.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Collapse.getOrCreateInstance(element)`. |
+| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.bs.collapse` event occurs). |
+| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.bs.collapse` event occurs). |
+| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). |
 {{< /bs-table >}}
 
 ### Events
@@ -184,10 +186,10 @@ Boosted's collapse class exposes a few events for hooking into collapse function
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
+| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
+| `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
 | `show.bs.collapse` | This event fires immediately when the `show` instance method is called. |
 | `shown.bs.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
 {{< /bs-table >}}
 
 ```js

@@ -3,9 +3,11 @@ layout: docs
 title: Translations
 description: Links to community-translated Bootstrap documentation sites.
 group: about
+aliases:
+  - "/docs/about/translations/"
 ---
 
-Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.
+Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up-to-date.
 
 {{< translations.inline >}}
 <ul>

@@ -3,6 +3,8 @@ layout: docs
 title: Gutters
 description: Gutters are the padding between your columns, used to responsively space and align content in the Boosted grid system.
 group: layout
+aliases:
+  - "/docs/layout/gutters/"
 toc: true
 ---
 
@@ -19,7 +21,7 @@ toc: true
 `.gx-*` classes can be used to control the horizontal gutter widths. The `.container` or `.container-fluid` parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-4`:
 
 {{< example >}}
-<div class="container px-4">
+<div class="container px-4 text-center">
   <div class="row gx-5">
     <div class="col">
      <div class="p-3 border bg-light">Custom column padding</div>
@@ -34,7 +36,7 @@ toc: true
 An alternative solution is to add a wrapper around the `.row` with the `.overflow-hidden` class:
 
 {{< example >}}
-<div class="container overflow-hidden">
+<div class="container overflow-hidden text-center">
   <div class="row gx-5">
     <div class="col">
      <div class="p-3 border bg-light">Custom column padding</div>
@@ -48,10 +50,10 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 
 ## Vertical gutters
 
-`.gy-*` classes can be used to control the vertical gutter widths. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
+`.gy-*` classes can be used to control the vertical gutter widths within a row when columns wrap to new lines. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
 
 {{< example >}}
-<div class="container overflow-hidden">
+<div class="container overflow-hidden text-center">
   <div class="row gy-5">
     <div class="col-6">
       <div class="p-3 border bg-light">Custom column padding</div>
@@ -74,7 +76,7 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 `.g-*` classes can be used to control the horizontal gutter widths, for the following example we use a smaller gutter width, so there won't be a need to add the `.overflow-hidden` wrapper class.
 
 {{< example >}}
-<div class="container">
+<div class="container text-center">
   <div class="row g-2">
     <div class="col-6">
       <div class="p-3 border bg-light">Custom column padding</div>
@@ -97,7 +99,7 @@ An alternative solution is to add a wrapper around the `.row` with the `.overflo
 Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-columns" >}}). In the following example, we use responsive row columns and responsive gutter classes.
 
 {{< example >}}
-<div class="container">
+<div class="container text-center">
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <div class="col">
       <div class="p-3 border bg-light">Row column</div>
@@ -142,7 +144,7 @@ The gutters between columns in our predefined grid classes can be removed with `
 In practice, here's how it looks. Note you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
 
 {{< example class="bd-example-row" >}}
-<div class="row g-0">
+<div class="row g-0 text-center">
   <div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>

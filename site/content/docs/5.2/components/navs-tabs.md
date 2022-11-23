@@ -3,7 +3,10 @@ layout: docs
 title: Navs and tabs
 description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
-aliases: "/docs/5.2/components/navs/"
+aliases:
+  - "/docs/components/navs/"
+  - "/docs/components/navs-tabs/"
+  - "/docs/5.2/components/navs/"
 toc: true
 ---
 
@@ -172,6 +175,8 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 
 ### Nested tabs
 
+{{< added-in "5.2.0" >}}
+
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
@@ -323,7 +328,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 
 If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
 
-Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. The `aria-current` attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding `aria-selected="true"` on the active tab.
+Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. The `aria-current` attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding `aria-selected="true"` on the active tab.
 
 ## Using dropdowns
 
@@ -404,6 +409,10 @@ On the `.nav-tabs-light` modifier class:
 On the `.nav-pills` modifier class:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
+
+On the `.tab-content` modifier class:
+
+{{< scss-docs name="tab-content-css-vars" file="scss/_nav.scss" >}}
 
 ### Sass variables
 
@@ -619,9 +628,9 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
 
 ### Accessibility
 
-Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices 1.2](https://www.w3.org/TR/wai-aria-practices-1.2/#tabpanel), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
+Dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
 
-In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab, with the plugin changing the [roving `tabindex`](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list's orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
+In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab, with the plugin changing the [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list's orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
 
 {{< callout warning >}}
 In general, to facilitate keyboard navigation, it's recommended to make the tab panels themselves focusable as well, unless the first element containing meaningful content inside the tab panel is already focusable. The JavaScript plugin does not try to handle this aspect—where appropriate, you'll need to explicitly make your tab panels focusable by adding `tabindex="0"` in your markup.
@@ -706,71 +715,22 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-#### constructor
+Activates your content as a tab element.
 
-Activates a tab element and content container. Tab should have either a `data-bs-target` or, if using a link, an `href` attribute, targeting a container node in the DOM.
-
-```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
-  </li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab li:last-child button')
-  const firstTab = new boosted.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs).
+You can create a tab instance with the constructor, for example:
 
 ```js
-const someTabTriggerEl = document.querySelector('#someTabTrigger')
-const tab = new boosted.Tab(someTabTriggerEl)
-
-tab.show()
+const bsTab = new boosted.Tab('#myTab')
 ```
 
-#### dispose
-
-Destroys an element's tab.
-
-#### getInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element
-
-```js
-const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
-```
-
-#### getOrCreateInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
-
-```js
-const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
-```
+{{< bs-table >}}
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element's tab. |
+| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `boosted.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Tab.getOrCreateInstance(element)`. |
+| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+{{< /bs-table >}}
 
 ### Events
 
@@ -786,10 +746,10 @@ If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events 
 {{< bs-table >}}
 | Event type | Description |
 | --- | --- |
+| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
+| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
 | `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
 | `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
 {{< /bs-table >}}
 
 ```js

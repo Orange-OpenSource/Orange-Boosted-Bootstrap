@@ -3,7 +3,11 @@ layout: docs
 title: Breakpoints
 description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Boosted.
 group: layout
-aliases: "/docs/5.2/layout/"
+aliases:
+  - "/layout/"
+  - "/docs/layout/"
+  - "/docs/5.2/layout/"
+  - "/docs/layout/breakpoints/"
 toc: true
 ---
 
@@ -22,7 +26,7 @@ Boosted includes six default breakpoints, sometimes referred to as _grid tiers_,
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra small | <em>None</em>  |&lt;480px |
+| Extra small | <em>None</em> |&lt;480px |
 | Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;768px |
 | Large | `lg` | &ge;1024px |
