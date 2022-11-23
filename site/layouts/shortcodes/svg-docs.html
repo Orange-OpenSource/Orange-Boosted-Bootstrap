@@ -11,10 +11,9 @@
 {{- $file := .Get "file" | default (print "site/static/docs/" .Site.Params.docs_version "/assets/brand/orange-logo") -}}
 {{- $svgFormatted := readFile (print $file "-formatted.svg") -}}
 {{- $svg := readFile (print $file ".svg") -}}
-{{- $code := $svgFormatted -}}
 {{- $downloadable := .Get "downloadable" | default true -}}
 
-{{- highlight $code "html" "" }}
+{{- highlight $svgFormatted "html" "" }}
 
 {{- if eq $downloadable true -}}
   {{- /* Get filename */ -}}
