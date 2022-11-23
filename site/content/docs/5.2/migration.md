@@ -22,9 +22,21 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 - **Modals**
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
 
+- **Orange navbar**
+  - Languages selection's `aria-label`s have been slightly changed in some supra bars examples for accessibility purpose; visible name must be included in the accessible name. It might be a useful modification to propagate into your websites if you have this same kind of languages selection.
+  ```diff
+  -        <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+  +        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
+  ```
+
 ### Forms
 
 - <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
+
+### Contents
+
+- **Tables**
+  - <span class="badge bg-warning">Warning</span> Reintroduction of `.has-checkbox` from v4 to correct spacing of first column when having row selection.
 
 ### Examples
 
@@ -51,6 +63,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>$btn-letter-spacing</code></li>
       <li><code>$btn-letter-spacing-lg</code></li>
       <li><code>$btn-letter-spacing-sm</code></li>
+      <li><code>$form-feedback-line-height</code></li>
     </ul>
   </details>
 
@@ -336,11 +349,15 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - <span class="badge bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
+- <span class="badge bg-danger">Breaking</span> Re-introduced footer component by tweaking a bit the classes: replaced `.o-footer-*` by `.footer-*`.
+
 For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
 
 ## v5.1.0
 
 <hr class="mb-4">
+
+- <span class="badge bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges). `$supporting-colors` is replaced by `$background-colors`.
 
 - **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
 
@@ -401,6 +418,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ## Sass
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
+
+- <span class="badge bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange`.
+
+- <span class="badge bg-danger">Breaking</span> Removed `$container-fluid-margin-widths`. Please use `$container-fluid-margin` instead.
 
 - <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
@@ -480,6 +501,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Links are underlined by default** (not just on hover), unless they're part of specific components.
 
+- <span class="badge bg-danger">Breaking</span> `.o-link-arrow` is renamed to `.link-chevron`. `.o-link-arrow.back` has been dropped.
+
 - **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
 
 - <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
@@ -551,6 +574,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
 
+### Back to top
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. Back to top component doesn't use JavaScript anymore.
+
 ### Badges
 
 - <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
@@ -572,6 +599,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
 - <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
+
+- <span class="badge bg-danger">Breaking</span> Social buttons now need an extra `.btn-icon`.
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -660,6 +689,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Pagination
 
+- <span class="badge bg-danger">Breaking</span> Dropped `.has-label` support.
+
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
 
 - Added `transition`s to pagination links.
@@ -675,6 +706,14 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
+
+### Stepped process
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
+
+- <span class="badge bg-danger">Breaking</span> Renamed respectively `$o-stepbar-margin-r`and `$o-stepbar-arrow-width` to `$step-item-margin-end` and `$step-item-arrow-width`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
 ### Toasts
 
@@ -714,6 +753,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.rounded`, `.rounded-top`, `.rounded-right`, `.rounded-bottom`, `.rounded-left`, `.rounded-0`, `.rounded-sm` and `.rounded-lg` to reduce bundle size since we shouldn't use those classes in Boosted.
 
 - <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
 
