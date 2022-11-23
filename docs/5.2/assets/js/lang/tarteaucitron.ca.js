@@ -35,11 +35,16 @@ tarteaucitron.lang = {
     "title": "Panell de gestió de galetes",
     "cookieDetail": "Detalls de les galetes per a",
     "ourSite": "en la nostra web",
+    "modalWindow": "(finestra modale)",
     "newWindow": "(finestra nova)",
     "allowAll": "Permet totes les galetes",
     "denyAll": "Denega totes les galetes",
+
+    "icon": "Cookies",
     
     "fallback": "està deshabilitat.",
+    "allowed": "Permès",
+    "disallowed": "Desautoritzat",
 
     "ads": {
         "title": "Xarxa de publicitat",

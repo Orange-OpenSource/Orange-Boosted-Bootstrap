@@ -33,11 +33,16 @@ tarteaucitron.lang = {
     "title": "Cookie管理面板",
     "cookieDetail": "Cookie详情",
     "ourSite": "显示在我们的网站上",
+    "modalWindow": "（模态窗口）",
     "newWindow": "（新建窗口）",
     "allowAll": "允许",
     "denyAll": "禁用",
 
+    "icon": "Cookies",
+
     "fallback": "已禁用。",
+    "allowed": "允许的",
+    "disallowed": "不允许的",
 
     "ads": {
         "title": "广告组",

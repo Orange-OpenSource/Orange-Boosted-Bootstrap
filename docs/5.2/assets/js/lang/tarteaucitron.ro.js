@@ -35,11 +35,16 @@ tarteaucitron.lang = {
     "title": "Panoul de gestionare a panourilor cookie",
     "cookieDetail": "Detaliile cookie pentru",
     "ourSite": "pe site-ul nostru",
+    "modalWindow": "(fereastra modală)",
     "newWindow": "(fereastră nouă)",
     "allowAll": "Permiteți toate cookie-urile",
     "denyAll": "Respinge toate cookie-urile",
+
+    "icon": "Cookies",
     
     "fallback": "este dezactivat.",
+    "allowed": "permis",
+    "disallowed": "nepermis",
 
     "ads": {
         "title": "Rețea de publicitate",

@@ -35,12 +35,17 @@ tarteaucitron.lang = {
     "toggleInfoBox": "Vis / skjul informationer om opbevaring af cookies",
     "title": "CCookie-styringspanel",
     "cookieDetail": "Cookie detaljer for",
-    "ourSite": "på vores side",
+    "ourSite": "på vores site",
+    "modalWindow": "(modal vindue)",
     "newWindow": "(nyt vindue)",
     "allowAll": "Tillad alle cookies",
     "denyAll": "Afvis alle cookies",
 
+    "icon": "Cookies",
+
     "fallback": "er deaktiveret.",
+    "allowed": "tilladt",
+    "disallowed": "ikke tilladt",
 
     "ads": {
         "title": "Annonceringsnetværk",

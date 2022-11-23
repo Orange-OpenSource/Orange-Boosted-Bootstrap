@@ -36,11 +36,16 @@ tarteaucitron.lang = {
     "title": "Cookies management panel",
     "cookieDetail": "Cookie detail for",
     "ourSite": "on our site",
+    "modalWindow": "(modal window)",
     "newWindow": "(new window)",
     "allowAll": "Allow all cookies",
     "denyAll": "Deny all cookies",
+
+    "icon": "Cookies",
     
     "fallback": "is disabled.",
+    "allowed": "allowed",
+    "disallowed": "disallowed",
 
     "ads": {
         "title": "Advertising network",

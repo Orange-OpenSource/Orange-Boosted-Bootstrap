@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <meta name="generator" content="Hugo 0.104.3">
+    <title>بطاقات من اليمين إلى اليسار · Boosted v5.2</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/5.2/examples/cards-rtl/">
+
+    
+
+    
+
+<link href="/docs/5.2/dist/css/orange-helvetica.rtl.min.css" rel="stylesheet" integrity="sha384-4MlBAYgNr+UGO/cACkdFashk4EWyneAX3fp0OWoM7k8/smSl1irUexFx6u83N9Em" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.rtl.min.css" rel="stylesheet" integrity="sha384-O4iOqyvlVK6wdiASuUw+balJxldrR8vzG2r8xKKykDzYeFZ/BbZilN+Xf7oPu0Cw" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.2/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol fill="currentColor" viewbox="0 0 1000 1000" id="heart">
+      <path d="M851.8,172.224C754.746,75.18,597.77,74.613,500,170.492l0,0v0C402.23,74.613,245.254,75.18,148.205,172.224c-96.042,96.038-97.605,250.77-4.7,348.724l0,0L500,914l0-.006V914L856.5,520.95l0,0C949.4,422.994,947.838,268.262,851.8,172.224ZM786.324,449.556L500,766.694,213.677,449.557l-0.145-.162A150.005,150.005,0,0,1,431.058,242.931q0.222,0.222.45,0.438l43.788,41.64L500,308.784v0l0,0,24.7-23.77,43.794-41.645q0.226-.216.449-0.438A149.05,149.05,0,0,1,675.018,199h0A150,150,0,0,1,786.469,449.4Z"/>
+    </symbol>
+    <symbol fill="currentColor" viewbox="0 0 1000 1000" id="share">
+      <path d="M875,775a150,150,0,1,1-296.77-31.1L369.6,616.4a150,150,0,1,1,0-232.8L578.23,256.1a150.087,150.087,0,1,1,52.17,85.3L421.77,468.9a151.338,151.338,0,0,1,0,62.2L630.4,658.6A149.993,149.993,0,0,1,875,775Z"/>
+    </symbol>
+  </svg>
+
+  <div class="container-xxl pt-5">
+    <div class="row mx-0">
+     <h1>بطاقات مرفوعة بالأسود</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer bg-dark text-light">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text fw-bold">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark text-light">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark navbar-dark text-light ">
+            <ul class="nav flex-row align-items-center navbar-nav gap-3 ">
+              <li>
+                <a href="#" class="nav-link p-0" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark text-light pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xxl">
+    <div class="row mx-0">
+      <h1>بطاقات موضحة باللون الأبيض</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xxl">
+    <div class="row mx-0">
+      <h1>بطاقات بيضاء</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer px-0">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer px-0">
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer px-0">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer px-0">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer px-0 pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xxl bg-dark pt-4">
+    <div class="row mx-0">
+      <h1>بطاقات مرفوعة بيضاء</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body p-0">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer">
+            <ul class="nav flex-row align-items-center gap-3">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 bg-body">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xxl bg-dark">
+    <div class="row mx-0">
+      <h1>بطاقات موضحة باللون الأسود</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer bg-dark">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark navbar-dark text-light ">
+            <ul class="nav flex-row align-items-center navbar-nav gap-3 ">
+              <li>
+                <a href="#" class="nav-link p-0">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                    <use xlink:href="#heart"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xxl bg-dark">
+    <div class="row mx-0">
+      <h1>بطاقات على الأسود</h1>
+    </div>
+    <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body px-0">
+            <h4 class="card-title">عنوان</h4>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <h6 class="card-text">شرح</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+      <div class="card border-0 p-0 bg-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark px-0">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark px-0">
+            <p class="card-text">البيانات الوصفية</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+      <div class="card border-0 p-0 bg-dark">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+        <div class="card-body bg-dark px-0">
+          <h4 class="card-title">عنوان</h4>
+          <h6 class="card-text">شرح</h6>
+        </div>
+        <div class="card-footer bg-dark navbar-dark px-0">
+          <ul class="nav flex-row align-items-center navbar-nav gap-3">
+            <li>
+              <a href="#" class="nav-link p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Favorite">
+                  <use xlink:href="#heart"/>
+                </svg>
+              </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" role="img" aria-label="Share">
+                    <use xlink:href="#share"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m-0 py-2">
+        <div class="card border-0 p-0 bg-dark">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: تعليق على الصورة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#ddd"/><text x="50%" y="50%" fill="#999" dy=".3em">تعليق على الصورة</text></svg>
+
+          <div class="card-body bg-dark px-0">
+            <h4 class="card-title">عنوان</h4>
+            <h6 class="card-text">شرح</h6>
+          </div>
+          <div class="card-footer bg-dark px-0 pt-2">
+            <a class="btn btn-secondary" aria-label="وصف الزر" title="وصف الزر">زر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>

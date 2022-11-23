@@ -36,11 +36,16 @@ tarteaucitron.lang = {
     "title": "Evästeiden hallintapaneeli",
     "cookieDetail": "Evästetiedot",
     "ourSite": "sivustollamme",
+    "modalWindow": "(modaalinen ikkuna)",
     "newWindow": "uusi ikkuna",
     "allowAll": "Hyväksy kaikki evästeet",
     "denyAll": "Kiellä kaikki evästeet",
+
+    "icon": "Cookies",
    
     "fallback": "hylätty.",
+    "allowed": "sallittu",
+    "disallowed": "kielletty",
 
     "ads": {
         "title": "Mainosverkosto",
