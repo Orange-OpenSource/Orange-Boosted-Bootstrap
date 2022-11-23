@@ -96,7 +96,7 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "npm run storybook-generate && start-storybook -p 6006 --no-manager-cache",
     "storybook-generate": "npm run docs && node stories/create-stories-from-doc.js",
-    "storybook-build": "npm run storybook-generate && build-storybook -o ./site/storybook"
+    "storybook-build": "npm run storybook-generate && build-storybook -o ./_site/storybook"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.6"
