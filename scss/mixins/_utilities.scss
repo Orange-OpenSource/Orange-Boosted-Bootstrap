@@ -4,7 +4,9 @@
   $rgba-string-index-before-color-name: str-index($value, $func-prefix);
   @if $rgba-string-index-before-color-name == 1 {
     $rgba-string-index-after-color-name: str-index($value, "-rgb");
-    @return str-slice($value, $rgba-string-index-before-color-name + str-length($func-prefix), $rgba-string-index-after-color-name - 1);
+    @if type-of($rgba-string-index-after-color-name) == "number" {
+      @return str-slice($value, $rgba-string-index-before-color-name + str-length($func-prefix), $rgba-string-index-after-color-name - 1);
+    }
   }
   @return undefined;
 }
@@ -117,7 +119,7 @@
                   }
                 }
               }
-              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value and "var(--#{$prefix}primary-text)" != $value {
+              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value and "rgba(var(--#{$prefix}primary-text), var(--#{$prefix}text-opacity))" != $value {
                 background-color: color-contrast($value);
               }
             }
