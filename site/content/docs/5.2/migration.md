@@ -9,6 +9,14 @@ aliases:
 toc: true
 ---
 
+## v5.2.3
+
+<hr class="mb-4">
+
+Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
+
 ## v5.2.2
 
 <hr class="mb-4">
