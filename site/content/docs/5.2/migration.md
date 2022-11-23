@@ -53,7 +53,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-letter-spacing</code></li>
-      <li><code>--bs-primary-text</code></li>
+      <li><code>--bs-primary-text-rgb</code></li>
     </ul>
   </details>
 
