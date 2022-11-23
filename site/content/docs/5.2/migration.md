@@ -13,7 +13,7 @@ toc: true
 
 <hr class="mb-4">
 
-Boosted v5.2.2 has landed with new bug fixes and documentation updates.
+Boosted v5.2.2 has landed with new bug fixes and documentation updates including a new RTL section in our examples.
 
 If you need more details about the changes, please refer to the [v5.2.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2).
 
