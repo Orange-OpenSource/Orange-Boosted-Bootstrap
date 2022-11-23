@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.1 (https://boosted.orange.com/)
+  * Boosted v5.2.2 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap swipe.js v5.2.1 (https://boosted.orange.com/)
+  * Bootstrap swipe.js v5.2.2 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -21,7 +21,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/swipe.js
+   * Bootstrap (v5.2.2): util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
