@@ -1,17 +1,14 @@
 name: Docs
 on:
   push:
+    branches:
+      - main
     paths:
       - 'js/**'
       - 'scss/**'
       - 'site/**'
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -21,37 +18,38 @@ env:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    if:"!(contains(github.event.*.labels.*.name, 'skip:ci'))"
 
     steps:
       - name: Bail early
         run: exit 0
-        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'
+        if: github.actor  == 'dependabot[bot]'
 
       - name: Clone repository
         uses: actions/checkout@v3
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - run: java -version
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - name: Build docs
         run: npm run docs-build
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - name: Validate HTML
         run: npm run docs-vnu
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
 
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@v1
@@ -60,4 +58,4 @@ jobs:
           recurse: true
           verbosity: error
           skip: "^(?!http://localhost)"
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+        if: "!(github.actor  == 'dependabot[bot]')"
