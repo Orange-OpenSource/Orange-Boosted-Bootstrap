@@ -1,15 +1,12 @@
 name: CSS
 on:
   push:
+    branches:
+      - main
     paths:
       - "scss/**"
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -19,32 +16,23 @@ env:
 jobs:
   css:
     runs-on: ubuntu-latest
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || (github.actor == 'dependabot[bot]' && github.event_name != 'workflow_dispatch'))"
 
     steps:
-      - name: Bail early
-        run: exit 0
-        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'
-
       - name: Clone repository
         uses: actions/checkout@v3
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - run: node --version
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
       - run: npm --version
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
 
       - name: Build CSS
         run: npm run css
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"

@@ -17,12 +17,9 @@ env:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]')"
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || (github.actor == 'dependabot[bot]' && contains(github.event.*.labels.*.name, 'dependabot:ci')))"
 
     steps:
-      - name: Bail early
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v3
 
