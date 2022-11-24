@@ -804,7 +804,7 @@ $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
 $table-active-bg:             rgba($black, $table-active-bg-factor) !default;
 
-$table-hover-color:           $table-color !default;
+$table-hover-color:           $table-color;
 $table-hover-bg-factor:       .065 !default;
 $table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
 
