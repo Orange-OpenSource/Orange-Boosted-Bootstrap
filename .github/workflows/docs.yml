@@ -18,7 +18,7 @@ env:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    if:"!(contains(github.event.*.labels.*.name, 'skip:ci'))"
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci'))"
 
     steps:
       - name: Bail early
