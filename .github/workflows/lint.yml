@@ -17,7 +17,7 @@ env:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || (github.actor == 'dependabot[bot]' && contains(github.event.*.labels.*.name, 'dependabot:ci')))"
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || (github.actor == 'dependabot[bot]' && !(contains(github.event.*.labels.*.name, 'dependabot:ci'))))"
 
     steps:
       - name: Clone repository
