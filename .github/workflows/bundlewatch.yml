@@ -17,7 +17,7 @@ env:
 jobs:
   bundlewatch:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || (github.actor == 'dependabot[bot]' && github.event_name != 'workflow_dispatch'))"
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
     steps:
       - name: Clone repository

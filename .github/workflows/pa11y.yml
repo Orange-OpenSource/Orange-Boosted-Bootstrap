@@ -1,17 +1,14 @@
 name: Pa11y
 on:
   push:
+    branches:
+      - main
     paths:
       - 'js/**'
       - 'scss/**'
       - 'site/**'
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -21,21 +18,16 @@ env:
 jobs:
   pa11y:
     runs-on: ubuntu-latest
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
     steps:
-      - name: Bail early
-        run: exit 0
-        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'
-
       - name: Clone repository
         uses: actions/checkout@v3
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Set up npm cache
         uses: actions/cache@v3.0.11
@@ -44,35 +36,29 @@ jobs:
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Install npm dependencies
         run: npm ci
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Compile dist
         run: npm run dist
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Update sri
         run: npm run release-sri
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Test docs
         run: npm run docs-build
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Run accessibility tests
         run: npm run docs-accessibility
-        if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')"
 
       - name: Generate HTML accessibility results
         run: npm run docs-pa11y-html
-        if: failure() && !(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')
+        if: failure()
 
       - name: Upload accessibility results
         uses: actions/upload-artifact@v3
-        if: failure() && !(contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y') || github.actor == 'dependabot[bot]')
+        if: failure()
         with:
           name: pa11y-ci-results
           path: .pa11y/
