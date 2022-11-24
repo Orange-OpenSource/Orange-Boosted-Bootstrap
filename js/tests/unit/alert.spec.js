@@ -222,7 +222,7 @@ describe('Alert', () => {
       const div = fixtureEl.querySelector('div')
       const alert = new Alert(div)
 
-      expect(Alert.getInstance(div)).not.toEqual(alert)
+      expect(Alert.getInstance(div)).toEqual(alert)
       expect(Alert.getInstance(div)).toBeInstanceOf(Alert)
     })
 

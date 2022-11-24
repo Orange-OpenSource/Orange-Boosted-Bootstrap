@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Bail early
         run: exit 0
-        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'"
+        if: contains(github.event.*.labels.*.name, 'skip:ci') || github.actor  == 'dependabot[bot]'
 
       - name: Test
         run: exit 0
