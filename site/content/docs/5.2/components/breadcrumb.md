@@ -80,7 +80,7 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to the [breadcrumb](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) component on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
