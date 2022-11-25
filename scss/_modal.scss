@@ -103,7 +103,7 @@
 }
 
 // Boosted mod
-.modal-dialog:not(.modal-dialog-scrollable) .modal-body > :last-child {
+.modal-dialog .modal-body > :last-child {
   margin-bottom: 0;
 }
 // End mod
