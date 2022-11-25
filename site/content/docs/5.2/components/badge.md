@@ -16,7 +16,7 @@ Badges scale to match the size of the immediate parent element by using relative
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component can not be used because it does not exist in the Orange Design System specifications.
+This component variant should not be used because it does not exist in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -34,7 +34,7 @@ Badges can be used as part of links or buttons to provide a counter.
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component can not be used because it does not exist in the Orange Design System specifications.
+This component should not be used because it does not exist in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -55,9 +55,9 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component can be used **only** inside a header component. For the correct design, please refer to our [Boosted navbars examples]({{< docsref "/examples/navbars" >}})
+This component variant should be used **only** inside a header component. For the correct design, please refer to our [Boosted navbars examples]({{< docsref "/examples/navbars" >}})
 
-For other usages, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
+For other usages, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}) component. You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component design specifications on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -83,7 +83,7 @@ For other usages, you will have to use the [Tags](https://system.design.orange.c
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These component variants can not be used because they do not exist in the Orange Design System specifications.
+These component variants should not be used because they do not exist in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
@@ -105,7 +105,7 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component can not be used because it does not exist in the Orange Design System specifications.
+This component should not be used because it does not exist in the Orange Design System specifications.
 
 Instead, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
 {{< /ods-incompatibility-alert >}}
