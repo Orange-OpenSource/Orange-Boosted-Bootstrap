@@ -68,7 +68,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         <h5 class="modal-title">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
-      <div class="modal-body  mb-1 mb-sm-2">
+      <div class="modal-body mb-1 mb-sm-2">
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer mt-2">
