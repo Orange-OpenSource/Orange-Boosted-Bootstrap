@@ -460,7 +460,9 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-brand">
-      <a class="stretched-link" href="#"></a>
+      <a class="stretched-link" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
       <h1 class="title">Scroll</h1>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
