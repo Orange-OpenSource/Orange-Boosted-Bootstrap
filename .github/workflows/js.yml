@@ -14,7 +14,8 @@ env:
   NODE: 16
 
 jobs:
-  JS Tests:
+  run:
+    name: JS Tests
     runs-on: ubuntu-latest
     if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
