@@ -42,9 +42,9 @@ These classes can also be added to groups of links, as an alternative to the [`.
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to the [buttons standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) component on the Orange Design System website.
+For the correct design, please refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) component on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -63,9 +63,9 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This checkbox variant can not be used because it does not respect the Orange Design System specifications.
+This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
-Instead use Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) components.
+From the Orange Design System point of view, checkboxes should be represented as in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component.
 
 For the correct design, you can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) component on on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -102,7 +102,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -184,7 +184,7 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -211,7 +211,7 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants, split buttons included, can not be used because they do not respect the Orange Design System specifications.
+These 2 vertical variants should not be used because they do not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
