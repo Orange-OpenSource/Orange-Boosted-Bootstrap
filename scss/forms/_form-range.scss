@@ -12,6 +12,7 @@
   appearance: none;
 
   &:focus {
+    // Boosted mod: better focus visibility
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
     &::-webkit-slider-thumb {
