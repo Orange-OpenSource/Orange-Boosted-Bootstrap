@@ -110,6 +110,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     </ul>
   </details>
 
+- **Pages**
+  - <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
+  - <span class="badge bg-success">New</span> A form page example is now available.
+
 ## v5.2.2
 
 <hr class="mb-4">
@@ -140,9 +144,6 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
   - <span class="badge bg-warning">Warning</span> Reintroduction of `.has-checkbox` from v4 to correct spacing of first column when having row selection.
 
 ### Examples
-
-- **Pages**
-- <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
 
 - <span class="badge bg-success">New</span> There is a new RTL section in the examples.
 
