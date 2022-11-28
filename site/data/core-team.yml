@@ -7,14 +7,8 @@
 - name: Loïc Laussel
   user: Lausselloic
 
-- name: Kevin Le Diouron
-  user: Nurovek
-
 - name: Julien Déramond
   user: julien-deramond
-
-- name: Yannick Cornaille
-  user: yannickcornaille
 
 - name: Isabelle Chanclou
   user: isabellechanclou
@@ -24,3 +18,6 @@
 
 - name: Mewen Le Hô
   user: MewenLeHo
+
+- name: Hannah Issermann
+  user: hannahiss

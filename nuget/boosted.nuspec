@@ -9,12 +9,12 @@
     <owners>Orange SA</owners>
     <description>Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.</description>
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
-    <summary>Boosted framework in CSS. Includes fonts and JavaScript</summary>
+    <summary>Boosted framework in CSS. Includes fonts and JavaScript.</summary>
     <language>en-us</language>
     <projectUrl>https://boosted.orange.com/</projectUrl>
     <icon>boosted.png</icon>
-    <license type="file">LICENSE.txt</license>
-    <copyright>Copyright 2017-2021</copyright>
+    <license type="expression">MIT</license>
+    <copyright>Copyright 2017-2022</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>css mobile-first responsive front-end framework web bootstrap</tags>
     <contentFiles>
@@ -22,7 +22,6 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="LICENSE.txt" target="" />
     <file src="nuget\boosted.png" target="" />
 
     <file src="dist\css\*.*" target="content\Content" />

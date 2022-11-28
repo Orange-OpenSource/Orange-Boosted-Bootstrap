@@ -1,0 +1,161 @@
+// stylelint-disable selector-class-pattern
+
+// Boosted mod: the entire file is modified and is specific to Boosted
+.bd-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.DocSearch-Container {
+  --docsearch-spacing: 20px;
+  --docsearch-hit-shadow: none;
+  --docsearch-muted-color: var(--docsearch-text-color);
+  --docsearch-hit-color: var(--docsearch-text-color);
+
+  z-index: 2000; // Make sure to be over all components showcased in the documentation
+  cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
+}
+
+.DocSearch-Modal {
+  @include border-radius(0, 0);
+}
+
+.DocSearch-Button {
+  --docsearch-searchbox-background: #{$black};
+  --docsearch-searchbox-focus-background: #{$black};
+  --docsearch-text-color: #{$white};
+
+  margin: 0;
+  border: 0;
+
+  &:hover {
+    outline: unset;
+    box-shadow: unset;
+
+    .DocSearch-Search-Icon {
+      color: var(--#{$prefix}link-hover-color);
+    }
+  }
+
+  &:focus {
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
+    outline-offset: .375rem; // replace when focus will be active
+    box-shadow: unset;
+  }
+
+  .DocSearch-Search-Icon {
+    color: $white;
+  }
+}
+
+.DocSearch-Button-Placeholder {
+  @include visually-hidden();
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.DocSearch-Search-Icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  stroke-width: 2;
+}
+
+.DocSearch-Form {
+  box-shadow: $gray-500 0 0 0 .125rem inset;
+  @include border-radius(0, 0);
+
+  &:focus-within {
+    box-shadow: $black 0 0 0 .125rem inset;
+  }
+}
+
+.DocSearch-Input:focus {
+  outline: 0;
+}
+
+.DocSearch-Reset {
+  @include border-radius(0, 0);
+
+  &:focus {
+    outline: 3px solid $accessible-orange;
+  }
+}
+
+.DocSearch-Cancel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Button-Keys {
+  @include visually-hidden();
+}
+
+.DocSearch-Commands-Key {
+  background-color: var(--#{$prefix}white);
+}
+
+.DocSearch-Hits {
+  .DocSearch-Hit-source {
+    color: var(--docsearch-text-color);
+  }
+}
+
+.DocSearch-MagnifierLabel {
+  color: var(--docsearch-text-color);
+}
+
+.DocSearch-Hit {
+  padding-top: .625rem;
+
+  a {
+    @include border-radius(0, 0);
+  }
+
+  mark {
+    color: var(--#{$prefix}white);
+    background: var(--#{$prefix}black);
+  }
+
+  &[aria-selected="true"] {
+    a {
+      background-color: var(--#{$prefix}black);
+    }
+
+    mark {
+      --docsearch-hit-active-color: var(--#{$prefix}black);
+      text-decoration: none;
+      background: var(--#{$prefix}white);
+    }
+  }
+}
+
+.DocSearch-Hit-action-button {
+  @include border-radius(0, 0);
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:focus {
+    background: transparent;
+    outline: 3px solid $accessible-orange;
+  }
+}
+
+.DocSearch-Prefill {
+  color: $black;
+  text-decoration: underline;
+  @include border-radius(0, 0);
+
+  &:hover {
+    color: var(--docsearch-highlight-color);
+  }
+
+  &:focus {
+    outline: 3px solid $accessible-orange;
+  }
+}
+// End mod

@@ -2,49 +2,43 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-(function () {
+(() => {
   'use strict'
 
-  var inputElement = document.getElementById('search-input')
+  const searchElement = document.getElementById('docsearch')
 
-  if (!window.docsearch || !inputElement) {
+  if (!window.docsearch || !searchElement) {
     return
   }
 
-  var siteDocsVersion = inputElement.getAttribute('data-bd-docs-version')
-
-  document.addEventListener('keydown', function (event) {
-    if (event.ctrlKey && event.key === '/') {
-      event.preventDefault()
-      inputElement.focus()
-    }
-  })
+  const siteDocsVersion = searchElement.getAttribute('data-bd-docs-version')
 
   window.docsearch({
-    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
+    apiKey: 'd04e794979727856a09d53f12ead9069',
     indexName: 'boosted-orange',
-    inputSelector: '#search-input',
-    algoliaOptions: {
-      facetFilters: ['version:' + siteDocsVersion]
+    appId: 'F4PKENW3TB',
+    container: searchElement,
+    searchParameters: {
+      facetFilters: [`version:${siteDocsVersion}`]
     },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        var liveUrl = 'https://boosted.orange.com/'
+    transformItems(items) {
+      return items.map(item => {
+        const liveUrl = 'https://boosted.orange.com/'
 
-        hit.url = window.location.origin.startsWith(liveUrl) ?
+        item.url = window.location.origin.startsWith(liveUrl) ?
           // On production, return the result as is
-          hit.url :
-          // On development or Netlify, replace `hit.url` with a trailing slash,
+          item.url :
+          // On development or Netlify, replace `item.url` with a trailing slash,
           // so that the result link is relative to the server root
-          hit.url.replace(liveUrl, '/')
+          item.url.replace(liveUrl, '/')
 
         // Prevent jumping to first header
-        if (hit.anchor === 'content') {
-          hit.url = hit.url.replace(/#content$/, '')
-          hit.anchor = null
+        if (item.anchor === 'content') {
+          item.url = item.url.replace(/#content$/, '')
+          item.anchor = null
         }
 
-        return hit
+        return item
       })
     },
     // Set debug to `true` if you want to inspect the dropdown

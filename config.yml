@@ -31,7 +31,7 @@ publishDir:                         "_site"
 module:
   mounts:
     - source:                       dist
-      target:                       static/docs/5.1/dist
+      target:                       static/docs/5.2/dist
     - source:                       site/assets
       target:                       assets
     - source:                       site/content
@@ -42,64 +42,68 @@ module:
       target:                       layouts
     - source:                       site/static
       target:                       static
-    - source:                       site/static/docs/5.1/assets/img/favicons/apple-touch-icon.png
+    - source:                       site/static/docs/5.2/assets/img/favicons/apple-touch-icon.png
       target:                       static/apple-touch-icon.png
-    - source:                       site/static/docs/5.1/assets/img/favicons/favicon.ico
+    - source:                       site/static/docs/5.2/assets/img/favicons/favicon.ico
       target:                       static/favicon.ico
 
       # Boosted mod
     - source:                       node_modules/tarteaucitronjs/tarteaucitron.js
       target:                       assets/js/vendor/tarteaucitron.js
     - source:                       node_modules/tarteaucitronjs/lang
-      target:                       static/docs/5.1/assets/js/lang
+      target:                       static/docs/5.2/assets/js/lang
+    - source:                       site/storybook
+      target:                       static/storybook
 
 params:
-  description:                      "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.."
+  subtitle:                         "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…"
+  description:                      "Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."
   authors:                          "Orange and Boosted contributors"
-  social_image_path:                /docs/5.1/assets/brand/orange-social.png
-  social_logo_path:                 /docs/5.1/assets/brand/orange-social-logo.png
 
-  current_version:                  "5.1.3"
-  current_ruby_version:             "5.1.3"
-  docs_version:                     "5.1"
+  current_version:                  "5.2.2"
+  current_ruby_version:             "5.2.2"
+  docs_version:                     "5.2"
   rfs_version:                      "v9.0.6"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
-  slack:                            "https://bootstrap-slack.herokuapp.com/"
   blog:                             "https://blog.getbootstrap.com/"
-  icons:                            "https://design.orange.com/icons-libraries/"
+  icons:                            "https://system.design.orange.com/0c1af118d/p/847054-solaris-icons/b/84c5ca"
   bootstrap:                        "https://getbootstrap.com"
   ods:
     web:                            "https://system.design.orange.com/0c1af118d/n/76065f"
 
   download:
-    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.1.3.zip"
-    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.1.3/boosted-5.1.3-dist.zip"
-    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.1.3/boosted-5.1.3-examples.zip"
+    source:                         "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.2.zip"
+    dist:                           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.2.2/boosted-5.2.2-dist.zip"
+    dist_examples:                  "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.2.2/boosted-5.2.2-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:                            "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css"
-    css_hash:                       "sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c"
-    css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:                   "sha384-3jLCd3m9+RnqE3QZ/vJQmBSJkQPzNa5bfI9bIWg6teLGDuHLZRz96szmdltmO1+y"
-    helvetica:                      "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/orange-helvetica.min.css"
-    helvetica_hash:                 "sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe"
-    helvetica_rtl:                  "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/orange-helvetica.rtl.min.css"
-    helvetica_rtl_hash:             "sha384-ihl4jOMS2VMlKkg/jH4cTxPHmSMcnVyANsKMO0YSUNvNyrrglHI9Itbx0wLOmV+W"
-    HelveticaNeueW20-55Roman:       "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/fonts/HelveticaNeueW20-55Roman.woff2"
+    css:                            "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/css/boosted.min.css"
+    css_hash:                       "sha384-4W+7QzRvU5MpZNXDQLEE9WgRDCNWBvAwLgEYnOpcArZblM633JIQea8MS9gDaQhi"
+    css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/css/boosted.rtl.min.css"
+    css_rtl_hash:                   "sha384-O4iOqyvlVK6wdiASuUw+balJxldrR8vzG2r8xKKykDzYeFZ/BbZilN+Xf7oPu0Cw"
+    helvetica:                      "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/css/orange-helvetica.min.css"
+    helvetica_hash:                 "sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ"
+    helvetica_rtl:                  "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/css/orange-helvetica.rtl.min.css"
+    helvetica_rtl_hash:             "sha384-4MlBAYgNr+UGO/cACkdFashk4EWyneAX3fp0OWoM7k8/smSl1irUexFx6u83N9Em"
+    HelveticaNeueW20-55Roman:       "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/fonts/HelveticaNeueW20-55Roman.woff2"
     HelveticaNeueW20-55Roman_hash:  "sha384-3JzHT24JpS8epPIAdqo7AcCNQcr5VxQi8FClxBayyd/6BLTIFbJLiGD4CIf8FtRl"
-    HelveticaNeueW20-75Bold:        "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/fonts/HelveticaNeueW20-75Bold.woff2"
+    HelveticaNeueW20-75Bold:        "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/fonts/HelveticaNeueW20-75Bold.woff2"
     HelveticaNeueW20-75Bold_hash:   "sha384-vpoGPps82D7bRdHnBlcsNi/WGJMOyFhPA9+NEonxOo5bYJGzIAjfIJ9tuZ0fPyKr"
-    HelvNeue55_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/fonts/HelvNeue55_W1G.woff2"
+    HelvNeue55_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/fonts/HelvNeue55_W1G.woff2"
     HelvNeue55_W1G_hash:            "sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16"
-    HelvNeue75_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/fonts/HelvNeue75_W1G.woff2"
+    HelvNeue75_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/fonts/HelvNeue75_W1G.woff2"
     HelvNeue75_W1G_hash:            "sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4/Goeqz"
-    js:                             "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.min.js"
-    js_hash:                        "sha384-mBRgv/ye1bG9U6wfppOiHvHVz1KlD7VdRcVZLfOCoQkohsL9P61pQxzobjI4XxNr"
-    js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:                 "sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF"
-    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.0/dist/umd/popper.min.js"
-    popper_hash:                    "sha384-ThCKQ0fDhFQh8PSFLvjhmjy7oRKp5gRbY+bcEnQWtRhuvli/qxsn0xMcMmzXkuIa"
+    js:                             "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/js/boosted.min.js"
+    js_hash:                        "sha384-IcPI2vc9+39UZpIZmVywH4fIczIu5GG1kh0UxFhYKdErymAU8EFeQFyy1VVnxj+/"
+    js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.2.2/dist/js/boosted.bundle.min.js"
+    js_bundle_hash:                 "sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M"
+    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    popper_hash:                    "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"
     focus_visible_hash:             "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
+
+  anchors:
+    min: 2
+    max: 5

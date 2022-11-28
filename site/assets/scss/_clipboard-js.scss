@@ -2,7 +2,8 @@
 //
 // JS-based `Copy` buttons for code snippets.
 
-.bd-clipboard {
+.bd-clipboard,
+.bd-edit {
   position: relative;
   display: none;
   float: right;
@@ -16,11 +17,35 @@
   }
 }
 
-// Boosted mod
-.btn-clipboard {
-  position: absolute;
-  right: 0;
-  z-index: 10;
-  @include border-radius();
+.btn-clipboard,
+.btn-edit {
+  display: block;
+  padding: .5em;
+  line-height: 1;
+  // Boosted mod: no specific color
+  background-color: $gray-100;
+  border: 0;
+  @include border-radius(.25rem);
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    z-index: 3;
+  }
+
+  // Boosted mod
+  .bi {
+    width: 1.4em;
+    height: 1.4em;
+  }
+  // End mod
 }
-// End mod
+
+.btn-clipboard {
+  position: relative;
+  z-index: 2;
+  margin-top: $border-width; // Boosted mod
+  margin-right: $border-width; // Boosted mod
+}

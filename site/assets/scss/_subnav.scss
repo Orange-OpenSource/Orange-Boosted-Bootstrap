@@ -1,67 +1,8 @@
+// Boosted mod: doesn't exist anymore in Bootstrap
+
 .bd-subnavbar {
-  --bs-gutter-x: $bd-gutter-x;
-  --bs-gutter-y: $bd-gutter-x;
-
-  // The position and z-index are needed for the dropdown to stay on top of the content
-  position: relative;
-  z-index: $zindex-sticky;
+  // The z-index is needed for the dropdown to stay on top of the content
+  z-index: $zindex-dropdown - 1; // goes under the navbar + dropdown.
   background-color: rgba($white, .95);
-
-  [aria-current] { // Boosted mod
-    background-image: $dropdown-active-icon;
-    background-repeat: no-repeat;
-    background-position: right $dropdown-item-padding-x center;
-    background-size: .75rem .75rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    position: sticky;
-    top: $spacer * 5; // Boosted mod
-  }
-}
-
-.bd-search {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    top: .4rem;
-    right: .4rem;
-    bottom: .4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: .3125rem;
-    padding-left: .3125rem;
-    @include font-size(.625rem); // Boosted mod
-    font-family: $font-family-monospace; // Boosted mod
-    color: $gray-700; // Boosted mod
-    content: "Ctrl + /";
-    background-color: $gray-100;
-    @include border-radius(.125rem);
-  }
-
-  @include media-breakpoint-down(md) {
-    width: 100%;
-  }
-}
-
-.bd-sidebar-toggle {
-  color: $text-muted;
-
-  &:hover,
-  &:focus {
-    color: $bd-purple-bright;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
-  }
-
-  .bi-collapse { display: none; }
-
-  &:not(.collapsed) {
-    .bi-expand { display: none; }
-    .bi-collapse { display: inline-block; }
-  }
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .15);
 }

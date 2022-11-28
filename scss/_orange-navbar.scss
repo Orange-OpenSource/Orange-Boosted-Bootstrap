@@ -1,63 +1,45 @@
 // Contents
 //
 // Supra bar
-
-
-// Supra bar
-//
 // Brand exclusive thin navbar that can be used with orange navbar
 .supra {
+  // scss-docs-start supra-navbar-css-vars
+  --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
+  --#{$prefix}navbar-nav-font-size: #{$font-size-sm};
+  --#{$prefix}navbar-nav-line-height: #{$line-height-sm};
+  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-supra-link-padding-y};
+  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-supra-link-padding-x};
+  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-supra-icon-padding-y};
+  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-supra-icon-padding-x};
+  --#{$prefix}navbar-nav-icon-size: #{$navbar-supra-icon-size};
+  // scss-docs-end supra-navbar-css-vars
+
   display: none;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-bottom: $navbar-orange-supra-border-bottom-width solid $gray-700;
-
-  .container {
-    padding-right: $navbar-orange-supra-padding-x;
-    padding-left: $navbar-orange-supra-padding-x;
-  }
-
-  @include media-breakpoint-up(md) {
-    display: flex;
-  }
 
   .navbar-nav .nav-link {
-    padding: $navbar-orange-supra-link-padding-top $navbar-orange-supra-link-padding-x $navbar-orange-supra-link-padding-bottom;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
-
-    &.active::before {
-      right: $navbar-orange-supra-link-padding-x;
-      bottom: -$navbar-orange-supra-border-bottom-width;
-      left: $navbar-orange-supra-link-padding-x;
-    }
+    padding-top: var(--#{$prefix}navbar-nav-link-padding-y);
 
     &.nav-icon {
-      padding: $navbar-orange-supra-icon-padding-top $navbar-orange-supra-icon-padding-x $navbar-orange-supra-icon-padding-bottom;
-
-      svg,
-      img {
-        width: $navbar-orange-supra-icon-size;
-        height: $navbar-orange-supra-icon-size;
-      }
-    }
-
-    .badge {
-      @extend .position-absolute;
-      @extend .top-0;
-      @extend .bg-info;
-      @extend .text-white;
-      @extend .translate-middle;
-      @extend .rounded-pill;
-      padding: $navbar-orange-supra-badge-padding-y $navbar-orange-supra-badge-padding-x;
-      margin-top: $navbar-orange-supra-badge-margin-top;
-      font-size: $font-size-base;
+      padding-top: add(var(--#{$prefix}navbar-nav-icon-padding-y), .3125rem);
     }
   }
+}
 
-  .nav-item:last-of-type {
-    .nav-icon {
-      padding-right: $navbar-orange-supra-link-padding-x;
+.header-minimized {
+  // scss-docs-start minimized-navbar-css-vars
+  @include media-breakpoint-up(md){
+    --#{$prefix}navbar-padding-y: 0px; /* stylelint-disable-line length-zero-no-unit */
+    --#{$prefix}navbar-brand-margin-y: #{$navbar-minimized-brand-margin-y};
+    --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs};
+    --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-xs};
+    --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-xs};
+    --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-minimized-nav-icon-padding-y};
+    --#{$prefix}navbar-toggler-padding-y: #{$navbar-minimized-toggler-padding-y};
+
+    .two-lined {
+      --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size-two-lined-xs};
+      --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing-two-lined-xs};
     }
   }
+  // scss-docs-end minimized-navbar-css-vars
 }

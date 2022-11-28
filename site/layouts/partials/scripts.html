@@ -5,7 +5,8 @@
 {{- end }}
 
 {{ if eq .Page.Layout "docs" -}}
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
 {{- end }}
 
 {{- $vendor := resources.Match "js/vendor/*.js" -}}
@@ -18,3 +19,66 @@
 {{- end }}
 
 <script src="{{ $docsJs.Permalink | relURL }}"></script>
+
+{{ if eq .Page.Layout "docs" -}}
+<script>
+  // Open in StackBlitz logic
+  document.querySelectorAll('.btn-edit').forEach(btn => {
+    btn.addEventListener('click', event => {
+      const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
+      
+      // Get extra classes for this example
+      const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
+
+      const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
+      StackBlitzSDK.openBoostedSnippet(htmlSnippet, jsSnippet, classes)
+    })
+  })
+
+  StackBlitzSDK.openBoostedSnippet = (htmlSnippet, jsSnippet, classes) => {
+    const markup = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
+      Patent and Trademark Office and may be registered in certain other jurisdictions.
+      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+      Orange has purchased the right to use Helvetica in its websites and mobile applications.
+      If you are not authorized to used it, don’t include the orange-helvetica.css
+      See NOTICE.txt for more information.
+    -->
+    <link href="{{ .Site.Params.cdn.HelvNeue55_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue55_W1G_hash }}" crossorigin="anonymous">
+    <link href="{{ .Site.Params.cdn.HelvNeue75_W1G }}" rel="preload" as="font" type="font/woff2" integrity="{{ .Site.Params.cdn.HelvNeue75_W1G_hash }}" crossorigin="anonymous">
+    <link href="{{ .Site.Params.cdn.helvetica }}" rel="stylesheet" integrity="{{ .Site.Params.cdn.helvetica_hash }}" crossorigin="anonymous">
+
+    <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/{{ .Site.Params.docs_version }}/assets/css/docs.css" rel="stylesheet">
+    <title>Boosted Example</title>
+    <${'script'} src="{{ .Site.Params.cdn.js_bundle }}"></${'script'}>
+  </head>
+  <body class="p-3 m-0 border-0 ${classes}">
+    <!-- Example Code -->
+${htmlSnippet.replace(/^/gm, '    ')}
+    <!-- End Example Code -->
+  </body>
+</html>`
+
+    const jsSnippetContent = jsSnippet ? '{{ os.ReadFile "site/assets/js/snippets.js" }}' : null
+    const project = {
+      files: {
+        'index.html': markup,
+        'index.js': jsSnippetContent
+      },
+      title: 'Boosted Example',
+      description: `Official example from ${window.location.href}`,
+      template: jsSnippet ? 'javascript' : 'html',
+      tags: ['boosted']
+    }
+
+    StackBlitzSDK.openProject(project, { openFile: 'index.html' })
+  }
+</script>
+{{- end }}

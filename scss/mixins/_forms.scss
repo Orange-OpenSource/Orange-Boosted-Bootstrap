@@ -25,9 +25,31 @@
     }
 
     @if $enable-validation-icons {
-      .form-control {
+      :not(.quantity-selector) > .form-control {
         @include form-validation-state-selector($state) {
-          background: $icon no-repeat right map-get($spacers, 2) center / $spacer;
+          padding-right: $input-height-inner;
+          background-image: escape-svg($icon);
+          background-repeat: no-repeat;
+          background-position: right $input-height-inner-quarter top subtract($input-height-inner-quarter, 2px);
+          background-size: $input-height-inner-half $input-height-inner-half;
+        }
+      }
+
+      .form-select {
+        @include form-validation-state-selector($state) {
+          &:not([multiple]):not([size]),
+          &:not([multiple])[size="1"] {
+            padding-right: $form-select-feedback-icon-padding-end;
+            background-image: escape-svg($form-select-indicator), escape-svg($icon);
+            background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+            background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+          }
+        }
+      }
+
+      .form-control-color {
+        @include form-validation-state-selector($state) {
+          width: add($form-color-width, $input-height-inner);
         }
       }
     }
@@ -36,9 +58,10 @@
       display: none;
       width: 100%;
       margin-top: $form-feedback-margin-top;
-      font-style: $form-feedback-font-style;
       @include font-size($form-feedback-font-size);
+      font-style: $form-feedback-font-style;
       font-weight: $font-weight-bold; // Boosted mod
+      line-height: $form-feedback-line-height; // Boosted mod
 
       // Boosted mod: status should not rely on color only
       @if $enable-validation-icons {
@@ -75,6 +98,20 @@
       }
     }
 
+    // Boosted mod: Remove border on input for form element QuantitySelector
+    .quantity-selector .form-control {
+      @include form-validation-state-selector($state) {
+        border-right: none;
+        border-left: none;
+
+        // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+        & ~ button {
+          border-color: $color;
+        }
+      }
+    }
+    // End mod
+
     // Boosted mod: no icon in background for textarea
 
     .form-select {
@@ -91,6 +128,7 @@
 
     .form-check-input {
       @include form-validation-state-selector($state) {
+        filter: none; // Boosted mod: remove filter to avoid having a blue border (invert of red border)
         border-color: $color;
 
         &:checked,
@@ -110,16 +148,16 @@
     }
   }
   // End mod
-  .input-group .form-control,
-  .input-group .form-select {
-    @include form-validation-state-selector($state) {
-      @if $state == "valid" {
-        z-index: 1;
-      } @else if $state == "invalid" {
-        z-index: 2;
-      }
-      &:focus {
-        z-index: 3;
+  .input-group {
+    > .form-control:not(:focus),
+    > .form-select:not(:focus),
+    > .form-floating:not(:focus-within) {
+      @include form-validation-state-selector($state) {
+        @if $state == "valid" {
+          z-index: 3;
+        } @else if $state == "invalid" {
+          z-index: 4;
+        }
       }
     }
   }

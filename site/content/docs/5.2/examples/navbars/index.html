@@ -1,0 +1,86 @@
+---
+layout: examples
+title: Navbars
+aliases:
+  - "/examples/navbars"
+  - "/docs/examples/navbars"
+---
+
+<main>
+  <h1 class="visually-hidden">Navbars Boosted example</h1>
+  <header>
+    {{< orange-supra aria_label="Supra navigation - Left navbar only example" >}}
+    {{< /orange-supra >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+
+  <header>
+    {{< orange-supra mode="languages" aria_label="Supra navigation - Both navbars with languages example" >}}
+    {{< /orange-supra >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-supra mode="actions" aria_label="Supra navigation - Both navbars with actions example" >}}
+    {{< /orange-supra >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-0" mode="actions" minimized=true aria_label="Global navigation - Minimized without title example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-1" mode="actions" aria_label="Global navigation - No title example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-2" mode="search" aria_label="Global navigation - No title with nav-under example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-3" mode="actions" title=true aria_label="Global navigation - With title example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-3-1" mode="actions" title=true labels=true navigation=true aria_label="Global navigation - With title and nav-under example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-4" mode="actions" title=true title_2=true labels=true aria_label="Global navigation - With two lined title example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    {{< orange-global-headers id="global-header-4-1" mode="actions" title=true title_2=true labels=true navigation=true aria_label="Global navigation - With two lined title and nav-under example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <!-- Should not have buy icon -->
+  <header>
+    {{< orange-global-headers id="global-header-5" mode="actions" responsive_logo=true labels_end=true  aria_label="Global navigation - With custom logo example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+  <!-- Should not have buy icon -->
+  <header>
+    {{< orange-global-headers id="global-header-5-1" mode="actions" responsive_logo=true navigation=true  aria_label="Global navigation - With custom logo and nav-under example" >}}
+    {{< /orange-global-headers >}}
+  </header>
+
+  <div class="b-example-divider"></div>
+</main>

@@ -1,29 +1,79 @@
 .bd-masthead {
+  // Boosted mod: no --bd-pink-rgb
   padding: 3rem 0;
+  // Boosted mod: no gradient background image
 
-  @include media-breakpoint-up(sm) {
-    padding: 5rem 0;
+  // Boosted mod: no extra h1 rule
+
+  .lead {
+    @include font-size(1rem);
+    font-weight: 400;
+    color: $gray-700;
+  }
+
+  .bd-code-snippet {
+    margin: 0;
+    @include border-radius(.5rem);
+  }
+
+  .highlight {
+    width: 100%;
+    padding: .625rem 1rem; // Boosted mod
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: rgba(var(--bs-body-color-rgb), .075);
+    @include border-radius(.5rem);
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 4rem;
+    }
+  }
+  .btn-clipboard {
+    position: absolute;
+    top: .3125rem; // Boosted mod
+    right: 0;
+    background-color: transparent;
+  }
+
+  // Boosted mod: no #carbonads
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.5rem);
+    }
   }
 }
 
-.bd-followup {
-  background-color: tint-color($teal, 92%);
-
-  & + & {
-    background-color: tint-color($indigo, 90%);
+.masthead-followup {
+  .lead {
+    @include font-size(1rem);
   }
 
-  & + & + & {
-    background-color: tint-color($yellow, 90%);
+  .highlight {
+    @include border-radius(.5rem);
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      @include font-size(1.25rem);
+    }
   }
 }
 
-.home-icon {
-  width: 6rem;
-  height: 6rem;
-  @include border-radius(25%);
+// Boosted mod: no .bd-btn-lg
+
+.masthead-followup-icon {
+  padding: 1rem;
+  color: rgba(var(--bg-rgb), 1);
+  background-color: rgba(var(--bg-rgb), .1);
+  background-blend-mode: multiple;
+  @include border-radius(1rem);
+  mix-blend-mode: darken;
+
+  svg {
+    filter: drop-shadow(0 1px 1px #fff);
+  }
 }
 
-@include media-breakpoint-up(md) {
-  .mw-md-75 { max-width: 75%; }
-}
+// Boosted mod: no .masthead-notice

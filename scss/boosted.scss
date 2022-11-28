@@ -1,14 +1,5 @@
-/*!
- * Boosted v5.1.3 (https://boosted.orange.com/)
- * Copyright 2014-2021 The Boosted Authors
- * Copyright 2014-2021 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
- * This a fork of Bootstrap: Initial license below
- * Bootstrap v5.1.3 (https://getbootstrap.com)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+@import "mixins/banner";
+@include bsBanner("");
 
 // scss-docs-start import-stack
 // Configuration
@@ -39,6 +30,7 @@
 @import "breadcrumb";
 @import "pagination";
 @import "badge";
+@import "tags";
 @import "alert";
 @import "progress";
 @import "list-group";
@@ -54,8 +46,11 @@
 
 // Boosted
 @import "back-to-top";
-@import "stepped-process";
+@import "footer";
 @import "orange-navbar";
+@import "stepped-process";
+@import "sticker";
+@import "title-bars";
 
 // Helpers
 @import "helpers";

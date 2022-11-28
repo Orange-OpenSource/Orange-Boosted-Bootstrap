@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.1.3): base-component.js
+ * Bootstrap (v5.2.2): base-component.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import Config from './util/config'
  * Constants
  */
 
-const VERSION = '5.1.3'
+const VERSION = '5.2.2'
 
 /**
  * Class definition
@@ -75,6 +75,10 @@ class BaseComponent extends Config {
 
   static get EVENT_KEY() {
     return `.${this.DATA_KEY}`
+  }
+
+  static eventName(name) {
+    return `${name}${this.EVENT_KEY}`
   }
 }
 

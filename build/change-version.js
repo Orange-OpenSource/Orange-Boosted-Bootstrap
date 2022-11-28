@@ -2,15 +2,15 @@
 
 /*!
  * Script to update version number references in the project.
- * Copyright 2017-2021 The Bootstrap Authors
- * Copyright 2017-2021 Twitter, Inc.
+ * Copyright 2017-2022 The Bootstrap Authors
+ * Copyright 2017-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
 'use strict'
 
-const fs = require('fs').promises
-const path = require('path')
+const fs = require('node:fs').promises
+const path = require('node:path')
 const globby = require('globby')
 
 const VERBOSE = process.argv.includes('--verbose')

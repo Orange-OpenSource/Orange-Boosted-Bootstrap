@@ -13,8 +13,8 @@
     <language>en-us</language>
     <projectUrl>https://boosted.orange.com/</projectUrl>
      <icon>boosted.png</icon>
-    <license type="file">LICENSE.txt</license>
-    <copyright>Copyright 2017-2021</copyright>
+    <license type="expression">MIT</license>
+    <copyright>Copyright 2017-2022</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>css sass mobile-first responsive front-end framework web bootstrap Orange</tags>
     <contentFiles>
@@ -22,7 +22,6 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="LICENSE.txt" target="" />
     <file src="nuget\boosted.png" target="" />
 
     <file src="scss\**\*.scss" target="content\Content\boosted" />
