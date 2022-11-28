@@ -1,0 +1,15 @@
+pre.prismjs {
+  color: #fff;
+  font-size: .875rem;
+}
+
+// Bypass https://github.com/storybookjs/storybook/issues/15598
+.token.tag {
+  display: initial;
+  padding: initial;
+  font-size: .875rem;
+  font-weight: initial;
+  line-height: initial;
+  background-color: initial;
+  border: initial;
+}

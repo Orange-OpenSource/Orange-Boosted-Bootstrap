@@ -4,9 +4,10 @@ title: Get started with Boosted
 description: Boosted is based on Bootstrap&#58; a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
 group: getting-started
 aliases:
-  - "/docs/5.2/getting-started/"
-  - "/docs/getting-started/"
   - "/getting-started/"
+  - "/docs/getting-started/"
+  - "/docs/5.2/getting-started/"
+  - "/docs/getting-started/introduction/"
 toc: true
 ---
 

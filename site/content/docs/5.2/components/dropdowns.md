@@ -3,6 +3,8 @@ layout: docs
 title: Dropdowns
 description: Toggle contextual overlays for displaying lists of links and more with the Boosted dropdown plugin.
 group: components
+aliases:
+  - "/docs/components/dropdowns/"
 toc: true
 ---
 
@@ -228,7 +230,12 @@ And putting it to use in a navbar:
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="navbar-brand">
+      <a class="stretched-link" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="title">Navbar</h1>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -728,7 +735,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">New around here? Sign up</a>
@@ -758,7 +765,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
 </div>
 {{< /example >}}

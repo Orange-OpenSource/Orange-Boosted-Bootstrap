@@ -11,6 +11,7 @@
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   --#{$prefix}btn-line-height: #{$btn-line-height};
   --#{$prefix}btn-color: #{$body-color};
+  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // Boosted mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
@@ -32,6 +33,7 @@
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
   text-decoration: if($link-decoration == none, null, none);
+  letter-spacing: var(--#{$prefix}btn-letter-spacing); // Boosted mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -43,12 +45,14 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  &:hover { // Boosted mod: simpler rule
+  &:hover {
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
+
+  // Boosted mod: no .btn-check + &:hover
 
   &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
     color: var(--#{$prefix}btn-hover-color);
@@ -152,27 +156,18 @@
 
 // Boosted mod: border-only on :hover, :focus and :active
 .btn-no-outline {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    border-color: $gray-500;
-  }
+  --#{$prefix}btn-hover-border-color: #{$gray-500};
+  --#{$prefix}btn-active-color: #{$accessible-orange};
+  --#{$prefix}btn-active-border-color: #{$gray-500};
+  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
 
-  &:active,
-  &.active {
-    color: $accessible-orange;
-    background-color: var(--#{$prefix}btn-bg);
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $gray-500;
-    border-color: var(--#{$prefix}btn-border-color);
-  }
-
-  &.btn-inverse:not(:active) {
-    color: $white;
+  &.btn-inverse {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-hover-border-color: #{$gray-700};
+    --#{$prefix}btn-active-color: #{$brand-orange};
+    --#{$prefix}btn-active-border-color: #{$gray-700};
+    --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
 // End mod
@@ -184,7 +179,7 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight: #{$font-weight-normal}
+  // Boosted mod: no redefinition of --#{$prefix}btn-font-weight
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
@@ -218,6 +213,10 @@
       outline-color: var(--#{$prefix}btn-active-color);
     }
   }
+
+  &.btn-inverse {
+    --#{$prefix}btn-disabled-color: #{$gray-700};
+  }
   // End mod
 
   // No need for an active state here
@@ -227,13 +226,14 @@
 //
 // Button Sizes
 // Boosted mod: 6th argument to set .btn-icon padding
+// Boosted mod: 7th argument to set .btn-letter-spacing
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
 }
 
 
@@ -245,23 +245,28 @@
 
 // Boosted mod: social button
 .btn-social {
-  border-color: currentcolor;
+  --#{$prefix}btn-border-color: currentcolor;
+  --#{$prefix}btn-hover-color: #{$white};
+  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, $black);
+  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, $black);
+  --#{$prefix}btn-active-color: #{$white};
+  --#{$prefix}btn-active-bg: #{$black};
+  --#{$prefix}btn-active-border-color: #{$black};
+  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$boosted-prefix}network-logo));
 
-  &:hover,
   &:focus {
-    color: $white;
-    background-color: var(--#{$boosted-prefix}network-color, $black);
-    border-color: var(--#{$boosted-prefix}network-color, $black);
     outline-color: var(--#{$boosted-prefix}network-color, $black);
   }
 
-  &:active,
-  &.active {
-    color: $white;
-    background-color: $black;
-    border-color: $black;
+  &.btn-inverse {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-active-color: #{$black};
+    --#{$prefix}btn-active-bg: #{$white};
+    --#{$prefix}btn-active-border-color: #{$white};
+    --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
 
@@ -271,17 +276,6 @@
   .btn-#{$name} {
     --#{$boosted-prefix}network-color: #{map-get($network, "color")};
     --#{$boosted-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
-
-    &.btn-inverse {
-      color: $white;
-
-      &:active,
-      &.active {
-        color: $black;
-        background-color: $white;
-        border-color: $white;
-      }
-    }
 
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);

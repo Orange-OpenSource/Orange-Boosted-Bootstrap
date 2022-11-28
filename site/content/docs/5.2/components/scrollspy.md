@@ -3,6 +3,8 @@ layout: docs
 title: Scrollspy
 description: Automatically update Boosted navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 group: components
+aliases:
+  - "/docs/components/scrollspy/"
 toc: true
 ---
 
@@ -33,7 +35,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3 mb-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -70,7 +72,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 ```html
 <nav id="navbar-example2" class="navbar px-3 mb-3">
   <a class="navbar-brand" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted - Back to Home" loading="lazy">
   </a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -387,7 +389,7 @@ const scrollSpy = new boosted.ScrollSpy(document.body, {
 | `rootMargin` | string | `0px 0px -25%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) valid units, when calculating scroll position. |
 | `smoothScroll` | boolean | `false` | Enables smooth scrolling when a user clicks on a link that refers to ScrollSpy observables. |
 | `target` | string, DOM element | `null` | Specifies element to apply Scrollspy plugin. |
-| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) valid input, when calculating scroll position.|
+| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) valid input, when calculating scroll position. |
 {{< /bs-table >}}
 
 {{< callout warning >}}

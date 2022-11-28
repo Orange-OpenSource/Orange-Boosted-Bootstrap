@@ -3,6 +3,8 @@ layout: docs
 title: Tooltips
 description: Documentation and examples for adding custom Boosted tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
 group: components
+aliases:
+  - "/docs/components/tooltips/"
 toc: true
 ---
 
@@ -114,14 +116,14 @@ With an SVG:
 
 <div class="bd-example tooltip-demo">
   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
     </svg>
   </a>
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
@@ -130,14 +132,14 @@ With an SVG:
 
 ```html
 <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
-  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
     <rect width="100%" height="100%" fill="#563d7c"/>
     <circle cx="50" cy="50" r="30" fill="#007bff"/>
   </svg>
 </a>
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
@@ -243,7 +245,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 | `popperConfig` | null, object, function | `null` | To change Boosted's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
 | `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
 | `sanitizeFn` | null, function | `null` | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization. |
-| `selector` | string, false | `false` | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). |
+| `selector` | string, false | `false` | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). **Note**: `title` attribute must not be used as a selector. |
 | `template` | string | `'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'` | Base HTML to use when creating the tooltip. The tooltip's `title` will be injected into the `.tooltip-inner`. `.tooltip-arrow` will become the tooltip's arrow. The outermost wrapper element should have the `.tooltip` class and `role="tooltip"`. |
 | `title` | string, element, function | `''` | Default title value if `title` attribute isn't present. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to. |
 | `trigger` | string | `'hover focus'` | How tooltip is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'` indicates that the tooltip will be triggered programmatically via the `.tooltip('show')`, `.tooltip('hide')` and `.tooltip('toggle')` methods; this value cannot be combined with any other trigger. `'hover'` on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present. |
