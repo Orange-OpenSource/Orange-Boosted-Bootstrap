@@ -216,9 +216,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Nevertheless, in some cases where it would be really needed, you could roll your own custom sizing with CSS variables.
-
-For the allowed variants, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
+For the allowed variants, please refer to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -265,7 +263,7 @@ Create responsive stacks of full-width, "block buttons" like those in Boosted 4 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These screen width buttons can not be used on desktop screens because they do not respect the Orange Design System specifications.
+These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
 For the correct design, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -308,16 +306,16 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 The button plugin allows you to create simple on/off toggle buttons.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
+
+Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
+{{< /ods-incompatibility-alert >}}
+
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
-
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This variant with only one toggle button can not be used because it does not respect the Orange Design System specifications.
-
-**Watch out**: The component named "toggle buttons" in Boosted is not the same component as the one in ODS which behaves like a radio button.
-{{< /ods-incompatibility-alert >}}
 
 ### Toggle states
 
