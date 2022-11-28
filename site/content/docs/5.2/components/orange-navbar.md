@@ -171,7 +171,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       <!-- Navbar with links -->
       <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
         </ul>
       </div>
