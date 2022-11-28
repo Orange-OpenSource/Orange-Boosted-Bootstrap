@@ -109,7 +109,7 @@
     color: var(--#{$prefix}stepped-process-link-color);
   }
 
-  &:hover {
+  &[href]:hover {
     text-decoration: if($link-hover-decoration == underline, null, underline);
   }
 
