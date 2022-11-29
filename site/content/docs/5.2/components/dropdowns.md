@@ -141,7 +141,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 ```
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This small variant can not be used because it does not respect the Orange Design System specifications.
+This small variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -271,7 +271,7 @@ Make the dropdown menu centered below the toggle with `.dropdown-center` on the 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -354,7 +354,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -507,7 +507,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 </div>
 {{< /example >}}
 
-You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
+You can also create non-interactive dropdown items with `.dropdown-item-text`.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -718,7 +718,7 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -740,7 +740,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -805,7 +805,7 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -844,7 +844,7 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-The variants Clickable outside, Clickable inside and Manual close can not be used because featuring a single selection, they do no respect the Orange Design System specifications. They can be used only if featuring multiple selections.
+The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They can be used only if featuring multiple selections.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
