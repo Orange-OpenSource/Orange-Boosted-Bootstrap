@@ -167,6 +167,13 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ## All colors
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+Some of the colors below do not respect the Orange Design System specifications.
+
+For the correct colors to use, please refer to our [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< callout warning >}}
 All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
 
@@ -174,13 +181,6 @@ Please note that in the Boosted colors, the indigo colors are the same as the pu
 {{< /callout >}}
 
 Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
-
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-Some of the colors below do not respect the Orange Design System specifications.
-
-For the correct colors to use, please refer to our [Orange colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
