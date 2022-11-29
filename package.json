@@ -134,7 +134,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-storybook": "^0.6.7",
-    "eslint-plugin-unicorn": "^44.0.0",
+    "eslint-plugin-unicorn": "^45.0.1",
     "find-unused-sass-variables": "^4.0.4",
     "focus-visible": "^5.2.0",
     "globby": "^11.1.0",
