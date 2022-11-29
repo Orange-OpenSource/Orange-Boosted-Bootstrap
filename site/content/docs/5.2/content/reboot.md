@@ -11,6 +11,11 @@ aliases:
 toc: true
 ---
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This section is about how Boosted technically works. Therefore, all the examples below are not relevant regarding the Orange Design System.
+{{< /ods-incompatibility-alert >}}
+
 ## Approach
 
 Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
@@ -99,11 +104,6 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 ## Horizontal rules
 
 The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
-
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-These `<hr>` 3rd and 4th variants can not be used because they do not respect the Orange Design System specifications. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
-{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <hr>
