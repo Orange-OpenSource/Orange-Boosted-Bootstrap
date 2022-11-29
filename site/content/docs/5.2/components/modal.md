@@ -246,7 +246,7 @@ When modals become too long for the user's viewport or device, they scroll indep
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants can not be used because they do not respect the Orange Design System specifications.
+This variant should not be used because it does not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -419,13 +419,6 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 Utilize the Boosted grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
-
-For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 <div class="modal fade" id="gridSystemModal" tabindex="-1" aria-labelledby="gridModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -514,7 +507,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants can not be used because they do not respect the Orange Design System specifications.
+Forms inside modals should not be used because they do not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -577,7 +570,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it does not respect the Orange Design System specifications.
+This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
 For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
@@ -727,13 +720,13 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-sm-down` | `480px` |
 | `.modal-fullscreen-md-down` | `768px` |
 | `.modal-fullscreen-lg-down` | `1024px` |
-| `.modal-fullscreen-xl-down` | `1280px` |
+| `.modal-fullscreen-xl-down` | `1280px` |s
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants can not be used because they do not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
 For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
