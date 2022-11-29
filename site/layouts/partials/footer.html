@@ -48,7 +48,7 @@
               <li><a class="nav-link" href="{{ .Site.Params.repo }}" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="{{ .Site.Params.repo }}/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
               <li><a class="nav-link" href="{{ .Site.Params.bootstrap }}" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingGuides">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -71,7 +71,7 @@
             This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.
           </p>
           <p class="mb-lg-1">
-            Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+            Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener" aria-label="Bootstrap code license">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
           <p class="mb-lg-1">Currently v{{ .Site.Params.current_version }}.</p>
           <p class="mb-lg-1">
@@ -85,7 +85,7 @@
   </div>
 </footer>
 <!-- Boosted mod: back-to-top component -->
-<nav aria-label="Back to top" class="back-to-top">
+<nav aria-label="Back to top" class="back-to-top" id="back-to-top">
   <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-bs-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
