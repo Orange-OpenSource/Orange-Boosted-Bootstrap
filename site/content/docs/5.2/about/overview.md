@@ -24,7 +24,7 @@ Boosted can be used for all **responsive web projects** for Orange group —&nbs
 
 Boosted ships with custom accessible components to suit specific needs:
 
-- <a href="{{< docsref "/components/back-to-top" >}}" aria-label="Component - Back to top">Back to top</a>
+- [Back to top]({{< docsref "/components/back-to-top" >}})
 - [Footer]({{< docsref "/components/footer" >}})
 - [Orange navbar]({{< docsref "/components/orange-navbar" >}})
 - [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
