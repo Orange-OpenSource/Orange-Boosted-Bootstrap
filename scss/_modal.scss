@@ -26,6 +26,8 @@
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
   --#{$prefix}modal-title-line-height: #{$modal-title-line-height};
+  --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-bottom};
+  --#{$prefix}modal-body-margin-sm-bottom: #{$modal-body-margin-sm-bottom};
   --#{$prefix}modal-footer-gap: #{$modal-footer-margin-between};
   --#{$prefix}modal-footer-bg: #{$modal-footer-bg};
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
@@ -181,6 +183,7 @@
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: var(--#{$prefix}modal-padding);
+  margin-bottom: var(--#{$prefix}modal-body-margin-bottom);
 }
 
 // Footer (for actions)
@@ -215,6 +218,10 @@
     max-width: var(--#{$prefix}modal-width);
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .modal-body {
+    margin-bottom: var(--#{$prefix}modal-body-margin-sm-bottom);
   }
 
   .modal-sm {
