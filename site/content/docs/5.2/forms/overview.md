@@ -3,8 +3,12 @@ layout: docs
 title: Forms
 description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
 group: forms
+aliases:
+  - "/forms/"
+  - "/docs/forms/"
+  - "/docs/5.2/forms/"
+  - "/docs/forms/overview/"
 toc: true
-aliases: "/docs/5.2/forms/"
 sections:
   - title: Form control
     description: Style textual inputs and textareas with support for multiple states.
@@ -47,7 +51,7 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary mt-2">Submit</button>
 </form>
 {{< /example >}}
 
@@ -126,7 +130,7 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
   </fieldset>
 </form>
 {{< /example >}}
@@ -155,7 +159,7 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
         <label class="form-check-label" for="requiredFieldsetCheck">Must check this</label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
   </fieldset>
 </form>
 {{< /example >}}

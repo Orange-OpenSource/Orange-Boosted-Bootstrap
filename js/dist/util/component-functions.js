@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.2 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap component-functions.js v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap component-functions.js v5.2.2 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,11 +20,10 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/component-functions.js
+   * Bootstrap (v5.2.2): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -32,14 +31,13 @@
       if (['A', 'AREA'].includes(this.tagName)) {
         event.preventDefault();
       }
-
       if (index.isDisabled(this)) {
         return;
       }
-
       const target = index.getElementFromSelector(this) || this.closest(`.${name}`);
-      const instance = component.getOrCreateInstance(target); // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
+      const instance = component.getOrCreateInstance(target);
 
+      // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
       instance[method]();
     });
   };

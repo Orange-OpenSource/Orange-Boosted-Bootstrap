@@ -3,6 +3,8 @@ layout: docs
 title: Navbar
 description: Documentation and examples for Boosted's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
+aliases:
+  - "/docs/components/navbar/"
 toc: true
 ---
 
@@ -47,7 +49,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +101,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
         <h1 class="title">Navbar</h1>
       </div>
@@ -113,7 +115,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
     <div class="container-fluid">
       <div class="navbar-brand">
         <span class="stretched-link">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </span>
         <h1 class="title">Navbar</h1>
       </div>
@@ -136,7 +138,7 @@ Please note that you should also add the `aria-current` attribute on the active 
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -169,7 +171,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -194,7 +196,7 @@ You can also use dropdowns in your navbar. Dropdown menus require a wrapping ele
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -249,7 +251,7 @@ Immediate child elements of `.navbar` use flex layout<!-- Boosted mod: no justif
   <div class="container-fluid">
     <div class="navbar-brand me-auto">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <form class="d-flex navbar-item" role="search">
@@ -305,7 +307,7 @@ Mix and match with other components and utilities as needed.
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -353,7 +355,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
     <div class="container-fluid">
       <div class="navbar-brand">
         <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
         </a>
       </div>
     </div>
@@ -368,7 +370,7 @@ Use any of the responsive containers to change how wide the content in your navb
   <div class="container-md">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
     </div>
   </div>
@@ -386,7 +388,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Default</h1>
     </div>
@@ -399,7 +401,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Fixed top</h1>
     </div>
@@ -412,7 +414,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Fixed bottom</h1>
     </div>
@@ -425,7 +427,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Sticky top</h1>
     </div>
@@ -438,7 +440,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
   <div class="container-fluid">
     <div class="navbar-brand">
       <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
       </a>
       <h1 class="title">Sticky bottom</h1>
     </div>
@@ -458,7 +460,9 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-brand">
-      <a class="stretched-link" href="#"></a>
+      <a class="stretched-link" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
       <h1 class="title">Scroll</h1>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -562,7 +566,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
@@ -621,7 +625,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn btn-primary btn-inverse" type="submit">Search</button>
         </form>
@@ -645,11 +649,19 @@ Some additional CSS variables are also present on `.navbar-nav`:
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
+Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
+
 ### Sass variables
+
+Variables for all navbars:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+Variables for the [dark navbar](#color-schemes):
+
+{{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass loop
 
