@@ -17,6 +17,22 @@ Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and 
 
 If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
 
+### Forms
+
+- <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$form-helper-size</code></li>
+      <li><code>$form-label-helper-margin-bottom</code></li>
+      <li><code>$form-label-helper-margin-left</code></li>
+      <li><code>$helper-icon</code></li>
+    </ul>
+  </details>
+
 ## v5.2.2
 
 <hr class="mb-4">
