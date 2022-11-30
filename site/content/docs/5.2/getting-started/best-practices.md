@@ -13,7 +13,7 @@ We've designed and developed Boosted to work in a number of environments. Here a
 **Heads up!** This copy is a work in progress.
 {{< /callout >}}
 
-### General outline
+## General outline
 
 - Working with CSS
 - Working with Sass files
