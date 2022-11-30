@@ -117,7 +117,7 @@
     @include border-start-radius(0);
   }
 
-  > :not(:first-child):not(.dropdown-menu):not(input):not(select):not(input + *):not(select + *)#{$validation-messages} {
+  > :not(:first-child):not(.dropdown-menu):not(input):not(select):not(textarea):not(input + *):not(select + *):not(textarea + *)#{$validation-messages} {
     margin-left: -$input-border-width;
   }
   // End mod
