@@ -1,14 +1,13 @@
 name: Percy
 on:
   push:
+    branches:
+      - main
     paths:
       - 'js/**'
       - 'scss/**'
       - 'site/content/docs/**/components/**'
       - 'site/content/docs/**/forms/**'
-    branches:
-      - main
-      - v4-dev
   workflow_dispatch:
 
 env:

@@ -9,11 +9,28 @@ aliases:
 toc: true
 ---
 
+## v5.2.3
+
+<hr class="mb-4">
+
+Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
+
+### Components
+
+- **Stepped Process**
+  - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
+  ```diff
+  -        <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
+  +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+  ```
+
 ## v5.2.2
 
 <hr class="mb-4">
 
-Boosted v5.2.2 has landed with new bug fixes and documentation updates.
+Boosted v5.2.2 has landed with new bug fixes and documentation updates including a new RTL section in our examples.
 
 If you need more details about the changes, please refer to the [v5.2.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2).
 
@@ -62,6 +79,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-btn-letter-spacing</code></li>
+      <li><code>--bs-primary-text-rgb</code></li>
     </ul>
   </details>
 
