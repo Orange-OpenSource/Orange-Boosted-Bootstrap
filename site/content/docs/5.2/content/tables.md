@@ -14,6 +14,12 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Boosted.
 
+<!-- Boosted mod : design callout -->
+{{< ods-recommendation-alert >}}
+In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
+You can refer to [small tables]({{< docsref "/content/tables#small-tables" >}}) paragraph.
+{{< /ods-recommendation-alert >}}
+
 {{< table class="table" simplified="false" >}}
 
 ## Variants
@@ -199,6 +205,11 @@ Behind the scenes it looks like this:
 ## Small tables
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
+
+<!-- Boosted mod : design callout -->
+{{< ods-recommendation-alert >}}
+These compact tables are recommended by Orange Design System.
+{{< /ods-recommendation-alert >}}
 
 {{< table class="table table-sm" >}}
 
@@ -835,7 +846,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 ### With icons or thumbnails
 
-Use SVG to display thumbnails or icons in your table data cell elements.
+Use SVG to display thumbnails or icons in your compact table data cell elements.
 
 <div class="bd-example">
   <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
@@ -861,14 +872,14 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck10">
             <label class="form-check-label" for="customCheck10">
-              <span class="visually-hidden">Select second row</span>
+              <span class="visually-hidden">Select first row</span>
             </label>
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg1">
-            <title id="svg1">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+            <title id="svg1">Thumbnail</title>
+            <rect width="100%" height="100%" fill="#ffd200"></rect>
           </svg>
           Cell text
         </td>
@@ -876,12 +887,12 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>Cell text</td>
         <td>Cell text</td>
       </tr>
-      <tr class="table-active">
+      <tr>
         <td>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck11" checked>
+            <input class="form-check-input" type="checkbox" id="customCheck11">
             <label class="form-check-label" for="customCheck11">
-              <span class="visually-hidden">Select fourth row</span>
+              <span class="visually-hidden">Select second row</span>
             </label>
           </div>
         </td>
@@ -896,19 +907,19 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>Cell text</td>
         <td>Cell text</td>
       </tr>
-      <tr>
+      <tr class="table-active">
         <td>
-            <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck12">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck12" checked>
             <label class="form-check-label" for="customCheck12">
-              <span class="visually-hidden">Select fifth row</span>
+              <span class="visually-hidden">Select third row</span>
             </label>
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg3">
-            <title id="svg3">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
+            <title id="svg3">Thumbnail</title>
+            <rect width="100%" height="100%" fill="#4bb4e6"></rect>
           </svg>
           Cell text
         </td>
@@ -916,12 +927,12 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>Cell text</td>
         <td>Cell text</td>
       </tr>
-      <tr>
+      <tr class="table-active">
         <td>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck13">
+            <input class="form-check-input" type="checkbox" id="customCheck13" checked>
             <label class="form-check-label" for="customCheck13">
-              <span class="visually-hidden">Select sixth row</span>
+              <span class="visually-hidden">Select fourth row</span>
             </label>
           </div>
         </td>
@@ -938,10 +949,10 @@ Use SVG to display thumbnails or icons in your table data cell elements.
       </tr>
       <tr>
         <td>
-          <div class="form-check mb-0">
+            <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck14">
             <label class="form-check-label" for="customCheck14">
-              <span class="visually-hidden">Select seventh row</span>
+              <span class="visually-hidden">Select fifth row</span>
             </label>
           </div>
         </td>
@@ -961,7 +972,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck15">
             <label class="form-check-label" for="customCheck15">
-              <span class="visually-hidden">Select eighth row</span>
+              <span class="visually-hidden">Select sixth row</span>
             </label>
           </div>
         </td>
@@ -976,111 +987,39 @@ Use SVG to display thumbnails or icons in your table data cell elements.
         <td>Cell text</td>
         <td>Cell text</td>
       </tr>
-    </tbody>
-  </table>
-</div>
-
-```html
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg1">
-    <title id="svg1">Document</title>
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-  </svg>
-  Cell text
-</td>
-```
-<div class="bd-example">
-  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
-    <thead>
       <tr>
-        <th scope="col">
+        <td>
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck16">
             <label class="form-check-label" for="customCheck16">
-              <span class="visually-hidden">Select all</span>
+              <span class="visually-hidden">Select seventh row</span>
             </label>
           </div>
-        </th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
+        </td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
+            <title id="svg7">Document</title>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+          </svg>
+          Cell text
+        </td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
         <td>
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck17">
             <label class="form-check-label" for="customCheck17">
-              <span class="visually-hidden">Select first row</span>
+              <span class="visually-hidden">Select eighth row</span>
             </label>
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg7">
-            <title id="svg7">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#ffd200"></rect>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck18" checked>
-            <label class="form-check-label" for="customCheck18">
-              <span class="visually-hidden">Select third row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg8">
-            <title id="svg8">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#4bb4e6"></rect>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck19">
-            <label class="form-check-label" for="customCheck19">
-              <span class="visually-hidden">Select first row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg9">
-            <title id="svg9">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#ffd200"></rect>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck20">
-            <label class="form-check-label" for="customCheck20">
-              <span class="visually-hidden">Select first row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg10">
-            <title id="svg10">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#ffd200"></rect>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
+            <title id="svg8">Document</title>
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
           </svg>
           Cell text
         </td>
@@ -1093,14 +1032,28 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </div>
 
 ```html
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg8">
-    <title id="svg8">Thumbnail</title>
-    <rect width="100%" height="100%" fill="#ffd200"></rect>
-  </svg>
-  Cell text
-</td>
+<table class="table table-sm table-hover table-responsive align-middle has-checkbox">
+  ...
+  <td>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+      <title id="svg1">Thumbnail</title>
+      <rect width="100%" height="100%" fill="#ffd200"></rect>
+    </svg>
+    Cell text
+  </td>
+  ...
+  <td>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
+      <title id="svg2">Document</title>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+    </svg>
+    Cell text
+  </td>
+  ...
+</table>
 ```
+
+Use SVG to display icons or thumbnails in your table data cell elements.
 
 <div class="bd-example">
   <table class="table table-responsive align-middle">
@@ -1214,12 +1167,16 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </div>
 
 ```html
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
-    <title id="check1-1">Yes</title>
-    <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-  </svg>
-</td>
+<table class="table table-responsive align-middle">
+  ...
+  <td>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
+      <title id="check1-1">Yes</title>
+      <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+    </svg>
+  </td>
+  ...
+</table>
 ```
 
 ## Sass

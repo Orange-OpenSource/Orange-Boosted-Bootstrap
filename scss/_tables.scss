@@ -55,6 +55,13 @@
     width: $spacer * 2;
     max-width: $spacer * 2;
   }
+
+  // Use negative margins on icons in tables to preserve row height
+  svg,
+  img {
+    margin-top: $table-cell-icon-margin-top;
+    margin-bottom: $table-cell-icon-margin-bottom;
+  }
   // End mod
 }
 
@@ -80,6 +87,15 @@
   > :not(caption) > * > * {
     padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // Boosted mod
   }
+
+  // Boosted mod
+  // Use negative margins on icons in tables to preserve row height
+  svg,
+  img {
+    margin-top: $table-cell-icon-margin-top-sm;
+    margin-bottom: $table-cell-icon-margin-bottom-sm;
+  }
+  // End mod
 }
 
 // Boosted mod: no .table-bordered

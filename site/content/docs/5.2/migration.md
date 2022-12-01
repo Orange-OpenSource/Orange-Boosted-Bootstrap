@@ -26,6 +26,18 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
 
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$table-cell-icon-margin-top</code></li>
+      <li><code>$table-cell-icon-margin-bottom</code></li>
+      <li><code>$table-cell-icon-margin-top-sm</code></li>
+      <li><code>$table-cell-icon-margin-bottom-sm</code></li>
+    </ul>
+  </details>
+
 ## v5.2.2
 
 <hr class="mb-4">

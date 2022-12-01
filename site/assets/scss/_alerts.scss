@@ -1,4 +1,4 @@
-.bd-ods-incompatibility-alert {
+.bd-ods-alert {
   .alert-heading ~ p {
     &:not(:first-of-type) {
       margin-top: map-get($spacers, 1);
