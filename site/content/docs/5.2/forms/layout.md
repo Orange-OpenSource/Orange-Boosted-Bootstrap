@@ -66,13 +66,6 @@ By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can 
 
 More complex layouts can also be created with the grid system.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-The browser generated appearance of the `<select>` dropdown menu does not respect the Orange Design System and cannot be changed due to browser limitations.
-
-For the correct appearance, refer to the Boosted [Dropdowns]({{< docsref "/components/dropdowns" >}}) component. Be aware that this Dropdowns component, because using an `<ul>` tag, can not be a replacement here for technical and accessibility reasons.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-6">
@@ -128,9 +121,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications.
+This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -190,9 +183,9 @@ Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correct
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications. The input label should always be placed above the input field.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 <!-- Boosted mod: no .col-form-label-sm -->
@@ -215,6 +208,13 @@ For the correct design, please refer to unitary [Forms](https://system.design.or
 
 As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications. The input label should always be placed above the input field.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="row g-3">
   <div class="col-sm-7">
@@ -235,9 +235,9 @@ The example below uses a flexbox utility to vertically center the contents and c
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+These form variants, with **labels** that are **not above input fields**, should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -320,9 +320,9 @@ Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+This form variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
