@@ -1,6 +1,5 @@
 {
   "level": "error",
-  "concurrency": 4,
   "defaults": {
     "chromeLaunchConfig": {
         "args": [
@@ -15,7 +14,7 @@
       "axe"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, a.text-decoration-none, #offcanvas, #offcanvasDark, #offcanvasResponsive",
+    "hideElements": "iframe, a.text-decoration-none, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
     "ignore": [
       "heading-order",
       "scrollable-region-focusable",
