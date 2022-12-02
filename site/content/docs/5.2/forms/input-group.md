@@ -14,9 +14,9 @@ Place one add-on or button on either side of an input. You may also place one on
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications.
+This form variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -71,6 +71,12 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 **Sizing on the individual input group elements isn't supported.**
 
+{{< ods-incompatibility-alert >}}
+This form variant should not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <!-- Boosted mod: no .input-group-sm -->
 {{< example >}}
 <div class="input-group mb-3">
@@ -110,9 +116,9 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used with this design because it does not respect the Orange Design System specifications.
+This form variant should not be used with this design because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -129,9 +135,9 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications.
+This form variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -178,9 +184,9 @@ For the correct design, please refer to unitary [Forms](https://system.design.or
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This form variant can not be used because it does not respect the Orange Design System specifications.
+This **third** form variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -271,9 +277,9 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These 3 first form variants can not be used because they do not respect the Orange Design System specifications.
+These **3 first** form variants should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -322,9 +328,9 @@ For the correct design, please refer to unitary [Forms](https://system.design.or
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These form variants can not be used because they do not respect the Orange Design System specifications.
+These form variants should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
