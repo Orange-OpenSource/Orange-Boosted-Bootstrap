@@ -72,7 +72,7 @@ Boosted uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#
 ```
 <!-- End mod -->
 
-## Example
+## Examples
 
 CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
 

@@ -33,7 +33,7 @@ Things to know when using the popover plugin:
 
 Keep reading to see how popovers work with some examples.
 
-## Example
+## Examples
 
 ### Enable popovers
 

@@ -30,7 +30,7 @@ Should you require our full set of [build tools]({{< docsref "/getting-started/c
 
 <a href="{{< param "download.source" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
-## Example
+## Examples
 
 If you want to download and examine our [examples]({{< docsref "/examples" >}}), you can grab the already built examples:
 

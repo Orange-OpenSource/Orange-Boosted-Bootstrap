@@ -43,7 +43,7 @@ Compared to the default grid system:
 
 - Nesting works similarly, but may require you to reset your column counts on each instance of a nested `.grid`. See the [nesting section](#nesting) for details.
 
-## Example
+## Examples
 
 ### Three columns
 

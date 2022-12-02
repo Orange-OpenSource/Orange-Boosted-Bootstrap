@@ -19,10 +19,10 @@
             <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+            <a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});" aria-label="Docs - Framework documentation">Docs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+            <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});" aria-label="Examples - Framework examples">Examples</a>
           </li>
           <li class="nav-item">
             <a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>

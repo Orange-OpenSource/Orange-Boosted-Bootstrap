@@ -32,7 +32,7 @@ Got all that? Great, let's see how they work with some examples.
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-### Example
+### Examples
 
 ### Enable tooltips
 
