@@ -54,7 +54,10 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This input readonly plain text element can not be used with this design in your forms because it does no respect the Orange Design System specifications. If you really need it, before using ask the Boosted team on Mattermost to have it modified by one of its designers.
+This  **readonly plain text** input element should not be used because it does no respect the Orange Design System specifications. The form text input label should always be placed above the input field.
+
+For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
