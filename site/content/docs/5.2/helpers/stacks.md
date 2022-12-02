@@ -64,7 +64,7 @@ And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 </div>
 {{< /example >}}
 
-## Examples
+## Example
 
 Use `.vstack` to stack buttons and other elements:
 

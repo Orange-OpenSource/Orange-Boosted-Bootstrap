@@ -9,7 +9,7 @@ toc: true
 added: "5.2"
 ---
 
-## Examples
+## Example
 
 A tag is basically a rounded `<span>` that can contain text, and optionally an image and/or a close button. Please **adapt the HTML** to be semantically correct. Here are some hints to build [accessible tags](https://a11y-guidelines.orange.com/en/web/components-examples/tags/).
 

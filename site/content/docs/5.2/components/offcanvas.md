@@ -23,7 +23,7 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## Example
 
 ### Offcanvas components
 

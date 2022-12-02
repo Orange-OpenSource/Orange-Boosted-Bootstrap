@@ -86,7 +86,7 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
 </div>
 {{< /example >}}
 
-## Examples
+## Example
 
 Here are some real life examples of these classes:
 

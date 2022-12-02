@@ -20,7 +20,7 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 
 - Target elements that are not visible will be ignored. See the [Non-visible elements](#non-visible-elements) section below.
 
-## Examples
+## Example
 
 ### Navbar
 

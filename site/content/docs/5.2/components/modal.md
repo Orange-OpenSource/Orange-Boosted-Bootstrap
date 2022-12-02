@@ -34,7 +34,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 Keep reading for demos and usage guidelines.
 
-## Examples
+## Example
 
 ### Modal components
 

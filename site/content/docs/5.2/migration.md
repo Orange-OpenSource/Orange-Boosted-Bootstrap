@@ -55,7 +55,7 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 - **Tables**
   - <span class="badge bg-warning">Warning</span> Reintroduction of `.has-checkbox` from v4 to correct spacing of first column when having row selection.
 
-### Examples
+### Example
 
 - <span class="badge bg-success">New</span> There is a new RTL section in the examples.
 

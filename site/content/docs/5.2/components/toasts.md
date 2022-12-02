@@ -21,7 +21,7 @@ Things to know when using the toast plugin:
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## Example
 
 ### Basic
 
