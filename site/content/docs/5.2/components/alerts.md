@@ -8,7 +8,7 @@ aliases:
 toc: true
 ---
 
-## Example
+## Examples
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
