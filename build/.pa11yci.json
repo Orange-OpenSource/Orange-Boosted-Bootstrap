@@ -1,5 +1,5 @@
 {
-  "standard": "WCAG2AAA",
+  "standard": "WCAG2AA",
   "level": "error",
   "defaults": {
     "chromeLaunchConfig": {
@@ -15,7 +15,7 @@
       "axe"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": ".d-none, iframe, #text-decoration + p + div a.text-decoration-none, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
+    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
     "ignore": [
       "color-contrast"
     ]
