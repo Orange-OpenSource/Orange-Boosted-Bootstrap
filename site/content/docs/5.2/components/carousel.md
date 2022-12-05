@@ -146,9 +146,9 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant should not be used because using captions does not respect the Orange Design System specifications.
+**Captions** should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Carousel Navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) on the Orange Design System website.
+Please refer to the [Carousel navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
