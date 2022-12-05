@@ -90,7 +90,7 @@ extra_js:
             <div class="col-md-4 col-6 mb-3">
               <label for="selectTitle" id="selectTitleLabel" class="form-label is-required">Title</label>
               <select class="form-select" id="selectTitle" aria-labelledby="selectTitleLabel selectTitleFeedback"
-                required>
+                 autocomplete="sex" required>
                 <option selected disabled value="" aria-hidden="true">Select a title</option>
                 <option value="1">Miss</option>
                 <option value="2">Ms.</option>
@@ -107,7 +107,7 @@ extra_js:
               <div class="mb-3">
                 <label for="inputFirstName" id="inputFirstNameLabel" class="form-label is-required">First name</label>
                 <input type="text" class="form-control" id="inputFirstName"
-                  aria-labelledby="inputFirstNameLabel inputFirstNameFeedback" required>
+                  aria-labelledby="inputFirstNameLabel inputFirstNameFeedback" autocomplete="given-name" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -118,7 +118,7 @@ extra_js:
               <div class="mb-3">
                 <label for="inputLastName" id="inputLastNameLabel" class="form-label is-required">Last name</label>
                 <input type="text" class="form-control" id="inputLastName"
-                  aria-labelledby="inputLastNameLabel inputLastNameFeedback" required>
+                  aria-labelledby="inputLastNameLabel inputLastNameFeedback" autocomplete="family-name" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -128,7 +128,7 @@ extra_js:
               </div>
               <div class="mb-3">
                 <label for="inputEmail" id="inputEmailLabel" class="form-label is-required">Email</label>
-                <input type="email" class="form-control" id="inputEmail" aria-labelledby="inputEmailLabel inputEmailFeedback" required>
+                <input type="email" class="form-control" id="inputEmail" aria-labelledby="inputEmailLabel inputEmailFeedback" autocomplete="email" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -139,7 +139,7 @@ extra_js:
               <div class="mb-3">
                 <label for="selectCountry" id="selectCountryLabel" class="form-label is-required">Country</label>
                 <select class="form-select" id="selectCountry"
-                  aria-labelledby="selectCountryLabel selectCountryFeedback" required>
+                  aria-labelledby="selectCountryLabel selectCountryFeedback" autocomplete="country-name" required>
                   <option selected disabled value="" aria-hidden="true">Select a country</option>
                   <option value="1">France</option>
                   <option value="2">Canada</option>
