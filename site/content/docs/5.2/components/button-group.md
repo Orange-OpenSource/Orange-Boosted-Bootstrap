@@ -44,7 +44,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) component on the Orange Design System website.
+Please refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -65,9 +65,7 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 {{< ods-incompatibility-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented as in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component.
-
-For the correct design, you can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) component on on the Orange Design System website.
+From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
