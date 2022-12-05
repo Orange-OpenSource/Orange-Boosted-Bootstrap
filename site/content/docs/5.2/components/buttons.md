@@ -216,7 +216,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the allowed variants, please refer to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -265,7 +265,7 @@ Create responsive stacks of full-width, "block buttons" like those in Boosted 4 
 {{< ods-incompatibility-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer  to [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) components on the Orange Design System website.
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
