@@ -31,8 +31,7 @@
   border: 0;
 
   .form-label + & {
-    margin-bottom: $form-label-helper-margin-bottom;
-    margin-left: $form-label-helper-margin-left;
+    margin-bottom: $form-helper-label-margin-bottom;
     vertical-align: bottom;
   }
 }

@@ -27,8 +27,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
       <li><code>$form-helper-size</code></li>
-      <li><code>$form-label-helper-margin-bottom</code></li>
-      <li><code>$form-label-helper-margin-left</code></li>
+      <li><code>$form-helper-label-margin-bottom</code></li>
+      <li><code>$form-helper-label-margin-left</code></li>
       <li><code>$helper-icon</code></li>
     </ul>
   </details>

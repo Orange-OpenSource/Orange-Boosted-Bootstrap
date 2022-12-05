@@ -971,8 +971,7 @@ $form-label-required-margin-left:       .1875rem !default; // Boosted mod
 
 // scss-docs-start form-helper-variables
 $form-helper-size:                      1.125rem !default; // Boosted mod
-$form-label-helper-margin-bottom:       .3125rem !default; // Boosted mod
-$form-label-helper-margin-left:         .125rem !default; // Boosted mod
+$form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($form-helper-size - $font-size-base), 2) !default; // Boosted mod
 // scss-docs-end form-helper-variables
 
 // scss-docs-start form-input-variables
