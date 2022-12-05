@@ -171,7 +171,7 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 {{< ods-incompatibility-alert >}}
 Some of the colors below do not respect the Orange Design System specifications.
 
-For the correct colors to use, please refer to our [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) paragraph and to [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829)  on  the Orange Design System website.
+Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< callout warning >}}
