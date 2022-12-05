@@ -200,23 +200,21 @@ Building on the above example, you can create different toast color schemes with
 Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
 
 {{< example stackblitz_add_js="true" >}}
-<form>
-  <div class="mb-3">
-    <label for="selectToastPlacement">Toast placement</label>
-    <select class="form-select mt-2" id="selectToastPlacement">
-      <option value="" selected>Select a position...</option>
-      <option value="top-0 start-0">Top left</option>
-      <option value="top-0 start-50 translate-middle-x">Top center</option>
-      <option value="top-0 end-0">Top right</option>
-      <option value="top-50 start-0 translate-middle-y">Middle left</option>
-      <option value="top-50 start-50 translate-middle">Middle center</option>
-      <option value="top-50 end-0 translate-middle-y">Middle right</option>
-      <option value="bottom-0 start-0">Bottom left</option>
-      <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
-      <option value="bottom-0 end-0">Bottom right</option>
-    </select>
-  </div>
-</form>
+<div class="mb-3">
+  <label for="selectToastPlacement">Toast placement</label>
+  <select class="form-select mt-2" id="selectToastPlacement">
+    <option value="" selected>Select a position...</option>
+    <option value="top-0 start-0">Top left</option>
+    <option value="top-0 start-50 translate-middle-x">Top center</option>
+    <option value="top-0 end-0">Top right</option>
+    <option value="top-50 start-0 translate-middle-y">Middle left</option>
+    <option value="top-50 start-50 translate-middle">Middle center</option>
+    <option value="top-50 end-0 translate-middle-y">Middle right</option>
+    <option value="bottom-0 start-0">Bottom left</option>
+    <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+    <option value="bottom-0 end-0">Bottom right</option>
+  </select>
+</div>
 <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
   <div class="toast-container p-3" id="toastPlacement">
     <div class="toast">

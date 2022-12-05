@@ -143,6 +143,7 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
 {{< example >}}
 <form>
   <fieldset>
+    <legend class="visually-hidden">Required fields inside fieldset example</legend>
     <div class="mb-3">
       <label for="requiredTextInput" class="form-label is-required">Required input</label>
       <input type="text" id="requiredTextInput" class="form-control" placeholder="Required input" required>

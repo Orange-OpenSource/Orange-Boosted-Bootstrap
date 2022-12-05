@@ -221,7 +221,7 @@ Even though you should use the Master or Small logo, you can still replace it by
 {{< callout warning >}}
 You should consider having a **responsive SVG logo**. In order to do so, you may set up a responsive rendering into your SVG, [as we do with the Master logo]({{< docsref "/about/brand#orange-logo" >}}).
 
-If you do not intend to use your own SVG, you should explore the DOM solution and therefore do as if you had a [title on one or two lines]({{< ref "#global-header-with-title" >}}).
+If you do not intend to use your own SVG, you should explore the DOM solution and therefore do as if you had a [title on one or two lines]({{< ref "#with-title" >}}).
 {{< /callout >}}
 
 <div class="bd-example p-0">

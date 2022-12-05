@@ -1,5 +1,5 @@
 {
-  "standard": "WCAG2AA",
+  "standard": "WCAG2AAA",
   "level": "error",
   "defaults": {
     "chromeLaunchConfig": {
@@ -12,10 +12,11 @@
       ["pa11y-ci-reporter-html", {"destination": ".pa11y", "includeZeroIssues": true}]
     ],
     "runners": [
-      "axe"
+      "axe",
+      "htmlcs"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
+    "hideElements": ".d-none, iframe, .accordion-sm .accordion-button, .accordion-collapse, .text-primary, a.active, a.disabled, .page-item.disabled, :disabled + label, .is-disabled, #text-decoration + p + div a.text-decoration-none, .bg-light code, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
     "ignore": [
       "color-contrast"
     ]

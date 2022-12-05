@@ -127,7 +127,7 @@ The `.navbar-brand` can be used to contain most elements, but an anchor works be
 
 ### Nav
 
-Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
+Navbar navigation links build on our `.nav` options with their own modifier class and require the use of toggler classes for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
 
 Add the `.active` class on `.nav-link` to indicate the current page.
 
@@ -271,6 +271,7 @@ Input groups work, too. If your navbar is an entire form, or mostly a form, you 
       <span class="input-group-text" id="basic-addon1">@</span>
       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <button class="btn btn-primary btn-inverse" type="submit">Search</button>
   </form>
 </nav>
 {{< /example >}}
@@ -279,10 +280,10 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark">
-  <form class="container-fluid justify-content-start align-items-center">
+  <div class="container-fluid justify-content-start align-items-center">
     <button class="btn btn-primary btn-inverse me-2" type="button">Main button</button>
     <button class="btn btn-sm btn-primary btn-inverse" type="button">Smaller button</button>
-  </form>
+  </div>
 </nav>
 {{< /example >}}
 

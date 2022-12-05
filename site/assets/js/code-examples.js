@@ -22,8 +22,8 @@
   const btnHtml = [
     '<div class="bd-code-snippet">',
     '   <div class="bd-clipboard">',
-    '      <button type="button" class="btn-clipboard">',
-    '        <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>',
+    '      <button type="button" class="btn-clipboard" title="Copied to clipboard">',
+    '        <svg class="bi" aria-hidden="true" focusable="false"><use xlink:href="#clipboard"/></svg>',
     '      </button>',
     '   </div>',
     '</div>'
