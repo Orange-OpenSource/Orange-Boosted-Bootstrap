@@ -12,23 +12,21 @@ toc: true
 ---
 ## About Orange Brand
 
-As Boosted is based on/inherited from Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
+As Boosted is based on from Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
 
-Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't.Those later ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
+Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't.Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
 
-As for technical reasons we have to keep them in/we can't remove them from this documentation, we tagged them with informational design callouts to inform you of what can be used or not from an Orange design point of view.
-Thanks for taking their information into account.
+As for maintainability reasons we have to keep them in this documentation, we tagged them with red informational design callouts. They inform you of what should not be used or not from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+Thanks for taking this information into account.
 
-These callouts look like that (e.g.: scrollspy component callout):
+Design callouts message example:
 
 {{< ods-incompatibility-alert >}}
-This navbar version of the Scrollspy component is not compatible with the Orange Design System.
+This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
-Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
+From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
-
-**Note** : The entire Boosted doc is preserved and enhanced when necessary with Orange brand specifics, i.e. [navbar](https://boosted.orange.com/docs/4.3/components/navbar/) page contains unsupported features, check out [navbar orange](https://boosted.orange.com/docs/4.3/components/navbar-orange/) page to find out what to use.
 
 ## Quick start
 
