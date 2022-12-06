@@ -2,9 +2,10 @@ name: cspell
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    branches:
+      - main
   pull_request:
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -14,15 +15,11 @@ env:
 jobs:
   cspell:
     runs-on: ubuntu-latest
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
     steps:
-      - name: Bail early
-        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v3
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run cspell
         uses: streetsidesoftware/cspell-action@v2
@@ -31,4 +28,3 @@ jobs:
           files: "**/*.md"
           inline: error
           incremental_files_only: false
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))

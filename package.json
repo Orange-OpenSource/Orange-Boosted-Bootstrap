@@ -1,7 +1,7 @@
 {
   "name": "boosted",
   "description": "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "5.2.1",
+  "version": "5.2.2",
   "config": {
     "version_short": "5.2"
   },
@@ -49,7 +49,6 @@
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-prefix-examples": "postcss --config build/postcss.config.js --replace \"site/content/**/*.css\"",
     "fonts": "cross-env mkdir -p dist/fonts && cp -r ./fonts/* dist/fonts/",
-    "img": "cross-env mkdir -p dist/img && cp -r ./img/* dist/img/",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
@@ -86,9 +85,9 @@
     "release-version": "node build/change-version.js",
     "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist && cp -r dist/ boosted-$npm_package_version-dist && zip -r9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.js",
-    "dist": "npm-run-all --aggregate-output --parallel css js img fonts",
+    "dist": "npm-run-all --aggregate-output --parallel css js fonts",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
-    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri storybook-build docs-build",
+    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri storybook-build-netlify docs-build",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
@@ -97,7 +96,8 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "npm run storybook-generate && start-storybook -p 6006 --no-manager-cache",
     "storybook-generate": "npm run docs && node stories/create-stories-from-doc.js",
-    "storybook-build": "npm run storybook-generate && build-storybook -o ./site/storybook"
+    "storybook-build": "npm run storybook-generate && build-storybook -o ./_site/storybook",
+    "storybook-build-netlify": "npm run storybook-generate && build-storybook -o ./site/storybook"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.6"
@@ -106,7 +106,7 @@
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
-    "@percy/cli": "^1.14.0",
+    "@percy/cli": "^1.16.0",
     "@popperjs/core": "^2.11.6",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -173,7 +173,7 @@
     "vnu-jar": "^22.9.29"
   },
   "files": [
-    "dist/{css,js,img,fonts}/*.{css,js,map,svg,woff2}",
+    "dist/{css,js,fonts}/*.{css,js,map,svg,woff2}",
     "js/{src,dist}/**/*.{js,map}",
     "scss/**/*.scss",
     "NOTICE.txt",

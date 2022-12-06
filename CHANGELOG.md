@@ -1,3 +1,41 @@
+## [5.2.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.2.1...v5.2.2) (2022-11-23)
+
+
+### Bug Fixes
+
+* add a note into Storybook script and some steps within our PR template ([9025e13](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9025e13603119d77c221e49aa5bee163c0a4a069))
+* **buttons:** letter spacing for large buttons ([#1447](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1447)) ([3f0b460](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f0b460f65cd3c373b1f1f404db949326c72de5b))
+* **css:** avoid CSS compilation errors when customizing`$prefix` ([#1609](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1609)) ([3f5c664](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f5c664015485244bd7cb7d2e64180f29654c8c6))
+* **css:** fix compilation issue when `$enable-rounded: true` ([#1604](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1604)) ([f14b551](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f14b551e4937227285d61d4d16addfa554abd0ce))
+* **docs:** make footer sticky in small pages ([#1596](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1596)) ([56f6bac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/56f6bac8e3f2f239732cecab4b258cf5063fe11e))
+* **docs:** typo in Spanish in some language selection dropdowns ([#1613](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1613)) ([a22f33e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a22f33e86bd414f0cd22acb3dbc080bcc346ba67))
+* **docs:** uniformize `alt` for Orange logos ([#1630](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1630)) ([55aacf8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/55aacf89e3659cf49916e54569bd47d1014484ee))
+* **dropdowns:** change dropdown in navbar example markup ([#1625](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1625)) ([86dfb2c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86dfb2cfe453bfc05c40cfa73c0c6889acc1aa12))
+* **examples:** remove unused thumbnail images ([#1597](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1597)) ([7772c2e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7772c2e58e763f470f4df776827c2309b58b6d53))
+* **footer:** reduce 'Copyright` footer font size ([#1589](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1589)) ([7dbc41d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dbc41d4582987930c762b46b0db4a48cf8279d5))
+* force sass version to 1.55.0 in the package-lock.json ([254b477](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/254b477748fb668bf7ab45d8ce402a72bf457e24))
+* **forms:** adapt invalid feedback line-height ([#1638](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1638)) ([e3c6350](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e3c6350c6d0250ba9e79c6797b711585cc50d0c1))
+* **forms:** add `.mt-2` to all submit buttons in forms examples  ([#1495](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1495)) ([3db79a9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3db79a930c2c9a4fc16c36cfc37153ee1b88e569))
+* **forms:** change bottom margin for `.form-label` ([#1443](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1443)) ([027d32a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/027d32a0ead8645ebb942338b413944d582f5654))
+* **forms:** change top margin for `.form-text` and `*-feedback` ([#1445](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1445)) ([6435103](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64351037690da67bc59d9eb1e894710fd2c6d571))
+* **forms:** realign input range thumb vertical alignment on Webkit ([#1632](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1632)) ([46b6734](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/46b6734d64f611e0be4a2cb984baa81c4a7762cd))
+* **forms:** switches rendering on some platforms ([#1612](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1612)) ([d78dae7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d78dae70b1df3b2490ffda8b8f3aad033bd7143f))
+* **orange navbar:** languages selection `aria-label` improvement for a11y ([#1629](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1629)) ([945d22f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/945d22f672197bea6a6ac71265f3cc079285efe0))
+* remove Algolia specific action from PR template for DoD release ([dd8f0ff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dd8f0ff921caa5c8c19c8cc96148695c96ae2dda))
+* **table:** reduce space after checkboxes in row selection ([#1272](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1272)) ([ef7a803](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ef7a8037c4d3ada51b12ec39cfbcc9f58dc88980))
+* update package-lock.json ([0abaae8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0abaae8756e0227879f407b2a01ddd6f2d8f3a58))
+* update package-lock.json ([9ec84e8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9ec84e8b6bc740d00d7c193c0e5c33c21b252d48))
+* update package-lock.json ([abee233](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/abee2339b9f5162102932ab5a30a8f0c3f2e4fdb))
+* **utilities:** use the right orange color for texts based on the light/dark variant ([#872](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/872)) ([e918550](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e918550251104fd3ec448281d93a963e7bb5461b))
+
+
+### Features
+
+* add Storybook to link it to the DSM ([#565](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/565)) ([3dfb87c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3dfb87cb46d3ebf51242e8dcc636e551f17e945e))
+* **examples:** add RTL section and new Cards RTL example ([#1603](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1603)) ([0d29f42](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d29f423e31c362e9f887c42b1a75d8f2b417cf1))
+
+
+
 ## [5.2.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.2.0...v5.2.1) (2022-10-31)
 
 

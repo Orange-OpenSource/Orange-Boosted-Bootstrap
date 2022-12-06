@@ -34,27 +34,44 @@ in whole or part of, in any medium, except as required for reasonable and custom
 and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
-img/orange-logo.svg
 dist/img/orange-logo.svg
-site/favicon.ico
-site/docs/**/assets/img/favicons/favicon.ico
-site/docs/**/assets/img/favicons/favicon-16x16.png
-site/docs/**/assets/img/favicons/favicon-32x32.png
-site/docs/**/assets/img/favicons/android-chrome-192x192.png
-site/docs/**/assets/img/favicons/android-chrome-512x512.png
-site/docs/**/assets/img/favicons/mstile-150x150.png
-site/docs/**/assets/img/favicons/safari-pinned-tab.svg
-site/docs/**/assets/img/favicons/apple-touch-icon.png
-site/docs/**/assets/img/favicons/mstile-70x70.png
-site/docs/**/assets/img/favicons/mstile-144x144.png
-site/docs/**/assets/img/favicons/mstile-150x150.png
-site/docs/**/assets/img/favicons/mstile-310x150.png
-site/docs/**/assets/img/favicons/mstile-310x310.png
-site/docs/**/assets/brand/orange-logo.svg
-site/docs/**/assets/brand/orange-social.svg
-site/docs/**/assets/brand/orange-social.png
-site/layouts/partials/icons/download.svg
+nuget/boosted.png
 site/layouts/partials/icons.html
+site/layouts/partials/icons/download.svg
+site/static/docs/**/assets/brand/OBS-logo.svg
+site/static/docs/**/assets/brand/OBS-logo-formatted.svg
+site/static/docs/**/assets/brand/orange-logo.svg
+site/static/docs/**/assets/brand/orange-logo-formatted.svg
+site/static/docs/**/assets/brand/orange-social.png
+site/static/docs/**/assets/brand/orange-social.svg
+site/static/docs/**/assets/img/boosted-cross.svg
+site/static/docs/**/assets/img/boosted-guidelines.png
+site/static/docs/**/assets/img/boosted-guidelines@2x.png
+site/static/docs/**/assets/img/boosted-sprite.svg
+site/static/docs/**/assets/img/favicons/android-chrome-192x192.png
+site/static/docs/**/assets/img/favicons/android-chrome-512x512.png
+site/static/docs/**/assets/img/favicons/apple-touch-icon.png
+site/static/docs/**/assets/img/favicons/favicon-16x16.png
+site/static/docs/**/assets/img/favicons/favicon-32x32.png
+site/static/docs/**/assets/img/favicons/favicon.ico
+site/static/docs/**/assets/img/favicons/mstile-144x144.png
+site/static/docs/**/assets/img/favicons/mstile-150x150.png
+site/static/docs/**/assets/img/favicons/mstile-150x150.png
+site/static/docs/**/assets/img/favicons/mstile-310x150.png
+site/static/docs/**/assets/img/favicons/mstile-310x310.png
+site/static/docs/**/assets/img/favicons/mstile-70x70.png
+site/static/docs/**/assets/img/favicons/safari-pinned-tab.svg
+site/static/docs/**/assets/img/navbar-contact.png
+site/static/docs/**/assets/img/platforms/android.png
+site/static/docs/**/assets/img/platforms/conversational.png
+site/static/docs/**/assets/img/platforms/extended-reality.png
+site/static/docs/**/assets/img/platforms/iOS.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-1024.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-1280.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-1440.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-320.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-480.png
+site/static/docs/**/assets/img/title-bars-illustrations/illustration-768.png
 
 End of the parts list under Orange SA Copyright
 
