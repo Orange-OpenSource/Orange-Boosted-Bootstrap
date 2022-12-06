@@ -173,19 +173,22 @@ Depending on the extra help information content, choose wisely between triggerin
 This form helper should be displayed right after the label.
 
 {{< example >}}
-<label for="tooltipTextInput" class="form-label">Input with helper inside a Popover</label>
-<button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
-  <span class="visually-hidden">Helper for input</span>
-</button>
-<input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
-
-<label for="tooltipSelect" class="form-label is-required mt-3">Select menu with helper inside a Tooltip</label>
-<button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
-  <span class="visually-hidden">Helper for select menu</span>
-</button>
-<select id="tooltipSelect" class="form-select" required>
-  <option value="">Tooltip select</option>
-</select>
+<div class="mb-3">
+  <label for="tooltipTextInput" class="form-label">Input with helper inside a Popover</label>
+  <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
+    <span class="visually-hidden">Helper for input</span>
+  </button>
+  <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
+</div>
+<div>
+  <label for="tooltipSelect" class="form-label is-required mt-3">Select menu with helper inside a Tooltip</label>
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
+    <span class="visually-hidden">Helper for select menu</span>
+  </button>
+  <select id="tooltipSelect" class="form-select" required>
+    <option value="">Tooltip select</option>
+  </select>
+</div>
 {{< /example >}}
 
 ## Accessibility
