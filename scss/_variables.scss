@@ -1356,6 +1356,7 @@ $dropdown-padding-x:                $spacer * .5 !default;
 $dropdown-padding-y:                0 !default;
 $dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
+$dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $white !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;

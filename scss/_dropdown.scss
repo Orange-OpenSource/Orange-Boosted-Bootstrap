@@ -35,6 +35,7 @@
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
   @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
+  --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // Boosted mod
   --#{$prefix}dropdown-color: #{$dropdown-color};
   --#{$prefix}dropdown-bg: #{$dropdown-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
@@ -65,6 +66,7 @@
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
+  line-height: var(--#{$prefix}dropdown-line-height); // Boosted mod
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
