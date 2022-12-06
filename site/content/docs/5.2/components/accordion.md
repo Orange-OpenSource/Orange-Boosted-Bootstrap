@@ -31,7 +31,7 @@ Click the accordions below to expand/collapse the accordion content.
         Accordion Item #1
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" role="region" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -43,7 +43,7 @@ Click the accordions below to expand/collapse the accordion content.
         Accordion Item #2
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" role="region" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -55,7 +55,7 @@ Click the accordions below to expand/collapse the accordion content.
         Accordion Item #3
       </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" role="region" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -80,7 +80,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #1
           </button>
         </h2>
-        <div id="collapseOneSmall" class="accordion-collapse collapse show" role="region" aria-labelledby="headingOneSmall" data-bs-parent="#accordionExampleSmall">
+        <div id="collapseOneSmall" class="accordion-collapse collapse show" aria-labelledby="headingOneSmall" data-bs-parent="#accordionExampleSmall">
           <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -92,7 +92,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #2
           </button>
         </h2>
-        <div id="collapseTwoSmall" class="accordion-collapse collapse" role="region" aria-labelledby="headingTwoSmall" data-bs-parent="#accordionExampleSmall">
+        <div id="collapseTwoSmall" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall" data-bs-parent="#accordionExampleSmall">
           <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -104,7 +104,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #3
           </button>
         </h2>
-        <div id="collapseThreeSmall" class="accordion-collapse collapse" role="region" aria-labelledby="headingThreeSmall" data-bs-parent="#accordionExampleSmall">
+        <div id="collapseThreeSmall" class="accordion-collapse collapse" aria-labelledby="headingThreeSmall" data-bs-parent="#accordionExampleSmall">
           <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -120,7 +120,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #1
           </button>
         </h2>
-        <div id="collapseOneLarge" class="accordion-collapse collapse show" role="region" aria-labelledby="headingOneLarge" data-bs-parent="#accordionExampleLarge">
+        <div id="collapseOneLarge" class="accordion-collapse collapse show" aria-labelledby="headingOneLarge" data-bs-parent="#accordionExampleLarge">
           <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -132,7 +132,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #2
           </button>
         </h2>
-        <div id="collapseTwoLarge" class="accordion-collapse collapse" role="region" aria-labelledby="headingTwoLarge" data-bs-parent="#accordionExampleLarge">
+        <div id="collapseTwoLarge" class="accordion-collapse collapse" aria-labelledby="headingTwoLarge" data-bs-parent="#accordionExampleLarge">
           <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -144,7 +144,7 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
             Accordion Item #3
           </button>
         </h2>
-        <div id="collapseThreeLarge" class="accordion-collapse collapse" role="region" aria-labelledby="headingThreeLarge" data-bs-parent="#accordionExampleLarge">
+        <div id="collapseThreeLarge" class="accordion-collapse collapse" aria-labelledby="headingThreeLarge" data-bs-parent="#accordionExampleLarge">
           <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
@@ -167,7 +167,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
         Accordion Item #1
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" role="region" aria-labelledby="panelsStayOpen-headingOne">
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
         <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -179,7 +179,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
         Accordion Item #2
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" role="region" aria-labelledby="panelsStayOpen-headingTwo">
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
       <div class="accordion-body">
         <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -191,7 +191,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
         Accordion Item #3
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" role="region" aria-labelledby="panelsStayOpen-headingThree">
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
       <div class="accordion-body">
         <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -214,7 +214,7 @@ Add `.accordion-dark` to the `.accordion` for a dark variant.
         Accordion Item #1
       </button>
     </h2>
-    <div id="panelsDark-collapseOne" class="accordion-collapse collapse show" role="region" aria-labelledby="panelsDark-headingOne" data-bs-parent="#accordionPanelsDarkExample">
+    <div id="panelsDark-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsDark-headingOne" data-bs-parent="#accordionPanelsDarkExample">
       <div class="accordion-body">
         <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -226,7 +226,7 @@ Add `.accordion-dark` to the `.accordion` for a dark variant.
         Accordion Item #2
       </button>
     </h2>
-    <div id="panelsDark-collapseTwo" class="accordion-collapse collapse" role="region" aria-labelledby="panelsDark-headingTwo" data-bs-parent="#accordionPanelsDarkExample">
+    <div id="panelsDark-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsDark-headingTwo" data-bs-parent="#accordionPanelsDarkExample">
       <div class="accordion-body">
         <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -238,7 +238,7 @@ Add `.accordion-dark` to the `.accordion` for a dark variant.
         Accordion Item #3
       </button>
     </h2>
-    <div id="panelsDark-collapseThree" class="accordion-collapse collapse" role="region" aria-labelledby="panelsDark-headingThree" data-bs-parent="#accordionPanelsDarkExample">
+    <div id="panelsDark-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsDark-headingThree" data-bs-parent="#accordionPanelsDarkExample">
       <div class="accordion-body">
         <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>

@@ -10,7 +10,7 @@
             </button>
             <span class="d-none d-md-flex">Links</span>
           </h3>
-          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" role="region" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
               <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
@@ -27,7 +27,7 @@
             </button>
             <span class="d-none d-md-flex">Guides</span>
           </h3>
-          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" role="region" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
@@ -43,7 +43,7 @@
             </button>
             <span class="d-none d-md-flex">Projects</span>
           </h3>
-          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" role="region" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
+          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="{{ .Site.Params.repo }}" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="{{ .Site.Params.repo }}/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
@@ -59,7 +59,7 @@
             </button>
             <span class="d-none d-md-flex">Community</span>
           </h3>
-          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" role="region" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
+          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="{{ .Site.Params.repo }}/issues" aria-describedby="headingCommunity">Issues</a></li>
               <li><a class="nav-link" href="{{ .Site.Params.repo }}/discussions" aria-describedby="headingCommunity">Discussions</a></li>

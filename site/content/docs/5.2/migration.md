@@ -19,18 +19,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
-- **Accordion**
-  - <span class="badge bg-warning">Warning</span> Accordions require a `role="region"` if they didn't have any role. Don't forget about the footer accordions.
-    <details class="mb-2">
-      <summary>More info</summary>
-
-      ```diff
-      - <div id="collapse" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#accordion">
-      + <div id="collapse" class="accordion-collapse collapse" role="region" aria-labelledby="heading" data-bs-parent="#accordion">
-      ```
-
-    </details>
-
 - **Cards**
   - <span class="badge bg-warning">Warning</span> We had an issue with some `<a>` that missed `[href]` attribute on cards example.
     <details class="mb-2">
