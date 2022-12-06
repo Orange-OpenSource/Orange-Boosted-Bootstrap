@@ -46,6 +46,13 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     </ul>
   </details>
 
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-dropdown-line-height</code></li>
+    </ul>
+  </details>
+
 ## v5.2.2
 
 <hr class="mb-4">
@@ -85,17 +92,6 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
 ### CSS and Sass variables
 
 - `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
-
-- <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> CSS variables:</summary>
-    <ul>
-      <li><code>--bs-dropdown-toggle-padding-x</code></li>
-      <li><code>--bs-dropdown-toggle-color</code></li>
-      <li><code>--bs-dropdown-toggle-bg</code></li>
-      <li><code>--bs-dropdown-toggle-border-color</code></li>
-      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
-    </ul>
-  </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
