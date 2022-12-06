@@ -19,12 +19,32 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
+- **Dropdowns**
+  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
+  ```diff
+  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
+  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+  ```
+
 - **Stepped Process**
   - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
   ```diff
   -        <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Dropped CSS variables:</summary>
+    <ul>
+      <li><code>--bs-dropdown-toggle-bg</code></li>
+      <li><code>--bs-dropdown-toggle-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-color</code></li>
+      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-padding-x</code></li>
+    </ul>
+  </details>
 
 ## v5.2.2
 
@@ -35,13 +55,6 @@ Boosted v5.2.2 has landed with new bug fixes and documentation updates including
 If you need more details about the changes, please refer to the [v5.2.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2).
 
 ### Components
-
-- **Dropdowns**
-  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
-  ```diff
-  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
-  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
-  ```
 
 - **Modals**
   - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
