@@ -248,7 +248,7 @@ When modals become too long for the user's viewport or device, they scroll indep
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -505,13 +505,6 @@ Have a bunch of buttons that all trigger the same modal with slightly different 
 
 Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-Forms inside modals should not be used because they do not respect the Orange Design System specifications.
-
-For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
@@ -572,7 +565,7 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
 {{< ods-incompatibility-alert >}}
 This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
-For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
@@ -728,7 +721,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
 {{< ods-incompatibility-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) on the Orange Design System website.
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 
