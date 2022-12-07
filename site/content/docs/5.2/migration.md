@@ -75,7 +75,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### Examples
 
 - **Cards and Cards RTL**
-  - <span class="badge bg-warning">Warning</span> We now use correctly `<button>` instead of `<a>`. We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Furthermore, we dropped unnecessary `.card-footer`. Please check and reflect if necessary this modification into your websites.
+  - <span class="badge bg-warning">Warning</span> We now use correctly `<button>` instead of `<a>`. We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Furthermore, we dropped unnecessary `.card-footer` and notice that size of icons has slightly changed. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
       <summary>Example</summary>
 
