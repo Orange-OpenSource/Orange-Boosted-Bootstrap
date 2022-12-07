@@ -23,9 +23,7 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
   {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
-    <p class="card-text fw-bold">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <div class="card-footer mt-2">
+    <p class="card-text fw-bold mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
