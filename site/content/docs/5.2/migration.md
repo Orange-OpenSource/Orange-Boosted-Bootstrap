@@ -28,8 +28,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - <h4 class="card-title">Title</h4>
       + <h3 class="card-title">Title</h3>
       ```
-
     </details>
+
   - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` when there is an image in the card to follow the design guidelines. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
       <summary>More info</summary>
@@ -38,6 +38,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - <p class="card-text">Description</p>
       + <p class="card-text fw-bold">Description</p>
       ```
+    </details>
 
 - **Footer**
   - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
@@ -48,7 +49,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
       + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
       ```
-
     </details>
 
 - **Navs & Tabs**
@@ -62,7 +62,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - Ensure that the `role="presentation"` is set on each `<li>` inside a `role="tablist"`.
       - Ensure that the `role="tabpanel"` is set on each child of `.tab-content`.
       - Ensure that the `disabled` links only miss the `[href]` attribute.
-
     </details>
 
 - **Stepped Process**
@@ -94,7 +93,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
           </div>
         </div>
       ```
-
     </details>
 
 ## v5.2.2
