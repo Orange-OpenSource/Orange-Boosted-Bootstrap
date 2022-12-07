@@ -60,9 +60,9 @@ Hover over the links below to see tooltips:
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This customized variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
+This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 
-For the correct design, please refer to [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) on the Orange Design System website.
+Please refer to the [Tooltip](https://system.design.orange.com/0c1af118d/p/932946-tooltip/b/417f3e) guidelines  on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< added-in "5.2.0" >}}
