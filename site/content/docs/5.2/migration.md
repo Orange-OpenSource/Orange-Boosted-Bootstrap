@@ -20,7 +20,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### Components
 
 - **Footer**
-  - <span class="badge bg-warning">Warning</span> Each footer accordion now use an `aria-labelledby` attribute to be consistent with accordion. Please reflect these modifications into your websites.
+  - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
@@ -32,7 +32,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     </details>
 
 - **Navs & Tabs**
-  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and a greater consistency over the documentation. Please reflect these modifications into your websites.
+  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and consistency over the documentation. Please reflect these modifications into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
