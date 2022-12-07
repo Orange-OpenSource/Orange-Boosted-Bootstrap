@@ -20,17 +20,17 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### Components
 
 - **Card**
-  - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any title inside a card. Please check and reflect if necessary this modification into your websites.
+  - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
       ```diff
-      - <h5 class="card-title">Title</h5>
+      - <h4 class="card-title">Title</h4>
       + <h3 class="card-title">Title</h3>
       ```
 
     </details>
-  - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` to be branded. Please check and reflect if necessary this modification into your websites.
+  - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` when there is an image in the card to follow the design guidelines. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
@@ -38,6 +38,30 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - <p class="card-text">Description</p>
       + <p class="card-text fw-bold">Description</p>
       ```
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
+      ```
+
+    </details>
+
+- **Navs & Tabs**
+  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and consistency over the documentation. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      - Ensure that the root element of the tablist is a `<ul>`.
+      - Ensure that the `role="tablist"` is set on `<ul>`.
+      - Ensure that the `role="tablist"` has an `aria-owns` set too with all the ids it owns.
+      - Ensure that the `role="presentation"` is set on each `<li>` inside a `role="tablist"`.
+      - Ensure that the `role="tabpanel"` is set on each child of `.tab-content`.
+      - Ensure that the `disabled` links only miss the `[href]` attribute.
 
     </details>
 
@@ -51,7 +75,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### Examples
 
 - **Cards and Cards RTL**
-  - <span class="badge bg-warning">Warning</span> We now use `<button>` instead of `<a>` without any role for button purpose. We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any title inside a card. Furthermore, we changed the way we managed our bottom part. Please check and reflect if necessary this modification into your websites.
+  - <span class="badge bg-warning">Warning</span> We now use correctly `<button>` instead of `<a>`. We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Furthermore, we dropped unnecessary `.card-footer`. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
       <summary>Example</summary>
 
