@@ -95,6 +95,13 @@
   // End mod
 }
 
+// Boosted mod
+.btn-inverse {
+  &[data-focus-visible-added]:focus {
+    @include focus-box($box-color: $black);
+  }
+}
+// End mod
 
 //
 // Alternate buttons

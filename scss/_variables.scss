@@ -587,7 +587,7 @@ $border-radius-pill:          50rem !default;
 $outline-zindex:              5 !default; // Boosted mod
 $outline-width:               3px !default;  // Boosted mod
 $outline-offset:              2px !default; // Boosted mod
-$outline-color:               var(--#{$prefix}primary-text-rgb) !default; // Boosted mod
+$outline-color:               var(--#{$prefix}link-hover-color) !default; // Boosted mod
 $outline-box-color:           $white !default; // Boosted mod
 
 // scss-docs-start box-shadow-variables
