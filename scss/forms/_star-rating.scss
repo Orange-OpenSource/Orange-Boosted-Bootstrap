@@ -31,14 +31,6 @@
     @include form-star-rating($accessible-orange);
   }
 
-  > input:focus ~ label {
-    @include form-star-rating($gray-500);
-  }
-
-  > input:focus + label {
-    @include form-star-rating($accessible-orange);
-  }
-
   > [data-focus-visible-added]:focus + label {
     @include focus-visible();
     outline-offset: -1px;
@@ -67,14 +59,6 @@
   }
 
   > input:checked + label {
-    @include form-star-rating($brand-orange);
-  }
-
-  > input:focus ~ label {
-    @include form-star-rating($gray-700);
-  }
-
-  > input:focus + label {
     @include form-star-rating($brand-orange);
   }
 

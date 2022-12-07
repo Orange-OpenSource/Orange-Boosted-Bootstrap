@@ -194,10 +194,6 @@
     @include media-breakpoint-down(lg) {
       outline-offset: -$outline-width;
     }
-
-    @include media-breakpoint-down(md) {
-      outline-offset: 0;
-    }
   }
 
   .nav-item {
@@ -315,7 +311,6 @@
   &:focus {
     text-decoration: none;
     // Boosted mod: no outline;
-    outline-offset: -$outline-width; // Boosted mod
     box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
   }
 

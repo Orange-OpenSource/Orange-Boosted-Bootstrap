@@ -129,8 +129,7 @@
   // scss-docs-start focus-visible-carousel
   &:focus {
     &[data-focus-visible-added] {
-      // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-      & > span {
+      > span {
         @include focus-visible();
         @include focus-box();
       }
