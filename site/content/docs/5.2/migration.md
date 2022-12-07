@@ -19,23 +19,24 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
-- **Cards**
-  - <span class="badge bg-warning">Warning</span> We had an issue with some `<a>` that missed `[href]` attribute on cards example.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> Each footer accordion now use an `aria-labelledby` attribute to be consistent with accordion. Please reflect these modifications into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
       ```diff
-      - <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
-      + <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
       ```
 
     </details>
 
 - **Navs & Tabs**
-  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and a greater consistency over the documentation.
+  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and a greater consistency over the documentation. Please reflect these modifications into your websites.
     <details class="mb-2">
       <summary>More info</summary>
 
+      - Ensure that the root element of the tablist is a `<ul>`.
       - Ensure that the `role="tablist"` is set on `<ul>`.
       - Ensure that the `role="tablist"` has an `aria-owns` set too with all the ids it owns.
       - Ensure that the `role="presentation"` is set on each `<li>` inside a `role="tablist"`.
@@ -50,6 +51,20 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   -        <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
+
+### Examples
+
+- **Cards and Cards RTL**
+  - <span class="badge bg-warning">Warning</span> We now use `<button>` instead of `<a>` without any role for button purpose. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+      + <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
+      ```
+
+    </details>
 
 ## v5.2.2
 
