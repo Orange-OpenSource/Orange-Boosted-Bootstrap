@@ -21,6 +21,20 @@
   color: $accessible-orange;
   content: "*";
 }
+
+.form-helper {
+  display: inline-block;
+  flex-shrink: 0;
+  width: $form-helper-size;
+  height: $form-helper-size;
+  background: no-repeat center/100% escape-svg($helper-icon);
+  border: 0;
+
+  .form-label + & {
+    margin-bottom: $form-helper-label-margin-bottom;
+    vertical-align: bottom;
+  }
+}
 // End mod
 
 // For use with horizontal and inline forms, when you need the label (or legend)

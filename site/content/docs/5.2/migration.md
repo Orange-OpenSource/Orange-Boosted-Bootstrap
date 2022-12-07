@@ -71,6 +71,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
 
+### Forms
+
+- <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
+
 ### Examples
 
 - **Cards and Cards RTL**
@@ -94,6 +98,17 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
         </div>
       ```
     </details>
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$form-helper-label-margin-bottom</code></li>
+      <li><code>$form-helper-size</code></li>
+      <li><code>$helper-icon</code></li>
+    </ul>
+  </details>
 
 ## v5.2.2
 
