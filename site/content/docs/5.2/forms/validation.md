@@ -40,7 +40,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 {{< ods-incompatibility-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -118,16 +118,17 @@ For the correct design, please refer to unitary [Forms](https://system.design.or
 
 ## Browser defaults
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This form variant, **with browser default validation feedback messages**, should not be used because it does not respect the Orange Design System specifications.
+
+Instead, please refer to our Boosted [Custom styles](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1614/files) section. You can also refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
 
 While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This form variant, with browser default validation feedback messages, should not be used because it does not respect the Orange Design System specifications.
-
-Instead, please refer to our Boosted [Custom styles](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/1614/files) section. You can also refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form class="row g-3">
@@ -187,7 +188,7 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
 {{< ods-incompatibility-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to unitary [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) components and  [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
