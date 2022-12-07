@@ -53,7 +53,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -68,9 +68,9 @@ We only set a `height` value on the `.progress`, so if you change that value the
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-The 1px height variant should not be used because it does not respect the Orange Design System specifications.
+The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -105,7 +105,7 @@ Use background utility classes to change the appearance of individual progress b
 {{< ods-incompatibility-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is #ff7900.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -135,7 +135,7 @@ Include multiple progress bars in a progress component if you need.
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -154,7 +154,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 {{< ods-incompatibility-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -183,7 +183,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-For the correct design, please refer to [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) on the Orange Design System website.
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
