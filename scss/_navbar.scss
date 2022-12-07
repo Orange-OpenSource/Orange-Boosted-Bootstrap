@@ -28,13 +28,13 @@
   --#{$prefix}navbar-nav-font-size: #{$font-size-base}; // Boosted mod
   --#{$prefix}navbar-nav-line-height: #{$line-height-base}; // Boosted mod
   --#{$prefix}navbar-nav-letter-spacing: #{$letter-spacing-base}; // Boosted mod
-  --#{$prefix}navbar-nav-link-padding-y: #{$navbar-nav-link-padding-y}; // Boosted mod
-  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x-xs}; // Boosted mod
-  --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y-xs}; // Boosted mod
-  --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x-xs}; // Boosted mod
+  --#{$prefix}navbar-nav-link-spacing-y: #{$navbar-nav-link-padding-y}; // Boosted mod
+  --#{$prefix}navbar-nav-link-spacing-x: #{$navbar-nav-link-padding-x-xs}; // Boosted mod
+  --#{$prefix}navbar-nav-icon-spacing-y: #{$navbar-nav-icon-padding-y-xs}; // Boosted mod
+  --#{$prefix}navbar-nav-icon-spacing-x: #{$navbar-nav-icon-padding-x-xs}; // Boosted mod
   --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size-xs}; // Boosted mod
-  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
-  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+  --#{$prefix}navbar-toggler-spacing-y: #{$navbar-toggler-padding-y};
+  --#{$prefix}navbar-toggler-spacing-x: #{$navbar-toggler-padding-x};
   --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size-xs}; // Boosted mod
   --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // Boosted mod
   --#{$prefix}navbar-toggler-icon-filter: none; // Boosted mod
@@ -65,12 +65,12 @@
     --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size};
     --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
     --#{$prefix}navbar-brand-letter-spacing: #{$navbar-brand-letter-spacing};
-    --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
-    --#{$prefix}navbar-nav-icon-padding-y: #{$navbar-nav-icon-padding-y};
-    --#{$prefix}navbar-nav-icon-padding-x: #{$navbar-nav-icon-padding-x};
+    --#{$prefix}navbar-nav-link-spacing-x: #{$navbar-nav-link-padding-x};
+    --#{$prefix}navbar-nav-icon-spacing-y: #{$navbar-nav-icon-padding-y};
+    --#{$prefix}navbar-nav-icon-spacing-x: #{$navbar-nav-icon-padding-x};
     --#{$prefix}navbar-nav-icon-size: #{$navbar-icon-size};
-    --#{$prefix}navbar-toggler-padding-y: #{$navbar-nav-icon-padding-y};
-    --#{$prefix}navbar-toggler-padding-x: #{$navbar-nav-icon-padding-x};
+    --#{$prefix}navbar-toggler-spacing-y: #{$navbar-nav-icon-padding-y};
+    --#{$prefix}navbar-toggler-spacing-x: #{$navbar-nav-icon-padding-x};
     --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
     --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
   }
@@ -162,8 +162,8 @@
 
 .navbar-nav {
   // scss-docs-start navbar-nav-css-vars
-  --#{$prefix}nav-link-padding-x: var(--#{$prefix}navbar-nav-link-padding-x); // Boosted mod
-  --#{$prefix}nav-link-padding-y: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  --#{$prefix}nav-link-margin-x: var(--#{$prefix}navbar-nav-link-spacing-x); // Boosted mod
+  --#{$prefix}nav-link-margin-y: var(--#{$prefix}navbar-nav-link-spacing-y); // Boosted mod
   @include rfs(var(--#{$prefix}navbar-nav-font-size, $font-size-base), --#{$prefix}nav-link-font-size); // Boosted mod
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
@@ -183,11 +183,21 @@
   // Boosted mod: Handle .nav-link and .nav-icon slightly differently than Bs
   .nav-link {
     position: relative;
-    padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
-    margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+    margin-top: subtract(var(--#{$prefix}navbar-nav-link-spacing-y), var(--#{$prefix}navbar-border-width));
+    margin-left: 0;
     word-break: break-all;
     outline-offset: $spacer;
     @include transition($navbar-transition);
+
+    &::before {
+      position: absolute;
+      top: calc(-1 * var(--#{$prefix}navbar-nav-link-spacing-y, 7px)); // stylelint-disable-line function-disallowed-list
+      right: calc(-1 * var(--#{$prefix}navbar-nav-link-spacing-x, 0px)); // stylelint-disable-line function-disallowed-list
+      bottom: calc(-1 * var(--#{$prefix}navbar-nav-link-spacing-y, 7px)); // stylelint-disable-line function-disallowed-list
+      left: calc(-1 * var(--#{$prefix}navbar-nav-link-spacing-x, 0px)); // stylelint-disable-line function-disallowed-list
+      z-index: $stretched-link-z-index;
+      content: "";
+    }
 
     &:hover,
     &:focus {
@@ -205,9 +215,16 @@
     }
 
     .nav-link.nav-icon {
-      padding: var(--#{$prefix}navbar-nav-icon-padding-y) var(--#{$prefix}navbar-nav-icon-padding-x);
-      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+      margin: var(--#{$prefix}navbar-nav-icon-spacing-y) var(--#{$prefix}navbar-nav-icon-spacing-x);
+      margin-left: 0;
       white-space: nowrap;
+
+      &::before {
+        top: calc(-1 * var(--#{$prefix}navbar-nav-icon-spacing-y)); // stylelint-disable-line function-disallowed-list
+        right: calc(-1 * var(--#{$prefix}navbar-nav-icon-spacing-x)); // stylelint-disable-line function-disallowed-list
+        bottom: calc(-1 * var(--#{$prefix}navbar-nav-icon-spacing-y)); // stylelint-disable-line function-disallowed-list
+        left: calc(-1 * var(--#{$prefix}navbar-nav-icon-spacing-x)); // stylelint-disable-line function-disallowed-list
+      }
 
       svg,
       img {
@@ -217,7 +234,7 @@
     }
 
     &:not(:first-of-type) > .nav-icon {
-      margin-left: 0;
+      margin-left: var(--#{$prefix}navbar-nav-icon-spacing-x);
     }
   }
 
@@ -243,7 +260,7 @@
 
 .navbar-text {
   // Boosted mod: no padding-top
-  padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
+  margin-bottom: var(--#{$prefix}navbar-nav-link-spacing-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
   a,
@@ -255,7 +272,7 @@
 
 // Boosted mod: Navbar item
 .navbar-item {
-  margin-bottom: var(--#{$prefix}navbar-nav-icon-padding-y);
+  margin-bottom: var(--#{$prefix}navbar-nav-icon-spacing-y);
 }
 // End mod
 
@@ -294,8 +311,10 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
-  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  position: relative;
+  padding: 0;
+  margin: var(--#{$prefix}navbar-toggler-spacing-y) var(--#{$prefix}navbar-toggler-spacing-x); // Boosted mod
+  margin-right: 0; // Boosted mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
@@ -306,13 +325,22 @@
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$prefix}navbar-toggler-transition));
 
+  &::before {
+    position: absolute;
+    top: calc(-1 * var(--#{$prefix}navbar-toggler-spacing-y)); // stylelint-disable-line function-disallowed-list
+    right: calc(-1 * var(--#{$prefix}navbar-toggler-spacing-x)); // stylelint-disable-line function-disallowed-list
+    bottom: calc(-1 * var(--#{$prefix}navbar-toggler-spacing-y)); // stylelint-disable-line function-disallowed-list
+    left: calc(-1 * var(--#{$prefix}navbar-toggler-spacing-x)); // stylelint-disable-line function-disallowed-list
+    z-index: $stretched-link-z-index;
+    content: "";
+  }
+
   &:hover {
     text-decoration: none;
   }
 
   &:focus {
     text-decoration: none;
-    outline-offset: calc(-1 * var(--#{$prefix}navbar-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
     box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
   }
 
@@ -382,13 +410,13 @@
 
           // Boosted mod
           .nav-link {
-            margin-left: 0;
+            margin-left: var(--#{$prefix}navbar-nav-link-spacing-x);
 
-            &.active::before {
+            &.active::after {
               position: absolute;
-              right: var(--#{$prefix}navbar-nav-link-padding-x);
-              bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
-              left: var(--#{$prefix}navbar-nav-link-padding-x);
+              right: 0;
+              bottom: calc(-1 * add(var(--#{$prefix}navbar-padding-y), var(--#{$prefix}navbar-nav-link-spacing-y))); // stylelint-disable-line function-disallowed-list
+              left: 0;
               height: calc(var(--#{$prefix}navbar-border-width) * 4); // stylelint-disable-line function-disallowed-list
               content: "";
               background-color: currentcolor;
@@ -400,19 +428,19 @@
             border: 0;
 
             &:first-child > .nav-link {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-left: 0;
             }
 
             &:last-child > .nav-link {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-right: 0;
             }
 
             &:first-child > .nav-icon {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-left: 0;
             }
 
             &:last-child > .nav-icon {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-right: 0;
             }
           }
           // End mod
@@ -437,17 +465,17 @@
         }
 
         &.header-minimized {
-          --#{$prefix}navbar-nav-link-padding-y: .75rem;
+          --#{$prefix}navbar-nav-link-spacing-y: .75rem;
         }
 
         &:not(.supra) + .navbar {
           margin-top: 0;
 
           .nav-link{
-            padding-bottom: add(var(--#{$prefix}navbar-nav-link-padding-y), .0625rem);
+            margin-bottom: add(var(--#{$prefix}navbar-nav-link-spacing-y), .0625rem);
 
-            &.active::before{
-              bottom: 0;
+            &.active::after{
+              bottom: calc(-1 * add(var(--#{$prefix}navbar-nav-link-spacing-y), .0625rem)); // stylelint-disable-line function-disallowed-list
             }
           }
         }
