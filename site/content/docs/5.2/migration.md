@@ -19,12 +19,59 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
+- **Card**
+  - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any title inside a card. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <h5 class="card-title">Title</h5>
+      + <h3 class="card-title">Title</h3>
+      ```
+
+    </details>
+  - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` to be branded. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <p class="card-text">Description</p>
+      + <p class="card-text fw-bold">Description</p>
+      ```
+
+    </details>
+
 - **Stepped Process**
   - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
   ```diff
   -        <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
+
+### Examples
+
+- **Cards and Cards RTL**
+  - <span class="badge bg-warning">Warning</span> We now use `<button>` instead of `<a>` without any role for button purpose. We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any title inside a card. Furthermore, we changed the way we managed our bottom part. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>Example</summary>
+
+      ```diff
+        <div class="card">
+          <img src="..." alt="..."/>
+          <div class="card-body">
+      -     <h4 class="card-title">Title</h4>
+      +     <h3 class="card-title">Title</h3>
+      -     <h6 class="card-text">Caption</h6>
+      +     <p class="card-text fw-bold mb-4">Caption</p>
+      -   </div>
+      -   <div class="card-footer pt-2">
+      -     <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+      +     <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
+          </div>
+        </div>
+      ```
+
+    </details>
 
 ## v5.2.2
 
