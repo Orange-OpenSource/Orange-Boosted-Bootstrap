@@ -74,9 +74,9 @@
 }
 
 .card-title {
+  @extend .h4; // Boosted mod
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
   // Boosted mod: no `color`
-  @extend .h4; // Boosted mod
 
   // Boosted mod: prevent unwanted margin when nothing follows…
   &:only-child {
@@ -86,9 +86,9 @@
 }
 
 .card-subtitle {
+  @extend .h6; // Boosted mod
   margin-top: 0; // Boosted mod
   margin-bottom: var(--#{$prefix}card-title-spacer-y); // Boosted mod
-  @extend .h6; // Boosted mod
 }
 
 .card-text:last-child {
