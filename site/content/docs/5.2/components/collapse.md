@@ -18,7 +18,7 @@ The collapse JavaScript plugin is used to show and hide content. Buttons or anch
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants can not be used because they do not respect the Orange Design System specifications in which no collapse behavior is allowed to be triggered from a button component.
+These variants should not be used because they do not respect the Orange Design System specifications in which no collapse behavior is allowed to be triggered from a button component.
 {{< /ods-incompatibility-alert >}}
 
 ## Example
