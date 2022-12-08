@@ -3,7 +3,10 @@ layout: docs
 title: Navs and tabs
 description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
-aliases: "/docs/5.2/components/navs/"
+aliases:
+  - "/docs/components/navs/"
+  - "/docs/components/navs-tabs/"
+  - "/docs/5.2/components/navs/"
 toc: true
 ---
 
@@ -177,37 +180,35 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
-<div role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4">
-  <ul class="nav nav-tabs" id="nav-tab-with-nested-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" id="nav-tab4" role="tab" aria-selected="false">Tab 4</a>
-    </li>
-  </ul>
-</div>
+<ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs" id="nav-tab-with-nested-tabs">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</a>
+  </li>
+</ul>
 
 <div class="tab-content" id="nav-tabs-content">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist" aria-labelledby="nav-tab1">
-    <ul class="nav nav-tabs nav-tabs-light mt-0">
-      <li class="nav-item">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="nav-tab1">
+    <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-tabs nav-tabs-light mt-0">
+      <li class="nav-item" role="presentation">
         <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkB" href="#linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab">Link B</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" id="nav-linkD" role="tab">Link D</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0" id="nav-tabs-light-content">
@@ -406,6 +407,10 @@ On the `.nav-tabs-light` modifier class:
 On the `.nav-pills` modifier class:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
+
+On the `.tab-content` modifier class:
+
+{{< scss-docs name="tab-content-css-vars" file="scss/_nav.scss" >}}
 
 ### Sass variables
 
@@ -708,71 +713,22 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-#### constructor
+Activates your content as a tab element.
 
-Activates a tab element and content container. Tab should have either a `data-bs-target` or, if using a link, an `href` attribute, targeting a container node in the DOM.
-
-```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
-  </li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab li:last-child button')
-  const firstTab = new boosted.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs).
+You can create a tab instance with the constructor, for example:
 
 ```js
-const someTabTriggerEl = document.querySelector('#someTabTrigger')
-const tab = new boosted.Tab(someTabTriggerEl)
-
-tab.show()
+const bsTab = new boosted.Tab('#myTab')
 ```
 
-#### dispose
-
-Destroys an element's tab.
-
-#### getInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element
-
-```js
-const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
-```
-
-#### getOrCreateInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized
-
-```js
-const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
-```
+{{< bs-table >}}
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element's tab. |
+| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `boosted.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Tab.getOrCreateInstance(element)`. |
+| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+{{< /bs-table >}}
 
 ### Events
 

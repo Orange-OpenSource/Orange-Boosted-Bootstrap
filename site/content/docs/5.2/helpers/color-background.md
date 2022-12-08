@@ -3,6 +3,8 @@ layout: docs
 title: Color & background
 description: Set a background color with contrasting foreground color.
 group: helpers
+aliases:
+  - "/docs/helpers/color-background/"
 toc: true
 added: "5.2"
 ---

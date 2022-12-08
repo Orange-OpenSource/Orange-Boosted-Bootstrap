@@ -3,7 +3,11 @@ layout: docs
 title: Reboot
 description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Boosted to provide an elegant, consistent, and simple baseline to build upon.
 group: content
-aliases: "/docs/5.2/content/"
+aliases:
+  - "/content/"
+  - "/docs/content/"
+  - "/docs/5.2/content/"
+  - "/docs/content/reboot/"
 toc: true
 ---
 
@@ -118,6 +122,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 * Nested lists have no bottom margin
   * This way they have a more even appearance
   * Particularly when followed by more list items
+    * Even with a third level list
 * The left padding has also been reset
 
 1. Here's an ordered list

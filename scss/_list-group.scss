@@ -109,11 +109,12 @@
     border-color: var(--#{$prefix}list-group-active-border-color);
   }
 
-  & + & {
+  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+  & + .list-group-item {
     border-top-width: 0;
 
     &.active {
-      margin-top: calc(var(--#{$prefix}list-group-border-width) * -1); // stylelint-disable-line function-disallowed-list
+      margin-top: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
       border-top-width: var(--#{$prefix}list-group-border-width);
     }
   }
@@ -150,7 +151,7 @@
           border-left-width: 0;
 
           &.active {
-            margin-left: calc(var(--#{$prefix}list-group-border-width) * -1); // stylelint-disable-line function-disallowed-list
+            margin-left: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
             border-left-width: var(--#{$prefix}list-group-border-width);
           }
         }
@@ -190,4 +191,21 @@
   @include list-group-item-variant($color, $value, color-contrast($value));
 }
 // scss-docs-end list-group-modifiers
+
+.list-group-dark {
+  // scss-docs-start list-group-dark-css-vars
+  --#{$prefix}list-group-color: #{$list-group-dark-color}; // Boosted mod
+  --#{$prefix}list-group-bg: #{$list-group-dark-bg}; // Boosted mod
+  --#{$prefix}list-group-border-color: #{$list-group-dark-border-color}; // Boosted mod
+  --#{$prefix}list-group-action-color: #{$list-group-dark-action-color}; // Boosted mod
+  --#{$prefix}list-group-action-hover-color: #{$list-group-dark-action-hover-color}; // Boosted mod
+  --#{$prefix}list-group-action-active-color: #{$list-group-dark-action-active-color}; // Boosted mod
+  --#{$prefix}list-group-action-active-bg: #{$list-group-dark-action-active-bg}; // Boosted mod
+  --#{$prefix}list-group-disabled-color: #{$list-group-dark-disabled-color}; // Boosted mod
+  --#{$prefix}list-group-disabled-bg: #{$list-group-dark-disabled-bg}; // Boosted mod
+  --#{$prefix}list-group-active-color: #{$list-group-dark-active-color}; // Boosted mod
+  --#{$prefix}list-group-active-bg: #{$list-group-dark-active-bg}; // Boosted mod
+  --#{$prefix}list-group-active-border-color: #{$list-group-dark-active-border-color}; // Boosted mod
+  // scss-docs-end list-group-dark-css-vars
+}
 // End mod

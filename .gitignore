@@ -48,3 +48,6 @@ Thumbs.db
 /.pa11y/
 /pa11y-ci-results.json
 /.github/release-drafter.yml
+
+# Storybook
+/stories/auto
