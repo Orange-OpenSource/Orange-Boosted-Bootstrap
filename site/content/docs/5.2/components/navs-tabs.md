@@ -234,7 +234,7 @@ Take that same HTML, but use `.nav-pills` instead:
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -260,7 +260,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants can not be used because they are a button component in the Orange Design System specifications.
+These variants should not be used because they are a button component in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -327,7 +327,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -379,7 +379,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This variant can not be used because it is a button component in the Orange Design System specifications.
+This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
