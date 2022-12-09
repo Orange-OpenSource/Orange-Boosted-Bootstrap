@@ -84,7 +84,7 @@
 // scss-docs-start root-dark-rule
 // Boosted mod
 [class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark),
+[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark),
 [class*="bg-secondary"] {
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-dark};
