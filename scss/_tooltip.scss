@@ -50,7 +50,7 @@
   bottom: 0;
 
   &::before {
-    top: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+    top: -5px;
     border-width: var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
     border-top-color: var(--#{$prefix}tooltip-bg);
   }
@@ -63,7 +63,7 @@
   height: var(--#{$prefix}tooltip-arrow-width);
 
   &::before {
-    right: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+    right: -5px;
     border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
     border-right-color: var(--#{$prefix}tooltip-bg);
   }
@@ -75,7 +75,7 @@
   top: 0;
 
   &::before {
-    bottom: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+    bottom: -5px;
     border-width: 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
     border-bottom-color: var(--#{$prefix}tooltip-bg);
   }
@@ -88,7 +88,7 @@
   height: var(--#{$prefix}tooltip-arrow-width);
 
   &::before {
-    left: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+    left: -5px;
     border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
     border-left-color: var(--#{$prefix}tooltip-bg);
   }
