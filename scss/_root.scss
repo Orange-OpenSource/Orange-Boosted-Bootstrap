@@ -73,6 +73,7 @@
 
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-hover-color: #{$link-hover-color};
+  --#{$prefix}focus-outline-color: #{$focus-outline-color};
 
   --#{$prefix}code-color: #{$code-color};
 
@@ -88,6 +89,7 @@
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
+  --#{$prefix}focus-outline-color: #{$focus-outline-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
   --#{$prefix}code-color: #{$code-color-dark};
   --#{$prefix}highlight-color: #{$mark-color-dark};
@@ -101,6 +103,7 @@
     --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
     --#{$prefix}link-color: #{$link-color};
     --#{$prefix}link-hover-color: #{$link-hover-color};
+    --#{$prefix}focus-outline-color: #{$focus-outline-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};
