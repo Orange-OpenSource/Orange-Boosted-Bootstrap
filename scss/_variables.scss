@@ -473,8 +473,8 @@ $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $accessible-orange !default; // Boosted mod
 $link-hover-color-dark:                   $brand-orange !default; // Boosted mod
-$focus-outline-color:                     $functional-blue !default; // Boosted mod
-$focus-outline-color-dark:                $white !default; // Boosted mod
+$focus-outline-color:                     #4170d8 !default; // Boosted mod
+$focus-outline-color-dark:                #4170d8 !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
