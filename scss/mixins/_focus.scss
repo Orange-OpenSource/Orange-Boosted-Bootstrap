@@ -1,8 +1,9 @@
 // scss-docs-start focus-visible
-@mixin focus-visible($zindex: $outline-zindex, $color: $outline-color, $width: $outline-width, $offset: $outline-offset) {
+@mixin focus-visible($zindex: $outline-zindex, $color: $outline-color, $width: $outline-width, $offset: $outline-offset, $box-color: $outline-box-color) {
   z-index: $zindex;
   outline: $color solid $width;
   outline-offset: $offset;
+  box-shadow: 0 0 0 $offset $box-color;
 }
 // scss-docs-end focus-visible
 
