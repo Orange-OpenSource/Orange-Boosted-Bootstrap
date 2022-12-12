@@ -75,7 +75,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 - <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
 
-- <span class="badge bg-success">New</span> New small size inputs examples have been added
+- <span class="badge bg-success">New</span> Small size form controls are now available. Small inputs are defined by their `.form-control-sm`, small selects by their `.form-select-sm`. `.input-group-sm` can be used depending on the context while they can also be associated with `.col-form-label-sm` to correctly follow their size if needed.
 
 ### Examples
 
