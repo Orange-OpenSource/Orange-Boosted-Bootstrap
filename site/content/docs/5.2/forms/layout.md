@@ -174,7 +174,6 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
-<!-- Boosted mod: no .col-form-label-sm -->
 {{< example >}}
 <div class="row mb-3">
   <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
