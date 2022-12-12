@@ -47,7 +47,7 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  Medium button
+  Button
 </button>
 <button type="button" class="btn btn-primary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
