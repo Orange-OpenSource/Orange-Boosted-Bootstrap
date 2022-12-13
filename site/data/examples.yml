@@ -30,6 +30,12 @@
     - name: Navbar sticky
       description: "Single navbar example of a sticky-top navbar along with some additional content."
 
+- category: RTL
+  description: "See Boosted's RTL version in action with these modified Custom Components examples."
+  examples:
+    - name: "Cards RTL"
+      description: "List of all card variants (content and design)."
+
 - category: Integrations
   description: "Integrations with external libraries."
   examples:

@@ -11,6 +11,7 @@
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   --#{$prefix}btn-line-height: #{$btn-line-height};
   --#{$prefix}btn-color: #{$body-color};
+  --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // Boosted mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
@@ -32,6 +33,7 @@
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
   text-decoration: if($link-decoration == none, null, none);
+  letter-spacing: var(--#{$prefix}btn-letter-spacing); // Boosted mod
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
@@ -43,12 +45,14 @@
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
-  &:hover { // Boosted mod: simpler rule
+  &:hover {
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
   }
+
+  // Boosted mod: no .btn-check + &:hover
 
   &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
     color: var(--#{$prefix}btn-hover-color);
@@ -222,13 +226,14 @@
 //
 // Button Sizes
 // Boosted mod: 6th argument to set .btn-icon padding
+// Boosted mod: 7th argument to set .btn-letter-spacing
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg, $btn-letter-spacing-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm, $btn-letter-spacing-sm);
 }
 
 

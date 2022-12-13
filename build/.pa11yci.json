@@ -2,13 +2,22 @@
   "standard": "WCAG2AA",
   "level": "error",
   "defaults": {
+    "chromeLaunchConfig": {
+        "args": [
+            "--no-sandbox"
+        ]
+    },
+    "reporters": [
+      "cli",
+      ["json", { "fileName": "./pa11y-ci-results.json" }]
+    ],
     "runners": [
       "axe"
     ],
-    "hideElements": "[id*='tarteaucitron'], #TableOfContents, .text-primary, .accordion-button:not(.collapsed), .active, [aria-current], select:disabled, [disabled] label, [disabled] + label, .modal, .bd-example nav, .badge.rounded-pill.bg-info.text-white, a.disabled, .form-check.form-switch, .nav-tabs .nav-item .nav-link.disabled, body > div.position-fixed:last-of-type",
+    "useIncognitoBrowserContext": false,
+    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
     "ignore": [
-      "heading-order",
-      "scrollable-region-focusable"
+      "color-contrast"
     ]
   }
 }
