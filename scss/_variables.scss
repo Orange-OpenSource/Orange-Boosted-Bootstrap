@@ -1830,7 +1830,7 @@ $modal-header-padding-y:            0 !default;
 $modal-header-padding-x:            $spacer !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
-$modal-body-margin-bottom:          $spacer * .5 !default; // Boosted mod
+$modal-body-margin-bottom:          $spacer * .75 !default; // Boosted mod
 $modal-body-margin-sm-bottom:       $spacer !default; // Boosted mod
 
 $modal-footer-bg:                   null !default;
