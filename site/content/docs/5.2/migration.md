@@ -26,6 +26,17 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
 
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$form-range-thumb-active-border-color</code></li>
+      <li><code>$form-range-thumb-hover-bg</code></li>
+    </ul>
+  </details>
+
+
 ## v5.2.2
 
 <hr class="mb-4">
@@ -90,7 +101,6 @@ If you need more details about the changes, please refer to the [v5.2.2 release]
       <li><code>$btn-letter-spacing-lg</code></li>
       <li><code>$btn-letter-spacing-sm</code></li>
       <li><code>$form-feedback-line-height</code></li>
-      <li><code>$form-range-thumb-active-border-color</code></li>
     </ul>
   </details>
 
