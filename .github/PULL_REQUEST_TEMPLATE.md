@@ -52,12 +52,14 @@
 
 <details>
   <summary>Detailed info</summary>
-    * including the "Sass" part using `scss-docs` shortcode
-    * in `/about/overview/#custom-components` if it is a new Orange custom component
-    * in `/getting-started/introduction/#components` if it is a new Orange custom component that requires JavaScript (and Popper)
-    * in `/customize/overview#csps-and-embedded-svgs` if it is a new Orange custom component that includes embedded SVGs in our CSS
-    * in `/forms/validation/?#supported-elements` if it is a new Orange custom component that is a form control
-    * in `/forms/overview/` if it is a new Orange custom component that is a form control
+  <ul>
+    <li>including the "Sass" part using `scss-docs` shortcode</li>
+    <li>in `/about/overview/#custom-components` if it is a new Orange custom component</li>
+    <li>in `/getting-started/introduction/#components` if it is a new Orange custom component that requires JavaScript (and Popper)</li>
+    <li>in `/customize/overview#csps-and-embedded-svgs` if it is a new Orange custom component that includes embedded SVGs in our CSS</li>
+    <li>in `/forms/validation/?#supported-elements` if it is a new Orange custom component that is a form control</li>
+    <li>in `/forms/overview/` if it is a new Orange custom component that is a form control</li>
+  </ul>
 </details>
 
 ### Checklist (for Core Team only)
