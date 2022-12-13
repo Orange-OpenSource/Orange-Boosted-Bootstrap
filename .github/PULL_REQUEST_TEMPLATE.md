@@ -53,12 +53,12 @@
 <details>
   <summary>Detailed info</summary>
   <ul>
-    <li>including the "Sass" part using `scss-docs` shortcode</li>
-    <li>in `/about/overview/#custom-components` if it is a new Orange custom component</li>
-    <li>in `/getting-started/introduction/#components` if it is a new Orange custom component that requires JavaScript (and Popper)</li>
-    <li>in `/customize/overview#csps-and-embedded-svgs` if it is a new Orange custom component that includes embedded SVGs in our CSS</li>
-    <li>in `/forms/validation/?#supported-elements` if it is a new Orange custom component that is a form control</li>
-    <li>in `/forms/overview/` if it is a new Orange custom component that is a form control</li>
+    <li>including the "Sass" part using <code>scss-docs</code> shortcode</li>
+    <li>in <code>/about/overview/#custom-components</code> if it is a new Orange custom component</li>
+    <li>in <code>/getting-started/introduction/#components</code> if it is a new Orange custom component that requires JavaScript (and Popper)</li>
+    <li>in <code>/customize/overview#csps-and-embedded-svgs</code> if it is a new Orange custom component that includes embedded SVGs in our CSS</li>
+    <li>in <code>/forms/validation/?#supported-elements</code> if it is a new Orange custom component that is a form control</li>
+    <li>in <code>/forms/overview/</code> if it is a new Orange custom component that is a form control</li>
   </ul>
 </details>
 
