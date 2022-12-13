@@ -73,7 +73,8 @@
 
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-hover-color: #{$link-hover-color};
-  --#{$prefix}focus-outline-color: #{$focus-outline-color};
+  --#{$prefix}focus-outline-outer-color: #{$focus-outline-outer-color};
+  --#{$prefix}focus-outline-inner-color: #{$focus-outline-inner-color};
 
   --#{$prefix}code-color: #{$code-color};
 
@@ -89,7 +90,8 @@
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
-  --#{$prefix}focus-outline-color: #{$focus-outline-color-dark};
+  --#{$prefix}focus-outline-outer-color: #{$focus-outline-outer-color-dark};
+  --#{$prefix}focus-outline-inner-color: #{$focus-outline-inner-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
   --#{$prefix}code-color: #{$code-color-dark};
   --#{$prefix}highlight-color: #{$mark-color-dark};
@@ -103,7 +105,8 @@
     --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
     --#{$prefix}link-color: #{$link-color};
     --#{$prefix}link-hover-color: #{$link-hover-color};
-    --#{$prefix}focus-outline-color: #{$focus-outline-color};
+    --#{$prefix}focus-outline-outer-color: #{$focus-outline-outer-color};
+    --#{$prefix}focus-outline-inner-color: #{$focus-outline-inner-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};

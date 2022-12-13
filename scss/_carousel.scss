@@ -131,7 +131,6 @@
     &[data-focus-visible-added] {
       > span {
         @include focus-visible();
-        @include focus-box();
       }
     }
   }
@@ -229,7 +228,6 @@
     &:focus {
       &[data-focus-visible-added] {
         @include focus-visible();
-        @include focus-box();
         transform: none;
       }
     }

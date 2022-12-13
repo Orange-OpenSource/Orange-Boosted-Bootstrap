@@ -53,14 +53,6 @@
 
   // Boosted mod: no .btn-check + &:hover
 
-  &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
-    // Boosted mod: added `&[data-focus-visible-added]`
-    &[data-focus-visible-added] {
-      @include focus-box();
-    }
-  }
-  // End mod
-
   // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
 
   // Boosted mod: custom styles for .btn-check
@@ -94,14 +86,6 @@
   }
   // End mod
 }
-
-// Boosted mod
-.btn-inverse {
-  &[data-focus-visible-added]:focus {
-    @include focus-box($box-color: $black);
-  }
-}
-// End mod
 
 //
 // Alternate buttons

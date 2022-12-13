@@ -473,8 +473,10 @@ $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $accessible-orange !default; // Boosted mod
 $link-hover-color-dark:                   $brand-orange !default; // Boosted mod
-$focus-outline-color:                     $black !default; // Boosted mod
-$focus-outline-color-dark:                $black !default; // Boosted mod
+$focus-outline-outer-color:               $black !default; // Boosted mod
+$focus-outline-outer-color-dark:          $white !default; // Boosted mod
+$focus-outline-inner-color:               $white !default; // Boosted mod
+$focus-outline-inner-color-dark:          $black !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -588,9 +590,10 @@ $border-radius-pill:          50rem !default;
 
 $outline-zindex:              5 !default; // Boosted mod
 $outline-width:               3px !default;  // Boosted mod
-$outline-offset:              2px !default; // Boosted mod
-$outline-color:               var(--#{$prefix}focus-outline-color) !default; // Boosted mod
-$outline-box-color:           $white !default; // Boosted mod
+$outline-offset:              3px !default; // Boosted mod
+$outline-color:               var(--#{$prefix}focus-outline-outer-color) !default; // Boosted mod
+$outline-box-width:           3px !default; // Boosted mod
+$outline-box-color:           var(--#{$prefix}focus-outline-inner-color) !default; // Boosted mod
 
 // scss-docs-start box-shadow-variables
 $box-shadow:                  null !default;

@@ -268,7 +268,6 @@
     + .btn,
     + .tag {
       @include focus-visible();
-      @include focus-box();
     }
   }
 
