@@ -24,66 +24,60 @@
 
 <!-- Please add direct links where your modifications can be seen in the documentation -->
 
-* https://deploy-preview-{your pr number}--boosted.netlify.app/
+* https://deploy-preview-{your_pr_number}--boosted.netlify.app/
 
 ### Checklist
 
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
+#### Contribution
+
 - [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
+
+#### Design
+
+- [ ] My change respects the design guidelines
+- [ ] My change is compatible with responsive display
+
+#### Development
+
 - [ ] My code follows the code style of the project _(using `npm run lint`)_
-- [ ] My change introduces changes to the documentation
-- [ ] My change introduces changes to the migration guide
-- [ ] I have updated the documentation accordingly
-- [ ] I have added tests to cover my changes
+- [ ] I have added JavaScript unit tests to cover my changes
 - [ ] All new and existing tests passed
+
+#### Documentation
+
+- [ ] My change introduces changes to the documentation or I have updated the documentation accordingly
+
+<details>
+  <summary>Detailed info</summary>
+  - including the "Sass" part using `scss-docs` shortcode
+  - in `/about/overview/#custom-components` if it is a new Orange custom component
+  - in `/getting-started/introduction/#components` if it is a new Orange custom component that requires JavaScript (and Popper)
+  - in `/customize/overview#csps-and-embedded-svgs` if it is a new Orange custom component that includes embedded SVGs in our CSS
+  - in `/forms/validation/?#supported-elements` if it is a new Orange custom component that is a form control
+  - in `/forms/overview/` if it is a new Orange custom component that is a form control
+</details>
+
+### Checklist (for Core Team only)
+
+- [ ] My change introduces changes to the migration guide
+- [ ] My new component is added in Storybook
+- [ ] Check RTL version
+- [ ] Manually run BrowserStack automatic tests
+- [ ] Manually test browser compatibility with BrowserStack (Chrome, Firefox (+ ESR), Edge, Safari, iOS Safari, Chrome & Android on Android)
+- [ ] Code review
+- [ ] Design review
+- [ ] A11y review
+
+#### After the merge
+
+- [ ] Manually launch Percy tests
 
 <!------------------------->
 <!-- /!\ Core Team Only -->
 <!------------------------->
-
-<!-- Uncomment the following for a feature DoD -->
-
-<!--
-### Development
-
-- [ ] Should match specs (eg. either the Web UI Kit or any pattern from the WAI — or both…)
-- [ ] Docs added:
-  - including the "Sass" part using `scss-docs` shortcode
-  - in /about/overview/#custom-components if it is a new Orange custom component
-  - in /getting-started/introduction/#components if it is a new Orange custom component that requires JavaScript (and Popper)
-  - in /customize/overview#csps-and-embedded-svgs if it is a new Orange custom component that includes embedded SVGs in our CSS
-  - in /forms/validation/?#supported-elements if it is a new Orange custom component that is a form control
-  - in /forms/overview/ if it is a new Orange custom component that is a form control
-- [ ] (Optional) If this feature is a new component, it probably must appear in Storybook
-- [ ] Check (and fix) RTL version
-- [ ] Run linters
-- [ ] Run compilers
-- [ ] Tests added for JS-side
-- [ ] Run tests
-- [ ] Manually run BrowserStack test
-- [ ] Manually run Percy test
-- [ ] Cross-browser test:
-  - [ ] Chrome
-  - [ ] Firefox (including ESR)
-  - [ ] Edge
-  - [ ] Safari
-  - [ ] iOS Safari
-  - [ ] Chrome & Firefox on Android
-- [ ] Responsive tests: desktop and small screens
-- [ ] Clean up the branch using `rebase -i`
-- [ ] Commited with `feat(…): …` message
-- [ ] Mention it in Migration Guide (if `back-from-v4`): renamed variables, changes in markup requirement,  etc.
-
-### Reviews
-
-- [ ] Code review
-- [ ] A11y review
-- [ ] Design review
--->
-
-
 
 <!-- Uncomment the following for a release DoD -->
 
