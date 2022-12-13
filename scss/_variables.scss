@@ -1434,7 +1434,7 @@ $pagination-focus-bg:               null !default;
 $pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
-$pagination-hover-bg:               null !default;
+$pagination-hover-bg:               $white !default; // Boosted mod
 $pagination-hover-border-color:     $gray-500 !default;
 
 $pagination-active-color:           $white !default;

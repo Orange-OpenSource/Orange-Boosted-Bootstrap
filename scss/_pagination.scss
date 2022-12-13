@@ -109,8 +109,6 @@
 }
 
 .page-item {
-  display: flex; // Boosted mod
-
   &:not(:first-child) .page-link {
     margin-left: $pagination-margin-start;
   }
@@ -189,12 +187,8 @@
     margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
-  @include media-breakpoint-down(sm) {
-    @include pagination-max-items(4);
-  }
-
-  @include media-breakpoint-between(sm, md) {
-    @include pagination-max-items(6);
+  @include media-breakpoint-down(md) {
+    @include pagination-max-items(7);
   }
 
   @include media-breakpoint-between(md, lg) {
