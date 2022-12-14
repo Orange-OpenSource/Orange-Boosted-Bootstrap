@@ -3,6 +3,8 @@ layout: docs
 title: "Boosted & Parcel"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
 group: getting-started
+aliases:
+  - "/docs/getting-started/parcel/"
 toc: true
 thumbnail: parcel.png
 ---
