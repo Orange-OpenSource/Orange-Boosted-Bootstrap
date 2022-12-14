@@ -55,6 +55,8 @@
 
   // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
 
+  // Boosted mod: no &:focus-visible to avoid issue in button tags
+
   // Boosted mod: custom styles for .btn-check
   // Boosted mod: simpler rule
   &:active,
@@ -86,6 +88,7 @@
   }
   // End mod
 }
+
 
 //
 // Alternate buttons
@@ -183,11 +186,13 @@
     text-decoration: $link-hover-decoration;
   }
 
-  // Boosted mod: no focus/hover outline color
+  // Boosted mod: no focus-visible color change
 
+  // Boosted mod: btn inverse
   &.btn-inverse {
     --#{$prefix}btn-disabled-color: #{$gray-700};
   }
+  // End mod
 
   // No need for an active state here
 }

@@ -102,6 +102,7 @@
   background: none;
   border: 0;
   outline: 0; // Boosted mod
+  box-shadow: none; // Boosted mod
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
