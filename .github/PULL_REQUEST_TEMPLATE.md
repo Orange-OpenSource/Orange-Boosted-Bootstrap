@@ -75,7 +75,7 @@
 
 #### After the merge
 
-- [ ] Manually launch Percy tests
+- [ ] Manually launch [Percy tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/percy.yml)
 
 <!------------------------->
 <!-- /!\ Core Team Only -->
