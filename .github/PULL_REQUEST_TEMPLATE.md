@@ -77,9 +77,9 @@
 
 - [ ] Manually launch [Percy tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/percy.yml)
 
-<!------------------------->
+<!------------------------>
 <!-- /!\ Core Team Only -->
-<!------------------------->
+<!------------------------>
 
 <!-- Uncomment the following for a release DoD -->
 
