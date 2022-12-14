@@ -66,7 +66,7 @@
 
 - [ ] My change introduces changes to the migration guide
 - [ ] My new component is added in Storybook
-- [ ] Check RTL version
+- [ ] My new component is compatible with RTL
 - [ ] Manually run BrowserStack automatic tests
 - [ ] Manually test browser compatibility with BrowserStack (Chrome, Firefox (+ ESR), Edge, Safari, iOS Safari, Chrome & Android on Android)
 - [ ] Code review
