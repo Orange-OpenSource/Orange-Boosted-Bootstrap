@@ -68,7 +68,7 @@
 - [ ] My new component is added in Storybook
 - [ ] My new component is compatible with RTL
 - [ ] Manually run [BrowserStack automatic tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
-- [ ] Manually test browser compatibility with BrowserStack (Chrome, Firefox (+ ESR), Edge, Safari, iOS Safari, Chrome & Android on Android)
+- [ ] Manually test browser compatibility with BrowserStack (Chrome, Firefox (+ ESR), Edge, Safari, iOS Safari, Chrome & Firefox on Android)
 - [ ] Code review
 - [ ] Design review
 - [ ] A11y review
