@@ -80,6 +80,10 @@
     --#{$prefix}accordion-btn-font-size: #{$font-size-base};
     --#{$prefix}accordion-btn-font-weight: #{$font-weight-normal};
 
+    .accordion-button::after {
+      margin-right: 15px;
+    }
+
     .accordion-body {
       --#{$prefix}side-nav-item-padding-left: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
 
@@ -114,7 +118,7 @@
     align-items: center;
     width: 100%;
     min-height: var(--#{$prefix}side-nav-item-height);
-    padding: 0 0 0 var(--#{$prefix}side-nav-item-padding-left);
+    padding: 10px 0 12px var(--#{$prefix}side-nav-item-padding-left);
     margin: 0;
     overflow: hidden;
     color: var(--#{$prefix}side-nav-color);
@@ -126,15 +130,20 @@
       background-color: var(--#{$prefix}side-nav-item-hover-bg);
     }
 
+    &.active-parent.collapsed,
     &.active {
       background: linear-gradient(to right, var(--#{$prefix}side-nav-item-active-border-color), var(--#{$prefix}side-nav-item-active-border-color) 4px, var(--#{$prefix}side-nav-item-active-bg) 4px, var(--#{$prefix}side-nav-item-active-bg));
+    }
+
+    &.active-parent {
+      background-color: var(--#{$prefix}side-nav-item-active-bg);
     }
   }
 
   .side-nav-collapse {
     display: none;
-    justify-content: center;
-    width: subtract(var(--#{$prefix}side-nav-width), var(--#{$prefix}side-nav-border-width));
+    justify-content: end;
+    width: 100%;
     padding-left: 0;
     background: unset !important; // stylelint-disable-line declaration-no-important
     @include caret(start);
@@ -144,7 +153,7 @@
     }
 
     &::before {
-      margin: 0;
+      margin-right: 23px;
       border-right-color: var(--#{$prefix}side-nav-color);
       @include transition(transform .35s ease);
     }

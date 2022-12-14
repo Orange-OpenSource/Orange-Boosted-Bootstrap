@@ -33,7 +33,7 @@ In order to make side navigation work properly, please make sure that the Javasc
     <div class="accordion" id="sideNavAccordion">
       <div class="accordion-item">
         <h3 class="accordion-header" id="dashboardHeader">
-          <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse" aria-expanded="true" aria-controls="dashboardCollapse">
+          <button class="accordion-button side-nav-item fw-bold active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse" aria-expanded="true" aria-controls="dashboardCollapse">
             Dashboard
           </button>
         </h3>
@@ -42,7 +42,7 @@ In order to make side navigation work properly, please make sure that the Javasc
             <div class="accordion" id="labels">
               <div class="accordion-item">
                 <h4 class="accordion-header" id="labelOneHeader">
-                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapse" aria-expanded="true" aria-controls="labelOneCollapse">
+                  <button class="accordion-button side-nav-item active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapse" aria-expanded="true" aria-controls="labelOneCollapse">
                     Label
                   </button>
                 </h4>
@@ -148,7 +148,7 @@ In order to make side navigation work properly, please make sure that the Javasc
     <div class="accordion" id="sideNavAccordionWithIcons">
       <div class="accordion-item">
         <h3 class="accordion-header" id="dashboardHeaderWithIcons">
-          <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseWithIcons" aria-expanded="true" aria-controls="dashboardCollapseWithIcons">
+          <button class="accordion-button side-nav-item fw-bold active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseWithIcons" aria-expanded="true" aria-controls="dashboardCollapseWithIcons">
             <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
             </svg>
@@ -160,7 +160,7 @@ In order to make side navigation work properly, please make sure that the Javasc
             <div class="accordion" id="labelsWithIcons">
               <div class="accordion-item">
                 <h4 class="accordion-header" id="labelOneHeaderWithIcons">
-                  <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseWithIcons" aria-expanded="true" aria-controls="labelOneCollapseWithIcons">
+                  <button class="accordion-button side-nav-item active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseWithIcons" aria-expanded="true" aria-controls="labelOneCollapseWithIcons">
                     Label
                   </button>
                 </h4>
@@ -281,7 +281,7 @@ To use the collapsible behavior, know that:
     <div id="collapsible-element" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
     <div class="position-absolute">
 
-      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element" aria-expanded="false" aria-controls="collapsible-element"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <button class="side-nav-item side-nav-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element" aria-expanded="false" aria-controls="collapsible-element"><span class="visually-hidden">Open/Close side navigation</span></button>
 
       <ul class="list-unstyled m-0 w-100">
         <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
@@ -335,7 +335,7 @@ The collapsible side navigation comes with ready to use `onclick` calls:
     <div id="collapsingTab" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
     <div class="position-absolute">
 
-      <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <button class="side-nav-item side-nav-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingTab" aria-expanded="false" aria-controls="collapsingTab"><span class="visually-hidden">Open/Close side navigation</span></button>
 
       <div class="d-flex overflow-hidden">
         <ul class="list-unstyled m-0 side-nav-dark mw-100" role="tablist">
@@ -376,7 +376,7 @@ The collapsible side navigation comes with ready to use `onclick` calls:
               <ul class="list-unstyled m-0">
                 <li><a href="#" class="side-nav-item">Label</a></li>
                 <li><a href="#" class="side-nav-item">Label</a></li>
-                <li><a href="#" class="side-nav-item active">Label</a></li>
+                <li><a href="#" class="side-nav-item">Label</a></li>
               </ul>
             </div>
           </div>
@@ -388,7 +388,7 @@ The collapsible side navigation comes with ready to use `onclick` calls:
               <div class="accordion" id="labelsContent">
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelOneContentHeader">
-                    <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneContentCollapse" aria-expanded="true" aria-controls="labelOneContentCollapse">
+                    <button class="accordion-button side-nav-item active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneContentCollapse" aria-expanded="true" aria-controls="labelOneContentCollapse">
                       Label
                     </button>
                   </h4>
@@ -453,23 +453,6 @@ The collapsible side navigation comes with ready to use `onclick` calls:
                     </div>
                   </div>
                 </div>
-
-                <div class="accordion-item">
-                  <h4 class="accordion-header" id="labelFiveContentHeader">
-                    <button class="accordion-button collapsed side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelFiveContentCollapse" aria-expanded="false" aria-controls="labelFiveContentCollapse">
-                      Label
-                    </button>
-                  </h4>
-                  <div id="labelFiveContentCollapse" class="accordion-collapse collapse" aria-labelledby="labelFiveContentHeader" data-bs-parent="#labelsContent">
-                    <div class="accordion-body">
-                      <ul class="list-unstyled m-0">
-                        <li><a href="#" class="side-nav-item">Label</a></li>
-                        <li><a href="#" class="side-nav-item">Label</a></li>
-                        <li><a href="#" class="side-nav-item">Label</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -497,7 +480,7 @@ Collapsible side navigation comes with a static variant: `.side-nav-static`.
     <div class="offcanvas-body">
       <div id="collapsible-element-2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
       <div class="position-absolute">
-        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-2" aria-expanded="false" aria-controls="collapsible-element-2"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <button class="side-nav-item side-nav-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-2" aria-expanded="false" aria-controls="collapsible-element-2"><span class="visually-hidden">Open/Close side navigation</span></button>
         <ul class="list-unstyled m-0 mw-100">
           <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
             <a href="#" class="side-nav-item fw-bold">
@@ -554,7 +537,7 @@ Side navigation comes with a right sided variant: `.offcanvas-end`.
     <div class="offcanvas-body">
       <div id="collapsible-element-right" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
       <div class="position-absolute">
-        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-right" aria-expanded="false" aria-controls="collapsible-element-right"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <button class="side-nav-item side-nav-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-right" aria-expanded="false" aria-controls="collapsible-element-right"><span class="visually-hidden">Open/Close side navigation</span></button>
         <ul class="list-unstyled m-0 w-100">
           <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
             <button class="side-nav-item fw-bold">
@@ -616,7 +599,7 @@ Dark variant can be applied on any example except the [Collapsible with drawer c
       <div class="accordion w-100" id="sideNavAccordionDark">
         <div class="accordion-item">
           <h3 class="accordion-header" id="dashboardHeaderDark">
-            <button class="accordion-button side-nav-item fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
+            <button class="accordion-button side-nav-item fw-bold active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCollapseDark" aria-expanded="true" aria-controls="dashboardCollapseDark">
               <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
               </svg>
@@ -628,7 +611,7 @@ Dark variant can be applied on any example except the [Collapsible with drawer c
               <div class="accordion" id="labelsDark">
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="labelOneHeaderDark">
-                    <button class="accordion-button side-nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseDark" aria-expanded="true" aria-controls="labelOneCollapseDark">
+                    <button class="accordion-button side-nav-item active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#labelOneCollapseDark" aria-expanded="true" aria-controls="labelOneCollapseDark">
                       Label
                     </button>
                   </h4>
@@ -742,7 +725,7 @@ Dark variant can be applied on any example except the [Collapsible with drawer c
     <div class="offcanvas-body">
       <div id="collapsible-element-dark" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
       <div class="position-absolute">
-        <button class="side-nav-item side-nav-collapse ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-dark" aria-expanded="false" aria-controls="collapsible-element-dark"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <button class="side-nav-item side-nav-collapse collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-element-dark" aria-expanded="false" aria-controls="collapsible-element-dark"><span class="visually-hidden">Open/Close side navigation</span></button>
         <ul class="list-unstyled m-0 w-100">
           <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
             <a href="#" class="side-nav-item fw-bold">
