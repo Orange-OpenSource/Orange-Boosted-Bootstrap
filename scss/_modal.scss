@@ -210,7 +210,7 @@
   .modal {
     --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
     --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
-    --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-sm-bottom};
+    --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-sm-bottom}; // Boosted mod
   }
 
   // Automatically set modal's width for larger viewports
