@@ -48,7 +48,7 @@
 
 #### Documentation
 
-- [ ] My change introduces changes to the documentation or I have updated the documentation accordingly
+- [ ] My change introduces changes to the documentation and/or I have updated the documentation accordingly
 
 <details>
   <summary>Detailed info</summary>
