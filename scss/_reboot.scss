@@ -97,10 +97,12 @@ body {
 .js-focus-visible :focus:not([data-focus-visible-added]),
 .js-focus-visible .focus:not([data-focus-visible-added]) { // 2
   outline: 0 !important;
+  box-shadow: none;
 }
 
 :focus:not(:focus-visible) { // 3
   outline: 0 !important;
+  box-shadow: none;
 }
 // scss-docs-end focus-visibility
 // End mod
