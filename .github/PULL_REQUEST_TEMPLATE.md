@@ -67,7 +67,7 @@
 - [ ] My change introduces changes to the migration guide
 - [ ] My new component is added in Storybook
 - [ ] My new component is compatible with RTL
-- [ ] Manually run BrowserStack automatic tests
+- [ ] Manually run [BrowserStack automatic tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
 - [ ] Manually test browser compatibility with BrowserStack (Chrome, Firefox (+ ESR), Edge, Safari, iOS Safari, Chrome & Android on Android)
 - [ ] Code review
 - [ ] Design review
