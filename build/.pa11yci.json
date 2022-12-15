@@ -9,7 +9,8 @@
     },
     "reporters": [
       "cli",
-      ["json", { "fileName": "./pa11y-ci-results.json" }]
+      ["json", { "fileName": "./pa11y-ci-results.json" }],
+      ["pa11y-ci-reporter-html", {"destination": ".pa11y", "includeZeroIssues": true}]
     ],
     "runners": [
       "axe"
