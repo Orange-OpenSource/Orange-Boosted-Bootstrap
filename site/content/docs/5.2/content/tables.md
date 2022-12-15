@@ -483,7 +483,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 {{< example >}}
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table">
       <thead>
         <tr>
@@ -641,8 +641,8 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div>
-  <table class="table table-sm table-hover table-responsive has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover has-checkbox">
     <thead>
       <tr>
         <th scope="col">
@@ -777,8 +777,8 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<div>
-  <table class="table table-sm table-hover table-responsive has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover has-checkbox">
     <thead>
       <tr>
         <th scope="col">
@@ -839,8 +839,8 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 Use SVG to display thumbnails or icons in your table data cell elements.
 
-<div>
-  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover align-middle has-checkbox">
     <thead>
       <tr>
         <th scope="col">
@@ -1039,8 +1039,8 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </td>
 ```
 
-<div>
-  <table class="table table-responsive align-middle">
+<div class="table-responsive">
+  <table class="table align-middle">
     <thead>
       <tr>
         <th scope="col">Column header</th>
