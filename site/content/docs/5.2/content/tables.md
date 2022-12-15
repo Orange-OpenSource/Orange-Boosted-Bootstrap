@@ -483,7 +483,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 {{< example >}}
-  <div class="table-responsive">
+  <div class="table-responsive" tabindex="0">
     <table class="table">
       <thead>
         <tr>
