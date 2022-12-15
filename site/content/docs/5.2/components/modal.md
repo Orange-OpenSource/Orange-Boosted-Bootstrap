@@ -713,7 +713,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-sm-down` | `480px` |
 | `.modal-fullscreen-md-down` | `768px` |
 | `.modal-fullscreen-lg-down` | `1024px` |
-| `.modal-fullscreen-xl-down` | `1280px` |s
+| `.modal-fullscreen-xl-down` | `1280px` |
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
 

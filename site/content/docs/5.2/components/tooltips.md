@@ -69,7 +69,6 @@ Please refer to the [Tooltip](https://system.design.orange.com/0c1af118d/p/93294
 
 You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
-
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example class="tooltip-demo" stackblitz_add_js="true" >}}

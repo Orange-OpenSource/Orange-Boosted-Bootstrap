@@ -12,6 +12,13 @@ toc: true
 
 ## Base nav
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component variant should not be used because it does not respect the Orange Design System specifications.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 Navigation available in Boosted share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.

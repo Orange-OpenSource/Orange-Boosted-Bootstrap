@@ -9,6 +9,11 @@ toc: true
 added: "5.1"
 ---
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component variant should not be used because it does not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 ## About
 
 Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.

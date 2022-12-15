@@ -103,7 +103,7 @@ Use background utility classes to change the appearance of individual progress b
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is #ff7900.
+These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}

@@ -36,13 +36,6 @@ For custom Boosted form validation messages, you'll need to add the `novalidate`
 
 Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This form variant should not be used because it does not respect the Orange Design System specifications. The form text input label should always be placed above the input field.
-
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">

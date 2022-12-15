@@ -156,6 +156,13 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ## Button addons
 
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These variants should not be used because they do not respect the Orange Design System specifications. They are not recommended for usability reasons.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="input-group mb-3">
   <button class="btn btn-secondary" type="button" id="button-addon1">Button</button>
