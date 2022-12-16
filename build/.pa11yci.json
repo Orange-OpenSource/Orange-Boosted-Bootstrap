@@ -15,7 +15,7 @@
       "axe"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvasResponsive, #bdSidebar",
+    "hideElements": "iframe, #text-decoration + p + div a.text-decoration-none, .accordion-collapse, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar",
     "ignore": [
       "color-contrast"
     ]
