@@ -60,7 +60,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 - [ ] My change introduces changes to the migration guide
 - [ ] My new component is added in Storybook
 - [ ] My new component is compatible with RTL
-- [ ] Manually run [BrowserStack automatic tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
+- [ ] Manually run [BrowserStack tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
 - [ ] Manually test browser compatibility with BrowserStack (Chrome >= 60, Firefox >= 60 (+ ESR), Edge, Safari >= 12, iOS Safari, Chrome & Firefox on Android)
 - [ ] Code review
 - [ ] Design review
