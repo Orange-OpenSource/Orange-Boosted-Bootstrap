@@ -46,9 +46,7 @@
 
     th,
     td {
-      &:first-child {
-        padding-left: 0;
-      }
+      // Boosted mod: no '&:first-child{padding-left: 0;}' to respect our design guidelines in docs
 
       &:not(:last-child) {
         padding-right: 1rem; // Boosted mod
