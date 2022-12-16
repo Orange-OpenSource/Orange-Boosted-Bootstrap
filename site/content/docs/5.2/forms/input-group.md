@@ -77,8 +77,12 @@ This form variant, with an **horizontal layout** (i.e. labels not above the inpu
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
-<!-- Boosted mod: no .input-group-sm -->
 {{< example >}}
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+
 <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">

@@ -23,12 +23,12 @@ toc: true
 
 ## Sizing
 
-Set heights using classes like `.form-control-lg`.
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
-<!-- Boosted mod: no .form-control-sm -->
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
 ## Disabled
@@ -105,6 +105,10 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 <div class="mb-3">
   <label for="formFileDisabled" class="form-label">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
+</div>
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
 </div>
 <div>
   <label for="formFileLg" class="form-label">Large file input example</label>

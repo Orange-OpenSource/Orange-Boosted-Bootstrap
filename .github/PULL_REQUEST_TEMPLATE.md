@@ -56,6 +56,7 @@
   - in /customize/overview#csps-and-embedded-svgs if it is a new Orange custom component that includes embedded SVGs in our CSS
   - in /forms/validation/?#supported-elements if it is a new Orange custom component that is a form control
   - in /forms/overview/ if it is a new Orange custom component that is a form control
+- [ ] (Optional) If this feature is a new component, it probably must appear in Storybook
 - [ ] Check (and fix) RTL version
 - [ ] Run linters
 - [ ] Run compilers
@@ -114,7 +115,7 @@
   - :warning: check the `package-lock.json` and `package.json` content, only "boosted" should have its version changed!
   - :warning: `site/content/docs/5.1/**/*.md` should not always be modified
 - [ ] if year changed recently, happy new year :tada: but please change © year in `.scss` main files (reboot, grid, utilities and main file) as well as in `NOTICE.txt`.
-- [ ] `npm run release` to compile dist, update SRI hashes in doc and package the release
+- [ ] `npm run release` to compile dist, build Storybook, update SRI hashes in doc and package the release
 - [ ] Prepare changelog:
   - install [Conventionnal Changelog](https://github.com/conventional-changelog/conventional-changelog) and `conventional-changelog-cli` globally
   - run `conventional-changelog -p angular -i CHANGELOG.md -s`
@@ -137,7 +138,7 @@
 - [ ] [publish on Nuget](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Generate-NuGet-packages)
 - [ ] check release on [NPM](https://www.npmjs.com/package/boosted), [Nuget](https://www.nuget.org/packages/boosted/), [Packagist](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)…
 - [ ] publish documentation on `gh-pages`:
-  - [ ] copy `../_site` to the `gh-pages` branch
+  - [ ] copy `../_site` to the `gh-pages` branch (don't forget to update Storybook as well)
   - [ ] check every `index.html` used as redirections to be redirecting to the new release
   - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurences

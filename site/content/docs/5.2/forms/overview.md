@@ -172,6 +172,33 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
 </form>
 {{< /example >}}
 
+## Form helper
+
+Form helper is a button using `.form-helper` that provides extra help information to a form control. Be sure to include text for screen readers with a visually hidden text.
+
+Depending on the extra help information content, choose wisely between triggering a [popover]({{< docsref "/components/popovers" >}}) or a [tooltip]({{< docsref "/components/tooltips" >}}). Tooltips should be used for small and simple texts without any actionable elements inside, while popovers are used in other cases.
+
+This form helper should be displayed right after the label.
+
+{{< example >}}
+<div class="mb-3">
+  <label for="tooltipTextInput" class="form-label">Input with helper inside a Popover</label>
+  <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input">
+    <span class="visually-hidden">Helper for input</span>
+  </button>
+  <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
+</div>
+<div>
+  <label for="tooltipSelect" class="form-label is-required mt-3">Select menu with helper inside a Tooltip</label>
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
+    <span class="visually-hidden">Helper for select menu</span>
+  </button>
+  <select id="tooltipSelect" class="form-select" required>
+    <option value="">Tooltip select</option>
+  </select>
+</div>
+{{< /example >}}
+
 ## Accessibility
 
 Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
@@ -196,3 +223,7 @@ Many form variables are set at a general level to be re-used and extended by ind
 `$input-btn-*` variables are shared global variables between our [buttons]({{< docsref "/components/buttons" >}}) and our form components. You'll find these frequently reassigned as values to other component-specific variables.
 
 {{< scss-docs name="input-btn-variables" file="scss/_variables.scss" >}}
+
+Variables for all form helpers:
+
+{{< scss-docs name="form-helper-variables" file="scss/_variables.scss" >}}

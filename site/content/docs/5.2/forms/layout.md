@@ -179,7 +179,7 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ### Horizontal form label sizing
 
-Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
@@ -188,8 +188,13 @@ This form variant, with **labels** that are **not above input fields**, should n
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
-<!-- Boosted mod: no .col-form-label-sm -->
 {{< example >}}
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+  <div class="col-sm-10">
+    <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+  </div>
+</div>
 <div class="row mb-3">
   <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
   <div class="col-sm-10">

@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v5.2.1 (https://boosted.orange.com/)
+ * Boosted Grid v5.2.2 (https://boosted.orange.com/)
  * Copyright 2014-2022 The Boosted Authors
  * Copyright 2014-2022 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v5.2.1 (https://getbootstrap.com/)
+ * Bootstrap Grid v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -49,6 +49,7 @@
   --bs-danger-rgb: 205, 60, 20;
   --bs-light-rgb: 204, 204, 204;
   --bs-dark-rgb: 0, 0, 0;
+  --bs-primary-text-rgb: 241, 110, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 0, 0, 0;
@@ -87,6 +88,7 @@
 [class*=bg-black],
 [class*=-dark]:not(.border-dark):not(.text-dark),
 [class*=bg-secondary] {
+  --bs-primary-text-rgb: 255, 121, 0;
   --bs-link-color: #fff;
   --bs-link-hover-color: #ff7900;
   --o-caption-color: #fff;
@@ -100,6 +102,7 @@
 [class*=bg-]:not([class*=bg-black],
 [class*=-dark]:not(.border-dark):not(.text-dark),
 [class*=bg-secondary]):not(.bg-transparent) {
+  --bs-primary-text-rgb: 241, 110, 0;
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
   --o-caption-color: var(--o-caption-color, #000);
@@ -2347,7 +2350,7 @@
 }
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-primary-text-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-light {
