@@ -46,9 +46,8 @@
 
 #### Development
 
-- [ ] My code follows the code style of the project _(using `npm run lint`)_
+- [ ] My change follows the [developer guide](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide)
 - [ ] I have added JavaScript unit tests to cover my changes
-- [ ] All new and existing tests passed
 
 #### Documentation
 
