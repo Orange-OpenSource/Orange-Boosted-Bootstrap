@@ -19,6 +19,51 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
+- **Card**
+  - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <h4 class="card-title">Title</h4>
+      + <h3 class="card-title">Title</h3>
+      ```
+    </details>
+
+  - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` when there is an image in the card to follow the design guidelines. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <p class="card-text">Description</p>
+      + <p class="card-text fw-bold">Description</p>
+      ```
+    </details>
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
+      ```
+    </details>
+
+- **Navs & Tabs**
+  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and consistency over the documentation. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      - Ensure that the root element of the tablist is a `<ul>`.
+      - Ensure that the `role="tablist"` is set on `<ul>`.
+      - Ensure that the `role="tablist"` has an `aria-owns` set too with all the ids it owns.
+      - Ensure that the `role="presentation"` is set on each `<li>` inside a `role="tablist"`.
+      - Ensure that the `role="tabpanel"` is set on each child of `.tab-content`.
+      - Ensure that the `disabled` links only miss the `[href]` attribute.
+    </details>
+
 - **Stepped Process**
   - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
   ```diff
@@ -26,11 +71,50 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
 
+### Forms
+
+- <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
+
+- <span class="badge bg-success">New</span> Small size form controls are now available. Small inputs are defined by their `.form-control-sm`, small selects by their `.form-select-sm`. They can be associated with `.col-form-label-sm` to correctly follow their size if needed. `.input-group-sm` can also be used depending on the context.
+
+### Examples
+
+- **Cards and Cards RTL**
+  - <span class="badge bg-warning">Warning</span> We now use correctly `<button>` instead of `<a>`. We now apply font style on our `.card-title` so these examples have been modified to follow the right semantic header hierarchy. Furthermore, we dropped unnecessary `.card-footer` and notice that size of icons has slightly changed. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>Example</summary>
+
+      ```diff
+        <div class="card">
+          <img src="..." alt="..."/>
+          <div class="card-body">
+      -     <h4 class="card-title">Title</h4>
+      +     <h3 class="card-title">Title</h3>
+      -     <h6 class="card-text">Caption</h6>
+      +     <p class="card-text fw-bold mb-4">Caption</p>
+      -   </div>
+      -   <div class="card-footer pt-2">
+      -     <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+      +     <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
+          </div>
+        </div>
+      ```
+    </details>
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$form-helper-label-margin-bottom</code></li>
+      <li><code>$form-helper-size</code></li>
+      <li><code>$form-select-border-radius-sm</code></li>
+      <li><code>$form-select-font-size-sm</code></li>
+      <li><code>$form-select-padding-x-sm</code></li>
+      <li><code>$form-select-padding-y-sm</code></li>
+      <li><code>$helper-icon</code></li>
+      <li><code>$input-border-radius-sm</code></li>
+      <li><code>$input-font-size-sm</code></li>
       <li><code>$table-cell-icon-margin-top</code></li>
       <li><code>$table-cell-icon-margin-bottom</code></li>
       <li><code>$table-cell-icon-margin-top-sm</code></li>
