@@ -1,3 +1,5 @@
+_Note: Please transform `- [ ]` into `- (NA)` in the description when things are not applicable_
+
 ### Related issues
 
 <!-- Please link any related issues here. -->
