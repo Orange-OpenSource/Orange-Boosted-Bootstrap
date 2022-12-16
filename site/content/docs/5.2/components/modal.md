@@ -244,13 +244,6 @@ When backdrop is set to static, the modal will not close when clicking outside o
 
 When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
-
-Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -719,7 +712,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants should not be used because they do not respect the Orange Design System specifications.
+These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
 
 Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}

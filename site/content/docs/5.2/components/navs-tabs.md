@@ -267,7 +267,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-These variants should not be used because they are a button component in the Orange Design System specifications.
+These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, they should be button components.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}

@@ -63,7 +63,7 @@ Add the `disabled` boolean attribute on a select to give it a grayed out appeara
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This **disabled** `<select>` element should not be used because it does no respect the Orange Design System specifications.
+This **disabled** `<select>` element should not be used with this appearance because it does no respect the Orange Design System specifications.
 
 Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) states guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}

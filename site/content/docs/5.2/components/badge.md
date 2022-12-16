@@ -55,9 +55,9 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 
 <!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
-This component variant should be used **only** inside a header component. Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examples.
+This component variant should be used **only** inside a header component.
 
-For other usages, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}) component. You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
+Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -107,7 +107,7 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 {{< ods-incompatibility-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
 
-Instead, you will have to use the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) component as described on the Orange Design System website. This component will be added later in Boosted.
+Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}

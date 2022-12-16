@@ -25,13 +25,6 @@ Informative tags are built on top of `<span>` and are usually used to display ca
 
 For a list of tags of an article, for example, add a heading (`<h1>–<h6>`) to explain that we are in a tags list and use `<ul>` or `<ol>` depending on the use case.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-`<ol>` variants should not be used because they do not respect the Orange Design System specifications.
-
-Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap m-0">
   <li><span class="tag">Bird</span></li>
@@ -49,12 +42,6 @@ Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-t
 A tag can be actionable either when built on top of a `<button>` or a `<label>`. These `<label>`s are based on either checkboxes or radios `<input>`. These tags are usually used as filters and have an `.active` state.
 
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
-
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-`<ol>` variants should not be used because they do not respect the Orange Design System specifications.
-Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
@@ -98,12 +85,6 @@ Another way to build actionable tags is to build them on top of `<a>`. These kin
 Put an explicit heading to add semantics. The text of the link must be clear enough to explain the destination of the tag.
 Most of the time, tags must be inside a list (`<ul>` or `<ol>`).
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-These `<ol>` variants should not be used because they do not respect the Orange Design System specifications.
-Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <ol class="list-unstyled d-flex gap-2 flex-wrap m-0">
   <li><a class="tag" href="#">1. Introduction</a></li>
@@ -116,12 +97,6 @@ Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-t
 This kind of tags are built on `<span>`.
 
 For a list of selected items use `<ul>` or `<ol>`.
-
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-`<ol>` variants should not be used because they do not respect the Orange Design System specifications.
-Please refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/components-examples/tags/examples/filter-by-brand/) of a component that can be built on top of this variant.
 

@@ -177,13 +177,6 @@ For invalid fields, ensure that the invalid feedback/error message is associated
 
 To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
 
-<!-- Boosted mod : design callout -->
-{{< ods-incompatibility-alert >}}
-This form variant should not be used because it does not respect the Orange Design System specifications.
-
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
