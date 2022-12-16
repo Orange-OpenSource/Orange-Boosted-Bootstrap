@@ -126,14 +126,13 @@
   --#{$prefix}nav-tabs-link-hover-color: #{$accessible-orange};
   --#{$prefix}nav-tabs-link-border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4); // stylelint-disable-line function-disallowed-list
   --#{$prefix}nav-tabs-link-hover-border-color: transparent;
-  --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+  --#{$prefix}nav-tabs-link-active-color: #{$black};
   --#{$prefix}nav-tabs-link-active-border-color: #{$accessible-orange};
   // scss-docs-end nav-tabs-light-css-vars
 
   .nav-link:hover,
   .nav-link:focus {
-    color: var(--#{$prefix}nav-tabs-link-hover-color);
-    outline-color: currentcolor;
+    outline-color: $accessible-orange;
   }
 }
 // End mod
