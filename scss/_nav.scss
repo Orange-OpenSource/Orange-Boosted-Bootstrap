@@ -126,7 +126,6 @@
   --#{$prefix}nav-tabs-link-hover-color: #{$accessible-orange};
   --#{$prefix}nav-tabs-link-border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4); // stylelint-disable-line function-disallowed-list
   --#{$prefix}nav-tabs-link-hover-border-color: transparent;
-  --#{$prefix}nav-tabs-link-active-color: #{$black};
   --#{$prefix}nav-tabs-link-active-border-color: #{$accessible-orange};
   // scss-docs-end nav-tabs-light-css-vars
 
