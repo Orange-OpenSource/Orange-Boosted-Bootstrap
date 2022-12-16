@@ -35,6 +35,10 @@
 
 - [ ] I have read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/.github/CONTRIBUTING.md)
 
+#### Accessibility
+
+- [ ] My change follows accessibility good practices; I have at least run axe
+
 #### Design
 
 - [ ] My change respects the design guidelines defined in [Orange Design System](https://system.design.orange.com/0c1af118d/p/8118d1-web)
