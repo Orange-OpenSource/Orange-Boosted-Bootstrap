@@ -135,11 +135,8 @@
       outline-color: currentcolor;
     }
 
-    &.active:hover {
-      color: var(--#{$prefix}nav-tabs-link-active-color);
-    }
-
     &.active {
+      color: var(--#{$prefix}nav-tabs-link-active-color);
       border-bottom-color: $accessible-orange;
     }
   }
