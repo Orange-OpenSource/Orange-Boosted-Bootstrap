@@ -3,6 +3,8 @@ layout: docs
 title: Tables
 description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.
 group: content
+aliases:
+  - "/docs/content/tables/"
 toc: true
 ---
 
@@ -631,7 +633,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 ## Rich content tables
 
 ### Row selection
-Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute.
+Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute, and use `.has-checkbox` on the table to get correct spacing on the first column.
 
 {{< callout info >}}
 #### Selection feature
@@ -640,7 +642,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 {{< /callout >}}
 
 <div>
-  <table class="table table-sm table-hover table-responsive">
+  <table class="table table-sm table-hover table-responsive has-checkbox">
     <thead>
       <tr>
         <th scope="col">
@@ -776,7 +778,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 ```html
 <div>
-  <table class="table table-sm table-hover table-responsive">
+  <table class="table table-sm table-hover table-responsive has-checkbox">
     <thead>
       <tr>
         <th scope="col">
@@ -838,7 +840,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 Use SVG to display thumbnails or icons in your table data cell elements.
 
 <div>
-  <table class="table table-sm table-hover table-responsive align-middle">
+  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
     <thead>
       <tr>
         <th scope="col">
