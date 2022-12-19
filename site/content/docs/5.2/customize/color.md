@@ -167,6 +167,12 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ## All colors
 
+{{< ods-incompatibility-alert >}}
+Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong the Orange Design System specifications.
+
+Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< callout warning >}}
 All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
 

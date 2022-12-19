@@ -554,6 +554,12 @@ exampleModal.addEventListener('show.bs.modal', event => {
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
+{{< ods-incompatibility-alert >}}
+This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
+
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -702,6 +708,12 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-xl-down` | `1280px` |
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
+
+{{< ods-incompatibility-alert >}}
+These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
+
+Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
