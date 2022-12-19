@@ -26,7 +26,7 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
       <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
     </li>
     <li class="stepped-process-item active">
-      <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
+      <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
     </li>
     <li class="stepped-process-item">
       <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
@@ -55,7 +55,7 @@ Add `.stepped-process-dark` to the `.stepped-process` for a dark variant.
       <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
     </li>
     <li class="stepped-process-item active">
-      <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
+      <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
     </li>
     <li class="stepped-process-item">
       <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>

@@ -663,7 +663,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 ## Rich content tables
 
 ### Row selection
-Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute.
+Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within `<th>` and `<td>` to display checkboxes and use the `checked` attribute, and use `.has-checkbox` on the table to get correct spacing on the first column.
 
 {{< callout info >}}
 #### Selection feature
@@ -671,8 +671,8 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div class="bd-example">
-  <table class="table table-sm table-hover table-responsive">
+<div>
+  <table class="table table-sm table-hover table-responsive has-checkbox">
     <caption class="visually-hidden">Boosted table with a selection feature</caption>
     <thead>
       <tr>
@@ -808,66 +808,71 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<table class="table table-sm table-hover table-responsive">
-  <thead>
+<div>
+  <table class="table table-sm table-hover table-responsive has-checkbox">
     <caption class="visually-hidden">Boosted table with a selection feature</caption>
-    <tr>
-      <th scope="col">
-        <div class="form-check mb-0">
-          <input class="form-check-input" type="checkbox" id="customCheck">
-          <label class="form-check-label" for="customCheck">
-            <span class="visually-hidden">Select all</span>
-          </label>
-        </div>
-      </th>
-      <th scope="col">Column header</th>
-      <th scope="col">Column header</th>
-      <th scope="col">Column header</th>
-      <th scope="col">Column header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <div class="form-check mb-0">
-          <input class="form-check-input" type="checkbox" id="customCheck1">
-          <label class="form-check-label" for="customCheck1">
-              <span class="visually-hidden">Select first row</span>
-          </label>
-        </div>
-      </td>
-      ...
-    </tr>
-    <tr>...</tr>
-    <tr class="table-active">
-      <td>
-        <div class="form-check mb-0">
-          <input class="form-check-input" type="checkbox" id="customCheck3" checked>
-          <label class="form-check-label" for="customCheck3">
-              <span class="visually-hidden">Select third row</span>
-          </label>
-        </div>
-      </td>
-      <td>Cell text</td>
-      <td>Cell text</td>
-      <td>Cell text</td>
-      <td>Cell text</td>
-    </tr>
-    <tr class="table-active">...</tr>
-    <tr>...</tr>
-    <tr>...</tr>
-    <tr>...</tr>
-    <tr>...</tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th scope="col">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck">
+            <label class="form-check-label" for="customCheck">
+              <span class="visually-hidden">Select all</span>
+            </label>
+          </div>
+        </th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+        <th scope="col">Column header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck1">
+            <label class="form-check-label" for="customCheck1">
+                <span class="visually-hidden">Select first row</span>
+            </label>
+          </div>
+        </td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+      </tr>
+      <tr>...</tr>
+      <tr class="table-active">
+        <td>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="customCheck3" checked>
+            <label class="form-check-label" for="customCheck3">
+                <span class="visually-hidden">Select third row</span>
+            </label>
+          </div>
+        </td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+        <td>Cell text</td>
+      </tr>
+      <tr class="table-active">...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+      <tr>...</tr>
+    </tbody>
+  </table>
+</div>
 ```
 
 ### With icons or thumbnails
 
 Use SVG to display thumbnails or icons in your table data cell elements.
 
-<div class="bd-example">
-  <table class="table table-sm table-hover table-responsive align-middle">
+<div>
+  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
     <caption class="visually-hidden">Boosted table with icons in a row</caption>
     <thead>
       <tr>
@@ -1067,7 +1072,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </td>
 ```
 
-<div class="bd-example">
+<div>
   <table class="table table-responsive align-middle">
     <caption class="visually-hidden">Boosted table with icons inside a row</caption>
     <thead>

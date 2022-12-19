@@ -56,6 +56,14 @@
   > thead {
     vertical-align: bottom;
   }
+
+  // Boosted mod
+  // When using checkboxes in the first column, force width to ensure correct spacing on this column
+  &.has-checkbox tr > :first-child {
+    width: $spacer * 2;
+    max-width: $spacer * 2;
+  }
+  // End mod
 }
 
 .table-group-divider {
