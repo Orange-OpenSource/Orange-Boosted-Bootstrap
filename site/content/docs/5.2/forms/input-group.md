@@ -275,12 +275,6 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
-{{< ods-incompatibility-alert >}}
-These **3 first** form variants should not be used because they do not respect the Orange Design System specifications.
-
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 {{< example >}}
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupSelect01">Options</label>
@@ -324,12 +318,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 {{< /example >}}
 
 ### Custom file input
-
-{{< ods-incompatibility-alert >}}
-These form variants should not be used because they do not respect the Orange Design System specifications.
-
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
