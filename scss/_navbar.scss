@@ -121,7 +121,8 @@
   white-space: nowrap;
   @include transition($navbar-brand-transition);
 
-  // Boosted mod: no focus
+  //// No focus
+
   &:hover {
     color: var(--#{$prefix}navbar-brand-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
@@ -315,8 +316,8 @@
   }
 
   // Boosted mod: close icon when opened & color state
-  &:hover .navbar-toggler-icon,
-  &:active .navbar-toggler-icon {
+  &:hover,
+  &:active {
     --#{$prefix}navbar-toggler-icon-filter: #{$orange-filter};
   }
 

@@ -27,7 +27,6 @@
 }
 
 .form-check-input {
-  position: relative; // Boosted mod: here to handle focus state when to close from each other
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
@@ -153,6 +152,7 @@
   padding-left: $form-switch-padding-start;
 
   .form-check-input {
+    position: relative; // Boosted mod: needed because of filter property
     width: $form-switch-width;
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
@@ -164,13 +164,23 @@
     border-color: $white; // Boosted mod
     @include border-radius($form-switch-border-radius);
     @include transition($form-switch-transition);
-    outline-color: #0e91ff; //  // Boosted mod : inverted color of $accessible-orange to compose with filter: invert(1)
+
+    &:focus {
+      &[data-focus-visible-added] {
+        @include focus-visible($color: $outline-box-color, $box-color: $outline-color);
+      }
+    }
 
     &:checked {
       background-color: $primary;
       filter: none; // Boosted mod
       border-color: $primary;
-      outline-color: $accessible-orange; // Boosted mod
+
+      &:focus {
+        &[data-focus-visible-added] {
+          @include focus-visible($color: $outline-color, $box-color: $outline-box-color);
+        }
+      }
 
       @if $enable-gradients {
         background-image: $form-switch-checked-bg-image, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient);

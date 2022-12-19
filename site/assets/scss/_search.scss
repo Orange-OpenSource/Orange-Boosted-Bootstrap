@@ -40,8 +40,9 @@
 
   &:focus {
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    @include focus-visible();
-    box-shadow: unset;
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 
   .DocSearch-Search-Icon {
@@ -74,13 +75,16 @@
 
 .DocSearch-Input:focus {
   outline: 0;
+  box-shadow: none;
 }
 
 .DocSearch-Reset {
   @include border-radius(0, 0);
 
   &:focus {
-    @include focus-visible();
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 }
 
@@ -147,6 +151,12 @@
 
   &:hover {
     color: var(--docsearch-highlight-color);
+  }
+
+  &:focus {
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 }
 // End mod

@@ -22,7 +22,6 @@
 }
 
 .nav-link {
-  position: relative; // Boosted mod: ensure that the outline goes over the next elements.
   display: flex; // Boosted mod
   align-items: center; // Boosted mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
@@ -86,8 +85,8 @@
 
     // Boosted mod: no focus
     &:hover {
-      color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
-      background-color: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
+      color: var(--#{$prefix}nav-tabs-link-hover-color); // Boosted mod
+      background-color: var(--#{$prefix}nav-tabs-link-hover-bg); // Boosted mod
       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
       isolation: isolate;
       border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
