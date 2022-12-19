@@ -126,23 +126,6 @@
   --#{$prefix}nav-tabs-link-hover-border-color: transparent;
   --#{$prefix}nav-tabs-link-active-border-color: #{$accessible-orange};
   // scss-docs-end nav-tabs-light-css-vars
-
-  border-color: $gray-500;
-
-  .nav-link {
-    // stylelint-disable-next-line function-disallowed-list
-    border-width: 0 0 calc(var(--#{$prefix}nav-tabs-border-width) * 4);
-
-    &:hover {
-      color: $accessible-orange;
-      background: none;
-      border-color: transparent;
-    }
-
-    &.active {
-      border-bottom-color: $accessible-orange;
-    }
-  }
 }
 // End mod
 
