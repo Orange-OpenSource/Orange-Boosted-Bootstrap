@@ -837,7 +837,7 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
 {{< ods-incompatibility-alert >}}
-The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They can be used only if featuring multiple selections.
+The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
