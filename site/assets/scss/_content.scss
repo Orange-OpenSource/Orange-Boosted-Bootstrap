@@ -29,10 +29,15 @@
     // stylelint-enable selector-max-type, selector-max-compound-selectors
   }
 
-  // Boosted mod: overrides Bootstrap documentation table rules
-  > .table th,
-  > .table td:first-child > code {
-    white-space: nowrap;
+  // Boosted mod: remove most Bootstrap table rules
+  > .table,
+  > .table-responsive .table {
+    // Prevent breaking of code
+    // stylelint-disable-next-line selector-max-compound-selectors
+    th,
+    td:first-child > code {
+      white-space: nowrap;
+    }
   }
 
   > .table-typography {
