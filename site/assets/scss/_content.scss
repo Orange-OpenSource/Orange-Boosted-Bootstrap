@@ -29,9 +29,10 @@
     // stylelint-enable selector-max-type, selector-max-compound-selectors
   }
 
-  // Boosted mod: remove most Bootstrap table rules
+  // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
+    // Boosted mod: remove unwanted rules
     // Prevent breaking of code
     // stylelint-disable-next-line selector-max-compound-selectors
     th,
@@ -40,6 +41,7 @@
     }
   }
 
+  // Boosted mod
   > .table-typography {
     white-space: nowrap;
 
