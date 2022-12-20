@@ -197,13 +197,8 @@ extra_js:
               </div>
               <div class="mb-3">
                 <label for="textareaMessage" id="textareaMessageLabel" class="form-label is-required">Message</label>
-                <button type="button" class="btn btn-link p-0 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-title="Help message for text area">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false"
-                    aria-hidden="true">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
-                  </svg>
-                  <span class="visually-hidden">Help message for text area</span>
+                <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for text area">
+                  <span class="visually-hidden">Helper for text area</span>
                 </button>
                 <textarea class="form-control" id="textareaMessage" rows="5"
                   placeholder="Describe your business and your motivation in becoming an Orange reseller"
