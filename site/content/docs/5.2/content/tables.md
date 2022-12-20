@@ -360,7 +360,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
-  <table class="table table-striped table-dark">
+  <table class="table table-striped table-bordered">
     <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
     <thead>
       <tr>
