@@ -76,8 +76,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - **Tables**
   - <span class="badge bg-warning">Warning</span> Every table now has a caption with `.visually-hidden` on it. Please reflect this modification into your websites.
   - <span class="badge bg-success">New</span> Tables now fully support striped rows and columns.
-  - <span class="badge bg-success">New</span> Tables now fully support branded hover on every tables.
-  - <span class="badge bg-success">New</span> Tables now fully support sticky `<thead>` using `.thead-sticky` on `<thead>`.
+  - Tables now fully support branded hover on every tables.
 
 ### Forms
 
@@ -115,8 +114,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-table-accent-bg</code></li>
-      <li><code>--bs-table-striped-color</code></li>
       <li><code>--bs-table-striped-bg</code></li>
+      <li><code>--bs-table-striped-color</code></li>
       <li><code>--bs-table-striped-hover-color</code></li>
       <li><code>--bs-table-striped-hover-bg</code></li>
     </ul>
@@ -135,19 +134,18 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$input-border-radius-sm</code></li>
       <li><code>$input-font-size-sm</code></li>
       <li><code>$table-accent-bg</code></li>
-      <li><code>$table-striped-color</code></li>
+      <li><code>$table-striped-bg</code></li>
       <li><code>$table-striped-bg-factor</code></li>
-      <li><code>$table-striped-bg</code></li>
-      <li><code>$table-striped-hover-color</code></li>
-      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-color</code></li>
+      <li><code>$table-striped-columns-order</code></li>
       <li><code>$table-striped-hover-bg</code></li>
-      <li><code>$table-striped-bg</code></li>
-      <li><code>$table-variant-striped-hover-bg-factor</code></li>
-      <li><code>$table-variant-striped-hover-bg</code></li>
+      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-hover-color</code></li>
+      <li><code>$table-striped-order</code></li>
       <li><code>$table-variant-active-bg-factor</code></li>
       <li><code>$table-variant-hover-bg-factor</code></li>
-      <li><code>$table-striped-order</code></li>
-      <li><code>$table-striped-columns-order</code></li>
+      <li><code>$table-variant-striped-hover-bg</code></li>
+      <li><code>$table-variant-striped-hover-bg-factor</code></li>
     </ul>
   </details>
 

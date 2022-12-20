@@ -21,9 +21,7 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 To make a table accessible, you should respect these three main rules:
 
 - If the table is an important one, add a `role="region"` attribute to help screen readers.
-
 - add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers.
-
 - add a `<caption>` on each table. If the table doesn't have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
 
 See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
@@ -150,7 +148,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ```html
 <table class="table">
-  <caption class="visually-hidden">Boosted table with an active row and cell</caption>
+  ...
   <thead>
     ...
   </thead>
@@ -205,7 +203,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ```html
 <table class="table table-dark">
-  <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
+  ...
   <thead>
     ...
   </thead>
@@ -227,7 +225,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ## How do the variants and accented tables work?
 
-For the accented tables (([striped rows](#striped-rows), [striped columns](#striped-columns), [hoverable rows](#hoverable-rows) and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
+For the accented tables ([striped rows](#striped-rows), [striped columns](#striped-columns), [hoverable rows](#hoverable-rows) and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
 
 - We start by setting the background of a table cell with the `--bs-table-bg` custom property. All table variants then set that custom property to colorize the table cells. This way, we don't get into trouble if semi-transparent colors are used as table backgrounds.
 - Then we add an inset box shadow on the table cells with `box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);` to layer on top of any specified `background-color`. Because we use a huge spread and no blur, the color will be monotone. Since `--bs-table-accent-bg` is unset by default, we don't have a default box shadow.
@@ -248,8 +246,6 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
 {{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
-
-<!-- Boosted mod : No table group dividers -->
 
 ## Table group dividers
 
@@ -331,7 +327,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 ```html
 <div class="table-responsive">
   <table class="table align-middle">
-    <caption class="visually-hidden">...</caption>
+    ...
     <thead>
       <tr>
         ...
@@ -420,7 +416,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 
 ```html
 <table class="table table-striped table-dark">
-  <caption class="visually-hidden">...</caption>
+  ...
   <thead>
     ...
   </thead>
@@ -429,7 +425,6 @@ Border styles, active styles, and table variants are not inherited by nested tab
     <tr>
       <td colspan="4">
         <table class="table mb-0">
-          <caption class="visually-hidden">...</caption>
           ...
         </table>
       </td>
@@ -462,7 +457,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 
 ```html
 <table class="table table-sm">
-  <caption>List of users</caption>
+  ...
   <thead>
     ...
   </thead>
@@ -484,7 +479,7 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
 
 ```html
 <table class="table caption-bottom">
-  <caption>List of users</caption>
+  ...
   <thead>
     ...
   </thead>
@@ -571,7 +566,6 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 ```html
 <div class="table-responsive">
   <table class="table">
-    <caption class="visually-hidden">...</caption>
     ...
   </table>
 </div>
@@ -810,7 +804,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 ```html
 <div>
   <table class="table table-sm table-hover table-responsive has-checkbox">
-    <caption class="visually-hidden">Boosted table with a selection feature</caption>
+    ...
     <thead>
       <tr>
         <th scope="col">
