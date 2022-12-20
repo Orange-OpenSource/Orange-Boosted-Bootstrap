@@ -216,12 +216,14 @@
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
   outline-offset: -$outline-width; // Boosted mod
+  box-shadow: none; // Boosted mod
 
   // Boosted mod: no focus
   &:hover {
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
+    outline-color: var(--#{$prefix}focus-outline-inner-color); // Boosted mod
   }
 
   &.active,
@@ -229,6 +231,7 @@
     color: var(--#{$prefix}dropdown-link-active-color);
     text-decoration: none;
     @include gradient-bg(var(--#{$prefix}dropdown-link-active-bg));
+    outline-color: var(--#{$prefix}focus-outline-inner-color); // Boosted mod
   }
 
   &.disabled,

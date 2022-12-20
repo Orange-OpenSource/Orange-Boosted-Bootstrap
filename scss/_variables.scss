@@ -620,6 +620,9 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
+// fusv-disable
+$transition-focus:    outline-offset $transition-duration $transition-timing !default; // Deprecated in v5.2.3
+// fuscv-enable
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
@@ -1075,6 +1078,9 @@ $form-check-inline-margin-end:    1rem !default;
 $form-star-size:                  1.5625rem !default;
 $form-star-size-sm:               1.25rem !default;
 $form-star-margin-between:        -.125rem !default;
+//fusv-disable
+$form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
+//fusv-enable
 
 // End mod
 // scss-docs-end form-check-variables
@@ -1539,7 +1545,7 @@ $accordion-body-padding-x:                $spacer !default; // Boosted mod
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
-$accordion-button-bg:                     transparent !default; // Boosted mod
+$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
