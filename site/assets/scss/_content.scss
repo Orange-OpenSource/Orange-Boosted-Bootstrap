@@ -29,39 +29,12 @@
     // stylelint-enable selector-max-type, selector-max-compound-selectors
   }
 
-  // Override Bootstrap defaults
-  > .table,
-  > .table-responsive .table {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-    @include font-size(.875rem);
-
-    thead {
-      border-bottom: 2px solid currentcolor;
-    }
-
-    tbody:not(:first-child) {
-      border-top: 2px solid currentcolor;
-    }
-
-    th,
-    td {
-      // Boosted mod: no '&:first-child{padding-left: 0;}' to respect our design guidelines in docs
-
-      &:not(:last-child) {
-        padding-right: 1rem; // Boosted mod
-      }
-    }
-
-    // Prevent breaking of code
-    // stylelint-disable-next-line selector-max-compound-selectors
-    th,
-    td:first-child > code {
-      white-space: nowrap;
-    }
+  // Boosted mod: overrides Bootstrap documentation table rules
+  > .table th > code,
+  > .table td:first-child > code {
+    white-space: nowrap;
   }
 
-  // Boosted mod
   > .table-typography {
     white-space: nowrap;
 
