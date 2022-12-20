@@ -30,7 +30,7 @@
   }
 
   // Boosted mod: overrides Bootstrap documentation table rules
-  > .table th > code,
+  > .table th,
   > .table td:first-child > code {
     white-space: nowrap;
   }
