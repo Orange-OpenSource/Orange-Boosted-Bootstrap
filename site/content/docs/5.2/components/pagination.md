@@ -179,7 +179,7 @@ Then, recompile your Sass.
 
 The following example uses our smart responsive pagination. To avoid pagination wrapping or overflowing, we limit the number of displayed pagination items depending on the breakpoints by displaying automatically some ellipsis.
 
-{{< example class="bd-example-responsive-pagination px-0" >}}
+{{< example class="bd-example-responsive-pagination px-0 px-sm-3" >}}
 <nav aria-label="Smart responsive page navigation example">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
