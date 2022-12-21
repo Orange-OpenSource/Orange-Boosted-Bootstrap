@@ -415,7 +415,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 </div>
 
 ```html
-<table class="table table-striped table-dark">
+<table class="table table-striped table-bordered">
   ...
   <thead>
     ...
