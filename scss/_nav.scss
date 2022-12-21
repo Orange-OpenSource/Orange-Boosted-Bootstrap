@@ -132,8 +132,7 @@
 
   .nav-link:hover,
   .nav-link:focus {
-    color: var(--#{$prefix}nav-tabs-link-hover-color);
-    outline-color: currentcolor;
+    outline-color: $accessible-orange;
   }
 }
 // End mod
