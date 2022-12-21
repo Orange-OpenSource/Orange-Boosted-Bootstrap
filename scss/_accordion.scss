@@ -28,6 +28,7 @@
   // Boosted mod: no --#{$prefix}accordion-btn-focus-box-shadow
   --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
   --#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
+  --#{$prefix}accordion-body-padding-top: #{$accordion-body-padding-top};
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
   // scss-docs-end accordion-css-vars
@@ -85,10 +86,6 @@
   border-width: var(--#{$prefix}accordion-border-width) 0 0; // Boosted mod
 }
 
-.accordion-collapse {
-  padding: 5px 0;
-}
-
 .accordion-item {
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
@@ -123,7 +120,7 @@
 }
 
 .accordion-body {
-  padding: 0 var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y) 0; // Boosted mod
+  padding: var(--#{$prefix}accordion-body-padding-top) var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y) 0; // Boosted mod
 }
 
 // Boosted mod: no Flush accordion items

@@ -118,6 +118,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>--bs-table-striped-color</code></li>
       <li><code>--bs-table-striped-hover-bg</code></li>
       <li><code>--bs-table-striped-hover-color</code></li>
+      <li><code>--bs-body-padding-top</code></li>
     </ul>
   </details>
 
@@ -146,6 +147,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$table-variant-hover-bg-factor</code></li>
       <li><code>$table-variant-striped-hover-bg</code></li>
       <li><code>$table-variant-striped-hover-bg-factor</code></li>
+      <li><code>$$accordion-body-padding-top</code></li>
     </ul>
   </details>
 
