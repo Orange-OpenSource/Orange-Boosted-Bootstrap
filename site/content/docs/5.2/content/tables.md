@@ -645,7 +645,6 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{- if not (eq . "xs") }}
 <div class="table-responsive{{ .abbr }}">
   <table class="table">
-    <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
     ...
   </table>
 </div>
