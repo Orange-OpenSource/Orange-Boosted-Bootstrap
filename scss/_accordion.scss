@@ -85,6 +85,10 @@
   border-width: var(--#{$prefix}accordion-border-width) 0 0; // Boosted mod
 }
 
+.accordion-collapse {
+  padding: 5px 0;
+}
+
 .accordion-item {
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
