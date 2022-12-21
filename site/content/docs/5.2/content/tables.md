@@ -14,7 +14,17 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Boosted.
 
-{{< table class="table" simplified="false" >}}
+{{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
+
+## Accessibility
+
+To make a table accessible, you should respect these three main rules:
+
+- If the table is an important one, add a `role="region"` attribute to help screen readers.
+- add a `scope="col"` or `scope="row"` attribute to the tags when needed to make the content of table readable by screen readers.
+- add a `<caption>` on each table. If the table doesn't have a caption or if the caption is not enough informative to describe the table, add an `aria-label` attribute to describe the table content. The `aria-label` should match the following pattern: `aria-label="Description of table data - Description of table metadata (e.g.: table with one level of column header)"`. The metadata is mandatory for complex tables.
+
+See [more information about the tables structures](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables).
 
 ## Variants
 
@@ -23,6 +33,7 @@ Use contextual class to color tables, table rows or individual cells.
 
 <div class="bd-example">
   <table class="table">
+    <caption class="visually-hidden">Boosted table variants</caption>
     <thead>
       <tr>
         <th scope="col">Class</th>
@@ -64,13 +75,39 @@ Use contextual class to color tables, table rows or individual cells.
 
 ## Accented tables
 
+### Striped rows
+
+Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+
+{{< table class="table table-striped" caption="Boosted striped rows table" >}}
+
+### Striped columns
+
+Use .table-striped-columns to add zebra-striping to any table column.
+
+{{< table class="table table-striped-columns" caption="Boosted striped columns table" >}}
+
+These classes can also be added to table variants:
+
+{{< table class="table table-dark table-striped" caption="Boosted dark striped rows table" >}}
+
+{{< table class="table table-dark table-striped-columns" caption="Boosted dark striped columns table" >}}
+
+<!-- Boosted mod : no .table-success -->
+
 ### Hoverable rows
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-{{< table class="table table-hover" >}}
+{{< table class="table table-hover" caption="Boosted hoverable table" >}}
 
-{{< table class="table table-dark table-hover" >}}
+{{< table class="table table-dark table-hover" caption="Boosted hoverable dark table" >}}
+
+These hoverable rows can also be combined with the striped rows variant:
+
+{{< table class="table table-striped table-hover" caption="Boosted hoverable striped table" >}}
+
+{{< table class="table table-dark table-striped table-hover" caption="Boosted hoverable dark striped table" >}}
 
 ### Active tables
 
@@ -78,6 +115,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
   <table class="table">
+    <caption class="visually-hidden">Boosted table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -110,6 +148,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ```html
 <table class="table">
+  ...
   <thead>
     ...
   </thead>
@@ -131,6 +170,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
   <table class="table table-dark">
+    <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -163,6 +203,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ```html
 <table class="table table-dark">
+  ...
   <thead>
     ...
   </thead>
@@ -184,11 +225,11 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ## How do the variants and accented tables work?
 
-For the accented tables ([hoverable rows](#hoverable-rows) and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
+For the accented tables ([striped rows](#striped-rows), [striped columns](#striped-columns), [hoverable rows](#hoverable-rows) and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
 
 - We start by setting the background of a table cell with the `--bs-table-bg` custom property. All table variants then set that custom property to colorize the table cells. This way, we don't get into trouble if semi-transparent colors are used as table backgrounds.
 - Then we add an inset box shadow on the table cells with `box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);` to layer on top of any specified `background-color`. Because we use a huge spread and no blur, the color will be monotone. Since `--bs-table-accent-bg` is unset by default, we don't have a default box shadow.
-- When either `.table-hover` or `.table-active` classes are added, the `--bs-table-accent-bg` is set to a semitransparent color to colorize the background.
+- When either `.table-striped`, `.table-striped-columns`, `.table-hover` or `.table-active` classes are added, the `--bs-table-accent-bg` is set to a semitransparent color to colorize the background.
 - For each table variant, we generate a `--bs-table-accent-bg` color with the highest contrast depending on that color. For example, the accent color for `.table-dark` has a lighter accent color.
 - Text and border colors are generated the same way, and their colors are inherited by default.
 
@@ -196,13 +237,15 @@ Behind the scenes it looks like this:
 
 {{< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >}}
 
+<!-- Boosted mod : No table borders -->
+
 ## Small tables
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
-{{< table class="table table-sm" >}}
+{{< table class="table table-sm" caption="Boosted small table" >}}
 
-{{< table class="table table-dark table-sm" >}}
+{{< table class="table table-dark table-sm" caption="Boosted dark small table" >}}
 
 ## Table group dividers
 
@@ -210,6 +253,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 
 {{< example >}}
 <table class="table">
+  <caption class="visually-hidden">Boosted group divided table</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -247,6 +291,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table align-middle">
+      <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
       <thead>
         <tr>
           <th scope="col" class="w-25">Heading 1</th>
@@ -282,6 +327,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 ```html
 <div class="table-responsive">
   <table class="table align-middle">
+    ...
     <thead>
       <tr>
         ...
@@ -310,64 +356,67 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <table class="table mb-0">
-          <thead>
-            <tr>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">A</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">B</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">C</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-striped table-bordered">
+    <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <table class="table mb-0">
+          <caption class="visually-hidden">Boosted nested table</caption>
+            <thead>
+              <tr>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">A</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">B</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">C</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ```html
-<table class="table table-sm">
+<table class="table table-striped table-bordered">
+  ...
   <thead>
     ...
   </thead>
@@ -393,80 +442,52 @@ Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be
 
 ## Anatomy
 
+<!-- Boosted mod : no table head or table foot -->
+
 ### Captions
 
 A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
-{{< example >}}
-<table class="table">
-  <caption>List of users</caption>
+<div class="bd-example">
+  <table class="table">
+    <caption>List of users</caption>
+    {{< partial "table-content" >}}
+  </table>
+</div>
+
+```html
+<table class="table table-sm">
+  ...
   <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
+    ...
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    ...
   </tbody>
 </table>
-{{< /example >}}
+```
 
 <!-- Boosted mod: default caption-side is top -->
 You can also put the `<caption>` on the bottom of the table with `.caption-bottom`.
 
-{{< example >}}
+<div class="bd-example">
+  <table class="table caption-bottom">
+    <caption>List of users</caption>
+    {{< partial "table-content" >}}
+  </table>
+</div>
+
+```html
 <table class="table caption-bottom">
-  <caption>List of users</caption>
+  ...
   <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
+    ...
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    ...
   </tbody>
 </table>
-{{< /example >}}
+```
 
 ## Responsive tables
 
@@ -482,9 +503,10 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
-{{< example >}}
-  <div class="table-responsive" tabindex="0">
+<div class="bd-example">
+  <div class="table-responsive">
     <table class="table">
+      <caption class="visually-hidden">Boosted responsive table</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -539,7 +561,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
       </tbody>
     </table>
   </div>
-{{< /example >}}
+</div>
 
 ```html
 <div class="table-responsive">
@@ -561,6 +583,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 <div class="bd-example">
   <div class="table-responsive{{ .abbr }}">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -643,6 +666,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 <div>
   <table class="table table-sm table-hover table-responsive has-checkbox">
+    <caption class="visually-hidden">Boosted table with a selection feature</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -779,6 +803,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 ```html
 <div>
   <table class="table table-sm table-hover table-responsive has-checkbox">
+    ...
     <thead>
       <tr>
         <th scope="col">
@@ -841,6 +866,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 
 <div>
   <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
+    <caption class="visually-hidden">Boosted table with icons in a row</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -1041,6 +1067,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 
 <div>
   <table class="table table-responsive align-middle">
+    <caption class="visually-hidden">Boosted table with icons inside a row</caption>
     <thead>
       <tr>
         <th scope="col">Column header</th>
