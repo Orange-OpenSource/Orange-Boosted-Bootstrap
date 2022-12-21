@@ -787,43 +787,58 @@ $mark-bg-dark:                $white !default; // Boosted mod
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:              .875rem !default;
-$table-cell-padding-x:              $spacer * .5 !default;
-$table-cell-icon-margin-top:        -.688rem !default; // Boosted mod
-$table-cell-icon-margin-bottom:     -.438rem !default; // Boosted mod
-$table-cell-padding-y-sm:           .5625rem !default;
-$table-cell-padding-x-sm:           $table-cell-padding-x !default;
-$table-cell-icon-margin-top-sm:     -.563rem !default; // Boosted mod
-$table-cell-icon-margin-bottom-sm:  -.313rem !default; // Boosted mod
+$table-cell-padding-y:                  .875rem !default;
+$table-cell-padding-x:                  $spacer * .5 !default;
+$table-cell-icon-margin-top:            -.688rem !default; // Boosted mod
+$table-cell-icon-margin-bottom:         -.438rem !default; // Boosted mod
+$table-cell-padding-y-sm:               .5625rem !default;
+$table-cell-padding-x-sm:               $table-cell-padding-x !default;
+$table-cell-icon-margin-top-sm:         -.563rem !default; // Boosted mod
+$table-cell-icon-margin-bottom-sm:      -.313rem !default; // Boosted mod
 
-$table-cell-vertical-align:   top !default;
-$table-line-height:           1.25 !default; // Boosted mod
+$table-cell-vertical-align:             top !default;
+$table-line-height:                     1.25 !default; // Boosted mod
 
-$table-color:                 var(--#{$prefix}body-color) !default;
-$table-bg:                    $body-bg !default;
-// Boosted mod: no $table-accent-bg
+$table-color:                           var(--#{$prefix}body-color) !default;
+$table-bg:                              $body-bg !default; // Boosted mod
+$table-accent-bg:                       transparent !default;
 
-$table-th-font-weight:        null !default;
+$table-th-font-weight:                  null !default;
 
-$table-active-color:          $table-color !default;
-$table-active-bg-factor:      .1 !default;
-$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-striped-color:                   $table-color !default;
+$table-striped-bg-factor:               .065 !default; // Boosted mod
+$table-striped-bg:                      rgba($black, $table-striped-bg-factor) !default;
+$table-striped-hover-color:             $table-color !default; // Boosted mod
+$table-striped-hover-bg-factor:         .4 !default; // Boosted mod
+$table-striped-hover-bg:                rgba($black, $table-striped-hover-bg-factor) !default; // Boosted mod
+$table-variant-striped-bg-factor:       .2 !default; // Boosted mod
+$table-variant-striped-hover-bg-factor: .865 !default; // Boosted mod
 
-$table-hover-color:           $table-color !default;
-$table-hover-bg-factor:       .065 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-active-color:                    $table-color !default;
+$table-active-bg-factor:                .135 !default; // Boosted mod
+$table-active-bg:                       rgba($black, $table-active-bg-factor) !default;
+$table-variant-active-bg-factor:        .6 !default; // Boosted mod
 
-$table-border-factor:         .4 !default;
-$table-border-width:          $border-width * .5 !default; // Boosted mod
-$table-border-color:          $gray-500 !default; // Boosted mod
+$table-hover-color:                     $table-color !default;
+$table-hover-bg-factor:                 .065 !default; // Boosted mod
+$table-hover-bg:                        rgba($black, $table-hover-bg-factor) !default;
+$table-variant-hover-bg-factor:         .2 !default; // Boosted mod
 
-// Boosted mod: no $table-striped-*
+$table-border-factor:                   .4 !default; // Boosted mod
+/* stylelint-disable-next-line function-disallowed-list */
+$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
+$table-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 
-$table-group-separator-color: currentcolor !default;
+$table-striped-order:                   odd !default;
+$table-striped-columns-order:           even !default;
 
-$table-caption-color:         var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
-$table-caption-color-dark:    $white !default; // Boosted mod
-$table-caption-padding-y:     .75rem !default; // Boosted mod
+$table-group-separator-color:           currentcolor !default;
+
+$table-caption-color:                   var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
+$table-caption-color-dark:              $white !default; // Boosted mod
+$table-caption-padding-y:               .75rem !default; // Boosted mod
+
+// Boosted mod: no $table-bg-scale
 // scss-docs-end table-variables
 
 // scss-docs-start table-loop

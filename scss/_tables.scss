@@ -6,7 +6,11 @@
   --#{$prefix}table-color: #{$table-color};
   --#{$prefix}table-bg: #{$table-bg};
   --#{$prefix}table-border-color: #{$table-border-color};
-  // Boosted mod: no table-accent-bg
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-striped-hover-color: #{$table-striped-hover-color}; // Boosted mod
+  --#{$prefix}table-striped-hover-bg: #{$table-striped-hover-bg}; // Boosted mod
   --#{$prefix}table-active-color: #{$table-active-color};
   --#{$prefix}table-active-bg: #{$table-active-bg};
   --#{$prefix}table-hover-color: #{$table-hover-color};
@@ -30,14 +34,14 @@
   // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px); // Boosted mod
-    line-height: $table-line-height; // Boosted mod
+    padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px);
+    line-height: $table-line-height;
     background-color: var(--#{$prefix}table-bg);
     box-shadow: inset 0 0 0 9999px var(--#{$prefix}table-accent-bg);
   }
 
   > thead > tr {
-    border-bottom-width: $table-border-width * 2;
+    border-bottom-width: calc($table-border-width * 2); // stylelint-disable-line function-disallowed-list
   }
 
   > tbody > th {
@@ -47,6 +51,10 @@
 
   > tbody {
     vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: bottom;
   }
 
   // Boosted mod
@@ -66,7 +74,7 @@
 }
 
 .table-group-divider {
-  border-top: ($table-border-width * 2) solid $table-group-separator-color;
+  border-top: calc($table-border-width * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
 }
 
 //
@@ -102,7 +110,25 @@
 
 // Boosted mod: no .table-borderless
 
-// Boosted mod: no .table-striped
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+// For rows
+.table-striped {
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    color: var(--#{$prefix}table-striped-color);
+  }
+}
+
+// For columns
+.table-striped-columns {
+  > :not(caption) > tr > :nth-child(#{$table-striped-columns-order}) {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    color: var(--#{$prefix}table-striped-color);
+  }
+}
 
 // Active table
 //
@@ -122,10 +148,14 @@
     --#{$prefix}table-accent-bg: var(--#{$prefix}table-hover-bg);
     color: var(--#{$prefix}table-hover-color);
   }
+
+  // Boosted mod
+  &.table-striped > tbody > tr:hover > * {
+    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-hover-bg);
+    color: var(--#{$prefix}table-striped-hover-color);
+  }
+  // End mod
 }
-
-
-// Boosted mod: no table-row-variants
 
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
