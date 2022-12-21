@@ -116,8 +116,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>--bs-table-accent-bg</code></li>
       <li><code>--bs-table-striped-bg</code></li>
       <li><code>--bs-table-striped-color</code></li>
-      <li><code>--bs-table-striped-hover-color</code></li>
       <li><code>--bs-table-striped-hover-bg</code></li>
+      <li><code>--bs-table-striped-hover-color</code></li>
     </ul>
   </details>
 
