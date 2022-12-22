@@ -324,7 +324,6 @@
 
 // Boosted mod: play/pause button
 .carousel-control-play-pause {
-
   &.pause {
     @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
   }
