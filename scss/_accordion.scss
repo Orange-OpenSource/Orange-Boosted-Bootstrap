@@ -50,9 +50,17 @@
   letter-spacing: var(--#{$prefix}accordion-btn-letter-spacing); // Boosted mod
   background-color: var(--#{$prefix}accordion-btn-bg);
   border: 0;
-  outline-offset: add($outline-offset, var(--#{$prefix}accordion-border-width)); // Boosted mod
   @include border-radius(0);
   overflow-anchor: none;
+
+  // Boosted mod: focus
+  &:focus {
+    &[data-focus-visible-added] {
+      outline-offset: add($outline-offset, var(--#{$prefix}accordion-border-width));
+      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $outline-box-width) $outline-box-color;
+    }
+  }
+  // End mod
 
   &:not(.collapsed) {
     color: var(--#{$prefix}accordion-active-color);

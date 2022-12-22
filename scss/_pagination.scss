@@ -72,7 +72,7 @@
   }
 
   &:focus {
-    z-index: 3;
+    z-index: 5; // Boosted mod
     color: var(--#{$prefix}pagination-focus-color);
     background-color: var(--#{$prefix}pagination-focus-bg);
     outline: $pagination-focus-outline;

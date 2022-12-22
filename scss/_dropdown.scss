@@ -215,8 +215,6 @@
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
-  outline-offset: -$outline-width; // Boosted mod
-  box-shadow: none; // Boosted mod
 
   // Boosted mod: no focus
   &:hover {
@@ -242,6 +240,15 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
   }
+
+  // Boosted mod: focus
+  &:focus {
+    &[data-focus-visible-added] {
+      outline-offset: -$outline-width;
+      box-shadow: inset 0 0 0 add($outline-box-width, $outline-width) $outline-box-color;
+    }
+  }
+  // End mod
 }
 
 .dropdown-menu.show {

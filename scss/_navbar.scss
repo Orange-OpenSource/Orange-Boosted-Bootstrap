@@ -312,7 +312,7 @@
   &:focus {
     text-decoration: none;
     // Boosted mod: no outline;
-    box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
+    // Boosted mod: no box-shadow
   }
 
   // Boosted mod: close icon when opened & color state

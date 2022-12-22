@@ -1094,6 +1094,10 @@ $form-star-size:                  1.5625rem !default;
 $form-star-size-sm:               1.25rem !default;
 $form-star-margin-between:        -.125rem !default;
 //fusv-disable
+$form-star-focus-color:           $black !default; // Deprecated in v5.2.3
+$form-star-focus-outline:         $border-width solid $form-star-focus-color !default; // Deprecated in v5.2.3
+$form-star-focus-color-dark:      $white !default; // Deprecated in v5.2.3
+$form-star-focus-outline-dark:    $border-width solid $form-star-focus-color-dark !default; // Deprecated in v5.2.3
 $form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
 //fusv-enable
 
@@ -1453,7 +1457,7 @@ $pagination-border-color:           transparent !default; // Boosted mod
 
 $pagination-focus-color:            null !default; // Boosted mod
 $pagination-focus-bg:               null !default; // Boosted mod
-$pagination-focus-box-shadow:       null !default; // Boosted mod
+$pagination-focus-box-shadow:       0 0 0 $outline-box-width $outline-box-color !default; // Boosted mod
 $pagination-focus-outline:          null !default; // Boosted mod
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
@@ -2035,7 +2039,7 @@ $offcanvas-border-width:            $modal-content-border-width !default;
 $offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                $modal-content-bg !default;
 $offcanvas-color:                   $modal-content-color !default;
-$offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+$offcanvas-box-shadow:              none !default; // Boosted mod
 $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // scss-docs-end offcanvas-variables

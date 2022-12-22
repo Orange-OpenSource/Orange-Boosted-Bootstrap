@@ -13,6 +13,7 @@
 
   &:focus {
     outline: 0;
+    box-shadow: none; // Bosted mod
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.

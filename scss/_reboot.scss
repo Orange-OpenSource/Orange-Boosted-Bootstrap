@@ -513,6 +513,7 @@ button {
 
 button:focus:not(:focus-visible) {
   outline: 0;
+  box-shadow: none; // Bosted mod
 }
 
 // 1. Remove the margin in Firefox and Safari
