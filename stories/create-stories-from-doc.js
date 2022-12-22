@@ -71,8 +71,8 @@ const files = [
   ['Toasts', '../_site/docs/5.2/components/toasts/index.html'],
   ['Tooltips',
     '../_site/docs/5.2/components/tooltips/index.html',
-    'var tooltipTriggerList = [].slice.call(document.querySelectorAll(\'[data-bs-toggle="tooltip"]\'));\
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\
+    'const tooltipTriggerList = [].slice.call(document.querySelectorAll(\'[data-bs-toggle="tooltip"]\'));\
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\
       return new boosted.Tooltip(tooltipTriggerEl);\
     })']
 ]
