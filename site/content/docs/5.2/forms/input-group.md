@@ -12,7 +12,6 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -118,7 +117,6 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -137,7 +135,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -160,7 +157,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ## Button addons
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications. They are not recommended for usability reasons.
 
@@ -193,7 +189,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ## Buttons with dropdowns
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This **third** form variant should not be used because it does not respect the Orange Design System specifications.
 

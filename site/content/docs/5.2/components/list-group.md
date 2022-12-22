@@ -144,9 +144,8 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
- This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
+This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -202,7 +201,6 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
@@ -228,7 +226,6 @@ This variant should not be used because it does not respect the Orange Design Sy
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}
@@ -266,7 +263,6 @@ This variant should not be used because it does not respect the Orange Design Sy
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}

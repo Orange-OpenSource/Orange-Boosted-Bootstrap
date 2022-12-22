@@ -66,7 +66,6 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 
 We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -101,7 +100,6 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 
 Use background utility classes to change the appearance of individual progress bars.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
@@ -150,7 +148,6 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -179,7 +176,6 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 

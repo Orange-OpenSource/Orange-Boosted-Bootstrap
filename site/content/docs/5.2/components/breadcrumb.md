@@ -78,7 +78,6 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 
 You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant **without the breadcrumb dividers** should not be used because it does not respect the Orange Design System specifications.
 

@@ -144,7 +144,6 @@ This `button` must immediately follow your carousel and have the custom `data-bs
 
 Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 **Captions** should not be used because they do not respect the Orange Design System specifications.
 

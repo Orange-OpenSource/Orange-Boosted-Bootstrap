@@ -167,7 +167,6 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ## All colors
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong the Orange Design System specifications.
 

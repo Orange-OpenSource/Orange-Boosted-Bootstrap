@@ -323,7 +323,6 @@ You can then remix that once again with size-specific column classes.
 
 Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-check` align properly.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 

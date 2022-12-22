@@ -212,7 +212,8 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {{< /example >}}
 
-<!-- Boosted mod : design callout -->
+You can even roll your own custom sizing with CSS variables:
+
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -261,7 +262,6 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
@@ -306,7 +306,6 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 The button plugin allows you to create simple on/off toggle buttons.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
 
