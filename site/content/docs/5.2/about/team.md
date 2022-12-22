@@ -3,6 +3,8 @@ layout: docs
 title: Team
 description: An overview of the founding team and core contributors to Boosted.
 group: about
+aliases:
+  - "/docs/about/team/"
 ---
 
 Boosted is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.

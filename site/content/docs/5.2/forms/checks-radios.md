@@ -3,7 +3,10 @@ layout: docs
 title: Checks and radios
 description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 group: forms
-aliases: "/docs/5.2/forms/checks/"
+aliases:
+  - "/docs/forms/checks/"
+  - "/docs/5.2/forms/checks/"
+  - "/docs/forms/checks-radios/"
 toc: true
 ---
 
@@ -409,9 +412,9 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 </form>
 {{< /example >}}
 
-### Dark background
+### Dark variant
 
-Star ratings come with a dark background variant: `.star-rating-dark`.
+Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <form>

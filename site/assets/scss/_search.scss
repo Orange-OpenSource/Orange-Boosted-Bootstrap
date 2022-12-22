@@ -8,9 +8,17 @@
 }
 
 .DocSearch-Container {
+  --docsearch-spacing: 20px;
   --docsearch-hit-shadow: none;
+  --docsearch-muted-color: var(--docsearch-text-color);
+  --docsearch-hit-color: var(--docsearch-text-color);
 
   z-index: 2000; // Make sure to be over all components showcased in the documentation
+  cursor: auto; // Needed because of [role="button"] in Algolia search modal. Remove once https://github.com/algolia/docsearch/issues/1370 is tackled.
+}
+
+.DocSearch-Modal {
+  @include border-radius(0, 0);
 }
 
 .DocSearch-Button {
@@ -58,6 +66,7 @@
 
 .DocSearch-Form {
   box-shadow: $gray-500 0 0 0 .125rem inset;
+  @include border-radius(0, 0);
 
   &:focus-within {
     box-shadow: $black 0 0 0 .125rem inset;
@@ -69,10 +78,10 @@
 }
 
 .DocSearch-Reset {
-  border-radius: 0; // stylelint-disable-line property-disallowed-list
+  @include border-radius(0, 0);
 
   &:focus {
-    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
+    outline: 3px solid $accessible-orange;
   }
 }
 
@@ -100,5 +109,53 @@
 
 .DocSearch-Hit {
   padding-top: .625rem;
+
+  a {
+    @include border-radius(0, 0);
+  }
+
+  mark {
+    color: var(--#{$prefix}white);
+    background: var(--#{$prefix}black);
+  }
+
+  &[aria-selected="true"] {
+    a {
+      background-color: var(--#{$prefix}black);
+    }
+
+    mark {
+      --docsearch-hit-active-color: var(--#{$prefix}black);
+      text-decoration: none;
+      background: var(--#{$prefix}white);
+    }
+  }
+}
+
+.DocSearch-Hit-action-button {
+  @include border-radius(0, 0);
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:focus {
+    background: transparent;
+    outline: 3px solid $accessible-orange;
+  }
+}
+
+.DocSearch-Prefill {
+  color: $black;
+  text-decoration: underline;
+  @include border-radius(0, 0);
+
+  &:hover {
+    color: var(--docsearch-highlight-color);
+  }
+
+  &:focus {
+    outline: 3px solid $accessible-orange;
+  }
 }
 // End mod

@@ -3,6 +3,8 @@ layout: docs
 title: License FAQs
 description: Commonly asked questions about Boosted's open source license.
 group: about
+aliases:
+  - "/docs/about/license/"
 ---
 
 ## Boosted license

@@ -4,11 +4,29 @@ title: Get started with Boosted
 description: Boosted is based on Bootstrap&#58; a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
 group: getting-started
 aliases:
-  - "/docs/5.2/getting-started/"
-  - "/docs/getting-started/"
   - "/getting-started/"
+  - "/docs/getting-started/"
+  - "/docs/5.2/getting-started/"
+  - "/docs/getting-started/introduction/"
 toc: true
 ---
+
+## About Orange Brand
+
+As Boosted is based on Bootstrap, you'll find in Boosted **all** the Bootstrap's components and their variants, but with an Orange branded look.
+
+Among those inherited components and variants, some exist in the Orange Design System and fully respect its design specifications and some don't. Those ones should not be used in your projects to ensure a consistent user experience throughout our Orange web services.
+
+As for maintainability reasons we have to keep them in this documentation, we tagged them with red informational design callouts. They inform you of what should not be used from an Orange design point of view. They suggest, when available, a replacement solution and/or a link to the Orange Design System website to see other possibilities.
+Thanks for taking this information into account.
+
+Design callouts message example:
+
+{{< ods-incompatibility-alert >}}
+This checkbox variant should not be used because it does not respect the Orange Design System specifications.
+
+From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 ## Quick start
 
@@ -81,7 +99,7 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
 
-- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) and the list of [components that require JavaScript](#js-components) below.
+- Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
 
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
 

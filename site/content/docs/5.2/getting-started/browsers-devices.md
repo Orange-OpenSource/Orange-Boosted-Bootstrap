@@ -3,6 +3,8 @@ layout: docs
 title: Browsers and devices
 description: Learn about the browsers and devices, from modern to old, that are supported by Boosted, including known quirks and bugs for each.
 group: getting-started
+aliases:
+  - "/docs/getting-started/browsers-devices/"
 toc: true
 ---
 
@@ -30,7 +32,7 @@ Generally speaking, Boosted supports the latest versions of each major platform'
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
 | --- | --- | --- | --- | --- |
 | **Android** | Supported | Supported | <span class="text-muted">&mdash;</span> | v6.0+ |
-| **Windows** | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
+| **iOS** | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
 {{< /bs-table >}}
 
 ### Desktop browsers

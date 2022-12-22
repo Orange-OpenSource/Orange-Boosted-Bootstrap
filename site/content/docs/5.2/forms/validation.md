@@ -3,6 +3,8 @@ layout: docs
 title: Validation
 description: Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
 group: forms
+aliases:
+  - "/docs/forms/validation/"
 toc: true
 extra_js:
   - src: "/docs/5.2/assets/js/validate-forms.js"
@@ -96,7 +98,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary mt-2" type="submit">Submit form</button>
   </div>
 </form>
 {{< /example >}}
@@ -154,7 +156,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary mt-2" type="submit">Submit form</button>
   </div>
 </form>
 {{< /example >}}
@@ -229,7 +231,7 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary mt-2" type="submit">Submit form</button>
   </div>
 </form>
 {{< /example >}}
@@ -298,7 +300,7 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
-    <button class="btn btn-primary" type="submit" disabled>Submit form</button>
+    <button class="btn btn-primary mt-2" type="submit" disabled>Submit form</button>
   </div>
 </form>
 {{< /example >}}
