@@ -52,7 +52,6 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct `margin` and `padding`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant, with a **readonly plain text** input element and an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does no respect the Orange Design System specifications.
 

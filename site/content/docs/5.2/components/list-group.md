@@ -164,7 +164,6 @@ This variant, which is just an **example illustrating the use of the layout util
 
 Use contextual classes to style list items with a stateful background and color.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}

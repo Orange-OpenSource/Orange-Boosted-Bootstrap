@@ -119,7 +119,6 @@ Create horizontal forms with the grid by adding the `.row` class to form groups 
 
 At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications.
 
@@ -181,7 +180,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications. The input label should always be placed above the input field.
 
@@ -213,7 +211,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant, with **labels** that are **not above input fields**, should not be used because it does not respect the Orange Design System specifications. The input label should always be placed above the input field.
 
@@ -238,7 +235,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These form variants, with **labels** that are **not above input fields**, should not be used because they do not respect the Orange Design System specifications.
 

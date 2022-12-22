@@ -49,7 +49,6 @@ Boosted provides a handful of [utilities for setting width]({{< docsref "/utilit
 
 Add labels to your progress bars by placing text within the `.progress-bar`.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -129,7 +128,6 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 
 Include multiple progress bars in a progress component if you need.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 

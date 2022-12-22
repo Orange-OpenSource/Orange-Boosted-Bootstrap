@@ -67,7 +67,6 @@ As is the `size` attribute:
 
 Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This **disabled** `<select>` element should not be used with this appearance because it does no respect the Orange Design System specifications.
 

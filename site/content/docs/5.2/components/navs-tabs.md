@@ -12,7 +12,6 @@ toc: true
 
 ## Base nav
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This component variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -262,7 +261,6 @@ This variant should not be used because it is a button component in the Orange D
 
 Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, they should be button components.
 {{< /ods-incompatibility-alert >}}
@@ -329,7 +327,6 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /ods-incompatibility-alert >}}

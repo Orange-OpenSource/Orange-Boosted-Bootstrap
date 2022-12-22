@@ -111,7 +111,6 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 
 ## Browser defaults
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form variant, **with browser default validation feedback messages**, should not be used because it does not respect the Orange Design System specifications.
 

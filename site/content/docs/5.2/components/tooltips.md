@@ -58,7 +58,6 @@ Hover over the links below to see tooltips:
 
 ### Custom tooltips
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This **customized** variant should not be used because it does not respect the Orange Design System specifications. More generally, customizing tooltip CSS might lead to mismatch the Orange Design System.
 

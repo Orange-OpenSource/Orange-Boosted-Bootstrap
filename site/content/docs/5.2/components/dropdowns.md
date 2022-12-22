@@ -139,7 +139,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
   </ul>
 </div>
 ```
-<!-- Boosted mod : design callout -->
+
 {{< ods-incompatibility-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
@@ -810,7 +810,6 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 

@@ -77,7 +77,6 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 This form version, with the **label** that is **not above the input field**, should not be used because it does not respect the Orange Design System specifications.
 

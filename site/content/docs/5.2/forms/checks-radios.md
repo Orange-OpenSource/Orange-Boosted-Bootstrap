@@ -250,7 +250,6 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 ### Checkbox toggle buttons
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These variants with only **one checkbox toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a checkbox toggle button should not be used alone.
 

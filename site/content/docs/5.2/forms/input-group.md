@@ -281,7 +281,6 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These **3 first** form variants should not be used because they do not respect the Orange Design System specifications.
 
@@ -332,7 +331,6 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ### Custom file input
 
-<!-- Boosted mod : design callout -->
 {{< ods-incompatibility-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
