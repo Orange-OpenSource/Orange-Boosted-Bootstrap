@@ -62,7 +62,7 @@ Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focu
 
 {{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
 
-{{< added-in "5.3.0" >}}
+{{< added-in "5.2.3" >}}
 
 Boosted provides `focus-visible()` mixin to ensure a proper focus state:
 - a solid `3px` black outline with an `outline-offset` of `2px` and a solid `2px` white box-shadow between the component and the outline when focused on light background.
