@@ -2190,7 +2190,7 @@ $footer-terms-padding-y-md:               $spacer * 1.1 !default;
 $footer-gap:                              $spacer * .75 !default;
 $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
-// End mod
+
 
 // Tags
 
@@ -2231,3 +2231,21 @@ $tag-disabled-color-dark:           $gray-700 !default;
 $tag-border-color-dark:             $gray-700 !default;
 $tag-active-decoration-color-dark:  $white !default;
 // scss-docs-end tag-dark-variables
+
+
+// Local navigation
+
+// scss-docs-start local-nav-variables
+$local-nav-padding-y:         $navbar-nav-link-padding-y !default;
+$local-nav-color:             $black !default;
+$local-nav-active-color:      $accessible-orange !default;
+$local-nav-border-color:      $gray-500 !default;
+$local-nav-border-width:      1px !default;
+// scss-docs-end local-nav-variables
+
+// scss-docs-start local-nav-dark-variables
+$local-nav-dark-color:        $white !default;
+$local-nav-dark-active-color: $brand-orange !default;
+$local-nav-dark-border-color: $gray-700 !default;
+// scss-docs-end local-nav-dark-variables
+// End mod

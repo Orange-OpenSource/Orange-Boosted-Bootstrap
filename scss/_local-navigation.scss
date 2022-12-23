@@ -1,18 +1,58 @@
-.nav-local {
-  &.accordion {
-    --bs-accordion-btn-padding-y: 15.5px;
-  }
+.local-nav {
+  // scss-docs-start local-nav-css-vars
+  --#{$prefix}local-nav-padding-y: #{$local-nav-padding-y};
+  --#{$prefix}local-nav-color: #{$local-nav-color};
+  --#{$prefix}local-nav-active-color: #{$local-nav-active-color};
+  --#{$prefix}local-nav-border-color: #{$local-nav-border-color};
+  --#{$prefix}local-nav-border-width: #{$local-nav-border-width};
+  // scss-docs-end local-nav-css-vars
 
-  .accordion-button::after {
-    margin-right: 0;
-  }
+  border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
 
-  .accordion-collapse {
-    border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  .local-nav-button {
+    display: block;
+    width: 100%;
+    padding: subtract(var(--#{$prefix}local-nav-padding-y), var(--#{$prefix}local-nav-border-width)) 0 var(--#{$prefix}local-nav-padding-y);
+    font-weight: 700;
+    color: var(--#{$prefix}local-nav-color);
+    background-color: transparent;
+    border: 0;
 
     @include media-breakpoint-up(lg) {
-      display: block;
-      border: 0;
+      display: none;
+    }
+
+    > [class*="container"] {
+      display: flex;
+      @include caret($accordion: true);
+
+      &::after {
+        margin-right: 0;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:not(.collapsed) {
+      color: var(--#{$prefix}local-nav-active-color);
+    }
+
+    &:not(.collapsed) {
+      border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
+
+      > [class*="container"] {
+        @include caret(up, true);
+
+        &::after {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  > .local-nav-collapse {
+    .nav-item:last-of-type {
+      margin-bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -20,16 +60,16 @@
     --bs-navbar-padding-y: 0px; // stylelint-disable-line length-zero-no-unit
     --bs-navbar-border-color: transparent;
 
-    margin-bottom: calc(var(--bs-accordion-border-width) * -1); // stylelint-disable-line function-disallowed-list
+    .nav-link.active::before {
+      bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
+    }
   }
 }
 
-.nav-local-dark {
-  &.accordion {
-    @extend .accordion-dark;
-  }
-
-  .navbar {
-    @extend .navbar-dark;
-  }
+.local-nav-dark {
+  // scss-docs-start local-nav-dark-css-vars
+  --#{$prefix}local-nav-color: #{$local-nav-dark-color};
+  --#{$prefix}local-nav-active-color: #{$local-nav-dark-active-color};
+  --#{$prefix}local-nav-border-color: #{$local-nav-dark-border-color};
+  // scss-docs-end local-nav-dark-css-vars
 }
