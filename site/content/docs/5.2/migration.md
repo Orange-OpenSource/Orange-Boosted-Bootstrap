@@ -85,7 +85,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <span class="badge bg-success">New</span> Small size form controls are now available. Small inputs are defined by their `.form-control-sm`, small selects by their `.form-select-sm`. They can be associated with `.col-form-label-sm` to correctly follow their size if needed. `.input-group-sm` can also be used depending on the context.
 
 ### Accordions
-- <span class="badge bg-danger">Breaking</span> `$accordion-body-padding-y` and `$accordion-body-padding-x` have been depreacted and splitted into `$accordion-body-padding-top`, `$accordion-body-padding-end`, `$accordion-body-padding-bottom` and `$accordion-body-padding-start`.
+- <span class="badge bg-danger">Breaking</span> `$accordion-body-padding-y` and `$accordion-body-padding-x` have been deprecated and splitted into `$accordion-body-padding-top`, `$accordion-body-padding-end`, `$accordion-body-padding-bottom` and `$accordion-body-padding-start`.
 
 ### Examples
 
