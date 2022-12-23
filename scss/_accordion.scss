@@ -26,9 +26,10 @@
   // Boosted mod: no --#{$prefix}accordion-btn-active-icon
   // Boosted mod: no --#{$prefix}accordion-btn-focus-border-color
   // Boosted mod: no --#{$prefix}accordion-btn-focus-box-shadow
-  --#{$prefix}accordion-body-padding-end: #{$accordion-body-padding-end};
-  --#{$prefix}accordion-body-padding-bottom: #{$accordion-body-padding-bottom};
-  --#{$prefix}accordion-body-padding-top: #{$accordion-body-padding-top};
+  --#{$prefix}accordion-body-padding-top: #{$accordion-body-padding-top}; // Boosted mod
+  --#{$prefix}accordion-body-padding-end: #{$accordion-body-padding-end}; // Boosted mod
+  --#{$prefix}accordion-body-padding-bottom: #{$accordion-body-padding-bottom}; // Boosted mod
+  --#{$prefix}accordion-body-padding-start: #{$accordion-body-padding-start}; // Boosted mod
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
   // scss-docs-end accordion-css-vars
@@ -120,7 +121,7 @@
 }
 
 .accordion-body {
-  padding: var(--#{$prefix}accordion-body-padding-top) var(--#{$prefix}accordion-body-padding-end) var(--#{$prefix}accordion-body-padding-bottom) 0; // Boosted mod
+  padding: var(--#{$prefix}accordion-body-padding-top) var(--#{$prefix}accordion-body-padding-end) var(--#{$prefix}accordion-body-padding-bottom) var(--#{$prefix}accordion-body-padding-start); // Boosted mod
 }
 
 // Boosted mod: no Flush accordion items
