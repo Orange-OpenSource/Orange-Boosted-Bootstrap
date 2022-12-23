@@ -14,7 +14,7 @@ Resize your browser to see the behavior of this component.
 {{< example >}}
 <nav class="local-nav" aria-label="Basic local navigation">
   <button class="local-nav-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
-    <div class="container-xxl">Label</div>
+    <span class="container-xxl">Label</span>
   </button>
   <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
     <div class="navbar navbar-expand-lg">
@@ -35,7 +35,7 @@ Add `.local-nav-dark` to the `.local-nav` for a dark variant.
 {{< example class="bg-dark" >}}
 <nav class="local-nav local-nav-dark" aria-label="Basic local navigation">
   <button class="local-nav-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavDark" aria-expanded="false" aria-controls="collapseLocalNavDark">
-    <div class="container-xxl">Label</div>
+    <span class="container-xxl">Label</span>
   </button>
   <div id="collapseLocalNavDark" class="container-xxl local-nav-collapse d-lg-block collapse">
     <div class="navbar navbar-dark navbar-expand-lg">
