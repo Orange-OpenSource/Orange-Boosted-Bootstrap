@@ -52,6 +52,7 @@
   border: 0;
   @include border-radius(0);
   overflow-anchor: none;
+  @include transition(var(--#{$prefix}accordion-transition));
 
   // Boosted mod: focus
   &:focus {

@@ -1565,7 +1565,7 @@ $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
-$accordion-transition:                    $btn-transition, border-radius .15s ease !default;
+$accordion-transition:                    null !default; // Boosted mod: no transition for new focus
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
 
