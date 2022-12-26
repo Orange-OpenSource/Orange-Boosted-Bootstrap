@@ -128,7 +128,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
-      <li><code>$form-range-thumb-active-border</code> is now deprecated. It has been replaced by <code>$form-range-thumb-active-border-color</code> and will be removed in v5.3.0</li>
+      <li><code>$form-range-thumb-active-border</code> is now deprecated. It has been replaced by <code>$form-range-thumb-active-border-color</code> and will be removed in v5.3.0.</li>
     </ul>
   </details>
 
