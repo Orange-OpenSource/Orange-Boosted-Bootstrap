@@ -108,6 +108,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       ```
     </details>
 
+- **Pages**
+  - <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
+  - <span class="badge bg-success">New</span> A form page example is now available.
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
