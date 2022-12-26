@@ -138,10 +138,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$input-border-radius-sm</code></li>
       <li><code>$input-font-size-sm</code></li>
       <li><code>$table-accent-bg</code></li>
-      <li><code>$table-cell-icon-margin-top</code></li>
       <li><code>$table-cell-icon-margin-bottom</code></li>
-      <li><code>$table-cell-icon-margin-top-sm</code></li>
       <li><code>$table-cell-icon-margin-bottom-sm</code></li>
+      <li><code>$table-cell-icon-margin-top</code></li>
+      <li><code>$table-cell-icon-margin-top-sm</code></li>
       <li><code>$table-striped-bg</code></li>
       <li><code>$table-striped-bg-factor</code></li>
       <li><code>$table-striped-color</code></li>
