@@ -664,8 +664,8 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div class="bd-example">
-  <table class="table table-sm table-hover table-responsive has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover has-checkbox">
     <caption class="visually-hidden">Boosted table with a selection feature</caption>
     <thead>
       <tr>
@@ -801,8 +801,8 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<div>
-  <table class="table table-sm table-hover table-responsive has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover has-checkbox">
     ...
     <thead>
       <tr>
@@ -864,8 +864,8 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 Use SVG to display thumbnails or icons in your compact table data cell elements.
 
-<div class="bd-example">
-  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover align-middle has-checkbox">
     <caption class="visually-hidden">Boosted table with icons in a row</caption>
     <thead>
       <tr>
@@ -1074,8 +1074,8 @@ Use SVG to display thumbnails or icons in your compact table data cell elements.
 
 Use SVG to display icons or thumbnails in your table data cell elements.
 
-<div class="bd-example">
-  <table class="table table-responsive align-middle">
+<div class="table-responsive">
+  <table class="table align-middle">
     <caption class="visually-hidden">Boosted table with icons inside a row</caption>
     <thead>
       <tr>
