@@ -5,6 +5,12 @@ extra_js:
   - src: "form.js"
 ---
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol fill="currentColor" viewBox="0 0 1000 1000" id="user">
+    <path fill-rule="evenodd" d="M656.7,422.409a229.959,229.959,0,0,1-315.39.008A224.95,224.95,0,0,0,224.064,615H224V825A100,100,0,0,0,324,925H774V620A224.944,224.944,0,0,0,656.7,422.409ZM679,255A180,180,0,1,1,499,75,180,180,0,0,1,679,255Z"></path>
+  </symbol>
+</svg>
+
 <header class="sticky-top">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation">
     <div class="container-xxl">
@@ -50,7 +56,7 @@ extra_js:
           <li class="nav-item">
             <a href="#" class="nav-link nav-icon">
               <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#user"></use>
+                <use xlink:href="#user"></use>
               </svg>
               <span class="visually-hidden">My account</span>
             </a>
