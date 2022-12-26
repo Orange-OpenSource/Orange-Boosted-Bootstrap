@@ -180,37 +180,35 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 Nav tabs light is nested in a tab for adding a level of depth in information organization.
 
 {{< example >}}
-<div role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4">
-  <ul class="nav nav-tabs" id="nav-tab-with-nested-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" id="nav-tab4" role="tab" aria-selected="false">Tab 4</a>
-    </li>
-  </ul>
-</div>
+<ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs" id="nav-tab-with-nested-tabs">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</a>
+  </li>
+</ul>
 
 <div class="tab-content" id="nav-tabs-content">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist" aria-labelledby="nav-tab1">
-    <ul class="nav nav-tabs nav-tabs-light mt-0">
-      <li class="nav-item">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="nav-tab1">
+    <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-tabs nav-tabs-light mt-0">
+      <li class="nav-item" role="presentation">
         <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkB" href="#linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab">Link B</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" id="nav-linkD" role="tab">Link D</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0" id="nav-tabs-light-content">
@@ -231,6 +229,10 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 ### Pills
 
 Take that same HTML, but use `.nav-pills` instead:
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it is a button component in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -361,6 +363,10 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {{< /example >}}
 
 ### Pills with dropdowns
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it is a button component in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">

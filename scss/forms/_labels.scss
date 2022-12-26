@@ -21,6 +21,20 @@
   color: $accessible-orange;
   content: "*";
 }
+
+.form-helper {
+  display: inline-block;
+  flex-shrink: 0;
+  width: $form-helper-size;
+  height: $form-helper-size;
+  background: no-repeat center/100% escape-svg($helper-icon);
+  border: 0;
+
+  .form-label + & {
+    margin-bottom: $form-helper-label-margin-bottom;
+    vertical-align: bottom;
+  }
+}
 // End mod
 
 // For use with horizontal and inline forms, when you need the label (or legend)
@@ -42,4 +56,8 @@
   @include font-size($input-font-size-lg);
 }
 
-// Boosted mod: no .col-form-label-sm
+.col-form-label-sm {
+  padding-top: add($input-padding-y-sm, $input-border-width);
+  padding-bottom: add($input-padding-y-sm, $input-border-width);
+  @include font-size($input-font-size-sm);
+}

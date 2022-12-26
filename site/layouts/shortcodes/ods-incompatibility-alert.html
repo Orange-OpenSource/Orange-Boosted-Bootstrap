@@ -5,7 +5,12 @@
 <div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
   <div>
-    <h4 class="alert-heading mb-1">Incompatibility with Orange Design System</h4>
-    {{ .Inner | markdownify }}
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" >
+        More information
+      </a>
+    </div>
+    <div>{{ .Inner | markdownify }}</div>
   </div>
 </div>
