@@ -78,6 +78,13 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
   ```
 
+### Contents
+
+- **Tables**
+  - <span class="badge bg-warning">Warning</span> Every table now has a caption with `.visually-hidden` on it. Please reflect this modification into your websites.
+
+  - <span class="badge bg-success">New</span> Tables now fully support striped rows and columns.
+
 ### Forms
 
 - <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
@@ -108,6 +115,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       ```
     </details>
 
+- **Pages**
+  - <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
+  - <span class="badge bg-success">New</span> A form page example is now available.
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
@@ -125,6 +136,11 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-dropdown-line-height</code></li>
+      <li><code>--bs-table-accent-bg</code></li>
+      <li><code>--bs-table-striped-bg</code></li>
+      <li><code>--bs-table-striped-color</code></li>
+      <li><code>--bs-table-striped-hover-bg</code></li>
+      <li><code>--bs-table-striped-hover-color</code></li>
     </ul>
   </details>
 
@@ -140,6 +156,19 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$helper-icon</code></li>
       <li><code>$input-border-radius-sm</code></li>
       <li><code>$input-font-size-sm</code></li>
+      <li><code>$table-accent-bg</code></li>
+      <li><code>$table-striped-bg</code></li>
+      <li><code>$table-striped-bg-factor</code></li>
+      <li><code>$table-striped-color</code></li>
+      <li><code>$table-striped-columns-order</code></li>
+      <li><code>$table-striped-hover-bg</code></li>
+      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-hover-color</code></li>
+      <li><code>$table-striped-order</code></li>
+      <li><code>$table-variant-active-bg-factor</code></li>
+      <li><code>$table-variant-hover-bg-factor</code></li>
+      <li><code>$table-variant-striped-hover-bg</code></li>
+      <li><code>$table-variant-striped-hover-bg-factor</code></li>
     </ul>
   </details>
 
