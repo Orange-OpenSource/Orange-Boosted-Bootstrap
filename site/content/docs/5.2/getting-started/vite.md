@@ -164,12 +164,18 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
    }
    ```
 
-2. **Now, let's import Boosted's font and CSS.** Assuming that you already have the fonts inside your project, add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+
+   ```sh
+   mkdir src/fonts
+   cp /path/HelvNeue55_W1G.woff2 src/fonts/
+   cp /path/HelvNeue75_W1G.woff2 src/fonts/
+   ```
+
+3. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
-   $font-path: "relative-path-to/font-folder/";
-
    @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
