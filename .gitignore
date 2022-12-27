@@ -51,10 +51,10 @@ Thumbs.db
 
 # Pa11y
 pa11y-ci-results.json
+.pa11y
 
 # Hugo
-hugo_build.lock
-
+.hugo_build.lock
 
 # Storybook
 /stories
