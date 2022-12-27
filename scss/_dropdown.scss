@@ -15,7 +15,8 @@
   // Generate the caret automatically
   @include caret();
 
-  // Boosted mod: Should be a btn-* class
+  // Boosted mod
+  // TODO: should probably be a `.btn-*` class
   &:not(.dropdown-toggle-split) {
     @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $dropdown-border-color, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
 
