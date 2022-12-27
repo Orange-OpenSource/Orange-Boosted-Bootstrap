@@ -3,6 +3,8 @@ layout: docs
 title: Dropdowns
 description: Toggle contextual overlays for displaying lists of links and more with the Boosted dropdown plugin.
 group: components
+aliases:
+  - "/docs/components/dropdowns/"
 toc: true
 ---
 
@@ -138,6 +140,12 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
+{{< ods-incompatibility-alert >}}
+This small variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -228,7 +236,12 @@ And putting it to use in a navbar:
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="navbar-brand">
+      <a class="stretched-link" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="title">Navbar</h1>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -260,6 +273,12 @@ Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will app
 ### Centered
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropdown-center">
@@ -336,6 +355,12 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 ### Dropup centered
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropup-center dropup">
@@ -694,6 +719,12 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
@@ -708,6 +739,12 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -728,7 +765,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">New around here? Sign up</a>
@@ -758,7 +795,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary mt-2">Sign in</button>
   </form>
 </div>
 {{< /example >}}
@@ -798,6 +835,10 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 ### Auto close behavior
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
+
+{{< ods-incompatibility-alert >}}
+The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-group">
@@ -934,12 +975,12 @@ Regardless of whether you call your dropdown via JavaScript or instead use the d
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `autoClose` | boolean, string | `true` | Configure the auto close behavior of the dropdown: <ul class="my-2"><li>`true` - the dropdown will be closed by clicking outside or inside the dropdown menu.</li><li>`false` - the dropdown will be closed by clicking the toggle button and manually calling `hide` or `toggle` method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li><li>`'inside'` - the dropdown will be closed (only) by clicking inside the dropdown menu.</li>  <li>`'outside'` - the dropdown will be closed (only) by clicking outside the dropdown menu.</li></ul> Note: the dropdown can always be closed with the <kbd>ESC</kbd> key. |
-| `boundary` | string, element | `'scrollParent'` | Overflow constraint boundary of the dropdown menu (applies only to Popper's preventOverflow modifier). By default it's `clippingParents` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
+| `autoClose` | boolean, string | `true` | Configure the auto close behavior of the dropdown: <ul class="my-2"><li>`true` - the dropdown will be closed by clicking outside or inside the dropdown menu.</li><li>`false` - the dropdown will be closed by clicking the toggle button and manually calling `hide` or `toggle` method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li><li>`'inside'` - the dropdown will be closed (only) by clicking inside the dropdown menu.</li> <li>`'outside'` - the dropdown will be closed (only) by clicking outside the dropdown menu.</li></ul> Note: the dropdown can always be closed with the <kbd>ESC</kbd> key. |
+| `boundary` | string, element | `'clippingParents'` | Overflow constraint boundary of the dropdown menu (applies only to Popper's preventOverflow modifier). By default it's `clippingParents` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
 | `display` | string | `'dynamic'` | By default, we use Popper for dynamic positioning. Disable this with `static`. |
-| `offset` | number, string, function | `[0, 2]` |  Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
+| `offset` | array, string, function | `[0, 2]` | Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
 | `popperConfig` | null, object, function | `null` | To change Boosted's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
-| `reference` | string, element | `'toggle'` | Reference element of the dropdown menu. Accepts the values of `'toggle'`, `'parent'`, an HTMLElement reference or an object providing `getBoundingClientRect`. For more information refer to Popper's [constructor docs](https://popper.js.org/docs/v2/constructors/#createpopper) and [virtual element docs](https://popper.js.org/docs/v2/virtual-elements/). |
+| `reference` | string, element, object | `'toggle'` | Reference element of the dropdown menu. Accepts the values of `'toggle'`, `'parent'`, an HTMLElement reference or an object providing `getBoundingClientRect`. For more information refer to Popper's [constructor docs](https://popper.js.org/docs/v2/constructors/#createpopper) and [virtual element docs](https://popper.js.org/docs/v2/virtual-elements/). |
 {{< /bs-table >}}
 
 #### Using function with `popperConfig`

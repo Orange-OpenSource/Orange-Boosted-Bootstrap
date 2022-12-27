@@ -3,7 +3,11 @@ layout: docs
 title: Reboot
 description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Boosted to provide an elegant, consistent, and simple baseline to build upon.
 group: content
-aliases: "/docs/5.2/content/"
+aliases:
+  - "/content/"
+  - "/docs/content/"
+  - "/docs/5.2/content/"
+  - "/docs/content/reboot/"
 toc: true
 ---
 
@@ -95,6 +99,10 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 ## Horizontal rules
 
 The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
+
+{{< ods-incompatibility-alert >}}
+These `<hr>` 3rd and 4th variants can not be used because they do not respect the Orange Design System specifications. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <hr>

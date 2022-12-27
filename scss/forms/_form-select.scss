@@ -55,7 +55,14 @@
   }
 }
 
-// Boosted mod: no .form-select-sm
+.form-select-sm {
+  padding-top: subtract($form-select-padding-y-sm, 1px); // Boosted mod
+  padding-bottom: add($form-select-padding-y-sm, 1px); // Boosted mod
+  padding-left: $form-select-padding-x-sm;
+  @include font-size($form-select-font-size-sm);
+  @include border-radius($form-select-border-radius-sm);
+  line-height: $line-height-sm; // Boosted mod
+}
 
 .form-select-lg {
   padding-top: subtract($form-select-padding-y-lg, 1px); // Boosted mod

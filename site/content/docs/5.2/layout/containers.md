@@ -3,6 +3,8 @@ layout: docs
 title: Containers
 description: Containers are a fundamental building block of Boosted that contain, pad, and align your content within a given device or viewport.
 group: layout
+aliases:
+  - "/docs/layout/containers/"
 toc: true
 ---
 
@@ -27,12 +29,12 @@ Please note that we apply an extra-padding on our containers (see [our mixins](#
 |  | Extra small<div class="fw-normal">&lt;480px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1280px</div> | XX-Large<div class="fw-normal">&ge;1440px</div> |
 | --- | --- | --- | --- | --- | --- | --- |
 | `.container` | <span class="text-muted">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-sm` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-md` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
-| `.container-lg` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | 960px | 1140px | 1320px |
-| `.container-xl` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | 1140px | 1320px |
-| `.container-xxl` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | <span class="text-muted">100vw -<br/>(2 * 40px)</span> | 1320px |
-| `.container-fluid` | <span class="text-muted">100vw -<br/>(2 * 4px)</span> | <span class="text-muted">100vw -<br/>(2 * 6px)</span> | <span class="text-muted">100vw -<br/>(2 * 12px)</span> | <span class="text-muted">100vw -<br/>(2 * 32px)</span> | <span class="text-muted">100vw -<br/>(2 * 40px)</span> | <span class="text-muted">100vw -<br/>(2 * 60px)</span> |
+| `.container-sm` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
+| `.container-md` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
+| `.container-lg` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | 960px | 1140px | 1320px |
+| `.container-xl` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | 1140px | 1320px |
+| `.container-xxl` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | <span class="text-muted">100vw -<br>(2 * 40px)</span> | 1320px |
+| `.container-fluid` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | <span class="text-muted">100vw -<br>(2 * 40px)</span> | <span class="text-muted">100vw -<br>(2 * 60px)</span> |
 {{< /bs-table >}}
 
 ## Default container

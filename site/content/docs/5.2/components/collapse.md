@@ -3,12 +3,18 @@ layout: docs
 title: Collapse
 description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
 group: components
+aliases:
+  - "/docs/components/collapse/"
 toc: true
 ---
 
 ## How it works
 
 The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
+
+{{< ods-incompatibility-alert >}}
+Triggering a collapse behavior from a button component should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -146,7 +152,7 @@ const collapseList = [...collapseElementList].map(collapseEl => new boosted.Coll
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-`parent` | selector, jQuery object, DOM element | `false` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
+`parent` | selector, DOM element | `null` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
 `toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
 {{< /bs-table >}}
 

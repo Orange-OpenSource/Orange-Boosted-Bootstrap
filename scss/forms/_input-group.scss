@@ -22,7 +22,7 @@
   > .form-control:focus,
   > .form-select:focus,
   > .form-floating:focus-within {
-    z-index: 3;
+    z-index: 5;
   }
 
   // Ensure buttons are always above inputs for more visually pleasing borders.
@@ -33,7 +33,7 @@
     z-index: 2;
 
     &:focus {
-      z-index: 3;
+      z-index: 5;
     }
   }
 }
@@ -70,16 +70,25 @@
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: $input-padding-y-lg $input-padding-x-lg;
+  line-height: $h5-line-height; // Boosted mod
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 }
 
-.input-group-lg > .form-select {
-  padding-right: $form-select-padding-x + $form-select-indicator-padding; // Boosted mod: dedupe selector, since no .input-group-sm
+.input-group-sm > .form-control,
+.input-group-sm > .form-select,
+.input-group-sm > .input-group-text,
+.input-group-sm > .btn {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  line-height: $line-height-sm; // Boosted mod
+  @include font-size($input-font-size-sm);
+  @include border-radius($input-border-radius-sm);
 }
 
-// Boosted mod: no .input-group-sm
-
+.input-group-lg > .form-select,
+.input-group-sm > .form-select {
+  padding-right: $form-select-padding-x + $form-select-indicator-padding;
+}
 
 // Rounded corners
 //

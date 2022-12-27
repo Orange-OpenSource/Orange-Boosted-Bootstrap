@@ -1,6 +1,7 @@
 name: BrowserStack
 on:
-  push:
+  # BrowserStack is for now deactivated when triggered by a push action because always failing
+  # push:
   workflow_dispatch:
 
 env:
@@ -11,6 +12,7 @@ jobs:
   browserstack:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
     steps:
       - name: Clone repository

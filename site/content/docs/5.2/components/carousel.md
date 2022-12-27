@@ -3,6 +3,8 @@ layout: docs
 title: Carousel
 description: A slideshow component for cycling through elements—images or slides of text—like a carousel.
 group: components
+aliases:
+  - "/docs/components/carousel/"
 toc: true
 ---
 
@@ -142,6 +144,12 @@ This `button` must immediately follow your carousel and have the custom `data-bs
 
 Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
+{{< ods-incompatibility-alert >}}
+**Captions** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Carousel navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
@@ -177,34 +185,6 @@ Add captions to your slides easily with the `.carousel-caption` element within a
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-{{< /example >}}
-
-### Disable touch swiping
-
-Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute so it doesn't autoplay.
-
-{{< example >}}
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -268,6 +248,34 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{{< /example >}}
+
+### Disable touch swiping
+
+Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute so it doesn't autoplay.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
