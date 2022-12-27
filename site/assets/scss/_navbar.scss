@@ -30,7 +30,7 @@
   .dropdown-menu {
     --#{$prefix}dropdown-min-width: 12rem;
     // Boosted mod: background-color is already good
-    @include rfs($font-size-sm, --#{$prefix}dropdown-font-size);
+    @include rfs($font-size-sm, --#{$prefix}dropdown-font-size); // Boosted mod
     --#{$prefix}dropdown-line-height: #{$line-height-sm}; // Boosted mod
     --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem}; // Boosted mod
     // Boosted mod: no box-shadow
