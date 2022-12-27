@@ -118,7 +118,7 @@
     "@storybook/addon-links": "^6.5.14",
     "@storybook/builder-webpack4": "^6.5.13",
     "@storybook/html": "^6.5.14",
-    "@storybook/manager-webpack4": "^6.5.14",
+    "@storybook/manager-webpack4": "^6.5.15",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.14",
