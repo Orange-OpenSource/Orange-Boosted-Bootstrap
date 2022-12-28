@@ -1392,7 +1392,7 @@ $dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               $box-shadow !default;
 
 $dropdown-link-color:               $black !default; // Boosted mod
-$dropdown-link-hover-color:         $black !default; // Boosted mod
+$dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod
 
 $dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
