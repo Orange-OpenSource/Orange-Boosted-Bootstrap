@@ -395,6 +395,7 @@ var, // Boosted mod
 code {
   @include font-size($code-font-size);
   font-style: normal; // Boosted mod: <var> is italic in all browsers
+  line-height: $line-height-sm; // Boosted mod
   color: var(--#{$prefix}code-color);
   word-wrap: break-word;
 

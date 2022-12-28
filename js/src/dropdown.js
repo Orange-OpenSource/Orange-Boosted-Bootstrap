@@ -71,7 +71,7 @@ const Default = {
   autoClose: true,
   boundary: 'clippingParents',
   display: 'dynamic',
-  offset: [0, 2],
+  offset: [0, 0], // Boosted mod
   popperConfig: null,
   reference: 'toggle'
 }

@@ -40,6 +40,13 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       ```
     </details>
 
+- **Dropdowns**
+  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
+  ```diff
+  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
+  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+  ```
+
 - **Footer**
   - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
     <details class="mb-2">
@@ -115,8 +122,20 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Dropped CSS variables:</summary>
+    <ul>
+      <li><code>--bs-dropdown-toggle-bg</code></li>
+      <li><code>--bs-dropdown-toggle-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-color</code></li>
+      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-padding-x</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-dropdown-line-height</code></li>
       <li><code>--bs-table-accent-bg</code></li>
       <li><code>--bs-table-striped-bg</code></li>
       <li><code>--bs-table-striped-color</code></li>

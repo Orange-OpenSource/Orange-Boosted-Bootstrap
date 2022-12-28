@@ -32,29 +32,7 @@
   // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-    @include font-size(.875rem);
-
-    thead {
-      border-bottom: 2px solid currentcolor;
-    }
-
-    tbody:not(:first-child) {
-      border-top: 2px solid currentcolor;
-    }
-
-    th,
-    td {
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:not(:last-child) {
-        padding-right: 1rem; // Boosted mod
-      }
-    }
-
+    // Boosted mod: remove unwanted rules
     // Prevent breaking of code
     // stylelint-disable-next-line selector-max-compound-selectors
     th,
