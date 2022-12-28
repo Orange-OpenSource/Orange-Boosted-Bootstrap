@@ -199,7 +199,6 @@
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
-    outline-color: var(--#{$prefix}focus-outline-inner-color); // Boosted mod
   }
 
   &.active,
