@@ -18,8 +18,9 @@ thumbnail: vite.svg
 {{< /callout >}}
 
 {{< callout warning >}}
-**To get a working Boosted demo from the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
-You may need to tweak a bit `src/scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted](#import-boosted) to know more.
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+
+You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup

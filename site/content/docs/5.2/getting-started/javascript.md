@@ -31,8 +31,9 @@ A better alternative for those using this type of frameworks is to use a framewo
 {{< /callout >}}
 
 {{< callout warning >}}
-**To get a working Boosted demo from the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `scss/style.scss`, within `<script>` tags in`index.html` and in `package.json`.
-You may need to tweak a bit `scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted]({{< docsref "/getting-started/webpack#import-boosted" >}}) to know more.
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `scss/style.scss`, within `<script>` tags in`index.html` and in `package.json`.
+
+You may need to tweak a bit `scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted with Webpack]({{< docsref "/getting-started/webpack#import-boosted" >}}) for more details.
 {{< /callout >}}
 
 We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
