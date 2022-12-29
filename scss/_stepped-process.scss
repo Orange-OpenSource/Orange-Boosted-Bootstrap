@@ -98,6 +98,8 @@
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
+  outline-color: $outline-box-color;
+  box-shadow: none;
 
   &::before {
     content: var(--#{$prefix}stepped-process-link-marker);
@@ -113,10 +115,12 @@
 
   .active & {
     color: var(--#{$prefix}stepped-process-link-active-color);
+    outline-color: $black;
   }
 
   .active ~ .stepped-process-item & {
     color: var(--#{$prefix}stepped-process-link-next-color);
+    outline-color: $outline-color;
   }
 }
 

@@ -206,7 +206,6 @@
     color: var(--#{$prefix}dropdown-link-active-color);
     text-decoration: none;
     @include gradient-bg(var(--#{$prefix}dropdown-link-active-bg));
-    outline-color: var(--#{$prefix}focus-outline-inner-color); // Boosted mod
   }
 
   &.disabled,
@@ -223,6 +222,11 @@
     &[data-focus-visible-added] {
       outline-offset: -$outline-width;
       box-shadow: inset 0 0 0 add($outline-box-width, $outline-width) $outline-box-color;
+
+      &.active {
+        outline-color: $outline-box-color;
+        box-shadow: inset 0 0 0 add($outline-box-width, $outline-width) $outline-color;
+      }
     }
   }
   // End mod
