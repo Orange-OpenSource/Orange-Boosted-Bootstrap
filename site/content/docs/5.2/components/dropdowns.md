@@ -140,6 +140,12 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
+{{< ods-incompatibility-alert >}}
+This small variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -268,6 +274,12 @@ Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will app
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="dropdown-center">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -343,6 +355,12 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 ### Dropup centered
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropup-center dropup">
@@ -701,6 +719,12 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
@@ -715,6 +739,12 @@ Place any freeform text within a dropdown menu with text and use [spacing utilit
 ### Forms
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -806,6 +836,10 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
+{{< ods-incompatibility-alert >}}
+The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
@@ -865,14 +899,6 @@ As part of Boosted's evolving CSS variables approach, dropdowns now use local CS
 Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
-
-Dropdowns also use local CSS variables on `.dropdown-toggle` for enhanced real-time customization.
-
-{{< scss-docs name="dropdown-toggle-css-vars" file="scss/_dropdown.scss" >}}
-
-Customization through CSS variables can be seen on the `.dropdown-toggle` dark variant where we override specific values.
-
-{{< scss-docs name="dropdown-toggle-dark-variant-css-vars" file="scss/_dropdown.scss" >}}
 
 ### Sass variables
 

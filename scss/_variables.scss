@@ -787,39 +787,54 @@ $mark-bg-dark:                $white !default; // Boosted mod
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:      .875rem !default;
-$table-cell-padding-x:      $spacer * .5 !default;
-$table-cell-padding-y-sm:   .5625rem !default;
-$table-cell-padding-x-sm:   $table-cell-padding-x !default;
+$table-cell-padding-y:                  .875rem !default; // Boosted mod
+$table-cell-padding-x:                  $spacer * .5 !default; // Boosted mod
+$table-cell-padding-y-sm:               .5625rem !default; // Boosted mod
+$table-cell-padding-x-sm:               $table-cell-padding-x !default; // Boosted mod
 
-$table-cell-vertical-align:   top !default;
-$table-line-height:           1.25 !default; // Boosted mod
+$table-cell-vertical-align:             top !default;
+$table-line-height:                     1.25 !default; // Boosted mod
 
-$table-color:                 var(--#{$prefix}body-color) !default;
-$table-bg:                    $body-bg !default;
-// Boosted mod: no $table-accent-bg
+$table-color:                           var(--#{$prefix}body-color) !default;
+$table-bg:                              $body-bg !default; // Boosted mod
+$table-accent-bg:                       transparent !default;
 
-$table-th-font-weight:        null !default;
+$table-th-font-weight:                  null !default;
 
-$table-active-color:          $table-color !default;
-$table-active-bg-factor:      .1 !default;
-$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-striped-color:                   $table-color !default;
+$table-striped-bg-factor:               .065 !default; // Boosted mod
+$table-striped-bg:                      rgba($black, $table-striped-bg-factor) !default;
+$table-striped-hover-color:             $table-color !default; // Boosted mod
+$table-striped-hover-bg-factor:         .4 !default; // Boosted mod
+$table-striped-hover-bg:                rgba($black, $table-striped-hover-bg-factor) !default; // Boosted mod
+$table-variant-striped-bg-factor:       .2 !default; // Boosted mod
+$table-variant-striped-hover-bg-factor: .865 !default; // Boosted mod
 
-$table-hover-color:           $table-color !default;
-$table-hover-bg-factor:       .065 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-active-color:                    $table-color !default;
+$table-active-bg-factor:                .135 !default; // Boosted mod
+$table-active-bg:                       rgba($black, $table-active-bg-factor) !default;
+$table-variant-active-bg-factor:        .6 !default; // Boosted mod
 
-$table-border-factor:         .4 !default;
-$table-border-width:          $border-width * .5 !default; // Boosted mod
-$table-border-color:          $gray-500 !default; // Boosted mod
+$table-hover-color:                     $table-color !default;
+$table-hover-bg-factor:                 .065 !default; // Boosted mod
+$table-hover-bg:                        rgba($black, $table-hover-bg-factor) !default;
+$table-variant-hover-bg-factor:         .2 !default; // Boosted mod
 
-// Boosted mod: no $table-striped-*
+$table-border-factor:                   .4 !default; // Boosted mod
+/* stylelint-disable-next-line function-disallowed-list */
+$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
+$table-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 
-$table-group-separator-color: currentcolor !default;
+$table-striped-order:                   odd !default;
+$table-striped-columns-order:           even !default;
 
-$table-caption-color:         var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
-$table-caption-color-dark:    $white !default; // Boosted mod
-$table-caption-padding-y:     .75rem !default; // Boosted mod
+$table-group-separator-color:           currentcolor !default;
+
+$table-caption-color:                   var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
+$table-caption-color-dark:              $white !default; // Boosted mod
+$table-caption-padding-y:               .75rem !default; // Boosted mod
+
+// Boosted mod: no $table-bg-scale
 // scss-docs-end table-variables
 
 // scss-docs-start table-loop
@@ -983,8 +998,8 @@ $input-font-weight:                     $font-weight-bold !default;
 $input-line-height:                     $input-btn-line-height !default;
 
 $input-padding-y-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
-$input-padding-x-sm:                    divide($input-padding-y, 2) !default; // Boosted mod
-// Boosted mod: no $input-font-size-sm
+$input-padding-x-sm:                    $input-btn-padding-x-sm !default;
+$input-font-size-sm:                    $input-btn-font-size-sm !default;
 
 $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
@@ -1001,7 +1016,7 @@ $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
 
 $input-border-radius:                   $border-radius !default;
-// Boosted mod: no input-sm
+$input-border-radius-sm:                $border-radius-sm !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 
 $input-focus-bg:                        $input-bg !default;
@@ -1138,7 +1153,10 @@ $form-select-box-shadow:          $box-shadow-inset !default;
 $form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
 $form-select-focus-box-shadow:    null !default;
 
-// Boosted mod: no .form-select-sm
+$form-select-padding-y-sm:        add($input-padding-y-sm, 1px) !default; // Boosted mod
+$form-select-padding-x-sm:        $input-padding-x-sm !default;
+$form-select-font-size-sm:        $input-font-size-sm !default;
+$form-select-border-radius-sm:    $input-border-radius-sm !default;
 
 $form-select-padding-y-lg:        $spacer * .5 !default;
 $form-select-padding-x-lg:        $input-padding-x-lg !default;
@@ -1360,8 +1378,9 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-x:                $spacer * .5 !default;
 $dropdown-padding-y:                0 !default;
-$dropdown-spacer:                   $border-width * -1 !default;
+$dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
+$dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $white !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
@@ -1373,8 +1392,8 @@ $dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               $box-shadow !default;
 
 $dropdown-link-color:               $black !default; // Boosted mod
-$dropdown-link-hover-color:         $white !default; // Boosted mod
-$dropdown-link-hover-bg:            $black !default; // Boosted mod
+$dropdown-link-hover-color:         $dropdown-link-color !default;
+$dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod
 
 $dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
 $dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
@@ -1399,8 +1418,8 @@ $dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
 $dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Boosted mod
 $dropdown-dark-box-shadow:          null !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $black !default; // Boosted mod
-$dropdown-dark-link-hover-bg:       $white !default; // Boosted mod
+$dropdown-dark-link-hover-color:    $white !default;
+$dropdown-dark-link-hover-bg:       $gray-700 !default; // Boosted mod
 $dropdown-dark-link-active-color:   $black !default; // Boosted mod
 $dropdown-dark-link-active-bg:      $white !default; // Boosted mod
 $dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod

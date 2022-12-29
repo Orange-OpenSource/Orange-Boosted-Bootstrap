@@ -69,6 +69,7 @@ const files = [
   ['Tags', '../_site/docs/5.2/components/tags/index.html'],
   ['TitleBars', '../_site/docs/5.2/components/title-bars/index.html'],
   ['Toasts', '../_site/docs/5.2/components/toasts/index.html'],
+  // Note: we need to use `var` instead of `const` to avoid `redeclaration of const tooltipTriggerList` message
   ['Tooltips',
     '../_site/docs/5.2/components/tooltips/index.html',
     'var tooltipTriggerList = [].slice.call(document.querySelectorAll(\'[data-bs-toggle="tooltip"]\'));\
