@@ -124,6 +124,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Dropped CSS variables:</summary>
     <ul>
+      <li><code>--bs-card-spacer-y</code></li>
       <li><code>--bs-dropdown-toggle-bg</code></li>
       <li><code>--bs-dropdown-toggle-border-color</code></li>
       <li><code>--bs-dropdown-toggle-color</code></li>
@@ -133,8 +134,17 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   </details>
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Dropped Sass variables:</summary>
+    <ul>
+      <li><code>$card-spacer-y</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-card-spacer-top</code></li>
+      <li><code>--bs-card-spacer-bottom</code></li>
       <li><code>--bs-dropdown-line-height</code></li>
       <li><code>--bs-table-accent-bg</code></li>
       <li><code>--bs-table-striped-bg</code></li>
@@ -147,6 +157,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$card-spacer-top</code></li>
+      <li><code>$card-spacer-bottom</code></li>
       <li><code>$form-helper-label-margin-bottom</code></li>
       <li><code>$form-helper-size</code></li>
       <li><code>$form-select-border-radius-sm</code></li>
