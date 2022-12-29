@@ -58,12 +58,12 @@ Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examp
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
-<a href="#" class="position-relative">
+<a href="#" class="position-relative d-inline-block">
   <svg width="2rem" height="2rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+  <span class="position-absolute top-0 badge rounded-pill bg-info text-white mt-1 start-50 translate-middle-y">
     99+
     <span class="visually-hidden">shopping basket items</span>
   </span>
