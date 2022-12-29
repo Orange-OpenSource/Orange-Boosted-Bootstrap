@@ -19,6 +19,9 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
+- **Accordions**
+  - <span class="badge bg-danger">Breaking</span> `$accordion-body-padding-y` and `$accordion-body-padding-x` have been deprecated and split into `$accordion-body-padding-top`, `$accordion-body-padding-end`, `$accordion-body-padding-bottom` and `$accordion-body-padding-start`.
+
 - **Card**
   - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
@@ -91,9 +94,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 - <span class="badge bg-success">New</span> Small size form controls are now available. Small inputs are defined by their `.form-control-sm`, small selects by their `.form-select-sm`. They can be associated with `.col-form-label-sm` to correctly follow their size if needed. `.input-group-sm` can also be used depending on the context.
 
-### Accordions
-- <span class="badge bg-danger">Breaking</span> `$accordion-body-padding-y` and `$accordion-body-padding-x` have been deprecated and splitted into `$accordion-body-padding-top`, `$accordion-body-padding-end`, `$accordion-body-padding-bottom` and `$accordion-body-padding-start`.
-
 ### Examples
 
 - **Cards and Cards RTL**
@@ -125,13 +125,23 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> Dropped CSS variables:</summary>
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
+      <li><code>--bs-accordion-body-padding-x</code></li>
+      <li><code>--bs-accordion-body-padding-y</code></li>
       <li><code>--bs-dropdown-toggle-bg</code></li>
       <li><code>--bs-dropdown-toggle-border-color</code></li>
       <li><code>--bs-dropdown-toggle-color</code></li>
       <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
       <li><code>--bs-dropdown-toggle-padding-x</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-body-padding-x</code></li>
+      <li><code>$accordion-body-padding-y</code></li>
     </ul>
   </details>
 
