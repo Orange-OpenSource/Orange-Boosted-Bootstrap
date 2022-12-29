@@ -193,7 +193,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-      outline-offset: -$outline-width;
+      outline-offset: -$focus-visible-outer-width;
     }
   }
 

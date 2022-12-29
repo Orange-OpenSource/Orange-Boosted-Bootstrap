@@ -57,8 +57,8 @@
   // Boosted mod: focus
   &:focus {
     &[data-focus-visible-added] {
-      outline-offset: add($outline-offset, var(--#{$prefix}accordion-border-width));
-      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $outline-box-width) $outline-box-color;
+      outline-offset: add($focus-visible-outer-offset, var(--#{$prefix}accordion-border-width));
+      box-shadow: 0 0 0 add(var(--#{$prefix}accordion-border-width), $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
     }
   }
   // End mod

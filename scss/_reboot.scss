@@ -652,7 +652,7 @@ legend {
 //    https://github.com/twbs/bootstrap/issues/11586.
 
 [type="search"] {
-  outline-offset: -#{$outline-offset}; // 1 // Boosted mod
+  outline-offset: -#{$focus-visible-outer-offset}; // 1 // Boosted mod
   -webkit-appearance: textfield; // 2
 }
 

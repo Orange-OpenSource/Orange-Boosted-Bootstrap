@@ -167,7 +167,7 @@
 
     &:focus {
       &[data-focus-visible-added] {
-        @include focus-visible($color: $outline-box-color, $box-color: $outline-color);
+        @include focus-visible($color: var(--#{$prefix}focus-visible-inner-color), $box-color: var(--#{$prefix}focus-visible-outer-color));
       }
     }
 
@@ -178,7 +178,7 @@
 
       &:focus {
         &[data-focus-visible-added] {
-          @include focus-visible($color: $outline-color, $box-color: $outline-box-color);
+          @include focus-visible($color: var(--#{$prefix}focus-visible-outer-color), $box-color: var(--#{$prefix}focus-visible-inner-color));
         }
       }
 

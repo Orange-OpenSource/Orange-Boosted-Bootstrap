@@ -584,17 +584,18 @@ $border-radius-2xl:           null !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
-$focus-outline-outer-color:       $black !default; // Boosted mod
-$focus-outline-outer-color-dark:  $white !default; // Boosted mod
-$focus-outline-inner-color:       $white !default; // Boosted mod
-$focus-outline-inner-color-dark:  $black !default; // Boosted mod
+// scss-docs-start focus-visible-variables
+$focus-visible-zindex:            5 !default; // Boosted mod
 
-$outline-zindex:                  5 !default; // Boosted mod
-$outline-width:                   3px !default;  // Boosted mod
-$outline-offset:                  2px !default; // Boosted mod
-$outline-color:                   var(--#{$prefix}focus-outline-outer-color) !default; // Boosted mod
-$outline-box-width:               2px !default; // Boosted mod
-$outline-box-color:               var(--#{$prefix}focus-outline-inner-color) !default; // Boosted mod
+$focus-visible-inner-width:       2px !default; // Boosted mod
+$focus-visible-inner-color:       $white !default; // Boosted mod
+$focus-visible-inner-color-dark:  $black !default; // Boosted mod
+
+$focus-visible-outer-width:       3px !default;  // Boosted mod
+$focus-visible-outer-offset:      $focus-visible-inner-width !default; // Boosted mod
+$focus-visible-outer-color:       $black !default; // Boosted mod
+$focus-visible-outer-color-dark:  $white !default; // Boosted mod
+// scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
 $box-shadow:                  null !default;
@@ -863,7 +864,7 @@ $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-focus-width:       $outline-offset !default; // Boosted mod
+$input-btn-focus-width:       $focus-visible-outer-offset !default; // Boosted mod
 // Boosted mod: no need for a blur variable
 $input-btn-focus-box-shadow:  null !default; // Boosted mod
 
@@ -1458,7 +1459,7 @@ $pagination-border-color:           transparent !default; // Boosted mod
 
 $pagination-focus-color:            null !default; // Boosted mod
 $pagination-focus-bg:               null !default; // Boosted mod
-$pagination-focus-box-shadow:       0 0 0 $outline-box-width $outline-box-color !default; // Boosted mod
+$pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
 $pagination-focus-outline:          null !default; // Boosted mod
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod

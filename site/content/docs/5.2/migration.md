@@ -17,6 +17,10 @@ Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and 
 
 If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
 
+### Accessibility
+
+<!-- TODO: Migration guide -->
+
 ### Components
 
 - **Card**
