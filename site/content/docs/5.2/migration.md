@@ -17,6 +17,17 @@ Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and 
 
 If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
 
+### Accessibility
+
+- **Focus visible**
+  - <span class="badge bg-warning">Warning</span> We completely refactored our focus visible management.
+
+  A `focus-visible()` mixin is provided to ensure a proper visible focus state. This visible focus state is defined by an outer outline and an inner box shadow. On light background, the outer outline is black and the inner box shadow is white. The latter will be invisible most of the time but is here to ensure a security on light background but that aren't white. On dark background, these colors are inverted.
+
+  We also removed the `:focus` style of our components that was mirroring the `:hover` state, as well as the transition animation.
+
+  Even if the generic case will be transparent for your project, please check this new behavior in your websites.
+
 ### Components
 
 - **Accordions**
@@ -134,6 +145,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>--bs-dropdown-toggle-color</code></li>
       <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
       <li><code>--bs-dropdown-toggle-padding-x</code></li>
+      <li><code>--bs-tag-outline-color</code></li>
     </ul>
   </details>
 
@@ -149,6 +161,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-dropdown-line-height</code></li>
+      <li><code>--bs-focus-visible-inner-color</code></li>
+      <li><code>--bs-focus-visible-outer-color</code></li>
       <li><code>--bs-table-accent-bg</code></li>
       <li><code>--bs-table-striped-bg</code></li>
       <li><code>--bs-table-striped-color</code></li>
@@ -162,8 +176,31 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   </details>
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$btn-close-focus-shadow</code></li>
+      <li><code>$form-range-thumb-active-border</code></li>
+      <li><code>$form-star-focus-box-shadow</code></li>
+      <li><code>$form-star-focus-color</code></li>
+      <li><code>$form-star-focus-color-dark</code></li>
+      <li><code>$form-star-focus-outline</code></li>
+      <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$outline-offset</code></li>
+      <li><code>$outline-width</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$focus-visible-inner-color</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-inner-width</code></li>
+      <li><code>$focus-visible-outer-color</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
+      <li><code>$focus-visible-outer-offset</code></li>
+      <li><code>$focus-visible-outer-width</code></li>
+      <li><code>$focus-visible-zindex</code></li>
       <li><code>$form-helper-label-margin-bottom</code></li>
       <li><code>$form-helper-size</code></li>
       <li><code>$form-select-border-radius-sm</code></li>
@@ -173,6 +210,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$helper-icon</code></li>
       <li><code>$input-border-radius-sm</code></li>
       <li><code>$input-font-size-sm</code></li>
+      <li><code>$step-link-active-outline</code></li>
       <li><code>$table-accent-bg</code></li>
       <li><code>$table-striped-bg</code></li>
       <li><code>$table-striped-bg-factor</code></li>
