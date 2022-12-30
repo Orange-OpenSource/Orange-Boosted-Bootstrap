@@ -621,9 +621,7 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
-// fusv-disable
-$transition-focus:    outline-offset $transition-duration $transition-timing !default; // Deprecated in v5.2.3
-// fuscv-enable
+$transition-focus:    outline-offset $transition-duration $transition-timing !default;
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
@@ -922,7 +920,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              null !default; // Boosted mod
+$btn-transition:              $transition-focus !default; // Boosted mod
 // scss-docs-end btn-variables
 
 // Boosted mod: icon button
@@ -1047,7 +1045,7 @@ $input-height-sm:                       1.875rem !default;
 $input-height-lg:                       3.125rem !default;
 $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
-$input-transition:                      border-color $transition-duration $transition-timing !default; // Boosted mod
+$input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
@@ -1114,7 +1112,7 @@ $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
 $form-switch-border-radius:       null !default; // Boosted mod
-$form-switch-transition:          background-position .15s ease-in-out !default;
+$form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // Boosted mod
 
 // Boosted mod: no $form-switch-focus-color
 // Boosted mod: no $form-switch-focus-bg-image
@@ -1200,7 +1198,7 @@ $form-range-thumb-active-bg:               null !default;
 $form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod // Deprecated in v5.2.0
 // fusv-enable
 $form-range-thumb-disabled-bg:             $gray-500 !default;
-$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
+$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing !default;
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
@@ -1309,7 +1307,7 @@ $navbar-toggler-font-size-xs:         1.04166666rem !default; // Boosted mod
 $navbar-toggler-font-size:            1.25rem !default; // Boosted mod
 $navbar-toggler-border-radius:        $btn-border-radius !default;
 $navbar-toggler-focus-width:          null !default; // Boosted mod
-$navbar-toggler-transition:           null !default; // Boosted mod
+$navbar-toggler-transition:           $transition-focus !default; // Boosted mod
 
 $navbar-light-color:                  $black !default;
 $navbar-light-hover-color:            $accessible-orange !default;
@@ -1326,8 +1324,8 @@ $navbar-light-brand-hover-color:      $navbar-light-active-color !default;
 // scss-docs-start orange-navbar-variables
 $navbar-transition-duration:                $transition-duration !default;
 $navbar-transition-timing-function:         $transition-timing !default;
-$navbar-transition:                         padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-brand-transition:                   margin $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-transition:                         padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-transition:                   margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:              width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
@@ -1474,7 +1472,7 @@ $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
-$pagination-transition:             null !default; // Boosted mod
+$pagination-transition:             $transition-focus !default;
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
@@ -1567,7 +1565,7 @@ $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
-$accordion-transition:                    null !default; // Boosted mod: no transition for new focus
+$accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod
 $accordion-button-active-color:           $accessible-orange !default; // Boosted mod
 
@@ -1926,7 +1924,7 @@ $carousel-control-color:             $black !default;
 $carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
-$carousel-control-transition:        null !default; // Boosted mod
+$carousel-control-transition:        $transition-focus !default;
 
 $carousel-indicator-width:           .5rem !default;
 $carousel-indicator-height:          .5rem !default;
