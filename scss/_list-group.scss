@@ -59,7 +59,7 @@
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-action-hover-color);
     text-decoration: none;
-    // Boosted mod: no background change
+    // Boosted mod: no background-color
   }
 
   &:active {
@@ -81,7 +81,6 @@
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}list-group-bg);
   border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
-  box-shadow: none; // Boosted mod
 
   &:first-child {
     @include border-top-radius(inherit);
