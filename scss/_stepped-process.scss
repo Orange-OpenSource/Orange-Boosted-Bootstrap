@@ -115,7 +115,7 @@
 
   .active & {
     color: var(--#{$prefix}stepped-process-link-active-color);
-    outline-color: $black;
+    outline-color: $step-link-active-outline;
   }
 
   .active ~ .stepped-process-item & {
