@@ -2,7 +2,8 @@
 @mixin alert-variant($background, $border, $color, $background-image) { // Boosted mod
   --#{$prefix}alert-color: #{$color};
   --#{$prefix}alert-bg: #{$background};
-  --#{$prefix}alert-border: #{$border};
+  --#{$prefix}alert-border: #{$border}; // Boosted mod
+  // Boosted mod: no --#{$prefix}alert-link-color
 
   // Boosted mod
   .alert-icon::before {
