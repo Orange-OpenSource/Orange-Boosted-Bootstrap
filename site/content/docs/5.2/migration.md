@@ -184,6 +184,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$accordion-body-padding-bottom</code></li>
+      <li><code>$accordion-body-padding-end</code></li>
+      <li><code>$accordion-body-padding-start</code></li>
+      <li><code>$accordion-body-padding-top</code></li>
       <li><code>$focus-visible-inner-color</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-inner-width</code></li>
@@ -215,10 +219,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$table-variant-hover-bg-factor</code></li>
       <li><code>$table-variant-striped-hover-bg</code></li>
       <li><code>$table-variant-striped-hover-bg-factor</code></li>
-      <li><code>$accordion-body-padding-top</code></li>
-      <li><code>$accordion-body-padding-end</code></li>
-      <li><code>$accordion-body-padding-bottom</code></li>
-      <li><code>$accordion-body-padding-start</code></li>
     </ul>
   </details>
 
