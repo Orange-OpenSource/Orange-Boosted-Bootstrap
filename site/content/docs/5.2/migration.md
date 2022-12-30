@@ -30,9 +30,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Components
 
-- **Accordions**
-  - <span class="badge bg-danger">Breaking</span> `$accordion-body-padding-y` and `$accordion-body-padding-x` have been deprecated and split into `$accordion-body-padding-top`, `$accordion-body-padding-end`, `$accordion-body-padding-bottom` and `$accordion-body-padding-start`.
-
 - **Card**
   - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Please check and reflect if necessary this modification into your websites.
     <details class="mb-2">
@@ -150,16 +147,12 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
-    <ul>
-      <li><code>$accordion-body-padding-x</code></li>
-      <li><code>$accordion-body-padding-y</code></li>
-    </ul>
-  </details>
-
-- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-accordion-body-padding-bottom</code></li>
+      <li><code>--bs-accordion-body-padding-end</code></li>
+      <li><code>--bs-accordion-body-padding-start</code></li>
+      <li><code>--bs-accordion-body-padding-top</code></li>
       <li><code>--bs-dropdown-line-height</code></li>
       <li><code>--bs-focus-visible-inner-color</code></li>
       <li><code>--bs-focus-visible-outer-color</code></li>
@@ -168,16 +161,14 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>--bs-table-striped-color</code></li>
       <li><code>--bs-table-striped-hover-bg</code></li>
       <li><code>--bs-table-striped-hover-color</code></li>
-      <li><code>--bs-body-padding-top</code></li>
-      <li><code>--bs-body-padding-end</code></li>
-      <li><code>--bs-body-padding-bottom</code></li>
-      <li><code>--bs-body-padding-start</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$accordion-body-padding-x</code></li>
+      <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
       <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
