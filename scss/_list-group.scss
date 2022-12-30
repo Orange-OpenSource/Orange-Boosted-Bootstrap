@@ -52,18 +52,14 @@
   width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: var(--#{$prefix}list-group-action-color);
   text-align: inherit; // For `<button>`s (anchors inherit)
-  outline-offset: $spacer; // Boosted mod
-  @include transition($transition-focus); // Boosted mod
 
+  // Boosted mod: default focus
   // Hover state
-  &:hover,
-  &:focus {
+  &:hover{
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-action-hover-color);
     text-decoration: none;
-    outline-color: var(--#{$prefix}list-group-action-color); // Boosted mod
-    outline-offset: var(--#{$prefix}list-group-border-width); // Boosted mod
-    // Boosted mod: no background change
+    // Boosted mod: no background-color
   }
 
   &:active {
@@ -118,6 +114,20 @@
       border-top-width: var(--#{$prefix}list-group-border-width);
     }
   }
+
+  // Boosted mod: focus
+  &:focus {
+    &[data-focus-visible-added] {
+      outline-offset: subtract(-$focus-visible-outer-width, var(--#{$prefix}list-group-border-width));
+      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
+
+      &.active {
+        outline-color: var(--#{$prefix}focus-visible-inner-color);
+        box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-outer-color);
+      }
+    }
+  }
+  // End mod
 }
 
 // Horizontal

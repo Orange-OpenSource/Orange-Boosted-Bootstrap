@@ -98,14 +98,14 @@
   color: var(--#{$prefix}stepped-process-link-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
-  outline-offset: $spacer;
+  outline-color: var(--#{$prefix}focus-visible-inner-color);
+  box-shadow: none;
 
   &::before {
     content: var(--#{$prefix}stepped-process-link-marker);
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--#{$prefix}stepped-process-link-color);
   }
 
@@ -113,17 +113,14 @@
     text-decoration: if($link-hover-decoration == underline, null, underline);
   }
 
-  &:focus {
-    text-decoration: var(--#{$prefix}stepped-process-link-text-decoration);
-    outline-offset: $spacer * .25;
-  }
-
   .active & {
     color: var(--#{$prefix}stepped-process-link-active-color);
+    outline-color: $step-link-active-outline;
   }
 
   .active ~ .stepped-process-item & {
     color: var(--#{$prefix}stepped-process-link-next-color);
+    outline-color: var(--#{$prefix}focus-visible-outer-color);
   }
 }
 

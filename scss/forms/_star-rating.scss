@@ -3,11 +3,6 @@
 //
 
 .star-rating {
-  &:focus-within {
-    outline: $form-star-focus-outline;
-    box-shadow: $form-star-focus-box-shadow;
-  }
-
   &.disabled,
   &:disabled {
     pointer-events: none;
@@ -35,12 +30,10 @@
     @include form-star-rating($accessible-orange);
   }
 
-  > input:focus ~ label {
-    @include form-star-rating($gray-500);
-  }
-
-  > input:focus + label {
-    @include form-star-rating($accessible-orange);
+  > [data-focus-visible-added]:focus + label {
+    @include focus-visible();
+    outline-offset: -1px;
+    box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
   }
 
   &:hover input + label {
@@ -57,10 +50,6 @@
 }
 
 .star-rating-dark {
-  &:focus-within {
-    outline: $form-star-focus-outline-dark;
-  }
-
   > label {
     @include form-star-rating($brand-orange);
   }
@@ -70,14 +59,6 @@
   }
 
   > input:checked + label {
-    @include form-star-rating($brand-orange);
-  }
-
-  > input:focus ~ label {
-    @include form-star-rating($gray-700);
-  }
-
-  > input:focus + label {
     @include form-star-rating($brand-orange);
   }
 
