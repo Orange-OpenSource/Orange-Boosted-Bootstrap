@@ -148,13 +148,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> Dropped Sass variables:</summary>
-    <ul>
-      <li><code>$card-spacer-y</code></li>
-    </ul>
-  </details>
-
-- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-body-padding-bottom</code></li>
@@ -180,6 +173,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$accordion-body-padding-x</code></li>
       <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
+      <li><code>$card-spacer-y</code></li>
       <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
