@@ -106,8 +106,7 @@
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
-  // Boosted mod: no focus
-  // Hover/focus state
+  // Hover state - Boosted mod: no focus state
   &:hover {
     --#{$boosted-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
     color: color-contrast($carousel-control-color);

@@ -53,9 +53,9 @@
 
   // Boosted mod: no .btn-check + &:hover
 
-  // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
-
   // Boosted mod: no &:focus-visible to avoid issue in button tags
+
+  // Boosted mod: no .btn-check:focus-visible + &
 
   // Boosted mod: custom styles for .btn-check
   // Boosted mod: simpler rule
@@ -68,6 +68,7 @@
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
     // Boosted mod: no box shadow modification for the active state
+    // Boosted mod: no &:focus-visible
   }
 
   &:disabled,
