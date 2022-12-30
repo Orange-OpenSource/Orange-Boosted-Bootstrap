@@ -621,7 +621,7 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
-$transition-focus:    outline-offset $transition-duration $transition-timing !default;
+$transition-focus:    null !default; // Boosted mod
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
