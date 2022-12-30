@@ -121,8 +121,7 @@
   white-space: nowrap;
   @include transition($navbar-brand-transition);
 
-  //// No focus
-
+  // No focus
   &:hover {
     color: var(--#{$prefix}navbar-brand-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
@@ -247,7 +246,7 @@
   padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
-  // Boosted mod: no focus
+  // Boosted mod: no a:focus
   a,
   a:hover {
     color: var(--#{$prefix}navbar-active-color);
