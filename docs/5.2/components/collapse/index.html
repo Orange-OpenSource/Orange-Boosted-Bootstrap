@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-4W+7QzRvU5MpZNXDQLEE9WgRDCNWBvAwLgEYnOpcArZblM633JIQea8MS9gDaQhi" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-zYFw+mxKy6r9zpAc1NoGiYBfQmxfvg7ONEMr81WeU+WLPPaLC9QTrNGFJTBi3EIn" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -65,8 +65,8 @@
     <a id="top"></a>
 <div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
   <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
-    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
-    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="d-inline-flex p-2 ms-3 bg-dark" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 bg-dark" href="#bd-docs-nav">Skip to docs navigation</a>
   </nav>
 </div>
 
@@ -180,11 +180,11 @@
           
           
 
-<li class="nav-item dropdown mb-0 d-flex align-items-center">
+<li class="nav-item dropdown d-flex">
   <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end position-absolute">
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item current" aria-current="true" href="/docs/5.2/components/collapse/">
@@ -201,7 +201,6 @@
     <li><h6 class="dropdown-header">Previous releases</h6></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://boosted.orange.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
   </ul>
@@ -454,7 +453,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.2/site/content/docs/5.2/components/collapse.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.3/site/content/docs/5.2/components/collapse.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
             View on GitHub
           </a>
           <h1 class="bd-title mb-0" id="content">Collapse</h1>
@@ -505,6 +504,17 @@
 
         <h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
 <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>. Given how CSS handles animations, you cannot use <code>padding</code> on a <code>.collapse</code> element. Instead, use the class as an independent wrapping element.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div>Triggering a collapse behavior from a button component should not be used because it does not respect the Orange Design System specifications.</div>
+  </div>
+</div>
+
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.2/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
@@ -832,7 +842,7 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
             </button>
             <span class="d-none d-md-flex">Links</span>
           </h3>
-          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
               <li><a class="nav-link" href="/docs/5.2/" aria-describedby="headingLinks">Docs</a></li>
@@ -849,7 +859,7 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
             </button>
             <span class="d-none d-md-flex">Guides</span>
           </h3>
-          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/docs/5.2/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link" href="/docs/5.2/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
@@ -865,12 +875,12 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
             </button>
             <span class="d-none d-md-flex">Projects</span>
           </h3>
-          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
               <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingGuides">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -881,7 +891,7 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
             </button>
             <span class="d-none d-md-flex">Community</span>
           </h3>
-          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity">Issues</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity">Discussions</a></li>
@@ -895,7 +905,7 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.2.</p>
+          <p class="mb-lg-1">Currently v5.2.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -914,7 +924,7 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-MANW37RG4MpFWPMCcNZBnvSobOkBpIGlbBkEzTtD4FbbOzJXbW8TddND1ak2lfsB" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -951,14 +961,14 @@ Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.2\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.3\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
@@ -985,7 +995,7 @@ ${htmlSnippet.replace(/^/gm, '    ')}
 
 
     
-  <div class="position-fixed"><input type="text" tabindex="-1"></div>
+  <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 
   </body>
 </html>

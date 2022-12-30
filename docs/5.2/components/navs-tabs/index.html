@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-4W+7QzRvU5MpZNXDQLEE9WgRDCNWBvAwLgEYnOpcArZblM633JIQea8MS9gDaQhi" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-zYFw+mxKy6r9zpAc1NoGiYBfQmxfvg7ONEMr81WeU+WLPPaLC9QTrNGFJTBi3EIn" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -65,8 +65,8 @@
     <a id="top"></a>
 <div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
   <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
-    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
-    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="d-inline-flex p-2 ms-3 bg-dark" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 bg-dark" href="#bd-docs-nav">Skip to docs navigation</a>
   </nav>
 </div>
 
@@ -180,11 +180,11 @@
           
           
 
-<li class="nav-item dropdown mb-0 d-flex align-items-center">
+<li class="nav-item dropdown d-flex">
   <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end position-absolute">
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item current" aria-current="true" href="/docs/5.2/components/navs-tabs/">
@@ -201,7 +201,6 @@
     <li><h6 class="dropdown-header">Previous releases</h6></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://boosted.orange.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
   </ul>
@@ -454,7 +453,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.2/site/content/docs/5.2/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.3/site/content/docs/5.2/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
             View on GitHub
           </a>
           <h1 class="bd-title mb-0" id="content">Navs and tabs</h1>
@@ -854,37 +853,35 @@
 
 <p>Nav tabs light is nested in a tab for adding a level of depth in information organization.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-<div role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4">
-  <ul class="nav nav-tabs" id="nav-tab-with-nested-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" id="nav-tab4" role="tab" aria-selected="false">Tab 4</a>
-    </li>
-  </ul>
-</div>
+<ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs" id="nav-tab-with-nested-tabs">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</a>
+  </li>
+</ul>
 
 <div class="tab-content" id="nav-tabs-content">
-  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tablist" aria-labelledby="nav-tab1">
-    <ul class="nav nav-tabs nav-tabs-light mt-0">
-      <li class="nav-item">
+  <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="nav-tab1">
+    <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-tabs nav-tabs-light mt-0">
+      <li class="nav-item" role="presentation">
         <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkB" href="#linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab">Link B</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" role="presentation">
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" id="nav-linkD" role="tab">Link D</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0" id="nav-tabs-light-content">
@@ -910,37 +907,35 @@
             <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> <span class="na">aria-owns</span><span class="o">=</span><span class="s">&#34;nav-tab1 nav-tab2 nav-tab3 nav-tab4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab-with-nested-tabs&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab1-content&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab1-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab1-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Tab 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab2&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab2-content&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab2-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab2-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab3-content&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab3-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab3-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab4&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> <span class="na">aria-owns</span><span class="o">=</span><span class="s">&#34;nav-tab1 nav-tab2 nav-tab3 nav-tab4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab-with-nested-tabs&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab1-content&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab1-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab1-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Tab 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab2&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab2-content&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab2-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab2-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab3&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#tab3-content&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab3-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab3-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tab4&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#tab4-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;tab4-content&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Tab 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-content&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tabs-content&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane-with-nested-tab fade show active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tab1-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-tab1&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-tabs-light mt-0&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane-with-nested-tab fade show active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tab1-content&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-tab1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span> <span class="na">aria-owns</span><span class="o">=</span><span class="s">&#34;nav-linkA nav-linkB nav-linkC nav-linkD&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs nav-tabs-light mt-0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-linkA&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#linkA&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#linkA&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span><span class="p">&gt;</span>Link A<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-linkB&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#linkB&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#linkB&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Link B<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-linkC&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#linkC&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#linkC&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Link C<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-linkD&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Link D<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-linkD&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#linkD&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span><span class="p">&gt;</span>Link D<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-content border-0&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-tabs-light-content&#34;</span><span class="p">&gt;</span>
@@ -958,6 +953,17 @@
 <!-- End mod -->
 <h3 id="pills">Pills <a class="anchor-link" href="#pills" aria-label="Link to this section: Pills"></a></h3>
 <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div>This variant should not be used because it is a button component in the Orange Design System specifications.</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -1233,6 +1239,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="pills-with-dropdowns">Pills with dropdowns <a class="anchor-link" href="#pills-with-dropdowns" aria-label="Link to this section: Pills with dropdowns"></a></h3>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div>This variant should not be used because it is a button component in the Orange Design System specifications.</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -1343,8 +1360,8 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$nav-link-font-weight</span><span class="o">:</span>              <span class="nv">$font-weight-bold</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$nav-link-color</span><span class="o">:</span>                    <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">link-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$nav-link-hover-color</span><span class="o">:</span>              <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">link-hover-color</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$nav-link-transition</span><span class="o">:</span>               <span class="n">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$nav-link-disabled-color</span><span class="o">:</span>           <span class="nv">$gray-500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$nav-link-transition</span><span class="o">:</span>               <span class="n">null</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$nav-link-disabled-color</span><span class="o">:</span>           <span class="nv">$gray-500</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$nav-tabs-border-color</span><span class="o">:</span>             <span class="nv">$black</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$nav-tabs-border-width</span><span class="o">:</span>             <span class="nv">$border-width</span><span class="p">;</span>
@@ -1705,7 +1722,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
             </button>
             <span class="d-none d-md-flex">Links</span>
           </h3>
-          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
               <li><a class="nav-link" href="/docs/5.2/" aria-describedby="headingLinks">Docs</a></li>
@@ -1722,7 +1739,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
             </button>
             <span class="d-none d-md-flex">Guides</span>
           </h3>
-          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/docs/5.2/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link" href="/docs/5.2/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
@@ -1738,12 +1755,12 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
             </button>
             <span class="d-none d-md-flex">Projects</span>
           </h3>
-          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
               <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingGuides">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -1754,7 +1771,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
             </button>
             <span class="d-none d-md-flex">Community</span>
           </h3>
-          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity">Issues</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity">Discussions</a></li>
@@ -1768,7 +1785,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.2.</p>
+          <p class="mb-lg-1">Currently v5.2.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1787,7 +1804,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-MANW37RG4MpFWPMCcNZBnvSobOkBpIGlbBkEzTtD4FbbOzJXbW8TddND1ak2lfsB" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1824,14 +1841,14 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.2\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.3\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
@@ -1858,7 +1875,7 @@ ${htmlSnippet.replace(/^/gm, '    ')}
 
 
     
-  <div class="position-fixed"><input type="text" tabindex="-1"></div>
+  <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 
   </body>
 </html>
