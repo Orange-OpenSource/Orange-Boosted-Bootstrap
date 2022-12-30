@@ -1203,7 +1203,7 @@ $form-range-thumb-active-bg:               null !default;
 $form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod // Deprecated in v5.2.0
 // fusv-enable
 $form-range-thumb-disabled-bg:             $gray-500 !default;
-$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing !default;
+$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
