@@ -601,7 +601,7 @@ $focus-visible-outer-color-dark:  $white !default; // Boosted mod
 $box-shadow:                  null !default; // Boosted mod
 $box-shadow-sm:               null !default; // Boosted mod
 $box-shadow-lg:               null !default; // Boosted mod
-$box-shadow-inset:            none !default; // Boosted mod
+$box-shadow-inset:            null !default; // Boosted mod
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $black !default;
@@ -1023,7 +1023,7 @@ $input-disabled-border-color:           null !default;
 $input-color:                           var(--#{$prefix}body-color) !default;
 $input-border-color:                    $gray-500 !default;
 $input-border-width:                    $input-btn-border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
+$input-box-shadow:                      none !default; // Boosted mod
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-sm:                $border-radius-sm !default;
@@ -1159,7 +1159,7 @@ $form-select-feedback-icon-size:        $input-height-inner-half $input-height-i
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $input-border-radius !default;
-$form-select-box-shadow:          $box-shadow-inset !default;
+$form-select-box-shadow:          none !default; // Boosted mod
 
 $form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
 // Boosted mod: no $form-select-focus-width
