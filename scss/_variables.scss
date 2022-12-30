@@ -1530,7 +1530,11 @@ $placeholder-opacity-min:           .2 !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
+$card-spacer-top:                   $spacer * .75 !default; // Boosted mod
+$card-spacer-bottom:                $spacer !default; // Boosted mod
+// fusv-disable
+$card-spacer-y:                     $spacer !default; // Deprecated in v5.2.3
+// fusv-enable
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
@@ -1538,7 +1542,7 @@ $card-border-color:                 var(--#{$prefix}border-color-translucent) !d
 $card-border-radius:                $border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-padding-y:                $card-spacer-y * .5 !default;
+$card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       $black !default;
 $card-cap-color:                    $white !default;
