@@ -1897,7 +1897,8 @@
     autoClose: true,
     boundary: 'clippingParents',
     display: 'dynamic',
-    offset: [0, 2],
+    offset: [0, 0],
+    // Boosted mod
     popperConfig: null,
     reference: 'toggle'
   };
@@ -3518,9 +3519,6 @@
     dispose() {
       clearTimeout(this._timeout);
       EventHandler.off(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
-      if (this.tip) {
-        this.tip.remove();
-      }
       if (this._element.getAttribute('data-bs-original-title')) {
         this._element.setAttribute('title', this._element.getAttribute('data-bs-original-title'));
       }
@@ -3542,10 +3540,7 @@
       }
 
       // todo v6 remove this OR make it optional
-      if (this.tip) {
-        this.tip.remove();
-        this.tip = null;
-      }
+      this._disposePopper();
       const tip = this._getTipElement();
       this._element.setAttribute('aria-describedby', tip.getAttribute('id'));
       const {
@@ -3555,11 +3550,7 @@
         container.append(tip);
         EventHandler.trigger(this._element, this.constructor.eventName(EVENT_INSERTED));
       }
-      if (this._popper) {
-        this._popper.update();
-      } else {
-        this._popper = this._createPopper(tip);
-      }
+      this._popper = this._createPopper(tip);
       tip.classList.add(CLASS_NAME_SHOW$2);
 
       // If this is a touch-enabled device we add extra
@@ -3608,11 +3599,10 @@
           return;
         }
         if (!this._isHovered) {
-          tip.remove();
+          this._disposePopper();
         }
         this._element.removeAttribute('aria-describedby');
         EventHandler.trigger(this._element, this.constructor.eventName(EVENT_HIDDEN$2));
-        this._disposePopper();
       };
       this._queueCallback(complete, this.tip, this._isAnimated());
     }
@@ -3870,6 +3860,10 @@
       if (this._popper) {
         this._popper.destroy();
         this._popper = null;
+      }
+      if (this.tip) {
+        this.tip.remove();
+        this.tip = null;
       }
     }
 
@@ -5129,6 +5123,7 @@
     Modal,
     Offcanvas,
     OrangeNavbar,
+    // Boosted mod
     Popover,
     QuantitySelector,
     // Boosted mod

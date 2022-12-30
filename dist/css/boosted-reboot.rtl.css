@@ -9,6 +9,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/* stylelint-disable-next-line function-disallowed-list */
 :root {
   --bs-blue: #527edb;
   --bs-indigo: #a885d8;
@@ -80,17 +81,21 @@
   --bs-border-radius-pill: 50rem;
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
+  --bs-focus-visible-inner-color: #fff;
+  --bs-focus-visible-outer-color: #000;
   --bs-code-color: #666;
   --bs-highlight-color: #fff;
   --bs-highlight-bg: #000;
 }
 
 [class*=bg-black],
-[class*=-dark]:not(.border-dark):not(.text-dark),
+[class*=-dark]:not(.border-dark):not(.text-dark):not(.btn-dark),
 [class*=bg-secondary] {
   --bs-primary-text-rgb: 255, 121, 0;
   --bs-link-color: #fff;
   --bs-link-hover-color: #ff7900;
+  --bs-focus-visible-inner-color: #000;
+  --bs-focus-visible-outer-color: #fff;
   --o-caption-color: #fff;
   --bs-code-color: #999;
   --bs-highlight-color: #000;
@@ -100,11 +105,13 @@
   --o-pre-color: #eee;
 }
 [class*=bg-]:not([class*=bg-black],
-[class*=-dark]:not(.border-dark):not(.text-dark),
+[class*=-dark]:not(.border-dark):not(.text-dark):not(.btn-dark),
 [class*=bg-secondary]):not(.bg-transparent) {
   --bs-primary-text-rgb: 241, 110, 0;
   --bs-link-color: #000;
   --bs-link-hover-color: #f16e00;
+  --bs-focus-visible-inner-color: #fff;
+  --bs-focus-visible-outer-color: #000;
   --o-caption-color: var(--o-caption-color, #000);
   --bs-code-color: #666;
   --bs-highlight-color: #fff;
@@ -152,16 +159,22 @@ body {
 }
 
 :focus {
-  outline: 0.125rem solid;
+  z-index: 5;
+  isolation: isolate;
+  outline: 3px solid var(--bs-focus-visible-outer-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--bs-focus-visible-inner-color);
 }
 
 .js-focus-visible :focus:not([data-focus-visible-added]),
 .js-focus-visible .focus:not([data-focus-visible-added]) {
   outline: 0 !important;
+  box-shadow: none;
 }
 
 :focus:not(:focus-visible) {
   outline: 0 !important;
+  box-shadow: none;
 }
 
 hr {
@@ -319,17 +332,6 @@ sup {
 a {
   color: var(--bs-link-color);
   text-decoration: underline;
-  outline-offset: 0.5rem;
-  transition: outline-offset 0.2s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  a {
-    transition: none;
-  }
-}
-a:focus {
-  color: var(--bs-link-hover-color);
-  outline-offset: 0.125rem;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -368,6 +370,7 @@ var,
 code {
   font-size: 0.875em;
   font-style: normal;
+  line-height: 1.1428571429;
   color: var(--bs-code-color);
   word-wrap: break-word;
 }
@@ -442,6 +445,7 @@ button {
 
 button:focus:not(:focus-visible) {
   outline: 0;
+  box-shadow: none;
 }
 
 input,
@@ -533,7 +537,7 @@ legend + * {
 }
 
 [type=search] {
-  outline-offset: -0.125rem;
+  outline-offset: -2px;
   -webkit-appearance: textfield;
 }
 
