@@ -135,6 +135,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
+      <li><code>--bs-accordion-body-padding-x</code></li>
+      <li><code>--bs-accordion-body-padding-y</code></li>
       <li><code>--bs-dropdown-toggle-bg</code></li>
       <li><code>--bs-dropdown-toggle-border-color</code></li>
       <li><code>--bs-dropdown-toggle-color</code></li>
@@ -147,6 +149,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-accordion-body-padding-bottom</code></li>
+      <li><code>--bs-accordion-body-padding-end</code></li>
+      <li><code>--bs-accordion-body-padding-start</code></li>
+      <li><code>--bs-accordion-body-padding-top</code></li>
       <li><code>--bs-dropdown-line-height</code></li>
       <li><code>--bs-focus-visible-inner-color</code></li>
       <li><code>--bs-focus-visible-outer-color</code></li>
@@ -161,6 +167,8 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$accordion-body-padding-x</code></li>
+      <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
       <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
@@ -176,6 +184,10 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$accordion-body-padding-bottom</code></li>
+      <li><code>$accordion-body-padding-end</code></li>
+      <li><code>$accordion-body-padding-start</code></li>
+      <li><code>$accordion-body-padding-top</code></li>
       <li><code>$focus-visible-inner-color</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-inner-width</code></li>
