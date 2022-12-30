@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-4W+7QzRvU5MpZNXDQLEE9WgRDCNWBvAwLgEYnOpcArZblM633JIQea8MS9gDaQhi" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-zYFw+mxKy6r9zpAc1NoGiYBfQmxfvg7ONEMr81WeU+WLPPaLC9QTrNGFJTBi3EIn" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -65,8 +65,8 @@
     <a id="top"></a>
 <div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
   <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
-    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
-    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="d-inline-flex p-2 ms-3 bg-dark" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 bg-dark" href="#bd-docs-nav">Skip to docs navigation</a>
   </nav>
 </div>
 
@@ -180,11 +180,11 @@
           
           
 
-<li class="nav-item dropdown mb-0 d-flex align-items-center">
+<li class="nav-item dropdown d-flex">
   <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end position-absolute">
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item current" aria-current="true" href="/docs/5.2/components/dropdowns/">
@@ -201,7 +201,6 @@
     <li><h6 class="dropdown-header">Previous releases</h6></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://boosted.orange.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
   </ul>
@@ -454,7 +453,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.2/site/content/docs/5.2/components/dropdowns.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.3/site/content/docs/5.2/components/dropdowns.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
             View on GitHub
           </a>
           <h1 class="bd-title mb-0" id="content">Dropdowns</h1>
@@ -723,7 +722,20 @@
 </span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><div class="bd-example">
+</span></span></code></pre></div><div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div><p>This small variant should not be used because it does not respect the Orange Design System specifications.</p>
+<p>Please refer to the <a href="https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480">Dropdown</a> guidelines on the Orange Design System website.</p>
+</div>
+  </div>
+</div>
+
+<div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Small button
@@ -918,6 +930,19 @@
 
 <h3 id="centered">Centered <a class="anchor-link" href="#centered" aria-label="Link to this section: Centered"></a></h3>
 <p>Make the dropdown menu centered below the toggle with <code>.dropdown-center</code> on the parent element.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div><p>This variant should not be used because it does not respect the Orange Design System specifications.</p>
+<p>Please refer to the <a href="https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480">Dropdown</a> guidelines on the Orange Design System website.</p>
+</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="dropdown-center">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1007,6 +1032,19 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="dropup-centered">Dropup centered <a class="anchor-link" href="#dropup-centered" aria-label="Link to this section: Dropup centered"></a></h3>
 <p>Make the dropup menu centered above the toggle with <code>.dropup-center</code> on the parent element.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div><p>This variant should not be used because it does not respect the Orange Design System specifications.</p>
+<p>Please refer to the <a href="https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480">Dropdown</a> guidelines on the Orange Design System website.</p>
+</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="dropup-center dropup">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1603,6 +1641,19 @@
 
 <h3 id="text">Text <a class="anchor-link" href="#text" aria-label="Link to this section: Text"></a></h3>
 <p>Place any freeform text within a dropdown menu with text and use <a href="/docs/5.2/utilities/spacing/">spacing utilities</a>. Note that you&rsquo;ll likely need additional sizing styles to constrain the menu width.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div><p>This variant should not be used because it does not respect the Orange Design System specifications.</p>
+<p>Please refer to the <a href="https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480">Dropdown</a> guidelines on the Orange Design System website.</p>
+</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
@@ -1635,6 +1686,19 @@
 
 <h3 id="forms">Forms <a class="anchor-link" href="#forms" aria-label="Link to this section: Forms"></a></h3>
 <p>Put a form within a dropdown menu, or make it into a dropdown menu, and use <a href="/docs/5.2/utilities/spacing/">margin or padding utilities</a> to give it the negative space you require.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div><p>This variant should not be used because it does not respect the Orange Design System specifications.</p>
+<p>Please refer to the <a href="https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480">Dropdown</a> guidelines on the Orange Design System website.</p>
+</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="dropdown-menu">
   <form class="px-4 py-3">
@@ -1827,6 +1891,17 @@
 
 <h3 id="auto-close-behavior">Auto close behavior <a class="anchor-link" href="#auto-close-behavior" aria-label="Link to this section: Auto close behavior"></a></h3>
 <p>By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the <code>autoClose</code> option to change this behavior of the dropdown.</p>
+<div class="bd-ods-incompatibility-alert alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">
+      Incompatibility with Orange Design System.
+      <a href="/docs/5.2/getting-started/introduction/">More information</a>
+    </div>
+    <div>The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.</div>
+  </div>
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
@@ -1939,7 +2014,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}dropdown-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-padding-y</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-spacer</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-spacer</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="nv">$dropdown-font-size</span><span class="o">,</span> <span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">dropdown-font-size</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-color</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-line-height</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-line-height</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}dropdown-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-border-radius</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-border-radius</span><span class="si">}</span><span class="p">;</span>
@@ -1975,26 +2051,15 @@
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-link-disabled-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-dark-link-disabled-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-header-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-dark-header-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  </span></span></code></pre></div>
-<p>Dropdowns also use local CSS variables on <code>.dropdown-toggle</code> for enhanced real-time customization.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}dropdown-toggle-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-padding-x</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}dropdown-toggle-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}dropdown-toggle-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--#{$prefix}dropdown-toggle-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-border-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  </span></span></code></pre></div>
-<p>Customization through CSS variables can be seen on the <code>.dropdown-toggle</code> dark variant where we override specific values.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">    <span class="na">--#{$prefix}dropdown-toggle-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">--#{$prefix}dropdown-toggle-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">--#{$prefix}dropdown-toggle-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$gray-700</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">--#{$prefix}dropdown-toggle-border-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$dropdown-link-hover-color</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    </span></span></code></pre></div>
 <h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <p>Variables for all dropdowns:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$dropdown-min-width</span><span class="o">:</span>                <span class="mi">10</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-padding-x</span><span class="o">:</span>                <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-padding-y</span><span class="o">:</span>                <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-spacer</span><span class="o">:</span>                   <span class="nv">$border-width</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-spacer</span><span class="o">:</span>                   <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-font-size</span><span class="o">:</span>                <span class="nv">$font-size-base</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-color</span><span class="o">:</span>                    <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-line-height</span><span class="o">:</span>              <span class="nv">$line-height-base</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-color</span><span class="o">:</span>                    <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-bg</span><span class="o">:</span>                       <span class="nv">$white</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-border-color</span><span class="o">:</span>             <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-color-translucent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-border-radius</span><span class="o">:</span>            <span class="nv">$border-radius</span><span class="p">;</span>
@@ -2005,8 +2070,8 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-box-shadow</span><span class="o">:</span>               <span class="nv">$box-shadow</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-link-color</span><span class="o">:</span>               <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-link-hover-color</span><span class="o">:</span>         <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-link-hover-bg</span><span class="o">:</span>            <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-link-hover-color</span><span class="o">:</span>         <span class="nv">$dropdown-link-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-link-hover-bg</span><span class="o">:</span>            <span class="nv">$gray-500</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-link-active-color</span><span class="o">:</span>        <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$component-active-color</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-link-active-bg</span><span class="o">:</span>           <span class="nv">$component-active-color</span><span class="p">;</span>  <span class="c1">// Boosted mod
@@ -2030,8 +2095,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-divider-bg</span><span class="o">:</span>          <span class="nv">$dropdown-dark-border-color</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-box-shadow</span><span class="o">:</span>          <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$dropdown-dark-link-color</span><span class="o">:</span>          <span class="nv">$dropdown-dark-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-dark-link-hover-color</span><span class="o">:</span>    <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-link-hover-bg</span><span class="o">:</span>       <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-dark-link-hover-color</span><span class="o">:</span>    <span class="nv">$white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dropdown-dark-link-hover-bg</span><span class="o">:</span>       <span class="nv">$gray-700</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-link-active-color</span><span class="o">:</span>   <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-link-active-bg</span><span class="o">:</span>      <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$dropdown-dark-link-disabled-color</span><span class="o">:</span> <span class="nv">$gray-700</span><span class="p">;</span> <span class="c1">// Boosted mod
@@ -2295,7 +2360,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
             </button>
             <span class="d-none d-md-flex">Links</span>
           </h3>
-          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
               <li><a class="nav-link" href="/docs/5.2/" aria-describedby="headingLinks">Docs</a></li>
@@ -2312,7 +2377,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
             </button>
             <span class="d-none d-md-flex">Guides</span>
           </h3>
-          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/docs/5.2/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link" href="/docs/5.2/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
@@ -2328,12 +2393,12 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
             </button>
             <span class="d-none d-md-flex">Projects</span>
           </h3>
-          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
               <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingGuides">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -2344,7 +2409,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
             </button>
             <span class="d-none d-md-flex">Community</span>
           </h3>
-          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity">Issues</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity">Discussions</a></li>
@@ -2358,7 +2423,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.2.</p>
+          <p class="mb-lg-1">Currently v5.2.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -2377,7 +2442,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-MANW37RG4MpFWPMCcNZBnvSobOkBpIGlbBkEzTtD4FbbOzJXbW8TddND1ak2lfsB" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -2414,14 +2479,14 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.2\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.3\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
@@ -2448,7 +2513,7 @@ ${htmlSnippet.replace(/^/gm, '    ')}
 
 
     
-  <div class="position-fixed"><input type="text" tabindex="-1"></div>
+  <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 
   </body>
 </html>

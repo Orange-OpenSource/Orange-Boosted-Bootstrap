@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.2/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-4W+7QzRvU5MpZNXDQLEE9WgRDCNWBvAwLgEYnOpcArZblM633JIQea8MS9gDaQhi" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-zYFw+mxKy6r9zpAc1NoGiYBfQmxfvg7ONEMr81WeU+WLPPaLC9QTrNGFJTBi3EIn" crossorigin="anonymous">
 
 <link href="/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
@@ -65,8 +65,8 @@
     <a id="top"></a>
 <div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
   <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
-    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
-    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="d-inline-flex p-2 ms-3 bg-dark" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 bg-dark" href="#bd-docs-nav">Skip to docs navigation</a>
   </nav>
 </div>
 
@@ -180,11 +180,11 @@
           
           
 
-<li class="nav-item dropdown mb-0 d-flex align-items-center">
+<li class="nav-item dropdown d-flex">
   <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-lg-none" aria-hidden="true">Boosted</span><span class="visually-hidden">Boosted&nbsp;</span> v5.2 <span class="visually-hidden">(switch to other versions)</span>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end position-absolute">
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute">
     <li><h6 class="dropdown-header">v5 releases</h6></li>
     <li>
       <a class="dropdown-item current" aria-current="true" href="/docs/5.2/content/tables/">
@@ -201,7 +201,6 @@
     <li><h6 class="dropdown-header">Previous releases</h6></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
     <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://boosted.orange.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
   </ul>
@@ -454,7 +453,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.2/site/content/docs/5.2/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.2.3/site/content/docs/5.2/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
             View on GitHub
           </a>
           <h1 class="bd-title mb-0" id="content">Tables</h1>
@@ -475,9 +474,12 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#accessibility">Accessibility</a></li>
     <li><a href="#variants">Variants</a></li>
     <li><a href="#accented-tables">Accented tables</a>
       <ul>
+        <li><a href="#striped-rows">Striped rows</a></li>
+        <li><a href="#striped-columns">Striped columns</a></li>
         <li><a href="#hoverable-rows">Hoverable rows</a></li>
         <li><a href="#active-tables">Active tables</a></li>
       </ul>
@@ -525,8 +527,7 @@
 <p>Due to the widespread use of <code>&lt;table&gt;</code> elements across third-party widgets like calendars and date pickers, Boosted&rsquo;s tables are <strong>opt-in</strong>. Add the base class <code>.table</code> to any <code>&lt;table&gt;</code>, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Boosted, meaning any nested tables can be styled independent from the parent.</p>
 <p>Using the most basic table markup, here&rsquo;s how <code>.table</code>-based tables look in Boosted.</p>
 <div class="bd-example">
-  <table class="table">
-      <thead>
+  <table class="table"><caption class="visually-hidden">Boosted tables basic look</caption>  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -555,7 +556,9 @@
   </tbody>
 
   </table>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">caption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Boosted tables basic look<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -583,12 +586,22 @@
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@twitter<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<h2 id="accessibility">Accessibility <a class="anchor-link" href="#accessibility" aria-label="Link to this section: Accessibility"></a></h2>
+<p>To make a table accessible, you should respect these three main rules:</p>
+<ul>
+<li>If the table is an important one, add a <code>role=&quot;region&quot;</code> attribute to help screen readers.</li>
+<li>add a <code>scope=&quot;col&quot;</code> or <code>scope=&quot;row&quot;</code> attribute to the tags when needed to make the content of table readable by screen readers.</li>
+<li>add a <code>&lt;caption&gt;</code> on each table. If the table doesn&rsquo;t have a caption or if the caption is not enough informative to describe the table, add an <code>aria-label</code> attribute to describe the table content. The <code>aria-label</code> should match the following pattern: <code>aria-label=&quot;Description of table data - Description of table metadata (e.g.: table with one level of column header)&quot;</code>. The metadata is mandatory for complex tables.</li>
+</ul>
+<p>See <a href="https://a11y-guidelines.orange.com/en/web/develop/textual-content/#structuring-data-tables">more information about the tables structures</a>.</p>
 <h2 id="variants">Variants <a class="anchor-link" href="#variants" aria-label="Link to this section: Variants"></a></h2>
 <!-- Boosted mod: only .table-dark is allowed -->
 <p>Use contextual class to color tables, table rows or individual cells.</p>
 <div class="bd-example">
   <table class="table">
+    <caption class="visually-hidden">Boosted table variants</caption>
     <thead>
       <tr>
         <th scope="col">Class</th>
@@ -626,11 +639,156 @@
 </div>
 
 <h2 id="accented-tables">Accented tables <a class="anchor-link" href="#accented-tables" aria-label="Link to this section: Accented tables"></a></h2>
+<h3 id="striped-rows">Striped rows <a class="anchor-link" href="#striped-rows" aria-label="Link to this section: Striped rows"></a></h3>
+<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+<div class="bd-example">
+  <table class="table table-striped"><caption class="visually-hidden">Boosted striped rows table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-striped&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<h3 id="striped-columns">Striped columns <a class="anchor-link" href="#striped-columns" aria-label="Link to this section: Striped columns"></a></h3>
+<p>Use .table-striped-columns to add zebra-striping to any table column.</p>
+<div class="bd-example">
+  <table class="table table-striped-columns"><caption class="visually-hidden">Boosted striped columns table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-striped-columns&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<p>These classes can also be added to table variants:</p>
+<div class="bd-example">
+  <table class="table table-dark table-striped"><caption class="visually-hidden">Boosted dark striped rows table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-striped&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<div class="bd-example">
+  <table class="table table-dark table-striped-columns"><caption class="visually-hidden">Boosted dark striped columns table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-striped-columns&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<!-- Boosted mod : no .table-success -->
 <h3 id="hoverable-rows">Hoverable rows <a class="anchor-link" href="#hoverable-rows" aria-label="Link to this section: Hoverable rows"></a></h3>
 <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
 <div class="bd-example">
-  <table class="table table-hover">
-      <thead>
+  <table class="table table-hover"><caption class="visually-hidden">Boosted hoverable table</caption>  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -659,12 +817,13 @@
   </tbody>
 
   </table>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-hover&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-hover&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <div class="bd-example">
-  <table class="table table-dark table-hover">
-      <thead>
+  <table class="table table-dark table-hover"><caption class="visually-hidden">Boosted hoverable dark table</caption>  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -693,13 +852,87 @@
   </tbody>
 
   </table>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-hover&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-hover&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<p>These hoverable rows can also be combined with the striped rows variant:</p>
+<div class="bd-example">
+  <table class="table table-striped table-hover"><caption class="visually-hidden">Boosted hoverable striped table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-striped table-hover&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<div class="bd-example">
+  <table class="table table-dark table-striped table-hover"><caption class="visually-hidden">Boosted hoverable dark striped table</caption>  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+
+  </table>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-striped table-hover&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <h3 id="active-tables">Active tables <a class="anchor-link" href="#active-tables" aria-label="Link to this section: Active tables"></a></h3>
 <p>Highlight a table row or cell by adding a <code>.table-active</code> class.</p>
 <div class="bd-example">
   <table class="table">
+    <caption class="visually-hidden">Boosted table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -730,6 +963,7 @@
   </table>
 </div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
@@ -749,6 +983,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </span></span></code></pre></div><div class="bd-example">
   <table class="table table-dark">
+    <caption class="visually-hidden">Boosted dark table with an active row and cell</caption>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -779,6 +1014,7 @@
   </table>
 </div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
@@ -797,11 +1033,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="how-do-the-variants-and-accented-tables-work">How do the variants and accented tables work? <a class="anchor-link" href="#how-do-the-variants-and-accented-tables-work" aria-label="Link to this section: How do the variants and accented tables work?"></a></h2>
-<p>For the accented tables (<a href="#hoverable-rows">hoverable rows</a> and <a href="#active-tables">active tables</a>), we used some techniques to make these effects work for all our <a href="#variants">table variants</a>:</p>
+<p>For the accented tables (<a href="#striped-rows">striped rows</a>, <a href="#striped-columns">striped columns</a>, <a href="#hoverable-rows">hoverable rows</a> and <a href="#active-tables">active tables</a>), we used some techniques to make these effects work for all our <a href="#variants">table variants</a>:</p>
 <ul>
 <li>We start by setting the background of a table cell with the <code>--bs-table-bg</code> custom property. All table variants then set that custom property to colorize the table cells. This way, we don&rsquo;t get into trouble if semi-transparent colors are used as table backgrounds.</li>
 <li>Then we add an inset box shadow on the table cells with <code>box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);</code> to layer on top of any specified <code>background-color</code>. Because we use a huge spread and no blur, the color will be monotone. Since <code>--bs-table-accent-bg</code> is unset by default, we don&rsquo;t have a default box shadow.</li>
-<li>When either <code>.table-hover</code> or <code>.table-active</code> classes are added, the <code>--bs-table-accent-bg</code> is set to a semitransparent color to colorize the background.</li>
+<li>When either <code>.table-striped</code>, <code>.table-striped-columns</code>, <code>.table-hover</code> or <code>.table-active</code> classes are added, the <code>--bs-table-accent-bg</code> is set to a semitransparent color to colorize the background.</li>
 <li>For each table variant, we generate a <code>--bs-table-accent-bg</code> color with the highest contrast depending on that color. For example, the accent color for <code>.table-dark</code> has a lighter accent color.</li>
 <li>Text and border colors are generated the same way, and their colors are inherited by default.</li>
 </ul>
@@ -809,14 +1045,20 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> table-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.table-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nf">opaque</span><span class="p">(</span><span class="nv">$body-bg</span><span class="o">,</span> <span class="nv">$background</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$hover-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-hover-bg-factor</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$active-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-active-bg-factor</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$table-border-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-border-factor</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$hover-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-variant-hover-bg-factor</span><span class="p">));</span><span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$striped-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-variant-striped-bg-factor</span><span class="p">));</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$striped-hover-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-variant-striped-hover-bg-factor</span><span class="p">));</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$active-bg</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-variant-active-bg-factor</span><span class="p">));</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$table-border-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$table-border-factor</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$background</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$table-border-color</span><span class="si">}</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$active-bg</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-striped-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$striped-bg</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-striped-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$striped-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-striped-hover-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$striped-hover-bg</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">--#{$prefix}table-striped-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$striped-hover-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">--#{$prefix}table-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$active-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$active-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-hover-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$hover-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}table-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$hover-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
@@ -826,11 +1068,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
+<!-- Boosted mod : No table borders -->
 <h2 id="small-tables">Small tables <a class="anchor-link" href="#small-tables" aria-label="Link to this section: Small tables"></a></h2>
 <p>Add <code>.table-sm</code> to make any <code>.table</code> more compact by cutting all cell <code>padding</code> in half.</p>
 <div class="bd-example">
-  <table class="table table-sm">
-      <thead>
+  <table class="table table-sm"><caption class="visually-hidden">Boosted small table</caption>  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -859,12 +1101,13 @@
   </tbody>
 
   </table>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <div class="bd-example">
-  <table class="table table-dark table-sm">
-      <thead>
+  <table class="table table-dark table-sm"><caption class="visually-hidden">Boosted dark small table</caption>  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -893,13 +1136,16 @@
   </tbody>
 
   </table>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-sm&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-dark table-sm&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <h2 id="table-group-dividers">Table group dividers <a class="anchor-link" href="#table-group-dividers" aria-label="Link to this section: Table group dividers"></a></h2>
 <p>Add a thicker border, darker between table groups—<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>—with <code>.table-group-divider</code>. Customize the color by changing the <code>border-top-color</code> (which we don&rsquo;t currently provide a utility class for at this time).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <table class="table">
+  <caption class="visually-hidden">Boosted group divided table</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -941,6 +1187,7 @@
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">caption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Boosted group divided table<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -975,6 +1222,7 @@
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table align-middle">
+      <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
       <thead>
         <tr>
           <th scope="col" class="w-25">Heading 1</th>
@@ -1008,6 +1256,7 @@
 </div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table-responsive&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table align-middle&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        ...
@@ -1032,62 +1281,65 @@
 </span></span></code></pre></div><h2 id="nesting">Nesting <a class="anchor-link" href="#nesting" aria-label="Link to this section: Nesting"></a></h2>
 <p>Border styles, active styles, and table variants are not inherited by nested tables.</p>
 <div class="bd-example">
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <table class="table mb-0">
-          <thead>
-            <tr>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">A</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">B</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-            <tr>
-              <th scope="row">C</th>
-              <td>First</td>
-              <td>Last</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-striped table-bordered">
+    <caption class="visually-hidden">Boosted table with a nested table inside - table with one level of row and column header</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <table class="table mb-0">
+          <caption class="visually-hidden">Boosted nested table</caption>
+            <thead>
+              <tr>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">A</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">B</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+              <tr>
+                <th scope="row">C</th>
+                <td>First</td>
+                <td>Last</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-striped table-bordered&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
@@ -1107,163 +1359,98 @@
 <p>To prevent <em>any</em> styles from leaking to nested tables, we use the child combinator (<code>&gt;</code>) selector in our CSS. Since we need to target all the <code>td</code>s and <code>th</code>s in the <code>thead</code>, <code>tbody</code>, and <code>tfoot</code>, our selector would look pretty long without it. As such, we use the rather odd looking <code>.table &gt; :not(caption) &gt; * &gt; *</code> selector to target all <code>td</code>s and <code>th</code>s of the <code>.table</code>, but none of any potential nested tables.</p>
 <p>Note that if you add <code>&lt;tr&gt;</code>s as direct children of a table, those <code>&lt;tr&gt;</code> will be wrapped in a <code>&lt;tbody&gt;</code> by default, thus making our selectors work as intended.</p>
 <h2 id="anatomy">Anatomy <a class="anchor-link" href="#anatomy" aria-label="Link to this section: Anatomy"></a></h2>
+<!-- Boosted mod : no table head or table foot -->
 <h3 id="captions">Captions <a class="anchor-link" href="#captions" aria-label="Link to this section: Captions"></a></h3>
 <p>A <code>&lt;caption&gt;</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it&rsquo;s about and decide if they want to read it.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-<table class="table">
-  <caption>List of users</caption>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+<div class="bd-example">
+  <table class="table">
+    <caption>List of users</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    
+
+  </table>
 </div>
-      
-      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
-        <small class="font-monospace text-muted text-uppercase">html</small>
-        <div class="d-flex ms-auto">
-          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
-            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
-          </button>
-          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
-            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
-          </button>
-        </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>List of users<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>First<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Last<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Handle<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Mark<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Otto<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@mdo<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Jacob<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Thornton<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@fat<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Larry<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>the Bird<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@twitter<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div></div>
-
-<!-- Boosted mod: default caption-side is top -->
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div><!-- Boosted mod: default caption-side is top -->
 <p>You can also put the <code>&lt;caption&gt;</code> on the bottom of the table with <code>.caption-bottom</code>.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-<table class="table caption-bottom">
-  <caption>List of users</caption>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+<div class="bd-example">
+  <table class="table caption-bottom">
+    <caption>List of users</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    
+
+  </table>
 </div>
-      
-      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
-        <small class="font-monospace text-muted text-uppercase">html</small>
-        <div class="d-flex ms-auto">
-          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
-            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
-          </button>
-          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
-            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
-          </button>
-        </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table caption-bottom&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>List of users<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table caption-bottom&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>First<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Last<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Handle<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Mark<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Otto<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@mdo<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Jacob<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Thornton<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@fat<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Larry<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>the Bird<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>@twitter<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div></div>
-
-<h2 id="responsive-tables">Responsive tables <a class="anchor-link" href="#responsive-tables" aria-label="Link to this section: Responsive tables"></a></h2>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="responsive-tables">Responsive tables <a class="anchor-link" href="#responsive-tables" aria-label="Link to this section: Responsive tables"></a></h2>
 <p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code>.table</code> with <code>.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.</p>
 <div class="bd-callout bd-callout-warning">
 <h5 id="vertical-clippingtruncation">Vertical clipping/truncation <a class="anchor-link" href="#vertical-clippingtruncation" aria-label="Link to this section: Vertical clipping/truncation"></a></h5>
@@ -1272,9 +1459,10 @@
 
 <h3 id="always-responsive">Always responsive <a class="anchor-link" href="#always-responsive" aria-label="Link to this section: Always responsive"></a></h3>
 <p>Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+<div class="bd-example">
+  <div class="table-responsive">
     <table class="table">
+      <caption class="visually-hidden">Boosted responsive table</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1330,74 +1518,6 @@
     </table>
   </div>
 </div>
-      
-      <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
-        <small class="font-monospace text-muted text-uppercase">html</small>
-        <div class="d-flex ms-auto">
-          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
-            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
-          </button>
-          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
-            <svg class="bi" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>
-          </button>
-        </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table-responsive&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
-
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table-responsive&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    ...
@@ -1412,6 +1532,7 @@
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for  breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1468,6 +1589,7 @@
 <div class="bd-example">
   <div class="table-responsive-sm">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for -sm breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1524,6 +1646,7 @@
 <div class="bd-example">
   <div class="table-responsive-md">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for -md breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1580,6 +1703,7 @@
 <div class="bd-example">
   <div class="table-responsive-lg">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for -lg breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1636,6 +1760,7 @@
 <div class="bd-example">
   <div class="table-responsive-xl">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for -xl breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1692,6 +1817,7 @@
 <div class="bd-example">
   <div class="table-responsive-xxl">
     <table class="table">
+    <caption class="visually-hidden">Boosted responsive table for -xxl breakpoint and under</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -1787,8 +1913,9 @@
 <p>The selection behavior isn&rsquo;t implemented yet. This feature will be delivered with <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/410">#410</a> as an example.
 </div>
 
-<div>
-  <table class="table table-sm table-hover table-responsive has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover has-checkbox">
+    <caption class="visually-hidden">Boosted table with a selection feature</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -1921,8 +2048,9 @@
     </tbody>
   </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm table-hover table-responsive has-checkbox&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table-responsive&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table table-sm table-hover has-checkbox&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
@@ -1979,8 +2107,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="with-icons-or-thumbnails">With icons or thumbnails <a class="anchor-link" href="#with-icons-or-thumbnails" aria-label="Link to this section: With icons or thumbnails"></a></h3>
 <p>Use SVG to display thumbnails or icons in your table data cell elements.</p>
-<div>
-  <table class="table table-sm table-hover table-responsive align-middle has-checkbox">
+<div class="table-responsive">
+  <table class="table table-sm table-hover align-middle has-checkbox">
+    <caption class="visually-hidden">Boosted table with icons in a row</caption>
     <thead>
       <tr>
         <th scope="col">
@@ -2175,8 +2304,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  Cell text
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span></code></pre></div><div>
-  <table class="table table-responsive align-middle">
+</span></span></code></pre></div><div class="table-responsive">
+  <table class="table align-middle">
+    <caption class="visually-hidden">Boosted table with icons inside a row</caption>
     <thead>
       <tr>
         <th scope="col">Column header</th>
@@ -2293,39 +2423,54 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$table-cell-padding-y</span><span class="o">:</span>      <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-cell-padding-x</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-cell-padding-y-sm</span><span class="o">:</span>   <span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-cell-padding-x-sm</span><span class="o">:</span>   <span class="nv">$table-cell-padding-x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$table-cell-vertical-align</span><span class="o">:</span>   <span class="ni">top</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-line-height</span><span class="o">:</span>           <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$table-cell-padding-y</span><span class="o">:</span>                  <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-cell-padding-x</span><span class="o">:</span>                  <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-cell-padding-y-sm</span><span class="o">:</span>               <span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-cell-padding-x-sm</span><span class="o">:</span>               <span class="nv">$table-cell-padding-x</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-color</span><span class="o">:</span>                 <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-bg</span><span class="o">:</span>                    <span class="nv">$body-bg</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $table-accent-bg
+</span></span><span class="line"><span class="cl"><span class="nv">$table-cell-vertical-align</span><span class="o">:</span>             <span class="ni">top</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-line-height</span><span class="o">:</span>                     <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-th-font-weight</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-color</span><span class="o">:</span>                           <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-bg</span><span class="o">:</span>                              <span class="nv">$body-bg</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-accent-bg</span><span class="o">:</span>                       <span class="ni">transparent</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$table-active-color</span><span class="o">:</span>          <span class="nv">$table-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-active-bg-factor</span><span class="o">:</span>      <span class="mf">.1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-active-bg</span><span class="o">:</span>             <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-active-bg-factor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-th-font-weight</span><span class="o">:</span>                  <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$table-hover-color</span><span class="o">:</span>           <span class="nv">$table-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-hover-bg-factor</span><span class="o">:</span>       <span class="mf">.065</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-hover-bg</span><span class="o">:</span>              <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-hover-bg-factor</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$table-border-factor</span><span class="o">:</span>         <span class="mf">.4</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-border-width</span><span class="o">:</span>          <span class="nv">$border-width</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-border-color</span><span class="o">:</span>          <span class="nv">$gray-500</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span><span class="line"><span class="cl"><span class="nv">$table-striped-color</span><span class="o">:</span>                   <span class="nv">$table-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-striped-bg-factor</span><span class="o">:</span>               <span class="mf">.065</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-bg</span><span class="o">:</span>                      <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-striped-bg-factor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-striped-hover-color</span><span class="o">:</span>             <span class="nv">$table-color</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-hover-bg-factor</span><span class="o">:</span>         <span class="mf">.4</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-hover-bg</span><span class="o">:</span>                <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-striped-hover-bg-factor</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-variant-striped-bg-factor</span><span class="o">:</span>       <span class="mf">.2</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-variant-striped-hover-bg-factor</span><span class="o">:</span> <span class="mf">.865</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $table-striped-*
+</span></span><span class="line"><span class="cl"><span class="nv">$table-active-color</span><span class="o">:</span>                    <span class="nv">$table-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-active-bg-factor</span><span class="o">:</span>                <span class="mf">.135</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-active-bg</span><span class="o">:</span>                       <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-active-bg-factor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-variant-active-bg-factor</span><span class="o">:</span>        <span class="mf">.6</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-group-separator-color</span><span class="o">:</span> <span class="ni">currentcolor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-hover-color</span><span class="o">:</span>                     <span class="nv">$table-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-hover-bg-factor</span><span class="o">:</span>                 <span class="mf">.065</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-hover-bg</span><span class="o">:</span>                        <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-hover-bg-factor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-variant-hover-bg-factor</span><span class="o">:</span>         <span class="mf">.2</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-border-factor</span><span class="o">:</span>                   <span class="mf">.4</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/* stylelint-disable-next-line function-disallowed-list */</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-border-width</span><span class="o">:</span>                    <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-border-color</span><span class="o">:</span>                    <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-color-translucent</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-striped-order</span><span class="o">:</span>                   <span class="n">odd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-striped-columns-order</span><span class="o">:</span>           <span class="n">even</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$table-caption-color</span><span class="o">:</span>         <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$boosted-prefix</span><span class="si">}</span><span class="ni">caption</span><span class="o">-</span><span class="ni">color</span><span class="o">,</span> <span class="nv">$black</span><span class="p">);</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-caption-color-dark</span><span class="o">:</span>    <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-caption-padding-y</span><span class="o">:</span>     <span class="mf">.75</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span><span class="line"><span class="cl"><span class="nv">$table-group-separator-color</span><span class="o">:</span>           <span class="ni">currentcolor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$table-caption-color</span><span class="o">:</span>                   <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$boosted-prefix</span><span class="si">}</span><span class="ni">caption</span><span class="o">-</span><span class="ni">color</span><span class="o">,</span> <span class="nv">$black</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-caption-color-dark</span><span class="o">:</span>              <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-caption-padding-y</span><span class="o">:</span>               <span class="mf">.75</span><span class="kt">rem</span><span class="p">;</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: no $table-bg-scale
 </span></span></span></code></pre></div>
 <h3 id="loop">Loop <a class="anchor-link" href="#loop" aria-label="Link to this section: Loop"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$table-variants</span><span class="o">:</span> <span class="p">(</span>
@@ -2353,7 +2498,7 @@
             </button>
             <span class="d-none d-md-flex">Links</span>
           </h3>
-          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseLinks" class="container-xxl accordion-collapse collapse" aria-labelledby="headingLinks" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
               <li><a class="nav-link" href="/docs/5.2/" aria-describedby="headingLinks">Docs</a></li>
@@ -2370,7 +2515,7 @@
             </button>
             <span class="d-none d-md-flex">Guides</span>
           </h3>
-          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseGuides" class="container-xxl accordion-collapse collapse" aria-labelledby="headingGuides" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="/docs/5.2/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link" href="/docs/5.2/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
@@ -2386,12 +2531,12 @@
             </button>
             <span class="d-none d-md-flex">Projects</span>
           </h3>
-          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseProjects" class="container-xxl accordion-collapse collapse" aria-labelledby="headingProjects" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects">Boosted 5</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
               <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingGuides">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -2402,7 +2547,7 @@
             </button>
             <span class="d-none d-md-flex">Community</span>
           </h3>
-          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
+          <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" aria-labelledby="headingCommunity" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity">Issues</a></li>
               <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity">Discussions</a></li>
@@ -2416,7 +2561,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.2.2.</p>
+          <p class="mb-lg-1">Currently v5.2.3.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -2435,7 +2580,7 @@
 </nav>
 
 
-    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-Mbnyc7kt5sdjykv1+fORyXVF9mbp8gqsv+iXa8Q6zo9qDXXvRvqxtovdkpUDMQ8M" crossorigin="anonymous"></script>
+    <script src="/docs/5.2/dist/js/boosted.bundle.min.js" integrity="sha384-MANW37RG4MpFWPMCcNZBnvSobOkBpIGlbBkEzTtD4FbbOzJXbW8TddND1ak2lfsB" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -2472,14 +2617,14 @@
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.2\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.2.3\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.2\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/boosted@5\.2\.3\/dist\/js\/boosted\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
@@ -2506,7 +2651,7 @@ ${htmlSnippet.replace(/^/gm, '    ')}
 
 
     
-  <div class="position-fixed"><input type="text" tabindex="-1"></div>
+  <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 
   </body>
 </html>
