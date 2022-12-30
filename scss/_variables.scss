@@ -598,10 +598,10 @@ $focus-visible-outer-color-dark:  $white !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  null !default;
-$box-shadow-sm:               null !default;
-$box-shadow-lg:               null !default;
-$box-shadow-inset:            none !default;
+$box-shadow:                  null !default; // Boosted mod
+$box-shadow-sm:               null !default; // Boosted mod
+$box-shadow-lg:               null !default; // Boosted mod
+$box-shadow-inset:            none !default; // Boosted mod
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $black !default;
