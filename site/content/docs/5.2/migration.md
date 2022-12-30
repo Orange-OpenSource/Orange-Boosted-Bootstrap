@@ -19,7 +19,14 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 
 ### Accessibility
 
-<!-- TODO: Migration guide -->
+- **Focus visible**
+  - <span class="badge bg-warning">Warning</span> We completely refactored our focus visible management.
+
+  A `focus-visible()` mixin is provided to ensure a proper visible focus state. This visible focus state is defined by an outer outline and an inner box shadow. On light background, the outer outline is black and the inner box shadow is white. The latter will be invisible most of the time but is here to ensure a security on light background but that aren't white. On dark background, these colors are inverted.
+
+  We also removed the `:focus` style of our components that was mirroring the `:hover` state.
+
+  Even if the generic case will be transparent for your project, please check this new behavior in your websites.
 
 ### Components
 
