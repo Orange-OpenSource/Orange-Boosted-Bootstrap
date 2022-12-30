@@ -194,11 +194,10 @@
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
 
-  &:hover,
-  &:focus {
+  // Boosted mod: no focus
+  &:hover {
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-    outline-color: var(--#{$prefix}dropdown-link-hover-bg); // Boosted mod
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
   }
 
@@ -217,6 +216,20 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
   }
+
+  // Boosted mod: focus
+  &:focus {
+    &[data-focus-visible-added] {
+      outline-offset: -$focus-visible-outer-width;
+      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
+
+      &.active {
+        outline-color: var(--#{$prefix}focus-visible-inner-color);
+        box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-outer-color);
+      }
+    }
+  }
+  // End mod
 }
 
 .dropdown-menu.show {

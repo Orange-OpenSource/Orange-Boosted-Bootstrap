@@ -74,6 +74,9 @@
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-hover-color: #{$link-hover-color};
 
+  --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color}; // Boosted mod
+  --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color}; // Boosted mod
+
   --#{$prefix}code-color: #{$code-color};
 
   --#{$prefix}highlight-color: #{$mark-color}; // Boosted mod
@@ -83,11 +86,13 @@
 // scss-docs-start root-dark-rule
 // Boosted mod
 [class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark),
+[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark),
 [class*="bg-secondary"] {
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-dark};
   --#{$prefix}link-hover-color: #{$link-hover-color-dark};
+  --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark};
+  --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark};
   --#{$boosted-prefix}caption-color: #{$table-caption-color-dark};
   --#{$prefix}code-color: #{$code-color-dark};
   --#{$prefix}highlight-color: #{$mark-color-dark};
@@ -101,6 +106,8 @@
     --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
     --#{$prefix}link-color: #{$link-color};
     --#{$prefix}link-hover-color: #{$link-hover-color};
+    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
+    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
     --#{$boosted-prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};
