@@ -70,7 +70,7 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
-  padding: var(--#{$prefix}card-spacer-top) var(--#{$prefix}card-spacer-x) var(--#{$prefix}card-spacer-bottom);
+  padding: var(--#{$prefix}card-spacer-top) var(--#{$prefix}card-spacer-x) var(--#{$prefix}card-spacer-bottom); // Boosted mod
   color: var(--#{$prefix}card-color);
 }
 
