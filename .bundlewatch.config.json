@@ -18,15 +18,15 @@
     },
     {
       "path": "./dist/css/boosted-utilities.css",
-      "maxSize": "9.25 kB"
+      "maxSize": "9.5 kB"
     },
     {
       "path": "./dist/css/boosted-utilities.min.css",
-      "maxSize": "8.5 kB"
+      "maxSize": "8.75 kB"
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "39.0 kB"
+      "maxSize": "39.25 kB"
     },
     {
       "path": "./dist/css/boosted.min.css",

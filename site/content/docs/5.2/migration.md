@@ -30,6 +30,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 - <span class="badge bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`.
 
+- <span class="badge bg-success">New</span> z-index utilities: `.z-{index}`.
+
 ### CSS and Sass variables
 
 - `@mixin caret()` has a new interface including a new optional parameters.
