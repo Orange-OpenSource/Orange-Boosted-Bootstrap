@@ -574,13 +574,12 @@ $border-color-translucent:    $gray-500 !default; // Boosted mod: gray value ins
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-// Boosted mod: all `$border-radius*` values are `null`
-$border-radius:               null !default;
-$border-radius-sm:            null !default;
-$border-radius-lg:            null !default;
-$border-radius-xl:            null !default;
-$border-radius-2xl:           null !default;
-// End mod
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-2xl:           2rem !default;
+$border-radius-pill:          50rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 

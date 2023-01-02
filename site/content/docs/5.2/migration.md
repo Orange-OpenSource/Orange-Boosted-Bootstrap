@@ -21,6 +21,11 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 - <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
 
+- <span class="badge bg-success">New</span> border dividers:
+  - `.rounded-{top|end|bottom|start}-{0|5}`
+  - `.rounded-{top|end|bottom|start}-circle`
+  - `.rounded-{top|end|bottom|start}-pill`.
+
 ### CSS and Sass variables
 
 - `@mixin caret()` has a new interface including a new optional parameters.
