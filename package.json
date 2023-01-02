@@ -108,7 +108,7 @@
     "@percy/cli": "^1.16.0",
     "@popperjs/core": "^2.11.6",
     "@rollup/plugin-babel": "^6.0.2",
-    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.1",
     "@storybook/addon-a11y": "^6.5.15",
