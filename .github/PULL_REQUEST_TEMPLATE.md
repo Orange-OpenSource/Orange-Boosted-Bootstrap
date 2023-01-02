@@ -26,7 +26,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 <!-- Please add direct links where your modifications can be seen in the documentation -->
 
-* https://deploy-preview-{your_pr_number}--boosted.netlify.app/
+- https://deploy-preview-{your_pr_number}--boosted.netlify.app/
 
 ### Checklist
 
