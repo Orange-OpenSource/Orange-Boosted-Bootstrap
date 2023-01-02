@@ -854,7 +854,7 @@ The 3 last auto close behavior variants should not be used because featuring a s
 
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
-    Clickable outside
+    Clickable inside
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
@@ -865,7 +865,7 @@ The 3 last auto close behavior variants should not be used because featuring a s
 
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-    Clickable inside
+    Clickable outside
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Menu item</a></li>
