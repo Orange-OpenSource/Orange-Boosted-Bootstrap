@@ -21,10 +21,14 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 - <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
 
-- <span class="badge bg-success">New</span> border dividers:
+- <span class="badge bg-success">New</span> border dividers utilities:
   - `.rounded-{top|end|bottom|start}-{0|5}`
   - `.rounded-{top|end|bottom|start}-circle`
   - `.rounded-{top|end|bottom|start}-pill`.
+
+- <span class="badge bg-success">New</span> overflow utilities: `.overflow-{x|y}-{auto|hidden|visible|scroll}`.
+
+- <span class="badge bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`.
 
 ### CSS and Sass variables
 
