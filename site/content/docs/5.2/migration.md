@@ -23,6 +23,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 ### CSS and Sass variables
 
+- `@mixin caret()` has a new interface including a new optional parameters.
+
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
