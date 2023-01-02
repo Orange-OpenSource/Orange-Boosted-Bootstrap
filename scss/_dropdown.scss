@@ -9,46 +9,22 @@
 }
 
 .dropdown-toggle {
-  // scss-docs-start dropdown-toggle-css-vars
-  --#{$prefix}dropdown-toggle-padding-x: #{$dropdown-padding-x}; // Boosted mod
-  --#{$prefix}dropdown-toggle-color: #{$dropdown-color}; // Boosted mod
-  --#{$prefix}dropdown-toggle-bg: #{$dropdown-bg}; // Boosted mod
-  --#{$prefix}dropdown-toggle-border-color: #{$dropdown-border-color}; // Boosted mod
-  // scss-docs-end dropdown-toggle-css-vars
+  --#{$prefix}btn-padding-x: #{$dropdown-padding-x}; // Boosted mod
 
-  // Boosted mod
-  padding-right: var(--#{$prefix}dropdown-toggle-padding-x);
-  padding-left: var(--#{$prefix}dropdown-toggle-padding-x);
-  color: var(--#{$prefix}dropdown-toggle-color);
   white-space: nowrap;
-  background-color: var(--#{$prefix}dropdown-toggle-bg);
-  border-color: var(--#{$prefix}dropdown-toggle-border-color);
-
-  .bg-dark &:not(.dropdown-toggle-split),
-  .navbar-dark &:not(.dropdown-toggle-split) {
-    // scss-docs-start dropdown-toggle-dark-variant-css-vars
-    --#{$prefix}dropdown-toggle-color: #{$dropdown-bg}; // Boosted mod
-    --#{$prefix}dropdown-toggle-bg: #{$dropdown-color}; // Boosted mod
-    --#{$prefix}dropdown-toggle-border-color: #{$gray-700}; // Boosted mod
-    --#{$prefix}dropdown-toggle-border-hover-color: #{$dropdown-link-hover-color}; // Boosted mod
-    // scss-docs-end dropdown-toggle-dark-variant-css-vars
-
-    color: var(--#{$prefix}dropdown-toggle-color);
-    background-color: var(--#{$prefix}dropdown-toggle-bg);
-    border-color: var(--#{$prefix}dropdown-toggle-border-color);
-
-    &:hover {
-      border-color: var(--#{$prefix}dropdown-toggle-border-hover-color);
-    }
-  }
-
-  .btn-group &:not(.btn-inverse) {
-    border-color: var(--#{$prefix}dropdown-toggle-color);
-  }
-  // End mod
-
   // Generate the caret automatically
   @include caret();
+
+  // Boosted mod
+  // TODO: should probably be a `.btn-*` class
+  &:not(.dropdown-toggle-split) {
+    @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $dropdown-border-color, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
+
+    &.btn-inverse {
+      @include button-variant($black, $gray-700, $white, $black, $gray-700, $white, $black, $white, $white, transparent, $gray-700, $gray-700);
+    }
+  }
+  // End mod
 }
 
 // The dropdown menu
@@ -60,6 +36,7 @@
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
   --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
   @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
+  --#{$prefix}dropdown-line-height: #{$dropdown-line-height}; // Boosted mod
   --#{$prefix}dropdown-color: #{$dropdown-color};
   --#{$prefix}dropdown-bg: #{$dropdown-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
@@ -90,6 +67,7 @@
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-y);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
+  line-height: var(--#{$prefix}dropdown-line-height); // Boosted mod
   color: var(--#{$prefix}dropdown-color);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
@@ -206,7 +184,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
+  padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x) add(var(--#{$prefix}dropdown-item-padding-y), .125rem); // Boosted mod
   clear: both;
   font-weight: var(--#{$prefix}dropdown-item-font-weight); // Boosted mod
   color: var(--#{$prefix}dropdown-link-color);
@@ -216,11 +194,10 @@
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
 
-  &:hover,
-  &:focus {
+  // Boosted mod: no focus
+  &:hover {
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-    outline-color: var(--#{$prefix}dropdown-link-hover-bg); // Boosted mod
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
   }
 
@@ -239,6 +216,20 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
   }
+
+  // Boosted mod: focus
+  &:focus {
+    &[data-focus-visible-added] {
+      outline-offset: -$focus-visible-outer-width;
+      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
+
+      &.active {
+        outline-color: var(--#{$prefix}focus-visible-inner-color);
+        box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-outer-color);
+      }
+    }
+  }
+  // End mod
 }
 
 .dropdown-menu.show {

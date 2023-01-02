@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.2): index.umd.js
+ * Bootstrap (v5.2.3): index.umd.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -12,7 +12,7 @@ import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
 import Offcanvas from './src/offcanvas'
-import OrangeNavbar from './src/orange-navbar'
+import OrangeNavbar from './src/orange-navbar' // Boosted mod
 import Popover from './src/popover'
 import QuantitySelector from './src/quantity-selector' // Boosted mod
 import ScrollSpy from './src/scrollspy'
@@ -29,7 +29,7 @@ export default {
   Dropdown,
   Modal,
   Offcanvas,
-  OrangeNavbar,
+  OrangeNavbar, // Boosted mod
   Popover,
   QuantitySelector, // Boosted mod
   ScrollSpy,

@@ -10,8 +10,7 @@
   .nav-link { // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
     // Boosted mod: no display, no padding, no color
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--#{$prefix}link-hover-color); // Boosted mod
     }
 
@@ -30,17 +29,28 @@
   .dropdown-menu {
     --#{$prefix}dropdown-min-width: 12rem;
     // Boosted mod: background-color is already good
-    @include rfs(.875rem, --#{$prefix}dropdown-font-size);
+    @include rfs($font-size-sm, --#{$prefix}dropdown-font-size); // Boosted mod
+    --#{$prefix}dropdown-line-height: #{$line-height-sm}; // Boosted mod
+    --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem}; // Boosted mod
     // Boosted mod: no box-shadow
   }
 
+  // Boosted mod: Use mask instead of background + ::after
   .dropdown-item.current {
-    font-weight: $font-weight-bold; // Boosted mod
-    background-image: escape-svg($dropdown-active-icon);
-    background-repeat: no-repeat;
-    background-position: right $dropdown-item-padding-x top .75rem; // Boosted mod
-    background-size: .75rem .75rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: .75rem;
+      right: $dropdown-item-padding-x;
+      width: .75rem;
+      height: .75rem;
+      content: "";
+      background-color: currentcolor;
+      mask: escape-svg($dropdown-active-icon) no-repeat 50% / .75rem;
+    }
   }
+  // End mod
 
   // Boosted mod: Specificity
   .navbar-nav.flex-row {

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.2): dropdown.js
+ * Bootstrap (v5.2.3): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -71,7 +71,7 @@ const Default = {
   autoClose: true,
   boundary: 'clippingParents',
   display: 'dynamic',
-  offset: [0, 2],
+  offset: [0, 0], // Boosted mod
   popperConfig: null,
   reference: 'toggle'
 }

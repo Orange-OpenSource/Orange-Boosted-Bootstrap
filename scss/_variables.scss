@@ -584,14 +584,29 @@ $border-radius-2xl:           null !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
-$outline-width:               $border-width !default;  // Boosted mod
-$outline-offset:              $outline-width !default; // Boosted mod
+// fusv-disable
+$outline-width:               $border-width !default;  // Deprecated in v5.2.3
+$outline-offset:              $outline-width !default; // Deprecated in v5.2.3
+// fusv-enable
+
+// scss-docs-start focus-visible-variables
+$focus-visible-zindex:            5 !default; // Boosted mod
+
+$focus-visible-inner-width:       2px !default; // Boosted mod
+$focus-visible-inner-color:       $white !default; // Boosted mod
+$focus-visible-inner-color-dark:  $black !default; // Boosted mod
+
+$focus-visible-outer-width:       3px !default;  // Boosted mod
+$focus-visible-outer-offset:      $focus-visible-inner-width !default; // Boosted mod
+$focus-visible-outer-color:       $black !default; // Boosted mod
+$focus-visible-outer-color-dark:  $white !default; // Boosted mod
+// scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  null !default;
-$box-shadow-sm:               null !default;
-$box-shadow-lg:               null !default;
-$box-shadow-inset:            null !default;
+$box-shadow:                  null !default; // Boosted mod
+$box-shadow-sm:               null !default; // Boosted mod
+$box-shadow-lg:               null !default; // Boosted mod
+$box-shadow-inset:            null !default; // Boosted mod
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $black !default;
@@ -611,9 +626,7 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-collapse-width:   width .35s ease !default;
 // scss-docs-end collapse-transition
-// scss-docs-start focus-transition
-$transition-focus:    outline-offset $transition-duration $transition-timing !default; // Boosted mod
-// scss-docs-end focus-transition
+$transition-focus:    null !default; // Boosted mod
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
@@ -854,9 +867,9 @@ $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-focus-width:       .125rem !default;
+$input-btn-focus-width:       $focus-visible-outer-offset !default; // Boosted mod
 // Boosted mod: no need for a blur variable
-$input-btn-focus-box-shadow:  null !default;
+$input-btn-focus-box-shadow:  null !default; // Boosted mod
 
 $input-btn-padding-y-sm:      $spacer * .25 !default;
 $input-btn-padding-x-sm:      $spacer * .5 !default;
@@ -898,7 +911,7 @@ $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
-$btn-focus-width:             $border-width !default;
+$btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        0 0 0 $btn-focus-width $white !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       null !default;
@@ -912,7 +925,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              $transition-focus !default;
+$btn-transition:              $transition-focus !default; // Boosted mod
 // scss-docs-end btn-variables
 
 // Boosted mod: icon button
@@ -1013,7 +1026,7 @@ $input-disabled-border-color:           null !default;
 $input-color:                           var(--#{$prefix}body-color) !default;
 $input-border-color:                    $gray-500 !default;
 $input-border-width:                    $input-btn-border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
+$input-box-shadow:                      none !default; // Boosted mod
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-sm:                $border-radius-sm !default;
@@ -1023,7 +1036,7 @@ $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              currentcolor !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
-$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow:                none !default; // Boosted mod
 
 $input-placeholder-color:               $gray-700 !default;
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
@@ -1084,13 +1097,14 @@ $form-check-inline-margin-end:    1rem !default;
 $form-star-size:                  1.5625rem !default;
 $form-star-size-sm:               1.25rem !default;
 $form-star-margin-between:        -.125rem !default;
+//fusv-disable
+$form-star-focus-color:           $black !default; // Deprecated in v5.2.3
+$form-star-focus-outline:         $border-width solid $form-star-focus-color !default; // Deprecated in v5.2.3
+$form-star-focus-color-dark:      $white !default; // Deprecated in v5.2.3
+$form-star-focus-outline-dark:    $border-width solid $form-star-focus-color-dark !default; // Deprecated in v5.2.3
+$form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
+//fusv-enable
 
-$form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default;
-$form-star-focus-color:           $black !default;
-$form-star-focus-outline:         $border-width solid $form-star-focus-color !default;
-
-$form-star-focus-color-dark:      $white !default;
-$form-star-focus-outline-dark:    $border-width solid $form-star-focus-color-dark !default;
 // End mod
 // scss-docs-end form-check-variables
 
@@ -1148,17 +1162,18 @@ $form-select-feedback-icon-size:        $input-height-inner-half $input-height-i
 $form-select-border-width:        $input-border-width !default;
 $form-select-border-color:        $input-border-color !default;
 $form-select-border-radius:       $input-border-radius !default;
-$form-select-box-shadow:          $box-shadow-inset !default;
+$form-select-box-shadow:          none !default; // Boosted mod
 
 $form-select-focus-border-color:  $input-color !default; // Boosted mod: for border to show in Firefox
-$form-select-focus-box-shadow:    null !default;
+// Boosted mod: no $form-select-focus-width
+$form-select-focus-box-shadow:    none !default; // Boosted mod
 
 $form-select-padding-y-sm:        add($input-padding-y-sm, 1px) !default; // Boosted mod
 $form-select-padding-x-sm:        $input-padding-x-sm !default;
 $form-select-font-size-sm:        $input-font-size-sm !default;
 $form-select-border-radius-sm:    $input-border-radius-sm !default;
 
-$form-select-padding-y-lg:        $spacer * .5 !default;
+$form-select-padding-y-lg:        $spacer * .5 !default; // Boosted mod
 $form-select-padding-x-lg:        $input-padding-x-lg !default;
 $form-select-font-size-lg:        $input-font-size-lg !default;
 $form-select-border-radius-lg:    $input-border-radius-lg !default;
@@ -1181,12 +1196,14 @@ $form-range-thumb-bg:                      $white !default;
 $form-range-thumb-border:                  $border-width solid $black !default;
 $form-range-thumb-border-radius:           50% !default;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
-$form-range-thumb-focus-box-shadow:        null !default;
+$form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg:               null !default;
-$form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod
+// fusv-disable
+$form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod // Deprecated in v5.2.0
+// fusv-enable
 $form-range-thumb-disabled-bg:             $gray-500 !default;
-$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing !default;
+$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
@@ -1253,7 +1270,7 @@ $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
-$nav-link-transition:               null !default;
+$nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           $gray-500 !default;
 
 $nav-tabs-border-color:             $black !default;
@@ -1378,8 +1395,9 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-x:                $spacer * .5 !default;
 $dropdown-padding-y:                0 !default;
-$dropdown-spacer:                   $border-width * -1 !default;
+$dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
+$dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $white !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
@@ -1391,8 +1409,8 @@ $dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               $box-shadow !default;
 
 $dropdown-link-color:               $black !default; // Boosted mod
-$dropdown-link-hover-color:         $white !default; // Boosted mod
-$dropdown-link-hover-bg:            $black !default; // Boosted mod
+$dropdown-link-hover-color:         $dropdown-link-color !default;
+$dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod
 
 $dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
 $dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
@@ -1417,8 +1435,8 @@ $dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
 $dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Boosted mod
 $dropdown-dark-box-shadow:          null !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $black !default; // Boosted mod
-$dropdown-dark-link-hover-bg:       $white !default; // Boosted mod
+$dropdown-dark-link-hover-color:    $white !default;
+$dropdown-dark-link-hover-bg:       $gray-700 !default; // Boosted mod
 $dropdown-dark-link-active-color:   $black !default; // Boosted mod
 $dropdown-dark-link-active-bg:      $white !default; // Boosted mod
 $dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
@@ -1442,10 +1460,10 @@ $pagination-margin-start:           0 !default; // Boosted mod
 $pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod
 
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default; // Boosted mod
-$pagination-focus-color:            var(--#{$prefix}link-color) !default;
-$pagination-focus-bg:               null !default;
-$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
+$pagination-focus-color:            null !default; // Boosted mod
+$pagination-focus-bg:               null !default; // Boosted mod
+$pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
+$pagination-focus-outline:          null !default; // Boosted mod
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
 $pagination-hover-bg:               null !default;
@@ -1512,7 +1530,11 @@ $placeholder-opacity-min:           .2 !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
+$card-spacer-top:                   $spacer * .75 !default; // Boosted mod
+$card-spacer-bottom:                $spacer !default; // Boosted mod
+// fusv-disable
+$card-spacer-y:                     $spacer !default; // Deprecated in v5.2.3
+// fusv-enable
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
@@ -1520,7 +1542,7 @@ $card-border-color:                 var(--#{$prefix}border-color-translucent) !d
 $card-border-radius:                $border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-padding-y:                $card-spacer-y * .5 !default;
+$card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       $black !default;
 $card-cap-color:                    $white !default;
@@ -1545,8 +1567,14 @@ $accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 $border-radius !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
-$accordion-body-padding-y:                $spacer !default; // Boosted mod
-$accordion-body-padding-x:                $spacer !default; // Boosted mod
+$accordion-body-padding-top:              5px !default; // Boosted mod
+$accordion-body-padding-end:              $spacer !default; // Boosted mod
+$accordion-body-padding-bottom:           $spacer !default; // Boosted mod
+$accordion-body-padding-start:            0 !default; // Boosted mod
+// fusv-disable
+$accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
+$accordion-body-padding-x:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
+// fusv-enable
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
@@ -1985,7 +2013,11 @@ $btn-close-border-width:        $border-width !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               $black !default;
 $btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
-$btn-close-focus-shadow:        $btn-focus-box-shadow !default;
+// Boosted mod
+// fusv-disable
+$btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
+// fusv-enable
+// End mod
 // Boosted mod: no opacity/filter
 
 // Boosted mod
@@ -2022,7 +2054,7 @@ $offcanvas-border-width:            $modal-content-border-width !default;
 $offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                $modal-content-bg !default;
 $offcanvas-color:                   $modal-content-color !default;
-$offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+$offcanvas-box-shadow:              none !default; // Boosted mod
 $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // scss-docs-end offcanvas-variables
@@ -2096,6 +2128,7 @@ $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, $border-widt
 $step-link-width:             1.25ch !default; // Matches width of a single number
 $step-link-color:             $white !default;
 $step-link-active-color:      $black !default;
+$step-link-active-outline:    $black !default;
 $step-link-next-color:        $black !default;
 $step-link-line-height:       $line-height-sm !default;
 $step-link-marker:            counter(var(--bs-stepped-process-counter)) inspect("\A0") !default;

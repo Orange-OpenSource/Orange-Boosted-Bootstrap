@@ -7,8 +7,8 @@
     background-color: $background;
 
     &.list-group-item-action {
-      &:hover,
-      &:focus {
+      // Boosted mod: no &:focus
+      &:hover {
         color: $color;
         background-color: if($color == $white, shade-color($background, 10%), tint-color($background, 10%)); // Boosted mod
       }

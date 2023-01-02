@@ -31,9 +31,7 @@
     color: $primary;
   }
 
-  &:focus {
-    z-index: 3;
-  }
+  // Boosted mod: no focus rule
 
   // Boosted mod
   .bi {
