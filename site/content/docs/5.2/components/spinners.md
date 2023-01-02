@@ -235,9 +235,7 @@ Used for creating the CSS animations for our spinners. Included in `scss/_spinne
 {{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
 
 [color]:   {{< docsref "/utilities/colors" >}}
-[display]: {{< docsref "/utilities/display" >}}
 [flex]:    {{< docsref "/utilities/flex" >}}
 [float]:   {{< docsref "/utilities/float" >}}
 [margin]:  {{< docsref "/utilities/spacing" >}}
-[sizing]:  {{< docsref "/utilities/sizing" >}}
 [text]:    {{< docsref "/utilities/text" >}}

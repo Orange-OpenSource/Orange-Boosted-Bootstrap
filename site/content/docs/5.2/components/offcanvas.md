@@ -13,7 +13,7 @@ toc: true
 Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, top or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and `data` attributes are used to invoke our JavaScript.
 
 - Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.
-- Similarly, some [source Sass](#sass) variables for offcanvas's styles and dimensions are inherited from the modal's variables.
+- Similarly, some [source Sass](#sass-variables) variables for offcanvas's styles and dimensions are inherited from the modal's variables.
 - When shown, offcanvas includes a default backdrop that can be clicked to hide the offcanvas.
 - Similar to modals, only one offcanvas can be shown at a time.
 
@@ -338,8 +338,8 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs). |
 | `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs). |
 | `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |

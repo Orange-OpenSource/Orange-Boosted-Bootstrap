@@ -222,8 +222,8 @@ Every Boosted plugin exposes the following methods and static properties.
 | Method | Description |
 | --- | --- |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
