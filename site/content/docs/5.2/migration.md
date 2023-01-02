@@ -9,6 +9,30 @@ aliases:
 toc: true
 ---
 
+## v5.3.0
+
+<hr class="mb-4">
+
+Boosted v5.3.0 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.3.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.0).
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-offcanvas-transition-duration</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-offcanvas-transition</code></li>
+    </ul>
+  </details>
+
 ## v5.2.3
 
 <hr class="mb-4">
