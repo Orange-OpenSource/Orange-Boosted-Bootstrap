@@ -33,6 +33,12 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-breakpoint-xs</code></li>
+      <li><code>--bs-breakpoint-sm</code></li>
+      <li><code>--bs-breakpoint-md</code></li>
+      <li><code>--bs-breakpoint-lg</code></li>
+      <li><code>--bs-breakpoint-xl</code></li>
+      <li><code>--bs-breakpoint-xxl</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
     </ul>
   </details>
