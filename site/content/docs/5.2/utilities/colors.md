@@ -32,7 +32,7 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Opacity

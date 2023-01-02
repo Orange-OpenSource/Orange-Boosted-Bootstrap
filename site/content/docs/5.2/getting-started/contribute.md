@@ -36,7 +36,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 {{< /bs-table >}}
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ## Sass

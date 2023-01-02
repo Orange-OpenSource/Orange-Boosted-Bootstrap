@@ -17,7 +17,7 @@ Triggering a collapse behavior from a button component should not be used becaus
 {{< /ods-incompatibility-alert >}}
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Example
@@ -159,7 +159,7 @@ const collapseList = [...collapseElementList].map(collapseEl => new boosted.Coll
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Activates your content as a collapsible element. Accepts an optional options `object`.

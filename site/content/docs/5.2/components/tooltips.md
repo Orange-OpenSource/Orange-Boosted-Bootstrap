@@ -25,11 +25,11 @@ Things to know when using the tooltip plugin:
 Got all that? Great, let's see how they work with some examples.
 
 {{< callout info >}}
-{{< partial "callout-info-sanitizer.md" >}}
+{{< partial "callouts/info-sanitizer.md" >}}
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ### Examples
@@ -53,7 +53,7 @@ Hover over the links below to see tooltips:
 {{< /example >}}
 
 {{< callout warning >}}
-{{< partial "callout-warning-data-bs-title-vs-title.md" >}}
+{{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
 {{< /callout >}}
 
 ### Custom tooltips
@@ -278,7 +278,7 @@ const tooltip = new boosted.Tooltip(element, {
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}

@@ -29,7 +29,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 ```
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 Keep reading for demos and usage guidelines.
@@ -906,7 +906,7 @@ const myModalAlternative = new boosted.Modal('#myModal', options)
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 #### Passing options

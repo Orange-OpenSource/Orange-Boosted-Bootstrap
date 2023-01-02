@@ -18,7 +18,7 @@ Things to know when using the toast plugin:
 - Toasts will automatically hide if you do not specify `autohide: false`.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Examples
@@ -370,7 +370,7 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}
