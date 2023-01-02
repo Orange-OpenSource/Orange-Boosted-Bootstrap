@@ -469,7 +469,13 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 
 ### Variables
 
+Variables for checks:
+
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}
+
+Variables for switches:
+
+{{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}
 
 ### Mixin
 
