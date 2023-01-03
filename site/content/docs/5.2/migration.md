@@ -32,6 +32,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 - <span class="badge bg-success">New</span> z-index utilities: `.z-{index}`.
 
+- <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
+
 ### CSS and Sass variables
 
 - `@mixin caret()` has a new interface including a new optional parameters.
