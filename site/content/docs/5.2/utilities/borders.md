@@ -49,6 +49,17 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-white"></span>
 {{< /example >}}
 
+{{< callout info >}}
+For each `.border-*` there is a matching `.border-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+
+Here is a list of these extra classes:
+{{< border-subtle.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+- `.border-{{ .name }}-subtle`
+{{- end -}}
+{{< /border-subtle.inline >}}
+{{< /callout >}}
+
 Or modify the default `border-color` of a component:
 
 {{< example >}}

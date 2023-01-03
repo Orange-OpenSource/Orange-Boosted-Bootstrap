@@ -14,6 +14,7 @@
   --#{$prefix}alert-border-color: transparent;
   --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
   --#{$prefix}alert-border-radius: #{$alert-border-radius};
+  --#{$prefix}alert-link-color: inherit;
   --#{$prefix}alert-logo-size: #{$alert-logo-size}; // Boosted mod
   --#{$prefix}alert-icon-size: #{$alert-icon-size}; // Boosted mod
   --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // Boosted mod
@@ -50,6 +51,7 @@
 // Provide class for links that match alerts
 .alert-link {
   font-weight: var(--#{$prefix}alert-link-font-weight); // Boosted mod
+  color: var(--#{$prefix}alert-link-color);
 }
 
 
@@ -75,13 +77,11 @@
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $state, $value in $alert-colors {
-  $alert-background: transparent; // Boosted mod
-  $alert-border: $alert-border-width solid $value; // Boosted mod
-  // Boosted mod: no $alert-color change
-
-  // Boosted mod: no contrast-ratio test
   .alert-#{$state} {
-    @include alert-variant($alert-background, $alert-border, $alert-color, map-get($alert-icons, $state)); // Boosted mod
+    --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
+    --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
   }
 }
 // scss-docs-end alert-modifiers
@@ -118,6 +118,7 @@
     order: -1;
     height: var(--#{$prefix}alert-logo-size);
     content: "";
+    background-image: var(--#{$prefix}alert-icon-bg-image);
     background-repeat: no-repeat;
 
     /* rtl:raw:

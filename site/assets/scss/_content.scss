@@ -32,8 +32,8 @@
   // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
-    // Boosted mod: remove unwanted rules
-    // Prevent breaking of code
+    // Boosted mod: remove a lot of rules to keep our basic rendering
+
     // stylelint-disable-next-line selector-max-compound-selectors
     th,
     td:first-child > code {
@@ -62,6 +62,14 @@
 .table-options td:last-child,
 .table-utilities td:last-child {
   min-width: 280px;
+}
+
+.table-swatches {
+  // Boosted mod: no `th`
+
+  td code {
+    white-space: nowrap;
+  }
 }
 
 .bd-title {
@@ -104,3 +112,31 @@
     border-left: var(--#{$prefix}border-width) solid $border-color;
   }
 }
+
+// Boosted mod: no `.bd-summary-link`
+
+// scss-docs-start custom-color-mode
+[data-bs-theme="blue"] {
+  --bs-body-color: var(--bs-white);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--bs-blue);
+  --bs-body-bg-rgb: #{to-rgb($blue)};
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: #{$blue-700};
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+    --bs-btn-border-color: #{rgba($white, .25)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+    --bs-btn-hover-border-color: #{rgba($white, .25)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+    --bs-btn-active-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+  }
+}
+// scss-docs-end custom-color-mode

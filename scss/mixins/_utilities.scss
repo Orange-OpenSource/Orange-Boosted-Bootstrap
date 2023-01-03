@@ -98,7 +98,7 @@
                   }
                 }
               }
-              @if "transparent" != inspect($value) {
+              @if "transparent" != inspect($value) and type-of($value) != "string" {
                 color: color-contrast($value);
               }
             }
@@ -117,7 +117,7 @@
                   }
                 }
               }
-              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value and "rgba(var(--#{$prefix}primary-text-rgb), var(--#{$prefix}text-opacity))" != $value {
+              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value and type-of($value) != "string" {
                 background-color: color-contrast($value);
               }
             }

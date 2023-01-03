@@ -22,9 +22,9 @@ Use `.vstack` to create vertical layouts. Stacked items are full-width by defaul
 <!-- Boosted mod: light border -->
 {{< example >}}
 <div class="vstack gap-3">
-  <div class="bg-light border border-light">First item</div>
-  <div class="bg-light border border-light">Second item</div>
-  <div class="bg-light border border-light">Third item</div>
+  <div class="bg-body-tertiary border border-light">First item</div>
+  <div class="bg-body-tertiary border border-light">Second item</div>
+  <div class="bg-body-tertiary border border-light">Third item</div>
 </div>
 {{< /example >}}
 
@@ -35,9 +35,9 @@ Use `.hstack` for horizontal layouts. Stacked items are vertically centered by d
 <!-- Boosted mod: light border -->
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border border-light">First item</div>
-  <div class="bg-light border border-light">Second item</div>
-  <div class="bg-light border border-light">Third item</div>
+  <div class="bg-body-tertiary border border-light">First item</div>
+  <div class="bg-body-tertiary border border-light">Second item</div>
+  <div class="bg-body-tertiary border border-light">Third item</div>
 </div>
 {{< /example >}}
 
@@ -46,9 +46,9 @@ Using horizontal margin utilities like `.ms-auto` as spacers:
 <!-- Boosted mod: light border -->
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border border-light">First item</div>
-  <div class="bg-light border border-light ms-auto">Second item</div>
-  <div class="bg-light border border-light">Third item</div>
+  <div class="bg-body-tertiary border border-light">First item</div>
+  <div class="bg-body-tertiary border border-light ms-auto">Second item</div>
+  <div class="bg-body-tertiary border border-light">Third item</div>
 </div>
 {{< /example >}}
 
@@ -57,10 +57,10 @@ And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 <!-- Boosted mod: light border -->
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border border-light">First item</div>
-  <div class="bg-light border border-light ms-auto">Second item</div>
+  <div class="bg-body-tertiary border border-light">First item</div>
+  <div class="bg-body-tertiary border border-light ms-auto">Second item</div>
   <div class="vr"></div>
-  <div class="bg-light border border-light">Third item</div>
+  <div class="bg-body-tertiary border border-light">Third item</div>
 </div>
 {{< /example >}}
 

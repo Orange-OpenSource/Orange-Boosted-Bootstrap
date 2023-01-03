@@ -160,7 +160,11 @@ This variant, which is just an **example illustrating the use of the layout util
 {{< /list-group.inline >}}
 {{< /example >}}
 
-## Contextual classes
+## Variants
+
+{{< callout info >}}
+**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+{{< /callout >}}
 
 Use contextual classes to style list items with a stateful background and color.
 
@@ -175,7 +179,9 @@ Use contextual classes to style list items with a stateful background and color.
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+### For links and buttons
+
+Contextual classes also work with `.list-group-item-action` for `<a>` and `<button>` elements. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
 
 {{< example >}}
 <div class="list-group">
@@ -373,15 +379,15 @@ Variables for the [dark list group](#dark-variant):
 {{< scss-docs name="list-group-dark-variables" file="scss/_variables.scss" >}}
 <!-- End mod -->
 
-### Mixins
+### Sass mixins
 
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+Used in combination with `$background-colors` to generate the [contextual variant classes](#variants) for `.list-group-item`s.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Loop
+### Sass loop
 
-Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+Loop that generates the modifier classes with an overriding of CSS variables.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 

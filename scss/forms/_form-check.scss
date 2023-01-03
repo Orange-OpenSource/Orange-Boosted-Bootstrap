@@ -27,11 +27,14 @@
 }
 
 .form-check-input {
+  --#{$prefix}form-check-bg: #{escape-svg($form-check-input-bg)};
+
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
-  background-color: $form-check-input-bg;
+  background-color: var(--#{$prefix}form-check-bg);
+  background-image: var(--#{$prefix}form-check-bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -67,17 +70,17 @@
 
     &[type="checkbox"] {
       @if $enable-gradients {
-        background-image: $form-check-input-checked-bg-image, var(--#{$prefix}gradient);
+        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image)}, var(--#{$prefix}gradient);
       } @else {
-        background-image: $form-check-input-checked-bg-image;
+        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-checked-bg-image)};
       }
     }
 
     &[type="radio"] {
       @if $enable-gradients {
-        background-image: escape-svg($form-check-radio-checked-bg-image), var(--#{$prefix}gradient);
+        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image)}, var(--#{$prefix}gradient);
       } @else {
-        background-image: escape-svg($form-check-radio-checked-bg-image);
+        --#{$prefix}form-check-bg-image: #{escape-svg($form-check-radio-checked-bg-image)};
       }
     }
   }
@@ -87,11 +90,11 @@
     border-color: $form-check-input-indeterminate-border-color;
 
     @if $enable-gradients {
-      background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$prefix}gradient);
+      --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)}, var(--#{$prefix}gradient);
       background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
       background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; /* stylelint-disable-line function-disallowed-list */  // Boosted mod
     } @else {
-      background-image: escape-svg($form-check-input-indeterminate-bg-image);
+      --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)};
       background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
       background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
     }
@@ -152,12 +155,14 @@
   padding-left: $form-switch-padding-start;
 
   .form-check-input {
+    --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
+
     position: relative; // Boosted mod: needed because of filter property
     width: $form-switch-width;
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
     background-color: $white; // Boosted mod
-    background-image: $form-switch-bg-image, var(--#{$boosted-prefix}switch-gradient);
+    background-image: var(--#{$prefix}form-switch-bg), var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
     filter: $invert-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
@@ -183,11 +188,11 @@
       }
 
       @if $enable-gradients {
-        background-image: $form-switch-checked-bg-image, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient);
+        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
         background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size 100%;
       } @else {
-        background-image: $form-switch-checked-bg-image, var(--#{$boosted-prefix}switch-gradient);
+        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
         background-position: $form-switch-checked-bg-position, 100% 0;
         background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
       }
@@ -376,3 +381,5 @@
   }
   // End mod
 }
+
+// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now

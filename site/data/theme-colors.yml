@@ -20,3 +20,4 @@
   contrast_color: dark
 - name: dark
   hex: "#000"
+  contrast_color: white

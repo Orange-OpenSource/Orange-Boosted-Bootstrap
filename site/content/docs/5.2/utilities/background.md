@@ -12,6 +12,17 @@ toc: true
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts.
 
+{{< callout info >}}
+For each `.background-*` there is a matching `.background-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+
+Here is a list of these extra classes:
+{{< background-subtle.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+- `.bg-{{ .name }}-subtle`
+{{- end -}}
+{{< /background-subtle.inline >}}
+{{< /callout >}}
+
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
 <div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
@@ -23,6 +34,8 @@ Similar to the contextual text color classes, set the background of an element t
 <div class="p-3 mb-2 fw-bold bg-supporting-pink">.bg-supporting-pink</div>
 <div class="p-3 mb-2 fw-bold bg-light">.bg-light</div>
 <div class="p-3 mb-2 fw-bold bg-white">.bg-white or .bg-body</div>
+<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 

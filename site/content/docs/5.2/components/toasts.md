@@ -29,7 +29,7 @@ To encourage extensible and predictable toasts, we recommend a header and body. 
 
 Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
@@ -123,7 +123,7 @@ Toasts are slightly translucent to blend in with what's below them.
 
 You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast-container position-static">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
@@ -155,7 +155,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
 
 Customize your toasts by removing sub-components, tweaking them with [utilities]({{< docsref "/utilities/api" >}}), or by adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Solaris]({{< docsref "/extend/icons" >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body my-auto">
@@ -168,7 +168,7 @@ Customize your toasts by removing sub-components, tweaking them with [utilities]
 
 Alternatively, you can also add additional controls and components to toasts.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -184,7 +184,7 @@ Alternatively, you can also add additional controls and components to toasts.
 
 Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.text-bg-secondary` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body my-auto">
@@ -310,7 +310,7 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 
 When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}

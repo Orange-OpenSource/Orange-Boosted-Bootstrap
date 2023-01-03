@@ -3,12 +3,12 @@
   padding: 3rem 0;
   // Boosted mod: no gradient background image
 
-  // Boosted mod: no extra h1 rule
+  // Boosted mod: no `h1`
 
   .lead {
     @include font-size(1rem);
     font-weight: 400;
-    color: $gray-700;
+    color: var(--bs-secondary-color);
   }
 
   .bd-code-snippet {
@@ -36,7 +36,7 @@
     background-color: transparent;
   }
 
-  // Boosted mod: no #carbonads
+  // Boosted mod: no `#carbonads`
 
   @include media-breakpoint-up(md) {
     .lead {
@@ -72,7 +72,7 @@
   mix-blend-mode: darken;
 
   svg {
-    filter: drop-shadow(0 1px 1px #fff);
+    filter: drop-shadow(0 1px 1px var(--bs-body-bg));
   }
 }
 
@@ -85,5 +85,13 @@
 
   &:hover > img {
     transform: scale(1.1);
+  }
+}
+
+@if $enable-dark-mode {
+  [data-bs-theme="dark"] {
+    .masthead-followup-icon {
+      mix-blend-mode: lighten;
+    }
   }
 }
