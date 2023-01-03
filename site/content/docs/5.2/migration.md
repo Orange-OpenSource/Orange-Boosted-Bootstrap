@@ -52,6 +52,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
       <li><code>--bs-breakpoint-lg</code></li>
       <li><code>--bs-breakpoint-xl</code></li>
       <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-card-subtitle-color</code></li>
+      <li><code>--bs-card-title-color</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
     </ul>
   </details>
@@ -59,6 +61,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 - <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$card-title-color</code></li>
+      <li><code>$card-subtitle-color</code></li>
       <li><code>$font-weight-medium</code></li>
     </ul>
   </details>
