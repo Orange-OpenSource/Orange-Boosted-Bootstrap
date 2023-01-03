@@ -34,19 +34,19 @@
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "48.25 kB"
+      "maxSize": "48.5 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "24.75 kB"
+      "maxSize": "25.0 kB"
     },
     {
       "path": "./dist/js/boosted.esm.js",
-      "maxSize": "33.0 kB"
+      "maxSize": "33.25 kB"
     },
     {
       "path": "./dist/js/boosted.esm.min.js",
-      "maxSize": "20.25 kB"
+      "maxSize": "20.5 kB"
     },
     {
       "path": "./dist/js/boosted.js",
@@ -54,7 +54,7 @@
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "17.75 kB"
+      "maxSize": "18.0 kB"
     }
   ],
   "ci": {

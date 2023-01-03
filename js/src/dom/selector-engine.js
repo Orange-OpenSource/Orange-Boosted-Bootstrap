@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { isDisabled, isVisible } from '../util/index.js'
+import { isDisabled, isVisible, parseSelector } from '../util/index.js'
 
 /**
  * Constants
@@ -49,7 +49,6 @@ const SelectorEngine = {
 
     return []
   },
-
   // TODO: this is now unused; remove later along with prev()
   next(element, selector) {
     let next = element.nextElementSibling
@@ -100,6 +99,7 @@ const SelectorEngine = {
       }
 
       selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null
+      selector = parseSelector(selector)
     }
 
     return selector
