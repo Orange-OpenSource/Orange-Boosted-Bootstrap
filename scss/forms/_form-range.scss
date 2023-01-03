@@ -43,7 +43,6 @@
     height: $form-range-thumb-height;
     margin-top: calc(($form-range-track-height - ($form-range-thumb-height + var(--#{$prefix}border-width) * 2)) * .5); /* stylelint-disable-line function-disallowed-list */ // Webkit specific // Boosted mod
     cursor: grab; // Boosted mod
-    background-color: #fd0;
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
