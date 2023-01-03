@@ -92,9 +92,9 @@
 
       &::before {
         position: absolute;
-        top: -$btn-border-width;
-        bottom: -$btn-border-width;
-        left: -$btn-border-width;
+        top: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        bottom: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        left: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
         width: $btn-border-width;
         color: inherit;
         content: "";
