@@ -41,8 +41,9 @@
     box-sizing: content-box; // Boosted mod
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    margin-top: ($form-range-track-height - ($form-range-thumb-height + $border-width * 2)) * .5; // Webkit specific // Boosted mod
+    margin-top: calc(($form-range-track-height - ($form-range-thumb-height + var(--#{$prefix}border-width) * 2)) * .5); /* stylelint-disable-line function-disallowed-list */ // Webkit specific // Boosted mod
     cursor: grab; // Boosted mod
+    background-color: #fd0;
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded

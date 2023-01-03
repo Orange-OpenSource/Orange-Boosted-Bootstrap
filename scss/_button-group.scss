@@ -79,7 +79,7 @@
 //
 
 .dropdown-toggle-split {
-  min-width: $dropdown-padding-x * 2 + $caret-width * 2; // Boosted mod
+  min-width: add($dropdown-padding-x * 2, calc($caret-width * 2)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
   padding-right: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
   padding-left: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
   border-color: currentcolor; // Boosted mod

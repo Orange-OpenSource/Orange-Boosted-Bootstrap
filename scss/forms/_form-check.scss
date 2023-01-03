@@ -88,12 +88,12 @@
 
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$prefix}gradient);
-      background-position: 50% add(50%, $border-width * .25), center; // Boosted mod
-      background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; /* stylelint-disable-line function-disallowed-list */  // Boosted mod
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
-      background-position: 50% add(50%, $border-width * .25); // Boosted mod
-      background-size: map-get($spacers, 2) $border-width * 1.5; // Boosted mod
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
     }
   }
 
@@ -249,7 +249,7 @@
     &.btn-icon:not(.btn-no-outline)::before,
     &.btn-icon:not(.btn-no-outline)::after {
       display: inline-block;
-      width: $border-width;
+      width: var(--#{$prefix}border-width);
       height: 100%;
       content: "";
     }
@@ -359,7 +359,7 @@
   + .btn-no-outline {
     // Absurd selector to hack on specifity
     &:not(:only-of-type) {
-      border: $border-width solid transparent;
+      border: var(--#{$prefix}border-width) solid transparent;
     }
 
     &:hover,

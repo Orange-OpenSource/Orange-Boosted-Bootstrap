@@ -44,6 +44,6 @@
 .btn-clipboard {
   position: relative;
   z-index: 2;
-  margin-top: $border-width; // Boosted mod
-  margin-right: $border-width; // Boosted mod
+  margin-top: var(--#{$prefix}border-width); // Boosted mod
+  margin-right: var(--#{$prefix}border-width); // Boosted mod
 }
