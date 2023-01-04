@@ -5,10 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index'
-import EventHandler from './dom/event-handler'
-import BaseComponent from './base-component'
-import SelectorEngine from './dom/selector-engine'
+import { defineJQueryPlugin } from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import BaseComponent from './base-component.js'
+import SelectorEngine from './dom/selector-engine.js'
 
 /**
  * Constants

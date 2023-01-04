@@ -79,7 +79,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 - `style` - path to Boosted's non-minified CSS that's been compiled using the default settings (no customization)
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ### yarn

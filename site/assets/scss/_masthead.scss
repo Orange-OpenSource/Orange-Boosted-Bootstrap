@@ -77,3 +77,13 @@
 }
 
 // Boosted mod: no .masthead-notice
+
+.animate-img {
+  > img {
+    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+  }
+
+  &:hover > img {
+    transform: scale(1.1);
+  }
+}

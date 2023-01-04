@@ -574,13 +574,11 @@ $border-color-translucent:    $gray-500 !default; // Boosted mod: gray value ins
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-// Boosted mod: all `$border-radius*` values are `null`
-$border-radius:               null !default;
-$border-radius-sm:            null !default;
-$border-radius-lg:            null !default;
-$border-radius-xl:            null !default;
-$border-radius-2xl:           null !default;
-// End mod
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-2xl:           2rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -667,6 +665,7 @@ $font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
 $font-weight-lighter:         null !default;
 $font-weight-light:           null !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          null !default;
@@ -1261,6 +1260,17 @@ $zindex-tooltip:                    1080 !default;
 $zindex-toast:                      1090 !default;
 // scss-docs-end zindex-stack
 
+// scss-docs-start zindex-levels-map
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+) !default;
+// scss-docs-end zindex-levels-map
+
+
 // Navs
 
 // scss-docs-start nav-variables
@@ -1537,6 +1547,8 @@ $card-spacer-y:                     $spacer !default; // Deprecated in v5.2.3
 // fusv-enable
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
+$card-title-color:                  null !default;
+$card-subtitle-color:               null !default;
 $card-border-width:                 $border-width !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
 $card-border-radius:                $border-radius !default;

@@ -9,6 +9,67 @@ aliases:
 toc: true
 ---
 
+## v5.3.0
+
+<hr class="mb-4">
+
+Boosted v5.3.0 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.3.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.0).
+
+### Helpers and utilities
+
+- <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
+
+- <span class="badge bg-success">New</span> border dividers utilities:
+  - `.rounded-{top|end|bottom|start}-{0|5}`
+  - `.rounded-{top|end|bottom|start}-circle`
+  - `.rounded-{top|end|bottom|start}-pill`.
+  - <span class="badge bg-warning">Warning</span> We had some HTML markups in our docs that contained some `.rounded-*` classes (coming from Bootstrap) that weren't doing anything. But now, they would add probably unwanted rounded corners. So please double-check that it won't add any regressions in your websites.
+
+- <span class="badge bg-success">New</span> overflow utilities: `.overflow-{x|y}-{auto|hidden|visible|scroll}`.
+
+- <span class="badge bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`.
+
+- <span class="badge bg-success">New</span> z-index utilities: `.z-{index}`.
+
+- <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
+
+### CSS and Sass variables
+
+- `@mixin caret()` has a new interface including a new optional parameters.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-offcanvas-transition-duration</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-breakpoint-xs</code></li>
+      <li><code>--bs-breakpoint-sm</code></li>
+      <li><code>--bs-breakpoint-md</code></li>
+      <li><code>--bs-breakpoint-lg</code></li>
+      <li><code>--bs-breakpoint-xl</code></li>
+      <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-card-subtitle-color</code></li>
+      <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-offcanvas-transition</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$card-title-color</code></li>
+      <li><code>$card-subtitle-color</code></li>
+      <li><code>$font-weight-medium</code></li>
+    </ul>
+  </details>
+
 ## v5.2.3
 
 <hr class="mb-4">
@@ -632,7 +693,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Renamed "Navs" component page to "Navs & Tabs".
 - Renamed "Checks" page to "Checks & radios".
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
-- Added new keyboard shortcut for the search field: <kbd>Ctrl + /</kbd>.
+- Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
 ## Sass
 
@@ -981,7 +1042,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-italic` utility to `.fst-italic` for brevity and consistency with new `.fst-normal` utility.
 
 - Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
 

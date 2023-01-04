@@ -29,18 +29,18 @@ In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}
 Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded float-start" >}}
-{{< placeholder width="200" height="200" class="rounded float-end" >}}
+{{< placeholder width="200" height="200" class="float-start" >}}
+{{< placeholder width="200" height="200" class="float-end" >}}
 {{< /example >}}
 
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded mx-auto d-block" >}}
+{{< placeholder width="200" height="200" class="mx-auto d-block" >}}
 {{< /example >}}
 
 {{< example >}}
 <div class="text-center">
-  {{< placeholder width="200" height="200" class="rounded" >}}
+  {{< placeholder width="200" height="200" >}}
 </div>
 {{< /example >}}
 
