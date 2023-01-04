@@ -54,7 +54,7 @@ Click the button below to show a toast (positioned with our utilities in the low
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#ff7900" class="rounded me-2" text="false" title="false" >}}
+      {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
@@ -75,7 +75,7 @@ Click the button below to show a toast (positioned with our utilities in the low
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      <img src="..." class="rounded me-2" alt="...">
+      <img src="..." class="me-2" alt="...">
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>

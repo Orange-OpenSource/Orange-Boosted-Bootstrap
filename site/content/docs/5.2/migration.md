@@ -25,6 +25,7 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
   - `.rounded-{top|end|bottom|start}-{0|5}`
   - `.rounded-{top|end|bottom|start}-circle`
   - `.rounded-{top|end|bottom|start}-pill`.
+  - <span class="badge bg-warning">Warning</span> We had some HTML markups in our docs that contained some `.rounded-*` classes (coming from Bootstrap) that weren't doing anything. But now, they would add probably unwanted rounded corners. So please double-check that it won't add any regressions in your websites.
 
 - <span class="badge bg-success">New</span> overflow utilities: `.overflow-{x|y}-{auto|hidden|visible|scroll}`.
 

@@ -61,7 +61,7 @@ Or modify the default `border-color` of a component:
   Dangerous heading
 </div>
 
-<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0">
   Changing border color and width
 </div>
 {{< /example >}}
