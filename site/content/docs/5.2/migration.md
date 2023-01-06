@@ -9,6 +9,67 @@ aliases:
 toc: true
 ---
 
+## v5.3.0
+
+<hr class="mb-4">
+
+Boosted v5.3.0 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.3.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.0).
+
+### Helpers and utilities
+
+- <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
+
+- <span class="badge bg-success">New</span> border dividers utilities:
+  - `.rounded-{top|end|bottom|start}-{0|5}`
+  - `.rounded-{top|end|bottom|start}-circle`
+  - `.rounded-{top|end|bottom|start}-pill`.
+  - <span class="badge bg-warning">Warning</span> We had some HTML markups in our docs that contained some `.rounded-*` classes (coming from Bootstrap) that weren't doing anything. But now, they would add probably unwanted rounded corners. So please double-check that it won't add any regressions in your websites.
+
+- <span class="badge bg-success">New</span> overflow utilities: `.overflow-{x|y}-{auto|hidden|visible|scroll}`.
+
+- <span class="badge bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`.
+
+- <span class="badge bg-success">New</span> z-index utilities: `.z-{index}`.
+
+- <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
+
+### CSS and Sass variables
+
+- `@mixin caret()` has a new interface including a new optional parameters.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-offcanvas-transition-duration</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-breakpoint-xs</code></li>
+      <li><code>--bs-breakpoint-sm</code></li>
+      <li><code>--bs-breakpoint-md</code></li>
+      <li><code>--bs-breakpoint-lg</code></li>
+      <li><code>--bs-breakpoint-xl</code></li>
+      <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-card-subtitle-color</code></li>
+      <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-offcanvas-transition</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$card-title-color</code></li>
+      <li><code>$card-subtitle-color</code></li>
+      <li><code>$font-weight-medium</code></li>
+    </ul>
+  </details>
+
 ## v5.2.3
 
 <hr class="mb-4">
@@ -16,6 +77,17 @@ toc: true
 Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
 
 If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
+
+### Accessibility
+
+- **Focus visible**
+  - <span class="badge bg-warning">Warning</span> We completely refactored our focus visible management.
+
+  A `focus-visible()` mixin is provided to ensure a proper visible focus state. This visible focus state is defined by an outer outline and an inner box shadow. On light background, the outer outline is black and the inner box shadow is white. The latter will be invisible most of the time but is here to ensure a security on light background but that aren't white. On dark background, these colors are inverted.
+
+  We also removed the `:focus` style of our components that was mirroring the `:hover` state, as well as the transition animation.
+
+  Even if the generic case will be transparent for your project, please check this new behavior in your websites.
 
 ### Components
 
@@ -39,6 +111,13 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       + <p class="card-text fw-bold">Description</p>
       ```
     </details>
+
+- **Dropdowns**
+  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
+  ```diff
+  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
+  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+  ```
 
 - **Footer**
   - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
@@ -115,8 +194,32 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-accordion-body-padding-x</code></li>
+      <li><code>--bs-accordion-body-padding-y</code></li>
+      <li><code>--bs-card-spacer-y</code></li>
+      <li><code>--bs-dropdown-toggle-bg</code></li>
+      <li><code>--bs-dropdown-toggle-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-color</code></li>
+      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-padding-x</code></li>
+      <li><code>--bs-tag-outline-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
+      <li><code>--bs-accordion-body-padding-bottom</code></li>
+      <li><code>--bs-accordion-body-padding-end</code></li>
+      <li><code>--bs-accordion-body-padding-start</code></li>
+      <li><code>--bs-accordion-body-padding-top</code></li>
+      <li><code>--bs-card-spacer-bottom</code></li>
+      <li><code>--bs-card-spacer-top</code></li>
+      <li><code>--bs-dropdown-line-height</code></li>
+      <li><code>--bs-focus-visible-inner-color</code></li>
+      <li><code>--bs-focus-visible-outer-color</code></li>
       <li><code>--bs-table-accent-bg</code></li>
       <li><code>--bs-table-striped-bg</code></li>
       <li><code>--bs-table-striped-color</code></li>
@@ -126,8 +229,40 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
   </details>
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-body-padding-x</code></li>
+      <li><code>$accordion-body-padding-y</code></li>
+      <li><code>$btn-close-focus-shadow</code></li>
+      <li><code>$card-spacer-y</code></li>
+      <li><code>$form-range-thumb-active-border</code></li>
+      <li><code>$form-star-focus-box-shadow</code></li>
+      <li><code>$form-star-focus-color</code></li>
+      <li><code>$form-star-focus-color-dark</code></li>
+      <li><code>$form-star-focus-outline</code></li>
+      <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$outline-offset</code></li>
+      <li><code>$outline-width</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> Sass variables:</summary>
     <ul>
+      <li><code>$accordion-body-padding-bottom</code></li>
+      <li><code>$accordion-body-padding-end</code></li>
+      <li><code>$accordion-body-padding-start</code></li>
+      <li><code>$accordion-body-padding-top</code></li>
+      <li><code>$card-spacer-bottom</code></li>
+      <li><code>$card-spacer-top</code></li>
+      <li><code>$focus-visible-inner-color</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-inner-width</code></li>
+      <li><code>$focus-visible-outer-color</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
+      <li><code>$focus-visible-outer-offset</code></li>
+      <li><code>$focus-visible-outer-width</code></li>
+      <li><code>$focus-visible-zindex</code></li>
       <li><code>$form-helper-label-margin-bottom</code></li>
       <li><code>$form-helper-size</code></li>
       <li><code>$form-select-border-radius-sm</code></li>
@@ -137,6 +272,7 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$helper-icon</code></li>
       <li><code>$input-border-radius-sm</code></li>
       <li><code>$input-font-size-sm</code></li>
+      <li><code>$step-link-active-outline</code></li>
       <li><code>$table-accent-bg</code></li>
       <li><code>$table-cell-icon-margin-bottom</code></li>
       <li><code>$table-cell-icon-margin-bottom-sm</code></li>
@@ -561,7 +697,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Renamed "Navs" component page to "Navs & Tabs".
 - Renamed "Checks" page to "Checks & radios".
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
-- Added new keyboard shortcut for the search field: <kbd>Ctrl + /</kbd>.
+- Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
 ## Sass
 
@@ -910,7 +1046,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-italic` utility to `.fst-italic` for brevity and consistency with new `.fst-normal` utility.
 
 - Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
 

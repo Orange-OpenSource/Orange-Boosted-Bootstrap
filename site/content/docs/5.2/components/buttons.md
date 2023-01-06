@@ -23,7 +23,7 @@ Boosted includes several predefined button styles, each serving its own semantic
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 <!-- Boosted mod -->

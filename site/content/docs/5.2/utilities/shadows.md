@@ -13,10 +13,10 @@ toc: true
 While shadows on components are disabled by default in Boosted and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
 
 {{< example >}}
-<div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
+<div class="shadow-none p-3 mb-5 bg-light">No shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body">Small shadow</div>
+<div class="shadow p-3 mb-5 bg-body">Regular shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body">Larger shadow</div>
 {{< /example >}}
 
 ## Sass
