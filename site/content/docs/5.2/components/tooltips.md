@@ -25,11 +25,11 @@ Things to know when using the tooltip plugin:
 Got all that? Great, let's see how they work with some examples.
 
 {{< callout info >}}
-{{< partial "callout-info-sanitizer.md" >}}
+{{< partial "callouts/info-sanitizer.md" >}}
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ### Examples
@@ -53,7 +53,7 @@ Hover over the links below to see tooltips:
 {{< /example >}}
 
 {{< callout warning >}}
-{{< partial "callout-warning-data-bs-title-vs-title.md" >}}
+{{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
 {{< /callout >}}
 
 ### Custom tooltips
@@ -278,7 +278,7 @@ const tooltip = new boosted.Tooltip(element, {
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}
@@ -287,8 +287,8 @@ const tooltip = new boosted.Tooltip(element, {
 | `disable` | Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled. |
 | `dispose` | Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. |
 | `enable` | Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.** |
-| `getInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `getOrCreateInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 | `hide` | Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
 | `setContent` | Gives a way to change the tooltip's content after its initialization. |
 | `show` | Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. |

@@ -1,13 +1,12 @@
 @each $color, $value in ("primary": $accessible-orange, "light": $light) { // Boosted mod: restrict to primary and light
   .link-#{$color} {
-    color: $value !important; // stylelint-disable-line declaration-no-important
-    // stylelint-disable-next-line declaration-no-important
-    background-color: color-contrast($value) !important; // Boosted mod: ensure contrast
+    color: $value if($enable-important-utilities, !important, null);
+    background-color: color-contrast($value) if($enable-important-utilities, !important, null); // Boosted mod: ensure contrast
 
     @if $link-shade-percentage != 0 {
       // Boosted mod: no &:focus
       &:hover {
-        color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage)) !important; // stylelint-disable-line declaration-no-important
+        color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage)) if($enable-important-utilities, !important, null);
       }
     }
   }

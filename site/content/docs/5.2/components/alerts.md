@@ -38,7 +38,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ### Live example

@@ -45,6 +45,7 @@ We're building a Vite project with Boosted from scratch, so there are some prere
    ```sh
    npm i --save boosted @popperjs/core
    ```
+
 4. **Install additional dependency.** In addition to Vite and Boosted, we need another dependency (Sass) to properly import and bundle Boosted's CSS.
 
    ```sh

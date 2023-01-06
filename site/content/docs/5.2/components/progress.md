@@ -115,7 +115,7 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Multiple bars
