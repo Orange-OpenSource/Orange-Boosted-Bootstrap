@@ -55,7 +55,4 @@ $offset-top: 7rem;
 
 $sidebar-height:         subtract(100vh, $offset-top);
 
-$documentation-link-color:    shade-color($info, 20%);
-$documentation-link-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$documentation-link-color}' fill-rule='evenodd' d='M9.26 25a1.77 1.77 0 0 1-1.76-1.76V6.76A1.77 1.77 0 0 1 9.26 5h12.36v2.35h1.17V25M20.44 6.18H9.26a.59.59 0 0 0-.58.58.59.59 0 0 0 .58.6h1.18V15l1.77-1.76L13.97 15V7.35h6.47z'/></svg>");
-
 $tac-prefix: "tarteaucitron";

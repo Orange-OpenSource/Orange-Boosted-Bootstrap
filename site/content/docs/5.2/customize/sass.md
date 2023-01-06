@@ -119,7 +119,7 @@ $body-color: #111;
 Repeat as necessary for any variable in Boosted, including the global options below.
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ## Maps and loops

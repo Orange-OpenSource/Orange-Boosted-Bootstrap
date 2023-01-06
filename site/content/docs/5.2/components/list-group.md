@@ -144,6 +144,10 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
+{{< ods-incompatibility-alert >}}
+This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 {{< list-group.inline >}}
 {{- range $.Site.Data.breakpoints }}
@@ -185,12 +189,16 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## With badges
 
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -212,6 +220,10 @@ Add badges to any list group item to show unread counts, activity, and more with
 ## Custom content
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="list-group">
@@ -245,6 +257,10 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 ## Checkboxes and radios
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -489,7 +505,7 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Activates your content as a tab element.

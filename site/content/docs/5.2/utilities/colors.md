@@ -32,7 +32,7 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Opacity
@@ -48,11 +48,13 @@ Consider our default `.text-primary` utility.
 ```css
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-primary-text-rgb), var(--bs-text-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-primary` (with the value of `13, 110, 253`) CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(13, 110, 253, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `$accessible-orange` (with the value of `241, 110, 0`) Sass variable as a CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(241, 110, 0, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+
+When used in a dark variant context, `--bs-primary-text-rgb` will use the value of `$brand-orange` (with the value of `255, 121, 0`).
 
 ### Example
 

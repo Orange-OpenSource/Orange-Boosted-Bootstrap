@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.1 (https://boosted.orange.com/)
+  * Boosted v5.2.3 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap selector-engine.js v5.2.1 (https://boosted.orange.com/)
+  * Bootstrap selector-engine.js v5.2.3 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -16,10 +16,11 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): dom/selector-engine.js
+   * Bootstrap (v5.2.3): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Constants
    */
@@ -28,61 +29,46 @@
     find(selector, element = document.documentElement) {
       return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
     },
-
     findOne(selector, element = document.documentElement) {
       return Element.prototype.querySelector.call(element, selector);
     },
-
     children(element, selector) {
       return [].concat(...element.children).filter(child => child.matches(selector));
     },
-
     parents(element, selector) {
       const parents = [];
       let ancestor = element.parentNode.closest(selector);
-
       while (ancestor) {
         parents.push(ancestor);
         ancestor = ancestor.parentNode.closest(selector);
       }
-
       return parents;
     },
-
     prev(element, selector) {
       let previous = element.previousElementSibling;
-
       while (previous) {
         if (previous.matches(selector)) {
           return [previous];
         }
-
         previous = previous.previousElementSibling;
       }
-
       return [];
     },
-
     // TODO: this is now unused; remove later along with prev()
     next(element, selector) {
       let next = element.nextElementSibling;
-
       while (next) {
         if (next.matches(selector)) {
           return [next];
         }
-
         next = next.nextElementSibling;
       }
-
       return [];
     },
-
     focusableChildren(element) {
       const focusables = ['a', 'button', 'input', 'textarea', 'select', 'details', '[tabindex]', '[contenteditable="true"]'].map(selector => `${selector}:not([tabindex^="-"])`).join(',');
       return this.find(focusables, element).filter(el => !index.isDisabled(el) && index.isVisible(el));
     }
-
   };
 
   return SelectorEngine;

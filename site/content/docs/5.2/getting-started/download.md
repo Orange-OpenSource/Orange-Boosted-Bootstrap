@@ -67,7 +67,7 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
 
 ```sh
-npm install boosted@v5.2.1
+npm install boosted@v5.2.3
 ```
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted's plugins onto a `boosted` object.
@@ -79,7 +79,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 - `style` - path to Boosted's non-minified CSS that's been compiled using the default settings (no customization)
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ### yarn
@@ -87,7 +87,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
 
 ```sh
-yarn add boosted@v5.2.1
+yarn add boosted@v5.2.3
 ```
 
 ### Composer

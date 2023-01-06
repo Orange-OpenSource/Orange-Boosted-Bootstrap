@@ -42,7 +42,6 @@
   display: block;
 }
 
-/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -52,8 +51,6 @@
 .active.carousel-item-start {
   transform: translateX(-100%);
 }
-
-/* rtl:end:ignore */
 
 
 //
@@ -105,12 +102,12 @@
   background: none;
   border: 0;
   outline: 0; // Boosted mod
+  box-shadow: none; // Boosted mod
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
-  // Hover/focus state
-  &:hover,
-  &:focus {
+  // Hover state - Boosted mod: no focus state
+  &:hover {
     --#{$boosted-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
     color: color-contrast($carousel-control-color);
     text-decoration: none;
@@ -129,16 +126,15 @@
     color: $carousel-control-color;
   }
 
+  // scss-docs-start focus-visible-carousel
   &:focus {
     &[data-focus-visible-added] {
-      // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-      & > span {
-        outline: map-get($border-widths, 3) solid $brand-orange;
-        outline-offset: $outline-offset;
-        box-shadow: 0 0 0 $outline-offset $white;
+      > span {
+        @include focus-visible();
       }
     }
   }
+  // scss-docs-end focus-visible-carousel
   // End mod
 }
 
@@ -231,9 +227,6 @@
 
     &:focus {
       &[data-focus-visible-added] {
-        outline: map-get($border-widths, 3) solid $brand-orange;
-        outline-offset: $outline-offset;
-        box-shadow: 0 0 0 $outline-offset $white;
         transform: none;
       }
     }

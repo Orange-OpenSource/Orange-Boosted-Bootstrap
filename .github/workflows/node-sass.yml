@@ -1,49 +1,36 @@
 name: CSS (node-sass)
-
 on:
   push:
+    branches:
+      - main
     paths:
       - 'scss/**'
-    branches:
-      - main
-      - "!dependabot/**"
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
-    branches:
-      - main
-      - "!dependabot/**"
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
+  NODE: 18
 
 jobs:
   css:
     runs-on: ubuntu-latest
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
     steps:
-      - name: Bail early
-        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v3
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Build CSS with node-sass
         run: |
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist-sass/css/
           ls -Al dist-sass/css
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))

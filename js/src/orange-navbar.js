@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v5.2.1): orange-navbar.js
+ * Boosted (v5.2.3): orange-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index'
-import EventHandler from './dom/event-handler'
-import BaseComponent from './base-component'
-import SelectorEngine from './dom/selector-engine'
+import { defineJQueryPlugin } from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import BaseComponent from './base-component.js'
+import SelectorEngine from './dom/selector-engine.js'
 
 /**
  * Constants

@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.1 (https://boosted.orange.com/)
+  * Boosted v5.2.3 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap backdrop.js v5.2.1 (https://boosted.orange.com/)
+  * Bootstrap backdrop.js v5.2.3 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -21,10 +21,11 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/backdrop.js
+   * Bootstrap (v5.2.3): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Constants
    */
@@ -40,8 +41,8 @@
     isVisible: true,
     // if false, we use the backdrop helper without adding any element to the dom
     rootElement: 'body' // give the choice to place backdrop under different elements
-
   };
+
   const DefaultType = {
     className: 'string',
     clickCallback: '(function|null)',
@@ -49,6 +50,7 @@
     isVisible: 'boolean',
     rootElement: '(element|string)'
   };
+
   /**
    * Class definition
    */
@@ -59,110 +61,86 @@
       this._config = this._getConfig(config);
       this._isAppended = false;
       this._element = null;
-    } // Getters
+    }
 
-
+    // Getters
     static get Default() {
       return Default;
     }
-
     static get DefaultType() {
       return DefaultType;
     }
-
     static get NAME() {
       return NAME;
-    } // Public
+    }
 
-
+    // Public
     show(callback) {
       if (!this._config.isVisible) {
         index.execute(callback);
         return;
       }
-
       this._append();
-
       const element = this._getElement();
-
       if (this._config.isAnimated) {
         index.reflow(element);
       }
-
       element.classList.add(CLASS_NAME_SHOW);
-
       this._emulateAnimation(() => {
         index.execute(callback);
       });
     }
-
     hide(callback) {
       if (!this._config.isVisible) {
         index.execute(callback);
         return;
       }
-
       this._getElement().classList.remove(CLASS_NAME_SHOW);
-
       this._emulateAnimation(() => {
         this.dispose();
         index.execute(callback);
       });
     }
-
     dispose() {
       if (!this._isAppended) {
         return;
       }
-
       EventHandler__default.default.off(this._element, EVENT_MOUSEDOWN);
-
       this._element.remove();
-
       this._isAppended = false;
-    } // Private
+    }
 
-
+    // Private
     _getElement() {
       if (!this._element) {
         const backdrop = document.createElement('div');
         backdrop.className = this._config.className;
-
         if (this._config.isAnimated) {
           backdrop.classList.add(CLASS_NAME_FADE);
         }
-
         this._element = backdrop;
       }
-
       return this._element;
     }
-
     _configAfterMerge(config) {
       // use getElement() with the default "body" to get a fresh Element on each instantiation
       config.rootElement = index.getElement(config.rootElement);
       return config;
     }
-
     _append() {
       if (this._isAppended) {
         return;
       }
-
       const element = this._getElement();
-
       this._config.rootElement.append(element);
-
       EventHandler__default.default.on(element, EVENT_MOUSEDOWN, () => {
         index.execute(this._config.clickCallback);
       });
       this._isAppended = true;
     }
-
     _emulateAnimation(callback) {
       index.executeAfterTransition(callback, this._getElement(), this._config.isAnimated);
     }
-
   }
 
   return Backdrop;
