@@ -2034,7 +2034,8 @@ $carousel-control-icon-active-bg:    $component-active-bg !default;
 
 $carousel-control-pause-icon:        $pause-icon !default;
 $carousel-control-play-icon:         $play-icon !default;
-$carousel-control-pause-icon-size:   1.25rem 1.25rem !default;
+$carousel-control-pause-button-size: .75rem !default;
+$carousel-control-pause-icon-size:   .75rem .75rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;

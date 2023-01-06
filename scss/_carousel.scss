@@ -301,6 +301,29 @@
   }
 }
 
+// Boosted mod: specif styles when pause/play button is present
+.carousel-indicators-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  min-width: 7.5em;
+  transform: translateX(-50%);
+
+  .carousel-indicators-pause-button button {
+    background: rgba($carousel-indicator-active-bg, .5);
+    @include border-radius($spacer, $spacer);
+  }
+
+  .carousel-indicators {
+    position: initial;
+    transform: none;
+  }
+}
+// End mod
+
 /* rtl:end:ignore */
 // End mod
 
@@ -323,11 +346,13 @@
 
 // Boosted mod: play/pause button
 .carousel-control-play-pause {
+  border: 0;
+
   &.pause {
-    @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+    @include button-icon($carousel-control-pause-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
   }
   &.play {
-    @include button-icon($carousel-control-play-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+    @include button-icon($carousel-control-play-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
   }
 }
 // End mod
