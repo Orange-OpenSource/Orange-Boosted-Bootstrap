@@ -67,6 +67,8 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
       <li><code>$card-title-color</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$font-weight-medium</code></li>
+      <li><code>$table-cell-icon-margin-bottom</code></li>
+      <li><code>$table-cell-icon-margin-top</code></li>
     </ul>
   </details>
 
@@ -274,10 +276,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$input-font-size-sm</code></li>
       <li><code>$step-link-active-outline</code></li>
       <li><code>$table-accent-bg</code></li>
-      <li><code>$table-cell-icon-margin-bottom</code></li>
-      <li><code>$table-cell-icon-margin-bottom-sm</code></li>
-      <li><code>$table-cell-icon-margin-top</code></li>
-      <li><code>$table-cell-icon-margin-top-sm</code></li>
       <li><code>$table-striped-bg</code></li>
       <li><code>$table-striped-bg-factor</code></li>
       <li><code>$table-striped-color</code></li>
