@@ -799,10 +799,10 @@ $mark-bg-dark:                $white !default; // Boosted mod
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:                  .875rem !default;
-$table-cell-padding-x:                  $spacer * .5 !default;
-$table-cell-padding-y-sm:               .5625rem !default;
-$table-cell-padding-x-sm:               $table-cell-padding-x !default;
+$table-cell-padding-y:                  .875rem !default; // Boosted mod
+$table-cell-padding-x:                  $spacer * .5 !default; // Boosted mod
+$table-cell-padding-y-sm:               .5625rem !default; // Boosted mod
+$table-cell-padding-x-sm:               $table-cell-padding-x !default; // Boosted mod
 
 $table-cell-icon-margin-top:            -.875rem !default; // Boosted mod
 $table-cell-icon-margin-bottom:         -.625rem !default; // Boosted mod
