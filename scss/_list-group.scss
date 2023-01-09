@@ -208,6 +208,8 @@
         --#{$prefix}list-group-action-hover-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`;
         --#{$prefix}list-group-action-hover-bg: #{if(color-contrast($value) == $white, shade-color($value, 10%), tint-color($value, 10%))}; // Boosted mod: instead of `var(--#{$prefix}#{state}-border-subtle)`;
       }
+
+      // Boosted mod: no `&:active`
     }
   }
 }
