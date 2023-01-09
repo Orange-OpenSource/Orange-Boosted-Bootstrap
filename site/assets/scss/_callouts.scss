@@ -29,7 +29,7 @@
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
     --bd-callout-color: var(--bs-emphasis-color); // Boosted mod
-    // Boosted mod: no `--bs-callout-bg
+    // Boosted mod: no `--bs-callout-bg`
     --bd-callout-border: var(--bs-#{$variant}-border-subtle);
   }
 }
