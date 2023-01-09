@@ -107,6 +107,56 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
 
+### Color modes!
+
+Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+
+- **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
+
+- **New extended color system.** We've added new theme colors (but not in `$theme-colors)`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+
+- We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
+
+- Adds new `_variables-dark.scss` stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing `_variables.scss` file in your import stack.
+
+  ```diff
+  diff --git a/scss/boosted.scss b/scss/boosted.scss
+  index 8f8296def..449d70487 100644
+  --- a/scss/boosted.scss
+  +++ b/scss/boosted.scss
+  @@ -6,6 +6,7 @@
+   // Configuration
+   @import "functions";
+   @import "variables";
+  +@import "variables-dark";
+   @import "maps";
+   @import "mixins";
+   @import "utilities";
+  ```
+
+### Components
+
+#### Alert
+
+- Alert variants are now styled via CSS variables.
+
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+
+#### List group
+
+- List group item variants are now styled via CSS variables.
+
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+
+### Forms
+
+- `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
+
+- `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
+
+- **Carousel**
+  - <span class="badge bg-warning">Warning</span> The pause/play button has been slightly changed for accessibility purpose; it is now placed first and is the first focusable item.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
