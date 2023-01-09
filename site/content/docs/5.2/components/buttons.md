@@ -66,19 +66,19 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
   <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">Secondary</span>
+  <span class="visually-hidden">Small button with icon only</span>
 </button>
 <button type="button" class="btn btn-icon btn-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">Secondary</span>
+  <span class="visually-hidden">Button with icon only</span>
 </button>
 <button type="button" class="btn btn-icon btn-secondary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">Secondary</span>
+  <span class="visually-hidden">Large button with icon only</span>
 </button>
 {{< /example >}}
 
@@ -91,19 +91,19 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
   <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">No outline</span>
+  <span class="visually-hidden">Small button with icon only and no outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">No outline</span>
+  <span class="visually-hidden">Button with icon only and no outline</span>
 </button>
 <button type="button" class="btn btn-icon btn-no-outline btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
-  <span class="visually-hidden">No outline</span>
+  <span class="visually-hidden">Large button with icon only and no outline</span>
 </button>
 {{< /example >}}
 
