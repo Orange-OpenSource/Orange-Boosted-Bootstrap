@@ -388,7 +388,9 @@
 }
 
 .highlight-toolbar {
-  background-color: $gray-100; // Boosted mod: change background color instead of using .bg-light
-  border: solid $gray-400; // Boosted mod: change border color
+  background-color: $gray-100; // Boosted mod: instead of `var(--bs-tertiary-bg)`
+  border: solid $gray-400; // Boosted mod: instead of `solid var(--bs-border-color)`
   border-width: map-get($border-widths, 1) 0;
+
+  // Boosted mod: no `.btn-clipboard`
 }
