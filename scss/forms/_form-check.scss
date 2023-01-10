@@ -188,11 +188,11 @@
       }
 
       @if $enable-gradients {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient), var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
+        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$prefix}gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
         background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size 100%;
       } @else {
-        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)}, var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
+        --#{$prefix}form-switch-bg: #{escape-svg($form-switch-checked-bg-image)};
         background-position: $form-switch-checked-bg-position, 100% 0;
         background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size 100%;
       }
