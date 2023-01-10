@@ -111,6 +111,11 @@ The `button` must have the custom `data-bs-control="play-button"` attribute. In 
 
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
 
+{{< callout warning >}}
+For Orange users we recommend using the pause/play button for better accessibility.
+Other way to pause the slide by hovering the slide should not be used.
+{{< /callout >}}
+
 {{< example >}}
 <div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
   <div class="carousel-indicators-wrapper">
