@@ -4,10 +4,10 @@
 
 .bd-example-snippet {
   border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
-  border-width: map-get($border-widths, 1) 0;
+  border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
-    border-width: map-get($border-widths, 1);
+    border-width: 1px;
   }
 }
 
@@ -18,7 +18,7 @@
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5);
   border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
-  border-width: map-get($border-widths, 1) 0;
+  border-width: 1px 0;
   @include clearfix();
 
   @include media-breakpoint-up(md) {
@@ -26,14 +26,14 @@
 
     margin-right: 0;
     margin-left: 0;
-    border-width: map-get($border-widths, 1);
+    border-width: 1px;
     @include border-top-radius(var(--bs-border-radius));
   }
 
   + .bd-code-snippet {
     @include border-top-radius(0);
     border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
-    border-width: 0 map-get($border-widths, 1) map-get($border-widths, 1);
+    border-width: 0 1px 1px;
   }
 
   + p {
@@ -120,7 +120,7 @@
   padding-top: .75rem;
   padding-bottom: .75rem;
   background-color: rgba(var(--bd-violet-rgb), .15);
-  border: map-get($border-widths, 1) solid rgba(var(--bd-violet-rgb), .3); // Boosted mod: use of `map-get($border-widths; 1)` instead of `1px`
+  border: 1px solid rgba(var(--bd-violet-rgb), .3);
 }
 
 .bd-example-row .row + .row,
@@ -135,7 +135,7 @@
 
 .bd-example-flex div {
   background-color: rgba(var(--bd-violet-rgb), .15);
-  border: map-get($border-widths, 1) solid rgba(var(--bd-violet-rgb), .3);
+  border: 1px solid rgba(var(--bd-violet-rgb), .3);
 }
 
 // Grid mixins
@@ -390,7 +390,7 @@
 .highlight-toolbar {
   background-color: $gray-100; // Boosted mod: instead of `var(--bs-tertiary-bg)`
   border: solid $gray-400; // Boosted mod: instead of `solid var(--bs-border-color)`
-  border-width: map-get($border-widths, 1) 0;
+  border-width: 1px 0;
 
   // Boosted mod: no `.btn-clipboard`
 }
