@@ -14,11 +14,11 @@
   // Boosted mod: Needed since the dropdowns define their own color (could be removed once they are tackled)
   .nav-link {
     &:hover {
-      color: var(--#{$prefix}link-hover-color);
+      color: var(--bs-link-hover-color);
     }
 
     &.active {
-      color: var(--#{$prefix}link-hover-color);
+      color: var(--bs-link-hover-color);
     }
   }
   // End mod
@@ -31,10 +31,10 @@
 
   // Boosted mod
   .dropdown-menu {
-    --#{$prefix}dropdown-min-width: 12rem;
-    @include rfs($font-size-sm, --#{$prefix}dropdown-font-size);
-    --#{$prefix}dropdown-line-height: #{$line-height-sm};
-    --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+    --bs-dropdown-min-width: 12rem;
+    @include rfs($font-size-sm, --bs-dropdown-font-size);
+    --bs-dropdown-line-height: #{$line-height-sm};
+    --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
   }
   // End mod
 
