@@ -1,5 +1,5 @@
 - name: primary
-  hex: "#fd0"
+  hex: "#ff7900"
 - name: secondary
   hex: "#000"
 - name: success
