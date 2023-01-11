@@ -14,7 +14,7 @@
   --#{$prefix}alert-border-color: transparent;
   --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color);
   --#{$prefix}alert-border-radius: #{$alert-border-radius};
-  --#{$prefix}alert-link-color: inherit;
+  // Boosted mod: no `--#{$prefix}alert-link-color`
   --#{$prefix}alert-logo-size: #{$alert-logo-size}; // Boosted mod
   --#{$prefix}alert-icon-size: #{$alert-icon-size}; // Boosted mod
   --#{$prefix}alert-icon-margin-y: #{$alert-icon-margin-y}; // Boosted mod
@@ -51,7 +51,7 @@
 // Provide class for links that match alerts
 .alert-link {
   font-weight: var(--#{$prefix}alert-link-font-weight); // Boosted mod
-  color: var(--#{$prefix}alert-link-color);
+  // Boosted mod: no `color`
 }
 
 
@@ -80,7 +80,7 @@
   .alert-#{$state} {
     --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text);
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
-    --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text);
+    // Boosted mod: no `--#{$prefix}alert-link-color`
     --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
   }
 }
