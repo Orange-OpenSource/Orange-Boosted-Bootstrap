@@ -111,7 +111,7 @@
 
 .border-lg-start {
   @include media-breakpoint-up(lg) {
-    border-left: var(--#{$prefix}border-width) solid $border-color;
+    border-left: var(--bs-border-width) solid $border-color;
   }
 }
 
