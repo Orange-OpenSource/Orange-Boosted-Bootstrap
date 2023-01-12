@@ -119,17 +119,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
   <summary><span class="badge text-warning-emphasis bg-warning">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
     <ul>
-      <li><code>$link-color-dark</code> → <code>$link-color-inverted</code></li>
-      <li><code>$link-hover-color-dark</code> -> <code>$link-hover-color-inverted</code></li>
+      <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>
       <li><code>$focus-visible-inner-color-dark</code> → <code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-dark</code> → <code>$focus-visible-outer-color-inverted</code></li>
-      <li><code>$mark-color-dark</code> → <code>$mark-color-inverted</code></li>
-      <li><code>$mark-bg-dark</code> → <code>$mark-bg-inverted</code></li>
-      <li><code>$table-caption-color-dark</code> → <code>$table-caption-color-inverted</code></li>
-      <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>
-      <li><code>$kbd-color-dark</code> → <code>$kbd-color-inverted</code></li>
       <li><code>$kbd-bg-dark</code> → <code>$kbd-bg-inverted</code></li>
+      <li><code>$kbd-color-dark</code> → <code>$kbd-color-inverted</code></li>
+      <li><code>$link-color-dark</code> → <code>$link-color-inverted</code></li>
+      <li><code>$link-hover-color-dark</code> -> <code>$link-hover-color-inverted</code></li>
+      <li><code>$mark-bg-dark</code> → <code>$mark-bg-inverted</code></li>
+      <li><code>$mark-color-dark</code> → <code>$mark-color-inverted</code></li>
       <li><code>$pre-color-dark</code> → <code>$pre-color-inverted</code></li>
+      <li><code>$table-caption-color-dark</code> → <code>$table-caption-color-inverted</code></li>
     </ul>
   </details>
 
@@ -143,17 +143,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
-      <li><code>$link-color-dark</code></li>
-      <li><code>$link-hover-color-dark</code></li>
+      <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-outer-color-dark</code></li>
-      <li><code>$mark-color-dark</code></li>
-      <li><code>$mark-bg-dark</code></li>
-      <li><code>$table-caption-color-dark</code></li>
-      <li><code>$code-color-dark</code></li>
-      <li><code>$kbd-color-dark</code></li>
       <li><code>$kbd-bg-dark</code></li>
+      <li><code>$kbd-color-dark</code></li>
+      <li><code>$link-color-dark</code></li>
+      <li><code>$link-hover-color-dark</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color-dark</code></li>
       <li><code>$pre-color-dark</code></li>
+      <li><code>$table-caption-color-dark</code></li>
     </ul>
   </details>
 
@@ -182,8 +182,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
+      <li><code>--bs-form-select-bg-img</code></li>
+      <li><code>--bs-form-switch-bg</code></li>
       <li><code>--bs-heading-color</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
@@ -216,9 +219,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text</code></li>
-      <li><code>--bs-form-check-bg</code></li>
-      <li><code>--bs-form-switch-bg</code></li>
-      <li><code>--bs-form-select-bg-img</code></li>
     </ul>
   </details>
 
@@ -242,6 +242,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
       <li><code>$code-color-dark</code></li>
+      <li><code>$code-color-inverted</code></li>
       <li><code>$color-mode-type</code></li>
       <li><code>$danger-bg-subtle-dark</code></li>
       <li><code>$danger-bg-subtle</code></li>
@@ -258,6 +259,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$emphasis-color-dark</code></li>
       <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
+      <li><code>$focus-visible-inner-color-inverted</code></li>
+      <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
@@ -266,6 +269,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$info-border-subtle</code></li>
       <li><code>$info-text-dark</code></li>
       <li><code>$info-text</code></li>
+      <li><code>$kbd-bg-inverted</code></li>
+      <li><code>$kbd-color-inverted</code></li>
       <li><code>$light-bg-subtle-dark</code></li>
       <li><code>$light-bg-subtle</code></li>
       <li><code>$light-border-subtle-dark</code></li>
@@ -273,7 +278,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$light-text-dark</code></li>
       <li><code>$light-text</code></li>
       <li><code>$link-color-dark</code></li>
+      <li><code>$link-color-inverted</code></li>
       <li><code>$link-hover-color-dark</code></li>
+      <li><code>$link-hover-color-inverted</code></li>
+      <li><code>$list-group-hover-bg</code></li>
+      <li><code>$mark-bg-inverted</code></li>
+      <li><code>$mark-color-inverted</code></li>
+      <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
       <li><code>$primary-border-subtle-dark</code></li>
@@ -292,24 +303,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-border-subtle</code></li>
       <li><code>$success-text-dark</code></li>
       <li><code>$success-text</code></li>
+      <li><code>$table-caption-color-inverted</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
       <li><code>$warning-border-subtle</code></li>
       <li><code>$warning-text-dark</code></li>
       <li><code>$warning-text</code></li>
-      <li><code>$link-color-inverted</code></li>
-      <li><code>$link-hover-color-inverted</code></li>
-      <li><code>$focus-visible-inner-color-inverted</code></li>
-      <li><code>$focus-visible-outer-color-inverted</code></li>
-      <li><code>$mark-color-inverted</code></li>
-      <li><code>$mark-bg-inverted</code></li>
-      <li><code>$table-caption-color-inverted</code></li>
-      <li><code>$list-group-hover-bg</code></li>
-      <li><code>$code-color-inverted</code></li>
-      <li><code>$kbd-color-inverted</code></li>
-      <li><code>$kbd-bg-inverted</code></li>
-      <li><code>$pre-color-inverted</code></li>
     </ul>
   </details>
 
