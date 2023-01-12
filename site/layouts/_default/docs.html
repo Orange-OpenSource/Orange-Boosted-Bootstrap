@@ -20,7 +20,7 @@
             {{- if .Page.Params.added -}}
               <p class="mb-0 me-2"><span class="tag tag-sm">Added in v{{ .Page.Params.added }}</span></p>
             {{- end -}}
-            <a class="btn btn-sm btn-bd-light" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+            <a class="btn btn-sm" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -31,7 +31,7 @@
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-muted">
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
           <button class="btn btn-secondary p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
             On this page
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>

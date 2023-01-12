@@ -5,12 +5,12 @@ $bd-purple:        $primary; // Boosted mod
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 // Boosted mod: np $bd-purple-light
 // Boosted mod: no $bd-accent
-$dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 
 $bd-gutter-x: .625rem; // Boosted mod
 $bd-callout-variants: info, warning, danger !default;
 
-:root {
+:root,
+[data-bs-theme="light"] {
   --bd-purple: #{$bd-purple};
   --bd-violet: #{$bd-violet};
   // Boosted mod: no --bd-accent
@@ -47,12 +47,20 @@ $bd-callout-variants: info, warning, danger !default;
   --docsearch-footer-background: #{$modal-footer-bg};
   --docsearch-footer-shadow: 0 -1px #{$black};
   // End mod
+
+  // Boosted mod: no --bd-violet-bg
+  // Boosted mod: no --bd-sidebar-link-bg
 }
 
+[data-bs-theme="dark"] {
+  --bd-violet: #{mix($bd-violet, $white, 75%)};
+  // Boosted mod: no --bd-violet-bg
+  // Boosted mod: no --bd-sidebar-link-bg
+}
+
+// Boosted mod
 $zindex-skippy: 1080;
-
 $offset-top: 7rem;
-
-$sidebar-height:         subtract(100vh, $offset-top);
-
+$sidebar-height: subtract(100vh, $offset-top);
 $tac-prefix: "tarteaucitron";
+// End mod
