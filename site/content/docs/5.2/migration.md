@@ -110,7 +110,7 @@ We've also introduced a new `.progress-stacked` class to more logically wrap [mu
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
 
-- <span class="badge bg-success">New</span> `.text-body-secondary`, `.text-body-tertiary` and `.text-body-emphasis`.
+- <span class="badge bg-success">New</span> `.text-black`, `.text-body-secondary`, `.text-body-tertiary` and `.text-body-emphasis`.
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
