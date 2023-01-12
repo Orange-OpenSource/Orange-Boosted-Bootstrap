@@ -35,6 +35,10 @@
     @include rfs($font-size-sm, --bs-dropdown-font-size);
     --bs-dropdown-line-height: #{$line-height-sm};
     --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+
+    .active .bi {
+      display: block !important; // stylelint-disable-line declaration-no-important
+    }
   }
   // End mod
 
