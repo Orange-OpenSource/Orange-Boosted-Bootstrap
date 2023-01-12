@@ -17,6 +17,11 @@ Boosted v5.3.0 has landed with a handful of urgent bug fixes from Bootstrap and 
 
 If you need more details about the changes, please refer to the [v5.3.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.0).
 
+### Components
+
+- **Buttons**
+  - <span class="badge bg-success">New</span> Add TikTok social button
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
