@@ -26,6 +26,7 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 <p class="text-body-emphasis">.text-body-emphasis</p>
 <p class="text-body-secondary">.text-body-secondary</p>
 <p class="text-body-tertiary">.text-body-tertiary</p>
+<p class="text-black">.text-black</p>
 <p class="text-white">.text-white</p>
 {{< /example >}}
 <!-- End mod -->
