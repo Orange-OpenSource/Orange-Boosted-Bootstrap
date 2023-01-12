@@ -13,7 +13,7 @@
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
-  // Boosted mod: no --#{$prefix}list-group-action-hover-bg
+  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
   --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
   --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
   --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
@@ -59,7 +59,7 @@
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-action-hover-color);
     text-decoration: none;
-    // Boosted mod: no background-color
+    background-color: var(--#{$prefix}list-group-action-hover-bg);
   }
 
   &:active {
@@ -197,8 +197,21 @@
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
-@each $color, $value in $background-colors {
-  @include list-group-item-variant($color, $value, color-contrast($value));
+@each $state, $value in $background-colors { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
+  .list-group-item-#{$state} {
+    --#{$prefix}list-group-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}#{state}-text)`
+    --#{$prefix}list-group-bg: #{$value}; // Boosted mod: instead of `var(--#{$prefix}#{$state}-bg-subtle)`
+    // Boosted mod: no `--#{$prefix}list-group-border-color`
+
+    &.list-group-item-action {
+      &:hover { // Boosted mod: no `&:focus`
+        --#{$prefix}list-group-action-hover-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`;
+        --#{$prefix}list-group-action-hover-bg: #{if(color-contrast($value) == $white, shade-color($value, 10%), tint-color($value, 10%))}; // Boosted mod: instead of `var(--#{$prefix}#{state}-border-subtle)`;
+      }
+
+      // Boosted mod: no `&:active`
+    }
+  }
 }
 // scss-docs-end list-group-modifiers
 

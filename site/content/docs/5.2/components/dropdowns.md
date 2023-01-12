@@ -896,6 +896,12 @@ As part of Boosted's evolving CSS variables approach, dropdowns now use local CS
 
 {{< scss-docs name="dropdown-css-vars" file="scss/_dropdown.scss" >}}
 
+{{< callout info >}}
+Dropdown items include at least one variable that is not set on `.dropdown`. This allows you to provide a new value while Boosted defaults to a fallback value.
+
+- `--bs-dropdown-item-border-radius`
+{{< /callout >}}
+
 Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}

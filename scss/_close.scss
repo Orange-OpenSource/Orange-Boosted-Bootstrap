@@ -60,7 +60,9 @@
   }
 }
 
-// Boosted mod: changing color instead of using filter
+// Boosted mod:
+// - no dark mode management so we keep our .btn-close-white
+// - changing color instead of using filter
 .btn-close-white {
   // scss-docs-start btn-close-white-css-vars
   --#{$prefix}btn-close-color: #{$btn-close-white-color}; // Boosted mod
