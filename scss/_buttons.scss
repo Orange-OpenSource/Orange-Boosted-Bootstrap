@@ -87,7 +87,6 @@
   &:not(.btn-icon) > svg {
     transform: translateY(1px);
   }
-
   // End mod
 }
 
@@ -140,7 +139,6 @@
     @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
-
 // scss-docs-end btn-variant-loops
 // End mod
 
@@ -162,7 +160,6 @@
     --#{$prefix}btn-disabled-color: #{$gray-700};
   }
 }
-
 // End mod
 
 
@@ -201,7 +198,6 @@
   &.btn-inverse {
     --#{$prefix}btn-disabled-color: #{$gray-700};
   }
-
   // End mod
 
   // No need for an active state here
@@ -226,7 +222,6 @@
 .btn-icon {
   padding: var(--#{$boosted-prefix}icon-spacing);
 }
-
 // End mod
 
 // Boosted mod: social button
