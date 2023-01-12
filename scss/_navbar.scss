@@ -517,3 +517,5 @@
   --#{$prefix}navbar-toggler-icon-filter: #{$invert-filter}; // Boosted mod
   // scss-docs-end navbar-dark-css-vars
 }
+
+// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now

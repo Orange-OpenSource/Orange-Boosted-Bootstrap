@@ -59,8 +59,9 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 
 // 2. Include any default variable overrides here
 
-// 3. Include remainder of required Boosted stylesheets
+// 3. Include remainder of required Boosted stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
@@ -106,6 +107,7 @@ $body-color: #111;
 
 // Required
 @import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/variables-dark";
 @import "../node_modules/boosted/scss/maps";
 @import "../node_modules/boosted/scss/mixins";
 @import "../node_modules/boosted/scss/root";
@@ -168,6 +170,7 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 // Required
 @import "../node_modules/boosted/scss/functions";
 @import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/variables-dark";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
@@ -296,7 +299,7 @@ Our `scss/mixins/` directory has a ton of mixins that power parts of Boosted and
 
 ### Color schemes
 
-A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light`, `dark`, and custom color schemes.
+A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light`, `dark`, and custom color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 
