@@ -95,7 +95,7 @@ yarn add boosted@v5.2.3
 You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):
 
 ```sh
-composer require orange-opensource/orange-boosted-bootstrap:{{< param current_version >}}
+composer require orange-opensource/orange-boosted-bootstrap:v{{< param current_version >}}
 ```
 
 ### NuGet
