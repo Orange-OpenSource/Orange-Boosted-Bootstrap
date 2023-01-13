@@ -20,7 +20,7 @@
 
     > [class*="container"] {
       display: flex;
-      @include caret(down, true);
+      @include caret($accordion: true);
 
       &::after {
         margin-right: 0;
@@ -37,7 +37,7 @@
       border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
 
       > [class*="container"] {
-        @include caret(up, true);
+        @include caret(up, $accordion: true);
 
         &::after {
           margin-right: 0;

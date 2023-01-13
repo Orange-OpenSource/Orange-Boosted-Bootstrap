@@ -2330,7 +2330,7 @@ $tag-active-decoration-color-dark:  $white !default;
 
 // scss-docs-start local-nav-variables
 $local-nav-padding-y:         $navbar-nav-link-padding-y !default;
-$local-nav-color:             $black !default;
+$local-nav-color:             var(--#{$prefix}body-color) !default;
 $local-nav-active-color:      $accessible-orange !default;
 $local-nav-border-color:      $gray-500 !default;
 $local-nav-border-width:      1px !default;
