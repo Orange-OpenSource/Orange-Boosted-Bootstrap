@@ -31,7 +31,7 @@ Boosted includes several predefined button styles, each serving its own semantic
 
 The recommended way of using an icon in a button is [an embedded SVG]({{< docsref "/extend/icons" >}}). You need to:
 
-- set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `1rem`,
+- set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `.9375rem`,
 - apply `.me-1` on it to get consistent spacing,
 - fill it using `currentColor` to respect button color scheme,
 - finally add `.overflow-visible` utility to prevent SVG content from being cropped.
