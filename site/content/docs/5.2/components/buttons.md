@@ -38,7 +38,7 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   Small button
@@ -63,7 +63,7 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-secondary btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Small button with icon only</span>
@@ -88,7 +88,7 @@ Use `.btn-no-outline` to get a borderless button as default state, and a consist
 
 {{< example >}}
 <button type="button" class="btn btn-icon btn-no-outline btn-sm">
-  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Small button with icon only and no outline</span>

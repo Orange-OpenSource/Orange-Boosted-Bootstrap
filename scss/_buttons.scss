@@ -84,7 +84,7 @@
   }
 
   // Boosted mod: with icon
-  &:not(.btn-icon) > svg {
+  &:not(.btn-icon):not(.btn-sm) > svg {
     transform: translateY(1px);
   }
   // End mod
@@ -216,6 +216,10 @@
 // Boosted mod: icon button
 .btn-icon {
   padding: var(--#{$boosted-prefix}icon-spacing);
+
+  &.btn-sm {
+    padding-bottom: $btn-icon-padding-x-sm + .0625rem;
+  }
 }
 // End mod
 
