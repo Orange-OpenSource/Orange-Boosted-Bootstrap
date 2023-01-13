@@ -18,13 +18,9 @@
     background-color: transparent;
     border: 0;
 
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
-
     > [class*="container"] {
       display: flex;
-      @include caret($accordion: true);
+      @include caret(down, true);
 
       &::after {
         margin-right: 0;

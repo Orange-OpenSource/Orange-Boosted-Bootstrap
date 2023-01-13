@@ -13,15 +13,15 @@ Resize your browser to see the behavior of this component.
 
 {{< example >}}
 <nav class="local-nav" aria-label="Basic local navigation">
-  <button class="local-nav-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
-    <span class="container-xxl">Label</span>
+  <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <span class="container-xxl">Shop</span>
   </button>
   <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
     <div class="navbar navbar-expand-lg">
       <ul class="navbar-nav w-100">
-        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
       </ul>
     </div>
   </div>
@@ -33,16 +33,16 @@ Resize your browser to see the behavior of this component.
 Add `.local-nav-dark` to the `.local-nav` for a dark variant.
 
 {{< example class="bg-dark" >}}
-<nav class="local-nav local-nav-dark" aria-label="Basic local navigation">
-  <button class="local-nav-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavDark" aria-expanded="false" aria-controls="collapseLocalNavDark">
-    <span class="container-xxl">Label</span>
+<nav class="local-nav local-nav-dark" aria-label="Local navigation on dark">
+  <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavDark" aria-expanded="false" aria-controls="collapseLocalNavDark">
+    <span class="container-xxl">Shop</span>
   </button>
   <div id="collapseLocalNavDark" class="container-xxl local-nav-collapse d-lg-block collapse">
     <div class="navbar navbar-dark navbar-expand-lg">
       <ul class="navbar-nav w-100">
-        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
       </ul>
     </div>
   </div>
