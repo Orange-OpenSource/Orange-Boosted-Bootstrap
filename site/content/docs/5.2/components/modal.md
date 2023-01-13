@@ -29,7 +29,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 ```
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 Keep reading for demos and usage guidelines.
@@ -40,7 +40,7 @@ Keep reading for demos and usage guidelines.
 
 Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
-<div class="bd-example bg-light">
+<div class="bd-example bg-body-tertiary">
   <div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -379,7 +379,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-body">
         <h2 class="h5">Popover in a modal</h2>
-        <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</a> triggers a popover on click.</p>
+        <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</button> triggers a popover on click.</p>
         <hr>
         <h2 class="h5">Tooltips in a modal</h2>
         <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
@@ -401,7 +401,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 ```html
 <div class="modal-body">
   <h2 class="h5">Popover in a modal</h2>
-  <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+  <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
   <hr>
   <h2 class="h5">Tooltips in a modal</h2>
   <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
@@ -594,7 +594,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     </div>
   </div>
 </div>
-<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
 {{< /example >}}
 
 ### Change animation
@@ -906,7 +906,7 @@ const myModalAlternative = new boosted.Modal('#myModal', options)
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 #### Passing options
@@ -924,8 +924,8 @@ const myModal = new boosted.Modal('#myModal', {
 | --- | --- |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
 | `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
-| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 | `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
 | `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`. |
 | `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |

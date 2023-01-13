@@ -1,6 +1,0 @@
-{{- /*
-Usage: `anchor "identifier"`
-*/ -}}
-
-{{- $name := .Get 0 | anchorize -}}
-<a id="{{ $name }}" class="ui-kit-id">{{ $name }}</a>

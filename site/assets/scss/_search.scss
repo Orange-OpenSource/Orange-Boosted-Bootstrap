@@ -40,9 +40,9 @@
 
   &:focus {
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    outline: var(--#{$prefix}link-hover-color) solid $outline-width;
-    outline-offset: .375rem; // replace when focus will be active
-    box-shadow: unset;
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 
   .DocSearch-Search-Icon {
@@ -75,13 +75,16 @@
 
 .DocSearch-Input:focus {
   outline: 0;
+  box-shadow: none;
 }
 
 .DocSearch-Reset {
   @include border-radius(0, 0);
 
   &:focus {
-    outline: 3px solid $accessible-orange;
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 }
 
@@ -135,13 +138,9 @@
 .DocSearch-Hit-action-button {
   @include border-radius(0, 0);
 
-  &:hover {
-    background: transparent;
-  }
-
+  &:hover,
   &:focus {
     background: transparent;
-    outline: 3px solid $accessible-orange;
   }
 }
 
@@ -155,7 +154,9 @@
   }
 
   &:focus {
-    outline: 3px solid $accessible-orange;
+    &[data-focus-visible-added] {
+      @include focus-visible();
+    }
   }
 }
 // End mod

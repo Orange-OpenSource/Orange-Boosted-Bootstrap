@@ -1,51 +1,57 @@
 // scss-docs-start caret-mixins
-@mixin caret-down {
-  border-top: $caret-width solid;
-  border-right: $caret-width solid transparent;
+@mixin caret-down($width: $caret-width) {
+  border-top: $width solid;
+  border-right: $width solid transparent;
   border-bottom: 0;
-  border-left: $caret-width solid transparent;
+  border-left: $width solid transparent;
 }
 
-@mixin caret-up {
+@mixin caret-up($width: $caret-width) {
   border-top: 0;
-  border-right: $caret-width solid transparent;
-  border-bottom: $caret-width solid;
-  border-left: $caret-width solid transparent;
+  border-right: $width solid transparent;
+  border-bottom: $width solid;
+  border-left: $width solid transparent;
 }
 
-@mixin caret-end {
-  border-top: $caret-width solid transparent;
+@mixin caret-end($width: $caret-width) {
+  border-top: $width solid transparent;
   border-right: 0;
-  border-bottom: $caret-width solid transparent;
-  border-left: $caret-width solid;
+  border-bottom: $width solid transparent;
+  border-left: $width solid;
 }
 
-@mixin caret-start {
-  border-top: $caret-width solid transparent;
-  border-right: $caret-width solid;
-  border-bottom: $caret-width solid transparent;
+@mixin caret-start($width: $caret-width) {
+  border-top: $width solid transparent;
+  border-right: $width solid;
+  border-bottom: $width solid transparent;
 }
 
-@mixin caret($direction: down, $accordion: false) {
+@mixin caret(
+  $direction: down,
+  $width: $caret-width,
+  $spacing: $caret-spacing,
+  $vertical-align: $caret-vertical-align,
+  $accordion: false // Boosted mod: $accordion param only there in Boosted
+) {
   @if $enable-caret {
     &::after {
       display: inline-block;
       // Boosted mod: flexbox FTW!
-      align-self: $caret-vertical-align;
+      align-self: $vertical-align;
       @if ($accordion == false) {
-        margin-left: $caret-spacing;
+        margin-left: $spacing;
       } @else {
-        margin: 0 $caret-spacing 0 auto;
+        margin: 0 $spacing 0 auto;
       }
       // End mod
       content: "";
       @if $direction == down {
-        @include caret-down();
-        transform: translateY($border-width * .5); // Boosted mod
+        @include caret-down($width);
+        transform: translateY(calc(var(--#{$prefix}border-width) * .5)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
       } @else if $direction == up {
-        @include caret-up();
+        @include caret-up($width);
       } @else if $direction == end {
-        @include caret-end();
+        @include caret-end($width);
       }
     }
 
@@ -58,12 +64,12 @@
         // stylelint-disable-next-line declaration-no-important
         position: static !important; // Boosted mod: prevent custom split buttons to interfere
         display: inline-block;
-        align-self: $caret-vertical-align; // Boosted mod: flexbox FTW!
-        margin-right: $caret-spacing;
+        align-self: $vertical-align; // Boosted mod: flexbox FTW!
+        margin-right: $spacing;
         // stylelint-disable-next-line declaration-no-important
         color: unset !important; // Boosted mod: prevent custom split buttons to interfere
         content: "";
-        @include caret-start();
+        @include caret-start($width);
       }
     }
 

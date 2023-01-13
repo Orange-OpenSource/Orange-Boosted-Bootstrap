@@ -9,8 +9,6 @@ toc: true
 added: "5.2"
 ---
 
-{{< added-in "5.2.0" >}}
-
 ## How it works
 
 Our footer is basically a `<footer>` tag with a `.bg-dark` class. It comes with 5 ready-to-use fully responsive bars which should be arranged vertically in the following order:

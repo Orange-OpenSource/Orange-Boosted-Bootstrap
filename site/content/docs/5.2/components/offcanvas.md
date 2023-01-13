@@ -13,14 +13,14 @@ toc: true
 Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, top or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and `data` attributes are used to invoke our JavaScript.
 
 - Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.
-- Similarly, some [source Sass](#sass) variables for offcanvas's styles and dimensions are inherited from the modal's variables.
+- Similarly, some [source Sass](#sass-variables) variables for offcanvas's styles and dimensions are inherited from the modal's variables.
 - When shown, offcanvas includes a default backdrop that can be clicked to hide the offcanvas.
 - Similar to modals, only one offcanvas can be shown at a time.
 
 **Heads up!** Given how CSS handles animations, you cannot use `margin` or `translate` on an `.offcanvas` element. Instead, use the class as an independent wrapping element.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Examples
@@ -30,7 +30,7 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+{{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
@@ -150,7 +150,7 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 
 Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
 
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+{{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
@@ -324,7 +324,7 @@ const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new boosted.O
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Activates your content as an offcanvas element. Accepts an optional options `object`.
@@ -338,8 +338,8 @@ const bsOffcanvas = new boosted.Offcanvas('#myOffcanvas')
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 | `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs). |
 | `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs). |
 | `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
