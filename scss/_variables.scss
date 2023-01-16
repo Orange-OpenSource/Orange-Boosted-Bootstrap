@@ -1246,9 +1246,11 @@ $form-range-thumb-transition:              background-color $transition-duration
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
-$form-file-button-color:          $input-color !default;
-$form-file-button-bg:             var(--#{$prefix}body-bg) !default;
-$form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
+$form-file-button-color:            $input-color !default;
+$form-file-placeholder-color:       $gray-700 !default; // Boosted mod
+$form-file-focus-border-color:      $black !default; // Boosted mod
+$form-file-button-bg:               var(--#{$prefix}body-bg) !default;
+$form-file-button-hover-bg:         var(--#{$prefix}secondary-bg) !default;
 // scss-docs-end form-file-variables
 
 // Boosted mod: no floating labels

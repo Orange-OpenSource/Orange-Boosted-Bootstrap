@@ -24,9 +24,16 @@
 
   &[type="file"] {
     overflow: hidden; // prevent pseudo element button overlap
+    color: $form-file-placeholder-color; // color of the text in the right part of input
 
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
+    }
+
+    &:active:not(:disabled),
+    &:focus {
+      color: $form-file-placeholder-color;
+      border-color: $form-file-focus-border-color !important; // stylelint-disable-line declaration-no-important
     }
   }
 
