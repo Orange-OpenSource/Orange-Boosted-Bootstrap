@@ -54,7 +54,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 ##### Buttons
 
-- <span class="badge bg-warning">Warning</span> Change icons size in small buttons (`.btn-icon.btn-sm`) to `.9375rem`
+- <span class="badge bg-warning">Warning</span> Change icons size in small buttons from `1rem` to `.9375rem`.
 
 #### List group
 

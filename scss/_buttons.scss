@@ -218,6 +218,7 @@
   padding: var(--#{$boosted-prefix}icon-spacing);
 
   &.btn-sm {
+    padding-right: $btn-icon-padding-x-sm + .0625rem;
     padding-bottom: $btn-icon-padding-x-sm + .0625rem;
   }
 }

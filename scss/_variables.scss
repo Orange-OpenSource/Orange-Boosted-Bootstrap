@@ -909,11 +909,11 @@ $input-btn-focus-width:       $focus-visible-outer-offset !default; // Boosted m
 $input-btn-focus-box-shadow:  null !default; // Boosted mod
 
 $input-btn-padding-y-sm:      $spacer * .25 !default;
-$input-btn-padding-x-sm:      $spacer * .65 !default;
+$input-btn-padding-x-sm:      $spacer * .5 !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
 $input-btn-padding-y-lg:      .8125rem !default;
-$input-btn-padding-x-lg:      $spacer * .9 !default;
+$input-btn-padding-x-lg:      $spacer !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      var(--#{$prefix}border-width) !default;
@@ -933,13 +933,13 @@ $btn-letter-spacing:          $letter-spacing-base !default; // Boosted mod
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-padding-x-sm:            $spacer * .65 !default; // Boosted mod
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
 $btn-line-height-sm:          $line-height-sm !default; // Boosted mod
 $btn-letter-spacing-sm:       $letter-spacing-base !default; // Boosted mod
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-padding-x-lg:            $spacer * .9 !default; // Boosted mod
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-line-height-lg:          $h5-line-height !default; // Boosted mod
 $btn-letter-spacing-lg:       $letter-spacing-base * 2 !default; // Boosted mod
