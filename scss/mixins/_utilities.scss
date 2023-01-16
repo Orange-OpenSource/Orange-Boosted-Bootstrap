@@ -98,8 +98,12 @@
                   }
                 }
               }
-              @if "transparent" != inspect($value) {
+
+              @if "transparent" != inspect($value) and type-of($value) != "string" {
                 color: color-contrast($value);
+              }
+              @else if $value == "var(--bs-secondary-bg-subtle)" or $value == "var(--bs-dark-bg-subtle)" {
+                color: var(--bs-white);
               }
             }
             @else if "color" == $property {
@@ -117,8 +121,13 @@
                   }
                 }
               }
-              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value and "rgba(var(--#{$prefix}primary-text-rgb), var(--#{$prefix}text-opacity))" != $value {
-                background-color: color-contrast($value);
+
+              @if $value == $white or $value == $light {
+                background: color-contrast($value);
+              } @else if $value == "var(--bs-light-text)" {
+                background: var(--bs-black);
+              } @else if $value == $body-color {
+                background: var(--bs-body-bg);
               }
             }
             // End mod

@@ -144,6 +144,10 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
+{{< ods-incompatibility-alert >}}
+This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 {{< list-group.inline >}}
 {{- range $.Site.Data.breakpoints }}
@@ -156,7 +160,11 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 {{< /list-group.inline >}}
 {{< /example >}}
 
-## Contextual classes
+## Variants
+
+{{< callout info >}}
+**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+{{< /callout >}}
 
 Use contextual classes to style list items with a stateful background and color.
 
@@ -171,7 +179,9 @@ Use contextual classes to style list items with a stateful background and color.
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+### For links and buttons
+
+Contextual classes also work with `.list-group-item-action` for `<a>` and `<button>` elements. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
 
 {{< example >}}
 <div class="list-group">
@@ -185,12 +195,16 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## With badges
 
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -212,6 +226,10 @@ Add badges to any list group item to show unread counts, activity, and more with
 ## Custom content
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="list-group">
@@ -245,6 +263,10 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 ## Checkboxes and radios
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -357,15 +379,15 @@ Variables for the [dark list group](#dark-variant):
 {{< scss-docs name="list-group-dark-variables" file="scss/_variables.scss" >}}
 <!-- End mod -->
 
-### Mixins
+### Sass mixins
 
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+Used in combination with `$background-colors` to generate the [contextual variant classes](#variants) for `.list-group-item`s.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Loop
+### Sass loop
 
-Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+Loop that generates the modifier classes with an overriding of CSS variables.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
@@ -489,7 +511,7 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Activates your content as a tab element.

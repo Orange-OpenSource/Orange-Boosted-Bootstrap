@@ -59,6 +59,12 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 
 We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
 
+{{< ods-incompatibility-alert >}}
+The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="progress" style="height: 1px;">
   <div class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -87,6 +93,12 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 
 Use background utility classes to change the appearance of individual progress bars.
 
+{{< ods-incompatibility-alert >}}
+These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
+
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <div class="progress">
   <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -103,7 +115,7 @@ Use background utility classes to change the appearance of individual progress b
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Multiple bars
@@ -121,6 +133,12 @@ Include multiple progress bars in a progress component if you need.
 ## Striped
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+
+{{< ods-incompatibility-alert >}}
+These variants should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="progress">
@@ -143,6 +161,12 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 ## Animated stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="progress">

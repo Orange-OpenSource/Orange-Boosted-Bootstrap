@@ -15,7 +15,7 @@ The carousel is a slideshow for cycling through a series of content, built with 
 In browsers where the [Page Visibility API](https://www.w3.org/TR/page-visibility/) is supported, the carousel will avoid sliding when the webpage is not visible to the user (such as when the browser tab is inactive, the browser window is minimized, etc.).
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 Please be aware that nested carousels are not supported, and carousels are generally not compliant with accessibility standards.
@@ -143,6 +143,12 @@ This `button` must immediately follow your carousel and have the custom `data-bs
 ### With captions
 
 Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+
+{{< ods-incompatibility-alert >}}
+**Captions** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Carousel navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
@@ -398,7 +404,7 @@ const carousel = new boosted.Carousel('#myCarousel')
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 You can create a carousel instance with the carousel constructor, for example, to initialize with additional options and start cycling through items:
