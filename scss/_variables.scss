@@ -2032,10 +2032,11 @@ $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
-$carousel-control-pause-icon:        $pause-icon !default;
-$carousel-control-play-icon:         $play-icon !default;
-$carousel-control-pause-button-size: .75rem !default;
-$carousel-control-pause-icon-size:   1rem 1rem !default;
+$carousel-control-pause-button-margin-end: 10px !default;
+$carousel-control-pause-icon:              $pause-icon !default;
+$carousel-control-play-icon:               $play-icon !default;
+$carousel-control-pause-button-size:       .75rem !default;
+$carousel-control-pause-icon-size:         1rem 1rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;
