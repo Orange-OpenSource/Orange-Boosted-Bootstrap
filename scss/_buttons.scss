@@ -259,7 +259,7 @@
       transform: if(map-has-key($network, "transform"), map-get($network, "transform"), null);
     }
 
-    &:hover {
+    &:hover:not(:active) {
       color: if(map-has-key($network, "hover-color"), map-get($network, "hover-color"), null);
     }
   }
