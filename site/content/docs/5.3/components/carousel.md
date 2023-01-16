@@ -119,7 +119,7 @@ Other way to pause the slide by hovering the slide should not be used.
 {{< example >}}
 <div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
   <div class="carousel-indicators-wrapper">
-    <div class="carousel-indicators-pause-button">
+    <div class>
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
         <span class="visually-hidden">Pause Carousel</span>
       </button>
