@@ -18,6 +18,10 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 - warning,
 - danger.
 
+{{< callout info >}}
+**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+{{< /callout >}}
+
 {{< example >}}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
@@ -38,7 +42,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ### Live example
@@ -196,6 +200,8 @@ Customization through CSS variables can be seen on the `.alert-sm` class where w
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixin
+
+{{< deprecated-in "5.3.0" >}}
 
 Used in combination with `$theme-colors` to create contextual modifier classes for our alerts.
 

@@ -8,6 +8,8 @@
   --#{$prefix}card-spacer-bottom: #{$card-spacer-bottom}; // Boosted mod
   --#{$prefix}card-spacer-x: #{$card-spacer-x};
   --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
+  --#{$prefix}card-title-color: #{$card-title-color};
+  --#{$prefix}card-subtitle-color: #{$card-subtitle-color};
   --#{$prefix}card-border-width: #{$card-border-width};
   --#{$prefix}card-border-color: #{$card-border-color};
   --#{$prefix}card-border-radius: #{$card-border-radius};
@@ -77,7 +79,7 @@
 .card-title {
   @extend .h4; // Boosted mod
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
-  // Boosted mod: no `color`
+  color: var(--#{$prefix}card-title-color);
 
   // Boosted mod: prevent unwanted margin when nothing follows…
   &:only-child {
@@ -90,6 +92,7 @@
   @extend .h6; // Boosted mod
   margin-top: 0; // Boosted mod
   margin-bottom: var(--#{$prefix}card-title-spacer-y); // Boosted mod
+  color: var(--#{$prefix}card-subtitle-color);
 }
 
 .card-text:last-child {

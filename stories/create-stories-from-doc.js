@@ -14,13 +14,13 @@ function createDirectoryIfNeeded(path) {
 }
 
 function createMDXDocumentation(content) {
-  return 'import { Story, Canvas } from \'@storybook/addon-docs/blocks\';\n\n' + content
+  return `import { Story, Canvas } from '@storybook/addon-docs/blocks';\n\n${content}`
 }
 
 function createTemplate(component, index, content) {
-  return 'import CustomMDXDocumentation from \'./Custom-MDX-Documentation.mdx\';\n\
+  return `import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';\n\
   export default {\n\
-    title: \'Components/' + component + '\',\n\
+    title: 'Components/${component}',\n\
     parameters: {\n\
       docs: {\n\
         page: CustomMDXDocumentation,\n\
@@ -28,7 +28,7 @@ function createTemplate(component, index, content) {
     },\n\
   }\n\
   \n\
-  export const ' + component + '_' + index + ' = () => `' + content + '`'
+  export const ${component}_${index} = () => \`${content}\``
 }
 
 const convertToKebabCase = string => {
@@ -78,7 +78,7 @@ const files = [
     })']
 ]
 
-const outputDirectory = __dirname + '/auto'
+const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
 
 (async () => {
@@ -95,7 +95,7 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto('file://' + __dirname + '/' + file[1]),
+        page.goto(`file://${__dirname}/${file[1]}`),
         page.waitForNavigation()
       ])
 
@@ -106,13 +106,13 @@ createDirectoryIfNeeded(outputDirectory);
       let index = 0
       let mdxContent = ''
       for (let example of e) {
-        const outputFileDirectory = outputDirectory + '/' + file[0]
-        const outputFile = outputFileDirectory + '/' + file[0] + '_' + index + '.stories.js'
+        const outputFileDirectory = `${outputDirectory}/${file[0]}`
+        const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
 
-        console.log('creating ' + outputFile + '...')
+        console.log(`creating ${outputFile}...`)
 
         // Fill the MDX doc content with this component
-        mdxContent += '<Canvas>\n<Story id="components-' + file[0].toLowerCase() + '--' + convertToKebabCase(file[0]) + '-' + index + '"/>\n</Canvas>\n\n'
+        mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
         example = example.replace(/<!--[\S\s]*?-->/gm, '')
@@ -120,7 +120,7 @@ createDirectoryIfNeeded(outputDirectory);
         // Insert some specific JavaScript
         example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         if (file[2]) {
-          example += '<script type="text/javascript">' + file[2] + '</script>'
+          example += `<script type="text/javascript">${file[2]}</script>`
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
@@ -136,7 +136,7 @@ createDirectoryIfNeeded(outputDirectory);
 
       // Create the MDX documentation
       try {
-        fs.writeFileSync(outputDirectory + '/' + file[0] + '/Custom-MDX-Documentation.mdx', createMDXDocumentation(mdxContent))
+        fs.writeFileSync(`${outputDirectory}/${file[0]}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
       } catch (error) {
         throw new Error(error)
       }

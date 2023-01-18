@@ -13,7 +13,7 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
+  NODE: 18
 
 jobs:
   pa11y:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -30,7 +32,7 @@ jobs:
           node-version: "${{ env.NODE }}"
 
       - name: Set up npm cache
-        uses: actions/cache@v3.2.1
+        uses: actions/cache@v3.2.3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}

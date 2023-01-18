@@ -30,7 +30,7 @@
 
 {{- $table_caption_attributes = printf ` class="visually-hidden"` -}}
 
-{{- $table := printf "\n<table%s>\n%s%s</table>\n" $table_attributes $table_caption $table_content -}}
+{{- $table := printf "<table%s>\n%s%s</table>\n" $table_attributes $table_caption $table_content -}}
 
 <div class="bd-example">
   <table{{ with $class }} class="{{ . }}"{{ end }}>
