@@ -1,6 +1,7 @@
 // Note: Bootstrap stops at --base0F
 
-:root {
+:root,
+[data-bs-theme="light"] {
   --base00: #{$white};
   --base01: #{$gray-700};
   --base02: #{$red-500};
@@ -17,6 +18,31 @@
   --base0D: #{$purple-700};
   --base0E: #{$teal-700};
   --base0F: #{$black};
+  --base10: #{$gray-400};
+  --base11: #{$yellow-800};
+  --base12: #{$cyan-900};
+  --base13: #{$pink-800};
+}
+
+// TODO: these values will need to be modified in order to work with Boosted dark mode
+// Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from Boosted's light mode
+[data-bs-theme="dark"] {
+  --base00: #282c34;
+  --base01: #353b45;
+  --base02: #3e4451;
+  --base03: #868e96;
+  --base04: #565c64;
+  --base05: #abb2bf;
+  --base06: #b6bdca;
+  --base07: #d19a66;
+  --base08: #e06c75;
+  --base09: #d19a66;
+  --base0A: #e5c07b;
+  --base0B: #98c379;
+  --base0C: #56b6c2;
+  --base0D: #61afef;
+  --base0E: #c678dd;
+  --base0F: #be5046;
   --base10: #{$gray-400};
   --base11: #{$yellow-800};
   --base12: #{$cyan-900};

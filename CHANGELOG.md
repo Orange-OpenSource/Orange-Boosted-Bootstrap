@@ -1,3 +1,35 @@
+## [5.2.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.2.2...v5.2.3) (2022-12-30)
+
+
+### Bug Fixes
+
+* **cards:** card header padding top ([#1449](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1449)) ([8dc7d8c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8dc7d8c0016340e5cbac60f0537071fe9b85e2f2))
+* **cards:** rendering and semantics rework of cards to better fit with ODS ([#1376](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1376)) ([f8772e1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f8772e1764b113157d1b418e3cd836db375889f5))
+* **docs:** add aliases for examples ([#1657](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1657)) ([e086864](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e086864c3969a78cc192b98e900a9260563611fc))
+* **docs:** remove link to non-existing 2.3.2 version ([#1692](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1692)) ([e8df7b4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e8df7b402e191e4415d59175289db2416c7da45f))
+* **dropdown:** several rendering fixes ([#1164](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1164)) ([b080e66](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b080e667a9c22efd715009ecfdf7ae8a7df1b577))
+* **modals:** remove extra-margin of the last scrollable modal's elt ([#1661](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1661)) ([b7c2e80](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b7c2e80be59f88094629f5378ba8557662257084))
+* **navbar:** add missing logo in Scroll navbar example docs ([#1664](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1664)) ([75dee5f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/75dee5fc56cb8048591957b390f33e519489c534))
+* **navs:** remove orange hover color on active tabs light ([#1420](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1420)) ([c661309](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c66130959ddb2f514fa2905dd419858c13c17782))
+* **orange navbar:** add some missing `aria-current`s in displayed codes ([#1662](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1662)) ([f9ae2ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f9ae2ac6650131c261f7238b61eb33780e53311f))
+* **stepped process:** convert current step to plain text for better a11y ([#1663](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1663)) ([cdcadcb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cdcadcb54ab1a64783f892092372d4c771cba150))
+* **storybook:** avoid redeclaration of const tooltipTriggerList ([fa373b4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fa373b4a5546e7c3f9b110dd37170a42c33eb55a))
+* **storybook:** generate Storybook site in `_site` intead of `site` ([#1660](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1660)) ([532e9d4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/532e9d4c90313dacd0035ce9d534eb474d6842bb))
+* **tables:** drop docs specific tables style and move some `.table-responsive` at the right place ([#1710](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1710)) ([e1e520f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e1e520fdcd4b10944324f1565ee4efd01e8b2a3f))
+
+
+### Features
+
+* **a11y:** refactoring of visible focus (rendering and architecture) ([#1437](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1437)) ([2001a10](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2001a102040d9fc755a9982d8d251c9c6331eb4e))
+* **accordion:** add padding to accordion content ([#1727](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1727)) ([20d8f0c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/20d8f0c1cc29878b5feab8d8801ada207a307797))
+* **examples:** new 'Pages' section and new 'Form' example ([#1559](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1559)) ([3901d0f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3901d0fc1492b08caca5caa5cb78371b9176e067))
+* **forms:** add form helper icon button ([#1444](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1444)) ([f8e748d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f8e748d1a7a297908b55c6b93c38fcdb01eb5b60))
+* **forms:** add small size form controls ([#1230](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1230)) ([cb36161](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cb36161510744f94954f7821c92da4d049967711))
+* **reboot:** set a `line-height` for `var` and `code` ([#1720](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1720)) ([5182046](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5182046df74af947cf26f445d44f92723ff28540))
+* **tables:** captions for a11y, striped rows and columns, and rendering enhancements ([#859](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/859)) ([9383bd1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9383bd18da0bf64ff97a1780b18ff7dad80ff482))
+
+
+
 ## [5.2.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.2.1...v5.2.2) (2022-11-23)
 
 

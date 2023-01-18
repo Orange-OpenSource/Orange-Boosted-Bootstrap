@@ -77,16 +77,18 @@ body {
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
-  outline: $outline-width solid; // 1
+  @include focus-visible(); // 1
 }
 
 .js-focus-visible :focus:not([data-focus-visible-added]),
 .js-focus-visible .focus:not([data-focus-visible-added]) { // 2
   outline: 0 !important;
+  box-shadow: none;
 }
 
 :focus:not(:focus-visible) { // 3
   outline: 0 !important;
+  box-shadow: none;
 }
 // scss-docs-end focus-visibility
 // End mod
@@ -119,7 +121,7 @@ hr {
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: $headings-color;
+  color: var(--#{$prefix}heading-color, inherit);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
@@ -320,20 +322,11 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: var(--#{$prefix}link-color);
+  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;
-  // Boosted mod
-  outline-offset: $outline-offset * 4;
-  @include transition($transition-focus);
-
-  &:focus {
-    color: var(--#{$prefix}link-hover-color);
-    outline-offset: $outline-offset;
-  }
-  // End mod
 
   &:hover {
-    color: var(--#{$prefix}link-hover-color);
+    --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
     text-decoration: $link-hover-decoration;
   }
 }
@@ -507,6 +500,7 @@ button {
 
 button:focus:not(:focus-visible) {
   outline: 0;
+  box-shadow: none; // Bosted mod
 }
 
 // 1. Remove the margin in Firefox and Safari
@@ -644,7 +638,7 @@ legend {
 //    https://github.com/twbs/bootstrap/issues/11586.
 
 [type="search"] {
-  outline-offset: -#{$outline-offset}; // 1 // Boosted mod
+  outline-offset: -#{$focus-visible-outer-offset}; // 1 // Boosted mod
   -webkit-appearance: textfield; // 2
 }
 

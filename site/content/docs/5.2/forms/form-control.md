@@ -10,6 +10,8 @@ toc: true
 
 ## Example
 
+Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+
 {{< example >}}
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -135,9 +137,15 @@ Learn more about [support for datalist elements](https://caniuse.com/datalist).
 </datalist>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+Form controls make use of a small amount of CSS variables to support custom styling across color modes.
+
+{{< scss-docs name="form-control-vars" file="scss/_root.scss" >}}
+
+### Sass variables
 
 `$input-*` are shared across most of our form controls (and not buttons).
 
