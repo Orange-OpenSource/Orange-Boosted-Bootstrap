@@ -26,6 +26,7 @@
     - title: Sass
     - title: Options
     - title: Color
+    - title: Color modes
     - title: Components
     - title: CSS variables
     - title: Optimize
@@ -98,6 +99,7 @@
     - title: Spinners
     - title: Stepped process
     - title: Sticker
+    - title: Tags
     - title: Title bars
     - title: Toasts
     - title: Tooltips
@@ -129,6 +131,7 @@
     - title: Flex
     - title: Float
     - title: Interactions
+    - title: Object fit
     - title: Opacity
     - title: Overflow
     - title: Position
@@ -138,6 +141,7 @@
     - title: Text
     - title: Vertical align
     - title: Visibility
+    - title: Z-index
 
 - title: Extend
   icon: tools

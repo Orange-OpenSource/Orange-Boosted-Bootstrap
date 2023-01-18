@@ -3,6 +3,8 @@ layout: docs
 title: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
+aliases:
+  - "/docs/utilities/text/"
 toc: true
 ---
 
@@ -38,7 +40,7 @@ Wrap text with a `.text-wrap` class.
 Prevent text from wrapping with a `.text-nowrap` class.
 
 {{< example >}}
-<div class="text-nowrap bg-light border border-dark" style="width: 8rem;">
+<div class="text-nowrap bg-body-secondary border border-dark" style="width: 8rem;">
   This text should overflow the parent.
 </div>
 {{< /example >}}

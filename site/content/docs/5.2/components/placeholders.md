@@ -3,6 +3,8 @@ layout: docs
 title: Placeholders
 description: Use loading placeholders for your components or pages to indicate something may still be loading.
 group: components
+aliases:
+  - "/docs/components/placeholders/"
 toc: true
 added: "5.1"
 ---
@@ -126,7 +128,7 @@ The size of `.placeholder`s are based on the typographic style of the parent ele
 
 ### Animation
 
-Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being _actively_ loaded.
+Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being *actively* loaded.
 
 {{< example >}}
 <p class="placeholder-glow">

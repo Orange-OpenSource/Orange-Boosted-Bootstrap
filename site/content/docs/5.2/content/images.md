@@ -3,6 +3,8 @@ layout: docs
 title: Images
 description: Documentation and examples for opting images into responsive behavior (so they never become wider than their parent) and add lightweight styles to them—all via classes.
 group: content
+aliases:
+  - "/docs/content/images/"
 toc: true
 ---
 
@@ -14,25 +16,31 @@ Images in Boosted are made responsive with `.img-fluid`. This applies `max-width
 {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
 {{< /example >}}
 
-<!-- Boosted mod: no rounded thumbnails -->
+## Image thumbnails
+
+In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a 2px border appearance.
+
+{{< example >}}
+{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a gray border around it" >}}
+{{< /example >}}
 
 ## Aligning images
 
 Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded float-start" >}}
-{{< placeholder width="200" height="200" class="rounded float-end" >}}
+{{< placeholder width="200" height="200" class="float-start" >}}
+{{< placeholder width="200" height="200" class="float-end" >}}
 {{< /example >}}
 
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded mx-auto d-block" >}}
+{{< placeholder width="200" height="200" class="mx-auto d-block" >}}
 {{< /example >}}
 
 {{< example >}}
 <div class="text-center">
-  {{< placeholder width="200" height="200" class="rounded" >}}
+  {{< placeholder width="200" height="200" >}}
 </div>
 {{< /example >}}
 

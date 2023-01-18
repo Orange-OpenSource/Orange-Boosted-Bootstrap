@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Color & background
+title: Color and background
 description: Set a background color with contrasting foreground color.
 group: helpers
+aliases:
+  - "/docs/helpers/color-background/"
 toc: true
 added: "5.2"
 ---
 
 ## Overview
-
-{{< added-in "5.2.0" >}}
 
 Color and background helpers combine the power of our [`.text-*` utilities]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
 

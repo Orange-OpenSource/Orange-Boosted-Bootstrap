@@ -2,4 +2,9 @@
 // Footer
 //
 
-// Boosted mod: no .bd-footer
+.bd-footer {
+  position: sticky; // Boosted mod
+  top: 100vh; // Boosted mod
+
+  // Boosted mod: no `a` selector since we use our Boosted footer component
+}

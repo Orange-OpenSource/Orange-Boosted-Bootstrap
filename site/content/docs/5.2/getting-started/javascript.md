@@ -3,6 +3,8 @@ layout: docs
 title: JavaScript
 description: Bring Boosted to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
 group: getting-started
+aliases:
+  - "/docs/getting-started/javascript/"
 toc: true
 ---
 
@@ -26,6 +28,12 @@ A better alternative for those using this type of frameworks is to use a framewo
 
 {{< callout >}}
 **Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
+{{< /callout >}}
+
+{{< callout warning >}}
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `scss/style.scss`, within `<script>` tags in`index.html` and in `package.json`.
+
+You may need to tweak a bit `scss/style.scss` to import font family properly in your project. Please refer to the font subsection of [how to import Boosted with Webpack]({{< docsref "/getting-started/webpack#import-boosted" >}}) for more details.
 {{< /callout >}}
 
 We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
@@ -214,15 +222,15 @@ Every Boosted plugin exposes the following methods and static properties.
 | Method | Description |
 | --- | --- |
 | `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
 | Static property | Description |
 | --- | --- |
-| `NAME`  | Returns the plugin name. (Example: `boosted.Tooltip.NAME`) |
-| `VERSION`  | The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
+| `NAME` | Returns the plugin name. (Example: `boosted.Tooltip.NAME`) |
+| `VERSION` | The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `boosted.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer

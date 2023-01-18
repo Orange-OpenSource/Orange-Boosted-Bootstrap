@@ -3,7 +3,11 @@ layout: docs
 title: Breakpoints
 description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Boosted.
 group: layout
-aliases: "/docs/5.2/layout/"
+aliases:
+  - "/layout/"
+  - "/docs/layout/"
+  - "/docs/5.2/layout/"
+  - "/docs/layout/breakpoints/"
 toc: true
 ---
 
@@ -22,7 +26,7 @@ Boosted includes six default breakpoints, sometimes referred to as _grid tiers_,
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Extra small | <em>None</em>  |&lt;480px |
+| Extra small | <em>None</em> |&lt;480px |
 | Small | `sm` | &ge;480px |
 | Medium | `md` | &ge;768px |
 | Large | `lg` | &ge;1024px |
@@ -93,7 +97,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 
 ### Max-width
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss
 // No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
@@ -133,7 +137,7 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 ```
 
 {{< callout warning >}}
-{{< partial "callout-info-mediaqueries-breakpoints.md" >}}
+{{< partial "callouts/info-mediaqueries-breakpoints.md" >}}
 {{< /callout >}}
 
 ### Single breakpoint

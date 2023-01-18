@@ -1,0 +1,141 @@
+// stylelint-disable function-disallowed-list
+
+.tag {
+  // scss-docs-start tag-css-vars
+  --#{$prefix}tag-gap: #{$tag-gap};
+  --#{$prefix}tag-padding-x: #{$tag-padding-x};
+  --#{$prefix}tag-padding-y: #{$tag-padding-y};
+  @include rfs($tag-font-size, --#{$prefix}tag-font-size);
+  --#{$prefix}tag-font-shift: #{$tag-font-shift};
+  --#{$prefix}tag-font-weight: #{$tag-font-weight};
+  --#{$prefix}tag-icon-size: #{$tag-icon-size};
+  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start};
+  --#{$prefix}tag-close-size: #{add(var(--#{$prefix}tag-font-size), .375rem)};
+  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end};
+  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start};
+  --#{$prefix}tag-border-width: #{$tag-border-width};
+  --#{$prefix}tag-border-radius: #{$tag-border-radius};
+  --#{$prefix}tag-border-color: #{$tag-border-color};
+  --#{$prefix}tag-active-color: #{$tag-active-color};
+  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color};
+  --#{$prefix}tag-disabled-color: #{$tag-disabled-color};
+  // scss-docs-end tag-css-vars
+
+  display: inline-flex;
+  gap: var(--#{$prefix}tag-gap);
+  align-items: center;
+  padding: subtract(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5)) var(--#{$prefix}tag-padding-x) add(var(--#{$prefix}tag-padding-y), calc(var(--#{$prefix}tag-font-shift) * .5));
+  @include font-size(var(--#{$prefix}tag-font-size));
+  font-weight: var(--#{$prefix}tag-font-weight);
+  line-height: add(var(--#{$prefix}tag-font-size), .125rem);
+  color: inherit;
+  background-color: transparent;
+  border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
+  @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+
+  img,
+  svg {
+    width: var(--#{$prefix}tag-icon-size);
+    min-width: var(--#{$prefix}tag-icon-size); // Here to avoid weird behavior on wrap
+    height: var(--#{$prefix}tag-icon-size);
+    margin: add(calc(-.5 * var(--#{$prefix}tag-icon-size)), var(--#{$prefix}tag-font-shift)) 0 calc(-.5 * var(--#{$prefix}tag-icon-size)) var(--#{$prefix}tag-icon-margin-start);
+  }
+
+  .close {
+    position: relative;
+    width: var(--#{$prefix}tag-close-size);
+    min-width: var(--#{$prefix}tag-close-size); // Here to avoid weird behavior on wrap
+    height: var(--#{$prefix}tag-close-size);
+    padding: 0; // Force padding on button to have a circle on iOS - Safari and Chrome
+    margin: add(calc(-.5 * var(--#{$prefix}tag-close-size)), var(--#{$prefix}tag-font-shift)) var(--#{$prefix}tag-close-margin-end) calc(-.5 * var(--#{$prefix}tag-close-size)) var(--#{$prefix}tag-close-margin-start);
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+    @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+
+    &::before {
+      position: absolute;
+      top: calc(-1 * var(--#{$prefix}tag-padding-y));
+      right: calc(-1 * var(--#{$prefix}tag-padding-y));
+      bottom: calc(-1 * var(--#{$prefix}tag-padding-y));
+      left: calc(-1 * var(--#{$prefix}tag-padding-y));
+      content: "";
+      @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
+    }
+
+    &::after {
+      display: block;
+      min-width: subtract(var(--#{$prefix}tag-close-size), .625rem);
+      min-height: subtract(var(--#{$prefix}tag-close-size), .625rem);
+      content: "";
+      background-color: currentcolor;
+      -webkit-mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem); // stylelint-disable-line property-no-vendor-prefix
+      mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--#{$prefix}tag-active-color);
+      background-color: var(--#{$prefix}tag-active-decoration-color);
+    }
+
+    &[disabled] {
+      pointer-events: none;
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    color: var(--#{$prefix}tag-disabled-color);
+    pointer-events: none;
+    border-color: var(--#{$prefix}tag-disabled-color);
+  }
+}
+
+// stylelint-disable selector-no-qualifying-type
+a.tag,
+button.tag,
+label.tag {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--#{$prefix}tag-active-decoration-color);
+  }
+
+  &.active,
+  &:active {
+    color: var(--#{$prefix}tag-active-color);
+    background-color: var(--#{$prefix}tag-active-decoration-color);
+    border-color: var(--#{$prefix}tag-active-decoration-color);
+
+    &[disabled],
+    &.disabled {
+      background-color: var(--#{$prefix}tag-disabled-color);
+      border-color: var(--#{$prefix}tag-disabled-color);
+    }
+  }
+}
+// stylelint-enable selector-no-qualifying-type
+
+.tag-sm {
+  // scss-docs-start tag-sm-css-vars
+  --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
+  --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
+  --#{$prefix}tag-font-size: #{$tag-font-size-sm};
+  --#{$prefix}tag-icon-size: #{$tag-icon-size-sm};
+  --#{$prefix}tag-icon-margin-start: #{$tag-icon-margin-start-sm};
+  --#{$prefix}tag-close-margin-end: #{$tag-close-margin-end-sm};
+  --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
+  // scss-docs-end tag-sm-css-vars
+}
+
+.tag-dark {
+  // scss-docs-start tag-dark-css-vars
+  --#{$prefix}tag-border-color: #{$tag-border-color-dark};
+  --#{$prefix}tag-active-color: #{$tag-active-color-dark};
+  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
+  --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
+  // scss-docs-end tag-dark-css-vars
+}

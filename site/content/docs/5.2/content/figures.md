@@ -3,6 +3,8 @@ layout: docs
 title: Figures
 description: Documentation and examples for displaying related images and text with the figure component in Boosted.
 group: content
+aliases:
+  - "/docs/content/figures/"
 toc: true
 ---
 
@@ -12,7 +14,7 @@ Use the included `.figure`, `.figure-img` and `.figure-caption` classes to provi
 
 {{< example >}}
 <figure class="figure">
-  {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
+  {{< placeholder width="400" height="300" class="figure-img img-fluid" >}}
   <figcaption class="figure-caption">A caption for the above image.</figcaption>
 </figure>
 {{< /example >}}
@@ -21,7 +23,7 @@ Aligning the figure's caption is easy with our [text utilities]({{< docsref "/ut
 
 {{< example >}}
 <figure class="figure">
-  {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
+  {{< placeholder width="400" height="300" class="figure-img img-fluid" >}}
   <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
 </figure>
 {{< /example >}}

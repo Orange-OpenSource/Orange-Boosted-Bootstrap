@@ -3,6 +3,8 @@ layout: docs
 title: Borders
 description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
 group: utilities
+aliases:
+  - "/docs/utilities/borders/"
 toc: true
 ---
 
@@ -47,6 +49,17 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-white"></span>
 {{< /example >}}
 
+{{< callout info >}}
+For each `.border-*` there is a matching `.border-*-subtle` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+
+Here is a list of these extra classes:
+{{< border-subtle.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+- `.border-{{ .name }}-subtle`
+{{- end -}}
+{{< /border-subtle.inline >}}
+{{< /callout >}}
+
 Or modify the default `border-color` of a component:
 
 {{< example >}}
@@ -59,7 +72,7 @@ Or modify the default `border-color` of a component:
   Dangerous heading
 </div>
 
-<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0">
   Changing border color and width
 </div>
 {{< /example >}}
@@ -116,8 +129,36 @@ Or, choose from any of the `.border-opacity` utilities:
 Add classes to an element to easily round its corners.
 
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Example rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
+{{< /example >}}
+
+### Sizes
+
+{{< added-in "5.3.0" >}}
+
+Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
+
+{{< example class="bd-example-rounded-utils" >}}
+{{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-1" title="Example small rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-2" title="Example default rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-3" title="Example large rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-4" title="Example larger rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-5" title="Example extra large rounded image" >}}
+{{< /example >}}
+
+{{< example class="bd-example-rounded-utils" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom-1" title="Example small rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-start-2" title="Example default left rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" >}}
+{{< placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" >}}
+{{< placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Example extra large bottom rounded image" >}}
 {{< /example >}}
 
 ## Dividers

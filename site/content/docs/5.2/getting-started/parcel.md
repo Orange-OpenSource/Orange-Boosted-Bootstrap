@@ -3,6 +3,8 @@ layout: docs
 title: "Boosted & Parcel"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
 group: getting-started
+aliases:
+  - "/docs/getting-started/parcel/"
 toc: true
 thumbnail: parcel.png
 ---
@@ -12,7 +14,13 @@ thumbnail: parcel.png
 </div>
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html) but not run it because Parcel isn't currently supported there.
+**Want to skip to the end?** Download the **Bootstrap** source code and working **Bootstrap** demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel). You can also [open the **Bootstrap** example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html) for live editing.
+{{< /callout >}}
+
+{{< callout warning >}}
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+
+You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
@@ -90,7 +98,7 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Webpack.
+   We're including a little bit of Boosted styling here with the `div class="container"` and `<button>` so that we see when Boosted's CSS is loaded by Parcel.
 
    Parcel will automatically detect we're using Sass and install the [Sass Parcel plugin](https://parceljs.org/languages/sass/) to support it. However, if you wish, you can also manually run `npm i --save-dev @parcel/transformer-sass`.
 
@@ -119,18 +127,27 @@ In the next and final section to this guide, we'll import all of Boosted's CSS a
 
 ## Import Boosted
 
-Importing Boosted into Parcel requires two imports, one into our `styles.scss` and one into our `main.js`.
+Importing Boosted into Parcel requires three imports, two into our `styles.scss` and one into our `main.js`.
 
-1. **Import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+1. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+
+   ```sh
+   mkdir src/fonts
+   cp /path/HelvNeue55_W1G.woff2 src/fonts/
+   cp /path/HelvNeue75_W1G.woff2 src/fonts/
+   ```
+
+2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
+   @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-2. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
+3. **Import Boosted's JS.** Add the following to `src/js/main.js` to import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
    <!-- eslint-skip -->
    ```js
@@ -150,7 +167,7 @@ Importing Boosted into Parcel requires two imports, one into our `styles.scss` a
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Boosted's plugins.*
 
-3. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
+4. **And you're done! 🎉** With Boosted's source Sass and JS fully loaded, your local development server should now look like this.
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-boosted.png" alt="Parcel dev server running with Boosted">
 

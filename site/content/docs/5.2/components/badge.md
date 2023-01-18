@@ -3,6 +3,8 @@ layout: docs
 title: Badges
 description: Documentation and examples for badges, our small count and labeling component.
 group: components
+aliases:
+  - "/docs/components/badge/"
 toc: true
 ---
 
@@ -11,6 +13,10 @@ toc: true
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
 
 ### Headings
+
+{{< ods-incompatibility-alert >}}
+This component variant should not be used because it does not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -24,6 +30,10 @@ Badges scale to match the size of the immediate parent element by using relative
 ### Buttons
 
 Badges can be used as part of links or buttons to provide a counter.
+
+{{< ods-incompatibility-alert >}}
+This component should not be used because it does not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -40,6 +50,12 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 <!-- Boosted mod: replace the button with a link with an icon because notifiers are only authorized with icons -->
 
 Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
+
+{{< ods-incompatibility-alert >}}
+This component variant should be used **only** inside a header component.
+
+Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <a href="#" class="position-relative">
@@ -62,6 +78,10 @@ Use utilities to modify a `.badge` and position it in the corner of a link with 
 
 {{< added-in "5.2.0" >}}
 
+{{< ods-incompatibility-alert >}}
+These component variants should not be used because they do not exist in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
 {{< example >}}
@@ -72,12 +92,18 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Pill badges
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
+
+{{< ods-incompatibility-alert >}}
+This component should not be used because it does not exist in the Orange Design System specifications.
+
+Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 {{< badge.inline >}}

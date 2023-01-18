@@ -3,6 +3,8 @@ layout: docs
 title: Breadcrumb
 description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
 group: components
+aliases:
+  - "/docs/components/breadcrumb/"
 toc: true
 ---
 
@@ -76,6 +78,12 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 
 You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.
 
+{{< ods-incompatibility-alert >}}
+This variant **without the breadcrumb dividers** should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Local Headers/Breadcrumb](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -89,6 +97,24 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 ```scss
 $breadcrumb-divider: none;
 ```
+
+<!-- Boosted mod: Dark variant -->
+## Dark variant
+
+{{< added-in "5.2.1" >}}
+
+Add `.breadcrumb-dark` to the `.breadcrumb` for a dark variant.
+
+{{< example class="bg-dark" >}}
+<nav aria-label="dark breadcrumb">
+  <ol class="breadcrumb breadcrumb-dark">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+{{< /example >}}
+<!-- End mod -->
 
 ## Accessibility
 
@@ -106,6 +132,20 @@ As part of Boosted's evolving CSS variables approach, breadcrumbs now use local 
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 
+<!-- Boosted mod: Dark variant -->
+Customization through CSS variables can be seen on the `.breadcrumb-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="breadcrumb-dark-css-vars" file="scss/_breadcrumb.scss" >}}
+<!-- End mod -->
+
 ### Sass variables
 
+Variables for all breadcrumbs:
+
 {{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}
+
+<!-- Boosted mod: Dark variant -->
+Variables for [dark breadcrumb](#dark-variant):
+
+{{< scss-docs name="breadcrumb-dark-variables" file="scss/_variables.scss" >}}
+<!-- End mod -->

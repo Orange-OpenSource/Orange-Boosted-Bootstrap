@@ -1,48 +1,24 @@
 {{- /*
-  Usage: `svg-docs file="img/orange-logo.svg" downloadable="true"`
+  Usage: `svg-docs file="orange-logo" downloadable="true"`
 
     Prints SVG content.
 
     Optional parameters:
-      file: SVG file path - default: `img/orange-logo.svg`
+      file: SVG file path without file extension - default: `orange-logo`
       downloadable: is the file downloadable? - default: `true`
 */ -}}
 
-{{- $file := .Get "file"| default "img/orange-logo.svg" -}}
-{{- $svg := readFile $file -}}
-{{- $code := $svg -}}
+{{- $fileName := .Get "file" | default "orange-logo" -}}
+{{- $file := (print "site/static/docs/" .Site.Params.docs_version "/assets/brand/" $fileName) -}}
+{{- $svgFormatted := readFile (print $file "-formatted.svg") -}}
+{{- $svg := readFile (print $file ".svg") -}}
 {{- $downloadable := .Get "downloadable" | default true -}}
 
-{{- if eq $file "img/orange-logo.svg" -}}
-  {{- /* Line feed */ -}}
-  {{- $code = replace $code ">" ">\n" -}}
-  {{- $code = replace $code "{" " {\n" -}}
-  {{- $code = replace $code "}}" "\n\t}\n}" -}}
-  {{- $code = replace $code "}@" "}\n@" -}}
-  {{- $code = replace $code "}<" "}\n<" -}}
-
-  {{- /* Indentation */ -}}
-  {{- $code = replace $code "<path" "\t<path" -}}
-  {{- $code = replace $code "<defs" "\t<defs" -}}
-  {{- $code = replace $code "</defs" "\t</defs" -}}
-  {{- $code = replace $code "<style" "\t\t<style" -}}
-  {{- $code = replace $code "</style" "\t\t</style" -}}
-  {{- $code = replace $code "@" "\t\t\t@" -}}
-  {{- $code = replace $code "#b" "\t\t\t\t#b" -}}
-  {{- $code = replace $code "#c" "\t\t\t\t#c" -}}
-  {{- $code = replace $code "display" "\t\t\t\t\tdisplay" -}}
-  {{- $code = replace $code "}" "\t\t\t}" -}}
-
-  {{- /* Content */ -}}
-  {{- $code = replace $code ":none" ": none" -}}
-  {{- $code = replace $code "none" "none;" -}}
-{{- end -}}
-
-{{- highlight $code "html" "" }}
+{{- highlight $svgFormatted "html" "" }}
 
 {{- if eq $downloadable true -}}
   {{- /* Get filename */ -}}
-  {{ $output := split $file "/" }}
+  {{ $output := split (print $file ".svg") "/" }}
   {{ $output  = last 1 $output }}
 
   {{- /* Get filesize */ -}}

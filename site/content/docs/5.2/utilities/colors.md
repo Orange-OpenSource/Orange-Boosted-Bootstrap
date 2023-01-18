@@ -3,6 +3,8 @@ layout: docs
 title: Colors
 description: Convey meaning through `color` with a handful of color utility classes. Includes support for styling links with hover states, too.
 group: utilities
+aliases:
+  - "/docs/utilities/colors/"
 toc: true
 ---
 
@@ -21,7 +23,10 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 <p class="text-light">.text-light</p>
 <p class="text-body">.text-body</p>
 <p class="text-muted">.text-muted</p>
-<p class="text-white bg-dark">.text-white</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+<p class="text-white">.text-white</p>
 {{< /example >}}
 <!-- End mod -->
 
@@ -29,8 +34,23 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 **Deprecation:** With the addition of `.text-opacity-*` utilities and CSS variables for text utilities, `.text-black-50` and `.text-white-50` are deprecated as of v5.1.0. They'll be removed in v6.0.0.
 {{< /callout >}}
 
+{{< callout warning >}}
+**Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+{{< /callout >}}
+
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+For each `.text-*` there is a matching `.text-*-emphasis` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+
+Here is a list of these extra classes:
+{{< colors.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+- `.text-{{ .name }}-emphasis`
+{{- end -}}
+{{< /colors.inline >}}
+{{< /callout >}}
+
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Opacity
@@ -46,11 +66,13 @@ Consider our default `.text-primary` utility.
 ```css
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-primary-text-rgb), var(--bs-text-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-primary` (with the value of `13, 110, 253`) CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(13, 110, 253, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `$accessible-orange` (with the value of `241, 110, 0`) Sass variable as a CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(241, 110, 0, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+
+When used in a dark variant context, `--bs-primary-text-rgb` will use the value of `$brand-orange` (with the value of `255, 121, 0`).
 
 ### Example
 

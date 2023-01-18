@@ -52,6 +52,13 @@
     height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
   }
 
+  // Prevent excessive date input height in Webkit
+  // https://github.com/twbs/bootstrap/issues/34433
+  &::-webkit-datetime-edit {
+    display: block;
+    padding: 0;
+  }
+
   // Placeholder
   &::placeholder {
     color: $input-placeholder-color;
@@ -119,8 +126,10 @@
 
   &:focus {
     outline: 0;
+    box-shadow: none; // Bosted mod
   }
 
+  &.form-control-sm,
   &.form-control-lg {
     padding-right: 0;
     padding-left: 0;
@@ -134,7 +143,19 @@
 //
 // Repeated in `_input_group.scss` to avoid Sass extend issues.
 
-// Boosted mod: no .form-control-sm
+.form-control-sm {
+  min-height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm add($input-padding-y-sm, 1px); // Boosted mod
+  line-height: $line-height-sm; // Boosted mod
+  @include font-size($input-font-size-sm);
+  @include border-radius($input-border-radius-sm);
+
+  &::file-selector-button {
+    padding: add($input-padding-y-sm, 1px) $input-padding-x-sm add($input-padding-y-sm, 3px); // Boosted mod
+    margin: add(-$input-padding-y-sm, -1px) (-$input-padding-x-sm) add(-$input-padding-y-sm, -3px); // Boosted mod
+    margin-inline-end: $input-padding-x-sm;
+  }
+}
 
 .form-control-lg {
   min-height: $input-height-lg;
@@ -155,6 +176,10 @@
 textarea {
   &.form-control {
     min-height: $input-height;
+  }
+
+  &.form-control-sm {
+    min-height: $input-height-sm;
   }
 
   &.form-control-lg {

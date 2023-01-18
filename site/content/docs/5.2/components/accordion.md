@@ -5,7 +5,9 @@ description: Build vertically collapsing accordions in combination with our Coll
 group: components
 aliases:
   - "/components/"
+  - "/docs/components/"
   - "/docs/5.2/components/"
+  - "/docs/components/accordion/"
 toc: true
 ---
 
@@ -14,7 +16,7 @@ toc: true
 The accordion uses [collapse]({{< docsref "/components/collapse" >}}) internally to make it collapsible. To render an accordion that's expanded, add the `.open` class on the `.accordion`.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Example
@@ -202,7 +204,7 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 
 {{< added-in "5.2.0" >}}
 
-Accordions come with a dark variant: `.accordion-dark`.
+Add `.accordion-dark` to the `.accordion` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <div class="accordion accordion-dark" id="accordionPanelsDarkExample">
@@ -271,4 +273,10 @@ Customization through CSS variables can be seen on the `.accordion-dark` modifie
 
 ### Sass variables
 
+Variables for all accordions:
+
 {{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}
+
+Variables for the [dark accordion](#dark-variant):
+
+{{< scss-docs name="accordion-dark-variables" file="scss/_variables.scss" >}}

@@ -4,71 +4,74 @@
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 .btn-close {
-  padding: $btn-close-padding;
-  color: $btn-close-color;
-  background-color: transparent; // include transparent for button elements
-  border: $btn-border-width solid transparent; // Boosted mod
-  outline-offset: map-get($spacers, 2); // Boosted mod
+  // scss-docs-start btn-close-css-vars
+  --#{$prefix}btn-close-color: #{$btn-close-color};
+  --#{$prefix}btn-close-bg: #{$btn-close-bg}; // Boosted mod: don't use escape-svg()
+  // Boosted mod: no --#{$prefix}btn-close-opacity
+  // Boosted mod: no --#{$prefix}btn-close-hover-opacity
+  // Boosted mod: no --#{$prefix}btn-close-focus-shadow
+  // Boosted mod: no --#{$prefix}btn-close-focus-opacity
+  // Boosted mod: no --#{$prefix}btn-close-disabled-opacity
+  // Boosted mod: no --#{$prefix}btn-close-white-filter
+  --#{$prefix}btn-close-padding: #{$btn-close-padding}; // Boosted mod
+  --#{$prefix}btn-close-border-width: #{$btn-close-border-width}; // Boosted mod
+  --#{$prefix}btn-close-border-color: #{$btn-close-border-color}; // Boosted mod
+  --#{$prefix}btn-close-hover-color: #{$btn-close-hover-color}; // Boosted mod
+  --#{$prefix}btn-close-active-color: #{$btn-close-active-color}; // Boosted mod
+  --#{$prefix}btn-close-active-border-color: #{$btn-close-active-border-color}; // Boosted mod
+  --#{$prefix}btn-close-disabled-color: #{$btn-close-disabled-color}; // Boosted mod
+  // scss-docs-end btn-close-css-vars
+
+  // Boosted mod: no box-sizing, width nor height
+  padding: var(--#{$prefix}btn-close-padding); // Boosted mod
+  color: var(--#{$prefix}btn-close-color);
+  background-color: var(--#{$prefix}btn-close-bg); // Boosted mod: instead of background
+  border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-border-color); // Boosted mod
   @include border-radius();
+  // Boosted mod: no opacity
   @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // Boosted mod: using mask instead of background
 
   // Override <a>'s hover style
   &:hover {
-    color: $btn-close-color;
+    color: var(--#{$prefix}btn-close-hover-color); // Boosted mod
     text-decoration: none;
+    // Boosted mod: no opacity
   }
+
+  // Boosted mod: no &:focus
 
   // Boosted mod: matching .btn-no-outline
   &:hover,
-  &:focus,
   &:active {
-    border-color: $gray-500;
-  }
-
-  &:focus {
-    outline-offset: $outline-width;
-    @include transition($transition-focus);
-
-    &[data-focus-visible-added] {
-      box-shadow: $btn-close-focus-shadow;
-    }
+    border: var(--#{$prefix}btn-close-border-width) solid var(--#{$prefix}btn-close-active-border-color);
   }
 
   &:active {
-    color: $primary;
+    color: var(--#{$prefix}btn-close-active-color);
   }
   // End mod
 
   &:disabled,
   &.disabled {
-    color: $gray-500; // Boosted mod
+    color: var(--#{$prefix}btn-close-disabled-color); // Boosted mod
     pointer-events: none;
     user-select: none;
+    // Boosted mod: no opacity
   }
 }
 
-// Boosted mod: changing color instead of using filter
+// Boosted mod:
+// - no dark mode management so we keep our .btn-close-white
+// - changing color instead of using filter
 .btn-close-white {
-  &,
-  &:hover:not(:active) {
-    color: $white;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: $gray-700;
-  }
-
-  &:focus {
-    &[data-focus-visible-added] {
-      box-shadow: 0 0 0 $btn-focus-width $black;
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $gray-700;
-  }
+  // scss-docs-start btn-close-white-css-vars
+  --#{$prefix}btn-close-color: #{$btn-close-white-color}; // Boosted mod
+  --#{$prefix}btn-close-bg: #{$btn-close-white-bg}; // Boosted mod
+  --#{$prefix}btn-close-border-color: #{$btn-close-white-border-color}; // Boosted mod
+  --#{$prefix}btn-close-hover-color: #{$btn-close-white-hover-color}; // Boosted mod
+  --#{$prefix}btn-close-active-color: #{$btn-close-white-active-color}; // Boosted mod
+  --#{$prefix}btn-close-active-border-color: #{$btn-close-white-active-border-color}; // Boosted mod
+  --#{$prefix}btn-close-disabled-color: #{$btn-close-white-disabled-color}; // Boosted mod
+  // scss-docs-end btn-close-white-css-vars
 }
 // End mod

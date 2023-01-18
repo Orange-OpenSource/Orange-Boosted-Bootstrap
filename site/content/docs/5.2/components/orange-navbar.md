@@ -3,11 +3,11 @@ layout: docs
 title: Orange navbar
 description: Documentation and examples for Boosted's exclusive responsive navbars.
 group: components
+aliases:
+  - "/docs/components/orange-navbar/"
 toc: true
 added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## How it works
 
@@ -125,9 +125,9 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
         <!-- Right navbar of the Supra bar -->
         <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>
         </ul>
       </div>
 
@@ -169,7 +169,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       <!-- Navbar with links -->
       <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
         </ul>
       </div>
@@ -430,7 +430,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
     <div class="container-xxl">
       <div id="global-header-6.1" class="navbar-collapse collapse m-0 global-header-6">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>

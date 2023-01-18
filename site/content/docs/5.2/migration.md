@@ -3,9 +3,798 @@ layout: docs
 title: Migrating to v5
 description: Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.
 group: migration
-aliases: "/migration/"
+aliases:
+  - "/migration/"
+  - "/docs/migration/"
 toc: true
 ---
+
+## v5.3.0
+
+<hr class="mb-4">
+
+Boosted v5.3.0 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.0 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.0).
+
+### Color modes!
+
+Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+
+- **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
+
+- **New extended color system.** We've added new theme colors (but not in `$theme-colors)`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+
+- We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
+
+- Adds new `_variables-dark.scss` stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing `_variables.scss` file in your import stack.
+
+  ```diff
+  diff --git a/scss/boosted.scss b/scss/boosted.scss
+  index 8f8296def..449d70487 100644
+  --- a/scss/boosted.scss
+  +++ b/scss/boosted.scss
+  @@ -6,6 +6,7 @@
+   // Configuration
+   @import "functions";
+   @import "variables";
+  +@import "variables-dark";
+   @import "maps";
+   @import "mixins";
+   @import "utilities";
+  ```
+
+### Components
+
+#### Alert
+
+- Alert variants are now styled via CSS variables.
+
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+
+#### List group
+
+- List group item variants are now styled via CSS variables.
+
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+
+### Forms
+
+- `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
+
+- `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
+
+### Helpers and utilities
+
+- <span class="badge bg-success">New</span> `.border-{color}-subtle`.
+
+- <span class="badge bg-success">New</span> `.text-body-secondary`, `.text-body-tertiary` and `.text-body-emphasis`.
+
+- <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
+
+- <span class="badge bg-success">New</span> `.bg-body-secondary`, `.bg-body-tertiary` and `.bg-body-emphasis`.
+
+- <span class="badge bg-success">New</span> `.bg-{color}-subtle`.
+
+- <span class="badge bg-success">New</span> `.fw-medium` is added to the `font-weight` utilities.
+
+- <span class="badge bg-success">New</span> border dividers utilities:
+  - `.rounded-{top|end|bottom|start}-{0|5}`
+  - `.rounded-{top|end|bottom|start}-circle`
+  - `.rounded-{top|end|bottom|start}-pill`.
+  - <span class="badge bg-warning">Warning</span> We had some HTML markups in our docs that contained some `.rounded-*` classes (coming from Bootstrap) that weren't doing anything. But now, they would add probably unwanted rounded corners. So please double-check that it won't add any regressions in your websites.
+
+- <span class="badge bg-success">New</span> overflow utilities: `.overflow-{x|y}-{auto|hidden|visible|scroll}`.
+
+- <span class="badge bg-success">New</span> object fit utilities: `.object-fit-{value}` and `.object-fit-{breakpoint}-{value}`. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
+
+- <span class="badge bg-success">New</span> Added new [`.z-*` utilities]({{< docsref "/utilities/z-index" >}}) for `z-index`.
+
+- <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
+
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-muted` will be be replaced by `.text-body-secondary` in v6.
+
+  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+
+- [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+
+### CSS and Sass variables
+
+- Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
+
+- The `--bs-heading-color` variable is back with an update and dark mode support. First, we now check for a `null` value on the associated Sass variable, `$headings-color`, before trying to output the CSS variable, so by default it's not present in our compiled CSS. Second, we use the CSS variable with a fallback value, `inherit`, allowing the original behavior to persist, but also allowing for overrides.
+
+- Converts links to use CSS variables for styling `color`, but not `text-decoration`. Colors are now set with `--bs-link-color-rgb` and `--bs-link-opacity` as `rgba()` color, allowing you to customize the translucency with ease. The `a:hover` pseudo-class now overrides `--bs-link-color-rgb` instead of explicitly setting the `color` property.
+
+- `--bs-border-width` is now being used in more components for greater control over default global styling.
+
+- Adds new root CSS variables for our `box-shadow`s, including `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, and `--bs-box-shadow-inset`.
+
+- Restores CSS variables for breakpoints, though we don't use them in our media queries as they're not supported. However, these can be useful in JS-specific contexts.
+
+- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+
+- `@mixin caret()` has a new interface including a new optional parameters.
+
+- <details class="mb-2">
+  <summary><span class="badge text-warning-emphasis bg-warning">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
+    <ul>
+      <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>
+      <li><code>$focus-visible-inner-color-dark</code> → <code>$focus-visible-inner-color-inverted</code></li>
+      <li><code>$focus-visible-outer-color-dark</code> → <code>$focus-visible-outer-color-inverted</code></li>
+      <li><code>$kbd-bg-dark</code> → <code>$kbd-bg-inverted</code></li>
+      <li><code>$kbd-color-dark</code> → <code>$kbd-color-inverted</code></li>
+      <li><code>$link-color-dark</code> → <code>$link-color-inverted</code></li>
+      <li><code>$link-hover-color-dark</code> -> <code>$link-hover-color-inverted</code></li>
+      <li><code>$mark-bg-dark</code> → <code>$mark-bg-inverted</code></li>
+      <li><code>$mark-color-dark</code> → <code>$mark-color-inverted</code></li>
+      <li><code>$pre-color-dark</code> → <code>$pre-color-inverted</code></li>
+      <li><code>$table-caption-color-dark</code> → <code>$table-caption-color-inverted</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-offcanvas-transition-duration</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$code-color-dark</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
+      <li><code>$kbd-bg-dark</code></li>
+      <li><code>$kbd-color-dark</code></li>
+      <li><code>$link-color-dark</code></li>
+      <li><code>$link-hover-color-dark</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color-dark</code></li>
+      <li><code>$pre-color-dark</code></li>
+      <li><code>$table-caption-color-dark</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-body-bg-rgb</code></li>
+      <li><code>--bs-box-shadow-inset</code></li>
+      <li><code>--bs-box-shadow-lg</code></li>
+      <li><code>--bs-box-shadow-sm</code></li>
+      <li><code>--bs-box-shadow</code></li>
+      <li><code>--bs-breakpoint-lg</code></li>
+      <li><code>--bs-breakpoint-md</code></li>
+      <li><code>--bs-breakpoint-sm</code></li>
+      <li><code>--bs-breakpoint-xl</code></li>
+      <li><code>--bs-breakpoint-xs</code></li>
+      <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-card-subtitle-color</code></li>
+      <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-danger-bg-subtle</code></li>
+      <li><code>--bs-danger-border-subtle</code></li>
+      <li><code>--bs-danger-text</code></li>
+      <li><code>--bs-dark-bg-subtle</code></li>
+      <li><code>--bs-dark-border-subtle</code></li>
+      <li><code>--bs-dark-text</code></li>
+      <li><code>--bs-emphasis-color-rgb</code></li>
+      <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-form-check-bg</code></li>
+      <li><code>--bs-form-control-bg</code></li>
+      <li><code>--bs-form-control-disabled-bg</code></li>
+      <li><code>--bs-form-select-bg-img</code></li>
+      <li><code>--bs-form-switch-bg</code></li>
+      <li><code>--bs-heading-color</code></li>
+      <li><code>--bs-info-bg-subtle</code></li>
+      <li><code>--bs-info-border-subtle</code></li>
+      <li><code>--bs-info-text</code></li>
+      <li><code>--bs-light-bg-subtle</code></li>
+      <li><code>--bs-light-border-subtle</code></li>
+      <li><code>--bs-light-text</code></li>
+      <li><code>--bs-link-color-rgb</code></li>
+      <li><code>--bs-link-decoration</code></li>
+      <li><code>--bs-link-hover-color-rgb</code></li>
+      <li><code>--bs-link-hover-decoration</code></li>
+      <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-primary-bg-subtle</code></li>
+      <li><code>--bs-primary-border-subtle</code></li>
+      <li><code>--bs-primary-text</code></li>
+      <li><code>--bs-secondary-bg-rgb</code></li>
+      <li><code>--bs-secondary-bg-subtle</code></li>
+      <li><code>--bs-secondary-bg</code></li>
+      <li><code>--bs-secondary-border-subtle</code></li>
+      <li><code>--bs-secondary-color-rgb</code></li>
+      <li><code>--bs-secondary-color</code></li>
+      <li><code>--bs-secondary-text</code></li>
+      <li><code>--bs-success-bg-subtle</code></li>
+      <li><code>--bs-success-border-subtle</code></li>
+      <li><code>--bs-success-text</code></li>
+      <li><code>--bs-tertiary-bg-rgb</code></li>
+      <li><code>--bs-tertiary-bg</code></li>
+      <li><code>--bs-tertiary-color-rgb</code></li>
+      <li><code>--bs-tertiary-color</code></li>
+      <li><code>--bs-warning-bg-subtle</code></li>
+      <li><code>--bs-warning-border-subtle</code></li>
+      <li><code>--bs-warning-text</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$body-bg-dark</code></li>
+      <li><code>$body-color-dark</code></li>
+      <li><code>$body-emphasis-color-dark</code></li>
+      <li><code>$body-emphasis-color</code></li>
+      <li><code>$body-secondary-bg-dark</code></li>
+      <li><code>$body-secondary-bg</code></li>
+      <li><code>$body-secondary-color-dark</code></li>
+      <li><code>$body-secondary-color</code></li>
+      <li><code>$body-tertiary-bg-dark</code></li>
+      <li><code>$body-tertiary-bg</code></li>
+      <li><code>$body-tertiary-color-dark</code></li>
+      <li><code>$body-tertiary-color</code></li>
+      <li><code>$border-color-dark</code></li>
+      <li><code>$border-color-translucent-dark</code></li>
+      <li><code>$card-subtitle-color</code></li>
+      <li><code>$card-title-color</code></li>
+      <li><code>$code-color-dark</code></li>
+      <li><code>$code-color-inverted</code></li>
+      <li><code>$color-mode-type</code></li>
+      <li><code>$danger-bg-subtle-dark</code></li>
+      <li><code>$danger-bg-subtle</code></li>
+      <li><code>$danger-border-subtle-dark</code></li>
+      <li><code>$danger-border-subtle</code></li>
+      <li><code>$danger-text-dark</code></li>
+      <li><code>$danger-text</code></li>
+      <li><code>$dark-bg-subtle-dark</code></li>
+      <li><code>$dark-bg-subtle</code></li>
+      <li><code>$dark-border-subtle-dark</code></li>
+      <li><code>$dark-border-subtle</code></li>
+      <li><code>$dark-text-dark</code></li>
+      <li><code>$dark-text</code></li>
+      <li><code>$emphasis-color-dark</code></li>
+      <li><code>$emphasis-color</code></li>
+      <li><code>$enable-dark-mode</code></li>
+      <li><code>$focus-visible-inner-color-inverted</code></li>
+      <li><code>$focus-visible-outer-color-inverted</code></li>
+      <li><code>$font-weight-medium</code></li>
+      <li><code>$headings-color-dark</code></li>
+      <li><code>$info-bg-subtle-dark</code></li>
+      <li><code>$info-bg-subtle</code></li>
+      <li><code>$info-border-subtle-dark</code></li>
+      <li><code>$info-border-subtle</code></li>
+      <li><code>$info-text-dark</code></li>
+      <li><code>$info-text</code></li>
+      <li><code>$kbd-bg-inverted</code></li>
+      <li><code>$kbd-color-inverted</code></li>
+      <li><code>$light-bg-subtle-dark</code></li>
+      <li><code>$light-bg-subtle</code></li>
+      <li><code>$light-border-subtle-dark</code></li>
+      <li><code>$light-border-subtle</code></li>
+      <li><code>$light-text-dark</code></li>
+      <li><code>$light-text</code></li>
+      <li><code>$link-color-dark</code></li>
+      <li><code>$link-color-inverted</code></li>
+      <li><code>$link-hover-color-dark</code></li>
+      <li><code>$link-hover-color-inverted</code></li>
+      <li><code>$list-group-hover-bg</code></li>
+      <li><code>$mark-bg-inverted</code></li>
+      <li><code>$mark-color-inverted</code></li>
+      <li><code>$pre-color-inverted</code></li>
+      <li><code>$primary-bg-subtle-dark</code></li>
+      <li><code>$primary-bg-subtle</code></li>
+      <li><code>$primary-border-subtle-dark</code></li>
+      <li><code>$primary-border-subtle</code></li>
+      <li><code>$primary-text-dark</code></li>
+      <li><code>$primary-text</code></li>
+      <li><code>$secondary-bg-subtle-dark</code></li>
+      <li><code>$secondary-bg-subtle</code></li>
+      <li><code>$secondary-border-subtle-dark</code></li>
+      <li><code>$secondary-border-subtle</code></li>
+      <li><code>$secondary-text-dark</code></li>
+      <li><code>$secondary-text</code></li>
+      <li><code>$success-bg-subtle-dark</code></li>
+      <li><code>$success-bg-subtle</code></li>
+      <li><code>$success-border-subtle-dark</code></li>
+      <li><code>$success-border-subtle</code></li>
+      <li><code>$success-text-dark</code></li>
+      <li><code>$success-text</code></li>
+      <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$warning-bg-subtle-dark</code></li>
+      <li><code>$warning-bg-subtle</code></li>
+      <li><code>$warning-border-subtle-dark</code></li>
+      <li><code>$warning-border-subtle</code></li>
+      <li><code>$warning-text-dark</code></li>
+      <li><code>$warning-text</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass maps:</summary>
+    <ul>
+      <li><code>$theme-colors-bg-subtle</code></li>
+      <li><code>$theme-colors-border-subtle</code></li>
+      <li><code>$theme-colors-text</code></li>
+    </ul>
+  </details>
+
+## v5.2.3
+
+<hr class="mb-4">
+
+Boosted v5.2.3 has landed with a handful of urgent bug fixes from Bootstrap and with specific Boosted content.
+
+If you need more details about the changes, please refer to the [v5.2.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.3).
+
+### Accessibility
+
+- **Focus visible**
+  - <span class="badge bg-warning">Warning</span> We completely refactored our focus visible management.
+
+  A `focus-visible()` mixin is provided to ensure a proper visible focus state. This visible focus state is defined by an outer outline and an inner box shadow. On light background, the outer outline is black and the inner box shadow is white. The latter will be invisible most of the time but is here to ensure a security on light background but that aren't white. On dark background, these colors are inverted.
+
+  We also removed the `:focus` style of our components that was mirroring the `:hover` state, as well as the transition animation.
+
+  Even if the generic case will be transparent for your project, please check this new behavior in your websites.
+
+### Components
+
+- **Card**
+  - <span class="badge bg-warning">Warning</span> We now apply font styles on our `.card-title` and `.card-subtitle`, so you can use any `<h*>` following your semantic structure inside a card. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <h4 class="card-title">Title</h4>
+      + <h3 class="card-title">Title</h3>
+      ```
+    </details>
+
+  - <span class="badge bg-warning">Warning</span> We now apply `.fw-bold` on some `.card-text` when there is an image in the card to follow the design guidelines. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <p class="card-text">Description</p>
+      + <p class="card-text fw-bold">Description</p>
+      ```
+    </details>
+
+- **Dropdowns**
+  - <span class="badge bg-warning">Warning</span> Dropdown menus y offset has slightly changed from 2px to 0. Please reflect this modification into your websites by changing each `data-bs-offset` or by adding them if needed and set it to 0.
+  ```diff
+  - <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,y">
+  + <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,0">
+  ```
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> Each footer accordion now uses an `aria-labelledby` attribute to be consistent with our accordion component. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
+      ```
+    </details>
+
+- **Navs & Tabs**
+  - <span class="badge bg-danger">Breaking</span> Nested tabs variant changed its markup to ensure a greater accessibility and consistency over the documentation. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      - Ensure that the root element of the tablist is a `<ul>`.
+      - Ensure that the `role="tablist"` is set on `<ul>`.
+      - Ensure that the `role="tablist"` has an `aria-owns` set too with all the ids it owns.
+      - Ensure that the `role="presentation"` is set on each `<li>` inside a `role="tablist"`.
+      - Ensure that the `role="tabpanel"` is set on each child of `.tab-content`.
+      - Ensure that the `disabled` links only miss the `[href]` attribute.
+    </details>
+
+- **Stepped Process**
+  - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
+  ```diff
+  -        <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
+  +        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+  ```
+
+### Contents
+
+- **Tables**
+  - <span class="badge bg-warning">Warning</span> Every table now has a caption with `.visually-hidden` on it. Please reflect this modification into your websites.
+
+  - <span class="badge bg-success">New</span> Tables now fully support striped rows and columns.
+
+### Forms
+
+- <span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the `.form-helper` utility class.
+
+- <span class="badge bg-success">New</span> Small size form controls are now available. Small inputs are defined by their `.form-control-sm`, small selects by their `.form-select-sm`. They can be associated with `.col-form-label-sm` to correctly follow their size if needed. `.input-group-sm` can also be used depending on the context.
+
+### Examples
+
+- **Cards and Cards RTL**
+  - <span class="badge bg-warning">Warning</span> We now use correctly `<button>` instead of `<a>`. We now apply font style on our `.card-title` so these examples have been modified to follow the right semantic header hierarchy. Furthermore, we dropped unnecessary `.card-footer` and notice that size of icons has slightly changed. Please check and reflect if necessary this modification into your websites.
+    <details class="mb-2">
+      <summary>Example</summary>
+
+      ```diff
+        <div class="card">
+          <img src="..." alt="..."/>
+          <div class="card-body">
+      -     <h4 class="card-title">Title</h4>
+      +     <h3 class="card-title">Title</h3>
+      -     <h6 class="card-text">Caption</h6>
+      +     <p class="card-text fw-bold mb-4">Caption</p>
+      -   </div>
+      -   <div class="card-footer pt-2">
+      -     <a class="btn btn-secondary" aria-label="Button description" title="Button description">Button</a>
+      +     <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
+          </div>
+        </div>
+      ```
+    </details>
+
+- **Pages**
+  - <span class="badge bg-success">New</span> A new section called 'Pages' has been added where you will find complete and reusable pages that can be found in the Design Guidelines.
+  - <span class="badge bg-success">New</span> A form page example is now available.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-accordion-body-padding-x</code></li>
+      <li><code>--bs-accordion-body-padding-y</code></li>
+      <li><code>--bs-card-spacer-y</code></li>
+      <li><code>--bs-dropdown-toggle-bg</code></li>
+      <li><code>--bs-dropdown-toggle-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-color</code></li>
+      <li><code>--bs-dropdown-toggle-hover-border-color</code></li>
+      <li><code>--bs-dropdown-toggle-padding-x</code></li>
+      <li><code>--bs-tag-outline-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-accordion-body-padding-bottom</code></li>
+      <li><code>--bs-accordion-body-padding-end</code></li>
+      <li><code>--bs-accordion-body-padding-start</code></li>
+      <li><code>--bs-accordion-body-padding-top</code></li>
+      <li><code>--bs-card-spacer-bottom</code></li>
+      <li><code>--bs-card-spacer-top</code></li>
+      <li><code>--bs-dropdown-line-height</code></li>
+      <li><code>--bs-focus-visible-inner-color</code></li>
+      <li><code>--bs-focus-visible-outer-color</code></li>
+      <li><code>--bs-table-accent-bg</code></li>
+      <li><code>--bs-table-striped-bg</code></li>
+      <li><code>--bs-table-striped-color</code></li>
+      <li><code>--bs-table-striped-hover-bg</code></li>
+      <li><code>--bs-table-striped-hover-color</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-body-padding-x</code></li>
+      <li><code>$accordion-body-padding-y</code></li>
+      <li><code>$btn-close-focus-shadow</code></li>
+      <li><code>$card-spacer-y</code></li>
+      <li><code>$form-range-thumb-active-border</code></li>
+      <li><code>$form-star-focus-box-shadow</code></li>
+      <li><code>$form-star-focus-color</code></li>
+      <li><code>$form-star-focus-color-dark</code></li>
+      <li><code>$form-star-focus-outline</code></li>
+      <li><code>$form-star-focus-outline-dark</code></li>
+      <li><code>$outline-offset</code></li>
+      <li><code>$outline-width</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-body-padding-bottom</code></li>
+      <li><code>$accordion-body-padding-end</code></li>
+      <li><code>$accordion-body-padding-start</code></li>
+      <li><code>$accordion-body-padding-top</code></li>
+      <li><code>$card-spacer-bottom</code></li>
+      <li><code>$card-spacer-top</code></li>
+      <li><code>$focus-visible-inner-color</code></li>
+      <li><code>$focus-visible-inner-color-dark</code></li>
+      <li><code>$focus-visible-inner-width</code></li>
+      <li><code>$focus-visible-outer-color</code></li>
+      <li><code>$focus-visible-outer-color-dark</code></li>
+      <li><code>$focus-visible-outer-offset</code></li>
+      <li><code>$focus-visible-outer-width</code></li>
+      <li><code>$focus-visible-zindex</code></li>
+      <li><code>$form-helper-label-margin-bottom</code></li>
+      <li><code>$form-helper-size</code></li>
+      <li><code>$form-select-border-radius-sm</code></li>
+      <li><code>$form-select-font-size-sm</code></li>
+      <li><code>$form-select-padding-x-sm</code></li>
+      <li><code>$form-select-padding-y-sm</code></li>
+      <li><code>$helper-icon</code></li>
+      <li><code>$input-border-radius-sm</code></li>
+      <li><code>$input-font-size-sm</code></li>
+      <li><code>$step-link-active-outline</code></li>
+      <li><code>$table-accent-bg</code></li>
+      <li><code>$table-striped-bg</code></li>
+      <li><code>$table-striped-bg-factor</code></li>
+      <li><code>$table-striped-color</code></li>
+      <li><code>$table-striped-columns-order</code></li>
+      <li><code>$table-striped-hover-bg</code></li>
+      <li><code>$table-striped-hover-bg-factor</code></li>
+      <li><code>$table-striped-hover-color</code></li>
+      <li><code>$table-striped-order</code></li>
+      <li><code>$table-variant-active-bg-factor</code></li>
+      <li><code>$table-variant-hover-bg-factor</code></li>
+      <li><code>$table-variant-striped-hover-bg</code></li>
+      <li><code>$table-variant-striped-hover-bg-factor</code></li>
+    </ul>
+  </details>
+
+## v5.2.2
+
+<hr class="mb-4">
+
+Boosted v5.2.2 has landed with new bug fixes and documentation updates including a new RTL section in our examples.
+
+If you need more details about the changes, please refer to the [v5.2.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2).
+
+### Components
+
+- **Modals**
+  - <span class="badge bg-warning">Warning</span> Modals markups have changed to show that a modal dialog represents its own separate document/context, so most of the `.modal-title`s are now `<h1>`s associated with a `.h*`. Please reflect this modification into your websites by choosing the right header level.
+
+- **Orange navbar**
+  - Languages selection's `aria-label`s have been slightly changed in some supra bars examples for accessibility purpose; visible name must be included in the accessible name. It might be a useful modification to propagate into your websites if you have this same kind of languages selection.
+  ```diff
+  -        <li class="nav-item"><a class="nav-link active" href="#" aria-label="English version">EN</a></li>
+  +        <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
+  ```
+
+### Forms
+
+- <span class="badge bg-warning">Warning</span> All forms examples have been modified to add a `.mt-2` to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.
+
+### Contents
+
+- **Tables**
+  - <span class="badge bg-warning">Warning</span> Reintroduction of `.has-checkbox` from v4 to correct spacing of first column when having row selection.
+
+### Examples
+
+- <span class="badge bg-success">New</span> There is a new RTL section in the examples.
+
+- **RTL**
+  - <span class="badge bg-success">New</span> Cards RTL example is now available.
+
+### CSS and Sass variables
+
+- `@mixin button-size()` has a new interface including a new optional parameter for button letter spacing.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-btn-letter-spacing</code></li>
+      <li><code>--bs-primary-text-rgb</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$btn-letter-spacing</code></li>
+      <li><code>$btn-letter-spacing-lg</code></li>
+      <li><code>$btn-letter-spacing-sm</code></li>
+      <li><code>$form-feedback-line-height</code></li>
+    </ul>
+  </details>
+
+## v5.2.1
+
+<hr class="mb-4">
+
+Boosted v5.2.1 is here with fixes from our latest minor release, v5.2. These changes include bug fixes, documentation updates, and some dependency updates, but also a new Tags component and a lot of new dark variants for our components.
+
+If you need more details about the changes, please refer to the [v5.2.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.1).
+
+### Components
+
+- **Back to top**
+  - <span class="badge bg-danger">Breaking</span> Back to top 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
+
+- **Breadcrumb**
+  - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
+
+- **Footers**
+  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+
+- **List group**
+  - <span class="badge bg-success">New</span> List group now has a dark variant.
+
+- **Pagination**
+  - <span class="badge bg-success">New</span> Pagination now has a dark variant.
+
+- **Scrollspy**
+  - <span class="badge bg-success">New</span> Scrollspy has a new `data-bs-threshold` data attribute.
+
+- **Stepped process**
+  - <span class="badge bg-success">New</span> Stepped process now has a dark variant.
+
+- **Tags**
+  - <span class="badge bg-success">New</span> Tags are now a component.
+
+- **Toasts**
+  - <span class="badge bg-warning">Warning</span> Changed the markup for Toasts with a custom content (toast message and close button). Please reflect this modification into your websites.
+    <details class="mt-2">
+      <summary>More info</summary>
+      {{< markdown >}}
+```diff
+<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+-   <div class="toast-body">
++   <div class="toast-body my-auto">
+      Hello, world! This is a toast message.
+    </div>
+-   <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
++   <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"><span class="visually-hidden">Close</span></button>
+  </div>
+</div>
+```
+      {{< /markdown >}}
+    </details>
+
+### Contents
+
+- <span class="badge bg-warning">Warning</span> Changed the rendering of `<mark>` (and so `.mark`). Depending on your usage it may worth checking the impact in your websites.
+
+- <span class="badge bg-warning">Warning</span> Tooltips examples applied on SVGs have been updated to use `focusable="false"` and `aria-hidden="true"` because SVGs do not carry any specific information so they should not be readable by screen readers. Please reflect this modification in your websites. By the way please check all the SVGs in your websites in order to apply this same modification if needed.
+  <details class="mb-3">
+    <summary>More info</summary>
+    {{< markdown >}}
+```diff
+<a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Default tooltip">
+- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
++ <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
+    <rect width="100%" height="100%" fill="#563d7c"/>
+    <circle cx="50" cy="50" r="30" fill="#007bff"/>
+  </svg>
+</a>
+```
+    {{< /markdown >}}
+  </details>
+
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+
+### Helpers and utilities
+
+- <span class="badge bg-success">New</span> `.img-thumbnail` is now officially supported.
+
+### CSS and Sass variables
+
+- <span class="badge bg-danger">Breaking</span> `--bs-pagination-margin-start` and `--bs-pagination-focus-outline` are now deprecated.
+
+- <span class="badge bg-warning">Warning</span> `$accordion-color` was announced a deprecated in v5.2.0 but is finally not removed.
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-alert-btn-close-offset</code></li>
+      <li><code>--bs-alert-dismissible-padding-right</code></li>
+      <li><code>--bs-alert-heading-font-weight</code></li>
+      <li><code>--bs-alert-icon-margin-y</code></li>
+      <li><code>--bs-alert-icon-size</code></li>
+      <li><code>--bs-alert-line-height</code></li>
+      <li><code>--bs-alert-link-font-weight</code></li>
+      <li><code>--bs-alert-logo-size</code></li>
+      <li><code>--bs-breadcrumb-color</code></li>
+      <li><code>--bs-btn-close-active-border-color</code></li>
+      <li><code>--bs-btn-close-active-color</code></li>
+      <li><code>--bs-btn-close-bg</code></li>
+      <li><code>--bs-btn-close-border-color</code></li>
+      <li><code>--bs-btn-close-border-width</code></li>
+      <li><code>--bs-btn-close-color</code></li>
+      <li><code>--bs-btn-close-disabled-color</code></li>
+      <li><code>--bs-btn-close-hover-color</code></li>
+      <li><code>--bs-btn-close-padding</code></li>
+      <li><code>--bs-btn-hover-border-color</code></li>
+      <li><code>--bs-dropdown-zindex</code></li>
+      <li><code>--bs-highlight-color</code></li>
+      <li><code>--bs-pagination-active-item-color</code></li>
+      <li><code>--bs-pagination-padding-end</code></li>
+      <li><code>--bs-tab-content-border-width</code></li>
+      <li><code>--bs-tab-content-padding-x</code></li>
+      <li><code>--bs-tab-content-padding-y</code></li>
+      <li><code>--bs-nav-tabs-link-border-width</code></li>
+      <li><code>--bs-nav-tabs-link-hover-bg</code></li>
+      <li><code>--bs-nav-tabs-link-hover-color</code></li>
+      <li><code>--bs-nav-tabs-link-padding-x</code></li>
+      <li><code>--bs-navbar-font-weight</code></li>
+      <li><code>--bs-navbar-toggler-icon-filter</code></li>
+      <li><code>--bs-stepped-process-link-next-color</code></li>
+      <li><code>--bs-toast-zindex</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$alert-heading-font-weight</code></li>
+      <li><code>$alert-icon-size-sm</code></li>
+      <li><code>$breadcrumb-color</code></li>
+      <li><code>$breadcrumb-dark-active-color</code></li>
+      <li><code>$breadcrumb-dark-bg</code></li>
+      <li><code>$breadcrumb-dark-color</code></li>
+      <li><code>$breadcrumb-dark-divider-color</code></li>
+      <li><code>$btn-close-active-border-color</code></li>
+      <li><code>$btn-close-active-color</code></li>
+      <li><code>$btn-close-border-color</code></li>
+      <li><code>$btn-close-border-width</code></li>
+      <li><code>$btn-close-disabled-color</code></li>
+      <li><code>$btn-close-hover-color</code></li>
+      <li><code>$btn-close-white-active-border-color</code></li>
+      <li><code>$btn-close-white-active-color</code></li>
+      <li><code>$btn-close-white-bg</code></li>
+      <li><code>$btn-close-white-border-color</code></li>
+      <li><code>$btn-close-white-color</code></li>
+      <li><code>$btn-close-white-disabled-color</code></li>
+      <li><code>$btn-close-white-hover-color</code></li>
+      <li><code>$list-group-dark-action-active-bg</code></li>
+      <li><code>$list-group-dark-action-active-color</code></li>
+      <li><code>$list-group-dark-action-color</code></li>
+      <li><code>$list-group-dark-action-hover-color</code></li>
+      <li><code>$list-group-dark-active-bg</code></li>
+      <li><code>$list-group-dark-active-border-color</code></li>
+      <li><code>$list-group-dark-active-color</code></li>
+      <li><code>$list-group-dark-bg</code></li>
+      <li><code>$list-group-dark-border-color</code></li>
+      <li><code>$list-group-dark-color</code></li>
+      <li><code>$list-group-dark-disabled-bg</code></li>
+      <li><code>$list-group-dark-disabled-color</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color</code></li>
+      <li><code>$mark-color-dark</code></li>
+      <li><code>$navbar-dark-border-color</code></li>
+      <li><code>$navbar-font-weight</code></li>
+      <li><code>$pagination-active-item-color</code></li>
+      <li><code>$pagination-dark-active-bg</code></li>
+      <li><code>$pagination-dark-active-border-color</code></li>
+      <li><code>$pagination-dark-active-color</code></li>
+      <li><code>$pagination-dark-active-item-bg</code></li>
+      <li><code>$pagination-dark-active-item-border-color</code></li>
+      <li><code>$pagination-dark-active-item-color</code></li>
+      <li><code>$pagination-dark-bg</code></li>
+      <li><code>$pagination-dark-border-color</code></li>
+      <li><code>$pagination-dark-color</code></li>
+      <li><code>$pagination-dark-disabled-bg</code></li>
+      <li><code>$pagination-dark-disabled-border-color</code></li>
+      <li><code>$pagination-dark-disabled-color</code></li>
+      <li><code>$pagination-dark-focus-bg</code></li>
+      <li><code>$pagination-dark-focus-color</code></li>
+      <li><code>$pagination-dark-hover-bg</code></li>
+      <li><code>$pagination-dark-hover-border-color</code></li>
+      <li><code>$pagination-dark-hover-color</code></li>
+      <li><code>$step-item-dark-active-bg</code></li>
+      <li><code>$step-item-dark-bg</code></li>
+      <li><code>$step-item-dark-drop-shadow</code></li>
+      <li><code>$step-item-dark-next-bg</code></li>
+      <li><code>$step-link-dark-active-color</code></li>
+      <li><code>$step-link-dark-color</code></li>
+      <li><code>$step-link-dark-next-color</code></li>
+      <li><code>$step-link-next-color</code></li>
+    </ul>
+  </details>
+
+- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule]({{< docsref "/customize/css-variables#dark-text-rule" >}}).
 
 ## v5.2.0
 
@@ -92,11 +881,15 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 - <span class="badge bg-danger">Breaking</span> Changed `data-o-label` to `data-bs-label` in Back to top component.
 
+- <span class="badge bg-danger">Breaking</span> Re-introduced footer component by tweaking a bit the classes: replaced `.o-footer-*` by `.footer-*`.
+
 For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
 
 ## v5.1.0
 
 <hr class="mb-4">
+
+- <span class="badge bg-danger">Breaking</span> Changed the behavior of `.bg-success`, `.bg-danger`, `.bg-warning` and `.bg-info`. You may prefer to use `.bg-supporting-green`, `.bg-supporting-pink`, `.bg-supporting-yellow` and `.bg-supporting-blue` instead (apart from badges). `$supporting-colors` is replaced by `$background-colors`.
 
 - **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
 
@@ -112,7 +905,7 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 - **Overhauled color and background utilities to use CSS variables, and added new [text opacity]({{< docsref "/utilities/text#opacity" >}}) and [background opacity]({{< docsref "/utilities/background#opacity" >}}) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
 
-- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]({{< docsref "/examples#snippets" >}}). Includes [footers]({{< docsref "/examples/footers/" >}}), [dropdowns]({{< docsref "/examples/dropdowns/" >}}), [list groups]({{< docsref "/examples/list-groups/" >}}), and [modals]({{< docsref "/examples/modals/" >}}).
+- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]({{< docsref "/examples#snippets" >}}).
 
 - **Removed unused positioning styles from popovers and tooltips** as these are handled solely by Popper. `$tooltip-margin` has been deprecated and set to `null` in the process.
 
@@ -152,11 +945,15 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Renamed "Navs" component page to "Navs & Tabs".
 - Renamed "Checks" page to "Checks & radios".
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
-- Added new keyboard shortcut for the search field: <kbd>Ctrl + /</kbd>.
+- Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
 ## Sass
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
+
+- <span class="badge bg-danger">Breaking</span> Renamed `$orange-2` to `$accessible-orange`.
+
+- <span class="badge bg-danger">Breaking</span> Removed `$container-fluid-margin-widths`. Please use `$container-fluid-margin` instead.
 
 - <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
@@ -236,6 +1033,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - **Links are underlined by default** (not just on hover), unless they're part of specific components.
 
+- <span class="badge bg-danger">Breaking</span> `.o-link-arrow` is renamed to `.link-chevron`. `.o-link-arrow.back` has been dropped.
+
 - **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
 
 - <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
@@ -307,6 +1106,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
 
+### Back to top
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. Back to top component doesn't use JavaScript anymore.
+
 ### Badges
 
 - <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
@@ -328,6 +1131,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
 - <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](/docs/{{< param docs_version >}}/components/buttons/#block-buttons)
+
+- <span class="badge bg-danger">Breaking</span> Social buttons now need an extra `.btn-icon`.
 
 - Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
 
@@ -385,7 +1190,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Jumbotron
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](/docs/{{< param docs_version >}}/examples/jumbotron/)
+- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
 
 ### List group
 
@@ -416,6 +1221,8 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 ### Pagination
 
+- <span class="badge bg-danger">Breaking</span> Dropped `.has-label` support.
+
 - Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
 
 - Added `transition`s to pagination links.
@@ -431,6 +1238,14 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
+
+### Stepped process
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
+
+- <span class="badge bg-danger">Breaking</span> Renamed respectively `$o-stepbar-margin-r`and `$o-stepbar-arrow-width` to `$step-item-margin-end` and `$step-item-arrow-width`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
 ### Toasts
 
@@ -471,13 +1286,15 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
 
+- <span class="badge bg-danger">Breaking</span> Dropped `.rounded`, `.rounded-top`, `.rounded-right`, `.rounded-bottom`, `.rounded-left`, `.rounded-0`, `.rounded-sm` and `.rounded-lg` to reduce bundle size since we shouldn't use those classes in Boosted.
+
 - <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
 
 - Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-italic` utility to `.fst-italic` for brevity and consistency with new `.fst-normal` utility.
 
 - Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
 

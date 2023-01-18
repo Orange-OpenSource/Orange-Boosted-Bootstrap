@@ -3,6 +3,8 @@ layout: docs
 title: Stretched link
 description: Make any HTML element or Boosted component clickable by "stretching" a nested link via CSS.
 group: helpers
+aliases:
+  - "/docs/helpers/stretched-link/"
 ---
 
 Add `.stretched-link` to a link to make its [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) clickable via a `::after` pseudo element. In most cases, this means that an element with `position: relative;` that contains a link with the `.stretched-link` class is clickable. Please note given [how CSS `position` works](https://www.w3.org/TR/CSS21/visuren.html#propdef-position), `.stretched-link` cannot be mixed with most table elements.
@@ -36,7 +38,7 @@ Most custom components do not have `position: relative` by default, so we need t
 {{< /example >}}
 
 {{< example >}}
-<div class="row g-0 bg-light position-relative">
+<div class="row g-0 bg-body-secondary position-relative">
   <div class="col-md-6 mb-md-0 p-md-4">
     {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
   </div>

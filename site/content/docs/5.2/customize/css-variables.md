@@ -3,6 +3,8 @@ layout: docs
 title: CSS variables
 description: Use Boosted's CSS custom properties for fast and forward-looking design and development.
 group: customize
+aliases:
+  - "/docs/customize/css-variables/"
 toc: true
 ---
 
@@ -13,6 +15,10 @@ Boosted includes many [CSS custom properties (variables)](https://developer.mozi
 ## Root variables
 
 Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Boosted's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
+
+### Default
+
+These CSS variables are available everywhere, regardless of color mode.
 
 ```css
 {{< root.inline >}}
@@ -35,6 +41,14 @@ Boosted 5 is increasingly making use of custom properties as local variables for
 Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}). Our [navbars also use CSS variables]({{< docsref "/components/navbar#css" >}}) as of v5.2.0. We're also using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]({{< docsref "/layout/css-grid" >}})—with more component usage coming in the future.
 
 Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
+
+### Dark text rule
+
+Using CSS variables allows a better flexibility on certain rules. This way we adapt our text variant color to our dark variants components instead of rewriting rules for each component. This process implies to override some existing CSS variables and to re-initialize those in some cases.
+
+Here is our proposal to handle the different text variants over the website:
+
+{{< scss-docs name="root-dark-rule" file="scss/_root.scss" >}}
 
 ## Prefix
 

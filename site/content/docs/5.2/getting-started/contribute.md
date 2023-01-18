@@ -4,7 +4,10 @@ title: Contribute
 description: Help develop Boosted with our documentation build scripts and tests.
 group: getting-started
 toc: true
-aliases: "/docs/5.2/getting-started/build-tools/"
+aliases:
+  - "/docs/getting-started/contribute/"
+  - "/docs/getting-started/build-tools/"
+  - "/docs/5.2/getting-started/build-tools/"
 ---
 
 ## Tooling setup
@@ -14,7 +17,7 @@ Boosted uses [npm scripts](https://docs.npmjs.com/misc/scripts/) to build the do
 To use our build system and run our documentation locally, you'll need a copy of Boosted's source files and Node. Follow these steps and you should be ready to rock:
 
 1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Boosted's sources]({{< param "download.source" >}}) or fork [Boosted's repository]({{< param repo >}}).
+2. Either [download Boosted's sources]({{< param "download.source" >}}) or fork and clone [Boosted's repository]({{< param repo >}}).
 3. Navigate to the root `/Orange-Boosted-Bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
 
 When completed, you'll be able to run the various commands provided from the command line.
@@ -28,12 +31,12 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 | --- | --- |
 | `npm start` | Compiles CSS and JavaScript, builds the documentation, and starts a local server. |
 | `npm run dist` | Creates the `dist/` directory with compiled files. Uses [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), and [terser](https://github.com/terser/terser). |
-| `npm test` | Runs tests locally after running `npm run dist` |
+| `npm test` | Runs tests locally after running `npm run dist`. |
 | `npm run docs-serve` | Builds and runs the documentation locally. |
 {{< /bs-table >}}
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ## Sass

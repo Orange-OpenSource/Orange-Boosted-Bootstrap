@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.3 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap config.js v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap config.js v5.2.3 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -20,10 +20,11 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/config.js
+   * Bootstrap (v5.2.3): util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Class definition
    */
@@ -33,50 +34,41 @@
     static get Default() {
       return {};
     }
-
     static get DefaultType() {
       return {};
     }
-
     static get NAME() {
       throw new Error('You have to implement the static method "NAME", for each component!');
     }
-
     _getConfig(config) {
       config = this._mergeConfigObj(config);
       config = this._configAfterMerge(config);
-
       this._typeCheckConfig(config);
-
       return config;
     }
-
     _configAfterMerge(config) {
       return config;
     }
-
     _mergeConfigObj(config, element) {
       const jsonConfig = index.isElement(element) ? Manipulator__default.default.getDataAttribute(element, 'config') : {}; // try to parse
 
-      return { ...this.constructor.Default,
+      return {
+        ...this.constructor.Default,
         ...(typeof jsonConfig === 'object' ? jsonConfig : {}),
         ...(index.isElement(element) ? Manipulator__default.default.getDataAttributes(element) : {}),
         ...(typeof config === 'object' ? config : {})
       };
     }
-
     _typeCheckConfig(config, configTypes = this.constructor.DefaultType) {
       for (const property of Object.keys(configTypes)) {
         const expectedTypes = configTypes[property];
         const value = config[property];
         const valueType = index.isElement(value) ? 'element' : index.toType(value);
-
         if (!new RegExp(expectedTypes).test(valueType)) {
           throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`);
         }
       }
     }
-
   }
 
   return Config;

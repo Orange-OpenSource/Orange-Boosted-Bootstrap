@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.2.0 (https://boosted.orange.com/)
+  * Boosted v5.2.3 (https://boosted.orange.com/)
   * Copyright 2015-2022 The Boosted Authors
   * Copyright 2015-2022 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap swipe.js v5.2.0 (https://boosted.orange.com/)
+  * Bootstrap swipe.js v5.2.3 (https://boosted.orange.com/)
   * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -21,10 +21,11 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/swipe.js
+   * Bootstrap (v5.2.3): util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   /**
    * Constants
    */
@@ -50,6 +51,7 @@
     leftCallback: '(function|null)',
     rightCallback: '(function|null)'
   };
+
   /**
    * Class definition
    */
@@ -58,84 +60,67 @@
     constructor(element, config) {
       super();
       this._element = element;
-
       if (!element || !Swipe.isSupported()) {
         return;
       }
-
       this._config = this._getConfig(config);
       this._deltaX = 0;
       this._supportPointerEvents = Boolean(window.PointerEvent);
-
       this._initEvents();
-    } // Getters
+    }
 
-
+    // Getters
     static get Default() {
       return Default;
     }
-
     static get DefaultType() {
       return DefaultType;
     }
-
     static get NAME() {
       return NAME;
-    } // Public
+    }
 
-
+    // Public
     dispose() {
       EventHandler__default.default.off(this._element, EVENT_KEY);
-    } // Private
+    }
 
-
+    // Private
     _start(event) {
       if (!this._supportPointerEvents) {
         this._deltaX = event.touches[0].clientX;
         return;
       }
-
       if (this._eventIsPointerPenTouch(event)) {
         this._deltaX = event.clientX;
       }
     }
-
     _end(event) {
       if (this._eventIsPointerPenTouch(event)) {
         this._deltaX = event.clientX - this._deltaX;
       }
-
       this._handleSwipe();
-
       index.execute(this._config.endCallback);
     }
-
     _move(event) {
       this._deltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this._deltaX;
     }
-
     _handleSwipe() {
       const absDeltaX = Math.abs(this._deltaX);
-
       if (absDeltaX <= SWIPE_THRESHOLD) {
         return;
       }
-
       const direction = absDeltaX / this._deltaX;
       this._deltaX = 0;
-
       if (!direction) {
         return;
       }
-
       index.execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
     }
-
     _initEvents() {
       if (this._supportPointerEvents) {
         EventHandler__default.default.on(this._element, EVENT_POINTERDOWN, event => this._start(event));
         EventHandler__default.default.on(this._element, EVENT_POINTERUP, event => this._end(event));
-
         this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
         EventHandler__default.default.on(this._element, EVENT_TOUCHSTART, event => this._start(event));
@@ -143,16 +128,14 @@
         EventHandler__default.default.on(this._element, EVENT_TOUCHEND, event => this._end(event));
       }
     }
-
     _eventIsPointerPenTouch(event) {
       return this._supportPointerEvents && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH);
-    } // Static
+    }
 
-
+    // Static
     static isSupported() {
       return 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
     }
-
   }
 
   return Swipe;

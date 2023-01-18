@@ -3,6 +3,8 @@ layout: docs
 title: Options
 description: Quickly customize Boosted with built-in variables to easily toggle global CSS preferences for controlling style and behavior.
 group: customize
+aliases:
+  - "/docs/customize/options/"
 ---
 
 Customize Boosted with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
@@ -13,6 +15,7 @@ You can find and customize these variables for key global options in Boosted's `
 | Variable                       | Values                                | Description                                                                            |
 | ------------------------------ | ------------------------------------- | -------------------------------------------------------------------------------------- |
 | `$spacer`                      | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{< docsref "/utilities/spacing" >}}). |
+| `$enable-dark-mode`            | `true` (default) or `false`           | Enables built-in [dark mode support]({{< docsref "/customize/color-modes#dark-mode" >}}) across the project and its components. |
 | `$enable-rounded`              | `true` or `false` (default)           | Enables predefined `border-radius` styles on various components. |
 | `$enable-shadows`              | `true` or `false` (default)           | Enables predefined decorative `box-shadow` styles on various components. Does not affect `box-shadow`s used for focus states. |
 | `$enable-gradients`            | `true` or `false` (default)           | Enables predefined gradients via `background-image` styles on various components. |

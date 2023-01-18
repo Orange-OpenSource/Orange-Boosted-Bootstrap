@@ -26,7 +26,7 @@
       gap: var(--#{$prefix}footer-gap);
 
       .nav-link {
-        outline-offset: 5px;
+        outline-offset: $focus-visible-outer-offset; // Override outline offset coming from .navbar-nav
 
         &.active::before {
           content: unset;

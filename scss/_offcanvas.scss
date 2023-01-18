@@ -2,6 +2,7 @@
 
 %offcanvas-css-vars {
   // scss-docs-start offcanvas-css-vars
+  --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas};
   --#{$prefix}offcanvas-width: #{$offcanvas-horizontal-width};
   --#{$prefix}offcanvas-height: #{$offcanvas-vertical-height};
   --#{$prefix}offcanvas-padding-x: #{$offcanvas-padding-x};
@@ -11,9 +12,8 @@
   --#{$prefix}offcanvas-border-width: #{$offcanvas-border-width};
   --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
-  --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas}; // Boosted mod
-  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height}; // Boosted mod
-  --#{$prefix}offcanvas-transition-duration: #{$offcanvas-transition-duration}; // Boosted mod
+  --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration ease-in-out};
+  --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
   // scss-docs-end offcanvas-css-vars
 }
 
@@ -34,7 +34,7 @@
     @include media-breakpoint-down($next) {
       position: fixed;
       bottom: 0;
-      z-index: var(--#{$prefix}offcanvas-zindex); // Boosted mod
+      z-index: var(--#{$prefix}offcanvas-zindex);
       display: flex;
       flex-direction: column;
       max-width: 100%;
@@ -44,7 +44,7 @@
       background-clip: padding-box;
       outline: 0;
       @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
-      @include transition(transform var(--#{$prefix}offcanvas-transition-duration) ease-in-out); // Boosted mod
+      @include transition(var(--#{$prefix}offcanvas-transition));
 
       &.offcanvas-start {
         top: 0;
@@ -133,15 +133,15 @@
 
   .btn-close {
     // Boosted mod: no extra padding rule
-    margin-top: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
-    margin-right: calc(var(--#{$prefix}offcanvas-padding-x) * -.5);
-    margin-bottom: calc(var(--#{$prefix}offcanvas-padding-y) * -.5);
+    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
+    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
   }
 }
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: var(--#{$prefix}offcanvas-title-line-height); // Boosted mod
+  line-height: var(--#{$prefix}offcanvas-title-line-height);
 }
 
 .offcanvas-body {

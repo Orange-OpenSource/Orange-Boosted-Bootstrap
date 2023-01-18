@@ -3,6 +3,8 @@ layout: docs
 title: Select
 description: Customize the native `<select>`s with custom CSS that changes the element's initial appearance.
 group: forms
+aliases:
+  - "/docs/forms/select/"
 toc: true
 ---
 
@@ -21,11 +23,17 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 
 ## Sizing
 
-You may also use large custom selects to match our similarly sized text inputs.
+You may also choose from small and large custom selects to match our similarly sized text inputs.
 
-<!-- Boosted mod: no .form-select-sm -->
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>

@@ -1,62 +1,47 @@
 name: Docs
 on:
   push:
+    branches:
+      - main
     paths:
       - 'js/**'
       - 'scss/**'
       - 'site/**'
-    branches:
-      - main
-      - "!dependabot/**"
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
-    branches:
-      - main
-      - "!dependabot/**"
+    types: [labeled, unlabeled, opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
+  NODE: 18
 
 jobs:
   docs:
     runs-on: ubuntu-latest
+    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
 
     steps:
-      - name: Bail early
-        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
-        run: exit 0
-
       - name: Clone repository
         uses: actions/checkout@v3
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.NODE }}"
           cache: npm
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - run: java -version
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Build docs
         run: npm run docs-build
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Validate HTML
         run: npm run docs-vnu
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@v1
@@ -65,4 +50,3 @@ jobs:
           recurse: true
           verbosity: error
           skip: "^(?!http://localhost)"
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))

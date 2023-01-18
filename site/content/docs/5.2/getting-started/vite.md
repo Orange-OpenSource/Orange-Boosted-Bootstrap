@@ -3,16 +3,24 @@ layout: docs
 title: "Boosted & Vite"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
 group: getting-started
+aliases:
+  - "/docs/getting-started/vite/"
 toc: true
-thumbnail: vite.png
+thumbnail: vite.svg
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.png" alt="Vite logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/vite.svg" alt="Vite logo" width="145" loading="lazy">
 </div>
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) for live editing.
+**Want to skip to the end?** Download the **Bootstrap** source code and working **Bootstrap** demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite). You can also [open the **Bootstrap** example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) for live editing.
+{{< /callout >}}
+
+{{< callout warning >}}
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+
+You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
@@ -37,6 +45,7 @@ We're building a Vite project with Boosted from scratch, so there are some prere
    ```sh
    npm i --save boosted @popperjs/core
    ```
+
 4. **Install additional dependency.** In addition to Vite and Boosted, we need another dependency (Sass) to properly import and bundle Boosted's CSS.
 
    ```sh
@@ -75,7 +84,7 @@ At this point, everything is in the right place, but Vite won't work because we 
 
 With dependencies installed and our project folder ready for us to start coding, we can now configure Vite and run our project locally.
 
-1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite were to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
+1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite where to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
 
    <!-- eslint-skip -->
    ```js
@@ -157,10 +166,19 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
    }
    ```
 
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+
+   ```sh
+   mkdir src/fonts
+   cp /path/HelvNeue55_W1G.woff2 src/fonts/
+   cp /path/HelvNeue75_W1G.woff2 src/fonts/
+   ```
+
+3. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
+   @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
 

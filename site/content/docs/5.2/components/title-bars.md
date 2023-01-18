@@ -3,11 +3,11 @@ layout: docs
 title: Title bars
 description: Documentation and examples for Boosted's exclusive Brand responsive title bars.
 group: components
+aliases:
+  - "/docs/components/title-bars/"
 toc: true
 added: "5.2"
 ---
-
-{{< added-in "5.2.0" >}}
 
 ## How it works
 

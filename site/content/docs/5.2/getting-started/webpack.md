@@ -3,16 +3,24 @@ layout: docs
 title: "Boosted & Webpack"
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Webpack.
 group: getting-started
+aliases:
+  - "/docs/getting-started/webpack/"
 toc: true
-thumbnail: webpack.png
+thumbnail: webpack.svg
 ---
 
 <div class="d-flex justify-content-center">
-  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.png" alt="Webpack logo" loading="lazy">
+  <img class="d-flex" src="/docs/{{< param docs_version >}}/assets/img/webpack.svg" alt="Webpack logo" width="145" loading="lazy">
 </div>
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+**Want to skip to the end?** Download the **Bootstrap** source code and working **Bootstrap** demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the **Bootstrap** example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+{{< /callout >}}
+
+{{< callout warning >}}
+**To get a working Boosted demo based on the Bootstrap ones**, you need to replace all `bootstrap` occurrences with `boosted` in `src/scss/style.scss`, `src/js/main.js` and in `package.json`.
+
+You may need to tweak a bit `src/scss/style.scss` and add a `src/fonts` directory to import font family properly in your project. Please refer to the font sub-section of [how to import Boosted](#import-boosted) for more details.
 {{< /callout >}}
 
 ## Setup
@@ -77,7 +85,7 @@ At this point, everything is in the right place, but Webpack won't work because 
 
 With dependencies installed and our project folder ready for us to start coding, we can now configure Webpack and run our project locally.
 
-1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack were to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
+1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack where to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
 
    ```js
    const path = require('path')
@@ -194,16 +202,25 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
 
    Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+
+   ```sh
+   mkdir src/fonts
+   cp /path/HelvNeue55_W1G.woff2 src/fonts/
+   cp /path/HelvNeue75_W1G.woff2 src/fonts/
+   ```
+
+3. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
+   @import "~boosted/scss/orange-helvetica";
    @import "~boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
+4. **Next we load the CSS and import Boosted's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Boosted's JS. Popper will be imported automatically through Boosted.
 
    <!-- eslint-skip -->
    ```js
@@ -231,6 +248,93 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-boosted.png" alt="Webpack dev server running with Boosted">
 
    Now you can start adding any Boosted components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Boosted's CSS and JS that you need.
+
+## Production optimizations
+
+Depending on your setup, you may want to implement some additional security and speed optimizations useful for running the project in production. Note that these optimizations are not applied on [the Webpack example project](https://github.com/twbs/examples/tree/main/webpack) and are up to you to implement.
+
+### Extracting CSS
+
+The `style-loader` we configured above conveniently emits CSS into the bundle so that manually loading a CSS file in `dist/index.html` isn't necessary. This approach may not work with a strict Content Security Policy, however, and it may become a bottleneck in your application due to the large bundle size.
+
+To separate the CSS so that we can load it directly from `dist/index.html`, use the `mini-css-extract-loader` Webpack plugin.
+
+First, install the plugin:
+
+```sh
+npm install --save-dev mini-css-extract-plugin
+```
+
+Then instantiate and use the plugin in the Webpack configuration:
+
+```diff
+--- a/webpack/webpack.config.js
++++ b/webpack/webpack.config.js
+@@ -1,8 +1,10 @@
++const miniCssExtractPlugin = require('mini-css-extract-plugin')
+ const path = require('path')
+ 
+ module.exports = {
+   mode: 'development',
+   entry: './src/js/main.js',
++  plugins: [new miniCssExtractPlugin()],
+   output: {
+     filename: "main.js",
+     path: path.resolve(__dirname, "dist"),
+@@ -18,8 +20,8 @@ module.exports = {
+         test: /\.(scss)$/,
+         use: [
+           {
+-            // Adds CSS to the DOM by injecting a `<style>` tag
+-            loader: 'style-loader'
++            // Extracts CSS for each JS file that includes CSS
++            loader: miniCssExtractPlugin.loader
+           },
+           {
+```
+
+After running `npm run build` again, there will be a new file `dist/main.css`, which will contain all of the CSS imported by `src/js/main.js`. If you view `dist/index.html` in your browser now, the style will be missing, as it is now in `dist/main.css`. You can include the generated CSS in `dist/index.html` like this:
+
+```diff
+--- a/webpack/dist/index.html
++++ b/webpack/dist/index.html
+@@ -3,6 +3,7 @@
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
++    <link rel="stylesheet" href="./main.css">
+     <title>Boosted w/ Webpack</title>
+   </head>
+   <body>
+```
+
+### Extracting SVG files
+
+Boosted's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
+
+Configure Webpack to extract inline SVG files like this:
+
+```diff
+--- a/webpack/webpack.config.js
++++ b/webpack/webpack.config.js
+@@ -16,6 +16,14 @@ module.exports = {
+   },
+   module: {
+     rules: [
++      {
++        mimetype: 'image/svg+xml',
++        scheme: 'data',
++        type: 'asset/resource',
++        generator: {
++          filename: 'icons/[hash].svg'
++        }
++      },
+       {
+         test: /\.(scss)$/,
+         use: [
+```
+
+After running `npm run build` again, you'll find the SVG files extracted into `dist/icons` and properly referenced from CSS.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

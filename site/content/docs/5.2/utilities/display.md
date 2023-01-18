@@ -3,6 +3,8 @@ layout: docs
 title: Display property
 description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 group: utilities
+aliases:
+  - "/docs/utilities/display/"
 toc: true
 ---
 
@@ -64,8 +66,8 @@ To show an element only on a given interval of screen sizes you can combine one 
 | Hidden only on sm | `.d-sm-none .d-md-block` |
 | Hidden only on md | `.d-md-none .d-lg-block` |
 | Hidden only on lg | `.d-lg-none .d-xl-block` |
-| Hidden only on xl | `.d-xl-none` |
-| Hidden only on xxl | `.d-xxl-none .d-xxl-block` |
+| Hidden only on xl | `.d-xl-none .d-xxl-block` |
+| Hidden only on xxl | `.d-xxl-none` |
 | Visible on all | `.d-block` |
 | Visible only on xs | `.d-block .d-sm-none` |
 | Visible only on sm | `.d-none .d-sm-block .d-md-none` |

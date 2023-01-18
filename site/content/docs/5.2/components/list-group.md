@@ -3,6 +3,8 @@ layout: docs
 title: List group
 description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
 group: components
+aliases:
+  - "/docs/components/list-group/"
 toc: true
 ---
 
@@ -142,6 +144,10 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
+{{< ods-incompatibility-alert >}}
+This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 {{< list-group.inline >}}
 {{- range $.Site.Data.breakpoints }}
@@ -154,7 +160,11 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 {{< /list-group.inline >}}
 {{< /example >}}
 
-## Contextual classes
+## Variants
+
+{{< callout info >}}
+**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+{{< /callout >}}
 
 Use contextual classes to style list items with a stateful background and color.
 
@@ -169,7 +179,9 @@ Use contextual classes to style list items with a stateful background and color.
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+### For links and buttons
+
+Contextual classes also work with `.list-group-item-action` for `<a>` and `<button>` elements. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
 
 {{< example >}}
 <div class="list-group">
@@ -183,12 +195,16 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## With badges
 
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -210,6 +226,10 @@ Add badges to any list group item to show unread counts, activity, and more with
 ## Custom content
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="list-group">
@@ -243,6 +263,10 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 ## Checkboxes and radios
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it does not respect the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="list-group">
@@ -297,6 +321,36 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 </ul>
 {{< /example >}}
 
+<!-- Boosted mod -->
+## Dark variant
+
+{{< added-in "5.2.1" >}}
+
+{{< callout warning >}}
+Dark variant won't support [contextual classes](#contextual-classes) until next release.
+{{< /callout >}}
+
+Add `.list-group-dark` to the `.list-group` for a dark variant.
+
+{{< example class="bg-dark" >}}
+<ul class="list-group list-group-dark">
+  <li class="list-group-item">A simple default list group item</li>
+  <li class="list-group-item active">A simple active list group item</li>
+  <li class="list-group-item disabled" aria-disabled="true">A simple disabled list group item</li>
+</ul>
+{{< /example >}}
+
+Dark variant also work with `.list-group-item-action`.
+
+{{< example class="bg-dark" >}}
+<div class="list-group list-group-dark">
+  <a class="list-group-item list-group-item-action" href="#">A simple default link list group item</a>
+  <a class="list-group-item list-group-item-action active" href="#">A simple active link list group item</a>
+  <a class="list-group-item list-group-item-action disabled">A simple disabled link list group item</a>
+</div>
+{{< /example >}}
+<!-- End mod -->
+
 ## CSS
 
 ### Variables
@@ -307,19 +361,33 @@ As part of Boosted's evolving CSS variables approach, list groups now use local 
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
+<!-- Boosted mod -->
+Customization through CSS variables can be seen on the `.list-group-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="list-group-dark-css-vars" file="scss/_list-group.scss" >}}
+<!-- End mod -->
+
 ### Sass variables
+
+Variables for all list groups:
 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+<!-- Boosted mod -->
+Variables for the [dark list group](#dark-variant):
 
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+{{< scss-docs name="list-group-dark-variables" file="scss/_variables.scss" >}}
+<!-- End mod -->
+
+### Sass mixins
+
+Used in combination with `$background-colors` to generate the [contextual variant classes](#variants) for `.list-group-item`s.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Loop
+### Sass loop
 
-Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+Loop that generates the modifier classes with an overriding of CSS variables.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
@@ -442,62 +510,26 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 ### Methods
 
-#### constructor
+{{< callout danger >}}
+{{< partial "callouts/danger-async-methods.md" >}}
+{{< /callout >}}
 
-Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
+Activates your content as a tab element.
 
-```html
-<div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
-</div>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab a:last-child')
-  const firstTab = new boosted.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+You can create a tab instance with the constructor, for example:
 
 ```js
-const tab = new boosted.Tab('#someListItem')
-
-tab.show()
+const bsTab = new boosted.Tab('#myTab')
 ```
 
-#### dispose
-
-Destroys an element's tab.
-
-#### getInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element.
-
-```js
-const tab = boosted.Tab.getInstance('#trigger') // Returns a Boosted tab instance
-```
-
-#### getOrCreateInstance
-
-*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialized.
-
-```js
-const tab = boosted.Tab.getOrCreateInstance('#trigger') // Returns a Boosted tab instance
-```
+{{< bs-table >}}
+| Method | Description |
+| --- | --- |
+| `dispose` | Destroys an element's tab. |
+| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `boosted.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Tab.getOrCreateInstance(element)`. |
+| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+{{< /bs-table >}}
 
 ### Events
 
@@ -508,7 +540,7 @@ When showing a new tab, the events fire in the following order:
 3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
 4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+If no tab was already active, then `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
 
 {{< bs-table >}}
 | Event type | Description |

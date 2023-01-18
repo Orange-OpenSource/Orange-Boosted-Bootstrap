@@ -3,7 +3,10 @@ layout: docs
 title: Checks and radios
 description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 group: forms
-aliases: "/docs/5.2/forms/checks/"
+aliases:
+  - "/docs/forms/checks/"
+  - "/docs/5.2/forms/checks/"
+  - "/docs/forms/checks-radios/"
 toc: true
 ---
 
@@ -325,21 +328,21 @@ Drop borders using `.btn-no-outline`, too.
 
 {{< example >}}
 <div class="btn-group" role="group">
-  <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off" checked>
+  <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
   <label class="btn btn-icon btn-no-outline" for="option8">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
-  <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
+  <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option9">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
-  <input type="radio" class="btn-check" name="icons" id="option10" autocomplete="off">
+  <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
   <label class="btn btn-icon btn-no-outline" for="option10">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
@@ -409,9 +412,9 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 </form>
 {{< /example >}}
 
-### Dark background
+### Dark variant
 
-Star ratings come with a dark background variant: `.star-rating-dark`.
+Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <form>
@@ -466,7 +469,13 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 
 ### Variables
 
+Variables for checks:
+
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}
+
+Variables for switches:
+
+{{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}
 
 ### Mixin
 

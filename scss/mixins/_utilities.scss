@@ -1,10 +1,10 @@
 // Boosted mod
 @function get-color-from-rgba-string($value) {
-  $prefix: "rgba(var(--bs-";
-  $rgba-string-index-before-color-name: str-index($value, $prefix);
+  $func-prefix: "rgba(var(--" + $prefix;
+  $rgba-string-index-before-color-name: str-index($value, $func-prefix);
   @if $rgba-string-index-before-color-name == 1 {
     $rgba-string-index-after-color-name: str-index($value, "-rgb");
-    @return str-slice($value, $rgba-string-index-before-color-name + str-length($prefix), $rgba-string-index-after-color-name - 1);
+    @return str-slice($value, $rgba-string-index-before-color-name + str-length($func-prefix), $rgba-string-index-after-color-name - 1);
   }
   @return undefined;
 }
@@ -98,8 +98,12 @@
                   }
                 }
               }
-              @if "transparent" != inspect($value) {
+
+              @if "transparent" != inspect($value) and type-of($value) != "string" {
                 color: color-contrast($value);
+              }
+              @else if $value == "var(--bs-secondary-bg-subtle)" or $value == "var(--bs-dark-bg-subtle)" {
+                color: var(--bs-white);
               }
             }
             @else if "color" == $property {
@@ -117,8 +121,13 @@
                   }
                 }
               }
-              @if "inherit" != inspect($value) and $accessible-orange != $value and $primary != $value and $text-muted != $value {
-                background-color: color-contrast($value);
+
+              @if $value == $white or $value == $light {
+                background: color-contrast($value);
+              } @else if $value == "var(--bs-light-text)" {
+                background: var(--bs-black);
+              } @else if $value == $body-color {
+                background: var(--bs-body-bg);
               }
             }
             // End mod
