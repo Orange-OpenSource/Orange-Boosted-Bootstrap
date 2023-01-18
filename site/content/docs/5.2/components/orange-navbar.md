@@ -9,8 +9,6 @@ toc: true
 added: "5.2"
 ---
 
-{{< added-in "5.2.0" >}}
-
 ## How it works
 
 Orange navbars are based on the [navbar]({{<docsref "/components/navbar">}}) component. They add some display management and introduce the Supra bar component.
@@ -127,7 +125,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
         <!-- Right navbar of the Supra bar -->
         <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version">EN</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
           <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
           <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>
         </ul>
@@ -171,7 +169,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
       <!-- Navbar with links -->
       <div id="global-header-1.1" class="navbar-collapse collapse global-header-1">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
         </ul>
       </div>
@@ -432,7 +430,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
     <div class="container-xxl">
       <div id="global-header-6.1" class="navbar-collapse collapse global-header-6">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Label</a></li>

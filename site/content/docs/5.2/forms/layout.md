@@ -172,10 +172,15 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ### Horizontal form label sizing
 
-Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
-<!-- Boosted mod: no .col-form-label-sm -->
 {{< example >}}
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+  <div class="col-sm-10">
+    <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+  </div>
+</div>
 <div class="row mb-3">
   <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
   <div class="col-sm-10">
@@ -289,6 +294,12 @@ You can then remix that once again with size-specific column classes.
 ## Inline forms
 
 Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-check` align properly.
+
+{{< ods-incompatibility-alert >}}
+This form variant should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">

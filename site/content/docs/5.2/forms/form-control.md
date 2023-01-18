@@ -10,6 +10,8 @@ toc: true
 
 ## Example
 
+Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+
 {{< example >}}
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -23,12 +25,12 @@ toc: true
 
 ## Sizing
 
-Set heights using classes like `.form-control-lg`.
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
-<!-- Boosted mod: no .form-control-sm -->
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
 ## Disabled
@@ -98,6 +100,10 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
   <label for="formFileDisabled" class="form-label">Disabled file input example</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
 </div>
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
 <div>
   <label for="formFileLg" class="form-label">Large file input example</label>
   <input class="form-control form-control-lg" id="formFileLg" type="file">
@@ -131,9 +137,15 @@ Learn more about [support for datalist elements](https://caniuse.com/datalist).
 </datalist>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Variables
+
+Form controls make use of a small amount of CSS variables to support custom styling across color modes.
+
+{{< scss-docs name="form-control-vars" file="scss/_root.scss" >}}
+
+### Sass variables
 
 `$input-*` are shared across most of our form controls (and not buttons).
 
