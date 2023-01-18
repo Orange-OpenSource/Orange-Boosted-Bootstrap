@@ -1644,7 +1644,8 @@ $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text)`
+$accordion-button-active-color:           var(--#{$prefix}dark-text) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text)`
+$accordion-button-hover-bg:               $gray-300 !default; // Boosted mod
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1678,7 +1679,8 @@ $accordion-dark-bg:                       $black !default; // Boosted mod
 $accordion-dark-border-color:             $gray-700 !default; // Boosted mod
 $accordion-dark-button-color:             $accordion-dark-color !default; // Boosted mod
 $accordion-dark-button-bg:                $accordion-dark-bg !default; // Boosted mod
-$accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
+$accordion-dark-button-active-color:      $white !default; // Boosted mod
+$accordion-dark-button-hover-bg:          $gray-900 !default; // Boosted mod
 // scss-docs-end accordion-dark-variables
 
 // Tooltips
