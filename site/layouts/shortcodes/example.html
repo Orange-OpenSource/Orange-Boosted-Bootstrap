@@ -17,6 +17,7 @@
 {{- $show_markup := .Get "show_markup" | default true -}}
 {{- $show_preview := .Get "show_preview" | default true -}}
 {{- $input := .Inner -}}
+{{- $content := .Inner -}}
 
 <div class="bd-example-snippet bd-code-snippet">
   {{- if eq $show_preview true -}}
@@ -28,7 +29,6 @@
   {{- if eq $show_markup true -}}
     {{- if eq $show_preview true -}}
       <!--Boosted mod: used .align-items-baseline instead of .align-items-center-->
-      <!--Boosted mod: removed .bg-light -->
       <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
         <small class="font-monospace text-muted text-uppercase">{{- $lang -}}</small>
         <div class="d-flex ms-auto">
@@ -42,7 +42,8 @@
       </div>
     {{- end -}}
 
-    {{- $content := replaceRE `<svg class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` $input -}}
+    {{- $content = replaceRE `<svg class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?<\/svg>` `<img src="..." class="$1" alt="...">` $content -}}
+    {{- $content = replaceRE `<img class="bd-placeholder-img(?:-lg)?(?: *?bd-placeholder-img-lg)? ?(.*?)".*?>` `<img src="..." class="$1" alt="...">` $content -}}
     {{- $content = replaceRE ` (class=" *?")` "" $content -}}
     {{- highlight (trim $content "\n") $lang "" -}}
   {{- end -}}

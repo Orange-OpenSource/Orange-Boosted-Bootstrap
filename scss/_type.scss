@@ -258,8 +258,7 @@ h2,
     transform: $linked-chevron-transform;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: $link-decoration;
 
     &::after {

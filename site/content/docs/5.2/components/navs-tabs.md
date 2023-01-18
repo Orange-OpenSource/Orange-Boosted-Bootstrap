@@ -230,6 +230,10 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 
 Take that same HTML, but use `.nav-pills` instead:
 
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it is a button component in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -359,6 +363,10 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {{< /example >}}
 
 ### Pills with dropdowns
+
+{{< ods-incompatibility-alert >}}
+This variant should not be used because it is a button component in the Orange Design System specifications.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -710,7 +718,7 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 ### Methods
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Activates your content as a tab element.

@@ -155,7 +155,7 @@
 @include tac("SelfLink", true) {
   position: absolute;
   right: $modal-content-padding;
-  bottom: add($spacer * -1.5, $border-width);
+  bottom: add($spacer * -1.5, var(--#{$prefix}border-width));
   padding: $spacer / 4 $spacer / 2;
   color: $white;
   background-color: $black;

@@ -11,6 +11,23 @@
     margin-left: -.25rem;
     overflow-y: auto;
   }
+
+  @include media-breakpoint-down(lg) {
+    .offcanvas-lg {
+      // Boosted mod: no `border-right-color`
+      box-shadow: $box-shadow-lg;
+    }
+  }
+}
+
+.bd-links-heading {
+  color: var(--bs-emphasis-color);
+
+  // Boosted mod
+  svg {
+    font-size: 1.5625rem;
+  }
+  // End mod
 }
 
 .bd-links-nav {
@@ -36,18 +53,10 @@
   padding: .1875rem .5rem;
   margin-top: .125rem;
   margin-left: 1.375rem; // Boosted mod: changed value
-  color: rgba($black, .65);
+  // Boosted mod: no `color`
   text-decoration: if($link-decoration == none, null, none);
-
-  // Boosted mod: no special hover, focus and active rules
 
   &.active {
     font-weight: 600;
   }
 }
-
-// Boosted mod
-.bd-links-heading svg {
-  font-size: 1.5625rem;
-}
-// End mod
