@@ -323,6 +323,10 @@
 
     &.play {
       @include button-icon($carousel-control-play-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+
+      &::after {
+        transform: translateX(1px);
+      }
     }
   }
 
