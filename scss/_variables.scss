@@ -2289,11 +2289,11 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 
 // scss-docs-start tag-variables
 $tag-gap:                           map-get($spacers, 1) !default;
-$tag-font-shift:                    $spacer * .1 !default;
 $tag-font-weight:                   $font-weight-bold !default;
 $tag-border-width:                  var(--#{$prefix}border-width) !default;
 $tag-border-radius:                 $border-radius-pill !default;
 
+$tag-font-shift:                    $spacer * .1 !default;
 $tag-padding-x:                     $spacer * .65 !default;
 $tag-padding-y:                     $spacer * .45 !default;
 $tag-icon-size:                     $spacer * 1.2 !default;
@@ -2309,6 +2309,7 @@ $tag-active-decoration-color:       $black !default;
 // scss-docs-end tag-variables
 
 // scss-docs-start tag-sm-variables
+$tag-font-shift-sm:                 $spacer * .2 !default;
 $tag-padding-x-sm:                  $spacer * .4 !default;
 $tag-padding-y-sm:                  $spacer * .25 !default;
 $tag-icon-size-sm:                  $spacer !default;

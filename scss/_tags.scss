@@ -121,6 +121,7 @@ label.tag {
 
 .tag-sm {
   // scss-docs-start tag-sm-css-vars
+  --#{$prefix}tag-font-shift: #{$tag-font-shift-sm};
   --#{$prefix}tag-padding-x: #{$tag-padding-x-sm};
   --#{$prefix}tag-padding-y: #{$tag-padding-y-sm};
   --#{$prefix}tag-font-size: #{$tag-font-size-sm};
