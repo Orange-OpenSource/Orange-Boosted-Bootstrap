@@ -1150,7 +1150,7 @@ $form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Depre
 // scss-docs-start form-switch-variables
 // Boosted mod: no $form-switch-color
 $form-switch-width:               $spacer * 3 !default; // Boosted mod
-$form-switch-padding-start:       $form-switch-width + .5rem !default;
+$form-switch-padding-start:       $form-switch-width + .625rem !default;
 $form-switch-bg-image:            var(--#{$boosted-prefix}close-icon) !default;  // Boosted mod
 $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
