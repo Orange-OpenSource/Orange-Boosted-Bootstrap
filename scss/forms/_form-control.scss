@@ -190,8 +190,23 @@ textarea {
 
 .form-control-color {
   width: $form-color-width;
-  height: $input-height;
-  padding: $input-padding-y;
+  height: $form-color-height; // Boosted mod
+  padding: $form-color-padding; // Boosted mod
+  border: 0; // Boosted mod
+  box-shadow: inset 0 0 0 2px $black; // Boosted mod
+
+  // Boosted mod
+  &:focus {
+    &[data-focus-visible-added] {
+      background-color: $black;
+      box-shadow: inset 0 0 0 2px $black;
+    }
+  }
+
+  &:hover {
+    background-color: $black;
+  }
+  // End mod
 
   &:not(:disabled):not([readonly]) {
     cursor: pointer;

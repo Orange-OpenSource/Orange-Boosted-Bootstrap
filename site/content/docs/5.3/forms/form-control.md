@@ -116,7 +116,7 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 
 {{< example >}}
 <label for="exampleColorInput" class="form-label">Color picker</label>
-<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#a885d8" title="Choose your color">
 {{< /example >}}
 
 ## Datalists

@@ -1091,7 +1091,9 @@ $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
-$form-color-width:                      3rem !default;
+$form-color-width:                      2.5rem !default; // Boosted mod
+$form-color-height:                     $form-color-width !default; // Boosted mod
+$form-color-padding:                    map-get($spacers, 2) !default; // Boosted mod
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
