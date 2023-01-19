@@ -201,8 +201,12 @@ textarea {
     }
   }
 
-  &:hover {
+  &:not(:disabled):not([readonly]):hover {
     background-color: var(--#{$prefix}body-color);
+  }
+
+  &:disabled {
+    filter: grayscale(1);
   }
   // End mod
 
