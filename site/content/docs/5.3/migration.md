@@ -109,6 +109,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
+- `.form-control-color` component has been redesigned according to UI Kit v5.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
@@ -264,6 +266,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text</code></li>
+      <li><code>--bs-form-color-disabled-color</code></li>
     </ul>
   </details>
 
@@ -355,6 +358,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$warning-border-subtle</code></li>
       <li><code>$warning-text-dark</code></li>
       <li><code>$warning-text</code></li>
+      <li><code>$form-color-disabled-color</code></li>
     </ul>
   </details>
 
