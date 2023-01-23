@@ -20,6 +20,12 @@
   > .btn.active {
     z-index: 1;
   }
+
+  // Boosted mod
+  &:focus-within {
+    z-index: 1;
+  }
+  // End mod
 }
 
 // Optional: Group multiple button groups together for a toolbar
@@ -39,7 +45,7 @@
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn,
   > .btn-group:not(:first-child) {
-    margin-left: -$btn-border-width;
+    margin-left: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners
@@ -73,88 +79,50 @@
 //
 
 .dropdown-toggle-split {
-  min-width: $dropdown-padding-x * 2 + $caret-width * 2; // Boosted mod
-  padding-right: subtract($dropdown-padding-x, $border-width);
-  padding-left: subtract($dropdown-padding-x, $border-width);
-  border-color: $black;
+  min-width: add($dropdown-padding-x * 2, calc($caret-width * 2)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  padding-right: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
+  padding-left: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
+  border-color: currentcolor; // Boosted mod
 
   // Boosted mod
-  &:not(:hover):not(:focus):not(:active) {
-    border-left-color: transparent;
-
-    &.btn-inverse {
-      color: $white;
-      background-color: $black;
-      border-color: $white;
+  .btn-group:not(.dropstart) &,
+  .dropstart & ~ .btn {
+    &:not(:hover):not(:focus):not(:active) {
+      border-left-color: transparent;
 
       &::before {
-        background-color: $black;
+        position: absolute;
+        top: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        bottom: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        left: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        width: $btn-border-width;
+        color: inherit;
+        content: "";
+        background:
+          linear-gradient(
+            currentcolor $btn-border-width,
+            transparent $btn-border-width,
+            transparent map-get($spacers, 1),
+            currentcolor map-get($spacers, 1),
+            currentcolor subtract(100%, map-get($spacers, 1)),
+            transparent subtract(100%, map-get($spacers, 1)),
+            transparent subtract(100%, $btn-border-width),
+            currentcolor subtract(100%, $btn-border-width)
+          );
       }
     }
   }
 
-  // TODO: we should avoid using !important and find a better selector
-  &:active,
-  &.active {
-    border-left: $border-width solid $black !important; // stylelint-disable-line declaration-no-important
-
-    &.btn-inverse {
-      border-left: $border-width solid $primary !important; // stylelint-disable-line declaration-no-important
-    }
-  }
-
-  &:not(:focus):not(:active) {
-    &::before {
-      position: absolute;
-      top: -$border-width;
-      bottom: -$border-width;
-      left: -$border-width;
-      width: $border-width;
-      color: $black;
-      content: "";
-      background:
-        linear-gradient(
-          currentcolor $border-width,
-          transparent $border-width,
-          transparent $border-width * 2.5,
-          currentcolor $border-width * 2.5,
-          currentcolor subtract(100%, $border-width * 2.5),
-          transparent subtract(100%, $border-width * 2.5),
-          transparent subtract(100%, $border-width),
-          currentcolor subtract(100%, $border-width)
-        );
-    }
-
-    &.btn-inverse::before {
-      color: $white;
-    }
-  }
-
   .btn:active + &,
-  .btn.active + & {
+  .btn.active + &,
+  &:active + * + .btn,
+  &.active + * + .btn {
     border-color: $primary;
-
-    &:focus {
-      border-color: $black;
-    }
-  }
-
-  .btn:disabled + &,
-  .btn.disabled + & {
-    border-color: $gray-500;
-
-    &::before {
-      color: $gray-500;
-    }
   }
 
   .btn-group.show > &:not(:focus):not(:active)::before {
     color: $primary;
     background-color: currentcolor;
-  }
-
-  .dropstart > &:not(:hover):not(:focus):not(:active) {
-    border-left-color: $black;
   }
   // End mod
 
@@ -208,7 +176,7 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: -$btn-border-width;
+    margin-top: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners

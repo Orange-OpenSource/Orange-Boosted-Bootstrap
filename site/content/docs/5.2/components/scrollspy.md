@@ -55,7 +55,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
       </li>
     </ul>
   </nav>
-  <div class="scrollspy-example p-3 rounded-2" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+  <div class="scrollspy-example p-3" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
     <h4 id="scrollspyHeading1">First heading</h4>
     <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
     <h4 id="scrollspyHeading2">Second heading</h4>
@@ -92,7 +92,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     </li>
   </ul>
 </nav>
-<div class="scrollspy-example p-3 rounded-2" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+<div class="scrollspy-example p-3" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Second heading</h4>
@@ -405,8 +405,8 @@ To keep backwards compatibility, we will continue to parse a given `offset` to `
 | Method | Description |
 | --- | --- |
 | `dispose` | Destroys an element's scrollspy. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method to get the scrollspy instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn't initialized. |
+| `getInstance` | _Static_ method to get the scrollspy instance associated with a DOM element. |
+| `getOrCreateInstance` | _Static_ method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn't initialized. |
 | `refresh` | When adding or removing elements in the DOM, you'll need to call the refresh method. |
 {{< /bs-table >}}
 
