@@ -200,8 +200,15 @@ textarea {
   }
 
   &:disabled {
-    filter: grayscale(1);
     border-color: $form-color-disabled-color;
+
+    &::-moz-color-swatch {
+      filter: brightness(0) invert(1) brightness(.8);
+    }
+
+    &::-webkit-color-swatch {
+      filter: brightness(0) invert(1) brightness(.8);
+    }
   }
   // End mod
 
