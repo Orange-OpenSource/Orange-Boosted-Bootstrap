@@ -311,7 +311,6 @@
   transform: translateX(-50%);
 
   .carousel-control-play-pause {
-    margin-right: $carousel-control-pause-button-margin-end;
     margin-bottom: $spacer;
     background: rgba($carousel-indicator-active-bg, .5);
     border: 0;
@@ -332,6 +331,7 @@
 
   .carousel-indicators {
     position: initial;
+    margin-left: $carousel-control-pause-indicators-margin-start;
     transform: none;
   }
 }
