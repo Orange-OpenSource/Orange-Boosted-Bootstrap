@@ -1723,10 +1723,10 @@ $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.
 // scss-docs-start popover-variables
 $popover-font-size:                 $font-size-sm !default;
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
-$popover-bg:                        $gray-400 !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
+$popover-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              var(--#{$prefix}border-width) !default;
-$popover-border-color:              $popover-bg !default; // Boosted mod
+$popover-border-color:              $black !default; // Boosted mod
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc($popover-border-radius - $popover-border-width) !default; // stylelint-disable-line function-disallowed-list
 $popover-box-shadow:                null !default;
