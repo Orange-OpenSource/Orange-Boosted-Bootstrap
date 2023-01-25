@@ -1726,7 +1726,7 @@ $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              var(--#{$prefix}border-width) !default;
-$popover-border-color:              $black !default; // Boosted mod
+$popover-border-color:              $gray-500 !default; // Boosted mod
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc($popover-border-radius - $popover-border-width) !default; // stylelint-disable-line function-disallowed-list
 $popover-box-shadow:                null !default;
