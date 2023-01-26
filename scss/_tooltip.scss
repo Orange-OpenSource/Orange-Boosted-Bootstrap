@@ -51,6 +51,7 @@
   }
 }
 
+// Boosted mod: new design for tooltips with a different color for borders
 .bs-tooltip-top .tooltip-arrow {
   bottom: 0;
 
@@ -136,6 +137,7 @@
 }
 
 /* rtl:end:ignore */
+// End mod
 
 .bs-tooltip-auto {
   &[data-popper-placement^="top"] {
