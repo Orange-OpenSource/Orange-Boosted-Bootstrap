@@ -16,6 +16,7 @@
   --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
   --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
   --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
+  --#{$prefix}tooltip-arrow-border: var(--#{$prefix}tooltip-border-color); // Boosted mod
   // scss-docs-end tooltip-css-vars
 
   z-index: var(--#{$prefix}tooltip-zindex);
@@ -62,7 +63,7 @@
 
   &::before {
     bottom: 0;
-    border-top-color: var(--#{$prefix}tooltip-border-color);
+    border-top-color: var(--#{$prefix}--#{$prefix}tooltip-arrow-border);
   }
 
   &::after {
