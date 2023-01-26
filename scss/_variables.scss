@@ -1701,7 +1701,9 @@ $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$tooltip-bg:                        $gray-400 !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$tooltip-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$tooltip-border-width:              var(--#{$prefix}border-width) !default; // Boosted mod
+$tooltip-border-color:              $black !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
 $tooltip-padding-y:                 $spacer * .5 !default;
