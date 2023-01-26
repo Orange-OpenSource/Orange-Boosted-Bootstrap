@@ -110,6 +110,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
+- **Popovers and tooltips**
+  - <span class="badge bg-success">Warning</span> Popovers and tooltips have been redesigned according to UI Kit v5.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
@@ -285,6 +288,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text</code></li>
+      <li><code>--bs-tooltip-border-width</code></li>
+      <li><code>--bs-tooltip-border-color</code></li>
+      <li><code>--bs-tooltip-arrow-border</code></li>
     </ul>
   </details>
 
@@ -387,6 +393,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$warning-border-subtle</code></li>
       <li><code>$warning-text-dark</code></li>
       <li><code>$warning-text</code></li>
+      <li><code>$tooltip-border-width</code></li>
+      <li><code>$tooltip-border-color</code></li>
     </ul>
   </details>
 
