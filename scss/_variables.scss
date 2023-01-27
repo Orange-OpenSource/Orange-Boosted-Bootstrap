@@ -1702,7 +1702,7 @@ $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
-$tooltip-border-width:              var(--#{$prefix}border-width) !default; // Boosted mod
+$tooltip-border-width:              map-get($border-widths, 1) !default; // Boosted mod
 $tooltip-border-color:              $black !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
@@ -1736,14 +1736,16 @@ $popover-box-shadow:                null !default;
 $popover-header-font-size:          $font-size-base !default;
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          $spacer * .5 !default;
-$popover-header-padding-x:          $spacer * .5 !default;
+$popover-header-padding-top:        $spacer !default; // Boosted mod
+$popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
+$popover-header-padding-x:          $spacer !default;
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-top:          0 !default;  // Boosted mod
+$popover-body-padding-bottom:       $spacer !default; // Boosted mod
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:               $spacer * .5 !default;
+$popover-arrow-width:               $spacer !default; // Boosted mod
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
 // scss-docs-end popover-variables
 
