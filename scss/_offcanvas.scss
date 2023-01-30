@@ -149,3 +149,9 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
 }
+
+.offcanvas-dark {
+  --#{$prefix}offcanvas-color: #{$white};
+  --#{$prefix}offcanvas-bg: #{$gray-900};
+  --#{$prefix}offcanvas-border-color: #{$gray-700};
+}

@@ -1,67 +1,114 @@
 .side-nav {
   // scss-docs-start side-nav-css-vars
-  --#{$prefix}side-nav-width: #{$side-nav-width};
-  --#{$prefix}side-nav-color: #{$side-nav-color};
-  --#{$prefix}side-nav-bg: #{$side-nav-bg};
-  --#{$prefix}side-nav-border-width: #{$side-nav-border-width};
-  --#{$prefix}side-nav-border-color: #{$side-nav-border-color};
-  --#{$prefix}side-nav-icon-size: #{$side-nav-icon-size};
-  --#{$prefix}side-nav-icon-margin-x: #{$side-nav-icon-margin-x};
-  --#{$prefix}side-nav-item-height: #{$side-nav-item-height};
-  --#{$prefix}side-nav-item-padding-left: #{$side-nav-item-padding-left};
-  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg};
-  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg};
-  --#{$prefix}side-nav-item-active-border-color: #{$side-nav-item-active-border-color};
+  --#{$prefix}side-nav-min-width: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */ // Needed due to an FF issue with certain numbers in `linear-gradient` (seems to be a known issue)
+  --#{$prefix}side-nav-max-width: 300px;
+  --#{$prefix}side-nav-bg: #{$white};
+  --#{$prefix}side-nav-border-width: #{1px};
+  --#{$prefix}side-nav-border-color: #{$gray-500};
+  --#{$prefix}side-nav-item-min-height: #{$spacer * 2};
+  --#{$prefix}side-nav-item-icon-size: #{$spacer * 1.25};
+  --#{$prefix}side-nav-item-spacing: 15px;
+  --#{$prefix}side-nav-item-padding-start: 15px;
+  --#{$prefix}side-nav-item-color: #{$black};
+  --#{$prefix}side-nav-item-hover-bg: #{$gray-300};
+  --#{$prefix}side-nav-item-active-bg: #{$gray-400};
   // scss-docs-end side-nav-css-vars
-  --#{$prefix}offcanvas-width: var(--#{$prefix}side-nav-width);
-  --#{$prefix}offcanvas-padding-x: 0;
-  --#{$prefix}offcanvas-padding-y: 0;
-  --#{$prefix}offcanvas-border-width: 0;
 
+  position: relative;
   flex-shrink: 0;
-  width: var(--#{$prefix}side-nav-width);
+  min-width: add(var(--#{$prefix}side-nav-min-width), var(--#{$prefix}side-nav-border-width));
   height: 100%;
-  overflow: hidden auto;
-  scrollbar-width: thin;
 
-  &::-webkit-scrollbar {
-    width: 9px;
-    background-color: $gray-300;
+  :focus {
+    &[data-focus-visible-added] {
+      outline-offset: -$focus-visible-outer-width;
+      box-shadow: inset 0 0 0 add($focus-visible-inner-width, $focus-visible-outer-width) var(--#{$prefix}focus-visible-inner-color);
+    }
   }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: $gray-500;
+  .accordion {
+    --#{$prefix}accordion-bg: transparent;
+    --#{$prefix}accordion-border-width: 0;
+    --#{$prefix}accordion-body-padding-top: 0;
+    --#{$prefix}accordion-body-padding-end: 0;
+    --#{$prefix}accordion-body-padding-bottom: 0;
+    --#{$prefix}accordion-body-padding-start: 0;
+
+    .accordion-button::after {
+      margin-right: var(--#{$prefix}side-nav-item-spacing);
+    }
+
+    .accordion-body {
+      --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */
+
+      .accordion-body {
+        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */
+      }
+    }
   }
 
-  svg,
-  img {
-    width: var(--#{$prefix}side-nav-icon-size);
-    min-width: var(--#{$prefix}side-nav-icon-size);
-    height: var(--#{$prefix}side-nav-icon-size);
-    margin-right: var(--#{$prefix}side-nav-icon-margin-x);
-  }
-
-  .offcanvas-header,
-  .offcanvas-body > :not(.collapse-horizontal) {
-    width: 100%;
+  > * {
+    position: absolute;
+    overflow: hidden;
     background: var(--#{$prefix}side-nav-bg);
     border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
   }
 
-  .offcanvas-body,
-  .offcanvas-body > :not(.collapse-horizontal) {
-    min-width: var(--#{$prefix}side-nav-width);
-    min-height: 100%;
-    background: var(--#{$prefix}side-nav-bg);
+  &.side-nav-static > * {
+    position: relative;
   }
 
-  .offcanvas-body {
-    min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
-    scrollbar-width: thin;
+  .side-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: var(--#{$prefix}side-nav-min-width);
+    min-height: var(--#{$prefix}side-nav-item-min-height);
+    padding: 8px 0 10px var(--#{$prefix}side-nav-item-padding-start);
+    margin: 0;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: var(--#{$prefix}side-nav-item-color);
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
 
-    @include media-breakpoint-up(lg) {
-      min-height: 100%;
+    &.active,
+    &.active-parent,
+    &:active {
+      background-color: var(--#{$prefix}side-nav-item-active-bg);
     }
+
+    &:hover {
+      background-color: var(--#{$prefix}side-nav-item-hover-bg);
+    }
+
+    &.active,
+    &.active-parent.collapsed {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        content: "";
+        background-color: $brand-orange;
+      }
+    }
+
+    svg,
+    img {
+      width: var(--#{$prefix}side-nav-item-icon-size);
+      min-width: var(--#{$prefix}side-nav-item-icon-size);
+      height: var(--#{$prefix}side-nav-item-icon-size);
+      margin: -8px subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) -10px 0;
+    }
+  }
+
+  .side-nav-scrollable {
+    height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
+    overflow: hidden auto;
+    scrollbar-width: thin;
 
     &::-webkit-scrollbar {
       width: 9px;
@@ -72,160 +119,99 @@
       background-color: $gray-500;
     }
   }
+}
 
-  .accordion {
-    --#{$prefix}accordion-border-width: 0;
-    --#{$prefix}accordion-body-padding-x: 0;
-    --#{$prefix}accordion-body-padding-y: 0;
-    --#{$prefix}accordion-btn-font-size: #{$font-size-base};
-    --#{$prefix}accordion-btn-font-weight: #{$font-weight-normal};
+.side-nav-toggle {
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}side-nav-min-width);
+  height: var(--#{$prefix}side-nav-item-min-height);
+  background-color: transparent;
+  border: 0;
 
-    .accordion-button::after {
-      margin-right: 15px;
-    }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--#{$prefix}side-nav-item-min-height);
+    content: "";
+  }
 
-    .accordion-body {
-      --#{$prefix}side-nav-item-padding-left: calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2); // stylelint-disable-line function-disallowed-list
+  &::after {
+    margin-right: 1px;
+    content: "";
+    border: 7px solid transparent;
+    border-right-color: var(--#{$prefix}side-nav-item-color);
+    border-left: 0;
+    // @include transition(transform .35s ease);
+  }
 
-      .accordion-body {
-        --#{$prefix}side-nav-item-padding-left: calc(var(--#{$prefix}side-nav-icon-size) * 2 + var(--#{$prefix}side-nav-icon-margin-x) * 3); // stylelint-disable-line function-disallowed-list
+  &.collapsed::after {
+    margin-left: 3px;
+    transform: rotate(180deg);
+  }
+}
+
+.side-nav-content {
+  display: flex;
+  height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $infix: breakpoint-infix($next, $grid-breakpoints);
+
+  .offcanvas#{$infix} {
+    @include media-breakpoint-down($next) {
+      .side-nav > * {
+        border: 0;
+      }
+
+      .side-nav-content {
+        height: 100%;
       }
     }
   }
+}
 
-  .tab-content { // to change after #1427 is merged
-    padding: 0;
-    border: 0;
+.side-nav-accordion {
+  > * {
+    width: subtract(var(--#{$prefix}side-nav-max-width), var(--#{$prefix}side-nav-border-width));
   }
+}
 
+.side-nav-collapsible {
   .collapse-horizontal {
-    height: 0;
-    min-height: unset;
-    margin-left: var(--#{$prefix}side-nav-width);
+    margin-left: var(--#{$prefix}side-nav-min-width);
 
     > * {
-      width: calc(var(--#{$prefix}offcanvas-width) - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
-      max-width: calc(100vw - var(--#{$prefix}side-nav-border-width) * 2 - var(--#{$prefix}side-nav-width)); // stylelint-disable-line function-disallowed-list
-    }
-
-    &:not(.show):not(.collapsing) + * .tab-content {
-      display: none;
+      width: subtract(subtract(var(--#{$prefix}side-nav-max-width), var(--#{$prefix}side-nav-min-width)), var(--#{$prefix}side-nav-border-width));
+      height: 0;
     }
   }
 
-  .side-nav-item { // Here to be more specific than other classes
-    display: flex;
-    align-items: center;
+  .side-nav-content {
+    position: absolute;
+    flex-direction: column;
     width: 100%;
-    min-height: var(--#{$prefix}side-nav-item-height);
-    padding: 10px 0 12px var(--#{$prefix}side-nav-item-padding-left);
-    margin: 0;
-    overflow: hidden;
-    color: var(--#{$prefix}side-nav-color);
-    text-decoration: none;
-    background-color: var(--#{$prefix}side-nav-bg);
-    border: 0;
-
-    &:hover {
-      background-color: var(--#{$prefix}side-nav-item-hover-bg);
-    }
-
-    &.active-parent.collapsed,
-    &.active {
-      background: linear-gradient(to right, var(--#{$prefix}side-nav-item-active-border-color), var(--#{$prefix}side-nav-item-active-border-color) 4px, var(--#{$prefix}side-nav-item-active-bg) 4px, var(--#{$prefix}side-nav-item-active-bg));
-    }
-
-    &.active-parent {
-      background-color: var(--#{$prefix}side-nav-item-active-bg);
-    }
   }
+}
 
-  .side-nav-collapse {
-    display: none;
-    justify-content: end;
-    width: 100%;
-    padding-left: 0;
-    background: unset !important; // stylelint-disable-line declaration-no-important
-    @include caret(start);
+.side-nav-content-with-drawer {
+  background: linear-gradient(to right, #{$gray-900} 0%, #{$gray-900} 54px, #{$white} 54px, #{$white} 100%); // Needed because is used out of the side-nav context
 
-    @include media-breakpoint-up(lg) {
-      display: flex;
-    }
-
-    &::before {
-      margin-right: 23px;
-      border-right-color: var(--#{$prefix}side-nav-color);
-      @include transition(transform .35s ease);
-    }
-
-    &.collapsed::before {
-      transform: rotateZ(180deg);
-    }
-  }
-
-  [data-focus-visible-added] {
-    z-index: 3;
-    outline: var(--#{$prefix}side-nav-item-active-border-color) solid 3px;
-    outline-offset: -3px;
+  .side-nav-toggle.collapsed::after {
+    --#{$prefix}side-nav-item-color: #{$white};
   }
 }
 
 .side-nav-dark {
   // scss-docs-start side-nav-dark-css-vars
-  --#{$prefix}side-nav-color: #{$side-nav-dark-color};
-  --#{$prefix}side-nav-bg: #{$side-nav-dark-bg};
-  --#{$prefix}side-nav-border-color: #{$side-nav-dark-border-color};
-  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-dark-item-hover-bg};
-  --#{$prefix}side-nav-item-active-bg: #{$side-nav-dark-item-active-bg};
+  --#{$prefix}side-nav-bg: #{$gray-900};
+  --#{$prefix}side-nav-border-color: #{$gray-700};
+  --#{$prefix}side-nav-item-color: #{$white};
+  --#{$prefix}side-nav-item-hover-bg: #{$black};
+  --#{$prefix}side-nav-item-active-bg: #{$gray-700};
   // scss-docs-end side-nav-dark-css-vars
-}
-
-.side-nav-collapsible {
-  // scss-docs-start side-nav-collapsible-css-vars
-  --#{$prefix}side-nav-width: #{$side-nav-collapsible-closed-width};
-  --#{$prefix}offcanvas-width: #{$side-nav-collapsible-opened-width};
-  // scss-docs-end side-nav-collapsible-css-vars
-
-  .offcanvas-body {
-    > :not(.collapse-horizontal) {
-      min-height: subtract(100%, var(--#{$prefix}side-nav-item-height));
-    }
-
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-      min-height: 100%;
-      overflow: hidden auto;
-
-      > :not(.collapse-horizontal) {
-        min-height: 100%;
-      }
-    }
-  }
-}
-
-.side-nav-collapsible-content {
-  // scss-docs-start side-nav-collapsible-content-css-vars
-  --#{$prefix}side-nav-bg: #{$side-nav-collapsible-content-bg};
-  --#{$prefix}side-nav-border-color: #{$side-nav-collapsible-content-border-color};
-  --#{$prefix}offcanvas-width: #{$side-nav-collapsible-content-opened-width};
-  // scss-docs-end side-nav-collapsible-content-css-vars
-
-  .offcanvas-header,
-  .show + * {
-    --#{$prefix}side-nav-border-color: #{$gray-500};
-  }
-
-  .side-nav-collapse.collapsed::before {
-    border-right-color: $white;
-  }
-}
-
-.side-nav-static {
-  width: auto;
-
-  .offcanvas-body {
-    @include media-breakpoint-up(lg) {
-      position: relative;
-    }
-  }
 }

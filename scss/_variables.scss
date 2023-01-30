@@ -2286,31 +2286,31 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 
 //// Side navigation
 // scss-docs-start side-nav-variables
-$side-nav-width:                            $spacer * 15 !default;
-$side-nav-color:                            $black !default;
-$side-nav-bg:                               $white !default;
-$side-nav-border-width:                     map-get($border-widths, 1) !default;
-$side-nav-border-color:                     $gray-500 !default;
-$side-nav-icon-size:                        $spacer * 1.25 !default;
-$side-nav-icon-margin-x:                    15px !default;
-$side-nav-item-height:                      $spacer * 2 !default;
-$side-nav-item-padding-left:                $side-nav-icon-margin-x !default;
-$side-nav-item-hover-bg:                    $gray-300 !default;
-$side-nav-item-active-bg:                   $gray-400 !default;
-$side-nav-item-active-border-color:         var(--#{$prefix}link-hover-color) !default;
+// $side-nav-width:                            $spacer * 15 !default;
+// $side-nav-color:                            $black !default;
+// $side-nav-bg:                               $white !default;
+// $side-nav-border-width:                     map-get($border-widths, 1) !default;
+// $side-nav-border-color:                     $gray-500 !default;
+// $side-nav-icon-size:                        $spacer * 1.25 !default;
+// $side-nav-icon-margin-x:                    15px !default;
+// $side-nav-item-height:                      $spacer * 2 !default;
+// $side-nav-item-padding-left:                $side-nav-icon-margin-x !default;
+// $side-nav-item-hover-bg:                    $gray-300 !default;
+// $side-nav-item-active-bg:                   $gray-400 !default;
+// $side-nav-item-active-border-color:         var(--#{$prefix}link-hover-color) !default;
 
-$side-nav-collapsible-closed-width:         calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2) !default; // stylelint-disable-line function-disallowed-list
-$side-nav-collapsible-opened-width:         $spacer * 15 !default;
+// $side-nav-collapsible-closed-width:         calc(var(--#{$prefix}side-nav-icon-size) + var(--#{$prefix}side-nav-icon-margin-x) * 2) !default; // stylelint-disable-line function-disallowed-list
+// $side-nav-collapsible-opened-width:         $spacer * 15 !default;
 
-$side-nav-collapsible-content-bg:           linear-gradient(to right, $gray-900, $gray-900 var(--#{$prefix}side-nav-width), $white var(--#{$prefix}side-nav-width)) !default;
-$side-nav-collapsible-content-border-color: $gray-700 !default;
-$side-nav-collapsible-content-opened-width: $spacer * 16.25 !default;
+// $side-nav-collapsible-content-bg:           linear-gradient(to right, $gray-900, $gray-900 var(--#{$prefix}side-nav-width), $white var(--#{$prefix}side-nav-width)) !default;
+// $side-nav-collapsible-content-border-color: $gray-700 !default;
+// $side-nav-collapsible-content-opened-width: $spacer * 16.25 !default;
 
-$side-nav-dark-color:                       $white !default;
-$side-nav-dark-bg:                          $gray-900 !default;
-$side-nav-dark-border-color:                $gray-700 !default;
-$side-nav-dark-item-hover-bg:               $black !default;
-$side-nav-dark-item-active-bg:              $gray-700 !default;
+// $side-nav-dark-color:                       $white !default;
+// $side-nav-dark-bg:                          $gray-900 !default;
+// $side-nav-dark-border-color:                $gray-700 !default;
+// $side-nav-dark-item-hover-bg:               $black !default;
+// $side-nav-dark-item-active-bg:              $gray-700 !default;
 // scss-docs-end side-nav-variables
 // End mod
 
