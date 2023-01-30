@@ -1266,7 +1266,7 @@ Dark variant can be applied on root of any example except the [collapsible side 
                 <div class="accordion-body">
                   <div class="accordion" id="dashboardAccordionDark">
                     <div class="accordion-item">
-                      <h4 class="accordion-header" id="overviewHeader">
+                      <h4 class="accordion-header" id="overviewHeaderDark">
                         <button class="accordion-button side-nav-item fw-normal active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCollapseDark" aria-expanded="true" aria-controls="overviewCollapseDark">
                           Overview
                         </button>
