@@ -291,6 +291,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-tooltip-border-width</code></li>
       <li><code>--bs-tooltip-border-color</code></li>
       <li><code>--bs-tooltip-arrow-border</code></li>
+      <li><code>--bs-popover-body-padding</code></li>
+      <li><code>--bs-popover-body-padding-top</code></li>
+      <li><code>--bs-popover-body-padding-bottom</code></li>
     </ul>
   </details>
 
@@ -395,6 +398,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$warning-text</code></li>
       <li><code>$tooltip-border-width</code></li>
       <li><code>$tooltip-border-color</code></li>
+      <li><code>$popover-body-padding</code></li>
+      <li><code>$popover-body-padding-top</code></li>
+      <li><code>$popover-body-padding-bottom</code></li>
     </ul>
   </details>
 
