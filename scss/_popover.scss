@@ -19,6 +19,7 @@
   --#{$prefix}popover-body-padding-x: #{$popover-body-padding-x};
   --#{$prefix}popover-body-padding-top: #{$popover-body-padding-top}; // Boosted mod
   --#{$prefix}popover-body-padding-bottom: #{$popover-body-padding-bottom}; // Boosted mod
+  --#{$prefix}popover-body-padding: #{$popover-body-padding}; // Boosted mod
   --#{$prefix}popover-body-color: #{$popover-body-color};
   --#{$prefix}popover-arrow-width: #{$popover-arrow-width};
   --#{$prefix}popover-arrow-height: #{$popover-arrow-height};
@@ -194,9 +195,15 @@
   &:empty {
     display: none;
   }
+
+  // Boosted mod: popover body special padding when following a popover header
+  + .popover-body {
+    padding: var(--#{$prefix}popover-body-padding-top) var(--#{$prefix}popover-body-padding-x) var(--#{$prefix}popover-body-padding-bottom);
+  }
+  // End mod
 }
 
 .popover-body {
-  padding: var(--#{$prefix}popover-body-padding-top) var(--#{$prefix}popover-body-padding-x) var(--#{$prefix}popover-body-padding-bottom); // Boosted mod
+  padding: var(--#{$prefix}popover-body-padding); // Boosted mod
   color: var(--#{$prefix}popover-body-color);
 }

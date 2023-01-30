@@ -1744,6 +1744,7 @@ $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-top:          0 !default;  // Boosted mod
 $popover-body-padding-bottom:       $spacer !default; // Boosted mod
 $popover-body-padding-x:            $popover-header-padding-x !default;
+$popover-body-padding:              $popover-header-padding-top !default; // Boosted mod
 
 $popover-arrow-width:               $spacer !default; // Boosted mod
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
