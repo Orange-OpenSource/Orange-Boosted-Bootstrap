@@ -230,8 +230,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-form-check-bg</code></li>
-      <li><code>--bs-form-color-disabled-background-swatch</code></li>
-      <li><code>--bs-form-color-disabled-border-color</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
       <li><code>--bs-form-select-bg-img</code></li>
