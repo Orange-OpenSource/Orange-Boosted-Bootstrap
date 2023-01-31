@@ -230,6 +230,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-form-check-bg</code></li>
+      <li><code>--bs-form-color-disabled-background-swatch</code></li>
+      <li><code>--bs-form-color-disabled-border-color</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
       <li><code>--bs-form-select-bg-img</code></li>
@@ -266,7 +268,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text</code></li>
-      <li><code>--bs-form-color-disabled-color</code></li>
     </ul>
   </details>
 
@@ -310,6 +311,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>
+      <li><code>$form-color-disabled-background-swatch</code></li>
+      <li><code>$form-color-disabled-border-color</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
@@ -358,7 +361,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$warning-border-subtle</code></li>
       <li><code>$warning-text-dark</code></li>
       <li><code>$warning-text</code></li>
-      <li><code>$form-color-disabled-color</code></li>
     </ul>
   </details>
 
