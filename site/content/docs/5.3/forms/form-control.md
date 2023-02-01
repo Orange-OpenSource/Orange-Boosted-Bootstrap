@@ -120,7 +120,7 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
   <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#a885d8" title="Choose your color">
 </div >
 
-<div class="mb-3">
+<div>
   <label for="exampleDisabledColorInput" class="form-label is-disabled">Disabled color picker</label>
   <input type="color" class="form-control form-control-color" id="exampleDisabledColorInput" value="#a885d8" title="Choose your color" disabled>
 </div>
