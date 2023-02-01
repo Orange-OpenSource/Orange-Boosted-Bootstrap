@@ -187,7 +187,7 @@
   display: flex;
   justify-content: center;
   padding: $carousel-indicators-padding-y 0; // Boosted mod
-  margin-bottom: $spacer; // Boosted mod
+  margin-bottom: $carousel-indicators-spacing; // Boosted mod
   list-style: none;
   background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
   transform: translateX(-50%); // Boosted mod
@@ -301,7 +301,8 @@
   }
 }
 
-// Boosted mod: specif styles when pause/play button is present
+/* rtl:end:ignore */
+
 .carousel-indicators-wrapper {
   position: absolute;
   bottom: 0;
@@ -311,7 +312,7 @@
   transform: translateX(-50%);
 
   .carousel-control-play-pause {
-    margin-bottom: $spacer;
+    margin-bottom: $carousel-indicators-spacing;
     background: rgba($carousel-indicator-active-bg, .5);
     border: 0;
     @include border-radius($spacer, $spacer);
@@ -331,15 +332,11 @@
 
   .carousel-indicators {
     position: initial;
-    margin-left: $carousel-control-pause-indicators-margin-start;
+    margin-left: $carousel-control-pause-indicators-spacing;
     transform: none;
   }
 }
 // End mod
-
-/* rtl:end:ignore */
-// End mod
-
 
 // Optional captions
 //

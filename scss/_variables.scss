@@ -2018,6 +2018,7 @@ $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
 $carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;
+$carousel-indicators-spacing:           $spacer !default;
 // End mod
 
 $carousel-caption-width:             70% !default;
@@ -2032,11 +2033,11 @@ $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
-$carousel-control-pause-indicators-margin-start: 10px !default;
-$carousel-control-pause-icon:                    $pause-icon !default;
-$carousel-control-play-icon:                     $play-icon !default;
-$carousel-control-pause-button-size:             .75rem !default;
-$carousel-control-pause-icon-size:               .75rem .75rem !default;
+$carousel-control-pause-indicators-spacing: 10px !default;
+$carousel-control-pause-icon:               $pause-icon !default;
+$carousel-control-play-icon:                $play-icon !default;
+$carousel-control-pause-button-size:        .75rem !default;
+$carousel-control-pause-icon-size:          .75rem .75rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;
