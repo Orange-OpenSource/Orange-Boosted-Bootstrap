@@ -9,23 +9,28 @@ added: "5.3"
 
 ## How it works
 
+Our side navigation is basically a `<nav>` that provides a hierarchy between links.
+
 Side navigation should be used inside an offcanvas using `.offcanvas-*` for responsive purpose. By default, we use `.offcanvas-lg` in our docs. Please refer to [Offcanvas]({{< docsref "/components/offcanvas#responsive" >}}) to learn more about its behavior. Since it uses [responsive offcanvas]({{< docsref "/components/offcanvas#responsive" >}}), please resize your browser to see its responsive behavior in action.
 
 {{< callout warning >}}
 In order to make side navigation work properly, please make sure that the Javascript files from [Collapse]({{< docsref "/components/collapse#usage" >}}) and [Tabs]({{< docsref "/components/navs-tabs#javascript-behavior" >}}) are imported in your project.
 {{< /callout >}}
 
-The side navigation provides:
+The side navigation provides 3 ready-to-use fully responsive themes. For each theme, we provide:
 - `.side-nav` to set up at the root element.
-- `.side-nav-item` to ensure correct size and behavior.
+- `.side-nav-dark` to darken our theme variants.
+- `.side-nav-scrollable` to ensure correct behavior of scroll boxes.
+- `.side-nav-item` to ensure correct size and behavior of displayed elements.
+- optional `.side-nav-static` to make collapsible side navigation static.
 - optional `.side-nav-toggle` to embed a version of the to collapse toggler.
 - optional `.side-nav-content` to make sure the content is well sized even with a toggler button.
 
 With the following structure:
 
 ```html
-<nav class="side-nav">
-  <div class="side-nav-theme">
+<nav class="side-nav side-nav-dark">
+  <div class="side-nav-theme side-nav-static">
     <!-- If collapsible -->
     <button class="side-nav-toggle"></button>
     <div class="side-nav-content">
@@ -38,17 +43,21 @@ With the following structure:
 
 ## Examples
 
-Our side navigation is basically a `<nav>` that provides a hierarchy between links. It comes with 3 ready-to-use fully responsive themes. If these available themes don’t meet your specific needs, feel free to develop your own custom theme accordingly to the Orange Design System.
+Side navigation come with 3 ready-to-use fully responsive themes. If these available themes don’t meet your specific needs, feel free to develop your own custom theme accordingly to the Orange Design System.
 
-Since we use offcanvases to display the responsive version of this component, please resize your browser to see the behavior.
+Since most of side navigation we display use the responsive version of this component, please resize your browser to see the behavior. 
+
+{{< callout info >}}
+You can also notice that every example is resizable in order to show the behavior it has in different configurations.
+{{< /callout >}}
 
 ### Without offcanvas
 
 Here is an example without offcanvas.
 
-{{< example class="p-0 side-nav-example d-flex" show_markup=false >}}
+{{< example class="p-0 side-nav-example d-flex" >}}
 <nav class="side-nav side-nav-static" aria-label="Basic side navigation without offcanvas">
-  <div class="h-100 side-nav-accordion side-nav-scrollable">
+  <div class="side-nav-accordion side-nav-scrollable">
     <div class="accordion" id="sideNavAccordion">
       <div class="accordion-item">
         <h3 class="accordion-header" id="dashboardHeader">
@@ -153,7 +162,7 @@ Here is the `.side-nav-accordion` theme. It should be used with [`.side-nav-stat
   <div class="offcanvas-body h-100 p-0">
 
     <nav class="side-nav side-nav-static" aria-label="Basic side navigation inside an offcanvas">
-      <div class="h-100 side-nav-accordion side-nav-scrollable">
+      <div class="side-nav-accordion side-nav-scrollable">
         <div class="accordion" id="sideNavAccordionOc">
           <div class="accordion-item">
             <h3 class="accordion-header" id="dashboardHeaderOc">
@@ -259,7 +268,7 @@ Illustrating icons can be added on each item if needed.
   <div class="offcanvas-body h-100 p-0">
 
     <nav class="side-nav side-nav-static" aria-label="Basic side navigation with icons inside an offcanvas">
-      <div class="h-100 side-nav-accordion side-nav-scrollable">
+      <div class="side-nav-accordion side-nav-scrollable">
         <div class="accordion" id="sideNavAccordionIconsOc">
           <div class="accordion-item">
             <h3 class="accordion-header" id="dashboardHeaderIconsOc">
@@ -366,10 +375,10 @@ Illustrating icons can be added on each item if needed.
 
 ### Collapsible
 
-Here is the `.side-nav-collapsible` theme. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally. It also uses a small trick to nicely collapse the side navigation with an empty `div`.
+Here is the `.side-nav-collapsible` theme. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally. It also uses a small trick to nicely collapse the side navigation with an empty `div`. (might change if we try to change the collapse thing on Bootstrap)
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsible" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement1').show()">Test collapsing</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsible" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement1').show()">Show basic collapsible side navigation</button>
 
 <div class="offcanvas-lg offcanvas-start" id="sideNavCollapsible">
   <div class="offcanvas-header p-0">
@@ -378,9 +387,9 @@ Here is the `.side-nav-collapsible` theme. The collapsible side navigation we pr
   <div class="offcanvas-body h-100 p-0">
 
     <nav class="side-nav" aria-label="Collapsible side navigation inside an offcanvas">
-      <div class="h-100 side-nav-collapsible">
+      <div class="side-nav-collapsible">
         <div id="collapsibleElement1" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-        <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement1" aria-expanded="false" aria-controls="collapsibleElement1"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement1" aria-expanded="false" aria-controls="collapsibleElement1"><span class="visually-hidden">Open/Close side navigation</span></button>
         <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
           <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
             <a href="#" class="side-nav-item active fw-bold">
@@ -425,8 +434,12 @@ The collapsible side navigation with drawer content comes with ready to use `onc
 - On the Offcanvas close button to `hide` its content.
 - On each menu item to `show` its content. (nav-item)
 
+{{< callout info >}}
+For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanvas-header` as well.
+{{< /callout >}}
+
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc1" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">Test</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc1" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">Show collapsible side navigation with drawer content</button>
 
 <div class="offcanvas-start offcanvas-lg d-flex" tabindex="-1" id="sideNavCwdc1">
   <div class="offcanvas-header p-0 side-nav-content-with-drawer">
@@ -435,8 +448,8 @@ The collapsible side navigation with drawer content comes with ready to use `onc
   <div class="offcanvas-body p-0">
 
     <nav class="side-nav" aria-label="Collapsible side navigation with drawer content inside an offcanvas">
-      <div class="h-100 side-nav-content-with-drawer">
-        <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc1"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <div class="side-nav-content-with-drawer">
+        <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc1"><span class="visually-hidden">Open/Close side navigation</span></button>
         <div class="side-nav-content">
           <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
             <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
@@ -571,16 +584,16 @@ The collapsible side navigation with drawer content comes with ready to use `onc
 Add `.side-nav-static` to the `.side-nav` for a static variant.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Test collapsing</button>
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
   <div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
     <div class="offcanvas-header p-0">
       <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-        <div class="h-100 side-nav-collapsible">
+        <div class="side-nav-collapsible">
           <div id="collapsibleElement2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement2" aria-expanded="false" aria-controls="collapsibleElement2"><span class="visually-hidden">Open/Close side navigation</span></button>
+          <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement2" aria-expanded="false" aria-controls="collapsibleElement2"><span class="visually-hidden">Open/Close side navigation</span></button>
           <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
             <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
               <a href="#" class="side-nav-item active fw-bold">
@@ -615,13 +628,17 @@ Add `.side-nav-static` to the `.side-nav` for a static variant.
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
 
 <div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
-  <div class="offcanvas-header">...</div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-header p-0">
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body h-100 p-0">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      ...
+      <div class="side-nav-collapsible">
+        ...
+      </div>
     </nav>
   </div>
 </div>
@@ -631,7 +648,9 @@ Add `.side-nav-static` to the `.side-nav` for a static variant.
 
 ## Scrollable
 
-Even if we handle the scroll in a particular way inside our predefined themes, you may change this behavior with the `.side-nav-scrollable`. If you do so, please make sure that every part is accessible through scroll (the icon part and the content one).
+Even if we handle the scroll in a particular way inside our predefined themes, you may want to change this behavior with the `.side-nav-scrollable`. If you do so, please make sure that every part is accessible through scroll (the icon part and the content one).
+
+<!-- Following the spec review
 
 Here are some examples with the [collapsible with drawer content](#collapsible-with-drawer-content), that default to a scroll on both parts (the icon part and the content part) excluding the title.
 
@@ -645,8 +664,8 @@ Here is an example including the title on the right scroll box.
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll boxes including the title">
-        <div class="h-100 side-nav-content-with-drawer">
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <div class="side-nav-content-with-drawer">
+          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
           <div class="side-nav-content">
             <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
               <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
@@ -781,8 +800,8 @@ Here is an example including the title on the right scroll box.
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="h-100 side-nav-content-with-drawer">
-        <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <div class="side-nav-content-with-drawer">
+        <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
         <div class="side-nav-content">
           <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
             ...
@@ -811,8 +830,8 @@ Here is an example of a unique scroll box containing the two previous scroll box
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and excluding the toggle button">
-        <div class="h-100 side-nav-content-with-drawer">
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc3"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <div class="side-nav-content-with-drawer">
+          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc3"><span class="visually-hidden">Open/Close side navigation</span></button>
           <div class="side-nav-content side-nav-scrollable">
             <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
               <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
@@ -947,8 +966,8 @@ Here is an example of a unique scroll box containing the two previous scroll box
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="h-100 side-nav-content-with-drawer">
-        <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
+      <div class="side-nav-content-with-drawer">
+        <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
         <div class="side-nav-content side-nav-scrollable">
           ...
         </div>
@@ -970,8 +989,8 @@ Here is an example of a unique scroll box containing the both previous scroll bo
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and including the toggle button">
-        <div class="h-100 side-nav-content-with-drawer side-nav-scrollable">
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc4"><span class="visually-hidden">Open/Close side navigation</span></button>
+        <div class="side-nav-content-with-drawer side-nav-scrollable">
+          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc4"><span class="visually-hidden">Open/Close side navigation</span></button>
           <div class="side-nav-content">
             <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
               <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
@@ -1106,7 +1125,7 @@ Here is an example of a unique scroll box containing the both previous scroll bo
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="h-100 side-nav-content-with-drawer side-nav-scrollable">
+      <div class="side-nav-content-with-drawer side-nav-scrollable">
         ...
       </div>
     </nav>
@@ -1128,9 +1147,9 @@ Add `.offcanvas-end` to the `.offcanvas` for a right sided variant. (only on mob
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav">
-        <div class="h-100 side-nav-collapsible">
+        <div class="side-nav-collapsible">
           <div id="collapsibleElement3" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement3" aria-expanded="false" aria-controls="collapsibleElement3"><span class="visually-hidden">Open/Close side navigation</span></button>
+          <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement3" aria-expanded="false" aria-controls="collapsibleElement3"><span class="visually-hidden">Open/Close side navigation</span></button>
           <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
             <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
               <a href="#" class="side-nav-item active fw-bold">
@@ -1173,26 +1192,31 @@ Add `.offcanvas-end` to the `.offcanvas` for a right sided variant. (only on mob
 
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 ```
+-->
 
 ## Dark variant
 
 Add `.side-nav-dark` to the `.side-nav` or its children for a dark variant. For example the [collapsible side navigation with drawer content](#collapsible-with-drawer-content) is made with a part of dark variant.
 
+We strongly recommend to use `.offcanvas-dark` (resp. `.btn-close-white`) on top of `.offcanvas-*` (resp. `.btn-close`) in order to have the correct design.
+
 {{< callout info >}}
 Dark variant can be applied on root of any example except the [collapsible side navigation with drawer content](#collapsible-with-drawer-content) one.
 {{< /callout >}}
 
+Here is the example on the collapsible theme.
+
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Test collapsing</button>
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
   <div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDark">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav side-nav-dark">
-        <div class="h-100 side-nav-collapsible">
+        <div class="side-nav-collapsible">
           <div id="collapsibleElement4" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-          <button class="side-nav-toggle collapsed d-none d-lg-flex ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement4" aria-expanded="false" aria-controls="collapsibleElement4"><span class="visually-hidden">Open/Close side navigation</span></button>
+          <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement4" aria-expanded="false" aria-controls="collapsibleElement4"><span class="visually-hidden">Open/Close side navigation</span></button>
           <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
             <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
               <a href="#" class="side-nav-item active fw-bold">
@@ -1227,11 +1251,13 @@ Dark variant can be applied on root of any example except the [collapsible side 
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleDark">
-  <div class="offcanvas-header">...</div>
-  <div class="offcanvas-body">
+<div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDark">
+  <div class="offcanvas-header p-0">
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body h-100 p-0">
     <div class="side-nav side-nav-dark">
       <div class="side-nav-collapsible">
         ...
@@ -1243,15 +1269,17 @@ Dark variant can be applied on root of any example except the [collapsible side 
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 ```
 
+Here is an example on the accordion theme.
+
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Test accordion</button>
-  <div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleDarkIconsOffcanvas">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Show dark accordion side navigation</button>
+  <div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDarkIconsOffcanvas">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav side-nav-dark side-nav-static">
-        <div class="h-100 side-nav-accordion side-nav-scrollable">
+        <div class="side-nav-accordion side-nav-scrollable">
           <div class="accordion" id="sideNavAccordionDark">
             <div class="accordion-item">
               <h3 class="accordion-header" id="dashboardHeaderDark">
@@ -1355,13 +1383,15 @@ Dark variant can be applied on root of any example except the [collapsible side 
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Test accordion</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Show dark accordion side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleDarkIconsOffcanvas">
-  <div class="offcanvas-header p-0">...</div>
+<div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDarkIconsOffcanvas">
+  <div class="offcanvas-header p-0">
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
   <div class="offcanvas-body h-100 p-0">
     <div class="side-nav side-nav-dark side-nav-static">
-      <div class="h-100 side-nav-accordion side-nav-scrollable">
+      <div class="side-nav-accordion side-nav-scrollable">
         ...
       </div>
     </div>
@@ -1370,6 +1400,24 @@ Dark variant can be applied on root of any example except the [collapsible side 
 
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 ```
+
 ## CSS
 ### Variables
+
+As part of Boosted's evolving CSS variables approach, side navigation now use local CSS variables on `.side-nav` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="side-nav-css-vars" file="scss/_side-navigation.scss" >}}
+
+Customization through CSS variables can be seen on the `.side-nav-dark` modifier class where we override specific values without adding duplicate CSS selectors.
+
+{{< scss-docs name="side-nav-dark-css-vars" file="scss/_side-navigation.scss" >}}
+
 ### Sass Variables
+
+Variables for all side navigation:
+
+{{< scss-docs name="side-nav-variables" file="scss/_variables.scss" >}}
+
+Variables for the [dark side navigation](#dark-variant):
+
+{{< scss-docs name="side-nav-dark-variables" file="scss/_variables.scss" >}}

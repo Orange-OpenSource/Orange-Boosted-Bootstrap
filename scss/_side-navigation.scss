@@ -1,17 +1,21 @@
 .side-nav {
   // scss-docs-start side-nav-css-vars
-  --#{$prefix}side-nav-min-width: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */ // Needed due to an FF issue with certain numbers in `linear-gradient` (seems to be a known issue)
-  --#{$prefix}side-nav-max-width: 300px;
-  --#{$prefix}side-nav-bg: #{$white};
-  --#{$prefix}side-nav-border-width: #{1px};
-  --#{$prefix}side-nav-border-color: #{$gray-500};
-  --#{$prefix}side-nav-item-min-height: #{$spacer * 2};
-  --#{$prefix}side-nav-item-icon-size: #{$spacer * 1.25};
-  --#{$prefix}side-nav-item-spacing: 15px;
-  --#{$prefix}side-nav-item-padding-start: 15px;
-  --#{$prefix}side-nav-item-color: #{$black};
-  --#{$prefix}side-nav-item-hover-bg: #{$gray-300};
-  --#{$prefix}side-nav-item-active-bg: #{$gray-400};
+  --#{$prefix}side-nav-min-width: #{$side-nav-min-width};
+  --#{$prefix}side-nav-max-width: #{$side-nav-max-width};
+  --#{$prefix}side-nav-bg: #{$side-nav-bg};
+  --#{$prefix}side-nav-border-width: #{$side-nav-border-width};
+  --#{$prefix}side-nav-border-color: #{$side-nav-border-color};
+  --#{$prefix}side-nav-item-min-height: #{$side-nav-item-min-height};
+  --#{$prefix}side-nav-item-icon-size: #{$side-nav-item-icon-size};
+  --#{$prefix}side-nav-item-spacing: #{$side-nav-item-spacing};
+  --#{$prefix}side-nav-item-padding-top: #{$side-nav-item-padding-top};
+  --#{$prefix}side-nav-item-padding-end: #{$side-nav-item-padding-end};
+  --#{$prefix}side-nav-item-padding-bottom: #{$side-nav-item-padding-bottom};
+  --#{$prefix}side-nav-item-padding-start: #{$side-nav-item-padding-start};
+  --#{$prefix}side-nav-item-color: #{$side-nav-item-color};
+  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg};
+  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg};
+  --#{$prefix}side-nav-item-active-border: #{$side-nav-item-active-border};
   // scss-docs-end side-nav-css-vars
 
   position: relative;
@@ -42,19 +46,24 @@
       --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */
 
       .accordion-body {
-        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */
+        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width) * 2); /* stylelint-disable-line function-disallowed-list */
       }
     }
   }
 
   > * {
-    position: absolute;
     overflow: hidden;
     background: var(--#{$prefix}side-nav-bg);
+  }
+
+  // Small trick to remove `.h-100` inside the markup
+  > div {
+    position: absolute;
+    height: 100%;
     border-right: var(--#{$prefix}side-nav-border-width) solid var(--#{$prefix}side-nav-border-color);
   }
 
-  &.side-nav-static > * {
+  &.side-nav-static > div {
     position: relative;
   }
 
@@ -64,7 +73,7 @@
     align-items: center;
     min-width: var(--#{$prefix}side-nav-min-width);
     min-height: var(--#{$prefix}side-nav-item-min-height);
-    padding: 8px 0 10px var(--#{$prefix}side-nav-item-padding-start);
+    padding: var(--#{$prefix}side-nav-item-padding-top) var(--#{$prefix}side-nav-item-padding-end) var(--#{$prefix}side-nav-item-padding-bottom) var(--#{$prefix}side-nav-item-padding-start);
     margin: 0;
     font-size: $font-size-base;
     line-height: $line-height-base;
@@ -92,7 +101,7 @@
         width: 4px;
         height: 100%;
         content: "";
-        background-color: $brand-orange;
+        background-color: var(--#{$prefix}side-nav-item-active-border);
       }
     }
 
@@ -101,31 +110,18 @@
       width: var(--#{$prefix}side-nav-item-icon-size);
       min-width: var(--#{$prefix}side-nav-item-icon-size);
       height: var(--#{$prefix}side-nav-item-icon-size);
-      margin: -8px subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) -10px 0;
-    }
-  }
-
-  .side-nav-scrollable {
-    height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
-    overflow: hidden auto;
-    scrollbar-width: thin;
-
-    &::-webkit-scrollbar {
-      width: 9px;
-      background-color: $gray-300;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $gray-500;
+      margin: calc(-1 * var(--#{$prefix}side-nav-item-padding-top)) subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) calc(-1 * var(--#{$prefix}side-nav-item-padding-bottom)) 0; /* stylelint-disable-line function-disallowed-list */
     }
   }
 }
 
 .side-nav-toggle {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: var(--#{$prefix}side-nav-min-width);
   height: var(--#{$prefix}side-nav-item-min-height);
+  margin-left: auto;
   background-color: transparent;
   border: 0;
 
@@ -141,10 +137,9 @@
   &::after {
     margin-right: 1px;
     content: "";
-    border: 7px solid transparent;
+    border: $caret-width solid transparent;
     border-right-color: var(--#{$prefix}side-nav-item-color);
     border-left: 0;
-    // @include transition(transform .35s ease);
   }
 
   &.collapsed::after {
@@ -158,6 +153,25 @@
   height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
 }
 
+.side-nav-scrollable {
+  height: subtract(100%, var(--#{$prefix}side-nav-item-min-height));
+  overflow: hidden auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba($black, .1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(192, 192, 192, .5);
+
+    &:hover {
+      background-color: rgba(128, 128, 128, .6);
+    }
+  }
+}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
   $next: breakpoint-next($breakpoint, $grid-breakpoints);
   $infix: breakpoint-infix($next, $grid-breakpoints);
@@ -168,6 +182,10 @@
         border: 0;
       }
 
+      .side-nav-toggle {
+        display: none;
+      }
+
       .side-nav-content {
         height: 100%;
       }
@@ -175,6 +193,7 @@
   }
 }
 
+// Themes
 .side-nav-accordion {
   > * {
     width: subtract(var(--#{$prefix}side-nav-max-width), var(--#{$prefix}side-nav-border-width));
@@ -201,17 +220,19 @@
 .side-nav-content-with-drawer {
   background: linear-gradient(to right, #{$gray-900} 0%, #{$gray-900} 54px, #{$white} 54px, #{$white} 100%); // Needed because is used out of the side-nav context
 
-  .side-nav-toggle.collapsed::after {
+  .side-nav-toggle.collapsed {
     --#{$prefix}side-nav-item-color: #{$white};
   }
 }
 
+// Dark variant
 .side-nav-dark {
   // scss-docs-start side-nav-dark-css-vars
-  --#{$prefix}side-nav-bg: #{$gray-900};
-  --#{$prefix}side-nav-border-color: #{$gray-700};
-  --#{$prefix}side-nav-item-color: #{$white};
-  --#{$prefix}side-nav-item-hover-bg: #{$black};
-  --#{$prefix}side-nav-item-active-bg: #{$gray-700};
+  --#{$prefix}side-nav-bg: #{$side-nav-bg-dark};
+  --#{$prefix}side-nav-border-color: #{$side-nav-border-color-dark};
+  --#{$prefix}side-nav-item-color: #{$side-nav-item-color-dark};
+  --#{$prefix}side-nav-item-hover-bg: #{$side-nav-item-hover-bg-dark};
+  --#{$prefix}side-nav-item-active-bg: #{$side-nav-item-active-bg-dark};
+  --#{$prefix}side-nav-item-active-border: #{$side-nav-item-active-border-dark};
   // scss-docs-end side-nav-dark-css-vars
 }
