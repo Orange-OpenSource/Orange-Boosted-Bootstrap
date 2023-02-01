@@ -58,6 +58,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Side navigation**
+  - <span class="badge bg-success">New</span> Side navigation are now a component.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
