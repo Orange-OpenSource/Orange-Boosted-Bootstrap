@@ -102,7 +102,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Carousel**
-  - <span class="badge text-warning-emphasis bg-warning">Breaking</span> The pause/play button has been slightly changed for accessibility purpose; it is now placed first and is the first focusable item.
+  - <span class="badge text-warning-emphasis bg-danger">Breaking</span> The pause/play button has been slightly changed for accessibility purpose; it is now placed first and is the first focusable item.
 
 ### Forms
 

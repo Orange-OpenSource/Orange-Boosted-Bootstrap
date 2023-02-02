@@ -2018,7 +2018,7 @@ $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
 $carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;
-$carousel-indicators-spacing:           $spacer !default;
+$carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
 
 $carousel-caption-width:             70% !default;
