@@ -25,6 +25,12 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
+{{< ods-incompatibility-alert >}}
+These select sizes variants, with a **height different than 40px**, should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
   <option selected>Open this select menu</option>
@@ -66,12 +72,6 @@ As is the `size` attribute:
 ## Disabled
 
 Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
-
-{{< ods-incompatibility-alert >}}
-This **disabled** `<select>` element should not be used with this appearance because it does no respect the Orange Design System specifications.
-
-Please refer to the [Dropdowns](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) states guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <select class="form-select" aria-label="Disabled select example" disabled>
