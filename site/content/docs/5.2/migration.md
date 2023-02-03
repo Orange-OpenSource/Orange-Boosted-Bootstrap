@@ -115,7 +115,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - `@mixin caret()` has a new interface including a new optional parameters.
 
 - <details class="mb-2">
-  <summary><span class="badge text-warning-emphasis bg-warning">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
+  <summary><span class="badge text-danger-emphasis bg-danger">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
     <ul>
       <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>
       <li><code>$focus-visible-inner-color-dark</code> → <code>$focus-visible-inner-color-inverted</code></li>
@@ -132,14 +132,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <summary><span class="badge text-danger-emphasis bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-offcanvas-transition-duration</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
-    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <summary><span class="badge text-danger-emphasis bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
