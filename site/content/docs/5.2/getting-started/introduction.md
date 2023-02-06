@@ -22,11 +22,11 @@ Thanks for taking this information into account.
 
 Design callouts message example:
 
-{{< ods-incompatibility-alert >}}
+{{< ods-alert >}}
 This checkbox variant should not be used because it does not respect the Orange Design System specifications.
 
 From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /ods-alert >}}
 
 ## Quick start
 

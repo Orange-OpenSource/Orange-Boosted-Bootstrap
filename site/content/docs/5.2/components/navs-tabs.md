@@ -230,9 +230,9 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 
 Take that same HTML, but use `.nav-pills` instead:
 
-{{< ods-incompatibility-alert >}}
+{{< ods-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /ods-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -364,9 +364,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 ### Pills with dropdowns
 
-{{< ods-incompatibility-alert >}}
+{{< ods-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /ods-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">

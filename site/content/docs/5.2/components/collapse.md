@@ -12,9 +12,9 @@ toc: true
 
 The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
 
-{{< ods-incompatibility-alert >}}
+{{< ods-alert >}}
 Triggering a collapse behavior from a button component should not be used because it does not respect the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /ods-alert >}}
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
