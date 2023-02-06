@@ -84,7 +84,7 @@
   }
 
   // Boosted mod: with icon
-  &:not(.btn-icon) > svg {
+  &:not(.btn-icon):not(.btn-story) > svg {
     transform: translateY(1px);
   }
   // End mod
@@ -282,7 +282,6 @@
       position: relative;
       width: 100%;
       height: auto;
-      vertical-align: middle;
       border: $btn-story-border-size solid var(--#{$prefix}body-bg);
       @include border-radius(50%, 50%);
 
