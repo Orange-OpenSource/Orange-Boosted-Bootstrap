@@ -182,11 +182,11 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< example >}}
 <div class="story-wrapper">
-  <a href="#" class="btn btn-story">
+  <a href="#" class="btn btn-story" aria-labelledby="labelStoryButton">
     {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
     <span class="visually-hidden">Story</span>
   </a>
-  <label>Label</label>
+  <label id="labelStoryButton">Label</label>
 </div>
 {{< /example >}}
 
