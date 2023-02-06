@@ -259,3 +259,42 @@
   }
 }
 // End mod
+
+// Boosted mod: story button
+.story-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  text-align: center;
+
+  .btn-story {
+    --#{$prefix}btn-border-color: currentcolor;
+    --#{$prefix}btn-active-bg: #{$black};
+    --#{$prefix}btn-story-size: #{$btn-story-size};
+    @include border-radius(50%, 50%);
+
+    width: var(--#{$prefix}btn-story-size);
+    height: var(--#{$prefix}btn-story-size);
+    padding: 0;
+    border: var(--#{$prefix}border-width) solid var(--#{$prefix}body-color);
+
+    .story-img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border: $btn-story-border-size solid var(--#{$prefix}body-bg);
+      @include border-radius(50%, 50%);
+
+      &:hover {
+        border-color: var(--#{$prefix}body-color);
+      }
+    }
+
+    + label {
+      display: block;
+      margin-top: $btn-story-label-margin-top;
+    }
+  }
+}
+// End mod

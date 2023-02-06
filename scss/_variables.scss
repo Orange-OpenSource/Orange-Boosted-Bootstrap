@@ -1012,6 +1012,12 @@ $btn-social-networks: (
   )
 ) !default;
 // scss-docs-end social-buttons
+
+// Boosted mod: story button
+$btn-story-size:              11.25rem !default;
+$btn-story-border-size:       $spacer * .75 !default;
+$btn-story-label-margin-top:  map-get($spacers, 2) !default;
+
 // End mod
 
 // Forms
