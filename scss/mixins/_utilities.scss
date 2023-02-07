@@ -118,6 +118,8 @@
                     $value: $white;
                   } @else if $color-name == "body-color" {
                     $value: $black;
+                  } @else if $color-name == "black" {
+                    background: var(--bs-white);
                   }
                 }
               }
