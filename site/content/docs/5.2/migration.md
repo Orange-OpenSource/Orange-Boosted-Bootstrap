@@ -51,6 +51,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Carousel**
+  - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
+
 - **List group**
   - List group item variants are now styled via CSS variables.
 
