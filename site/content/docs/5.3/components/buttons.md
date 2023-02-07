@@ -186,7 +186,7 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
     {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
     <span class="visually-hidden">Story</span>
   </a>
-  <label id="labelStoryButton">Label</label>
+  <p id="labelStoryButton">Label</p>
 </div>
 {{< /example >}}
 

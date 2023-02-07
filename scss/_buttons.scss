@@ -290,9 +290,10 @@
       }
     }
 
-    + label {
+    + p {
       display: block;
       margin-top: $btn-story-label-margin-top;
+      font-weight: $btn-story-label-font-weight;
     }
   }
 }
