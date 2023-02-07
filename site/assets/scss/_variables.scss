@@ -52,7 +52,7 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-sidebar-link-bg
 }
 
-[data-bs-theme="dark"] {
+@include color-mode(dark, true) {
   --bd-violet: #{mix($bd-violet, $white, 75%)};
   // Boosted mod: no --bd-violet-bg
   // Boosted mod: no --bd-sidebar-link-bg

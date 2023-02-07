@@ -26,7 +26,7 @@
 
 // TODO: these values will need to be modified in order to work with Boosted dark mode
 // Right now, values are from Bootstrap from `--base00` to `--baseOF` and the 4 remaining one are copied from Boosted's light mode
-[data-bs-theme="dark"] {
+@include color-mode(dark, true) {
   --base00: #282c34;
   --base01: #353b45;
   --base02: #3e4451;
