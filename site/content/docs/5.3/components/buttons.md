@@ -180,13 +180,22 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< added-in "5.3.0" >}}
 
+{{< callout info >}}
+{{< partial "callouts/warning-story-button.md" >}}
+{{< /callout >}}
+
 {{< example >}}
 <div class="story-wrapper">
-  <a href="#" class="btn btn-story" aria-labelledby="labelStoryButton">
+  <a href="#" id="exampleStoryButton1" class="btn btn-story" aria-labelledby="exampleStoryButton1 labelStoryButton1">
     {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
-    <span class="visually-hidden">Story</span>
   </a>
-  <p id="labelStoryButton">Label</p>
+  <p id="labelStoryButton1">Label</p>
+</div>
+<div class="story-wrapper">
+  <a href="#" id="exampleStoryButton2" role="button" class="btn btn-story" aria-labelledby="exampleStoryButton2 labelStoryButton2">
+    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
+  </a>
+  <p id="labelStoryButton2">Label</p>
 </div>
 {{< /example >}}
 
