@@ -9,7 +9,7 @@ aliases:
 
 ## Boosted license
 
-Boosted is released under the MIT license and is copyright {{< year >}} Orange SA for additions to native Bootstrap, which is released under MIT license and copyright {{< year >}} Twitter.
+Boosted is released under the MIT license and is copyright {{< year >}} Orange SA for additions to native Bootstrap, which is released under MIT license and copyright {{< year >}}.
 
 ## It requires you to:
 
@@ -27,8 +27,8 @@ Boosted is released under the MIT license and is copyright {{< year >}} Orange S
 - Hold the authors and license owners liable for damages as Boosted and Bootstrap are provided without warranty
 - Hold the creators or copyright holders of Boosted or Bootstrap liable
 - Redistribute any piece of Boosted or Bootstrap without proper attribution
-- Use any marks owned by Orange SA or Twitter in any way that might state or imply that Orange SA or Twitter endorses your distribution
-- Use any marks owned by Orange SA or Twitter in any way that might state or imply that you created the Orange SA or Twitter software in question
+- Use any marks owned by Orange SA in any way that might state or imply that Orange SA endorses your distribution
+- Use any marks owned by Orange SA in any way that might state or imply that you created the Orange SA software in question
 
 ## It does not require you to:
 
