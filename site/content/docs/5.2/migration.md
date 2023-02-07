@@ -46,17 +46,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 ### Components
 
-#### Alert
+- **Alert**
+  - Alert variants are now styled via CSS variables.
 
-- Alert variants are now styled via CSS variables.
+  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
-- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+- **List group**
+  - List group item variants are now styled via CSS variables.
 
-#### List group
-
-- List group item variants are now styled via CSS variables.
-
-- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
 #### Progress bars
 
@@ -159,7 +157,7 @@ We've also introduced a new `.progress-stacked` class to more logically wrap [mu
 - `@mixin caret()` has a new interface including a new optional parameters.
 
 - <details class="mb-2">
-  <summary><span class="badge text-warning-emphasis bg-warning">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
+  <summary><span class="badge bg-danger">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
     <ul>
       <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>
       <li><code>$focus-visible-inner-color-dark</code> → <code>$focus-visible-inner-color-inverted</code></li>
