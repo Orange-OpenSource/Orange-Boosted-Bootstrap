@@ -114,6 +114,10 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 Set the `type="color"` and add `.form-control-color` to the `<input>`. We use the modifier class to set fixed `height`s and override some inconsistencies between browsers.
 
+{{< callout info >}}
+{{< partial "callouts/warning-color-picker.md" >}}
+{{< /callout >}}
+
 {{< example >}}
 <div class="mb-3">
   <label for="exampleColorInput" class="form-label">Color picker</label>
