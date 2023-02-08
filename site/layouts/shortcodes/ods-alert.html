@@ -4,7 +4,7 @@ Usage: `ods-alert "level"`, where `level` is one of info, success, warning or da
 
 {{- $level := .Get 0 | default "danger" -}}
 
-<div class="bd-ods-alert alert alert-{{ $level }}">
+<div class="alert alert-{{ $level }}">
   <span class="alert-icon"><span class="visually-hidden">{{ $level }}</span></span>
   <div>
     <div class="alert-heading mb-1 h4">

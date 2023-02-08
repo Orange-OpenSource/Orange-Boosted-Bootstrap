@@ -250,7 +250,7 @@ Behind the scenes it looks like this:
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
 <!-- Boosted mod : design callout -->
-{{< ods-alert >}}
+{{< ods-alert info >}}
 These compact tables are recommended by Orange Design System.
 {{< /ods-alert >}}
 
