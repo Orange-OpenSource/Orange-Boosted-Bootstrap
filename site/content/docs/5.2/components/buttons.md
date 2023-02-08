@@ -38,8 +38,14 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
+<svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+</svg>
+Small button
+</button>
+<button type="button" class="btn btn-primary btn-sm">
   <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success2"/>
   </svg>
   Small button
 </button>
