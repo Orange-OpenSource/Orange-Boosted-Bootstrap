@@ -87,7 +87,7 @@
   // Boosted mod
   .btn-group:not(.dropstart) &,
   .dropstart & ~ .btn {
-    &:not(:hover):not(:focus):not(:active) {
+    &:not(:hover):not(:focus):not(:active):not(.show) {
       border-left-color: transparent;
 
       &::before {
