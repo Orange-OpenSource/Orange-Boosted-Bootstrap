@@ -30,7 +30,7 @@ Add `.btn-close-white` to the `.btn-close` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <button type="button" class="btn-close btn-close-white" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
-<button type="button" class="btn-close btn-close-white" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn-close btn-close-white" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Without specific class
