@@ -22,14 +22,15 @@
 }
 
 .nav-link {
-  display: flex; // Boosted mod
+  display: flex; // Boosted mod: instead of `block`
   align-items: center; // Boosted mod
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);
   color: var(--#{$prefix}nav-link-color);
   text-decoration: if($link-decoration == none, null, none);
-  background: none; // Boosted mod: Prevent dropdown's background to interfere
+  background: none;
+  border: 0;
   @include transition($nav-link-transition);
 
   // Boosted mod: no focus
