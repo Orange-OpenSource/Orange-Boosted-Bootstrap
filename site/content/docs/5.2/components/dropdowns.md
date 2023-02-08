@@ -248,7 +248,7 @@ And putting it to use in a navbar:
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
