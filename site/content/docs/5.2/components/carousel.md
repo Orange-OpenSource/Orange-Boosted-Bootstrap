@@ -110,7 +110,7 @@ This `button` must immediately follow your carousel and have the custom `data-bs
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
 
 {{< example >}}
-<div id="carouselExamplePause" class="carousel slide">
+<div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Slide 2"></button>
