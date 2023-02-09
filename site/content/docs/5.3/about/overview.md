@@ -6,7 +6,7 @@ group: about
 aliases:
   - "/about/"
   - "/docs/about/"
-  - "/docs/5.2/about/"
+  - "/docs/5.3/about/"
   - "/docs/about/overview/"
 ---
 

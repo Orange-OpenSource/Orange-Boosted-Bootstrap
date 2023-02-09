@@ -7,7 +7,7 @@ toc: true
 aliases:
   - "/docs/getting-started/contribute/"
   - "/docs/getting-started/build-tools/"
-  - "/docs/5.2/getting-started/build-tools/"
+  - "/docs/5.3/getting-started/build-tools/"
 ---
 
 ## Tooling setup

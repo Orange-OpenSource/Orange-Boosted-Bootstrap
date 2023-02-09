@@ -6,7 +6,7 @@ group: extend
 aliases:
   - "/extend/"
   - "/docs/extend/"
-  - "/docs/5.2/extend/"
+  - "/docs/5.3/extend/"
   - "/docs/extend/approach/"
 ---
 

@@ -6,7 +6,7 @@ group: layout
 aliases:
   - "/layout/"
   - "/docs/layout/"
-  - "/docs/5.2/layout/"
+  - "/docs/5.3/layout/"
   - "/docs/layout/breakpoints/"
 toc: true
 ---

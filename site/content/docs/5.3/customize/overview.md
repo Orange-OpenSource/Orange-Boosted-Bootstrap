@@ -7,7 +7,7 @@ toc: false
 aliases:
   - "/customize/"
   - "/docs/customize/"
-  - "/docs/5.2/customize/"
+  - "/docs/5.3/customize/"
   - "/docs/customize/overview/"
 sections:
   - title: Sass

@@ -6,7 +6,7 @@ group: components
 aliases:
   - "/components/"
   - "/docs/components/"
-  - "/docs/5.2/components/"
+  - "/docs/5.3/components/"
   - "/docs/components/accordion/"
 toc: true
 ---

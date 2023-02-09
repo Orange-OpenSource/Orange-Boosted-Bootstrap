@@ -6,7 +6,7 @@ group: content
 aliases:
   - "/content/"
   - "/docs/content/"
-  - "/docs/5.2/content/"
+  - "/docs/5.3/content/"
   - "/docs/content/reboot/"
 toc: true
 ---
