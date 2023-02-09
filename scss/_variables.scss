@@ -1634,8 +1634,8 @@ $accordion-body-padding-end:              $spacer !default; // Boosted mod
 $accordion-body-padding-bottom:           $spacer !default; // Boosted mod
 $accordion-body-padding-start:            0 !default; // Boosted mod
 // fusv-disable
-$accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.3.0-alpha1 to divide it in -padding<top | end | bottom |start>
-$accordion-body-padding-x:                $spacer !default; // Deprecated in Boosted 5.3.0-alpha1 to divide it in -padding<top | end | bottom |start>
+$accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
+$accordion-body-padding-x:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
 // fusv-enable
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
