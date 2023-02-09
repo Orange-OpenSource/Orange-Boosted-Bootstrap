@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/docs/getting-started/webpack/"
 toc: true
-thumbnail: webpack.svg
+thumbnail: guides/webpack-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">

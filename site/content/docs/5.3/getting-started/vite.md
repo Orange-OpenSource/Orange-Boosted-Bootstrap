@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: vite.svg
+thumbnail: guides/vite-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">

@@ -6,7 +6,7 @@ group: getting-started
 aliases:
   - "/docs/getting-started/parcel/"
 toc: true
-thumbnail: parcel.png
+thumbnail: guides/parcel-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">
