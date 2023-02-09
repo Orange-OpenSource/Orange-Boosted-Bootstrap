@@ -1,0 +1,59 @@
+{{- /*
+  Usage: `card args`
+
+  `args` are all optional and can be one of the following:
+    * border: Add some borders to the card - default = false
+    * background: Define the card background - default = "dark"
+    * caption: Display caption - default = false
+    * meta_data: Display nav - default = false
+    * buttons: Display share and favorite buttons - default = false
+    * action: Display action button - default = false
+    * rtl: Display the arabic version - default = false
+*/ -}}
+
+{{- $border := .Get "border" | default false -}}
+{{- $background := .Get "background" | default "dark" -}}
+{{- $caption := .Get "caption" | default false -}}
+{{- $meta_data := .Get "meta_data" | default false -}}
+{{- $buttons := .Get "buttons" | default false -}}
+{{- $action := .Get "action" | default false -}}
+{{- $rtl := .Get "rtl" | default false -}}
+
+<div class="card{{ if eq $border false }} border-0 {{ end }}">
+  <svg class="bd-placeholder-img card-img-top" width="100%" height="162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ if $rtl }}تعليق على الصورة{{ else }}Image cap{{ end }}" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <rect width="100%" height="100%" fill="{{ (index $.Site.Data.grays 3).hex }}"/>
+    <text x="50%" y="50%" fill="{{ (index $.Site.Data.grays 5).hex }}" dy=".3em">{{ if $rtl }}تعليق على الصورة{{ else }}Image cap{{ end }}</text>
+  </svg>
+  <div class="card-body bg-{{ $background }}">
+    <h3 class="card-title{{ if and $meta_data (not $caption) }} mb-3{{ end }}">{{ if $rtl }}عنوان{{ else }}Title{{ end }}</h3>
+    {{- if $caption -}}
+    <p class="card-text fw-bold mb-{{ if or (or $meta_data $buttons) $action }}4{{ else }}2{{ end }}">{{ if $rtl }}شرح{{ else }}Caption{{ end }}</p>
+    {{- end -}}
+    {{- if $meta_data -}}
+    <p class="card-text fw-bold text-{{ if eq $background "dark" }}light{{ else }}muted{{ end }}">{{ if $rtl }}البيانات الوصفية{{ else }}Meta data{{ end }}</p>
+    {{- end -}}
+    {{- if $buttons -}}
+    <ul class="nav flex-row gap-3">
+      <li>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
+            <use xlink:href="#heart"/>
+          </svg>
+          <span class="visually-hidden">{{ if $rtl }}مفضل{{ else }}Favorite{{ end }}</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
+            <use xlink:href="#share"/>
+          </svg>
+          <span class="visually-hidden">{{ if $rtl }}يشارك{{ else }}Share{{ end }}</span>
+        </a>
+      </li>
+    </ul>
+    {{- end -}}
+    {{- if $action -}}
+    <button class="btn btn-secondary{{ if eq $background "dark" }} btn-inverse{{ end }}" aria-label="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}" title="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}">{{ if $rtl }}زر{{ else }}Button{{ end }}</button>
+    {{- end -}}
+  </div>
+</div>
