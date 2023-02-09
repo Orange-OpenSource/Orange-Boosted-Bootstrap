@@ -1,7 +1,7 @@
 .anchor-link {
   padding: 0 .175rem;
   font-weight: 400;
-  color: rgba(var(--#{$prefix}link-color), .5); // Boosted mod
+  color: rgba(var(--bs-link-color), .5); // Boosted mod
   text-decoration: none;
   opacity: 0;
   @include transition(color .15s ease-in-out, opacity .15s ease-in-out);
@@ -14,7 +14,7 @@
   &:hover,
   :hover > &,
   :target > & {
-    color: var(--#{$prefix}link-color); // Boosted mod
+    color: var(--bs-link-color); // Boosted mod
     text-decoration: none;
     opacity: 1;
   }

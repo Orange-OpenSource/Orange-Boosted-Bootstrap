@@ -435,7 +435,7 @@ $enable-important-utilities:  true !default;
 $enable-fixed-header:         true !default; // Boosted mod: used to apply scroll-padding-top
 
 $enable-dark-mode:            true !default;
-$color-mode-type:             data !default;
+$color-mode-type:             data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
 
@@ -1889,7 +1889,7 @@ $progress-height-xs:                $spacer * .25 !default;
 $list-group-color:                  var(--#{$prefix}body-color) !default;
 $list-group-bg:                     var(--#{$prefix}body-bg) !default;
 $list-group-border-color:           var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
-$list-group-border-width:           $border-width !default;
+$list-group-border-width:           var(--#{$prefix}border-width) !default;
 $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
 
 $list-group-item-padding-y:         .875rem !default; // Boosted mod
