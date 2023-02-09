@@ -111,7 +111,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Popovers and tooltips**
-  - <span class="badge bg-success">Warning</span> Popovers and tooltips have been redesigned according to UI Kit v5.
+  - <span class="badge bg-warning">Warning</span> Popovers and tooltips have been redesigned according to UI Kit v5.
 
 ### Forms
 

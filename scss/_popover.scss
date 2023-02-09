@@ -33,7 +33,6 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}popover-font-size));
-  font-weight: var(--#{$prefix}popover-font-weight); // Boosted mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
@@ -183,6 +182,7 @@
 // Offset the popover to account for the popover arrow
 .popover-header {
   padding: var(--#{$prefix}popover-header-padding-top) var(--#{$prefix}popover-header-padding-x) var(--#{$prefix}popover-header-padding-bottom); // Boosted mod
+  font-weight: var(--#{$prefix}popover-font-weight); // Boosted mod
   margin-bottom: 0; // Reset the default from Reboot
   @include font-size(var(--#{$prefix}popover-header-font-size));
   color: var(--#{$prefix}popover-header-color);
@@ -190,6 +190,7 @@
   /* rtl:remove */
   letter-spacing: unset; // Boosted mod
   background-color: var(--#{$prefix}popover-header-bg);
+  // Boosted mod: no border bottom
   @include border-top-radius(var(--#{$prefix}popover-inner-border-radius));
 
   &:empty {

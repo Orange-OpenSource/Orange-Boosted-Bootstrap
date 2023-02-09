@@ -41,7 +41,7 @@
     height: var(--#{$prefix}tooltip-arrow-height);
 
     &::before,
-    &::after {
+    &::after { // Boosted mod
       position: absolute;
       display: block;
       content: "";
