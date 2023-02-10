@@ -140,7 +140,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, Quantit
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTORP)) {
+  for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTOR)) {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })
