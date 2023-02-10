@@ -38,17 +38,24 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-sm">
-<svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-</svg>
-Small button
-</button>
-<button type="button" class="btn btn-primary btn-sm">
   <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success2"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   Small button
 </button>
+<button type="button" class="btn btn-primary btn-sm">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-solaris"/>
+  </svg>
+  Small button
+</button>
+<button type="button" class="btn btn-primary btn-sm">
+<svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
+<use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-optimized"/>
+</svg>
+Small button
+</button>
+<br>
 <button type="button" class="btn btn-primary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
@@ -74,6 +81,19 @@ Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sur
   </svg>
   <span class="visually-hidden">Small button with icon only</span>
 </button>
+<button type="button" class="btn btn-icon btn-secondary btn-sm">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-solaris"/>
+  </svg>
+  <span class="visually-hidden">Small button with icon only</span>
+</button>
+<button type="button" class="btn btn-icon btn-secondary btn-sm">
+  <svg width=".9375rem" height=".9375rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success-optimized"/>
+  </svg>
+  <span class="visually-hidden">Small button with icon only</span>
+</button>
+<br>
 <button type="button" class="btn btn-icon btn-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
