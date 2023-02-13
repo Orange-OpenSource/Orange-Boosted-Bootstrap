@@ -276,7 +276,6 @@
     width: var(--#{$prefix}btn-story-size);
     height: var(--#{$prefix}btn-story-size);
     padding: 0;
-    border: var(--#{$prefix}border-width) solid var(--#{$prefix}body-color);
 
     .story-img {
       position: relative;
@@ -291,7 +290,6 @@
     }
 
     + p {
-      display: block;
       margin-top: $btn-story-label-margin-top;
       font-weight: $btn-story-label-font-weight;
     }
