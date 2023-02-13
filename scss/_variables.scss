@@ -1378,6 +1378,7 @@ $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; 
 $navbar-light-hover-color:            $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
 $navbar-light-active-color:           $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
 $navbar-light-disabled-color:         $gray-500 !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
+// Boosted mod: no $navbar-light-icon-color
 $navbar-light-toggler-icon-bg:        $burger-icon !default; // Boosted mod: instead of inline SVG
 $navbar-light-toggler-icon-bg-small:  $burger-icon-small !default; // Boosted mod: slightly different burger icon for small breakpoints
 $navbar-light-toggler-border-color:   null !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .15)`
