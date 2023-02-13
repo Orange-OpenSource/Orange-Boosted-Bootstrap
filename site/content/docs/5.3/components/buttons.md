@@ -127,6 +127,30 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 {{< scss-docs name="social-buttons" file="scss/_variables.scss" >}}
 
+## Story button
+
+{{< added-in "5.3.0" >}}
+
+{{< callout info >}}
+**Accessibility warning** Be sure to pick the correct example according to your needs: a button to trigger an action inside the current page or a link to open an URL.
+Please note that if using a `role="button"`, you will need to listen to keyboards events to be sure to replicate native button activation on space keyup.
+{{< /callout >}}
+
+{{< example >}}
+<div class="story-wrapper">
+  <a href="#" id="exampleStoryButton1" class="btn btn-story" aria-labelledby="exampleStoryButton1 labelStoryButton1">
+    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
+  </a>
+  <p id="labelStoryButton1">Label</p>
+</div>
+<div class="story-wrapper">
+  <a href="#" id="exampleStoryButton2" role="button" class="btn btn-story" aria-labelledby="exampleStoryButton2 labelStoryButton2">
+    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
+  </a>
+  <p id="labelStoryButton2">Label</p>
+</div>
+{{< /example >}}
+
 ## Dark variant
 
 {{< added-in "5.2.0" >}}
@@ -174,30 +198,6 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
-{{< /example >}}
-
-## Story button
-
-{{< added-in "5.3.0" >}}
-
-{{< callout info >}}
-**Accessibility warning** Be sure to pick the correct example according to your needs: a button to trigger an action inside the current page or a link to open an URL.
-Please note that if using a `role="button"`, you will need to listen to keyboards events to be sure to replicate native button activation on space keyup.
-{{< /callout >}}
-
-{{< example >}}
-<div class="story-wrapper">
-  <a href="#" id="exampleStoryButton1" class="btn btn-story" aria-labelledby="exampleStoryButton1 labelStoryButton1">
-    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
-  </a>
-  <p id="labelStoryButton1">Label</p>
-</div>
-<div class="story-wrapper">
-  <a href="#" id="exampleStoryButton2" role="button" class="btn btn-story" aria-labelledby="exampleStoryButton2 labelStoryButton2">
-    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
-  </a>
-  <p id="labelStoryButton2">Label</p>
-</div>
 {{< /example >}}
 
 <!-- End mod -->

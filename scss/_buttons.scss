@@ -275,26 +275,24 @@
 
     width: var(--#{$prefix}btn-story-size);
     height: var(--#{$prefix}btn-story-size);
-    padding: 0;
+    padding: calc($btn-story-border-size - var(--#{$prefix}btn-border-width)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}body-bg);
 
     .story-img {
-      position: relative;
       width: 100%;
       height: auto;
-      border: $btn-story-border-size solid var(--#{$prefix}body-bg);
+      padding: var(--#{$prefix}btn-border-width); // Use padding instead of border to prevent antialising bug on border-radius
+      background-color: var(--#{$prefix}body-bg);
       @include border-radius(50%, 50%);
-
-      &:hover {
-        padding: var(--#{$prefix}btn-border-width);
-        border-color: var(--#{$prefix}body-color);
-        border-width: calc($btn-story-border-size - var(--#{$prefix}btn-border-width)); // stylelint-disable-line function-disallowed-list
-      }
     }
 
     + p {
       margin-top: $btn-story-label-margin-top;
       font-weight: $btn-story-label-font-weight;
+    }
+
+    &:hover {
+      background-color: var(--bs-body-color);
     }
   }
 }
