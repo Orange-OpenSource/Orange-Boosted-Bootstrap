@@ -276,6 +276,7 @@
     width: var(--#{$prefix}btn-story-size);
     height: var(--#{$prefix}btn-story-size);
     padding: 0;
+    background-color: var(--#{$prefix}body-bg);
 
     .story-img {
       position: relative;
@@ -285,7 +286,9 @@
       @include border-radius(50%, 50%);
 
       &:hover {
+        padding: var(--#{$prefix}btn-border-width);
         border-color: var(--#{$prefix}body-color);
+        border-width: calc($btn-story-border-size - var(--#{$prefix}btn-border-width)); // stylelint-disable-line function-disallowed-list
       }
     }
 
