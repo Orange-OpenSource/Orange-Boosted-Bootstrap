@@ -1346,6 +1346,10 @@ $nav-pills-padding-x:               $nav-tabs-link-padding-x !default; // Booste
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
+
+$nav-underline-gap:                 0 !default; // Boosted mod: instead of 1rem
+$nav-underline-border-width:        #{calc($nav-tabs-border-width * .5)} !default; // Boosted mod: instead of .125rem
+$nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // scss-docs-end nav-variables
 
 
