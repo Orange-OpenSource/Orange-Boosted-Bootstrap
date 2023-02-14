@@ -14,6 +14,7 @@
   --#{$prefix}popover-header-padding-top: #{$popover-header-padding-top}; // Boosted mod
   --#{$prefix}popover-header-padding-bottom: #{$popover-header-padding-bottom}; // Boosted mod
   @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
+  --#{$prefix}popover-header-line-height: #{$popover-header-line-height};
   --#{$prefix}popover-header-color: #{$popover-header-color};
   --#{$prefix}popover-header-bg: #{$popover-header-bg};
   --#{$prefix}popover-body-padding-x: #{$popover-body-padding-x};
@@ -184,6 +185,7 @@
   padding: var(--#{$prefix}popover-header-padding-top) var(--#{$prefix}popover-header-padding-x) var(--#{$prefix}popover-header-padding-bottom); // Boosted mod
   margin-bottom: 0; // Reset the default from Reboot
   font-weight: var(--#{$prefix}popover-font-weight); // Boosted mod
+  line-height: var(--#{$prefix}popover-line-height); // Boosted mod
   @include font-size(var(--#{$prefix}popover-header-font-size));
   color: var(--#{$prefix}popover-header-color);
 
