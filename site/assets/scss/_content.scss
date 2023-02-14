@@ -21,6 +21,10 @@
 
   > h2 {
     margin-top: 3rem;
+
+    &:not(:target):first-child {
+      margin-top: 2rem;
+    }
   }
 
   > h3 {
