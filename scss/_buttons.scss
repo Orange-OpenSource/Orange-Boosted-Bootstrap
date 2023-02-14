@@ -294,6 +294,15 @@
     &:hover {
       background-color: var(--bs-body-color);
     }
+
+    &.btn-inverse {
+      --#{$prefix}btn-border-color: var(--#{$prefix}body-bg);
+      background-color: var(--#{$prefix}body-color);
+
+      &:hover {
+        background-color: var(--bs-body-bg);
+      }
+    }
   }
 }
 // End mod

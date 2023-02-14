@@ -200,6 +200,21 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
 {{< /example >}}
 
+{{< example class="bg-dark" >}}
+<div class="story-wrapper">
+  <a href="#" id="exampleStoryButton1" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButton1 labelStoryButton1">
+    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
+  </a>
+  <p id="labelStoryButton1">Label</p>
+</div>
+<div class="story-wrapper">
+  <a href="#" id="exampleStoryButton2" role="button" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButton2 labelStoryButton2">
+    {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
+  </a>
+  <p id="labelStoryButton2">Label</p>
+</div>
+{{< /example >}}
+
 <!-- End mod -->
 
 ## Disable text wrapping
