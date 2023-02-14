@@ -1748,6 +1748,10 @@ $popover-body-padding:              $popover-header-padding-top !default; // Boo
 
 $popover-arrow-width:               $spacer !default; // Boosted mod
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
+// fusv-disable
+$popover-header-padding-y:          $spacer * .5 !default; // Deprecated in Boosted 5.3.0 because of tooltips and popovers redesign in UI Kit V5
+$popover-body-padding-y:            $popover-header-padding-y !default; // Deprecated in Boosted 5.3.0 because of tooltips and popovers redesign in UI Kit V5
+// fusv-enable
 // scss-docs-end popover-variables
 
 // fusv-disable
