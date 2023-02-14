@@ -51,6 +51,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Buttons**
+  - <span class="badge bg-success">New</span> we added story button, a new type of navigation button, in our documentation.
+
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
 
@@ -284,6 +287,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$body-tertiary-color</code></li>
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
+      <li><code>$btn-story-border-size</code></li>
+      <li><code>$btn-story-label-font-weight</code></li>
+      <li><code>$btn-story-label-margin-top</code></li>
+      <li><code>$btn-story-size</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
       <li><code>$code-color-dark</code></li>
