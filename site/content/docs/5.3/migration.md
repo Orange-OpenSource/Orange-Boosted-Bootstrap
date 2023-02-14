@@ -440,9 +440,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       - Ensure that the `disabled` links only miss the `[href]` attribute.
     </details>
 
-- **Orange Navbar**
-  - <span class="badge bg-danger">Breaking</span> The minimizing behavior with `.header-minimized` is applied on top of the `<header>` instead of one of his child directly.
-
 - **Stepped Process**
   - Current step has been slightly changed for accessibility purpose; the link to this step has been converted to plain text. Please reflect this modification into your websites.
   ```diff

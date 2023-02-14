@@ -6,26 +6,16 @@
   // Boosted mod: Offset content from fixed navbar when jumping to headings, values adjusted
   > :target {
     padding-top: 7.5rem;
-    margin-top: -5.75rem;
+    margin-top: -5.5rem;
 
     @include media-breakpoint-up(md) {
-      padding-top: 10.5rem;
-      margin-top: -8.75rem;
-
-      .header-minimized ~ .bd-gutter & {
-        padding-top: 8rem;
-        margin-top: -6.25rem;
-      }
+      padding-top: 11rem;
+      margin-top: -9rem;
     }
 
     @include media-breakpoint-up(lg) {
-      padding-top: 6.875rem;
-      margin-top: -5rem;
-
-      .header-minimized ~ .bd-gutter & {
-        padding-top: 4.375rem;
-        margin-top: -2.625rem;
-      }
+      padding-top: 8rem;
+      margin-top: -6rem;
     }
   }
 
