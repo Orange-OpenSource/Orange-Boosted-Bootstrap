@@ -202,16 +202,16 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <div class="story-wrapper">
-  <a href="#" id="exampleStoryButton1" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButton1 labelStoryButton1">
+  <a href="#" id="exampleStoryButtonDark1" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButtonDark1 labelStoryButtonDark1">
     {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
   </a>
-  <p id="labelStoryButton1">Label</p>
+  <p id="labelStoryButtonDark1">Label</p>
 </div>
 <div class="story-wrapper">
-  <a href="#" id="exampleStoryButton2" role="button" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButton2 labelStoryButton2">
+  <a href="#" id="exampleStoryButtonDark2" role="button" class="btn btn-inverse btn-story" aria-labelledby="exampleStoryButtonDark2 labelStoryButtonDark2">
     {{< placeholder width="250" height="250" class="story-img" text="Story thumbnail" >}}
   </a>
-  <p id="labelStoryButton2">Label</p>
+  <p id="labelStoryButtonDark2">Label</p>
 </div>
 {{< /example >}}
 
