@@ -1,0 +1,370 @@
+---
+layout: examples
+title: E-shop
+aliases:
+  - "/examples/e-shop"
+  - "/docs/examples/e-shop"
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="smartphone">
+    <path d="M16.801 1.8H7.2A1.199 1.199 0 0 0 6 3v18a1.2 1.2 0 0 0 1.199 1.2H16.8A1.199 1.199 0 0 0 18 21V3a1.2 1.2 0 0 0-1.199-1.2Zm-5.701.6h1.8a.3.3 0 0 1 0 .6h-1.8a.3.3 0 0 1 0-.6Zm.9 19.2a.6.6 0 1 1 0-1.2.6.6 0 0 1 0 1.2Zm4.8-1.8H7.2V3.6h9.6v16.2Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="promotion">
+    <path d="M13.793 2.316a2.4 2.4 0 0 0-3.5-.09l-.002.001a2.399 2.399 0 0 0-.08.085L4.2 8.712v11.4a2.4 2.4 0 0 0 2.4 2.4h10.8a2.4 2.4 0 0 0 2.4-2.4v-11.4l-6.007-6.396ZM12 4.212a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.12 11.064-2.115.997 1.298 1.853L14.94 18l.133 2.211-1.981-1.214-1.067 1.978-1.067-1.978-1.981
+    1.214.133-2.211-2.364.125 1.298-1.853-2.115-.997 2.115-.998-1.298-1.852 2.364.124-.133-2.21 1.981 1.213 1.067-1.977 1.067 1.977 1.981-1.214-.133 2.211 2.364-.124-1.298 1.852 2.115.998Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewbox="0 0 24 24" id="random">
+    <path d="M13.793 2.316a2.4 2.4 0 0 0-3.5-.09l-.002.001a2.399 2.399 0 0 0-.08.085L4.2 8.712v11.4a2.4 2.4 0 0 0 2.4 2.4h10.8a2.4 2.4 0 0 0 2.4-2.4v-11.4l-6.007-6.396ZM12 4.212a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.12 11.064-2.115.997 1.298 1.853L14.94 18l.133 2.211-1.981-1.214-1.067 1.978-1.067-1.978-1.981
+    1.214.133-2.211-2.364.125 1.298-1.853-2.115-.997 2.115-.998-1.298-1.852 2.364.124-.133-2.21 1.981 1.213 1.067-1.977 1.067 1.977 1.981-1.214-.133 2.211 2.364-.124-1.298 1.852 2.115.998Z"/>
+  </symbol>
+</svg>
+
+<a id="top"></a>
+
+<div class="visually-hidden-focusable top-0 start-0 end-0">
+  <nav class="container-xxl d-flex flex-wrap py-1" aria-label="Skip links">
+    <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to main content</a>
+    <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to footer</a>
+  </nav>
+</div>
+
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
+    <div class="container-xxl">
+
+      <!-- Orange brand logo -->
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Burger menu (visible on small screens) -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar with links -->
+      <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Orange Money</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Orange Energie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Assistance</a></li>
+        </ul>
+      </div>
+
+      <!-- Navbar with action icons -->
+      <div id="global-header-1.2" class="navbar-collapse collapse d-flex global-header-1">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+              </svg>
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+              </svg>
+              <span class="visually-hidden">Basket</span>
+              <span class="position-relative align-self-start">
+                <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  1
+                  <span class="visually-hidden">shopping basket items</span>
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+              <span class="visually-hidden">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav class="container-xxl" aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Shop</a></li>
+    <li class="breadcrumb-item"><a href="#">Mobile</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Smartphones</li>
+  </ol>
+</nav>
+
+<div class="bg-white title-bar mb-2 mb-md-3">
+  <div class="container-xxl">
+    <h1 class="display-1">Smartphones</h1>
+  </div>
+</div>
+
+<main>
+  <div class="container-xxl">
+    <h2 class="h4 ll-sm mb-3 mb-md-4">Choose the model that suits your needs from our selection of Smartphones.</h2>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+      <li>
+        <button class="tag active">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <use xlink:href="#smartphone"/>
+          </svg>
+          All<span class="visually-hidden">Devices</span>
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#promotion"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Best deal
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Premium
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Small price
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>New
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Refurbished
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Soon available
+        </button>
+      </li>
+      <li>
+        <button class="tag">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <span class="visually-hidden">Filter by</span>Flash sale
+        </button>
+      </li>
+    </ul>
+    <hr class="mt-2 mt-md-4 border-1 border-light">
+    <div class="row pt-md-4">
+
+      <form class="col-12 col-md-3 pe-5">
+        <button type="button" class="btn btn-dark mb-3">
+          <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          Reset filter
+        </button>
+
+        <div class="mb-2 pt-4">
+          <h3 class="h4 mb-0">Purchase type</h3>
+          <hr class="border-1 border-light my-2">
+          <div class="d-flex flex-column fs-4">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="offerTypeFilter">
+              <label class="form-check-label fs-6" for="offerTypeFilter">
+                With offer (56)
+              </label>
+            </div>
+            <div class="form-check mt-1">
+              <input class="form-check-input" type="checkbox" value="" id="mobileTypeFilter" checked>
+              <label class="form-check-label fs-6" for="mobileTypeFilter">
+                Mobile only (42)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-2 pt-4">
+          <h3 class="h4 mb-0">Brands</h3>
+          <hr class="border-1 border-light my-2">
+          <div class="d-flex flex-column fs-4">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="allBrandsFilter">
+              <label class="form-check-label fs-6" for="allBrandsFilter">
+                All (75)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="appleBrandFilter" checked>
+              <label class="form-check-label fs-6" for="appleBrandFilter">
+                Apple (23)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="alcatelBrandFilter">
+              <label class="form-check-label fs-6" for="alcatelBrandFilter">
+                Alcatel (2)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="honorBrandFilter">
+              <label class="form-check-label fs-6" for="honorBrandFilter">
+                Honor (4)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="itelBrandFilter" checked>
+              <label class="form-check-label fs-6" for="itelBrandFilter">
+                Itel (1)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="orangeBrandFilter" checked>
+              <label class="form-check-label fs-6" for="orangeBrandFilter">
+                Orange (3)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="tclBrandFilter">
+              <label class="form-check-label fs-6" for="tclBrandFilter">
+                TCL (6)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="samsungBrandFilter">
+              <label class="form-check-label fs-6" for="samsungBrandFilter">
+                Samsung (10)
+              </label>
+            </div>
+            <div class="collapse" id="brandFilterCollapse">
+              <div class="d-flex flex-column">
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="xiaomiBrandFilter">
+                  <label class="form-check-label fs-6" for="xiaomiBrandFilter">
+                    Xiaomi (6)
+                  </label>
+                </div>
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="huaweiBrandFilter">
+                  <label class="form-check-label fs-6" for="huaweiBrandFilter">
+                    Huawei (8)
+                  </label>
+                </div>
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="otherBrandFilter">
+                  <label class="form-check-label fs-6" for="otherBrandFilter">
+                    Others (12)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-link justify-content-start mt-1 p-0" data-bs-toggle="collapse" data-bs-target="#brandFilterCollapse" aria-expanded="false" aria-controls="brandFilterCollapse">More brands</button>
+          </div>
+        </div>
+
+        <div class="mb-2 pt-4">
+          <h3 class="h4 mb-0">Colors</h3>
+          <hr class="border-1 border-light my-2">
+          <div class="d-flex flex-column fs-4">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="allColorsFilter">
+              <label class="form-check-label fs-6" for="allColorsFilter">
+                All (65)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="appleColorFilter" checked>
+              <label class="form-check-label fs-6" for="appleColorFilter">
+                Black (3)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="alcatelColorFilter">
+              <label class="form-check-label fs-6" for="alcatelColorFilter">
+                Blue (3)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="honorColorFilter">
+              <label class="form-check-label fs-6" for="honorColorFilter">
+                Gold (2)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="itelColorFilter" checked>
+              <label class="form-check-label fs-6" for="itelColorFilter">
+                Grey (6)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="orangeColorFilter" checked>
+              <label class="form-check-label fs-6" for="orangeColorFilter">
+                Red (1)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="tclColorFilter">
+              <label class="form-check-label fs-6" for="tclColorFilter">
+                Phantom Violet (23)
+              </label>
+            </div>
+            <div class="form-check mt-1 mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="samsungColorFilter">
+              <label class="form-check-label fs-6" for="samsungColorFilter">
+                White (1)
+              </label>
+            </div>
+            <div class="collapse" id="ColorFilterCollapse">
+              <div class="d-flex flex-column">
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="xiaomiColorFilter">
+                  <label class="form-check-label fs-6" for="xiaomiColorFilter">
+                    Pink (6)
+                  </label>
+                </div>
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="huaweiColorFilter">
+                  <label class="form-check-label fs-6" for="huaweiColorFilter">
+                    Drake's Neck Green (8)
+                  </label>
+                </div>
+                <div class="form-check mt-1 mb-2">
+                  <input class="form-check-input" type="checkbox" value="" id="otherColorFilter">
+                  <label class="form-check-label fs-6" for="otherColorFilter">
+                    Others (12)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-link justify-content-start mt-1 p-0" data-bs-toggle="collapse" data-bs-target="#ColorFilterCollapse" aria-expanded="false" aria-controls="ColorFilterCollapse">More colors</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="col-12 col-md-9" style="height: 20px; background-color: black;"></div>
+    </div>
+  </div>
+</main>
