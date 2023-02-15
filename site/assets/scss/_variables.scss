@@ -21,6 +21,7 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-violet-bg
   --bd-toc-color: var(--bd-purple); // Boosted mod: instead of `var(--bd-violet)`
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
 }
 
 @include color-mode(dark, true) {
@@ -28,6 +29,7 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-violet-bg
   --bd-toc-color: var(--#{$prefix}emphasis-color);
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
 }
 
 // Boosted mod
