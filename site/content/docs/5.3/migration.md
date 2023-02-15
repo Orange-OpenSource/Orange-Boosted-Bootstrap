@@ -269,7 +269,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-popover-body-line-height</code></li>
-      <li><code>--bs-popover-body-padding</code></li>
       <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -372,7 +371,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$nav-underline-link-hover-color</code></li>
       <li><code>$nav-underline-link-padding-x</code></li>
       <li><code>$popover-body-line-height</code></li>
-      <li><code>$popover-body-padding</code></li>
       <li><code>$popover-header-line-height</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
