@@ -178,7 +178,7 @@
   // Boosted mod
   // Bigger gap between elements from lg breakpoint
   @include media-breakpoint-up(lg) {
-    --#{$prefix}nav-underline-gap: var(--#{$prefix}nav-link-padding-y);
+    --#{$prefix}nav-underline-gap: #{$nav-underline-gap-lg};
   }
 
   .nav-link {

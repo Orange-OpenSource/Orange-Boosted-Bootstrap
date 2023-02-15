@@ -1348,6 +1348,7 @@ $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-underline-gap:                       0 !default; // Boosted mod: instead of 1rem
+$nav-underline-gap-lg:                    var(--#{$prefix}nav-link-padding-y) !default; // Boosted mod
 $nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod: instead of .125rem
 $nav-underline-border-color:              $gray-500 !default; // Boosted mod
 $nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
