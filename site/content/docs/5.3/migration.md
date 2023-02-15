@@ -268,6 +268,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-body-line-height</code></li>
+      <li><code>--bs-popover-body-padding</code></li>
+      <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text</code></li>
@@ -285,15 +288,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
       <li><code>--bs-tertiary-color</code></li>
+      <li><code>--bs-tooltip-arrow-border</code></li>
+      <li><code>--bs-tooltip-border-color</code></li>
+      <li><code>--bs-tooltip-border-width</code></li>
+      <li><code>--bs-tooltip-line-height</code></li>
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text</code></li>
-      <li><code>--bs-tooltip-border-width</code></li>
-      <li><code>--bs-tooltip-border-color</code></li>
-      <li><code>--bs-tooltip-arrow-border</code></li>
-      <li><code>--bs-popover-body-padding</code></li>
-      <li><code>--bs-popover-body-padding-top</code></li>
-      <li><code>--bs-popover-body-padding-bottom</code></li>
     </ul>
   </details>
 
@@ -370,6 +371,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$nav-underline-link-border-width</code></li>
       <li><code>$nav-underline-link-hover-color</code></li>
       <li><code>$nav-underline-link-padding-x</code></li>
+      <li><code>$popover-body-line-height</code></li>
+      <li><code>$popover-body-padding</code></li>
+      <li><code>$popover-header-line-height</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
@@ -390,17 +394,16 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-dark</code></li>
       <li><code>$success-text</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$tooltip-arrow-border</code></li>
+      <li><code>$tooltip-border-color</code></li>
+      <li><code>$tooltip-border-width</code></li>
+      <li><code>$tooltip-line-height</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
       <li><code>$warning-border-subtle</code></li>
       <li><code>$warning-text-dark</code></li>
       <li><code>$warning-text</code></li>
-      <li><code>$tooltip-border-width</code></li>
-      <li><code>$tooltip-border-color</code></li>
-      <li><code>$popover-body-padding</code></li>
-      <li><code>$popover-body-padding-top</code></li>
-      <li><code>$popover-body-padding-bottom</code></li>
     </ul>
   </details>
 
