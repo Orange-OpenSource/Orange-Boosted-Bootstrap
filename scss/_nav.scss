@@ -184,7 +184,6 @@
   .nav-link {
     padding: subtract(1rem, var(--#{$prefix}nav-underline-border-width)) subtract(var(--#{$prefix}nav-underline-link-padding-x), var(--#{$prefix}nav-underline-border-width)); // Boosted mod
     margin-bottom: calc(-1 * var(--#{$prefix}nav-underline-border-width)); // stylelint-disable-line function-disallowed-list
-    background: none;
     border: var(--#{$prefix}nav-underline-border-width) solid transparent;
     border-width: var(--#{$prefix}nav-underline-link-border-width);
     @include border-top-radius(var(--#{$prefix}nav-underline-border-radius));
