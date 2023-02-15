@@ -179,7 +179,7 @@
   border-bottom: var(--#{$prefix}nav-underline-border-width) solid var(--#{$prefix}nav-underline-border-color); // Boosted mod
 
   // Boosted mod
-  // Bigger gap between elements form lg breakpoint
+  // Bigger gap between elements from lg breakpoint
   @include media-breakpoint-up(lg) {
     --#{$prefix}nav-underline-gap: var(--#{$prefix}nav-link-padding-y);
   }
