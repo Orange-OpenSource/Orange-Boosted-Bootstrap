@@ -163,16 +163,16 @@
   // scss-docs-start nav-underline-css-vars
   --#{$prefix}nav-underline-gap: #{$nav-underline-gap};
   --#{$prefix}nav-underline-border-width: #{$nav-underline-border-width};
-  --#{$prefix}nav-underline-border-color: #{$gray-500}; // Boosted mod
-  --#{$prefix}nav-underline-border-radius: #{$nav-tabs-border-radius}; // Boosted mod
-  --#{$prefix}nav-underline-link-padding-x: #{$nav-tabs-link-padding-x}; // Boosted mod
-  --#{$prefix}nav-underline-link-hover-color: #{$accessible-orange}; // Boosted mod
-  --#{$prefix}nav-underline-link-hover-bg: var(--#{$prefix}nav-underline-link-hover-border-color); // Boosted mod
-  --#{$prefix}nav-underline-link-border-width: 0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4);  /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  --#{$prefix}nav-underline-border-color: #{$nav-underline-border-color}; // Boosted mod
+  --#{$prefix}nav-underline-border-radius: #{$nav-underline-border-radius}; // Boosted mod
+  --#{$prefix}nav-underline-link-padding-x: #{$nav-underline-link-padding-x}; // Boosted mod
+  --#{$prefix}nav-underline-link-hover-color: #{$nav-underline-link-hover-color}; // Boosted mod
+  --#{$prefix}nav-underline-link-hover-bg: transparent; // Boosted mod
+  --#{$prefix}nav-underline-link-border-width: #{$nav-underline-link-border-width}; // Boosted mod
   --#{$prefix}nav-underline-link-hover-border-color: transparent; // Boosted mod
   --#{$prefix}nav-underline-link-active-color: #{$nav-underline-link-active-color};
-  --#{$prefix}nav-underline-link-active-bg: #{$nav-tabs-link-active-bg}; // Boosted mod
-  --#{$prefix}nav-underline-link-active-border-color: #{$accessible-orange}; // Boosted mod
+  --#{$prefix}nav-underline-link-active-bg: #{$nav-underline-link-active-bg}; // Boosted mod
+  --#{$prefix}nav-underline-link-active-border-color: #{$nav-underline-link-active-border-color}; // Boosted mod
   // scss-docs-end nav-underline-css-vars
 
   gap: var(--#{$prefix}nav-underline-gap);

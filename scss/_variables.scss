@@ -1347,9 +1347,16 @@ $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
-$nav-underline-gap:                 0 !default; // Boosted mod: instead of 1rem
-$nav-underline-border-width:        #{calc($nav-tabs-border-width * .5)} !default; // Boosted mod: instead of .125rem
-$nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
+$nav-underline-gap:                       0 !default; // Boosted mod: instead of 1rem
+$nav-underline-border-width:              #{calc($nav-tabs-border-width * .5)} !default; // Boosted mod: instead of .125rem
+$nav-underline-border-color:              $gray-500 !default; // Boosted mod
+$nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
+$nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
+$nav-underline-link-padding-x:            $nav-tabs-link-padding-x !default; // Boosted mod
+$nav-underline-link-hover-color:          $accessible-orange !default; // Boosted mod
+$nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default;  /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+$nav-underline-link-active-bg:            var(--#{$prefix}body-bg) !default; // Boosted mod
+$nav-underline-link-active-border-color:  $accessible-orange !default; // Boosted mod
 // scss-docs-end nav-variables
 
 

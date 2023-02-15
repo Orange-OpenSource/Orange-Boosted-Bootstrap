@@ -351,8 +351,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$mark-bg-inverted</code></li>
       <li><code>$mark-color-inverted</code></li>
       <li><code>$nav-underline-gap</code></li>
+      <li><code>$nav-underline-border-color</code></li>
+      <li><code>$nav-underline-border-radius</code></li>
       <li><code>$nav-underline-border-width</code></li>
+      <li><code>$nav-underline-link-active-bg</code></li>
+      <li><code>$nav-underline-link-active-border-color</code></li>
       <li><code>$nav-underline-link-active-color</code></li>
+      <li><code>$nav-underline-link-border-width</code></li>
+      <li><code>$nav-underline-link-hover-color</code></li>
+      <li><code>$nav-underline-link-padding-x</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
