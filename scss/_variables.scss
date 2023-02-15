@@ -1699,7 +1699,8 @@ $accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
 // scss-docs-start tooltip-variables
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
-$tooltip-max-width:                 $spacer * 10 !default;
+$tooltip-line-height:               1.14 !default; // Boosted mod
+$tooltip-max-width:                 5.8rem !default;
 $tooltip-color:                     $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
 $tooltip-border-width:              map-get($border-widths, 1) !default; // Boosted mod
@@ -1740,19 +1741,17 @@ $popover-header-color:              $headings-color !default;
 $popover-header-padding-top:        $spacer !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod
+$popover-header-padding-y:          $spacer * .5 !default;
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-top:          0 !default;  // Boosted mod
 $popover-body-padding-bottom:       $spacer !default; // Boosted mod
 $popover-body-padding-x:            $popover-header-padding-x !default;
+$popover-body-padding-y:            $popover-header-padding-y !default;
 $popover-body-padding:              $popover-header-padding-top !default; // Boosted mod
 
 $popover-arrow-width:               $spacer !default; // Boosted mod
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
-// fusv-disable
-$popover-header-padding-y:          $spacer * .5 !default; // Deprecated in Boosted 5.3.0 because of tooltips and popovers redesign in UI Kit V5
-$popover-body-padding-y:            $popover-header-padding-y !default; // Deprecated in Boosted 5.3.0 because of tooltips and popovers redesign in UI Kit V5
-// fusv-enable
 // scss-docs-end popover-variables
 
 // fusv-disable
