@@ -341,13 +341,13 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-$primary-text:            $primary !default; // Boosted mod: instead of `$blue-600`
-$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-600`
-$success-text:            null !default; // Boosted mod: instead of `$green-600`
-$info-text:               null !default; // Boosted mod: instead of `$cyan-700`
-$warning-text:            null !default; // Boosted mod: instead of `$yellow-700`
-$danger-text:             null !default; // Boosted mod: instead of `$red-600`
-$light-text:              $light !default; // Boosted mod: instead of `$gray-600`
+$primary-text:            $primary !default; // Boosted mod: instead of `$blue-700`
+$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-700`
+$success-text:            null !default; // Boosted mod: instead of `$green-700`
+$info-text:               null !default; // Boosted mod: instead of `$cyan-800`
+$warning-text:            null !default; // Boosted mod: instead of `$yellow-800`
+$danger-text:             null !default; // Boosted mod: instead of `$red-700`
+$light-text:              $light !default; // Boosted mod: instead of `$gray-700`
 $dark-text:               null !default; // Boosted mod: instead of `$gray-700`
 
 $primary-bg-subtle:       $primary !default; // Boosted mod: instead of `$blue-100`
