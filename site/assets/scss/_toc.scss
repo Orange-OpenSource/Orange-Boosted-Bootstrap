@@ -1,12 +1,6 @@
-// stylelint-disable selector-max-type, selector-no-qualifying-type, selector-max-compound-selectors
+// stylelint-disable selector-max-type, selector-no-qualifying-type
 
 .bd-toc {
-  // Boosted mod
-  @include media-breakpoint-down(lg) {
-    border: 0 !important; // stylelint-disable-line declaration-no-important
-  }
-  // End mod
-
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: $offset-top; // Boosted mod
@@ -22,21 +16,12 @@
     ul {
       padding-left: 0;
       margin-bottom: 0;
-      margin-left: -.75rem;
       list-style: none;
 
       ul {
         padding-left: 1rem;
-        margin-left: -1rem;
-
-        a {
-          padding-left: 1.375rem;
-        }
+        margin-left: -.5rem; // Boosted mod
       }
-    }
-
-    li {
-      margin-bottom: .25rem;
     }
 
     a {
