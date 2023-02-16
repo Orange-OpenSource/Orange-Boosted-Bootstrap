@@ -18,15 +18,19 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-accent-rgb
   --bd-pink-rgb: #{to-rgb($pink-500)};
   --bd-teal-rgb: #{to-rgb($teal-500)};
-
   // Boosted mod: no --bd-violet-bg
+  --bd-toc-color: var(--bs-emphasis-color); // Boosted mod: instead of `var(--bd-violet)`
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
+  --bd-toc-active-border-left-color: var(--bd-purple); // Boosted mod
 }
 
 @include color-mode(dark, true) {
   --bd-violet: #{mix($bd-violet, $white, 75%)};
   // Boosted mod: no --bd-violet-bg
+  // Boosted mod: no --bd-toc-color
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
 }
 
 // Boosted mod
