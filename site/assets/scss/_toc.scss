@@ -34,11 +34,11 @@
       &:hover,
       &.active {
         color: var(--bd-toc-color);
-        border-left-color: var(--bd-toc-color);
+        border-left-color: var(--bd-toc-active-border-left-color); // Boosted mod: instead of `--bd-toc-color`
       }
 
       &.active {
-        font-weight: 500;
+        font-weight: 700; // Boosted mod: instead of `500`
       }
 
       code {
