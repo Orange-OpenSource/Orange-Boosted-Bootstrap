@@ -7,10 +7,35 @@ aliases:
 ---
 
 <style type="text/css">
+  .card {
+    --bs-info-rgb: 75, 180, 230;
+    --bs-success-rgb: 80, 190, 135;
+  }
+
+  @media screen and (min-width: 768px) {
+    .card h3 {
+      min-height: 2.8125rem;
+    }
+  }
+
   .custom-triangle {
+    border-width: 0 19px 41px 0;
     border-style: solid;
-    border-width: 0 16px 40px 0;
     border-right-color: transparent !important;
+  }
+
+  .custom-counter {
+    padding: 1px 2px;
+  }
+
+  .custom-counter::after {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    content: "";
   }
 </style>
 
@@ -117,7 +142,7 @@ aliases:
 </div>
 
 <main>
-  <div class="container-xxl">
+  <div class="container-xxl pb-3">
     <h2 class="h4 ll-sm mb-3 mb-md-4">Choose the model that suits your needs from our selection of Smartphones.</h2>
     <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
       <li>
@@ -459,7 +484,7 @@ aliases:
                   <input type="email" class="form-control" id="maxPriceFilter" placeholder="Maximum price" value="300 000">
                 </div>
                 <div class="mt-3">
-                  <p class="placeholder-glow">
+                  <p class="placeholder-glow mb-0">
                     <span class="visually-hidden">placeholder for double range slider</span>
                     <span class="placeholder col-12" style="min-height: 50px;"></span>
                   </p>
@@ -510,15 +535,15 @@ aliases:
           </form>
         </div>
 
-        <p class="pt-md-3 h4">
+        <p class="pt-md-3 h4 mb-3">
           <span class="text-primary">16 matches</span> / 9 displayed
         </p>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-3 mt-md-4">
-          <div class="card border-0 mt-1">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-3">
+          <div class="card border-0 pt-2 pt-md-4">
             <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
-              <div class="d-flex">
-                <div class="p-2 bg-primary">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-primary text-nowrap">
                   <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                     <use xlink:href="#random"/>
                   </svg>Flash sale
@@ -526,26 +551,852 @@ aliases:
                 <div class="custom-triangle border-primary"></div>
               </div>
               <div>
-                <p class="mb-1 small fw-bold lh-sm">85 items left!</p>
-                <p class="mb-1 small fw-bold lh-sm">
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">0</span>
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">1</span>
+                <p class="mb-1 small fw-bold lh-sm text-nowrap">85 items left!</p>
+                <p class="mb-1 small fw-bold lh-sm text-nowrap">
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">0</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
                   :
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">1</span>
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">1</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
                   :
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">2</span>
-                  <span class="border border-1 border-light rounded-1" style="padding: 0 2px;">7</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">2</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">7</span>
                 </p>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,99 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxx xxxxxx xx xxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible1" name="rating1" value="1" class="visually-hidden">
+                    <label for="terrible1" title="Terrible"></label>
+
+                    <input type="radio" id="bad1" name="rating1" value="2" class="visually-hidden">
+                    <label for="bad1" title="Bad"></label>
+
+                    <input type="radio" id="mixed1" name="rating1" value="3" class="visually-hidden" checked>
+                    <label for="mixed1" title="Mixed"></label>
+
+                    <input type="radio" id="good1" name="rating1" value="4" class="visually-hidden">
+                    <label for="good1" title="Good"></label>
+
+                    <input type="radio" id="excellent1" name="rating1" value="5" class="visually-hidden">
+                    <label for="excellent1" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <defs>
+                        <linearGradient id="Gradient1">
+                          <stop offset="0%" stop-color="#0400ff"/>
+                          <stop offset="100%" stop-color="#fff800"/>
+                        </linearGradient>
+                      </defs>
+                      <circle cx="10" cy="10" r="10" fill="url('#Gradient1')"/>
+                    </svg>
+                    5 colors
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">2 500 350 FCFA</span><br>
+                    <span class="text-decoration-line-through">3 000 000 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare1">
+                      <label for="phoneCompare1" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 pt-4 pt-md-4">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-danger fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-danger text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Out of stock
+                </div>
+                <div class="custom-triangle border-danger"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,80 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible2" name="rating2" value="1" class="visually-hidden">
+                    <label for="terrible2" title="Terrible"></label>
+
+                    <input type="radio" id="bad2" name="rating2" value="2" class="visually-hidden">
+                    <label for="bad2" title="Bad"></label>
+
+                    <input type="radio" id="mixed2" name="rating2" value="3" class="visually-hidden" checked>
+                    <label for="mixed2" title="Mixed"></label>
+
+                    <input type="radio" id="good2" name="rating1" value="4" class="visually-hidden">
+                    <label for="good2" title="Good"></label>
+
+                    <input type="radio" id="excellent2" name="rating2" value="5" class="visually-hidden">
+                    <label for="excellent2" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">50 530 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare2">
+                      <label for="phoneCompare2" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 pt-4 pt-md-4">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-info fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-supporting-blue text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Flash sale
+                </div>
+                <div class="custom-triangle border-info"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,75 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxxx xxxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible3" name="rating3" value="1" class="visually-hidden">
+                    <label for="terrible3" title="Terrible"></label>
+
+                    <input type="radio" id="bad3" name="rating3" value="2" class="visually-hidden">
+                    <label for="bad3" title="Bad"></label>
+
+                    <input type="radio" id="mixed3" name="rating3" value="3" class="visually-hidden" checked>
+                    <label for="mixed3" title="Mixed"></label>
+
+                    <input type="radio" id="good3" name="rating3" value="4" class="visually-hidden">
+                    <label for="good3" title="Good"></label>
+
+                    <input type="radio" id="excellent3" name="rating3" value="5" class="visually-hidden">
+                    <label for="excellent3" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#085edb"/>
+                    </svg>
+                    Blue
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">129 952 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare3">
+                      <label for="phoneCompare3" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-supporting-green text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>New
+                </div>
+                <div class="custom-triangle border-success"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,90 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxxxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible4" name="rating4" value="1" class="visually-hidden">
+                    <label for="terrible4" title="Terrible"></label>
+
+                    <input type="radio" id="bad4" name="rating4" value="2" class="visually-hidden">
+                    <label for="bad4" title="Bad"></label>
+
+                    <input type="radio" id="mixed4" name="rating4" value="3" class="visually-hidden" checked>
+                    <label for="mixed4" title="Mixed"></label>
+
+                    <input type="radio" id="good4" name="rating4" value="4" class="visually-hidden">
+                    <label for="good4" title="Good"></label>
+
+                    <input type="radio" id="excellent4" name="rating4" value="5" class="visually-hidden">
+                    <label for="excellent4" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Gray
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">323 380 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare4">
+                      <label for="phoneCompare4" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-primary text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Flash sale
+                </div>
+                <div class="custom-triangle border-primary"></div>
+              </div>
+              <div >
+                <p class="mb-1 small fw-bold lh-sm text-nowrap">
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">0</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
+                  :
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">1</span>
+                  :
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">2</span>
+                  <span class="position-relative z-0 d-inline-block border border-1 border-light rounded-1 custom-counter">7</span>
+                </p>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,89 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxxxx xxxxxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible5" name="rating5" value="1" class="visually-hidden">
+                    <label for="terrible5" title="Terrible"></label>
+
+                    <input type="radio" id="bad5" name="rating5" value="2" class="visually-hidden">
+                    <label for="bad5" title="Bad"></label>
+
+                    <input type="radio" id="mixed5" name="rating5" value="3" class="visually-hidden" checked>
+                    <label for="mixed5" title="Mixed"></label>
+
+                    <input type="radio" id="good5" name="rating5" value="4" class="visually-hidden">
+                    <label for="good5" title="Good"></label>
+
+                    <input type="radio" id="excellent5" name="rating5" value="5" class="visually-hidden">
+                    <label for="excellent5" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Gray
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">625 605 FCFA</span><br>
+                    <span class="text-decoration-line-through">725 605 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare5">
+                      <label for="phoneCompare5" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-primary text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Best deal
+                </div>
+                <div class="custom-triangle border-primary"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,87 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxx xx xx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible6" name="rating6" value="1" class="visually-hidden">
+                    <label for="terrible6" title="Terrible"></label>
+
+                    <input type="radio" id="bad6" name="rating6" value="2" class="visually-hidden">
+                    <label for="bad6" title="Bad"></label>
+
+                    <input type="radio" id="mixed6" name="rating6" value="3" class="visually-hidden" checked>
+                    <label for="mixed6" title="Mixed"></label>
+
+                    <input type="radio" id="good6" name="rating6" value="4" class="visually-hidden">
+                    <label for="good6" title="Good"></label>
+
+                    <input type="radio" id="excellent6" name="rating6" value="5" class="visually-hidden">
+                    <label for="excellent6" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">459 900 FCFA</span><br>
+                    <span class="text-decoration-line-through">359 900 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex mb-3 p-2 bg-supporting-yellow">
+                <svg class="flex-shrink-0 me-2" width="1.875rem" height="1.875rem" fill="currentColor" aria-hidden="true" focusable="false">
+                  <use xlink:href="#random"/>
+                </svg>
+                <p class="mb-0 small fw-bold">Extra 20 GB for 3 months if purchased with plan</p>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare6">
+                      <label for="phoneCompare6" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-supporting-green text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>New
+                </div>
+                <div class="custom-triangle border-success"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,90 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxxxx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible7" name="rating7" value="1" class="visually-hidden">
+                    <label for="terrible7" title="Terrible"></label>
+
+                    <input type="radio" id="bad7" name="rating7" value="2" class="visually-hidden">
+                    <label for="bad7" title="Bad"></label>
+
+                    <input type="radio" id="mixed7" name="rating7" value="3" class="visually-hidden" checked>
+                    <label for="mixed7" title="Mixed"></label>
+
+                    <input type="radio" id="good7" name="rating7" value="4" class="visually-hidden">
+                    <label for="good7" title="Good"></label>
+
+                    <input type="radio" id="excellent7" name="rating7" value="5" class="visually-hidden">
+                    <label for="excellent7" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Gray
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">330 320 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare7">
+                      <label for="phoneCompare7" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-primary text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Best deal
+                </div>
+                <div class="custom-triangle border-primary"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,77 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxxxxxx xxxxxx xx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible8" name="rating8" value="1" class="visually-hidden">
+                    <label for="terrible8" title="Terrible"></label>
+
+                    <input type="radio" id="bad8" name="rating8" value="2" class="visually-hidden">
+                    <label for="bad8" title="Bad"></label>
+
+                    <input type="radio" id="mixed8" name="rating8" value="3" class="visually-hidden" checked>
+                    <label for="mixed8" title="Mixed"></label>
+
+                    <input type="radio" id="good8" name="rating8" value="4" class="visually-hidden">
+                    <label for="good8" title="Good"></label>
+
+                    <input type="radio" id="excellent8" name="rating8" value="5" class="visually-hidden">
+                    <label for="excellent8" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#666666"/>
+                    </svg>
+                    Gray
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">550 450 FCFA</span><br>
+                    <span class="text-decoration-line-through">700 200 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare8">
+                      <label for="phoneCompare8" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
+            <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
+              <div class="d-flex mt-1">
+                <div class="p-2 bg-primary text-nowrap">
+                  <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="#random"/>
+                  </svg>Best deal
+                </div>
+                <div class="custom-triangle border-primary"></div>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
+              <div class="row mb-3 align-items-start">
+                <div class="col-5 small fw-bold">
+                  {{< placeholder width="100%" height="160" class="mb-1" text="Image cap" >}}
+                  DAS: 0,82 W/Kg
+                </div>
+                <div class="col-7">
+                  <h3 class="fs-4 fw-bold mb-2">xxx xx xxx</h3>
+                  <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled>
+                    <input type="radio" id="terrible9" name="rating9" value="1" class="visually-hidden">
+                    <label for="terrible9" title="Terrible"></label>
+
+                    <input type="radio" id="bad9" name="rating9" value="2" class="visually-hidden">
+                    <label for="bad9" title="Bad"></label>
+
+                    <input type="radio" id="mixed9" name="rating9" value="3" class="visually-hidden" checked>
+                    <label for="mixed9" title="Mixed"></label>
+
+                    <input type="radio" id="good9" name="rating9" value="4" class="visually-hidden">
+                    <label for="good9" title="Good"></label>
+
+                    <input type="radio" id="excellent9" name="rating9" value="5" class="visually-hidden">
+                    <label for="excellent9" title="Excellent"></label>
+                  </fieldset>
+                  <span class="visually-hidden">rated 3 stars out of 5</span>
+                  <p class="mb-3 fw-bold">
+                    <svg class="border border-1 rounded-circle me-2" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <circle cx="10" cy="10" r="10" fill="#000000"/>
+                    </svg>
+                    Black
+                  </p>
+                  <p class="mb-0 pt-md-1">
+                    <span class="fw-bold">From</span><br>
+                    <span class="fs-4 fw-bold text-primary">300 600 FCFA</span><br>
+                    <span class="text-decoration-line-through">500 600 FCFA</span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-5 col-7">
+                  <form class="mb-3">
+                    <div class="form-check fs-4">
+                      <input type="checkbox" class="form-check-input" id="phoneCompare9">
+                      <label for="phoneCompare9" class="form-check-label fs-6">Compare</label>
+                    </div>
+                  </form>
+                  <a href="#" class="btn btn-info">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pt-2 pt-md-5">
+          <div class="col-12 col-md-4 offset-md-4">
+            <button class="btn btn-info w-100 mb-2" disabled>Compare selection (0)</button>
+            <button class="btn btn-secondary w-100">Load all results</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="h1 mb-3 pt-4 pt-md-5">Top sales</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-4 pt-3">
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxxx xxxxxx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">25 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxxx xxxxx xxxxx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxxxx xxx xxxxxx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxxxx x xxx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">28 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxxxx xx xxxx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative row mt-md-3">
+          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="Image cap" >}}</div></div>
+          <div class="col-7 col-md-5">
+            <h3 class="mb-1 fs-4 fw-bold">xxxxx xxx xx</h3>
+            <p>
+              From<br>
+              <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
+            </p>
+          </div>
+          <div class="col-1 offset-1 offset-md-2">
+            <a href="#" class="stretched-link">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
+                <use xlink:href="#random"/>
+              </svg>
+              <span class="visually-hidden">Go to link</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="visually-hidden">Advices</h2>
+    <div class="row gy-3">
+      <div class="col-12 pt-3">
+        <div class="row gx-0">
+          <div class="col-12 col-md-7 order-md-1">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="Image cap" >}}</div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="h-100 p-2 p-md-4 bg-dark">
+              <div class="pt-1 pt-md-0 pe-3 pe-md-4 pb-1 ps-2">
+                <h3 class="h1 mb-2 text-primary">The best for my budget</h3>
+                <p class="h2 mt-1 mt-md-2 mb-2">iPhone at a reduced price refurbished, with 1 year guarantly</p>
+                <p class="h5 mt-1 mt-md-2 mb-3 text-primary">From 850 000 FCFA</p>
+                <button class="btn btn-secondary btn-inverse mt-1 mt-md-2 mb-2">Find yours</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-md-5">
+        <div class="row gx-0">
+          <div class="col-12 col-md-7 order-md-1">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="Image cap" >}}</div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="h-100 pt-2 pt-md-0">
+              <div class="pt-1 pt-md-0 pe-md-5">
+                <h3 class="mb-2">Why buy your phone from Orange?</h3>
+                <p class="lead mb-0 mt-md-1">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you ans demonstrate it to you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-md-4">
+        <div class="row gx-0">
+          <div class="col-12 col-md-7">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="Image cap" >}}</div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="h-100 pt-2 pt-md-0">
+              <div class="pt-1 pt-md-0 ps-md-5">
+                <h3 class="mb-2">How to choose your smartphone?</h3>
+                <p class="lead mb-0 mt-md-1">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-md-4">
+        <div class="row gx-0">
+          <div class="col-12 col-md-7 order-md-1">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="Image cap" >}}</div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="h-100 pt-2 pt-md-0">
+              <div class="pt-1 pt-md-0 pe-md-5">
+                <h3 class="mb-2">Do you prefer a simple phone?</h3>
+                <p class="lead mb-0 mt-md-1">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 pt-2 pt-md-4">
+        <div class="row gx-0">
+          <div class="col-12 col-md-7">
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="Image cap" >}}</div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="h-100 pt-2 pt-md-0">
+              <div class="pt-1 pt-md-0 ps-md-5">
+                <h3 class="mb-2">Which offer to choose with your mobile?</h3>
+                <p class="lead mb-0 mt-md-1">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row mt-5">
+  <div class="bg-body-secondary mt-4 mt-md-5 pb-3">
+    <div class="container-xxl pt-3 pt-md-4 pb-5">
+      <h2 class="display-3 mb-4">Orange by your side</h2>
+      <div class="row justify-content-around align-items-start pt-2 pt-md-4 text-center">
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link text-decoration-none">Contact us</a></div>
+        </div>
 
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link text-decoration-none">Frequently asked questions</a></div>
+        </div>
+
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link text-decoration-none">Shops</a></div>
+        </div>
+
+        <div class="position-relative col-6 col-md-2">
+          <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="#random"/>
+          </svg>
+          <div><a href="#" class="mb-0 fw-bold stretched-link text-decoration-none">24/24 service</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
