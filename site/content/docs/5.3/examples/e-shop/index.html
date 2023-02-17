@@ -1,43 +1,12 @@
 ---
 layout: examples
 title: E-shop
+extra_css:
+  - "e-shop.css"
 aliases:
   - "/examples/e-shop"
   - "/docs/examples/e-shop"
 ---
-
-<style type="text/css">
-  .card {
-    --bs-info-rgb: 75, 180, 230;
-    --bs-success-rgb: 80, 190, 135;
-  }
-
-  @media screen and (min-width: 768px) {
-    .card h3 {
-      min-height: 2.8125rem;
-    }
-  }
-
-  .custom-triangle {
-    border-width: 0 19px 41px 0;
-    border-style: solid;
-    border-right-color: transparent !important;
-  }
-
-  .custom-counter {
-    padding: 1px 2px;
-  }
-
-  .custom-counter::after {
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #ccc;
-    content: "";
-  }
-</style>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol fill="currentColor" viewbox="0 0 24 24" id="smartphone">
@@ -517,7 +486,7 @@ aliases:
             Filter
           </button>
 
-          <form class="btn-group d-none d-md-flex" role="group">
+          <form><div class="btn-group d-none d-md-flex" role="group">
             <input type="radio" class="btn-check" name="displayOffers" id="gridDisplay" autocomplete="off" checked>
             <label class="btn btn-icon btn-no-outline" for="gridDisplay" title="Grid">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -532,7 +501,7 @@ aliases:
               </svg>
               <span class="visually-hidden">List display</span>
             </label>
-          </form>
+          </div></form>
         </div>
 
         <p class="pt-md-3 h4 mb-3">
