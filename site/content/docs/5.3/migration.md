@@ -328,6 +328,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>
+      <li><code>$form-color-disabled-background-swatch</code></li>
+      <li><code>$form-color-disabled-border-color</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
