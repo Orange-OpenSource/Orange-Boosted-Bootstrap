@@ -24,80 +24,27 @@ aliases:
     </div>
     <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title">Title</h3>
-          </div>
-        </div>
+        {{< card >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title mb-3">Title</h3>
-            <p class="card-text fw-bold text-light">Meta data</p>
-          </div>
-        </div>
+        {{< card metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-2">Caption</p>
-          </div>
-        </div>
+        {{< card caption=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <p class="card-text fw-bold text-light">Meta data</p>
-          </div>
-        </div>
+        {{< card caption=true metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <ul class="nav flex-row gap-3">
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                    <use xlink:href="#heart"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                    <use xlink:href="#share"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {{< card caption=true buttons=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body bg-dark">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <button class="btn btn-secondary btn-inverse" aria-label="Button description" title="Button description">Button</button>
-          </div>
-        </div>
+        {{< card caption=true action=true >}}
       </div>
     </div>
 
@@ -107,80 +54,27 @@ aliases:
     </div>
     <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-          </div>
-        </div>
+        {{< card borders=true background="body" >}}
       </div>
 
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title mb-3">Title</h3>
-            <p class="card-text fw-bold text-muted">Meta data</p>
-          </div>
-        </div>
+        {{< card borders=true background="body" metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-2">Caption</p>
-          </div>
-        </div>
+        {{< card borders=true background="body" caption=true >}}
       </div>
 
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <p class="card-text fw-bold text-muted">Meta data</p>
-          </div>
-        </div>
+        {{< card borders=true background="body" caption=true metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <ul class="nav flex-row gap-3">
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                    <use xlink:href="#heart"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                    <use xlink:href="#share"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {{< card borders=true background="body" caption=true buttons=true >}}
       </div>
 
       <div class="col">
-        <div class="card">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
-          </div>
-        </div>
+        {{< card borders=true background="body" caption=true action=true >}}
       </div>
     </div>
 
@@ -190,80 +84,27 @@ aliases:
     </div>
     <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title">Title</h3>
-          </div>
-        </div>
+        {{< card background="body" open=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title mb-3">Title</h3>
-            <p class="card-text fw-bold text-muted">Meta data</p>
-          </div>
-        </div>
+        {{< card background="body" open=true metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-2">Caption</p>
-          </div>
-        </div>
+        {{< card background="body" open=true caption=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <p class="card-text fw-bold text-muted">Meta data</p>
-          </div>
-        </div>
+        {{< card background="body" open=true caption=true metadata=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <ul class="nav flex-row gap-3">
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                    <use xlink:href="#heart"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                    <use xlink:href="#share"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {{< card background="body" open=true caption=true buttons=true >}}
       </div>
 
       <div class="col">
-        <div class="card border-0">
-          {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-          <div class="card-body px-0">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text fw-bold mb-4">Caption</p>
-            <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
-          </div>
-        </div>
+        {{< card background="body" open=true caption=true action=true >}}
       </div>
     </div>
   </div>
@@ -275,80 +116,27 @@ aliases:
       </div>
       <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title">Title</h3>
-            </div>
-          </div>
+          {{< card background="body" >}}
         </div>
 
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title mb-3">Title</h3>
-              <p class="card-text fw-bold text-muted">Meta data</p>
-            </div>
-          </div>
+          {{< card background="body" metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-2">Caption</p>
-            </div>
-          </div>
+          {{< card background="body" caption=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <p class="card-text fw-bold text-muted">Meta data</p>
-            </div>
-          </div>
+          {{< card background="body" caption=true metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <ul class="nav flex-row gap-3">
-                <li>
-                  <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                      <use xlink:href="#heart"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                      <use xlink:href="#share"/>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          {{< card background="body" caption=true buttons=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0 bg-body">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <button class="btn btn-secondary" aria-label="Button description" title="Button description">Button</button>
-            </div>
-          </div>
+          {{< card background="body" caption=true action=true >}}
         </div>
       </div>
 
@@ -358,80 +146,27 @@ aliases:
       </div>
       <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title">Title</h3>
-            </div>
-          </div>
+          {{< card borders=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title mb-3">Title</h3>
-              <p class="card-text fw-bold text-light">Meta data</p>
-            </div>
-          </div>
+          {{< card borders=true metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-2">Caption</p>
-            </div>
-          </div>
+          {{< card borders=true caption=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <p class="card-text fw-bold text-light">Meta data</p>
-            </div>
-          </div>
+          {{< card borders=true caption=true metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <ul class="nav flex-row gap-3">
-                <li>
-                  <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                      <use xlink:href="#heart"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                      <use xlink:href="#share"/>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          {{< card borders=true caption=true buttons=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-dark">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <button class="btn btn-secondary btn-inverse" aria-label="Button description" title="Button description">Button</button>
-            </div>
-          </div>
+          {{< card borders=true caption=true action=true >}}
         </div>
       </div>
 
@@ -441,80 +176,27 @@ aliases:
       </div>
       <div class="row m-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-3 py-1">
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title">Title</h3>
-            </div>
-          </div>
+          {{< card open=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title mb-3">Title</h3>
-              <p class="card-text fw-bold text-light">Meta data</p>
-            </div>
-          </div>
+          {{< card open=true metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-2">Caption</p>
-            </div>
-          </div>
+          {{< card open=true caption=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <p class="card-text fw-bold text-light">Meta data</p>
-            </div>
-          </div>
+          {{< card open=true caption=true metadata=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <ul class="nav flex-row gap-3">
-                <li>
-                  <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Favorite">
-                      <use xlink:href="#heart"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" role="img" aria-label="Share">
-                      <use xlink:href="#share"/>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          {{< card open=true caption=true buttons=true >}}
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            {{< placeholder width="100%" height="162" class="card-img-top" text="Image cap" >}}
-            <div class="card-body bg-dark px-0">
-              <h3 class="card-title">Title</h3>
-              <p class="card-text fw-bold mb-4">Caption</p>
-              <button class="btn btn-secondary btn-inverse" aria-label="Button description" title="Button description">Button</button>
-            </div>
-          </div>
+          {{< card open=true caption=true action=true >}}
         </div>
       </div>
     </div>
