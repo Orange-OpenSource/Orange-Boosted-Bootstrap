@@ -31,7 +31,7 @@
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  &:not(.form-control-color):focus { // Boosted mod
+  &:not(.form-control-color):focus { // Boosted mod: instead of `&:focus`
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color !important; // stylelint-disable-line declaration-no-important
