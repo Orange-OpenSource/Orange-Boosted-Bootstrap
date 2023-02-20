@@ -139,21 +139,20 @@
     --#{$prefix}breakpoint-#{$name}: #{$value};
   }
 
-
-  /* // Focus styles
+  // Focus styles
   // scss-docs-start root-focus-variables
-  --#{$prefix}focus-ring-width: #{$focus-ring-width};
-  --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity};
-  --#{$prefix}focus-ring-color: #{$focus-ring-color};
+  --#{$prefix}focus-ring-width: #{$focus-ring-width}; // TODO: check
+  --#{$prefix}focus-ring-opacity: #{$focus-ring-opacity}; // TODO: check
+  --#{$prefix}focus-ring-color: #{$focus-ring-color}; // TODO: check
   // By default, there is no `--bs-focus-ring-x`, `--bs-focus-ring-y`, or `--bs-focus-ring-blur`, but we provide CSS variables with fallbacks to initial `0` values
-  --#{$prefix}focus-ring-box-shadow: var(--#{$prefix}focus-ring-x, 0) var(--#{$prefix}focus-ring-y, 0) var(--#{$prefix}focus-ring-blur, 0) var(--#{$prefix}focus-ring-width) var(--#{$prefix}focus-ring-color);
-  // scss-docs-end root-focus-variables */
+  --#{$prefix}focus-ring-box-shadow: var(--#{$prefix}focus-ring-x, 0) var(--#{$prefix}focus-ring-y, 0) var(--#{$prefix}focus-ring-blur, 0) var(--#{$prefix}focus-ring-width) var(--#{$prefix}focus-ring-color); // TODO: check
+  // scss-docs-end root-focus-variables
 }
 
 // scss-docs-start root-dark-rule
 // Boosted mod
 [class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark),
+[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark),
 [class*="bg-secondary"] {
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-inverted};
