@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: "Boosted & Vite"
+title: Boosted and Vite
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Vite.
 group: getting-started
 aliases:
   - "/docs/getting-started/vite/"
 toc: true
-thumbnail: vite.svg
+thumbnail: guides/vite-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">

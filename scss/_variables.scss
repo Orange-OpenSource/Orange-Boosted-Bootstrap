@@ -341,13 +341,13 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-$primary-text:            $primary !default; // Boosted mod: instead of `$blue-600`
-$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-600`
-$success-text:            null !default; // Boosted mod: instead of `$green-600`
-$info-text:               null !default; // Boosted mod: instead of `$cyan-700`
-$warning-text:            null !default; // Boosted mod: instead of `$yellow-700`
-$danger-text:             null !default; // Boosted mod: instead of `$red-600`
-$light-text:              $light !default; // Boosted mod: instead of `$gray-600`
+$primary-text:            $primary !default; // Boosted mod: instead of `$blue-700`
+$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-700`
+$success-text:            null !default; // Boosted mod: instead of `$green-700`
+$info-text:               null !default; // Boosted mod: instead of `$cyan-800`
+$warning-text:            null !default; // Boosted mod: instead of `$yellow-800`
+$danger-text:             null !default; // Boosted mod: instead of `$red-700`
+$light-text:              $light !default; // Boosted mod: instead of `$gray-700`
 $dark-text:               null !default; // Boosted mod: instead of `$gray-700`
 
 $primary-bg-subtle:       $primary !default; // Boosted mod: instead of `$blue-100`
@@ -1342,10 +1342,22 @@ $nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg`
 
-$nav-pills-padding-x:               $nav-tabs-link-padding-x !default; // Boosted mod
+$nav-pills-padding-x:               1.8125rem !default; // Boosted mod
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
+
+$nav-underline-gap:                       0 !default; // Boosted mod: instead of 1rem
+$nav-underline-gap-lg:                    $spacer * .5 !default; // Boosted mod
+$nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod: instead of .125rem
+$nav-underline-border-color:              $gray-500 !default; // Boosted mod
+$nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
+$nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
+$nav-underline-link-padding-x:            1.8125rem !default; // Boosted mod
+$nav-underline-link-hover-color:          $accessible-orange !default; // Boosted mod
+$nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default;  /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+$nav-underline-link-active-bg:            var(--#{$prefix}body-bg) !default; // Boosted mod
+$nav-underline-link-active-border-color:  $accessible-orange !default; // Boosted mod
 // scss-docs-end nav-variables
 
 
@@ -1378,6 +1390,7 @@ $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; 
 $navbar-light-hover-color:            $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
 $navbar-light-active-color:           $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
 $navbar-light-disabled-color:         $gray-500 !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
+// Boosted mod: no $navbar-light-icon-color
 $navbar-light-toggler-icon-bg:        $burger-icon !default; // Boosted mod: instead of inline SVG
 $navbar-light-toggler-icon-bg-small:  $burger-icon-small !default; // Boosted mod: slightly different burger icon for small breakpoints
 $navbar-light-toggler-border-color:   null !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .15)`

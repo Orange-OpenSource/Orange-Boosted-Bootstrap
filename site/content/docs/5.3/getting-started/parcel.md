@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: "Boosted & Parcel"
+title: Boosted and Parcel
 description: The official guide for how to include and bundle Boosted's CSS and JavaScript in your project using Parcel.
 group: getting-started
 aliases:
   - "/docs/getting-started/parcel/"
 toc: true
-thumbnail: parcel.png
+thumbnail: guides/parcel-dev-server-boosted.png
 ---
 
 <div class="d-flex justify-content-center">
