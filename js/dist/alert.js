@@ -1,27 +1,22 @@
 /*!
-  * Boosted v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap alert.js v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap alert.js v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./base-component'), require('./util/component-functions')) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index.js'), require('./dom/event-handler.js'), require('./base-component.js'), require('./util/component-functions.js')) :
   typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './base-component', './util/component-functions'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Alert = factory(global.Index, global.EventHandler, global.BaseComponent, global.ComponentFunctions));
-})(this, (function (index, EventHandler, BaseComponent, componentFunctions) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+})(this, (function (index_js, EventHandler, BaseComponent, componentFunctions_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): alert.js
+   * Bootstrap (v5.3.0-alpha1): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -42,7 +37,7 @@
    * Class definition
    */
 
-  class Alert extends BaseComponent__default.default {
+  class Alert extends BaseComponent {
     // Getters
     static get NAME() {
       return NAME;
@@ -50,7 +45,7 @@
 
     // Public
     close() {
-      const closeEvent = EventHandler__default.default.trigger(this._element, EVENT_CLOSE);
+      const closeEvent = EventHandler.trigger(this._element, EVENT_CLOSE);
       if (closeEvent.defaultPrevented) {
         return;
       }
@@ -62,7 +57,7 @@
     // Private
     _destroyElement() {
       this._element.remove();
-      EventHandler__default.default.trigger(this._element, EVENT_CLOSED);
+      EventHandler.trigger(this._element, EVENT_CLOSED);
       this.dispose();
     }
 
@@ -85,13 +80,13 @@
    * Data API implementation
    */
 
-  componentFunctions.enableDismissTrigger(Alert, 'close');
+  componentFunctions_js.enableDismissTrigger(Alert, 'close');
 
   /**
    * jQuery
    */
 
-  index.defineJQueryPlugin(Alert);
+  index_js.defineJQueryPlugin(Alert);
 
   return Alert;
 

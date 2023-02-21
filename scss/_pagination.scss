@@ -72,10 +72,9 @@
   }
 
   &:focus {
-    z-index: 3;
+    z-index: 5; // Boosted mod
     color: var(--#{$prefix}pagination-focus-color);
     background-color: var(--#{$prefix}pagination-focus-bg);
-    border-color: var(--#{$prefix}pagination-hover-border-color); // Boosted mod
     outline: $pagination-focus-outline;
     box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
   }
@@ -86,7 +85,6 @@
     color: var(--#{$prefix}pagination-active-item-color);
     background-color: var(--#{$prefix}pagination-active-item-bg);
     border-color: var(--#{$prefix}pagination-active-item-border-color);
-    outline-color: var(--#{$prefix}pagination-active-item-border-color);
   }
   // End mod
 
@@ -96,7 +94,6 @@
     color: var(--#{$prefix}pagination-active-color);
     @include gradient-bg(var(--#{$prefix}pagination-active-bg));
     border-color: var(--#{$prefix}pagination-active-border-color);
-    outline-color: var(--#{$prefix}pagination-active-bg); // Boosted mod
   }
 
   &.disabled,
@@ -113,7 +110,7 @@
     margin-left: $pagination-margin-start;
   }
 
-  @if $pagination-margin-start == ($pagination-border-width * -1) {
+  @if $pagination-margin-start == calc($pagination-border-width * -1) {
     &:first-child {
       .page-link {
         @include border-start-radius(var(--#{$prefix}pagination-border-radius));
@@ -137,8 +134,7 @@
   &:last-child:not(.active) .page-link {
     border-color: currentcolor;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--#{$prefix}pagination-active-color);
       background-color: var(--#{$prefix}pagination-active-bg);
       border-color: var(--#{$prefix}pagination-active-border-color);
@@ -152,7 +148,6 @@
       color: var(--#{$prefix}pagination-active-item-color);
       background-color: var(--#{$prefix}pagination-active-item-bg);
       border-color: var(--#{$prefix}pagination-active-item-border-color);
-      outline-color: var(--#{$prefix}pagination-active-item-border-color);
     }
   }
 
