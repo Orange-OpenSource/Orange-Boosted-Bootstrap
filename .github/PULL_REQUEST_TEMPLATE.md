@@ -50,6 +50,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 - [ ] My change follows the [developer guide](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide)
 - [ ] I have added JavaScript unit tests to cover my changes
+- [ ] I have added SCSS unit tests to cover my changes
 
 #### Documentation
 
