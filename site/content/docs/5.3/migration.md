@@ -59,11 +59,20 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Navs and tabs**
+  - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
+
+    ```diff
+    - <ul class="nav nav-tabs nav-tabs-light">
+    + <ul class="nav nav-underline">
+    ```
+
+    It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
+
 - **Orange Navbar**
   - <span class="badge bg-danger">Breaking</span> The minimizing behavior with `.header-minimized` is applied on top of the `<header>` instead of one of his child directly.
 
 - **Progress bars**
-
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
 
     While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
@@ -145,6 +154,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+
+- <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
 
 ### CSS and Sass variables
 
@@ -230,6 +241,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-focus-ring-box-shadow</code></li>
+      <li><code>--bs-focus-ring-color</code></li>
+      <li><code>--bs-focus-ring-opacity</code></li>
+      <li><code>--bs-focus-ring-width</code></li>
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
@@ -246,6 +261,18 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
       <li><code>--bs-link-hover-decoration</code></li>
+      <li><code>--bs-nav-underline-border-color</code></li>
+      <li><code>--bs-nav-underline-border-radius</code></li>
+      <li><code>--bs-nav-underline-border-width</code></li>
+      <li><code>--bs-nav-underline-gap</code></li>
+      <li><code>--bs-nav-underline-link-active-bg</code></li>
+      <li><code>--bs-nav-underline-link-active-border-color</code></li>
+      <li><code>--bs-nav-underline-link-active-color</code></li>
+      <li><code>--bs-nav-underline-link-border-width</code></li>
+      <li><code>--bs-nav-underline-link-hover-border-color</code></li>
+      <li><code>--bs-nav-underline-link-hover-bg</code></li>
+      <li><code>--bs-nav-underline-link-hover-color</code></li>
+      <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -307,9 +334,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$emphasis-color-dark</code></li>
       <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
+      <li><code>$focus-ring-box-shadow</code></li>
+      <li><code>$focus-ring-color</code></li>
+      <li><code>$focus-ring-opacity</code></li>
+      <li><code>$focus-ring-width</code></li>
       <li><code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>
+      <li><code>$form-color-disabled-background-swatch</code></li>
+      <li><code>$form-color-disabled-border-color</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
@@ -332,6 +365,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$list-group-hover-bg</code></li>
       <li><code>$mark-bg-inverted</code></li>
       <li><code>$mark-color-inverted</code></li>
+      <li><code>$nav-underline-border-color</code></li>
+      <li><code>$nav-underline-border-radius</code></li>
+      <li><code>$nav-underline-border-width</code></li>
+      <li><code>$nav-underline-gap</code></li>
+      <li><code>$nav-underline-gap-lg</code></li>
+      <li><code>$nav-underline-link-active-bg</code></li>
+      <li><code>$nav-underline-link-active-border-color</code></li>
+      <li><code>$nav-underline-link-active-color</code></li>
+      <li><code>$nav-underline-link-border-width</code></li>
+      <li><code>$nav-underline-link-hover-color</code></li>
+      <li><code>$nav-underline-link-padding-x</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
