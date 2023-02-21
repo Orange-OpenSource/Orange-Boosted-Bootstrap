@@ -18,44 +18,19 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-accent-rgb
   --bd-pink-rgb: #{to-rgb($pink-500)};
   --bd-teal-rgb: #{to-rgb($teal-500)};
-
-  // Boosted mod: all available CSS vars and specific modifications for Boosted
-  --docsearch-primary-color: #{$primary};
-  --docsearch-text-color: #{$black};
-  // --docsearch-spacing
-  // --docsearch-icon-stroke-width
-  --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-muted-color: #{$text-muted};
-  // --docsearch-container-background
-  // --docsearch-logo-color
-  // --docsearch-modal-width
-  // --docsearch-modal-height
-  --docsearch-modal-background: #{$modal-content-bg};
-  // --docsearch-modal-shadow;
-  // --docsearch-searchbox-height;
-  // --docsearch-searchbox-background;
-  // --docsearch-searchbox-focus-background;
-  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
-  // --docsearch-hit-height;
-  --docsearch-hit-color: #{$gray-700};
-  // --docsearch-hit-active-color;
-  // --docsearch-hit-background;
-  // --docsearch-hit-shadow;
-  --docsearch-key-gradient: null;
-  --docsearch-key-shadow: null;
-  // --docsearch-footer-height;
-  --docsearch-footer-background: #{$modal-footer-bg};
-  --docsearch-footer-shadow: 0 -1px #{$black};
-  // End mod
-
   // Boosted mod: no --bd-violet-bg
+  --bd-toc-color: var(--bs-emphasis-color); // Boosted mod: instead of `var(--bd-violet)`
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
+  --bd-toc-active-border-left-color: var(--bd-purple); // Boosted mod
 }
 
-[data-bs-theme="dark"] {
+@include color-mode(dark, true) {
   --bd-violet: #{mix($bd-violet, $white, 75%)};
   // Boosted mod: no --bd-violet-bg
+  // Boosted mod: no --bd-toc-color
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
 }
 
 // Boosted mod
