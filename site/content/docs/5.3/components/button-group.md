@@ -209,12 +209,12 @@ These 2 vertical variants should not be used because they do not respect the Ora
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-  <button type="button" class="btn btn-dark">Button</button>
-  <button type="button" class="btn btn-dark">Button</button>
-  <button type="button" class="btn btn-dark">Button</button>
-  <button type="button" class="btn btn-dark">Button</button>
-  <button type="button" class="btn btn-dark">Button</button>
-  <button type="button" class="btn btn-dark">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
 </div>
 {{< /example >}}
 
