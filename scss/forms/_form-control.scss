@@ -31,7 +31,7 @@
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  &:focus {
+  &:not(.form-control-color):focus { // Boosted mod: instead of `&:focus`
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color !important; // stylelint-disable-line declaration-no-important
@@ -192,6 +192,26 @@ textarea {
   width: $form-color-width;
   height: $input-height;
   padding: $input-padding-y;
+  border-color: var(--#{$prefix}body-color); // Boosted mod
+
+  // Boosted mod
+  &:hover {
+    background-color: var(--#{$prefix}body-color);
+  }
+
+  &:disabled {
+    background-color: var(--#{$prefix}body-bg);
+    border-color: $form-color-disabled-border-color;
+
+    &::-moz-color-swatch {
+      filter: $form-color-disabled-background-swatch;
+    }
+
+    &::-webkit-color-swatch {
+      filter: $form-color-disabled-background-swatch;
+    }
+  }
+  // End mod
 
   &:not(:disabled):not([readonly]) {
     cursor: pointer;
