@@ -331,7 +331,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$emphasis-color-dark</code></li>
       <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
-      <li><code>$focus-ring-blur</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
       <li><code>$focus-ring-opacity</code></li>
