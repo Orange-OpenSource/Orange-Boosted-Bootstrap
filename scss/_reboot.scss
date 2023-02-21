@@ -88,6 +88,7 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 //    See https://github.com/WICG/focus-visible
+//    Note: this rule is not applied for our focus ring helper which handles itself outline and box shadow
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
