@@ -31,7 +31,7 @@
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  &:focus {
+  &:not(.form-control-color):focus { // Boosted mod: instead of `&:focus`
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color !important; // stylelint-disable-line declaration-no-important
@@ -50,6 +50,13 @@
   &::-webkit-date-and-time-value {
     // Multiply line-height by 1em if it has no unit
     height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+  }
+
+  // Prevent excessive date input height in Webkit
+  // https://github.com/twbs/bootstrap/issues/34433
+  &::-webkit-datetime-edit {
+    display: block;
+    padding: 0;
   }
 
   // Placeholder
@@ -119,6 +126,7 @@
 
   &:focus {
     outline: 0;
+    box-shadow: none; // Bosted mod
   }
 
   &.form-control-sm,
@@ -184,6 +192,26 @@ textarea {
   width: $form-color-width;
   height: $input-height;
   padding: $input-padding-y;
+  border-color: var(--#{$prefix}body-color); // Boosted mod
+
+  // Boosted mod
+  &:hover {
+    background-color: var(--#{$prefix}body-color);
+  }
+
+  &:disabled {
+    background-color: var(--#{$prefix}body-bg);
+    border-color: $form-color-disabled-border-color;
+
+    &::-moz-color-swatch {
+      filter: $form-color-disabled-background-swatch;
+    }
+
+    &::-webkit-color-swatch {
+      filter: $form-color-disabled-background-swatch;
+    }
+  }
+  // End mod
 
   &:not(:disabled):not([readonly]) {
     cursor: pointer;

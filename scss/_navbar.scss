@@ -121,8 +121,8 @@
   white-space: nowrap;
   @include transition($navbar-brand-transition);
 
-  &:hover,
-  &:focus {
+  // No focus
+  &:hover {
     color: var(--#{$prefix}navbar-brand-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
@@ -186,8 +186,6 @@
     margin-top: subtract(var(--#{$prefix}navbar-nav-link-spacing-y), var(--#{$prefix}navbar-border-width));
     margin-left: 0;
     word-break: break-all;
-    outline-offset: $spacer;
-    @include transition($navbar-transition);
 
     &::before {
       position: absolute;
@@ -199,10 +197,12 @@
       content: "";
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       z-index: 1;
-      outline-offset: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      outline-offset: -$focus-visible-outer-width;
     }
   }
 
@@ -263,9 +263,9 @@
   margin-bottom: var(--#{$prefix}navbar-nav-link-spacing-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
+  // Boosted mod: no a:focus
   a,
-  a:hover,
-  a:focus  {
+  a:hover {
     color: var(--#{$prefix}navbar-active-color);
   }
 }
@@ -320,8 +320,6 @@
   color: var(--#{$prefix}navbar-color);
   background-color: transparent; // remove default button style
   border: 0; // Boosted mod: remove border to simplify calculations
-  outline-color: var(--#{$prefix}navbar-active-color); // Boosted mod
-  outline-offset: $spacer; // Boosted mod
   @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
   @include transition(var(--#{$prefix}navbar-toggler-transition));
 
@@ -341,12 +339,12 @@
 
   &:focus {
     text-decoration: none;
-    box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
+    // Boosted mod: no outline;
+    // Boosted mod: no box-shadow
   }
 
   // Boosted mod: close icon when opened & color state
   &:hover,
-  &:focus,
   &:active {
     --#{$prefix}navbar-toggler-icon-filter: #{$orange-filter};
   }
@@ -548,3 +546,5 @@
   --#{$prefix}navbar-toggler-icon-filter: #{$invert-filter}; // Boosted mod
   // scss-docs-end navbar-dark-css-vars
 }
+
+// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
