@@ -152,6 +152,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
+- <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
@@ -236,6 +238,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-focus-ring-box-shadow</code></li>
+      <li><code>--bs-focus-ring-color</code></li>
+      <li><code>--bs-focus-ring-opacity</code></li>
+      <li><code>--bs-focus-ring-width</code></li>
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
@@ -325,6 +331,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$emphasis-color-dark</code></li>
       <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
+      <li><code>$focus-ring-box-shadow</code></li>
+      <li><code>$focus-ring-color</code></li>
+      <li><code>$focus-ring-opacity</code></li>
+      <li><code>$focus-ring-width</code></li>
       <li><code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>
