@@ -57,7 +57,7 @@
   })
 
   clipboard.on('success', event => {
-    const iconFirstChild = event.trigger.querySelector('.bi').firstChild
+    const iconFirstChild = event.trigger.querySelector('.bi').firstElementChild
     const tooltipBtn = boosted.Tooltip.getInstance(event.trigger)
     const namespace = 'http://www.w3.org/1999/xlink'
     const originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
