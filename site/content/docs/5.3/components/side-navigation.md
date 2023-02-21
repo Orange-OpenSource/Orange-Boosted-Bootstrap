@@ -3,6 +3,8 @@ layout: docs
 title: Side Navigation
 description: Documentation and examples for Boosted's exclusive Brand responsive side navigation.
 group: components
+aliases:
+  - "/docs/components/side-navigation/"
 toc: true
 added: "5.3"
 ---
