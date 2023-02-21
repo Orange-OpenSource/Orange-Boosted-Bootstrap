@@ -180,7 +180,7 @@
     font-weight: $font-weight-bold; // Boosted mod
     color: $gray-800; // Boosted mod: instead of `var(--bs-secondary-color)`
     background-color: $gray-400; // Boosted mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--#{$prefix}border-width) solid $gray-500; // Boosted mod
+    border: var(--bs-border-width) solid $gray-500; // Boosted mod
 
     > div {
       display: flex;
@@ -260,7 +260,7 @@
 }
 
 .simple-list-example-scrollspy .active {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--bs-link-hover-color);
 }
 // End mod
 
@@ -402,4 +402,9 @@
   border-width: 1px 0;
 
   // Boosted mod: no `.btn-clipboard`
+}
+
+.focused {
+  outline: 0;
+  box-shadow: var(--#{$variable-prefix}focus-ring-offset), var(--#{$variable-prefix}focus-ring-x, 0) var(--#{$variable-prefix}focus-ring-y, 0) var(--#{$variable-prefix}focus-ring-blur) var(--#{$variable-prefix}focus-ring-width) var(--#{$variable-prefix}focus-ring-color);
 }
