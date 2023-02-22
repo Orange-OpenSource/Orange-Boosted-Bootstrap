@@ -94,7 +94,7 @@ const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 
 if (toastTrigger) {
-  const toastBoosted = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  const toastBoosted = boosted.Toast.getOrCreateInstance(toastLiveExample)
   toastTrigger.addEventListener('click', () => {
     toastBoosted.show()
   })
