@@ -22,6 +22,8 @@ $bd-callout-variants: info, warning, danger !default;
   --bd-toc-color: var(--bs-emphasis-color); // Boosted mod: instead of `var(--bd-violet)`
   // Boosted mod: no --bd-sidebar-link-bg
   // Boosted mod: no --bd-callout-link
+  // Boosted mod: no --bd-callout-code-color
+  --bd-pre-bg: var(--bs-tertiary-bg);
   --bd-toc-active-border-left-color: var(--bd-purple); // Boosted mod
 }
 
@@ -31,6 +33,8 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-toc-color
   // Boosted mod: no --bd-sidebar-link-bg
   // Boosted mod: no --bd-callout-link
+  // Boosted mod: no --bd-callout-code-color
+  --bd-pre-bg: #{adjust-color($gray-900, $lightness: -2.5%)}; // stylelint-disable-line scss/at-function-named-arguments
 }
 
 // Boosted mod
