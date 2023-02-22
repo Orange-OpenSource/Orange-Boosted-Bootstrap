@@ -26,7 +26,7 @@ This helper should be used carefully because the rendering provided in the follo
 
 The icon link helper component modifies our default link styles to enhance their appearance and quickly align any pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We stylize the underline with a custom offset and color. Icons are automatically sized to `1em` to best match their associated text's `font-size`.
 
-Icon links assume [Bootstrap Icons](https://icons.getbootstrap.com) are being used, but you should use [Solaris icons]([Solaris]({{< docsref "/extend/icons" >}})) in an Orange project.
+Icon links assume [Bootstrap Icons](https://icons.getbootstrap.com) are being used, but you should use [Solaris icons]({{< docsref "/extend/icons" >}}) in an Orange project.
 
 {{< callout >}}
 Icons used here are likely to be purely decorative, which means they should be hidden from assistive technologies using `aria-hidden="true"`, as we've done in our examples. For icons that are more than decorative, provide an appropriate text alternative via `alt` for `<img>` elements `role="img"` and `aria-label` for SVGs.

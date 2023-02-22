@@ -9,6 +9,10 @@ toc: true
 added: 5.3
 ---
 
+{{< ods-incompatibility-alert >}}
+Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+{{< /ods-incompatibility-alert >}}
+
 ## Link opacity
 
 Change the alpha opacity of the link `rgba()` color value with utilities. Please be aware that changes to a color's opacity can lead to links with [*insufficient* contrast]({{< docsref "getting-started/accessibility#color-contrast" >}}).
@@ -82,12 +86,10 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 
 [Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
 
+<!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors"-->
 {{< example >}}
-{{< colored-links.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<p><a href="#" class="link-{{ .name }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
-{{- end -}}
-{{< /colored-links.inline >}}
+<p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary link</a></p>
+<p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
 {{< /example >}}
 
 {{< callout info >}}
