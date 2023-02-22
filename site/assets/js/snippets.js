@@ -62,6 +62,7 @@
   // Instantiate all toasts in docs pages only
   const toastTrigger = document.getElementById('liveToastBtn')
   const toastLiveExample = document.getElementById('liveToast')
+
   if (toastTrigger) {
     const toastBoosted = boosted.Toast.getOrCreateInstance(toastLiveExample)
     toastTrigger.addEventListener('click', () => {
