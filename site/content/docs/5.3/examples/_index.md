@@ -36,7 +36,7 @@ One of the missing examples has priority? Feel free to contact a member of the [
           <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="{{ $.Site.Params.github_org }}{{ $example.url }}/" target="_blank">
+              <a class="d-block link-offset-1" href="{{ $.Site.Params.bootstrap_github_org }}{{ $example.url }}/" target="_blank">
                 {{ $example.name }}
               </a>
             </h3>
