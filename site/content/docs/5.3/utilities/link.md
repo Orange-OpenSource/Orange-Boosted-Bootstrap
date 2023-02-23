@@ -90,6 +90,7 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 {{< example >}}
 <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary link</a></p>
 <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
+<p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>
 {{< /example >}}
 
 <!--Boosted mod: removed callout not applicable to our modified example-->
