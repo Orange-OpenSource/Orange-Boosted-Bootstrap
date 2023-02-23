@@ -1714,10 +1714,10 @@ $accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
 $tooltip-line-height:               $line-height-sm !default; // Boosted mod
-$tooltip-max-width:                 5.8rem !default;
+$tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
-$tooltip-border-width:              var(--#{$prefix}border-width) * .5 !default; // Boosted mod
+$tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
 $tooltip-border-color:              $black !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
@@ -1740,13 +1740,13 @@ $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.
 // scss-docs-start popover-variables
 $popover-font-size:                 $font-size-base !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
-$popover-bg:                        $white !default;
+$popover-bg:                        var(--#{$prefix}body-bg) !default;
 $popover-max-width:                 23.75rem !default; // Boosted mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
-$popover-border-color:              $gray-500 !default;
+$popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc($popover-border-radius - $popover-border-width) !default; // stylelint-disable-line function-disallowed-list
-$popover-box-shadow:                null !default; // Boosted mod
+$popover-box-shadow:                $box-shadow !default;
 
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod
 $popover-header-line-height:        1.11 !default; // Boosted mod
@@ -1759,8 +1759,8 @@ $popover-header-padding-y:          $spacer * .5 !default;
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-line-height:          1.5 !default; // Boosted mod
+$popover-body-padding-y:            $popover-header-padding-top !default; // Boosted mod: instead of `$spacer`
 $popover-body-padding-x:            $popover-header-padding-x !default;
-$popover-body-padding-y:            $popover-header-padding-y !default;
 
 $popover-arrow-width:               $spacer !default; // Boosted mod
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
