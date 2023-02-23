@@ -350,8 +350,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$dark-border-subtle</code></li>
       <li><code>$dark-text-dark</code></li>
       <li><code>$dark-text</code></li>
-      <li><code>$emphasis-color-dark</code></li>
-      <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>

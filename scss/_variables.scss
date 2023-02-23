@@ -493,15 +493,13 @@ $body-text-align:           null !default;
 $body-color:                $black !default; // Boosted mod: instead of `$gray-900`
 $body-bg:                   $white !default;
 
-$body-emphasis-color:       $black !default;
-
 $body-secondary-color:      $gray-700 !default; // Boosted mod: instead of `rgba($body-color, .75)`
 $body-secondary-bg:         $gray-300 !default; // Boosted mod: instead of `$gray-200`
 
 $body-tertiary-color:       rgba($body-color, .5) !default;
 $body-tertiary-bg:          $gray-100 !default;
 
-$emphasis-color:            $black !default;
+$body-emphasis-color:       $black !default;
 
 // Links
 //
