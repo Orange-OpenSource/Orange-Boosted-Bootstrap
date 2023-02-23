@@ -214,6 +214,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
+      <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
     </ul>
   </details>
@@ -221,6 +222,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-outer-color-dark</code></li>
