@@ -28,7 +28,7 @@
   @include border-radius(.25rem);
 
   &:hover {
-    color: var(--bs-link-hover-color); // Boosted mod
+    color: var(--bs-link-hover-color);
   }
 
   // Boosted mod: no focus rule
