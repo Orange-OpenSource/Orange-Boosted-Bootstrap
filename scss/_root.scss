@@ -132,10 +132,6 @@
   --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color}; // Boosted mod
   --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color}; // Boosted mod
 
-  @each $name, $value in $grid-breakpoints {
-    --#{$prefix}breakpoint-#{$name}: #{$value};
-  }
-
   // Focus styles
   // scss-docs-start root-focus-variables
   --#{$prefix}focus-ring-width: #{$focus-ring-width};
