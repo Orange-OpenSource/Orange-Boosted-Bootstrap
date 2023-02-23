@@ -45,11 +45,11 @@
     &::before,
     &::after { // Boosted mod
       position: absolute;
-      display: block;
+      display: block; // Boosted mod
       content: "";
       border-color: transparent;
       border-style: solid;
-      border-width: 0;
+      border-width: 0; // Boosted mod
     }
   }
 }
@@ -164,6 +164,6 @@
   color: var(--#{$prefix}tooltip-color);
   // Boosted mod: no `text-align: center`
   background-color: var(--#{$prefix}tooltip-bg);
-  border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color);
+  border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color); // Boosted mod
   @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }

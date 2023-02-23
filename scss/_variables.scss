@@ -1713,11 +1713,11 @@ $accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
 // scss-docs-start tooltip-variables
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
-$tooltip-line-height:               1.14 !default; // Boosted mod
+$tooltip-line-height:               $line-height-sm !default; // Boosted mod
 $tooltip-max-width:                 5.8rem !default;
-$tooltip-color:                     $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$tooltip-bg:                        $white !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
-$tooltip-border-width:              map-get($border-widths, 1) !default; // Boosted mod
+$tooltip-color:                     var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
+$tooltip-bg:                        var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$tooltip-border-width:              var(--#{$prefix}border-width) * .5 !default; // Boosted mod
 $tooltip-border-color:              $black !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
