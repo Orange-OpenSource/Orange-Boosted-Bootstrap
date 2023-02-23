@@ -142,7 +142,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
-- <span class="badge bg-success">New</span> `.bg-body-secondary`, `.bg-body-tertiary` and `.bg-body-emphasis`.
+- <span class="badge bg-success">New</span> `.bg-body-secondary` and `.bg-body-tertiary`.
 
 - <span class="badge bg-success">New</span> `.bg-{color}-subtle`.
 
