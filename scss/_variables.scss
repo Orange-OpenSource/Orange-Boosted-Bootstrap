@@ -1718,7 +1718,7 @@ $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
 $tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
-$tooltip-border-color:              $black !default; // Boosted mod
+$tooltip-border-color:              var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
 $tooltip-padding-y:                 $spacer * .5 !default;
