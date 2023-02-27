@@ -439,26 +439,50 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 </form>
 {{< /example >}}
 
+### Readonly
+
+Make star ratings readable but non editable by adding the `readonly` boolean attribute and the `checked` boolean attribute to any `<input>` element.
+
+{{< example >}}
+<fieldset class="star-rating">
+  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden" readonly>
+  <label for="terrible4" title="Terrible"></label>
+
+  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden" readonly>
+  <label for="bad4" title="Bad"></label>
+
+  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" readonly checked>
+  <label for="mixed4" title="Mixed"></label>
+
+  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" readonly>
+  <label for="good4" title="Good"></label>
+
+  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden" readonly>
+  <label for="excellent4" title="Excellent"></label>
+</fieldset>
+<span class="visually-hidden">rated 3 stars out of 5</span>
+{{< /example >}}
+
 ### Disabled
 
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 
 {{< example >}}
 <fieldset class="star-rating" disabled>
-  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
-  <label for="terrible4" title="Terrible"></label>
+  <input type="radio" id="terrible5" name="rating" value="1" class="visually-hidden">
+  <label for="terrible5" title="Terrible"></label>
 
-  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
-  <label for="bad4" title="Bad"></label>
+  <input type="radio" id="bad5" name="rating" value="2" class="visually-hidden">
+  <label for="bad5" title="Bad"></label>
 
-  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
-  <label for="mixed4" title="Mixed"></label>
+  <input type="radio" id="mixed5" name="rating" value="3" class="visually-hidden" checked>
+  <label for="mixed5" title="Mixed"></label>
 
-  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
-  <label for="good4" title="Good"></label>
+  <input type="radio" id="good5" name="rating" value="4" class="visually-hidden">
+  <label for="good5" title="Good"></label>
 
-  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
-  <label for="excellent4" title="Excellent"></label>
+  <input type="radio" id="excellent5" name="rating" value="5" class="visually-hidden">
+  <label for="excellent5" title="Excellent"></label>
 </fieldset>
 <span class="visually-hidden">rated 3 stars out of 5</span>
 {{< /example >}}

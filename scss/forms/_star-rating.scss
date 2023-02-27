@@ -3,10 +3,6 @@
 //
 
 .star-rating {
-  &.disabled,
-  &:disabled {
-    pointer-events: none;
-  }
 
   > label {
     display: block;
@@ -46,6 +42,23 @@
 
   > input:hover + label {
     @include form-star-rating($black);
+  }
+
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+
+    > label {
+      @include form-star-rating($gray-700);
+    }
+
+    > input:checked ~ label {
+      @include form-star-rating($gray-500);
+    }
+
+    > input:checked + label {
+      @include form-star-rating($gray-700);
+    }
   }
 }
 
