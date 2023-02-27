@@ -212,6 +212,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-offcanvas-transition-duration</code></li>
+      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 

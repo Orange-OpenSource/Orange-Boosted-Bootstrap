@@ -1725,7 +1725,7 @@ $tooltip-padding-y:                 $spacer * .5 !default;
 $tooltip-padding-x:                 $spacer * .5 !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
-$tooltip-arrow-width:               $spacer * .5 !default;
+$tooltip-arrow-width:               $spacer !default;
 $tooltip-arrow-height:              $tooltip-arrow-width * .5 !default;
 // fusv-disable
 $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.0 for CSS variables
@@ -1741,7 +1741,7 @@ $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.
 $popover-font-size:                 $font-size-base !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        var(--#{$prefix}body-bg) !default;
-$popover-max-width:                 23.75rem !default; // Boosted mod
+$popover-max-width:                 $spacer * 19 !default; // Boosted mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
