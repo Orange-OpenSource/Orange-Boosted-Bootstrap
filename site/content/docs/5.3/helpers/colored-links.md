@@ -27,6 +27,6 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 Colored links can also be modified by [our link utilities]({{< docsref "/utilities/link/" >}}).
 
 {{< example >}}
-<p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary link</a></p>
-<p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
+<p><a href="#" class="link-primary link-offset-2 link-underline-opacity-10 link-underline-opacity-100-hover">Primary link</a></p>
+<p><a href="#" class="link-light link-offset-2 link-underline-opacity-10 link-underline-opacity-100-hover">Light link</a></p>
 {{< /example >}}
