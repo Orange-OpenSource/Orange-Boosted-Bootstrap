@@ -15,7 +15,7 @@ added: 5.3
 Add `.link-chevron` to bold your link and enhance them with a chevron.
 
 {{< example >}}
-<a class="link-chevron" href="#links">This is a sample link with chevron</a>
+<a class="link-chevron" href="#">This is a sample link with chevron</a>
 {{< /example >}}
 
 ## Icon link
