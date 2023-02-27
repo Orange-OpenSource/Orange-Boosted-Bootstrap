@@ -2,7 +2,7 @@
 
 .icon-link {
   display: inline-flex;
-  gap: .375rem;
+  gap: .3125rem; // Boosted mod: instead of .375rem
   align-items: center;
   text-decoration-color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, .5));
   text-underline-offset: .5rem;
