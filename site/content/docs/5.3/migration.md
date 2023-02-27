@@ -73,7 +73,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Modals**
-  - Added new variables for `$modal-body-margin-bottom` and `$modal-body-margin-bottom-sm`.
+  - Added new variables for `$modal-footer-margin-top` and `$modal-footer-margin-top-sm`.
 
 - **Navs and tabs**
   - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
@@ -289,7 +289,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
-      <li><code>--bs-modal-body-margin-bottom</code></li>
+      <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -393,8 +393,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$nav-underline-link-border-width</code></li>
       <li><code>$nav-underline-link-hover-color</code></li>
       <li><code>$nav-underline-link-padding-x</code></li>
-      <li><code>$modal-body-margin-bottom</code></li>
-      <li><code>$modal-body-margin-bottom-sm</code></li>
+      <li><code>$modal-footer-margin-top</code></li>
+      <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>

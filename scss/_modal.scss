@@ -26,12 +26,12 @@
   --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
   --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
   --#{$prefix}modal-title-line-height: #{$modal-title-line-height};
-  --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-bottom}; // Boosted mod
   --#{$prefix}modal-footer-gap: #{$modal-footer-margin-between};
   --#{$prefix}modal-footer-bg: #{$modal-footer-bg};
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
   --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // Boosted mod
+  --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top}; // Boosted mod
   --#{$prefix}modal-content-padding: #{$modal-content-padding}; // Boosted mod
   --#{$prefix}modal-img-margin: #{$modal-img-margin};
   --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
@@ -182,7 +182,6 @@
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: var(--#{$prefix}modal-padding);
-  margin-bottom: var(--#{$prefix}modal-body-margin-bottom); // Boosted mod
 }
 
 // Footer (for actions)
@@ -193,6 +192,7 @@
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: var(--#{$prefix}modal-footer-padding); // Boosted mod
+  margin-top: var(--#{$prefix}modal-footer-margin-top); // Boosted mod
   background-color: var(--#{$prefix}modal-footer-bg);
   border-top: if($modal-footer-border-color == null, null, var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color)); // Boosted mod
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
@@ -210,7 +210,7 @@
   .modal {
     --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
     --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
-    --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-bottom-sm}; // Boosted mod
+    --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top-sm}; // Boosted mod
   }
 
   // Automatically set modal's width for larger viewports
