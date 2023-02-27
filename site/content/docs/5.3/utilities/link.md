@@ -92,9 +92,7 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
 {{< /example >}}
 
-{{< callout info >}}
-{{< partial "callouts/warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
+<!--Boosted mod: removed callout not applicable to our modified example-->
 
 ## Sass
 

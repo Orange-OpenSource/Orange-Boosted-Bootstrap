@@ -18,9 +18,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 <p><a href="#" class="link-light">Light link</a></p>
 {{< /example >}}
 
-{{< callout info >}}
-{{< partial "callouts/warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
+<!--Boosted mod: removed callout not applicable to our modified example-->
 
 ## Link utilities
 
