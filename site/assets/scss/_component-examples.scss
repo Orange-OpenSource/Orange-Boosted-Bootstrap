@@ -344,7 +344,7 @@
   position: relative;
   padding: .75rem ($bd-gutter-x * .5);
   margin-bottom: 1rem;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bd-pre-bg);
 
   @include media-breakpoint-up(md) {
     padding: .75rem 1.25rem;
@@ -388,9 +388,14 @@
 }
 
 .highlight-toolbar {
-  background-color: $gray-100; // Boosted mod: instead of `var(--bs-tertiary-bg)`
+  background-color: $gray-100; // Boosted mod: instead of `var(--bd-pre-bg)`
   border: solid $gray-400; // Boosted mod: instead of `solid var(--bs-border-color)`
   border-width: 1px 0;
 
   // Boosted mod: no `.btn-clipboard`
+}
+
+.focused {
+  outline: 0;
+  box-shadow: var(--#{$variable-prefix}focus-ring-offset), var(--#{$variable-prefix}focus-ring-x, 0) var(--#{$variable-prefix}focus-ring-y, 0) var(--#{$variable-prefix}focus-ring-blur) var(--#{$variable-prefix}focus-ring-width) var(--#{$variable-prefix}focus-ring-color);
 }

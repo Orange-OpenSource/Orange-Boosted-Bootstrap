@@ -46,6 +46,19 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 ### Components
 
+- **Accordion**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in accordions is not necessary. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <h2 class="accordion-header" id="heading">...</h2>
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
+      + <h2 class="accordion-header">...</h2>
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      ```
+    </details>
+
 - **Alert**
   - Alert variants are now styled via CSS variables.
 
@@ -68,6 +81,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
+
+- **Orange footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -151,6 +167,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+
+- <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
 
 ### CSS and Sass variables
 
@@ -236,6 +254,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-focus-ring-box-shadow</code></li>
+      <li><code>--bs-focus-ring-color</code></li>
+      <li><code>--bs-focus-ring-opacity</code></li>
+      <li><code>--bs-focus-ring-width</code></li>
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
@@ -325,6 +347,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$emphasis-color-dark</code></li>
       <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
+      <li><code>$focus-ring-box-shadow</code></li>
+      <li><code>$focus-ring-color</code></li>
+      <li><code>$focus-ring-opacity</code></li>
+      <li><code>$focus-ring-width</code></li>
       <li><code>$focus-visible-inner-color-inverted</code></li>
       <li><code>$focus-visible-outer-color-inverted</code></li>
       <li><code>$font-weight-medium</code></li>

@@ -649,6 +649,14 @@ $box-shadow-inset:  null !default; // Boosted mod: instead of `inset 0 1px 2px r
 $component-active-color:      $black !default;
 $component-active-bg:         $primary !default;
 
+// scss-docs-start focus-ring-variables
+$focus-ring-width:      .25rem !default;
+$focus-ring-opacity:    .25 !default;
+$focus-ring-color:      rgba($primary, $focus-ring-opacity) !default;
+// Boosted mod: no `$focus-ring-blur`
+$focus-ring-box-shadow: null !default; // Boosted mod: instead of `0 0 $focus-ring-blur $focus-ring-width $focus-ring-color`
+// scss-docs-end focus-ring-variables
+
 // scss-docs-start caret-variables
 $caret-width:                 add($spacer * .25, var(--#{$prefix}border-width)) !default;
 $caret-vertical-align:        center !default;
@@ -904,9 +912,11 @@ $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-focus-width:       $focus-visible-outer-offset !default; // Boosted mod
-// Boosted mod: no need for a blur variable
-$input-btn-focus-box-shadow:  null !default; // Boosted mod
+$input-btn-focus-width:       $focus-visible-outer-offset !default; // Boosted mod: instead of `$focus-ring-width`
+// Boosted mod: no `$input-btn-focus-color-opacity`
+// Boosted mod: no `$input-btn-focus-color`
+// Boosted mod: no `$input-btn-focus-blur`
+$input-btn-focus-box-shadow:  $focus-ring-box-shadow !default;
 
 $input-btn-padding-y-sm:      $spacer * .25 !default;
 $input-btn-padding-x-sm:      $spacer * .5 !default;
@@ -1114,7 +1124,7 @@ $form-check-input-border:                 var(--#{$prefix}border-width) solid $i
 $form-check-input-border-radius:          0 !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           null !default;
-$form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+$form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
@@ -1334,6 +1344,8 @@ $nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$nav-link-disabled-color:           $gray-500 !default; // Boosted mod: instead of `$gray-600`
+// Boosted mod: no `$nav-link-focus-box-shadow`
 
 $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
@@ -1537,7 +1549,7 @@ $pagination-border-color:           transparent !default; // Boosted mod: instea
 
 $pagination-focus-color:            null !default; // Boosted mod
 $pagination-focus-bg:               null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
-$pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
+$pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod: no `$focus-ring-box-shadow`
 $pagination-focus-outline:          null !default; // Boosted mod
 
 $pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
@@ -2087,12 +2099,13 @@ $btn-close-padding:             var(--#{$boosted-prefix}icon-spacing, #{$btn-ico
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               $black !default;
-$btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
 // Boosted mod
 // fusv-disable
 $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
 // fusv-enable
 // End mod
+$btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
+
 // Boosted mod: no opacity/filter
 
 // Boosted mod
