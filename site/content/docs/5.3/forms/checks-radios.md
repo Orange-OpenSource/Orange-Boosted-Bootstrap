@@ -445,19 +445,19 @@ Make star ratings readable but non editable by adding the `readonly` boolean att
 
 {{< example >}}
 <fieldset class="star-rating">
-  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden" readonly>
+  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
   <label for="terrible4" title="Terrible"></label>
 
-  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden" readonly>
+  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
   <label for="bad4" title="Bad"></label>
 
-  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" readonly checked>
+  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
   <label for="mixed4" title="Mixed"></label>
 
-  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" readonly>
+  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
   <label for="good4" title="Good"></label>
 
-  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden" readonly>
+  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
   <label for="excellent4" title="Excellent"></label>
 </fieldset>
 <span class="visually-hidden">rated 3 stars out of 5</span>
