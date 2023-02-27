@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Icon link
-description: Quickly create stylized hyperlinks with Bootstrap Icons or other icons.
+description: Quickly create stylized hyperlinks with Solaris icons.
 group: helpers
 aliases:
   - "/docs/icon-link/"
