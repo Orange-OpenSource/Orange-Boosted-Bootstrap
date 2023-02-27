@@ -303,11 +303,7 @@ Links in content are black and underlined. They adapt to their context otherwise
 
 ### With chevron
 
-Add `.link-chevron` to bold your link and enhance them with a chevron.
-
-{{< example >}}
-<a class="link-chevron" href="#links">This is a sample link with chevron</a>
-{{< /example >}}
+Use our [link chevron helper]({{< docsref "/helpers/icon-link#link-chevron" >}}) to bold your link and enhance them with a chevron.
 <!-- End mod -->
 
 ## Lists
