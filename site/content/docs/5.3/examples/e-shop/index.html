@@ -69,7 +69,7 @@ aliases:
 
 <a id="top"></a>
 
-<div class="visually-hidden-focusable top-0 start-0 end-0">
+<div class="visually-hidden-focusable top-0 start-0 end-0 bg-dark">
   <nav class="container-xxl d-flex flex-wrap py-1" aria-label="Skip links">
     <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to main content</a>
     <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to footer</a>
@@ -158,9 +158,9 @@ aliases:
 <main>
   <div class="container-xxl pb-3">
     <h2 class="h4 ll-sm mb-3 mb-md-4">Choose the model that suits your needs from our selection of Smartphones.</h2>
-    <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <ul class="list-unstyled d-flex gap-2 flex-nowrap overflow-x-auto m-0 pb-2 pb-lg-0">
       <li>
-        <button class="tag active">
+        <button class="tag text-nowrap active">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <use xlink:href="#smartphone"/>
           </svg>
@@ -168,7 +168,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#promotion"/>
           </svg>
@@ -176,7 +176,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#random"/>
           </svg>
@@ -184,7 +184,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#tag"/>
           </svg>
@@ -192,7 +192,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#new"/>
           </svg>
@@ -200,7 +200,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#random"/>
           </svg>
@@ -208,7 +208,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#clock"/>
           </svg>
@@ -216,7 +216,7 @@ aliases:
         </button>
       </li>
       <li>
-        <button class="tag">
+        <button class="tag text-nowrap">
           <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <use xlink:href="#tick"/>
           </svg>
@@ -234,27 +234,20 @@ aliases:
         </div>
         <div class="offcanvas-body">
 
-          <form>
-            <button type="button" class="btn btn-dark mb-3">
-              <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
-                <use xlink:href="#delete"/>
-              </svg>
-              Reset filter
-            </button>
-
-            <div class="mb-2 pt-4">
+          <form class="d-flex flex-column">
+            <div class="mb-2 pt-lg-4">
               <h3 class="h4 mb-0">Purchase type</h3>
               <hr class="border-1 border-light my-2">
-              <div class="d-flex flex-column fs-4">
+              <div class="d-flex flex-column">
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="offerTypeFilter">
-                  <label class="form-check-label fs-6" for="offerTypeFilter">
+                  <label class="form-check-label" for="offerTypeFilter">
                     With offer (56)
                   </label>
                 </div>
                 <div class="form-check mt-1">
                   <input class="form-check-input" type="checkbox" value="" id="mobileTypeFilter" checked>
-                  <label class="form-check-label fs-6" for="mobileTypeFilter">
+                  <label class="form-check-label" for="mobileTypeFilter">
                     Mobile only (42)
                   </label>
                 </div>
@@ -264,52 +257,52 @@ aliases:
             <div class="mb-2 pt-4">
               <h3 class="h4 mb-0">Brands</h3>
               <hr class="border-1 border-light my-2">
-              <div class="d-flex flex-column fs-4">
+              <div class="d-flex flex-column">
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="allBrandsFilter">
-                  <label class="form-check-label fs-6" for="allBrandsFilter">
+                  <label class="form-check-label" for="allBrandsFilter">
                     All (75)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="appleBrandFilter" checked>
-                  <label class="form-check-label fs-6" for="appleBrandFilter">
+                  <label class="form-check-label" for="appleBrandFilter">
                     Apple (23)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="alcatelBrandFilter">
-                  <label class="form-check-label fs-6" for="alcatelBrandFilter">
+                  <label class="form-check-label" for="alcatelBrandFilter">
                     Alcatel (2)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="honorBrandFilter">
-                  <label class="form-check-label fs-6" for="honorBrandFilter">
+                  <label class="form-check-label" for="honorBrandFilter">
                     Honor (4)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="itelBrandFilter" checked>
-                  <label class="form-check-label fs-6" for="itelBrandFilter">
+                  <label class="form-check-label" for="itelBrandFilter">
                     Itel (1)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="orangeBrandFilter" checked>
-                  <label class="form-check-label fs-6" for="orangeBrandFilter">
+                  <label class="form-check-label" for="orangeBrandFilter">
                     Orange (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="tclBrandFilter">
-                  <label class="form-check-label fs-6" for="tclBrandFilter">
+                  <label class="form-check-label" for="tclBrandFilter">
                     TCL (6)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="samsungBrandFilter">
-                  <label class="form-check-label fs-6" for="samsungBrandFilter">
+                  <label class="form-check-label" for="samsungBrandFilter">
                     Samsung (10)
                   </label>
                 </div>
@@ -317,19 +310,19 @@ aliases:
                   <div class="d-flex flex-column">
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="xiaomiBrandFilter">
-                      <label class="form-check-label fs-6" for="xiaomiBrandFilter">
+                      <label class="form-check-label" for="xiaomiBrandFilter">
                         Xiaomi (6)
                       </label>
                     </div>
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="huaweiBrandFilter">
-                      <label class="form-check-label fs-6" for="huaweiBrandFilter">
+                      <label class="form-check-label" for="huaweiBrandFilter">
                         Huawei (8)
                       </label>
                     </div>
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="otherBrandFilter">
-                      <label class="form-check-label fs-6" for="otherBrandFilter">
+                      <label class="form-check-label" for="otherBrandFilter">
                         Others (12)
                       </label>
                     </div>
@@ -342,52 +335,52 @@ aliases:
             <div class="mb-2 pt-4">
               <h3 class="h4 mb-0">Colors</h3>
               <hr class="border-1 border-light my-2">
-              <div class="d-flex flex-column fs-4">
+              <div class="d-flex flex-column">
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="allColorsFilter">
-                  <label class="form-check-label fs-6" for="allColorsFilter">
+                  <label class="form-check-label" for="allColorsFilter">
                     All (65)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="appleColorFilter" checked>
-                  <label class="form-check-label fs-6" for="appleColorFilter">
+                  <label class="form-check-label" for="appleColorFilter">
                     Black (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="alcatelColorFilter">
-                  <label class="form-check-label fs-6" for="alcatelColorFilter">
+                  <label class="form-check-label" for="alcatelColorFilter">
                     Blue (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="honorColorFilter">
-                  <label class="form-check-label fs-6" for="honorColorFilter">
+                  <label class="form-check-label" for="honorColorFilter">
                     Gold (2)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="itelColorFilter" checked>
-                  <label class="form-check-label fs-6" for="itelColorFilter">
+                  <label class="form-check-label" for="itelColorFilter">
                     Grey (6)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="orangeColorFilter" checked>
-                  <label class="form-check-label fs-6" for="orangeColorFilter">
+                  <label class="form-check-label" for="orangeColorFilter">
                     Red (1)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="tclColorFilter">
-                  <label class="form-check-label fs-6" for="tclColorFilter">
+                  <label class="form-check-label" for="tclColorFilter">
                     Phantom Violet (23)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="samsungColorFilter">
-                  <label class="form-check-label fs-6" for="samsungColorFilter">
+                  <label class="form-check-label" for="samsungColorFilter">
                     White (1)
                   </label>
                 </div>
@@ -395,19 +388,19 @@ aliases:
                   <div class="d-flex flex-column">
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="xiaomiColorFilter">
-                      <label class="form-check-label fs-6" for="xiaomiColorFilter">
+                      <label class="form-check-label" for="xiaomiColorFilter">
                         Pink (6)
                       </label>
                     </div>
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="huaweiColorFilter">
-                      <label class="form-check-label fs-6" for="huaweiColorFilter">
+                      <label class="form-check-label" for="huaweiColorFilter">
                         Drake's Neck Green (8)
                       </label>
                     </div>
                     <div class="form-check mt-1 mb-2">
                       <input class="form-check-input" type="checkbox" value="" id="otherColorFilter">
-                      <label class="form-check-label fs-6" for="otherColorFilter">
+                      <label class="form-check-label" for="otherColorFilter">
                         Others (12)
                       </label>
                     </div>
@@ -420,40 +413,40 @@ aliases:
             <div class="mb-2 pt-4">
               <h3 class="h4 mb-0">Storage</h3>
               <hr class="border-1 border-light my-2">
-              <div class="d-flex flex-column fs-4">
+              <div class="d-flex flex-column">
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="allStorageFilter" checked>
-                  <label class="form-check-label fs-6" for="allStorageFilter">
+                  <label class="form-check-label" for="allStorageFilter">
                     All (17)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="firstStorageFilter">
-                  <label class="form-check-label fs-6" for="firstStorageFilter">
+                  <label class="form-check-label" for="firstStorageFilter">
                     64 GB (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="secondStorageFilter">
-                  <label class="form-check-label fs-6" for="secondStorageFilter">
+                  <label class="form-check-label" for="secondStorageFilter">
                     128 GB (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="thirdStorageFilter">
-                  <label class="form-check-label fs-6" for="thirdStorageFilter">
+                  <label class="form-check-label" for="thirdStorageFilter">
                     256 GB (7)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="fourthStorageFilter">
-                  <label class="form-check-label fs-6" for="fourthStorageFilter">
+                  <label class="form-check-label" for="fourthStorageFilter">
                     542 GB (3)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="fifthStorageFilter">
-                  <label class="form-check-label fs-6" for="fifthStorageFilter">
+                  <label class="form-check-label" for="fifthStorageFilter">
                     1 TB (1)
                   </label>
                 </div>
@@ -463,22 +456,22 @@ aliases:
             <div class="mb-2 pt-4">
               <h3 class="h4 mb-0">SIM</h3>
               <hr class="border-1 border-light my-2">
-              <div class="d-flex flex-column fs-4">
+              <div class="d-flex flex-column">
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="monoSimFilter">
-                  <label class="form-check-label fs-6" for="monoSimFilter">
+                  <label class="form-check-label" for="monoSimFilter">
                     Mono (15)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="dualSimFilter" disabled>
-                  <label class="form-check-label fs-6" for="dualSimFilter">
+                  <label class="form-check-label" for="dualSimFilter">
                     Dual (0)
                   </label>
                 </div>
                 <div class="form-check mt-1 mb-2">
                   <input class="form-check-input" type="checkbox" value="" id="eSimFilter">
-                  <label class="form-check-label fs-6" for="eSimFilter">
+                  <label class="form-check-label" for="eSimFilter">
                     eSIM (3)
                   </label>
                 </div>
@@ -493,11 +486,11 @@ aliases:
                   <label for="minusPriceFilter" class="form-label">From</label>
                   <input type="email" class="form-control" id="minusPriceFilter" placeholder="Minimum price" value="50 000">
                 </div>
-                <div class="mt-1 mb-2">
+                <div class="mt-1 mb-4">
                   <label for="maxPriceFilter" class="form-label">To</label>
                   <input type="email" class="form-control" id="maxPriceFilter" placeholder="Maximum price" value="300 000">
                 </div>
-                <div class="mt-3">
+                <div>
                   <p class="placeholder-glow mb-0">
                     <span class="visually-hidden">placeholder for double range slider</span>
                     <span class="placeholder col-12" style="min-height: 50px;"></span>
@@ -505,6 +498,19 @@ aliases:
                 </div>
               </div>
             </div>
+
+            <hr class="d-lg-none border-1 border-light">
+
+            <button type="button" class="btn btn-primary d-lg-none mb-3">
+              See 23 results
+            </button>
+
+            <button type="button" class="btn btn-dark mb-3 order-lg-first">
+              <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
+                <use xlink:href="#delete"/>
+              </svg>
+              Reset filter
+            </button>
           </form>
 
         </div>
@@ -583,7 +589,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,99 W/Kg
                 </div>
                 <div class="col-7">
@@ -627,9 +633,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare1">
-                      <label for="phoneCompare1" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare1" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -652,7 +658,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,80 W/Kg
                 </div>
                 <div class="col-7">
@@ -689,9 +695,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare2">
-                      <label for="phoneCompare2" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare2" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -714,7 +720,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,75 W/Kg
                 </div>
                 <div class="col-7">
@@ -751,9 +757,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare3">
-                      <label for="phoneCompare3" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare3" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -776,7 +782,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,90 W/Kg
                 </div>
                 <div class="col-7">
@@ -813,9 +819,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare4">
-                      <label for="phoneCompare4" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare4" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -850,7 +856,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,89 W/Kg
                 </div>
                 <div class="col-7">
@@ -888,9 +894,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare5">
-                      <label for="phoneCompare5" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare5" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -913,7 +919,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,87 W/Kg
                 </div>
                 <div class="col-7">
@@ -957,9 +963,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare6">
-                      <label for="phoneCompare6" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare6" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -982,7 +988,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,90 W/Kg
                 </div>
                 <div class="col-7">
@@ -1019,9 +1025,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare7">
-                      <label for="phoneCompare7" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare7" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -1044,7 +1050,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,77 W/Kg
                 </div>
                 <div class="col-7">
@@ -1082,9 +1088,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare8">
-                      <label for="phoneCompare8" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare8" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -1107,7 +1113,7 @@ aliases:
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
               <div class="row mb-3 align-items-start">
                 <div class="col-5 small fw-bold">
-                  {{< placeholder width="100%" height="160" class="mb-1" text="false" >}}
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
                   DAS: 0,82 W/Kg
                 </div>
                 <div class="col-7">
@@ -1145,9 +1151,9 @@ aliases:
               <div class="row">
                 <div class="offset-5 col-7">
                   <form class="mb-3">
-                    <div class="form-check fs-4">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="phoneCompare9">
-                      <label for="phoneCompare9" class="form-check-label fs-6">Compare</label>
+                      <label for="phoneCompare9" class="form-check-label">Compare</label>
                     </div>
                   </form>
                   <a href="#" class="btn btn-info">More details</a>
@@ -1170,10 +1176,10 @@ aliases:
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-4 pt-3">
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-        <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+        <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxx xxxxxx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">25 900 FCFA</span>
             </p>
@@ -1191,10 +1197,10 @@ aliases:
 
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxx xxxxx xxxxx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
             </p>
@@ -1212,10 +1218,10 @@ aliases:
 
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxxx xxx xxxxxx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
             </p>
@@ -1233,10 +1239,10 @@ aliases:
 
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxxx x xxx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">28 900 FCFA</span>
             </p>
@@ -1254,10 +1260,10 @@ aliases:
 
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxxx xx xxxx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
             </p>
@@ -1275,10 +1281,10 @@ aliases:
 
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-          <div class="col-3"><div class="ratio ratio-9x16">{{< placeholder width="100%" height="100" text="false" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxx xxx xx</h3>
-            <p>
+            <p class="mb-0">
               From<br>
               <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
             </p>
@@ -1298,12 +1304,12 @@ aliases:
     <h2 class="visually-hidden">Advices</h2>
     <div class="row gy-3">
       <div class="col-12 pt-3">
-        <div class="row gx-0">
+        <div class="row gx-0 bg-dark">
           <div class="col-12 col-lg-7 order-lg-1">
-            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="false" >}}</div>
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
-            <div class="h-100 p-2 p-lg-4 bg-dark">
+            <div class="h-100 p-2 p-lg-4">
               <div class="pt-1 pt-lg-0 pe-3 pe-lg-4 pb-1 ps-2">
                 <h3 class="h1 mb-2 text-primary">The best for my budget</h3>
                 <p class="h2 mt-1 mt-lg-2 mb-2">iPhone at a reduced price refurbished, with 1 year guarantly</p>
@@ -1316,15 +1322,15 @@ aliases:
       </div>
 
       <div class="col-12 pt-2 pt-lg-5">
-        <div class="row gx-0">
+        <div class="row gx-0 bg-white">
           <div class="col-12 col-lg-7 order-lg-1">
-            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="false" >}}</div>
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 pe-lg-5">
                 <h3 class="mb-2">Why buy your phone from Orange?</h3>
-                <p class="lead mb-0 mt-lg-1">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you ans demonstrate it to you.</p>
+                <p class="lead mb-0 mt-lg-1 line-height-custom">Come quickly to our Orange Stores to discover the wide range of phones and smartphones that Orange offers you. Buying a new mobile phone from Orange is guaranteed to benefit from all the Orange services, its after-sales service and a welcome bonus. Our advisers are waiting to help you choose the mobile that suits you ans demonstrate it to you.</p>
               </div>
             </div>
           </div>
@@ -1332,15 +1338,15 @@ aliases:
       </div>
 
       <div class="col-12 pt-2 pt-lg-4">
-        <div class="row gx-0">
+        <div class="row gx-0 bg-white">
           <div class="col-12 col-lg-7">
-            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="false" >}}</div>
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 ps-lg-5">
                 <h3 class="mb-2">How to choose your smartphone?</h3>
-                <p class="lead mb-0 mt-lg-1">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
+                <p class="lead mb-0 mt-lg-1 line-height-custom">Discover our wide choice of Android, Samsung or Apple iPhone smartphones to take advantages of the quality and speed of Orange's 4G network. Buying a smartphone from Orange is guaranteed to benefit from the quality of the latest generation cameras, and a large storage capacity. The long-lasting batteries will allow you to take advantage of all the features of your mobile to listen to music, watch videos and take advantage of social networks. Finally, the smartphone will be the ideal companion for paying, transferring or withdrawing money with Orange Money.</p>
               </div>
             </div>
           </div>
@@ -1348,15 +1354,15 @@ aliases:
       </div>
 
       <div class="col-12 pt-2 pt-lg-4">
-        <div class="row gx-0">
+        <div class="row gx-0 bg-white">
           <div class="col-12 col-lg-7 order-lg-1">
-            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="false" >}}</div>
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 pe-lg-5">
                 <h3 class="mb-2">Do you prefer a simple phone?</h3>
-                <p class="lead mb-0 mt-lg-1">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
+                <p class="lead mb-0 mt-lg-1 line-height-custom">If you want a new phone at low prices but with great features, come to the Orange store. Discover the brands Tecno, Mobiwire, Alcatel which offer all the features of the best smartphones at low prices. With these mobile phones you can also share your photos, chat on messaging, and watch your favorite videos.</p>
               </div>
             </div>
           </div>
@@ -1364,15 +1370,15 @@ aliases:
       </div>
 
       <div class="col-12 pt-2 pt-lg-4">
-        <div class="row gx-0">
+        <div class="row gx-0 bg-white">
           <div class="col-12 col-lg-7">
-            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="false" >}}</div>
+            <div class="ratio ratio-16x9">{{< placeholder width="100%" height="162" text="icon" >}}</div>
           </div>
           <div class="col-12 col-lg-5">
             <div class="h-100 pt-2 pt-lg-0">
               <div class="pt-1 pt-lg-0 ps-lg-5">
                 <h3 class="mb-2">Which offer to choose with your mobile?</h3>
-                <p class="lead mb-0 mt-lg-1">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
+                <p class="lead mb-0 mt-lg-1 line-height-custom">Have you chosen your smartphone? Orange offers a wide choice of offers with or without commitment to take advantage of the quality of the Orange network and its speed with 4G. Our offers adapt to all your desires and all your budgets.</p>
               </div>
             </div>
           </div>
@@ -1384,7 +1390,7 @@ aliases:
   <div class="bg-body-secondary mt-4 mt-md-5 pb-3">
     <div class="container-xxl pt-3 pt-md-4 pb-5">
       <h2 class="display-3 mb-4">Orange by your side</h2>
-      <div class="row justify-content-around align-items-start pt-2 pt-md-4 text-center">
+      <div class="row justify-content-around align-items-start gy-4 pt-2 pt-md-4 text-center">
         <div class="position-relative col-6 col-md-2">
           <svg class="mb-2" width="3.125rem" height="3.125rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="#support"/>

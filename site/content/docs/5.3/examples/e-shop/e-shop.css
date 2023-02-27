@@ -28,3 +28,11 @@
   content: "";
   border-top: 1px solid #ccc;
 }
+
+.ratio-3x4 {
+  --bs-aspect-ratio: 133%;
+}
+
+.line-height-custom {
+  line-height: 1.5;
+}
