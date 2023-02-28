@@ -28,7 +28,10 @@
 
   {{- if eq $show_markup true -}}
     {{- if eq $show_preview true -}}
-      <!--Boosted mod: used .align-items-baseline instead of .align-items-center-->
+      <!--Boosted mod:
+        * used .align-items-baseline instead of .align-items-center
+        * don't use "border-0 border-top border-bottom" because of a different borders base rendering
+      -->
       <div class="d-flex align-items-baseline highlight-toolbar ps-3 pe-2 py-1">
         <small class="font-monospace text-muted text-uppercase">{{- $lang -}}</small>
         <div class="d-flex ms-auto">

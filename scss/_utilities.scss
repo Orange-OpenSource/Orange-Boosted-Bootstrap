@@ -676,7 +676,6 @@ $utilities: map-merge(
           "transparent": transparent,
           "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
           "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "body-emphasis": rgba(var(--#{$prefix}emphasis-bg-rgb), var(--#{$prefix}bg-opacity)),
           "supporting-green": $supporting-green, // Boosted mod
           "supporting-blue": $supporting-blue, // Boosted mod
           "supporting-yellow": $supporting-yellow, // Boosted mod
@@ -729,7 +728,7 @@ $utilities: map-merge(
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -744,7 +743,7 @@ $utilities: map-merge(
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -759,7 +758,7 @@ $utilities: map-merge(
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -774,7 +773,7 @@ $utilities: map-merge(
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -789,7 +788,7 @@ $utilities: map-merge(
         2: var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -805,11 +804,13 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-visibility
+    // scss-docs-start utils-zindex
     "z-index": (
       property: z-index,
       class: z,
       values: $zindex-levels,
     )
+    // scss-docs-end utils-zindex
   ),
   $utilities
 );
