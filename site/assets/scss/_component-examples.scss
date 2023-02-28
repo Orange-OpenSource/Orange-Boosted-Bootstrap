@@ -311,7 +311,7 @@
 }
 
 .bd-example-zindex-levels {
-  min-height: 16.625rem;
+  min-height: 16.625rem; // Boosted mod: instead of `15rem`
 
   > div {
     color: var(--bs-body-bg);
