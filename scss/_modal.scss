@@ -79,6 +79,7 @@
   // scss-docs-start modal-scrollable-css-vars
   --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // Boosted mod
   --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // Boosted mod
+  --#{$prefix}modal-scrollable-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // Boosted mod
   // scss-docs-end modal-scrollable-css-vars
 
   height: calc(100% - var(--#{$prefix}modal-margin) * 2);
@@ -94,6 +95,10 @@
     overflow-y: auto;
     border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color); // Boosted mod
     border-width: var(--#{$prefix}modal-border-width) 0; // Boosted mod
+  }
+
+  .modal-footer {
+    margin-top: var(--#{$prefix}modal-scrollable-footer-margin-top); // Boosted mod
   }
 }
 
