@@ -28,6 +28,17 @@ One of the missing examples has priority? Feel free to contact a member of the [
       <p><a href="{{ $.Site.Params.repo }}/issues/new/choose">Please open an issue.</a></p>
     </div>
   {{ end -}}
+  {{ if eq $entry.category "Starters" -}}
+    <div class="bd-callout bd-callout-warning mb-4">
+      <p>
+        <strong>To get working Boosted examples based on the Bootstrap ones</strong>, you need to replace all <code>bootstrap</code> occurrences with <code>boosted</code> in some files.
+      </p>
+      <p>
+        You may need to tweak a bit Sass files and add a <code>src/fonts</code> directory to import font family properly in your project.
+        "Import Boosted" sections in our <a href="/docs/{{ $.Site.Params.docs_version }}/getting-started/parcel">Parcel</a>, <a href="/docs/{{ $.Site.Params.docs_version }}/getting-started/vite">Vite</a> or <a href="/docs/{{ $.Site.Params.docs_version }}/getting-started/webpack">Webpack</a> guides could help you.
+      </p>
+    </div>
+  {{ end -}}
   {{ range $i, $example := $entry.examples -}}
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
