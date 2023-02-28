@@ -107,13 +107,13 @@ Carousel progress indicator is paused under multiple conditions:
 Adding a pause and play button is recommended to setup an accessible carousel.
 When using this button, do not forget to turn off the pause on hover by adding `data-bs-pause="false"` to your carousel.
 
-The `button` must have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
+The `button` must have the custom `data-bs-control="play-button"` attribute and must be included inside a `.carousel-indicators-wrapper` alongside the `.carousel-indicators`. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
 
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
 
 {{< callout warning >}}
 For Orange users we recommend using the pause/play button for better accessibility.
-Other way to pause the slide by hovering the slide should not be used.
+Pausing the carousel by hovering one slide should not be used.
 {{< /callout >}}
 
 {{< example >}}

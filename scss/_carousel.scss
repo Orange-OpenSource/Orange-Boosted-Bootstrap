@@ -328,6 +328,12 @@
         transform: translateX(1px);
       }
     }
+
+    &:hover {
+      color: color-contrast($carousel-control-color);
+      background-color: #{color-contrast($carousel-indicator-active-bg)};
+      opacity: $carousel-control-hover-opacity;
+    }
   }
 
   .carousel-indicators {

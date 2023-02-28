@@ -127,7 +127,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Carousel**
-  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button has been slightly changed for accessibility purpose; it is now placed first and is the first focusable item.
+  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 ### Forms
 
