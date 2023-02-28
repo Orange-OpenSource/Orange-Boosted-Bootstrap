@@ -335,6 +335,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$body-tertiary-color</code></li>
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
+      <li><code>$border-radius-xxl</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
       <li><code>$code-color-dark</code></li>
