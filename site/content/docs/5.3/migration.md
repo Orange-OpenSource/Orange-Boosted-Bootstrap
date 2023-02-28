@@ -241,6 +241,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-bg-rgb</code></li>
+      <li><code>--bs-border-radius-xxl</code></li>
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
