@@ -493,15 +493,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </tbody>
 </table>
 
-### Using the new colors
-
-These new colors are accessible via CSS variables and utility classes—like `--bs-primary-bg-subtle` and `.bg-primary-subtle`—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color's associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.
-
-{{< example >}}
-<div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-  Example element with utilities
-</div>
-{{< /example >}}
+<!--Boosted mod: no "Using the new colors" section because `.bg-primary-subtle` stays orange without opacity in Boosted so the text can't be visible-->
 
 ### Theme colors
 
