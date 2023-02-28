@@ -298,7 +298,7 @@ tooltip.setContent({ '.tooltip-inner': 'another title' })
 ```
 
 {{< callout info >}}
-The `setContent` method accepts an `object` argument, where each property-key is a valid `string` selector within the popover template, and each related property-value can be `string` | `element` | `function` | `null`
+The `setContent` method accepts an `object` argument, where each property-key is a valid `string` selector within the tooltip template, and each related property-value can be `string` | `element` | `function` | `null`
 {{< /callout >}}
 
 ### Events
@@ -306,11 +306,11 @@ The `setContent` method accepts an `object` argument, where each property-key is
 {{< bs-table >}}
 | Event | Description |
 | --- | --- |
-| `hidden.bs.tooltip` | This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete). |
+| `hidden.bs.tooltip` | This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete). |
 | `hide.bs.tooltip` | This event is fired immediately when the `hide` instance method has been called. |
 | `inserted.bs.tooltip` | This event is fired after the `show.bs.tooltip` event when the tooltip template has been added to the DOM. |
 | `show.bs.tooltip` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.tooltip` | This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). |
+| `shown.bs.tooltip` | This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete). |
 {{< /bs-table >}}
 
 ```js
