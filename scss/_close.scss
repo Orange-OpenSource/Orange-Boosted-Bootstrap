@@ -4,7 +4,7 @@
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 .btn-close {
-  // scss-docs-start btn-close-css-vars
+  // scss-docs-start close-css-vars
   --#{$prefix}btn-close-color: #{$btn-close-color};
   --#{$prefix}btn-close-bg: #{$btn-close-bg}; // Boosted mod: don't use escape-svg()
   // Boosted mod: no --#{$prefix}btn-close-opacity
@@ -20,7 +20,7 @@
   --#{$prefix}btn-close-active-color: #{$btn-close-active-color}; // Boosted mod
   --#{$prefix}btn-close-active-border-color: #{$btn-close-active-border-color}; // Boosted mod
   --#{$prefix}btn-close-disabled-color: #{$btn-close-disabled-color}; // Boosted mod
-  // scss-docs-end btn-close-css-vars
+  // scss-docs-end close-css-vars
 
   // Boosted mod: no box-sizing, width nor height
   padding: var(--#{$prefix}btn-close-padding); // Boosted mod

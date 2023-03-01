@@ -23,7 +23,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
-- **New extended color system.** We've added new theme colors (but not in `$theme-colors)`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+- **New extended color system.** We've added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
 
 - We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
 
@@ -45,6 +45,19 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   ```
 
 ### Components
+
+- **Accordion**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in accordions is not necessary. Please reflect these modifications into your websites.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <h2 class="accordion-header" id="heading">...</h2>
+      - <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="heading">
+      + <h2 class="accordion-header">...</h2>
+      + <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      ```
+    </details>
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
@@ -68,6 +81,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
+
+- **Orange footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -113,6 +129,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Side navigation**
   - <span class="badge bg-success">New</span> Side navigation are now a component.
 
+- **Carousel**
+  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
@@ -129,7 +148,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
-- <span class="badge bg-success">New</span> `.bg-body-secondary`, `.bg-body-tertiary` and `.bg-body-emphasis`.
+- <span class="badge bg-success">New</span> `.bg-body-secondary` and `.bg-body-tertiary`.
 
 - <span class="badge bg-success">New</span> `.bg-{color}-subtle`.
 
@@ -156,6 +175,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
 - <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
+
+- <span class="badge bg-success">New</span> Added new set of link utilities associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`.
+
+- <span class="badge bg-success">New</span> Added new icon link helper associated to `.icon-link` and `.link-hover`. They can be paired with our link utilities.
+
+- <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
 ### CSS and Sass variables
 
@@ -195,6 +220,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
+      <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
     </ul>
   </details>
@@ -202,6 +228,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-outer-color-dark</code></li>
@@ -220,6 +247,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-bg-rgb</code></li>
+      <li><code>--bs-border-radius-xxl</code></li>
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
@@ -314,8 +342,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$body-tertiary-color</code></li>
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
+      <li><code>$border-radius-xxl</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
+      <li><code>$carousel-control-pause-button-size</code></li>
+      <li><code>$carousel-control-pause-indicators-spacing</code></li>
+      <li><code>$carousel-indicators-margin-bottom</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$code-color-inverted</code></li>
       <li><code>$color-mode-type</code></li>
@@ -331,8 +363,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$dark-border-subtle</code></li>
       <li><code>$dark-text-dark</code></li>
       <li><code>$dark-text</code></li>
-      <li><code>$emphasis-color-dark</code></li>
-      <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
@@ -396,6 +426,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-dark</code></li>
       <li><code>$success-text</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
@@ -1364,7 +1395,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
   - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
   - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-  - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+  - Renamed `.text-*-left` and `.text-*-right` to `.text-*-start` and `.text-*-end`.
 
 - <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
 
