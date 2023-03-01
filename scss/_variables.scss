@@ -493,15 +493,13 @@ $body-text-align:           null !default;
 $body-color:                $black !default; // Boosted mod: instead of `$gray-900`
 $body-bg:                   $white !default;
 
-$body-emphasis-color:       $black !default;
-
 $body-secondary-color:      $gray-700 !default; // Boosted mod: instead of `rgba($body-color, .75)`
 $body-secondary-bg:         $gray-300 !default; // Boosted mod: instead of `$gray-200`
 
 $body-tertiary-color:       rgba($body-color, .5) !default;
 $body-tertiary-bg:          $gray-100 !default;
 
-$emphasis-color:            $black !default;
+$body-emphasis-color:       $black !default;
 
 // Links
 //
@@ -617,9 +615,12 @@ $border-radius:               .375rem !default;
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
-$border-radius-2xl:           2rem !default;
+$border-radius-xxl:           2rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
+// fusv-disable
+$border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
+// fusv-enable
 
 // fusv-disable
 $outline-width:               var(--#{$prefix}border-width) !default; // Deprecated in v5.2.3
@@ -640,10 +641,10 @@ $focus-visible-outer-color-inverted:  $white !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow:        null !default; // Boosted mod: instead of `0 .5rem 1rem rgba(var(--#{$prefix}body-color-rgb), .15)`
-$box-shadow-sm:     null !default; // Boosted mod: instead of `0 .125rem .25rem rgba(var(--#{$prefix}body-color-rgb), .075)`
-$box-shadow-lg:     null !default; // Boosted mod: instead of `0 1rem 3rem rgba(var(--#{$prefix}body-color-rgb), .175)`
-$box-shadow-inset:  null !default; // Boosted mod: instead of `inset 0 1px 2px rgba(var(--#{$prefix}body-color-rgb), .075)`
+$box-shadow:        null !default; // Boosted mod: instead of `0 .5rem 1rem rgba($black, .15)`
+$box-shadow-sm:     null !default; // Boosted mod: instead of `0 .125rem .25rem rgba($black, .075)`
+$box-shadow-lg:     null !default; // Boosted mod: instead of `0 1rem 3rem rgba($black, .175)`
+$box-shadow-inset:  null !default; // Boosted mod: instead of `inset 0 1px 2px rgba($black, .075)`
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $black !default;
@@ -1649,7 +1650,7 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
 $accordion-padding-x:                     0 !default; // Boosted mod
-$accordion-color:                         var(--#{$prefix}body-color) !default; // Sass variable because of $accordion-button-icon
+$accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
 $accordion-border-color:                  $gray-500 !default; // Boosted mod
@@ -2048,6 +2049,7 @@ $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
 $carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;
+$carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
 
 $carousel-caption-width:             70% !default;
@@ -2062,9 +2064,11 @@ $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
-$carousel-control-pause-icon:        $pause-icon !default;
-$carousel-control-play-icon:         $play-icon !default;
-$carousel-control-pause-icon-size:   1.25rem 1.25rem !default;
+$carousel-control-pause-indicators-spacing: 10px !default;
+$carousel-control-pause-icon:               $pause-icon !default;
+$carousel-control-play-icon:                $play-icon !default;
+$carousel-control-pause-button-size:        .75rem !default;
+$carousel-control-pause-icon-size:          .75rem .75rem !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;

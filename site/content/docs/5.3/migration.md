@@ -23,7 +23,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
-- **New extended color system.** We've added new theme colors (but not in `$theme-colors)`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+- **New extended color system.** We've added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
 
 - We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
 
@@ -66,6 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
+  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -145,7 +146,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
-- <span class="badge bg-success">New</span> `.bg-body-secondary`, `.bg-body-tertiary` and `.bg-body-emphasis`.
+- <span class="badge bg-success">New</span> `.bg-body-secondary` and `.bg-body-tertiary`.
 
 - <span class="badge bg-success">New</span> `.bg-{color}-subtle`.
 
@@ -172,6 +173,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
 - <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
+
+- <span class="badge bg-success">New</span> Added new set of link utilities associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`.
+
+- <span class="badge bg-success">New</span> Added new icon link helper associated to `.icon-link` and `.link-hover`. They can be paired with our link utilities.
+
+- <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
 ### CSS and Sass variables
 
@@ -211,6 +218,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
+      <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
     </ul>
   </details>
@@ -218,6 +226,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
       <li><code>$focus-visible-outer-color-dark</code></li>
@@ -236,6 +245,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-body-bg-rgb</code></li>
+      <li><code>--bs-border-radius-xxl</code></li>
       <li><code>--bs-box-shadow-inset</code></li>
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
@@ -331,8 +341,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$body-tertiary-color</code></li>
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
+      <li><code>$border-radius-xxl</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
+      <li><code>$carousel-control-pause-button-size</code></li>
+      <li><code>$carousel-control-pause-indicators-spacing</code></li>
+      <li><code>$carousel-indicators-margin-bottom</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$code-color-inverted</code></li>
       <li><code>$color-mode-type</code></li>
@@ -348,8 +362,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$dark-border-subtle</code></li>
       <li><code>$dark-text-dark</code></li>
       <li><code>$dark-text</code></li>
-      <li><code>$emphasis-color-dark</code></li>
-      <li><code>$emphasis-color</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
@@ -416,6 +428,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-dark</code></li>
       <li><code>$success-text</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
@@ -1384,7 +1397,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
   - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
   - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
   - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-  - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+  - Renamed `.text-*-left` and `.text-*-right` to `.text-*-start` and `.text-*-end`.
 
 - <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
 

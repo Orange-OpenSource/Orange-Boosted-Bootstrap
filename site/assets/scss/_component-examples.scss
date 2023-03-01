@@ -311,11 +311,18 @@
 }
 
 .bd-example-zindex-levels {
-  min-height: 15rem;
+  min-height: 16.625rem; // Boosted mod: instead of `15rem`
 
   > div {
-    background-color: tint-color($bd-violet, 75%);
-    border: 1px solid tint-color($bd-violet, 50%);
+    color: var(--bs-body-bg);
+    background-color: var(--bd-violet);
+    border: 1px solid var(--bd-purple);
+
+    > span {
+      position: absolute;
+      right: 5px;
+      bottom: 0;
+    }
   }
 
   > :nth-child(2) {
@@ -389,10 +396,8 @@
 
 .highlight-toolbar {
   background-color: $gray-100; // Boosted mod: instead of `var(--bd-pre-bg)`
-  border: solid $gray-400; // Boosted mod: instead of `solid var(--bs-border-color)`
-  border-width: 1px 0;
-
-  // Boosted mod: no `.btn-clipboard`
+  border: solid $gray-400; // Boosted mod
+  border-width: 1px 0; // Boosted mod
 }
 
 .focused {
