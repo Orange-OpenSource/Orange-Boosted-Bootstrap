@@ -290,7 +290,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-modal-footer-margin-top</code></li>
-      <li><code>--bs-modal-scrollable-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
