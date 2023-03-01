@@ -126,6 +126,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
+- **Carousel**
+  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
@@ -339,6 +342,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$border-radius-xxl</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
+      <li><code>$carousel-control-pause-button-size</code></li>
+      <li><code>$carousel-control-pause-indicators-spacing</code></li>
+      <li><code>$carousel-indicators-margin-bottom</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$code-color-inverted</code></li>
       <li><code>$color-mode-type</code></li>
