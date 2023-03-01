@@ -1,0 +1,1 @@
+**ProTip!** Conveying meaning through color alone will not be conveyed to users of assistive technologies like screen readers. Please ensure the context is is obvious itself (e.g., the visible text) or is included through alternative means, such as additional text hidden with the `.visually-hidden` class.

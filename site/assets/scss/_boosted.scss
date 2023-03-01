@@ -50,85 +50,11 @@ body {
   text-rendering: optimizelegibility;
 }
 
-//
-// Design Guidelines
-//
-#orange-logo ~ .row .ratio .figure-caption {
-  bottom: -#{$spacer * 1.5};
-
-  @include media-breakpoint-up(lg) {
-    bottom: -#{$spacer};
-  }
-}
-
-#orange-business-services-logo ~ .row .ratio img {
-  margin-bottom: $spacer / 10;
-}
-
-// stylelint-disable
-.bd-alerts .bd-content > h2 ~ p,
-#with-labels + p,
-#with-icons + p,
-#links + .row h3 + p {
-  display: flex;
-  align-items: center;
-  padding: 0 0 $spacer / 2;
-  margin: $spacer / -2 0 $spacer * 1.5;
-  border-bottom: $border-width / 2 solid tint-color($info, 80%);
-
-  > a[href]:first-of-type {
-    display: flex;
-    align-items: center;
-    font-weight: $font-weight-bold;
-    color: $documentation-link-color;
-
-    &::before {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      content: "";
-      background-image: escape-svg($documentation-link-bg-image);
-      background-size: 1em;
-    }
-
-    &:hover,
-    &:focus {
-      color: $black;
-    }
-  }
-}
-// stylelint-enable
-
-.ui-kit-id {
-  @include font-size($small-font-size);
-  font-weight: $font-weight-bold;
-  color: $documentation-link-color;
-  text-transform: uppercase;
-
-  &::before {
-    padding-right: $spacer / 8;
-    content: "#";
-  }
-
-  &,
-  &:hover {
-    color: $documentation-link-color;
-    text-decoration: none;
-  }
-}
-
 // Back to top offset
 [id="#{$back-to-top-target-id}"]:target {
   @include media-breakpoint-up(md) {
     scroll-margin-top: $offset-top;
   }
-}
-
-// "Added in vX.Y.Z" areas
-// stylelint-disable-next-line selector-max-class, selector-no-qualifying-type
-small.d-inline-flex.px-2.py-1.font-monospace.text-muted.border.rounded-3 {
-  // stylelint-disable-next-line declaration-no-important
-  border-color: $light !important;
 }
 
 // Design guidelines

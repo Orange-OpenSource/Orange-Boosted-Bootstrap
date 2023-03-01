@@ -3,6 +3,7 @@
 
 @import "functions";
 @import "variables";
+@import "variables-dark";
 @import "maps";
 
 @import "mixins/breakpoints";
@@ -11,8 +12,6 @@
 @import "mixins/utilities";
 
 @import "vendor/rfs";
-
-@import "root";
 
 @import "containers";
 @import "grid";
