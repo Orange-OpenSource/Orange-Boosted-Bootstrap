@@ -105,16 +105,28 @@ Carousel progress indicator is paused under multiple conditions:
 {{< added-in "5.2.0" >}}
 
 Adding a pause and play button is recommended to setup an accessible carousel.
-This `button` must immediately follow your carousel and have the custom `data-bs-control="play-button"` attribute. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
+When using this button, do not forget to turn off the pause on hover by adding `data-bs-pause="false"` to your carousel.
+
+The `button` must have the custom `data-bs-control="play-button"` attribute and must be included inside a `.carousel-action-bar` alongside the `.carousel-indicators`. In addition, it must also have a `data-bs-target` attribute that matches the `id` of the `.carousel` element.
 
 'Play' and 'Pause' texts can be changed by modifying `data-bs-play-text` and `data-bs-pause-text` custom attributes.
 
+{{< callout warning >}}
+For Orange users we recommend using the pause/play button for better accessibility.
+Pausing the carousel by hovering one slide should not be used.
+{{< /callout >}}
+
 {{< example >}}
-<div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+  <div class="carousel-action-bar">
+    <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
+      <span class="visually-hidden">Pause Carousel</span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -136,9 +148,6 @@ This `button` must immediately follow your carousel and have the custom `data-bs
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
-  <span class="visually-hidden">Pause Carousel</span>
-</button>
 {{< /example >}}
 <!-- End mod -->
 
