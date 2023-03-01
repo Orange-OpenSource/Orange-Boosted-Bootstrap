@@ -365,6 +365,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$font-weight-medium</code></li>
       <li><code>$form-color-disabled-background-swatch</code></li>
       <li><code>$form-color-disabled-border-color</code></li>
+      <li><code>$form-range-thumb-active-border-color</code></li>
+      <li><code>$form-range-thumb-hover-bg</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
@@ -632,8 +634,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$focus-visible-zindex</code></li>
       <li><code>$form-helper-label-margin-bottom</code></li>
       <li><code>$form-helper-size</code></li>
-      <li><code>$form-range-thumb-active-border-color</code></li>
-      <li><code>$form-range-thumb-hover-bg</code></li>
       <li><code>$form-select-border-radius-sm</code></li>
       <li><code>$form-select-font-size-sm</code></li>
       <li><code>$form-select-padding-x-sm</code></li>
