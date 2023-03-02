@@ -802,7 +802,9 @@ $small-font-size:             .875rem !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  var(--#{$prefix}secondary-color) !default;
+// fusv-disable
+$text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+// fusv-enable
 
 $initialism-font-size:        $small-font-size !default;
 

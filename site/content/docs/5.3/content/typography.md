@@ -27,13 +27,13 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 
 <!-- Boosted mod -->
 {{< bs-table >}}
-| Heading | Desktop Size | Tablet Size | Mobile Size | Line Height <small class="text-muted">Desktop</small> | Letter Spacing <small class="text-muted">Desktop</small> |
+| Heading | Desktop Size | Tablet Size | Mobile Size | Line Height <small class="text-body-secondary">Desktop</small> | Letter Spacing <small class="text-body-secondary">Desktop</small> |
 | --- | --- | --- | --- | --- | --- |
-| `<h1></h1>` | Bold 2.125rem <small class="text-muted">(34px)</small> | Bold 2.125rem <small class="text-muted">(34px)</small> | Bold 1.5rem <small class="text-muted">(24px)</small> | 1 <small class="text-muted">(34px)</small> | -0.0625rem <small class="text-muted">(-1px)</small> |
-| `<h2></h2>` | Bold 1.875rem <small class="text-muted">(30px)</small> | Bold 1.5rem <small class="text-muted">(24px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | 1.067 <small class="text-muted">(32px)</small> | -0.05rem <small class="text-muted">(-0.8px)</small> |
-| `<h3></h3>` | Bold 1.5rem <small class="text-muted">(24px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | Bold 1rem <small class="text-muted">(16px)</small> | 1.083 <small class="text-muted">(26px)</small> | -0.03125rem <small class="text-muted">(-0.5px)</small> |
-| `<h4></h4>` | Bold 1.25rem <small class="text-muted">(20px)</small> | Bold 1.125rem <small class="text-muted">(18px)</small> | | 1.1 <small class="text-muted">(22px)</small> | -0.025rem <small class="text-muted">(-0.4px)</small> |
-| `<h5></h5>` | Bold 1.125rem <small class="text-muted">(18px)</small> | Bold 1rem <small class="text-muted">(16px)</small> | | 1.111 <small class="text-muted">(20px)</small> | -0.0125rem <small class="text-muted">(-0.2px)</small> |
+| `<h1></h1>` | Bold 2.125rem <small class="text-body-secondary">(34px)</small> | Bold 2.125rem <small class="text-body-secondary">(34px)</small> | Bold 1.5rem <small class="text-body-secondary">(24px)</small> | 1 <small class="text-body-secondary">(34px)</small> | -0.0625rem <small class="text-body-secondary">(-1px)</small> |
+| `<h2></h2>` | Bold 1.875rem <small class="text-body-secondary">(30px)</small> | Bold 1.5rem <small class="text-body-secondary">(24px)</small> | Bold 1.125rem <small class="text-body-secondary">(18px)</small> | 1.067 <small class="text-body-secondary">(32px)</small> | -0.05rem <small class="text-body-secondary">(-0.8px)</small> |
+| `<h3></h3>` | Bold 1.5rem <small class="text-body-secondary">(24px)</small> | Bold 1.125rem <small class="text-body-secondary">(18px)</small> | Bold 1rem <small class="text-body-secondary">(16px)</small> | 1.083 <small class="text-body-secondary">(26px)</small> | -0.03125rem <small class="text-body-secondary">(-0.5px)</small> |
+| `<h4></h4>` | Bold 1.25rem <small class="text-body-secondary">(20px)</small> | Bold 1.125rem <small class="text-body-secondary">(18px)</small> | | 1.1 <small class="text-body-secondary">(22px)</small> | -0.025rem <small class="text-body-secondary">(-0.4px)</small> |
+| `<h5></h5>` | Bold 1.125rem <small class="text-body-secondary">(18px)</small> | Bold 1rem <small class="text-body-secondary">(16px)</small> | | 1.111 <small class="text-body-secondary">(20px)</small> | -0.0125rem <small class="text-body-secondary">(-0.2px)</small> |
 {{< /bs-table >}}
 <!-- End mod -->
 
@@ -64,7 +64,7 @@ Use the included utility classes to recreate the small secondary heading text fr
 {{< example >}}
 <h3>
   Fancy display heading
-  <small class="text-muted">With faded secondary text</small>
+  <small class="text-body-secondary">With faded secondary text</small>
 </h3>
 {{< /example >}}
 
@@ -82,46 +82,46 @@ Traditional heading elements are designed to work best in the meat of your page 
     <th scope="col">Mobile size</th>
     <th scope="col">
         Line height
-        <small class="text-muted">Desktop</small>
+        <small class="text-body-secondary">Desktop</small>
     </th>
     <th scope="col">
         Letter spacing
-        <small class="text-muted">Desktop</small>
+        <small class="text-body-secondary">Desktop</small>
     </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Display 1</td>
-      <td>Bold 3.75rem <small class="text-muted">(60px)</small></td>
-      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
-      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
-      <td>1 <small class="text-muted">(60px)</small></td>
-      <td>-0.125rem <small class="text-muted">(-2px)</small></td>
+      <td>Bold 3.75rem <small class="text-body-secondary">(60px)</small></td>
+      <td>Bold 3.125rem <small class="text-body-secondary">(50px)</small></td>
+      <td>Bold 1.875rem <small class="text-body-secondary">(30px)</small></td>
+      <td>1 <small class="text-body-secondary">(60px)</small></td>
+      <td>-0.125rem <small class="text-body-secondary">(-2px)</small></td>
     </tr>
     <tr>
       <td>Display 2</td>
-      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
-      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>1 <small class="text-muted">(50px)</small></td>
-      <td>-0.1rem <small class="text-muted">(-1.6px)</small></td>
+      <td>Bold 3.125rem <small class="text-body-secondary">(50px)</small></td>
+      <td>Bold 2.5rem <small class="text-body-secondary">(40px)</small></td>
+      <td>Bold 1.5rem <small class="text-body-secondary">(24px)</small></td>
+      <td>1 <small class="text-body-secondary">(50px)</small></td>
+      <td>-0.1rem <small class="text-body-secondary">(-1.6px)</small></td>
     </tr>
     <tr>
       <td>Display 3</td>
-      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
-      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>1 <small class="text-muted">(40px)</small></td>
-      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+      <td>Bold 2.5rem <small class="text-body-secondary">(40px)</small></td>
+      <td>Bold 2.125rem <small class="text-body-secondary">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-body-secondary">(24px)</small></td>
+      <td>1 <small class="text-body-secondary">(40px)</small></td>
+      <td>-0.0625rem <small class="text-body-secondary">(-1px)</small></td>
     </tr>
     <tr>
       <td>Display 4</td>
-      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td>1 <small class="text-muted">(34px)</small></td>
-      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+      <td>Bold 2.125rem <small class="text-body-secondary">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-body-secondary">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-body-secondary">(18px)</small></td>
+      <td>1 <small class="text-body-secondary">(34px)</small></td>
+      <td>-0.0625rem <small class="text-body-secondary">(-1px)</small></td>
     </tr>
   </tbody>
 </table>
@@ -156,34 +156,34 @@ Since only [headings](#headings), [display headings](#display-headings) and `str
     <th scope="col">Mobile size</th>
     <th scope="col">
         Line height
-        <small class="text-muted">Desktop</small>
+        <small class="text-body-secondary">Desktop</small>
     </th>
     <th scope="col">
         Letter spacing
-        <small class="text-muted">Desktop</small>
+        <small class="text-body-secondary">Desktop</small>
     </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Lead</td>
-      <td>Regular 1.25rem <small class="text-muted">(20px)</small></td>
-      <td>Regular 1.125rem <small class="text-muted">(18px)</small></td>
-      <td>Regular 1rem <small class="text-muted">(16px)</small></td>
-      <td>1.5 <small class="text-muted">(30px)</small></td>
-      <td>-0.015625rem <small class="text-muted">(-0.25px)</small></td>
+      <td>Regular 1.25rem <small class="text-body-secondary">(20px)</small></td>
+      <td>Regular 1.125rem <small class="text-body-secondary">(18px)</small></td>
+      <td>Regular 1rem <small class="text-body-secondary">(16px)</small></td>
+      <td>1.5 <small class="text-body-secondary">(30px)</small></td>
+      <td>-0.015625rem <small class="text-body-secondary">(-0.25px)</small></td>
     </tr>
     <tr>
       <td>Body copy</td>
-      <td colspan="3">Regular 1rem <small class="text-muted">(16px)</small></td>
-      <td>1.5 <small class="text-muted">(24px)</small></td>
-      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+      <td colspan="3">Regular 1rem <small class="text-body-secondary">(16px)</small></td>
+      <td>1.5 <small class="text-body-secondary">(24px)</small></td>
+      <td>-0.00625rem <small class="text-body-secondary">(-0.1px)</small></td>
     </tr>
     <tr>
       <td>Small</td>
-      <td colspan="3">Regular .875rem <small class="text-muted">(14px)</small></td>
-      <td>1.143 <small class="text-muted">(16px)</small></td>
-      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+      <td colspan="3">Regular .875rem <small class="text-body-secondary">(14px)</small></td>
+      <td>1.143 <small class="text-body-secondary">(16px)</small></td>
+      <td>-0.00625rem <small class="text-body-secondary">(-0.1px)</small></td>
     </tr>
   </tbody>
 </table>
