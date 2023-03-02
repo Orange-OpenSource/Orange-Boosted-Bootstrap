@@ -1277,7 +1277,7 @@ Here is an example on the accordion theme.
   <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas" id="sideNavCollapsibleIconsDarkToggle">Show dark accordion side navigation</button>
   <div class="offcanvas-lg offcanvas-start offcanvas-dark" role="region" aria-labelledby="sideNavCollapsibleIconsDarkToggle" id="sideNavCollapsibleDarkIconsOffcanvas">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls=""><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav side-nav-dark side-nav-static">
