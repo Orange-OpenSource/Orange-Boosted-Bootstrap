@@ -66,6 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
+  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -128,9 +129,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Side navigation**
   - <span class="badge bg-success">New</span> Side navigation are now a component.
-
-- **Carousel**
-  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 ### Forms
 
