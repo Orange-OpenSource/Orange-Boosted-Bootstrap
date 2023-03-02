@@ -155,11 +155,11 @@ Here is an example without offcanvas.
 Here is the `.side-nav-accordion` theme. It should be used with [`.side-nav-static`](#static) since it doesn't have any collapse behavior. The whole accordion should be scrollable.
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavOffcanvas" data-bs-toggle="offcanvas">Show basic side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavOffcanvas" id="sideNavToggle">Show basic side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start h-100" id="sideNavOffcanvas">
+<div class="offcanvas-lg offcanvas-start h-100" role="region" aria-labelledby="sideNavToggle" id="sideNavOffcanvas">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavOffcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
 
@@ -261,11 +261,11 @@ Here is the `.side-nav-accordion` theme. It should be used with [`.side-nav-stat
 Illustrating icons can be added on each item if needed.
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavIconsOffcanvas" data-bs-toggle="offcanvas">Show basic side navigation with icons</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavIconsOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavIconsOffcanvas" id="sideNavIconsToggle">Show basic side navigation with icons</button>
 
-<div class="offcanvas-lg offcanvas-start h-100" id="sideNavIconsOffcanvas">
+<div class="offcanvas-lg offcanvas-start h-100" role="region" aria-labelledby="sideNavIconsToggle" id="sideNavIconsOffcanvas">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavIconsOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavIconsOffcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
 
@@ -380,11 +380,11 @@ Illustrating icons can be added on each item if needed.
 Here is the `.side-nav-collapsible` theme. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally. It also uses a small trick to nicely collapse the side navigation with an empty `div`. (might change if we try to change the collapse thing on Bootstrap)
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsible" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement1').show()">Show basic collapsible side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsible" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsible" id="sideNavCollapsibleToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement1').show()">Show basic collapsible side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsible">
+<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCollapsibleToggle" id="sideNavCollapsible">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsible" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsible" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsible"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
 
@@ -441,11 +441,11 @@ For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanv
 {{< /callout >}}
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc1" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">Show collapsible side navigation with drawer content</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc1" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc1" id="sideNavCwdc1Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">Show collapsible side navigation with drawer content</button>
 
-<div class="offcanvas-start offcanvas-lg d-flex" tabindex="-1" id="sideNavCwdc1">
+<div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc1Toggle" id="sideNavCwdc1">
   <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc1"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc1" aria-expanded="true" aria-controls="sideNavCwdc1"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body p-0">
 
@@ -453,25 +453,25 @@ For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanv
       <div class="side-nav-content-with-drawer">
         <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc1"><span class="visually-hidden">Open/Close side navigation</span></button>
         <div class="side-nav-content">
-          <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
-            <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-              <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#dashboardTab1" type="button" role="tab" aria-controls="dashboardTab1" aria-selected="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
+          <ul class="nav d-block h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="menubar">
+            <li class="nav-item" role="none" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
+              <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#dashboardTab1" type="button" role="menuitem" aria-controls="dashboardTab1" aria-expanded="false" aria-haspopup="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
                 <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
                   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
                 </svg>
                 <span class="visually-hidden">Open dashboard tab</span>
               </button>
             </li>
-            <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-              <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab1" type="button" role="tab" aria-controls="chartsTab1" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
+            <li class="nav-item" role="none" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
+              <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab1" type="button" role="menuitem" aria-controls="chartsTab1" aria-expanded="false" aria-haspopup="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
                 <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
                   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
                 </svg>
                 <span class="visually-hidden">Open charts tab</span>
               </button>
             </li>
-            <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-              <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#financialTab1" type="button" role="tab" aria-controls="financialTab1" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
+            <li class="nav-item" role="none" data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
+              <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#financialTab1" type="button" role="menuitem" aria-controls="financialTab1" aria-expanded="false" aria-haspopup="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc1').show()">
                 <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
                   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
                 </svg>
@@ -586,10 +586,10 @@ For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanv
 Add `.side-nav-static` to the `.side-nav` for a static variant.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
-  <div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleStatic" id="sideNavCollapsibleStaticToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
+  <div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCollapsibleStaticToggle" id="sideNavCollapsibleStatic">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleStatic"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
@@ -630,11 +630,11 @@ Add `.side-nav-static` to the `.side-nav` for a static variant.
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleStatic" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleStatic" id="sideNavCollapsibleStaticToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement2').show()">Show basic collapsible static side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
+<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCollapsibleStaticToggle" id="sideNavCollapsibleStatic">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close ms-auto" data-bs-target="#sideNavCollapsibleStatic" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleStatic"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
@@ -659,10 +659,10 @@ Here are some examples with the [collapsible with drawer content](#collapsible-w
 Here is an example including the title on the right scroll box.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc2" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" tabindex="-1" id="sideNavCwdc2">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc2" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc2" id="sideNavCwdc2Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">Test</button>
+  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc2Toggle" id="sideNavCwdc2">
     <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc2"><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc2" aria-expanded="true" aria-controls="sideNavCwdc2"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll boxes including the title">
@@ -796,9 +796,9 @@ Here is an example including the title on the right scroll box.
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc2" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc2" id="sideNavCwdc2Toggle">Collapsing side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
+<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc2Toggle" id="sideNavCwdc2">
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
@@ -825,10 +825,10 @@ Here is an example including the title on the right scroll box.
 Here is an example of a unique scroll box containing the two previous scroll boxes and excluding the toggle button.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc3" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" tabindex="-1" id="sideNavCwdc3">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc3" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc3" id="sideNavCwdc3Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">Test</button>
+  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc3Toggle" id="sideNavCwdc3">
     <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc3"><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc3" aria-expanded="true" aria-controls="sideNavCwdc3"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and excluding the toggle button">
@@ -962,9 +962,9 @@ Here is an example of a unique scroll box containing the two previous scroll box
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc3" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc3" id="sideNavCwdc3Toggle">Collapsing side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
+<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc3Toggle" id="sideNavCwdc3">
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
@@ -984,10 +984,10 @@ Here is an example of a unique scroll box containing the two previous scroll box
 Here is an example of a unique scroll box containing the both previous scroll boxes and including the toggle button.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc4" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" tabindex="-1" id="sideNavCwdc4">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc4" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc4" id="sideNavCwdc4Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">Test</button>
+  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc4Toggle" id="sideNavCwdc4">
     <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc4"><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc4" aria-expanded="true" aria-controls="sideNavCwdc4"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body p-0">
       <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and including the toggle button">
@@ -1121,9 +1121,9 @@ Here is an example of a unique scroll box containing the both previous scroll bo
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sidebarMenuStatic" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc4" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc4" id="sideNavCwdc4Toggle">Collapsing side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start" id="sideNavCollapsibleStatic">
+<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc4Toggle" id="sideNavCwdc4">
   <div class="offcanvas-header">...</div>
   <div class="offcanvas-body">
     <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
@@ -1142,10 +1142,10 @@ Here is an example of a unique scroll box containing the both previous scroll bo
 Add `.offcanvas-end` to the `.offcanvas` for a right sided variant. (only on mobile for now)
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement3').show()">Test collapsing</button>
-  <div class="offcanvas-lg offcanvas-end" id="sideNavCollapsibleRight">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleRight" id="sideNavCollapsibleRightToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement3').show()">Test collapsing</button>
+  <div class="offcanvas-lg offcanvas-end" role="region" aria-labelledby="sideNavCollapsibleRightToggle" id="sideNavCollapsibleRight">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close me-auto" data-bs-target="#sideNavCollapsibleRight" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close me-auto" data-bs-target="#sideNavCollapsibleRight" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleRight"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav">
@@ -1186,9 +1186,9 @@ Add `.offcanvas-end` to the `.offcanvas` for a right sided variant. (only on mob
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas">Collapsing side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleRight" id="sideNavCollapsibleRightToggle">Collapsing side navigation</button>
 
-<div class="offcanvas-lg offcanvas-end" id="sideNavCollapsibleRight">
+<div class="offcanvas-lg offcanvas-end" role="region" aria-labelledby="sideNavCollapsibleRightToggle" id="sideNavCollapsibleRight">
   ...
 </div>
 
@@ -1209,10 +1209,10 @@ Dark variant can be applied on root of any example except the [collapsible side 
 Here is the example on the collapsible theme.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
-  <div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDark">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDark" id="sideNavCollapsibleDarkToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
+  <div class="offcanvas-lg offcanvas-start offcanvas-dark" role="region" aria-labelledby="sideNavCollapsibleDarkToggle" id="sideNavCollapsibleDark">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleDark"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav side-nav-dark">
@@ -1253,11 +1253,11 @@ Here is the example on the collapsible theme.
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDark" id="sideNavCollapsibleDarkToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDark">
+<div class="offcanvas-lg offcanvas-start offcanvas-dark" role="region" aria-labelledby="sideNavCollapsibleDarkToggle" id="sideNavCollapsibleDark">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDark" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleDark"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
     <div class="side-nav side-nav-dark">
@@ -1274,10 +1274,10 @@ Here is the example on the collapsible theme.
 Here is an example on the accordion theme.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Show dark accordion side navigation</button>
-  <div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDarkIconsOffcanvas">
+  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas" id="sideNavCollapsibleIconsDarkToggle">Show dark accordion side navigation</button>
+  <div class="offcanvas-lg offcanvas-start offcanvas-dark" role="region" aria-labelledby="sideNavCollapsibleIconsDarkToggle" id="sideNavCollapsibleDarkIconsOffcanvas">
     <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls=""><span class="visually-hidden">Close</span></button>
     </div>
     <div class="offcanvas-body h-100 p-0">
       <div class="side-nav side-nav-dark side-nav-static">
@@ -1385,11 +1385,11 @@ Here is an example on the accordion theme.
 </div>
 
 ```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas">Show dark accordion side navigation</button>
+<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas" id="sideNavCollapsibleIconsDarkToggle">Show dark accordion side navigation</button>
 
-<div class="offcanvas-lg offcanvas-start offcanvas-dark" id="sideNavCollapsibleDarkIconsOffcanvas">
+<div class="offcanvas-lg offcanvas-start offcanvas-dark" role="region" aria-labelledby="sideNavCollapsibleIconsDarkToggle" id="sideNavCollapsibleDarkIconsOffcanvas">
   <div class="offcanvas-header p-0">
-    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas"><span class="visually-hidden">Close</span></button>
   </div>
   <div class="offcanvas-body h-100 p-0">
     <div class="side-nav side-nav-dark side-nav-static">
