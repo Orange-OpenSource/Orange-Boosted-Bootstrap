@@ -11,6 +11,7 @@
   --#{$prefix}popover-inner-border-radius: #{$popover-inner-border-radius};
   --#{$prefix}popover-box-shadow: #{$popover-box-shadow};
   --#{$prefix}popover-header-padding-x: #{$popover-header-padding-x};
+  --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y}; // Boosted mod: deprecated in v5.3.0
   --#{$prefix}popover-header-padding-top: #{$popover-header-padding-top}; // Boosted mod
   --#{$prefix}popover-header-padding-bottom: #{$popover-header-padding-bottom}; // Boosted mod
   @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
@@ -33,6 +34,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}popover-font-size));
+  line-height: var(--#{$prefix}popover-body-line-height); // Boosted mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
@@ -207,6 +209,5 @@
 
 .popover-body {
   padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x);
-  line-height: var(--#{$prefix}popover-body-line-height); // Boosted mod
   color: var(--#{$prefix}popover-body-color);
 }
