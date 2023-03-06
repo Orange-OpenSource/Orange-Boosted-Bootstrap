@@ -725,7 +725,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
-<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
   <p>
     Some example text that's free-flowing within the dropdown menu.
   </p>

@@ -802,7 +802,9 @@ $small-font-size:             .875rem !default;
 
 $sub-sup-font-size:           .75em !default;
 
-$text-muted:                  var(--#{$prefix}secondary-color) !default;
+// fusv-disable
+$text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+// fusv-enable
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -1066,9 +1068,9 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}form-control-bg) !default;
+$input-bg:                              var(--#{$prefix}body-bg) !default;
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
-$input-disabled-bg:                     var(--#{$prefix}form-control-disabled-bg) !default;
+$input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           var(--#{$prefix}body-color) !default;
