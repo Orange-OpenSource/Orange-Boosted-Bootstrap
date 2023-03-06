@@ -17,7 +17,7 @@ When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure the
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
 
 {{< callout info >}}
-Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, howver, any `.text-*-emphasis` utility will. This will be resolved in v6.
+Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
 {{< /callout >}}
 
 <!-- Boosted mod -->
