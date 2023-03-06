@@ -88,19 +88,21 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 //    See https://github.com/WICG/focus-visible
+//    Note: this rule is not applied for our focus ring helper which
+//    handles itself outline and box shadow
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
   @include focus-visible(); // 1
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]),
-.js-focus-visible .focus:not([data-focus-visible-added]) { // 2
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring) { // 2
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible) { // 3
+:focus:not(:focus-visible):not(.focus-ring) { // 3
   outline: 0 !important;
   box-shadow: none;
 }
@@ -511,8 +513,11 @@ button {
 // visible (e.g. as result of mouse click or touch tap). It already
 // should be doing this automatically, but seems to currently be
 // confused and applies its very visible two-tone outline anyway.
+//
+// This rule is not applied with the focus ring utility which handles
+// itself outline and box shadow
 
-button:focus:not(:focus-visible) {
+button:focus:not(:focus-visible):not(.focus-ring) {
   outline: 0;
   box-shadow: none; // Bosted mod
 }
