@@ -177,6 +177,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
+- <span class="badge bg-success">New</span> Added new `.border-black` border color utility.
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.

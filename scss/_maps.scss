@@ -161,9 +161,10 @@ $utilities-bg-subtle: (
 $utilities-border: map-merge(
   $utilities-colors,
   (
-    "white": to-rgb($white),
-    "light": $gray-500, // Boosted mod: handled differently within `rgba-css-var`
+    "black": to-rgb($black),
     "dark": $gray-700, // Boosted mod: handled differently within `rgba-css-var`
+    "light": $gray-500, // Boosted mod: handled differently within `rgba-css-var`
+    "white": to-rgb($white),
   )
 ) !default;
 $utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border", "$value") !default; // Boosted mod
