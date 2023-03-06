@@ -180,7 +180,7 @@
     font-weight: $font-weight-bold; // Boosted mod
     color: $gray-800; // Boosted mod: instead of `var(--bs-secondary-color)`
     background-color: $gray-400; // Boosted mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--#{$prefix}border-width) solid $gray-500; // Boosted mod
+    border: var(--bs-border-width) solid $gray-500; // Boosted mod
 
     > div {
       display: flex;
@@ -251,7 +251,7 @@
 
 // Boosted mod
 .simple-list-example-scrollspy .active {
-  color: var(--#{$prefix}link-hover-color);
+  color: var(--bs-link-hover-color);
 }
 // End mod
 
@@ -311,11 +311,18 @@
 }
 
 .bd-example-zindex-levels {
-  min-height: 15rem;
+  min-height: 16.625rem; // Boosted mod: instead of `15rem`
 
   > div {
-    background-color: tint-color($bd-violet, 75%);
-    border: 1px solid tint-color($bd-violet, 50%);
+    color: var(--bs-body-bg);
+    background-color: var(--bd-violet);
+    border: 1px solid var(--bd-purple);
+
+    > span {
+      position: absolute;
+      right: 5px;
+      bottom: 0;
+    }
   }
 
   > :nth-child(2) {
@@ -344,7 +351,7 @@
   position: relative;
   padding: .75rem ($bd-gutter-x * .5);
   margin-bottom: 1rem;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bd-pre-bg);
 
   @include media-breakpoint-up(md) {
     padding: .75rem 1.25rem;
@@ -388,9 +395,12 @@
 }
 
 .highlight-toolbar {
-  background-color: $gray-100; // Boosted mod: instead of `var(--bs-tertiary-bg)`
-  border: solid $gray-400; // Boosted mod: instead of `solid var(--bs-border-color)`
-  border-width: 1px 0;
+  background-color: $gray-100; // Boosted mod: instead of `var(--bd-pre-bg)`
+  border: solid $gray-400; // Boosted mod
+  border-width: 1px 0; // Boosted mod
+}
 
-  // Boosted mod: no `.btn-clipboard`
+.focused {
+  outline: 0;
+  box-shadow: var(--#{$variable-prefix}focus-ring-offset), var(--#{$variable-prefix}focus-ring-x, 0) var(--#{$variable-prefix}focus-ring-y, 0) var(--#{$variable-prefix}focus-ring-blur) var(--#{$variable-prefix}focus-ring-width) var(--#{$variable-prefix}focus-ring-color);
 }
