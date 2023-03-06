@@ -630,6 +630,7 @@ Here's an example that generates text color utilities (e.g., `.text-purple-500`)
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
