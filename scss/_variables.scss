@@ -1651,7 +1651,7 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
-$accordion-padding-x:                     0 !default; // Boosted mod
+$accordion-padding-x:                     $spacer * .5 !default; // Boosted mod
 $accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
