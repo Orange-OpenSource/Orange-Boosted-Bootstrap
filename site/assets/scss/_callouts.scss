@@ -3,6 +3,9 @@
 //
 
 .bd-callout {
+  // Boosted mod: no `--#{$prefix}link-color-rgb` to keep our links black
+  // Boosted mod: no `--#{$prefix}code-color` to keep our text black
+
   padding: $spacer; // Boosted mod
   margin-top: $spacer; // Boosted mod
   margin-bottom: $spacer; // Boosted mod

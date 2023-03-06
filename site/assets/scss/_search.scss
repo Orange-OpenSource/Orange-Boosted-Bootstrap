@@ -1,6 +1,57 @@
 // stylelint-disable selector-class-pattern
 
 // Boosted mod: the entire file is modified and is specific to Boosted
+
+:root {
+  // All available CSS vars and specific modifications for Boosted
+  --docsearch-primary-color: #{$primary};
+  --docsearch-text-color: #{$black};
+  // --docsearch-spacing
+  // --docsearch-icon-stroke-width
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-muted-color: var(--bs-secondary-color);
+  // --docsearch-container-background
+  --docsearch-logo-color: #{$black};
+  // --docsearch-modal-width
+  // --docsearch-modal-height
+  --docsearch-modal-background: #{$modal-content-bg};
+  // --docsearch-modal-shadow;
+  // --docsearch-searchbox-height;
+  // --docsearch-searchbox-background;
+  // --docsearch-searchbox-focus-background;
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-text-color);
+  // --docsearch-hit-height;
+  --docsearch-hit-color: #{$gray-700};
+  // --docsearch-hit-active-color;
+  // --docsearch-hit-background;
+  // --docsearch-hit-shadow;
+  --docsearch-key-gradient: null;
+  --docsearch-key-shadow: null;
+  // --docsearch-footer-height;
+  --docsearch-footer-background: #{$modal-footer-bg};
+  --docsearch-footer-shadow: 0 -1px #{$black};
+}
+
+@include color-mode(dark, true) {
+  // From here, the values are copied from https://cdn.jsdelivr.net/npm/@docsearch/css@3
+  // in html[data-theme="dark"] selector
+  // and are slightly modified for formatting purpose
+  --docsearch-text-color: #f5f6f7;
+  --docsearch-container-background: rgba(9, 10, 17, .8);
+  --docsearch-modal-background: #15172a;
+  --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
+  --docsearch-searchbox-background: #090a11;
+  --docsearch-searchbox-focus-background: #000;
+  --docsearch-hit-color: #bec3c9;
+  --docsearch-hit-shadow: none;
+  --docsearch-hit-background: #090a11;
+  --docsearch-key-gradient: linear-gradient(-26.5deg, #565872, #31355b);
+  --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, .3);
+  --docsearch-footer-background: #1e2136;
+  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, .5), 0 -4px 8px 0 rgba(0, 0, 0, .2);
+  --docsearch-muted-color: #7f8497;
+}
+
 .bd-search {
   position: relative;
   display: flex;
@@ -34,7 +85,7 @@
     box-shadow: unset;
 
     .DocSearch-Search-Icon {
-      color: var(--#{$prefix}link-hover-color);
+      color: var(--bs-link-hover-color);
     }
   }
 
@@ -97,7 +148,7 @@
 }
 
 .DocSearch-Commands-Key {
-  background-color: var(--#{$prefix}white);
+  background-color: var(--bs-white);
 }
 
 .DocSearch-Hits {
@@ -118,19 +169,19 @@
   }
 
   mark {
-    color: var(--#{$prefix}white);
-    background: var(--#{$prefix}black);
+    color: var(--bs-white);
+    background: var(--bs-black);
   }
 
   &[aria-selected="true"] {
     a {
-      background-color: var(--#{$prefix}black);
+      background-color: var(--bs-black);
     }
 
     mark {
-      --docsearch-hit-active-color: var(--#{$prefix}black);
+      --docsearch-hit-active-color: var(--bs-black);
       text-decoration: none;
-      background: var(--#{$prefix}white);
+      background: var(--bs-white);
     }
   }
 }
@@ -158,5 +209,11 @@
       @include focus-visible();
     }
   }
+}
+
+// Fix --docsearch-logo-color that doesn't do anything
+.DocSearch-Logo svg .cls-1,
+.DocSearch-Logo svg .cls-2 {
+  fill: var(--docsearch-logo-color);
 }
 // End mod
