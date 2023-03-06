@@ -38,6 +38,10 @@ Or remove borders:
 
 ## Color
 
+{{< callout info >}}
+Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, howver, any `.border-*-subtle` utility will. This will be resolved in v6.
+{{< /callout >}}
+
 Change the border color using utilities built on our theme colors.
 
 {{< example class="bd-example-border-utils" >}}

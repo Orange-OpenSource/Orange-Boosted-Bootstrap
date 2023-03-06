@@ -12,6 +12,10 @@ toc: true
 
 Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts.
 
+{{< callout info >}}
+Background utilities like `.bg-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, howver, any `.bg-*-subtle` utility will. This will be resolved in v6.
+{{< /callout >}}
+
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
 <div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
