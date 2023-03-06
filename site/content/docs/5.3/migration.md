@@ -64,6 +64,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Cards**
+  - Cards now have a `color` set on them to improve rendering across color modes.
+
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
@@ -127,6 +130,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
+### Content
+
+- **Typography**
+  - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
@@ -139,7 +147,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
 
-- <span class="badge bg-success">New</span> `.text-black`, `.text-body-secondary`, `.text-body-tertiary` and `.text-body-emphasis`.
+- <span class="badge bg-success">New</span> `.text-black`, `.text-body-secondary`, and `.text-body-tertiary`.
+
+- <span class="badge bg-success">New</span> Added new `.link-body-emphasis` helper alongside our [colored links]({{< docsref "/helpers/colored-links" >}}). This creates a colored link using our color mode responsive emphasis color.
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
@@ -169,11 +179,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
-- <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
+- <span class="badge bg-success">New</span> Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring associated to `.focus-ring` and `.focus-ring-{color}` classes.
 
-- <span class="badge bg-success">New</span> Added new set of link utilities associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`.
+- <span class="badge bg-success">New</span> Added new link utilities for link color opacity, underline offset, underline color, and underline opacity associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`. [Explore the new links utilities.]({{< docsref "/utilities/link" >}})
 
-- <span class="badge bg-success">New</span> Added new icon link helper associated to `.icon-link` and `.link-hover`. They can be paired with our link utilities.
+- <span class="badge bg-success">New</span> Added new `.icon-link` helper associated to `.icon-link` and `.link-hover` to quickly place and align icons alongside a textual link. Icon links support our new link utilities, too.
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
@@ -441,6 +451,18 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$theme-colors-text</code></li>
     </ul>
   </details>
+
+### Docs
+
+- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. However, they lack an individual color mode picker for the time being.
+
+- Improved included JavaScript for live Toast demo.
+
+- Added `twbs/examples` repo contents to the top of the Examples page.
+
+### Tooling
+
+- Bootstrap replaced instances of bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
 
 ## v5.2.3
 
