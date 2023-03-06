@@ -30,9 +30,9 @@
   --#{$prefix}accordion-body-padding-end: #{$accordion-body-padding-end}; // Boosted mod
   --#{$prefix}accordion-body-padding-bottom: #{$accordion-body-padding-bottom}; // Boosted mod
   --#{$prefix}accordion-body-padding-start: #{$accordion-body-padding-start}; // Boosted mod
+  --#{$prefix}accordion-btn-hover-bg: #{$accordion-button-hover-bg}; // Boosted mod
   --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
   --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
-  --#{$prefix}accordion-btn-hover-bg: #{$accordion-button-hover-bg}; // Boosted mod
   // scss-docs-end accordion-css-vars
 }
 
@@ -159,11 +159,11 @@
   // scss-docs-start accordion-dark-css-vars
   --#{$prefix}accordion-btn-color: #{$accordion-dark-button-color};
   --#{$prefix}accordion-btn-bg: #{$accordion-dark-button-bg};
+  --#{$prefix}accordion-btn-hover-bg: #{$accordion-dark-button-hover-bg};
   --#{$prefix}accordion-active-color: #{$accordion-dark-button-active-color};
   --#{$prefix}accordion-border-color: #{$accordion-dark-border-color};
   --#{$prefix}accordion-color: #{$accordion-dark-color};
   --#{$prefix}accordion-bg: #{$accordion-dark-bg};
-  --#{$prefix}accordion-btn-hover-bg: #{$accordion-dark-button-hover-bg};
   // scss-docs-end accordion-dark-css-vars
 }
 // End mod
