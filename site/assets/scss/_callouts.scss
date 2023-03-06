@@ -3,9 +3,13 @@
 //
 
 .bd-callout {
+  // Boosted mod: no `--#{$prefix}link-color-rgb` to keep our links black
+  // Boosted mod: no `--#{$prefix}code-color` to keep our text black
+
   padding: $spacer; // Boosted mod
   margin-top: $spacer; // Boosted mod
   margin-bottom: $spacer; // Boosted mod
+  color: var(--bd-callout-color, inherit);
   background-color: var(--bd-callout-bg, var(--bs-gray-200)); // Boosted mod
   border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-200)); // Boosted mod
 
@@ -27,7 +31,8 @@
 // Variations
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
-    --bd-callout-bg: var(--bs-gray-200); // Boosted mod
-    --bd-callout-border: var(--bs-#{$variant}); // Boosted mod
+    --bd-callout-color: var(--bs-emphasis-color); // Boosted mod
+    // Boosted mod: no `--bd-callout-bg`
+    --bd-callout-border: var(--bs-#{$variant}-border-subtle);
   }
 }
