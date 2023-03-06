@@ -174,7 +174,7 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 <div class="border-top border-dark border-1 my-3"></div>
 <div class="border-top my-3"></div>
 <hr class="text-light">
-<hr class="text-muted">
+<hr class="text-body-secondary">
 <hr>
 {{< /example >}}
 
