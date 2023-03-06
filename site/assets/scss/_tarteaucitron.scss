@@ -124,7 +124,7 @@
 @include tac("Name", true) {
   float: left;
   font-size: $font-size-sm;
-  color: $text-muted;
+  color: var(--bs-secondary-color);
 }
 
 @include tac("Ask", true) {
@@ -155,7 +155,7 @@
 @include tac("SelfLink", true) {
   position: absolute;
   right: $modal-content-padding;
-  bottom: add($spacer * -1.5, var(--#{$prefix}border-width));
+  bottom: add($spacer * -1.5, var(--bs-border-width));
   padding: $spacer / 4 $spacer / 2;
   color: $white;
   background-color: $black;
