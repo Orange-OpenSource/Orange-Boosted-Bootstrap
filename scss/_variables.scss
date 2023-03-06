@@ -341,6 +341,7 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
+// scss-docs-start theme-text-variables
 $primary-text:            $primary !default; // Boosted mod: instead of `$blue-700`
 $secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-700`
 $success-text:            null !default; // Boosted mod: instead of `$green-700`
@@ -349,7 +350,9 @@ $warning-text:            null !default; // Boosted mod: instead of `$yellow-800
 $danger-text:             null !default; // Boosted mod: instead of `$red-700`
 $light-text:              $light !default; // Boosted mod: instead of `$gray-700`
 $dark-text:               null !default; // Boosted mod: instead of `$gray-700`
+// scss-docs-end theme-text-variables
 
+// scss-docs-start theme-bg-subtle-variables
 $primary-bg-subtle:       $primary !default; // Boosted mod: instead of `$blue-100`
 $secondary-bg-subtle:     $secondary !default; // Boosted mod: instead of `$gray-100`
 $success-bg-subtle:       $success !default; // Boosted mod: instead of `$green-100`
@@ -358,7 +361,9 @@ $warning-bg-subtle:       $warning !default; // Boosted mod: instead of `$yellow
 $danger-bg-subtle:        $danger !default; // Boosted mod: instead of `$red-100`
 $light-bg-subtle:         $light !default; // Boosted mod: instead of `mix($gray-100, $white)`
 $dark-bg-subtle:          $dark !default; // Boosted mod: instead of `$gray-400`
+// scss-docs-end theme-bg-subtle-variables
 
+// scss-docs-start theme-border-subtle-variables
 $primary-border-subtle:   $primary !default; // Boosted mod: instead of `$blue-200`
 $secondary-border-subtle: $secondary !default; // Boosted mod: instead of `$gray-200`
 $success-border-subtle:   $success !default; // Boosted mod: instead of `$green-200`
@@ -367,6 +372,7 @@ $warning-border-subtle:   $warning !default; // Boosted mod: instead of `$yellow
 $danger-border-subtle:    $danger !default; // Boosted mod: instead of `$red-200`
 $light-border-subtle:     $light !default; // Boosted mod: instead of `$gray-200`
 $dark-border-subtle:      $dark !default; // Boosted mod: instead of `$gray-500`
+// scss-docs-end theme-border-subtle-variables
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (

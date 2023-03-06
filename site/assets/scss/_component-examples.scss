@@ -380,6 +380,7 @@
 
   .highlight {
     margin-bottom: 0;
+    @include border-top-radius(0);
   }
 
   .bd-example {
@@ -398,6 +399,12 @@
   background-color: $gray-100; // Boosted mod: instead of `var(--bd-pre-bg)`
   border: solid $gray-400; // Boosted mod
   border-width: 1px 0; // Boosted mod
+}
+
+.bd-scss-docs {
+  .highlight-toolbar {
+    @include border-top-radius(calc(var(--bs-border-radius) + 1px));
+  }
 }
 
 .focused {
