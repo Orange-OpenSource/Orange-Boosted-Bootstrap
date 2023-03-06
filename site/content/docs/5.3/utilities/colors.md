@@ -10,6 +10,10 @@ toc: true
 
 ## Accessibility
 
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
+
 When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure they meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)**, by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
 
 ## Colors
@@ -52,10 +56,6 @@ Here is a list of these extra classes:
 - `.text-{{ .name }}-emphasis`
 {{- end -}}
 {{< /colors.inline >}}
-{{< /callout >}}
-
-{{< callout info >}}
-{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Opacity
