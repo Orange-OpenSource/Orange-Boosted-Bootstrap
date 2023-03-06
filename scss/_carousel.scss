@@ -187,7 +187,7 @@
   display: flex;
   justify-content: center;
   padding: $carousel-indicators-padding-y 0; // Boosted mod
-  margin-bottom: $spacer; // Boosted mod
+  margin-bottom: $carousel-indicators-margin-bottom; // Boosted mod
   list-style: none;
   background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
   transform: translateX(-50%); // Boosted mod
@@ -302,8 +302,47 @@
 }
 
 /* rtl:end:ignore */
-// End mod
 
+.carousel-action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+
+  .carousel-control-play-pause {
+    margin-bottom: $carousel-indicators-margin-bottom;
+    background: rgba($carousel-indicator-active-bg, .5);
+    border: 0;
+    @include border-radius($spacer, $spacer);
+
+    &.pause {
+      @include button-icon($carousel-control-pause-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+    }
+
+    &.play {
+      @include button-icon($carousel-control-play-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+
+      &::after {
+        transform: translateX(1px);
+      }
+    }
+
+    &:hover {
+      color: color-contrast($carousel-control-color);
+      background-color: #{color-contrast($carousel-indicator-active-bg)};
+      opacity: $carousel-control-hover-opacity;
+    }
+  }
+
+  .carousel-indicators {
+    position: initial;
+    margin-left: $carousel-control-pause-indicators-spacing;
+    transform: none;
+  }
+}
+// End mod
 
 // Optional captions
 //
@@ -321,13 +360,3 @@
 
 // Boosted mod: no dark carousel nor carousel in dark mode since Boosted doesn't have any dark mode for now
 
-// Boosted mod: play/pause button
-.carousel-control-play-pause {
-  &.pause {
-    @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
-  }
-  &.play {
-    @include button-icon($carousel-control-play-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
-  }
-}
-// End mod
