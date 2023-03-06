@@ -46,7 +46,7 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 
 You may use an external SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
 
-SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how icons inherit their color from the parent's `.text-primary` class, whereas the second icon get grayed out by `.text-muted`.
+SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how icons inherit their color from the parent's `.text-primary` class, whereas the second icon get grayed out by `.text-body-secondary`.
 
   </div>
   <div class="col-md-8">
@@ -55,7 +55,7 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
 <svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
 </svg>
-<svg width="2em" height="2em" class="text-muted" aria-hidden="true">
+<svg width="2em" height="2em" class="text-body-secondary" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
 </svg>
 <svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
