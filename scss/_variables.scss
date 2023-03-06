@@ -342,14 +342,14 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
-$primary-text:            $primary !default; // Boosted mod: instead of `$blue-700`
-$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-700`
-$success-text:            null !default; // Boosted mod: instead of `$green-700`
-$info-text:               null !default; // Boosted mod: instead of `$cyan-800`
-$warning-text:            null !default; // Boosted mod: instead of `$yellow-800`
-$danger-text:             null !default; // Boosted mod: instead of `$red-700`
-$light-text:              $light !default; // Boosted mod: instead of `$gray-700`
-$dark-text:               null !default; // Boosted mod: instead of `$gray-700`
+$primary-text-emphasis:   $primary !default; // Boosted mod: instead of `$blue-700`
+$secondary-text-emphasis: $secondary !default; // Boosted mod: instead of `$gray-700`
+$success-text-emphasis:   null !default; // Boosted mod: instead of `$green-700`
+$info-text-emphasis:      null !default; // Boosted mod: instead of `$cyan-800`
+$warning-text-emphasis:   null !default; // Boosted mod: instead of `$yellow-800`
+$danger-text-emphasis:    null !default; // Boosted mod: instead of `$red-700`
+$light-text-emphasis:     $light !default; // Boosted mod: instead of `$gray-700`
+$dark-text-emphasis:      null !default; // Boosted mod: instead of `$gray-700`
 // scss-docs-end theme-text-variables
 
 // scss-docs-start theme-bg-subtle-variables
@@ -1294,7 +1294,7 @@ $form-feedback-line-height:         $line-height-sm !default; // Boosted mod
 // scss-docs-start form-validation-states
 $form-validation-states: (
   "valid": (
-    "color": var(--#{$prefix}success-text),
+    "color": var(--#{$prefix}success-text-emphasis),
     "icon": $form-feedback-icon-valid,
     // Boosted mod: no `tooltip-color`
     // Boosted mod: no `tooltip-bg-color`
@@ -1302,7 +1302,7 @@ $form-validation-states: (
     "border-color": var(--#{$prefix}success),
   ),
   "invalid": (
-    "color": var(--#{$prefix}danger-text),
+    "color": var(--#{$prefix}danger-text-emphasis),
     "icon": $form-feedback-icon-invalid,
     // Boosted mod: no `tooltip-color`
     // Boosted mod: no `tooltip-bg-color`
@@ -1680,7 +1680,7 @@ $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text)`
+$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
