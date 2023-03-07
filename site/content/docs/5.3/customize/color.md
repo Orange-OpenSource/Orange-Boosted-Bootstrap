@@ -309,7 +309,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
