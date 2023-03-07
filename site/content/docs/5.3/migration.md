@@ -130,7 +130,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
-### Content
+### Contents
 
 - **Typography**
   - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
