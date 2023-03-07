@@ -1760,7 +1760,7 @@ $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mo
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-line-height:          1.5 !default; // Boosted mod
+$popover-body-height:               1.5 !default; // Boosted mod
 $popover-body-padding-y:            $popover-header-padding-top !default; // Boosted mod: instead of `$spacer`
 $popover-body-padding-x:            $popover-header-padding-x !default;
 

@@ -34,7 +34,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}popover-font-size));
-  line-height: var(--#{$prefix}popover-body-line-height); // Boosted mod
+  line-height: var(--#{$prefix}popover-line-height); // Boosted mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: var(--#{$prefix}popover-bg);
