@@ -17,7 +17,7 @@ toc: true
 Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
 
 - We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- The `.progress` wrapper also requires a `role="progress"` and `aria` attributes to make it accessible, including an accessible name (using `aria-label`, `aria-labelledby`, or similar).
+- The `.progress` wrapper also requires a `role="progressbar"` and `aria` attributes to make it accessible, including an accessible name (using `aria-label`, `aria-labelledby`, or similar).
 - We use the inner `.progress-bar` purely for the visual bar and label.
 - The `.progress-bar` requires an inline style, utility class, or custom CSS to set its width.
 - We provide a special `.progress-stacked` class to create multiple/stacked progress bars.- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible, including an accessible name (using `aria-label`, `aria-labelledby`, or similar).
@@ -65,7 +65,7 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
-<div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
   <div class="progress-bar" style="width: 25%"></div>
 </div>
 <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
