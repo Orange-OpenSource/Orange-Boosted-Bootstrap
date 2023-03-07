@@ -352,14 +352,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$danger-bg-subtle</code></li>
       <li><code>$danger-border-subtle-dark</code></li>
       <li><code>$danger-border-subtle</code></li>
-      <li><code>$danger-text-dark</code></li>
-      <li><code>$danger-text</code></li>
+      <li><code>$danger-text-emphasis-dark</code></li>
+      <li><code>$danger-text-emphasis</code></li>
       <li><code>$dark-bg-subtle-dark</code></li>
       <li><code>$dark-bg-subtle</code></li>
       <li><code>$dark-border-subtle-dark</code></li>
       <li><code>$dark-border-subtle</code></li>
-      <li><code>$dark-text-dark</code></li>
-      <li><code>$dark-text</code></li>
+      <li><code>$dark-text-emphasis-dark</code></li>
+      <li><code>$dark-text-emphasis</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
@@ -375,16 +375,16 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$info-bg-subtle</code></li>
       <li><code>$info-border-subtle-dark</code></li>
       <li><code>$info-border-subtle</code></li>
-      <li><code>$info-text-dark</code></li>
-      <li><code>$info-text</code></li>
+      <li><code>$info-text-emphasis-dark</code></li>
+      <li><code>$info-text-emphasis</code></li>
       <li><code>$kbd-bg-inverted</code></li>
       <li><code>$kbd-color-inverted</code></li>
       <li><code>$light-bg-subtle-dark</code></li>
       <li><code>$light-bg-subtle</code></li>
       <li><code>$light-border-subtle-dark</code></li>
       <li><code>$light-border-subtle</code></li>
-      <li><code>$light-text-dark</code></li>
-      <li><code>$light-text</code></li>
+      <li><code>$light-text-emphasis-dark</code></li>
+      <li><code>$light-text-emphasis</code></li>
       <li><code>$link-color-dark</code></li>
       <li><code>$link-color-inverted</code></li>
       <li><code>$link-hover-color-dark</code></li>
@@ -408,28 +408,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$primary-bg-subtle</code></li>
       <li><code>$primary-border-subtle-dark</code></li>
       <li><code>$primary-border-subtle</code></li>
-      <li><code>$primary-text-dark</code></li>
-      <li><code>$primary-text</code></li>
+      <li><code>$primary-text-emphasis-dark</code></li>
+      <li><code>$primary-text-emphasis</code></li>
       <li><code>$secondary-bg-subtle-dark</code></li>
       <li><code>$secondary-bg-subtle</code></li>
       <li><code>$secondary-border-subtle-dark</code></li>
       <li><code>$secondary-border-subtle</code></li>
-      <li><code>$secondary-text-dark</code></li>
-      <li><code>$secondary-text</code></li>
+      <li><code>$secondary-text-emphasis-dark</code></li>
+      <li><code>$secondary-text-emphasis</code></li>
       <li><code>$success-bg-subtle-dark</code></li>
       <li><code>$success-bg-subtle</code></li>
       <li><code>$success-border-subtle-dark</code></li>
       <li><code>$success-border-subtle</code></li>
-      <li><code>$success-text-dark</code></li>
-      <li><code>$success-text</code></li>
+      <li><code>$success-text-emphasis-dark</code></li>
+      <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
       <li><code>$warning-border-subtle</code></li>
-      <li><code>$warning-text-dark</code></li>
-      <li><code>$warning-text</code></li>
+      <li><code>$warning-text-emphasis-dark</code></li>
+      <li><code>$warning-text-emphasis</code></li>
     </ul>
   </details>
 
