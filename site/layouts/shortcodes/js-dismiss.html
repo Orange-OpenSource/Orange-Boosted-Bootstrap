@@ -13,7 +13,7 @@ Dismissal can be achieved with the `data` attribute on a button **within the {{ 
 or on a button **outside the {{ $name }}** using the `data-bs-target` as demonstrated below:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-  <span class="visually-hidden">Close</span>
+<button type="button" class="btn btn-primary" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}">
+  Close
 </button>
 ```

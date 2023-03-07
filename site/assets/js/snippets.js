@@ -91,8 +91,10 @@
     // Create btn-close's tooltip after innerHTML has been modified
     const tooltip = new boosted.Tooltip(document.querySelector('[data-bs-id="btn-close"]'))
     // Hide tooltip when clicking on live alert's btn-close
-    document.querySelector('[data-bs-id="btn-close"]').addEventListener('click', () => {
-      tooltip.hide()
+    document.querySelectorAll('[data-bs-id="btn-close"]').forEach(closeBtn => {
+      closeBtn.addEventListener('click', () => {
+        tooltip.hide()
+      })
     })
   }
 

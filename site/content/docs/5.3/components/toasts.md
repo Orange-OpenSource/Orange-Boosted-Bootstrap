@@ -57,7 +57,7 @@ Click the button below to show a toast (positioned with our utilities in the low
       {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-container="#liveToast"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -78,7 +78,7 @@ Click the button below to show a toast (positioned with our utilities in the low
       <img src="..." class="me-2" alt="...">
       <strong class="me-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-container="#liveToast"><span class="visually-hidden">Close</span></button>
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -241,7 +241,7 @@ For systems that generate more notifications, consider using a wrapping element 
   <!-- - `.toast-container` for spacing between toasts -->
   <!-- - `top-0` & `end-0` to position the toasts in the upper right corner -->
   <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
-  <div class="toast-container top-0 end-0 p-3">
+  <div class="toast-container top-0 end-0 p-3" id="toastStacked">
 
     <!-- Then put toasts within -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -249,7 +249,7 @@ For systems that generate more notifications, consider using a wrapping element 
         {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
         <strong class="me-auto">Boosted</strong>
         <small>just now</small>
-        <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-container="#toastStacked"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="toast-body">
         See? Just like this.
@@ -261,7 +261,7 @@ For systems that generate more notifications, consider using a wrapping element 
         {{< placeholder width="20" height="20" background="#ff7900" class="me-2" text="false" title="false" >}}
         <strong class="me-auto">Boosted</strong>
         <small>2 seconds ago</small>
-        <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-container="#toastStacked"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="toast-body">
         Heads up, toasts will stack automatically

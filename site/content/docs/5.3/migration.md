@@ -61,6 +61,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
+  - Add tooltip on close button
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
@@ -68,10 +69,16 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
+- **Close button**
+  - Add tooltip on close button
+
 - **List group**
   - List group item variants are now styled via CSS variables.
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+
+- **Modal**
+  - Add tooltip on close button
 
 - **Navs and tabs**
   - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
@@ -82,6 +89,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
+
+- **Offcanvas**
+  - Add tooltip on close button
 
 - **Orange footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
@@ -126,6 +136,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
+- **Toasts**
+  - Add tooltip on close button
+
 
 ### Forms
 
