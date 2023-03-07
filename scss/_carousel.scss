@@ -188,7 +188,6 @@
   justify-content: center;
   padding: $carousel-indicators-padding-y 0; // Boosted mod
   margin-bottom: $carousel-indicators-margin-bottom; // Boosted mod
-  list-style: none;
   background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
   transform: translateX(-50%); // Boosted mod
   @include border-radius($spacer, $spacer); // Boosted mod

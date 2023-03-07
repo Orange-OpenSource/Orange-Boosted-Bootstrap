@@ -177,6 +177,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
+- <span class="badge bg-success">New</span> Added new `.border-black` border color utility.
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
@@ -191,7 +193,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - Restores CSS variables for breakpoints, though we don't use them in our media queries as they're not supported. However, these can be useful in JS-specific contexts.
 
-- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
 
 - `@mixin caret()` has a new interface including a new optional parameters.
 
@@ -257,10 +259,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-card-title-color</code></li>
       <li><code>--bs-danger-bg-subtle</code></li>
       <li><code>--bs-danger-border-subtle</code></li>
-      <li><code>--bs-danger-text</code></li>
+      <li><code>--bs-danger-text-emphasis</code></li>
       <li><code>--bs-dark-bg-subtle</code></li>
       <li><code>--bs-dark-border-subtle</code></li>
-      <li><code>--bs-dark-text</code></li>
+      <li><code>--bs-dark-text-emphasis</code></li>
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
@@ -276,10 +278,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-heading-color</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
-      <li><code>--bs-info-text</code></li>
+      <li><code>--bs-info-text-emphasis</code></li>
       <li><code>--bs-light-bg-subtle</code></li>
       <li><code>--bs-light-border-subtle</code></li>
-      <li><code>--bs-light-text</code></li>
+      <li><code>--bs-light-text-emphasis</code></li>
       <li><code>--bs-link-color-rgb</code></li>
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
@@ -299,24 +301,24 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
-      <li><code>--bs-primary-text</code></li>
+      <li><code>--bs-primary-text-emphasis</code></li>
       <li><code>--bs-secondary-bg-rgb</code></li>
       <li><code>--bs-secondary-bg-subtle</code></li>
       <li><code>--bs-secondary-bg</code></li>
       <li><code>--bs-secondary-border-subtle</code></li>
       <li><code>--bs-secondary-color-rgb</code></li>
       <li><code>--bs-secondary-color</code></li>
-      <li><code>--bs-secondary-text</code></li>
+      <li><code>--bs-secondary-text-emphasis</code></li>
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
-      <li><code>--bs-success-text</code></li>
+      <li><code>--bs-success-text-emphasis</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
       <li><code>--bs-tertiary-color</code></li>
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
-      <li><code>--bs-warning-text</code></li>
+      <li><code>--bs-warning-text-emphasis</code></li>
     </ul>
   </details>
 
@@ -350,14 +352,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$danger-bg-subtle</code></li>
       <li><code>$danger-border-subtle-dark</code></li>
       <li><code>$danger-border-subtle</code></li>
-      <li><code>$danger-text-dark</code></li>
-      <li><code>$danger-text</code></li>
+      <li><code>$danger-text-emphasis-dark</code></li>
+      <li><code>$danger-text-emphasis</code></li>
       <li><code>$dark-bg-subtle-dark</code></li>
       <li><code>$dark-bg-subtle</code></li>
       <li><code>$dark-border-subtle-dark</code></li>
       <li><code>$dark-border-subtle</code></li>
-      <li><code>$dark-text-dark</code></li>
-      <li><code>$dark-text</code></li>
+      <li><code>$dark-text-emphasis-dark</code></li>
+      <li><code>$dark-text-emphasis</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
@@ -373,16 +375,16 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$info-bg-subtle</code></li>
       <li><code>$info-border-subtle-dark</code></li>
       <li><code>$info-border-subtle</code></li>
-      <li><code>$info-text-dark</code></li>
-      <li><code>$info-text</code></li>
+      <li><code>$info-text-emphasis-dark</code></li>
+      <li><code>$info-text-emphasis</code></li>
       <li><code>$kbd-bg-inverted</code></li>
       <li><code>$kbd-color-inverted</code></li>
       <li><code>$light-bg-subtle-dark</code></li>
       <li><code>$light-bg-subtle</code></li>
       <li><code>$light-border-subtle-dark</code></li>
       <li><code>$light-border-subtle</code></li>
-      <li><code>$light-text-dark</code></li>
-      <li><code>$light-text</code></li>
+      <li><code>$light-text-emphasis-dark</code></li>
+      <li><code>$light-text-emphasis</code></li>
       <li><code>$link-color-dark</code></li>
       <li><code>$link-color-inverted</code></li>
       <li><code>$link-hover-color-dark</code></li>
@@ -406,28 +408,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$primary-bg-subtle</code></li>
       <li><code>$primary-border-subtle-dark</code></li>
       <li><code>$primary-border-subtle</code></li>
-      <li><code>$primary-text-dark</code></li>
-      <li><code>$primary-text</code></li>
+      <li><code>$primary-text-emphasis-dark</code></li>
+      <li><code>$primary-text-emphasis</code></li>
       <li><code>$secondary-bg-subtle-dark</code></li>
       <li><code>$secondary-bg-subtle</code></li>
       <li><code>$secondary-border-subtle-dark</code></li>
       <li><code>$secondary-border-subtle</code></li>
-      <li><code>$secondary-text-dark</code></li>
-      <li><code>$secondary-text</code></li>
+      <li><code>$secondary-text-emphasis-dark</code></li>
+      <li><code>$secondary-text-emphasis</code></li>
       <li><code>$success-bg-subtle-dark</code></li>
       <li><code>$success-bg-subtle</code></li>
       <li><code>$success-border-subtle-dark</code></li>
       <li><code>$success-border-subtle</code></li>
-      <li><code>$success-text-dark</code></li>
-      <li><code>$success-text</code></li>
+      <li><code>$success-text-emphasis-dark</code></li>
+      <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
       <li><code>$warning-border-subtle</code></li>
-      <li><code>$warning-text-dark</code></li>
-      <li><code>$warning-text</code></li>
+      <li><code>$warning-text-emphasis-dark</code></li>
+      <li><code>$warning-text-emphasis</code></li>
     </ul>
   </details>
 
