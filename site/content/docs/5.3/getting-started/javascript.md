@@ -79,7 +79,7 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     <script type="importmap">
     {
       "imports": {
-        "@popperjs/core": "{{< param "cdn.popper" >}}",
+        "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
         "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
       }
     }
