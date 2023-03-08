@@ -341,32 +341,38 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-$primary-text:            $primary !default; // Boosted mod: instead of `$blue-700`
-$secondary-text:          $secondary !default; // Boosted mod: instead of `$gray-700`
-$success-text:            null !default; // Boosted mod: instead of `$green-700`
-$info-text:               null !default; // Boosted mod: instead of `$cyan-800`
-$warning-text:            null !default; // Boosted mod: instead of `$yellow-800`
-$danger-text:             null !default; // Boosted mod: instead of `$red-700`
-$light-text:              $light !default; // Boosted mod: instead of `$gray-700`
-$dark-text:               null !default; // Boosted mod: instead of `$gray-700`
+// scss-docs-start theme-text-variables
+$primary-text-emphasis:   $primary !default; // Boosted mod: instead of `shade-color($primary, 60%)`
+$secondary-text-emphasis: $secondary !default; // Boosted mod: instead of `shade-color($secondary, 60%)`
+$success-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($success, 60%)`
+$info-text-emphasis:      null !default; // Boosted mod: instead of `shade-color($info, 60%)`
+$warning-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($warning, 60%)`
+$danger-text-emphasis:    null !default; // Boosted mod: instead of `shade-color($danger, 60%)`
+$light-text-emphasis:     $light !default; // Boosted mod: instead of `$gray-700`
+$dark-text-emphasis:      null !default; // Boosted mod: instead of `$gray-700`
+// scss-docs-end theme-text-variables
 
-$primary-bg-subtle:       $primary !default; // Boosted mod: instead of `$blue-100`
-$secondary-bg-subtle:     $secondary !default; // Boosted mod: instead of `$gray-100`
-$success-bg-subtle:       $success !default; // Boosted mod: instead of `$green-100`
-$info-bg-subtle:          $info !default; // Boosted mod: instead of `$cyan-100`
-$warning-bg-subtle:       $warning !default; // Boosted mod: instead of `$yellow-100`
-$danger-bg-subtle:        $danger !default; // Boosted mod: instead of `$red-100`
+// scss-docs-start theme-bg-subtle-variables
+$primary-bg-subtle:       $primary !default; // Boosted mod: instead of `tint-color($primary, 80%)`
+$secondary-bg-subtle:     $secondary !default; // Boosted mod: instead of `tint-color($secondary, 80%)`
+$success-bg-subtle:       $success !default; // Boosted mod: instead of `tint-color($success, 80%)`
+$info-bg-subtle:          $info !default; // Boosted mod: instead of `tint-color($info, 80%)`
+$warning-bg-subtle:       $warning !default; // Boosted mod: instead of `tint-color($warning, 80%)`
+$danger-bg-subtle:        $danger !default; // Boosted mod: instead of `tint-color($danger, 80%)`
 $light-bg-subtle:         $light !default; // Boosted mod: instead of `mix($gray-100, $white)`
 $dark-bg-subtle:          $dark !default; // Boosted mod: instead of `$gray-400`
+// scss-docs-end theme-bg-subtle-variables
 
-$primary-border-subtle:   $primary !default; // Boosted mod: instead of `$blue-200`
-$secondary-border-subtle: $secondary !default; // Boosted mod: instead of `$gray-200`
-$success-border-subtle:   $success !default; // Boosted mod: instead of `$green-200`
-$info-border-subtle:      $info !default; // Boosted mod: instead of `$cyan-200`
-$warning-border-subtle:   $warning !default; // Boosted mod: instead of `$yellow-200`
-$danger-border-subtle:    $danger !default; // Boosted mod: instead of `$red-200`
+// scss-docs-start theme-border-subtle-variables
+$primary-border-subtle:   $primary !default; // Boosted mod: instead of `tint-color($primary, 60%)`
+$secondary-border-subtle: $secondary !default; // Boosted mod: instead of `tint-color($secondary, 60%)`
+$success-border-subtle:   $success !default; // Boosted mod: instead of `tint-color($success, 60%)`
+$info-border-subtle:      $info !default; // Boosted mod: instead of `tint-color($info, 60%)`
+$warning-border-subtle:   $warning !default; // Boosted mod: instead of `tint-color($warning, 60%)`
+$danger-border-subtle:    $danger !default; // Boosted mod: instead of `tint-color($danger, 60%)`
 $light-border-subtle:     $light !default; // Boosted mod: instead of `$gray-200`
 $dark-border-subtle:      $dark !default; // Boosted mod: instead of `$gray-500`
+// scss-docs-end theme-border-subtle-variables
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
@@ -1288,7 +1294,7 @@ $form-feedback-line-height:         $line-height-sm !default; // Boosted mod
 // scss-docs-start form-validation-states
 $form-validation-states: (
   "valid": (
-    "color": var(--#{$prefix}success-text),
+    "color": var(--#{$prefix}success-text-emphasis),
     "icon": $form-feedback-icon-valid,
     // Boosted mod: no `tooltip-color`
     // Boosted mod: no `tooltip-bg-color`
@@ -1296,7 +1302,7 @@ $form-validation-states: (
     "border-color": var(--#{$prefix}success),
   ),
   "invalid": (
-    "color": var(--#{$prefix}danger-text),
+    "color": var(--#{$prefix}danger-text-emphasis),
     "icon": $form-feedback-icon-invalid,
     // Boosted mod: no `tooltip-color`
     // Boosted mod: no `tooltip-bg-color`
@@ -1505,7 +1511,7 @@ $dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod: instead 
 $dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
 $dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
 
-$dropdown-link-disabled-color:      $gray-500 !default;
+$dropdown-link-disabled-color:      $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
 
 $dropdown-item-padding-y:           $spacer * .5 !default;
 $dropdown-item-padding-x:           $spacer * .5 !default;
@@ -1674,7 +1680,7 @@ $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text)`
+$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
