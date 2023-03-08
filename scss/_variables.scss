@@ -1764,6 +1764,7 @@ $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.
 
 // scss-docs-start popover-variables
 $popover-font-size:                 $font-size-base !default; // Boosted mod
+$popover-line-height:               1.5 !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        var(--#{$prefix}body-bg) !default;
 $popover-max-width:                 $spacer * 19 !default; // Boosted mod
@@ -1781,7 +1782,6 @@ $popover-header-padding-top:        $spacer !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod
 
-$popover-line-height:               1.5 !default; // Boosted mod
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-y:            $popover-header-padding-top !default; // Boosted mod: instead of `$spacer`
 $popover-body-padding-x:            $popover-header-padding-x !default;
