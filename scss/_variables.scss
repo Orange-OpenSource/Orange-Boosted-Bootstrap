@@ -2118,12 +2118,12 @@ $btn-close-padding:             var(--#{$boosted-prefix}icon-spacing, #{$btn-ico
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               $black !default;
+$btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
 // Boosted mod
 // fusv-disable
 $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
 // fusv-enable
 // End mod
-$btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
 
 // Boosted mod: no opacity/filter
 
