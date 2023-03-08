@@ -226,9 +226,11 @@
   }
   // End mod
 
-  .show > .nav-link,
-  .nav-link.active {
-    color: var(--#{$prefix}navbar-active-color);
+  .nav-link {
+    &.active,
+    &.show {
+      color: var(--#{$prefix}navbar-active-color);
+    }
   }
 
   .dropdown-menu {
