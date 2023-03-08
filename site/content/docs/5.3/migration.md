@@ -143,6 +143,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
+- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
@@ -187,9 +189,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
-- <span class="badge bg-success">New</span> Added new `.border-black` border color utility.
+- <span class="badge bg-success">New</span> Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+
+- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
 ### CSS and Sass variables
 
