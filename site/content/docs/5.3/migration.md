@@ -399,6 +399,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$form-valid-color</code></li>
       <li><code>$form-valid-color-dark</code></li>
       <li><code>$headings-color-dark</code></li>
+      <li><code>$icon-link-gap</code></li>
+      <li><code>$icon-link-underline-offset</code></li>
+      <li><code>$icon-link-icon-size</code></li>
+      <li><code>$icon-link-icon-transition</code></li>
+      <li><code>$icon-link-icon-transform</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
       <li><code>$info-border-subtle-dark</code></li>
