@@ -65,6 +65,13 @@ $code-color-dark:                   tint-color($code-color, 40%) !default;
 // Boosted mod: no $form-switch-color-dark
 // Boosted mod: no $form-switch-bg-image-dark
 
+// scss-docs-start form-validation-colors-dark
+$form-valid-color-dark:             $green-300 !default;
+$form-valid-border-color-dark:      $green-300 !default;
+$form-invalid-color-dark:           $red-300 !default;
+$form-invalid-border-color-dark:    $red-300 !default;
+// scss-docs-end form-validation-colors-dark
+
 
 //
 // Accordion
