@@ -285,8 +285,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
+      <li><code>--bs-form-invalid-border-color</code></li>
+      <li><code>--bs-form-invalid-color</code></li>
       <li><code>--bs-form-select-bg-img</code></li>
       <li><code>--bs-form-switch-bg</code></li>
+      <li><code>--bs-form-valid-border-color</code></li>
+      <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
@@ -382,6 +386,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$font-weight-medium</code></li>
       <li><code>$form-color-disabled-background-swatch</code></li>
       <li><code>$form-color-disabled-border-color</code></li>
+      <li><code>$form-invalid-border-color</code></li>
+      <li><code>$form-invalid-border-color-dark</code></li>
+      <li><code>$form-invalid-color</code></li>
+      <li><code>$form-invalid-color-dark</code></li>
+      <li><code>$form-valid-border-color</code></li>
+      <li><code>$form-valid-border-color-dark</code></li>
+      <li><code>$form-valid-color</code></li>
+      <li><code>$form-valid-color-dark</code></li>
       <li><code>$headings-color-dark</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
