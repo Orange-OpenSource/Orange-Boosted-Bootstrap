@@ -478,7 +478,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 ### Docs
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. However, they lack an individual color mode picker for the time being.
+- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
 
 - Improved included JavaScript for live Toast demo.
 
