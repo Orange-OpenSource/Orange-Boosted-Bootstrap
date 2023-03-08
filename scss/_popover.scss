@@ -62,7 +62,7 @@
 
 .bs-popover-top {
   > .popover-arrow {
-    bottom: calc((-.9 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod: `-.9` instead of `-1` because of the thicker border of the popovers
+    bottom: calc((-1 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */
 
     &::before,
     &::after {
@@ -84,7 +84,7 @@
 /* rtl:begin:ignore */
 .bs-popover-end {
   > .popover-arrow {
-    left: calc((-.9 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod: `-.9` instead of `-1` because of the thicker border of the popovers
+    left: calc((-1 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */
     width: var(--#{$prefix}popover-arrow-height);
     height: var(--#{$prefix}popover-arrow-width);
 
@@ -109,7 +109,7 @@
 
 .bs-popover-bottom {
   > .popover-arrow {
-    top: calc((-.9 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod: `-.9` instead of `-1` because of the thicker border of the popovers
+    top: calc((-1 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */
 
     &::before,
     &::after {
@@ -143,7 +143,7 @@
 /* rtl:begin:ignore */
 .bs-popover-start {
   > .popover-arrow {
-    right: calc((-.9 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod: `-.9` instead of `-1` because of the thicker border of the popovers
+    right: calc((-1 * var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); /* stylelint-disable-line function-disallowed-list */
     width: var(--#{$prefix}popover-arrow-height);
     height: var(--#{$prefix}popover-arrow-width);
 
