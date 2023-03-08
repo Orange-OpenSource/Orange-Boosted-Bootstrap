@@ -128,7 +128,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Side navigation**
-  - <span class="badge bg-success">New</span> Side navigation are now a component.
+  - <span class="badge bg-success">New</span> Side navigation and related variants are now a component.
 
 ### Forms
 

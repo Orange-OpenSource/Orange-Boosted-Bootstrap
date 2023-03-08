@@ -2138,11 +2138,11 @@ $btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y:               $modal-inner-padding !default;
 $offcanvas-padding-x:               $modal-inner-padding !default;
-$offcanvas-horizontal-width:        300px !default;
+$offcanvas-horizontal-width:        300px !default; // Boosted mod: instead of `400px`
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-border-color:            $modal-content-border-color !default;
-$offcanvas-border-width:            1px !default;
+$offcanvas-border-width:            1px !default; // Boosted mod: instead of `$modal-content-border-width`
 $offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                var(--#{$prefix}body-bg) !default;
 $offcanvas-color:                   null !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`

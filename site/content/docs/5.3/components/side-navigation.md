@@ -11,7 +11,7 @@ added: "5.3"
 
 ## How it works
 
-Our side navigation is basically a `<nav>` that provides a hierarchy between links.
+Our side navigation is basically a `<nav>` that can provide up to 3 levels hierarchy between links.
 
 Side navigation should be used inside an offcanvas using `.offcanvas-*` for responsive purpose. By default, we use `.offcanvas-lg` in our docs. Please refer to [Offcanvas]({{< docsref "/components/offcanvas#responsive" >}}) to learn more about its behavior. Since it uses [responsive offcanvas]({{< docsref "/components/offcanvas#responsive" >}}), please resize your browser to see its responsive behavior in action.
 
@@ -25,7 +25,7 @@ The side navigation provides 3 ready-to-use fully responsive themes. For each th
 - `.side-nav-scrollable` to ensure correct behavior of scroll boxes.
 - `.side-nav-item` to ensure correct size and behavior of displayed elements.
 - optional `.side-nav-static` to make collapsible side navigation static.
-- optional `.side-nav-toggle` to embed a version of the to collapse toggler.
+- optional `.side-nav-toggle` to embed a version of the collapse toggler.
 - optional `.side-nav-content` to make sure the content is well sized even with a toggler button.
 
 With the following structure:
@@ -45,7 +45,7 @@ With the following structure:
 
 ## Examples
 
-Side navigation come with 3 ready-to-use fully responsive themes. If these available themes don’t meet your specific needs, feel free to develop your own custom theme accordingly to the Orange Design System.
+Side navigation comes with 3 ready-to-use fully responsive themes. If these available themes don't meet your specific needs, feel free to develop your own custom theme accordingly to the Orange Design System.
 
 Since most of side navigation we display use the responsive version of this component, please resize your browser to see the behavior.
 
@@ -55,7 +55,7 @@ You can also notice that every example is resizable in order to show the behavio
 
 ### Without offcanvas
 
-Here is an example without offcanvas.
+We strongly recommend using the side navigation inside an offcanvas but it can be used outside as well. If you do so, please make sure that the responsive part is still fine.
 
 {{< example class="p-0 side-nav-example d-flex" >}}
 <nav class="side-nav side-nav-static" aria-label="Basic side navigation without offcanvas">
@@ -434,7 +434,7 @@ Here is the `.side-nav-content-with-drawer` theme. The collapsible side navigati
 The collapsible side navigation with drawer content comes with ready to use `onclick` calls:
 - On the Offcanvas toggler button to `show` its content.
 - On the Offcanvas close button to `hide` its content.
-- On each menu item to `show` its content. (nav-item)
+- On each menu item to `show` its content (nav-item).
 
 {{< callout info >}}
 For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanvas-header` as well.
