@@ -360,14 +360,14 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
   </div>
   {{< placeholder width="100%" height="180" class="card-img-bottom" text="Image cap" >}}
 </div>
@@ -406,7 +406,7 @@ Using a combination of grid and utility classes, cards can be made horizontal in
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
       </div>
     </div>
   </div>
@@ -498,7 +498,7 @@ Use card groups to render cards as a single, attached element with equal width a
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
@@ -506,7 +506,7 @@ Use card groups to render cards as a single, attached element with equal width a
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text fw-bold">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
@@ -514,7 +514,7 @@ Use card groups to render cards as a single, attached element with equal width a
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
 </div>

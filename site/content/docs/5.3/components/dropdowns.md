@@ -725,7 +725,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
-<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
   <p>
     Some example text that's free-flowing within the dropdown menu.
   </p>
@@ -951,7 +951,7 @@ Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 ### Via JavaScript
 
 {{< callout warning >}}
-Dropdowns must have `data-bs-toggle="dropdown"` on their trigger element, regardless of using the Data API or JavaScript.
+Dropdowns must have `data-bs-toggle="dropdown"` on their trigger element, regardless of whether you call your dropdown via JavaScript or use the data-api.
 {{< /callout >}}
 
 Call the dropdowns via JavaScript:

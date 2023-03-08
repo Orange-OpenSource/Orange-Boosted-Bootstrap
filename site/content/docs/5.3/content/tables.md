@@ -1186,13 +1186,13 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 </td>
 ```
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### Sass loop
 
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 
