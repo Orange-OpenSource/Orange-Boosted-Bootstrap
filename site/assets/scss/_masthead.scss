@@ -28,10 +28,18 @@
     @include media-breakpoint-up(lg) {
       padding-right: 4rem;
     }
+
+    pre {
+      padding: 0;
+      margin-top: .625rem;
+      margin-right: 1.875rem;
+      margin-bottom: .625rem;
+      overflow: hidden;
+    }
   }
   .btn-clipboard {
     position: absolute;
-    top: .3125rem; // Boosted mod
+    top: .3125rem; // Boosted mod: instead of `-.625rem`
     right: 0;
     background-color: transparent;
   }

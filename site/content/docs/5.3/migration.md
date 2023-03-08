@@ -146,6 +146,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
+- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
@@ -176,9 +178,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
 
-- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-body-secondary` will be be replaced by `.text-body-secondary` in v6.
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
 
-  With the addition of the expanded theme colors and variables, the `.text-body-secondary` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
@@ -190,9 +192,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
-- <span class="badge bg-success">New</span> Added new `.border-black` border color utility.
+- <span class="badge bg-success">New</span> Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+
+- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
 ### CSS and Sass variables
 
@@ -290,8 +294,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
+      <li><code>--bs-form-invalid-border-color</code></li>
+      <li><code>--bs-form-invalid-color</code></li>
       <li><code>--bs-form-select-bg-img</code></li>
       <li><code>--bs-form-switch-bg</code></li>
+      <li><code>--bs-form-valid-border-color</code></li>
+      <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
@@ -366,6 +374,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
       <li><code>$border-radius-xxl</code></li>
+      <li><code>$btn-color</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
       <li><code>$carousel-control-pause-button-size</code></li>
@@ -396,7 +405,20 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$font-weight-medium</code></li>
       <li><code>$form-color-disabled-background-swatch</code></li>
       <li><code>$form-color-disabled-border-color</code></li>
+      <li><code>$form-invalid-border-color</code></li>
+      <li><code>$form-invalid-border-color-dark</code></li>
+      <li><code>$form-invalid-color</code></li>
+      <li><code>$form-invalid-color-dark</code></li>
+      <li><code>$form-valid-border-color</code></li>
+      <li><code>$form-valid-border-color-dark</code></li>
+      <li><code>$form-valid-color</code></li>
+      <li><code>$form-valid-color-dark</code></li>
       <li><code>$headings-color-dark</code></li>
+      <li><code>$icon-link-gap</code></li>
+      <li><code>$icon-link-underline-offset</code></li>
+      <li><code>$icon-link-icon-size</code></li>
+      <li><code>$icon-link-icon-transition</code></li>
+      <li><code>$icon-link-icon-transform</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
       <li><code>$info-border-subtle-dark</code></li>
@@ -482,7 +504,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 ### Docs
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. However, they lack an individual color mode picker for the time being.
+- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
 
 - Improved included JavaScript for live Toast demo.
 
