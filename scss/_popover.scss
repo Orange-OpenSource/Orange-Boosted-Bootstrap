@@ -3,6 +3,7 @@
   --#{$prefix}popover-zindex: #{$zindex-popover};
   --#{$prefix}popover-max-width: #{$popover-max-width};
   @include rfs($popover-font-size, --#{$prefix}popover-font-size);
+  --#{$prefix}popover-line-height: #{$popover-line-height}; // Boosted mod
   --#{$prefix}popover-font-weight: #{$popover-font-weight}; // Boosted mod: extra CSS variable
   --#{$prefix}popover-bg: #{$popover-bg};
   --#{$prefix}popover-border-width: #{$popover-border-width};
@@ -20,7 +21,6 @@
   --#{$prefix}popover-header-bg: #{$popover-header-bg};
   --#{$prefix}popover-body-padding-x: #{$popover-body-padding-x};
   --#{$prefix}popover-body-padding-y: #{$popover-body-padding-y};
-  --#{$prefix}popover-line-height: #{$popover-line-height}; // Boosted mod
   --#{$prefix}popover-body-color: #{$popover-body-color};
   --#{$prefix}popover-arrow-width: #{$popover-arrow-width};
   --#{$prefix}popover-arrow-height: #{$popover-arrow-height};
