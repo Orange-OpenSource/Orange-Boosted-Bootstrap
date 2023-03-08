@@ -1842,11 +1842,14 @@ $modal-header-padding:              $modal-header-padding-y $modal-header-paddin
 $modal-footer-bg:                   null !default;
 $modal-footer-border-color:         null !default; // Boosted mod
 $modal-footer-border-width:         $modal-header-border-width !default;
+$modal-footer-margin-top:           $spacer * .5 !default; // Boosted mod
+$modal-footer-margin-top-sm:        $spacer * .75 !default; // Boosted mod
 
 // Boosted mod
 //// Scrollable modal
-$modal-scrollable-inner-padding:    $spacer !default;
-$modal-scrollable-inner-margin:     $spacer 0 $spacer * .5 !default;
+$modal-scrollable-inner-padding:     $spacer !default;
+$modal-scrollable-inner-margin:      $spacer 0 0 !default;
+$modal-scrollable-footer-margin-top: $spacer * .5 !default;
 
 //// Modal with top image
 $modal-img-margin:                  -$modal-content-padding-y 0 $modal-content-padding-y !default; // Boosted mod
