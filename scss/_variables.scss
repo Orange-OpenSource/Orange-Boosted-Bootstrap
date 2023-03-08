@@ -1360,7 +1360,6 @@ $nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$nav-link-disabled-color:           $gray-500 !default; // Boosted mod: instead of `$gray-600`
 // Boosted mod: no `$nav-link-focus-box-shadow`
 
 $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
