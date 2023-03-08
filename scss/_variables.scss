@@ -1750,7 +1750,7 @@ $tooltip-padding-y:                 $spacer * .5 !default;
 $tooltip-padding-x:                 $spacer * .5 !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
-$tooltip-arrow-width:               $spacer !default;
+$tooltip-arrow-width:               $spacer * .5 !default;
 $tooltip-arrow-height:              $tooltip-arrow-width * .5 !default;
 // fusv-disable
 $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.0 for CSS variables
