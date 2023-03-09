@@ -40,7 +40,7 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  // Boosted mod: no `&:focus`
+  // Boosted mod: no `&:focus-visible`
 
   // Disabled state lightens text
   &.disabled {

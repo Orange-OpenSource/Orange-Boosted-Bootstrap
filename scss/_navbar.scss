@@ -204,6 +204,11 @@
     @include media-breakpoint-down(lg) {
       outline-offset: -$focus-visible-outer-width;
     }
+
+    &.active,
+    &.show {
+      color: var(--#{$prefix}navbar-active-color);
+    }
   }
 
   .nav-item {
@@ -242,11 +247,6 @@
     border: 0;
   }
   // End mod
-
-  .show > .nav-link,
-  .nav-link.active {
-    color: var(--#{$prefix}navbar-active-color);
-  }
 
   .dropdown-menu {
     position: static;

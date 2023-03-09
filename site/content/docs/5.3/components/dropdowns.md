@@ -266,8 +266,7 @@ And putting it to use in a navbar:
 ## Directions
 
 {{< callout info >}}
-#### RTL
-Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will appear on the right side.
+**Directions are flipped in RTL mode.** As such, `.dropstart` will appear on the right side.
 {{< /callout >}}
 
 ### Centered
@@ -726,7 +725,7 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
-<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
   <p>
     Some example text that's free-flowing within the dropdown menu.
   </p>
@@ -951,18 +950,16 @@ Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 
 ### Via JavaScript
 
+{{< callout warning >}}
+Dropdowns must have `data-bs-toggle="dropdown"` on their trigger element, regardless of whether you call your dropdown via JavaScript or use the data-api.
+{{< /callout >}}
+
 Call the dropdowns via JavaScript:
 
 ```js
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new boosted.Dropdown(dropdownToggleEl))
 ```
-
-{{< callout info >}}
-##### `data-bs-toggle="dropdown"` still required
-
-Regardless of whether you call your dropdown via JavaScript or instead use the data-api, `data-bs-toggle="dropdown"` is always required to be present on the dropdown's trigger element.
-{{< /callout >}}
 
 ### Options
 
