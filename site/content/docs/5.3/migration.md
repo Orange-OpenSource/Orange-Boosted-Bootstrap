@@ -70,7 +70,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
 - **Orange Navbar**
-  - <span class="badge bg-danger">Breaking</span> The minimizing behavior with `.header-minimized` is applied on top of the `<header>` instead of one of his child directly.
+  - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied on top of the `<header>` instead of one of his child directly.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
