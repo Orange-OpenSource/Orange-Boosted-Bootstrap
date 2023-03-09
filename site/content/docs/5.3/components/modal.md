@@ -85,8 +85,8 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 
 Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag—being `.modal-content`'s first child— and you're done!
 
-<div class="bd-example bd-example-modal">
-  <div class="modal" tabindex="-1">
+<div class="bd-example bg-body-tertiary">
+  <div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         {{< placeholder width="100%" height="260" class="modal-img" text="Image cap" >}}
@@ -633,7 +633,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
 | Size | Class | Modal max-width
 | --- | --- | --- |
 | Small | `.modal-sm` | `300px` |
-| Default | <span class="text-muted">None</span> | `460px` |
+| Default | <span class="text-body-secondary">None</span> | `460px` |
 | Large | `.modal-lg` | `700px` |
 | Extra large | `.modal-xl` | `940px` |
 {{< /bs-table >}}
