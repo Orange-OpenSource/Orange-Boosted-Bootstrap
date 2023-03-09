@@ -34,7 +34,7 @@ class OrangeNavbar extends BaseComponent {
 
   // Static
   static enableMinimizing(el) {
-    // The minimized behaviour works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
+    // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
     if (window.scrollY > 0) {
       el.classList.add('header-minimized')
     } else {
