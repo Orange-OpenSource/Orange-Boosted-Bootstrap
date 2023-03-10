@@ -61,9 +61,9 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
 {{< ods-incompatibility-alert >}}
-This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
+These **checkbox** and **radio button** variants should not be used because they do not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
+From the Orange Design System point of view, checkboxes and radio buttons should respectively be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) or [Radios]({{< docsref "/forms/checks-radios#radios" >}}) components. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) and [Radio button](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789)  guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -152,6 +152,12 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 ## Sizing
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
+
+{{< ods-incompatibility-alert >}}
+The **first size variant (50px height) and the last one (30px height)** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Toggle buttons](https://system.design.orange.com/0c1af118d/p/59c349-toggle-buttons/b/91bf23) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">

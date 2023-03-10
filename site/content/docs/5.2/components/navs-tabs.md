@@ -12,12 +12,6 @@ toc: true
 
 ## Base nav
 
-{{< ods-incompatibility-alert >}}
-This component variant should not be used because it does not respect the Orange Design System specifications.
-
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
-
 Navigation available in Boosted share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
@@ -28,7 +22,14 @@ Note that the `.nav-link` can be used out of any context and combined with our [
 The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
 To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
+
 {{< /callout >}}
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+This component variant should not be used because it does not respect the Orange Design System specifications.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="nav">
@@ -65,6 +66,13 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 ### Horizontal alignment
 
 Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}). By default, navs are left-aligned, but you can easily change them to center or right aligned.
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These **centered** and **right aligned** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left aligned.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 Centered with `.justify-content-center`:
 
@@ -107,6 +115,13 @@ Right-aligned with `.justify-content-end`:
 ### Vertical
 
 Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
+
+<!-- Boosted mod : design callout -->
+{{< ods-incompatibility-alert >}}
+These **vertical** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be displayed horizontally.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -262,7 +277,15 @@ This variant should not be used because it is a button component in the Orange D
 Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 {{< ods-incompatibility-alert >}}
-These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, they should be button components.
+These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, nav tabs and <a> html tags should not look like buttons.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
+{{< ods-incompatibility-alert >}}
+These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, they should be `<button>` components and not `<li><a></a></li>` components.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -328,7 +351,15 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {{< ods-incompatibility-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
+This **link** variant, which is just an **example illustrating the use of the flexbox utilities**, should not be used because it does not respect the Orange Design System specifications. Indeed, they should be `<button>` components and not `<li><a></a></li>` components.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
+
+{{< ods-incompatibility-alert >}}
+This **link** variant, which is just an **example illustrating the use of the flexbox utilities**, should not be used because it does not respect the Orange Design System specifications. Indeed, nav tabs and <a> html tags should not look like buttons.
+
+Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}
 
 {{< example >}}
@@ -351,6 +382,13 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
 
 ### Tabs with dropdowns
+
+<!-- Boosted mod : design callout -->
+<!--{{< ods-incompatibility-alert >}}
+This component variant with a **dropdown menu not placed at the very end of the line** should not be used because it does not respect the Orange Design System specifications.
+
+Please refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}} -->
 
 {{< example >}}
 <ul class="nav nav-tabs">

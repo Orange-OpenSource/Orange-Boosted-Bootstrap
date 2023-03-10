@@ -251,7 +251,7 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 ### Checkbox toggle buttons
 
 {{< ods-incompatibility-alert >}}
-These variants with only **one checkbox toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a checkbox toggle button should not be used alone.
+These **checkbox toggle button** variants should not be used because they do not respect the Orange Design System specifications. Indeed, from the Orange Design System point of view a checkbox should always look like a checkbox component.
 
 Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
 {{< /ods-incompatibility-alert >}}
@@ -278,6 +278,14 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 ### Radio toggle buttons
 
 <!-- Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
+
+{{< ods-incompatibility-alert >}}
+These **radio toggle button** and **radio toggle button with icon** variants should not be used because they do not respect the Orange Design System specifications.
+
+From the Orange Design System point of view a radio buttons should be represented like in our Boosted [Radios]({{< docsref "/forms/checks-radios#radios" >}}) components.
+
+You can also refer to [Radio button](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
+{{< /ods-incompatibility-alert >}}
 
 Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
 

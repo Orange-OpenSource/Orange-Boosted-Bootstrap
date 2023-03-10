@@ -78,7 +78,7 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
 {{< ods-incompatibility-alert >}}
-This form version, with the **label** that is **not above the input field**, should not be used because it does not respect the Orange Design System specifications.
+This form version, with an **horizontal layout** (i.e. labels not above the input fields), should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /ods-incompatibility-alert >}}

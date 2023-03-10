@@ -307,7 +307,7 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 The button plugin allows you to create simple on/off toggle buttons.
 
 {{< ods-incompatibility-alert >}}
-These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
+These variants with only **one toggle button instead of a group of buttons** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, [Toggle buttons](https://system.design.orange.com/0c1af118d/p/59c349-toggle-buttons/b/91bf23) should not be used alone.
 
 Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
 {{< /ods-incompatibility-alert >}}
