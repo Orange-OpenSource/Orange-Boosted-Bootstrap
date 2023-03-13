@@ -1,27 +1,22 @@
 /*!
-  * Boosted v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap backdrop.js v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap backdrop.js v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/event-handler'), require('./index'), require('./config')) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/event-handler.js'), require('./index.js'), require('./config.js')) :
   typeof define === 'function' && define.amd ? define(['../dom/event-handler', './index', './config'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Backdrop = factory(global.EventHandler, global.Index, global.Config));
-})(this, (function (EventHandler, index, Config) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  const Config__default = /*#__PURE__*/_interopDefaultLegacy(Config);
+})(this, (function (EventHandler, index_js, Config) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/backdrop.js
+   * Bootstrap (v5.3.0-alpha1): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -55,7 +50,7 @@
    * Class definition
    */
 
-  class Backdrop extends Config__default.default {
+  class Backdrop extends Config {
     constructor(config) {
       super();
       this._config = this._getConfig(config);
@@ -77,35 +72,35 @@
     // Public
     show(callback) {
       if (!this._config.isVisible) {
-        index.execute(callback);
+        index_js.execute(callback);
         return;
       }
       this._append();
       const element = this._getElement();
       if (this._config.isAnimated) {
-        index.reflow(element);
+        index_js.reflow(element);
       }
       element.classList.add(CLASS_NAME_SHOW);
       this._emulateAnimation(() => {
-        index.execute(callback);
+        index_js.execute(callback);
       });
     }
     hide(callback) {
       if (!this._config.isVisible) {
-        index.execute(callback);
+        index_js.execute(callback);
         return;
       }
       this._getElement().classList.remove(CLASS_NAME_SHOW);
       this._emulateAnimation(() => {
         this.dispose();
-        index.execute(callback);
+        index_js.execute(callback);
       });
     }
     dispose() {
       if (!this._isAppended) {
         return;
       }
-      EventHandler__default.default.off(this._element, EVENT_MOUSEDOWN);
+      EventHandler.off(this._element, EVENT_MOUSEDOWN);
       this._element.remove();
       this._isAppended = false;
     }
@@ -124,7 +119,7 @@
     }
     _configAfterMerge(config) {
       // use getElement() with the default "body" to get a fresh Element on each instantiation
-      config.rootElement = index.getElement(config.rootElement);
+      config.rootElement = index_js.getElement(config.rootElement);
       return config;
     }
     _append() {
@@ -133,13 +128,13 @@
       }
       const element = this._getElement();
       this._config.rootElement.append(element);
-      EventHandler__default.default.on(element, EVENT_MOUSEDOWN, () => {
-        index.execute(this._config.clickCallback);
+      EventHandler.on(element, EVENT_MOUSEDOWN, () => {
+        index_js.execute(this._config.clickCallback);
       });
       this._isAppended = true;
     }
     _emulateAnimation(callback) {
-      index.executeAfterTransition(callback, this._getElement(), this._config.isAnimated);
+      index_js.executeAfterTransition(callback, this._getElement(), this._config.isAnimated);
     }
   }
 

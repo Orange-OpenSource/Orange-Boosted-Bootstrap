@@ -9,6 +9,12 @@
     margin-top: -5rem;
   }
 
+  > h2,
+  > h3,
+  > h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
+  }
+
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -32,28 +38,7 @@
   // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-    @include font-size(.875rem);
-
-    thead {
-      border-bottom: 2px solid currentcolor;
-    }
-
-    tbody:not(:first-child) {
-      border-top: 2px solid currentcolor;
-    }
-
-    th,
-    td {
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:not(:last-child) {
-        padding-right: 1rem; // Boosted mod
-      }
-    }
+    // Boosted mod: remove a lot of rules to keep our basic rendering
 
     // Prevent breaking of code
     // stylelint-disable-next-line selector-max-compound-selectors
@@ -86,7 +71,16 @@
   min-width: 280px;
 }
 
+.table-swatches {
+  // Boosted mod: no `th`
+
+  td code {
+    white-space: nowrap;
+  }
+}
+
 .bd-title {
+  --bs-heading-color: var(--bs-emphasis-color);
   @include font-size(3rem);
 }
 
@@ -98,31 +92,43 @@
 .bi {
   width: 1em;
   height: 1em;
+  // Boosted mod: no `vertical-align`
   fill: currentcolor;
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  // Boosted mod: no text-decoration-color
-  text-underline-offset: .5rem;
-  backface-visibility: hidden;
-
-  .bi {
-    width: .75em; // Boosted mod
-    height: .75em; // Boosted mod
-    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
-  }
-
-  &:hover {
-    .bi {
-      transform: translate3d(5px, 0, 0);
-    }
-  }
 }
 
 .border-lg-start {
   @include media-breakpoint-up(lg) {
-    border-left: $border-width solid $border-color;
+    border-left: var(--bs-border-width) solid $border-color;
   }
 }
+
+// Boosted mod: no `.bd-summary-link`
+
+// scss-docs-start custom-color-mode
+[data-bs-theme="blue"] {
+  --bs-body-color: var(--bs-white);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--bs-blue);
+  --bs-body-bg-rgb: #{to-rgb($blue)};
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: #{$blue-700};
+    --bs-dropdown-link-hover-bg: #{$blue-600}; // Boosted mod
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+    --bs-btn-border-color: #{rgba($white, .25)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+    --bs-btn-hover-color: inherit; // Boosted mod
+    --bs-btn-hover-border-color: #{rgba($white, .25)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+    --bs-btn-active-color: inherit; // Boosted mod
+    --bs-btn-active-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+  }
+}
+// scss-docs-end custom-color-mode

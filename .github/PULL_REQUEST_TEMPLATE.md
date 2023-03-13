@@ -17,7 +17,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 <!-- What types of changes does you code introduce? -->
 <!-- Please remove the unused items in the list -->
 
-- Bug fix (non-breaking which fixes an issues)
+- Bug fix (non-breaking which fixes an issue)
 - New feature (non-breaking change which adds functionality)
 - Refactoring (non-breaking change)
 - Breaking change (fix or feature that would change existing functionality)
@@ -26,7 +26,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 <!-- Please add direct links where your modifications can be seen in the documentation -->
 
-* https://deploy-preview-{your_pr_number}--boosted.netlify.app/
+- <https://deploy-preview-{your_pr_number}--boosted.netlify.app/>
 
 ### Checklist
 
@@ -50,6 +50,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 
 - [ ] My change follows the [developer guide](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/Developer-guide)
 - [ ] I have added JavaScript unit tests to cover my changes
+- [ ] I have added SCSS unit tests to cover my changes
 
 #### Documentation
 

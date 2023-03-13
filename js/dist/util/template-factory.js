@@ -1,27 +1,22 @@
 /*!
-  * Boosted v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap template-factory.js v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap template-factory.js v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./sanitizer'), require('./index'), require('../dom/selector-engine'), require('./config')) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./sanitizer.js'), require('./index.js'), require('../dom/selector-engine.js'), require('./config.js')) :
   typeof define === 'function' && define.amd ? define(['./sanitizer', './index', '../dom/selector-engine', './config'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.TemplateFactory = factory(global.Sanitizer, global.Index, global.SelectorEngine, global.Config));
-})(this, (function (sanitizer, index, SelectorEngine, Config) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-  const Config__default = /*#__PURE__*/_interopDefaultLegacy(Config);
+})(this, (function (sanitizer_js, index_js, SelectorEngine, Config) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/template-factory.js
+   * Bootstrap (v5.3.0-alpha1): util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -32,7 +27,7 @@
 
   const NAME = 'TemplateFactory';
   const Default = {
-    allowList: sanitizer.DefaultAllowlist,
+    allowList: sanitizer_js.DefaultAllowlist,
     content: {},
     // { selector : text ,  selector2 : text2 , }
     extraClass: '',
@@ -59,7 +54,7 @@
    * Class definition
    */
 
-  class TemplateFactory extends Config__default.default {
+  class TemplateFactory extends Config {
     constructor(config) {
       super();
       this._config = this._getConfig(config);
@@ -119,7 +114,7 @@
       }
     }
     _setContent(template, content, selector) {
-      const templateElement = SelectorEngine__default.default.findOne(selector, template);
+      const templateElement = SelectorEngine.findOne(selector, template);
       if (!templateElement) {
         return;
       }
@@ -128,8 +123,8 @@
         templateElement.remove();
         return;
       }
-      if (index.isElement(content)) {
-        this._putElementInTemplate(index.getElement(content), templateElement);
+      if (index_js.isElement(content)) {
+        this._putElementInTemplate(index_js.getElement(content), templateElement);
         return;
       }
       if (this._config.html) {
@@ -139,10 +134,10 @@
       templateElement.textContent = content;
     }
     _maybeSanitize(arg) {
-      return this._config.sanitize ? sanitizer.sanitizeHtml(arg, this._config.allowList, this._config.sanitizeFn) : arg;
+      return this._config.sanitize ? sanitizer_js.sanitizeHtml(arg, this._config.allowList, this._config.sanitizeFn) : arg;
     }
     _resolvePossibleFunction(arg) {
-      return typeof arg === 'function' ? arg(this) : arg;
+      return index_js.execute(arg, [this]);
     }
     _putElementInTemplate(element, templateElement) {
       if (this._config.html) {
