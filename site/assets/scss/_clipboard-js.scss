@@ -28,7 +28,7 @@
   @include border-radius(.25rem);
 
   &:hover {
-    color: var(--bs-link-hover-color); // Boosted mod
+    color: var(--bs-link-hover-color);
   }
 
   // Boosted mod: no focus rule
@@ -44,6 +44,6 @@
 .btn-clipboard {
   position: relative;
   z-index: 2;
-  margin-top: var(--bs-border-width); // Boosted mod
-  margin-right: var(--bs-border-width); // Boosted mod
+  margin-top: var(--bs-border-width); // Boosted mod: instead of `1.25rem`
+  margin-right: var(--bs-border-width); // Boosted mod: instead of `.75rem`
 }

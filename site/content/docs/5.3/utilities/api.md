@@ -393,6 +393,7 @@ New utilities can be added to the default `$utilities` map with a `map-merge`. M
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -419,6 +420,7 @@ Modify existing utilities in the default `$utilities` map with `map-get` and `ma
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -448,6 +450,7 @@ You can enable responsive classes for an existing set of utilities that are not 
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -503,6 +506,7 @@ Missing v4 utilities, or used to another naming convention? The utilities API ca
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -526,6 +530,7 @@ Remove any of the default utilities with the [`map-remove()` Sass function](http
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -541,6 +546,7 @@ You can also use the [`map-merge()` Sass function](https://sass-lang.com/documen
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
@@ -560,6 +566,7 @@ You can add, remove, and modify many utilities all at once with the [`map-merge(
 ```scss
 @import "boosted/scss/functions";
 @import "boosted/scss/variables";
+@import "boosted/scss/variables-dark";
 @import "boosted/scss/maps";
 @import "boosted/scss/mixins";
 @import "boosted/scss/utilities";
