@@ -50,6 +50,28 @@ By default, range inputs "snap" to integer values. To change this, you can speci
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
+## Usability
+
+For better usability, it is recommended most of the time to display the current selected value.
+
+This requires extra JavaScript code.
+
+{{< example >}}
+<div class="d-flex w-100 justify-content-between">
+  <label for="customRange4" class="form-label">Example range</label>
+  <span id="customRange4ValueText" class="fw-bold" aria-hidden="true"></span>
+</div>
+<input type="range" class="form-range" min="0" max="100" step="1" id="customRange4" onchange="updateLabelValue()">
+
+<script>
+  function updateLabelValue() {
+    document.getElementById('customRange4ValueText').innerHTML = document.getElementById('customRange4').value;
+  }
+
+  updateLabelValue()
+</script>
+{{< /example >}}
+
 ## CSS
 
 ### Sass variables
