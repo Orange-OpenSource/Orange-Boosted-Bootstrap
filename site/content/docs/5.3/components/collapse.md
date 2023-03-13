@@ -106,9 +106,9 @@ If your control element is targeting a single collapsible element – i.e. the `
 
 Note that Boosted's current implementation does not cover the various *optional* keyboard interactions described in the [ARIA Authoring Practices Guide accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - you will need to include these yourself with custom JavaScript.
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 {{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
 

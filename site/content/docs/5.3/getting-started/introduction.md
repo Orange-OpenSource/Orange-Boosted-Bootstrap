@@ -155,7 +155,7 @@ Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky
 </html>
 ```
 
-### Responsive meta tag
+### Viewport meta
 
 Boosted is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
 

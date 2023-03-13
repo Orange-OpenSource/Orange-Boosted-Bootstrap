@@ -385,7 +385,7 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 <!--Boosted mod: no custom `.btn-*` modifier class-->
 
-## Sass variables
+### Sass variables
 
 {{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
 
