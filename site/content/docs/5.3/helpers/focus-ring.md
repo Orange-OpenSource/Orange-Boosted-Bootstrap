@@ -9,9 +9,9 @@ toc: true
 added: "5.3"
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 The `.focus-ring` helper removes the default `outline` on `:focus`, replacing it with a `box-shadow` that can be more broadly customized. The new shadow is made up of a series of CSS variables, inherited from the `:root` level, that can be modified for any element or component.
 
@@ -42,6 +42,14 @@ Modify the `--bs-focus-ring-*` CSS variables as needed to change the default app
 `.focus-ring` sets styles via global CSS variables that can be overridden on any parent element, as shown above. These variables are generated from their Sass variable counterparts.
 
 {{< scss-docs name="root-focus-variables" file="scss/_root.scss" >}}
+
+By default, there is no `--bs-focus-ring-x`, `--bs-focus-ring-y`, or `--bs-focus-ring-blur`, but we provide CSS variables with fallbacks to initial `0` values. Modify them to change the default appearance.
+
+{{< example >}}
+<a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-x: 10px; --bs-focus-ring-y: 10px; --bs-focus-ring-blur: 4px">
+  Blurry offset focus ring
+</a>
+{{< /example >}}
 
 ### Sass
 
