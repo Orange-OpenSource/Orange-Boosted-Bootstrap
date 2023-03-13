@@ -145,6 +145,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
 
+- <span class="badge bg-success">New</span> Our range documentation now provides an example which displays the current selected value for better usability, but with some extra JavaScript code.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
