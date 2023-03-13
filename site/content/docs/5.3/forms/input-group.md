@@ -12,11 +12,11 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -114,11 +114,11 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group">
@@ -132,11 +132,11 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This form variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -154,11 +154,11 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ## Button addons
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications. They are not recommended for usability reasons.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -186,11 +186,11 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ## Buttons with dropdowns
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This **third** form variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">

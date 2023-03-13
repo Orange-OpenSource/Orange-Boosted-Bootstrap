@@ -8,11 +8,11 @@ aliases:
 toc: true
 ---
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This component contains some spinners that should not be used on Orange sites.
 
 **Growing spinner** and its examples are not compatible with the [Orange Design System]({{< param ods.web >}}).
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 ## About
 

@@ -14,9 +14,9 @@ Badges scale to match the size of the immediate parent element by using relative
 
 ### Headings
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This component variant should not be used because it does not exist in the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -31,9 +31,9 @@ This component variant should not be used because it does not exist in the Orang
 
 Badges can be used as part of links or buttons to provide a counter.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -51,11 +51,11 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 
 Use utilities to modify a `.badge` and position it in the corner of a link with an icon.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This component variant should be used **only** inside a header component.
 
 Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examples. You can also refer to the [Global headers](https://system.design.orange.com/0c1af118d/p/37609b-global-headers/b/366c91) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <a href="#" class="position-relative">
@@ -78,9 +78,9 @@ Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examp
 
 {{< added-in "5.2.0" >}}
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These component variants should not be used because they do not exist in the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
@@ -99,11 +99,11 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This component should not be used because it does not exist in the Orange Design System specifications.
 
 Instead, consider using our Boosted [Tags]({{< docsref "/components/tags" >}}). You can also refer to the [Tags](https://system.design.orange.com/0c1af118d/p/975c09-tags/b/24dde8) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 {{< badge.inline >}}

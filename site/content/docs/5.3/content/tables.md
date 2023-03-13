@@ -14,11 +14,10 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Boosted.
 
-<!-- Boosted mod : design callout -->
-{{< ods-alert info >}}
+{{< design-callout-alert info >}}
 In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
 You can refer to [small tables]({{< docsref "/content/tables#small-tables" >}}) paragraph.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
 
@@ -249,10 +248,9 @@ Behind the scenes it looks like this:
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
-<!-- Boosted mod : design callout -->
-{{< ods-alert info >}}
+{{< design-callout-alert info >}}
 To display basic tables, Orange Design System recommends using these compact tables.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< table class="table table-sm" caption="Boosted small table" >}}
 

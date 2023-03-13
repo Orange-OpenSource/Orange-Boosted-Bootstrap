@@ -36,11 +36,11 @@ These classes can also be added to groups of links, as an alternative to the [`.
 
 ## Mixed styles
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-secondary`.
 
 Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples" >}}) secondary variant component. You can also refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -56,11 +56,11 @@ Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples"
 
 Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This **checkbox** variant should not be used because it does not respect the Orange Design System specifications.
 
 From the Orange Design System point of view, checkboxes should be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) component. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -92,9 +92,9 @@ From the Orange Design System point of view, checkboxes should be represented li
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -173,9 +173,9 @@ Instead of applying button sizing classes to every button in a group, just add `
 
 Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -199,9 +199,9 @@ This variant should not be used because it does not respect the Orange Design Sy
 
 Make a set of buttons appear vertically stacked rather than horizontally.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These 2 vertical variants should not be used because they do not respect the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

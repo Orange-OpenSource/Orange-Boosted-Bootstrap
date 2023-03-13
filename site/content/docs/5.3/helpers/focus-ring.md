@@ -9,9 +9,9 @@ toc: true
 added: "5.3"
 ---
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 The `.focus-ring` helper removes the default `outline` on `:focus`, replacing it with a `box-shadow` that can be more broadly customized. The new shadow is made up of a series of CSS variables, inherited from the `:root` level, that can be modified for any element or component.
 

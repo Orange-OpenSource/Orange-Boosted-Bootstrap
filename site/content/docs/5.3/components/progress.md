@@ -58,11 +58,11 @@ Boosted provides a handful of [utilities for setting width]({{< docsref "/utilit
 
 You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
@@ -110,11 +110,11 @@ Boosted also provides size variants for progress bar: simply add `.progress-xs` 
 
 Use background utility classes to change the appearance of individual progress bars.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
@@ -182,11 +182,11 @@ You can include multiple progress components inside a container with `.progress-
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -210,11 +210,11 @@ Please refer to the [Progress indicators](https://system.design.orange.com/0c1af
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
-{{< ods-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
-{{< /ods-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
