@@ -59,7 +59,7 @@ This requires extra JavaScript code.
 {{< example >}}
 <div class="d-flex w-100 justify-content-between">
   <label for="customRange4" class="form-label">Example range</label>
-  <output id="customRange4ValueText" for="customRange4" class="fw-bold"></span>
+  <output id="customRange4ValueText" for="customRange4" class="fw-bold"></output>
 </div>
 <input type="range" class="form-range" min="0" max="100" step="1" id="customRange4" onchange="updateLabelValue()">
 
