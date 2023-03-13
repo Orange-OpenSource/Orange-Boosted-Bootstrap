@@ -189,10 +189,12 @@
 
     &::before {
       position: absolute;
-      top: calc(-1 * var(--#{$prefix}nav-link-margin-y, 5px)); // stylelint-disable-line function-disallowed-list
-      right: calc(-1 * var(--#{$prefix}nav-link-margin-x, 0px)); // stylelint-disable-line function-disallowed-list
-      bottom: calc(-1 * var(--#{$prefix}nav-link-margin-y, 5px)); // stylelint-disable-line function-disallowed-list
-      left: calc(-1 * var(--#{$prefix}nav-link-margin-x, 0px)); // stylelint-disable-line function-disallowed-list
+      // stylelint-disable function-disallowed-list
+      top: calc(-1 * var(--#{$prefix}nav-link-margin-y, 5px));
+      right: calc(-1 * var(--#{$prefix}nav-link-margin-x, 0px));
+      bottom: calc(-1 * var(--#{$prefix}nav-link-margin-y, 5px));
+      left: calc(-1 * var(--#{$prefix}nav-link-margin-x, 0px));
+      // stylelint-enable function-disallowed-list
       z-index: $stretched-link-z-index;
       content: "";
     }
@@ -317,10 +319,12 @@
   // Boosted mod
   &::before {
     position: absolute;
-    top: calc(-1 * var(--#{$prefix}navbar-toggler-margin-y)); // stylelint-disable-line function-disallowed-list
-    right: calc(-.25 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
-    bottom: calc(-1 * var(--#{$prefix}navbar-toggler-margin-y)); // stylelint-disable-line function-disallowed-list
-    left: calc(-1 * var(--#{$prefix}navbar-toggler-margin-x)); // stylelint-disable-line function-disallowed-list
+    // stylelint-disable function-disallowed-list
+    top: calc(-1 * var(--#{$prefix}navbar-toggler-margin-y));
+    right: calc(-.25 * var(--#{$prefix}gutter-x));
+    bottom: calc(-1 * var(--#{$prefix}navbar-toggler-margin-y));
+    left: calc(-1 * var(--#{$prefix}navbar-toggler-margin-x));
+    // stylelint-enable function-disallowed-list
     z-index: $stretched-link-z-index;
     content: "";
   }
