@@ -20,9 +20,9 @@ Add `.link-chevron` to bold your link and enhance them with a chevron.
 
 ## Icon link
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 The icon link helper component modifies our default link styles to enhance their appearance and quickly align any pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We stylize the underline with a custom offset and color. Icons are automatically sized to `1em` to best match their associated text's `font-size`.
 

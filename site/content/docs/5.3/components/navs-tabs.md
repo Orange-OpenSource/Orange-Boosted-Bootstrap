@@ -155,9 +155,9 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 
 Take that same HTML, but use `.nav-pills` instead:
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -363,9 +363,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 ### Pills with dropdowns
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
