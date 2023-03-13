@@ -251,7 +251,7 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 
 <!-- Boosted mod : design callout -->
 {{< ods-alert info >}}
-These compact tables are recommended by Orange Design System.
+To display basic tables, Orange Design System recommends using these compact tables.
 {{< /ods-alert >}}
 
 {{< table class="table table-sm" caption="Boosted small table" >}}
