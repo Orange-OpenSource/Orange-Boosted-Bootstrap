@@ -164,11 +164,11 @@ Alternatively, you can use the new combined [color and background]({{< docsref "
 
 You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="progress-stacked">

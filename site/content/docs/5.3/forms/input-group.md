@@ -73,11 +73,11 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 **Sizing on the individual input group elements isn't supported.**
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** because of its height, should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group input-group-sm mb-3">
@@ -284,12 +284,11 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 ### Custom select
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These **first 3** form variants should not be used because they do not respect the Orange Design System specifications. The **first 2** form variants should have a vertical layout (i.e., having their label above the input field). The **third** form variant should be split in 2 elements (a button and a dropdown) which should be presented in a more logical way : the dropdown first and then the button.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
-
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -335,11 +334,11 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 ### Custom file input
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These form variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="input-group mb-3">

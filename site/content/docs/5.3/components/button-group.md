@@ -149,11 +149,11 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 The **first size variant (50px height) and the last one (30px height)** should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Toggle buttons](https://system.design.orange.com/0c1af118d/p/59c349-toggle-buttons/b/91bf23) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">

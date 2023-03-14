@@ -803,11 +803,11 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant with a `data-bs-offset` attribute having values different than `"0,0"` should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="d-flex">
