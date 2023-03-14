@@ -14,6 +14,11 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Boosted.
 
+{{< design-callout-alert info >}}
+In order to get the row height recommended by Orange Design System, please use the `.table-sm` class in addition to `.table`.
+You can refer to [small tables]({{< docsref "/content/tables#small-tables" >}}) paragraph.
+{{< /design-callout-alert >}}
+
 {{< table class="table" simplified="false" caption="Boosted tables basic look" >}}
 
 ## Accessibility
@@ -242,6 +247,10 @@ Behind the scenes it looks like this:
 ## Small tables
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
+
+{{< design-callout-alert info >}}
+To display basic tables, Orange Design System recommends using these compact tables.
+{{< /design-callout-alert >}}
 
 {{< table class="table table-sm" caption="Boosted small table" >}}
 
@@ -1207,13 +1216,13 @@ Use SVG to display icons or thumbnails in your table data cell elements (`50px` 
 </div>
 ```
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### Sass loop
 
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 

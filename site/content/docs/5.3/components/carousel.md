@@ -155,11 +155,11 @@ Pausing the carousel by hovering one slide should not be used.
 
 You can add captions to your slides with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 **Captions** should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Carousel navigation](https://system.design.orange.com/0c1af118d/p/7773e1-carousel-navigation/b/99a7b7) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -433,9 +433,9 @@ To prevent the carousel from autoplaying, use the following attributes combo:
 
 The transition duration of `.carousel-item` can be changed with the `$carousel-transition-duration` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (e.g. `transition: transform 2s ease, opacity .5s ease-out`).
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 {{< scss-docs name="carousel-variables" file="scss/_variables.scss" >}}
 
