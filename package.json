@@ -159,7 +159,7 @@
     "npm-run-all": "^4.1.5",
     "ods-storybook-theme": "^0.1.0",
     "pa11y-ci": "^3.0.1",
-    "pa11y-ci-reporter-html": "^5.1.0",
+    "pa11y-ci-reporter-html": "^5.1.1",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "rollup": "^3.17.2",
