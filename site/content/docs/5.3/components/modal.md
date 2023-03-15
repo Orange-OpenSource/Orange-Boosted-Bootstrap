@@ -851,7 +851,7 @@ As part of Boosted's evolving CSS variables approach, modals now use local CSS v
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### Sass loop
 
 [Responsive fullscreen modals](#fullscreen-modal) are generated via the `$breakpoints` map and a loop in `scss/_modal.scss`.
 
