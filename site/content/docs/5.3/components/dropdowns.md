@@ -140,11 +140,11 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This small variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 <div class="bd-example">
   <div class="btn-group">
@@ -266,19 +266,18 @@ And putting it to use in a navbar:
 ## Directions
 
 {{< callout info >}}
-#### RTL
-Directions are mirrored when using Boosted in RTL, meaning `.dropstart` will appear on the right side.
+**Directions are flipped in RTL mode.** As such, `.dropstart` will appear on the right side.
 {{< /callout >}}
 
 ### Centered
 
 Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="dropdown-center">
@@ -356,11 +355,11 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 Make the dropup menu centered above the toggle with `.dropup-center` on the parent element.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="dropup-center dropup">
@@ -719,14 +718,14 @@ Separate groups of related menu items with a divider.
 
 Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
-<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
   <p>
     Some example text that's free-flowing within the dropdown menu.
   </p>
@@ -740,11 +739,11 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b9b-dropdown/b/04c480) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -836,9 +835,9 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
 
 By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 The 3 last auto close behavior variants should not be used because featuring a single selection, they do no respect the Orange Design System specifications. They should be used only with multiple selections.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="btn-group">
@@ -920,7 +919,7 @@ Variables for the CSS-based carets that indicate a dropdown's interactivity:
 
 {{< scss-docs name="caret-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Sass mixins
 
 Mixins are used to generate the CSS-based carets and can be found in `scss/mixins/_caret.scss`.
 
@@ -951,18 +950,16 @@ Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 
 ### Via JavaScript
 
+{{< callout warning >}}
+Dropdowns must have `data-bs-toggle="dropdown"` on their trigger element, regardless of whether you call your dropdown via JavaScript or use the data-api.
+{{< /callout >}}
+
 Call the dropdowns via JavaScript:
 
 ```js
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new boosted.Dropdown(dropdownToggleEl))
 ```
-
-{{< callout info >}}
-##### `data-bs-toggle="dropdown"` still required
-
-Regardless of whether you call your dropdown via JavaScript or instead use the data-api, `data-bs-toggle="dropdown"` is always required to be present on the dropdown's trigger element.
-{{< /callout >}}
 
 ### Options
 

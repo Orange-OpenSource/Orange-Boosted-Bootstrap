@@ -151,15 +151,18 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 </ul>
 {{< /example >}}
 
-<!-- Boosted mod -->
-### Tabs light
+### Pills
 
-Nav tabs light only differ visually, with a full width bottom border and a different active state.
+Take that same HTML, but use `.nav-pills` instead:
+
+{{< design-callout-alert >}}
+This variant should not be used because it is a button component in the Orange Design System specifications.
+{{< /design-callout-alert >}}
 
 {{< example >}}
-<ul class="nav nav-tabs nav-tabs-light">
+<ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">Active</a>
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -173,6 +176,28 @@ Nav tabs light only differ visually, with a full width bottom border and a diffe
 </ul>
 {{< /example >}}
 
+### Underline
+
+Take that same HTML, but use `.nav-underline` instead:
+
+{{< example >}}
+<ul class="nav nav-underline">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+{{< /example >}}
+
+<!-- Boosted mod -->
 ### Nested tabs
 
 {{< added-in "5.2.0" >}}
@@ -197,7 +222,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 
 <div class="tab-content" id="nav-tabs-content">
   <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="nav-tab1">
-    <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-tabs nav-tabs-light mt-0">
+    <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
       <li class="nav-item" role="presentation">
         <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
       </li>
@@ -211,7 +236,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
       </li>
     </ul>
-    <div class="tab-content border-0" id="nav-tabs-light-content">
+    <div class="tab-content border-0">
       <div class="tab-pane fade show active" id="linkA" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
       <div class="tab-pane" id="linkB" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
       <div class="tab-pane" id="linkC" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
@@ -223,33 +248,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
   <div class="tab-pane" id="tab4-content" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
 </div>
 {{< /example >}}
-
 <!-- End mod -->
-
-### Pills
-
-Take that same HTML, but use `.nav-pills` instead:
-
-{{< ods-incompatibility-alert >}}
-This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
-
-{{< example >}}
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
-{{< /example >}}
 
 ### Fill and justify
 
@@ -364,9 +363,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 ### Pills with dropdowns
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -398,7 +397,7 @@ This variant should not be used because it is a button component in the Orange D
 
 {{< added-in "5.2.0" >}}
 
-As part of Boosted's evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, `.nav-tabs-light` and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted's evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 On the `.nav` base class:
 
@@ -408,10 +407,6 @@ On the `.nav-tabs` modifier class:
 
 {{< scss-docs name="nav-tabs-css-vars" file="scss/_nav.scss" >}}
 
-On the `.nav-tabs-light` modifier class:
-
-{{< scss-docs name="nav-tabs-light-css-vars" file="scss/_nav.scss" >}}
-
 On the `.nav-pills` modifier class:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
@@ -419,6 +414,12 @@ On the `.nav-pills` modifier class:
 On the `.tab-content` modifier class:
 
 {{< scss-docs name="tab-content-css-vars" file="scss/_nav.scss" >}}
+
+{{< added-in "5.3.0" >}}
+
+On the `.nav-underline` modifier class:
+
+{{< scss-docs name="nav-underline-css-vars" file="scss/_nav.scss" >}}
 
 ### Sass variables
 

@@ -39,5 +39,18 @@
     {{- $match = replace $match " !default" "" -}}
   {{- end -}}
 
-  {{- highlight $match "scss" "" -}}
+  <div class="bd-example-snippet bd-code-snippet bd-scss-docs">
+    <!--Boosted mod: added `border-light border-1 border-top-0`-->
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-light border-1 border-top-0">
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/{{ $file | replaceRE `\\` "/" }}">
+        {{- $file -}}
+      </a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+        </button>
+      </div>
+    </div>
+    {{- highlight $match "scss" "" -}}
+  </div>
 {{- end -}}
