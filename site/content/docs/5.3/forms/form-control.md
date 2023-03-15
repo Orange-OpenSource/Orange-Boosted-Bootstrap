@@ -27,6 +27,12 @@ Form controls are styled with a mix of Sass and CSS variables, allowing them to 
 
 Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
+{{< design-callout-alert >}}
+The last variant with a `.form-control-sm` class and and then a height of 30px can not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
 <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
@@ -134,6 +140,12 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 {{< /example >}}
 
 ## File input
+
+{{< design-callout-alert >}}
+The **Small file input example** below with a height of 30px can not be used because it does not respect the Orange Design System specifications.
+
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="mb-3">

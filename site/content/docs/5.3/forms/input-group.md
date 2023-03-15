@@ -74,7 +74,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 **Sizing on the individual input group elements isn't supported.**
 
 {{< design-callout-alert >}}
-These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** because of its height, should not be used because they do not respect the Orange Design System specifications.
+These 3 form variants, with an **horizontal layout** (i.e. labels not above the input fields), and the **small** one because of its height, should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on the Orange Design System website.
 {{< /design-callout-alert >}}
