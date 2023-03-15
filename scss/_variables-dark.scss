@@ -46,12 +46,12 @@ $body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
 $body-secondary-bg-dark:            $gray-800 !default;
 $body-tertiary-color-dark:          rgba($body-color-dark, .5) !default;
 $body-tertiary-bg-dark:             #414141 !default; // Boosted mod: instead of `mix($gray-800, $gray-900, 50%)`
-$body-emphasis-color-dark:          $gray-100 !default;
+$body-emphasis-color-dark:          $white !default; // Boosted mod: instead of `$gray-100`
 $border-color-dark:                 $gray-700 !default;
-$border-color-translucent-dark:     rgba($white, .15) !default;
+$border-color-translucent-dark:     $gray-700 !default; // Boosted mod instead of `rgba($white, .15)`
 $headings-color-dark:               null !default;
-$link-color-dark:                   tint-color($primary, 40%) !default;
-$link-hover-color-dark:             shift-color($link-color-dark, -$link-shade-percentage) !default;
+$link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
+$link-hover-color-dark:             $primary !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   tint-color($code-color, 40%) !default;
 
 
