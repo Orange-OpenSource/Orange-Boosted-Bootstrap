@@ -400,7 +400,7 @@ Using a combination of grid and utility classes, cards can be made horizontal in
 <div class="card mb-3" style="max-width: 480px;">
   <div class="row g-0">
     <div class="col-md-4">
-      {{< placeholder width="100%" height="250" text="Image" class="img-fluid" >}}
+      {{< placeholder width="100%" height="250" text="icon" class="img-fluid" >}}
     </div>
     <div class="col-md-8">
       <div class="card-body">
