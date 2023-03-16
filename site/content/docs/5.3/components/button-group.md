@@ -59,7 +59,7 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 {{< design-callout-alert >}}
 These **checkbox** and **radio button** variants should not be used because they do not respect the Orange Design System specifications.
 
-From the Orange Design System point of view, checkboxes and radio buttons should respectively be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) or [Radios]({{< docsref "/forms/checks-radios#radios" >}}) components. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) and [Radio button](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789)  guidelines on the Orange Design System website.
+From the Orange Design System point of view, checkboxes and radio buttons should respectively be represented like in our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}) or [Radios]({{< docsref "/forms/checks-radios#radios" >}}) components. You can also refer to the [Checkbox](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) and [Radio button](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459/i/48901789) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

@@ -28,7 +28,7 @@ You may also choose from small and large custom selects to match our similarly s
 {{< design-callout-alert >}}
 These select sizes variants, with a **height different than 40px**, should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines and to the [Pages](https://system.design.orange.com/0c1af118d/p/20500e-form/b/16bb53) form examples on  the Orange Design System website.
+Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

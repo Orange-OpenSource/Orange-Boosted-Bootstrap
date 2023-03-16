@@ -22,13 +22,12 @@ Note that the `.nav-link` can be used out of any context and combined with our [
 The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
 To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
-
 {{< /callout >}}
 
 {{< design-callout-alert >}}
 This component variant should not be used because it does not respect the Orange Design System specifications.
 
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -70,7 +69,7 @@ Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref
 {{< design-callout-alert >}}
 These **centered** and **right aligned** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be left aligned.
 
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 Centered with `.justify-content-center`:
@@ -118,7 +117,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 {{< design-callout-alert >}}
 These **vertical** component variants should not be used because they do not respect the Orange Design System specifications. Indeed, nav items should be displayed horizontally.
 
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -276,7 +275,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 {{< design-callout-alert >}}
 These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, nav tabs and `<a>` html tags should not look like buttons.
 
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -344,7 +343,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 {{< design-callout-alert >}}
 This **link** variant, which is just an **example illustrating the use of the flexbox utilities**, should not be used because it does not respect the Orange Design System specifications. Indeed, nav tabs and `<a>` html tags should not look like buttons.
 
-Instead, please consider using our Boosted [Tabs light]({{< docsref "/components/navs-tabs#tabs-light" >}}) variant. You can also refer to [Navigation](https://system.design.orange.com/0c1af118d/p/44331c-navigation/b/9105e6) guidelines on the Orange Design System website.
+Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}

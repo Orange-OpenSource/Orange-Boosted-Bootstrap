@@ -171,7 +171,6 @@ Use contextual classes to style list items with a stateful background and color.
 {{< design-callout-alert >}}
 This variant should not be used as is because its rendering does not respect the Orange Design System specifications.
 However, please note that the HTML markup remains valid and will be used as is when the [issue #1452](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/1452) will be closed.
-
 {{< /design-callout-alert >}}
 
 {{< example >}}

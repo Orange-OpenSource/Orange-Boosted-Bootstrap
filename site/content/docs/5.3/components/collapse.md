@@ -20,7 +20,6 @@ Triggering a collapse behavior from a button component should not be used becaus
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-
 ## Example
 
 Click the buttons below to show and hide another element via class changes:
