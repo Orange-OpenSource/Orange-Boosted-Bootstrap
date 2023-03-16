@@ -14,7 +14,7 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 
 - To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
 
-- On the scrollable container, add `data-bs-spy="scroll"` and `data-bs-target="#navId"` where `navId` is the unique `id` of the associated navigation. Be sure to also include a `tabindex="0"` to ensure keyboard access.
+- On the scrollable container, add `data-bs-spy="scroll"` and `data-bs-target="#navId"` where `navId` is the unique `id` of the associated navigation. If there is no focusable element inside the element, be sure to also include a `tabindex="0"` to ensure keyboard access.
 
 - As you scroll the "spied" container, an `.active` class is added and removed from anchor links within the associated navigation. Links must have resolvable `id` targets, otherwise they're ignored. For example, a `<a href="#home">home</a>` must correspond to something in the DOM like `<div id="home"></div>`
 
@@ -24,11 +24,11 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 
 ### Navbar
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This navbar version of the Scrollspy component is not compatible with the Orange Design System.
 
 Refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}) and [Nav & tabs]({{< docsref "/components/navs-tabs" >}}).
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
