@@ -17,7 +17,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 <!-- What types of changes does you code introduce? -->
 <!-- Please remove the unused items in the list -->
 
-- Bug fix (non-breaking which fixes an issues)
+- Bug fix (non-breaking which fixes an issue)
 - New feature (non-breaking change which adds functionality)
 - Refactoring (non-breaking change)
 - Breaking change (fix or feature that would change existing functionality)

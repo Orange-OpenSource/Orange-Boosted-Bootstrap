@@ -8,11 +8,11 @@ aliases:
 toc: true
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure.
 
 In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 ## How it works
 
@@ -514,7 +514,7 @@ Sometimes you want to use the collapse plugin to trigger a container element for
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
+    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
   </div>
 </div>
 <nav class="navbar navbar-dark bg-dark">

@@ -127,7 +127,7 @@
 
               @if $value == $white or $value == $light {
                 background: color-contrast($value);
-              } @else if $value == "var(--bs-light-text)" {
+              } @else if $value == "var(--bs-light-text-emphasis)" {
                 background: var(--bs-black);
               } @else if $value == $body-color {
                 background: var(--bs-body-bg);

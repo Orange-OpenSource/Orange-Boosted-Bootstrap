@@ -92,11 +92,11 @@ We use the following JavaScript to trigger our live toast demo:
 ```js
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
-if (toastTrigger) {
-  toastTrigger.addEventListener('click', () => {
-    const toast = new boosted.Toast(toastLiveExample)
 
-    toast.show()
+if (toastTrigger) {
+  const toastBoosted = boosted.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBoosted.show()
   })
 }
 ```
