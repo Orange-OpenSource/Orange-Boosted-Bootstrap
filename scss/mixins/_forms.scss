@@ -67,9 +67,9 @@
       @if $enable-validation-icons {
         &::before {
           flex-shrink: 0;
-          align-self: center;
           width: $form-feedback-icon-size;
           height: $form-feedback-icon-size;
+          margin-top: 1px;
           margin-right: map-get($spacers, 1);
           content: "";
           background: $form-feedback-icon-invalid no-repeat;
