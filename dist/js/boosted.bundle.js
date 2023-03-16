@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/index.js
+   * Bootstrap (v5.3.0-alpha1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -24,6 +24,19 @@
   const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend';
+
+  /**
+   * Properly escape IDs selectors to handle weird IDs
+   * @param {string} selector
+   * @returns {string}
+   */
+  const parseSelector = selector => {
+    if (selector && window.CSS && window.CSS.escape) {
+      // document.querySelector needs escaping to handle IDs (html5+) containing for instance /
+      selector = selector.replace(/#([^\s"#']+)/g, (match, id) => `#${CSS.escape(id)}`);
+    }
+    return selector;
+  };
 
   // Shout-out AngusCroll (https://goo.gl/pxwQGp)
   const toType = object => {
@@ -42,38 +55,6 @@
       prefix += Math.floor(Math.random() * MAX_UID);
     } while (document.getElementById(prefix));
     return prefix;
-  };
-  const getSelector = element => {
-    let selector = element.getAttribute('data-bs-target');
-    if (!selector || selector === '#') {
-      let hrefAttribute = element.getAttribute('href');
-
-      // The only valid content that could double as a selector are IDs or classes,
-      // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
-      // `document.querySelector` will rightfully complain it is invalid.
-      // See https://github.com/twbs/bootstrap/issues/32273
-      if (!hrefAttribute || !hrefAttribute.includes('#') && !hrefAttribute.startsWith('.')) {
-        return null;
-      }
-
-      // Just in case some CMS puts out a full URL with the anchor appended
-      if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
-        hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
-      }
-      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
-    }
-    return selector;
-  };
-  const getSelectorFromElement = element => {
-    const selector = getSelector(element);
-    if (selector) {
-      return document.querySelector(selector) ? selector : null;
-    }
-    return null;
-  };
-  const getElementFromSelector = element => {
-    const selector = getSelector(element);
-    return selector ? document.querySelector(selector) : null;
   };
   const getTransitionDurationFromElement = element => {
     if (!element) {
@@ -116,7 +97,7 @@
       return object.jquery ? object[0] : object;
     }
     if (typeof object === 'string' && object.length > 0) {
-      return document.querySelector(object);
+      return document.querySelector(parseSelector(object));
     }
     return null;
   };
@@ -226,10 +207,8 @@
       }
     });
   };
-  const execute = callback => {
-    if (typeof callback === 'function') {
-      callback();
-    }
+  const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
+    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
   };
   const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
     if (!waitForTransition) {
@@ -284,7 +263,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): dom/event-handler.js
+   * Bootstrap (v5.3.0-alpha1): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -406,9 +385,8 @@
   }
   function removeNamespacedHandlers(element, events, typeEvent, namespace) {
     const storeElementEvent = events[typeEvent] || {};
-    for (const handlerKey of Object.keys(storeElementEvent)) {
+    for (const [handlerKey, event] of Object.entries(storeElementEvent)) {
       if (handlerKey.includes(namespace)) {
-        const event = storeElementEvent[handlerKey];
         removeHandler(element, events, typeEvent, event.callable, event.delegationSelector);
       }
     }
@@ -447,10 +425,9 @@
           removeNamespacedHandlers(element, events, elementEvent, originalTypeEvent.slice(1));
         }
       }
-      for (const keyHandlers of Object.keys(storeElementEvent)) {
+      for (const [keyHandlers, event] of Object.entries(storeElementEvent)) {
         const handlerKey = keyHandlers.replace(stripUidRegex, '');
         if (!inNamespace || originalTypeEvent.includes(handlerKey)) {
-          const event = storeElementEvent[keyHandlers];
           removeHandler(element, events, typeEvent, event.callable, event.delegationSelector);
         }
       }
@@ -490,8 +467,8 @@
       return evt;
     }
   };
-  function hydrateObj(obj, meta) {
-    for (const [key, value] of Object.entries(meta || {})) {
+  function hydrateObj(obj, meta = {}) {
+    for (const [key, value] of Object.entries(meta)) {
       try {
         obj[key] = value;
       } catch (_unused) {
@@ -508,7 +485,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): dom/data.js
+   * Bootstrap (v5.3.0-alpha1): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -556,7 +533,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): dom/manipulator.js
+   * Bootstrap (v5.3.0-alpha1): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -613,7 +590,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/config.js
+   * Bootstrap (v5.3.0-alpha1): util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -653,8 +630,7 @@
       };
     }
     _typeCheckConfig(config, configTypes = this.constructor.DefaultType) {
-      for (const property of Object.keys(configTypes)) {
-        const expectedTypes = configTypes[property];
+      for (const [property, expectedTypes] of Object.entries(configTypes)) {
         const value = config[property];
         const valueType = isElement$1(value) ? 'element' : toType(value);
         if (!new RegExp(expectedTypes).test(valueType)) {
@@ -666,7 +642,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): base-component.js
+   * Bootstrap (v5.3.0-alpha1): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -675,7 +651,7 @@
    * Constants
    */
 
-  const VERSION = '5.2.2';
+  const VERSION = '5.3.0-alpha1';
 
   /**
    * Class definition
@@ -734,7 +710,95 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/component-functions.js
+   * Bootstrap (v5.3.0-alpha1): dom/selector-engine.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  const getSelector = element => {
+    let selector = element.getAttribute('data-bs-target');
+    if (!selector || selector === '#') {
+      let hrefAttribute = element.getAttribute('href');
+
+      // The only valid content that could double as a selector are IDs or classes,
+      // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
+      // `document.querySelector` will rightfully complain it is invalid.
+      // See https://github.com/twbs/bootstrap/issues/32273
+      if (!hrefAttribute || !hrefAttribute.includes('#') && !hrefAttribute.startsWith('.')) {
+        return null;
+      }
+
+      // Just in case some CMS puts out a full URL with the anchor appended
+      if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
+        hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
+      }
+      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
+    }
+    return parseSelector(selector);
+  };
+  const SelectorEngine = {
+    find(selector, element = document.documentElement) {
+      return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
+    },
+    findOne(selector, element = document.documentElement) {
+      return Element.prototype.querySelector.call(element, selector);
+    },
+    children(element, selector) {
+      return [].concat(...element.children).filter(child => child.matches(selector));
+    },
+    parents(element, selector) {
+      const parents = [];
+      let ancestor = element.parentNode.closest(selector);
+      while (ancestor) {
+        parents.push(ancestor);
+        ancestor = ancestor.parentNode.closest(selector);
+      }
+      return parents;
+    },
+    prev(element, selector) {
+      let previous = element.previousElementSibling;
+      while (previous) {
+        if (previous.matches(selector)) {
+          return [previous];
+        }
+        previous = previous.previousElementSibling;
+      }
+      return [];
+    },
+    // TODO: this is now unused; remove later along with prev()
+    next(element, selector) {
+      let next = element.nextElementSibling;
+      while (next) {
+        if (next.matches(selector)) {
+          return [next];
+        }
+        next = next.nextElementSibling;
+      }
+      return [];
+    },
+    focusableChildren(element) {
+      const focusables = ['a', 'button', 'input', 'textarea', 'select', 'details', '[tabindex]', '[contenteditable="true"]'].map(selector => `${selector}:not([tabindex^="-"])`).join(',');
+      return this.find(focusables, element).filter(el => !isDisabled(el) && isVisible(el));
+    },
+    getSelectorFromElement(element) {
+      const selector = getSelector(element);
+      if (selector) {
+        return SelectorEngine.findOne(selector) ? selector : null;
+      }
+      return null;
+    },
+    getElementFromSelector(element) {
+      const selector = getSelector(element);
+      return selector ? SelectorEngine.findOne(selector) : null;
+    },
+    getMultipleElementsFromSelector(element) {
+      const selector = getSelector(element);
+      return selector ? SelectorEngine.find(selector) : [];
+    }
+  };
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.3.0-alpha1): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -748,7 +812,7 @@
       if (isDisabled(this)) {
         return;
       }
-      const target = getElementFromSelector(this) || this.closest(`.${name}`);
+      const target = SelectorEngine.getElementFromSelector(this) || this.closest(`.${name}`);
       const instance = component.getOrCreateInstance(target);
 
       // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
@@ -758,7 +822,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): alert.js
+   * Bootstrap (v5.3.0-alpha1): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -832,7 +896,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): button.js
+   * Bootstrap (v5.3.0-alpha1): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -895,64 +959,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): dom/selector-engine.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
-   * Constants
-   */
-
-  const SelectorEngine = {
-    find(selector, element = document.documentElement) {
-      return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
-    },
-    findOne(selector, element = document.documentElement) {
-      return Element.prototype.querySelector.call(element, selector);
-    },
-    children(element, selector) {
-      return [].concat(...element.children).filter(child => child.matches(selector));
-    },
-    parents(element, selector) {
-      const parents = [];
-      let ancestor = element.parentNode.closest(selector);
-      while (ancestor) {
-        parents.push(ancestor);
-        ancestor = ancestor.parentNode.closest(selector);
-      }
-      return parents;
-    },
-    prev(element, selector) {
-      let previous = element.previousElementSibling;
-      while (previous) {
-        if (previous.matches(selector)) {
-          return [previous];
-        }
-        previous = previous.previousElementSibling;
-      }
-      return [];
-    },
-    // TODO: this is now unused; remove later along with prev()
-    next(element, selector) {
-      let next = element.nextElementSibling;
-      while (next) {
-        if (next.matches(selector)) {
-          return [next];
-        }
-        next = next.nextElementSibling;
-      }
-      return [];
-    },
-    focusableChildren(element) {
-      const focusables = ['a', 'button', 'input', 'textarea', 'select', 'details', '[tabindex]', '[contenteditable="true"]'].map(selector => `${selector}:not([tabindex^="-"])`).join(',');
-      return this.find(focusables, element).filter(el => !isDisabled(el) && isVisible(el));
-    }
-  };
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/swipe.js
+   * Bootstrap (v5.3.0-alpha1): util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1071,7 +1078,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): carousel.js
+   * Bootstrap (v5.3.0-alpha1): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1551,7 +1558,7 @@
    */
 
   EventHandler.on(document, EVENT_CLICK_DATA_API$6, SELECTOR_DATA_SLIDE, function (event) {
-    const target = getElementFromSelector(this);
+    const target = SelectorEngine.getElementFromSelector(this);
     if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
       return;
     }
@@ -1588,7 +1595,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): collapse.js
+   * Bootstrap (v5.3.0-alpha1): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1636,7 +1643,7 @@
       this._triggerArray = [];
       const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$4);
       for (const elem of toggleList) {
-        const selector = getSelectorFromElement(elem);
+        const selector = SelectorEngine.getSelectorFromElement(elem);
         const filterElement = SelectorEngine.find(selector).filter(foundElement => foundElement === this._element);
         if (selector !== null && filterElement.length) {
           this._triggerArray.push(elem);
@@ -1731,7 +1738,7 @@
 
         // Boosted mod: Change the moment of the appliance of .collapsed
         for (const trigger of this._triggerArray) {
-          const element = getElementFromSelector(trigger);
+          const element = SelectorEngine.getElementFromSelector(trigger);
           if (element && !this._isShown(element)) {
             this._addAriaAndCollapsedClass([trigger], false);
           }
@@ -1762,7 +1769,7 @@
       }
       const children = this._getFirstLevelChildren(SELECTOR_DATA_TOGGLE$4);
       for (const element of children) {
-        const selected = getElementFromSelector(element);
+        const selected = SelectorEngine.getElementFromSelector(element);
         if (selected) {
           this._addAriaAndCollapsedClass([element], this._isShown(selected));
         }
@@ -1810,9 +1817,7 @@
     if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
       event.preventDefault();
     }
-    const selector = getSelectorFromElement(this);
-    const selectorElements = SelectorEngine.find(selector);
-    for (const element of selectorElements) {
+    for (const element of SelectorEngine.getMultipleElementsFromSelector(this)) {
       Collapse.getOrCreateInstance(element, {
         toggle: false
       }).toggle();
@@ -3673,7 +3678,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): dropdown.js
+   * Bootstrap (v5.3.0-alpha1): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3723,7 +3728,8 @@
     autoClose: true,
     boundary: 'clippingParents',
     display: 'dynamic',
-    offset: [0, 2],
+    offset: [0, 0],
+    // Boosted mod
     popperConfig: null,
     reference: 'toggle'
   };
@@ -3745,7 +3751,7 @@
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
-      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
+      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0] || SelectorEngine.findOne(SELECTOR_MENU, this._parent);
       this._inNavbar = this._detectNavbar();
     }
@@ -3927,7 +3933,7 @@
       }
       return {
         ...defaultBsPopperConfig,
-        ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
+        ...execute(this._config.popperConfig, [defaultBsPopperConfig])
       };
     }
     _selectMenuItem({
@@ -4001,7 +4007,7 @@
       }
       event.preventDefault();
 
-      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
+      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
       const instance = Dropdown.getOrCreateInstance(getToggleButton);
       if (isUpOrDownEvent) {
@@ -4040,7 +4046,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/scrollBar.js
+   * Bootstrap (v5.3.0-alpha1): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4137,7 +4143,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/backdrop.js
+   * Bootstrap (v5.3.0-alpha1): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4261,7 +4267,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/focustrap.js
+   * Bootstrap (v5.3.0-alpha1): util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4359,7 +4365,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): modal.js
+   * Bootstrap (v5.3.0-alpha1): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4631,7 +4637,7 @@
    */
 
   EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$2, function (event) {
-    const target = getElementFromSelector(this);
+    const target = SelectorEngine.getElementFromSelector(this);
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
@@ -4665,7 +4671,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): offcanvas.js
+   * Bootstrap (v5.3.0-alpha1): offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4851,7 +4857,7 @@
    */
 
   EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$1, function (event) {
-    const target = getElementFromSelector(this);
+    const target = SelectorEngine.getElementFromSelector(this);
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
@@ -4895,7 +4901,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.2): orange-navbar.js
+   * Boosted (v5.3.0-alpha1): orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4974,7 +4980,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/sanitizer.js
+   * Bootstrap (v5.3.0-alpha1): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5069,7 +5075,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/template-factory.js
+   * Bootstrap (v5.3.0-alpha1): util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5190,7 +5196,7 @@
       return this._config.sanitize ? sanitizeHtml(arg, this._config.allowList, this._config.sanitizeFn) : arg;
     }
     _resolvePossibleFunction(arg) {
-      return typeof arg === 'function' ? arg(this) : arg;
+      return execute(arg, [this]);
     }
     _putElementInTemplate(element, templateElement) {
       if (this._config.html) {
@@ -5204,7 +5210,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): tooltip.js
+   * Bootstrap (v5.3.0-alpha1): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5344,9 +5350,6 @@
     dispose() {
       clearTimeout(this._timeout);
       EventHandler.off(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
-      if (this.tip) {
-        this.tip.remove();
-      }
       if (this._element.getAttribute('data-bs-original-title')) {
         this._element.setAttribute('title', this._element.getAttribute('data-bs-original-title'));
       }
@@ -5368,10 +5371,7 @@
       }
 
       // todo v6 remove this OR make it optional
-      if (this.tip) {
-        this.tip.remove();
-        this.tip = null;
-      }
+      this._disposePopper();
       const tip = this._getTipElement();
       this._element.setAttribute('aria-describedby', tip.getAttribute('id'));
       const {
@@ -5381,11 +5381,7 @@
         container.append(tip);
         EventHandler.trigger(this._element, this.constructor.eventName(EVENT_INSERTED));
       }
-      if (this._popper) {
-        this._popper.update();
-      } else {
-        this._popper = this._createPopper(tip);
-      }
+      this._popper = this._createPopper(tip);
       tip.classList.add(CLASS_NAME_SHOW$2);
 
       // If this is a touch-enabled device we add extra
@@ -5434,11 +5430,10 @@
           return;
         }
         if (!this._isHovered) {
-          tip.remove();
+          this._disposePopper();
         }
         this._element.removeAttribute('aria-describedby');
         EventHandler.trigger(this._element, this.constructor.eventName(EVENT_HIDDEN$2));
-        this._disposePopper();
       };
       this._queueCallback(complete, this.tip, this._isAnimated());
     }
@@ -5516,7 +5511,7 @@
       return this.tip && this.tip.classList.contains(CLASS_NAME_SHOW$2);
     }
     _createPopper(tip) {
-      const placement = typeof this._config.placement === 'function' ? this._config.placement.call(this, tip, this._element) : this._config.placement;
+      const placement = execute(this._config.placement, [this, tip, this._element]);
       const attachment = AttachmentMap[placement.toUpperCase()];
       return createPopper(this._element, tip, this._getPopperConfig(attachment));
     }
@@ -5533,7 +5528,7 @@
       return offset;
     }
     _resolvePossibleFunction(arg) {
-      return typeof arg === 'function' ? arg.call(this._element) : arg;
+      return execute(arg, [this._element]);
     }
     _getPopperConfig(attachment) {
       const defaultBsPopperConfig = {
@@ -5571,7 +5566,7 @@
       };
       return {
         ...defaultBsPopperConfig,
-        ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
+        ...execute(this._config.popperConfig, [defaultBsPopperConfig])
       };
     }
     _setListeners() {
@@ -5679,9 +5674,9 @@
     }
     _getDelegateConfig() {
       const config = {};
-      for (const key in this._config) {
-        if (this.constructor.Default[key] !== this._config[key]) {
-          config[key] = this._config[key];
+      for (const [key, value] of Object.entries(this._config)) {
+        if (this.constructor.Default[key] !== value) {
+          config[key] = value;
         }
       }
       config.selector = false;
@@ -5696,6 +5691,10 @@
       if (this._popper) {
         this._popper.destroy();
         this._popper = null;
+      }
+      if (this.tip) {
+        this.tip.remove();
+        this.tip = null;
       }
     }
 
@@ -5722,7 +5721,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): popover.js
+   * Bootstrap (v5.3.0-alpha1): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5802,7 +5801,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.2): quantity-selector.js
+   * Boosted (v5.3.0-alpha1): quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5926,7 +5925,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): scrollspy.js
+   * Bootstrap (v5.3.0-alpha1): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6185,7 +6184,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): tab.js
+   * Bootstrap (v5.3.0-alpha1): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6275,7 +6274,7 @@
         return;
       }
       element.classList.add(CLASS_NAME_ACTIVE);
-      this._activate(getElementFromSelector(element)); // Search and activate/show the proper section
+      this._activate(SelectorEngine.getElementFromSelector(element)); // Search and activate/show the proper section
 
       const complete = () => {
         if (element.getAttribute('role') !== 'tab') {
@@ -6297,7 +6296,7 @@
       }
       element.classList.remove(CLASS_NAME_ACTIVE);
       element.blur();
-      this._deactivate(getElementFromSelector(element)); // Search and deactivate the shown section too
+      this._deactivate(SelectorEngine.getElementFromSelector(element)); // Search and deactivate the shown section too
 
       const complete = () => {
         if (element.getAttribute('role') !== 'tab') {
@@ -6358,7 +6357,7 @@
       this._setInitialAttributesOnTargetPanel(child);
     }
     _setInitialAttributesOnTargetPanel(child) {
-      const target = getElementFromSelector(child);
+      const target = SelectorEngine.getElementFromSelector(child);
       if (!target) {
         return;
       }
@@ -6446,7 +6445,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): toast.js
+   * Bootstrap (v5.3.0-alpha1): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6941,7 +6940,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): index.umd.js
+   * Bootstrap (v5.3.0-alpha1): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6955,6 +6954,7 @@
     Modal,
     Offcanvas,
     OrangeNavbar,
+    // Boosted mod
     Popover,
     QuantitySelector,
     // Boosted mod

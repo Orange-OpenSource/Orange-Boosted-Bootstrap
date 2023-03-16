@@ -10,7 +10,7 @@
   @include rfs($btn-font-size, --#{$prefix}btn-font-size);
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   --#{$prefix}btn-line-height: #{$btn-line-height};
-  --#{$prefix}btn-color: #{$body-color};
+  --#{$prefix}btn-color: #{$btn-color};
   --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // Boosted mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
@@ -39,7 +39,6 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  outline-offset: map-get($spacers, 1); // Boosted mod
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
@@ -54,25 +53,11 @@
 
   // Boosted mod: no .btn-check + &:hover
 
-  &:focus { // Boosted mod: no &:focus-visible to avoid issue in button tags
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    // Boosted mod: no outline: 0;
-    outline-color: var(--#{$prefix}btn-hover-border-color); // Boosted mod
-    outline-offset: $outline-width; // Boosted mod
-    &[data-focus-visible-added] { // Boosted mod: added `&[data-focus-visible-added]`
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
-  }
+  // Boosted mod: no &:focus-visible to avoid issue in button tags
 
-  // Boosted mod: no `.btn-check:focus-visible + &` rule to remove the outline
+  // Boosted mod: no .btn-check:focus-visible + &
 
+  // Boosted mod: custom styles for .btn-check
   // Boosted mod: simpler rule
   &:active,
   &.active,
@@ -82,8 +67,8 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
-    outline-color: var(--#{$prefix}btn-active-border-color); // Boosted mod
     // Boosted mod: no box shadow modification for the active state
+    // Boosted mod: no &:focus-visible
   }
 
   &:disabled,
@@ -154,7 +139,7 @@
 
 // Boosted mod: no .btn-outline
 
-// Boosted mod: border-only on :hover, :focus and :active
+// Boosted mod: border-only on :hover and :active
 .btn-no-outline {
   --#{$prefix}btn-hover-border-color: #{$gray-500};
   --#{$prefix}btn-active-color: #{$accessible-orange};
@@ -189,7 +174,7 @@
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: none;
+  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
   // Boosted mod: no redefinition of --#{$prefix}btn-focus-shadow-rgb
 
   text-decoration: $link-decoration;
@@ -202,18 +187,9 @@
     text-decoration: $link-hover-decoration;
   }
 
-  // Boosted mod
-  &:focus-visible {
-    &:not(:hover) {
-      color: var(--#{$prefix}btn-color);
-      outline-color: var(--#{$prefix}btn-color);
-    }
+  // Boosted mod: no focus-visible color change
 
-    &:hover {
-      outline-color: var(--#{$prefix}btn-active-color);
-    }
-  }
-
+  // Boosted mod: btn inverse
   &.btn-inverse {
     --#{$prefix}btn-disabled-color: #{$gray-700};
   }
@@ -256,10 +232,6 @@
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$boosted-prefix}network-logo));
-
-  &:focus {
-    outline-color: var(--#{$boosted-prefix}network-color, $black);
-  }
 
   &.btn-inverse {
     --#{$prefix}btn-color: #{$white};

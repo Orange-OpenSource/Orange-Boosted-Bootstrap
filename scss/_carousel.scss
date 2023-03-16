@@ -102,12 +102,12 @@
   background: none;
   border: 0;
   outline: 0; // Boosted mod
+  box-shadow: none; // Boosted mod
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
-  // Hover/focus state
-  &:hover,
-  &:focus {
+  // Hover state - Boosted mod: no focus state
+  &:hover {
     --#{$boosted-prefix}control-bg: #{color-contrast($carousel-indicator-active-bg)}; // Boosted mod
     color: color-contrast($carousel-control-color);
     text-decoration: none;
@@ -126,16 +126,15 @@
     color: $carousel-control-color;
   }
 
+  // scss-docs-start focus-visible-carousel
   &:focus {
     &[data-focus-visible-added] {
-      // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-      & > span {
-        outline: map-get($border-widths, 3) solid $brand-orange;
-        outline-offset: $outline-offset;
-        box-shadow: 0 0 0 $outline-offset $white;
+      > span {
+        @include focus-visible();
       }
     }
   }
+  // scss-docs-end focus-visible-carousel
   // End mod
 }
 
@@ -188,8 +187,7 @@
   display: flex;
   justify-content: center;
   padding: $carousel-indicators-padding-y 0; // Boosted mod
-  margin-bottom: $spacer; // Boosted mod
-  list-style: none;
+  margin-bottom: $carousel-indicators-margin-bottom; // Boosted mod
   background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
   transform: translateX(-50%); // Boosted mod
   @include border-radius($spacer, $spacer); // Boosted mod
@@ -228,9 +226,6 @@
 
     &:focus {
       &[data-focus-visible-added] {
-        outline: map-get($border-widths, 3) solid $brand-orange;
-        outline-offset: $outline-offset;
-        box-shadow: 0 0 0 $outline-offset $white;
         transform: none;
       }
     }
@@ -306,8 +301,47 @@
 }
 
 /* rtl:end:ignore */
-// End mod
 
+.carousel-action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+
+  .carousel-control-play-pause {
+    margin-bottom: $carousel-indicators-margin-bottom;
+    background: rgba($carousel-indicator-active-bg, .5);
+    border: 0;
+    @include border-radius($spacer, $spacer);
+
+    &.pause {
+      @include button-icon($carousel-control-pause-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+    }
+
+    &.play {
+      @include button-icon($carousel-control-play-icon, $carousel-control-pause-button-size, $size: $carousel-control-pause-icon-size, $pseudo: "after");
+
+      &::after {
+        transform: translateX(1px);
+      }
+    }
+
+    &:hover {
+      color: color-contrast($carousel-control-color);
+      background-color: #{color-contrast($carousel-indicator-active-bg)};
+      opacity: $carousel-control-hover-opacity;
+    }
+  }
+
+  .carousel-indicators {
+    position: initial;
+    margin-left: $carousel-control-pause-indicators-spacing;
+    transform: none;
+  }
+}
+// End mod
 
 // Optional captions
 //
@@ -323,15 +357,5 @@
   background-color: color-contrast($carousel-caption-color); // Boosted mod: ensure contrast
 }
 
-// Boosted mod: no dark carousel
+// Boosted mod: no dark carousel nor carousel in dark mode since Boosted doesn't have any dark mode for now
 
-// Boosted mod: play/pause button
-.carousel-control-play-pause {
-  &.pause {
-    @include button-icon($carousel-control-pause-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
-  }
-  &.play {
-    @include button-icon($carousel-control-play-icon, $size: $carousel-control-pause-icon-size, $pseudo: "after");
-  }
-}
-// End mod

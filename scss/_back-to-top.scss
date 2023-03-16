@@ -66,8 +66,7 @@
       background-color: var(--#{$prefix}back-to-top-title-bg-color);
     }
 
-    &[data-#{$prefix}label]:hover::before,
-    &[data-#{$prefix}label]:focus::before {
+    &[data-#{$prefix}label]:hover::before {
       text-decoration: var(--#{$prefix}back-to-top-title-active-decoration);
     }
   }

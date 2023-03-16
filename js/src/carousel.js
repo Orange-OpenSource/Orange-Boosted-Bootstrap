@@ -1,24 +1,23 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.2): carousel.js
+ * Bootstrap (v5.3.0-alpha1): carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 import {
   defineJQueryPlugin,
-  getElementFromSelector,
   getNextActiveElement,
   isRTL,
   isVisible,
   reflow,
   triggerTransitionEnd
-} from './util/index'
-import EventHandler from './dom/event-handler'
-import Manipulator from './dom/manipulator'
-import SelectorEngine from './dom/selector-engine'
-import Swipe from './util/swipe'
-import BaseComponent from './base-component'
+} from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import Manipulator from './dom/manipulator.js'
+import SelectorEngine from './dom/selector-engine.js'
+import Swipe from './util/swipe.js'
+import BaseComponent from './base-component.js'
 
 /**
  * Constants
@@ -161,7 +160,7 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+    // Boosted mod: if a play-pause button is present, set the button to play
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
       this._playPauseButton.classList.remove('pause')
       this._playPauseButton.classList.add('play')
@@ -192,7 +191,7 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+    // Boosted mod: if a play-pause button is present, reset the button to pause
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
       this._playPauseButton.classList.remove('play')
       this._playPauseButton.classList.add('pause')
@@ -579,7 +578,7 @@ class Carousel extends BaseComponent {
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (event) {
-  const target = getElementFromSelector(this)
+  const target = SelectorEngine.getElementFromSelector(this)
 
   if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
     return

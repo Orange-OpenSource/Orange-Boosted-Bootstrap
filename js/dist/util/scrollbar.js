@@ -1,27 +1,22 @@
 /*!
-  * Boosted v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap scrollbar.js v5.2.2 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap scrollbar.js v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/selector-engine'), require('../dom/manipulator'), require('./index')) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/selector-engine.js'), require('../dom/manipulator.js'), require('./index.js')) :
   typeof define === 'function' && define.amd ? define(['../dom/selector-engine', '../dom/manipulator', './index'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Scrollbar = factory(global.SelectorEngine, global.Manipulator, global.Index));
-})(this, (function (SelectorEngine, Manipulator, index) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+})(this, (function (SelectorEngine, Manipulator, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): util/scrollBar.js
+   * Bootstrap (v5.3.0-alpha1): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -89,28 +84,28 @@
     _saveInitialAttribute(element, styleProperty) {
       const actualValue = element.style.getPropertyValue(styleProperty);
       if (actualValue) {
-        Manipulator__default.default.setDataAttribute(element, styleProperty, actualValue);
+        Manipulator.setDataAttribute(element, styleProperty, actualValue);
       }
     }
     _resetElementAttributes(selector, styleProperty) {
       const manipulationCallBack = element => {
-        const value = Manipulator__default.default.getDataAttribute(element, styleProperty);
+        const value = Manipulator.getDataAttribute(element, styleProperty);
         // We only want to remove the property if the value is `null`; the value can also be zero
         if (value === null) {
           element.style.removeProperty(styleProperty);
           return;
         }
-        Manipulator__default.default.removeDataAttribute(element, styleProperty);
+        Manipulator.removeDataAttribute(element, styleProperty);
         element.style.setProperty(styleProperty, value);
       };
       this._applyManipulationCallback(selector, manipulationCallBack);
     }
     _applyManipulationCallback(selector, callBack) {
-      if (index.isElement(selector)) {
+      if (index_js.isElement(selector)) {
         callBack(selector);
         return;
       }
-      for (const sel of SelectorEngine__default.default.find(selector, this._element)) {
+      for (const sel of SelectorEngine.find(selector, this._element)) {
         callBack(sel);
       }
     }
