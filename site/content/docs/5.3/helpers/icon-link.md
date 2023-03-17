@@ -4,7 +4,6 @@ title: Icon link
 description: Quickly create stylized hyperlinks with Solaris icons.
 group: helpers
 aliases:
-  - "/docs/icon-link/"
   - "/docs/helpers/icon-link/"
 toc: true
 added: 5.3
