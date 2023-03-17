@@ -89,6 +89,27 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Orange footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
 
+- **Orange navbar**
+  - <span class="badge bg-danger">Warning</span> For usability, the way to manage spacing in the navbar has been changed. You may not need the margin utilities on `.navbar-brand` and `.navbar-collapse` anymore. And depending on the alignment of the items, you may need to add some on `.navbar-nav`.
+    <details class="mb-2">
+      <summary>More info</summary>
+
+      ```diff
+      - <div class="navbar-brand me-auto (me-lg-4)">...</div>
+      + <div class="navbar-brand">...</div>
+      ```
+
+      ```diff
+      - <div class="navbar-collapse collapse (me-lg-auto) (me-lg-3)">...</div>
+      + <div class="navbar-collapse collapse">...</div>
+      ```
+
+      ```diff
+      - <div class="navbar-nav">...</div>
+      + <div class="navbar-nav (ms-auto)">...</div>
+      ```
+    </details>
+
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
 

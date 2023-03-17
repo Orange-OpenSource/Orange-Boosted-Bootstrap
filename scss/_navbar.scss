@@ -242,7 +242,7 @@
 //
 
 .navbar-text {
-  // Boosted mod: no padding-top
+  padding-top: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   padding-bottom: var(--#{$prefix}navbar-nav-link-padding-y); // Boosted mod
   color: var(--#{$prefix}navbar-color);
 
