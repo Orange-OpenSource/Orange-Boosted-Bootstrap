@@ -906,7 +906,7 @@ $table-striped-columns-order:           even !default;
 
 $table-group-separator-color:           currentcolor !default;
 
-$table-caption-color:                   var(--#{$boosted-prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod
+$table-caption-color:                   var(--#{$boosted-prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
 
@@ -1659,7 +1659,7 @@ $card-inner-border-radius:          subtract($card-border-radius, $card-border-w
 $card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       var(--#{$prefix}body-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
-$card-cap-color:                    var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `$white`
+$card-cap-color:                    var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `null`
 $card-cap-font-weight:              $font-weight-bold !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
