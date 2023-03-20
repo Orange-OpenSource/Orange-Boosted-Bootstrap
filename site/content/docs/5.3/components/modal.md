@@ -89,7 +89,7 @@ Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag
   <div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        {{< placeholder width="100%" height="260" class="modal-img" text="Image cap" >}}
+        {{< placeholder width="100%" height="260" class="modal-img" text="icon" >}}
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
