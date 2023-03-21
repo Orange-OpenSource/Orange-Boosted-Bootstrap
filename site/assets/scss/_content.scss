@@ -4,24 +4,6 @@
 
 .bd-content {
   // Offset content from fixed navbar when jumping to headings
-  > :target {
-    padding-top: 7.5rem;
-    margin-top: -5.5rem;
-
-    @include media-breakpoint-up(md) {
-      .header-minimized ~ .bd-gutter & {
-        padding-top: 8.5rem;
-        margin-top: -6.5rem;
-      }
-    }
-
-    @include media-breakpoint-up(lg) {
-      .header-minimized ~ .bd-gutter & {
-        padding-top: 5.5rem;
-        margin-top: -3.5rem;
-      }
-    }
-  }
 
   > h2,
   > h3,

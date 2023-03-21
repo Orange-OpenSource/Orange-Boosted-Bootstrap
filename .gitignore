@@ -35,9 +35,6 @@ Thumbs.db
 # Local Netlify folder
 .netlify
 
-# For proper npm login
-.npmrc
-
 # Komodo
 .komodotools
 *.komodoproject
