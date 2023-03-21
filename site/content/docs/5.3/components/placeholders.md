@@ -19,7 +19,7 @@ In the example below, we take a typical card component and recreate it with plac
 
 <div class="bd-example bd-example-placeholder-cards d-flex justify-content-around">
 <div class="card">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#20c997" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="icon" background="#20c997" >}}
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -28,7 +28,7 @@ In the example below, we take a typical card component and recreate it with plac
 </div>
 
 <div class="card" aria-hidden="true">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#666" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="icon" background="#666" >}}
   <div class="card-body">
     <div class="h5 card-title placeholder-glow">
       <span class="placeholder col-6"></span>
@@ -40,7 +40,7 @@ In the example below, we take a typical card component and recreate it with plac
       <span class="placeholder col-6"></span>
       <span class="placeholder col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a class="btn btn-primary disabled placeholder col-6"></a>
   </div>
 </div>
 </div>
@@ -69,7 +69,7 @@ In the example below, we take a typical card component and recreate it with plac
       <span class="placeholder col-6"></span>
       <span class="placeholder col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a class="btn btn-primary disabled placeholder col-6"></a>
   </div>
 </div>
 ```
@@ -85,7 +85,7 @@ We apply additional styling to `.btn`s via `::before` to ensure the `height` is 
   <span class="placeholder col-6"></span>
 </p>
 
-<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
+<a class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
 {{< /example >}}
 
 {{< callout info >}}
@@ -140,8 +140,8 @@ Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better c
 </p>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 {{< scss-docs name="placeholders" file="scss/_variables.scss" >}}

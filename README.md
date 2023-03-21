@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/5.3/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
+    <img src="https://boosted.orange.com/docs/5.2/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
   </a>
 </p>
 
@@ -36,11 +36,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.3.0-alpha1.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.2.3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.3.0-alpha1`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.3.0-alpha1`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.3.0-alpha1`
+- Install with [npm](https://www.npmjs.com/): `npm install boosted@v5.2.3`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@v5.2.3`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.2.3`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://boosted.orange.com/docs/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
@@ -131,7 +131,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/). Working on our search? Be sure to set `debug: true` in `site/assets/js/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
 ### Running documentation locally
 
@@ -205,7 +205,7 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2022 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Code and documentation copyright 2011-2023 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
-Boosted code and documentation copyright 2015-2022 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Boosted code and documentation copyright 2015-2023 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 

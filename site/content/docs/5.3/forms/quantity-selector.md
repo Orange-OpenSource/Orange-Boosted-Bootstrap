@@ -65,9 +65,9 @@ Add the `disabled` boolean attribute on quantity selector elements to give it a 
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 For more details, please have a look at the exhaustive list of available variables:
 

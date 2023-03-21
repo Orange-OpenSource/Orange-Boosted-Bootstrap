@@ -202,15 +202,13 @@
     --#{$prefix}list-group-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}#{state}-text)`
     --#{$prefix}list-group-bg: #{$value}; // Boosted mod: instead of `var(--#{$prefix}#{$state}-bg-subtle)`
     // Boosted mod: no `--#{$prefix}list-group-border-color`
-
-    &.list-group-item-action {
-      &:hover { // Boosted mod: no `&:focus`
-        --#{$prefix}list-group-action-hover-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`;
-        --#{$prefix}list-group-action-hover-bg: #{if(color-contrast($value) == $white, shade-color($value, 10%), tint-color($value, 10%))}; // Boosted mod: instead of `var(--#{$prefix}#{state}-border-subtle)`;
-      }
-
-      // Boosted mod: no `&:active`
-    }
+    --#{$prefix}list-group-action-hover-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`;
+    --#{$prefix}list-group-action-hover-bg: #{if(color-contrast($value) == $white, shade-color($value, 10%), tint-color($value, 10%))}; // Boosted mod: instead of `var(--#{$prefix}#{state}-border-subtle)`;
+    // Boosted mod: no `--#{$prefix}list-group-action-active-color`
+    // Boosted mod: no `--#{$prefix}list-group-action-active-bg`
+    // Boosted mod: no `--#{$prefix}list-group-active-color`
+    // Boosted mod: no `--#{$prefix}list-group-active-bg`
+    // Boosted mod: no `--#{$prefix}list-group-active-border-color`
   }
 }
 // scss-docs-end list-group-modifiers

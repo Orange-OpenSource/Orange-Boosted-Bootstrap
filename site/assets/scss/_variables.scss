@@ -1,5 +1,3 @@
-// stylelint-disable scss/dollar-variable-default
-
 // Local docs variables
 $bd-purple:        $primary; // Boosted mod
 $bd-violet:        lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
@@ -18,15 +16,23 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-accent-rgb
   --bd-pink-rgb: #{to-rgb($pink-500)};
   --bd-teal-rgb: #{to-rgb($teal-500)};
-
   // Boosted mod: no --bd-violet-bg
+  --bd-toc-color: var(--bs-emphasis-color); // Boosted mod: instead of `var(--bd-violet)`
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
+  // Boosted mod: no --bd-callout-code-color
+  --bd-pre-bg: var(--bs-tertiary-bg);
+  --bd-toc-active-border-left-color: var(--bd-purple); // Boosted mod
 }
 
 @include color-mode(dark, true) {
   --bd-violet: #{mix($bd-violet, $white, 75%)};
   // Boosted mod: no --bd-violet-bg
+  // Boosted mod: no --bd-toc-color
   // Boosted mod: no --bd-sidebar-link-bg
+  // Boosted mod: no --bd-callout-link
+  // Boosted mod: no --bd-callout-code-color
+  --bd-pre-bg: #{adjust-color($gray-900, $lightness: -2.5%)}; // stylelint-disable-line scss/at-function-named-arguments
 }
 
 // Boosted mod

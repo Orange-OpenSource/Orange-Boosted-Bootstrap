@@ -1,10 +1,6 @@
-// stylelint-disable selector-max-type
+// stylelint-disable selector-max-type, selector-no-qualifying-type
 
-.bd-toc { // Boosted mod
-  @include media-breakpoint-down(lg) {
-    border: 0 !important; // stylelint-disable-line declaration-no-important
-  }
-
+.bd-toc {
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: $offset-top; // Boosted mod
@@ -24,19 +20,25 @@
 
       ul {
         padding-left: 1rem;
-        margin-top: .25rem;
+        margin-left: -.5rem; // Boosted mod
       }
     }
 
-    li {
-      margin-bottom: .25rem;
-    }
-
     a {
+      display: block;
+      padding: .125rem 0 .125rem .75rem;
       color: inherit;
+      text-decoration: none;
+      border-left: .125rem solid transparent;
 
-      &:not(:hover) {
-        text-decoration: none;
+      &:hover,
+      &.active {
+        color: var(--bd-toc-color);
+        border-left-color: var(--bd-toc-active-border-left-color); // Boosted mod: instead of `--bd-toc-color`
+      }
+
+      &.active {
+        font-weight: 700; // Boosted mod: instead of `500`
       }
 
       code {
@@ -62,7 +64,7 @@
 .bd-toc-collapse {
   @include media-breakpoint-down(md) {
     nav {
-      padding: 1.25rem;
+      padding: 1.25rem 1.25rem 1.25rem 1rem;
       background-color: var(--bs-tertiary-bg);
       border: 1px solid var(--bs-border-color);
       @include border-radius(var(--bs-border-radius));

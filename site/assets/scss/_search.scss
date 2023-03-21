@@ -9,7 +9,7 @@
   // --docsearch-spacing
   // --docsearch-icon-stroke-width
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-muted-color: #{$text-muted};
+  --docsearch-muted-color: var(--bs-secondary-color);
   // --docsearch-container-background
   --docsearch-logo-color: #{$black};
   // --docsearch-modal-width
