@@ -124,7 +124,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
         </ul>
 
         <!-- Right navbar of the Supra bar -->
-        <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none">
+        <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
           <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
           <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
           <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>

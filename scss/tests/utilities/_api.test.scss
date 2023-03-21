@@ -1,5 +1,6 @@
 @import "../../functions";
 @import "../../variables";
+@import "../../variables-dark";
 @import "../../maps";
 @import "../../mixins";
 
@@ -26,9 +27,9 @@ $utilities: ();
 
     $grid-breakpoints: (
       xs: 0,
-      sm: 576px,
-      md: 768px
-    );
+      sm: 333px,
+      md: 666px
+    ) !global;
 
 
     @include assert() {
@@ -51,13 +52,13 @@ $utilities: ();
           font-size: 1.25rem !important;
         }
 
-        @media (min-width: 480px) { // Boosted mod: instead of 576px
+        @media (min-width: 333px) {
           .padding-sm-1rem {
             padding: 1rem !important;
           }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 666px) {
           .padding-md-1rem {
             padding: 1rem !important;
           }
