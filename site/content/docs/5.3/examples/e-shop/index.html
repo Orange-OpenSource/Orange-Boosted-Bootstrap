@@ -71,8 +71,11 @@ aliases:
 
 <div class="visually-hidden-focusable top-0 start-0 end-0 bg-dark">
   <nav class="container-xxl d-flex flex-wrap py-1" aria-label="Skip links">
-    <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to main content</a>
-    <a href="#" class="d-inline-flex p-2 ms-3 bg-dark">Skip to footer</a>
+    <a href="#title" class="d-inline-flex p-2 ms-3 bg-dark">Skip to main content</a>
+    <a href="#results-order" class="d-inline-flex p-2 ms-3 bg-dark">Skip to filter results</a>
+    <a href="#top-sales" class="d-inline-flex p-2 ms-3 bg-dark">Skip to top sales</a>
+    <a href="#advices" class="d-inline-flex p-2 ms-3 bg-dark">Skip to advices</a>
+    <a href="#footer" class="d-inline-flex p-2 ms-3 bg-dark">Skip to footer</a>
   </nav>
 </div>
 
@@ -140,7 +143,7 @@ aliases:
   </nav>
 </header>
 
-<nav class="container-xxl" aria-label="Breadcrumb ">
+<nav class="container-xxl" aria-label="Breadcrumb">
   <ol class="breadcrumb mb-0">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Shop</a></li>
@@ -149,7 +152,7 @@ aliases:
   </ol>
 </nav>
 
-<div class="bg-body title-bar mb-2 mb-md-3">
+<div class="bg-body title-bar mb-2 mb-md-3" id="title">
   <div class="container-xxl">
     <h1 class="display-1">Smartphones</h1>
   </div>
@@ -519,14 +522,14 @@ aliases:
       <div class="col-12 col-lg-9">
         <div class="d-flex justify-content-between gap-2 mb-4">
           <div class="dropdown flex-shrink-1" style="width: 146px;">
-            <button class="btn btn-secondary dropdown-toggle justify-content-between w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Newest
+            <button class="btn btn-secondary dropdown-toggle justify-content-between w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="results-order">
+              <span class="visually-hidden">Sorted by</span>Newest
             </button>
             <ul class="dropdown-menu">
-              <li><button class="dropdown-item active">Newest</button></li>
-              <li><button class="dropdown-item">Oldest</button></li>
-              <li><button class="dropdown-item">Cheapest</button></li>
-              <li><button class="dropdown-item">Most expensive</button></li>
+              <li><button class="dropdown-item active"><span class="visually-hidden">Sort by</span>Newest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Oldest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Cheapest</button></li>
+              <li><button class="dropdown-item"><span class="visually-hidden">Sort by</span>Most expensive</button></li>
             </ul>
           </div>
 
@@ -535,7 +538,7 @@ aliases:
               <svg class="me-1" width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#filter"/>
               </svg>
-              Filter
+              <span class="visually-hidden">Toggle</span>Filter
             </button>
 
             <form><div class="btn-group d-none d-md-flex ms-2" role="group">
@@ -1199,11 +1202,11 @@ aliases:
       </div>
     </div>
 
-    <h2 class="h1 mb-3 pt-4 pt-md-5">Top sales</h2>
+    <h2 class="h1 mb-3 pt-4 pt-md-5" id="top-sales">Top sales</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-4 pt-3">
       <div class="col">
         <div class="position-relative"><div class="row mt-md-3">
-        <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
+          <div class="col-3"><div class="ratio ratio-3x4">{{< placeholder width="100%" height="100" text="icon" >}}</div></div>
           <div class="col-7 col-md-5">
             <h3 class="mb-1 fs-4 fw-bold">xxxxxx xxxxxx</h3>
             <p class="mb-0">
@@ -1211,7 +1214,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">25 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1232,7 +1235,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1253,7 +1256,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">22 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1274,7 +1277,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">28 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1295,7 +1298,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1316,7 +1319,7 @@ aliases:
               <span class="fs-4 fw-bold text-primary">42 900 FCFA</span>
             </p>
           </div>
-          <div class="col-1 offset-1 offset-md-2">
+          <div class="d-flex col-2 offset-md-1 justify-content-end">
             <a href="#" class="stretched-link">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="#chevron-right"/>
@@ -1328,7 +1331,7 @@ aliases:
       </div>
     </div>
 
-    <h2 class="visually-hidden">Advices</h2>
+    <h2 class="visually-hidden" id="advices">Advices</h2>
     <div class="row gy-3">
       <div class="col-12 pt-3">
         <div class="row gx-0 bg-dark">
@@ -1450,7 +1453,7 @@ aliases:
   </div>
 </main>
 
-<footer class="footer bg-dark navbar-dark">
+<footer class="footer bg-dark navbar-dark" id="footer">
   <h2 class="visually-hidden">Sitemap &amp; information</h2>
   <div class="container-xxl footer-social">
     <h3 class="footer-heading me-md-3">Follow us</h3>

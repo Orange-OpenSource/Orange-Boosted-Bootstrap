@@ -59,6 +59,8 @@
 - category: Pages
   description: "Complete reusable pages that can be found in the Design Guidelines."
   examples:
+    - name: E-shop
+      description: "How to build an e-shop page with Boosted."
     - name: Form
       description: "How to build a form with Boosted."
 
