@@ -79,7 +79,7 @@ Each component then specifies its own visible focus style when needed, for examp
 #### Under a fixed header
 
 {{< callout warning >}}
-Know that using this feature might lead to unexpected scroll while tabbing inside the header.
+Know that using this feature might lead to unexpected scroll while tabbing inside the header. Prefer `scroll-margin-*` on focusable elements.
 {{< /callout >}}
 
 When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
