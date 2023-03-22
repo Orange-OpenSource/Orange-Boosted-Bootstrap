@@ -1,0 +1,8 @@
+img {
+  max-height: 400px;
+}
+
+iframe {
+  height: 60vw;
+  max-height: 75vh;
+}
