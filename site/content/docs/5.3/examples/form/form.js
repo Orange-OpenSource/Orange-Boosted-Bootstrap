@@ -18,7 +18,7 @@
         invalidItems[0].focus()
         // Add the id of the corresponding invalid message to each invalid field
         invalidItems.forEach(element => {
-          let valuesArray = [element.id + 'Label', element.id + 'Feedback'].join(' ')
+          const valuesArray = [element.id + 'Label', element.id + 'Feedback'].join(' ')
           element.setAttribute('aria-labelledby', valuesArray)
         })
         // Remove the id of the corresponding invalid message to each valid field
