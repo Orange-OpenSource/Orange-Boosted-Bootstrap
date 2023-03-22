@@ -1,24 +1,23 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-      day: tuesday
-      time: "12:00"
-      timezone: Europe/Athens
-    open-pull-requests-limit: 10
-    reviewers:
-      - julien-deramond
-    labels:
-      - dependencies
-      - v5
-    versioning-strategy: increase
-    rebase-strategy: disabled
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: weekly
       day: tuesday
       time: "12:00"
-      timezone: Europe/Athens
+      timezone: Europe/Paris
+  - package-ecosystem: npm
+    directory: "/"
+    reviewers:
+      - julien-deramond
+    labels:
+      - dependencies
+      - v5
+    schedule:
+      interval: weekly
+      day: tuesday
+      time: "12:00"
+      timezone: Europe/Paris
+    versioning-strategy: increase
+    rebase-strategy: disabled
