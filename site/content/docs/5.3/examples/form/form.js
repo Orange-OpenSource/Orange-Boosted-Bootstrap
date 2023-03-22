@@ -16,6 +16,16 @@
         // Focus on first error
         const invalidItems = form.querySelectorAll(':invalid')
         invalidItems[0].focus()
+        // Add the id of the corresponding invalid message to each invalid field
+        invalidItems.forEach(element => {
+          let valuesArray = [element.id + 'Label', element.id + 'Feedback'].join(' ')
+          element.setAttribute('aria-labelledby', valuesArray)
+        })
+        // Remove the id of the corresponding invalid message to each valid field
+        const validItems = form.querySelectorAll(':valid')
+        validItems.forEach(element => {
+          element.setAttribute('aria-labelledby', element.id + 'Label')
+        })
       }
 
       form.classList.add('was-validated')
