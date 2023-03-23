@@ -9,4 +9,9 @@ iframe {
 
 .store-badge {
   height: 2.5rem;
+  transition: transform .2s ease-in-out;
+}
+
+.store-badge:hover {
+  transform: translateY(-5px);
 }
