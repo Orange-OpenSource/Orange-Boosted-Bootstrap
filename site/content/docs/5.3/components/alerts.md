@@ -60,24 +60,30 @@ We use the following JavaScript to trigger our live alert demo:
 
 ```js
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type, typeVisuallyHidden) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    '   <span class="alert-icon">',
-    `      <span class="visually-hidden">${typeVisuallyHidden}</span>`,
-    '   </span>',
-    '   <p>',
-    `     ${message}`,
-    '   </p>',
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">',
-    '      <span class="visually-hidden">Close</span>',
-    '   </button>',
-    '</div>'
-  ].join('')
+function alert(message, type, typeVisuallyHidden) {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      '  <span class="alert-icon">',
+      `    <span class="visually-hidden">${typeVisuallyHidden}</span>`,
+      '  </span>',
+      `  <p>${message}</p>`,
+      '  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">',
+      '    <span class="visually-hidden">Close</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
 
   alertPlaceholder.append(wrapper)
+
+  // Create btn-close's tooltip after innerHTML has been modified
+  const tooltip = new boosted.Tooltip(wrapper.querySelector('.btn-close'))
+  // Hide tooltip when clicking on live alert's btn-close
+  wrapper.querySelectorAll('.btn-close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      tooltip.hide()
+    })
+  })
 }
 
 const alertTrigger = document.getElementById('liveAlertBtn')

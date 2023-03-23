@@ -74,17 +74,22 @@
   // Alerts
   // -------------------------------
   // Used in 'Show live toast' example in docs or StackBlitz
+
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() and a tooltip on btn-close
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-  const alertTrigger = document.getElementById('liveAlertBtn')
-
-  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert()
-
   function alert(message, type, typeVisuallyHidden) {
     const wrapper = document.createElement('div')
-    wrapper.innerHTML = `<div class="alert alert-${type} alert-dismissible" role="alert">
-        <span class="alert-icon"><span class="visually-hidden">${typeVisuallyHidden}</span></span><p>${message}</p>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-        <span class="visually-hidden">Close</span></button></div>`
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      '  <span class="alert-icon">',
+      `    <span class="visually-hidden">${typeVisuallyHidden}</span>`,
+      '  </span>',
+      `  <p>${message}</p>`,
+      '  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">',
+      '    <span class="visually-hidden">Close</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
 
     alertPlaceholder.append(wrapper)
 
@@ -98,6 +103,7 @@
     })
   }
 
+  const alertTrigger = document.getElementById('liveAlertBtn')
   if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
       alert('Nice, you triggered this alert message!', 'success', 'Success')
