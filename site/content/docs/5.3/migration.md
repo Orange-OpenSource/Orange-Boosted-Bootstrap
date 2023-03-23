@@ -131,7 +131,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Popovers**
-  - <span class="badge bg-warning">Warning</span> The paddings have been increased so it can have an impact on the existing design, please check this modification in your websites.
+  - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
 
 ### Contents
 
