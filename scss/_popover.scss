@@ -193,7 +193,7 @@
   /* rtl:remove */
   letter-spacing: unset; // Boosted mod
   background-color: var(--#{$prefix}popover-header-bg);
-  // Boosted mod: no border bottom
+  // Boosted mod: no `border-bottom`
   @include border-top-radius(var(--#{$prefix}popover-inner-border-radius));
 
   &:empty {

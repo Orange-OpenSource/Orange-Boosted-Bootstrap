@@ -1791,8 +1791,7 @@ $popover-arrow-height:              $popover-arrow-width * .5 !default;
 // scss-docs-end popover-variables
 
 // fusv-disable
-$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 for $popover-header-padding-top and $popover-header-padding-bottom
-// Deprecated in Boosted 5.2.0 for CSS variables
+$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
 $popover-arrow-color:               $popover-bg !default;
 $popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
 // fusv-enable

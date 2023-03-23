@@ -130,9 +130,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
-- **Popovers and tooltips**
-  - <span class="badge bg-warning">Warning</span> Popovers and tooltips have been redesigned according to UI Kit v5.
-  
+- **Popovers**
+  - <span class="badge bg-warning">Warning</span> The paddings have been increased so it can have an impact on the existing design, please check this modification in your websites.
+
 ### Contents
 
 - **Typography**
