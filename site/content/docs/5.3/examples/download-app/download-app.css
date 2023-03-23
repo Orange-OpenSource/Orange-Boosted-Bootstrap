@@ -6,3 +6,7 @@ iframe {
   height: 60vw;
   max-height: 75vh;
 }
+
+.store-badge {
+  height: 2.5rem;
+}
