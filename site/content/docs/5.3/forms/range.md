@@ -61,14 +61,23 @@ This requires extra JavaScript code.
   <label for="customRange4" class="form-label">Example range</label>
   <output id="customRange4ValueText" for="customRange4" class="fw-bold" aria-hidden="true"></output>
 </div>
-<input type="range" class="form-range" min="0" max="100" step="1" id="customRange4" onchange="updateLabelValue()">
+<input type="range" class="form-range" min="0" max="100" step="1" id="customRange4">
 
 <script>
+  // Please note that this script is only an example, please adapt it to your needs
+
   function updateLabelValue() {
-    document.getElementById('customRange4ValueText').innerHTML = document.getElementById('customRange4').value;
+    document.querySelector(`output[for="${this.id}"]`).innerHTML = this.value;
   }
 
-  updateLabelValue()
+  window.addEventListener('load', function () {
+    Array.from(document.getElementsByClassName('form-range')).forEach(function (el) {
+      if (document.querySelector(`output[for="${el.id}"]`)) {
+        el.addEventListener('input', updateLabelValue)
+        updateLabelValue.call(el)
+      }
+    })
+  })
 </script>
 {{< /example >}}
 
