@@ -10,6 +10,11 @@ aliases:
   - "/docs/examples/download-app"
 ---
 
+<header class="sticky-top">
+  {{< orange-global-headers id="global-header" mode="actions" aria_label="Global navigation - Minimized without title example" >}}
+  {{< /orange-global-headers >}}
+</header>
+
 <img loading="lazy" class="w-100 object-fit-cover" alt="App demo_Image PC and app demo_1" src="https://user-images.githubusercontent.com/62606284/226661800-ba6db2c4-e15e-4d6e-a330-6112cf4afb8a.png">
 
 <div class="bg-body title-bar">
@@ -18,7 +23,7 @@ aliases:
   </div>
 </div>
 
-<main class="container-xxl mt-3">
+<main class="container-xxl mt-3 mb-5">
   <p class="lead">The <a href="https://system.design.orange.com/">Orange Design System</a> reference information for Orange digital branding for both design and development resources. The goal is to ensure a consistent user experience across all Orange digital touchpoints thanks to an extensive library of design resources conforming to accessibility and eco-design engagement.</p>
 
   <p class="mb-0">In order to share a common usage experience of this Design System, we created a mobile app for both iOS and Android OS. With this app:</p>
@@ -51,3 +56,6 @@ aliases:
     <img loading="lazy" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/mobile-qr-code.svg" alt="QR code to access this page on mobile.">
   </div>
 </main>
+
+{{< orange-footer mandatory=true id="1" >}}
+{{< /orange-footer >}}
