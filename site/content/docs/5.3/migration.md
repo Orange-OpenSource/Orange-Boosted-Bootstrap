@@ -131,7 +131,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
 - **Popovers**
-  - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+  - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
 
 ### Contents
 
@@ -329,7 +329,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-popover-header-padding-bottom</code></li>
-      <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -458,7 +457,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-scrollable-footer-margin-top</code></li>
       <li><code>$popover-header-line-height</code></li>
       <li><code>$popover-header-padding-bottom</code></li>
-      <li><code>$popover-header-padding-top</code></li>
       <li><code>$popover-line-height</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
