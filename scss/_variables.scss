@@ -1659,9 +1659,9 @@ $accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
-$accordion-body-padding-top:              5px !default; // Boosted mod
+$accordion-body-padding-top:              $spacer !default; // Boosted mod
 $accordion-body-padding-end:              $spacer !default; // Boosted mod
-$accordion-body-padding-bottom:           $spacer !default; // Boosted mod
+$accordion-body-padding-bottom:           $spacer * 1.5 !default; // Boosted mod
 $accordion-body-padding-start:            0 !default; // Boosted mod
 // fusv-disable
 $accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
