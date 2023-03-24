@@ -69,7 +69,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
-  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
+  - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -147,6 +147,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
+- <span class="badge bg-success">New</span> Our range documentation now provides an example which displays the current selected value for better usability, but with some extra JavaScript code.
 
 ### Helpers and utilities
 

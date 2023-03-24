@@ -406,7 +406,7 @@
 }
 
 .highlight-toolbar {
-  background-color: $gray-100; // Boosted mod: instead of `var(--bd-pre-bg)`
+  background-color: var(--bd-pre-bg);
   border: solid $gray-400; // Boosted mod
   border-width: 1px 0; // Boosted mod
 }
