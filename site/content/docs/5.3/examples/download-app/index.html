@@ -11,8 +11,16 @@ aliases:
 ---
 
 <header class="sticky-top">
-  {{< orange-global-headers id="global-header" mode="actions" aria_label="Global navigation - Minimized without title example" >}}
-  {{< /orange-global-headers >}}
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
+    <div class="container-xxl">
+      <div class="navbar-brand me-auto me-lg-4">
+        <a class="stretched-link" href="#">
+          <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">ODS Libraries</h1>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <img loading="lazy" class="w-100 object-fit-cover" alt="App demo_Image PC and app demo_1" src="https://user-images.githubusercontent.com/62606284/226661800-ba6db2c4-e15e-4d6e-a330-6112cf4afb8a.png">
@@ -24,28 +32,65 @@ aliases:
 </div>
 
 <main class="container-xxl mt-3 mb-5">
-  <p class="lead">The <a href="https://system.design.orange.com/">Orange Design System</a> reference information for Orange digital branding for both design and development resources. The goal is to ensure a consistent user experience across all Orange digital touchpoints thanks to an extensive library of design resources conforming to accessibility and eco-design engagement.</p>
+  <p class="lead mb-4">An App to experience the Orange Design System</p>
 
-  <p class="mb-0">In order to share a common usage experience of this Design System, we created a mobile app for both iOS and Android OS. With this app:</p>
+  <div class="bg-body-secondary mb-4">
+    <div class="row">
+      <div class="col-12 col-md-6 order-md-last">
+        <img loading="lazy" class="w-100 h-100 mh-100 object-fit-cover" alt="To be defined" src="https://user-images.githubusercontent.com/62606284/226661800-ba6db2c4-e15e-4d6e-a330-6112cf4afb8a.png">
+      </div>
+      <div class="col-12 col-md-6 pt-3">
+        <div class="px-3">
+          <h2>The Orange Design System</h2>
+          <p>The <a href="https://system.design.orange.com/">Design System</a> from Orange provides the reference information for it's digital branding for both design and development resources. The goal is to ensure a consistent user experience across all Orange digital touchpoints thanks to an extensive library of design resources conforming to accessibility and eco-design engagement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-dark mb-4">
+    <div class="row">
+      <div class="col-12 col-md-6 py-3">
+        <iframe class="w-100 h-100" src="https://mastermedia.orange.com/pmJLYXq6kC" title="Explanation on how to get the app on your phone" allowfullscreen></iframe>
+      </div>
+      <div class="col-12 col-md-6 pt-3">
+        <div class="px-3">
+          <h2 class="text-primary">Orange Design System App</h2>
+
+          <p class="mb-0">In order to share a common usage experience of this Design System, we created a mobile app for both iOS and Android OS. With this app:</p>
+
+          <ul>
+            <li>A designer or digital service creator will be able to use these apps to experiment, in each OS, all the available assets and variants to adjust possible customization.</li>
+            <li>A developer will be able to view the corresponding code customization and have a ready built app code base that shows how to best use the assets, conforming to the expected accessibility standards, for faster and more qualitative integration.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <ul>
-    <li>A designer or digital service creator will be able to use these apps to experiment, in each OS, all the available assets and variants to adjust possible customization.</li>
-    <li>A developer will be able to view the corresponding code customization and have a ready built app code base that shows how to best use the assets, conforming to the expected accessibility standards, for faster and more qualitative integration.</li>
+    <li>Find all available elements in the code library</li>
+    <li> Experience the available interactions on each components and select the right customization</li>
+    <li>Save time and find the right code to use by selecting the right component variant and it's possible customization</li>
+    <li>All components have been implemented to follow the Orange Design System requirement in order to reinforce the brand consistancy</li>
+    <li>Available components have been tested with code example for their accessibility performance</li>
+    <li>The App is available on both iOS and android</li>
+    <li>The Orange Design System app and its SDK are available in an open-source</li>
   </ul>
 
-  <p class="mb-4">The code libraries references in the app can be found at <a href="https://github.com/Orange-OpenSource/ods-android">Android Orange Design System Code Library</a> or at <a href="https://github.com/Orange-OpenSource/ods-ios">iOS Orange Design System Code Library</a>.</p>
+  <p class="mb-0">The code libraries references in the app can be found at:</p>
+  <ul>
+    <li><a href="https://github.com/Orange-OpenSource/ods-ios">iOS Orange Design System Code Library</a></li>
+    <li><a href="https://github.com/Orange-OpenSource/ods-android">Android Orange Design System Code Library</a></li>
+  </ul>
 
-  <iframe class="w-100 mb-5" src="https://mastermedia.orange.com/pmJLYXq6kC" title="Explanation on how to get the app on your phone" allowfullscreen></iframe>
-
-  <p class="lead">The following mobile app is the live example of the Orange Design System Implementation.</p>
-
-  <h2>For Android:</h2>
+  <h2>Android (2 step process)</h2>
   <ol>
-    <li>Register your google store account in our <a href="https://groups.google.com/g/odsapp">beta program list</a>.</li>
-    <li>Then <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block m-2"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on Google Play"></a></li>
+    <li>Register your Google Store account in our <a href="https://groups.google.com/g/odsapp">beta program list</a>.</li>
+    <li>Download the app <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block m-2"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on Google Play"></a></li>
   </ol>
 
-  <h2>For iOS:</h2>
+  <h2>iOS</h2>
   <ol>
     <li>Work in progress.</li>
     <li>Then <a href="#" class="d-inline-block m-2"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/app-store-badge.svg" alt="Get it on App Store"></a></li>
@@ -57,5 +102,16 @@ aliases:
   </div>
 </main>
 
-{{< orange-footer mandatory=true id="1" >}}
-{{< /orange-footer >}}
+<footer class="footer bg-dark navbar-dark">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange 2023</li>
+      <li><a class="nav-link" href="https://system.design.orange.com/">Design System</a></li>
+      <li><a class="nav-link" href="https://brand.orange.com/">Orange Brand</a></li>
+      <li><a class="nav-link" href="https://github.com/Orange-OpenSource/ods-ios/issues/new/choose">Feedback iOS</a></li>
+      <li><a class="nav-link" href="https://github.com/Orange-OpenSource/ods-android/issues/new/choose">Feedback Android</a></li>
+      <li><a class="nav-link" href="https://developer.orange.com/">Orange developer</a></li>
+    </ul>
+  </div>
+</footer>

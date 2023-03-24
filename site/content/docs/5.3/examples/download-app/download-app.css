@@ -2,11 +2,6 @@ img {
   max-height: 400px;
 }
 
-iframe {
-  height: 60vw;
-  max-height: 75vh;
-}
-
 .store-badge {
   height: 2.5rem;
   transition: transform .2s ease-in-out;
