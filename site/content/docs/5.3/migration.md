@@ -64,9 +64,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Cards**
+  - Cards now have a `color` set on them to improve rendering across color modes.
+
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
-  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
+  - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -127,6 +130,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
+### Contents
+
+- **Typography**
+  - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+
 ### Forms
 
 - `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
@@ -135,11 +143,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
+- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
+- <span class="badge bg-success">New</span> Our range documentation now provides an example which displays the current selected value for better usability, but with some extra JavaScript code.
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
 
-- <span class="badge bg-success">New</span> `.text-black`, `.text-body-secondary`, `.text-body-tertiary` and `.text-body-emphasis`.
+- <span class="badge bg-success">New</span> `.text-black`, `.text-body-secondary`, and `.text-body-tertiary`.
+
+- <span class="badge bg-success">New</span> Added new `.link-body-emphasis` helper alongside our [colored links]({{< docsref "/helpers/colored-links" >}}). This creates a colored link using our color mode responsive emphasis color.
 
 - <span class="badge bg-success">New</span> `.text-{color}-emphasis`.
 
@@ -163,19 +177,25 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
 
-- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-body-secondary` will be be replaced by `.text-body-secondary` in v6.
+- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
 
-  With the addition of the expanded theme colors and variables, the `.text-body-secondary` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
 - [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
 
-- <span class="badge bg-success">New</span> Added a new focus ring helper associated to `.focus-ring` and `.focus-ring-{color}` classes.
+- <span class="badge bg-success">New</span> Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring associated to `.focus-ring` and `.focus-ring-{color}` classes.
 
-- <span class="badge bg-success">New</span> Added new set of link utilities associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`.
+- <span class="badge bg-success">New</span> Added new link utilities for link color opacity, underline offset, underline color, and underline opacity associated to `.link-opacity-*`, `.link-opacity-*-hover`, `.link-offset-*`, `.link-underline-*` and `.link-underline-opacity-*`. [Explore the new links utilities.]({{< docsref "/utilities/link" >}})
 
-- <span class="badge bg-success">New</span> Added new icon link helper associated to `.icon-link` and `.link-hover`. They can be paired with our link utilities.
+- <span class="badge bg-success">New</span> Added new `.icon-link` helper associated to `.icon-link` and `.link-hover` to quickly place and align icons alongside a textual link. Icon links support our new link utilities, too.
 
 - <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
+
+- <span class="badge bg-success">New</span> Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
+
+- CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+
+- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
 ### CSS and Sass variables
 
@@ -191,7 +211,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - Restores CSS variables for breakpoints, though we don't use them in our media queries as they're not supported. However, these can be useful in JS-specific contexts.
 
-- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
 
 - `@mixin caret()` has a new interface including a new optional parameters.
 
@@ -257,10 +277,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-card-title-color</code></li>
       <li><code>--bs-danger-bg-subtle</code></li>
       <li><code>--bs-danger-border-subtle</code></li>
-      <li><code>--bs-danger-text</code></li>
+      <li><code>--bs-danger-text-emphasis</code></li>
       <li><code>--bs-dark-bg-subtle</code></li>
       <li><code>--bs-dark-border-subtle</code></li>
-      <li><code>--bs-dark-text</code></li>
+      <li><code>--bs-dark-text-emphasis</code></li>
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
@@ -271,15 +291,19 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-check-bg</code></li>
       <li><code>--bs-form-control-bg</code></li>
       <li><code>--bs-form-control-disabled-bg</code></li>
+      <li><code>--bs-form-invalid-border-color</code></li>
+      <li><code>--bs-form-invalid-color</code></li>
       <li><code>--bs-form-select-bg-img</code></li>
       <li><code>--bs-form-switch-bg</code></li>
+      <li><code>--bs-form-valid-border-color</code></li>
+      <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
-      <li><code>--bs-info-text</code></li>
+      <li><code>--bs-info-text-emphasis</code></li>
       <li><code>--bs-light-bg-subtle</code></li>
       <li><code>--bs-light-border-subtle</code></li>
-      <li><code>--bs-light-text</code></li>
+      <li><code>--bs-light-text-emphasis</code></li>
       <li><code>--bs-link-color-rgb</code></li>
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
@@ -296,27 +320,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
+      <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
-      <li><code>--bs-primary-text</code></li>
+      <li><code>--bs-primary-text-emphasis</code></li>
       <li><code>--bs-secondary-bg-rgb</code></li>
       <li><code>--bs-secondary-bg-subtle</code></li>
       <li><code>--bs-secondary-bg</code></li>
       <li><code>--bs-secondary-border-subtle</code></li>
       <li><code>--bs-secondary-color-rgb</code></li>
       <li><code>--bs-secondary-color</code></li>
-      <li><code>--bs-secondary-text</code></li>
+      <li><code>--bs-secondary-text-emphasis</code></li>
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
-      <li><code>--bs-success-text</code></li>
+      <li><code>--bs-success-text-emphasis</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
       <li><code>--bs-tertiary-color</code></li>
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
-      <li><code>--bs-warning-text</code></li>
+      <li><code>--bs-warning-text-emphasis</code></li>
     </ul>
   </details>
 
@@ -338,6 +363,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
       <li><code>$border-radius-xxl</code></li>
+      <li><code>$btn-color</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
       <li><code>$carousel-control-pause-button-size</code></li>
@@ -350,14 +376,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$danger-bg-subtle</code></li>
       <li><code>$danger-border-subtle-dark</code></li>
       <li><code>$danger-border-subtle</code></li>
-      <li><code>$danger-text-dark</code></li>
-      <li><code>$danger-text</code></li>
+      <li><code>$danger-text-emphasis-dark</code></li>
+      <li><code>$danger-text-emphasis</code></li>
       <li><code>$dark-bg-subtle-dark</code></li>
       <li><code>$dark-bg-subtle</code></li>
       <li><code>$dark-border-subtle-dark</code></li>
       <li><code>$dark-border-subtle</code></li>
-      <li><code>$dark-text-dark</code></li>
-      <li><code>$dark-text</code></li>
+      <li><code>$dark-text-emphasis-dark</code></li>
+      <li><code>$dark-text-emphasis</code></li>
       <li><code>$enable-dark-mode</code></li>
       <li><code>$focus-ring-box-shadow</code></li>
       <li><code>$focus-ring-color</code></li>
@@ -368,21 +394,34 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$font-weight-medium</code></li>
       <li><code>$form-color-disabled-background-swatch</code></li>
       <li><code>$form-color-disabled-border-color</code></li>
+      <li><code>$form-invalid-border-color</code></li>
+      <li><code>$form-invalid-border-color-dark</code></li>
+      <li><code>$form-invalid-color</code></li>
+      <li><code>$form-invalid-color-dark</code></li>
+      <li><code>$form-valid-border-color</code></li>
+      <li><code>$form-valid-border-color-dark</code></li>
+      <li><code>$form-valid-color</code></li>
+      <li><code>$form-valid-color-dark</code></li>
       <li><code>$headings-color-dark</code></li>
+      <li><code>$icon-link-gap</code></li>
+      <li><code>$icon-link-underline-offset</code></li>
+      <li><code>$icon-link-icon-size</code></li>
+      <li><code>$icon-link-icon-transition</code></li>
+      <li><code>$icon-link-icon-transform</code></li>
       <li><code>$info-bg-subtle-dark</code></li>
       <li><code>$info-bg-subtle</code></li>
       <li><code>$info-border-subtle-dark</code></li>
       <li><code>$info-border-subtle</code></li>
-      <li><code>$info-text-dark</code></li>
-      <li><code>$info-text</code></li>
+      <li><code>$info-text-emphasis-dark</code></li>
+      <li><code>$info-text-emphasis</code></li>
       <li><code>$kbd-bg-inverted</code></li>
       <li><code>$kbd-color-inverted</code></li>
       <li><code>$light-bg-subtle-dark</code></li>
       <li><code>$light-bg-subtle</code></li>
       <li><code>$light-border-subtle-dark</code></li>
       <li><code>$light-border-subtle</code></li>
-      <li><code>$light-text-dark</code></li>
-      <li><code>$light-text</code></li>
+      <li><code>$light-text-emphasis-dark</code></li>
+      <li><code>$light-text-emphasis</code></li>
       <li><code>$link-color-dark</code></li>
       <li><code>$link-color-inverted</code></li>
       <li><code>$link-hover-color-dark</code></li>
@@ -401,33 +440,36 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$nav-underline-link-border-width</code></li>
       <li><code>$nav-underline-link-hover-color</code></li>
       <li><code>$nav-underline-link-padding-x</code></li>
+      <li><code>$modal-footer-margin-top</code></li>
+      <li><code>$modal-footer-margin-top-sm</code></li>
+      <li><code>$modal-scrollable-footer-margin-top</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
       <li><code>$primary-border-subtle-dark</code></li>
       <li><code>$primary-border-subtle</code></li>
-      <li><code>$primary-text-dark</code></li>
-      <li><code>$primary-text</code></li>
+      <li><code>$primary-text-emphasis-dark</code></li>
+      <li><code>$primary-text-emphasis</code></li>
       <li><code>$secondary-bg-subtle-dark</code></li>
       <li><code>$secondary-bg-subtle</code></li>
       <li><code>$secondary-border-subtle-dark</code></li>
       <li><code>$secondary-border-subtle</code></li>
-      <li><code>$secondary-text-dark</code></li>
-      <li><code>$secondary-text</code></li>
+      <li><code>$secondary-text-emphasis-dark</code></li>
+      <li><code>$secondary-text-emphasis</code></li>
       <li><code>$success-bg-subtle-dark</code></li>
       <li><code>$success-bg-subtle</code></li>
       <li><code>$success-border-subtle-dark</code></li>
       <li><code>$success-border-subtle</code></li>
-      <li><code>$success-text-dark</code></li>
-      <li><code>$success-text</code></li>
+      <li><code>$success-text-emphasis-dark</code></li>
+      <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
       <li><code>$warning-border-subtle-dark</code></li>
       <li><code>$warning-border-subtle</code></li>
-      <li><code>$warning-text-dark</code></li>
-      <li><code>$warning-text</code></li>
+      <li><code>$warning-text-emphasis-dark</code></li>
+      <li><code>$warning-text-emphasis</code></li>
     </ul>
   </details>
 
@@ -439,6 +481,18 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$theme-colors-text</code></li>
     </ul>
   </details>
+
+### Docs
+
+- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
+
+- Improved included JavaScript for live Toast demo.
+
+- Added `twbs/examples` repo contents to the top of the Examples page.
+
+### Tooling
+
+- Bootstrap replaced instances of bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
 
 ## v5.2.3
 

@@ -85,11 +85,11 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 
 Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag—being `.modal-content`'s first child— and you're done!
 
-<div class="bd-example bd-example-modal">
-  <div class="modal" tabindex="-1">
+<div class="bd-example bg-body-tertiary">
+  <div class="modal position-static d-block" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        {{< placeholder width="100%" height="260" class="modal-img" text="Image cap" >}}
+        {{< placeholder width="100%" height="260" class="modal-img" text="icon" >}}
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
@@ -554,11 +554,11 @@ exampleModal.addEventListener('show.bs.modal', event => {
 
 Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This toggle behavior between multiple modals should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
 
 Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
 {{< example >}}
@@ -709,11 +709,11 @@ Another override is the option to pop up a modal that covers the user viewport, 
 | `.modal-fullscreen-xxl-down` | `1440px` |
 {{< /bs-table >}}
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These **full screen** variants should not be used because they do not respect the Orange Design System specifications. Indeed, modals should always be placed in the center of a page and not be full screen.
 
 Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3-modals/b/774d3d) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
@@ -851,7 +851,7 @@ As part of Boosted's evolving CSS variables approach, modals now use local CSS v
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### Sass loop
 
 [Responsive fullscreen modals](#fullscreen-modal) are generated via the `$breakpoints` map and a loop in `scss/_modal.scss`.
 

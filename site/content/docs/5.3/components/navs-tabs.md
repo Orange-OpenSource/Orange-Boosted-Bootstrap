@@ -155,9 +155,9 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 
 Take that same HTML, but use `.nav-pills` instead:
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -192,7 +192,7 @@ Take that same HTML, but use `.nav-underline` instead:
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -363,9 +363,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 ### Pills with dropdowns
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it is a button component in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="nav nav-pills">
