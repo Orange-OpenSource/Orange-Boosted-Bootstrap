@@ -19,20 +19,19 @@ Side navigation should be used inside an offcanvas using `.offcanvas-*` for resp
 In order to make side navigation work properly, please make sure that the Javascript files from [Collapse]({{< docsref "/components/collapse#usage" >}}) and [Tabs]({{< docsref "/components/navs-tabs#javascript-behavior" >}}) are imported in your project.
 {{< /callout >}}
 
-The side navigation provides 3 ready-to-use fully responsive themes. For each theme, we provide:
+The side navigation provides 3 ready-to-use fully responsive variants. For each variant, we provide:
 - `.side-nav` to set up at the root element.
-- `.side-nav-dark` to darken our theme variants.
+- `.side-nav-dark` to darken our variants.
 - `.side-nav-scrollable` to ensure correct behavior of scroll boxes.
 - `.side-nav-item` to ensure correct size and behavior of displayed elements.
 - optional `.side-nav-static` to make collapsible side navigation static.
-- optional `.side-nav-toggle` to embed a version of the collapse toggler.
-- optional `.side-nav-content` to make sure the content is well sized even with a toggler button.
+- optional `.side-nav-toggle` and `.side-nav-content` to embed a version of the collapse toggler and make sure the content is well sized even with a toggler button.
 
 With the following structure:
 
 ```html
 <nav class="side-nav side-nav-dark">
-  <div class="side-nav-theme side-nav-static">
+  <div class="side-nav-variant side-nav-static">
     <!-- If collapsible -->
     <button class="side-nav-toggle"></button>
     <div class="side-nav-content">
@@ -45,7 +44,7 @@ With the following structure:
 
 ## Examples
 
-Side navigation comes with 3 ready-to-use fully responsive themes. If these available themes don't meet your specific needs, feel free to develop your own custom theme accordingly to the Orange Design System.
+Side navigation comes with 3 ready-to-use fully responsive variants. If these available variants don't meet your specific needs, feel free to develop your own custom variant accordingly to the Orange Design System.
 
 Since most of side navigation we display use the responsive version of this component, please resize your browser to see the behavior.
 
@@ -152,7 +151,7 @@ We strongly recommend using the side navigation inside an offcanvas but it can b
 
 ### With accordions
 
-Here is the `.side-nav-accordion` theme. It should be used with [`.side-nav-static`](#static) since it doesn't have any collapse behavior. The whole accordion should be scrollable.
+Here is the `.side-nav-accordion` variant. It should be used with [`.side-nav-static`](#static) since it doesn't have any collapse behavior. The whole accordion should be scrollable.
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavOffcanvas" id="sideNavToggle">Show basic side navigation</button>
@@ -377,7 +376,7 @@ Illustrating icons can be added on each item if needed.
 
 ### Collapsible
 
-Here is the `.side-nav-collapsible` theme. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally. It also uses a small trick to nicely collapse the side navigation with an empty `div`. (might change if we try to change the collapse thing on Bootstrap)
+Here is the `.side-nav-collapsible` variant. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally. It also uses a small trick to nicely collapse the side navigation with an empty `div`. (might change if we try to change the collapse thing on Bootstrap)
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
 <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsible" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsible" id="sideNavCollapsibleToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement1').show()">Show basic collapsible side navigation</button>
@@ -429,7 +428,7 @@ Here is the `.side-nav-collapsible` theme. The collapsible side navigation we pr
 
 ### Collapsible with drawer content
 
-Here is the `.side-nav-content-with-drawer` theme. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally.
+Here is the `.side-nav-content-with-drawer` variant. The collapsible side navigation we provide uses [Tooltips]({{< docsref "/components/tooltips#usage" >}}) internally.
 
 The collapsible side navigation with drawer content comes with ready to use `onclick` calls:
 - On the Offcanvas toggler button to `show` its content.
@@ -437,7 +436,7 @@ The collapsible side navigation with drawer content comes with ready to use `onc
 - On each menu item to `show` its content (nav-item).
 
 {{< callout info >}}
-For this theme, you need to add `.side-nav-content-with-drawer` on the `.offcanvas-header` as well.
+For this variant, you need to add `.side-nav-content-with-drawer` on the `.offcanvas-header` as well.
 {{< /callout >}}
 
 {{< example class="p-lg-0 side-nav-example d-block d-lg-flex" >}}
@@ -650,551 +649,7 @@ Add `.side-nav-static` to the `.side-nav` for a static variant.
 
 ## Scrollable
 
-Even if we handle the scroll in a particular way inside our predefined themes, you may want to change this behavior with the `.side-nav-scrollable`. If you do so, please make sure that every part is accessible through scroll (the icon part and the content one).
-
-<!-- Following the spec review
-
-Here are some examples with the [collapsible with drawer content](#collapsible-with-drawer-content), that default to a scroll on both parts (the icon part and the content part) excluding the title.
-
-Here is an example including the title on the right scroll box.
-
-<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc2" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc2" id="sideNavCwdc2Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc2Toggle" id="sideNavCwdc2">
-    <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc2" aria-expanded="true" aria-controls="sideNavCwdc2"><span class="visually-hidden">Close</span></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll boxes including the title">
-        <div class="side-nav-content-with-drawer">
-          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <div class="side-nav-content">
-            <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-                <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#dashboardTab2" type="button" role="tab" aria-controls="dashboardTab2" aria-selected="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-                  </svg>
-                  <span class="visually-hidden">Open dashboard tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab2" type="button" role="tab" aria-controls="chartsTab2" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-                  </svg>
-                  <span class="visually-hidden">Open charts tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#financialTab2" type="button" role="tab" aria-controls="financialTab2" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc2').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-                  </svg>
-                  <span class="visually-hidden">Open financial tab</span>
-                </button>
-              </li>
-            </ul>
-            <div class="collapse collapse-horizontal" id="sideNavCollapseCwdc2">
-              <div class="tab-content side-nav-scrollable h-100 ms-2 p-0 border-0" style="width: 235px;">
-                <div class="tab-pane h-100 active" id="dashboardTab2" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Dashboard</h3>
-                    <div class="accordion" id="dashboardAccordionCwdc2">
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="overviewHeaderCwdc2">
-                          <button class="accordion-button side-nav-item fw-normal active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCollapseCwdc2" aria-expanded="true" aria-controls="overviewCollapseCwdc2">
-                            Overview
-                          </button>
-                        </h4>
-                        <div id="overviewCollapseCwdc2" class="accordion-collapse collapse show" aria-labelledby="overviewHeaderCwdc2" data-bs-parent="#dashboardAccordionCwdc2">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item active" aria-current="page">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="dataHeaderCwdc2">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#dataCollapseCwdc2" aria-expanded="false" aria-controls="dataCollapseCwdc2">
-                            Data
-                          </button>
-                        </h4>
-                        <div id="dataCollapseCwdc2" class="accordion-collapse collapse" aria-labelledby="dataHeaderCwdc2" data-bs-parent="#dashboardAccordionCwdc2">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="exploreHeaderCwdc2">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#exploreCollapseCwdc2" aria-expanded="false" aria-controls="exploreCollapseCwdc2">
-                            Explore
-                          </button>
-                        </h4>
-                        <div id="exploreCollapseCwdc2" class="accordion-collapse collapse" aria-labelledby="exploreHeaderCwdc2" data-bs-parent="#dashboardAccordionCwdc2">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="trendHeaderCwdc2">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#trendCollapseCwdc2" aria-expanded="false" aria-controls="trendCollapseCwdc2">
-                            Trend
-                          </button>
-                        </h4>
-                        <div id="trendCollapseCwdc2" class="accordion-collapse collapse" aria-labelledby="trendHeaderCwdc2" data-bs-parent="#dashboardAccordionCwdc2">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="chartsTab2" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Charts</h3>
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="financialTab2" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Financial</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-</div>
-
-```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc2" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc2" id="sideNavCwdc2Toggle">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc2Toggle" id="sideNavCwdc2">
-  <div class="offcanvas-header">...</div>
-  <div class="offcanvas-body">
-    <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="side-nav-content-with-drawer">
-        <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
-        <div class="side-nav-content">
-          <ul class="h-100 list-unstyled m-0 side-nav-dark side-nav-scrollable" role="tablist">
-            ...
-          </ul>
-          <div class="collapse collapse-horizontal" id="sideNavCollapseCwdc2">
-            <div class="tab-content side-nav-scrollable h-100 ms-2 p-0 border-0" style="width: 235px;">
-              ...
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>
-
-<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-```
-
-Here is an example of a unique scroll box containing the two previous scroll boxes and excluding the toggle button.
-
-<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc3" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc3" id="sideNavCwdc3Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc3Toggle" id="sideNavCwdc3">
-    <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc3" aria-expanded="true" aria-controls="sideNavCwdc3"><span class="visually-hidden">Close</span></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and excluding the toggle button">
-        <div class="side-nav-content-with-drawer">
-          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc3"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <div class="side-nav-content side-nav-scrollable">
-            <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-                <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#dashboardTab3" type="button" role="tab" aria-controls="dashboardTab3" aria-selected="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-                  </svg>
-                  <span class="visually-hidden">Open dashboard tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab3" type="button" role="tab" aria-controls="chartsTab3" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-                  </svg>
-                  <span class="visually-hidden">Open charts tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#financialTab3" type="button" role="tab" aria-controls="financialTab3" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc3').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-                  </svg>
-                  <span class="visually-hidden">Open financial tab</span>
-                </button>
-              </li>
-            </ul>
-            <div class="collapse collapse-horizontal" id="sideNavCollapseCwdc3">
-              <div class="tab-content h-100 ms-2 p-0 border-0" style="width: 235px;">
-                <div class="tab-pane h-100 active" id="dashboardTab3" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Dashboard</h3>
-                    <div class="accordion" id="dashboardAccordionCwdc3">
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="overviewHeaderCwdc3">
-                          <button class="accordion-button side-nav-item fw-normal active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCollapseCwdc3" aria-expanded="true" aria-controls="overviewCollapseCwdc3">
-                            Overview
-                          </button>
-                        </h4>
-                        <div id="overviewCollapseCwdc3" class="accordion-collapse collapse show" aria-labelledby="overviewHeaderCwdc3" data-bs-parent="#dashboardAccordionCwdc3">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item active" aria-current="page">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="dataHeaderCwdc3">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#dataCollapseCwdc3" aria-expanded="false" aria-controls="dataCollapseCwdc3">
-                            Data
-                          </button>
-                        </h4>
-                        <div id="dataCollapseCwdc3" class="accordion-collapse collapse" aria-labelledby="dataHeaderCwdc3" data-bs-parent="#dashboardAccordionCwdc3">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="exploreHeaderCwdc3">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#exploreCollapseCwdc3" aria-expanded="false" aria-controls="exploreCollapseCwdc3">
-                            Explore
-                          </button>
-                        </h4>
-                        <div id="exploreCollapseCwdc3" class="accordion-collapse collapse" aria-labelledby="exploreHeaderCwdc3" data-bs-parent="#dashboardAccordionCwdc3">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="trendHeaderCwdc3">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#trendCollapseCwdc3" aria-expanded="false" aria-controls="trendCollapseCwdc3">
-                            Trend
-                          </button>
-                        </h4>
-                        <div id="trendCollapseCwdc3" class="accordion-collapse collapse" aria-labelledby="trendHeaderCwdc3" data-bs-parent="#dashboardAccordionCwdc3">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="chartsTab3" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Charts</h3>
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="financialTab3" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Financial</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-</div>
-
-```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc3" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc3" id="sideNavCwdc3Toggle">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc3Toggle" id="sideNavCwdc3">
-  <div class="offcanvas-header">...</div>
-  <div class="offcanvas-body">
-    <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="side-nav-content-with-drawer">
-        <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc2"><span class="visually-hidden">Open/Close side navigation</span></button>
-        <div class="side-nav-content side-nav-scrollable">
-          ...
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>
-
-<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-```
-
-Here is an example of a unique scroll box containing the both previous scroll boxes and including the toggle button.
-
-<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc4" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc4" id="sideNavCwdc4Toggle" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">Test</button>
-  <div class="offcanvas-start offcanvas-lg d-flex" role="region" aria-labelledby="sideNavCwdc4Toggle" id="sideNavCwdc4">
-    <div class="offcanvas-header p-0 side-nav-content-with-drawer">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sideNavCwdc4" aria-expanded="true" aria-controls="sideNavCwdc4"><span class="visually-hidden">Close</span></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <nav class="side-nav" aria-label="Collapsible side navigation with drawer content with scroll box including the two previous ones and including the toggle button">
-        <div class="side-nav-content-with-drawer side-nav-scrollable">
-          <button class="side-nav-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sideNavCollapseCwdc4"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <div class="side-nav-content">
-            <ul class="list-unstyled m-0 side-nav-dark" role="tablist">
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-                <button class="side-nav-item active" data-bs-toggle="tab" data-bs-target="#dashboardTab4" type="button" role="tab" aria-controls="dashboardTab4" aria-selected="true" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-                  </svg>
-                  <span class="visually-hidden">Open dashboard tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#chartsTab4" type="button" role="tab" aria-controls="chartsTab4" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-                  </svg>
-                  <span class="visually-hidden">Open charts tab</span>
-                </button>
-              </li>
-              <li role="presentation" data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-                <button class="side-nav-item" data-bs-toggle="tab" data-bs-target="#financialTab4" type="button" role="tab" aria-controls="financialTab4" aria-selected="false" onclick="boosted.Collapse.getOrCreateInstance('#sideNavCollapseCwdc4').show()">
-                  <svg class="align-self-center" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-                  </svg>
-                  <span class="visually-hidden">Open financial tab</span>
-                </button>
-              </li>
-            </ul>
-            <div class="collapse collapse-horizontal" id="sideNavCollapseCwdc4">
-              <div class="tab-content h-100 ms-2 p-0 border-0" style="width: 235px;">
-                <div class="tab-pane h-100 active" id="dashboardTab4" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Dashboard</h3>
-                    <div class="accordion" id="dashboardAccordionCwdc4">
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="overviewHeaderCwdc4">
-                          <button class="accordion-button side-nav-item fw-normal active-parent" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCollapseCwdc4" aria-expanded="true" aria-controls="overviewCollapseCwdc4">
-                            Overview
-                          </button>
-                        </h4>
-                        <div id="overviewCollapseCwdc4" class="accordion-collapse collapse show" aria-labelledby="overviewHeaderCwdc4" data-bs-parent="#dashboardAccordionCwdc4">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item active" aria-current="page">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="dataHeaderCwdc4">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#dataCollapseCwdc4" aria-expanded="false" aria-controls="dataCollapseCwdc4">
-                            Data
-                          </button>
-                        </h4>
-                        <div id="dataCollapseCwdc4" class="accordion-collapse collapse" aria-labelledby="dataHeaderCwdc4" data-bs-parent="#dashboardAccordionCwdc4">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="exploreHeaderCwdc4">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#exploreCollapseCwdc4" aria-expanded="false" aria-controls="exploreCollapseCwdc4">
-                            Explore
-                          </button>
-                        </h4>
-                        <div id="exploreCollapseCwdc4" class="accordion-collapse collapse" aria-labelledby="exploreHeaderCwdc4" data-bs-parent="#dashboardAccordionCwdc4">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h4 class="accordion-header" id="trendHeaderCwdc4">
-                          <button class="accordion-button collapsed side-nav-item fw-normal" type="button" data-bs-toggle="collapse" data-bs-target="#trendCollapseCwdc4" aria-expanded="false" aria-controls="trendCollapseCwdc4">
-                            Trend
-                          </button>
-                        </h4>
-                        <div id="trendCollapseCwdc4" class="accordion-collapse collapse" aria-labelledby="trendHeaderCwdc4" data-bs-parent="#dashboardAccordionCwdc4">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled m-0">
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                              <li><a href="#" class="side-nav-item">Label</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="chartsTab4" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Charts</h3>
-                    <ul class="list-unstyled m-0">
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                      <li><a href="#" class="side-nav-item">Label</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab-pane h-100" id="financialTab4" role="tabpanel">
-                  <div class="tab-pane-content h-100">
-                    <h3 class="tab-pane-title side-nav-item pe-none border-bottom border-1 border-light mb-0 fs-5">Financial</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-</div>
-
-```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCwdc4" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCwdc4" id="sideNavCwdc4Toggle">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-start" role="region" aria-labelledby="sideNavCwdc4Toggle" id="sideNavCwdc4">
-  <div class="offcanvas-header">...</div>
-  <div class="offcanvas-body">
-    <nav class="side-nav side-nav-static" aria-label="Static collapsible side navigation inside an offcanvas">
-      <div class="side-nav-content-with-drawer side-nav-scrollable">
-        ...
-      </div>
-    </nav>
-  </div>
-</div>
-
-<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-```
-
-## Right sided
-
-Add `.offcanvas-end` to the `.offcanvas` for a right sided variant. (only on mobile for now)
-
-<div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
-  <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleRight" id="sideNavCollapsibleRightToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement3').show()">Test collapsing</button>
-  <div class="offcanvas-lg offcanvas-end" role="region" aria-labelledby="sideNavCollapsibleRightToggle" id="sideNavCollapsibleRight">
-    <div class="offcanvas-header p-0">
-      <button type="button" class="btn-close me-auto" data-bs-target="#sideNavCollapsibleRight" data-bs-dismiss="offcanvas" aria-expanded="true" aria-controls="sideNavCollapsibleRight"><span class="visually-hidden">Close</span></button>
-    </div>
-    <div class="offcanvas-body h-100 p-0">
-      <div class="side-nav">
-        <div class="side-nav-collapsible">
-          <div id="collapsibleElement3" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
-          <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement3" aria-expanded="false" aria-controls="collapsibleElement3"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
-            <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
-              <a href="#" class="side-nav-item active fw-bold">
-                <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#dashboard"/>
-                </svg>
-                Dashboard
-              </a>
-            </li>
-            <li data-bs-toggle="tooltip" data-bs-title="Charts" data-bs-placement="right">
-              <a href="#" class="side-nav-item fw-bold">
-                <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#chart"/>
-                </svg>
-                Charts
-              </a>
-            </li>
-            <li data-bs-toggle="tooltip" data-bs-title="Financial" data-bs-placement="right">
-              <a href="#" class="side-nav-item fw-bold">
-                <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#financial"/>
-                </svg>
-                Financial
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-</div>
-
-```html
-<button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleRight" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleRight" id="sideNavCollapsibleRightToggle">Collapsing side navigation</button>
-
-<div class="offcanvas-lg offcanvas-end" role="region" aria-labelledby="sideNavCollapsibleRightToggle" id="sideNavCollapsibleRight">
-  ...
-</div>
-
-<div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
-```
--->
+Even if we handle the scroll in a particular way inside our predefined variants, you may want to change this behavior with the `.side-nav-scrollable`. If you do so, please make sure that every part is accessible through scroll (the icon part and the content one).
 
 ## Dark variant
 
@@ -1206,7 +661,7 @@ We strongly recommend to use `.offcanvas-dark` (resp. `.btn-close-white`) on top
 Dark variant can be applied on root of any example except the [collapsible side navigation with drawer content](#collapsible-with-drawer-content) one.
 {{< /callout >}}
 
-Here is the example on the collapsible theme.
+Here is the example on the collapsible variant.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
   <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDark" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDark" id="sideNavCollapsibleDarkToggle" onclick="boosted.Collapse.getOrCreateInstance('#collapsibleElement4').show()">Show dark collapsible side navigation</button>
@@ -1271,7 +726,7 @@ Here is the example on the collapsible theme.
 <div class="d-none d-lg-flex flex-grow-1 p-2">Content that should fill the remaining space.</div>
 ```
 
-Here is an example on the accordion theme.
+Here is an example on the accordion variant.
 
 <div class="bd-example p-lg-0 side-nav-example d-block d-lg-flex">
   <button class="btn btn-primary d-lg-none" data-bs-target="#sideNavCollapsibleDarkIconsOffcanvas" data-bs-toggle="offcanvas" aria-haspopup="true" aria-controls="sideNavCollapsibleDarkIconsOffcanvas" id="sideNavCollapsibleIconsDarkToggle">Show dark accordion side navigation</button>
