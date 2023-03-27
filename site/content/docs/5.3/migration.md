@@ -483,7 +483,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$tooltip-border-color</code></li>
       <li><code>$tooltip-border-width</code></li>
       <li><code>$tooltip-line-height</code></li>
-      <li><code>$tooltip-line-height</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
