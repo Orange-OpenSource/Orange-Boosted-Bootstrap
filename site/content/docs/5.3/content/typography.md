@@ -377,9 +377,9 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 In Bootstrap 5, they enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({{< docsref "/getting-started/rfs" >}}) to find out how this works.
 **However in Boosted 5, RFS is disabled by default.**
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 <!-- Boosted mod: finer typography management -->
 #### Headings

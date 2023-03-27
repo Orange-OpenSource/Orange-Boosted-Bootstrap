@@ -73,13 +73,13 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
   </head>
   <body>
     <h1>Hello, modularity!</h1>
-    <button id="popoverButton" type="button" class="btn btn-primary btn-lg" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button>
+    <button id="popoverButton" type="button" class="btn btn-primary btn-lg" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button>
 
     <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
     <script type="importmap">
     {
       "imports": {
-        "@popperjs/core": "{{< param "cdn.popper" >}}",
+        "@popperjs/core": "{{< param "cdn.popper_esm" >}}",
         "boosted": "https://cdn.jsdelivr.net/npm/boosted@{{< param "current_version" >}}/dist/js/boosted.esm.min.js"
       }
     }

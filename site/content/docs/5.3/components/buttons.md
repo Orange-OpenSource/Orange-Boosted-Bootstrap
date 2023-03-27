@@ -16,13 +16,13 @@ Boosted has a base `.btn` class that sets up basic styles such as padding and co
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-The `.btn` class is intended to be used in conjunction with our additional predefined button styles, or to serve as a basis for your own custom styles.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
 <!-- Boosted mod: no warning callout about `:focus`/`:focus-visible` since Boosted provides a default visible focus for each focusable element -->
 
-## Predefined styles
+## Variants
 
-Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -252,11 +252,11 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 
 You can even roll your own custom sizing with CSS variables:
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <button type="button" class="btn btn-primary"
@@ -300,11 +300,11 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
 
 Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -344,11 +344,11 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 The button plugin allows you to create simple on/off toggle buttons.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These variants with only **one toggle button** should not be used because they do not respect the Orange Design System specifications. From the Orange Design System point of view and for usability reasons, a toggle button should not be used alone.
 
 Instead, consider using our Boosted [Checks]({{< docsref "/forms/checks-radios#checks" >}}), [Radios]({{< docsref "/forms/checks-radios#radios" >}}) or [Radio toggle buttons]({{< docsref "/forms/checks-radios#radio-toggle-buttons" >}}) components.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
@@ -411,7 +411,7 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 <!--Boosted mod: no custom `.btn-*` modifier class-->
 
-## Sass variables
+### Sass variables
 
 {{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
 

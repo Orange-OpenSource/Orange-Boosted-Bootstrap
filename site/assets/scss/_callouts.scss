@@ -31,8 +31,8 @@
 // Variations
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
-    --bd-callout-color: var(--bs-emphasis-color); // Boosted mod
-    // Boosted mod: no `--bd-callout-bg`
+    --bd-callout-color: var(--bs-emphasis-color); // Boosted mod: instead of `var(--bs-#{$variant}-text-emphasis)`
+    --bd-callout-bg: var(--bs-tertiary-bg);
     --bd-callout-border: var(--bs-#{$variant}-border-subtle);
   }
 }

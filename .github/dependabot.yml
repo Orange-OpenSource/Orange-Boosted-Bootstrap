@@ -1,24 +1,75 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-      day: tuesday
-      time: "12:00"
-      timezone: Europe/Athens
-    open-pull-requests-limit: 10
-    reviewers:
-      - julien-deramond
-    labels:
-      - dependencies
-      - v5
-    versioning-strategy: increase
-    rebase-strategy: disabled
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: weekly
       day: tuesday
       time: "12:00"
-      timezone: Europe/Athens
+      timezone: Europe/Paris
+  - package-ecosystem: npm
+    directory: "/"
+    reviewers:
+      - julien-deramond
+    labels:
+      - dependencies
+      - v5
+    schedule:
+      interval: weekly
+      day: tuesday
+      time: "12:00"
+      timezone: Europe/Paris
+    versioning-strategy: increase
+    rebase-strategy: disabled
+    # Ignore Bootstrap dependencies as they are managed by the Bootstrap team
+    # Less notifications for us
+    ignore:
+      - dependency-name: "@babel/cli"
+      - dependency-name: "@babel/core"
+      - dependency-name: "@babel/preset-env"
+      - dependency-name: "@popperjs/core"
+      - dependency-name: "@rollup/plugin-babel"
+      - dependency-name: "@rollup/plugin-commonjs"
+      - dependency-name: "@rollup/plugin-node-resolve"
+      - dependency-name: "@rollup/plugin-replace"
+      - dependency-name: "autoprefixer"
+      - dependency-name: "bundlewatch"
+      - dependency-name: "clean-css-cli"
+      - dependency-name: "cross-env"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-xo"
+      - dependency-name: "eslint-plugin-html"
+      - dependency-name: "eslint-plugin-import"
+      - dependency-name: "eslint-plugin-markdown"
+      - dependency-name: "eslint-plugin-unicorn"
+      - dependency-name: "find-unused-sass-variables"
+      - dependency-name: "globby"
+      - dependency-name: "hammer-simulator"
+      - dependency-name: "hugo-bin"
+      - dependency-name: "ip"
+      - dependency-name: "jasmine"
+      - dependency-name: "jquery"
+      - dependency-name: "karma"
+      - dependency-name: "karma-browserstack-launcher"
+      - dependency-name: "karma-chrome-launcher"
+      - dependency-name: "karma-coverage-istanbul-reporter"
+      - dependency-name: "karma-detect-browsers"
+      - dependency-name: "karma-firefox-launcher"
+      - dependency-name: "karma-jasmine"
+      - dependency-name: "karma-jasmine-html-reporter"
+      - dependency-name: "karma-rollup-preprocessor"
+      - dependency-name: "lockfile-lint"
+      - dependency-name: "nodemon"
+      - dependency-name: "npm-run-all"
+      - dependency-name: "postcss"
+      - dependency-name: "postcss-cli"
+      - dependency-name: "rollup"
+      - dependency-name: "rollup-plugin-istanbul"
+      - dependency-name: "rtlcss"
+      - dependency-name: "sass"
+      - dependency-name: "sass-true"
+      - dependency-name: "shelljs"
+      - dependency-name: "stylelint"
+      - dependency-name: "stylelint-config-twbs-bootstrap"
+      - dependency-name: "terser"
+      - dependency-name: "vnu-jar"
