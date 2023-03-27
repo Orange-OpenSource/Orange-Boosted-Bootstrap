@@ -1779,6 +1779,9 @@ $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
+// fusv-disable
+$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
+// fusv-enable
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
@@ -1790,7 +1793,6 @@ $popover-arrow-height:              $popover-arrow-width * .5 !default;
 // scss-docs-end popover-variables
 
 // fusv-disable
-$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
 $popover-arrow-color:               $popover-bg !default;
 $popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
 // fusv-enable
