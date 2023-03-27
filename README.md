@@ -1,10 +1,4 @@
-<p align="center">
-  <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/5.2/assets/brand/orange-logo.svg" alt="Boosted" width="50" height="50">
-  </a>
-</p>
-
-<h3 align="center">Boosted</h3>
+<h1 align="center">Boosted</h1>
 
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
