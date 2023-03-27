@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/index.js
+   * Bootstrap util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -263,7 +263,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): dom/event-handler.js
+   * Bootstrap dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -485,7 +485,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): dom/data.js
+   * Bootstrap dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -533,7 +533,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): dom/manipulator.js
+   * Bootstrap dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -590,7 +590,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/config.js
+   * Bootstrap util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -642,7 +642,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): base-component.js
+   * Bootstrap base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -710,7 +710,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): dom/selector-engine.js
+   * Bootstrap dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -798,7 +798,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/component-functions.js
+   * Bootstrap util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -822,7 +822,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): alert.js
+   * Bootstrap alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -896,7 +896,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): button.js
+   * Bootstrap button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -959,7 +959,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/swipe.js
+   * Bootstrap util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1078,7 +1078,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): carousel.js
+   * Bootstrap carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1211,7 +1211,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+      // Boosted mod: if a play-pause button is present, set the button to play
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
         this._playPauseButton.classList.remove('pause');
         this._playPauseButton.classList.add('play');
@@ -1238,7 +1238,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+      // Boosted mod: if a play-pause button is present, reset the button to pause
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
         this._playPauseButton.classList.remove('play');
         this._playPauseButton.classList.add('pause');
@@ -1595,7 +1595,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): collapse.js
+   * Bootstrap collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3636,49 +3636,49 @@
 
   const Popper = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
-    popperGenerator,
-    detectOverflow,
-    createPopperBase: createPopper$2,
-    createPopper,
-    createPopperLite: createPopper$1,
-    top,
-    bottom,
-    right,
-    left,
-    auto,
-    basePlacements,
-    start,
-    end,
-    clippingParents,
-    viewport,
-    popper,
-    reference,
-    variationPlacements,
-    placements,
-    beforeRead,
-    read,
-    afterRead,
-    beforeMain,
-    main,
     afterMain,
-    beforeWrite,
-    write,
+    afterRead,
     afterWrite,
-    modifierPhases,
     applyStyles: applyStyles$1,
     arrow: arrow$1,
+    auto,
+    basePlacements,
+    beforeMain,
+    beforeRead,
+    beforeWrite,
+    bottom,
+    clippingParents,
     computeStyles: computeStyles$1,
+    createPopper,
+    createPopperBase: createPopper$2,
+    createPopperLite: createPopper$1,
+    detectOverflow,
+    end,
     eventListeners,
     flip: flip$1,
     hide: hide$1,
+    left,
+    main,
+    modifierPhases,
     offset: offset$1,
+    placements,
+    popper,
+    popperGenerator,
     popperOffsets: popperOffsets$1,
-    preventOverflow: preventOverflow$1
+    preventOverflow: preventOverflow$1,
+    read,
+    reference,
+    right,
+    start,
+    top,
+    variationPlacements,
+    viewport,
+    write
   }, Symbol.toStringTag, { value: 'Module' }));
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): dropdown.js
+   * Bootstrap dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4046,7 +4046,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/scrollBar.js
+   * Bootstrap util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4143,7 +4143,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/backdrop.js
+   * Bootstrap util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4267,7 +4267,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/focustrap.js
+   * Bootstrap util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4365,7 +4365,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): modal.js
+   * Bootstrap modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4528,7 +4528,6 @@
           return;
         }
         if (this._config.keyboard) {
-          event.preventDefault();
           this.hide();
           return;
         }
@@ -4671,7 +4670,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): offcanvas.js
+   * Bootstrap offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4829,11 +4828,11 @@
         if (event.key !== ESCAPE_KEY) {
           return;
         }
-        if (!this._config.keyboard) {
-          EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
+        if (this._config.keyboard) {
+          this.hide();
           return;
         }
-        this.hide();
+        EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
       });
     }
 
@@ -4901,7 +4900,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.3.0-alpha2): orange-navbar.js
+   * Boosted orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4930,7 +4929,7 @@
 
     // Static
     static enableMinimizing(el) {
-      // The minimized behaviour works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
+      // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
       const scroll = window.scrollY;
       const headerChildren = [...el.children];
       const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'));
@@ -4980,7 +4979,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/sanitizer.js
+   * Bootstrap util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5075,7 +5074,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): util/template-factory.js
+   * Bootstrap util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5210,7 +5209,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): tooltip.js
+   * Bootstrap tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5257,7 +5256,8 @@
     delay: 0,
     fallbackPlacements: ['top', 'right', 'bottom', 'left'],
     html: false,
-    offset: [0, 0],
+    offset: [0, 5],
+    // Boosted mod: instead of `offset: [0, 0],`
     placement: 'top',
     popperConfig: null,
     sanitize: true,
@@ -5721,7 +5721,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): popover.js
+   * Bootstrap popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5736,7 +5736,8 @@
   const Default$2 = {
     ...Tooltip.Default,
     content: '',
-    offset: [0, 8],
+    offset: [0, 15],
+    // Boosted mod: instead of `offset: [0, 8],`
     placement: 'right',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
     trigger: 'click'
@@ -5801,7 +5802,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.3.0-alpha2): quantity-selector.js
+   * Boosted quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5820,7 +5821,7 @@
   const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]';
   const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]';
   const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]';
-  const SELECTOR_INPUT_GROUP = '.input-group';
+  const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector';
 
   /**
    * Class definition
@@ -5850,7 +5851,7 @@
 
     // Static
     static StepUp(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const max = counterInput.getAttribute('max');
       const step = Number(counterInput.getAttribute('step'));
@@ -5862,7 +5863,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static StepDown(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const min = counterInput.getAttribute('min');
       const step = Number(counterInput.getAttribute('step'));
@@ -5874,7 +5875,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static CheckIfDisabledOnChange(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON);
       const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON);
@@ -5912,7 +5913,7 @@
   EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp);
   EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown);
   EventHandler.on(window, EVENT_LOAD_DATA_API$2, () => {
-    for (const el of SelectorEngine.find(SELECTOR_INPUT_GROUP)) {
+    for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTOR)) {
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
@@ -5925,7 +5926,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): scrollspy.js
+   * Bootstrap scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6184,7 +6185,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): tab.js
+   * Bootstrap tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6363,7 +6364,7 @@
       }
       this._setAttributeIfNotExists(target, 'role', 'tabpanel');
       if (child.id) {
-        this._setAttributeIfNotExists(target, 'aria-labelledby', `#${child.id}`);
+        this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.id}`);
       }
     }
     _toggleDropDown(element, open) {
@@ -6445,7 +6446,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): toast.js
+   * Bootstrap toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6940,7 +6941,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): index.umd.js
+   * Bootstrap index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

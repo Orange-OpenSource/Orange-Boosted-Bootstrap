@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha2): carousel.js
+   * Bootstrap carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -149,7 +149,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+      // Boosted mod: if a play-pause button is present, set the button to play
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
         this._playPauseButton.classList.remove('pause');
         this._playPauseButton.classList.add('play');
@@ -176,7 +176,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+      // Boosted mod: if a play-pause button is present, reset the button to pause
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
         this._playPauseButton.classList.remove('play');
         this._playPauseButton.classList.add('pause');
