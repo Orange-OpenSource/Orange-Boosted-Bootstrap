@@ -3,12 +3,13 @@
 //
 
 .bd-content {
-  // Offset content from fixed navbar when jumping to headings
-  > :target {
-    padding-top: 5rem;
-    margin-top: -5rem;
+  > h2,
+  > h3,
+  > h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
   }
 
+  // Offset content from fixed navbar when jumping to headings
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -74,6 +75,7 @@
 }
 
 .bd-title {
+  --bs-heading-color: var(--bs-emphasis-color);
   @include font-size(3rem);
 }
 
@@ -87,26 +89,6 @@
   height: 1em;
   // Boosted mod: no `vertical-align`
   fill: currentcolor;
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  // Boosted mod: no text-decoration-color
-  text-underline-offset: .5rem;
-  backface-visibility: hidden;
-
-  .bi {
-    width: .75em; // Boosted mod
-    height: .75em; // Boosted mod
-    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
-  }
-
-  &:hover {
-    .bi {
-      transform: translate3d(5px, 0, 0);
-    }
-  }
 }
 
 .border-lg-start {
