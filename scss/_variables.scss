@@ -987,9 +987,9 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-500 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius:           var(--#{$prefix}border-radius) !default;
+$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              $transition-focus !default; // Boosted mod
 // scss-docs-end btn-variables
@@ -1094,9 +1094,9 @@ $input-border-color:                    var(--#{$prefix}border-color-translucent
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
 
-$input-border-radius:                   $border-radius !default;
-$input-border-radius-sm:                $border-radius-sm !default;
-$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius:                   var(--#{$prefix}border-radius) !default;
+$input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
+$input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              currentcolor !default;
@@ -1382,7 +1382,7 @@ $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg`
 
 $nav-pills-padding-x:               1.8125rem !default; // Boosted mod
-$nav-pills-border-radius:           $border-radius !default;
+$nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
@@ -1513,7 +1513,7 @@ $dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
-$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default; // Boosted mod
 $dropdown-divider-bg:               $dropdown-border-color !default;
@@ -1590,6 +1590,9 @@ $pagination-disabled-bg:            $white !default; // Boosted mod: instead of 
 $pagination-disabled-border-color:  $pagination-disabled-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
 $pagination-transition:             $transition-focus !default;
+
+// Boosted mod: no $pagination-border-radius-sm
+// Boosted mod: no $pagination-border-radius-lg
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
@@ -1826,7 +1829,7 @@ $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .65em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-border-radius:               var(--#{$prefix}border-radius) !default;
 // scss-docs-end badge-variables
 
 // Modals
@@ -1850,7 +1853,7 @@ $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
-$modal-content-inner-border-radius: $border-radius !default; // Boosted mod
+$modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // Boosted mod: instead of `subtract($modal-content-border-radius, $modal-content-border-width)`
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
@@ -1900,7 +1903,7 @@ $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
 $alert-margin-bottom:               $spacer !default;
 $alert-color:                       inherit !default; // Boosted mod
-$alert-border-radius:               $border-radius !default;
+$alert-border-radius:               var(--#{$prefix}border-radius) !default;
 $alert-link-font-weight:            null !default; // Boosted mod
 $alert-heading-font-weight:         $font-weight-bold !default; // Boosted mod
 $alert-border-width:                var(--#{$prefix}border-width) !default;
