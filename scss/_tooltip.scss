@@ -22,7 +22,7 @@
 
   z-index: var(--#{$prefix}tooltip-zindex);
   display: block;
-  padding: var(--#{$prefix}tooltip-arrow-height);
+  padding: var(--#{$prefix}tooltip-arrow-height); // Boosted mod
   margin: var(--#{$prefix}tooltip-margin);
   @include deprecate("`$tooltip-margin`", "v5", "v5.x", true);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
@@ -56,7 +56,7 @@
 
 // Boosted mod: needed to generate a border with a different color
 .bs-tooltip-top .tooltip-arrow {
-  bottom: 0;
+  bottom: 0; // Boosted mod: instead of `calc(-1 * var(--#{$prefix}tooltip-arrow-height))`
 
   &::before,
   &::after {
@@ -76,7 +76,7 @@
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow {
-  left: 0;
+  left: 0; // Boosted mod: instead of `calc(-1 * var(--#{$prefix}tooltip-arrow-height))`
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 
@@ -99,7 +99,7 @@
 /* rtl:end:ignore */
 
 .bs-tooltip-bottom .tooltip-arrow {
-  top: 0;
+  top: 0; // Boosted mod: instead of `calc(-1 * var(--#{$prefix}tooltip-arrow-height))`
 
   &::before,
   &::after {
@@ -119,7 +119,7 @@
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow {
-  right: 0;
+  right: 0; // Boosted mod: instead of `calc(-1 * var(--#{$prefix}tooltip-arrow-height))`
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 
