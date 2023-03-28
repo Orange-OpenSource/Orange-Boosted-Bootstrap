@@ -60,6 +60,7 @@
     })
 
   // Instantiate all toasts in docs pages only
+  // js-docs-start live-toast
   const toastTrigger = document.getElementById('liveToastBtn')
   const toastLiveExample = document.getElementById('liveToast')
 
@@ -69,28 +70,43 @@
       toastBoosted.show()
     })
   }
+  // js-docs-end live-toast
 
   // -------------------------------
   // Alerts
   // -------------------------------
-  // Used in 'Show live toast' example in docs or StackBlitz
+  // Used in 'Show live alert' example in docs or StackBlitz
+
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `alert()` function
+  // js-docs-start live-alert
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-  const alertTrigger = document.getElementById('liveAlertBtn')
 
-  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert()
-
-  function alert(message, type, typeVisuallyHidden) {
+  const alert = (message, type, typeVisuallyHidden) => {
     const wrapper = document.createElement('div')
-    wrapper.innerHTML = `<div class="alert alert-${type} alert-dismissible" role="alert"><span class="alert-icon"><span class="visually-hidden">${typeVisuallyHidden}</span></span><p>${message}</p><button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button></div>`
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      '  <span class="alert-icon">',
+      `    <span class="visually-hidden">${typeVisuallyHidden}</span>`,
+      '  </span>',
+      '  <p>',
+      `    ${message}`,
+      '  </p>',
+      '  <button type="button" class="btn-close" data-bs-dismiss="alert">',
+      '    <span class="visually-hidden">Close</span>',
+      '  </button>',
+      '</div>'
+    ].join('')
 
     alertPlaceholder.append(wrapper)
   }
 
+  const alertTrigger = document.getElementById('liveAlertBtn')
   if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
       alert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
+  // js-docs-end live-alert
 
   // --------
   // Carousels
@@ -127,6 +143,7 @@
   // Modal
   // -------------------------------
   // Modal 'Varying modal content' example in docs and StackBlitz
+  // js-docs-start varying-modal-content
   const exampleModal = document.getElementById('exampleModal')
   if (exampleModal) {
     exampleModal.addEventListener('show.bs.modal', event => {
@@ -134,6 +151,8 @@
       const button = event.relatedTarget
       // Extract info from data-bs-* attributes
       const recipient = button.getAttribute('data-bs-whatever')
+      // If necessary, you could initiate an Ajax request here
+      // and then do the updating in a callback.
 
       // Update the modal's content.
       const modalTitle = exampleModal.querySelector('.modal-title')
@@ -143,6 +162,7 @@
       modalBodyInput.value = recipient
     })
   }
+  // js-docs-end varying-modal-content
 
   // -------------------------------
   // Offcanvas
