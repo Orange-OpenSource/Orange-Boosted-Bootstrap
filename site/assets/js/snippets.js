@@ -80,7 +80,6 @@
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `alert()` function
   // js-docs-start live-alert
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
   const alert = (message, type, typeVisuallyHidden) => {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
