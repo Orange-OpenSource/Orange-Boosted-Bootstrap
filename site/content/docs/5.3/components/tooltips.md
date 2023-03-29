@@ -129,7 +129,7 @@ With an SVG:
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
   </button>
@@ -145,7 +145,7 @@ With an SVG:
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
 </button>
