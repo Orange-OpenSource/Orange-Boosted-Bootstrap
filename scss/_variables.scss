@@ -2362,7 +2362,7 @@ $tag-gap:                           map-get($spacers, 1) !default;
 $tag-font-shift:                    $spacer * .1 !default;
 $tag-font-weight:                   $font-weight-bold !default;
 $tag-border-width:                  var(--#{$prefix}border-width) !default;
-$tag-border-radius:                 $border-radius-pill !default;
+$tag-border-radius:                 var(--#{$prefix}border-radius-pill) !default;
 
 $tag-padding-x:                     $spacer * .65 !default;
 $tag-padding-y:                     $spacer * .45 !default;
