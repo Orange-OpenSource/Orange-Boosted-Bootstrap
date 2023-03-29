@@ -83,7 +83,7 @@
     "release": "npm-run-all dist release-sri docs-build storybook-build release-zip*",
     "release-sri": "node build/generate-sri.js",
     "release-version": "node build/change-version.js",
-    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist && cp -r dist/ boosted-$npm_package_version-dist && zip -r9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
+    "release-zip": "cross-env-shell \"rm -rf boosted-$npm_package_version-dist boosted-$npm_package_version-dist.zip && cp -r dist/ boosted-$npm_package_version-dist && zip -qr9 boosted-$npm_package_version-dist.zip boosted-$npm_package_version-dist && rm -rf boosted-$npm_package_version-dist\"",
     "release-zip-examples": "node build/zip-examples.js",
     "dist": "npm-run-all --aggregate-output --parallel css js fonts",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
