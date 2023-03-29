@@ -100,9 +100,9 @@ params:
     js_hash:                        "sha384-bHRe1TeW+cP6fVxQZT9BlwrotYMDkOFZIALypmm4g4xpYL6zLZA3wZDf4ut7XyqW"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.0-alpha2/dist/js/boosted.bundle.min.js"
     js_bundle_hash:                 "sha384-EI6cnT2fBMBrnTJ/qDfugxlUP4IZpgvfH8vXsron3CcD2GWbP1KoEoG2XiXPe9Qs"
-    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    popper_hash:                    "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/esm/popper.min.js"
+    popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    popper_hash:                    "sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/esm/popper.min.js"
     focus_visible:                  "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"
     focus_visible_hash:             "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
 
