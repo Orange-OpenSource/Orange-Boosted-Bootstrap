@@ -412,19 +412,15 @@
 // when `$enable-responsive-pagination` is enabled (see site/assets/scss/docs.scss)
 .bd-example-responsive-pagination {
   .page-item {
-    @include media-breakpoint-down(md) {
-      @include pagination-max-items(7);
+    @include media-breakpoint-down(sm) {
+      @include pagination-max-items(3);
     }
 
-    @include media-breakpoint-between(md, lg) {
-      @include pagination-max-items(8);
-    }
-
-    @include media-breakpoint-between(lg, xl) {
+    @include media-breakpoint-between(sm, md) {
       @include pagination-max-items(10);
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(md) {
       @include pagination-max-items(12);
     }
   }

@@ -188,7 +188,7 @@ The following example uses our smart responsive pagination. To avoid pagination 
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
     <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">5</a>
+      <a class="page-link" href="#"><span class="d-sm-none">Page</span>&nbsp;<span class="test">5</span>&nbsp;<span class="d-sm-none">of 10</span></a>
     </li>
     <li class="page-item"><a class="page-link" href="#">6</a></li>
     <li class="page-item"><a class="page-link" href="#">7</a></li>
