@@ -125,7 +125,6 @@ With dependencies installed and our project folder ready for us to start coding,
          <h1>Hello, Boosted and Webpack!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
-       <script src="./main.js"></script>
      </body>
    </html>
    ```
@@ -139,7 +138,7 @@ With dependencies installed and our project folder ready for us to start coding,
      // ...
      "scripts": {
        "start": "webpack serve",
-       "build": "webpack build",
+       "build": "webpack build --mode=production",
        "test": "echo \"Error: no test specified\" && exit 1"
      },
      // ...
