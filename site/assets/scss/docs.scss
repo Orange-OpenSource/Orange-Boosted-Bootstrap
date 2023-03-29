@@ -31,7 +31,7 @@
 // Since for this docs.scss we don't import "_pagination.scss" the definition of this variable requires a replay of the mixins
 // related to the smart responsive pagination (see site/assets/scss/_component-examples.scss).
 // fusv-disable
-$enable-responsive-pagination: true; // stylelint-disable-line scss/dollar-variable-default
+$enable-responsive-pagination: true;
 // fusv-enable
 // End mod
 

@@ -16,7 +16,7 @@
 // - the end of the list is made of the last (n/2) items (or (n/2 - 1) depending on the active element)
 // - the last part of the list is made of the active element
 // - n should be greater than 7 since we want at least two arrows, the first, the active and the last and might have 2 three dots cases for a11y and design reasons
-@mixin pagination-max-items($pagination-max-items) {
+@mixin pagination-max-items($pagination-max-items: 12) {
   @if $enable-responsive-pagination {
     display: none;
 
@@ -84,9 +84,9 @@
       &.active .page-link {
         --bs-pagination-padding-y: 0;
         --bs-pagination-padding-x: .625rem;
-        color: #000;
-        background-color: #fff;
-        border-color: #fff;
+        color: var(--#{$prefix}pagination-color);
+        background-color: var(--#{$prefix}pagination-bg);
+        border-color: transparent;
       }
     }
   }

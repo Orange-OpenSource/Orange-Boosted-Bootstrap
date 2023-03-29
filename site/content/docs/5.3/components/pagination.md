@@ -125,14 +125,14 @@ By default, every item is visible. Here is an example with our basic responsive 
 
 {{< example >}}
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
     <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">5</a>
+      <span class="page-link">5</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">6</a></li>
     <li class="page-item"><a class="page-link" href="#">7</a></li>
@@ -144,8 +144,24 @@ By default, every item is visible. Here is an example with our basic responsive 
 </nav>
 {{< /example >}}
 
+You may use a small trick to build your own custom pagination.
+
+{{< example class="px-0 px-sm-3" >}}
+<nav aria-label="Page navigation example with a small trick">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+    <li class="page-item page-ellipsis"><a class="page-link" href="#">1</a></li>
+    <li class="page-item page-ellipsis active" aria-current="page">
+      <span class="page-link">5</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">10</a></li>
+    <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+  </ul>
+</nav>
+{{< /example >}}
+
 {{< callout warning >}}
-**Heads up—our smart responsive pagination is opt-in as of v5.2.1!**
+**Heads up—our smart responsive pagination is opt-out as of v5.3.0!**
 
 It means that it is disabled by default in order to have a lighter CSS bundle. We included it here in our documentation's CSS for this specific use case just as a demonstration of the rendering.
 
@@ -179,16 +195,18 @@ Then, recompile your Sass.
 
 The following example uses our smart responsive pagination. To avoid pagination wrapping or overflowing, we limit the number of displayed pagination items depending on the breakpoints by displaying automatically some ellipsis.
 
+Given that container queries lack adequate support, we offer an alternative solution that relies on page breakpoints. Nonetheless, our solution remains flexible and can be tailored to specific requirements using our [Sass mixin](#usage).
+
 {{< example class="bd-example-responsive-pagination px-0 px-sm-3" >}}
 <nav aria-label="Smart responsive page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
     <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#"><span class="d-sm-none">Page</span>&nbsp;<span class="test">5</span>&nbsp;<span class="d-sm-none">of 10</span></a>
+      <span class="page-link"><span class="d-sm-none">Page</span>&nbsp;<span class="test">5</span>&nbsp;<span class="d-sm-none">of 10</span></span>
     </li>
     <li class="page-item"><a class="page-link" href="#">6</a></li>
     <li class="page-item"><a class="page-link" href="#">7</a></li>
@@ -254,4 +272,20 @@ Variables for the [dark pagination](#dark-variant):
 {{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}
 
 <!-- Boosted mod: responsive behavior -->
+The mixin is used to display a specified number of items, with the option to display a smaller version of the pagination if there are more items than the specified number. Under 7, it will display the smallest version.
+
+The `$pagination-max-items` parameter is used to specify the maximum number of items to be displayed, and defaults to 12 if not specified. The mixin needs to be applied on top of `.page-item` element.
+
+Overall, the mixin is a useful tool for controlling the display of items on a webpage and improving user experience by avoiding overwhelming them with too much content at once.
+
+See below how to use it for a proper [usage](#usage).
+
 {{< scss-docs name="pagination-max-items-mixin" file="scss/mixins/_pagination.scss" >}}
+
+#### Usage
+
+Here's an example of how you can use our responsive mixin to specify breakpoint `pagination-max-items` numbers for specific elements. This is the default behavior for our page-specific elements.
+
+{{< scss-docs name="pagination-mixin-use" file="site/assets/scss/_component-examples.scss" >}}
+
+<!-- Will maybe need a specific example page -->

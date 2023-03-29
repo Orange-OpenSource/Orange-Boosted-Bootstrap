@@ -105,6 +105,21 @@
   }
 }
 
+// Boosted mod
+.page-ellipsis {
+  display: flex;
+
+  &::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((var(--#{$prefix}pagination-icon-size) + var(--#{$prefix}pagination-border-width) * 2)); // stylelint-disable-line function-disallowed-list
+    content: "...";
+    background-color: var(--#{$prefix}pagination-bg);
+  }
+}
+// End mod
+
 .page-item {
   &:not(:first-child) .page-link {
     margin-left: $pagination-margin-start;
