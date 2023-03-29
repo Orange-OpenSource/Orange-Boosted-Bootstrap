@@ -143,6 +143,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
 
 
+- **Popovers**
+  - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
 ### Contents
 
 - **Typography**
@@ -250,6 +253,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
+      <li><code>--bs-popover-header-padding-x</code></li>
+      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 
@@ -266,6 +271,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
+      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -335,6 +341,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-header-line-height</code></li>
+      <li><code>--bs-popover-header-padding-bottom</code></li>
+      <li><code>--bs-popover-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text-emphasis</code></li>
@@ -352,6 +361,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
       <li><code>--bs-tertiary-color</code></li>
+      <li><code>--bs-tooltip-arrow-border</code></li>
+      <li><code>--bs-tooltip-border-color</code></li>
+      <li><code>--bs-tooltip-border-width</code></li>
+      <li><code>--bs-tooltip-line-height</code></li>
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text-emphasis</code></li>
@@ -456,6 +469,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>
+      <li><code>$popover-header-line-height</code></li>
+      <li><code>$popover-header-padding-bottom</code></li>
+      <li><code>$popover-line-height</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
@@ -476,6 +492,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-emphasis-dark</code></li>
       <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$tooltip-border-color</code></li>
+      <li><code>$tooltip-border-width</code></li>
+      <li><code>$tooltip-line-height</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
