@@ -62,7 +62,7 @@ const Default = {
   delay: 0,
   fallbackPlacements: ['top', 'right', 'bottom', 'left'],
   html: false,
-  offset: [0, 5], // Boosted mod: instead of `offset: [0, 6],`
+  offset: [0, 10], // Boosted mod: instead of `offset: [0, 6],`
   placement: 'top',
   popperConfig: null,
   sanitize: true,
