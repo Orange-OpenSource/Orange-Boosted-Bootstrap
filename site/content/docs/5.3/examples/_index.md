@@ -47,13 +47,17 @@ One of the missing examples has priority? Feel free to contact a member of the [
           <svg class="bi fs-5 flex-shrink-0"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="{{ $.Site.Params.bootstrap_github_org }}{{ $example.url }}/" target="_blank">
+              <a class="d-block link-offset-1" href="{{ $.Site.Params.bootstrap_github_org }}{{ $example.url }}/" target="_blank" rel="noopener">
                 {{ $example.name }}
               </a>
             </h3>
             <p class="text-body-secondary">{{ $example.description }}</p>
             <p>
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs{{ $example.url }}?file=index.html" target="_blank">
+              {{- $htmlIndexLocation := "index.html" -}}
+              {{- if $example.htmlIndexLocation -}}
+                {{- $htmlIndexLocation = printf "%s/index.html" $example.htmlIndexLocation -}}
+              {{- end }}
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs{{ $example.url }}?file={{ $htmlIndexLocation | urlquery }}" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Edit in StackBlitz
               </a>

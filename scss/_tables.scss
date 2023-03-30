@@ -41,7 +41,7 @@
   }
 
   > thead > tr {
-    border-bottom-width: calc($table-border-width * 2); // stylelint-disable-line function-disallowed-list
+    border-bottom-width: calc(#{$table-border-width} * 2); // stylelint-disable-line function-disallowed-list
   }
 
   > tbody > th {
@@ -74,7 +74,7 @@
 }
 
 .table-group-divider {
-  border-top: calc($table-border-width * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
+  border-top: calc(#{$table-border-width} * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
 }
 
 //
