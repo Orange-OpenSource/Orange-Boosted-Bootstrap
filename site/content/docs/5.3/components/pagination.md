@@ -144,10 +144,10 @@ By default, every item is visible. Here is an example with our basic responsive 
 </nav>
 {{< /example >}}
 
-You may use a small trick to build your own custom pagination.
+You may use `.page-ellipsis` to build your own custom pagination. It places `...` right after the number it's applied on.
 
 {{< example class="px-0 px-sm-3" >}}
-<nav aria-label="Page navigation example with a small trick">
+<nav aria-label="Page navigation example with ellipsis">
   <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
     <li class="page-item page-ellipsis"><a class="page-link" href="#">1</a></li>
@@ -285,6 +285,8 @@ See below how to use it for a proper [usage](#usage).
 #### Usage
 
 Here's an example of how you can use our responsive mixin to specify breakpoint `pagination-max-items` numbers for specific elements. This is the default behavior for our page-specific elements.
+
+Be sure to use unrelated media queries, otherwise there might be issues with some overlapping rules due to half-hardcoded Sass rules.
 
 {{< scss-docs name="pagination-mixin-use" file="site/assets/scss/_component-examples.scss" >}}
 

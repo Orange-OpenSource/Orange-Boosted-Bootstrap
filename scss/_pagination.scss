@@ -197,16 +197,18 @@
     margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
-  @include media-breakpoint-down(sm) {
-    @include pagination-max-items(3);
-  }
+  @if $enable-responsive-pagination {
+    @include media-breakpoint-down(sm) {
+      @include pagination-max-items(3);
+    }
 
-  @include media-breakpoint-between(sm, md) {
-    @include pagination-max-items(10);
-  }
+    @include media-breakpoint-between(sm, md) {
+      @include pagination-max-items(10);
+    }
 
-  @include media-breakpoint-up(md) {
-    @include pagination-max-items(12);
+    @include media-breakpoint-up(md) {
+      @include pagination-max-items(12);
+    }
   }
   // End mod
 }

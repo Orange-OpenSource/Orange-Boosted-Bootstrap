@@ -90,9 +90,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
 
 - **Pagination**
-  - <span class="badge bg-success">New</span> `.page-ellipsis`
-  - <span class="badge bg-warning">Warning</span> We changed the Sass mixin `pagination-max-items` so it doesn't fail even with odd numbers. Changed a bit the behavior of this mixin. Please check if it doesn't break anything inside your websites. It better fit the design in smallest viewports.
-  - <span class="badge bg-danger">Breaking</span> Added `$enable-responsive-pagination`, meaning we changed the default behavior for our responsive part. Please check whether you need it to change it or not.
+  - <span class="badge bg-success">New</span> Added `.page-ellipsis` to help building your pagination.
+  - <span class="badge bg-warning">Warning</span> Modifications to the Sass mixin `pagination-max-items` have been made to ensure it can handle odd numbers without failing. Additionally, slight adjustments to its behavior to enhance its suitability for smaller viewports were made. The active element was also replaced from an `<a>` to a `<span>` to address design and accessibility issues. Please reflect these modifications in your websites.
+  - <span class="badge bg-danger">Breaking</span> A new variable `$enable-responsive-pagination` which alters the default behavior of our responsive component was introduced. Please check whether you need to modify it to suit your needs.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
