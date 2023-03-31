@@ -18,9 +18,9 @@
         invalidItems[0].focus()
         // Add the id of the corresponding invalid message to each invalid field
         invalidItems.forEach(element => {
-          const closestLabel = element.closest('.mb-3').querySelector('.form-label').getAttribute('id')
+          const linkedLabel = element.getAttribute('aria-labelledby')
           const closestInvalidFeedback = element.closest('.mb-3').querySelector('.invalid-feedback').getAttribute('id')
-          const valuesArray = [closestLabel, closestInvalidFeedback].join(' ')
+          const valuesArray = [linkedLabel, closestInvalidFeedback].join(' ')
           element.setAttribute('aria-labelledby', valuesArray)
         })
         // Remove the id of the corresponding invalid message to each valid field
