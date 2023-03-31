@@ -3,7 +3,10 @@
   padding: 3rem 0;
   // Boosted mod: no gradient background image
 
-  // Boosted mod: no `h1`
+  h1 {
+    --bs-heading-color: var(--bs-emphasis-color);
+    // Boosted mod: no `@include font-size`
+  }
 
   .lead {
     @include font-size(1rem);
@@ -54,6 +57,12 @@
 }
 
 .masthead-followup {
+  h2,
+  h3,
+  h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
+  }
+
   .lead {
     @include font-size(1rem);
   }
@@ -86,7 +95,7 @@
 
 .animate-img {
   > img {
-    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+    @include transition(transform .2s ease-in-out);
   }
 
   &:hover > img {

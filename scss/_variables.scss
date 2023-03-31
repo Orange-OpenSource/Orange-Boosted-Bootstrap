@@ -646,13 +646,13 @@ $outline-offset:              $outline-width !default; // Deprecated in v5.2.3
 $focus-visible-zindex:                5 !default; // Boosted mod
 
 $focus-visible-inner-width:           2px !default; // Boosted mod
-$focus-visible-inner-color:           $white !default; // Boosted mod
-$focus-visible-inner-color-inverted:  $black !default; // Boosted mod
+$focus-visible-inner-color:           var(--#{$prefix}body-bg) !default; // Boosted mod
+$focus-visible-inner-color-inverted:  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 
 $focus-visible-outer-width:           3px !default;  // Boosted mod
 $focus-visible-outer-offset:          $focus-visible-inner-width !default; // Boosted mod
-$focus-visible-outer-color:           $black !default; // Boosted mod
-$focus-visible-outer-color-inverted:  $white !default; // Boosted mod
+$focus-visible-outer-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod
+$focus-visible-outer-color-inverted:  var(--#{$prefix}body-bg) !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
@@ -873,7 +873,7 @@ $table-cell-vertical-align:             top !default;
 $table-line-height:                     1.25 !default; // Boosted mod
 
 $table-color:                           var(--#{$prefix}body-color) !default;
-$table-bg:                              $body-bg !default; // Boosted mod
+$table-bg:                              var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `transparent`
 $table-accent-bg:                       transparent !default;
 
 $table-th-font-weight:                  null !default;
@@ -906,8 +906,8 @@ $table-striped-columns-order:           even !default;
 
 $table-group-separator-color:           currentcolor !default;
 
-$table-caption-color:                   var(--#{$boosted-prefix}caption-color, $black) !default; // Boosted mod
-$table-caption-color-inverted:          $white !default; // Boosted mod
+$table-caption-color:                   var(--#{$boosted-prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
 
 // Boosted mod: no $table-bg-scale
@@ -987,9 +987,9 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-500 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius:           var(--#{$prefix}border-radius) !default;
+$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              $transition-focus !default; // Boosted mod
 // scss-docs-end btn-variables
@@ -1094,9 +1094,9 @@ $input-border-color:                    var(--#{$prefix}border-color-translucent
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
 
-$input-border-radius:                   $border-radius !default;
-$input-border-radius-sm:                $border-radius-sm !default;
-$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius:                   var(--#{$prefix}border-radius) !default;
+$input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
+$input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              currentcolor !default;
@@ -1384,7 +1384,7 @@ $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg`
 
 $nav-pills-padding-x:               1.8125rem !default; // Boosted mod
-$nav-pills-border-radius:           $border-radius !default;
+$nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
@@ -1515,7 +1515,7 @@ $dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
-$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default; // Boosted mod
 $dropdown-divider-bg:               $dropdown-border-color !default;
@@ -1593,6 +1593,9 @@ $pagination-disabled-border-color:  $pagination-disabled-color !default; // Boos
 
 $pagination-transition:             $transition-focus !default;
 
+// Boosted mod: no $pagination-border-radius-sm
+// Boosted mod: no $pagination-border-radius-lg
+
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !default;
@@ -1661,7 +1664,7 @@ $card-inner-border-radius:          subtract($card-border-radius, $card-border-w
 $card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       var(--#{$prefix}body-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
-$card-cap-color:                    $white !default;
+$card-cap-color:                    var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `null`
 $card-cap-font-weight:              $font-weight-bold !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
@@ -1740,9 +1743,12 @@ $accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
 // scss-docs-start tooltip-variables
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
+$tooltip-line-height:               $line-height-sm !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
-$tooltip-color:                     $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$tooltip-bg:                        $gray-400 !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$tooltip-color:                     var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
+$tooltip-bg:                        var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+$tooltip-border-color:              var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
 $tooltip-padding-y:                 $spacer * .5 !default;
@@ -1762,32 +1768,37 @@ $tooltip-arrow-color:               null !default; // Deprecated in Boosted 5.2.
 // Popovers
 
 // scss-docs-start popover-variables
-$popover-font-size:                 $font-size-sm !default;
+$popover-font-size:                 $font-size-base !default; // Boosted mod: instead of `$font-size-sm`
+$popover-line-height:               1.5 !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
-$popover-bg:                        $gray-400 !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$popover-max-width:                 17.25rem !default;
+$popover-bg:                        var(--#{$prefix}body-bg) !default;
+$popover-max-width:                 $spacer * 19 !default; // Boosted mod: instead of `276px`
 $popover-border-width:              var(--#{$prefix}border-width) !default;
-$popover-border-color:              $popover-bg !default; // Boosted mod
+$popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
-$popover-inner-border-radius:       calc($popover-border-radius - $popover-border-width) !default; // stylelint-disable-line function-disallowed-list
-$popover-box-shadow:                null !default;
+$popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
+$popover-box-shadow:                $box-shadow !default;
 
-$popover-header-font-size:          $font-size-base !default;
+$popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
+$popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          $spacer * .5 !default;
-$popover-header-padding-x:          $spacer * .5 !default;
+$popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
+// fusv-disable
+$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
+// fusv-enable
+$popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-y:            $spacer !default;
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:               $spacer * .5 !default;
+$popover-arrow-width:               $spacer !default; // Boosted mod: instead of `1rem`
 $popover-arrow-height:              $popover-arrow-width * .5 !default;
 // scss-docs-end popover-variables
 
 // fusv-disable
-// Deprecated in Boosted 5.2.0 for CSS variables
+// Deprecated in Bootstrap 5.2.0 for CSS variables
 $popover-arrow-color:               $popover-bg !default;
 $popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
 // fusv-enable
@@ -1799,7 +1810,7 @@ $toast-max-width:                   21.875rem !default;
 $toast-padding-x:                   $spacer * .5 !default;
 $toast-padding-y:                   $spacer * .25 !default;
 $toast-font-size:                   .875rem !default;
-$toast-color:                       $black !default;
+$toast-color:                       var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `null` due to some `bg-dark` issue
 $toast-background-color:            rgba(var(--#{$prefix}body-bg-rgb), .85) !default;
 $toast-border-width:                var(--#{$prefix}border-width) !default;
 $toast-border-color:                var(--#{$prefix}border-color-translucent) !default; // Boosted mod
@@ -1820,7 +1831,7 @@ $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .65em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-border-radius:               var(--#{$prefix}border-radius) !default;
 // scss-docs-end badge-variables
 
 // Modals
@@ -1844,7 +1855,7 @@ $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
-$modal-content-inner-border-radius: $border-radius !default; // Boosted mod
+$modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // Boosted mod: instead of `subtract($modal-content-border-radius, $modal-content-border-width)`
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
@@ -1894,7 +1905,7 @@ $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
 $alert-margin-bottom:               $spacer !default;
 $alert-color:                       inherit !default; // Boosted mod
-$alert-border-radius:               $border-radius !default;
+$alert-border-radius:               var(--#{$prefix}border-radius) !default;
 $alert-link-font-weight:            null !default; // Boosted mod
 $alert-heading-font-weight:         $font-weight-bold !default; // Boosted mod
 $alert-border-width:                var(--#{$prefix}border-width) !default;
@@ -2034,7 +2045,7 @@ $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         $spacer * .5 !default;
 $breadcrumb-margin-bottom:          1rem !default;
-$breadcrumb-color:                  $black !default; // Boosted mod
+$breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-active-color:           null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
@@ -2131,7 +2142,7 @@ $btn-close-height:              $btn-close-width !default;
 $btn-close-padding:             var(--#{$boosted-prefix}icon-spacing, #{$btn-icon-padding-x}) !default; // Boosted mod
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
-$btn-close-color:               $black !default;
+$btn-close-color:               var(--#{$prefix}emphasis-color) !default;
 $btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
 // Boosted mod
 // fusv-disable
@@ -2241,7 +2252,7 @@ $step-item-bg:                $black !default;
 $step-item-active-bg:         $primary !default;
 $step-item-next-bg:           $gray-400 !default;
 $step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
-$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(calc(-1 * $step-item-shadow-size) 0 0 $white) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
+$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $white) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
 
 $step-item-arrow-width:       .8125rem !default;
 $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, var(--#{$prefix}border-width)) 50%, 1px 100%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, subtract(100%, 1px) 0%, var(--#{$prefix}border-width) 50%, subtract(100%, 1px) 100%, 100% 100%) #{"*/"} !default; // Used in clip-path
@@ -2261,7 +2272,7 @@ $step-link-text-decoration:   $link-decoration !default;
 $step-item-dark-bg:           $white !default;
 $step-item-dark-active-bg:    $brand-orange !default;
 $step-item-dark-next-bg:      $gray-700 !default;
-$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(calc(-1 * $step-item-shadow-size) 0 0 $black) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
+$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $black) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
 $step-link-dark-color:        $black !default;
 $step-link-dark-active-color: $black !default;
 $step-link-dark-next-color:   $white !default;
@@ -2353,7 +2364,7 @@ $tag-gap:                           map-get($spacers, 1) !default;
 $tag-font-shift:                    $spacer * .1 !default;
 $tag-font-weight:                   $font-weight-bold !default;
 $tag-border-width:                  var(--#{$prefix}border-width) !default;
-$tag-border-radius:                 $border-radius-pill !default;
+$tag-border-radius:                 var(--#{$prefix}border-radius-pill) !default;
 
 $tag-padding-x:                     $spacer * .65 !default;
 $tag-padding-y:                     $spacer * .45 !default;

@@ -9,9 +9,9 @@ toc: true
 added: 5.3
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 ## Link opacity
 
