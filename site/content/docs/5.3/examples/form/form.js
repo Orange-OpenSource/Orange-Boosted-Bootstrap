@@ -18,15 +18,15 @@
         invalidItems[0].focus()
         // Add the id of the corresponding invalid message to each invalid field
         invalidItems.forEach(element => {
-          const linkedLabel = element.getAttribute('aria-labelledby')
-          const closestInvalidFeedback = element.closest('.mb-3').querySelector('.invalid-feedback').getAttribute('id')
-          const valuesArray = [linkedLabel, closestInvalidFeedback].join(' ')
+          const closestLabel = element.parentElement.querySelector('.form-label').getAttribute('id')
+          const closestInvalidFeedback = element.parentElement.querySelector('.invalid-feedback').getAttribute('id')
+          const valuesArray = [closestLabel, closestInvalidFeedback].join(' ')
           element.setAttribute('aria-labelledby', valuesArray)
         })
         // Remove the id of the corresponding invalid message to each valid field
-        const validItems = form.querySelectorAll(':valid:not([type=\'submit\'])')
+        const validItems = form.querySelectorAll(':valid:not([type="submit"])')
         validItems.forEach(element => {
-          const closestLabel = element.closest('.mb-3').querySelector('.form-label').getAttribute('id')
+          const closestLabel = element.parentElement.querySelector('.form-label').getAttribute('id')
           element.setAttribute('aria-labelledby', closestLabel)
         })
       }
