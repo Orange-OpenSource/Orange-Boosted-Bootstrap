@@ -8,17 +8,20 @@
   --#{$prefix}tooltip-margin: #{$tooltip-margin};
   @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
   --#{$prefix}tooltip-font-weight: #{$tooltip-font-weight}; // Boosted mod: extra CSS variable
+  --#{$prefix}tooltip-line-height: #{$tooltip-line-height}; // Boosted mod
   --#{$prefix}tooltip-color: #{$tooltip-color};
   --#{$prefix}tooltip-bg: #{$tooltip-bg};
+  --#{$prefix}tooltip-border-width: #{$tooltip-border-width}; // Boosted mod
+  --#{$prefix}tooltip-border-color: #{$tooltip-border-color}; // Boosted mod
   --#{$prefix}tooltip-border-radius: #{$tooltip-border-radius};
   --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
   --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
   --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
+  --#{$prefix}tooltip-arrow-border: var(--#{$prefix}tooltip-border-color); // Boosted mod
   // scss-docs-end tooltip-css-vars
 
   z-index: var(--#{$prefix}tooltip-zindex);
   display: block;
-  padding: var(--#{$prefix}tooltip-arrow-height);
   margin: var(--#{$prefix}tooltip-margin);
   @include deprecate("`$tooltip-margin`", "v5", "v5.x", true);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
@@ -26,6 +29,7 @@
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
   font-weight: var(--#{$prefix}tooltip-font-weight); // Boosted mod
+  line-height: var(--#{$prefix}--#{$prefix}tooltip-line-height); // Boosted mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
   opacity: 0;
@@ -37,34 +41,56 @@
     width: var(--#{$prefix}tooltip-arrow-width);
     height: var(--#{$prefix}tooltip-arrow-height);
 
-    &::before {
+    &::before,
+    &::after { // Boosted mod
       position: absolute;
+      display: block; // Boosted mod
       content: "";
       border-color: transparent;
       border-style: solid;
+      border-width: 0; // Boosted mod
     }
   }
 }
 
+// Boosted mod: needed to generate a border with a different color
 .bs-tooltip-top .tooltip-arrow {
-  bottom: 0;
+  bottom: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+
+  &::before,
+  &::after {
+    border-width: var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+  }
 
   &::before {
-    top: -1px;
-    border-width: var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+    bottom: 0;
+    border-top-color: var(--#{$prefix}--#{$prefix}tooltip-arrow-border);
+  }
+
+  &::after {
+    bottom: var(--#{$prefix}tooltip-border-width);
     border-top-color: var(--#{$prefix}tooltip-bg);
   }
 }
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow {
-  left: 0;
+  left: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 
-  &::before {
-    right: -1px;
+  &::before,
+  &::after {
     border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+  }
+
+  &::before {
+    left: 0;
+    border-right-color: var(--#{$prefix}tooltip-arrow-border);
+  }
+
+  &::after {
+    left: var(--#{$prefix}tooltip-border-width);
     border-right-color: var(--#{$prefix}tooltip-bg);
   }
 }
@@ -72,29 +98,48 @@
 /* rtl:end:ignore */
 
 .bs-tooltip-bottom .tooltip-arrow {
-  top: 0;
+  top: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
+
+  &::before,
+  &::after {
+    border-width: 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+  }
 
   &::before {
-    bottom: -1px;
-    border-width: 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+    top: 0;
+    border-bottom-color: var(--#{$prefix}tooltip-arrow-border);
+  }
+
+  &::after {
+    top: var(--#{$prefix}tooltip-border-width);
     border-bottom-color: var(--#{$prefix}tooltip-bg);
   }
 }
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow {
-  right: 0;
+  right: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
   width: var(--#{$prefix}tooltip-arrow-height);
   height: var(--#{$prefix}tooltip-arrow-width);
 
-  &::before {
-    left: -1px;
+  &::before,
+  &::after {
     border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+  }
+
+  &::before {
+    right: 0;
+    border-left-color: var(--#{$prefix}tooltip-arrow-border);
+  }
+
+  &::after {
+    right: var(--#{$prefix}tooltip-border-width);
     border-left-color: var(--#{$prefix}tooltip-bg);
   }
 }
 
 /* rtl:end:ignore */
+// End mod
 
 .bs-tooltip-auto {
   &[data-popper-placement^="top"] {
@@ -118,5 +163,6 @@
   color: var(--#{$prefix}tooltip-color);
   // Boosted mod: no `text-align: center`
   background-color: var(--#{$prefix}tooltip-bg);
+  border: var(--#{$prefix}tooltip-border-width) solid var(--#{$prefix}tooltip-border-color); // Boosted mod
   @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }
