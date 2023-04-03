@@ -200,6 +200,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
+- <span class="badge bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
