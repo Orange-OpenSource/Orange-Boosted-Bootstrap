@@ -60,6 +60,7 @@
     })
 
   // Instantiate all toasts in docs pages only
+  // js-docs-start live-toast
   const toastTrigger = document.getElementById('liveToastBtn')
   const toastLiveExample = document.getElementById('liveToast')
 
@@ -69,6 +70,7 @@
       toastBoosted.show()
     })
   }
+  // js-docs-end live-toast
 
   // -------------------------------
   // Alerts
@@ -76,6 +78,7 @@
   // Used in 'Show live toast' example in docs or StackBlitz
 
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() and a tooltip on btn-close
+  // js-docs-start live-alert
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
   function alert(message, type, typeVisuallyHidden) {
     const wrapper = document.createElement('div')
@@ -109,6 +112,7 @@
       alert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
+  // js-docs-end live-alert
 
   // --------
   // Carousels
@@ -145,6 +149,7 @@
   // Modal
   // -------------------------------
   // Modal 'Varying modal content' example in docs and StackBlitz
+  // js-docs-start varying-modal-content
   const exampleModal = document.getElementById('exampleModal')
   if (exampleModal) {
     exampleModal.addEventListener('show.bs.modal', event => {
@@ -152,6 +157,8 @@
       const button = event.relatedTarget
       // Extract info from data-bs-* attributes
       const recipient = button.getAttribute('data-bs-whatever')
+      // If necessary, you could initiate an Ajax request here
+      // and then do the updating in a callback.
 
       // Update the modal's content.
       const modalTitle = exampleModal.querySelector('.modal-title')
@@ -161,6 +168,7 @@
       modalBodyInput.value = recipient
     })
   }
+  // js-docs-end varying-modal-content
 
   // -------------------------------
   // Offcanvas
