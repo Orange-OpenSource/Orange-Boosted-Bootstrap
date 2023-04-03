@@ -250,7 +250,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
-      <li><code>$form-range-thumb-active-border</code> It has been replaced by <code>$form-range-thumb-active-border-color</code> and will be removed in v5.3.0.</li>
       <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
@@ -414,7 +413,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$form-invalid-border-color-dark</code></li>
       <li><code>$form-invalid-color</code></li>
       <li><code>$form-invalid-color-dark</code></li>
-      <li><code>$form-range-thumb-active-border-color</code></li>
       <li><code>$form-range-thumb-hover-bg</code></li>
       <li><code>$form-valid-border-color</code></li>
       <li><code>$form-valid-border-color-dark</code></li>
@@ -683,7 +681,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
       <li><code>$card-spacer-y</code></li>
-      <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
       <li><code>$form-star-focus-color-dark</code></li>

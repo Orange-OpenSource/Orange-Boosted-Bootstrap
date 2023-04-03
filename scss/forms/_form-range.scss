@@ -58,7 +58,7 @@
 
     &:active {
       cursor: grabbing; // Boosted mod
-      border-color: $form-range-thumb-active-border-color; // Boosted mod
+      border-color: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
@@ -94,7 +94,7 @@
 
     &:active {
       cursor: grabbing; // Boosted mod
-      border-color: $form-range-thumb-active-border-color; // Boosted mod
+      border-color: $form-range-thumb-active-border; // Boosted mod
       @include gradient-bg($form-range-thumb-active-bg);
     }
   }
