@@ -69,9 +69,9 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
 </div>
 
 To create your own SVG sprite file, containing only the icons you need:
-- download the icons from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
-- optimise them with [svgo](https://github.com/svg/svgo)
-- include the path in a tag `<symbol>`
+- download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
+- optimize them with [svgo](https://github.com/svg/svgo)
+- include the path in a tag `<symbol>`, inside a SVG file, like below
 - you may have the attributes `fill="#000000"` and/or `fill-rule="evenodd"`, only if needed
 
 ```html
