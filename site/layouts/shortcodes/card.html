@@ -39,25 +39,25 @@
     {{- if $buttons -}}
     <ul class="nav flex-row gap-3">
       <li>
-        <a href="#">
+        <button class="btn btn-link btn-inverse p-0 border-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
             <use xlink:href="#heart"/>
           </svg>
           <span class="visually-hidden">{{ if $rtl }}مفضل{{ else }}Favorite{{ end }}</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a href="#">
+        <button class="btn btn-link btn-inverse p-0 border-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
             <use xlink:href="#share"/>
           </svg>
           <span class="visually-hidden">{{ if $rtl }}يشارك{{ else }}Share{{ end }}</span>
-        </a>
+        </button>
       </li>
     </ul>
     {{- end -}}
     {{- if $action -}}
-    <button class="btn btn-secondary{{ if eq $background "dark" }} btn-inverse{{ end }}" aria-label="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}" title="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}">{{ if $rtl }}زر{{ else }}Button{{ end }}</button>
+    <a href="#" class="btn btn-secondary{{ if eq $background "dark" }} btn-inverse{{ end }}" aria-label="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}" title="{{ if $rtl }}وصف الزر{{ else }}Button description{{ end }}">{{ if $rtl }}زر{{ else }}Button{{ end }}</a>
     {{- end -}}
   </div>
 </div>
