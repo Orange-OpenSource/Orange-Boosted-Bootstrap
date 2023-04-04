@@ -63,7 +63,7 @@ params:
   current_version:                  "5.3.0-alpha2"
   current_ruby_version:             "5.3.0-alpha2"
   docs_version:                     "5.3"
-  rfs_version:                      "v9.0.6"
+  rfs_version:                      "v10.0.0"
   bootstrap_github_org:             "https://github.com/twbs"
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
