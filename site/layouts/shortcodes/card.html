@@ -37,8 +37,8 @@
     <p class="card-text fw-bold text-{{ if eq $background "dark" }}light{{ else }}muted{{ end }}">{{ if $rtl }}البيانات الوصفية{{ else }}Meta data{{ end }}</p>
     {{- end -}}
     {{- if $buttons -}}
-    <ul class="nav flex-row gap-3">
-      <li class="lh-1">
+    <ul class="nav flex-row gap-3 lh-1">
+      <li>
         <button class="btn btn-icon btn-link btn-inverse p-0 border-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
             <use xlink:href="#heart"/>
@@ -46,7 +46,7 @@
           <span class="visually-hidden">{{ if $rtl }}مفضل{{ else }}Favorite{{ end }}</span>
         </button>
       </li>
-      <li class="lh-1">
+      <li>
         <button class="btn btn-icon btn-link btn-inverse p-0 border-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
             <use xlink:href="#share"/>
