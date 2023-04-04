@@ -1269,10 +1269,9 @@ $form-range-thumb-border-radius:           50% !default;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
 $form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
-$form-range-thumb-active-bg:               null !default;
-// fusv-disable
-$form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod // Deprecated in v5.2.0
-// fusv-enable
+$form-range-thumb-hover-bg:                $black !default; // Boosted mod
+$form-range-thumb-active-bg:               $primary !default; // Boosted mod: instead of `tint-color($component-active-bg, 70%)`
+$form-range-thumb-active-border:           $primary !default; // Boosted mod
 $form-range-thumb-disabled-bg:             $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
 // scss-docs-end form-range-variables
