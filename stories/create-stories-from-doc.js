@@ -63,6 +63,7 @@ const files = [
   ['Popovers', '../_site/docs/5.3/components/popovers/index.html'],
   ['Progress', '../_site/docs/5.3/components/progress/index.html'],
   ['Scrollspy', '../_site/docs/5.3/components/scrollspy/index.html'],
+  ['SideNavigation', '../_site/docs/5.3/components/side-navigation/index.html'],
   ['Spinners', '../_site/docs/5.3/components/spinners/index.html'],
   ['SteppedProcess', '../_site/docs/5.3/components/stepped-process/index.html'],
   ['Sticker', '../_site/docs/5.3/components/sticker/index.html'],
