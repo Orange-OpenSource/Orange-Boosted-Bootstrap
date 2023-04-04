@@ -32,22 +32,13 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 <input type="range" class="form-range" id="disabledRange" disabled>
 {{< /example >}}
 
-## Dark variant
-
-Nothing to do here, just use it normally within a `.bg-dark` element.
-
-{{< example class="bg-dark" >}}
-<label for="customRange2" class="form-label">Example range</label>
-<input type="range" class="form-range" id="customRange2">
-{{< /example >}}
-
 ## Min and max
 
 Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
 
 {{< example >}}
-<label for="customRange3" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" id="customRange3">
+<label for="customRange2" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" id="customRange2">
 {{< /example >}}
 
 ## Steps
@@ -55,8 +46,8 @@ Range inputs have implicit values for `min` and `max`—`0` and `100`, respectiv
 By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
 
 {{< example >}}
-<label for="customRange4" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange4">
+<label for="customRange3" class="form-label">Example range</label>
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
 ## Usability
@@ -67,10 +58,10 @@ This requires extra JavaScript code.
 
 {{< example >}}
 <div class="d-flex w-100 justify-content-between">
-  <label for="customRange5" class="form-label">Example range</label>
-  <output for="customRange5" class="fw-bold" aria-hidden="true"></output>
+  <label for="customRange4" class="form-label">Example range</label>
+  <output for="customRange4" class="fw-bold" aria-hidden="true"></output>
 </div>
-<input type="range" class="form-range" min="0" max="100" step="1" id="customRange5">
+<input type="range" class="form-range" min="0" max="100" step="1" id="customRange4">
 
 <script>
   // Please note that this script is only an example, please adapt it to your needs
