@@ -1051,7 +1051,7 @@ $form-text-font-size:                   $small-font-size !default;
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // Boosted mod: instead of `null`
 $form-text-line-height:                 $line-height-sm !default; // Boosted mod
-$form-text-color:                       $text-muted !default;
+$form-text-color:                       var(--#{$prefix}secondary-color) !default;
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
