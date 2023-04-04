@@ -3,6 +3,8 @@
   --#{$prefix}local-nav-padding-y: #{$local-nav-padding-y};
   --#{$prefix}local-nav-color: #{$local-nav-color};
   --#{$prefix}local-nav-active-color: #{$local-nav-active-color};
+  --#{$prefix}local-nav-active-bg: #{$local-nav-active-bg};
+  --#{$prefix}local-nav-active-marker-width: #{$local-nav-active-marker-width};
   --#{$prefix}local-nav-border-color: #{$local-nav-border-color};
   --#{$prefix}local-nav-border-width: #{$local-nav-border-width};
   // scss-docs-end local-nav-css-vars
@@ -28,8 +30,7 @@
     }
 
     &:hover,
-    &:active,
-    &:not(.collapsed) {
+    &:active {
       color: var(--#{$prefix}local-nav-active-color);
     }
 
@@ -56,8 +57,27 @@
     --bs-navbar-padding-y: 0px; // stylelint-disable-line length-zero-no-unit
     --bs-navbar-border-color: transparent;
 
-    .nav-link.active::before {
-      bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
+    .nav-link.active {
+      color: var(--#{$prefix}local-nav-color);
+
+      &::before {
+        bottom: calc(-1 * var(--#{$prefix}local-nav-border-width)); // stylelint-disable-line function-disallowed-list
+      }
+
+      @include media-breakpoint-down(lg) {
+        background-color: var(--#{$prefix}local-nav-active-bg);
+
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          /* stylelint-disable-next-line function-disallowed-list */
+          left: calc(-1 * var(--#{$prefix}local-nav-active-marker-width));
+          width: var(--#{$prefix}local-nav-active-marker-width);
+          content: "";
+          background-color: var(--#{$prefix}local-nav-active-color);
+        }
+      }
     }
   }
 }
@@ -66,6 +86,7 @@
   // scss-docs-start local-nav-dark-css-vars
   --#{$prefix}local-nav-color: #{$local-nav-dark-color};
   --#{$prefix}local-nav-active-color: #{$local-nav-dark-active-color};
+  --#{$prefix}local-nav-active-bg: #{$local-nav-dark-active-bg};
   --#{$prefix}local-nav-border-color: #{$local-nav-dark-border-color};
   // scss-docs-end local-nav-dark-css-vars
 }

@@ -2398,16 +2398,19 @@ $tag-active-decoration-color-dark:  $white !default;
 // Local navigation
 
 // scss-docs-start local-nav-variables
-$local-nav-padding-y:         $navbar-nav-link-padding-y !default;
-$local-nav-color:             var(--#{$prefix}body-color) !default;
-$local-nav-active-color:      $accessible-orange !default;
-$local-nav-border-color:      $gray-500 !default;
-$local-nav-border-width:      1px !default;
+$local-nav-padding-y:           $navbar-nav-link-padding-y !default;
+$local-nav-color:               var(--#{$prefix}body-color) !default;
+$local-nav-active-color:        $accessible-orange !default;
+$local-nav-active-bg:           var(--#{$prefix}secondary-bg) !default;
+$local-nav-active-marker-width: $spacer * .2 !default;
+$local-nav-border-color:        $gray-500 !default;
+$local-nav-border-width:        1px !default;
 // scss-docs-end local-nav-variables
 
 // scss-docs-start local-nav-dark-variables
-$local-nav-dark-color:        $white !default;
-$local-nav-dark-active-color: $brand-orange !default;
-$local-nav-dark-border-color: $gray-700 !default;
+$local-nav-dark-color:          $white !default;
+$local-nav-dark-active-color:   $brand-orange !default;
+$local-nav-dark-active-bg:      var(--#{$prefix}secondary-color) !default;
+$local-nav-dark-border-color:   $gray-700 !default;
 // scss-docs-end local-nav-dark-variables
 // End mod
