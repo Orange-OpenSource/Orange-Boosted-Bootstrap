@@ -32,6 +32,15 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 <input type="range" class="form-range" id="disabledRange" disabled>
 {{< /example >}}
 
+## Dark variant
+
+Nothing to do here, just use it normally within a `.bg-dark` element.
+
+{{< example class="bg-dark" >}}
+<label for="customRange1" class="form-label">Example range</label>
+<input type="range" class="form-range" id="customRange1">
+{{< /example >}}
+
 ## Min and max
 
 Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
