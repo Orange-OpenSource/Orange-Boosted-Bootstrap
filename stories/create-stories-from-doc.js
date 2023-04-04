@@ -53,6 +53,7 @@ const files = [
   ['Dropdowns', '../_site/docs/5.3/components/dropdowns/index.html'],
   ['Footer', '../_site/docs/5.3/components/footer/index.html'],
   ['ListGroup', '../_site/docs/5.3/components/list-group/index.html'],
+  ['LocalNavigation', '../_site/docs/5.3/components/local-navigation/index.html'],
   ['Modal', '../_site/docs/5.3/components/modal/index.html'],
   ['Navbar', '../_site/docs/5.3/components/navbar/index.html'],
   ['NavsTabs', '../_site/docs/5.3/components/navs-tabs/index.html'],
