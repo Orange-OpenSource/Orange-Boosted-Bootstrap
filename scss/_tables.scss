@@ -63,6 +63,13 @@
     width: $spacer * 2;
     max-width: $spacer * 2;
   }
+
+  // Use negative margins on icons in tables to preserve row height
+  svg,
+  img {
+    margin-top: $table-cell-icon-margin-top;
+    margin-bottom: $table-cell-icon-margin-bottom;
+  }
   // End mod
 }
 
