@@ -16,7 +16,7 @@
 }
 
 // Boosted mod: no .#{$state}-tooltip, so no need for `$tooltip-*` args
-@mixin form-validation-state($state, $color, $icon, $border-color: $color) {
+@mixin form-validation-state($state, $color, $icon, $border-color: $color, $border-width: $border-width) {
   // Boosted mod: valid ≠ invalid
   @if $state == "valid" {
     .#{$state}-feedback {
@@ -95,6 +95,14 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: change border size on focus to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          &[data-focus-visible-added] {
+            border-width: $border-width;
+          }
+        }
+        // End mod
       }
     }
 
@@ -123,6 +131,14 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: change border size on focus to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          &[data-focus-visible-added] {
+            border-width: $border-width;
+          }
+        }
+        // End mod
       }
     }
 
