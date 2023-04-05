@@ -413,6 +413,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$form-invalid-border-color-dark</code></li>
       <li><code>$form-invalid-color</code></li>
       <li><code>$form-invalid-color-dark</code></li>
+      <li><code>$form-range-thumb-hover-bg</code></li>
+      <li><code>$form-text-line-height</code></li>
       <li><code>$form-valid-border-color</code></li>
       <li><code>$form-valid-border-color-dark</code></li>
       <li><code>$form-valid-color</code></li>
@@ -481,6 +483,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-emphasis-dark</code></li>
       <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$table-cell-icon-margin-bottom</code></li>
+      <li><code>$table-cell-icon-margin-top</code></li>
       <li><code>$tooltip-border-color</code></li>
       <li><code>$tooltip-border-width</code></li>
       <li><code>$tooltip-line-height</code></li>
@@ -680,7 +684,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
       <li><code>$card-spacer-y</code></li>
-      <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
       <li><code>$form-star-focus-color-dark</code></li>
