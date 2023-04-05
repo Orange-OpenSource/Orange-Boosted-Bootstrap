@@ -414,6 +414,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$form-invalid-color</code></li>
       <li><code>$form-invalid-color-dark</code></li>
       <li><code>$form-range-thumb-hover-bg</code></li>
+      <li><code>$form-text-line-height</code></li>
       <li><code>$form-valid-border-color</code></li>
       <li><code>$form-valid-border-color-dark</code></li>
       <li><code>$form-valid-color</code></li>
