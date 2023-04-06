@@ -528,9 +528,9 @@ $utilities: map-merge(
       class: lh,
       values: (
         1: 1,
-        sm: $line-height-sm,
-        base: $line-height-base,
-        lg: $line-height-lg,
+        sm: 1.25,
+        base: 1.5,
+        lg: 2,
       )
     ),
     "line-length": (
