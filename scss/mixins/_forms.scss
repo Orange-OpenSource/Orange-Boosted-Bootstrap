@@ -16,6 +16,7 @@
 }
 
 // Boosted mod: no .#{$state}-tooltip, so no need for `$tooltip-*` args
+// Boosted mod: `$border-width`arg added to be able to change border width on focus for fields on error
 @mixin form-validation-state($state, $color, $icon, $border-color: $color, $border-width: $border-width) {
   // Boosted mod: valid ≠ invalid
   @if $state == "valid" {

@@ -1324,7 +1324,7 @@ $form-validation-states: (
     // Boosted mod: no `tooltip-bg-color`
     // Boosted mod: no `focus-box-shadow`
     "border-color": var(--#{$prefix}form-invalid-border-color),
-    "border-width": .25rem
+    "border-width": .25rem // Boosted mod
   )
 ) !default;
 // scss-docs-end form-validation-states
