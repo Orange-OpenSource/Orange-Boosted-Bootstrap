@@ -27,7 +27,7 @@
 
 .header-minimized {
   // scss-docs-start minimized-navbar-css-vars
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     --#{$prefix}navbar-padding-y: 0px; // stylelint-disable-line length-zero-no-unit
     --#{$prefix}navbar-brand-margin-y: #{$navbar-minimized-brand-margin-y};
     --#{$prefix}navbar-brand-logo-size: #{$navbar-brand-logo-size-xs};
@@ -45,6 +45,8 @@
 }
 
 .header-offbeat {
-  --bs-navbar-nav-link-padding-y: 24px;
-  // --bs-navbar-nav-padding-bottom: 1px;
+  @include media-breakpoint-up(lg) {
+    // TODO: use Sass var instead of 26px
+    --#{$prefix}navbar-nav-link-padding-y: 26px;
+  }
 }
