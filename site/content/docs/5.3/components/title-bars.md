@@ -27,7 +27,7 @@ Supporting colors can also be used as the background color for title bars, but n
 The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/black one without any image.
 
 {{< example class="p-0">}}
-<div class="bg-white title-bar">
+<div class="bg-body title-bar">
   <div class="container-xxl">
     <h1 class="display-1">Title</h1>
   </div>

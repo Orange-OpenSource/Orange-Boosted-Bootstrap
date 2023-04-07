@@ -16,13 +16,13 @@ Boosted has a base `.btn` class that sets up basic styles such as padding and co
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-The `.btn` class is intended to be used in conjunction with our additional predefined button styles, or to serve as a basis for your own custom styles.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
 <!-- Boosted mod: no warning callout about `:focus`/`:focus-visible` since Boosted provides a default visible focus for each focusable element -->
 
-## Predefined styles
+## Variants
 
-Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 {{< buttons.inline >}}

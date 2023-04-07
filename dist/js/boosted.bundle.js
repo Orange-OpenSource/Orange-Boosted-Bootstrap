@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Boosted v5.3.0-alpha3 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.3.0-alpha1 (https://boosted.orange.com/)
+  * Bootstrap v5.3.0-alpha3 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -16,7 +16,55 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/index.js
+   * Bootstrap dom/data.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+
+  /**
+   * Constants
+   */
+
+  const elementMap = new Map();
+  const Data = {
+    set(element, key, instance) {
+      if (!elementMap.has(element)) {
+        elementMap.set(element, new Map());
+      }
+      const instanceMap = elementMap.get(element);
+
+      // make it clear we only want one instance per element
+      // can be removed later when multiple key/instances are fine to be used
+      if (!instanceMap.has(key) && instanceMap.size !== 0) {
+        // eslint-disable-next-line no-console
+        console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(instanceMap.keys())[0]}.`);
+        return;
+      }
+      instanceMap.set(key, instance);
+    },
+    get(element, key) {
+      if (elementMap.has(element)) {
+        return elementMap.get(element).get(key) || null;
+      }
+      return null;
+    },
+    remove(element, key) {
+      if (!elementMap.has(element)) {
+        return;
+      }
+      const instanceMap = elementMap.get(element);
+      instanceMap.delete(key);
+
+      // free up element references if there are no instances left for an element
+      if (instanceMap.size === 0) {
+        elementMap.delete(element);
+      }
+    }
+  };
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -263,7 +311,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): dom/event-handler.js
+   * Bootstrap dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -333,7 +381,7 @@
   }
   function normalizeParameters(originalTypeEvent, handler, delegationFunction) {
     const isDelegated = typeof handler === 'string';
-    // todo: tooltip passes `false` instead of selector, so we need to check
+    // TODO: tooltip passes `false` instead of selector, so we need to check
     const callable = isDelegated ? delegationFunction : handler || delegationFunction;
     let typeEvent = getTypeEvent(originalTypeEvent);
     if (!nativeEvents.has(typeEvent)) {
@@ -450,11 +498,10 @@
         nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
         defaultPrevented = jQueryEvent.isDefaultPrevented();
       }
-      let evt = new Event(event, {
+      const evt = hydrateObj(new Event(event, {
         bubbles,
         cancelable: true
-      });
-      evt = hydrateObj(evt, args);
+      }), args);
       if (defaultPrevented) {
         evt.preventDefault();
       }
@@ -485,55 +532,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): dom/data.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
-   * Constants
-   */
-
-  const elementMap = new Map();
-  const Data = {
-    set(element, key, instance) {
-      if (!elementMap.has(element)) {
-        elementMap.set(element, new Map());
-      }
-      const instanceMap = elementMap.get(element);
-
-      // make it clear we only want one instance per element
-      // can be removed later when multiple key/instances are fine to be used
-      if (!instanceMap.has(key) && instanceMap.size !== 0) {
-        // eslint-disable-next-line no-console
-        console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(instanceMap.keys())[0]}.`);
-        return;
-      }
-      instanceMap.set(key, instance);
-    },
-    get(element, key) {
-      if (elementMap.has(element)) {
-        return elementMap.get(element).get(key) || null;
-      }
-      return null;
-    },
-    remove(element, key) {
-      if (!elementMap.has(element)) {
-        return;
-      }
-      const instanceMap = elementMap.get(element);
-      instanceMap.delete(key);
-
-      // free up element references if there are no instances left for an element
-      if (instanceMap.size === 0) {
-        elementMap.delete(element);
-      }
-    }
-  };
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): dom/manipulator.js
+   * Bootstrap dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -590,7 +589,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/config.js
+   * Bootstrap util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -642,7 +641,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): base-component.js
+   * Bootstrap base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -651,7 +650,7 @@
    * Constants
    */
 
-  const VERSION = '5.3.0-alpha1';
+  const VERSION = '5.3.0-alpha3';
 
   /**
    * Class definition
@@ -710,7 +709,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): dom/selector-engine.js
+   * Bootstrap dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -798,7 +797,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/component-functions.js
+   * Bootstrap util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -822,7 +821,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): alert.js
+   * Bootstrap alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -896,7 +895,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): button.js
+   * Bootstrap button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -959,7 +958,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/swipe.js
+   * Bootstrap util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1078,7 +1077,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): carousel.js
+   * Bootstrap carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1211,7 +1210,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+      // Boosted mod: if a play-pause button is present, set the button to play
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
         this._playPauseButton.classList.remove('pause');
         this._playPauseButton.classList.add('play');
@@ -1238,7 +1237,7 @@
       }
       // End mod
 
-      // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+      // Boosted mod: if a play-pause button is present, reset the button to pause
       if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
         this._playPauseButton.classList.remove('play');
         this._playPauseButton.classList.add('pause');
@@ -1453,7 +1452,7 @@
       }
       if (!activeElement || !nextElement) {
         // Some weirdness is happening, so we bail
-        // todo: change tests that use empty divs to avoid this check
+        // TODO: change tests that use empty divs to avoid this check
         return;
       }
       const isCycling = Boolean(this._interval);
@@ -1595,7 +1594,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): collapse.js
+   * Bootstrap collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1993,7 +1992,7 @@
   function getUAString() {
     var uaData = navigator.userAgentData;
 
-    if (uaData != null && uaData.brands) {
+    if (uaData != null && uaData.brands && Array.isArray(uaData.brands)) {
       return uaData.brands.map(function (item) {
         return item.brand + "/" + item.version;
       }).join(' ');
@@ -2312,10 +2311,9 @@
   // Zooming can change the DPR, but it seems to report a value that will
   // cleanly divide the values into the appropriate subpixels.
 
-  function roundOffsetsByDPR(_ref) {
+  function roundOffsetsByDPR(_ref, win) {
     var x = _ref.x,
         y = _ref.y;
-    var win = window;
     var dpr = win.devicePixelRatio || 1;
     return {
       x: round(x * dpr) / dpr || 0,
@@ -2398,7 +2396,7 @@
     var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
       x: x,
       y: y
-    }) : {
+    }, getWindow(popper)) : {
       x: x,
       y: y
     };
@@ -3636,49 +3634,49 @@
 
   const Popper = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
-    popperGenerator,
-    detectOverflow,
-    createPopperBase: createPopper$2,
-    createPopper,
-    createPopperLite: createPopper$1,
-    top,
-    bottom,
-    right,
-    left,
-    auto,
-    basePlacements,
-    start,
-    end,
-    clippingParents,
-    viewport,
-    popper,
-    reference,
-    variationPlacements,
-    placements,
-    beforeRead,
-    read,
-    afterRead,
-    beforeMain,
-    main,
     afterMain,
-    beforeWrite,
-    write,
+    afterRead,
     afterWrite,
-    modifierPhases,
     applyStyles: applyStyles$1,
     arrow: arrow$1,
+    auto,
+    basePlacements,
+    beforeMain,
+    beforeRead,
+    beforeWrite,
+    bottom,
+    clippingParents,
     computeStyles: computeStyles$1,
+    createPopper,
+    createPopperBase: createPopper$2,
+    createPopperLite: createPopper$1,
+    detectOverflow,
+    end,
     eventListeners,
     flip: flip$1,
     hide: hide$1,
+    left,
+    main,
+    modifierPhases,
     offset: offset$1,
+    placements,
+    popper,
+    popperGenerator,
     popperOffsets: popperOffsets$1,
-    preventOverflow: preventOverflow$1
+    preventOverflow: preventOverflow$1,
+    read,
+    reference,
+    right,
+    start,
+    top,
+    variationPlacements,
+    viewport,
+    write
   }, Symbol.toStringTag, { value: 'Module' }));
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): dropdown.js
+   * Bootstrap dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3751,7 +3749,7 @@
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
-      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
+      // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0] || SelectorEngine.findOne(SELECTOR_MENU, this._parent);
       this._inNavbar = this._detectNavbar();
     }
@@ -3925,7 +3923,7 @@
 
       // Disable Popper if we have a static display or Dropdown is in Navbar
       if (this._inNavbar || this._config.display === 'static') {
-        Manipulator.setDataAttribute(this._menu, 'popper', 'static'); // todo:v6 remove
+        Manipulator.setDataAttribute(this._menu, 'popper', 'static'); // TODO: v6 remove
         defaultBsPopperConfig.modifiers = [{
           name: 'applyStyles',
           enabled: false
@@ -4007,7 +4005,7 @@
       }
       event.preventDefault();
 
-      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
+      // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
       const instance = Dropdown.getOrCreateInstance(getToggleButton);
       if (isUpOrDownEvent) {
@@ -4046,104 +4044,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/scrollBar.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
-   * Constants
-   */
-
-  const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
-  const SELECTOR_STICKY_CONTENT = '.sticky-top';
-  const PROPERTY_PADDING = 'padding-right';
-  const PROPERTY_MARGIN = 'margin-right';
-
-  /**
-   * Class definition
-   */
-
-  class ScrollBarHelper {
-    constructor() {
-      this._element = document.body;
-    }
-
-    // Public
-    getWidth() {
-      // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth#usage_notes
-      const documentWidth = document.documentElement.clientWidth;
-      return Math.abs(window.innerWidth - documentWidth);
-    }
-    hide() {
-      const width = this.getWidth();
-      this._disableOverFlow();
-      // give padding to element to balance the hidden scrollbar width
-      this._setElementAttributes(this._element, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
-      // trick: We adjust positive paddingRight and negative marginRight to sticky-top elements to keep showing fullwidth
-      this._setElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
-      this._setElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN, calculatedValue => calculatedValue - width);
-    }
-    reset() {
-      this._resetElementAttributes(this._element, 'overflow');
-      this._resetElementAttributes(this._element, PROPERTY_PADDING);
-      this._resetElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING);
-      this._resetElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN);
-    }
-    isOverflowing() {
-      return this.getWidth() > 0;
-    }
-
-    // Private
-    _disableOverFlow() {
-      this._saveInitialAttribute(this._element, 'overflow');
-      this._element.style.overflow = 'hidden';
-    }
-    _setElementAttributes(selector, styleProperty, callback) {
-      const scrollbarWidth = this.getWidth();
-      const manipulationCallBack = element => {
-        if (element !== this._element && window.innerWidth > element.clientWidth + scrollbarWidth) {
-          return;
-        }
-        this._saveInitialAttribute(element, styleProperty);
-        const calculatedValue = window.getComputedStyle(element).getPropertyValue(styleProperty);
-        element.style.setProperty(styleProperty, `${callback(Number.parseFloat(calculatedValue))}px`);
-      };
-      this._applyManipulationCallback(selector, manipulationCallBack);
-    }
-    _saveInitialAttribute(element, styleProperty) {
-      const actualValue = element.style.getPropertyValue(styleProperty);
-      if (actualValue) {
-        Manipulator.setDataAttribute(element, styleProperty, actualValue);
-      }
-    }
-    _resetElementAttributes(selector, styleProperty) {
-      const manipulationCallBack = element => {
-        const value = Manipulator.getDataAttribute(element, styleProperty);
-        // We only want to remove the property if the value is `null`; the value can also be zero
-        if (value === null) {
-          element.style.removeProperty(styleProperty);
-          return;
-        }
-        Manipulator.removeDataAttribute(element, styleProperty);
-        element.style.setProperty(styleProperty, value);
-      };
-      this._applyManipulationCallback(selector, manipulationCallBack);
-    }
-    _applyManipulationCallback(selector, callBack) {
-      if (isElement$1(selector)) {
-        callBack(selector);
-        return;
-      }
-      for (const sel of SelectorEngine.find(selector, this._element)) {
-        callBack(sel);
-      }
-    }
-  }
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/backdrop.js
+   * Bootstrap util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4267,7 +4168,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/focustrap.js
+   * Bootstrap util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4365,7 +4266,104 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): modal.js
+   * Bootstrap util/scrollBar.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+
+  /**
+   * Constants
+   */
+
+  const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
+  const SELECTOR_STICKY_CONTENT = '.sticky-top';
+  const PROPERTY_PADDING = 'padding-right';
+  const PROPERTY_MARGIN = 'margin-right';
+
+  /**
+   * Class definition
+   */
+
+  class ScrollBarHelper {
+    constructor() {
+      this._element = document.body;
+    }
+
+    // Public
+    getWidth() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth#usage_notes
+      const documentWidth = document.documentElement.clientWidth;
+      return Math.abs(window.innerWidth - documentWidth);
+    }
+    hide() {
+      const width = this.getWidth();
+      this._disableOverFlow();
+      // give padding to element to balance the hidden scrollbar width
+      this._setElementAttributes(this._element, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
+      // trick: We adjust positive paddingRight and negative marginRight to sticky-top elements to keep showing fullwidth
+      this._setElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
+      this._setElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN, calculatedValue => calculatedValue - width);
+    }
+    reset() {
+      this._resetElementAttributes(this._element, 'overflow');
+      this._resetElementAttributes(this._element, PROPERTY_PADDING);
+      this._resetElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING);
+      this._resetElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN);
+    }
+    isOverflowing() {
+      return this.getWidth() > 0;
+    }
+
+    // Private
+    _disableOverFlow() {
+      this._saveInitialAttribute(this._element, 'overflow');
+      this._element.style.overflow = 'hidden';
+    }
+    _setElementAttributes(selector, styleProperty, callback) {
+      const scrollbarWidth = this.getWidth();
+      const manipulationCallBack = element => {
+        if (element !== this._element && window.innerWidth > element.clientWidth + scrollbarWidth) {
+          return;
+        }
+        this._saveInitialAttribute(element, styleProperty);
+        const calculatedValue = window.getComputedStyle(element).getPropertyValue(styleProperty);
+        element.style.setProperty(styleProperty, `${callback(Number.parseFloat(calculatedValue))}px`);
+      };
+      this._applyManipulationCallback(selector, manipulationCallBack);
+    }
+    _saveInitialAttribute(element, styleProperty) {
+      const actualValue = element.style.getPropertyValue(styleProperty);
+      if (actualValue) {
+        Manipulator.setDataAttribute(element, styleProperty, actualValue);
+      }
+    }
+    _resetElementAttributes(selector, styleProperty) {
+      const manipulationCallBack = element => {
+        const value = Manipulator.getDataAttribute(element, styleProperty);
+        // We only want to remove the property if the value is `null`; the value can also be zero
+        if (value === null) {
+          element.style.removeProperty(styleProperty);
+          return;
+        }
+        Manipulator.removeDataAttribute(element, styleProperty);
+        element.style.setProperty(styleProperty, value);
+      };
+      this._applyManipulationCallback(selector, manipulationCallBack);
+    }
+    _applyManipulationCallback(selector, callBack) {
+      if (isElement$1(selector)) {
+        callBack(selector);
+        return;
+      }
+      for (const sel of SelectorEngine.find(selector, this._element)) {
+        callBack(sel);
+      }
+    }
+  }
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4471,9 +4469,8 @@
       this._queueCallback(() => this._hideModal(), this._element, this._isAnimated());
     }
     dispose() {
-      for (const htmlElement of [window, this._dialog]) {
-        EventHandler.off(htmlElement, EVENT_KEY$6);
-      }
+      EventHandler.off(window, EVENT_KEY$6);
+      EventHandler.off(this._dialog, EVENT_KEY$6);
       this._backdrop.dispose();
       this._focustrap.deactivate();
       super.dispose();
@@ -4528,7 +4525,6 @@
           return;
         }
         if (this._config.keyboard) {
-          event.preventDefault();
           this.hide();
           return;
         }
@@ -4671,7 +4667,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): offcanvas.js
+   * Bootstrap offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4829,11 +4825,11 @@
         if (event.key !== ESCAPE_KEY) {
           return;
         }
-        if (!this._config.keyboard) {
-          EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
+        if (this._config.keyboard) {
+          this.hide();
           return;
         }
-        this.hide();
+        EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
       });
     }
 
@@ -4901,7 +4897,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.3.0-alpha1): orange-navbar.js
+   * Boosted orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4930,7 +4926,7 @@
 
     // Static
     static enableMinimizing(el) {
-      // The minimized behaviour works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
+      // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
       const scroll = window.scrollY;
       const headerChildren = [...el.children];
       const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'));
@@ -4980,13 +4976,12 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/sanitizer.js
+   * Bootstrap util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
   const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
-  const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
 
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.
@@ -5013,6 +5008,9 @@
     // Check if a regular expression validates the attribute.
     return allowedAttributeList.filter(attributeRegex => attributeRegex instanceof RegExp).some(regex => regex.test(attributeName));
   };
+
+  // js-docs-start allow-list
+  const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   const DefaultAllowlist = {
     // Global attributes allowed on any supplied element below.
     '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
@@ -5046,6 +5044,8 @@
     u: [],
     ul: []
   };
+  // js-docs-end allow-list
+
   function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
     if (!unsafeHtml.length) {
       return unsafeHtml;
@@ -5075,7 +5075,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): util/template-factory.js
+   * Bootstrap util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5210,7 +5210,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): tooltip.js
+   * Bootstrap tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5257,7 +5257,8 @@
     delay: 0,
     fallbackPlacements: ['top', 'right', 'bottom', 'left'],
     html: false,
-    offset: [0, 0],
+    offset: [0, 10],
+    // Boosted mod: instead of `offset: [0, 6],`
     placement: 'top',
     popperConfig: null,
     sanitize: true,
@@ -5370,7 +5371,7 @@
         return;
       }
 
-      // todo v6 remove this OR make it optional
+      // TODO: v6 remove this or make it optional
       this._disposePopper();
       const tip = this._getTipElement();
       this._element.setAttribute('aria-describedby', tip.getAttribute('id'));
@@ -5456,12 +5457,12 @@
     _createTipElement(content) {
       const tip = this._getTemplateFactory(content).toHtml();
 
-      // todo: remove this check on v6
+      // TODO: remove this check in v6
       if (!tip) {
         return null;
       }
       tip.classList.remove(CLASS_NAME_FADE$2, CLASS_NAME_SHOW$2);
-      // todo: on v6 the following can be achieved with CSS only
+      // TODO: v6 the following can be achieved with CSS only
       tip.classList.add(`bs-${this.constructor.NAME}-auto`);
       const tipId = getUID(this.constructor.NAME).toString();
       tip.setAttribute('id', tipId);
@@ -5721,7 +5722,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): popover.js
+   * Bootstrap popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5736,7 +5737,8 @@
   const Default$2 = {
     ...Tooltip.Default,
     content: '',
-    offset: [0, 8],
+    offset: [0, 15],
+    // Boosted mod: instead of `offset: [0, 8],`
     placement: 'right',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>',
     trigger: 'click'
@@ -5801,7 +5803,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.3.0-alpha1): quantity-selector.js
+   * Boosted quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5820,7 +5822,7 @@
   const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]';
   const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]';
   const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]';
-  const SELECTOR_INPUT_GROUP = '.input-group';
+  const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector';
 
   /**
    * Class definition
@@ -5850,7 +5852,7 @@
 
     // Static
     static StepUp(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const max = counterInput.getAttribute('max');
       const step = Number(counterInput.getAttribute('step'));
@@ -5862,7 +5864,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static StepDown(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const min = counterInput.getAttribute('min');
       const step = Number(counterInput.getAttribute('step'));
@@ -5874,7 +5876,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static CheckIfDisabledOnChange(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON);
       const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON);
@@ -5912,7 +5914,7 @@
   EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp);
   EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown);
   EventHandler.on(window, EVENT_LOAD_DATA_API$2, () => {
-    for (const el of SelectorEngine.find(SELECTOR_INPUT_GROUP)) {
+    for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTOR)) {
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
@@ -5925,7 +5927,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): scrollspy.js
+   * Bootstrap scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6184,7 +6186,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): tab.js
+   * Bootstrap tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6217,7 +6219,7 @@
   const SELECTOR_TAB_PANEL = '.list-group, .nav, [role="tablist"]';
   const SELECTOR_OUTER = '.nav-item, .list-group-item';
   const SELECTOR_INNER = `.nav-link${NOT_SELECTOR_DROPDOWN_TOGGLE}, .list-group-item${NOT_SELECTOR_DROPDOWN_TOGGLE}, [role="tab"]${NOT_SELECTOR_DROPDOWN_TOGGLE}`;
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]'; // todo:v6: could be only `tab`
+  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]'; // TODO: could only be `tab` in v6
   const SELECTOR_INNER_ELEM = `${SELECTOR_INNER}, ${SELECTOR_DATA_TOGGLE}`;
   const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`;
 
@@ -6231,7 +6233,7 @@
       this._parent = this._element.closest(SELECTOR_TAB_PANEL);
       if (!this._parent) {
         return;
-        // todo: should Throw exception on v6
+        // TODO: should throw exception in v6
         // throw new TypeError(`${element.outerHTML} has not a valid parent ${SELECTOR_INNER_ELEM}`)
       }
 
@@ -6363,7 +6365,7 @@
       }
       this._setAttributeIfNotExists(target, 'role', 'tabpanel');
       if (child.id) {
-        this._setAttributeIfNotExists(target, 'aria-labelledby', `#${child.id}`);
+        this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.id}`);
       }
     }
     _toggleDropDown(element, open) {
@@ -6445,7 +6447,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): toast.js
+   * Bootstrap toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6940,7 +6942,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.3.0-alpha1): index.umd.js
+   * Bootstrap index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
