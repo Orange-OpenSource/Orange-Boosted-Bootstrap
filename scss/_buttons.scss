@@ -223,8 +223,8 @@
 .btn-social {
   --#{$prefix}btn-border-color: currentcolor;
   --#{$prefix}btn-hover-color: #{$white};
-  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, $black);
-  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, $black);
+  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, #{$black});
+  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, #{$black});
   --#{$prefix}btn-active-color: #{$white};
   --#{$prefix}btn-active-bg: #{$black};
   --#{$prefix}btn-active-border-color: #{$black};
