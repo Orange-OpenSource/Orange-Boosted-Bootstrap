@@ -141,8 +141,8 @@ Importing Boosted into Parcel requires three imports, two into our `styles.scss`
 
    ```scss
    // Import all of Boosted's CSS
-   @import "~boosted/scss/orange-helvetica";
-   @import "~boosted/scss/boosted";
+   @import "boosted/scss/orange-helvetica";
+   @import "boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
