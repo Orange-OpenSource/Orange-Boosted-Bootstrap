@@ -530,7 +530,7 @@ $utilities: map-merge(
         1: 1,
         sm: 1.25,
         base: 1.5,
-        lg: 2,
+        lg: $line-height-lg,
       )
     ),
     "line-length": (
