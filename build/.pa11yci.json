@@ -1,5 +1,5 @@
 {
-  "standard": "WCAG2AAA",
+  "standard": "WCAG2AA",
   "level": "error",
   "defaults": {
     "chromeLaunchConfig": {
