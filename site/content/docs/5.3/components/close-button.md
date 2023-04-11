@@ -51,14 +51,13 @@ Close buttons can also be created without `.btn-close` to reduce the size of you
 
 ## CSS
 
-<!-- Boosted mod: CSS var -->
 ### Variables
 
 {{< added-in "5.2.1" >}}
 
-As part of Boosted’s evolving CSS variables approach, close buttons now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+As part of Boosted’s evolving CSS variables approach, close button now use local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
-{{< scss-docs name="btn-close-css-vars" file="scss/_close.scss" >}}
+{{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 
 Customization through CSS variables can be seen on the `.btn-close-white` modifier class where we override specific values without adding duplicate CSS selectors.
 
@@ -73,4 +72,3 @@ Variables for all close buttons:
 Variables for the [dark close button](#dark-variant):
 
 {{< scss-docs name="close-white-variables" file="scss/_variables.scss" >}}
-<!-- End mod -->
