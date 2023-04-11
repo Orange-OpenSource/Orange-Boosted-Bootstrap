@@ -117,6 +117,14 @@
         & ~ button {
           border-color: $border-color;
         }
+
+        &:focus {
+          &[data-focus-visible-added] {
+            ~ button {
+              border-width: $border-width;
+            }
+          }
+        }
       }
     }
     // End mod
