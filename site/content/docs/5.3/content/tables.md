@@ -1222,7 +1222,7 @@ Use SVG to display icons or thumbnails in your table data cell elements (`50px` 
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
 
-### Sass loop
+### Sass loops
 
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 
