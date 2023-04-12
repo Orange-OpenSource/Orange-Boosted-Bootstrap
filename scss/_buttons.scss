@@ -275,7 +275,7 @@
 
     width: var(--#{$prefix}btn-story-size);
     height: var(--#{$prefix}btn-story-size);
-    padding: calc($btn-story-border-size - var(--#{$prefix}btn-border-width)); // stylelint-disable-line function-disallowed-list
+    padding: calc(#{$btn-story-border-size} - var(--#{$prefix}btn-border-width)); // stylelint-disable-line function-disallowed-list
     background-color: var(--#{$prefix}body-bg);
 
     .story-img {
