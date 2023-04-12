@@ -96,8 +96,7 @@ With dependencies installed and our project folder ready for us to start coding,
        outDir: '../dist'
      },
      server: {
-       port: 8080,
-       hot: true
+       port: 8080
      }
    }
    ```
