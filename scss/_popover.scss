@@ -76,7 +76,7 @@
 
     &::after {
       // stylelint-disable-next-line function-disallowed-list
-      bottom: calc(var(--#{$prefix}popover-border-width) + calc(var(--#{$prefix}popover-border-width) * .5)); // Boosted mod: instead of `var(--#{$prefix}popover-border-width)`
+      bottom: calc(var(--#{$prefix}popover-border-width) + var(--#{$prefix}popover-border-width) * .5); // Boosted mod: instead of `var(--#{$prefix}popover-border-width)`
       border-top-color: var(--#{$prefix}popover-bg);
     }
   }
@@ -101,7 +101,7 @@
 
     &::after {
       // stylelint-disable-next-line function-disallowed-list
-      left: calc(var(--#{$prefix}popover-border-width) + calc(var(--#{$prefix}popover-border-width) * .5)); // Boosted mod: instead of `var(--#{$prefix}popover-border-width)`
+      left: calc(var(--#{$prefix}popover-border-width) + var(--#{$prefix}popover-border-width) * .5); // Boosted mod: instead of `var(--#{$prefix}popover-border-width)`
       border-right-color: var(--#{$prefix}popover-bg);
     }
   }
