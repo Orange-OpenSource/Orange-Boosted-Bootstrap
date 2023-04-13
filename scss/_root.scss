@@ -1,5 +1,22 @@
 :root,
 [data-bs-theme="light"] {
+  //  Typo
+  --headline-l: 40px;
+  --headline-m: 35px;
+  --headline-s: 29px;
+  --title-l: 50px;
+  --title-m: 34px;
+  --title-s: 25px;
+
+  @include media-breakpoint-down(sm) {
+    --headline-l: 24px;
+    --headline-m: 21px;
+    --headline-s: 17px;
+    --title-l: 30px;
+    --title-m: 24px;
+    --title-s: 18px;
+  }
+
   // Note: Custom variable values only support SassScript inside `#{}`.
 
   // Colors

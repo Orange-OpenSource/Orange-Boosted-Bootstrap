@@ -148,27 +148,56 @@ hr {
 
 h1 {
   @extend %heading;
-  @include font-size($h4-font-size);
-  line-height: $h4-line-height;
+  @include font-size($h1-font-size);
+  // TODO: line-height
 
   /* rtl:remove */
-  letter-spacing: $h4-spacing;
+  // TODO: letter-spacing
 }
 
 h2 {
   @extend %heading;
-  @include font-size($h5-font-size);
-  line-height: $h5-line-height;
+  @include font-size($h2-font-size);
+  // TODO: line-height
 
   /* rtl:remove */
-  letter-spacing: $h5-spacing;
+  // TODO: letter-spacing
 }
 
-h3,
-h4,
-h5,
+h3 {
+  @extend %heading;
+  @include font-size($h3-font-size);
+  // TODO: line-height
+
+  /* rtl:remove */
+  // TODO: letter-spacing
+}
+
+h4 {
+  @extend %heading;
+  @include font-size($h4-font-size);
+  // TODO: line-height
+
+  /* rtl:remove */
+  // TODO: letter-spacing
+}
+
+h5 {
+  @extend %heading;
+  @include font-size($h5-font-size);
+  // TODO: line-height
+
+  /* rtl:remove */
+  // TODO: letter-spacing
+}
+
 h6 {
   @extend %heading;
+  @include font-size($h6-font-size);
+  // TODO: line-height
+
+  /* rtl:remove */
+  // TODO: letter-spacing
 }
 
 

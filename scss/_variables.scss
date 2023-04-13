@@ -746,12 +746,12 @@ $line-length-md:              80ch !default;
 
 $letter-spacing-base:         $spacer * -.005 !default; // -0.1px
 
-$h1-font-size:                $font-size-base * 2.125 !default;   // 34px
-$h2-font-size:                $font-size-base * 1.875 !default;   // 30px
-$h3-font-size:                $font-size-base * 1.5 !default;     // 24px
-$h4-font-size:                $font-size-xlg !default;            // 20px
-$h5-font-size:                $font-size-lg !default;             // 18px
-$h6-font-size:                $font-size-base !default;           // 16px
+$h1-font-size:                var(--title-l) !default;
+$h2-font-size:                var(--headline-l) !default;
+$h3-font-size:                var(--headline-m) !default;
+$h4-font-size:                var(--title-m) !default;
+$h5-font-size:                var(--headline-s) !default;
+$h6-font-size:                var(--title-s) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
