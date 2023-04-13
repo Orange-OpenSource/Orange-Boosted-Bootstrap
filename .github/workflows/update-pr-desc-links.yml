@@ -3,6 +3,7 @@ on:
   pull_request:
     types:
       - opened
+
 jobs:
   track_pr:
     runs-on: ubuntu-latest
