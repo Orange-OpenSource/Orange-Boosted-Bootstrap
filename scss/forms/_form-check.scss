@@ -91,12 +91,16 @@
 
     @if $enable-gradients {
       --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)}, var(--#{$prefix}gradient);
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; /* stylelint-disable-line function-disallowed-list */  // Boosted mod
+      // stylelint-disable-next-line function-disallowed-list
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)), center; // Boosted mod
+      // stylelint-disable-next-line function-disallowed-list
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5), auto; // Boosted mod
     } @else {
       --#{$prefix}form-check-bg-image: #{escape-svg($form-check-input-indeterminate-bg-image)};
-      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
-      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); /* stylelint-disable-line function-disallowed-list */  // Boosted mod
+      // stylelint-disable-next-line function-disallowed-list
+      background-position: 50% add(50%, calc(var(--#{$prefix}border-width) * .25)); // Boosted mod
+      // stylelint-disable-next-line function-disallowed-list
+      background-size: map-get($spacers, 2) calc(var(--#{$prefix}border-width) * 1.5); // Boosted mod
     }
   }
 

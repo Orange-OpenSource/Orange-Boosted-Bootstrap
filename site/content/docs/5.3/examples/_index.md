@@ -53,11 +53,11 @@ One of the missing examples has priority? Feel free to contact a member of the [
             </h3>
             <p class="text-body-secondary">{{ $example.description }}</p>
             <p>
-              {{- $htmlIndexLocation := "index.html" -}}
-              {{- if $example.htmlIndexLocation -}}
-                {{- $htmlIndexLocation = printf "%s/index.html" $example.htmlIndexLocation -}}
+              {{- $indexPath := "index.html" -}}
+              {{- if $example.indexPath -}}
+                {{- $indexPath = $example.indexPath -}}
               {{- end }}
-              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs{{ $example.url }}?file={{ $htmlIndexLocation | urlquery }}" target="_blank" rel="noopener">
+              <a class="icon-link link-secondary link-offset-1" href="https://stackblitz.com/github/twbs{{ $example.url }}?file={{ $indexPath | urlquery }}" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Edit in StackBlitz
               </a>
