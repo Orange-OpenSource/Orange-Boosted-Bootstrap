@@ -23,7 +23,7 @@ The table below illustrates how each container's `max-width` compares to the ori
 
 See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
 
-Please note that we apply an extra-padding on our containers (see [our mixins](#mixins))
+Please note that we apply an extra-padding on our containers (see [our mixins](#sass-mixins))
 
 {{< bs-table "table" >}}
 |  | Extra small<div class="fw-normal">&lt;480px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1280px</div> | XX-Large<div class="fw-normal">&ge;1440px</div> |
