@@ -26,7 +26,7 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
 {{< design-callout-alert >}}
-These select sizes variants, with a **height different than 40px**, should not be used because they do not respect the Orange Design System specifications.
+This second variant size variant, with a **height of 30px**, should not be used because it does not respect the Orange Design System specifications.
 
 Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-forms/b/599459) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}

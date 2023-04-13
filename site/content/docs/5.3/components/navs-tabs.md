@@ -273,7 +273,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
 Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 {{< design-callout-alert >}}
-These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications. Indeed, nav tabs and `<a>` html tags should not look like buttons.
+These **link** variants, which are just **examples illustrating the use of the fill and justify utilities**, should not be used because they do not respect the Orange Design System specifications.
 
 Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -341,7 +341,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {{< design-callout-alert >}}
-This **link** variant, which is just an **example illustrating the use of the flexbox utilities**, should not be used because it does not respect the Orange Design System specifications. Indeed, nav tabs and `<a>` html tags should not look like buttons.
+This **link** variant, which is just an **example illustrating the use of the flexbox utilities**, should not be used because it does not respect the Orange Design System specifications.
 
 Instead, please consider using our Boosted tabs [Underline]({{< docsref "/components/navs-tabs#underline" >}}) variant. You can also refer to [Tabs](https://system.design.orange.com/0c1af118d/p/8630dc-tabs/b/4547ed) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
