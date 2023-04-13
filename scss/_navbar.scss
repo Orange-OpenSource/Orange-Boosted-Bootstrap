@@ -129,7 +129,7 @@
 
   //// Orange's master logo
   img {
-    width: auto;
+    width: inherit;
     height: var(--#{$prefix}navbar-brand-logo-size);
     @include transition($navbar-brand-logo-transition);
   }
