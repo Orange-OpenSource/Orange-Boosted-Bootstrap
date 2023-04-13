@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v5.3.0-alpha1): quantity-selector.js
+ * Boosted quantity-selector.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index.js'
-import EventHandler from './dom/event-handler.js'
 import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants

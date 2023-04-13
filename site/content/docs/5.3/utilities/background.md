@@ -158,7 +158,7 @@ Color mode background colors are also available as a Sass map:
 
 <!-- Boosted mod: no background gradient -->
 
-## Utilities API
+### Sass utilities API
 
 Background utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

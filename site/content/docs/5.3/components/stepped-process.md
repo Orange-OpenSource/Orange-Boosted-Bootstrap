@@ -16,6 +16,10 @@ Use short labels for each step, otherwise they will be cut off to preserve inlin
 
 Add `.active` to a `.stepped-process-item` to indicate the current step, alongside `aria-current="step"` to convey the active state to assistive technologies.
 
+{{< callout info >}}
+**Using more than 5 items in a row?** You can easily customize this by changing `$stepped-process-max-items` Sass variable.
+{{< /callout >}}
+
 ## Example
 
 {{< example >}}
