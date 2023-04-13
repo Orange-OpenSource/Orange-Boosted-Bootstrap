@@ -100,7 +100,7 @@
         // Boosted mod: change border size on focus to allow sufficient contrast between error field focused and non focused
         &:focus {
           &[data-focus-visible-added] {
-            border-width: $border-width;
+            outline: $border-width solid $border-color;
           }
         }
         // End mod
@@ -146,7 +146,7 @@
         // Boosted mod: change border size on focus to allow sufficient contrast between error field focused and non focused
         &:focus {
           &[data-focus-visible-added] {
-            border-width: $border-width;
+            outline: $border-width solid $border-color;
           }
         }
         // End mod
