@@ -120,8 +120,10 @@
 
         &:focus {
           &[data-focus-visible-added] {
-            ~ button {
-              border-width: $border-width;
+            ~ button,
+            ~ .btn:disabled {
+              border-color: var(--#{$prefix}btn-border-color) !important; // stylelint-disable-line declaration-no-important
+              border-width: $border-width !important; // stylelint-disable-line declaration-no-important
             }
           }
         }
