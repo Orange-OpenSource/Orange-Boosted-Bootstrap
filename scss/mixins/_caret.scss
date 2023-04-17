@@ -47,7 +47,8 @@
       content: "";
       @if $direction == down {
         @include caret-down($width);
-        transform: translateY(calc(var(--#{$prefix}border-width) * .5)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+        // stylelint-disable-next-line function-disallowed-list
+        transform: translateY(calc(var(--#{$prefix}border-width) * .5)); // Boosted mod
       } @else if $direction == up {
         @include caret-up($width);
       } @else if $direction == end {
