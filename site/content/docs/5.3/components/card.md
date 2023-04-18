@@ -12,6 +12,18 @@ toc: true
 
 A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Boosted 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
 
+{{< design-callout-alert info >}}
+**On the Orange Design System website**, you'll find the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) component guidelines describing how Orange designers want cards to be represented and used.
+<br><br>
+**In this Boosted cards component description page**, you'll find card variants that can be used as cards as well as some variants that are meant to be used as containers.
+<br><br>
+Regarding the available card sizes, please note that:
+
+- **In the Orange Design System**, a card component is available in **3 sizes** that **can not be modified**. Depending on the size of your screen, you can adjust the cards layout by changing the cards size (choosing among the 3 existing sizes) and/or the number of cards to display on a single line.
+
+- **In Boosted**, as some card variants can be used as containers, more sizing possibilities are offered to adjust their sizes.
+{{< /design-callout-alert >}}
+
 ## Example
 
 Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Boosted components. They have no `margin` by default, so use [spacing utilities]({{< docsref "/utilities/spacing" >}}) as needed.
