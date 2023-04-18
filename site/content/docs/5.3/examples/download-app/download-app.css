@@ -7,8 +7,8 @@
 }
 
 .images > * {
-  transform-origin: center;
   transition: transform .3s ease-in-out;
+  transform-origin: center;
 }
 
 .images > :hover {
@@ -26,7 +26,7 @@
   50% {
     transform: scale(1.2);
   }
-  0% {
+  100% {
     transform: scale(1);
   }
 }
