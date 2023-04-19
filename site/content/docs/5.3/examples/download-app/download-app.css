@@ -11,16 +11,12 @@
 }
 
 .out-of-grid img {
-  width: 100%;
+  min-width: 100%;
 }
 
 @media (min-width: 1024px) {
   .out-of-grid {
     position: absolute;
-  }
-
-  .out-of-grid img {
-    width: auto;
   }
 }
 
@@ -91,4 +87,8 @@
 
 .images.active > :nth-child(6) img {
   animation-delay: 625ms;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
