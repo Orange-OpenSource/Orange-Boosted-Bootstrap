@@ -45,7 +45,7 @@
     animation-timing-function: cubic-bezier(.5, 0, 1, .5);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
     animation-timing-function: cubic-bezier(0, .5, .5, 1);
   }
 }
