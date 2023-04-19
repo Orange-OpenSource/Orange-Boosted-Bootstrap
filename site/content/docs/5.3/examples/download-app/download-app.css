@@ -31,62 +31,47 @@
   transform: scale(1.2);
 }
 
-.images.active img {
-  animation: enter 2s ease 1;
+.images > .col {
+  transform: translateY(-50px);
+}
+
+.images.active > .col {
+  animation: enter .75s 5 alternate forwards;
 }
 
 @keyframes enter {
   0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, .9) translateY(0);
-  }
-  30% {
-    transform: scale(.9, 1.1) translateY(-50px);
-  }
-  50% {
-    transform: scale(1.05, .95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-9px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  71% {
-    transform: scale(1, 1) translateY(-5px);
-  }
-  78% {
-    transform: scale(1, 1) translateY(0);
+    transform: translateY(-50px);
+    animation-timing-function: cubic-bezier(.5, 0, 1, .5);
   }
   100% {
-    transform: scale(1, 1) translateY(0);
+    transform: translateY(0px);
+    animation-timing-function: cubic-bezier(0, .5, .5, 1);
   }
 }
 
-.images.active > :nth-child(1) img {
+.images.active > :nth-child(1) {
   animation-delay: 0ms;
 }
 
-.images.active > :nth-child(2) img {
-  animation-delay: 125ms;
+.images.active > :nth-child(2) {
+  animation-delay: 100ms;
 }
 
-.images.active > :nth-child(3) img {
-  animation-delay: 250ms;
+.images.active > :nth-child(3) {
+  animation-delay: 200ms;
 }
 
-.images.active > :nth-child(4) img {
-  animation-delay: 375ms;
+.images.active > :nth-child(4) {
+  animation-delay: 300ms;
 }
 
-.images.active > :nth-child(5) img {
+.images.active > :nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.images.active > :nth-child(6) {
   animation-delay: 500ms;
-}
-
-.images.active > :nth-child(6) img {
-  animation-delay: 625ms;
 }
 
 footer .nav-link:hover {
