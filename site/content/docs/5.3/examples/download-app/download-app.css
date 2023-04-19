@@ -89,6 +89,6 @@
   animation-delay: 625ms;
 }
 
-.nav-link:hover {
+footer .nav-link:hover {
   text-decoration: underline;
 }
