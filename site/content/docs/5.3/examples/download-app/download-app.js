@@ -23,4 +23,6 @@
 
   observer.observe(document.querySelector('.images'))
   observer.observe(document.querySelector('.ticks'))
+  observer.observe(document.querySelector('.steps#ios-steps'))
+  observer.observe(document.querySelector('.steps#android-steps'))
 })()

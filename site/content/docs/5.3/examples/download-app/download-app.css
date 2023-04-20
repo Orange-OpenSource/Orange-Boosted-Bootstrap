@@ -137,10 +137,6 @@
   }
 }
 
-.ticks.active > :nth-child(1) {
-  animation-delay: 0ms;
-}
-
 .ticks.active > :nth-child(2) {
   animation-delay: 250ms;
 }
@@ -159,6 +155,43 @@
 
 .ticks.active > :nth-child(6) {
   animation-delay: 1250ms;
+}
+
+.steps > * {
+  opacity: 0;
+}
+
+.steps.active > * {
+  animation: enter-bottom-smooth .75s 1 forwards ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+  .steps > * {
+    opacity: 1;
+  }
+
+  .steps.active > * {
+    animation: none;
+  }
+}
+
+@keyframes enter-bottom-smooth {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.steps.active > :nth-child(2) {
+  animation-delay: 1.25s;
+}
+
+.steps.active > :nth-child(3) {
+  animation-delay: 2.5s;
 }
 
 .store-badge {

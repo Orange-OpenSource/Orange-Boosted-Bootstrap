@@ -189,7 +189,9 @@ aliases:
             <use xlink:href="#apple"/>
           </svg>
           <p class="h4 pt-3 mb-4">For iOS, simply hit the button below to download the app on your device.</p>
-          <a href="https://itunes.apple.com/fr/app/id6446178285" class="d-inline-block mt-3"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/app-store-badge.svg" alt="Get it on App Store" height="60"></a>
+          <div class="steps" id="ios-steps">
+            <a href="https://itunes.apple.com/fr/app/id6446178285" class="d-inline-block mt-3"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/app-store-badge.svg" alt="Get it on App Store" height="60"></a>
+          </div>
         </div>
         <hr class="d-md-none my-5 border-top border-1 border-translucent">
         <div class="col-12 col-sm-8 col-md-4 d-flex flex-column align-items-center">
@@ -197,13 +199,19 @@ aliases:
             <use xlink:href="#android"/>
           </svg>
           <p class="h4 pt-3 mb-4">For Android, please make sure to follow the two steps process below.</p>
-          <span class="tag my-3 border-primary">1</span>
-          <p class="fw-bold mb-3">Register with your Google store account to our <a href="https://groups.google.com/g/odsapp">Beta program list</a></p>
-          <a href="https://groups.google.com/g/odsapp" class="btn btn-secondary mb-3">Register</a>
-          <div class="vr mx-auto my-4 bg-body-secondary" style="height: 100px;"></div>
-          <span class="tag my-3 border-primary">2</span>
-          <p class="fw-bold mb-3">Download the app on your device from the Google Play store</p>
-          <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on App Store" height="60"></a>
+          <div class="steps" id="android-steps">
+            <div>
+              <span class="tag my-3 border-primary">1</span>
+              <p class="fw-bold mb-3">Register with your Google store account to our <a href="https://groups.google.com/g/odsapp">Beta program list</a></p>
+              <a href="https://groups.google.com/g/odsapp" class="btn btn-secondary mb-3">Register</a>
+            </div>
+            <div class="vr mx-auto my-4 bg-body-secondary" style="height: 100px;"></div>
+            <div>
+              <span class="tag my-3 border-primary">2</span>
+              <p class="fw-bold mb-3">Download the app on your device from the Google Play store</p>
+              <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on App Store" height="60"></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
