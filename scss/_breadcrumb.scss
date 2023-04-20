@@ -19,6 +19,7 @@
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
   @include font-size(var(--#{$prefix}breadcrumb-font-size));
   font-weight: var(--#{$prefix}breadcrumb-font-weight); // Boosted mod
+  line-height: $line-height-sm;
   color: var(--#{$prefix}breadcrumb-color); // Boosted mod
   list-style: none;
   background-color: var(--#{$prefix}breadcrumb-bg);
@@ -33,6 +34,7 @@
     &::before {
       float: left; // Suppress inline spacings and underlining of the separator
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x) #{"/* rtl:ignore */"}; // Boosted mod
+      padding-left: 0;
       color: var(--#{$prefix}breadcrumb-divider-color);
       content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
       // Boosted mod
@@ -42,6 +44,33 @@
       */
       // End mod
     }
+  }
+
+  display: none;
+
+  &:first-child:last-child,
+  &:nth-last-child(2) {
+    display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    &:nth-last-child(2) {
+      padding-left: 0;
+
+      &::before {
+        float: left; // Suppress inline spacings and underlining of the separator
+        padding-right: 0;
+        padding-left: var(--#{$prefix}breadcrumb-item-padding-x) #{"/* rtl:ignore */"}; // Boosted mod
+        color: var(--#{$prefix}breadcrumb-divider-color);
+        content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+        transform: scaleX(-1);
+        transform-origin: center;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 
   &.active {
