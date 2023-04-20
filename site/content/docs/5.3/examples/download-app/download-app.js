@@ -1,13 +1,17 @@
 (() => {
   'use strict'
 
-  // The following code is used to redirect user directly on the download page of their store whether they have an Android or an iOS device.
-  // https://stackoverflow.com/questions/35430336/redirect-users-to-itunes-app-store-or-google-play-store
+  // For a proper redirection on the different stores, please copy paste the code below and adapt the links.
+
   // if (!(/windows phone/i.test(navigator.userAgent)) && /android/i.test(navigator.userAgent)) {
   //   window.location.href = 'https://play.google.com/apps/testing/com.orange.ods.app/'
+  // }
+
   if (/ipad|iphone|ipod/i.test(navigator.userAgent)) {
-    window.location.href = 'https://boosted.orange.com'
+    window.location.href = 'https://itunes.apple.com/fr/app/id6446178285'
   }
+
+  // End of copy paste
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -18,4 +22,5 @@
   })
 
   observer.observe(document.querySelector('.images'))
+  observer.observe(document.querySelector('.ticks'))
 })()
