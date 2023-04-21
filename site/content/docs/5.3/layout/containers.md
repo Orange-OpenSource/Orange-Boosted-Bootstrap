@@ -28,13 +28,13 @@ Please note that we apply an extra-padding on our containers (see [our mixins](#
 {{< bs-table "table" >}}
 |  | Extra small<div class="fw-normal">&lt;480px</div> | Small<div class="fw-normal">&ge;480px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;1024px</div> | X-Large<div class="fw-normal">&ge;1280px</div> | XX-Large<div class="fw-normal">&ge;1440px</div> |
 | --- | --- | --- | --- | --- | --- | --- |
-| `.container` | <span class="text-muted">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-sm` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
-| `.container-md` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
-| `.container-lg` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | 960px | 1140px | 1320px |
-| `.container-xl` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | 1140px | 1320px |
-| `.container-xxl` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | <span class="text-muted">100vw -<br>(2 * 40px)</span> | 1320px |
-| `.container-fluid` | <span class="text-muted">100vw -<br>(2 * 4px)</span> | <span class="text-muted">100vw -<br>(2 * 6px)</span> | <span class="text-muted">100vw -<br>(2 * 12px)</span> | <span class="text-muted">100vw -<br>(2 * 32px)</span> | <span class="text-muted">100vw -<br>(2 * 40px)</span> | <span class="text-muted">100vw -<br>(2 * 60px)</span> |
+| `.container` | <span class="text-body-secondary">312px</span> | 468px | 744px | 960px | 1200px | 1320px |
+| `.container-sm` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | 468px | 744px | 960px | 1200px | 1320px |
+| `.container-md` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | 744px | 960px | 1140px | 1320px |
+| `.container-lg` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | 960px | 1140px | 1320px |
+| `.container-xl` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | 1140px | 1320px |
+| `.container-xxl` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | 1320px |
+| `.container-fluid` | <span class="text-body-secondary">100vw -<br>(2 * 4px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 6px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 12px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 32px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 40px)</span> | <span class="text-body-secondary">100vw -<br>(2 * 60px)</span> |
 {{< /bs-table >}}
 
 ## Default container
@@ -69,15 +69,17 @@ Use `.container-fluid` for a full width container with minimum margins, spanning
 </div>
 ```
 
-## Sass
+## CSS
 
-### Variables
+### Sass variables
 
 As shown above, Boosted generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 
-### Mixins
+For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
+
+### Sass mixins
 
 In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
 
@@ -89,5 +91,3 @@ In addition to customizing the Sass, you can also create your own containers wit
   @include make-container();
 }
 ```
-
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).

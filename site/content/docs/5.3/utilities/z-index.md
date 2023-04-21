@@ -16,11 +16,11 @@ We call these "low-level" `z-index` utilities because of their default values of
 {{< /callout >}}
 
 {{< example class="bd-example-zindex-levels position-relative" >}}
-<div class="z-3 position-absolute p-5"></div>
-<div class="z-2 position-absolute p-5"></div>
-<div class="z-1 position-absolute p-5"></div>
-<div class="z-0 position-absolute p-5"></div>
-<div class="z-n1 position-absolute p-5"></div>
+<div class="z-3 position-absolute p-5"><span>z-3</span></div>
+<div class="z-2 position-absolute p-5"><span>z-2</span></div>
+<div class="z-1 position-absolute p-5"><span>z-1</span></div>
+<div class="z-0 position-absolute p-5"><span>z-0</span></div>
+<div class="z-n1 position-absolute p-5"><span>z-n1</span></div>
 {{< /example >}}
 
 ## Overlays
@@ -37,8 +37,14 @@ Learn about our [`z-index` approach]({{< docsref "/extend/approach#z-index-scale
 
 ## CSS
 
-### Sass map
+### Sass maps
 
 Customize this Sass map to change the available values and generated utilities.
 
 {{< scss-docs name="zindex-levels-map" file="scss/_variables.scss" >}}
+
+### Sass utilities API
+
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-zindex" file="scss/_utilities.scss" >}}

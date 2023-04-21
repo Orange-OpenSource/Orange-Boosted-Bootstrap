@@ -129,9 +129,9 @@ Placeholder links—those without an `href`—are targeted with a more specific 
 
 The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 These `<hr>` 3rd and 4th variants can not be used because they do not respect the Orange Design System specifications. For the 3rd variant, it is because of its opacity. For the 4th variant, it is because of its height and its opacity.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< example >}}
 <hr>
@@ -275,6 +275,10 @@ Various form elements have been rebooted for simpler base styles. Here are some 
 
 These changes, and more, are demonstrated below.
 
+{{< callout warning >}}
+{{< partial "callouts/warning-input-support.md" >}}
+{{< /callout >}}
+
 <form class="bd-example">
   <fieldset>
     <legend>Example legend</legend>
@@ -397,10 +401,6 @@ These changes, and more, are demonstrated below.
   </fieldset>
 </form>
 
-{{< callout warning >}}
-{{< partial "callouts/warning-input-support.md" >}}
-{{< /callout >}}
-
 ### Pointers on buttons
 
 Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
@@ -417,8 +417,8 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 <div class="bd-example">
   <address>
-    <strong>Twitter, Inc.</strong><br>
-    1355 Market St, Suite 900<br>
+    <strong>ACME Corporation</strong><br>
+    1123 Fictional St,<br>
     San Francisco, CA 94103<br>
     <abbr title="Phone">P:</abbr> (123) 456-7890
   </address>
@@ -472,10 +472,8 @@ HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.o
 <input type="text" hidden>
 ```
 
-{{< callout warning >}}
-##### jQuery incompatibility
-
-`[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods. Therefore, we don't currently especially endorse `[hidden]` over other techniques for managing the `display` of elements.
+{{< callout info >}}
+Since `[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods, we don't specifically endorse `[hidden]` over other techniques for managing the `display` of elements.
 {{< /callout >}}
 
 To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{< docsref "/utilities/visibility" >}}) instead.
