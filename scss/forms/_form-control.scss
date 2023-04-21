@@ -131,6 +131,7 @@
   width: 100%;
   padding: $input-padding-y 0;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  font-weight: $input-font-weight; //boosted mod
   line-height: $input-line-height;
   color: $input-plaintext-color;
   background-color: transparent;
