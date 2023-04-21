@@ -342,6 +342,12 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
     <ul class="dropdown-menu">
@@ -351,12 +357,6 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -372,6 +372,12 @@ This variant should not be used because it is a button component in the Orange D
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
     <ul class="dropdown-menu">
@@ -381,12 +387,6 @@ This variant should not be used because it is a button component in the Orange D
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
