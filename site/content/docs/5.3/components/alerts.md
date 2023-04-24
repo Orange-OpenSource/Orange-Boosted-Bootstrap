@@ -19,7 +19,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 - danger.
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 {{< example >}}
@@ -169,7 +169,7 @@ Customization through CSS variables can be seen on the `.alert-sm` class where w
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
-### Sass mixin
+### Sass mixins
 
 {{< deprecated-in "5.3.0" >}}
 
@@ -177,7 +177,7 @@ Used in combination with `$theme-colors` to create contextual modifier classes f
 
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
-### Sass loop
+### Sass loops
 
 Loop that generates the modifier classes with the `alert-variant()` mixin.
 
