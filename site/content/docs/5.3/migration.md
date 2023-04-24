@@ -64,6 +64,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Breadcrumb**
+  - <span class="badge bg-success">New</span> The breadcrumbs now support responsive display.
+
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
 
