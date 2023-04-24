@@ -107,7 +107,7 @@
 
 .btn-light,
 .btn-secondary {
-  @include button-variant(transparent, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+  @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
   &.btn-inverse {
     @include button-variant(transparent, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
   }
