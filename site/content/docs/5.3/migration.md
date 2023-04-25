@@ -205,7 +205,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 ### Examples
 
 - **Form**
-  - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visibled-added` attribute on the focused element on first error.
+  - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visible-added` attribute on the focused element on first error.
 
 ### CSS and Sass variables
 
