@@ -39,6 +39,8 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
+  // Boosted mod: no `&:focus-visible`
+
   // Disabled state lightens text
   &.disabled {
     color: var(--#{$prefix}nav-link-disabled-color);
@@ -147,7 +149,7 @@
 
   // Boosted mod
   .nav-item + .nav-item {
-    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); /* stylelint-disable-line function-disallowed-list */
+    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 }
