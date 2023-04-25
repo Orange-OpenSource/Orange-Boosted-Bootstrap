@@ -67,6 +67,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
 
+- **Close button**
+  - <span class="badge bg-success">New</span> Some examples in the documentation were added to better fit your needs.
+
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
