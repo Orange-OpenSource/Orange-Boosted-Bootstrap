@@ -9,9 +9,9 @@ toc: true
 added: 5.3
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 ## Link opacity
 
@@ -96,11 +96,11 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 
 <!--Boosted mod: removed callout not applicable to our modified example-->
 
-## Sass
+## CSS
 
 In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
 
-### Utilities API
+### Sass utilities API
 
 Link utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

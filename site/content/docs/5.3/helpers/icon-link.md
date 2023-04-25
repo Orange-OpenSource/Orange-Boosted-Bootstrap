@@ -4,7 +4,6 @@ title: Icon link
 description: Quickly create stylized hyperlinks with Solaris icons.
 group: helpers
 aliases:
-  - "/docs/icon-link/"
   - "/docs/helpers/icon-link/"
 toc: true
 added: 5.3
@@ -20,9 +19,9 @@ Add `.link-chevron` to bold your link and enhance them with a chevron.
 
 ## Icon link
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This helper should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, this helper could help in some cases to build specific ues cases or other reusable components.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 The icon link helper component modifies our default link styles to enhance their appearance and quickly align any pairing of icon and text. Alignment is set via inline flexbox styling and a default `gap` value. We stylize the underline with a custom offset and color. Icons are automatically sized to `1em` to best match their associated text's `font-size`.
 
@@ -87,13 +86,13 @@ Customize the color by overriding the `--bs-link-*` CSS variable:
 </a>
 {{< /example >}}
 
-### Sass
+### Sass variables
 
 Customize the icon link Sass variables to modify all icon link styles across your Bootstrap-powered project.
 
 {{< scss-docs name="icon-link-variables" file="scss/_variables.scss" >}}
 
-### Utilities
+### Sass utilities API
 
 Modify icon links with any of [our link utilities]({{< docsref "/utilities/link/" >}}) for modifying underline color and offset.
 

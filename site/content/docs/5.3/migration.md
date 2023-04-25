@@ -62,19 +62,19 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Alert**
   - Alert variants are now styled via CSS variables.
 
-  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
 
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
-  - <span class="badge text-danger-emphasis bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
+  - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
 
-  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Navs and tabs**
   - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
@@ -130,6 +130,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     </div>
     ```
 
+- **Popovers**
+  - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
 ### Contents
 
 - **Typography**
@@ -144,6 +147,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
+- <span class="badge bg-success">New</span> Our range documentation now provides an example which displays the current selected value for better usability, but with some extra JavaScript code.
 
 ### Helpers and utilities
 
@@ -195,6 +200,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
+- <span class="badge bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
+
 ### CSS and Sass variables
 
 - Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
@@ -235,6 +242,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
+      <li><code>--bs-popover-header-padding-x</code></li>
+      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 
@@ -251,6 +260,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
+      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -320,6 +330,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-header-line-height</code></li>
+      <li><code>--bs-popover-header-padding-bottom</code></li>
+      <li><code>--bs-popover-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text-emphasis</code></li>
@@ -337,6 +350,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
       <li><code>--bs-tertiary-color</code></li>
+      <li><code>--bs-tooltip-arrow-border</code></li>
+      <li><code>--bs-tooltip-border-color</code></li>
+      <li><code>--bs-tooltip-border-width</code></li>
+      <li><code>--bs-tooltip-line-height</code></li>
       <li><code>--bs-warning-bg-subtle</code></li>
       <li><code>--bs-warning-border-subtle</code></li>
       <li><code>--bs-warning-text-emphasis</code></li>
@@ -396,6 +413,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$form-invalid-border-color-dark</code></li>
       <li><code>$form-invalid-color</code></li>
       <li><code>$form-invalid-color-dark</code></li>
+      <li><code>$form-range-thumb-hover-bg</code></li>
+      <li><code>$form-text-line-height</code></li>
       <li><code>$form-valid-border-color</code></li>
       <li><code>$form-valid-border-color-dark</code></li>
       <li><code>$form-valid-color</code></li>
@@ -441,6 +460,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>
+      <li><code>$popover-header-line-height</code></li>
+      <li><code>$popover-header-padding-bottom</code></li>
+      <li><code>$popover-line-height</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
@@ -461,6 +483,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$success-text-emphasis-dark</code></li>
       <li><code>$success-text-emphasis</code></li>
       <li><code>$table-caption-color-inverted</code></li>
+      <li><code>$table-cell-icon-margin-bottom</code></li>
+      <li><code>$table-cell-icon-margin-top</code></li>
+      <li><code>$tooltip-border-color</code></li>
+      <li><code>$tooltip-border-width</code></li>
+      <li><code>$tooltip-line-height</code></li>
       <li><code>$utilities-links-underline</code></li>
       <li><code>$warning-bg-subtle-dark</code></li>
       <li><code>$warning-bg-subtle</code></li>
@@ -657,7 +684,6 @@ If you need more details about the changes, please refer to the [v5.2.3 release]
       <li><code>$accordion-body-padding-y</code></li>
       <li><code>$btn-close-focus-shadow</code></li>
       <li><code>$card-spacer-y</code></li>
-      <li><code>$form-range-thumb-active-border</code></li>
       <li><code>$form-star-focus-box-shadow</code></li>
       <li><code>$form-star-focus-color</code></li>
       <li><code>$form-star-focus-color-dark</code></li>
