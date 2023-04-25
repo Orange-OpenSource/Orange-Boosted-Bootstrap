@@ -19,13 +19,13 @@ Resize your browser to see the behavior of this component.
     <span class="container-xxl">Shop</span>
   </button>
   <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
-    <div class="navbar navbar-expand-lg">
-      <ul class="navbar-nav w-100">
-        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-      </ul>
-    </div>
+      <div class="navbar navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
+        </ul>
+      </div>
   </div>
 </nav>
 {{< /example >}}
@@ -40,13 +40,13 @@ Add `.local-nav-dark` to the `.local-nav` for a dark variant.
     <span class="container-xxl">Shop</span>
   </button>
   <div id="collapseLocalNavDark" class="container-xxl local-nav-collapse d-lg-block collapse">
-    <div class="navbar navbar-dark navbar-expand-lg">
-      <ul class="navbar-nav w-100">
-        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-      </ul>
-    </div>
+      <div class="navbar navbar-dark navbar-expand-lg">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
+        </ul>
+      </div>
   </div>
 </nav>
 {{< /example >}}
