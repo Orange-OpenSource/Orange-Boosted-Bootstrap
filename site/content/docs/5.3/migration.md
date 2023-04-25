@@ -66,6 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
+  - <span class="badge text-warning-emphasis bg-warning">Warning</span> Cards example has slightly changed. Please reflect these modifications into your websites.
 
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
