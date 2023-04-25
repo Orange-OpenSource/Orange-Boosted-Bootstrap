@@ -28,6 +28,7 @@ Where *value* is one of:
 - `inline-block`
 - `block`
 - `grid`
+- `inline-grid`
 - `table`
 - `table-cell`
 - `table-row`
@@ -91,6 +92,7 @@ Change the `display` value of elements when printing with our print display util
 - `.d-print-inline-block`
 - `.d-print-block`
 - `.d-print-grid`
+- `.d-print-inline-grid`
 - `.d-print-table`
 - `.d-print-table-row`
 - `.d-print-table-cell`
@@ -105,9 +107,9 @@ The print and display classes can be combined.
 <div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Utilities API
+### Sass utilities API
 
 Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
