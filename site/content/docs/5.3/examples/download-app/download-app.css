@@ -6,6 +6,15 @@
   --bs-border-color: var(--bs-border-color-translucent);
 }
 
+@media (max-width: 479.98px) {
+  h3,
+  .h3 {
+    font-size: 1.125rem;
+    line-height: 1.111111;
+    letter-spacing: -.0125rem;
+  }
+}
+
 .icons-sm {
   width: 2.5rem;
   height: 2.5rem;
