@@ -90,7 +90,8 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
-        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">Agree to terms and conditions</a>
+        By checking this box, I agree to the
+        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a>
       </label>
       <div class="invalid-feedback">
         You must agree before submitting.
@@ -150,8 +151,9 @@ While these feedback styles cannot be styled with CSS, you can still customize t
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">Agree to terms and conditions</a>
+       <label class="form-check-label" for="invalidCheck2">
+        By checking this box, I agree to the
+        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a>
       </label>
     </div>
   </div>
@@ -222,8 +224,9 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-      <label class="form-check-label" for="invalidCheck3">
-        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">Agree to terms and conditions</a>
+         <label class="form-check-label" for="invalidCheck3">
+        By checking this box, I agree to the
+        <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a>
       </label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
