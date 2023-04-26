@@ -89,7 +89,7 @@
   .btn-group:not(.dropstart) &,
   .dropstart & ~ .btn {
     &:not(:hover):not(:focus):not(:active):not(.show) {
-      border-left-color: transparent;
+      border-left-color: var(--#{$prefix}highlight-color); // Not a big fan
 
       &::before {
         position: absolute;
