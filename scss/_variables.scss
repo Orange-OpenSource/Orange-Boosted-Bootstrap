@@ -1133,7 +1133,7 @@ $form-color-disabled-background-swatch: brightness(0) invert(1) brightness(.8) !
 $form-check-input-width:                  1.25em !default; // Boosted mod: instead of `1em`
 $form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
 $form-check-padding-start:                $form-check-input-width + .625em !default; // Boosted mod: instead of `$form-check-input-width + .5em`
-$form-check-margin-bottom:                .125rem !default;
+$form-check-margin-bottom:                $spacer * .75 !default; // Boosted mod: instead of `.125rem`
 $form-check-label-padding-top:            .4375rem !default; // Boosted mod
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
