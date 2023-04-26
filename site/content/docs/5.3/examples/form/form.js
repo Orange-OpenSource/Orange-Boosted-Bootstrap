@@ -16,6 +16,7 @@
         // Focus on first error
         const invalidItems = form.querySelectorAll(':invalid')
         invalidItems[0].focus()
+        invalidItems[0].setAttribute('data-focus-visible-added', '')
         // Add the id of the corresponding invalid message to each invalid field
         invalidItems.forEach(element => {
           const closestLabel = element.parentElement.querySelector('.form-label').getAttribute('id')
