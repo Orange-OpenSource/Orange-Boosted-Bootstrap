@@ -336,7 +336,7 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
 
 ### Tabs with dropdowns
-
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -360,6 +360,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
   </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ### Pills with dropdowns
 
@@ -367,6 +368,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -390,6 +392,7 @@ This variant should not be used because it is a button component in the Orange D
   </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ## CSS
 
