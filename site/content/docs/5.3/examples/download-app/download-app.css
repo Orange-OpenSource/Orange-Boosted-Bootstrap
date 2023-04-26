@@ -6,6 +6,38 @@
   --bs-border-color: var(--bs-border-color-translucent);
 }
 
+.icons-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icons-md {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.icons-lg {
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+@media (min-width: 768px) {
+  .icons-sm {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .icons-md {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .icons-lg {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
 .out-of-grid {
   position: static;
 }
@@ -13,6 +45,7 @@
 .out-of-grid img {
   width: 100%;
   min-width: 100%;
+  min-height: 165px;
 }
 
 @media (min-width: 1024px) {
@@ -23,6 +56,14 @@
   .out-of-grid img {
     width: auto;
   }
+}
+
+iframe {
+  min-height: 10.625rem;
+}
+
+footer .nav-link:hover {
+  text-decoration: underline;
 }
 
 .images img {
@@ -206,8 +247,4 @@
 
 .store-badge:hover {
   transform: scale(1.2);
-}
-
-footer .nav-link:hover {
-  text-decoration: underline;
 }

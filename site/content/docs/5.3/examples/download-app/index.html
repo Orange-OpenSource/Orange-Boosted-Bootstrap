@@ -49,54 +49,92 @@ aliases:
 </header>
 
 <main>
-  <div class="bg-dark mb-2 border-dark border-bottom border-1 position-relative">
+  <div class="bg-dark mb-0 mb-md-2 border-dark border-bottom border-1 position-relative">
     <div class="col-12 col-lg-7 out-of-grid h-100 end-0 overflow-hidden">
       <img loading="lazy" class="h-100 object-fit-cover" alt="App demo_Image PC and app demo_1" src="Banner_image.png">
     </div>
     <div class="container-xxl position-relative z-1">
       <div class="row">
         <div class="col-12 col-lg-5 py-2 bg-dark">
-          <h2 class="pt-3 mb-3 display-2 text-primary">Implementing mobile designs into code</h2>
+          <h2 class="pt-1 pt-md-3 mb-2 mb-md-3 display-2 text-primary">Implementing mobile designs into code</h2>
           <p class="pt-1 mb-2 display-2">A trusted source for developers</p>
-          <p class="ll-sm pt-3 mb-4">From documentation, though repositories, to a showcase mobile application, the Orange Design System provides the elements for developers to implement experiences on mobile iOS and Android operating systems, by integrating brand foundations, design standards, societal and environmental commitments.</p>
+          <p class="ll-sm pt-1 pt-md-3 mb-3 mb-md-4">From documentation, though repositories, to a showcase mobile application, the Orange Design System provides the elements for developers to implement experiences on mobile iOS and Android operating systems, by integrating brand foundations, design standards, societal and environmental commitments.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container-xxl pb-4 pb-md-5">
+  <div class="container-xxl pb-3 pb-md-5">
     <div class="row flex-column align-items-center mb-2 pt-4 pt-md-5">
       <div class="col-12 col-md-6">
-        <h2 class="h1 text-primary text-center mb-4">A showcase mobile application</h2>
-        <div class="d-flex gap-3 justify-content-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="3.75rem" height="3.75rem" role="img" focusable="false" aria-hidden="true">
+        <h2 class="h1 text-primary text-center mb-2 mb-md-4">A showcase mobile application</h2>
+        <div class="d-flex gap-3 justify-content-center mt-1 mt-md-0 mb-2 mb-md-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icons-md" width="3.75rem" height="3.75rem" focusable="false" aria-hidden="true">
             <use xlink:href="#apple"/>
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="3.75rem" height="3.75rem" role="img" focusable="false" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icons-md" width="3.75rem" height="3.75rem" focusable="false" aria-hidden="true">
             <use xlink:href="#android"/>
           </svg>
         </div>
-        <h3 class="mb-0 text-center">The place for mobile designers and developers to experiment the elements of the Orange Design System</h3>
+        <h3 class="mt-1 mt-md-0 mb-0 text-center">The place for mobile designers and developers to experiment the elements of the Orange Design System</h3>
       </div>
     </div>
     <div class="w-100 mb-2 pt-4 pt-md-5">
       <div class="row">
-        <div class="col-12 col-md-6 d-flex mb-3 mb-md-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="me-3" width="2.5rem" height="2.5rem" role="img" focusable="false" aria-hidden="true">
+        <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row mb-3 mb-lg-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 mb-2 me-3 icons-sm" width="2.5rem" height="2.5rem" focusable="false" aria-hidden="true">
             <use xlink:href="#designer"/>
           </svg>
-          <p class="mb-0 col-9 fw-bold">Designers can use the application to experiment, for each mobile operating system, all the available assets and variants, to adjust possible customisation.</p>
+          <p class="mb-0 col-12 col-lg-10 fw-bold">Designers can use the application to experiment, for each mobile operating system, all the available assets and variants, to adjust possible customisation.</p>
         </div>
-        <div class="col-12 col-md-6 d-flex">
-          <svg xmlns="http://www.w3.org/2000/svg" class="me-3" width="2.5rem" height="2.5rem" role="img" focusable="false" aria-hidden="true">
+        <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row">
+          <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 mb-2 me-3 icons-sm" width="2.5rem" height="2.5rem" focusable="false" aria-hidden="true">
             <use xlink:href="#developer"/>
           </svg>
-          <p class="mb-0 col-9 fw-bold">Developers access a ready built code base that shows how to best use the assets, conforming to the expected accessibility standards, for faster and more qualitative integration.</p>
+          <p class="mb-0 col-12 col-lg-10 fw-bold">Developers access a ready built code base that shows how to best use the assets, conforming to the expected accessibility standards, for faster and more qualitative integration.</p>
         </div>
       </div>
     </div>
-    <div class="w-100 pt-5">
-      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 gy-5 mb-4 images">
+    <div class="w-100 pt-md-5">
+      <div id="phonesCarousel" class="carousel slide is-paused d-sm-none">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#phonesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner d-flex align-items-center pt-4 pb-5 images" style="min-height: calc(216vw - 208px);">
+          <div class="carousel-item px-5 active">
+            <img loading="lazy" src="iPhone_13_Pro_Max_home.png" alt="" class="w-100">
+          </div>
+          <div class="carousel-item px-5">
+            <img loading="lazy" src="Google_Pixel_2XL_home.png" alt="" class="w-100">
+          </div>
+          <div class="carousel-item px-5">
+            <img loading="lazy" src="iPhone_13_Pro_Max_components.png" alt="" class="w-100">
+          </div>
+          <div class="carousel-item px-5">
+            <img loading="lazy" src="Google_Pixel_2XL_components.png" alt="" class="w-100">
+          </div>
+          <div class="carousel-item px-5">
+            <img loading="lazy" src="iPhone_13_Pro_Max_button_1.png" alt="" class="w-100">
+          </div>
+          <div class="carousel-item px-5">
+            <img loading="lazy" src="Google_Pixel_2XL_button_1.png" alt="" class="w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#phonesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#phonesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="row row-cols-3 row-cols-md-6 gy-5 mb-4 d-none d-sm-flex images">
         <div class="col d-flex align-items-end"><img loading="lazy" src="iPhone_13_Pro_Max_home.png" alt="" class="w-100"></div>
         <div class="col d-flex align-items-end"><img loading="lazy" src="Google_Pixel_2XL_home.png" alt="" class="w-100"></div>
         <div class="col d-flex align-items-end"><img loading="lazy" src="iPhone_13_Pro_Max_components.png" alt="" class="w-100"></div>
@@ -108,17 +146,17 @@ aliases:
   </div>
 
   <div class="py-4 py-md-5 bg-supporting-blue border-top border-1 border-translucent">
-    <div class="container-xxl d-flex justify-content-center py-2">
-      <div class="col-12 col-md-6">
-        <h2 class="h1 mb-5 text-center">Do you want to start building your app?<br>Get access to the SDK now</h2>
-        <div class="d-flex gap-3 flex-column flex-lg-row justify-content-between">
-          <a href="https://github.com/Orange-OpenSource/ods-ios/" class="btn btn-secondary">
+    <div class="container-xxl d-flex justify-content-center pt-md-2 pb-2">
+      <div class="col-12 col-md-6 col-lg-8 col-xl-6">
+        <h2 class="h1 mb-4 mb-md-5 text-center">Do you want to start building your app?<br>Get access to the SDK now</h2>
+        <div class="d-flex gap-4 flex-column flex-lg-row align-items-center justify-content-between pt-2 pt-md-0">
+          <a href="https://github.com/Orange-OpenSource/ods-ios/" class="btn btn-lg btn-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
               <use xlink:href="#apple"/>
             </svg>
             Access the iOS SDK
           </a>
-          <a href="https://github.com/Orange-OpenSource/ods-android/" class="btn btn-secondary">
+          <a href="https://github.com/Orange-OpenSource/ods-android/" class="btn btn-lg btn-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
               <use xlink:href="#android"/>
             </svg>
@@ -130,10 +168,10 @@ aliases:
   </div>
 
   <div class="bg-dark py-4 py-md-5 border border-1 border-dark">
-    <div class="container-xxl py-2">
+    <div class="container-xxl pt-md-2 pb-2">
       <h2 class="h1 mb-4 mb-md-5 text-primary text-center">What you get from the showcase app</h2>
       <div class="row">
-        <div class="col-12 col-md-5 mb-4 mb-md-0">
+        <div class="col-12 col-md-5 pt-2 pt-md-0 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0 ticks">
             <li class="d-flex align-items-start mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" class="me-3 flex-shrink-0" width="1.875rem" height="1.875rem" role="img" focusable="false" aria-hidden="true">
@@ -165,7 +203,7 @@ aliases:
               </svg>
               <p class="fw-bold mb-0">Assurance that the components have been tested amongst the accessibility standard from the industry</p>
             </li>
-            <li class="d-flex align-items-start mb-3">
+            <li class="d-flex align-items-start mb-md-3">
               <svg xmlns="http://www.w3.org/2000/svg" class="me-3 flex-shrink-0" width="1.875rem" height="1.875rem" role="img" focusable="false" aria-hidden="true">
                 <use xlink:href="#tick"/>
               </svg>
@@ -173,43 +211,60 @@ aliases:
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-6 offset-md-1 border-dark border border-1">
-          <iframe class="w-100 h-100" src="https://mastermedia.orange.com/pmJLYXq6kC" title="Explanation on how to get the app on your phone" allowfullscreen></iframe>
+        <div class="col-12 col-md-6 offset-md-1 mt-2 mt-md-0">
+          <iframe class="w-100 h-100 border-dark border border-1" src="https://mastermedia.orange.com/pmJLYXq6kC" title="Explanation on how to get the app on your phone" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
 
   <div class="py-4 py-md-5">
-    <div class="container-xxl py-2">
+    <div class="container-xxl pt-md-2 pb-2">
       <h2 class="h1 mb-4 mb-md-5 text-primary text-center">How to download the showcase app</h2>
-      <div class="row pt-2 justify-content-around text-center">
-        <div class="col-12 col-sm-8 col-md-4 d-flex flex-column align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
-            <use xlink:href="#apple"/>
-          </svg>
-          <p class="h4 pt-3 mb-4">For iOS, simply hit the button below to download the app on your device.</p>
-          <div class="steps" id="ios-steps">
-            <a href="https://itunes.apple.com/fr/app/id6446178285" class="d-inline-block mt-3"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/app-store-badge.svg" alt="Get it on App Store" height="60"></a>
-          </div>
-        </div>
-        <hr class="d-md-none my-5 border-top border-1 border-translucent">
-        <div class="col-12 col-sm-8 col-md-4 d-flex flex-column align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
-            <use xlink:href="#android"/>
-          </svg>
-          <p class="h4 pt-3 mb-4">For Android, please make sure to follow the two steps process below.</p>
-          <div class="steps" id="android-steps">
-            <div>
-              <span class="tag my-3 border-primary">1</span>
-              <p class="fw-bold mb-3">Register with your Google store account to our <a href="https://groups.google.com/g/odsapp">Beta program list</a></p>
-              <a href="https://groups.google.com/g/odsapp" class="btn btn-secondary mb-3">Register</a>
+      <div class="pt-2 text-center">
+        <ul class="col-12 col-sm-8 d-md-none mx-auto nav nav-underline" role="tablist" aria-owns="nav-link-apple nav-link-android" >
+          <li class="nav-item w-50" role="presentation">
+            <a class="nav-link justify-content-center active" id="nav-link-apple" aria-current="page" href="#link-apple" data-bs-toggle="tab" data-bs-target="#link-apple" role="tab">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icons-lg" width="6.25rem" height="6.25rem" focusable="false" aria-hidden="true">
+                <use xlink:href="#apple"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item w-50" role="presentation">
+            <a class="nav-link justify-content-center" id="nav-link-android" href="#link-android" data-bs-toggle="tab" data-bs-target="#link-android" role="tab">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icons-lg" width="6.25rem" height="6.25rem" focusable="false" aria-hidden="true">
+                <use xlink:href="#android"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content border-0 p-0 pt-3 pt-md-3 row justify-content-around">
+          <div id="link-apple" role="tabpanel" aria-labelledby="nav-link-apple" class="col-12 col-sm-8 col-md-4 d-md-flex flex-column align-items-center mx-auto tab-pane show active">
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-none d-md-block mb-4" width="6.25rem" height="6.25rem" focusable="false" aria-hidden="true">
+              <use xlink:href="#apple"/>
+            </svg>
+            <p class="h4 pt-3 mb-3 mb-md-4">For iOS, simply hit the button below to download the app on your device.</p>
+            <div class="steps mt-md-3" id="ios-steps">
+              <a href="https://itunes.apple.com/fr/app/id6446178285" class="d-inline-block"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/app-store-badge.svg" alt="Get it on App Store" height="60"></a>
             </div>
-            <div class="vr mx-auto my-4 bg-body-secondary" style="height: 100px;"></div>
-            <div>
-              <span class="tag my-3 border-primary">2</span>
-              <p class="fw-bold mb-3">Download the app on your device from the Google Play store</p>
-              <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on App Store" height="60"></a>
+          </div>
+          <div id="link-android" role="tabpanel" aria-labelledby="nav-link-android" class="col-12 col-sm-8 col-md-4 d-md-flex flex-column align-items-center mx-auto tab-pane">
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-none d-md-block mb-4" width="6.25rem" height="6.25rem" focusable="false" aria-hidden="true">
+              <use xlink:href="#android"/>
+            </svg>
+            <p class="h4 pt-3 mb-3 mb-md-4">For Android, please make sure to follow the two steps process below.</p>
+            <div class="steps" id="android-steps">
+              <div>
+                <span class="tag mt-md-3 mb-3 border-primary">1</span>
+                <p class="fw-bold mb-3">Register with your Google store account to our <a href="https://groups.google.com/g/odsapp">Beta program list</a></p>
+                <a href="https://groups.google.com/g/odsapp" class="btn btn-secondary mb-md-3">Register</a>
+              </div>
+              <div class="vr mx-auto my-4 bg-body-secondary" style="height: 75px;"></div>
+              <div>
+                <span class="tag mt-md-3 mb-3 border-primary">2</span>
+                <p class="fw-bold mb-3">Download the app on your device from the Google Play store</p>
+                <a href="https://play.google.com/apps/testing/com.orange.ods.app/" class="d-inline-block"><img loading="lazy" class="store-badge" src="/docs/{{< param docs_version >}}/assets/img/examples/download-app/google-play-badge.svg" alt="Get it on App Store" height="60"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -218,11 +273,11 @@ aliases:
   </div>
 
   <div class="bg-body-secondary py-4 py-md-5">
-    <div class="container-xxl py-2">
-      <h2 class="h1 mb-4 mb-md-5 text-center">Access this website on your mobile<br>device with the QR code below</h2>
-      <div class="d-flex justify-content-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="200" height="200" fill="none">
-          <path fill="currentColor" d="M15 15h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8ZM15 23h8v7h-8v-7Zm46 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm45 0h8v7h-8v-7ZM15 30h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 38h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7ZM15 45h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 53h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm45 0h8v8h-8v-8ZM15 61h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7ZM76 68h7v8h-7v-8Zm38 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8ZM30 76h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm45 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h8v7h-8v-7ZM38 83h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm30 0h8v8h-8v-8Zm46 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8ZM15 91h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm113 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7ZM15 98h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-166 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm91 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm53 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm84 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm-182 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm83 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm98 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-182 7h8v8h-8v-8Zm23 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-189 8h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm30 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-151 7h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm-182 8h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm38 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm46 0h7v7h-7v-7Zm37 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm30 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Z"/>
+    <div class="container-xxl pt-md-2 pb-2">
+      <h2 class="col-12 col-md-6 h1 mx-auto mb-4 mb-md-5 text-center">Access this website on your mobile device with the QR code below</h2>
+      <div class="d-flex justify-content-center pt-2 pt-md-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="200" height="200" style="background-color: var(--bs-body-color);">
+          <path fill="var(--bs-body-bg)" d="M15 15h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8ZM15 23h8v7h-8v-7Zm46 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm45 0h8v7h-8v-7ZM15 30h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 38h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7ZM15 45h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8ZM15 53h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm45 0h8v8h-8v-8ZM15 61h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7ZM76 68h7v8h-7v-8Zm38 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8ZM30 76h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm45 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h8v7h-8v-7ZM38 83h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm30 0h8v8h-8v-8Zm46 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8ZM15 91h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm113 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7ZM15 98h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm31 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-166 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm91 0h8v8h-8v-8Zm38 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm76 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm53 0h8v7h-8v-7Zm76 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm-212 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm84 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm-182 8h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm83 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm23 0h8v8h-8v-8Zm-197 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm23 0h7v7h-7v-7Zm98 0h8v7h-8v-7Zm23 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-182 7h8v8h-8v-8Zm23 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-189 8h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm30 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm31 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm-151 7h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm15 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm46 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm-182 8h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm30 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm15 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm15 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm16 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm15 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm7 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm38 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm-212 8h8v7h-8v-7Zm46 0h7v7h-7v-7Zm37 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm30 0h8v7h-8v-7Zm8 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm22 0h8v7h-8v-7Zm23 0h8v7h-8v-7Zm8 0h7v7h-7v-7Zm15 0h7v7h-7v-7Zm-205 7h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm8 0h7v8h-7v-8Zm7 0h8v8h-8v-8Zm8 0h8v8h-8v-8Zm23 0h7v8h-7v-8Zm23 0h7v8h-7v-8Zm15 0h7v8h-7v-8Zm22 0h8v8h-8v-8Zm16 0h7v8h-7v-8Zm15 0h7v8h-7v-8Z"/>
           <svg x="101" y="101" width="49" height="49" viewBox="0 0 1000 1000">
             <rect rx="130" ry="130" width="1000" height="1000" fill="#ff7900"/>
             <path fill="#fff" d="m843.715 331.562-159.1 159.1-17.678-17.678 159.1-159.1a25.073 25.073 0 0 0 0-35.355L719.971 172.463a25.073 25.073 0 0 0-35.355 0l-17.678 17.678 44.194 44.194a12.5 12.5 0 0 1-17.678 17.678l-44.194-44.195-35.355 35.356 26.516 26.516a12.5 12.5 0 0 1-17.677 17.678l-26.517-26.517-35.355 35.356 44.194 44.193a12.5 12.5 0 1 1-17.678 17.678l-44.194-44.195-17.677 17.678-17.678-17.678 159.1-159.1a50.148 50.148 0 0 1 70.711 0l106.065 106.068a50.148 50.148 0 0 1 0 70.711Zm-30.633 322.01a58.843 58.843 0 0 1 13.786 21.609c.008.02.013.042.021.063a56.343 56.343 0 0 1 2.401 9.564c.079.491.155.982.221 1.475a56.109 56.109 0 0 1-15.976 47.253l-44.21 44.179-34.84 34.814A56.12 56.12 0 0 1 694.7 829h-.064q-2.571 0-5.135-.241c-.172-.016-.344-.035-.515-.052q-2.3-.234-4.581-.657a50.364 50.364 0 0 1-.926-.18c-10.465-2.117-21.09-6.433-29.2-14.542l-246.5-246.7-182.557-182.061-36.335-121.63-17.561-57.828-3.482-13.9c0-.012-.006-.024-.01-.036q-.2-.669-.353-1.335c-.036-.162-.06-.323-.093-.485-.058-.293-.119-.586-.164-.877-.028-.189-.044-.375-.067-.563-.032-.263-.067-.526-.088-.787-.015-.2-.019-.392-.028-.588-.011-.25-.026-.5-.027-.748 0-.038-.005-.078-.005-.116 0-.281.013-.558.026-.836 0-.081 0-.163.007-.244.024-.4.062-.8.111-1.2.013-.1.032-.2.046-.3.042-.292.087-.582.143-.869.027-.14.059-.278.089-.417a15.596 15.596 0 0 1 .295-1.176c.067-.231.137-.46.212-.688.049-.146.1-.292.15-.436.081-.228.169-.454.259-.678.055-.137.109-.274.167-.409.1-.239.214-.474.327-.708.054-.114.106-.229.162-.341q.249-.492.525-.967l.025-.046c.194-.331.4-.654.613-.972.069-.1.143-.2.214-.3.149-.213.3-.424.456-.631.09-.117.182-.231.274-.346q.222-.278.453-.548c.1-.117.2-.231.307-.345q.234-.26.478-.51c.106-.109.213-.219.322-.326.172-.168.349-.331.527-.493.106-.1.21-.194.318-.288.206-.179.417-.35.63-.52.087-.068.171-.141.258-.208q.454-.35.929-.671c.061-.042.126-.08.189-.121.257-.17.518-.336.784-.493.116-.069.236-.133.354-.2.217-.123.436-.243.659-.357.134-.069.27-.134.405-.2l.648-.3q.211-.093.427-.18c.221-.09.444-.174.67-.256l.427-.151c.241-.081.484-.153.728-.224.132-.038.261-.079.394-.114.3-.081.613-.151.923-.217.075-.015.148-.035.223-.05q.579-.114 1.171-.191c.1-.014.211-.021.315-.033.291-.033.583-.062.877-.081.145-.009.292-.013.438-.018.258-.011.516-.018.777-.018a19.616 19.616 0 0 1 1.724.085c.261.025.522.058.784.093.156.022.312.042.469.068.286.046.573.1.86.164.133.028.265.051.4.082.42.1.842.208 1.264.336L232.8 179.7l30.221 9.164 121.462 36.412ZM249.008 201.918l-46.532 46.5 36.59 122.164 21.524-21.716 433.579 433.271 17.682-17.67L278.272 331.2l53.048-53.011L764.9 711.457l17.683-17.67L349 260.514l22.256-22.032Zm82.054 324.1-17.678 17.677 44.195 44.194a12.5 12.5 0 1 1-17.679 17.677l-44.194-44.194-35.356 35.355 26.517 26.517a12.5 12.5 0 0 1-17.678 17.677l-26.516-26.516-35.355 35.355 44.195 44.194a12.5 12.5 0 0 1-17.678 17.678l-44.194-44.194-17.678 17.678a25.073 25.073 0 0 0 0 35.355l106.066 106.066a25.073 25.073 0 0 0 35.355 0l159.1-159.1 17.677 17.678-159.1 159.1a50.148 50.148 0 0 1-70.711 0L154.285 738.149a50.148 50.148 0 0 1 0-70.711l159.1-159.1Z"/>
@@ -233,31 +288,31 @@ aliases:
   </div>
 
   <div class="py-4 py-md-5 bg-supporting-yellow">
-    <div class="container-xxl d-flex justify-content-center py-2">
-      <div class="col-12 col-sm-8">
-        <h2 class="h1 mb-3 text-center">Your feedback is valued</h2>
-        <h3 class="mb-3 text-center">Let us know if you spot anything to correct or improve</h3>
-        <div class="d-flex gap-3 flex-column flex-lg-row justify-content-between mt-4">
+    <div class="container-xxl d-flex justify-content-center pt-md-2 pb-2">
+      <div class="col-12 col-md-6">
+        <h2 class="h1 mb-2 mb-md-3 text-center">Your feedback is valued</h2>
+        <h3 class="mb-md-3 text-center">Let us know if you spot anything to correct or improve</h3>
+        <div class="d-flex gap-md-3 flex-column flex-lg-row justify-content-between mt-4">
           <div class="d-flex flex-column align-items-center mb-4 mb-md-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 mb-md-4 icons-lg" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
               <use xlink:href="#apple"/>
             </svg>
-            <a href="https://github.com/Orange-OpenSource/ods-ios/issues/new/choose" class="btn btn-secondary">
+            <a href="https://github.com/Orange-OpenSource/ods-ios/issues/new/choose" class="btn btn-lg btn-secondary mt-1 mt-md-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
                 <use xlink:href="#apple"/>
               </svg>
-              Give a feedback on iOS app
+              iOS feedback
             </a>
           </div>
           <div class="d-flex flex-column align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 mb-md-4 icons-lg" width="6.25rem" height="6.25rem" role="img" focusable="false" aria-hidden="true">
               <use xlink:href="#android"/>
             </svg>
-            <a href="https://github.com/Orange-OpenSource/ods-android/issues/new/choose" class="btn btn-secondary">
+            <a href="https://github.com/Orange-OpenSource/ods-android/issues/new/choose" class="btn btn-lg btn-secondary mt-1 mt-md-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="me-1" width="1.25rem" height="1.25rem" role="img" focusable="false" aria-hidden="true">
                 <use xlink:href="#android"/>
               </svg>
-              Give a feedback on Android App
+              Android feedback
             </a>
           </div>
         </div>

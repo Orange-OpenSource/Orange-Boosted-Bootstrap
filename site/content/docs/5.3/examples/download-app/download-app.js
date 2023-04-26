@@ -1,3 +1,5 @@
+/* global boosted: false */
+
 (() => {
   'use strict'
 
@@ -21,8 +23,14 @@
     })
   })
 
-  observer.observe(document.querySelector('.images'))
+  observer.observe(document.querySelector('.images.row'))
   observer.observe(document.querySelector('.ticks'))
   observer.observe(document.querySelector('.steps#ios-steps'))
   observer.observe(document.querySelector('.steps#android-steps'))
+
+  // Instantiate the carousel
+  document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
+    .forEach(carousel => {
+      boosted.Carousel.getOrCreateInstance(carousel)
+    })
 })()
