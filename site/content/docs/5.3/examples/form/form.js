@@ -16,6 +16,7 @@
         // Focus on first error
         const invalidItems = form.querySelectorAll(':invalid')
         invalidItems[0].focus()
+        invalidItems[0].setAttribute('data-focus-visible-added', '')
       }
 
       form.classList.add('was-validated')
