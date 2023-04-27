@@ -44,7 +44,6 @@
   position: sticky;
   top: var(--#{$prefix}back-to-top-link-offset-top);
   pointer-events: all;
-  background-color: var(--#{$prefix}back-to-top-title-bg-color); // Boosted mod
   @include button-icon(var(--#{$prefix}back-to-top-link-icon), $size: var(--#{$prefix}back-to-top-link-width) var(--#{$prefix}back-to-top-link-height), $pseudo: "after", $position: calc(50% - 1px));
 
   &::after {
