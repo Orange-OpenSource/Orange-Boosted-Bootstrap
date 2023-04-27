@@ -136,6 +136,7 @@
   &:required {
     ~ .form-check-label::after {
       color: $accessible-orange;
+      // Boosted mod: no margin-left
       content: "*";
     }
   }
