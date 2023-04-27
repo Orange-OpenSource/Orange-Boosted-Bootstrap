@@ -202,6 +202,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
 
+- <span class="badge bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
+
 ### Examples
 
 - **Cards/Cards RTL**
