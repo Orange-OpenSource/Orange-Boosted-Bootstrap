@@ -823,6 +823,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 
 - **Footers**
   - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
 
 - **List group**
   - <span class="badge bg-success">New</span> List group now has a dark variant.
