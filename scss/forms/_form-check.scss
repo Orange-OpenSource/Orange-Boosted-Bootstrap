@@ -135,8 +135,8 @@
   // Boosted mod: required symbol
   &:required {
     ~ .form-check-label::after {
+      margin-left: $form-label-required-margin-left;
       color: $accessible-orange;
-      // Boosted mod: no margin-left
       content: "*";
     }
   }
