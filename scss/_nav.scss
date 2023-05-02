@@ -149,7 +149,7 @@
 
   // Boosted mod
   .nav-item + .nav-item {
-    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); /* stylelint-disable-line function-disallowed-list */
+    margin-left: calc(var(--#{$prefix}nav-link-padding-y) * .5); // stylelint-disable-line function-disallowed-list
   }
   // End mod
 }

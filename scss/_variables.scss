@@ -792,7 +792,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        700 !default;
 $headings-line-height:        $h6-line-height !default;
-$headings-color:              null !default;
+$headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -869,6 +869,8 @@ $table-cell-padding-x:                  $spacer * .5 !default; // Boosted mod
 $table-cell-padding-y-sm:               .5625rem !default; // Boosted mod
 $table-cell-padding-x-sm:               $table-cell-padding-x !default; // Boosted mod
 
+$table-cell-icon-margin-top:            -.75rem !default; // Boosted mod
+$table-cell-icon-margin-bottom:         -.625rem !default; // Boosted mod
 $table-cell-vertical-align:             top !default;
 $table-line-height:                     1.25 !default; // Boosted mod
 
@@ -898,7 +900,8 @@ $table-hover-bg:                        rgba($black, $table-hover-bg-factor) !de
 $table-variant-hover-bg-factor:         .2 !default; // Boosted mod
 
 $table-border-factor:                   .4 !default; // Boosted mod
-$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$table-border-width:                    calc(var(--#{$prefix}border-width) * .5) !default;  // Boosted mod
 $table-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 
 $table-striped-order:                   odd !default;
@@ -1047,10 +1050,12 @@ $btn-social-networks: (
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .4375rem !default; // Boosted mod
+$form-text-font-size:                   $small-font-size !default;
 $form-text-font-size:                   null !default;
 $form-text-font-style:                  null !default;
-$form-text-font-weight:                 null !default;
-$form-text-color:                       null !default;
+$form-text-font-weight:                 $font-weight-bold !default; // Boosted mod: instead of `null`
+$form-text-line-height:                 $line-height-sm !default; // Boosted mod
+$form-text-color:                       var(--#{$prefix}secondary-color) !default;
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
@@ -1195,7 +1200,8 @@ $form-switch-transition:          background-position .15s ease-in-out, $transit
 // Boosted mod: no $form-switch-checked-color
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default; // Boosted mod
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default; // Boosted mod
-$form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; // Boosted mod
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
@@ -1387,13 +1393,15 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-underline-gap:                       0 !default; // Boosted mod: instead of 1rem
 $nav-underline-gap-lg:                    $spacer * .5 !default; // Boosted mod
-$nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod: instead of .125rem
+// stylelint-disable-next-line function-disallowed-list
+$nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod: instead of .125rem
 $nav-underline-border-color:              $gray-500 !default; // Boosted mod
 $nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
 $nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
 $nav-underline-link-padding-x:            1.8125rem !default; // Boosted mod
 $nav-underline-link-hover-color:          $accessible-orange !default; // Boosted mod
-$nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default;  /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default; // Boosted mod
 $nav-underline-link-active-bg:            var(--#{$prefix}body-bg) !default; // Boosted mod
 $nav-underline-link-active-border-color:  $accessible-orange !default; // Boosted mod
 // scss-docs-end nav-variables
@@ -1678,7 +1686,8 @@ $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
 $accordion-padding-x:                     0 !default; // Boosted mod
 $accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
-$accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
 $accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
@@ -1744,7 +1753,8 @@ $tooltip-line-height:               $line-height-sm !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $tooltip-bg:                        var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
-$tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$tooltip-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
 $tooltip-border-color:              var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   1 !default;
@@ -2118,16 +2128,19 @@ $carousel-transition:                transform $carousel-transition-duration $tr
 $spinner-width:           $spacer * 2 !default;
 $spinner-height:          $spinner-width !default;
 $spinner-vertical-align:  -.125em !default;
-$spinner-border-width:    calc(var(--#{$prefix}border-width) * 3) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$spinner-border-width:    calc(var(--#{$prefix}border-width) * 3) !default; // Boosted mod
 $spinner-animation-speed: .75s !default;
 
 $spinner-width-sm:        $spacer !default;
 $spinner-height-sm:       $spinner-width-sm !default;
-$spinner-border-width-sm: calc(var(--#{$prefix}border-width) * 2) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$spinner-border-width-sm: calc(var(--#{$prefix}border-width) * 2) !default; // Boosted mod
 
 $spinner-width-lg:        $spacer * 4 !default; // Boosted mod
 $spinner-height-lg:       $spinner-width-lg !default; // Boosted mod
-$spinner-border-width-lg: calc(var(--#{$prefix}border-width) * 4) !default; /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+// stylelint-disable-next-line function-disallowed-list
+$spinner-border-width-lg: calc(var(--#{$prefix}border-width) * 4) !default; // Boosted mod
 // scss-docs-end spinner-variables
 
 
