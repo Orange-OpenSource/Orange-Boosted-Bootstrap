@@ -12,10 +12,10 @@
           </h3>
           <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
+              <li><a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" aria-describedby="headingLinks">Home</a></li>
+              <li><a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
+              <li><a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
+              <li><a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
               <!-- Boosted mod: removed .Site.Params.icons|themes|blog|swag -->
             </ul>
           </div>
