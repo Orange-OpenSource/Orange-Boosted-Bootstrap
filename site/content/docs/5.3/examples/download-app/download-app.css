@@ -243,17 +243,3 @@ footer .nav-link:hover {
 .steps.active > :nth-child(3) {
   animation-delay: 2s;
 }
-
-.store-badge {
-  transition: transform .25s ease;
-}
-
-@media (prefers-reduced-motion) {
-  .store-badge {
-    transition: transform .5s ease;
-  }
-}
-
-.store-badge:hover {
-  transform: scale(1.2);
-}
