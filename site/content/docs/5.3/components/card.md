@@ -325,7 +325,7 @@ Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-
 Add some navigation to a card's header (or block) with Boosted's [nav components]({{< docsref "/components/navs-tabs" >}}).
 
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
+These variants should not be used because they do not respect the Orange Design System specifications.
 
 Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -408,11 +408,10 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
 {{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications. It does not respect accessibility requirements neither.
+This variant should not be used because it does not respect the Orange Design System specifications. Moreover, it might lead to accessibility issues. Instead, prefer using a card that includes a top image.
 
 Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
-
 
 {{< example >}}
 <div class="card text-bg-dark">
@@ -552,7 +551,7 @@ In addition to styling the content within cards, Boosted includes a few options 
 Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use `display: flex;` to become attached with uniform dimensions starting at the `sm` breakpoint.
 
 {{< design-callout-alert >}}
-These variants **with no spacing between cards** should not be used because they do not respect the Orange Design System specifications.
+These variants **with no spacing between cards** should not be used because they do not respect the Orange Design System specifications. Instead, prefer having a gap of at least 20px between cards.
 
 Please refer to the [Cards](https://system.design.orange.com/0c1af118d/p/82eaf1-cards/b/69655e) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
