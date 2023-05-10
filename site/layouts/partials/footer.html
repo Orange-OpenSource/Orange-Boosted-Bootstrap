@@ -33,7 +33,7 @@
           </h3>
           <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link{{ if (and (eq $category_slug "getting-started") (ne $page_slug "webpack") (ne $page_slug "parcel") (ne $page_slug "vite")) }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
+              <li><a class="nav-link{{ if (and (eq $category_slug "getting-started") (ne $page_slug "webpack" "parcel" "vite")) }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
               <li><a class="nav-link{{ if eq $page_slug "webpack" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
               <li><a class="nav-link{{ if eq $page_slug "parcel" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/" aria-describedby="headingGuides">Parcel</a></li>
               <li><a class="nav-link{{ if eq $page_slug "vite" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/vite/" aria-describedby="headingGuides">Vite</a></li>
