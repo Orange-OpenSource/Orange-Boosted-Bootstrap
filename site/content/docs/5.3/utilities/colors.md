@@ -60,6 +60,7 @@ Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used
 To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
 
 Here are some compliant examples for texts:
+
 {{< example >}}
 <p class="text-primary fs-3">.text-primary</p>
 <p class="text-primary-emphasis bg-dark fs-3">.text-primary-emphasis</p>
@@ -72,6 +73,7 @@ Here are some compliant examples for texts:
 {{< /example >}}
 
 Here are some compliant examples for non-texts elements, such as SVG icons:
+
 {{< example >}}
 <p class="p-2">
   <svg width="2em" height="2em" class="text-primary" aria-hidden="true" focusable="false">
