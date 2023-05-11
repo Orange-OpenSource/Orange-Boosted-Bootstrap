@@ -13,11 +13,12 @@
   --#{$prefix}popover-box-shadow: #{$popover-box-shadow};
   --#{$prefix}popover-header-padding-x: #{$popover-header-padding-x}; // Boosted mod: deprecated in v5.3.0
   --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y}; // Boosted mod: deprecated in v5.3.0
-  --#{$prefix}popover-header-padding-bottom: #{$popover-header-padding-bottom}; // Boosted mod
   @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
   --#{$prefix}popover-header-line-height: #{$popover-header-line-height}; // Boosted mod
   --#{$prefix}popover-header-color: #{$popover-header-color};
   --#{$prefix}popover-header-bg: #{$popover-header-bg};
+  --#{$prefix}popover-header-padding-x: #{$popover-header-padding-x};
+  --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y};
   --#{$prefix}popover-body-padding-x: #{$popover-body-padding-x};
   --#{$prefix}popover-body-padding-y: #{$popover-body-padding-y};
   --#{$prefix}popover-body-color: #{$popover-body-color};
@@ -29,7 +30,6 @@
   z-index: var(--#{$prefix}popover-zindex);
   display: block;
   max-width: var(--#{$prefix}popover-max-width);
-  padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x); // Boosted mod
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
@@ -187,7 +187,7 @@
 
 // Offset the popover to account for the popover arrow
 .popover-header {
-  // Boosted mod: no `padding`
+  padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x); // Boosted mod
   margin-bottom: 0; // Reset the default from Reboot
   font-weight: var(--#{$prefix}popover-font-weight); // Boosted mod
   line-height: var(--#{$prefix}popover-header-line-height); // Boosted mod
@@ -206,12 +206,12 @@
 
   // Boosted mod: popover body special padding when following a popover header
   + .popover-body {
-    padding-top: var(--#{$prefix}popover-header-padding-bottom);
+    padding-top: 0;
   }
   // End mod
 }
 
 .popover-body {
-  // Boosted mod: no `padding`
+  padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x); // Boosted mod
   color: var(--#{$prefix}popover-body-color);
 }
