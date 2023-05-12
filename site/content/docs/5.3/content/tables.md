@@ -466,7 +466,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 
 ```html
 <table class="table table-sm">
-  ...
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
@@ -488,7 +488,7 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
 
 ```html
 <table class="table caption-bottom">
-  ...
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
