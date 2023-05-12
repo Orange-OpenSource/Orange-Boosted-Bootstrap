@@ -544,7 +544,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
 {{< /design-callout-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">

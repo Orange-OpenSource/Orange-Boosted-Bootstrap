@@ -114,7 +114,7 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 
 You can see this in action with a live demo:
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
@@ -132,7 +132,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 
-{{< example class="bg-dark" >}}
+{{< example class="bg-dark" stackblitz_add_js="true" >}}
 <div class="alert alert-success bg-dark" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <p>Success notification text goes here.</p>

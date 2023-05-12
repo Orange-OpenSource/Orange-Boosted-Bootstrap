@@ -12,7 +12,7 @@ toc: true
 
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
@@ -20,7 +20,7 @@ Provide an option to dismiss or close a component with `.btn-close`. Default sty
 
 Disabled close buttons change their `color`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn-close" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
@@ -28,7 +28,7 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 
 Add `.btn-close-white` to the `.btn-close` for a dark variant.
 
-{{< example class="bg-dark" >}}
+{{< example class="bg-dark" stackblitz_add_js="true" >}}
 <button type="button" class="btn-close btn-close-white" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 <button type="button" class="btn-close btn-close-white" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
@@ -37,7 +37,7 @@ Add `.btn-close-white` to the `.btn-close` for a dark variant.
 
 Close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
