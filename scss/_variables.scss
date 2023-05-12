@@ -1789,8 +1789,7 @@ $popover-header-font-size:          $font-size-lg !default; // Boosted mod: inst
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
-
-$popover-header-padding-y:          $spacer !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top`
+$popover-header-padding-y:          $spacer !default; // Boosted mod: instead of `.5rem`
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;

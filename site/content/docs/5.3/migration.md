@@ -252,8 +252,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
-      <li><code>--bs-popover-header-padding-x</code></li>
-      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 
