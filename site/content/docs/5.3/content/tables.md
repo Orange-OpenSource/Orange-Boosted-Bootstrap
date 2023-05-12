@@ -906,10 +906,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-              <title id="svg1">Thumbnail</title>
-              <rect width="100%" height="100%" fill="#ffd200"></rect>
-            </svg>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30">
             Cell text
           </td>
           <td>Cell text</td>
@@ -946,10 +943,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
-              <title id="svg3">Thumbnail</title>
-              <rect width="100%" height="100%" fill="#4bb4e6"></rect>
-            </svg>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30">
             Cell text
           </td>
           <td>Cell text</td>
