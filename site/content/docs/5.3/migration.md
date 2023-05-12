@@ -356,6 +356,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-table-bg-state</code></li>
+      <li><code>--bs-table-bg-type</code></li>
+      <li><code>--bs-table-color-state</code></li>
+      <li><code>--bs-table-color-type</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
