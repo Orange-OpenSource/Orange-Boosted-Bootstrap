@@ -368,19 +368,19 @@ Star rating system is built on top of radios. Simply add `.star-rating` to a `<f
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden">
-    <label for="terrible" title="Terrible"></label>
+    <label for="terrible" title="Terrible" aria-label="Terrible"></label>
 
     <input type="radio" id="bad" name="rating" value="2" class="visually-hidden">
-    <label for="bad" title="Bad"></label>
+    <label for="bad" title="Bad" aria-label="Bad"></label>
 
     <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden">
-    <label for="mixed" title="Mixed"></label>
+    <label for="mixed" title="Mixed" aria-label="Mixed"></label>
 
     <input type="radio" id="good" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good" title="Good"></label>
+    <label for="good" title="Good" aria-label="Good"></label>
 
     <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden">
-    <label for="excellent" title="Excellent"></label>
+    <label for="excellent" title="Excellent" aria-label="Excellent"></label>
   </fieldset>
 </form>
 {{< /example >}}
@@ -395,19 +395,19 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
-    <label for="terrible2" title="Terrible"></label>
+    <label for="terrible2" title="Terrible" aria-label="Terrible"></label>
 
     <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden">
-    <label for="bad2" title="Bad"></label>
+    <label for="bad2" title="Bad" aria-label="Bad"></label>
 
     <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden">
-    <label for="mixed2" title="Mixed"></label>
+    <label for="mixed2" title="Mixed" aria-label="Mixed"></label>
 
     <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good2" title="Good"></label>
+    <label for="good2" title="Good" aria-label="Good"></label>
 
     <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
-    <label for="excellent2" title="Excellent"></label>
+    <label for="excellent2" title="Excellent" aria-label="Excellent"></label>
   </fieldset>
 </form>
 {{< /example >}}
@@ -422,19 +422,19 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"></label>
+    <label for="terrible3" title="Terrible" aria-label="Terrible"></label>
 
     <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"></label>
+    <label for="bad3" title="Bad" aria-label="Bad"></label>
 
     <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"></label>
+    <label for="mixed3" title="Mixed" aria-label="Mixed"></label>
 
     <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"></label>
+    <label for="good3" title="Good" aria-label="Good"></label>
 
     <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"></label>
+    <label for="excellent3" title="Excellent" aria-label="Excellent"></label>
   </fieldset>
 </form>
 {{< /example >}}
@@ -446,19 +446,19 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 {{< example >}}
 <fieldset class="star-rating" disabled>
   <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
-  <label for="terrible4" title="Terrible"></label>
+  <label for="terrible4" title="Terrible" aria-label="Terrible"></label>
 
   <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
-  <label for="bad4" title="Bad"></label>
+  <label for="bad4" title="Bad" aria-label="Bad"></label>
 
   <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
-  <label for="mixed4" title="Mixed"></label>
+  <label for="mixed4" title="Mixed" aria-label="Mixed"></label>
 
   <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
-  <label for="good4" title="Good"></label>
+  <label for="good4" title="Good" aria-label="Good"></label>
 
   <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
-  <label for="excellent4" title="Excellent"></label>
+  <label for="excellent4" title="Excellent" aria-label="Excellent"></label>
 </fieldset>
 <span class="visually-hidden">rated 3 stars out of 5</span>
 {{< /example >}}
