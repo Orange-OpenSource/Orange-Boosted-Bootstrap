@@ -150,6 +150,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> Our range documentation now provides an example which displays the current selected value for better usability, but with some extra JavaScript code.
 
+- <span class="badge bg-success">New</span> Star rating has been slightly changed for accessibility purpose; an aria-label attribute matching the title attribute was added. Please reflect this modification into your websites.
+  ```diff
+  -    <label for="excellent" title="Excellent"></label>
+  +    <label for="excellent" title="Excellent" aria-label="Excellent"></label>
+  ```
+
 ### Helpers and utilities
 
 - <span class="badge bg-success">New</span> `.border-{color}-subtle`.
