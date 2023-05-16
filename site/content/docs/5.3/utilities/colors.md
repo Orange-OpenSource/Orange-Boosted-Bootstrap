@@ -12,13 +12,13 @@ toc: true
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
+## Colors
+
 {{< design-callout-alert >}}
 Some of the colors combinations below do not belong the Orange Design System specifications, and do not meet accessibility standards.
 
-Please refer to our Boosted [Orange's colors]({{< docsref "/utilities/colors#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-colors" >}}) section underneath and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
-
-## Colors
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
 
@@ -65,7 +65,7 @@ Here are some compliant examples for texts:
 <p class="text-primary fs-3">.text-primary</p>
 <p class="text-primary-emphasis bg-dark fs-3">.text-primary-emphasis</p>
 <p class="text-secondary">.text-secondary</p>
-<p class="text-light">.text-light</p>
+<p class="text-light bg-dark">.text-light</p>
 <p class="text-body">.text-body</p>
 <p class="text-body-secondary">.text-body-secondary</p>
 <p class="text-black">.text-black</p>
