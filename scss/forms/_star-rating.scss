@@ -23,7 +23,7 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-500);
+    @include form-star-rating($gray-700);
   }
 
   > input:checked + label {
@@ -41,7 +41,7 @@
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-500);
+    @include form-star-rating($gray-700);
   }
 
   > input:hover + label {
@@ -55,7 +55,7 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-700);
+    @include form-star-rating($gray-600);
   }
 
   > input:checked + label {
@@ -67,7 +67,7 @@
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-700);
+    @include form-star-rating($gray-600);
   }
 
   > input:hover + label {
