@@ -109,6 +109,22 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 {{< /orange-footer >}}
 {{< /example >}}
 
+### Accessibility
+
+Add the `.active` class on `.nav-link` to indicate the current page.
+
+Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
+
+{{< example class="p-0" >}}
+{{< orange-footer service=true show_active_link=true >}}
+{{< /orange-footer >}}
+{{< /example >}}
+
+{{< example class="p-0" >}}
+{{< orange-footer mandatory=true show_active_link=true >}}
+{{< /orange-footer >}}
+{{< /example >}}
+
 ## CSS
 
 ### Variables
