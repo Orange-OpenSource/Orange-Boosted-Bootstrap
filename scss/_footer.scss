@@ -28,8 +28,12 @@
       .nav-link {
         outline-offset: $focus-visible-outer-offset; // Override outline offset coming from .navbar-nav
 
-        &.active::before {
-          content: unset;
+        &.active {
+          text-decoration: underline;
+
+          &::before {
+            content: unset;
+          }
         }
       }
     }
