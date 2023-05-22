@@ -15,7 +15,7 @@
     height: 1em;
     font-size: $form-star-size;
     cursor: pointer;
-    @include form-star-rating($accessible-orange);
+    @include form-star-rating($accessible-orange, $accessible-orange);
 
     &:not(:first-of-type){
       margin-left: $form-star-margin-between;
@@ -23,11 +23,11 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-700);
+    @include form-star-rating($gray-700, $white);
   }
 
   > input:checked + label {
-    @include form-star-rating($accessible-orange);
+    @include form-star-rating($accessible-orange, $accessible-orange);
   }
 
   > [data-focus-visible-added]:focus + label {
@@ -37,41 +37,41 @@
   }
 
   &:hover input + label {
-    @include form-star-rating($black);
+    @include form-star-rating($black, $black);
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-700);
+    @include form-star-rating($gray-700, $white);
   }
 
   > input:hover + label {
-    @include form-star-rating($black);
+    @include form-star-rating($black, $black);
   }
 }
 
 .star-rating-dark {
   > label {
-    @include form-star-rating($brand-orange);
+    @include form-star-rating($brand-orange, $brand-orange);
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-600);
+    @include form-star-rating($gray-600, $gray-600);
   }
 
   > input:checked + label {
-    @include form-star-rating($brand-orange);
+    @include form-star-rating($brand-orange, $brand-orange);
   }
 
   &:hover input + label {
-    @include form-star-rating($white);
+    @include form-star-rating($white, $white);
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-600);
+    @include form-star-rating($gray-600, $gray-600);
   }
 
   > input:hover + label {
-    @include form-star-rating($white);
+    @include form-star-rating($white, $white);
   }
 }
 
