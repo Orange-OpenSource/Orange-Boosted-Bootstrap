@@ -75,6 +75,30 @@
   }
 }
 
-.star-rating-sm > label {
-  font-size: $form-star-size-sm;
+.star-rating-sm {
+
+  > label {
+    font-size: $form-star-size-sm;
+    @include form-star-rating-sm($accessible-orange, $accessible-orange);
+  }
+
+  > input:checked ~ label {
+    @include form-star-rating-sm($gray-700, $white);
+  }
+
+  > input:checked + label {
+    @include form-star-rating-sm($accessible-orange, $accessible-orange);
+  }
+
+  &:hover input + label {
+    @include form-star-rating-sm($black, $black);
+  }
+
+  > input:hover ~ label {
+    @include form-star-rating-sm($gray-700, $white);
+  }
+
+  > input:hover + label {
+    @include form-star-rating-sm($black, $black);
+  }
 }
