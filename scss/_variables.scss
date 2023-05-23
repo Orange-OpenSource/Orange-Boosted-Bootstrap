@@ -1170,7 +1170,7 @@ $form-check-inline-margin-end:    1rem !default;
 // Boosted mod: Star rating
 $form-star-size:                  1.5625rem !default;
 $form-star-size-sm:               1.25rem !default;
-$form-star-margin-between:        -.125rem !default;
+$form-star-margin-between:        .125rem !default;
 //fusv-disable
 $form-star-focus-color:           $black !default; // Deprecated in v5.2.3
 $form-star-focus-outline:         var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3

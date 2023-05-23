@@ -1,5 +1,5 @@
 // scss-docs-start form-star-rating-mixin
 @mixin form-star-rating($color, $background-color) {
-  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25'><path fill='#{$background-color}' fill-rule='evenodd' stroke='#{$color}' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>"));
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25'><path fill='#{$background-color}' fill-rule='evenodd' stroke='#{$color}' d='m10.1 1.623 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L10.1 14.06l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L10.1 1.623Z'/></svg>"));
 }
 // scss-docs-end form-star-rating-mixin
