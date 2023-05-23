@@ -446,15 +446,15 @@ Make star ratings readable but non editable by using `span` instead of `<input>`
 <fieldset class="star-rating">
   <legend class="visually-hidden">Results relevance</legend>
 
-  <span id="terrible4" title="Terrible" aria-label="Terrible" class="checked"></span>
+  <span id="terrible4" title="Terrible" class="checked"></span>
 
-  <span id="bad4" title="Bad" aria-label="Bad" class="checked"></span>
+  <span id="bad4" title="Bad" class="checked"></span>
 
-  <span id="mixed4" title="Mixed" aria-label="Mixed" class="checked"></span>
+  <span id="mixed4" title="Mixed" class="checked"></span>
 
-  <span id="good4" title="Good" aria-label="Good"></span>
+  <span id="good4" title="Good"></span>
 
-  <span id="excellent4" title="Excellent" aria-label="Excellent"></span>
+  <span id="excellent4" title="Excellent"></span>
 </fieldset>
 <span class="visually-hidden">rated 3 stars out of 5</span>
 {{< /example >}}
