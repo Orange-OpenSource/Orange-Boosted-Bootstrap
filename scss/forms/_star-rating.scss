@@ -3,12 +3,9 @@
 //
 
 .star-rating {
-  &.disabled,
-  &:disabled {
-    pointer-events: none;
-  }
 
-  > label {
+  > label,
+  > span {
     display: block;
     float: left;
     width: 1em;
@@ -22,15 +19,18 @@
     }
   }
 
-  > input:checked ~ label {
+  > input:checked ~ label,
+  > span {
     @include form-star-rating($gray-700, $white);
   }
 
-  > input:checked + label {
+  > input:checked + label,
+  > .checked {
     @include form-star-rating($accessible-orange, $accessible-orange);
   }
 
-  > [data-focus-visible-added]:focus + label {
+  > [data-focus-visible-added]:focus + label,
+  > [data-focus-visible-added]:focus + span {
     @include focus-visible();
     outline-offset: -1px;
     box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
@@ -46,6 +46,23 @@
 
   > input:hover + label {
     @include form-star-rating($black, $black);
+  }
+
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+
+    > label {
+      @include form-star-rating($gray-700, $gray-700);
+    }
+
+    > input:checked ~ label {
+      @include form-star-rating($gray-500, $gray-500);
+    }
+
+    > input:checked + label {
+      @include form-star-rating($gray-700, $gray-700);
+    }
   }
 }
 
