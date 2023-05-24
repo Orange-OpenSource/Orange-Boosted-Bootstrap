@@ -62,7 +62,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Alert**
   - Alert variants are now styled via CSS variables.
 
-  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
@@ -74,7 +74,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **List group**
   - List group item variants are now styled via CSS variables.
 
-  - <span class="badge text-warning-emphasis bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Local navigation**
   - <span class="badge bg-success">New</span> We now provide the local navigation as a new component and its dark variant.
@@ -89,8 +89,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
-- **Orange footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -183,7 +184,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> gap utilities: `.row-gap-{index}` and `.column-gap-{index}` to set horizontal or vertical space between children items in the specified container.
 
-- <span class="badge text-warning-emphasis bg-warning">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
+- <span class="badge bg-warning">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
 
   With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 
@@ -195,15 +196,25 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-success">New</span> Added new `.icon-link` helper associated to `.icon-link` and `.link-hover` to quickly place and align icons alongside a textual link. Icon links support our new link utilities, too.
 
-- <span class="badge text-warning-emphasis bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
+- <span class="badge bg-warning">Warning</span> For advanced Sass users, `.link-chevron` is no more defined within `scss/_type.scss` but in `scss/helpers/_chevron-link.scss`. Depending on your needs, it may be imported either from `scss/helpers/_chevron-links.scss` directly or from `scss/helpers/_icon-link.scss` for the complete icon link bundle.
 
 - <span class="badge bg-success">New</span> Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
 
 - CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge bg-warning">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
 
 - <span class="badge bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
+
+- <span class="badge bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
+
+### Examples
+
+- **Cards/Cards RTL**
+  - <span class="badge bg-warning">Warning</span> Semantics have been changed for the row containing icons and the actions footer containing secondary buttons in order to be more accessible. Please reflect these modifications into your websites.
+
+- **Form**
+  - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visible-added` attribute on the focused element on first error.
 
 ### CSS and Sass variables
 
@@ -349,6 +360,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-table-bg-state</code></li>
+      <li><code>--bs-table-bg-type</code></li>
+      <li><code>--bs-table-color-state</code></li>
+      <li><code>--bs-table-color-type</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
@@ -814,8 +829,8 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 - **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
-- **Footers**
-  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> All footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
 - **List group**
   - <span class="badge bg-success">New</span> List group now has a dark variant.
