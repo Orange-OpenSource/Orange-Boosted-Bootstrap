@@ -138,6 +138,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Typography**
   - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+  - <span class="badge bg-warning">Warning</span> We changed the font-size of titles depending on the breakpoints to better fit design. `<h3>`, `<h5>` and `<h6>` are changed, please make sure that it has no severe impacts on your websites.
 
 ### Forms
 
