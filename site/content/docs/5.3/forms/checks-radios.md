@@ -440,23 +440,21 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 {{< /example >}}
 
 ### Readonly
-Make star ratings readable but non editable by using `span` instead of `<input>` elements.
+Make star ratings readable but non editable by using `<span>` instead of `<input>` elements.
 
 {{< example >}}
-<fieldset class="star-rating">
-  <legend class="visually-hidden">Results relevance</legend>
+<div class="star-rating">
+  <p class="visually-hidden">Results relevance: rated 3 stars out of 5</p>
 
-  <span id="terrible4" title="Terrible" class="checked"></span>
+    <div aria-hidden="true">
+      <span id="terrible4" class="checked"></span>
+      <span id="bad4" class="checked"></span>
+      <span id="mixed4" class="checked"></span>
+      <span id="good4"></span>
+      <span id="excellent4"></span>
+    </div>
 
-  <span id="bad4" title="Bad" class="checked"></span>
-
-  <span id="mixed4" title="Mixed" class="checked"></span>
-
-  <span id="good4" title="Good"></span>
-
-  <span id="excellent4" title="Excellent"></span>
-</fieldset>
-<span class="visually-hidden">rated 3 stars out of 5</span>
+</div>
 {{< /example >}}
 
 ### Disabled
@@ -482,7 +480,7 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
   <input type="radio" id="excellent5" name="rating" value="5" class="visually-hidden">
   <label for="excellent5" title="Excellent"></label>
 </fieldset>
-<span class="visually-hidden">rated 3 stars out of 5</span>
+<p class="visually-hidden">rated 3 stars out of 5</p>
 {{< /example >}}
 
 <!-- End mod -->
