@@ -157,6 +157,7 @@
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
+  margin-bottom: $form-switch-margin-bottom;
 
   .form-check-input {
     --#{$prefix}form-switch-bg: #{escape-svg($form-switch-bg-image)};
