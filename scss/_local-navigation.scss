@@ -2,6 +2,7 @@
   // scss-docs-start local-nav-css-vars
   --#{$prefix}local-nav-padding-y: #{$local-nav-padding-y};
   --#{$prefix}local-nav-color: #{$local-nav-color};
+  --#{$prefix}local-nav-bg: #{$local-nav-bg};
   --#{$prefix}local-nav-hover-color: #{$local-nav-color};
   --#{$prefix}local-nav-hover-bg: #{#eee};
   --#{$prefix}local-nav-active-color: #{$local-nav-active-color};
@@ -11,6 +12,7 @@
   --#{$prefix}local-nav-border-width: #{$local-nav-border-width};
   // scss-docs-end local-nav-css-vars
 
+  background-color: var(--#{$prefix}local-nav-bg);
   border-bottom: var(--#{$prefix}local-nav-border-color) solid var(--#{$prefix}local-nav-border-width);
 
   .local-nav-button {
@@ -118,6 +120,7 @@
 .local-nav-dark {
   // scss-docs-start local-nav-dark-css-vars
   --#{$prefix}local-nav-color: #{$local-nav-dark-color};
+  --#{$prefix}local-nav-bg: #{$local-nav-dark-bg};
   --#{$prefix}local-nav-hover-color: #{$local-nav-dark-active-color};
   --#{$prefix}local-nav-hover-bg: #{#333};
   --#{$prefix}local-nav-active-color: #{$local-nav-dark-active-color};

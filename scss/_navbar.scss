@@ -383,7 +383,6 @@
           .nav-link {
             margin: 0;
 
-            &:not(.nav-icon):hover::before,
             &.active::before {
               position: absolute;
               right: var(--#{$prefix}navbar-nav-link-padding-x);
