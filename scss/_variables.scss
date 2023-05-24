@@ -342,14 +342,14 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
-$primary-text-emphasis:   $primary !default; // Boosted mod: instead of `shade-color($primary, 60%)`
+$primary-text-emphasis:   $accessible-orange !default; // Boosted mod: instead of `shade-color($primary, 60%)`
 $secondary-text-emphasis: $secondary !default; // Boosted mod: instead of `shade-color($secondary, 60%)`
-$success-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($success, 60%)`
-$info-text-emphasis:      null !default; // Boosted mod: instead of `shade-color($info, 60%)`
-$warning-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($warning, 60%)`
-$danger-text-emphasis:    null !default; // Boosted mod: instead of `shade-color($danger, 60%)`
+$success-text-emphasis:   $success !default; // Boosted mod: instead of `shade-color($success, 60%)`
+$info-text-emphasis:      $info !default; // Boosted mod: instead of `shade-color($info, 60%)`
+$warning-text-emphasis:   $warning !default; // Boosted mod: instead of `shade-color($warning, 60%)`
+$danger-text-emphasis:    $danger !default; // Boosted mod: instead of `shade-color($danger, 60%)`
 $light-text-emphasis:     $light !default; // Boosted mod: instead of `$gray-700`
-$dark-text-emphasis:      null !default; // Boosted mod: instead of `$gray-700`
+$dark-text-emphasis:      $dark !default; // Boosted mod: instead of `$gray-700`
 // scss-docs-end theme-text-variables
 
 // scss-docs-start theme-bg-subtle-variables
