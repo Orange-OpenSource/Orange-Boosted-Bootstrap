@@ -77,7 +77,7 @@ h2,
   letter-spacing: $h6-spacing;
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   h1,
   .display-1,
   .display-2,
@@ -108,6 +108,7 @@ h2,
   }
 
   h2,
+  h3,
   .display-4 {
     @include font-size($h3-font-size);
     line-height: $h3-line-height;
@@ -116,8 +117,9 @@ h2,
     letter-spacing: $h3-spacing;
   }
 
-  h3,
   h4,
+  h5,
+  h6,
   .lead {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
@@ -127,7 +129,7 @@ h2,
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .display-1 {
     @include font-size($display1-size);
 
@@ -181,20 +183,13 @@ h2,
     letter-spacing: $h4-spacing;
   }
 
-  h5 {
+  h5,
+  h6 {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
 
     /* rtl:remove */
     letter-spacing: $h5-spacing;
-  }
-
-  h6 {
-    @include font-size($h6-font-size);
-    line-height: $h6-line-height;
-
-    /* rtl:remove */
-    letter-spacing: $h6-spacing;
   }
 
   .lead {
