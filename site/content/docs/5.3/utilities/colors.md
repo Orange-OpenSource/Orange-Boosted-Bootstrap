@@ -59,11 +59,17 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
 
-Here are some compliant examples for texts:
+Thus, the `.text-primary` color on light background can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
+
+{{< callout warning >}}
+For now, Boosted does not provide any text utility for `$brand-orange` which should be used on dark background instead of `$accessible-orange`.
+{{< /callout >}}
+
+Here are some compliant combinations examples for texts:
 
 {{< example >}}
 <p class="text-primary fs-3">.text-primary</p>
-<p class="text-primary-emphasis bg-dark fs-3">.text-primary-emphasis</p>
+<p class="text-primary fs-4 fw-bold">.text-primary</p>
 <p class="text-secondary">.text-secondary</p>
 <p class="text-light bg-dark">.text-light</p>
 <p class="text-body">.text-body</p>
@@ -72,7 +78,7 @@ Here are some compliant examples for texts:
 <p class="text-white">.text-white</p>
 {{< /example >}}
 
-Here are some compliant examples for non-texts elements, such as SVG icons:
+Here are some compliant combinations  examples for non-texts elements, such as SVG icons:
 
 {{< example >}}
 <p class="p-2">
@@ -90,9 +96,6 @@ Here are some compliant examples for non-texts elements, such as SVG icons:
   </svg>
 </p>
 <p class="bg-dark p-2">
-  <svg width="2em" height="2em" class="text-primary-emphasis" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
   <svg width="2em" height="2em" class="text-warning" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
   </svg>
