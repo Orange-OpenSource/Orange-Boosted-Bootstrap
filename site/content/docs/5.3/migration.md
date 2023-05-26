@@ -86,8 +86,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
-- **Orange footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -356,6 +357,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-table-bg-state</code></li>
+      <li><code>--bs-table-bg-type</code></li>
+      <li><code>--bs-table-color-state</code></li>
+      <li><code>--bs-table-color-type</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
@@ -821,8 +826,8 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 - **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
-- **Footers**
-  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> All footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
 - **List group**
   - <span class="badge bg-success">New</span> List group now has a dark variant.
