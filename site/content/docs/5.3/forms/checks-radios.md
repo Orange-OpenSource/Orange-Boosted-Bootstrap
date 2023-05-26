@@ -462,7 +462,7 @@ Make star ratings readable but non editable by using `<span>` instead of `<input
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 
 {{< example >}}
-<fieldset class="star-rating" disabled>
+<fieldset class="star-rating" disabled aria-hidden="true">
   <legend class="visually-hidden">Results relevance</legend>
 
   <input type="radio" id="terrible5" name="rating" value="1" class="visually-hidden">
@@ -480,7 +480,7 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
   <input type="radio" id="excellent5" name="rating" value="5" class="visually-hidden">
   <label for="excellent5" title="Excellent"></label>
 </fieldset>
-<p class="visually-hidden">rated 3 stars out of 5</p>
+<p class="visually-hidden">Results relevance: rated 3 stars out of 5</p>
 {{< /example >}}
 
 <!-- End mod -->
