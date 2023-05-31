@@ -202,15 +202,14 @@
   &:empty {
     display: none;
   }
-
-  // Boosted mod: popover body special padding when following a popover header
-  + .popover-body {
-    padding-top: 0;
-  }
-  // End mod
 }
 
 .popover-body {
   padding: var(--#{$prefix}popover-body-padding-y) var(--#{$prefix}popover-body-padding-x);
   color: var(--#{$prefix}popover-body-color);
 }
+
+// Boosted mod: popover body special padding when following a popover header
+.popover:not(.custom-popover) .popover-header + .popover-body {
+  padding-top: 0;
+} // End mod
