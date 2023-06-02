@@ -67,6 +67,14 @@
   }
 }
 
+[data-bs-theme="light"] .dark-show {
+  display: none;
+}
+
+[data-bs-theme="dark"] .dark-show + * {
+  display: none;
+}
+
 iframe {
   min-height: 10.625rem;
 }
