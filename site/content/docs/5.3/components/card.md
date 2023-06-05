@@ -423,12 +423,13 @@ Cards include various options for customizing their backgrounds, borders, and co
 
 Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
 
+<!-- Boosted mod: move text-bg-{{ .name }} on card-body -->
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="card text-bg-{{ .name }} mb-3" style="max-width: 18rem;">
+<div class="card mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
-  <div class="card-body">
+  <div class="card-body text-bg-{{ .name }} ">
     <h5 class="card-title">{{ .name | title }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
@@ -436,6 +437,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 {{- end -}}
 {{< /card.inline >}}
 {{< /example >}}
+<!-- End mod -->
 
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}

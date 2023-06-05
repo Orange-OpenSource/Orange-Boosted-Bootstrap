@@ -116,7 +116,6 @@ $utilities-text: map-merge(
   $utilities-colors,
   (
     "primary": to-rgb($accessible-orange),
-    "light": to-rgb($gray-500),
     "black": to-rgb($black),
     "white": to-rgb($white),
     "body": to-rgb($body-color)
