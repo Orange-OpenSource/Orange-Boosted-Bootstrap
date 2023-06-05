@@ -19,7 +19,7 @@ Boosted also adds a dedicated icon for each contextual class using `.alert-icon`
 - danger.
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 {{< example >}}
@@ -56,37 +56,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 
 We use the following JavaScript to trigger our live alert demo:
 
-<!-- Boosted mod: adapted innerHTML to have the icon and so added a parameter within alert() -->
-
-```js
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type, typeVisuallyHidden) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    '   <span class="alert-icon">',
-    `      <span class="visually-hidden">${typeVisuallyHidden}</span>`,
-    '   </span>',
-    '   <p>',
-    `     ${message}`,
-    '   </p>',
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert">',
-    '      <span class="visually-hidden">Close</span>',
-    '   </button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('Nice, you triggered this alert message!', 'success', 'Success')
-  })
-}
-```
+{{< js-docs name="live-alert" file="site/assets/js/snippets.js" >}}
 
 <!-- Boosted mod: no Link color -->
 
@@ -199,7 +169,7 @@ Customization through CSS variables can be seen on the `.alert-sm` class where w
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
-### Sass mixin
+### Sass mixins
 
 {{< deprecated-in "5.3.0" >}}
 
@@ -207,7 +177,7 @@ Used in combination with `$theme-colors` to create contextual modifier classes f
 
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
-### Sass loop
+### Sass loops
 
 Loop that generates the modifier classes with the `alert-variant()` mixin.
 
