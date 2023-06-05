@@ -70,7 +70,7 @@ Or modify the default `border-color` of a component:
 {{< example >}}
 <div class="mb-4">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
+  <input type="email" class="form-control border-danger" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 
 <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
