@@ -67,6 +67,12 @@ Here is a list of these extra classes:
 
 Or modify the default `border-color` of a component:
 
+{{< design-callout-alert >}}
+The **second and third** border color variants should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Web UI Kit/Core elements/Line Styles](https://system.design.orange.com/0c1af118d/p/395b5b-web-ui-kit/b/64fd11) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <div class="mb-4">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -88,6 +94,11 @@ Or modify the default `border-color` of a component:
 
 Boosted `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
+{{< design-callout-alert >}}
+These border color variants **with opacity** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Web UI Kit/Core elements/Line Styles](https://system.design.orange.com/0c1af118d/p/395b5b-web-ui-kit/b/64fd11) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 ### How it works
 
 Consider our default `.border-success` utility.
@@ -122,6 +133,12 @@ Or, choose from any of the `.border-opacity` utilities:
 
 ## Width
 
+{{< design-callout-alert >}}
+These border variants with **a width of 0px, 1px and 3px** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Web UI Kit/Core elements/Line Styles](https://system.design.orange.com/0c1af118d/p/395b5b-web-ui-kit/b/64fd11) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-0"></span>
 <span class="border border-1"></span>
@@ -132,6 +149,12 @@ Or, choose from any of the `.border-opacity` utilities:
 ## Radius
 
 Add classes to an element to easily round its corners.
+
+{{< design-callout-alert >}}
+These border variants with **a radius css class different than `rounded` and `rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Web UI Kit/Core elements/Line Styles](https://system.design.orange.com/0c1af118d/p/395b5b-web-ui-kit/b/64fd11) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
@@ -148,6 +171,12 @@ Add classes to an element to easily round its corners.
 {{< added-in "5.3.0" >}}
 
 Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
+
+{{< design-callout-alert >}}
+These border variants with **a size css class different than `rounded-0`** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Web UI Kit/Core elements/Line Styles](https://system.design.orange.com/0c1af118d/p/395b5b-web-ui-kit/b/64fd11) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
