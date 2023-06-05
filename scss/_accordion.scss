@@ -73,6 +73,7 @@
 
   &:hover {
     z-index: 2;
+    color: var(--#{$prefix}accordion-active-color); // Boosted mod
     background-color: var(--#{$prefix}accordion-btn-hover-bg); // Boosted mod
   }
 
