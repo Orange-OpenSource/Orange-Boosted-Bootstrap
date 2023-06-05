@@ -1705,7 +1705,7 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod: new variable
+$accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
 $accordion-button-active-color:           var(--#{$prefix}dark-text) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text)`
 
