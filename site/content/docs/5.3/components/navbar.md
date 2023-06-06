@@ -339,7 +339,7 @@ Mix and match with other components and utilities as needed.
 **New in v5.2.0:** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
 {{< /callout >}}
 
-Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` utilities.
+Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
 Please note that "light navbar" is not compatible with Orange Design System. You will mostly find examples using a combination of `.navbar-dark` and `.bg-dark`.
 

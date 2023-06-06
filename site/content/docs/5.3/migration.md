@@ -65,6 +65,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
   - <span class="badge bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
+- **Buttons**
+  - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
+
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
 
@@ -93,11 +96,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+
 - **Offcanvas**
   - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
-
-- **Orange footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -139,9 +143,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
+
 - **Toasts**
   - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
-
 
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
@@ -838,8 +842,8 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 - **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
-- **Footers**
-  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> All footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
 - **List group**
   - <span class="badge bg-success">New</span> List group now has a dark variant.
