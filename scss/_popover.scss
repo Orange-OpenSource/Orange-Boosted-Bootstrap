@@ -209,7 +209,11 @@
   color: var(--#{$prefix}popover-body-color);
 }
 
-// Boosted mod: popover body special padding when following a popover header
+// Boosted mod: needed to reset styles for custom popover and make it customisable
 .popover:not(.custom-popover) .popover-header + .popover-body {
-  padding-top: 0;
-} // End mod
+  padding-top: 0; // popover body special padding when following a popover header
+}
+.popover.custom-popover .popover-header {
+  padding: var(--#{$prefix}popover-header-padding-y) var(--#{$prefix}popover-header-padding-x);
+}
+// End mod
