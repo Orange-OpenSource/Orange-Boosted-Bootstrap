@@ -30,7 +30,7 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
-<p class="text-{{ .name }}-emphasis">.text-{{ .name }}-emphasis</p>
+<p class="text-{{ .name }}-emphasis {{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
 {{- end -}}
 {{< /colors.inline >}}
 
@@ -59,7 +59,8 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
 
-Thus, the `.text-primary` color on light background can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
+Thus, the `.text-primary` color on white background (`#f16e00`) can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
+The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
 
 Here are some compliant combinations examples for texts:
 
@@ -72,15 +73,15 @@ Here are some compliant combinations examples for texts:
 <p class="text-body">.text-body</p>
 <p class="text-body-secondary">.text-body-secondary</p>
 <p class="text-black">.text-black</p>
-<p class="text-white">.text-white</p>
+<p class="text-white bg-dark">.text-white</p>
 {{< /example >}}
 
-Here are some compliant combinations  examples for non-texts elements, such as SVG icons:
+Here are some compliant combinations examples for non-texts elements, such as SVG icons:
 
 {{< example >}}
 <p class="p-2">
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
@@ -91,13 +92,28 @@ Here are some compliant combinations  examples for non-texts elements, such as S
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-body-secondary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
 </p>
 <p class="bg-dark p-2">
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-light" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
 </p>
 {{< /example >}}

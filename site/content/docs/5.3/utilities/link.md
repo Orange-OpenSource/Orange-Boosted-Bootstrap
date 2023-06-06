@@ -91,7 +91,7 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 {{< example >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<p><a href="#" class="link-{{ .name }} {{ if or (eq .name "primary") (eq .name "success") (eq .name "warning") (eq .name "info") (eq .name "light") -}}bg-dark{{- end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
+<p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
 {{- end -}}
 {{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>
