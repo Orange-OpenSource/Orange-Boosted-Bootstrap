@@ -41,10 +41,44 @@
   }
 }
 
-.sticker-fs-xl {
-  font-size: 2.5rem;
+.sticker-fs-4xl {
+  font-size: $display1-size;
+  line-height: $display-line-height;
+  letter-spacing: $display1-spacing;
 }
 
-.sticker-fs-xxl {
-  font-size: 3.75rem;
+.sticker-fs-3xl {
+  font-size: $display3-size;
+  line-height: $display-line-height;
+  letter-spacing: $display3-spacing;
+}
+
+.sticker-fs-2xl {
+  font-size: $display4-size;
+  line-height: $display-line-height;
+  letter-spacing: $display4-spacing;
+}
+
+.sticker-fs-xl {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  letter-spacing: $h2-spacing;
+}
+
+.sticker-fs-l {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  letter-spacing: $h3-spacing;
+}
+
+.sticker-fs-m {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  letter-spacing: $h4-spacing;
+}
+
+.sticker-fs-s {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+  letter-spacing: $h5-spacing;
 }
