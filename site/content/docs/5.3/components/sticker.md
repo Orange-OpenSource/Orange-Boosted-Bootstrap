@@ -50,7 +50,7 @@ For instance, here are the classes:
 - `.sticker-fs-m` equivalent to `20px`.
 - `.sticker-fs-s` equivalent to `18px`.
 
-**Please be aware that those examples are not meant to be responsive** because they will always depend on the context. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you could for example set fixed font sizes and add some responsive rules by using `scale()` CSS function.
+**Please be aware that those examples are not meant to be responsive** because they will always depend on the context. If you do not want this behavior, you could add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
 
 ## Sizes
