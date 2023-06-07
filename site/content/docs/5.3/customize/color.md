@@ -149,7 +149,7 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 
 {{< added-in "5.3.0" >}}
 
-Boosted's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
+We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
 
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
@@ -274,10 +274,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-primary-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -309,10 +309,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-success-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -344,10 +344,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-danger-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-danger-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -379,10 +379,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-warning-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-warning-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -414,10 +414,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-info-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-info-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-info-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-info-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -449,10 +449,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-light-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-light-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-light-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-light-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -484,10 +484,10 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td class="ps-0">
-        <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text)">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-dark-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-dark-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
   </tbody>
@@ -517,11 +517,11 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 
 ### All colors
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong the Orange Design System specifications.
 
 Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 {{< callout warning >}}
 All Boosted colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).

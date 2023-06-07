@@ -8,11 +8,11 @@ aliases:
 toc: true
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This component explains the basic behavior, structure and concepts of navbars from a Bootstrap point of view. Some discrepancies exist with Boosted due to a different HTML structure.
 
 In order to build an Orange navbar please refer to [Orange navbar]({{< docsref "/components/orange-navbar" >}}).
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 ## How it works
 
@@ -339,7 +339,7 @@ Mix and match with other components and utilities as needed.
 **New in v5.2.0:** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
 {{< /callout >}}
 
-Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` utilities.
+Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
 Please note that "light navbar" is not compatible with Orange Design System. You will mostly find examples using a combination of `.navbar-dark` and `.bg-dark`.
 
@@ -510,9 +510,9 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 Sometimes you want to use the collapse plugin to trigger a container element for content that structurally sits outside of the `.navbar` . Because our plugin works on the `id` and `data-bs-target` matching, that's easily done!
 
 {{< example >}}
-<div class="collapse" id="navbarToggleExternalContent">
+<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
   <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
+    <h5 class="text-body-emphasis h4">Collapsed content</h5>
     <span class="text-body-secondary">Toggleable via the navbar brand.</span>
   </div>
 </div>
@@ -663,7 +663,7 @@ Variables for the [dark navbar](#color-schemes):
 
 {{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
-### Sass loop
+### Sass loops
 
 [Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
 

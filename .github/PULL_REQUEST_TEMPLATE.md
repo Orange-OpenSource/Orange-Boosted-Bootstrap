@@ -17,7 +17,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 <!-- What types of changes does you code introduce? -->
 <!-- Please remove the unused items in the list -->
 
-- Bug fix (non-breaking which fixes an issues)
+- Bug fix (non-breaking which fixes an issue)
 - New feature (non-breaking change which adds functionality)
 - Refactoring (non-breaking change)
 - Breaking change (fix or feature that would change existing functionality)
@@ -95,7 +95,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - then, if bumping a minor or major version:
     - [ ] Manually change `version_short` in `package.json`
     - [ ] Add docs version to `site/data/docs-versions.yml`
-    - [ ] Manually change `docs_version` in `config.yml` and other references to the previous version
+    - [ ] Manually change `docs_version` in `hugo.yml` and other references to the previous version
     - [ ] Update redirects in docs frontmatter (`site/content/docs/_index.html`?)
     - [ ] Move `site/content/docs/5.x` to `site/content/docs/5.x+1`
     - [ ] Increment `site/static/docs/{version}` version

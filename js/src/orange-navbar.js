@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v5.3.0-alpha1): orange-navbar.js
+ * Boosted orange-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index.js'
-import EventHandler from './dom/event-handler.js'
 import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants
@@ -34,7 +34,7 @@ class OrangeNavbar extends BaseComponent {
 
   // Static
   static enableMinimizing(el) {
-    // The minimized behaviour works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
+    // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
     const scroll = window.scrollY
     const headerChildren = [...el.children]
     const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'))

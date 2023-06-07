@@ -9,9 +9,9 @@ toc: true
 added: "5.3"
 ---
 
-{{< ods-incompatibility-alert >}}
+{{< design-callout-alert >}}
 This helper should not be used because the rendering provided in the following examples does not exist in the Orange Design System specifications.
-{{< /ods-incompatibility-alert >}}
+{{< /design-callout-alert >}}
 
 The `.focus-ring` helper removes the default `outline` on `:focus`, replacing it with a `box-shadow` that can be more broadly customized. The new shadow is made up of a series of CSS variables, inherited from the `:root` level, that can be modified for any element or component.
 
@@ -43,13 +43,21 @@ Modify the `--bs-focus-ring-*` CSS variables as needed to change the default app
 
 {{< scss-docs name="root-focus-variables" file="scss/_root.scss" >}}
 
-### Sass
+By default, there is no `--bs-focus-ring-x`, `--bs-focus-ring-y`, or `--bs-focus-ring-blur`, but we provide CSS variables with fallbacks to initial `0` values. Modify them to change the default appearance.
+
+{{< example >}}
+<a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-x: 10px; --bs-focus-ring-y: 10px; --bs-focus-ring-blur: 4px">
+  Blurry offset focus ring
+</a>
+{{< /example >}}
+
+### Sass variables
 
 Customize the focus ring Sass variables to modify all usage of the focus ring styles across your Boosted-powered project.
 
 {{< scss-docs name="focus-ring-variables" file="scss/_variables.scss" >}}
 
-### Utilities
+### Sass utilities API
 
 In addition to `.focus-ring`, we have several `.focus-ring-*` utilities to modify the helper class defaults. Modify the color with any of our [theme colors]({{< docsref "/customize/color#theme-colors" >}}). Note that the light and dark variants may not be visible on all background colors given current color mode support.
 

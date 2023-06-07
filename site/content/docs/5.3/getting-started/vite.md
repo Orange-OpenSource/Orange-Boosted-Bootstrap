@@ -92,9 +92,11 @@ With dependencies installed and our project folder ready for us to start coding,
 
    export default {
      root: path.resolve(__dirname, 'src'),
+     build: {
+       outDir: '../dist'
+     },
      server: {
-       port: 8080,
-       hot: true
+       port: 8080
      }
    }
    ```
@@ -108,13 +110,13 @@ With dependencies installed and our project folder ready for us to start coding,
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>Boosted w/ Vite</title>
+       <script type="module" src="./js/main.js"></script>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
          <h1>Hello, Boosted and Vite!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
-       <script type="module" src="./js/main.js"></script>
      </body>
    </html>
    ```
@@ -146,27 +148,7 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
 
 ## Import Boosted
 
-1. **Set up Boosted's Sass import in `vite.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `resolve` section—we use this to add an alias to our source files inside `node_modules` to keep imports as simple as possible.
-
-   <!-- eslint-skip -->
-   ```js
-   const path = require('path')
-
-   export default {
-     root: path.resolve(__dirname, 'src'),
-     resolve: {
-       alias: {
-         '~boosted': path.resolve(__dirname, 'node_modules/boosted'),
-       }
-     },
-     server: {
-       port: 8080,
-       hot: true
-     }
-   }
-   ```
-
-2. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+1. **Let's import Boosted's fonts.** Download the WOFF2 version of our Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
    ```sh
    mkdir src/fonts
@@ -174,12 +156,12 @@ In the next and final section to this guide, we’ll import all of Boosted’s C
    cp /path/HelvNeue75_W1G.woff2 src/fonts/
    ```
 
-3. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
+2. **Now, let's import Boosted's CSS.** Add the following to `src/scss/styles.scss` to import all of Boosted's source Sass.
 
    ```scss
    // Import all of Boosted's CSS
-   @import "~boosted/scss/orange-helvetica";
-   @import "~boosted/scss/boosted";
+   @import "boosted/scss/orange-helvetica";
+   @import "boosted/scss/boosted";
    ```
 
    *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
