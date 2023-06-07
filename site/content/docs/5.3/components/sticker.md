@@ -14,7 +14,7 @@ added: "5.2"
 {{< example >}}
 <div class="sticker">
   <p class="mb-0">
-    <span class="display-3 mb-0 d-block">39.99 €</span>
+    <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
     <span>Per month</span>
   </p>
 </div>
@@ -39,7 +39,16 @@ For a better rendering you can use our margin utilities or even CSS.
 {{< callout warning >}}
 **Font sizes and responsiveness**
 
-All the provided examples use our text utilities to facilitate the understanding and to match the examples from the Orange Design System in desktop mode.
+All the provided examples use some specific classes to have non-responsive stickers.
+
+For instance, here are the classes:
+- `.sticker-fs-4xl` equivalent to `60px`.
+- `.sticker-fs-3xl` equivalent to `40px`.
+- `.sticker-fs-2xl` equivalent to `34px`.
+- `.sticker-fs-xl` equivalent to `30px`.
+- `.sticker-fs-l` equivalent to `24px`.
+- `.sticker-fs-m` equivalent to `20px`.
+- `.sticker-fs-s` equivalent to `18px`.
 
 **Please be aware that those examples are not meant to be responsive** because they will always depend on the context. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you could for example set fixed font sizes and add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
@@ -53,7 +62,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 {{< example >}}
 <div class="sticker sticker-lg">
   <p class="mb-0">
-    <span class="display-1">New</span>
+    <span class="sticker-fs-4xl">New</span>
   </p>
 </div>
 {{< /example >}}
@@ -61,7 +70,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 {{< example >}}
 <div class="sticker sticker-sm">
   <p class="mb-0">
-    <span class="h2">New</span>
+    <span class="sticker-fs-xl">New</span>
   </p>
 </div>
 {{< /example >}}
@@ -78,8 +87,8 @@ Since stickers only provide a container, accessibility becomes specific to the s
 {{< example >}}
 <div class="sticker">
   <p class="mb-1">
-    <span class="h3 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-    <span class="display-3 mb-0 d-block" aria-hidden="true">39.99 €</span>
+    <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+    <span class="sticker-fs-3xl mb-0 d-block" aria-hidden="true">39.99 €</span>
     <span aria-hidden="true">Per month</span>
     <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
   </p>
