@@ -52,14 +52,14 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
   <div class="col-md-8">
 
 {{< example class="mt-0 text-primary" >}}
-<!-- todo atre exemple avec fill currentcolor et text success pour la coche ? -->
+<!-- todo other example with fill current color and text success with tick? -->
 <svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
 </svg>
 <svg width="2em" height="2em" class="text-info" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
 </svg>
-<!-- todo exemple à changer pour accessibilité ? -->
+<!-- todo example to change for accessibility: bg-dark? to test -->
 <svg width="2em" height="2em" class="text-warning" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
 </svg>
@@ -87,7 +87,7 @@ To create your own SVG sprite file, containing only the icons you need:
 </svg>
 ```
 
-<!-- ajouter lien vers utilities > colors -->
+<!-- todo add link to utilities / colors -->
 
 <div class="row my-4">
   <div class="col-md-4">
