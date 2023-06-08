@@ -207,8 +207,17 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
-<!-- Boosted mod: No outline buttons -->
+## Outline buttons
 
+In need of a button with a transparent default background color? Replace the default modifier classes with the `.btn-outline-secondary` one to remove all background colors on buttons.
+
+{{< example class="bg-supporting-blue" >}}
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+{{< /example >}}
+
+{{< callout info >}}
+This button should only be used on a light background in order to have sufficient contrast, otherwise use its dark variant.
+{{< /callout >}}
 
 ## Sizes
 
