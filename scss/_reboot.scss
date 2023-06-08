@@ -102,7 +102,7 @@ body {
   box-shadow: none;
 }
 
-:focus:not(:focus-visible):not(.focus-ring) { // 3
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select):valid { // 3
   outline: 0 !important;
   box-shadow: none;
 }
