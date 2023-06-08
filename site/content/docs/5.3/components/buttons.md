@@ -186,7 +186,6 @@ Add `.btn-inverse` to the `.btn` for a dark variant.
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
 <a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
 {{< /example >}}
 <!-- End mod -->
 
