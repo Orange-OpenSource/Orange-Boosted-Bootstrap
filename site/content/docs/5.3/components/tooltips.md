@@ -129,7 +129,7 @@ With an SVG:
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
   </button>
@@ -143,9 +143,9 @@ With an SVG:
   </svg>
 </a>
 
-<button type="button" class="btn btn-link p-0 me-3 bd-blue-fg" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
+<button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" class="text-info" focusable="false" aria-hidden="true">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
 </button>

@@ -52,16 +52,18 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
   <div class="col-md-8">
 
 {{< example class="mt-0 text-primary" >}}
+<!-- todo atre exemple avec fill currentcolor et text success pour la coche ? -->
 <svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
 </svg>
-<svg width="2em" height="2em" class="text-body-secondary" aria-hidden="true">
+<svg width="2em" height="2em" class="text-info" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
 </svg>
-<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
+<!-- todo exemple à changer pour accessibilité ? -->
+<svg width="2em" height="2em" class="text-warning" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
 </svg>
-<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
+<svg width="2em" height="2em" class="text-danger" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
 </svg>
 {{< /example >}}
@@ -72,7 +74,7 @@ To create your own SVG sprite file, containing only the icons you need:
 - download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
 - optimize them with [svgo](https://github.com/svg/svgo)
 - include the path in a tag `<symbol>`, inside a SVG file, like below
-- you may have the attributes `fill="#000000"` and/or `fill-rule="evenodd"`, only if needed
+- you may add the attributes `fill="#000000"` and/or `fill-rule="evenodd"`, only if needed
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -84,6 +86,8 @@ To create your own SVG sprite file, containing only the icons you need:
   </symbol>
 </svg>
 ```
+
+<!-- ajouter lien vers utilities > colors -->
 
 <div class="row my-4">
   <div class="col-md-4">
