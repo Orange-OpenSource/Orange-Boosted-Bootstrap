@@ -151,6 +151,8 @@ With an SVG:
 </button>
 ```
 
+<!-- todo remove color in fill attribute in Boosted sprite -->
+
 ## CSS
 
 ### Variables
