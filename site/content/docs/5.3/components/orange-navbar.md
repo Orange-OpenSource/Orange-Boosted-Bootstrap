@@ -356,7 +356,7 @@ You can add a search input into your Global header.
       ...
 
       <!-- Navbar with action icons -->
-      <form class="d-flex d-none d-lg-flex nav-item" role="search">
+      <form class="d-flex d-none d-lg-flex navbar-item" role="search">
         <!-- todo : reforge when .dark-input -->
         <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
       </form>
