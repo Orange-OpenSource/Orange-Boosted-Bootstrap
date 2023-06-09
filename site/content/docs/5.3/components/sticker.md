@@ -12,14 +12,6 @@ added: "5.2"
 ## Example
 
 {{< example >}}
-<style>
-  .sticker-fs-3xl {
-    font-size: 2.5rem;
-    line-height: 1;
-    letter-spacing: -.0625rem;
-  }
-</style>
-
 <div class="sticker">
   <p class="mb-0">
     <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
@@ -27,6 +19,14 @@ added: "5.2"
   </p>
 </div>
 {{< /example >}}
+
+```css
+.sticker-fs-3xl {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+```
 
 ## How it works
 
@@ -59,14 +59,6 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 **Don't forget to adjust the size of the content.**
 
 {{< example >}}
-<style>
-  .sticker-fs-4xl {
-    font-size: 3.75rem;
-    line-height: 1;
-    letter-spacing: -.125rem;
-  }
-</style>
-
 <div class="sticker sticker-lg">
   <p class="mb-0">
     <span class="sticker-fs-4xl">New</span>
@@ -74,21 +66,29 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 </div>
 {{< /example >}}
 
-{{< example >}}
-<style>
-  .sticker-fs-xl {
-    font-size: 1.875rem;
-    line-height: calc(32 / 30);
-    letter-spacing: -.05rem;
-  }
-</style>
+```css
+.sticker-fs-4xl {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.125rem;
+}
+```
 
+{{< example >}}
 <div class="sticker sticker-sm">
   <p class="mb-0">
     <span class="sticker-fs-xl">New</span>
   </p>
 </div>
 {{< /example >}}
+
+```css
+.sticker-fs-xl {
+  font-size: 1.875rem;
+  line-height: calc(32 / 30);
+  letter-spacing: -.05rem;
+}
+```
 
 ## Accessibility
 
@@ -100,20 +100,6 @@ Since stickers only provide a container, accessibility becomes specific to the s
 ### Focus on one use case
 
 {{< example >}}
-<style>
-  .sticker-fs-3xl {
-    font-size: 2.5rem;
-    line-height: 1;
-    letter-spacing: -.0625rem;
-  }
-
-  .sticker-fs-l {
-    font-size: 1.5rem;
-    line-height: calc(26 / 24);
-    letter-spacing: -.03125rem;
-  }
-</style>
-
 <div class="sticker">
   <p class="mb-1">
     <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -123,6 +109,20 @@ Since stickers only provide a container, accessibility becomes specific to the s
   </p>
 </div>
 {{< /example >}}
+
+```css
+.sticker-fs-3xl {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+
+.sticker-fs-l {
+  font-size: 1.5rem;
+  line-height: calc(26 / 24);
+  letter-spacing: -.03125rem;
+}
+```
 
 ## CSS
 
