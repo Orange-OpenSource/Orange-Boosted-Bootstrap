@@ -8,6 +8,8 @@ aliases:
 toc: true
 ---
 
+{{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
+
 {{< example >}}
 <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Entire popover</button>
 {{< /example >}}
@@ -17,29 +19,11 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<style>
-.custom-title-popover {
-  --bs-popover-header-padding-y: 10px;
-}
-</style>
-
 <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-custom-class="custom-title-popover"
 >Title popover</button>
 {{< /example >}}
 
 {{< example >}}
-<style>
-.custom-popover {
-  --bs-popover-max-width: 12.5rem;
-  --bs-popover-border-color: var(--bs-primary);
-  --bs-popover-header-padding-y: 10px;
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-black);
-  --bs-popover-body-padding-x: 1rem;
-  --bs-popover-body-padding-y: .5rem;
-}
-</style>
-
 <button type="button" class="btn btn-secondary"
         data-bs-toggle="popover" data-bs-placement="right"
         data-bs-custom-class="custom-popover"
@@ -50,20 +34,6 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<style>
-.custom-popover-2 {
-  --bs-popover-max-width: 12.5rem;
-  --bs-popover-border-color: var(--bs-primary);
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-black);
-  --bs-popover-header-padding-x: 0;
-  --bs-popover-header-padding-top: 5px;
-  --bs-popover-header-padding-bottom: 15px;
-  --bs-popover-body-padding-x: 30px;
-  --bs-popover-body-padding-y: 0;
-}
-</style>
-
 <button type="button" class="btn btn-secondary"
         data-bs-toggle="popover" data-bs-placement="right"
         data-bs-custom-class="custom-popover-2"
