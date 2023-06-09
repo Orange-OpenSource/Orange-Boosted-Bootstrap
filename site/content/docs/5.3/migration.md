@@ -61,9 +61,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
-  - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
-
   - <span class="badge bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
 
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
@@ -77,6 +76,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Close button**
   - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -95,10 +98,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     ```
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
-
-- **Footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
-  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
 
 - **Offcanvas**
   - A tooltip was added on close button in code examples. Please reflect this modification in your websites.
