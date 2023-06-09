@@ -97,11 +97,10 @@
     alertPlaceholder.append(wrapper)
 
     // Create `.btn-close` tooltip after `innerHTML` has been modified
-    const tooltip = new boosted.Tooltip(wrapper.querySelector('.btn-close'))
-    wrapper.querySelectorAll('.btn-close').forEach(closeBtn => {
-      closeBtn.addEventListener('click', () => {
-        tooltip.hide()
-      })
+    const btnClose = wrapper.querySelector('.btn-close')
+    const tooltip = new boosted.Tooltip(btnClose)
+    btnClose.addEventListener('click', () => {
+      tooltip.hide()
     })
   }
 
@@ -111,7 +110,6 @@
       appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
-
   // js-docs-end live-alert
 
   // --------
