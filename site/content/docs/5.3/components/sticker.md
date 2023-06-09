@@ -12,6 +12,14 @@ added: "5.2"
 ## Example
 
 {{< example >}}
+<style>
+  .sticker-fs-3xl {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: -.0625rem;
+  }
+</style>
+
 <div class="sticker">
   <p class="mb-0">
     <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
@@ -39,16 +47,7 @@ For a better rendering you can use our margin utilities or even CSS.
 {{< callout warning >}}
 **Font sizes and responsiveness**
 
-All the provided examples use some specific classes to have non-responsive stickers.
-
-For instance, here are the classes:
-- `.sticker-fs-4xl` equivalent to `60px`.
-- `.sticker-fs-3xl` equivalent to `40px`.
-- `.sticker-fs-2xl` equivalent to `34px`.
-- `.sticker-fs-xl` equivalent to `30px`.
-- `.sticker-fs-l` equivalent to `24px`.
-- `.sticker-fs-m` equivalent to `20px`.
-- `.sticker-fs-s` equivalent to `18px`.
+All the provided examples use some specific classes to have non-responsive stickers. You may adapt those classes to your needs.
 
 **Please be aware that those examples are not meant to be responsive** because they will always depend on the context. If you do not want this behavior, you could add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
@@ -60,6 +59,14 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 **Don't forget to adjust the size of the content.**
 
 {{< example >}}
+<style>
+  .sticker-fs-4xl {
+    font-size: 3.75rem;
+    line-height: 1;
+    letter-spacing: -.125rem;
+  }
+</style>
+
 <div class="sticker sticker-lg">
   <p class="mb-0">
     <span class="sticker-fs-4xl">New</span>
@@ -68,6 +75,14 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 {{< /example >}}
 
 {{< example >}}
+<style>
+  .sticker-fs-xl {
+    font-size: 1.875rem;
+    line-height: calc(32 / 30);
+    letter-spacing: -.05rem;
+  }
+</style>
+
 <div class="sticker sticker-sm">
   <p class="mb-0">
     <span class="sticker-fs-xl">New</span>
@@ -85,6 +100,20 @@ Since stickers only provide a container, accessibility becomes specific to the s
 ### Focus on one use case
 
 {{< example >}}
+<style>
+  .sticker-fs-3xl {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: -.0625rem;
+  }
+
+  .sticker-fs-l {
+    font-size: 1.5rem;
+    line-height: calc(26 / 24);
+    letter-spacing: -.03125rem;
+  }
+</style>
+
 <div class="sticker">
   <p class="mb-1">
     <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
