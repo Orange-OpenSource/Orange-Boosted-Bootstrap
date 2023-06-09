@@ -8,6 +8,73 @@ aliases:
 toc: true
 ---
 
+{{< example >}}
+<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Entire popover</button>
+{{< /example >}}
+
+{{< example >}}
+<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Content popover</button>
+{{< /example >}}
+
+{{< example >}}
+<style>
+.custom-title-popover {
+  --bs-popover-header-padding-y: 10px;
+}
+</style>
+
+<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-custom-class="custom-title-popover"
+>Title popover</button>
+{{< /example >}}
+
+{{< example >}}
+<style>
+.custom-popover {
+  --bs-popover-max-width: 12.5rem;
+  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-padding-y: 10px;
+  --bs-popover-header-bg: var(--bs-primary);
+  --bs-popover-header-color: var(--bs-black);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+</style>
+
+<button type="button" class="btn btn-secondary"
+        data-bs-toggle="popover" data-bs-placement="right"
+        data-bs-custom-class="custom-popover"
+        data-bs-title="Custom popover"
+        data-bs-content="This popover is themed via CSS variables.">
+  Custom popover
+</button>
+{{< /example >}}
+
+{{< example >}}
+<style>
+.custom-popover-2 {
+  --bs-popover-max-width: 12.5rem;
+  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-bg: var(--bs-primary);
+  --bs-popover-header-color: var(--bs-black);
+  --bs-popover-header-padding-x: 0;
+  --bs-popover-header-padding-top: 5px;
+  --bs-popover-header-padding-bottom: 15px;
+  --bs-popover-body-padding-x: 30px;
+  --bs-popover-body-padding-y: 0;
+}
+</style>
+
+<button type="button" class="btn btn-secondary"
+        data-bs-toggle="popover" data-bs-placement="right"
+        data-bs-custom-class="custom-popover-2"
+        data-bs-title="Custom popover"
+        data-bs-content="This popover is themed via CSS variables.">
+  Custom popover
+</button>
+{{< /example >}}
+
+—
+
 ## Overview
 
 Things to know when using the popover plugin:
