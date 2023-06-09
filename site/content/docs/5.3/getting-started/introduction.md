@@ -123,6 +123,7 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Alerts for dismissing
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
+- Close button for displaying and positioning tooltip
 - Collapse for toggling visibility of content
 - Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Footer for extending our Collapse plugin to implement responsive behavior
