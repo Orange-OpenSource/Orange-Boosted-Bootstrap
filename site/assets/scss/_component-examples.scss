@@ -231,6 +231,7 @@
 .custom-popover {
   --bs-popover-max-width: 12.5rem;
   --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-padding-y: 10px;
   --bs-popover-header-bg: var(--bs-primary);
   --bs-popover-header-color: var(--bs-black); // Boosted mod: text-dark on primary
   --bs-popover-body-padding-x: 1rem;
