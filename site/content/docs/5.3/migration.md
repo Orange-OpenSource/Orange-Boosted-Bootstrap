@@ -271,7 +271,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
-      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
