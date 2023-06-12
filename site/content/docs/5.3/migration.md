@@ -156,7 +156,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <span class="badge bg-success">New</span> Star rating has been slightly changed for accessibility purpose; a visually hidden `span` matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites. Our documentation also includes a disabled and a readonly state for this form element.
   ```diff
   -    <label for="excellent" title="Excellent"></label>
-  +    <label for="excellent" title="Excellent" aria-label="Excellent"></label>
+  +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   ```
 
 ### Helpers and utilities
