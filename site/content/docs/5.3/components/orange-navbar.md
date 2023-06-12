@@ -341,7 +341,6 @@ You can add a search input into your Global header.
   </header>
 </div>
 
-<!-- todo : reforge search box when .dark-input -->
 ```html
 <header>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
