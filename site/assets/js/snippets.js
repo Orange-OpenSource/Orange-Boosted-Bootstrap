@@ -77,7 +77,7 @@
   // -------------------------------
   // Used in 'Show live alert' example in docs or StackBlitz
 
-  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within appendAlert() and a tooltip on `.btn-close`
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
   // js-docs-start live-alert
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
   const appendAlert = (message, type, typeVisuallyHidden) => {
