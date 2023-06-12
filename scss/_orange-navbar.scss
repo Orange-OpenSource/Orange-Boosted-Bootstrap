@@ -26,6 +26,10 @@
 }
 
 .header-minimized {
+  .navbar-brand img {
+    @include transition($navbar-brand-logo-transition);
+  }
+
   // scss-docs-start minimized-navbar-css-vars
   @include media-breakpoint-up(md){
     --#{$prefix}navbar-padding-y: 0px;

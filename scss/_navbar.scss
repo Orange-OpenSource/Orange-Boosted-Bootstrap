@@ -131,7 +131,6 @@
   img {
     width: auto;
     height: var(--#{$prefix}navbar-brand-logo-size);
-    @include transition($navbar-brand-logo-transition);
   }
 
   //// Ensure headings variant align consistently
