@@ -75,7 +75,8 @@
   display: none;
 }
 
-iframe {
+iframe,
+.mastermedia-player {
   min-height: 10.625rem;
 }
 
