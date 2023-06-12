@@ -10,7 +10,7 @@
   // }
 
   if (/ipad|iphone|ipod/i.test(navigator.userAgent)) {
-    window.location.href = 'https://itunes.apple.com/fr/app/id6446178285?mt=8'
+    window.location.href = 'https://apps.apple.com/fr/app/id6446178285'
   }
 
   // End of copy paste
