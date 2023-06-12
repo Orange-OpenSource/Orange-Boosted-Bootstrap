@@ -10,10 +10,11 @@
   // }
 
   if (/ipad|iphone|ipod/i.test(navigator.userAgent)) {
-    window.location.href = 'https://apps.apple.com/fr/app/id6446178285'
+    window.location.href = 'itms-apps://apps.apple.com/fr/app/id6446178285'
   }
 
   // End of copy paste
+  // We use `itms-apps` instead of `https` for phones. (https://stackoverflow.com/a/2337601)
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
