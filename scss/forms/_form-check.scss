@@ -59,7 +59,9 @@
   }
 
   &:focus {
-    border-color: $form-check-input-focus-border;
+    // Boosted mod: instead of `$form-check-input-focus-border`
+    border-color: $form-check-input-focus-border !important; // stylelint-disable-line declaration-no-important
+    // End mod
     // Boosted mod: default outline
     box-shadow: $form-check-input-focus-box-shadow;
   }

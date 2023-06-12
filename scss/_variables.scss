@@ -1146,7 +1146,7 @@ $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 var(--#{$prefix}border-width) solid $input-border-color !default; // Boosted mod: instead of `var(--#{$prefix}border-width) solid var(--#{$prefix}border-color)`
 $form-check-input-border-radius:          0 !default;
 $form-check-radio-border-radius:          50% !default;
-$form-check-input-focus-border:           null !default;
+$form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
