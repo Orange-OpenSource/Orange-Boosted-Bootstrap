@@ -81,6 +81,25 @@
     },
     { once: true }
   )
+
+  document.addEventListener(
+    'youtube_added',
+    () => {
+      const ask = document.querySelector(
+        '#*youtubeLine .tarteaucitronAsk'
+      )
+      const choiceEvent =
+        'tarteaucitron.userInterface.respond(document.getElementById(\'youtubeAllowed\'),document.getElementById(\'youtubeAllowed\').checked);'
+      const toggle = document
+        .createRange()
+        .createContextualFragment(
+          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="youtubeAllowed" aria-describedby="tacCLYoutube" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!youtube=true' ? 'checked' : '')}><label class="form-check-label visually-hidden" for="youtubeAllowed">Google Tag Manager</label><input id="youtubeDenied" class="d-none"></div>`
+        )
+      ask.innerHTML = ''
+      ask.append(toggle)
+    },
+    { once: true }
+  )
 })()
 
 if (typeof tarteaucitron !== 'undefined') {
@@ -98,7 +117,8 @@ if (typeof tarteaucitron !== 'undefined') {
   })
 
   tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+  (tarteaucitron.job = tarteaucitron.job || []).push('youtube')
   dataLayer = [{
     site_name: 'accessibility-boosted',
     phase: 'prod',
