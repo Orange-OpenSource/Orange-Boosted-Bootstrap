@@ -32,8 +32,10 @@
       order: -1;
       padding-right: $quantity-selector-btn-padding-x;
 
-      &:not([data-focus-visible-added]) {
-        border-right: none;
+      &:not(:focus) {
+        &:not([data-focus-visible-added]) {
+          border-right: none;
+        }
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
@@ -46,8 +48,10 @@
       @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       padding-left: $quantity-selector-btn-padding-x;
 
-      &:not([data-focus-visible-added]) {
-        border-left: none;
+      &:not(:focus) {
+        &:not([data-focus-visible-added]) {
+          border-left: none;
+        }
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
