@@ -107,24 +107,40 @@
     }
 
     // Boosted mod: Remove border on input for form element QuantitySelector
-    .quantity-selector .form-control {
-      @include form-validation-state-selector($state) {
+    .quantity-selector {
 
-        // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-        & ~ button {
-          border-color: $border-color;
-        }
+      .form-control {
+        @include form-validation-state-selector($state) {
+          // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+          & ~ button {
+            border-color: $border-color;
+          }
 
-        &:focus {
-          &[data-focus-visible-added] {
-            ~ button,
-            ~ .btn:disabled {
-              border-color: var(--#{$prefix}btn-border-color) !important; // stylelint-disable-line declaration-no-important
-              border-width: $outline-width !important; // stylelint-disable-line declaration-no-important
+          &:focus {
+            &[data-focus-visible-added] {
+              ~ button,
+              ~ .btn:disabled {
+                border-color: var(--#{$prefix}btn-border-color) !important; // stylelint-disable-line declaration-no-important
+                border-width: $outline-width !important; // stylelint-disable-line declaration-no-important
+              }
             }
           }
         }
       }
+
+      button {
+        &:focus {
+          &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+            &:first-of-type {
+              border-right: var(--#{$prefix}border-width) solid $border-color;
+            }
+            &:last-of-type {
+              border-left: var(--#{$prefix}border-width) solid $border-color;
+            }
+          }
+        }
+      }
+
     }
     // End mod
 
