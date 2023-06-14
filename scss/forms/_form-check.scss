@@ -12,6 +12,12 @@
     float: left;
     margin-left: $form-check-padding-start * -1;
   }
+
+  // Boosted mod: Remove margin when it's the last element of a form.
+  &:last-child {
+    margin-bottom: 0;
+  }
+  // End mod
 }
 
 .form-check-reverse {
