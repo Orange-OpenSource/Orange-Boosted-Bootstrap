@@ -86,7 +86,7 @@
     'youtube_added',
     () => {
       const ask = document.querySelector(
-        '#*youtubeLine .tarteaucitronAsk'
+        '#youtubeLine .tarteaucitronAsk'
       )
       const choiceEvent =
         'tarteaucitron.userInterface.respond(document.getElementById(\'youtubeAllowed\'),document.getElementById(\'youtubeAllowed\').checked);'

@@ -22,7 +22,7 @@ Aspect ratios are declared in a Sass map and included in each class via CSS vari
 
 Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an aspect ratio class. The immediate child element is automatically sized thanks to our universal selector `.ratio > *`.
 
-<div class="ratio ratio-16x9" class="youtube_player" videoID="zpOULjyy-n8" loading="0" allowfullscreen></div>
+<div class="ratio ratio-16x9 youtube_player" videoID="zpOULjyy-n8" loading="0" allowfullscreen></div>
 
 ```html
 <div class="ratio ratio-16x9">
