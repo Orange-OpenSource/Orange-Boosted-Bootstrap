@@ -38,7 +38,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     '.*Consider using the “h1” element as a top-level heading only.*',
     // Boosted mod: use of tarteaucitron template for youtube videos.
     'Attribute “videoid” not allowed on element “div” at this point.',
-    'Bad value “0” for attribute “rel” on element “div”: The string “0” is not an absolute URL.',
+    'Attribute “relates” not allowed on element “div” at this point.',
     'Attribute “loading” not allowed on element “div” at this point.',
     'Attribute “allowfullscreen” not allowed on element “div” at this point.'
   ].join('|')

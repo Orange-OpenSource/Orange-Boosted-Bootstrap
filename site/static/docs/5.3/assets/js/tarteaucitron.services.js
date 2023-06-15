@@ -41,11 +41,11 @@ tarteaucitron.services.youtube = {
       const videoHeight = tarteaucitron.getElemAttr(x, 'height')
       let frameHeight = 'height='
       const allowfullscreen = tarteaucitron.getElemAttr(x, 'allowfullscreen')
-      const attrs = ['theme', 'rel', 'controls', 'showinfo', 'autoplay', 'mute', 'start', 'end', 'loop', 'enablejsapi']
+      const attrs = ['theme', 'relates', 'controls', 'showinfo', 'autoplay', 'mute', 'start', 'end', 'loop', 'enablejsapi']
       let params = attrs.filter(a => {
         return tarteaucitron.getElemAttr(x, a) !== null
       }).map(a => {
-        return `${a}=${tarteaucitron.getElemAttr(x, a)}`
+        return `${a === 'relates' ? 'rel' : a}=${tarteaucitron.getElemAttr(x, a)}`
       }).join('&')
 
       if (tarteaucitron.getElemAttr(x, 'loop') === 1) {
