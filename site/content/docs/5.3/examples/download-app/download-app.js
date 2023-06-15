@@ -34,10 +34,4 @@
     .forEach(carousel => {
       boosted.Carousel.getOrCreateInstance(carousel)
     })
-
-  document.getElementById('button-mastermedia').addEventListener('click', () => {
-    const parent = document.querySelector('.mastermedia-player').parentElement
-    parent.innerHTML = '<iframe class="w-100 h-100 border-dark border border-1" src="https://mastermedia.orange.com/pmJLYXq6kC" title="Explanation on how to get the app on your phone" allow="fullscreen"></iframe>'
-    parent.focus()
-  })
 })()
