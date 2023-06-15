@@ -38,8 +38,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     '.*Consider using the “h1” element as a top-level heading only.*',
     // Boosted mod: use of tarteaucitron template for mastermedia videos.
     'Attribute “videoid” not allowed on element “div” at this point.',
-    'Attribute “loading” not allowed on element “div” at this point.',
-    'Attribute “allowfullscreen” not allowed on element “div” at this point.'
+    'Attribute “classlist” not allowed on element “div” at this point.'
   ].join('|')
 
   const args = [
