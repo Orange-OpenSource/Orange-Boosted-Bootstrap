@@ -872,6 +872,10 @@ const myModal = new boosted.Modal(document.getElementById('myModal'), options)
 const myModalAlternative = new boosted.Modal('#myModal', options)
 ```
 
+### Enable tooltip on close button
+
+Tooltips on close buttons of modals have to be initialized. Tooltips can be [initialized globally]({{< docsref "/components/tooltips#enable-tooltips" >}}) in the project.
+
 ### Options
 
 {{< markdown >}}

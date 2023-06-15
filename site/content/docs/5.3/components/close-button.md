@@ -49,6 +49,10 @@ Close buttons can also be created without `.btn-close` to reduce the size of you
 </button>
 {{< /example >}}
 
+## Enable tooltip
+
+Tooltips on close buttons have to be initialized. Tooltips can be [initialized globally]({{< docsref "/components/tooltips#enable-tooltips" >}}) in the project.
+
 ## CSS
 
 ### Variables
