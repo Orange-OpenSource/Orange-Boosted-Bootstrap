@@ -78,6 +78,7 @@
         )
       ask.innerHTML = ''
       ask.append(toggle)
+      ask.classList.add('mb-3')
     },
     { once: true }
   )
