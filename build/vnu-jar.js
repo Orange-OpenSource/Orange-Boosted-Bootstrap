@@ -36,9 +36,10 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
     'The “img” role is unnecessary for element “img”.',
     '.*Consider using the “h1” element as a top-level heading only.*',
-    'Attribute "videoid" not allowed on element "div" at this point.',
-    'Attribute "loading" not allowed on element "div" at this point.',
-    'Attribute "allowfullscreen" not allowed on element "div" at this point.'
+    // Boosted mod: use of tarteaucitron template for youtube videos.
+    'Attribute “videoid” not allowed on element “div” at this point.',
+    'Attribute “loading” not allowed on element “div” at this point.',
+    'Attribute “allowfullscreen” not allowed on element “div” at this point.'
   ].join('|')
 
   const args = [
