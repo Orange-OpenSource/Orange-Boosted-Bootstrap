@@ -41,6 +41,7 @@ tarteaucitron.services.youtube = {
       const videoHeight = tarteaucitron.getElemAttr(x, 'height')
       let frameHeight = 'height='
       const allowfullscreen = tarteaucitron.getElemAttr(x, 'allowfullscreen')
+      // Boosted mod: Usage of `relates` instead of `rel` since html checker (docs-vnu) seems to be quite annoying about `rel` specifically
       const attrs = ['theme', 'relates', 'controls', 'showinfo', 'autoplay', 'mute', 'start', 'end', 'loop', 'enablejsapi']
       let params = attrs.filter(a => {
         return tarteaucitron.getElemAttr(x, a) !== null

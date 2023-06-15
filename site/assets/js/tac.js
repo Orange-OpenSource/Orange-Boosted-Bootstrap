@@ -74,7 +74,7 @@
       const toggle = document
         .createRange()
         .createContextualFragment(
-          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!googletagmanager=true' ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
+          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!googletagmanager=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label><input id="googletagmanagerDenied" class="d-none"></div>`
         )
       ask.innerHTML = ''
       ask.append(toggle)
@@ -94,7 +94,7 @@
       const toggle = document
         .createRange()
         .createContextualFragment(
-          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="youtubeAllowed" aria-describedby="tacCLYoutube" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1] === '!youtube=true' ? 'checked' : '')}><label class="form-check-label visually-hidden" for="youtubeAllowed">Google Tag Manager</label><input id="youtubeDenied" class="d-none"></div>`
+          `<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ms-0" type="checkbox" id="youtubeAllowed" aria-describedby="tacCLYoutube" onchange="${choiceEvent}"${((document.cookie.match(/^(?:.*;)?\s*cookie-consent\s*=\s*([^;]+)(?:.*)?$/) || [null])[1].match('!youtube=true') ? 'checked' : '')}><label class="form-check-label visually-hidden" for="youtubeAllowed">Google Tag Manager</label><input id="youtubeDenied" class="d-none"></div>`
         )
       ask.innerHTML = ''
       ask.append(toggle)
