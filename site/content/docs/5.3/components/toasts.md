@@ -391,4 +391,4 @@ myToastEl.addEventListener('hidden.bs.toast', () => {
   // do something...
 })
 ```
-{{% enable-btn-close-tooltip 3 toasts / %}}
+{{% enable-btn-close-tooltip 3 toasts %}}

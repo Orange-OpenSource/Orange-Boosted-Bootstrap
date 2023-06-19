@@ -307,7 +307,7 @@ const offcanvasElementList = document.querySelectorAll('.offcanvas')
 const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new boosted.Offcanvas(offcanvasEl))
 ```
 
-{{% enable-btn-close-tooltip 3 offcanvases / %}}
+{{% enable-btn-close-tooltip 3 offcanvases %}}
 
 ### Options
 

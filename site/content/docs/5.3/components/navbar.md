@@ -635,7 +635,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 </nav>
 {{< /example >}}
 
-{{% enable-btn-close-tooltip 4 "offcanvases navbars" / %}}
+{{% enable-btn-close-tooltip 4 "offcanvases navbars" %}}
 
 ## CSS
 

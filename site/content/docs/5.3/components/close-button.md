@@ -49,7 +49,7 @@ Close buttons can also be created without `.btn-close` to reduce the size of you
 </button>
 {{< /example >}}
 
-{{% enable-btn-close-tooltip 2 / %}}
+{{% enable-btn-close-tooltip 2 %}}
 
 ## CSS
 

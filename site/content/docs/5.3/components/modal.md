@@ -872,7 +872,7 @@ const myModal = new boosted.Modal(document.getElementById('myModal'), options)
 const myModalAlternative = new boosted.Modal('#myModal', options)
 ```
 
-{{% enable-btn-close-tooltip 3 modals / %}}
+{{% enable-btn-close-tooltip 3 modals %}}
 
 ### Options
 
