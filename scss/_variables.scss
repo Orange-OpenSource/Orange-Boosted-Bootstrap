@@ -1789,11 +1789,15 @@ $popover-header-font-size:          $font-size-lg !default; // Boosted mod: inst
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          $spacer !default; // Boosted mod: instead of `.5rem`
+$popover-header-padding-top:        $spacer !default; // Boosted mod: TODO
+$popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
+$popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-top:          0 !default; // Boosted mod
+$popover-body-padding-bottom:       $spacer !default; // Boosted mod
+$popover-body-padding-y:            initial !default; // Boosted mod
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
 $popover-arrow-width:               $spacer !default; // Boosted mod: instead of `1rem`
