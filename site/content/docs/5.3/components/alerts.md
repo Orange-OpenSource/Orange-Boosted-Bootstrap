@@ -110,7 +110,7 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 - Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
 - Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
 - On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- On the close button, add the attributes `data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"`, which adds a tooltip for better accessibility. You also need to [enable tooltips]({{< docsref "/components/tooltips#enable-tooltips" >}}) (if not already done).
+- On the close button, add the `data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"` attributes, which add a tooltip for better accessibility. You also need to [enable tooltips]({{< docsref "/components/tooltips#enable-tooltips" >}}) (if not already done).
 - To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
 
 You can see this in action with a live demo:
