@@ -391,7 +391,4 @@ myToastEl.addEventListener('hidden.bs.toast', () => {
   // do something...
 })
 ```
-### Enable tooltip on close button
-
-Tooltips on close buttons of toasts have to be initialized. Tooltips can be [initialized globally]({{< docsref "/components/tooltips#enable-tooltips" >}}) in the project.
-
+{{% enable-btn-close-tooltip 3 toasts / %}}

@@ -635,9 +635,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 </nav>
 {{< /example >}}
 
-#### Enable tooltip on close button
-
-Tooltips on close buttons of offcanvases navbars have to be initialized. Tooltips can be [initialized globally]({{< docsref "/components/tooltips#enable-tooltips" >}}) in the project.
+{{% enable-btn-close-tooltip 4 "offcanvases navbars" / %}}
 
 ## CSS
 

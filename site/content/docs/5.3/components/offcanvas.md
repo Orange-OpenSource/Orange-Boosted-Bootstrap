@@ -307,9 +307,7 @@ const offcanvasElementList = document.querySelectorAll('.offcanvas')
 const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new boosted.Offcanvas(offcanvasEl))
 ```
 
-### Enable tooltip on close button
-
-Tooltips on close buttons of offcanvases have to be initialized. Tooltips can be [initialized globally]({{< docsref "/components/tooltips#enable-tooltips" >}}) in the project.
+{{% enable-btn-close-tooltip 3 offcanvases / %}}
 
 ### Options
 
