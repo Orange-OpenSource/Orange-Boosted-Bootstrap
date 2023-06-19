@@ -343,6 +343,8 @@ const toastList = [...toastElList].map(toastEl => new boosted.Toast(toastEl, opt
 
 {{% js-dismiss "toast" %}}
 
+{{% enable-btn-close-tooltip 3 toasts %}}
+
 ### Options
 
 {{< markdown >}}
@@ -391,4 +393,3 @@ myToastEl.addEventListener('hidden.bs.toast', () => {
   // do something...
 })
 ```
-{{% enable-btn-close-tooltip 3 toasts %}}
