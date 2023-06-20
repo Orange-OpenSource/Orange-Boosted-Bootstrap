@@ -36,7 +36,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
-          PROJECT_NUMBER: 1
+          PROJECT_NUMBER: 12
           PROJECT_COL_DESIGN_A11Y_REVIEW: "Need Design and/or Accessibility Review"
           PROJECT_COL_LEAD_REVIEW: "Need Lead Dev Review"
         run: |
@@ -45,7 +45,7 @@ jobs:
               organization(login: $org){
                 projectV2(number: $number) {
                   id
-                  fields(first:20) {
+                  fields(first:10) {
                     nodes {
                       ... on ProjectV2Field {
                         id
@@ -61,7 +61,7 @@ jobs:
                       }
                     }
                   }
-                  items(first:20) {
+                  items(first:50) {
                     nodes {
                       id
                       content {
