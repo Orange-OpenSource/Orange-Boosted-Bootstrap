@@ -1784,19 +1784,20 @@ $popover-border-color:              var(--#{$prefix}border-color-translucent) !d
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
 $popover-box-shadow:                $box-shadow !default;
+$popover-padding-y:                 $spacer !default;
 
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-top:        $spacer !default; // Boosted mod: TODO
+$popover-header-padding-top:        $popover-padding-y !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
 $popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-top:          0 !default; // Boosted mod
-$popover-body-padding-bottom:       $spacer !default; // Boosted mod
+$popover-body-padding-bottom:       $popover-padding-y !default; // Boosted mod
 $popover-body-padding-y:            initial !default; // Boosted mod
 $popover-body-padding-x:            $popover-header-padding-x !default;
 

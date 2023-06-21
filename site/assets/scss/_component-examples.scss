@@ -225,17 +225,28 @@
 // scss-docs-end custom-tooltip
 
 // scss-docs-start custom-popovers
+.custom-title-popover {
+  --bs-popover-header-padding-y: 10px;
+}
 .custom-popover {
   --bs-popover-max-width: 12.5rem;
   --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-padding-y: .5rem; // Boosted mod
   --bs-popover-header-bg: var(--bs-primary);
   --bs-popover-header-color: var(--bs-black); // Boosted mod: text-dark on primary
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
-  --bs-popover-header-padding-x: .5rem; // Boosted mod
-  --bs-popover-header-padding-y: .5rem; // Boosted mod
-  --bs-popover-header-padding-top: 5px; // Boosted mod
-  --bs-popover-header-padding-bottom: 15px; // Boosted mod
+}
+.custom-popover-2 {
+  --bs-popover-max-width: 12.5rem;
+  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-bg: var(--bs-primary);
+  --bs-popover-header-color: var(--bs-black);
+  --bs-popover-header-padding-x: 0;
+  --bs-popover-header-padding-top: 5px;
+  --bs-popover-header-padding-bottom: 15px;
+  --bs-popover-body-padding-x: 30px;
+  --bs-popover-body-padding-y: 0;
 }
 // scss-docs-end custom-popovers
 
