@@ -41,6 +41,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     'Attribute “relates” not allowed on element “div” at this point.',
     'Attribute “loading” not allowed on element “div” at this point.',
     'Attribute “allowfullscreen” not allowed on element “div” at this point.'
+    // End mod
   ].join('|')
 
   const args = [
