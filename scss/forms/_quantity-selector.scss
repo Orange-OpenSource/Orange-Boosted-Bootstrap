@@ -31,7 +31,10 @@
       @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
       order: -1;
       padding-right: $quantity-selector-btn-padding-x;
-      border-right: none;
+
+      &:not(:focus-visible) {
+        border-right: none;
+      }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
         @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
@@ -42,7 +45,10 @@
     &:last-of-type {
       @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       padding-left: $quantity-selector-btn-padding-x;
-      border-left: none;
+
+      &:not(:focus-visible) {
+        border-left: none;
+      }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
         @include button-icon($quantity-selector-icon-add-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-add-height, $pseudo: "after");
