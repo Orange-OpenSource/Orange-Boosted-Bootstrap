@@ -28,7 +28,7 @@ jobs:
           REPO: ${{ github.event.repository.name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          gh api --method POST /repos/$OWNER/$REPO/issues/$PR_NUMBER/labels/ -f labels=["ready for a11y review"]
+          curl -L -X POST -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/labels -d '{"labels":["ready for a11y review"]}'
           gh api --method DELETE "/repos/$OWNER/$REPO/issues/$PR_NUMBER/labels/upcoming a11y review"
 
       - name: Get Project Data
