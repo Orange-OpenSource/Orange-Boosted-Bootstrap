@@ -1,11 +1,11 @@
-name: Dev review in progress move PR in the right column
+name: Move card to Dev Review in Progess column
 on:
   pull_request_review:
     types:
       - submitted
 
 jobs:
-  project-move-card:
+  move_card_to_dev_review_in_progress:
     if: github.event.review.state != 'approved' && github.event.review.user != 'julien-deramond' && github.event.review.user != 'Aniort'
     runs-on: ubuntu-latest
     steps:
