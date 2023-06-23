@@ -1,11 +1,11 @@
-name: Update PR board according to the labels
+name: Move card to the next review column once dev approved
 on:
   pull_request_review:
     types:
       - submitted
 
 jobs:
-  update_pr_board:
+  move_card_to_next_review:
     if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     steps:
@@ -37,8 +37,8 @@ jobs:
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
           PROJECT_NUMBER: 12
-          PROJECT_COL_DESIGN_A11Y_REVIEW: "Need Design and/or Accessibility Review"
-          PROJECT_COL_LEAD_REVIEW: "Need Lead Dev Review"
+          PROJECT_DESIGN_A11Y_COL: "Need Design and/or Accessibility Review"
+          PROJECT_LEAD_COL: "Need Lead Dev Review"
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
@@ -79,8 +79,8 @@ jobs:
 
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
-          echo 'TARGET_COL_ID1='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_COL_DESIGN_A11Y_REVIEW }}") |.id' project_data.json) >> $GITHUB_ENV
-          echo 'TARGET_COL_ID2='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_COL_LEAD_REVIEW }}") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'TARGET_COL_ID1='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_DESIGN_A11Y_COL }}") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'TARGET_COL_ID2='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_LEAD_COL }}") |.id' project_data.json) >> $GITHUB_ENV
           echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
 
       - name: Change project card to the design and/or accessibility column
