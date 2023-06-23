@@ -1,4 +1,4 @@
-name: Move card in project when the PR is design and/or a11y approved
+name: Move card to right column when the PR is design and/or a11y approved
 on:
   pull_request_target:
     types:
@@ -6,7 +6,7 @@ on:
       - unlabeled
 
 jobs:
-  design_approved:
+  design_or_a11y_approved:
     if: (contains(github.event.*.labels.*.name, 'passed a11y review') || contains(github.event.*.labels.*.name, 'passed design review')) && !(contains(github.event.*.labels.*.name, 'ready for a11y review') || contains(github.event.*.labels.*.name, 'ready for design review'))
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
           PROJECT_NUMBER: 12
-          PROJECT_COL_LEAD_REVIEW: "Need Lead Dev Review"
+          PROJECT_TARGET_COL: "Need Lead Dev Review"
         run: |
           gh api graphql -f query='
           query($org: String!, $number: Int!) {
@@ -57,10 +57,10 @@ jobs:
 
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
-          echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_COL_LEAD_REVIEW }}") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_TARGET_COL }}") |.id' project_data.json) >> $GITHUB_ENV
           echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
 
-      - name: Change project card to the design and/or accessibility column
+      - name: Move card to Need Lead Dev Review column
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
         run: |
