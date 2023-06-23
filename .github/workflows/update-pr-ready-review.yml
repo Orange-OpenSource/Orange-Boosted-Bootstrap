@@ -1,4 +1,4 @@
-name: Move PR to Dev Review Project Column
+name: Move card to Need Dev Review project column
 on:
   pull_request_target:
    types:
@@ -7,7 +7,7 @@ on:
      - reopened
 
 jobs:
-  project_move_to_dev_review:
+  move_card_to_need_dev_review:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
           PROJECT_NUMBER: 12
-          PROJECT_COL_DEV_REVIEW: "Need Dev Review"
+          PROJECT_TARGET_COL: "Need Dev Review"
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
@@ -58,10 +58,10 @@ jobs:
 
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
-          echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_COL_DEV_REVIEW }}") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_TARGET_COL }}") |.id' project_data.json) >> $GITHUB_ENV
           echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
 
-      - name: Move to Dev Review Column
+      - name: Move card to Need Dev Review column
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
         run: |
