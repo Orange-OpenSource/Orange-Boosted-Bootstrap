@@ -154,7 +154,7 @@
   &:first-child .page-link {
     margin-right: var(--#{$prefix}pagination-margin-x-first-last);
 
-    &:not(:empty) :not([data-bs-a11y]) {
+    &:not(:empty) {
       padding-right: var(--#{$prefix}pagination-padding-end);
     }
 
