@@ -4,7 +4,7 @@ tarteaucitron.services.googletagmanager = {
   key: 'googletagmanager',
   type: 'api',
   name: 'Google Tag Manager',
-  uri: 'https://adssettings.google.com/',
+  uri: 'https://policies.google.com/privacy',
   needConsent: true,
   cookies: ['_ga', '_gat', '__utma', '__utmb', '__utmc', '__utmt', '__utmz', '__gads', '_drt_', 'FLC', 'exchange_uid', 'id', 'fc', 'rrs', 'rds', 'rv', 'uid', 'UIDR', 'UID', 'clid', 'ipinfo', 'acs'],
   js() {
