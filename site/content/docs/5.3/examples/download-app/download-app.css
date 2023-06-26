@@ -1,7 +1,3 @@
-.btn-secondary {
-  background-color: transparent;
-}
-
 .border-translucent {
   --bs-border-color: var(--bs-border-color-translucent);
 }
