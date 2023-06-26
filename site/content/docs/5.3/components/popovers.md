@@ -8,43 +8,6 @@ aliases:
 toc: true
 ---
 
-{{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
-
-{{< example >}}
-<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Entire popover</button>
-{{< /example >}}
-
-{{< example >}}
-<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Content popover</button>
-{{< /example >}}
-
-{{< example >}}
-<button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-custom-class="custom-title-popover"
->Title popover</button>
-{{< /example >}}
-
-{{< example >}}
-<button type="button" class="btn btn-secondary"
-        data-bs-toggle="popover" data-bs-placement="right"
-        data-bs-custom-class="custom-popover"
-        data-bs-title="Custom popover"
-        data-bs-content="This popover is themed via CSS variables.">
-  Custom popover
-</button>
-{{< /example >}}
-
-{{< example >}}
-<button type="button" class="btn btn-secondary"
-        data-bs-toggle="popover" data-bs-placement="right"
-        data-bs-custom-class="custom-popover-2"
-        data-bs-title="Custom popover"
-        data-bs-content="This popover is themed via CSS variables.">
-  Custom popover
-</button>
-{{< /example >}}
-
-—
-
 ## Overview
 
 Things to know when using the popover plugin:

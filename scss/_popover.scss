@@ -4,7 +4,7 @@
   --#{$prefix}popover-max-width: #{$popover-max-width};
   @include rfs($popover-font-size, --#{$prefix}popover-font-size);
   --#{$prefix}popover-line-height: #{$popover-line-height}; // Boosted mod
-  --#{$prefix}popover-font-weight: #{$popover-font-weight}; // Boosted mod: extra CSS variable
+  --#{$prefix}popover-font-weight: #{$popover-font-weight}; // Boosted mod
   --#{$prefix}popover-bg: #{$popover-bg};
   --#{$prefix}popover-border-width: #{$popover-border-width};
   --#{$prefix}popover-border-color: #{$popover-border-color};
