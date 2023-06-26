@@ -20,13 +20,7 @@ added: "5.2"
 </div>
 {{< /example >}}
 
-```css
-.sticker-fs-3xl {
-  font-size: 2.5rem;
-  line-height: 1;
-  letter-spacing: -.0625rem;
-}
-```
+{{< scss-docs name="sticker-fs-3xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## How it works
 
@@ -66,13 +60,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 </div>
 {{< /example >}}
 
-```css
-.sticker-fs-4xl {
-  font-size: 3.75rem;
-  line-height: 1;
-  letter-spacing: -.125rem;
-}
-```
+{{< scss-docs name="sticker-fs-4xl" file="site/assets/scss/_component-examples.scss" >}}
 
 {{< example >}}
 <div class="sticker sticker-sm">
@@ -82,13 +70,7 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 </div>
 {{< /example >}}
 
-```css
-.sticker-fs-xl {
-  font-size: 1.875rem;
-  line-height: calc(32 / 30);
-  letter-spacing: -.05rem;
-}
-```
+{{< scss-docs name="sticker-fs-xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## Accessibility
 
@@ -110,19 +92,7 @@ Since stickers only provide a container, accessibility becomes specific to the s
 </div>
 {{< /example >}}
 
-```css
-.sticker-fs-3xl {
-  font-size: 2.5rem;
-  line-height: 1;
-  letter-spacing: -.0625rem;
-}
-
-.sticker-fs-l {
-  font-size: 1.5rem;
-  line-height: calc(26 / 24);
-  letter-spacing: -.03125rem;
-}
-```
+{{< scss-docs name="sticker-fs-l-3xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## CSS
 
