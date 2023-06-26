@@ -204,6 +204,18 @@
   // End mod
 }
 
+// Boosted mod: special style for pagination with icons only
+.icons-only {
+  .page-item {
+    &:first-child .page-link {
+      padding-right: 0;
+    }
+    &:last-child .page-link {
+      padding-left: 0;
+    }
+  }
+}
+// End mod
 
 //
 // Sizing
