@@ -1779,12 +1779,12 @@ $popover-line-height:               1.5 !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        var(--#{$prefix}body-bg) !default;
 $popover-max-width:                 $spacer * 19 !default; // Boosted mod: instead of `276px`
+$popover-padding-y:                 $spacer !default; // Boosted mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
 $popover-box-shadow:                $box-shadow !default;
-$popover-padding-y:                 $spacer !default; // Boosted mod
 
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
 $popover-header-line-height:        1.11 !default; // Boosted mod
