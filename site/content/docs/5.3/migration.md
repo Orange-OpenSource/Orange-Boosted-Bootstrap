@@ -150,7 +150,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
 
 - **Stickers**
-  - <span class="badge bg-warning">Warning</span> Due to the changes in `font-size` we introduced several classes for stickers font-size to better fit design. Those are non-responsive font sizes.
+  - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
 
 - **Toasts**
   - <span class="badge bg-success">New</span> A tooltip was added on close buttons of toasts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
