@@ -4,6 +4,8 @@
   'use strict'
 
   // For a proper redirection on the different stores, please copy paste the code below and adapt the links.
+  // Please visit https://developer.android.com/distribute/marketing-tools/linking-to-google-play?hl=fr#UriSummary for more Android information.
+  // Please visit https://stackoverflow.com/a/2337601 for more iOS information.
 
   // if (!(/windows phone/i.test(navigator.userAgent)) && /android/i.test(navigator.userAgent)) {
   //   window.location.href = 'https://play.google.com/apps/testing/com.orange.ods.app/'
