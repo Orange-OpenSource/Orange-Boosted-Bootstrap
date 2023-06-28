@@ -144,7 +144,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Typography**
   - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
-  - <span class="badge bg-warning">Breaking</span> Some headings font size values have been changed to be compliant with the design guidelines. Please check it has no impact on your websites.
+  - <span class="badge bg-danger">Breaking</span> Some headings font size values have been changed to be compliant with the design guidelines. Please check it has no impact on your websites.
     - `<h3>` values are now `24px` for tablet breakpoint and `18px` for mobile breakpoint.
     - `<h5>` value is now `18px` for tablet breakpoint.
     - `<h6>` value is now `18px` for desktop and tablet breakpoints.
