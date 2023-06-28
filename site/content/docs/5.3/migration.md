@@ -61,8 +61,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
-
   - <span class="badge bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of alerts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
@@ -74,10 +74,23 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
+- **Close button**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+
 - **List group**
   - List group item variants are now styled via CSS variables.
 
   - <span class="badge bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+
+- **Modal**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of modals. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+
+- **Navbar**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of offcanvas navbars. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Navs and tabs**
   - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
@@ -89,9 +102,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
-- **Footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
-  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+- **Offcanvas**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of offcanvases. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -139,6 +151,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Stickers**
   - <span class="badge bg-warning">Warning</span> Due to the changes in `font-size` we introduced several classes for stickers font-size to better fit design. Those are non-responsive font sizes.
+
+- **Toasts**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of toasts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 ### Contents
 
@@ -263,8 +278,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
-      <li><code>--bs-popover-header-padding-x</code></li>
-      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 
@@ -281,7 +294,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
-      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -351,8 +363,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-body-padding-bottom</code></li>
+      <li><code>--bs-popover-body-padding-top</code></li>
       <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-popover-header-padding-bottom</code></li>
+      <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -485,9 +500,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>
+      <li><code>$popover-body-padding-bottom</code></li>
+      <li><code>$popover-body-padding-top</code></li>
       <li><code>$popover-header-line-height</code></li>
       <li><code>$popover-header-padding-bottom</code></li>
+      <li><code>$popover-header-padding-top</code></li>
       <li><code>$popover-line-height</code></li>
+      <li><code>$popover-padding-y</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
