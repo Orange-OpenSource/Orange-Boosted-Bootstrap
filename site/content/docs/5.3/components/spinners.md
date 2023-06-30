@@ -43,9 +43,6 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 <div class="spinner-border text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
 {{< /example >}}
 
 {{< example class="bg-dark" >}}
@@ -79,9 +76,6 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 <!-- Boosted mod -->
 {{< example >}}
 <div class="spinner-grow text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
