@@ -1779,6 +1779,7 @@ $popover-line-height:               1.5 !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        var(--#{$prefix}body-bg) !default;
 $popover-max-width:                 $spacer * 19 !default; // Boosted mod: instead of `276px`
+$popover-padding-y:                 $spacer !default; // Boosted mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
@@ -1789,24 +1790,25 @@ $popover-header-font-size:          $font-size-lg !default; // Boosted mod: inst
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
+$popover-header-padding-top:        $popover-padding-y !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
-// fusv-disable
-$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
-// fusv-enable
+$popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-padding-y:            $spacer !default;
-$popover-body-padding-x:            $popover-header-padding-x !default;
+$popover-body-padding-top:          0 !default; // Boosted mod
+$popover-body-padding-bottom:       $popover-padding-y !default; // Boosted mod
+$popover-body-padding-y:            initial !default; // Boosted mod: instead of `$spacer`
+$popover-body-padding-x:            $popover-header-padding-x !default; // Boosted mod: instead of `$spacer`
 
 $popover-arrow-width:               $spacer !default; // Boosted mod: instead of `1rem`
-$popover-arrow-height:              $popover-arrow-width * .5 !default;
+$popover-arrow-height:              $popover-arrow-width * .5 !default; // Boosted mod: instead of `.5rem`
 // scss-docs-end popover-variables
 
 // fusv-disable
 // Deprecated in Bootstrap 5.2.0 for CSS variables
 $popover-arrow-color:               $popover-bg !default;
-$popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
+$popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color-translucent)`
 // fusv-enable
 
 // Toasts
