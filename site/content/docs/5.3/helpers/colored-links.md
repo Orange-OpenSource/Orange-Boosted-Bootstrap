@@ -27,7 +27,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 {{< example >}}
 {{< colored-links.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
-    <p><a href="#" class="link-{{ .name }} {{ if or (eq .name "primary") (eq .name "success") (eq .name "warning") (eq .name "info") (eq .name "light") -}}bg-dark{{- end }}">{{ .name | title }} link</a></p>
+    <p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">{{ .name | title }} link</a></p>
   {{- end -}}
 {{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis">Emphasis link</a></p>
