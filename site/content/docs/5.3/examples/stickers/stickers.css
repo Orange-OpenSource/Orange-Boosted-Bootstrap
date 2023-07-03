@@ -1,0 +1,43 @@
+/* Values need to be adapted to your needs */
+
+.sticker-fs-4xl {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.125rem;
+}
+
+.sticker-fs-3xl {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+
+.sticker-fs-2xl {
+  font-size: 2.125rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+
+.sticker-fs-xl {
+  font-size: 1.875rem;
+  line-height: calc(32 / 30);
+  letter-spacing: -.05rem;
+}
+
+.sticker-fs-l {
+  font-size: 1.5rem;
+  line-height: calc(26 / 24);
+  letter-spacing: -.03125rem;
+}
+
+.sticker-fs-m {
+  font-size: 1.25rem;
+  line-height: calc(22 / 20);
+  letter-spacing: -.025rem;
+}
+
+.sticker-fs-s {
+  font-size: 1.125rem;
+  line-height: calc(20 / 18);
+  letter-spacing: -.0125rem;
+}

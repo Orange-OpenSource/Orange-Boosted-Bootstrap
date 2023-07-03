@@ -14,11 +14,13 @@ added: "5.2"
 {{< example >}}
 <div class="sticker">
   <p class="mb-0">
-    <span class="display-3 mb-0 d-block">39.99 €</span>
+    <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
     <span>Per month</span>
   </p>
 </div>
 {{< /example >}}
+
+{{< scss-docs name="sticker-fs-3xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## How it works
 
@@ -39,9 +41,9 @@ For a better rendering you can use our margin utilities or even CSS.
 {{< callout warning >}}
 **Font sizes and responsiveness**
 
-All the provided examples use our text utilities to facilitate the understanding and to match the examples from the Orange Design System in desktop mode.
+All the provided examples use some specific classes to have non-responsive stickers. You may adapt those classes to your needs.
 
-**Please be aware that those examples are not meant to be responsive** because they will always depend on the context. Indeed the font size will be resized in small screens due to the text utilities. If you do not want this behavior, you could for example set fixed font sizes and add some responsive rules by using `scale()` CSS function.
+**Please be aware that those examples are not meant to be responsive** because they will always depend on the context. If you do not want this behavior, you could add some responsive rules by using `scale()` CSS function.
 {{< /callout >}}
 
 ## Sizes
@@ -53,18 +55,22 @@ Fancy larger or smaller stickers? Add `.sticker-lg` or `.sticker-sm` for additio
 {{< example >}}
 <div class="sticker sticker-lg">
   <p class="mb-0">
-    <span class="display-1">New</span>
+    <span class="sticker-fs-4xl">New</span>
   </p>
 </div>
 {{< /example >}}
 
+{{< scss-docs name="sticker-fs-4xl" file="site/assets/scss/_component-examples.scss" >}}
+
 {{< example >}}
 <div class="sticker sticker-sm">
   <p class="mb-0">
-    <span class="h2">New</span>
+    <span class="sticker-fs-xl">New</span>
   </p>
 </div>
 {{< /example >}}
+
+{{< scss-docs name="sticker-fs-xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## Accessibility
 
@@ -78,13 +84,15 @@ Since stickers only provide a container, accessibility becomes specific to the s
 {{< example >}}
 <div class="sticker">
   <p class="mb-1">
-    <span class="h3 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-    <span class="display-3 mb-0 d-block" aria-hidden="true">39.99 €</span>
+    <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+    <span class="sticker-fs-3xl mb-0 d-block" aria-hidden="true">39.99 €</span>
     <span aria-hidden="true">Per month</span>
     <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
   </p>
 </div>
 {{< /example >}}
+
+{{< scss-docs name="sticker-fs-l-3xl" file="site/assets/scss/_component-examples.scss" >}}
 
 ## CSS
 

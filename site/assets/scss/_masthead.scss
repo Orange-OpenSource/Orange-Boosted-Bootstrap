@@ -16,7 +16,9 @@
 
   .bd-code-snippet {
     margin: 0;
-    @include border-radius(.5rem);
+    border-color: var(--bs-border-color-translucent);
+    border-width: 1px;
+    @include border-radius(calc(.5rem - 1px));
   }
 
   .highlight {
@@ -34,9 +36,7 @@
 
     pre {
       padding: 0;
-      margin-top: .625rem;
-      margin-right: 1.875rem;
-      margin-bottom: .625rem;
+      margin: .625rem 0;
       overflow: hidden;
     }
   }
@@ -65,10 +65,6 @@
 
   .lead {
     @include font-size(1rem);
-  }
-
-  .highlight {
-    @include border-radius(.5rem);
   }
 
   @include media-breakpoint-up(md) {
