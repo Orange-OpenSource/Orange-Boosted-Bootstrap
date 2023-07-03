@@ -46,7 +46,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
           <p>Modal body text goes here.</p>
@@ -66,7 +66,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>Modal body text goes here.</p>
@@ -92,7 +92,7 @@ Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag
         {{< placeholder width="100%" height="260" class="modal-img" text="icon" >}}
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
           <p>Modal body text goes here.</p>
@@ -113,7 +113,7 @@ Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag
       <img class="modal-img" src="..." alt="...">
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>Modal body text goes here.</p>
@@ -141,7 +141,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalLiveLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>Woo-hoo, you're reading this text in a modal!</p>
@@ -172,7 +172,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -195,7 +195,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="staticBackdropLiveLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>I will not close if you click outside of me. Don't even try to press escape key.</p>
@@ -226,7 +226,7 @@ When backdrop is set to static, the modal will not close when clicking outside o
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -249,7 +249,7 @@ When modals become too long for the user's viewport or device, they scroll indep
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalLongTitle">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body" style="min-height: 1500px">
         <p>This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling will move the modal as needed.</p>
@@ -275,7 +275,7 @@ You can also create a scrollable modal that allows scroll the modal body by addi
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalScrollableTitle">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
@@ -312,7 +312,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalCenterTitle">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>This is a vertically centered modal.</p>
@@ -330,7 +330,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <p>This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show how vertically centering the modal works when combined with scrollable modals. We also use some repeated line breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
@@ -375,7 +375,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalPopoversLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <h2 class="h5">Popover in a modal</h2>
@@ -417,7 +417,7 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="gridModalLabel">Grids in modals</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <div class="container-fluid bd-example-row">
@@ -508,7 +508,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalLabel">New message</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         <form>
@@ -544,13 +544,13 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
 {{< /design-callout-alert >}}
 
 <!--Boosted mod: replace aria-label="Close" with a visually hidden span (a11y)-->
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalToggleLabel">Modal 1</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         Show a second modal and hide this one with the button below.
@@ -566,7 +566,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h5" id="exampleModalToggleLabel2">Modal 2</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         Hide this modal and show the first with the button below.
@@ -640,7 +640,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -654,7 +654,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalLgLabel">Large modal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -668,7 +668,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalSmLabel">Small modal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -719,7 +719,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -736,7 +736,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenSmLabel">Full screen below sm</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -753,7 +753,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenMdLabel">Full screen below md</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -770,7 +770,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenLgLabel">Full screen below lg</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -787,7 +787,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenXlLabel">Full screen below xl</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -804,7 +804,7 @@ Please refer to the [Modals](https://system.design.orange.com/0c1af118d/p/16d9f3
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title h4" id="exampleModalFullscreenXxlLabel">Full screen below xxl</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
         ...
@@ -871,6 +871,8 @@ const myModal = new boosted.Modal(document.getElementById('myModal'), options)
 // or
 const myModalAlternative = new boosted.Modal('#myModal', options)
 ```
+
+{{% enable-btn-close-tooltip 3 modals %}}
 
 ### Options
 
