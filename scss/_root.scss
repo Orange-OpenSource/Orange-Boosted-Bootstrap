@@ -142,8 +142,8 @@
 // scss-docs-start root-dark-rule
 // Boosted mod
 [class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
-[class*="bg-secondary"] {
+[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark):not(.text-bg-dark),
+[class*="bg-secondary"]:not(.text-bg-secondary) {
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
   --#{$prefix}link-color: #{$link-color-inverted};
   --#{$prefix}link-hover-color: #{$link-hover-color-inverted};
@@ -159,7 +159,7 @@
   --#{$boosted-prefix}kbd-bg: #{$kbd-bg-inverted};
   --#{$boosted-prefix}pre-color: #{$pre-color-inverted};
   --#{$prefix}body-color: #{$body-color-dark};
-  --#{$prefix}heading-color: #{$white};
+  --#{$prefix}heading-color: #{$headings-color-dark};
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {
@@ -178,7 +178,7 @@
     --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
     --#{$boosted-prefix}pre-color: #{$pre-color};
     --#{$prefix}body-color: #{$body-color};
-    --#{$prefix}heading-color: #{$black};
+    --#{$prefix}heading-color: #{$headings-color};
   }
 }
 // End mod
