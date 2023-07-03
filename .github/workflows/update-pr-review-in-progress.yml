@@ -6,7 +6,7 @@ on:
 
 jobs:
   move_card_to_dev_review_in_progress:
-    if: github.event.review.state != 'approved' && github.event.review.user != 'julien-deramond' && github.event.review.user != 'Aniort'
+    if: github.event.pull_request.draft == false && github.event.review.state != 'approved' && github.event.review.user != 'julien-deramond' && github.event.review.user != 'Aniort'
     runs-on: ubuntu-latest
     steps:
       - name: Get Project Data
