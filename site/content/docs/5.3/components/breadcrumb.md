@@ -39,6 +39,12 @@ Use an ordered or unordered list with linked list items to create a minimally st
 
 Dividers are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by modifying a local CSS custom property `--bs-breadcrumb-divider`, or through the `$breadcrumb-divider` Sass variable — and `$breadcrumb-divider-flipped` for its RTL counterpart, if needed. We default to our Sass variable, which is set as a fallback to the custom property. This way, you get a global divider that you can override without recompiling CSS at any time.
 
+{{< design-callout-alert >}}
+These variants **changing or without the breadcrumb dividers** should not be used because they do not respect the Orange Design System specifications.
+
+Please refer to the [Local Headers/Breadcrumb](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -74,12 +80,6 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 ```
 
 You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.
-
-{{< design-callout-alert >}}
-This variant **without the breadcrumb dividers** should not be used because it does not respect the Orange Design System specifications.
-
-Please refer to the [Local Headers/Breadcrumb](https://system.design.orange.com/0c1af118d/p/774477-local-headers/b/743cd0/i/66611057) guidelines on the Orange Design System website.
-{{< /design-callout-alert >}}
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">

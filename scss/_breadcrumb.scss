@@ -21,7 +21,6 @@
   @include font-size(var(--#{$prefix}breadcrumb-font-size));
   font-weight: var(--#{$prefix}breadcrumb-font-weight); // Boosted mod
   line-height: var(--#{$prefix}breadcrumb-line-height); // Boosted mod
-  color: var(--#{$prefix}breadcrumb-color); // Boosted mod
   list-style: none;
   background-color: var(--#{$prefix}breadcrumb-bg);
   @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
@@ -48,6 +47,16 @@
 
   // Boosted mod: Handle responsive
   display: none;
+
+  // Handle links differently to avoid any issue with colored backgrounds
+  a {
+    color: var(--#{$prefix}breadcrumb-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   @include media-breakpoint-up(md) {
     display: block;
