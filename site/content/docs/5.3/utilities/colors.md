@@ -69,17 +69,15 @@ Here are some compliant combinations examples for texts:
 <p class="text-black">regular black text</p>
 <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
 <p class="text-body-secondary">regular secondary text</p>
-<p class="text-light">regular disabled text</p>
 
 <p class="text-black fw-bold">bold black text</p>
 <p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
 <p class="text-body-secondary fw-bold">bold secondary text</p>
 
-<div class="bg-dark">
+<div class="bg-dark py-1">
   <p class="text-white">regular white text on dark</p>
   <p class="text-primary">regular primary text on dark</p>
   <p class="text-light">regular light text on dark</p>
-  <p class="text-body-secondary">regular disabled text on dark</p>
 
   <p class="text-white fw-bold">bold white text on dark</p>
   <p class="text-primary fw-bold">bold primary text on dark</p>
@@ -87,7 +85,7 @@ Here are some compliant combinations examples for texts:
 </div>
 {{< /example >}}
 
-Here are some compliant combinations examples for non-texts elements, such as SVG icons (note: `.text-light` on white and `.text-body-secondary` on dark should only be used for disabled icons) :
+Here are some compliant combinations examples for non-texts elements, such as SVG icons:
 
 {{< example >}}
 <p class="p-2">
@@ -102,9 +100,6 @@ Here are some compliant combinations examples for non-texts elements, such as SV
   </svg>
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-light" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
 </p>
 <p class="bg-dark p-2">
@@ -122,9 +117,6 @@ Here are some compliant combinations examples for non-texts elements, such as SV
   </svg>
   <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-body-secondary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
 </p>
 {{< /example >}}
