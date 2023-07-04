@@ -57,7 +57,7 @@ This footer bar is a container with a `.footer-title-content` class. This contai
 This footer bar is a container with `.footer-social` class into which a list of social media icons can be added.
 
 {{< callout info >}}
-Other social icons are available. See full list in [Social buttons section]({{< docsref "/components/buttons#social-buttons" >}}).
+Other social media are available. See the full list of our [Social buttons]({{< docsref "/components/buttons#social-buttons" >}}).
 {{< /callout >}}
 
 {{< example class="p-0" >}}
