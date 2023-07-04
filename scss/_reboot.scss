@@ -157,7 +157,8 @@ h1 {
   letter-spacing: $h4-spacing;
 }
 
-h2 {
+h2,
+h3 {
   @extend %heading;
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
@@ -166,7 +167,6 @@ h2 {
   letter-spacing: $h5-spacing;
 }
 
-h3,
 h4,
 h5,
 h6 {

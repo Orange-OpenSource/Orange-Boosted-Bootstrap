@@ -66,6 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
+  - <span class="badge bg-success">New</span> TikTok social button.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
@@ -80,6 +81,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
   - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+  - <span class="badge bg-warning">Warning</span> Coverage checker icon has been changed from `ic_Signal` to `ic_Mobile_Network_Coverage`. Please download the right [Solaris icon]({{< docsref "/extend/icons" >}}) and update your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
@@ -149,6 +151,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
 
+- **Stickers**
+  - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
+
 - **Toasts**
   - <span class="badge bg-success">New</span> A tooltip was added on close buttons of toasts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
@@ -156,6 +161,10 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Typography**
   - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+  - <span class="badge bg-danger">Breaking</span> Some headings font size values have been changed to be compliant with the design guidelines. Please check it has no impact on your websites.
+    - `<h3>` values are now `24px` for tablet breakpoint and `18px` for mobile breakpoint.
+    - `<h5>` value is now `18px` for tablet breakpoint.
+    - `<h6>` value is now `18px` for desktop and tablet breakpoints.
 
 ### Forms
 
@@ -271,8 +280,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
-      <li><code>--bs-popover-header-padding-x</code></li>
-      <li><code>--bs-popover-header-padding-y</code></li>
     </ul>
   </details>
 
@@ -289,7 +296,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
-      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -359,8 +365,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-padding-x</code></li>
       <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-body-padding-bottom</code></li>
+      <li><code>--bs-popover-body-padding-top</code></li>
       <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-popover-header-padding-bottom</code></li>
+      <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
@@ -493,9 +502,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>
+      <li><code>$popover-body-padding-bottom</code></li>
+      <li><code>$popover-body-padding-top</code></li>
       <li><code>$popover-header-line-height</code></li>
       <li><code>$popover-header-padding-bottom</code></li>
+      <li><code>$popover-header-padding-top</code></li>
       <li><code>$popover-line-height</code></li>
+      <li><code>$popover-padding-y</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>

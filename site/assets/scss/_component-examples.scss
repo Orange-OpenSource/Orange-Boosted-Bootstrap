@@ -228,8 +228,9 @@
 .custom-popover {
   --bs-popover-max-width: 12.5rem;
   --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-padding-y: .5rem; // Boosted mod
   --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-black); // Boosted mod: text-dark on primary
+  --bs-popover-header-color: var(--bs-black); // Boosted mod: instead of `var(--bs-white)`
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
@@ -400,6 +401,38 @@
 }
 
 // Boosted mod
+// scss-docs-start sticker-fs-4xl
+.sticker-fs-4xl {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.125rem;
+}
+// scss-docs-end sticker-fs-4xl
+
+// scss-docs-start sticker-fs-l-3xl
+// scss-docs-start sticker-fs-3xl
+.sticker-fs-3xl {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+}
+// scss-docs-end sticker-fs-3xl
+
+.sticker-fs-l {
+  font-size: 1.5rem;
+  line-height: calc(26 / 24); // stylelint-disable-line function-disallowed-list
+  letter-spacing: -.03125rem;
+}
+// scss-docs-end sticker-fs-l-3xl
+
+// scss-docs-start sticker-fs-xl
+.sticker-fs-xl {
+  font-size: 1.875rem;
+  line-height: calc(32 / 30); // stylelint-disable-line function-disallowed-list
+  letter-spacing: -.05rem;
+}
+// scss-docs-end sticker-fs-xl
+
 .border-gray-400 {
   --bs-border-color: #{$gray-400};
 }
