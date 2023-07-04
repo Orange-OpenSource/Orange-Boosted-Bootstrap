@@ -68,7 +68,7 @@ params:
   repo:                             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:                          "getbootstrap"
   blog:                             "https://blog.getbootstrap.com/"
-  icons:                            "https://system.design.orange.com/0c1af118d/p/847054-solaris-icons/b/84c5ca"
+  icons:                            "https://system.design.orange.com/0c1af118d/p/65c68d-solaris-icon-library"
   bootstrap:                        "https://getbootstrap.com"
   ods:
     web:                            "https://system.design.orange.com/0c1af118d/n/76065f"
