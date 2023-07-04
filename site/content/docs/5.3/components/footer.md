@@ -54,7 +54,11 @@ This footer bar is a container with a `.footer-title-content` class. This contai
 
 ### Follow us bar
 
-This footer bar is a container with `.footer-social` class into which a list of social media icons can be added:
+This footer bar is a container with `.footer-social` class into which a list of social media icons can be added.
+
+{{< callout info >}}
+Other social media are available. See the full list of our [Social buttons]({{< docsref "/components/buttons#social-buttons" >}}).
+{{< /callout >}}
 
 {{< example class="p-0" >}}
 {{< orange-footer follow=true >}}
@@ -106,6 +110,22 @@ The footer is a container with a `.footer-terms` class. This footer bar is **man
 
 {{< example class="p-0" >}}
 {{< orange-footer mandatory=true >}}
+{{< /orange-footer >}}
+{{< /example >}}
+
+### Accessibility
+
+Add the `.active` class on `.nav-link` to indicate the current page.
+
+Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
+
+{{< example class="p-0" >}}
+{{< orange-footer service=true show_active_link=true >}}
+{{< /orange-footer >}}
+{{< /example >}}
+
+{{< example class="p-0" >}}
+{{< orange-footer mandatory=true show_active_link=true >}}
 {{< /orange-footer >}}
 {{< /example >}}
 

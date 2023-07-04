@@ -154,6 +154,8 @@ As part of Boosted's evolving CSS variables approach, popovers now use local CSS
 
 {{< scss-docs name="popover-css-vars" file="scss/_popover.scss" >}}
 
+Note that `--bs-popover-body-padding-y` and `--bs-popover-header-padding-y` have priority over `--bs-popover-body-padding-bottom` and `--bs-popover-body-padding-top`, and `--bs-popover-header-padding-bottom` and `--bs-popover-header-padding-top`, respectively.
+
 ### Sass variables
 
 {{< scss-docs name="popover-variables" file="scss/_variables.scss" >}}
