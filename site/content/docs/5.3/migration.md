@@ -66,6 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
+  - <span class="badge bg-success">New</span> TikTok social button.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
@@ -80,6 +81,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
   - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+  - <span class="badge bg-warning">Warning</span> Coverage checker icon has been changed from `ic_Signal` to `ic_Mobile_Network_Coverage`. Please download the right [Solaris icon]({{< docsref "/extend/icons" >}}) and update your websites.
 
 - **List group**
   - List group item variants are now styled via CSS variables.
