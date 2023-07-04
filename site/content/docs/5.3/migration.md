@@ -66,7 +66,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
-  - <span class="badge bg-success">New</span> TikTok social button
+  - <span class="badge bg-success">New</span> TikTok social button.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
