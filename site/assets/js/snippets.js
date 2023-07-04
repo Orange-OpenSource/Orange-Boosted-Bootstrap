@@ -77,32 +77,37 @@
   // -------------------------------
   // Used in 'Show live alert' example in docs or StackBlitz
 
-  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `alert()` function
+  // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
   // js-docs-start live-alert
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-  const alert = (message, type, typeVisuallyHidden) => {
+  const appendAlert = (message, type, typeVisuallyHidden) => {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
       '  <span class="alert-icon">',
       `    <span class="visually-hidden">${typeVisuallyHidden}</span>`,
       '  </span>',
-      '  <p>',
-      `    ${message}`,
-      '  </p>',
-      '  <button type="button" class="btn-close" data-bs-dismiss="alert">',
+      `  <p>${message}</p>`,
+      '  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">',
       '    <span class="visually-hidden">Close</span>',
       '  </button>',
       '</div>'
     ].join('')
 
     alertPlaceholder.append(wrapper)
+
+    // Create `.btn-close` tooltip after `innerHTML` has been modified
+    const btnClose = wrapper.querySelector('.btn-close')
+    const tooltip = new boosted.Tooltip(btnClose)
+    btnClose.addEventListener('click', () => {
+      tooltip.hide()
+    })
   }
 
   const alertTrigger = document.getElementById('liveAlertBtn')
   if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
-      alert('Nice, you triggered this alert message!', 'success', 'Success')
+      appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
   // js-docs-end live-alert
