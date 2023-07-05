@@ -115,8 +115,6 @@
     "@rollup/plugin-replace": "^5.0.2",
     "@storybook/addon-a11y": "^7.0.24",
     "@storybook/addon-essentials": "^7.0.24",
-    "@storybook/addon-interactions": "^7.0.24",
-    "@storybook/addon-links": "^7.0.24",
     "@storybook/html": "^7.0.24",
     "@storybook/html-webpack5": "^7.0.24",
     "@storybook/preset-scss": "^1.0.3",
