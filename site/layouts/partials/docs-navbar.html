@@ -81,17 +81,26 @@
     </div>
   </nav>
 
-  <!--Boosted mod: docs-subnav doesn't exist anymore in Bootstrap-->
-  {{- if eq .Layout "docs" }}
-    {{ partial "docs-subnav" }}
-  {{- end }}
-  <!--End mod-->
-
-  <nav class="local-nav" aria-label="Basic local navigation">
+  <nav class="local-nav local-nav-dark" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavToRemove" aria-expanded="false" aria-controls="collapseLocalNavToRemove">
       <span class="container-xxl">Shop</span>
     </button>
     <div id="collapseLocalNavToRemove" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-dark navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+  <nav class="local-nav" aria-label="Basic local navigation">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavToRemove2" aria-expanded="false" aria-controls="collapseLocalNavToRemove2">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNavToRemove2" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
@@ -101,4 +110,10 @@
         </div>
     </div>
   </nav>
+
+  <!--Boosted mod: docs-subnav doesn't exist anymore in Bootstrap-->
+  {{- if eq .Layout "docs" }}
+    {{ partial "docs-subnav" }}
+  {{- end }}
+  <!--End mod-->
 </header>
