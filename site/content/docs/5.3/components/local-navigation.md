@@ -32,7 +32,7 @@ Resize your browser to see the behavior of this component.
 
 ## Dark variant
 
-Add `.local-nav-dark` to the `.local-nav` for a dark variant.
+Add `.local-nav-dark` to the `.local-nav` for a dark variant. Don't forget to add `.navbar-dark` to the navbar.
 
 {{< example class="bg-dark" >}}
 <nav class="local-nav local-nav-dark" aria-label="Local navigation on dark">
