@@ -71,7 +71,7 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 </div>
 {{< /example >}}
 
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in orange.
+Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color].
 
 <!-- Boosted mod -->
 {{< example >}}
