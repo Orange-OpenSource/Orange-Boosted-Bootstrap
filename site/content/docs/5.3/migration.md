@@ -259,7 +259,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - `@mixin caret()` has a new interface including a new optional parameters.
 
 - <details class="mb-2">
-  <summary><span class="badge bg-danger">Breaking</span> Remove <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences in your code.</summary>
+  <summary><span class="badge bg-danger">Breaking</span> Remove <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences of `$boosted-prefix` or `--o-` and replace them respectively by `$prefix` or `--bs-` in your code.</summary>
 
     ```diff
     - $boosted-prefix // or `o-`
@@ -289,12 +289,27 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
+      <li><code>--o-caption-color</code></li>
+      <li><code>--o-check-icon</code></li>
+      <li><code>--o-chevron-icon</code></li>
+      <li><code>--o-close-icon</code></li>
+      <li><code>--o-control-bg</code></li>
+      <li><code>--o-error-icon</code></li>
+      <li><code>--o-icon-spacing</code></li>
+      <li><code>--o-kbd-bg</code></li>
+      <li><code>--o-kbd-color</code></li>
+      <li><code>--o-network-color</code></li>
+      <li><code>--o-network-logo</code></li>
+      <li><code>--o-pre-color</code></li>
+      <li><code>--o-success-icon</code></li>
+      <li><code>--o-switch-gradient</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$boosted-prefix</code></li>
       <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
@@ -325,8 +340,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-breakpoint-xl</code></li>
       <li><code>--bs-breakpoint-xs</code></li>
       <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-caption-color</code></li>
       <li><code>--bs-card-subtitle-color</code></li>
       <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-check-icon</code></li>
+      <li><code>--bs-chevron-icon</code></li>
+      <li><code>--bs-close-icon</code></li>
+      <li><code>--bs-control-bg</code></li>
       <li><code>--bs-danger-bg-subtle</code></li>
       <li><code>--bs-danger-border-subtle</code></li>
       <li><code>--bs-danger-text-emphasis</code></li>
@@ -336,6 +356,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-error-icon</code></li>
       <li><code>--bs-focus-ring-box-shadow</code></li>
       <li><code>--bs-focus-ring-color</code></li>
       <li><code>--bs-focus-ring-opacity</code></li>
@@ -350,9 +371,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-valid-border-color</code></li>
       <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
+      <li><code>--bs-icon-spacing</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
       <li><code>--bs-info-text-emphasis</code></li>
+      <li><code>--bs-kbd-bg</code></li>
+      <li><code>--bs-kbd-color</code></li>
       <li><code>--bs-light-bg-subtle</code></li>
       <li><code>--bs-light-border-subtle</code></li>
       <li><code>--bs-light-text-emphasis</code></li>
@@ -360,6 +384,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
       <li><code>--bs-link-hover-decoration</code></li>
+      <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-nav-underline-border-color</code></li>
       <li><code>--bs-nav-underline-border-radius</code></li>
       <li><code>--bs-nav-underline-border-width</code></li>
@@ -372,7 +397,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
-      <li><code>--bs-modal-footer-margin-top</code></li>
+      <li><code>--bs-network-color</code></li>
+      <li><code>--bs-network-logo</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-popover-body-padding-bottom</code></li>
       <li><code>--bs-popover-body-padding-top</code></li>
@@ -380,6 +406,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-popover-header-padding-bottom</code></li>
       <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
+      <li><code>--bs-pre-color</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text-emphasis</code></li>
@@ -392,7 +419,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-secondary-text-emphasis</code></li>
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
+      <li><code>--bs-success-icon</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-switch-gradient</code></li>
       <li><code>--bs-table-bg-state</code></li>
       <li><code>--bs-table-bg-type</code></li>
       <li><code>--bs-table-color-state</code></li>

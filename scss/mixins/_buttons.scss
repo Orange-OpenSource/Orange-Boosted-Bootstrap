@@ -73,7 +73,6 @@
       min-height: inherit;
       content: "";
       background-color: currentcolor;
-      -webkit-mask: #{$icon} no-repeat #{$position} / #{$size}; // stylelint-disable-line property-no-vendor-prefix
       mask: #{$icon} no-repeat #{$position} / #{$size};
     }
   }
