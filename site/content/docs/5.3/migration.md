@@ -259,6 +259,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - `@mixin caret()` has a new interface including a new optional parameters.
 
 - <details class="mb-2">
+  <summary><span class="badge bg-danger">Breaking</span> Remove <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences in your code.</summary>
+
+    ```diff
+    - $boosted-prefix // or `o-`
+    + $prefix // or `bs-`
+    ```
+  </details>
+
+- <details class="mb-2">
   <summary><span class="badge bg-danger">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
     <ul>
       <li><code>$code-color-dark</code> → <code>$code-color-inverted</code></li>

@@ -447,8 +447,10 @@ $color-mode-type:             data !default; // `data` or `media-query`
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix !default;
+// fusv-disable
 $boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$prefix:              $boosted-variable-prefix !default;
+$boosted-prefix:              $boosted-variable-prefix !default; // Deprecated in v6.0.0
+// fusv-enable
 
 // Gradient
 //
