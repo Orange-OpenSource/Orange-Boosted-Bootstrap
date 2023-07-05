@@ -137,7 +137,14 @@
 // scss-docs-end btn-variant-loops
 // End mod
 
-// Boosted mod: no .btn-outline
+// Boosted mod: only secondary variant
+.btn-outline-secondary {
+  @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+  &.btn-inverse {
+    @include button-variant(transparent, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
+  }
+}
+// End mod
 
 // Boosted mod: border-only on :hover and :active
 .btn-no-outline {
