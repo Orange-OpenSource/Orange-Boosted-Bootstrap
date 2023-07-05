@@ -80,6 +80,7 @@
 
       @include media-breakpoint-down(lg) {
         --bs-nav-link-padding-x: 0;
+        --bs-navbar-border-width: 0px;
 
         &:hover {
           color: var(--#{$prefix}local-nav-color);
