@@ -148,7 +148,7 @@ If you're adding labels to progress bars with a custom background color, make su
   <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
 </div>
 <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+  <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
 </div>
 {{< /example >}}
 
