@@ -90,7 +90,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
       <div class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -150,7 +150,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
     </div>
   </div>
   <div class="col-12">
@@ -221,7 +221,7 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)"> terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
       </div>
