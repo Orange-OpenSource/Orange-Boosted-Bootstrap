@@ -1092,12 +1092,12 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              $black !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
+$input-bg:                              $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           $white !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$input-color:                           $black !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $input-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of var(--#{$prefix}border-color)
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
