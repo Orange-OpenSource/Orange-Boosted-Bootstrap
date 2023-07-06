@@ -20,10 +20,12 @@
   // Tooltips
   // --------
   // Instantiate all tooltips in a docs or StackBlitz
+  // storybook-start Tooltips
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
     .forEach(tooltip => {
       new boosted.Tooltip(tooltip)
     })
+  // storybook-end Tooltips
 
   // --------
   // Popovers
