@@ -44,7 +44,7 @@ const toPascalCase = str => {
   return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
 }
 
-const files = fs.readdirSync(path.resolve(__dirname, `..\\site\\content\\docs\\${version}\\components\\`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
@@ -88,7 +88,7 @@ createDirectoryIfNeeded(outputDirectory);
         // Insert some specific JavaScript
         example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         if (file.match('Tooltip') || file.match('Popover') || file.match('Modal') || file.match('')) {
-          example += `<script type="text/javascript">${fs.readFile(path.resolve(__dirname, '..\\site\\assets\\js\\snippets.js'), 'utf8', (err, data) => {
+          example += `<script type="text/javascript">${fs.readFile(path.resolve(__dirname, '../site/assets/js/snippets.js'), 'utf8', (err, data) => {
             return data
           })}</script>`
         }
