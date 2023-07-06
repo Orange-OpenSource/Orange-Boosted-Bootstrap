@@ -31,10 +31,12 @@
   // Popovers
   // --------
   // Instantiate all popovers in docs or StackBlitz
+  // storybook-start Popovers
   document.querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(popover => {
       new boosted.Popover(popover)
     })
+  // storybook-end Popovers
 
   // -------------------------------
   // Toasts
