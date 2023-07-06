@@ -74,13 +74,13 @@ createDirectoryIfNeeded(outputDirectory);
       let index = 0
       let mdxContent = ''
       for (let example of e) {
-        const outputFileDirectory = `${outputDirectory}/${file[0]}`
-        const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
+        const outputFileDirectory = `${outputDirectory}/${file}`
+        const outputFile = `${outputFileDirectory}/${file}_${index}.stories.js`
 
         console.log(`creating ${outputFile}...`)
 
         // Fill the MDX doc content with this component
-        mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
+        mdxContent += `<Canvas>\n<Story id="components-${file.toLowerCase()}--${convertToKebabCase(file)}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
         example = example.replace(/<!--[\S\s]*?-->/gm, '')
@@ -96,7 +96,7 @@ createDirectoryIfNeeded(outputDirectory);
         createDirectoryIfNeeded(outputFileDirectory)
 
         try {
-          fs.writeFileSync(outputFile, createTemplate(file[0], index, example))
+          fs.writeFileSync(outputFile, createTemplate(file, index, example))
         } catch (error) {
           throw new Error(error)
         }
@@ -106,7 +106,7 @@ createDirectoryIfNeeded(outputDirectory);
 
       // Create the MDX documentation
       try {
-        fs.writeFileSync(`${outputDirectory}/${file[0]}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
+        fs.writeFileSync(`${outputDirectory}/${file}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
       } catch (error) {
         throw new Error(error)
       }
