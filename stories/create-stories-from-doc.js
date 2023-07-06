@@ -87,7 +87,7 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Insert some specific JavaScript
         example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        if (file.match('Tooltip') || file.match('Popover')) {
+        if (fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })?.match(`// storybook-start ${file}\n`)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 's')
           example += `\n<script type="text/javascript">\n  ${fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })?.match(re)}</script>`
           console.log(example)
