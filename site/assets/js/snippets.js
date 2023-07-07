@@ -42,6 +42,7 @@
   // Toasts
   // -------------------------------
   // Used by 'Placement' example in docs or StackBlitz
+  // storybook-start Toasts
   const toastPlacement = document.getElementById('toastPlacement')
   if (toastPlacement) {
     document.getElementById('selectToastPlacement').addEventListener('change', function () {
@@ -54,7 +55,6 @@
   }
 
   // Instantiate all toasts in docs pages only
-  // storybook-start Toasts
   document.querySelectorAll('.bd-example .toast')
     .forEach(toastNode => {
       const toast = new boosted.Toast(toastNode, {
@@ -63,7 +63,6 @@
 
       toast.show()
     })
-  // storybook-start Toasts
 
   // Instantiate all toasts in docs pages only
   // js-docs-start live-toast
@@ -76,6 +75,7 @@
       toastBoosted.show()
     })
   }
+  // storybook-end Toasts
   // js-docs-end live-toast
 
   // -------------------------------
@@ -85,6 +85,7 @@
 
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
   // js-docs-start live-alert
+  // storybook-start Alerts
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
   const appendAlert = (message, type, typeVisuallyHidden) => {
     const wrapper = document.createElement('div')
@@ -116,16 +117,19 @@
       appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
+  // storybook-end Alerts
   // js-docs-end live-alert
 
   // --------
   // Carousels
   // --------
   // Instantiate all non-autoplaying carousels in docs or StackBlitz
+  // storybook-start Carousels
   document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
     .forEach(carousel => {
       boosted.Carousel.getOrCreateInstance(carousel)
     })
+  // storybook-end Carousels
 
   // -------------------------------
   // Checks & Radios
@@ -178,6 +182,7 @@
   // Offcanvas
   // -------------------------------
   // 'Offcanvas components' example in docs only
+  // storybook-start Offcanvas
   const myOffcanvas = document.querySelectorAll('.bd-example-offcanvas .offcanvas')
   if (myOffcanvas) {
     myOffcanvas.forEach(offcanvas => {
@@ -186,4 +191,5 @@
       }, false)
     })
   }
+  // storybook-end Offcanvas
 })()
