@@ -13,28 +13,12 @@ function createDirectoryIfNeeded(path) {
   }
 }
 
-function createMDXDocumentation(content) {
-  return `import { Story, Canvas } from '@storybook/addon-docs/blocks';\n\n${content}`
-}
-
 function createTemplate(component, index, content) {
-  return `import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';\n\
-  export default {\n\
+  return `export default {\n\
     title: 'Components/${component}',\n\
-    parameters: {\n\
-      docs: {\n\
-        page: CustomMDXDocumentation,\n\
-      }\n\
-    },\n\
   }\n\
   \n\
   export const ${component}_${index} = () => \`${content}\``
-}
-
-const convertToKebabCase = string => {
-  return string.replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/\s+/g, '-')
-    .toLowerCase()
 }
 
 // TODO: build this list automatically from docs
@@ -104,15 +88,11 @@ createDirectoryIfNeeded(outputDirectory);
       )
 
       let index = 0
-      let mdxContent = ''
       for (let example of e) {
         const outputFileDirectory = `${outputDirectory}/${file[0]}`
         const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
 
         console.log(`creating ${outputFile}...`)
-
-        // Fill the MDX doc content with this component
-        mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
         example = example.replace(/<!--[\S\s]*?-->/gm, '')
@@ -132,13 +112,6 @@ createDirectoryIfNeeded(outputDirectory);
         }
 
         index++
-      }
-
-      // Create the MDX documentation
-      try {
-        fs.writeFileSync(`${outputDirectory}/${file[0]}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
-      } catch (error) {
-        throw new Error(error)
       }
 
       await page.close()
