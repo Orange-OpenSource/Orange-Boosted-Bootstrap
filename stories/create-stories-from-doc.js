@@ -89,9 +89,9 @@ createDirectoryIfNeeded(outputDirectory);
         // Insert some specific JavaScript
         example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
-          const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 's')
-          example += `\n<script type="text/javascript">\n  ${snippets.match(re)}</script>`
-          console.log(example)
+          const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
+          console.log(snippets.match(re)[0], snippets.match(re)[0].replaceAll('`', '\'`'))
+          example += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`')}</script>`
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
