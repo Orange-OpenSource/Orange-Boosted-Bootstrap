@@ -45,7 +45,7 @@ const toPascalCase = str => {
 }
 
 const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
-const snippets = fs.readdirSync(path.resolve(__dirname, '../site/assets/js/snippets.js'))
+const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
@@ -88,7 +88,7 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Insert some specific JavaScript
         example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        if (snippets?.match(`// storybook-start ${file}\n`)) {
+        if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 's')
           example += `\n<script type="text/javascript">\n  ${snippets.match(re)}</script>`
           console.log(example)
