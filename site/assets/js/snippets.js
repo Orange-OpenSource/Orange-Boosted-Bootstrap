@@ -86,8 +86,8 @@
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
   // js-docs-start live-alert
   // storybook-start Alerts
-  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
   const appendAlert = (message, type, typeVisuallyHidden) => {
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
