@@ -114,7 +114,6 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-replace": "^5.0.2",
     "@storybook/addon-a11y": "^7.0.26",
-    "@storybook/addon-docs": "^7.0.26",
     "@storybook/addon-essentials": "^7.0.26",
     "@storybook/html": "^7.0.26",
     "@storybook/html-webpack5": "^7.0.26",
