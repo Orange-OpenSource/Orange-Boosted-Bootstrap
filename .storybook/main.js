@@ -8,6 +8,9 @@ const config = {
       measure: false
     }
   }, "@storybook/preset-scss"],
-  "framework": "@storybook/html-webpack5"
+  "framework": "@storybook/html-webpack5",
+  docs: {
+    autodocs: true
+  }
 };
 export default config;
