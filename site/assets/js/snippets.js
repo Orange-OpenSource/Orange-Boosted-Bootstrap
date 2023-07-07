@@ -54,6 +54,7 @@
   }
 
   // Instantiate all toasts in docs pages only
+  // storybook-start Toasts
   document.querySelectorAll('.bd-example .toast')
     .forEach(toastNode => {
       const toast = new boosted.Toast(toastNode, {
@@ -62,6 +63,7 @@
 
       toast.show()
     })
+  // storybook-start Toasts
 
   // Instantiate all toasts in docs pages only
   // js-docs-start live-toast
