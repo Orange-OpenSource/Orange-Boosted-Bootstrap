@@ -91,7 +91,7 @@ createDirectoryIfNeeded(outputDirectory);
         // Insert some specific JavaScript
         // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         example[0] += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
-        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").className = "${Object.values(example[1]).join('" "')}"\n</script>`
+        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").className = "${Object.values(example[1]).join(' ')}"\n</script>`
         if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs')
           example[0] += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
