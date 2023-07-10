@@ -42,7 +42,7 @@ Add `.btn-close-white` to the `.btn-close` for a dark variant.
 ## Eco-design variant
 
 {{< callout info >}}
-For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file.
+For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file if you are an advanced Boosted user using **custom Sass imports**.
 
 If you choose this option, please be aware that if the design of close buttons change in the future, this section might disappear and you would have to use `.btn-close` to your close buttons or change the combinations of classes.
 {{< /callout >}}
