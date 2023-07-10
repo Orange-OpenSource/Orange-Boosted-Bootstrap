@@ -107,7 +107,7 @@
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.22.4",
-    "@percy/cli": "^1.25.0",
+    "@percy/cli": "^1.26.1",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.0",
@@ -171,7 +171,7 @@
     "sirv-cli": "^2.0.2",
     "stylelint": "^15.6.2",
     "stylelint-config-twbs-bootstrap": "^10.0.0",
-    "tarteaucitronjs": "^1.12.0",
+    "tarteaucitronjs": "^1.13.0",
     "terser": "5.16.0",
     "vnu-jar": "^23.4.11"
   },
