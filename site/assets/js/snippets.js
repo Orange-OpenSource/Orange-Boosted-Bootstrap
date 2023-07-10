@@ -16,6 +16,8 @@
 (() => {
   'use strict'
 
+  // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail render some examples.
+
   // --------
   // Tooltips
   // --------
@@ -140,7 +142,7 @@
   // -------------------------------
   // Links
   // -------------------------------
-  // Disable empty links in docs examples only,
+  // Disable empty links in docs examples only
   document.querySelectorAll('.bd-content [href="#"]')
     .forEach(link => {
       link.addEventListener('click', event => {

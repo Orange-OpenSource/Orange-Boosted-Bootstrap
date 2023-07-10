@@ -44,6 +44,7 @@ const toPascalCase = str => {
   return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
 }
 
+// Get all stories that might be displayed
 const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
   .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
   .concat([['Tables', 'content']]) // Manual adding
@@ -70,6 +71,7 @@ createDirectoryIfNeeded(outputDirectory);
         page.waitForNavigation()
       ])
 
+      // Getting examples content and classes
       const e = await page.evaluate(() =>
         Array.from(document.querySelectorAll('.bd-example'), e => [e.innerHTML, e.classList]) // eslint-disable-line no-undef
       )
@@ -89,12 +91,11 @@ createDirectoryIfNeeded(outputDirectory);
         example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '')
 
         // Insert some specific JavaScript
-        // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        example[0] += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
-        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").className = "${Object.values(example[1]).join(' ')}"\n</script>`
+        example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
+        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").className = "${Object.values(example[1]).join(' ')} m-0 p-0 border-0"\n</script>` // Add example classes and remove the previous ones
         if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
-          const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs')
-          example[0] += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
+          const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs') // RegExp to get all used code in `snippets.js`
+          example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in js snippets
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
