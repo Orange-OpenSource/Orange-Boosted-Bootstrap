@@ -179,13 +179,11 @@
   // -------------------------------
   // 'Offcanvas components' example in docs only
   // storybook-start Offcanvas
-  const myOffcanvas = document.querySelectorAll('.bd-example-offcanvas .offcanvas')
-  if (myOffcanvas) {
-    myOffcanvas.forEach(offcanvas => {
+  document.querySelectorAll('.bd-example-offcanvas .offcanvas')
+    .forEach(offcanvas => {
       offcanvas.addEventListener('show.bs.offcanvas', event => {
         event.preventDefault()
       }, false)
     })
-  }
   // storybook-end Offcanvas
 })()
