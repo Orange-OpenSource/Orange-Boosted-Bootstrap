@@ -42,7 +42,6 @@
   // Toasts
   // -------------------------------
   // Used by 'Placement' example in docs or StackBlitz
-  // storybook-start Toasts
   const toastPlacement = document.getElementById('toastPlacement')
   if (toastPlacement) {
     document.getElementById('selectToastPlacement').addEventListener('change', function () {
@@ -55,6 +54,7 @@
   }
 
   // Instantiate all toasts in docs pages only
+  // storybook-start Toasts
   document.querySelectorAll('.bd-example .toast')
     .forEach(toastNode => {
       const toast = new boosted.Toast(toastNode, {
@@ -63,6 +63,7 @@
 
       toast.show()
     })
+  // storybook-end Toasts
 
   // Instantiate all toasts in docs pages only
   // js-docs-start live-toast
@@ -75,7 +76,6 @@
       toastBoosted.show()
     })
   }
-  // storybook-end Toasts
   // js-docs-end live-toast
 
   // -------------------------------
@@ -87,7 +87,6 @@
   // js-docs-start live-alert
   // storybook-start Alerts
   const appendAlert = (message, type, typeVisuallyHidden) => {
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
@@ -101,7 +100,7 @@
       '</div>'
     ].join('')
 
-    alertPlaceholder.append(wrapper)
+    document.getElementById('liveAlertPlaceholder').append(wrapper)
 
     // Create `.btn-close` tooltip after `innerHTML` has been modified
     const btnClose = wrapper.querySelector('.btn-close')
@@ -111,9 +110,8 @@
     })
   }
 
-  const alertTrigger = document.getElementById('liveAlertBtn')
-  if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
+  if (document.getElementById('liveAlertBtn')) {
+    document.getElementById('liveAlertBtn').addEventListener('click', () => {
       appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
@@ -158,9 +156,9 @@
   // -------------------------------
   // Modal 'Varying modal content' example in docs and StackBlitz
   // js-docs-start varying-modal-content
-  const exampleModal = document.getElementById('exampleModal')
-  if (exampleModal) {
-    exampleModal.addEventListener('show.bs.modal', event => {
+  // storybook-start Modal
+  if (document.getElementById('exampleModal')) {
+    document.getElementById('exampleModal').addEventListener('show.bs.modal', event => {
       // Button that triggered the modal
       const button = event.relatedTarget
       // Extract info from data-bs-* attributes
@@ -169,13 +167,14 @@
       // and then do the updating in a callback.
 
       // Update the modal's content.
-      const modalTitle = exampleModal.querySelector('.modal-title')
-      const modalBodyInput = exampleModal.querySelector('.modal-body input')
+      const modalTitle = document.getElementById('exampleModal').querySelector('.modal-title')
+      const modalBodyInput = document.getElementById('exampleModal').querySelector('.modal-body input')
 
       modalTitle.textContent = `New message to ${recipient}`
       modalBodyInput.value = recipient
     })
   }
+  // storybook-end Modal
   // js-docs-end varying-modal-content
 
   // -------------------------------
