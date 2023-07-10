@@ -45,6 +45,7 @@ const toPascalCase = str => {
 }
 
 const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))).concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))))
+console.log(files.join('\n'))
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
@@ -95,8 +96,8 @@ createDirectoryIfNeeded(outputDirectory);
         example = example.replace(/<!--[\S\s]*?-->/gm, '')
 
         // Insert some specific JavaScript
-        example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        example += '\n<script type="text/javascript">\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
+        // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
+        example += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
         if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
           example += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
