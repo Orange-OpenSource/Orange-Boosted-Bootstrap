@@ -97,10 +97,10 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Insert some specific JavaScript
         // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        example += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
+        example += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
         if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
-          example += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
+          example += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
