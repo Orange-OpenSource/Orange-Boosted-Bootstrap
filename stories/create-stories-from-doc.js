@@ -103,11 +103,12 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Automatically remove HTML comments that would break the story
         example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '')
+        console.log(Object.values(example[1]).join('", "'))
 
         // Insert some specific JavaScript
         // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         example[0] += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
-        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").classList.add(${Object.values(example[1]).join(', ')})\n</script>`
+        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").classList.add("${Object.values(example[1]).join('", "')}")\n</script>`
         if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
           example[0] += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
