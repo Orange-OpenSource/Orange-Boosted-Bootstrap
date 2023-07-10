@@ -147,10 +147,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
-- <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
 
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
+- **Spinners**
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` to have a white spinner on a dark background.
 
 - **Stickers**
   - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
@@ -1484,8 +1487,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
-
-- <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` to have a white spinner on a dark background.
 
 ### Stepped process
 
