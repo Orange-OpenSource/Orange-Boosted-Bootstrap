@@ -79,9 +79,9 @@
   // Used in 'Show live alert' example in docs or StackBlitz
 
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
-  // js-docs-start live-alert
   // storybook-start Alerts
-  const appendAlert = (message, type, typeVisuallyHidden) => {
+  // js-docs-start live-alert
+  function appendAlert(message, type, typeVisuallyHidden) {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
@@ -110,8 +110,8 @@
       appendAlert('Nice, you triggered this alert message!', 'success', 'Success')
     })
   }
-  // storybook-end Alerts
   // js-docs-end live-alert
+  // storybook-end Alerts
 
   // --------
   // Carousels

@@ -44,8 +44,9 @@ const toPascalCase = str => {
   return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
 }
 
-const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))).concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))))
-console.log(files.join('\n'))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))))
+  .concat('Tables')
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
@@ -70,20 +71,28 @@ createDirectoryIfNeeded(outputDirectory);
           page.waitForNavigation()
         ])
       } catch {
-        await Promise.all([
-          page.waitForNavigation(),
-          page.goto(`file://${__dirname}/../_site/docs/${version}/forms/${convertToKebabCase(file)}/index.html`),
-          page.waitForNavigation()
-        ])
+        try {
+          await Promise.all([
+            page.waitForNavigation(),
+            page.goto(`file://${__dirname}/../_site/docs/${version}/forms/${convertToKebabCase(file)}/index.html`),
+            page.waitForNavigation()
+          ])
+        } catch {
+          await Promise.all([
+            page.waitForNavigation(),
+            page.goto(`file://${__dirname}/../_site/docs/${version}/content/${convertToKebabCase(file)}/index.html`),
+            page.waitForNavigation()
+          ])
+        }
       }
 
       const e = await page.evaluate(() =>
-        Array.from(document.querySelectorAll('.bd-example'), e => e.innerHTML) // eslint-disable-line no-undef
+        Array.from(document.querySelectorAll('.bd-example'), e => [e.innerHTML, e.classList]) // eslint-disable-line no-undef
       )
 
       let index = 0
       let mdxContent = ''
-      for (let example of e) {
+      for (const example of e) {
         const outputFileDirectory = `${outputDirectory}/${file}`
         const outputFile = `${outputFileDirectory}/${file}_${index}.stories.js`
 
@@ -93,20 +102,21 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story id="components-${file.toLowerCase()}--${convertToKebabCase(file)}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example = example.replace(/<!--[\S\s]*?-->/gm, '')
+        example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '')
 
         // Insert some specific JavaScript
         // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        example += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
+        example[0] += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
+        example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").classList.add(${example[1].entries?.join(', ')})\n</script>`
         if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
-          example += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
+          example[0] += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
 
         try {
-          fs.writeFileSync(outputFile, createTemplate(file, index, example))
+          fs.writeFileSync(outputFile, createTemplate(file, index, example[0]))
         } catch (error) {
           throw new Error(error)
         }
