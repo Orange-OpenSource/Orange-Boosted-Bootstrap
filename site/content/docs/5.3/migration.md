@@ -71,15 +71,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
 
-- **Close button**
-  - <span class="badge bg-success">New</span> Some examples in the documentation were added to better fit your needs.
-
 - **Carousel**
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
 - **Close button**
   - <span class="badge bg-success">New</span> A tooltip was added on close buttons. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+  - <span class="badge bg-success">New</span> Added an eco-design variant.
 
 - **Footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.

@@ -39,9 +39,13 @@ Add `.btn-close-white` to the `.btn-close` for a dark variant.
 <button type="button" class="btn-close btn-close-white" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
-## Without specific class
+## Eco-design variant
 
-Close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle.
+{{< callout info >}}
+For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file.
+
+If you choose this option, please be aware that if the design of close buttons change in the future, this section might disappear and you would have to use `.btn-close` to your close buttons or change the combinations of classes.
+{{< /callout >}}
 
 {{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
