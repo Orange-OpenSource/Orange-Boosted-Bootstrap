@@ -10,12 +10,6 @@ toc: true
 
 ## Example
 
-{{< callout info >}}
-Due to some Boosted button variants, it is feasible to have the good rendering without `.btn-close`.
-
-If you are an advanced Boosted user using **custom Sass imports**, it would be better to use our [close buttons built on top of button variants](#without-specific-class) to save few bytes.
-{{< /callout >}}
-
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
 {{< example stackblitz_add_js="true" >}}
