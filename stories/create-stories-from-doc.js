@@ -44,9 +44,9 @@ const toPascalCase = str => {
   return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
 }
 
-const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
-  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))))
-  .concat('Tables')
+const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
+  .concat(['Tables', 'content'])
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
@@ -64,27 +64,11 @@ createDirectoryIfNeeded(outputDirectory);
 
       // Some timeouts and `page.waitForNavigation` have been added to avoid
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
-      try {
-        await Promise.all([
-          page.waitForNavigation(),
-          page.goto(`file://${__dirname}/../_site/docs/${version}/components/${convertToKebabCase(file)}/index.html`),
-          page.waitForNavigation()
-        ])
-      } catch {
-        try {
-          await Promise.all([
-            page.waitForNavigation(),
-            page.goto(`file://${__dirname}/../_site/docs/${version}/forms/${convertToKebabCase(file)}/index.html`),
-            page.waitForNavigation()
-          ])
-        } catch {
-          await Promise.all([
-            page.waitForNavigation(),
-            page.goto(`file://${__dirname}/../_site/docs/${version}/content/${convertToKebabCase(file)}/index.html`),
-            page.waitForNavigation()
-          ])
-        }
-      }
+      await Promise.all([
+        page.waitForNavigation(),
+        page.goto(`file://${__dirname}/../_site/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
+        page.waitForNavigation()
+      ])
 
       const e = await page.evaluate(() =>
         Array.from(document.querySelectorAll('.bd-example'), e => [e.innerHTML, e.classList]) // eslint-disable-line no-undef
@@ -93,13 +77,13 @@ createDirectoryIfNeeded(outputDirectory);
       let index = 0
       let mdxContent = ''
       for (const example of e) {
-        const outputFileDirectory = `${outputDirectory}/${file}`
-        const outputFile = `${outputFileDirectory}/${file}_${index}.stories.js`
+        const outputFileDirectory = `${outputDirectory}/${file[0]}`
+        const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
 
         console.log(`creating ${outputFile}...`)
 
         // Fill the MDX doc content with this component
-        mdxContent += `<Canvas>\n<Story id="components-${file.toLowerCase()}--${convertToKebabCase(file)}-${index}"/>\n</Canvas>\n\n`
+        mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
         example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '')
@@ -108,15 +92,15 @@ createDirectoryIfNeeded(outputDirectory);
         // example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
         example[0] += '\n<script type="text/javascript" defer>\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>'
         example[0] += `\n<script type="text/javascript">\n  document.getElementById("root").className = "${Object.values(example[1]).join('" "')}"\n</script>`
-        if (new RegExp(`// storybook-start ${file}\n`, 's').test(snippets)) {
-          const re = new RegExp(`// storybook-start ${file}\n.*// storybook-end ${file}\n`, 'gs')
+        if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
+          const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs')
           example[0] += `\n<script type="text/javascript" defer>\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${').replaceAll(/\.bd-.* /g, '')}</script>`
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
 
         try {
-          fs.writeFileSync(outputFile, createTemplate(file, index, example[0]))
+          fs.writeFileSync(outputFile, createTemplate(file[0], index, example[0]))
         } catch (error) {
           throw new Error(error)
         }
@@ -126,7 +110,7 @@ createDirectoryIfNeeded(outputDirectory);
 
       // Create the MDX documentation
       try {
-        fs.writeFileSync(`${outputDirectory}/${file}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
+        fs.writeFileSync(`${outputDirectory}/${file[0]}/Custom-MDX-Documentation.mdx`, createMDXDocumentation(mdxContent))
       } catch (error) {
         throw new Error(error)
       }
