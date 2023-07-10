@@ -42,19 +42,18 @@
   // Toasts
   // -------------------------------
   // Used by 'Placement' example in docs or StackBlitz
-  const toastPlacement = document.getElementById('toastPlacement')
-  if (toastPlacement) {
+  // storybook-start Toasts
+  if (document.getElementById('toastPlacement')) {
     document.getElementById('selectToastPlacement').addEventListener('change', function () {
-      if (!toastPlacement.dataset.originalClass) {
-        toastPlacement.dataset.originalClass = toastPlacement.className
+      if (!document.getElementById('toastPlacement').dataset.originalClass) {
+        document.getElementById('toastPlacement').dataset.originalClass = document.getElementById('toastPlacement').className
       }
 
-      toastPlacement.className = `${toastPlacement.dataset.originalClass} ${this.value}`
+      document.getElementById('toastPlacement').className = `${document.getElementById('toastPlacement').dataset.originalClass} ${this.value}`
     })
   }
 
   // Instantiate all toasts in docs pages only
-  // storybook-start Toasts
   document.querySelectorAll('.bd-example .toast')
     .forEach(toastNode => {
       const toast = new boosted.Toast(toastNode, {
@@ -63,20 +62,16 @@
 
       toast.show()
     })
-  // storybook-end Toasts
 
   // Instantiate all toasts in docs pages only
   // js-docs-start live-toast
-  const toastTrigger = document.getElementById('liveToastBtn')
-  const toastLiveExample = document.getElementById('liveToast')
-
-  if (toastTrigger) {
-    const toastBoosted = boosted.Toast.getOrCreateInstance(toastLiveExample)
-    toastTrigger.addEventListener('click', () => {
-      toastBoosted.show()
+  if (document.getElementById('liveToastBtn')) {
+    document.getElementById('liveToastBtn').addEventListener('click', () => {
+      boosted.Toast.getOrCreateInstance(document.getElementById('liveToast')).show()
     })
   }
   // js-docs-end live-toast
+  // storybook-end Toasts
 
   // -------------------------------
   // Alerts
@@ -133,17 +128,19 @@
   // Checks & Radios
   // -------------------------------
   // Indeterminate checkbox example in docs and StackBlitz
+  // storybook-start ChecksRadios
   document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')
     .forEach(checkbox => {
       if (checkbox.id.includes('Indeterminate')) {
         checkbox.indeterminate = true
       }
     })
+  // storybook-end ChecksRadios
 
   // -------------------------------
   // Links
   // -------------------------------
-  // Disable empty links in docs examples only
+  // Disable empty links in docs examples only,
   document.querySelectorAll('.bd-content [href="#"]')
     .forEach(link => {
       link.addEventListener('click', event => {
@@ -155,8 +152,8 @@
   // Modal
   // -------------------------------
   // Modal 'Varying modal content' example in docs and StackBlitz
-  // js-docs-start varying-modal-content
   // storybook-start Modal
+  // js-docs-start varying-modal-content
   if (document.getElementById('exampleModal')) {
     document.getElementById('exampleModal').addEventListener('show.bs.modal', event => {
       // Button that triggered the modal
@@ -174,8 +171,8 @@
       modalBodyInput.value = recipient
     })
   }
-  // storybook-end Modal
   // js-docs-end varying-modal-content
+  // storybook-end Modal
 
   // -------------------------------
   // Offcanvas

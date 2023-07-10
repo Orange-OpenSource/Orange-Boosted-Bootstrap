@@ -44,7 +44,7 @@ const toPascalCase = str => {
   return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
 }
 
-const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', '')))
+const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))).concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => toPascalCase(fileName.replace('.md', ''))))
 const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
@@ -62,11 +62,19 @@ createDirectoryIfNeeded(outputDirectory);
 
       // Some timeouts and `page.waitForNavigation` have been added to avoid
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
-      await Promise.all([
-        page.waitForNavigation(),
-        page.goto(`file://${__dirname}/../_site/docs/${version}/components/${convertToKebabCase(file)}/index.html`),
-        page.waitForNavigation()
-      ])
+      try {
+        await Promise.all([
+          page.waitForNavigation(),
+          page.goto(`file://${__dirname}/../_site/docs/${version}/components/${convertToKebabCase(file)}/index.html`),
+          page.waitForNavigation()
+        ])
+      } catch {
+        await Promise.all([
+          page.waitForNavigation(),
+          page.goto(`file://${__dirname}/../_site/docs/${version}/forms/${convertToKebabCase(file)}/index.html`),
+          page.waitForNavigation()
+        ])
+      }
 
       const e = await page.evaluate(() =>
         Array.from(document.querySelectorAll('.bd-example'), e => e.innerHTML) // eslint-disable-line no-undef
