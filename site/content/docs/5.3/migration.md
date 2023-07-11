@@ -77,6 +77,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Close button**
   - <span class="badge bg-success">New</span> A tooltip was added on close buttons. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+  - <span class="badge bg-success">New</span> Added an eco-design variant.
 
 - **Footer**
   - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.

@@ -620,7 +620,9 @@ $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
   2: $border-width,
-  3: $border-width * 1.5
+  3: $border-width * 1.5,
+  4: $border-width * 2,
+  5: $border-width * 2.5
 ) !default;
 $border-style:                solid !default;
 $border-color:                $black !default; // Boosted mod
