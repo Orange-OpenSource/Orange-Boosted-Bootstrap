@@ -40,7 +40,7 @@
 
   // Boosted mod
   @each $icon, $svg in $svg-as-custom-props {
-    --#{$boosted-prefix}#{$icon}-icon: #{escape-svg($svg)};
+    --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
   }
   // End mod
 
@@ -151,13 +151,13 @@
   --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
   --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
   --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
-  --#{$boosted-prefix}caption-color: #{$table-caption-color-inverted};
+  --#{$prefix}caption-color: #{$table-caption-color-inverted};
   --#{$prefix}code-color: #{$code-color-inverted};
   --#{$prefix}highlight-color: #{$mark-color-inverted};
   --#{$prefix}highlight-bg: #{$mark-bg-inverted};
-  --#{$boosted-prefix}kbd-color: #{$kbd-color-inverted};
-  --#{$boosted-prefix}kbd-bg: #{$kbd-bg-inverted};
-  --#{$boosted-prefix}pre-color: #{$pre-color-inverted};
+  --#{$prefix}kbd-color: #{$kbd-color-inverted};
+  --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
+  --#{$prefix}pre-color: #{$pre-color-inverted};
   --#{$prefix}body-color: #{$body-color-dark};
   --#{$prefix}heading-color: #{$headings-color-dark};
 
@@ -170,13 +170,13 @@
     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
     --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
     --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
-    --#{$boosted-prefix}caption-color: #{$table-caption-color};
+    --#{$prefix}caption-color: #{$table-caption-color};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}highlight-color: #{$mark-color};
     --#{$prefix}highlight-bg: #{$mark-bg};
-    --#{$boosted-prefix}kbd-color: #{$kbd-color};
-    --#{$boosted-prefix}kbd-bg: #{$kbd-bg};
-    --#{$boosted-prefix}pre-color: #{$pre-color};
+    --#{$prefix}kbd-color: #{$kbd-color};
+    --#{$prefix}kbd-bg: #{$kbd-bg};
+    --#{$prefix}pre-color: #{$pre-color};
     --#{$prefix}body-color: #{$body-color};
     --#{$prefix}heading-color: #{$headings-color};
   }
