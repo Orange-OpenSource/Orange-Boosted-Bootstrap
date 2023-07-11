@@ -20,7 +20,7 @@
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // Boosted mod
-  --#{$boosted-prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
+  --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
   // scss-docs-end btn-css-vars
 
   display: inline-flex; // Boosted mod
@@ -222,7 +222,7 @@
 
 // Boosted mod: icon button
 .btn-icon {
-  padding: var(--#{$boosted-prefix}icon-spacing);
+  padding: var(--#{$prefix}icon-spacing);
 }
 // End mod
 
@@ -230,15 +230,15 @@
 .btn-social {
   --#{$prefix}btn-border-color: currentcolor;
   --#{$prefix}btn-hover-color: #{$white};
-  --#{$prefix}btn-hover-bg: var(--#{$boosted-prefix}network-color, #{$black});
-  --#{$prefix}btn-hover-border-color: var(--#{$boosted-prefix}network-color, #{$black});
+  --#{$prefix}btn-hover-bg: var(--#{$prefix}network-color, #{$black});
+  --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
   --#{$prefix}btn-active-color: #{$white};
   --#{$prefix}btn-active-bg: #{$black};
   --#{$prefix}btn-active-border-color: #{$black};
   --#{$prefix}btn-disabled-color: #{$gray-500};
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
-  @include button-icon(var(--#{$boosted-prefix}network-logo));
+  @include button-icon(var(--#{$prefix}network-logo));
 
   &.btn-inverse {
     --#{$prefix}btn-color: #{$white};
@@ -253,8 +253,8 @@
   $network: map-get($btn-social-networks, $name);
 
   .btn-#{$name} {
-    --#{$boosted-prefix}network-color: #{map-get($network, "color")};
-    --#{$boosted-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
+    --#{$prefix}network-color: #{map-get($network, "color")};
+    --#{$prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
 
     &::before {
       mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
