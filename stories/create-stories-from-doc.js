@@ -88,7 +88,7 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '')
+        example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
