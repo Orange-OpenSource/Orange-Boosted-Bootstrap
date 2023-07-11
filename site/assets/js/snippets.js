@@ -119,12 +119,12 @@
   // Carousels
   // --------
   // Instantiate all non-autoplaying carousels in docs or StackBlitz
-  // storybook-start Carousels
+  // storybook-start Carousel
   document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
     .forEach(carousel => {
       boosted.Carousel.getOrCreateInstance(carousel)
     })
-  // storybook-end Carousels
+  // storybook-end Carousel
 
   // -------------------------------
   // Checks & Radios
