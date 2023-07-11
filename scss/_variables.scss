@@ -449,7 +449,7 @@ $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shor
 $prefix:                      $variable-prefix !default;
 // fusv-disable
 $boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$boosted-prefix:              $boosted-variable-prefix !default; // Deprecated in v6.0.0
+$boosted-prefix:              $boosted-variable-prefix !default; // Deprecated in v5.3.0 for the shorter `$prefix`
 // fusv-enable
 
 // Gradient

@@ -260,11 +260,11 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - `@mixin caret()` has a new interface including a new optional parameters.
 
 - <details class="mb-2">
-  <summary><span class="badge bg-danger">Breaking</span> Remove <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences of `$boosted-prefix` or `--o-` and replace them respectively by `$prefix` or `--bs-` in your code.</summary>
+  <summary><span class="badge bg-danger">Breaking</span> Deprecated <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences of <code>$boosted-prefix</code> or <code>--o-</code> and replace them respectively by <code>$prefix</code> or <code>--bs-</code> in your code.</summary>
 
     ```diff
-    - $boosted-prefix // or `o-`
-    + $prefix // or `bs-`
+    - $boosted-prefix // or `--o-`
+    + $prefix // or `--bs-`
     ```
   </details>
 
@@ -291,6 +291,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
       <li><code>--o-caption-color</code></li>
+      <li><code>--o-carousel-interval</code></li>
       <li><code>--o-check-icon</code></li>
       <li><code>--o-chevron-icon</code></li>
       <li><code>--o-close-icon</code></li>
@@ -344,6 +345,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-caption-color</code></li>
       <li><code>--bs-card-subtitle-color</code></li>
       <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-carousel-interval</code></li>
       <li><code>--bs-check-icon</code></li>
       <li><code>--bs-chevron-icon</code></li>
       <li><code>--bs-close-icon</code></li>
