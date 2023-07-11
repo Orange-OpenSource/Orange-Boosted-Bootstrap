@@ -92,10 +92,6 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
-        if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
-          const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs') // RegExp to get all used code in `snippets.js`
-          example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in js snippets
-        }
 
         createDirectoryIfNeeded(outputFileDirectory)
 
