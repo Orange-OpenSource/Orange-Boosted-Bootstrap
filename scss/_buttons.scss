@@ -156,6 +156,7 @@
 
   &.btn-inverse {
     --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-hover-color: #{$white};
     --#{$prefix}btn-hover-border-color: #{$gray-700};
     --#{$prefix}btn-active-color: #{$brand-orange};
     --#{$prefix}btn-active-border-color: #{$gray-700};

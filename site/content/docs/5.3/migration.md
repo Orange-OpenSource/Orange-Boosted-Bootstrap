@@ -148,9 +148,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
 
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
+- **Spinners**
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` to have a white spinner on a dark background.
 
 - **Stickers**
   - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
@@ -232,6 +236,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - <span class="badge bg-success">New</span> Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
 
 - <span class="badge bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
+
+- <span class="badge bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
+
 
 ### Examples
 
