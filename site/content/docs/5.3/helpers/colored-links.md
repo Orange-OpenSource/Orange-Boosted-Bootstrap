@@ -26,9 +26,9 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 <!--Boosted mod: use `contrast_color` as background ensure a good contrast-->
 {{< example >}}
 {{< colored-links.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-    <p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">{{ .name | title }} link</a></p>
-  {{- end -}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">{{ .name | title }} link</a></p>
+{{- end -}}
 {{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis">Emphasis link</a></p>
 {{< /example >}}

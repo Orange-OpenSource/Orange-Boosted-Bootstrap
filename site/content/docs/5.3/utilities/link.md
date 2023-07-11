@@ -90,9 +90,9 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 <!--Boosted mod: use `contrast_color` as background ensure a good contrast-->
 {{< example >}}
 {{< colored-links.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
-    <p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
-  {{- end -}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
+{{- end -}}
 {{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>
 {{< /example >}}
