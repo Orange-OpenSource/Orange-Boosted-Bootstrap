@@ -88,11 +88,10 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example[0] = example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')
+        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-0 p-0 border-0">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
-        example[0] += `\n<script type="text/javascript">\n  Array.from(document.querySelectorAll('#storybook-root')).concat(Array.from(document.querySelectorAll('[id^="story--components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}"][id$="-inner"]'))).forEach(elt => {elt.className = "${Object.values(example[1]).join(' ')} m-0 p-0 border-0"})\n</script>` // Add example classes and remove the previous ones
         if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs') // RegExp to get all used code in `snippets.js`
           example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in js snippets
