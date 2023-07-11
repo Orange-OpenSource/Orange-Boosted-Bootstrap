@@ -92,7 +92,7 @@ createDirectoryIfNeeded(outputDirectory);
 
         // Insert some specific JavaScript
         example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
-        example[0] += `\n<script type="text/javascript">\n  var root = [document.getElementById('storybook-root')].concat(document.querySelectorAll('[id^="story--components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}"]'))\n  root.className = "${Object.values(example[1]).join(' ')} m-0 p-0 border-0"\n</script>` // Add example classes and remove the previous ones
+        example[0] += `\n<script type="text/javascript">\n  const rootElts = document.getElementById('storybook-root') !== null ? document.querySelectorAll('#storybook-root') : document.querySelectorAll('[id^="story--components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}"][id$="-inner"]')\n  rootElts.forEach(elt => {elt.className = "${Object.values(example[1]).join(' ')} m-0 p-0 border-0"})\n</script>` // Add example classes and remove the previous ones
         if (new RegExp(`// storybook-start ${file[0]}\n`, 's').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gs') // RegExp to get all used code in `snippets.js`
           example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in js snippets
