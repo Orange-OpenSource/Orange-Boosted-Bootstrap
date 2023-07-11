@@ -141,7 +141,7 @@
   --#{$prefix}alert-icon-size: #{$alert-icon-size-sm};
   --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
   // scss-docs-end alert-sm-css-vars
-  --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
+  --#{$prefix}icon-spacing: #{$btn-close-padding-sm};
 
   .alert-icon {
     margin: var(--#{$prefix}alert-icon-margin-y) 0;
