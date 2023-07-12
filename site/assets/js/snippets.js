@@ -18,6 +18,7 @@
 
   // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail render some examples.
 
+  // storybook-start Overview
   // --------
   // Tooltips
   // --------
@@ -39,6 +40,7 @@
       new boosted.Popover(popover)
     })
   // storybook-end Popovers
+  // storybook-end Overview
 
   // -------------------------------
   // Toasts
