@@ -873,7 +873,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 ### With icons or thumbnails
 
-Use SVG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
+Use SVG or PNG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -905,10 +905,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30">
-            Cell text
-          </td>
+          <td><img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-1">Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -922,13 +919,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-              <title id="svg2">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg1"><title id="svg1">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -942,10 +933,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30">
-            Cell text
-          </td>
+          <td><img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-1">Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -959,13 +947,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
-              <title id="svg4">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2"><title id="svg2">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -979,13 +961,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
-              <title id="svg5">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg3"><title id="svg3">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -999,13 +975,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
-              <title id="svg6">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4"><title id="svg4">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -1019,13 +989,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
-              <title id="svg7">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5"><title id="svg5">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -1039,13 +1003,7 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
               </label>
             </div>
           </td>
-          <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
-              <title id="svg8">Document</title>
-              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-            </svg>
-            Cell text
-          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6"><title id="svg6">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
           <td>Cell text</td>
@@ -1059,27 +1017,15 @@ Use SVG to display icons or thumbnails in your compact table data cell elements 
 <div class="table-responsive">
   <table class="table table-sm table-hover align-middle has-checkbox">
     ...
-    <td>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-        <title id="svg1">Thumbnail</title>
-        <rect width="100%" height="100%" fill="#ffd200"></rect>
-      </svg>
-      Cell text
-    </td>
+    <td><img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-1">Cell text</td>
     ...
-    <td>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-        <title id="svg2">Document</title>
-        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-      </svg>
-      Cell text
-    </td>
+    <td><svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg1"><title id="svg1">Document</title><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use></svg>Cell text</td>
     ...
   </table>
 </div>
 ```
 
-Use SVG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
+Use SVG or PNG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
   <div class="table-responsive">
