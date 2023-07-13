@@ -83,56 +83,6 @@
               }
             }
             #{$property}: $value if($enable-important-utilities, !important, null);
-
-            // Boosted mod: ensure contrasts in color utilities
-            @if "background-color" == $property {
-              @if type-of($value) == "string" {
-                $color-name: get-color-from-rgba-string($value);
-                @if undefined != $color-name {
-                  @if map-has-key($theme-colors, $color-name) {
-                    $value: map-get($theme-colors, $color-name);
-                  }
-                  // Handle colors not in $theme-colors
-                  @else if $color-name == "black" {
-                    $value: $black;
-                  }
-                }
-              }
-
-              @if "transparent" != inspect($value) and type-of($value) != "string" {
-                color: color-contrast($value);
-              }
-              @else if $value == "var(--bs-secondary-bg-subtle)" or $value == "var(--bs-dark-bg-subtle)" {
-                color: var(--bs-white);
-              }
-            }
-            @else if "color" == $property {
-              @if type-of($value) == "string" {
-                $color-name: get-color-from-rgba-string($value);
-                @if undefined != $color-name {
-                  @if map-has-key($theme-colors, $color-name) {
-                    $value: map-get($theme-colors, $color-name);
-                  }
-                  // Handle colors not in $theme-colors
-                  @else if $color-name == "white" {
-                    $value: $white;
-                  } @else if $color-name == "body-color" {
-                    $value: $black;
-                  } @else if $color-name == "black" {
-                    background: var(--bs-white);
-                  }
-                }
-              }
-
-              @if $value == $white or $value == $light {
-                background: color-contrast($value);
-              } @else if $value == "var(--bs-light-text-emphasis)" {
-                background: var(--bs-black);
-              } @else if $value == $body-color {
-                background: var(--bs-body-bg);
-              }
-            }
-            // End mod
           }
         }
 
