@@ -32,7 +32,13 @@ Got all that? Great, let's see how they work with some examples.
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-### Examples
+## Accessibility
+
+For accessibility purpose, [content on hover or focus should be dismissible, hoverable and persistent](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html).
+With Boosted tooltips, no mechanism is available to dismiss the tooltip without moving pointer hover or keyboard focus (due to Popper library's limitations).
+Please pay attention that the tooltip never hides an important content.
+
+## Examples
 
 ### Enable tooltips
 

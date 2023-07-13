@@ -268,7 +268,7 @@ Input groups work, too. If your navbar is an entire form, or mostly a form, you 
 <nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid">
     <div class="input-group">
-      <span class="input-group-text" id="basic-addon1">@</span>
+      <span class="input-group-text text-white" id="basic-addon1">@</span>
       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
     </div>
   </form>
@@ -533,7 +533,7 @@ Transform your expanding and collapsing navbar into an offcanvas drawer with the
 
 In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <nav class="navbar fixed-top">
   <div class="container-fluid">
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -542,7 +542,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -591,7 +591,7 @@ To create an offcanvas navbar that expands into a normal navbar at a specific br
 
 When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
@@ -601,7 +601,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -634,6 +634,8 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
   </div>
 </nav>
 {{< /example >}}
+
+{{% enable-btn-close-tooltip 4 "offcanvases navbars" %}}
 
 ## CSS
 
