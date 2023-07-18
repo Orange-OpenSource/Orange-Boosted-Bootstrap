@@ -15,8 +15,7 @@
 <link href="/docs/{{ .Site.Params.docs_version }}/dist/css/boosted{{ if eq .Page.Params.direction "rtl" }}.rtl{{ end }}.css" rel="stylesheet">
 {{- end }}
 
-<!-- Boosted mod: Download app for tarteaucitron cookies -->
-{{- if or (ne .Page.Layout "examples") (eq .Page.Title "Download app") }}
+{{- if (ne .Page.Layout "examples") }}
 {{- $targetDocsCssPath := path.Join "/docs" .Site.Params.docs_version "assets/css/docs.css" -}}
 {{- $sassOptions := dict "targetPath" $targetDocsCssPath "outputStyle" "expanded" "precision" 6 -}}
 {{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
@@ -29,3 +28,19 @@
 
 <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
 {{- end }}
+
+<!-- Boosted mod: Download app for tarteaucitron cookies -->
+{{- if or (ne .Page.Layout "examples") (eq .Page.Title "Download app") }}
+{{- $targetTacCssPath := path.Join "/docs" .Site.Params.docs_version "assets/css/tac.css" -}}
+{{- $sassOptionsTac := dict "targetPath" $targetTacCssPath "outputStyle" "expanded" "precision" 6 -}}
+{{- $postcssOptionsTac := dict "use" "autoprefixer" "noMap" true -}}
+
+{{ if eq hugo.Environment "production" -}}
+  {{- $sassOptionsTac = merge $sassOptionsTac (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{- $styleTac := resources.Get "scss/tac.scss" | toCSS $sassOptionsTac | postCSS $postcssOptionsTac }}
+
+<link href="{{ $styleTac.Permalink | relURL }}" rel="stylesheet">
+{{- end }}
+<!-- End mod -->
