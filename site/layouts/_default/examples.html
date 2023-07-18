@@ -4,16 +4,6 @@
     {{- $colorModeJS := printf "/docs/%s/assets/js/color-modes.js" $.Site.Params.docs_version -}}
     <script src="{{ $colorModeJS | relURL }}"></script>
 
-    <!-- Boosted mod: To have the display of tarteaucitron inside download app page -->
-    {{- if eq .Page.Title "Download app" -}}
-    {{- $tarteJS := resources.Get "/js/vendor/tarteaucitron.js" -}}
-    {{ if eq hugo.Environment "production" -}}
-    {{- $tarteJS = $tarteJS | resources.Minify -}}
-    {{- end }}
-    {{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}
-    <script src="{{ $tarteJS.Permalink | absURL }}" {{ printf "integrity=%q" $secureTarteJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
-    {{- end -}}
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -157,20 +147,6 @@
 
     {{ range .Page.Params.extra_js -}}
       <script{{ with .async }} async{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
-    {{- end -}}
-
-    <!-- Boosted mod: To get the tarteaucitron template inside Download app page -->
-    {{- if eq .Page.Title "Download app" -}}
-    {{- $vendor := resources.Match "js/vendor/*.js" -}}
-    {{- $js := resources.Match "js/*.js" -}}
-    {{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
-    {{- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath -}}
-
-    {{- if eq hugo.Environment "production" -}}
-      {{- $docsJs = $docsJs | resources.Minify -}}
-    {{- end }}
-
-    <script src="{{ $docsJs.Permalink | relURL }}"></script>
     {{- end -}}
   </body>
 </html>

@@ -28,19 +28,3 @@
 
 <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
 {{- end }}
-
-<!-- Boosted mod: Download app for tarteaucitron cookies -->
-{{- if or (ne .Page.Layout "examples") (eq .Page.Title "Download app") }}
-{{- $targetTacCssPath := path.Join "/docs" .Site.Params.docs_version "assets/css/tac.css" -}}
-{{- $sassOptionsTac := dict "targetPath" $targetTacCssPath "outputStyle" "expanded" "precision" 6 -}}
-{{- $postcssOptionsTac := dict "use" "autoprefixer" "noMap" true -}}
-
-{{ if eq hugo.Environment "production" -}}
-  {{- $sassOptionsTac = merge $sassOptionsTac (dict "outputStyle" "compressed") -}}
-{{- end -}}
-
-{{- $styleTac := resources.Get "scss/tac.scss" | toCSS $sassOptionsTac | postCSS $postcssOptionsTac }}
-
-<link href="{{ $styleTac.Permalink | relURL }}" rel="stylesheet">
-{{- end }}
-<!-- End mod -->
