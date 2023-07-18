@@ -1001,8 +1001,8 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3">
-              <title id="svg3">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
+              <title id="svg4">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1021,8 +1021,8 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3">
-              <title id="svg3">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
+              <title id="svg5">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1041,8 +1041,8 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
             </div>
           </td>
           <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3">
-              <title id="svg3">Document</title>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
+              <title id="svg6">Document</title>
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
             </svg>
             Cell text
@@ -1066,8 +1066,8 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
     </td>
     ...
     <td>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3">
-        <title id="svg3">Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1">
+        <title id="svg1">Document</title>
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
       </svg>
       Cell text
