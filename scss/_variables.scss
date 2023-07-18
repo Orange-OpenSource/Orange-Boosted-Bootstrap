@@ -342,14 +342,14 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
-$primary-text-emphasis:   $primary !default; // Boosted mod: instead of `shade-color($primary, 60%)`
+$primary-text-emphasis:   $accessible-orange !default; // Boosted mod: instead of `shade-color($primary, 60%)`
 $secondary-text-emphasis: $secondary !default; // Boosted mod: instead of `shade-color($secondary, 60%)`
-$success-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($success, 60%)`
-$info-text-emphasis:      null !default; // Boosted mod: instead of `shade-color($info, 60%)`
-$warning-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($warning, 60%)`
-$danger-text-emphasis:    null !default; // Boosted mod: instead of `shade-color($danger, 60%)`
+$success-text-emphasis:   $success !default; // Boosted mod: instead of `shade-color($success, 60%)`
+$info-text-emphasis:      $info !default; // Boosted mod: instead of `shade-color($info, 60%)`
+$warning-text-emphasis:   $warning !default; // Boosted mod: instead of `shade-color($warning, 60%)`
+$danger-text-emphasis:    $danger !default; // Boosted mod: instead of `shade-color($danger, 60%)`
 $light-text-emphasis:     $light !default; // Boosted mod: instead of `$gray-700`
-$dark-text-emphasis:      null !default; // Boosted mod: instead of `$gray-700`
+$dark-text-emphasis:      $dark !default; // Boosted mod: instead of `$gray-700`
 // scss-docs-end theme-text-variables
 
 // scss-docs-start theme-bg-subtle-variables
@@ -835,7 +835,7 @@ $blockquote-line-height:      1.5 !default; // Boosted mod
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mod
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    inherit !default;
+$hr-color:                    var(--#{$prefix}heading-color) !default; // Boosted mod
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in v5.2.0
@@ -1096,12 +1096,12 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}body-bg) !default;
+$input-bg:                              $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           var(--#{$prefix}body-color) !default;
+$input-color:                           $black !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $input-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of var(--#{$prefix}border-color)
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
@@ -1675,8 +1675,8 @@ $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
-$card-cap-bg:                       var(--#{$prefix}body-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
-$card-cap-color:                    var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `null`
+$card-cap-bg:                       $black !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
+$card-cap-color:                    $white !default; // Boosted mod: instead of `null`
 $card-cap-font-weight:              $font-weight-bold !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;

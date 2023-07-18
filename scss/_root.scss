@@ -158,6 +158,8 @@
   --#{$prefix}kbd-color: #{$kbd-color-inverted};
   --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
   --#{$prefix}pre-color: #{$pre-color-inverted};
+  --#{$prefix}body-color: #{$body-color-dark};
+  --#{$prefix}heading-color: #{$headings-color-dark};
 
   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
   [class*="bg-"]:not(&):not(.bg-transparent) {
@@ -175,6 +177,8 @@
     --#{$prefix}kbd-color: #{$kbd-color};
     --#{$prefix}kbd-bg: #{$kbd-bg};
     --#{$prefix}pre-color: #{$pre-color};
+    --#{$prefix}body-color: #{$body-color};
+    --#{$prefix}heading-color: #{$headings-color};
   }
 }
 // End mod
