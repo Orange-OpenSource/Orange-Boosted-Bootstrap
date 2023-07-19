@@ -239,14 +239,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
 
-
 ### Examples
 
 - **Cards/Cards RTL**
   - <span class="badge bg-warning">Warning</span> Semantics have been changed for the row containing icons and the actions footer containing secondary buttons in order to be more accessible. Please reflect these modifications into your websites.
 
-- **Form**
+- **Form page**
   - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visible-added` attribute on the focused element on first error.
+
+- <span class="badge bg-success">New</span> A download app page is now available.
 
 ### CSS and Sass variables
 
