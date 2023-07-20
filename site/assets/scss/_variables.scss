@@ -38,6 +38,6 @@ $bd-callout-variants: info, warning, danger !default;
 // Boosted mod
 $zindex-skippy: 1080;
 $offset-top: 7rem;
-$sidebar-height: subtract(100vh, $offset-top);
+$sidebar-height: subtract(100vh, $offset-top + 1rem);
 $tac-prefix: "tarteaucitron";
 // End mod
