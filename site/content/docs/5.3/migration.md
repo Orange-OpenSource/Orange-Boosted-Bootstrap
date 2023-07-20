@@ -612,8 +612,6 @@ Please wait for the next Boosted versions to use it in your websites.
 
 ### Docs
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
-
 - Improved included JavaScript for live Toast demo.
 
 - Added `twbs/examples` repo contents to the top of the Examples page.
