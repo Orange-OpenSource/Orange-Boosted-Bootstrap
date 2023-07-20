@@ -8,6 +8,13 @@ aliases:
 toc: true
 ---
 
+{{< design-callout-alert >}}
+The colors combinations below do not belong to the Orange Design System specifications.
+
+Please refer to our Boosted [links]({{< docsref "/content/typography#links" >}}) section and to the [Text links in body copy](https://system.design.orange.com/0c1af118d/p/38f221-typography/t/56933e) guidelines on the Orange Design System website.
+
+{{< /design-callout-alert >}}
+
 ## Link colors
 
 You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors" >}}), these classes have a `:hover` and `:focus` state. Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
@@ -16,14 +23,20 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 **Heads up!** `.link-body-emphasis` is currently the only colored link that adapts to color modes. It's treated as a special case until v6 arrives and we can more thoroughly rebuild our theme colors for color modes. Until then, it's a unique, high-contrast link color with custom `:hover` and `:focus` styles. However, it still responds to the new link utilities.
 {{< /callout >}}
 
-<!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors"; body-emphasis is treated on its own-->
+<!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->
 {{< example >}}
-<p><a href="#" class="link-primary">Primary link</a></p>
-<p><a href="#" class="link-light">Light link</a></p>
+{{< colored-links.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">{{ .name | title }} link</a></p>
+{{- end -}}
+{{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis">Emphasis link</a></p>
 {{< /example >}}
+<!--End mod-->
 
-<!--Boosted mod: removed callout not applicable to our modified example-->
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
 
 ## Link utilities
 

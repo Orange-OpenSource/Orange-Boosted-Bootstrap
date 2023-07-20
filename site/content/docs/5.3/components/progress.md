@@ -61,7 +61,7 @@ You only set a `height` value on the `.progress` container, so if you change tha
 {{< design-callout-alert >}}
 The **1px height** variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -113,7 +113,7 @@ Use background utility classes to change the appearance of individual progress b
 {{< design-callout-alert >}}
 These backgrounds color variants should not be used because they do not respect the Orange Design System specifications. The only background color to use is the primary color.
 
-Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -148,7 +148,7 @@ If you're adding labels to progress bars with a custom background color, make su
   <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
 </div>
 <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+  <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
 </div>
 {{< /example >}}
 
@@ -185,7 +185,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 {{< design-callout-alert >}}
 These variants should not be used because they do not respect the Orange Design System specifications.
 
-Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -213,7 +213,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 {{< design-callout-alert >}}
 This variant should not be used because it does not respect the Orange Design System specifications.
 
-Please refer to the [Progress indicators](https://system.design.orange.com/0c1af118d/p/45093c-progress-indicators/b/2875f1) guidelines on the Orange Design System website.
+Please refer to the [Progress bar](https://system.design.orange.com/0c1af118d/p/080a7d-progress-bar/b/898b87) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
 
 {{< example >}}
