@@ -440,7 +440,7 @@ $enable-deprecation-messages: false !default;
 $enable-important-utilities:  true !default;
 $enable-fixed-header:         true !default; // Boosted mod: used to apply scroll-padding-top
 
-$enable-dark-mode:            false !default; // Boosted mod: instead of `true`
+$enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
