@@ -132,5 +132,5 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - [ ] check every `index.html` used as redirections to be redirecting to the new release
   - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurences
-- [ ] make an announcement in Plazza :tada:
+- [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) and internal communication channels :tada:
 -->
