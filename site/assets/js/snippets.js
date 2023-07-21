@@ -18,35 +18,35 @@
 
   // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
 
-  // storybook-start Overview
+  // storybook-start overview
   // --------
   // Tooltips
   // --------
   // Instantiate all tooltips in a docs or StackBlitz
-  // storybook-start Tooltips
+  // storybook-start tooltips
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
     .forEach(tooltip => {
       new boosted.Tooltip(tooltip)
     })
-  // storybook-end Tooltips
+  // storybook-end tooltips
 
   // --------
   // Popovers
   // --------
   // Instantiate all popovers in docs or StackBlitz
-  // storybook-start Popovers
+  // storybook-start popovers
   document.querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(popover => {
       new boosted.Popover(popover)
     })
-  // storybook-end Popovers
-  // storybook-end Overview
+  // storybook-end popovers
+  // storybook-end overview
 
   // -------------------------------
   // Toasts
   // -------------------------------
   // Used by 'Placement' example in docs or StackBlitz
-  // storybook-start Toasts
+  // storybook-start toasts
   if (document.getElementById('toastPlacement')) {
     document.getElementById('selectToastPlacement').addEventListener('change', function () {
       if (!document.getElementById('toastPlacement').dataset.originalClass) {
@@ -75,7 +75,7 @@
     })
   }
   // js-docs-end live-toast
-  // storybook-end Toasts
+  // storybook-end toasts
 
   // -------------------------------
   // Alerts
@@ -83,7 +83,7 @@
   // Used in 'Show live alert' example in docs or StackBlitz
 
   // Boosted mod: adapted innerHTML to have the icon and so added a parameter within `appendAlert()` and a tooltip on `.btn-close`
-  // storybook-start Alerts
+  // storybook-start alerts
   // js-docs-start live-alert
   function appendAlert(message, type, typeVisuallyHidden) {
     const wrapper = document.createElement('div')
@@ -115,31 +115,31 @@
     })
   }
   // js-docs-end live-alert
-  // storybook-end Alerts
+  // storybook-end alerts
 
   // --------
   // Carousels
   // --------
   // Instantiate all non-autoplaying carousels in docs or StackBlitz
-  // storybook-start Carousel
+  // storybook-start carousel
   document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])')
     .forEach(carousel => {
       boosted.Carousel.getOrCreateInstance(carousel)
     })
-  // storybook-end Carousel
+  // storybook-end carousel
 
   // -------------------------------
   // Checks & Radios
   // -------------------------------
   // Indeterminate checkbox example in docs and StackBlitz
-  // storybook-start ChecksRadios
+  // storybook-start checksradios
   document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')
     .forEach(checkbox => {
       if (checkbox.id.includes('Indeterminate')) {
         checkbox.indeterminate = true
       }
     })
-  // storybook-end ChecksRadios
+  // storybook-end checksradios
 
   // -------------------------------
   // Links
@@ -156,7 +156,7 @@
   // Modal
   // -------------------------------
   // Modal 'Varying modal content' example in docs and StackBlitz
-  // storybook-start Modal
+  // storybook-start modal
   // js-docs-start varying-modal-content
   if (document.getElementById('exampleModal')) {
     document.getElementById('exampleModal').addEventListener('show.bs.modal', event => {
@@ -176,18 +176,18 @@
     })
   }
   // js-docs-end varying-modal-content
-  // storybook-end Modal
+  // storybook-end modal
 
   // -------------------------------
   // Offcanvas
   // -------------------------------
   // 'Offcanvas components' example in docs only
-  // storybook-start Offcanvas
+  // storybook-start offcanvas
   document.querySelectorAll('.bd-example-offcanvas .offcanvas')
     .forEach(offcanvas => {
       offcanvas.addEventListener('show.bs.offcanvas', event => {
         event.preventDefault()
       }, false)
     })
-  // storybook-end Offcanvas
+  // storybook-end offcanvas
 })()
