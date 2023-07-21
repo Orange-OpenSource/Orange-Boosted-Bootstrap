@@ -81,9 +81,9 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:                            "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/css/boosted.min.css"
-    css_hash:                       "sha384-N4CwGr4LTFn9pUFZbiKmApD81UtYjfub+NXuKhXMdD3YBXp5xjCZFMkVsCgCFKFM"
+    css_hash:                       "sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94"
     css_rtl:                        "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/css/boosted.rtl.min.css"
-    css_rtl_hash:                   "sha384-OrTCUaJ33/fqdtXDMxNtBrE6ngW7O36tr69A9GB8JMk07jnEj5+JgIq7Ad9trDBc"
+    css_rtl_hash:                   "sha384-cjvdoOcy4x9UqjwvQqAcb4RwpFif4agx660maKo1HHd12MTgxBl2EjufzOQgE7Q7"
     helvetica:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/css/orange-helvetica.min.css"
     helvetica_hash:                 "sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ"
     helvetica_rtl:                  "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/css/orange-helvetica.rtl.min.css"
@@ -97,9 +97,9 @@ params:
     HelvNeue75_W1G:                 "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/fonts/HelvNeue75_W1G.woff2"
     HelvNeue75_W1G_hash:            "sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4/Goeqz"
     js:                             "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/js/boosted.min.js"
-    js_hash:                        "sha384-Ay44pAtq92iRrbFnSxWeYAfGcj6hdwTyM6eXJur4pM5vhr0FcqS6QXXk4iTDk4YB"
+    js_hash:                        "sha384-JPf3Sp9tS/ngOsLbgIv+IpCJLXgHfqx9/uWsTCARddSQNPdOaWAlmFG2XSuU5cgB"
     js_bundle:                      "https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:                 "sha384-COkOgwCu1CnSnNJa4+/DDfHEtuu7dOnfPwwKqolB1lnFcj9turrs6yqTCwc3KeRo"
+    js_bundle_hash:                 "sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK"
     popper:                         "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     popper_hash:                    "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     popper_esm:                     "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"

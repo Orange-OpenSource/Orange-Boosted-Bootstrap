@@ -21,6 +21,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -71,7 +72,7 @@
   const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel'; // Boosted mod
   const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel'; // Boosted mod
 
-  const PREFIX_CUSTOM_PROPS = 'o-'; // Boosted mod: should match `$boosted-prefix` in scss/_variables.scss
+  const PREFIX_CUSTOM_PROPS = 'bs-'; // Boosted mod: should match `$prefix` in scss/_variables.scss
 
   const KEY_TO_DIRECTION = {
     [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
