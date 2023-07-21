@@ -21,6 +21,14 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 
 Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
 
+{{< design-callout-alert >}}
+Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
+
+However, the dark mode is not yet available in the Orange Design System specifications.
+
+Please wait for the next Boosted versions to use it in your websites.
+{{< /design-callout-alert >}}
+
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
 - **New extended color system.** We've added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
@@ -148,9 +156,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
 
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
+- **Spinners**
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` to have a white spinner on a dark background.
 
 - **Stickers**
   - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
@@ -233,13 +245,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
 
+- <span class="badge bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
+
 ### Examples
 
 - **Cards/Cards RTL**
   - <span class="badge bg-warning">Warning</span> Semantics have been changed for the row containing icons and the actions footer containing secondary buttons in order to be more accessible. Please reflect these modifications into your websites.
 
-- **Form**
+- **Form page**
   - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visible-added` attribute on the focused element on first error.
+
+- <span class="badge bg-success">New</span> A download app page is now available.
 
 ### CSS and Sass variables
 
@@ -258,6 +274,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
 
 - `@mixin caret()` has a new interface including a new optional parameters.
+
+- <details class="mb-2">
+  <summary><span class="badge bg-danger">Breaking</span> Deprecated <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences of <code>$boosted-prefix</code> or <code>--o-</code> and replace them respectively by <code>$prefix</code> or <code>--bs-</code> in your code.</summary>
+
+    ```diff
+    - $boosted-prefix // or `--o-`
+    + $prefix // or `--bs-`
+    ```
+  </details>
 
 - <details class="mb-2">
   <summary><span class="badge bg-danger">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
@@ -281,12 +306,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
+      <li><code>--o-caption-color</code></li>
+      <li><code>--o-carousel-interval</code></li>
+      <li><code>--o-check-icon</code></li>
+      <li><code>--o-chevron-icon</code></li>
+      <li><code>--o-close-icon</code></li>
+      <li><code>--o-control-bg</code></li>
+      <li><code>--o-error-icon</code></li>
+      <li><code>--o-icon-spacing</code></li>
+      <li><code>--o-kbd-bg</code></li>
+      <li><code>--o-kbd-color</code></li>
+      <li><code>--o-network-color</code></li>
+      <li><code>--o-network-logo</code></li>
+      <li><code>--o-pre-color</code></li>
+      <li><code>--o-success-icon</code></li>
+      <li><code>--o-switch-gradient</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$boosted-prefix</code></li>
       <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
@@ -317,8 +358,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-breakpoint-xl</code></li>
       <li><code>--bs-breakpoint-xs</code></li>
       <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-caption-color</code></li>
       <li><code>--bs-card-subtitle-color</code></li>
       <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-carousel-interval</code></li>
+      <li><code>--bs-check-icon</code></li>
+      <li><code>--bs-chevron-icon</code></li>
+      <li><code>--bs-close-icon</code></li>
+      <li><code>--bs-control-bg</code></li>
       <li><code>--bs-danger-bg-subtle</code></li>
       <li><code>--bs-danger-border-subtle</code></li>
       <li><code>--bs-danger-text-emphasis</code></li>
@@ -328,6 +375,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-error-icon</code></li>
       <li><code>--bs-focus-ring-box-shadow</code></li>
       <li><code>--bs-focus-ring-color</code></li>
       <li><code>--bs-focus-ring-opacity</code></li>
@@ -342,9 +390,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-valid-border-color</code></li>
       <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
+      <li><code>--bs-icon-spacing</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
       <li><code>--bs-info-text-emphasis</code></li>
+      <li><code>--bs-kbd-bg</code></li>
+      <li><code>--bs-kbd-color</code></li>
       <li><code>--bs-light-bg-subtle</code></li>
       <li><code>--bs-light-border-subtle</code></li>
       <li><code>--bs-light-text-emphasis</code></li>
@@ -352,6 +403,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
       <li><code>--bs-link-hover-decoration</code></li>
+      <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-nav-underline-border-color</code></li>
       <li><code>--bs-nav-underline-border-radius</code></li>
       <li><code>--bs-nav-underline-border-width</code></li>
@@ -364,7 +416,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
-      <li><code>--bs-modal-footer-margin-top</code></li>
+      <li><code>--bs-network-color</code></li>
+      <li><code>--bs-network-logo</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
       <li><code>--bs-popover-body-padding-bottom</code></li>
       <li><code>--bs-popover-body-padding-top</code></li>
@@ -372,6 +425,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-popover-header-padding-bottom</code></li>
       <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
+      <li><code>--bs-pre-color</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text-emphasis</code></li>
@@ -384,7 +438,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-secondary-text-emphasis</code></li>
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
+      <li><code>--bs-success-icon</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-switch-gradient</code></li>
       <li><code>--bs-table-bg-state</code></li>
       <li><code>--bs-table-bg-type</code></li>
       <li><code>--bs-table-color-state</code></li>
@@ -555,8 +611,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   </details>
 
 ### Docs
-
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
 
 - Improved included JavaScript for live Toast demo.
 

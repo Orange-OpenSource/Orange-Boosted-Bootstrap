@@ -1,11 +1,11 @@
 .bd-sidebar {
   @include media-breakpoint-up(lg) {
     position: sticky;
-    top: 5rem;
+    top: $offset-top; // Boosted mod: instead of `5rem`
     // Override collapse behaviors
     // stylelint-disable-next-line declaration-no-important
     display: block !important;
-    height: subtract(100vh, 6rem);
+    height: $sidebar-height; // Boosted mod: instead of `subtract(100vh, 6rem)`
     // Prevent focus styles to be cut off:
     padding-left: .25rem;
     margin-left: -.25rem;
