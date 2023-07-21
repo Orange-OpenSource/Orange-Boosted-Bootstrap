@@ -16,7 +16,7 @@
 (() => {
   'use strict'
 
-  // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail render some examples.
+  // Boosted mod: Try not using `const` at the first layer in this file, otherwise Storybook will fail to render some examples.
 
   // storybook-start Overview
   // --------
