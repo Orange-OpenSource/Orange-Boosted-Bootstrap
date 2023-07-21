@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Navbars · Boosted v5.3</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/navbars/">
+
+    
+
+    
+
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <h1 class="visually-hidden">Navbars Boosted example</h1>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Left navbar only example">
+  <div class="container-xxl">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+    </ul>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Both navbars with languages example">
+  <div class="container-xxl">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" lang="fr" hreflang="fr">FR</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" lang="es" hreflang="es">ES</a></li>
+    </ul>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Both navbars with actions example">
+  <div class="container-xxl">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search"/>
+          </svg>
+          <span class="visually-hidden">Search</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <svg fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+            <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy"/>
+          </svg>
+          <span class="visually-hidden">Basket</span>
+          <span class="position-relative align-self-start">
+            <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              1
+              <span class="visually-hidden">shopping basket items</span>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link nav-icon">
+          <img src="/docs/5.3/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" aria-hidden="true">
+          <span class="visually-hidden">My account</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg header-minimized" aria-label="Global navigation - Minimized without title example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto me-lg-4">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-0" aria-controls="global-header-0.1 global-header-0.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-0.1" class="navbar-collapse collapse me-lg-auto global-header-0">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      </ul>
+    </div>
+    <div id="global-header-0.2" class="navbar-collapse collapse d-sm-flex global-header-0">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - No title example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto me-lg-4">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-1" aria-controls="global-header-1.1 global-header-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-1.1" class="navbar-collapse collapse me-lg-auto global-header-1">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      </ul>
+    </div>
+    <div id="global-header-1.2" class="navbar-collapse collapse d-sm-flex global-header-1">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - No title with nav-under example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto me-lg-4">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-2" aria-controls="global-header-2.1 global-header-2.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-2.1" class="navbar-collapse collapse me-lg-auto global-header-2">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      </ul>
+    </div>
+    <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
+      <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    <div id="global-header-2.2" class="navbar-collapse collapse d-sm-flex global-header-2">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item d-lg-none">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto me-lg-4">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="title">Title</h1>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-3" aria-controls="global-header-3.1 global-header-3.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-3.1" class="navbar-collapse collapse me-lg-auto global-header-3">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      </ul>
+    </div>
+    <div id="global-header-3.2" class="navbar-collapse collapse d-sm-flex global-header-3">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title and nav-under example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="title">Title</h1>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-3-1" aria-controls="global-header-3-1.1 global-header-3-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-3-1.2" class="navbar-collapse collapse d-sm-flex global-header-3-1">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With title and nav-under example.2">
+  <div class="container-xxl">
+    <div id="global-header-3-1.1" class="navbar-collapse collapse m-0 global-header-3-1">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto me-lg-4">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="two-lined">
+        Title Line 1<br>Title Line 2
+      </h1>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-4" aria-controls="global-header-4.1 global-header-4.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-4.1" class="navbar-collapse collapse me-lg-auto global-header-4">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+      </ul>
+    </div>
+    <div id="global-header-4.2" class="navbar-collapse collapse d-sm-flex global-header-4">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+      <h1 class="two-lined">
+        Title Line 1<br>Title Line 2
+      </h1>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-4-1" aria-controls="global-header-4-1.1 global-header-4-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-4-1.2" class="navbar-collapse collapse d-sm-flex global-header-4-1">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lined title and nav-under example.2">
+  <div class="container-xxl">
+    <div id="global-header-4-1.1" class="navbar-collapse collapse m-0 global-header-4-1">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <!-- Should not have buy icon -->
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-5" aria-controls="global-header-5.1 global-header-5.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-5.1" class="navbar-collapse collapse me-lg-3 global-header-5">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+      </ul>
+    </div>
+    <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex ms-lg-3 global-header-5">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item d-none">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+  <!-- Should not have buy icon -->
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example">
+  <div class="container-xxl">
+    <div class="navbar-brand me-auto">
+      <a class="stretched-link" href="#">
+        <img src="/docs/5.3/assets/brand/OBS-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+      </a>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header-5-1" aria-controls="global-header-5-1.1 global-header-5-1.2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="global-header-5-1.2" class="navbar-collapse collapse d-sm-flex ms-lg-3 global-header-5-1">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#search" />
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="nav-item d-none">
+          <a href="#" class="nav-link nav-icon">
+            <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+              <use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#buy" />
+            </svg>
+            <span class="visually-hidden">Basket</span>
+            <span class="position-relative align-self-start">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                1
+                <span class="visually-hidden">shopping basket items</span>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-icon">
+            <img src="/docs/5.3/assets/img/navbar-contact.png" width="25" height="25" role="img" alt="User" loading="lazy">
+            <span class="visually-hidden">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo and nav-under example.2">
+  <div class="container-xxl">
+    <div id="global-header-5-1.1" class="navbar-collapse collapse m-0 global-header-5-1">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="b-example-divider"></div>
+</main>
+<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Title Bars Template · Boosted v5.3</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/title-bars/">
+
+    
+
+    
+
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="title-bars.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column">
+    
+<main>
+  <div class="bg-body title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-supporting-pink title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <picture>
+        <source media="(min-width:1440px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-1440.png">
+        <source media="(min-width:1280px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-1280.png">
+        <source media="(min-width:1024px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-1024.png">
+        <source media="(min-width:768px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-768.png">
+        <source media="(min-width:480px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-480.png">
+        <source media="(min-width:320px)" srcset="/docs/5.3/assets/img/title-bars-illustrations/illustration-320.png">
+        <img src="/docs/5.3/assets/img/title-bars-illustrations/illustration-320.png" alt="">
+      </picture>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="alert alert-info mb-0" role="alert">
+    <span class="alert-icon"><span class="visually-hidden">Information</span></span>
+    <div>
+      <h4 class="alert-heading">Background image</h4>
+      <p>In order to have a correct background image in the following title bar, the <code>.example-title-bar-custom-background</code> extra class and the corresponding CSS can be found in <a href="title-bars.css" title="Title bars example CSS file">title-bars.css</a>.</p>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-supporting-blue title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <div class="col example-title-bar-custom-background"></div>
+    </div>
+  </div>
+
+</main>
+<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK" crossorigin="anonymous"></script>
+
+    </body>
+</html>

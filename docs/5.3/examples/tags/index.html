@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Orange and Boosted contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Tags · Boosted v5.3</title>
+
+    <link rel="canonical" href="https://boosted.orange.com/docs/5.3/examples/tags/">
+
+    
+
+    
+
+<link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+       
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<main>
+  <h1 class="visually-hidden">Present some ways the tags could be used</h1>
+  <div class="container-xxl">
+    <table class="table">
+      <caption class="h2">Use informative tags in a table context</caption>
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Associated tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Larry</td>
+          <td class="p-2">
+            <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
+              <li><span class="tag tag-sm">Bird</span></li>
+              <li><span class="tag tag-sm">Twitter</span></li>
+              <li><span class="tag tag-sm">NBA</span></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Bootstrap</td>
+          <td class="p-2">
+            <ul class="list-unstyled m-0 d-flex gap-2 flex-wrap">
+              <li><span class="tag tag-sm">Framework</span></li>
+              <li><span class="tag tag-sm">Twitter</span></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Example of anchor links</h2>
+    <h3 class="visually-hidden">Links to anchor in an imaginary page</h3>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+      <li>
+        <a class="tag" href="#">1. Introduction</a>
+      </li>
+      <li>
+        <a class="tag" href="#">2. Exposure</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Checkbox filter</h2>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap mb-0">
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="tag" for="btncheck1">Mobile</label>
+      </li>
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+        <label class="tag" for="btncheck2">Computer</label>
+      </li>
+      <li>
+        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+        <label class="tag" for="btncheck3">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+          </svg>
+          TV
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container-xxl py-3">
+    <h2>Radio filter</h2>
+    <ul class="list-unstyled d-flex gap-2 flex-wrap mb-0">
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck4" autocomplete="off" checked>
+        <label class="tag" for="btncheck4">Mobile</label>
+      </li>
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck5" autocomplete="off">
+        <label class="tag" for="btncheck5">Computer</label>
+      </li>
+      <li>
+        <input type="radio" name="tagRadio" class="btn-check" id="btncheck6" autocomplete="off">
+        <label class="tag" for="btncheck6">
+          <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+          </svg>
+          TV
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+</main>
+<script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK" crossorigin="anonymous"></script>
+
+    </body>
+</html>
