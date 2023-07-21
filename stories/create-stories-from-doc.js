@@ -94,7 +94,7 @@ createDirectoryIfNeeded(outputDirectory);
         example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
         if (new RegExp(`// storybook-start ${file[0]}\n`, 'si').test(snippets)) {
           const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gsi') // RegExp to get all used code in `snippets.js`
-          example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in js snippets
+          example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in JS snippets
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
