@@ -17,6 +17,11 @@ Boosted v5.3.1 has landed also including specific Boosted content as usual.
 
 If you need more details about the changes, please refer to the [v5.3.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1).
 
+### Components
+
+- **Spinner**
+  - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
+
 ### Forms
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
