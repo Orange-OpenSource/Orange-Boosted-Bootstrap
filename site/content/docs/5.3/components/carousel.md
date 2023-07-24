@@ -60,7 +60,7 @@ You can add indicators to the carousel, alongside the previous/next controls. Th
 
 <!-- Boosted mod -->
 
-Indicators are animated to show the active slide progress, based on its interval. It adapts to [any interval you set](#individual-carousel-item-interval) thanks to the `--o-carousel-interval` CSS custom property.
+Indicators are animated to show the active slide progress, based on its interval. It adapts to [any interval you set](#individual-carousel-item-interval) thanks to the `--bs-carousel-interval` CSS custom property.
 Carousel progress indicator is paused under multiple conditions:
 
 * when the `prefers-reduced-motion` media query equals `reduce` [to improve accessibility]({{< docsref "/getting-started/accessibility#reduced-motion" >}}).
