@@ -101,7 +101,7 @@
     "storybook-build-netlify": "npm run storybook-generate && storybook build -o ./site/storybook"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.7"
+    "@popperjs/core": "^2.11.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
@@ -200,7 +200,7 @@
     },
     "dependencies": {},
     "peerDependencies": {
-      "@popperjs/core": "^2.11.7"
+      "@popperjs/core": "^2.11.8"
     }
   }
 }
