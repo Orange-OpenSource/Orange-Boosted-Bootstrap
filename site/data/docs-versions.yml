@@ -1,6 +1,6 @@
 - group: v3.x
   baseurl: "https://boosted.orange.com/docs"
-  description: "Every minor and patch release from v3 is listed below. Last update was v3.4.1."
+  description: "Every minor release from v3 is listed below. Last update was v3.4.1."
   versions:
     - "3.3"
     - "3.4"
