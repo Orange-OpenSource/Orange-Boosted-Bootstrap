@@ -59,7 +59,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 ### Checklist (for Core Team only)
 
 - [ ] My change introduces changes to the migration guide
-- [ ] My new component is added in Storybook
+- [ ] My new component is well displayed in [Storybook](https://deploy-preview-{your_pr_number}--boosted.netlify.app/storybook)
 - [ ] My new component is compatible with RTL
 - [ ] Manually run [BrowserStack tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
 - [ ] Manually test browser compatibility with BrowserStack (Chrome >= 60, Firefox >= 60 (+ ESR), Edge, Safari >= 12, iOS Safari, Chrome & Firefox on Android)
