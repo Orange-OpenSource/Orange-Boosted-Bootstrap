@@ -28,8 +28,10 @@ This footer component is based on the [navbar component]({{< docsref "/component
 
 ## Example
 
+{{< example class="p-0" show_markup=false >}}
 {{< orange-footer title_content=true follow=true nav=true service=true mandatory=true id="1" >}}
 {{< /orange-footer >}}
+{{< /example >}}
 
 ## Footer bars
 
