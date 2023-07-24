@@ -35,10 +35,6 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
 
-### Docs
-
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
-
 ## v5.3.0
 
 <hr class="mb-4">
