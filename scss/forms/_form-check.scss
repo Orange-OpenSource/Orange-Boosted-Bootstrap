@@ -153,7 +153,7 @@
 
 .form-switch {
   // Boosted mod
-  --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+  --#{$prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
@@ -166,7 +166,7 @@
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
     background-color: $white; // Boosted mod
-    background-image: var(--#{$prefix}form-switch-bg), var(--#{$boosted-prefix}switch-gradient); // Boosted mod: extra param `var(--#{$boosted-prefix}switch-gradient)`
+    background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // Boosted mod: extra param `var(--#{$prefix}switch-gradient)`
     filter: $invert-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
@@ -202,7 +202,7 @@
       }
 
       &:not(:disabled) {
-        --#{$boosted-prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
+        --#{$prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
       }
     }
 
