@@ -22,6 +22,15 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 - **Spinner**
   - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
 
+  ```diff
+  <button class="btn btn-primary" type="button">
+  -  <span class="spinner-border me-2" role="status" aria-hidden="true"></span>
+  -  Loading...
+  +  <span class="spinner-border me-2" aria-hidden="true"></span>
+  +  <span role="status">Loading...</span>
+  </button>
+  ```
+
 ### Forms
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
