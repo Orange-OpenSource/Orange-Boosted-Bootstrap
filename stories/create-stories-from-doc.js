@@ -1,7 +1,10 @@
 'use strict'
 
 const fs = require('node:fs')
+const path = require('node:path')
 const puppeteer = require('puppeteer') // eslint-disable-line import/no-extraneous-dependencies
+
+const version = '5.3'
 
 function createDirectoryIfNeeded(path) {
   if (!fs.existsSync(path)) {
@@ -37,46 +40,15 @@ const convertToKebabCase = string => {
     .toLowerCase()
 }
 
-// TODO: build this list automatically from docs
-const files = [
-  ['Accordion', '../_site/docs/5.3/components/accordion/index.html'],
-  ['Alerts', '../_site/docs/5.3/components/alerts/index.html'],
-  ['BackToTop', '../_site/docs/5.3/components/back-to-top/index.html'],
-  ['Badge', '../_site/docs/5.3/components/badge/index.html'],
-  ['Breadcrumb', '../_site/docs/5.3/components/breadcrumb/index.html'],
-  ['ButtonGroup', '../_site/docs/5.3/components/button-group/index.html'],
-  ['Buttons', '../_site/docs/5.3/components/buttons/index.html'],
-  ['Card', '../_site/docs/5.3/components/card/index.html'],
-  ['Carousel', '../_site/docs/5.3/components/carousel/index.html'],
-  ['CloseButton', '../_site/docs/5.3/components/close-button/index.html'],
-  ['Collapse', '../_site/docs/5.3/components/collapse/index.html'],
-  ['Dropdowns', '../_site/docs/5.3/components/dropdowns/index.html'],
-  ['Footer', '../_site/docs/5.3/components/footer/index.html'],
-  ['ListGroup', '../_site/docs/5.3/components/list-group/index.html'],
-  ['Modal', '../_site/docs/5.3/components/modal/index.html'],
-  ['Navbar', '../_site/docs/5.3/components/navbar/index.html'],
-  ['NavsTabs', '../_site/docs/5.3/components/navs-tabs/index.html'],
-  ['OffCanvas', '../_site/docs/5.3/components/offcanvas/index.html'],
-  ['OrangeNavbar', '../_site/docs/5.3/components/orange-navbar/index.html'],
-  ['Pagination', '../_site/docs/5.3/components/pagination/index.html'],
-  ['Placeholders', '../_site/docs/5.3/components/placeholders/index.html'],
-  ['Popovers', '../_site/docs/5.3/components/popovers/index.html'],
-  ['Progress', '../_site/docs/5.3/components/progress/index.html'],
-  ['Scrollspy', '../_site/docs/5.3/components/scrollspy/index.html'],
-  ['Spinners', '../_site/docs/5.3/components/spinners/index.html'],
-  ['SteppedProcess', '../_site/docs/5.3/components/stepped-process/index.html'],
-  ['Sticker', '../_site/docs/5.3/components/sticker/index.html'],
-  ['Tags', '../_site/docs/5.3/components/tags/index.html'],
-  ['TitleBars', '../_site/docs/5.3/components/title-bars/index.html'],
-  ['Toasts', '../_site/docs/5.3/components/toasts/index.html'],
-  // Note: we need to use `var` instead of `const` to avoid `redeclaration of const tooltipTriggerList` message
-  ['Tooltips',
-    '../_site/docs/5.3/components/tooltips/index.html',
-    'var tooltipTriggerList = [].slice.call(document.querySelectorAll(\'[data-bs-toggle="tooltip"]\'));\
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\
-      return new boosted.Tooltip(tooltipTriggerEl);\
-    })']
-]
+const toPascalCase = str => {
+  return (str.match(/[\dA-Za-z]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('')
+}
+
+// Get all stories that might be displayed
+const files = fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/components/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'components'])
+  .concat(fs.readdirSync(path.resolve(__dirname, `../site/content/docs/${version}/forms/`)).map(fileName => [toPascalCase(fileName.replace('.md', '')), 'forms']))
+  .concat([['Tables', 'content']]) // Manual adding
+const snippets = fs.readFileSync(path.resolve(__dirname, '../site/assets/js/snippets.js'), { encoding: 'utf8' })
 
 const outputDirectory = `${__dirname}/auto`
 createDirectoryIfNeeded(outputDirectory);
@@ -95,17 +67,18 @@ createDirectoryIfNeeded(outputDirectory);
       // 'Error: Execution context was destroyed, most likely because of a navigation.':
       await Promise.all([
         page.waitForNavigation(),
-        page.goto(`file://${__dirname}/${file[1]}`),
+        page.goto(`file://${__dirname}/../_site/docs/${version}/${file[1]}/${convertToKebabCase(file[0])}/index.html`),
         page.waitForNavigation()
       ])
 
+      // Getting examples content and classes
       const e = await page.evaluate(() =>
-        Array.from(document.querySelectorAll('.bd-example'), e => e.innerHTML) // eslint-disable-line no-undef
+        Array.from(document.querySelectorAll('.bd-example'), e => [e.innerHTML, e.classList]) // eslint-disable-line no-undef
       )
 
       let index = 0
       let mdxContent = ''
-      for (let example of e) {
+      for (const example of e) {
         const outputFileDirectory = `${outputDirectory}/${file[0]}`
         const outputFile = `${outputFileDirectory}/${file[0]}_${index}.stories.js`
 
@@ -115,18 +88,19 @@ createDirectoryIfNeeded(outputDirectory);
         mdxContent += `<Canvas>\n<Story id="components-${file[0].toLowerCase()}--${convertToKebabCase(file[0])}-${index}"/>\n</Canvas>\n\n`
 
         // Automatically remove HTML comments that would break the story
-        example = example.replace(/<!--[\S\s]*?-->/gm, '')
+        example[0] = `<div class="${Object.values(example[1]).join(' ')} m-0 border-0">${example[0].replace(/<!--[\S\s]*?-->/gm, '').replaceAll('`', '\\`').replaceAll('${', '\\${')}</div>`
 
         // Insert some specific JavaScript
-        example += '<script src="https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>'
-        if (file[2]) {
-          example += `<script type="text/javascript">${file[2]}</script>`
+        example[0] += '\n<script type="text/javascript">\n  /* global boosted: false */\n  document.querySelectorAll(\'[href]\').forEach(link => {link.addEventListener(\'click\', event => {event.preventDefault()})})\n</script>' // Remove links behavior
+        if (new RegExp(`// storybook-start ${file[0]}\n`, 'si').test(snippets)) {
+          const re = new RegExp(`// storybook-start ${file[0]}\n.*// storybook-end ${file[0]}\n`, 'gsi') // RegExp to get all used code in `snippets.js`
+          example[0] += `\n<script type="text/javascript">\n  ${snippets.match(re)[0].replaceAll('`', '\\`').replaceAll('${', '\\${')}</script>` // Replace backticks and variables in JS snippets
         }
 
         createDirectoryIfNeeded(outputFileDirectory)
 
         try {
-          fs.writeFileSync(outputFile, createTemplate(file[0], index, example))
+          fs.writeFileSync(outputFile, createTemplate(file[0], index, example[0]))
         } catch (error) {
           throw new Error(error)
         }

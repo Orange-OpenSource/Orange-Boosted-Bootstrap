@@ -78,15 +78,15 @@ Boosted uses [embedded SVGs as data URIs]({{< docsref "/customize/overview" >}}#
 
 ```css
 :root {
-  --o-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
+  --bs-chevron-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e");
 }
 
 .back-to-top-link::after {
-  background-image: var(--o-chevron-icon);
+  background-image: var(--bs-chevron-icon);
 }
 
 .pagination-item:first-child .page-link::before {
-  background-image: var(--o-chevron-icon);
+  background-image: var(--bs-chevron-icon);
 }
 ```
 <!-- End mod -->
