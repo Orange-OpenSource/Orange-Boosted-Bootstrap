@@ -9,6 +9,32 @@ aliases:
 toc: true
 ---
 
+## v5.3.1
+
+<hr class="mb-4">
+
+Boosted v5.3.1 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1).
+
+### Components
+
+- **Spinner**
+  - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
+
+  ```diff
+  <button class="btn btn-primary" type="button">
+  -  <span class="spinner-border me-2" role="status" aria-hidden="true"></span>
+  -  Loading...
+  +  <span class="spinner-border me-2" aria-hidden="true"></span>
+  +  <span role="status">Loading...</span>
+  </button>
+  ```
+
+### Forms
+
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
+
 ## v5.3.0
 
 <hr class="mb-4">
@@ -185,7 +211,7 @@ Please wait for the next Boosted versions to use it in your websites.
 
 - `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
 
-- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
 

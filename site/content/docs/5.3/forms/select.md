@@ -26,14 +26,14 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
 {{< example >}}
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+<select class="form-select form-select-lg mb-3" aria-label="Large select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
 
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+<select class="form-select form-select-sm" aria-label="Small select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
@@ -44,7 +44,7 @@ You may also choose from small and large custom selects to match our similarly s
 The `multiple` attribute is also supported:
 
 {{< example >}}
-<select class="form-select" multiple aria-label="multiple select example">
+<select class="form-select" multiple aria-label="Multiple select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
@@ -55,7 +55,7 @@ The `multiple` attribute is also supported:
 As is the `size` attribute:
 
 {{< example >}}
-<select class="form-select" size="3" aria-label="size 3 select example">
+<select class="form-select" size="3" aria-label="Size 3 select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
