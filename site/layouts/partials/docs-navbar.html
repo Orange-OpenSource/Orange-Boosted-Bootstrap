@@ -1,4 +1,13 @@
 <header class="sticky-top">
+  <nav class="navbar navbar-dark navbar-expand bg-dark supra d-none" aria-label="Supra-navigation - New release banner">
+    <div class="container-xxl d-flex justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://boosted.orange.com">There's a newer version of Boosted!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Main navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
@@ -44,38 +53,6 @@
           {{ end }}
 
           {{ partial "docs-versions" . }}
-        </ul>
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item dropdown d-flex">
-            <a href="#" class="nav-link dropdown-toggle gap-1 mx-0 bg-transparent" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
-              <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-              <span class="d-lg-none ms-2" aria-hidden="true" id="bd-theme-text">Toggle theme</span>
-              <span class="visually-hidden">Toggle theme</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark position-absolute" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon"><use href="#sun-fill"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon"><use href="#moon-stars-fill"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 theme-icon"><use href="#circle-half"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>

@@ -212,7 +212,8 @@
         "no-multi-str": "off",
         "strict": "error",
         "unicorn/prefer-top-level-await": "off"
-      }
+      },
+      "extends": ["plugin:storybook/recommended"]
     },
     {
       "files": [
