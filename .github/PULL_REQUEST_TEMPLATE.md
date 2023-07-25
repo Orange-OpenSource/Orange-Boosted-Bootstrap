@@ -59,7 +59,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
 ### Checklist (for Core Team only)
 
 - [ ] My change introduces changes to the migration guide
-- [ ] My new component is added in Storybook
+- [ ] My new component is well displayed in [Storybook](https://deploy-preview-{your_pr_number}--boosted.netlify.app/storybook)
 - [ ] My new component is compatible with RTL
 - [ ] Manually run [BrowserStack tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions/workflows/browserstack.yml)
 - [ ] Manually test browser compatibility with BrowserStack (Chrome >= 60, Firefox >= 60 (+ ESR), Edge, Safari >= 12, iOS Safari, Chrome & Firefox on Android)
@@ -95,7 +95,7 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - then, if bumping a minor or major version:
     - [ ] Manually change `version_short` in `package.json`
     - [ ] Add docs version to `site/data/docs-versions.yml`
-    - [ ] Manually change `docs_version` in `config.yml` and other references to the previous version
+    - [ ] Manually change `docs_version` in `hugo.yml` and other references to the previous version
     - [ ] Update redirects in docs frontmatter (`site/content/docs/_index.html`?)
     - [ ] Move `site/content/docs/5.x` to `site/content/docs/5.x+1`
     - [ ] Increment `site/static/docs/{version}` version
@@ -132,5 +132,5 @@ _Note: Please transform `- [ ]` into `- (NA)` in the description when things are
   - [ ] check every `index.html` used as redirections to be redirecting to the new release
   - [ ] when bumping minor version: ensure `dist` URLs in examples' HTML has changed
   - [ ] double-check everything before pushing, starting by searching for forgotten old version number occurences
-- [ ] make an announcement in Plazza :tada:
+- [ ] make an announcement in [GitHub Discussions](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions/categories/announcements) and internal communication channels :tada:
 -->

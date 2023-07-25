@@ -127,6 +127,8 @@ Or, choose from any of the `.border-opacity` utilities:
 <span class="border border-1"></span>
 <span class="border border-2"></span>
 <span class="border border-3"></span>
+<span class="border border-4"></span>
+<span class="border border-5"></span>
 {{< /example >}}
 
 ## Radius
@@ -215,7 +217,7 @@ Color mode adaptive border colors are also available as a Sass map:
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
-### Utilities API
+### Sass utilities API
 
 Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

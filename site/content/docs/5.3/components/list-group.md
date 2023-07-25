@@ -163,7 +163,7 @@ This variant, which is just an **example illustrating the use of the layout util
 ## Variants
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+**Heads up!** As of v5.3.0, the `list-group-item-variant()` Sass mixin is deprecated. List group item variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
 {{< /callout >}}
 
 Use contextual classes to style list items with a stateful background and color.
@@ -387,7 +387,7 @@ Used in combination with `$background-colors` to generate the [contextual varian
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Sass loop
+### Sass loops
 
 Loop that generates the modifier classes with an overriding of CSS variables.
 

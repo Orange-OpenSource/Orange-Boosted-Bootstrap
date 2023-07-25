@@ -1619,7 +1619,7 @@ describe('Carousel', () => {
     })
 
     // Boosted mod
-    it('should set --o-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
+    it('should set --bs-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <ol class="carousel-indicators">',
@@ -1642,12 +1642,12 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl)
       carousel.cycle()
 
-      expect(firstIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('7ms')
+      expect(firstIndicator.style.getPropertyValue('--bs-carousel-interval')).toEqual('7ms')
 
       carousel._activeElement = secondItemEl
       carousel.cycle()
 
-      expect(secondIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('9385ms')
+      expect(secondIndicator.style.getPropertyValue('--bs-carousel-interval')).toEqual('9385ms')
     })
     // End mod
   })

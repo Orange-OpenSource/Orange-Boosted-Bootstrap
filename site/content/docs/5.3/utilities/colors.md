@@ -8,15 +8,17 @@ aliases:
 toc: true
 ---
 
-## Accessibility
-
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure they meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)**, by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
-
 ## Colors
+
+{{< design-callout-alert >}}
+Some of the colors combinations below do not belong to the Orange Design System specifications, and do not meet accessibility standards.
+
+Please refer to our [Orange's colors]({{< docsref "/utilities/colors#oranges-colors" >}}) section underneath and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
 
@@ -24,19 +26,24 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
 {{< /callout >}}
 
-<!-- Boosted mod -->
 {{< example >}}
-<p class="text-primary">.text-primary</p>
-<p class="text-secondary">.text-secondary</p>
-<p class="text-light">.text-light</p>
+{{< colors.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
+<p class="text-{{ .name }}-emphasis {{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
+{{- end -}}
+{{< /colors.inline >}}
+
 <p class="text-body">.text-body</p>
 <p class="text-body-emphasis">.text-body-emphasis</p>
 <p class="text-body-secondary">.text-body-secondary</p>
 <p class="text-body-tertiary">.text-body-tertiary</p>
-<p class="text-black">.text-black</p>
-<p class="text-white">.text-white</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50 bg-white">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>
 {{< /example >}}
-<!-- End mod -->
 
 {{< callout warning >}}
 **Deprecation:** With the addition of `.text-opacity-*` utilities and CSS variables for text utilities, `.text-black-50` and `.text-white-50` are deprecated as of v5.1.0. They'll be removed in v6.0.0.
@@ -46,16 +53,75 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 **Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 {{< /callout >}}
 
-{{< callout info >}}
-For each `.text-*` there is a matching `.text-*-emphasis` utility. In Boosted, they have exactly the same value so we decided not to display them in the example above so that you don't hesitate on which class to use.
+<!-- Boosted mod -->
+## Orange's colors
 
-Here is a list of these extra classes:
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-- `.text-{{ .name }}-emphasis`
-{{- end -}}
-{{< /colors.inline >}}
-{{< /callout >}}
+Bootstrap provides many `.text-*` and `.bg-*` utilities, but they should be used with care to meet our design specifications and [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+To be sure to respect the specifications, it is necessary to define `color`, `background-color` and `font-size` altogether.
+
+Thus, the `.text-primary` color on white background (`#f16e00`) can only be used in a font size greater than 24px (using for example `.fs-3` utility), or 19px bold (using for example `.fs-4` and `.fw-bold` utilities).
+The `.text-primary` color on dark background (`#ff7900`) can be used in any size, and it shouldn't be used on light grey backgrounds at all.
+
+Here are some compliant combinations examples for texts:
+
+{{< example >}}
+
+<p class="text-black">regular black text</p>
+<p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
+<p class="text-body-secondary">regular secondary text</p>
+
+<p class="text-black fw-bold">bold black text</p>
+<p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
+<p class="text-body-secondary fw-bold">bold secondary text</p>
+
+<div class="bg-dark py-1">
+  <p class="text-white">regular white text on dark</p>
+  <p class="text-primary">regular primary text on dark</p>
+  <p class="text-light">regular light text on dark</p>
+
+  <p class="text-white fw-bold">bold white text on dark</p>
+  <p class="text-primary fw-bold">bold primary text on dark</p>
+  <p class="text-light fw-bold">bold light text on dark</p>
+</div>
+{{< /example >}}
+
+Here are some compliant combinations examples for non-texts elements, such as SVG icons:
+
+{{< example >}}
+<p class="p-2">
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
+</p>
+<p class="bg-dark p-2">
+  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+  </svg>
+</p>
+{{< /example >}}
+
+<!-- End mod -->
 
 ## Opacity
 
@@ -153,7 +219,7 @@ Color mode adaptive text colors are also available as a Sass map:
 
 {{< scss-docs name="theme-text-dark-map" file="scss/_maps.scss" >}}
 
-### Utilities API
+### Sass utilities API
 
 Color utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

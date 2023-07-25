@@ -89,9 +89,8 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
+      <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
+      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
       <div class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -150,9 +149,8 @@ While these feedback styles cannot be styled with CSS, you can still customize t
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
+      <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
+      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
     </div>
   </div>
   <div class="col-12">
@@ -222,9 +220,8 @@ To fix [issues with border radius](https://github.com/twbs/bootstrap/issues/2511
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-      <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
-      </label>
+      <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
+      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -329,11 +326,11 @@ These variables are also color mode adaptive, meaning they change color while in
 
 ### Sass mixins
 
-Two mixins are combined, through our [loop](#loop), to generate our form validation feedback styles.
+Two mixins are combined, through our [loop](#sass-loops), to generate our form validation feedback styles.
 
 {{< scss-docs name="form-validation-mixins" file="scss/mixins/_forms.scss" >}}
 
-### Sass map
+### Sass maps
 
 This is the validation Sass map from `_variables.scss`. Override or extend this to generate different or additional states.
 
@@ -341,7 +338,7 @@ This is the validation Sass map from `_variables.scss`. Override or extend this 
 
 Maps of `$form-validation-states` can contain three optional parameters to override focus styles.<!-- Boosted mod: no tooltips -->
 
-### Sass loop
+### Sass loops
 
 Used to iterate over `$form-validation-states` map values to generate our validation styles. Any modifications to the above Sass map will be reflected in your compiled CSS via this loop.
 

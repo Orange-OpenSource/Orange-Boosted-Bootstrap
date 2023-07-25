@@ -233,8 +233,8 @@ Highlight a table row or cell by adding a `.table-active` class.
 For the accented tables ([striped rows](#striped-rows), [striped columns](#striped-columns), [hoverable rows](#hoverable-rows) and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
 
 - We start by setting the background of a table cell with the `--bs-table-bg` custom property. All table variants then set that custom property to colorize the table cells. This way, we don't get into trouble if semi-transparent colors are used as table backgrounds.
-- Then we add an inset box shadow on the table cells with `box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);` to layer on top of any specified `background-color`. Because we use a huge spread and no blur, the color will be monotone. Since `--bs-table-accent-bg` is unset by default, we don't have a default box shadow.
-- When either `.table-striped`, `.table-striped-columns`, `.table-hover` or `.table-active` classes are added, the `--bs-table-accent-bg` is set to a semitransparent color to colorize the background.
+- Then we add an inset box shadow on the table cells with `box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));` to layer on top of any specified `background-color`. It uses custom cascade to override the `box-shadow`, regardless the CSS specificity. Because we use a huge spread and no blur, the color will be monotone. Since `--bs-table-accent-bg` is set to `transparent` by default, we don't have a default box shadow.
+- When either `.table-striped`, `.table-striped-columns`, `.table-hover` or `.table-active` classes are added, either `--bs-table-bg-type` or `--bs-table-bg-state` (by default set to `initial`) are set to a semitransparent color (`--bs-table-striped-bg`, `--bs-table-active-bg` or `--bs-table-hover-bg`) to colorize the background and override default `--bs-table-accent-bg`.
 - For each table variant, we generate a `--bs-table-accent-bg` color with the highest contrast depending on that color. For example, the accent color for `.table-dark` has a lighter accent color.
 - Text and border colors are generated the same way, and their colors are inherited by default.
 
@@ -466,7 +466,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 
 ```html
 <table class="table table-sm">
-  ...
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
@@ -488,7 +488,7 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
 
 ```html
 <table class="table caption-bottom">
-  ...
+  <caption>List of users</caption>
   <thead>
     ...
   </thead>
@@ -673,140 +673,142 @@ Add a [`.form-check` div]({{< docsref "/forms/checks-radios#checks" >}}) within 
 The selection behavior isn't implemented yet. This feature will be delivered with [#410]({{< param repo >}}/issues/410) as an example.
 {{< /callout >}}
 
-<div class="table-responsive">
-  <table class="table table-sm table-hover has-checkbox">
-    <caption class="visually-hidden">Boosted table with a selection feature</caption>
-    <thead>
-      <tr>
-        <th scope="col">
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck">
-            <label class="form-check-label" for="customCheck">
-              <span class="visually-hidden">Select all</span>
-            </label>
-          </div>
-        </th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck1">
-            <label class="form-check-label" for="customCheck1">
-                <span class="visually-hidden">Select first row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck2">
-            <label class="form-check-label" for="customCheck2">
-                <span class="visually-hidden">Select second row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck3" checked>
-            <label class="form-check-label" for="customCheck3">
-                <span class="visually-hidden">Select third row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck4" checked>
-            <label class="form-check-label" for="customCheck4">
-                <span class="visually-hidden">Select fourth row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table table-sm table-hover has-checkbox">
+      <caption class="visually-hidden">Boosted table with a selection feature</caption>
+      <thead>
+        <tr>
+          <th scope="col">
             <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck5">
-            <label class="form-check-label" for="customCheck5">
-                <span class="visually-hidden">Select fifth row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck6">
-            <label class="form-check-label" for="customCheck6">
-                <span class="visually-hidden">Select sixth row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck7">
-            <label class="form-check-label" for="customCheck7">
-                <span class="visually-hidden">Select seventh row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck8">
-            <label class="form-check-label" for="customCheck8">
-                <span class="visually-hidden">Select eighth row</span>
-            </label>
-          </div>
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-    </tbody>
-  </table>
+              <input class="form-check-input" type="checkbox" id="customCheck">
+              <label class="form-check-label" for="customCheck">
+                <span class="visually-hidden">Select all</span>
+              </label>
+            </div>
+          </th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck1">
+              <label class="form-check-label" for="customCheck1">
+                  <span class="visually-hidden">Select first row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck2">
+              <label class="form-check-label" for="customCheck2">
+                  <span class="visually-hidden">Select second row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr class="table-active">
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck3" checked>
+              <label class="form-check-label" for="customCheck3">
+                  <span class="visually-hidden">Select third row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr class="table-active">
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck4" checked>
+              <label class="form-check-label" for="customCheck4">
+                  <span class="visually-hidden">Select fourth row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+              <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck5">
+              <label class="form-check-label" for="customCheck5">
+                  <span class="visually-hidden">Select fifth row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck6">
+              <label class="form-check-label" for="customCheck6">
+                  <span class="visually-hidden">Select sixth row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck7">
+              <label class="form-check-label" for="customCheck7">
+                  <span class="visually-hidden">Select seventh row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck8">
+              <label class="form-check-label" for="customCheck8">
+                  <span class="visually-hidden">Select eighth row</span>
+              </label>
+            </div>
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 ```html
@@ -871,328 +873,338 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 
 ### With icons or thumbnails
 
-Use SVG to display thumbnails or icons in your table data cell elements.
+Use SVG or PNG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table table-sm table-hover align-middle has-checkbox">
+      <caption class="visually-hidden">Boosted table with icons in a row</caption>
+      <thead>
+        <tr>
+          <th scope="col">
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck9">
+              <label class="form-check-label" for="customCheck9">
+                <span class="visually-hidden">Select all</span>
+              </label>
+            </div>
+          </th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck10">
+              <label class="form-check-label" for="customCheck10">
+                <span class="visually-hidden">Select first row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck11">
+              <label class="form-check-label" for="customCheck11">
+                <span class="visually-hidden">Select second row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
+              <title id="svg1">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr class="table-active">
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck12" checked>
+              <label class="form-check-label" for="customCheck12">
+                <span class="visually-hidden">Select third row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr class="table-active">
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck13" checked>
+              <label class="form-check-label" for="customCheck13">
+                <span class="visually-hidden">Select fourth row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg2" class="me-2">
+              <title id="svg2">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+              <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck14">
+              <label class="form-check-label" for="customCheck14">
+                <span class="visually-hidden">Select fifth row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg3" class="me-2">
+              <title id="svg3">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck15">
+              <label class="form-check-label" for="customCheck15">
+                <span class="visually-hidden">Select sixth row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg4" class="me-2">
+              <title id="svg4">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck16">
+              <label class="form-check-label" for="customCheck16">
+                <span class="visually-hidden">Select seventh row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg5" class="me-2">
+              <title id="svg5">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="customCheck17">
+              <label class="form-check-label" for="customCheck17">
+                <span class="visually-hidden">Select eighth row</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg6" class="me-2">
+              <title id="svg6">Document</title>
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+            </svg>
+            Cell text
+          </td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+          <td>Cell text</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+```html
 <div class="table-responsive">
   <table class="table table-sm table-hover align-middle has-checkbox">
-    <caption class="visually-hidden">Boosted table with icons in a row</caption>
-    <thead>
-      <tr>
-        <th scope="col">
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck9">
-            <label class="form-check-label" for="customCheck9">
-              <span class="visually-hidden">Select all</span>
-            </label>
-          </div>
-        </th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck10">
-            <label class="form-check-label" for="customCheck10">
-              <span class="visually-hidden">Select first row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-            <title id="svg1">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#ffd200"></rect>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck11">
-            <label class="form-check-label" for="customCheck11">
-              <span class="visually-hidden">Select second row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-            <title id="svg2">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck12" checked>
-            <label class="form-check-label" for="customCheck12">
-              <span class="visually-hidden">Select third row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
-            <title id="svg3">Thumbnail</title>
-            <rect width="100%" height="100%" fill="#4bb4e6"></rect>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr class="table-active">
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck13" checked>
-            <label class="form-check-label" for="customCheck13">
-              <span class="visually-hidden">Select fourth row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
-            <title id="svg4">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-            <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck14">
-            <label class="form-check-label" for="customCheck14">
-              <span class="visually-hidden">Select fifth row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
-            <title id="svg5">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck15">
-            <label class="form-check-label" for="customCheck15">
-              <span class="visually-hidden">Select sixth row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
-            <title id="svg6">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck16">
-            <label class="form-check-label" for="customCheck16">
-              <span class="visually-hidden">Select seventh row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
-            <title id="svg7">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="customCheck17">
-            <label class="form-check-label" for="customCheck17">
-              <span class="visually-hidden">Select eighth row</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
-            <title id="svg8">Document</title>
-            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-          </svg>
-          Cell text
-        </td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-        <td>Cell text</td>
-      </tr>
-    </tbody>
+    ...
+    <td>
+      <img src="/docs/{{< param docs_version >}}/assets/img/thumbnail.png" alt="Thumbnail" width="30" height="30" class="me-2">
+      Cell text
+    </td>
+    ...
+    <td>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="svg1" class="me-2">
+        <title id="svg1">Document</title>
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
+      </svg>
+      Cell text
+    </td>
+    ...
   </table>
 </div>
-
-```html
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
-    <title id="svg1">Thumbnail</title>
-    <rect width="100%" height="100%" fill="#ffd200"></rect>
-  </svg>
-  Cell text
-</td>
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
-    <title id="svg2">Document</title>
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#document"></use>
-  </svg>
-  Cell text
-</td>
 ```
 
-<div class="table-responsive">
-  <table class="table align-middle">
-    <caption class="visually-hidden">Boosted table with icons inside a row</caption>
-    <thead>
-      <tr>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-        <th scope="col">Column header</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
-            <title id="check1-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-2">
-            <title id="check1-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-3">
-            <title id="check1-3">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-1">
-            <title id="check2-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-2">
-            <title id="check2-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-3">
-            <title id="check2-3">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td></td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-1">
-            <title id="check3-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-2">
-            <title id="check3-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td></td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-1">
-            <title id="check4-1">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-2">
-            <title id="check4-2">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td></td>
-        <td></td>
-        <td>
-         <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check5">
-           <title id="check5">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row" class="fw-normal">Cell text</th>
-        <td></td>
-        <td></td>
-        <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check6">
-            <title id="check6">Yes</title>
-            <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-          </svg>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+Use SVG or PNG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
+
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table align-middle">
+      <caption class="visually-hidden">Boosted table with icons inside a row</caption>
+      <thead>
+        <tr>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+          <th scope="col">Column header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
+              <title id="check1-1">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-2">
+              <title id="check1-2">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-3">
+              <title id="check1-3">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-1">
+              <title id="check2-1">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-2">
+              <title id="check2-2">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check2-3">
+              <title id="check2-3">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-1">
+              <title id="check3-1">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check3-2">
+              <title id="check3-2">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-1">
+              <title id="check4-1">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check4-2">
+              <title id="check4-2">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td></td>
+          <td>
+           <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check5">
+             <title id="check5">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="fw-normal">Cell text</th>
+          <td></td>
+          <td></td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check6">
+              <title id="check6">Yes</title>
+              <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 ```html
-<td>
-  <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
-    <title id="check1-1">Yes</title>
-    <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
-  </svg>
-</td>
+<div class="table-responsive">
+  <table class="table align-middle">
+    ...
+    <td>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
+        <title id="check1-1">Yes</title>
+        <use style="color: var(--bs-success);" xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"></use>
+      </svg>
+    </td>
+    ...
+  </table>
+</div>
 ```
 
 ## CSS
@@ -1201,7 +1213,7 @@ Use SVG to display thumbnails or icons in your table data cell elements.
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
 
-### Sass loop
+### Sass loops
 
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 

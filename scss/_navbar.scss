@@ -52,7 +52,7 @@
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
   // Boosted mod
   font-weight: var(--#{$prefix}navbar-font-weight);
-  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); /* stylelint-disable-line function-disallowed-list */
+  box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
   @include transition($navbar-transition);
   // End mod
   @include gradient-bg();
@@ -123,7 +123,10 @@
 
   // No focus
   &:hover {
-    color: var(--#{$prefix}navbar-brand-hover-color);
+    .title,
+    .two-lined {
+      color: var(--#{$prefix}navbar-brand-hover-color);
+    }
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
@@ -137,7 +140,7 @@
   //// Ensure headings variant align consistently
   .title,
   .two-lined {
-    margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); /* stylelint-disable-line function-disallowed-list */
+    margin: divide(-2em, 7) $spacer divide(-1em, 7) calc(var(--#{$prefix}navbar-brand-logo-size) / 2); // stylelint-disable-line function-disallowed-list
     @include font-size(var(--#{$prefix}navbar-brand-font-size));
     line-height: 1;
     letter-spacing: var(--#{$prefix}navbar-brand-letter-spacing);
@@ -184,7 +187,7 @@
   .nav-link {
     position: relative;
     padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
-    margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+    margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
     word-break: break-all;
 
     &:hover {
@@ -211,7 +214,7 @@
 
     .nav-link.nav-icon {
       padding: var(--#{$prefix}navbar-nav-icon-padding-y) var(--#{$prefix}navbar-nav-icon-padding-x);
-      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+      margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
       white-space: nowrap;
 
       svg,
@@ -280,7 +283,7 @@
     border-top: var(--#{$prefix}navbar-border-width) solid var(--#{$prefix}navbar-border-color);
 
     @include media-breakpoint-up(md) {
-      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); /* stylelint-disable-line function-disallowed-list */
+      margin-bottom: calc(-1 * var(--#{$prefix}navbar-padding-y)); // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -294,8 +297,10 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
-  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  // stylelint-disable-next-line function-disallowed-list
+  padding: var(--#{$prefix}navbar-toggler-padding-y) calc(var(--#{$prefix}navbar-toggler-padding-x) / 2) var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x); // Boosted mod
+  // stylelint-disable-next-line function-disallowed-list
+  margin-right: calc(-.5 * var(--#{$prefix}navbar-toggler-padding-x)); // Boosted mod
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{$prefix}navbar-color);
@@ -397,19 +402,19 @@
             border: 0;
 
             &:first-child > .nav-link {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
             }
 
             &:last-child > .nav-link {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
             }
 
             &:first-child > .nav-icon {
-              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-left: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
             }
 
             &:last-child > .nav-icon {
-              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); /* stylelint-disable-line function-disallowed-list */
+              margin-right: calc(-1 * var(--#{$prefix}navbar-nav-icon-padding-x)); // stylelint-disable-line function-disallowed-list
             }
           }
           // End mod
@@ -503,7 +508,8 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
-.navbar-dark {
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
   // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};

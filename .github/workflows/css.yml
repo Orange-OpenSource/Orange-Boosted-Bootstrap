@@ -44,3 +44,15 @@ jobs:
 
       - name: Run CSS tests
         run: npm run css-test
+
+      # Check that there are no stylelint multiline comments (e.g. /* stylelint-disable */)
+      - name: Check built CSS files
+        shell: bash
+        run: |
+          if [[ $(find dist/css/ -name "*.css" | xargs grep -F "/* stylelint" | wc -l | bc) -eq 0 ]]; then
+            echo "All good, no stylelint multiline comments found"
+            exit 0
+          else
+            echo "Found stylelint multiline comments!"
+            exit 1
+          fi
