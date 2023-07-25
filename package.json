@@ -158,7 +158,7 @@
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^3.25.3",
+    "rollup": "^3.26.2",
     "rollup-plugin-istanbul": "^4.0.0",
     "rtlcss": "^4.1.0",
     "sass": "^1.63.6",
