@@ -19,6 +19,9 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 
 ### Components
 
+- **Nav and tabs**
+  - <span class="badge bg-success">New</span> Added support for JavaScript Tabs' <kbd>Home</kbd> and <kbd>End</kbd> keys.
+
 - **Spinner**
   - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
 
