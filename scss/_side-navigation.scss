@@ -43,10 +43,10 @@
     }
 
     .accordion-body {
-      --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); /* stylelint-disable-line function-disallowed-list */
+      --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)); // stylelint-disable-line function-disallowed-list
 
       .accordion-body {
-        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width) * 2); /* stylelint-disable-line function-disallowed-list */
+        --#{$prefix}side-nav-item-padding-start: calc(var(--#{$prefix}side-nav-item-icon-size) * 2 + var(--#{$prefix}side-nav-item-spacing) * 3 - var(--#{$prefix}side-nav-border-width) * 2); // stylelint-disable-line function-disallowed-list
       }
     }
   }
@@ -110,7 +110,7 @@
       width: var(--#{$prefix}side-nav-item-icon-size);
       min-width: var(--#{$prefix}side-nav-item-icon-size);
       height: var(--#{$prefix}side-nav-item-icon-size);
-      margin: calc(-1 * var(--#{$prefix}side-nav-item-padding-top)) subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) calc(-1 * var(--#{$prefix}side-nav-item-padding-bottom)) 0; /* stylelint-disable-line function-disallowed-list */
+      margin: calc(-1 * var(--#{$prefix}side-nav-item-padding-top)) subtract(var(--#{$prefix}side-nav-item-spacing), var(--#{$prefix}side-nav-border-width)) calc(-1 * var(--#{$prefix}side-nav-item-padding-bottom)) 0; // stylelint-disable-line function-disallowed-list
     }
   }
 }
