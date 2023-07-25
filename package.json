@@ -118,7 +118,7 @@
     "@storybook/html": "^7.1.0",
     "@storybook/html-webpack5": "^7.1.0",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/theming": "^7.1.0",
+    "@storybook/theming": "^7.1.1",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "bundlewatch": "^0.3.3",
