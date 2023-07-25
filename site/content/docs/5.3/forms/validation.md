@@ -268,7 +268,7 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
-    <select class="form-select" required aria-label="select example">
+    <select class="form-select" required aria-label="Open select menu required">
       <option value="">Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -278,7 +278,7 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
-    <input type="file" class="form-control" aria-label="file example" required>
+    <input type="file" class="form-control" aria-label="Select a file required" required>
     <div class="invalid-feedback">Example invalid form file feedback</div>
   </div>
 
