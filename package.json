@@ -113,7 +113,7 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-replace": "^5.0.2",
-    "@storybook/addon-a11y": "^7.1.0",
+    "@storybook/addon-a11y": "^7.1.1",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/html": "^7.1.0",
     "@storybook/html-webpack5": "^7.1.0",
