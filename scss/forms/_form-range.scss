@@ -43,8 +43,8 @@
     height: $form-range-thumb-height;
     // stylelint-disable-next-line function-disallowed-list
     margin-top: calc((#{$form-range-track-height} - (#{$form-range-thumb-height} + var(--#{$prefix}border-width) * 2)) * .5); // Webkit specific // Boosted mod
-    cursor: grab; // Boosted mod
     appearance: none;
+    cursor: grab; // Boosted mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
@@ -78,8 +78,8 @@
   &::-moz-range-thumb {
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    cursor: grab; // Boosted mod
     appearance: none;
+    cursor: grab; // Boosted mod
     @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
     @include border-radius($form-range-thumb-border-radius, $form-range-thumb-border-radius); // Boosted mod: always rounded
