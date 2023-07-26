@@ -10,7 +10,7 @@
     },
     {
       "path": "./dist/css/boosted-reboot.css",
-      "maxSize": "4.5 kB"
+      "maxSize": "4.25 kB"
     },
     {
       "path": "./dist/css/boosted-reboot.min.css",
@@ -34,7 +34,7 @@
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "48.5 kB"
+      "maxSize": "48.25 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",

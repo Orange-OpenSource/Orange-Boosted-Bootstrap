@@ -283,7 +283,7 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< design-callout-alert >}}
 These **full-width** buttons should not be used on desktop screens because they do not respect the Orange Design System specifications.
@@ -316,7 +316,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 </div>
 {{< /example >}}
 
-Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they're no longer stacked.
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -367,8 +367,8 @@ const bsButton = new boosted.Button('#myButton')
 | Method | Description |
 | --- | --- |
 | `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `boosted.Button.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)`. |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `boosted.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn't initialized. You can use it like this: `boosted.Button.getOrCreateInstance(element)`. |
 | `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 {{< /bs-table >}}
 
