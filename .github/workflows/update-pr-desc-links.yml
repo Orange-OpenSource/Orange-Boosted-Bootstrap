@@ -15,7 +15,7 @@ jobs:
           )"
           gh api --method PATCH /repos/$OWNER/$REPO/pulls/$PR_NUMBER -f body="$PR_UPDATED_BODY"
         env:
-          GITHUB_TOKEN: ${{ secrets.YOUR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
           PR_NUMBER: ${{ github.event.number }}
