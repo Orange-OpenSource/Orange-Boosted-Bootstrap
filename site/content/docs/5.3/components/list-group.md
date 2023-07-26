@@ -346,7 +346,7 @@ Dark variant also work with `.list-group-item-action`.
 <div class="list-group list-group-dark">
   <a class="list-group-item list-group-item-action" href="#">A simple default link list group item</a>
   <a class="list-group-item list-group-item-action active" href="#">A simple active link list group item</a>
-  <a class="list-group-item list-group-item-action disabled">A simple disabled link list group item</a>
+  <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A simple disabled link list group item</a>
 </div>
 {{< /example >}}
 <!-- End mod -->
