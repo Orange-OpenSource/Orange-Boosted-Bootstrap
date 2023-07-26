@@ -16,6 +16,7 @@
 
     padding-top: var(--#{$prefix}footer-padding-top);
     padding-bottom: var(--#{$prefix}footer-padding-bottom);
+    color: var(--#{$prefix}body-color);
 
     .navbar-nav {
       --#{$prefix}nav-link-padding-x: 0;
@@ -28,8 +29,12 @@
       .nav-link {
         outline-offset: $focus-visible-outer-offset; // Override outline offset coming from .navbar-nav
 
-        &.active::before {
-          content: unset;
+        &.active {
+          text-decoration: underline;
+
+          &::before {
+            content: unset;
+          }
         }
       }
     }

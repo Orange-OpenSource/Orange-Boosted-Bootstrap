@@ -72,6 +72,8 @@
 - category: Pages
   description: "Complete reusable pages that can be found in the Design Guidelines."
   examples:
+    - name: Download app
+      description: "How to build a download app page (redirect on iOS and Android)."
     - name: Form
       description: "How to build a form with Boosted."
 

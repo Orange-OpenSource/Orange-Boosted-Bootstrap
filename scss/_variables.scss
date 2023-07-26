@@ -342,14 +342,14 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
-$primary-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($primary, 60%)`
-$secondary-text-emphasis: null !default; // Boosted mod: instead of `shade-color($secondary, 60%)`
-$success-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($success, 60%)`
-$info-text-emphasis:      null !default; // Boosted mod: instead of `shade-color($info, 60%)`
-$warning-text-emphasis:   null !default; // Boosted mod: instead of `shade-color($warning, 60%)`
-$danger-text-emphasis:    null !default; // Boosted mod: instead of `shade-color($danger, 60%)`
-$light-text-emphasis:     null !default; // Boosted mod: instead of `$gray-700`
-$dark-text-emphasis:      null !default; // Boosted mod: instead of `$gray-700`
+$primary-text-emphasis:   $accessible-orange !default; // Boosted mod: instead of `shade-color($primary, 60%)`
+$secondary-text-emphasis: $secondary !default; // Boosted mod: instead of `shade-color($secondary, 60%)`
+$success-text-emphasis:   $success !default; // Boosted mod: instead of `shade-color($success, 60%)`
+$info-text-emphasis:      $info !default; // Boosted mod: instead of `shade-color($info, 60%)`
+$warning-text-emphasis:   $warning !default; // Boosted mod: instead of `shade-color($warning, 60%)`
+$danger-text-emphasis:    $danger !default; // Boosted mod: instead of `shade-color($danger, 60%)`
+$light-text-emphasis:     $light !default; // Boosted mod: instead of `$gray-700`
+$dark-text-emphasis:      $dark !default; // Boosted mod: instead of `$gray-700`
 // scss-docs-end theme-text-variables
 
 // scss-docs-start theme-bg-subtle-variables
@@ -447,8 +447,10 @@ $color-mode-type:             data !default; // `data` or `media-query`
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix !default;
-$boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$boosted-prefix`
-$boosted-prefix:              $boosted-variable-prefix !default;
+// fusv-disable
+$boosted-variable-prefix:     o- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$boosted-prefix:              $boosted-variable-prefix !default; // Deprecated in v5.3.0 for the shorter `$prefix`
+// fusv-enable
 
 // Gradient
 //
@@ -618,7 +620,9 @@ $border-width:                .125rem !default;
 $border-widths: (
   1: $border-width * .5,
   2: $border-width,
-  3: $border-width * 1.5
+  3: $border-width * 1.5,
+  4: $border-width * 2,
+  5: $border-width * 2.5
 ) !default;
 $border-style:                solid !default;
 $border-color:                $black !default; // Boosted mod
@@ -831,7 +835,7 @@ $blockquote-line-height:      1.5 !default; // Boosted mod
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mod
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    inherit !default;
+$hr-color:                    var(--#{$prefix}heading-color) !default; // Boosted mod
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in v5.2.0
@@ -841,6 +845,10 @@ $hr-height:                   null !default; // Deprecated in v5.2.0
 $hr-border-color:             null !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
 $hr-opacity:                  null !default;
+
+// scss-docs-start vr-variables
+$vr-border-width:             2px !default; // Boosted mod: instead of `var(--#{$prefix}border-width)`
+// scss-docs-end vr-variables
 
 $legend-margin-bottom:        $spacer * .25 !default;
 $legend-font-size:            $font-size-xlg !default;
@@ -875,7 +883,7 @@ $table-cell-vertical-align:             top !default;
 $table-line-height:                     1.25 !default; // Boosted mod
 
 $table-color:                           var(--#{$prefix}body-color) !default;
-$table-bg:                              var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `transparent`
+$table-bg:                              var(--#{$prefix}body-bg) !default;
 $table-accent-bg:                       transparent !default;
 
 $table-th-font-weight:                  null !default;
@@ -909,7 +917,7 @@ $table-striped-columns-order:           even !default;
 
 $table-group-separator-color:           currentcolor !default;
 
-$table-caption-color:                   var(--#{$boosted-prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
 
@@ -1041,6 +1049,10 @@ $btn-social-networks: (
     "color": red,
     "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2a14 14 0 00-5 27v-4l2-7-1-2c0-2 1-3 3-3l1 2-1 4c0 2 1 3 2 3 3 0 5-3 5-7 0-3-3-5-6-5-4 0-6 3-6 6l1 3a302 302 0 01-1 2c-2-1-3-3-3-5 0-5 3-9 9-9 5 0 9 4 9 8 0 5-3 9-7 9l-4-2v4l-2 3a14 14 0 0018-13c0-8-6-14-14-14z'/></svg>",
     "size": 1.375rem
+  ),
+  "tiktok": (
+    "color": #ff2c55,
+    "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M7.024 30.054C4.584 28.212 3 25.235 3 21.876c0-5.59 4.39-10.123 9.805-10.123.45 0 .899.031 1.345.094v5.6a4.363 4.363 0 0 0-1.361-.218c-2.477 0-4.485 2.074-4.485 4.631 0 1.809 1.003 3.374 2.467 4.137l.31.146a4.348 4.348 0 0 0 1.708.348c2.471 0 4.476-2.065 4.484-4.615V0h5.335v.704c.02.211.046.42.082.63l.08.404a7.668 7.668 0 0 0 3.306 4.769A7.22 7.22 0 0 0 30 7.665V8.83l-.199-.047-.182-.047.381.094v4.312a12.4 12.4 0 0 1-7.392-2.443v11.177c0 5.591-4.39 10.124-9.804 10.124-2.02 0-3.898-.63-5.458-1.712l-.322-.234Z'/></svg>"
   )
 ) !default;
 // scss-docs-end social-buttons
@@ -1049,7 +1061,7 @@ $btn-social-networks: (
 // Forms
 
 // scss-docs-start form-text-variables
-$form-text-margin-top:                  .375rem !default; // Boosted mod
+$form-text-margin-top:                  .4375rem !default; // Boosted mod
 $form-text-font-size:                   $small-font-size !default;
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // Boosted mod: instead of `null`
@@ -1088,12 +1100,12 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}body-bg) !default;
+$input-bg:                              $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $input-disabled-color:                  $gray-700 !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           var(--#{$prefix}body-color) !default;
+$input-color:                           $black !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $input-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of var(--#{$prefix}border-color)
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
@@ -1152,7 +1164,7 @@ $form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
 $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image:       var(--#{$boosted-prefix}check-icon) !default;
+$form-check-input-checked-bg-image:       var(--#{$prefix}check-icon) !default;
 $form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
@@ -1186,7 +1198,7 @@ $form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Depre
 // Boosted mod: no $form-switch-color
 $form-switch-width:               $spacer * 3 !default; // Boosted mod
 $form-switch-padding-start:       $form-switch-width + .625rem !default; // Boosted mod
-$form-switch-bg-image:            var(--#{$boosted-prefix}close-icon) !default;  // Boosted mod
+$form-switch-bg-image:            var(--#{$prefix}close-icon) !default;  // Boosted mod
 $form-switch-bg-position:         right .5rem top 50% !default;  // Boosted mod
 $form-switch-bg-size:             .75rem !default;  // Boosted mod
 $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted mod
@@ -1299,8 +1311,8 @@ $form-feedback-valid-color:         $success !default; // Boosted mod: deprecate
 $form-feedback-invalid-color:       $danger !default; // Boosted mod: deprecated in v5.3.0
 // fusv-enable
 
-$form-feedback-icon-valid:          var(--#{$boosted-prefix}success-icon) !default;
-$form-feedback-icon-invalid:        var(--#{$boosted-prefix}error-icon) !default;
+$form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
+$form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
 $form-feedback-icon-size:           add($spacer * .25, $spacer * .5) !default; // Boosted mod
 $form-feedback-line-height:         $line-height-sm !default; // Boosted mod
 // scss-docs-end form-feedback-variables
@@ -1499,6 +1511,7 @@ $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
 $navbar-dark-toggler-border-color:  transparent !default;
+// Boosted mod: np $navbar-dark-icon-color
 // Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
 $navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
@@ -1602,7 +1615,7 @@ $pagination-transition:             $transition-focus !default;
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
-$pagination-icon:                   var(--#{$boosted-prefix}chevron-icon) !default;
+$pagination-icon:                   var(--#{$prefix}chevron-icon) !default;
 $pagination-icon-size:              subtract($spacer * 2, calc(var(--#{$prefix}border-width) * 2)) !default; // stylelint-disable-line function-disallowed-list
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
@@ -1667,8 +1680,8 @@ $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
-$card-cap-bg:                       var(--#{$prefix}body-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
-$card-cap-color:                    var(--#{$prefix}body-bg) !default; // Boosted mod: instead of `null`
+$card-cap-bg:                       $black !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
+$card-cap-color:                    $white !default; // Boosted mod: instead of `null`
 $card-cap-font-weight:              $font-weight-bold !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
@@ -1779,6 +1792,7 @@ $popover-line-height:               1.5 !default; // Boosted mod
 $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        var(--#{$prefix}body-bg) !default;
 $popover-max-width:                 $spacer * 19 !default; // Boosted mod: instead of `276px`
+$popover-padding-y:                 $spacer !default; // Boosted mod
 $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
@@ -1789,24 +1803,25 @@ $popover-header-font-size:          $font-size-lg !default; // Boosted mod: inst
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $popover-header-color:              $headings-color !default;
+$popover-header-padding-top:        $popover-padding-y !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
-// fusv-disable
-$popover-header-padding-y:          $spacer * .5 !default; // Boosted mod: deprecated in v5.3.0 replaced by `$popover-header-padding-top` and `$popover-header-padding-bottom`
-// fusv-enable
+$popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
 $popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
-$popover-body-padding-y:            $spacer !default;
-$popover-body-padding-x:            $popover-header-padding-x !default;
+$popover-body-padding-top:          0 !default; // Boosted mod
+$popover-body-padding-bottom:       $popover-padding-y !default; // Boosted mod
+$popover-body-padding-y:            initial !default; // Boosted mod: instead of `$spacer`
+$popover-body-padding-x:            $popover-header-padding-x !default; // Boosted mod: instead of `$spacer`
 
 $popover-arrow-width:               $spacer !default; // Boosted mod: instead of `1rem`
-$popover-arrow-height:              $popover-arrow-width * .5 !default;
+$popover-arrow-height:              $popover-arrow-width * .5 !default; // Boosted mod: instead of `.5rem`
 // scss-docs-end popover-variables
 
 // fusv-disable
 // Deprecated in Bootstrap 5.2.0 for CSS variables
 $popover-arrow-color:               $popover-bg !default;
-$popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod
+$popover-arrow-outer-color:         $popover-border-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color-translucent)`
 // fusv-enable
 
 // Toasts
@@ -1919,10 +1934,10 @@ $alert-border-width:                var(--#{$prefix}border-width) !default;
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
 $alert-icons: (
-  "success": var(--#{$boosted-prefix}success-icon),
+  "success": var(--#{$prefix}success-icon),
   "info":    escape-svg($info-icon),
   "warning": escape-svg($warning-icon),
-  "danger":  var(--#{$boosted-prefix}error-icon)
+  "danger":  var(--#{$prefix}error-icon)
 ) !default;
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
@@ -2104,7 +2119,7 @@ $carousel-caption-spacer:            $spacer * 3 !default;
 $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
 $carousel-control-icon-size:         1rem 1.5rem !default;
-$carousel-control-icon-bg:           var(--#{$boosted-prefix}chevron-icon) !default;
+$carousel-control-icon-bg:           var(--#{$prefix}chevron-icon) !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
 $carousel-control-pause-indicators-spacing: 10px !default;
@@ -2148,11 +2163,11 @@ $spinner-border-width-lg: calc(var(--#{$prefix}border-width) * 4) !default; // B
 // scss-docs-start close-variables
 $btn-close-width:               $spacer !default; // Boosted mod
 $btn-close-height:              $btn-close-width !default;
-$btn-close-padding:             var(--#{$boosted-prefix}icon-spacing, #{$btn-icon-padding-x}) !default; // Boosted mod
+$btn-close-padding:             var(--#{$prefix}icon-spacing, #{$btn-icon-padding-x}) !default; // Boosted mod
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
 $btn-close-color:               var(--#{$prefix}emphasis-color) !default;
-$btn-close-bg:                  var(--#{$boosted-prefix}close-icon) !default; // Boosted mod
+$btn-close-bg:                  var(--#{$prefix}close-icon) !default; // Boosted mod
 // Boosted mod
 // fusv-disable
 $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in v5.3.0
@@ -2209,13 +2224,13 @@ $code-color-inverted:               $gray-600 !default;
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(--#{$boosted-prefix}kbd-color, $black) !default;
+$kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
 $kbd-color-inverted:                $white !default;
-$kbd-bg:                            var(--#{$boosted-prefix}kbd-bg, $gray-300) !default;
+$kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
 $kbd-bg-inverted:                   $gray-900 !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
-$pre-color:                         var(--#{$boosted-prefix}pre-color, $gray-900) !default;
+$pre-color:                         var(--#{$prefix}pre-color, $gray-900) !default;
 $pre-color-inverted:                $gray-300 !default;
 $pre-line-height:                   1.25 !default;
 // End mod
@@ -2240,7 +2255,7 @@ $back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
 $back-to-top-title-offset-right: add(100%, var(--#{$prefix}border-width)) !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
 $back-to-top-title-bg-color:     $white !default;
-$back-to-top-icon:               var(--#{$boosted-prefix}chevron-icon) !default;
+$back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
 $back-to-top-icon-width:         add(.5rem, 1px) !default;
 $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 // scss-docs-end back-to-top
