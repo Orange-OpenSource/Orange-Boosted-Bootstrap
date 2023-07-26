@@ -1,8 +1,6 @@
 name: Update PR Description Netlify Preview URLs
 on:
-  pull_request_target:
-    types:
-      - opened
+  push:
 
 jobs:
   track_pr:
