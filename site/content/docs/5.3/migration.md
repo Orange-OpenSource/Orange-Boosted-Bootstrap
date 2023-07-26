@@ -47,6 +47,10 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
     </ul>
   </details>
 
+### Docs
+
+- Added missing `aria-disabled="true"` for links having only a `.disabled` class in cards, dropdowns, list groups, navbars, nav and tabs, and placeholders. Please apply this modification in your websites.
+
 ## v5.3.0
 
 <hr class="mb-4">
