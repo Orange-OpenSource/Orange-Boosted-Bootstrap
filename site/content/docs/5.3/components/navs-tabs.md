@@ -216,7 +216,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
     <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false">Tab 4</a>
+    <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false" aria-disabled="true">Tab 4</a>
   </li>
 </ul>
 
@@ -233,7 +233,7 @@ Nav tabs light is nested in a tab for adding a level of depth in information org
         <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab">Link D</a>
+        <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab"  aria-disabled="true">Link D</a>
       </li>
     </ul>
     <div class="tab-content border-0">
