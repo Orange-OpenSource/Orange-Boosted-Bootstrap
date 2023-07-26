@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.112.5">
+<meta name="generator" content="Hugo 0.115.4">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -13,6 +13,8 @@
 <title>Boosted · Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library…</title>
 
 <link rel="canonical" href="https://boosted.orange.com/">
+
+<link rel="preconnect" href="https://F4PKENW3TB-dsn.algolia.net" crossorigin>
 
 
 
@@ -22,10 +24,10 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -70,7 +72,7 @@
   </nav>
 </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="arrow-right" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
   </symbol>
@@ -192,7 +194,9 @@
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          
+          <li class="nav-item d-flex align-items-md-center mb-0 me-2">
+            <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div>
+          </li>
 
           
 
@@ -257,7 +261,7 @@
       </p>
       <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
         <div class="d-inline-block v-align-middle fs-5" style="min-width: fit-content;">
-          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i boosted@5.3.0</span></span></code></pre></div>
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i boosted@5.3.1</span></span></code></pre></div>
         </div>
         <a href="/docs/5.3/getting-started/introduction/" class="btn btn-lg btn-primary" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">
           <svg class="bi me-2 fs-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
@@ -265,11 +269,9 @@
         </a>
       </div>
       <p class="text-body-secondary mb-0">
-        Currently <strong>v5.3.0</strong>
+        Currently <strong>v5.3.1</strong>
         <span class="px-1">&middot;</span>
         <a href="/docs/5.3/getting-started/download/" class="link-secondary">Download</a>
-        <span class="px-1">&middot;</span>
-        <a href="https://boosted.orange.com/docs/4.6/getting-started/introduction/" class="link-secondary text-nowrap">v4.6.x docs</a>
         <span class="px-1">&middot;</span>
         <a href="/docs/versions/" class="link-secondary text-nowrap">All releases</a>
       </p>
@@ -279,7 +281,7 @@
 
     <div class="container-xxl bd-gutter masthead-followup">
       <div class="col-lg-7 mx-auto pb-3 mb-3 mb-md-5 text-md-center">
-  <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
+  <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-primary-rgb);">
     <svg class="bi fs-1"><use xlink:href="#code"></use></svg>
   </div>
   <h2 class="mb-3 lh-sm fw-semibold">Get started any way you&nbsp;want</h2>
@@ -301,8 +303,8 @@
     <p class="pe-lg-5">
       Install Boosted’s source Sass and JavaScript files via npm, yarn, Composer, or NuGet. Package managed installs don’t include documentation or our full build scripts.
     </p>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install boosted@5.3.0</span></span></code></pre></div>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add boosted@5.3.0</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install boosted@5.3.1</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add boosted@5.3.1</span></span></code></pre></div>
     <p>
       <a href="/docs/5.3/getting-started/download/">Read our installation docs</a> for more info and additional package managers.
     </p>
@@ -313,8 +315,8 @@
     <p class="pe-lg-5">
       When you only need to include Boosted’s compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/package/npm/boosted">jsDelivr</a>. See it in action with our simple <a href="/docs/5.3/getting-started/introduction/#quick-start">quick start</a>, or <a href="/docs/5.3/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper and our JS <a href="/docs/5.3/getting-started/introduction/#separate">separately</a>.
     </p>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-C547DcNh/clANzJDqzKRQtl/8UV1HQdgDdv3qxLmD0D3XCeIUxTJNdx1xd4Olo94&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.0/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
   </div>
 
   <div class="col-md-8 mx-auto text-center">
@@ -737,10 +739,10 @@
           </h3>
           <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects">Boosted 5</a></li>
-              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
-              <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" aria-describedby="headingProjects" target="_blank" rel="noopener">Boosted 5</a></li>
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev" aria-describedby="headingProjects" target="_blank" rel="noopener">Boosted 4</a></li>
+              <li><a class="nav-link" href="https://getbootstrap.com" aria-describedby="headingProjects" target="_blank" rel="noopener">Bootstrap</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects" target="_blank" rel="noopener">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -753,21 +755,21 @@
           </h3>
           <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity">Issues</a></li>
-              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity">Discussions</a></li>
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues" aria-describedby="headingCommunity" target="_blank" rel="noopener">Issues</a></li>
+              <li><a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions" aria-describedby="headingCommunity" target="_blank" rel="noopener">Discussions</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-column accordion-header col-md-12 col-lg-4 mb-3 pt-3 pt-lg-4 px-1 px-lg-0 fw-bold small">
           <p class="mb-lg-1">
-            This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.
+            This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
           </p>
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.0.</p>
+          <p class="mb-lg-1">Currently v5.3.1.</p>
           <p class="mb-lg-1">
-            <a href="https://www.netlify.com">
+            <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
             </a>
           </p>
@@ -784,8 +786,10 @@
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-ZsgVpTb0fk8Sm1EvaKv851vneixczBKLPDkxmz9bvY4duMrvXXRCkVeisAwqNLJK" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 
 
