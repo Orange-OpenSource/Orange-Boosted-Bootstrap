@@ -38,6 +38,15 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
 
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$vr-border-width</code></li>
+    </ul>
+  </details>
+
 ## v5.3.0
 
 <hr class="mb-4">
