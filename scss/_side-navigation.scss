@@ -217,14 +217,6 @@
   }
 }
 
-.side-nav-content-with-drawer {
-  background: linear-gradient(to right, #{$gray-900} 0%, #{$gray-900} 54px, #{$white} 54px, #{$white} 100%); // Needed because is used out of the side-nav context
-
-  .side-nav-toggle.collapsed {
-    --#{$prefix}side-nav-item-color: #{$white};
-  }
-}
-
 // Dark variant
 .side-nav-dark {
   // scss-docs-start side-nav-dark-css-vars
