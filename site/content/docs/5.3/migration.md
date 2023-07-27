@@ -22,6 +22,10 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
+### Additional changes
+
+- **Removed default scroll padding behavior. —** This led to an unintended scroll of the page while tabbing inside the navbar in certain browsers. To keep it enable in your websites, set `$enable-fixed-header: true;` before importing Boosted variables. Another solution to this problem is used inside Boosted documentation. Please refer to [this scrolling CSS file]({{< param repo >}}/blob/main/site/assets/scss/_scrolling.scss) to know more about this.
+
 ## v5.3.1
 
 <hr class="mb-4">
