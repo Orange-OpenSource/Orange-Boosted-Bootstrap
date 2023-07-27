@@ -1,3 +1,7 @@
+{{- $url := split .Permalink "/" -}}
+{{- $category_slug := index $url (sub (len $url) 3) -}}
+{{- $page_slug := index $url (sub (len $url) 2) -}}
+
 <footer class="footer bg-dark navbar-dark bd-footer">
   <h2 class="visually-hidden">Boosted sitemap & information</h2>
   <div class="container-xxl footer-nav">
@@ -12,10 +16,10 @@
           </h3>
           <div id="collapseLinks" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="/" aria-describedby="headingLinks">Home</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
+              <li><a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" aria-describedby="headingLinks">Home</a></li>
+              <li><a class="nav-link{{ if (and (eq .Page.Layout "docs") (ne $category_slug "getting-started")) }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/" aria-describedby="headingLinks">Docs</a></li>
+              <li><a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" aria-describedby="headingLinks">Examples</a></li>
+              <li><a class="nav-link{{ if eq .Page.Title "Orange Design System for web" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/guidelines/" aria-describedby="headingLinks">Design guidelines</a></li>
               <!-- Boosted mod: removed .Site.Params.icons|themes|blog|swag -->
             </ul>
           </div>
@@ -29,10 +33,10 @@
           </h3>
           <div id="collapseGuides" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/" aria-describedby="headingGuides">Parcel</a></li>
-              <li><a class="nav-link" href="/docs/{{ .Site.Params.docs_version }}/getting-started/vite/" aria-describedby="headingGuides">Vite</a></li>
+              <li><a class="nav-link{{ if (and (eq $category_slug "getting-started") (ne $page_slug "webpack" "parcel" "vite")) }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/" aria-describedby="headingGuides">Getting started</a></li>
+              <li><a class="nav-link{{ if eq $page_slug "webpack" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/" aria-describedby="headingGuides">Webpack</a></li>
+              <li><a class="nav-link{{ if eq $page_slug "parcel" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/" aria-describedby="headingGuides">Parcel</a></li>
+              <li><a class="nav-link{{ if eq $page_slug "vite" }} active" aria-current="page{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/vite/" aria-describedby="headingGuides">Vite</a></li>
             </ul>
           </div>
         </div>
@@ -45,10 +49,10 @@
           </h3>
           <div id="collapseProjects" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="{{ .Site.Params.repo }}" aria-describedby="headingProjects">Boosted 5</a></li>
-              <li><a class="nav-link" href="{{ .Site.Params.repo }}/tree/v4-dev" aria-describedby="headingProjects">Boosted 4</a></li>
-              <li><a class="nav-link" href="{{ .Site.Params.bootstrap }}" aria-describedby="headingProjects">Bootstrap</a></li>
-              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects">Pre-release on Netlify</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.repo }}" aria-describedby="headingProjects" target="_blank" rel="noopener">Boosted 5</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.repo }}/tree/v4-dev" aria-describedby="headingProjects" target="_blank" rel="noopener">Boosted 4</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.bootstrap }}" aria-describedby="headingProjects" target="_blank" rel="noopener">Bootstrap</a></li>
+              <li><a class="nav-link" href="https://boosted.netlify.app" aria-describedby="headingProjects" target="_blank" rel="noopener">Pre-release on Netlify</a></li>
             </ul>
           </div>
         </div>
@@ -61,21 +65,21 @@
           </h3>
           <div id="collapseCommunity" class="container-xxl accordion-collapse collapse" data-bs-parent="#sitemapAccordion">
             <ul class="navbar-nav">
-              <li><a class="nav-link" href="{{ .Site.Params.repo }}/issues" aria-describedby="headingCommunity">Issues</a></li>
-              <li><a class="nav-link" href="{{ .Site.Params.repo }}/discussions" aria-describedby="headingCommunity">Discussions</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.repo }}/issues" aria-describedby="headingCommunity" target="_blank" rel="noopener">Issues</a></li>
+              <li><a class="nav-link" href="{{ .Site.Params.repo }}/discussions" aria-describedby="headingCommunity" target="_blank" rel="noopener">Discussions</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-column accordion-header col-md-12 col-lg-4 mb-3 pt-3 pt-lg-4 px-1 px-lg-0 fw-bold small">
           <p class="mb-lg-1">
-            This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.
+            This documentation is an adaptation made by Orange. Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people" target="_blank" rel="noopener">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors" target="_blank" rel="noopener">their contributors</a>.
           </p>
           <p class="mb-lg-1">
             Orange modified code licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
           <p class="mb-lg-1">Currently v{{ .Site.Params.current_version }}.</p>
           <p class="mb-lg-1">
-            <a href="https://www.netlify.com">
+            <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
             </a>
           </p>
