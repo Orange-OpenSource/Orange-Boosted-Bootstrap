@@ -68,7 +68,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
 
 However, the dark mode was not yet available in the Orange Design System specifications at this time.
 
-Please use Boosted v5.3.1 to have the dark mode available.
+Please use Boosted v5.3.2 to have the dark mode available.
 {{< /design-callout-alert >}}
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
