@@ -35,17 +35,10 @@ class OrangeNavbar extends BaseComponent {
   // Static
   static enableMinimizing(el) {
     // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
-    const scroll = window.scrollY
-    const headerChildren = [...el.children]
-    const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'))
-
-    if (globalHeaderChild) {
-      if (scroll > 0) {
-        // Consider first element not having .supra in array is the first header
-        globalHeaderChild.classList.add('header-minimized')
-      } else {
-        globalHeaderChild.classList.remove('header-minimized')
-      }
+    if (window.scrollY > 0) {
+      el.classList.add('header-minimized')
+    } else {
+      el.classList.remove('header-minimized')
     }
   }
 
