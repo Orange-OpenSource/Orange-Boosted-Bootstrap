@@ -28,7 +28,7 @@
   @include font-size(var(--#{$prefix}tag-font-size));
   font-weight: var(--#{$prefix}tag-font-weight);
   line-height: add(var(--#{$prefix}tag-font-size), .125rem);
-  color: inherit;
+  color: var(--#{$prefix}body-color);
   background-color: transparent;
   border: var(--#{$prefix}tag-border-width) solid var(--#{$prefix}tag-border-color);
   @include border-radius(var(--#{$prefix}tag-border-radius), var(--#{$prefix}tag-border-radius));
@@ -69,8 +69,7 @@
       min-height: subtract(var(--#{$prefix}tag-close-size), .625rem);
       content: "";
       background-color: currentcolor;
-      -webkit-mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem); // stylelint-disable-line property-no-vendor-prefix
-      mask: escape-svg(var(--#{$boosted-prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
+      mask: escape-svg(var(--#{$prefix}close-icon)) no-repeat 50% / subtract(var(--#{$prefix}tag-close-size), .625rem);
     }
 
     &:hover,
@@ -96,7 +95,7 @@
 a.tag,
 button.tag,
 label.tag {
-  color: inherit;
+  color: var(--#{$prefix}body-color);
   text-decoration: none;
   cursor: pointer;
 

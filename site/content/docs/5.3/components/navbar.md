@@ -75,7 +75,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
       <form class="d-flex navbar-item ms-3" role="search">
@@ -156,7 +156,7 @@ Please note that you should also add the `aria-current` attribute on the active 
           <a class="nav-link" href="#">Pricing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
     </div>
@@ -182,7 +182,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Features</a>
         <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </div>
     </div>
   </div>
@@ -268,7 +268,7 @@ Input groups work, too. If your navbar is an entire form, or mostly a form, you 
 <nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid">
     <div class="input-group">
-      <span class="input-group-text" id="basic-addon1">@</span>
+      <span class="input-group-text text-white" id="basic-addon1">@</span>
       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
     </div>
   </form>
@@ -339,7 +339,7 @@ Mix and match with other components and utilities as needed.
 **New in v5.2.0:** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
 {{< /callout >}}
 
-Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` utilities.
+Navbar themes are easier than ever thanks to Boosted's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
 Please note that "light navbar" is not compatible with Orange Design System. You will mostly find examples using a combination of `.navbar-dark` and `.bg-dark`.
 
@@ -533,7 +533,7 @@ Transform your expanding and collapsing navbar into an offcanvas drawer with the
 
 In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <nav class="navbar fixed-top">
   <div class="container-fluid">
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -542,7 +542,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -591,7 +591,7 @@ To create an offcanvas navbar that expands into a normal navbar at a specific br
 
 When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
@@ -601,7 +601,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -634,6 +634,8 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
   </div>
 </nav>
 {{< /example >}}
+
+{{% enable-btn-close-tooltip 4 "offcanvases navbars" %}}
 
 ## CSS
 
