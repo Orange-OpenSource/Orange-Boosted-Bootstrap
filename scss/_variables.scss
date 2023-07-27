@@ -2382,7 +2382,7 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 
 //// Side navigation
 // scss-docs-start side-nav-variables
-$side-nav-min-width:                calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)) !default; /* stylelint-disable-line function-disallowed-list */
+$side-nav-min-width:                calc(var(--#{$prefix}side-nav-item-icon-size) + var(--#{$prefix}side-nav-item-spacing) * 2 - var(--#{$prefix}side-nav-border-width)) !default; // stylelint-disable-line function-disallowed-list
 $side-nav-max-width:                $offcanvas-horizontal-width !default;
 $side-nav-bg:                       var(--#{$prefix}body-bg) !default;
 $side-nav-border-width:             1px !default;
