@@ -19,6 +19,9 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 
 ### Components
 
+- **Nav and tabs**
+  - <span class="badge bg-success">New</span> Added support for JavaScript Tabs' <kbd>Home</kbd> and <kbd>End</kbd> keys.
+
 - **Spinner**
   - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
 
@@ -34,6 +37,19 @@ If you need more details about the changes, please refer to the [v5.3.1 release]
 ### Forms
 
 - <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$vr-border-width</code></li>
+    </ul>
+  </details>
+
+### Docs
+
+- Added missing `aria-disabled="true"` for links having only a `.disabled` class in cards, dropdowns, list groups, navbars, nav and tabs, and placeholders. Please apply this modification in your websites.
 
 ## v5.3.0
 
@@ -52,7 +68,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
 
 However, the dark mode was not yet available in the Orange Design System specifications at this time.
 
-Please use Boosted v5.3.1 to have the dark mode available.
+Please use Boosted v5.3.2 to have the dark mode available.
 {{< /design-callout-alert >}}
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
@@ -1390,10 +1406,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
-  - `.custom-control.custom-custom-radio` is now `.form-check`.
+  - `.custom-control.custom-radio` is now `.form-check`.
   - `.custom-control.custom-switch` is now `.form-check.form-switch`.
   - `.custom-select` is now `.form-select`.
-  - `.custom-file` and `.form-file` have been replaced by custom styles on top of `.form-control`.
+  - `.custom-file` and `.form-control-file` have been replaced by custom styles on top of `.form-control`.
   - `.custom-range` is now `.form-range`.
   - Dropped native `.form-control-file` and `.form-control-range`.
 
