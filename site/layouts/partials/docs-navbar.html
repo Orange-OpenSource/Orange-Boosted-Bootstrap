@@ -46,11 +46,9 @@
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          {{ if eq .Layout "docs" }}
           <li class="nav-item d-flex align-items-md-center mb-0 me-2">
             <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
           </li>
-          {{ end }}
 
           {{ partial "docs-versions" . }}
         </ul>
