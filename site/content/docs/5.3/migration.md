@@ -24,7 +24,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 ### Forms
 
-- <span class="badge bg-warning">Warning</span> In order to improve accessibility for people suffering for any form of colorblindness, we added a visual cue to form elements on error when focused.
+- <span class="badge bg-warning">Warning</span> In order to improve accessibility for people suffering for any form of colorblindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore.
 
 ## v5.3.1
 
