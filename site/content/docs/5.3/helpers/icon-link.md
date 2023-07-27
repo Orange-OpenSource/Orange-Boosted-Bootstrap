@@ -96,7 +96,7 @@ Customize the icon link Sass variables to modify all icon link styles across you
 
 Modify icon links with any of [our link utilities]({{< docsref "/utilities/link/" >}}) for modifying underline color and offset.
 
-{{< example >}}
+{{< example class="bg-dark" >}}
 <a class="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25" href="#">
   Icon link
   <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>

@@ -116,7 +116,7 @@
   }
 
   .btn-secondary {
-    --bs-btn-color: var(--bs-white); // Boosted mod
+    --bs-btn-color: var(--bs-dark); // Boosted mod
     --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
     --bs-btn-border-color: #{rgba($white, .25)};
     --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};

@@ -595,7 +595,10 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 {{< example stackblitz_add_js="true" >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+    <div class="navbar-brand">
+      <a class="stretched-link" href="#"><span class="visually-hidden">Brand</span></a>
+      <h1 class="title">Offcanvas dark navbar</h1>
+    </div>
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

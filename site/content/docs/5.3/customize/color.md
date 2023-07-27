@@ -157,7 +157,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
 **Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
 {{< /callout >}}
 
-<table class="table table-swatches">
+<table class="table table-swatches exclude-from-pa11y-analysis">
   <thead>
     <tr>
       <th style="width: 340px;">Description</th>
