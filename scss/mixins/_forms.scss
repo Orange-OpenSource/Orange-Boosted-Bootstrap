@@ -107,6 +107,19 @@
       }
     }
 
+    // Boosted mod: apply focus mixin to allow sufficient contrast between input file on error focused vs. non focused
+    .form-control[type="file"] {
+      @include form-validation-state-selector($state) {
+        border-color: $border-color;
+
+        &:focus {
+          @include focus-visible();
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+        }
+      }
+    }
+    // End mod
+
     // Boosted mod: Remove border on input for form element QuantitySelector
     .quantity-selector .form-control {
       @include form-validation-state-selector($state) {

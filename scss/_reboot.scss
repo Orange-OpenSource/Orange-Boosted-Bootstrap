@@ -98,13 +98,13 @@ body {
   @include focus-visible(); // 1
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid),
-.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid) { // 2
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid) { // 3
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
   outline: 0 !important;
   box-shadow: none;
 }
