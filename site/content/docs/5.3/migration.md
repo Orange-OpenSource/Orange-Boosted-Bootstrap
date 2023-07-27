@@ -22,6 +22,10 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
+### Forms
+
+- <span class="badge bg-warning">Warning</span> In order to improve accessibility for people suffering for any form of colorblindness, we added a visual to form elements on error when focused.
+
 ## v5.3.1
 
 <hr class="mb-4">
