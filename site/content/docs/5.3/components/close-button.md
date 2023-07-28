@@ -12,42 +12,80 @@ toc: true
 
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
-{{< example >}}
-<button type="button" class="btn-close"><span class="visually-hidden">Close</span></button>
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Disabled state
 
 Disabled close buttons change their `color`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
 
-{{< example >}}
-<button type="button" class="btn-close" disabled><span class="visually-hidden">Close</span></button>
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn-close" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Dark variant
 
 Add `.btn-close-white` to the `.btn-close` for a dark variant.
 
+{{< example class="bg-dark" stackblitz_add_js="true" >}}
+<button type="button" class="btn-close btn-close-white" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn-close btn-close-white" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+{{< /example >}}
+
+## Eco-design variant
+
+{{< callout info >}}
+For eco-design reasons, close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle. It means that you don't have to import `_close.scss` in your Sass file if you are an advanced Boosted user using **custom Sass imports**.
+
+If you choose this option, please be aware that if the design of close buttons change in the future, this section might disappear and you would have to use `.btn-close` to your close buttons or change the combinations of classes.
+{{< /callout >}}
+
+{{< example stackblitz_add_js="true" >}}
+<button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+{{< /example >}}
+
 {{< example class="bg-dark" >}}
-<button type="button" class="btn-close btn-close-white"><span class="visually-hidden">Close</span></button>
-<button type="button" class="btn-close btn-close-white" disabled><span class="visually-hidden">Close</span></button>
-{{< /example >}}
-
-## Without specific class
-
-Close buttons can also be created without `.btn-close` to reduce the size of your CSS bundle.
-
-{{< example >}}
-<button type="button" class="btn btn-icon btn-no-outline">
+<button type="button" class="btn btn-icon btn-no-outline btn-inverse" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 
-<button type="button" class="btn btn-icon btn-no-outline" disabled>
+<button type="button" class="btn btn-icon btn-no-outline btn-inverse" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary btn-inverse" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
+  <span class="visually-hidden">Close</span>
+</button>
+
+<button type="button" class="btn btn-icon btn-secondary btn-inverse" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 {{< /example >}}
+
+{{% enable-btn-close-tooltip 2 %}}
 
 ## CSS
 
