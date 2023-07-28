@@ -9,6 +9,61 @@ aliases:
 toc: true
 ---
 
+## v5.3.2
+
+<hr class="mb-4">
+
+Boosted v5.3.2 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.2).
+
+### Components
+
+- **Orange navbar**
+  - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
+
+## v5.3.1
+
+<hr class="mb-4">
+
+Boosted v5.3.1 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1).
+
+### Components
+
+- **Nav and tabs**
+  - <span class="badge bg-success">New</span> Added support for JavaScript Tabs' <kbd>Home</kbd> and <kbd>End</kbd> keys.
+
+- **Spinner**
+  - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
+
+  ```diff
+  <button class="btn btn-primary" type="button">
+  -  <span class="spinner-border me-2" role="status" aria-hidden="true"></span>
+  -  Loading...
+  +  <span class="spinner-border me-2" aria-hidden="true"></span>
+  +  <span role="status">Loading...</span>
+  </button>
+  ```
+
+### Forms
+
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$vr-border-width</code></li>
+    </ul>
+  </details>
+
+### Docs
+
+- Added missing `aria-disabled="true"` for links having only a `.disabled` class in cards, dropdowns, list groups, navbars, nav and tabs, and placeholders. Please apply this modification in your websites.
+
 ## v5.3.0
 
 <hr class="mb-4">
@@ -24,9 +79,9 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 {{< design-callout-alert >}}
 Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
 
-However, the dark mode is not yet available in the Orange Design System specifications.
+However, the dark mode was not yet available in the Orange Design System specifications at this time.
 
-Please wait for the next Boosted versions to use it in your websites.
+Please use Boosted v5.3.2 to have the dark mode available.
 {{< /design-callout-alert >}}
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
@@ -185,7 +240,7 @@ Please wait for the next Boosted versions to use it in your websites.
 
 - `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
 
-- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
 
@@ -1364,10 +1419,10 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
-  - `.custom-control.custom-custom-radio` is now `.form-check`.
+  - `.custom-control.custom-radio` is now `.form-check`.
   - `.custom-control.custom-switch` is now `.form-check.form-switch`.
   - `.custom-select` is now `.form-select`.
-  - `.custom-file` and `.form-file` have been replaced by custom styles on top of `.form-control`.
+  - `.custom-file` and `.form-control-file` have been replaced by custom styles on top of `.form-control`.
   - `.custom-range` is now `.form-range`.
   - Dropped native `.form-control-file` and `.form-control-range`.
 
