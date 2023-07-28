@@ -117,8 +117,8 @@
 .bd-example-cssgrid [class*="grid"] > * {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: rgba(var(--bd-violet-rgb), .15);
-  border: 1px solid rgba(var(--bd-violet-rgb), .3);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
+  border: 1px solid rgba(var(--bd-primary-light-rgb), .3);
 }
 
 .bd-example-row .row + .row,
@@ -128,12 +128,12 @@
 
 .bd-example-row-flex-cols .row {
   min-height: 10rem;
-  background-color: rgba(var(--bd-violet-rgb), .15);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
 }
 
 .bd-example-flex div:not(.vr) {
-  background-color: rgba(var(--bd-violet-rgb), .15);
-  border: 1px solid rgba(var(--bd-violet-rgb), .3);
+  background-color: rgba(var(--bd-primary-light-rgb), .15);
+  border: 1px solid rgba(var(--bd-primary-light-rgb), .3);
 }
 
 // Grid mixins
@@ -220,17 +220,18 @@
 
 // scss-docs-start custom-tooltip
 .custom-tooltip {
-  --bs-tooltip-bg: var(--bs-primary);
+  --bs-tooltip-bg: var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
 }
 // scss-docs-end custom-tooltip
 
 // scss-docs-start custom-popovers
 .custom-popover {
   --bs-popover-max-width: 12.5rem;
-  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-border-color: var(--bd-violet-bg);
+  --bs-popover-header-bg: var(--bd-violet-bg);
   --bs-popover-header-padding-y: .5rem; // Boosted mod
-  --bs-popover-header-bg: var(--bs-primary);
-  --bs-popover-header-color: var(--bs-black); // Boosted mod: instead of `var(--bs-white)`
+  --bs-popover-header-color: var(--bs-white);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: .5rem;
 }
@@ -314,8 +315,8 @@
 
   > div {
     color: var(--bs-body-bg);
-    background-color: var(--bd-violet);
-    border: 1px solid var(--bd-purple);
+    background-color: var(--bd-primary-light);
+    border: 1px solid var(--bd-primary);
 
     > span {
       position: absolute;
