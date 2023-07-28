@@ -22,6 +22,10 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
+### Forms
+
+- <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
+
 ## v5.3.1
 
 <hr class="mb-4">
@@ -1025,7 +1029,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     {{< /markdown >}}
   </details>
 
-- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want to apply this same modification within your websites.
 
 ### Helpers and utilities
 
