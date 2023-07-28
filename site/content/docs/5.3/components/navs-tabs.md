@@ -335,6 +335,10 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
 
+{{< callout info >}}
+As a design recommendation, dropdowns are typically placed at the end of the nav after all of the links.
+{{< /callout >}}
+
 ### Tabs with dropdowns
 <!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
