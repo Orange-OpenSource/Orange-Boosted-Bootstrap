@@ -110,15 +110,16 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 - Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
 - Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
 - On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
+- On the close button, add the `data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"` attributes, which add a tooltip for better accessibility. You also need to [enable tooltips]({{< docsref "/components/tooltips#enable-tooltips" >}}) (if not already done).
 - To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
 
 You can see this in action with a live demo:
 
-{{< example >}}
+{{< example stackblitz_add_js="true" >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 
@@ -126,13 +127,15 @@ You can see this in action with a live demo:
 When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you're planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
 {{< /callout >}}
 
+{{% enable-btn-close-tooltip 4 alerts %}}
+
 ## Dark variant
 
 {{< added-in "5.2.0" >}}
 
 Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted as well by using the [dark variant of close button]({{< docsref "/components/close-button#dark-variant" >}})
 
-{{< example class="bg-dark" >}}
+{{< example class="bg-dark" stackblitz_add_js="true" >}}
 <div class="alert alert-success bg-dark" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <p>Success notification text goes here.</p>
@@ -147,7 +150,7 @@ Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted 
 <div class="alert alert-warning alert-dismissible fade show bg-dark" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 

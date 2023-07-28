@@ -1,12 +1,14 @@
 ---
 layout: examples
 title: Stickers
+extra_css:
+  - "stickers.css"
 aliases:
   - "/examples/stickers"
   - "/docs/examples/stickers"
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol fill="currentColor" viewBox="0 0 1000 1000" id="fiveG">
     <path fill-rule="evenodd" d="M211.433,340.61L191.64,453l1.414,1.414q20.495-20.493,43.828-29.334t53.019-8.835q36.748,0,65.036,13.43a143.063,143.063,0,0,1,47.716,36.048q19.435,22.629,29.69,53.366a205.643,205.643,0,0,1,10.251,65.382q0,38.168-14.845,71.035a181.15,181.15,0,0,1-39.941,56.9,177.216,177.216,0,0,1-58.32,37.109,182.009,182.009,0,0,1-70.691,12.37,245.986,245.986,0,0,1-68.924-9.543A172.033,172.033,0,0,1,131.553,723,146.982,146.982,0,0,1,90.905,673.88Q75.7,644.557,75,605.671H175.381q3.53,33.928,25.449,54.072,21.9,20.146,55.846,20.145,19.782,0,35.7-8.128a85.013,85.013,0,0,0,26.863-21.205A95.631,95.631,0,0,0,336.2,620.161a108.262,108.262,0,0,0,6.009-35.694,113.362,113.362,0,0,0-5.655-36.049,84.412,84.412,0,0,0-16.966-29.686,79.781,79.781,0,0,0-26.863-19.792q-15.556-7.057-36.052-7.068-26.874,0-43.829,9.542t-31.811,30.04H90.552l48.777-273.543h276.4v82.7h-204.3ZM776.256,748.8Q740.2,763.995,703.444,764q-57.974,0-104.269-20.144T521.061,688.37q-31.812-35.337-48.777-83.052T455.318,502.474q0-56.541,16.966-104.964,16.967-48.407,48.777-84.466T599.175,256.5q46.29-20.493,104.269-20.5a245.328,245.328,0,0,1,75.285,11.662,213.452,213.452,0,0,1,65.743,34.282A187.977,187.977,0,0,1,892.9,337.783q19.088,33.231,23.328,76.338H810.187q-9.908-42.411-38.173-63.615-28.283-21.205-68.57-21.2-37.477,0-63.622,14.49a120.089,120.089,0,0,0-42.414,38.876q-16.272,24.386-23.682,55.485a276.177,276.177,0,0,0-7.423,64.322,256.827,256.827,0,0,0,7.423,61.848,166.787,166.787,0,0,0,23.682,54.072,121.187,121.187,0,0,0,42.414,38.522q26.144,14.494,63.622,14.49,55.139,0,85.183-27.92t34.991-80.931H711.926v-82.7H924V752.691H853.309L842,695.439Q812.307,733.607,776.256,748.8Z"/>
   </symbol>
@@ -21,7 +23,7 @@ aliases:
   <div class="d-flex flex-wrap gap-3 p-3">
     <div class="sticker sticker-sm">
       <p class="mb-0">
-        <span class="h2">New</span>
+        <span class="sticker-fs-xl">New</span>
       </p>
     </div>
 
@@ -36,7 +38,7 @@ aliases:
 
     <div class="sticker sticker-sm">
       <p class="mb-0">
-        <span class="h4">Free delivery</span>
+        <span class="sticker-fs-m">Free delivery</span>
       </p>
     </div>
 
@@ -45,21 +47,21 @@ aliases:
         <use xlink:href="#delivery"></use>
       </svg>
       <p class="mb-2">
-        <span class="h4">Free delivery</span>
+        <span class="sticker-fs-m">Free delivery</span>
       </p>
     </div>
 
     <div class="sticker sticker-sm">
       <p class="mb-0">
-        <span class="h2 mb-0 d-block">39.99 €</span>
+        <span class="sticker-fs-xl mb-0 d-block">39.99 €</span>
         <span>Per month</span>
       </p>
     </div>
 
     <div class="sticker sticker-sm">
       <p class="mb-0">
-        <span class="h5 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-        <span class="h2 mb-0 d-block" aria-hidden="true">39.99 €</span>
+        <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+        <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
         <span aria-hidden="true">Per month</span>
         <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
       </p>
@@ -68,7 +70,7 @@ aliases:
     <div class="sticker sticker-sm">
       <p class="mb-2">
         <span class="mb-0 d-block">Bonus</span>
-        <span class="h2 mb-0 d-block">90 min</span>
+        <span class="sticker-fs-xl mb-0 d-block">90 min</span>
         <span>Per month</span>
       </p>
     </div>
@@ -76,23 +78,23 @@ aliases:
     <div class="sticker sticker-sm">
       <p class="mb-0">
         <span class="mb-0 d-block">Bonus</span>
-        <span class="h2 mb-0 d-block">250 %</span>
+        <span class="sticker-fs-xl mb-0 d-block">250 %</span>
         <span>With Orange Money</span>
       </p>
     </div>
 
     <div class="sticker sticker-sm">
       <p class="mb-3">
-        <span class="h2 mb-0 d-block">+</span>
-        <span class="h2 mb-0 d-block">90 min</span>
+        <span class="sticker-fs-xl mb-0 d-block">+</span>
+        <span class="sticker-fs-xl mb-0 d-block">90 min</span>
         <span>Per month</span>
       </p>
     </div>
 
     <div class="sticker sticker-sm">
       <p class="mb-3">
-        <span class="h2 mb-0 d-block">+</span>
-        <span class="h2 mb-0 d-block">250 %</span>
+        <span class="sticker-fs-xl mb-0 d-block">+</span>
+        <span class="sticker-fs-xl mb-0 d-block">250 %</span>
         <span>With Orange Money</span>
       </p>
     </div>
@@ -100,7 +102,7 @@ aliases:
   <div class="d-flex flex-wrap gap-3 p-3">
     <div class="sticker">
       <p class="mb-0">
-        <span class="display-3">New</span>
+        <span class="sticker-fs-3xl">New</span>
       </p>
     </div>
 
@@ -115,7 +117,7 @@ aliases:
 
     <div class="sticker">
       <p class="mb-1">
-        <span class="h3">Free delivery</span>
+        <span class="sticker-fs-l">Free delivery</span>
       </p>
     </div>
 
@@ -124,21 +126,21 @@ aliases:
         <use xlink:href="#delivery"></use>
       </svg>
       <p class="mb-3">
-        <span class="h3">Free delivery</span>
+        <span class="sticker-fs-l">Free delivery</span>
       </p>
     </div>
 
     <div class="sticker">
       <p class="mb-0">
-        <span class="display-3 mb-0 d-block">39.99 €</span>
+        <span class="sticker-fs-3xl mb-0 d-block">39.99 €</span>
         <span>Per month</span>
       </p>
     </div>
 
     <div class="sticker">
       <p class="mb-1">
-        <span class="h3 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-        <span class="display-3 mb-0 d-block" aria-hidden="true">39.99 €</span>
+        <span class="sticker-fs-l mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+        <span class="sticker-fs-3xl mb-0 d-block" aria-hidden="true">39.99 €</span>
         <span aria-hidden="true">Per month</span>
         <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
       </p>
@@ -147,7 +149,7 @@ aliases:
     <div class="sticker">
       <p class="mb-1">
         <span class="mb-0 d-block">Bonus</span>
-        <span class="display-3 mb-0 d-block">90 min</span>
+        <span class="sticker-fs-3xl mb-0 d-block">90 min</span>
         <span>Per month</span>
       </p>
     </div>
@@ -155,23 +157,23 @@ aliases:
     <div class="sticker">
       <p class="mb-0">
         <span class="mb-0 d-block">Bonus</span>
-        <span class="display-3 mb-0 d-block">250 %</span>
+        <span class="sticker-fs-3xl mb-0 d-block">250 %</span>
         <span>With Orange Money</span>
       </p>
     </div>
 
     <div class="sticker">
       <p class="mb-4">
-        <span class="display-3 mb-0 d-block">+</span>
-        <span class="display-3 mb-0 d-block">90 min</span>
+        <span class="sticker-fs-3xl mb-0 d-block">+</span>
+        <span class="sticker-fs-3xl mb-0 d-block">90 min</span>
         <span>Per month</span>
       </p>
     </div>
 
     <div class="sticker">
       <p class="mb-3">
-        <span class="display-3 mb-0 d-block">+</span>
-        <span class="display-3 mb-0 d-block">250 %</span>
+        <span class="sticker-fs-3xl mb-0 d-block">+</span>
+        <span class="sticker-fs-3xl mb-0 d-block">250 %</span>
         <span>With Orange Money</span>
       </p>
     </div>
@@ -179,7 +181,7 @@ aliases:
   <div class="d-flex flex-wrap gap-3 p-3">
     <div class="sticker sticker-lg">
       <p class="mb-0">
-        <span class="display-1">New</span>
+        <span class="sticker-fs-4xl">New</span>
       </p>
     </div>
 
@@ -194,7 +196,7 @@ aliases:
 
     <div class="sticker sticker-lg">
       <p class="mb-1">
-        <span class="display-3">Free delivery</span>
+        <span class="sticker-fs-3xl">Free delivery</span>
       </p>
     </div>
 
@@ -203,55 +205,55 @@ aliases:
         <use xlink:href="#delivery"></use>
       </svg>
       <p class="mb-4">
-        <span class="display-3">Free delivery</span>
+        <span class="sticker-fs-3xl">Free delivery</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-0">
-        <span class="display-1 mb-0 d-block">39.99 €</span>
-        <span class="h3">Per month</span>
+        <span class="sticker-fs-4xl mb-0 d-block">39.99 €</span>
+        <span class="sticker-fs-l">Per month</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-1">
-        <span class="display-4 mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
-        <span class="display-1 mb-0 d-block" aria-hidden="true">39.99 €</span>
-        <span class="h3" aria-hidden="true">Per month</span>
+        <span class="sticker-fs-2xl mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+        <span class="sticker-fs-4xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+        <span class="sticker-fs-l" aria-hidden="true">Per month</span>
         <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-1">
-        <span class="h3 mb-0 d-block">Bonus</span>
-        <span class="display-1 mb-0 d-block">90 min</span>
-        <span class="h3">Per month</span>
+        <span class="sticker-fs-l mb-0 d-block">Bonus</span>
+        <span class="sticker-fs-4xl mb-0 d-block">90 min</span>
+        <span class="sticker-fs-l">Per month</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-1">
-        <span class="h3 mb-0 d-block">Bonus</span>
-        <span class="display-1 mb-0 d-block">250 %</span>
-        <span class="h3">With Orange Money</span>
+        <span class="sticker-fs-l mb-0 d-block">Bonus</span>
+        <span class="sticker-fs-4xl mb-0 d-block">250 %</span>
+        <span class="sticker-fs-l">With Orange Money</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-4">
-        <span class="display-1 mb-0 d-block">+</span>
-        <span class="display-1 mb-0 d-block">90 min</span>
-        <span class="h3">Per month</span>
+        <span class="sticker-fs-4xl mb-0 d-block">+</span>
+        <span class="sticker-fs-4xl mb-0 d-block">90 min</span>
+        <span class="sticker-fs-l">Per month</span>
       </p>
     </div>
 
     <div class="sticker sticker-lg">
       <p class="mb-4">
-        <span class="display-1 mb-0 d-block">+</span>
-        <span class="display-1 mb-0 d-block">250 %</span>
-        <span class="h3">With Orange Money</span>
+        <span class="sticker-fs-4xl mb-0 d-block">+</span>
+        <span class="sticker-fs-4xl mb-0 d-block">250 %</span>
+        <span class="sticker-fs-l">With Orange Money</span>
       </p>
     </div>
   </div>
