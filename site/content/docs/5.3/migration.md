@@ -19,6 +19,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 ### Components
 
+- **Accordion**
+  - <span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
+
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
