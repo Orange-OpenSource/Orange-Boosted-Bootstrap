@@ -90,7 +90,7 @@ body {
 //    See https://github.com/WICG/focus-visible
 //    Note 1: this rule is not applied for our focus ring helper which
 //    handles itself outline and box shadow
-//    Note 2: this rule is also not applied for invalid select form elements to ensure
+//    Note 2: this rule is also not applied for invalid select and invalid input files to ensure
 //    sufficient contrast between select elements on error focused vs. non focused
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
