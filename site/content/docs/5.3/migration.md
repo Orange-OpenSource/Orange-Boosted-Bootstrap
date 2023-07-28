@@ -1029,7 +1029,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     {{< /markdown >}}
   </details>
 
-- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want to apply this same modification within your websites.
 
 ### Helpers and utilities
 
