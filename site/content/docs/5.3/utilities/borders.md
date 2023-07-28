@@ -130,7 +130,7 @@ Or, choose from any of the `.border-opacity` utilities:
 ## Width
 
 {{< design-callout-alert >}}
-The three last border utilities with **a width superior to 2px** should not be used because they do not respect the Orange Design System specifications.
+The three last border utilities with **a width larger than 2px** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example class="bd-example-border-utils" >}}
