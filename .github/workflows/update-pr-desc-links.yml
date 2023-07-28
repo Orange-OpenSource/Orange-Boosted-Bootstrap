@@ -8,20 +8,11 @@ jobs:
   track_pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR Description
+      - name: Update PR Description
         run: |
           PR_UPDATED_BODY="$(
             gh api /repos/$OWNER/$REPO/pulls/$PR_NUMBER | jq -r '.body' | sed 's/{your_pr_number}/${{ env.PR_NUMBER }}/g'
           )"
-          echo 'PR_UPDATED_BODY='$PR_UPDATED_BODY >> $GITHUB_ENV
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.event.repository.name }}
-          PR_NUMBER: ${{ github.event.number }}
-
-      - name: Update PR Description
-        run: |
           gh api --method PATCH /repos/$OWNER/$REPO/pulls/$PR_NUMBER -f body="$PR_UPDATED_BODY"
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}

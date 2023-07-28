@@ -23,18 +23,18 @@ Background utilities like `.bg-*` that generated from our original `$theme-color
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
 <div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
-<div class="p-3 mb-2 fw-bold bg-secondary">.bg-secondary</div>
+<div class="p-3 mb-2 fw-bold bg-secondary text-white">.bg-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-green">.bg-supporting-green</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-purple">.bg-supporting-purple</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-yellow">.bg-supporting-yellow</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-blue">.bg-supporting-blue</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-pink">.bg-supporting-pink</div>
 <div class="p-3 mb-2 fw-bold bg-light">.bg-light</div>
-<div class="p-3 mb-2 fw-bold bg-dark">.bg-dark</div>
+<div class="p-3 mb-2 fw-bold bg-dark text-white">.bg-dark</div>
 <div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
-<div class="p-3 mb-2 fw-bold bg-black">.bg-black</div>
+<div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
 <div class="p-3 mb-2 fw-bold bg-white">.bg-white</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}

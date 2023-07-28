@@ -149,7 +149,7 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 
 {{< added-in "5.3.0" >}}
 
-Boosted's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
+We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
 
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
@@ -518,7 +518,7 @@ Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-l
 ### All colors
 
 {{< design-callout-alert >}}
-Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong the Orange Design System specifications.
+Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong to the Orange Design System specifications.
 
 Please refer to our Boosted [Orange's colors]({{< docsref "/customize/color#oranges-colors" >}}) section and to the [Color](https://system.design.orange.com/0c1af118d/p/7059a5-colour/b/17b829) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}

@@ -7,7 +7,7 @@
     * nav: Display nav content - default = false
     * service: Display service content - default = false
     * mandatory: Display mandatory content - default = false
-    * in_examples: Display in_examples content - default = false
+    * extra_social: Add extra social links - default = false
     * show_active_link: Display active link in footer - default = false
     * id: Set an id for accordions and the footer itself
 */ -}}
@@ -17,7 +17,7 @@
 {{- $nav := .Get "nav" | default false -}}
 {{- $service := .Get "service" | default false -}}
 {{- $mandatory := .Get "mandatory" | default false -}}
-{{- $in_examples := .Get "in_examples" | default false -}}
+{{- $extra_social := .Get "extra_social" | default false -}}
 {{- $show_active_link := .Get "show_active_link" | default false -}}
 {{- $id := .Get "id" -}}
 {{- $input := .Inner -}}
@@ -49,10 +49,11 @@
       <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
-      {{- if $in_examples }}
+      {{- if $extra_social }}
         <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok btn-inverse"><span class="visually-hidden">TikTok</span></a></li>
       {{- end }}
     </ul>
   </div>
