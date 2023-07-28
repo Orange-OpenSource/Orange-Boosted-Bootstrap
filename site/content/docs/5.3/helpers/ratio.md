@@ -24,7 +24,7 @@ Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an asp
 
 {{< example >}}
 <div class="ratio ratio-16x9">
-  <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
 </div>
 {{< /example >}}
 
