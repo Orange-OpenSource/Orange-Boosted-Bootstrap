@@ -35,20 +35,34 @@
       scroll-behavior: smooth;
     }
   }
+}
 
-  // Boosted mod: Improve focus visibility when fixed/sticky header is used
-  // See https://caniuse.com/?search=scroll-padding
-  // scss-docs-start scroll-offset
-  @if $enable-fixed-header {
-    scroll-padding-top: $scroll-offset-top * .5;
+// Boosted mod: Improve focus visibility when fixed/sticky header is used
+// See https://caniuse.com/?search=scroll-padding
+// scss-docs-start scroll-offset
+@if $enable-fixed-header {
+  main {
+    a,
+    button,
+    h2,
+    h3,
+    h4,
+    input,
+    [tabindex="0"] {
+      scroll-margin-top: var(--#{$prefix}scroll-offset-mobile);
 
-    @include media-breakpoint-up(lg) {
-      scroll-padding-top: $scroll-offset-top;
+      @include media-breakpoint-up(md) {
+        scroll-margin-top: var(--#{$prefix}scroll-offset-desktop);
+
+        .header-minimized ~ & {
+          scroll-margin-top: var(--#{$prefix}scroll-offset-minimized);
+        }
+      }
     }
   }
-  // scss-docs-end scroll-offset
-  // End mod
 }
+// scss-docs-end scroll-offset
+// End mod
 
 
 // Body

@@ -1,4 +1,7 @@
 main {
+  --bs-scroll-offset-desktop: 10rem;
+  --bs-scroll-offset-minimized: 7.5rem;
+
   min-height: 150vh;
 }
 

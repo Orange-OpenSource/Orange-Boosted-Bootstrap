@@ -83,10 +83,6 @@ When using a fixed (or sticky) header, tabbing backward often hides focused elem
 1. `$scroll-offset-top` variable defines the offset,
 2. and [`$enable-fixed-header` allows to drop this rule]({{< docsref "/customize/options" >}}) if you don't use a fixed header.
 
-{{< callout warning >}}
-Know that using this feature might lead to unexpected scroll while tabbing inside the header. Prefer `scroll-margin-*` on focusable elements.
-{{< /callout >}}
-
 {{< scss-docs name="scroll-offset" file="scss/_reboot.scss" >}}
 
 ### Minimum target size
