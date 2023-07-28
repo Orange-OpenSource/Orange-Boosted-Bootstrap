@@ -203,7 +203,7 @@ Importing Boosted into Webpack requires the loaders we installed in the first se
                loader: 'postcss-loader',
                options: {
                  postcssOptions: {
-                   plugins: () => [
+                   plugins: [
                      autoprefixer
                    ]
                  }

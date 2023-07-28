@@ -28,8 +28,10 @@ This footer component is based on the [navbar component]({{< docsref "/component
 
 ## Example
 
+{{< example class="p-0" show_markup=false >}}
 {{< orange-footer title_content=true follow=true nav=true service=true mandatory=true id="1" >}}
 {{< /orange-footer >}}
+{{< /example >}}
 
 ## Footer bars
 
@@ -54,7 +56,11 @@ This footer bar is a container with a `.footer-title-content` class. This contai
 
 ### Follow us bar
 
-This footer bar is a container with `.footer-social` class into which a list of social media icons can be added:
+This footer bar is a container with `.footer-social` class into which a list of social media icons can be added.
+
+{{< callout info >}}
+Other social media are available. See the full list of our [Social buttons]({{< docsref "/components/buttons#social-buttons" >}}).
+{{< /callout >}}
 
 {{< example class="p-0" >}}
 {{< orange-footer follow=true >}}

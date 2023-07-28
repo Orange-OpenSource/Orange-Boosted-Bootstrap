@@ -10,7 +10,7 @@
     margin-left: $linked-chevron-margin-left;
     vertical-align: middle;
     content: "";
-    background-image: var(--#{$boosted-prefix}chevron-icon);
+    background-image: var(--#{$prefix}chevron-icon);
     background-repeat: no-repeat;
     transform: $linked-chevron-transform;
   }
