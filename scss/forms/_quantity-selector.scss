@@ -36,6 +36,10 @@
         border-right: none;
       }
 
+      &:focus-visible {
+        margin-right: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
+      }
+
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
         @include button-icon($quantity-selector-icon-remove-sm, $width: 1rem, $height: 1rem, $size: $quantity-selector-icon-sm-width $quantity-selector-icon-sm-remove-height, $pseudo: "after");
         padding-right: $quantity-selector-btn-padding-x-sm;
@@ -48,6 +52,11 @@
 
       &:not(:focus-visible) {
         border-left: none;
+      }
+
+      &:focus-visible {
+        // stylelint-disable-next-line declaration-no-important
+        margin-left: calc(#{$input-border-width} * -2) !important; // stylelint-disable-line function-disallowed-list
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
