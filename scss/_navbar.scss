@@ -438,7 +438,8 @@
           display: flex;
         }
 
-        &.header-minimized {
+        .header-minimized &:first-child:not(.supra),
+        .header-minimized .supra + &.navbar {
           --#{$prefix}navbar-nav-link-padding-y: .75rem;
         }
 

@@ -80,6 +80,10 @@ Use contextual class to color tables, table rows or individual cells.
 
 ## Accented tables
 
+{{< design-callout-alert info >}}
+It is possible to use striped rows **or** striped columns in your tables, but you **can't use both in a same table**.
+{{< /design-callout-alert >}}
+
 ### Striped rows
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
@@ -361,6 +365,10 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 ```
 
 ## Nesting
+
+{{< design-callout-alert >}}
+This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.
+{{< /design-callout-alert >}}
 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
