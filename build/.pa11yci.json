@@ -16,7 +16,7 @@
       "htmlcs"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, .accordion-sm .accordion-button, .table-dark .table-active, .page-item.disabled, :disabled + label, .is-disabled, #text-decoration + p + div a.text-decoration-none, .bg-light code, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar, caption.visually-hidden, .overflow-y-scroll, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, .exclude-from-pa11y-analysis",
+    "hideElements": "iframe, .accordion-sm .accordion-button, .table-dark .table-active, :disabled + label, .is-disabled, #text-decoration + p + div a.text-decoration-none, .bg-light code, #offcanvas, #offcanvasDark, #offcanvasResponsive, #bdSidebar, caption.visually-hidden, .overflow-y-scroll, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, .exclude-from-pa11y-analysis",
     "ignore": [
       "color-contrast"
     ]
