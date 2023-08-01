@@ -36,6 +36,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
     'The “img” role is unnecessary for element “img”.',
     '.*Consider using the “h1” element as a top-level heading only.*'
+    // End mod
   ].join('|')
 
   const args = [
