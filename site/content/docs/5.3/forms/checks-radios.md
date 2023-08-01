@@ -446,14 +446,13 @@ Make star ratings readable but non editable by using `<span>` instead of `<input
 <div class="star-rating">
   <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-    <div aria-hidden="true">
-      <span class="checked"></span>
-      <span class="checked"></span>
-      <span class="checked"></span>
-      <span></span>
-      <span></span>
-    </div>
-
+  <div aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span class="checked"></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 {{< /example >}}
 

@@ -20,8 +20,8 @@
   }
 
   > input:checked ~ label,
-  span {
-    @include form-star-rating($gray-700, $white);
+  .checked ~ span {
+    @include form-star-rating($gray-700, transparent);
   }
 
   > input:checked + label,
@@ -40,7 +40,7 @@
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-700, $white);
+    @include form-star-rating($gray-700, transparent);
   }
 
   > input:hover + label {
@@ -71,7 +71,7 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-500, $black);
+    @include form-star-rating($gray-500, transparent);
   }
 
   > input:checked + label {
@@ -83,7 +83,7 @@
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-500, $black);
+    @include form-star-rating($gray-500, transparent);
   }
 
   > input:hover + label {
@@ -99,7 +99,7 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating-sm($gray-700, $white);
+    @include form-star-rating-sm($gray-700, transparent);
   }
 
   > input:checked + label {
@@ -111,7 +111,7 @@
   }
 
   > input:hover ~ label {
-    @include form-star-rating-sm($gray-700, $white);
+    @include form-star-rating-sm($gray-700, transparent);
   }
 
   > input:hover + label {
