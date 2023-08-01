@@ -19,8 +19,34 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 ### Components
 
+- **Accordion**
+  - <span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
+
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
+
+### Forms
+
+- <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-accordion-btn-hover-bg</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-button-hover-bg</code></li>
+      <li><code>$accordion-dark-button-hover-bg</code></li>
+      <li><code>$footer-accordion-active-color</code></li>
+      <li><code>$footer-accordion-btn-hover-bg</code></li>
+    </ul>
+  </details>
 
 ## v5.3.1
 
@@ -1031,7 +1057,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     {{< /markdown >}}
   </details>
 
-- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want to apply this same modification within your websites.
 
 ### Helpers and utilities
 

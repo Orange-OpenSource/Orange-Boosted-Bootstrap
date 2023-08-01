@@ -1704,9 +1704,9 @@ $accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
-$accordion-body-padding-top:              5px !default; // Boosted mod
-$accordion-body-padding-end:              $spacer !default; // Boosted mod
-$accordion-body-padding-bottom:           $spacer !default; // Boosted mod
+$accordion-body-padding-top:              $spacer !default; // Boosted mod
+$accordion-body-padding-end:              0 !default; // Boosted mod
+$accordion-body-padding-bottom:           $spacer * 1.5 !default; // Boosted mod
 $accordion-body-padding-start:            0 !default; // Boosted mod
 // fusv-disable
 $accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
@@ -1718,8 +1718,9 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
+$accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
+$accordion-button-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1753,7 +1754,8 @@ $accordion-dark-bg:                       $black !default; // Boosted mod
 $accordion-dark-border-color:             $gray-700 !default; // Boosted mod
 $accordion-dark-button-color:             $accordion-dark-color !default; // Boosted mod
 $accordion-dark-button-bg:                $accordion-dark-bg !default; // Boosted mod
-$accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
+$accordion-dark-button-hover-bg:          $gray-900 !default; // Boosted mod
+$accordion-dark-button-active-color:      $white !default; // Boosted mod
 // scss-docs-end accordion-dark-variables
 
 // Tooltips
@@ -2348,6 +2350,8 @@ $footer-line-height-md:                   $line-height-base !default;
 $footer-title-font-weight:                $font-weight-bold !default;
 $footer-letter-spacing:                   $letter-spacing-base !default;
 $footer-accordion-line-height:            $spacer * 1.45 !default;
+$footer-accordion-active-color:           $brand-orange !default;
+$footer-accordion-btn-hover-bg:           null !default;
 $footer-nav-link-font-weight:             $font-weight-bold !default;
 
 $footer-title-content-padding-top:        $spacer * 1.25 !default;
