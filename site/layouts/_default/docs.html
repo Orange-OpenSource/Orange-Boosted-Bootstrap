@@ -2,7 +2,7 @@
 {{ define "main" }}
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
     <aside class="bd-sidebar">
-      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+      <section class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
@@ -11,7 +11,7 @@
         <div class="offcanvas-body">
           {{ partial "docs-sidebar" . }}
         </div>
-      </div>
+      </section>
     </aside>
 
     <main class="bd-main order-1">
