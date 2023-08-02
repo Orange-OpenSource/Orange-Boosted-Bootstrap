@@ -16,7 +16,7 @@
       "htmlcs"
     ],
     "useIncognitoBrowserContext": false,
-    "hideElements": "iframe, .table-dark .table-active, :disabled + label, .is-disabled, a.text-decoration-none, caption.visually-hidden, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, .exclude-from-pa11y-analysis",
+    "hideElements": "iframe, .table-dark .table-active, :disabled + label, .is-disabled, caption.visually-hidden, .overflow-y-auto, .overflow-x-scroll, .overflow-x-auto, .table-responsive, .exclude-from-pa11y-analysis",
     "ignore": [
       "color-contrast"
     ]

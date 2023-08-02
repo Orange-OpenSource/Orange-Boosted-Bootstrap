@@ -140,7 +140,7 @@ Reset a text or link's color with `.text-reset`, so that it inherits the color f
 
 Decorate text in components with text decoration classes.
 
-{{< example >}}
+{{< example class="exclude-from-pa11y-analysis" >}}
 <p class="text-decoration-underline">This text has a line underneath it.</p>
 <p class="text-decoration-line-through">This text has a line going through it.</p>
 <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
