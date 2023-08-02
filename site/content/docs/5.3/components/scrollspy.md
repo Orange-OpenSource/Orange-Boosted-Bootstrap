@@ -283,6 +283,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 Scrollspy is not limited to nav components and list groups, so it will work on any `<a>` anchor elements in the current document. Scroll the area and watch the `.active` class change.
 
+<!-- Boosted mod: exclude-from-pa11y-analysis because of the `a.active` that is #f16e00 but with a too small font-size -->
 <div class="bd-example exclude-from-pa11y-analysis">
   <div class="row">
     <div class="col-4">

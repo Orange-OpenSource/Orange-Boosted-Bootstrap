@@ -80,6 +80,7 @@ Create placeholders with the `.placeholder` class and a grid column class (e.g.,
 
 We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
 
+<!-- Boosted mod: exclude-from-pa11y-analysis because the `a` here is seen as an anchor link -->
 {{< example class="exclude-from-pa11y-analysis">}}
 <p aria-hidden="true">
   <span class="placeholder col-6"></span>

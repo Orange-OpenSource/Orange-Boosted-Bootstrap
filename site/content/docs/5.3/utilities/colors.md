@@ -148,6 +148,7 @@ When used in a dark variant context, `--bs-primary-text-rgb` will use the value 
 
 To change that opacity, override `--bs-text-opacity` via custom styles or inline styles.
 
+<!-- Boosted mod: exclude-from-pa11y-analysis because the use of `.text-primary` on small texts + opacity -->
 {{< example class="exclude-from-pa11y-analysis" >}}
 <div class="text-primary">This is default primary text</div>
 <div class="text-primary" style="--bs-text-opacity: .5;">This is 50% opacity primary text</div>
