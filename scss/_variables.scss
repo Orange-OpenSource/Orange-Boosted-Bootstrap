@@ -1183,6 +1183,13 @@ $form-check-inline-margin-end:    1rem !default;
 $form-star-size:                  1.5625rem !default;
 $form-star-size-sm:               1.25rem !default;
 $form-star-margin-between:        -.125rem !default;
+
+$form-star-rating-checked-color:       var(--#{$prefix}link-hover-color) !default;
+$form-star-rating-unchecked-color:     var(--#{$prefix}code-color) !default;
+$form-star-rating-hover-color:         var(--#{$prefix}emphasis-color) !default;
+$form-star-rating-checked-icon:        escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' d='m12.5 2.9 2.379 7.35 7.721-.007-6.25 4.536 2.392 7.346-6.242-4.547-6.242 4.547 2.392-7.346-6.25-4.536 7.721.007Z'/></svg>")) !default;
+$form-star-rating-unchecked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' fill-rule='evenodd' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
+
 //fusv-disable
 $form-star-focus-color:           $black !default; // Deprecated in v5.2.3
 $form-star-focus-outline:         var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3
