@@ -829,7 +829,7 @@ $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-xlg !default;
-$blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // Boosted mod: instead of `$gray-700`
+$blockquote-footer-color:     var(--#{$prefix}secondary-color) !default; // Boosted mod: instead of `$gray-600`
 $blockquote-footer-font-size: $small-font-size !default;
 $blockquote-line-height:      1.5 !default; // Boosted mod
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mod
