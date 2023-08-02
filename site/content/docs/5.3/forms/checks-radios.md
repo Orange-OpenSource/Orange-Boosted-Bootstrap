@@ -418,7 +418,7 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 
 {{< example class="bg-dark" >}}
 <form>
-  <fieldset class="star-rating star-rating-dark">
+  <fieldset class="star-rating" data-bs-theme="dark">
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">

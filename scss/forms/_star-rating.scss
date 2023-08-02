@@ -3,6 +3,9 @@
 //
 
 .star-rating {
+  --#{$prefix}star-rating-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' d='m12.5 2.9 2.379 7.35 7.721-.007-6.25 4.536 2.392 7.346-6.242-4.547-6.242 4.547 2.392-7.346-6.25-4.536 7.721.007Z'/></svg>"))};
+  --#{$prefix}star-rating-unchecked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' fill-rule='evenodd' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>"))};
+
   &.disabled,
   &:disabled {
     pointer-events: none;
@@ -15,7 +18,8 @@
     height: 1em;
     font-size: $form-star-size;
     cursor: pointer;
-    @include form-star-rating($accessible-orange);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
+    background-color: var(--bs-link-hover-color);
 
     &:not(:first-of-type){
       margin-left: $form-star-margin-between;
@@ -23,11 +27,13 @@
   }
 
   > input:checked ~ label {
-    @include form-star-rating($gray-500);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
+    background-color: var(--bs-code-color);
   }
 
   > input:checked + label {
-    @include form-star-rating($accessible-orange);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
+    background-color: var(--bs-link-hover-color);
   }
 
   > [data-focus-visible-added]:focus + label {
@@ -37,15 +43,18 @@
   }
 
   &:hover input + label {
-    @include form-star-rating($black);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
+    background-color: var(--bs-emphasis-color);
   }
 
   > input:hover ~ label {
-    @include form-star-rating($gray-500);
+    mask-image: var(--#{$prefix}star-rating-unchecked-icon);
+    background-color: var(--bs-code-color);
   }
 
   > input:hover + label {
-    @include form-star-rating($black);
+    mask-image: var(--#{$prefix}star-rating-checked-icon);
+    background-color: var(--bs-emphasis-color);
   }
 }
 
