@@ -138,9 +138,9 @@
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
 
-  --#{$prefix}scroll-offset-mobile: #{$scroll-offset-top / 2}; // Boosted mod
-  --#{$prefix}scroll-offset-desktop: #{$scroll-offset-top}; // Boosted mod
-  --#{$prefix}scroll-offset-minimized: #{add(divide($scroll-offset-top, 2), $spacer)}; // Boosted mod
+  --#{$prefix}scroll-offset-mobile: #{$scroll-offset-top}; // Boosted mod
+  --#{$prefix}scroll-offset-desktop: #{$scroll-offset-top-md}; // Boosted mod
+  --#{$prefix}scroll-offset-minimized: #{$scroll-offset-top-minimized}; // Boosted mod
 }
 
 // scss-docs-start root-dark-rule

@@ -2240,7 +2240,11 @@ $pre-line-height:                   1.25 !default;
 //
 
 //// Scroll margin
-$scroll-offset-top:              $spacer * 6 !default; // Matching .navbar computed height
+// scss-docs-start scroll-offset-variables
+$scroll-offset-top:              $spacer * 3.5 !default; // Matching .navbar computed height on mobile
+$scroll-offset-top-md:           $spacer * 6 !default; // Matching .navbar computed height on desktop
+$scroll-offset-top-minimized:    $spacer * 4 !default; // Matching .navbar computed height when minimized
+// scss-docs-end scroll-offset-variables
 
 //// Back to top
 // scss-docs-start back-to-top

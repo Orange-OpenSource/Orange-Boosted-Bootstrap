@@ -24,7 +24,26 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 ### Additional changes
 
-- **Removed default scroll padding behavior. —** This led to an unintended scroll of the page while tabbing inside the navbar in certain browsers. To keep it enable in your websites, set `$enable-fixed-header: true;` before importing Boosted variables. Another solution to this problem is used inside Boosted documentation. Please refer to [this scrolling CSS file]({{< param repo >}}/blob/main/site/assets/scss/_scrolling.scss) to know more about this.
+- <span class="badge bg-success">New</span> **Fixed header focus behavior. —** Previous version led to an unintended scroll of the page while tabbing inside the navbar in certain browsers. Some new rules were introduced including `scroll-margin-*` instead of `scroll-padding-*` to keep the same behavior. Some variables may need to be adapted to your website. Please check that it doesn't break the focus on your website.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-scroll-offset-top</code></li>
+      <li><code>--bs-scroll-offset-top-md</code></li>
+      <li><code>--bs-scroll-offset-top-minimized</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$scroll-offset-top-md</code></li>
+      <li><code>$scroll-offset-top-minimized</code></li>
+    </ul>
+  </details>
 
 ## v5.3.1
 

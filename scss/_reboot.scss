@@ -48,6 +48,8 @@
     h3,
     h4,
     input,
+    select,
+    textarea,
     [tabindex="0"] {
       scroll-margin-top: var(--#{$prefix}scroll-offset-mobile);
 
