@@ -680,7 +680,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
       <thead>
         <tr>
           <th scope="col">
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck">
               <label class="form-check-label" for="customCheck">
                 <span class="visually-hidden">Select all</span>
@@ -696,7 +696,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
       <tbody>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck1">
               <label class="form-check-label" for="customCheck1">
                   <span class="visually-hidden">Select first row</span>
@@ -710,7 +710,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck2">
               <label class="form-check-label" for="customCheck2">
                   <span class="visually-hidden">Select second row</span>
@@ -724,7 +724,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr class="table-active">
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck3" checked>
               <label class="form-check-label" for="customCheck3">
                   <span class="visually-hidden">Select third row</span>
@@ -738,7 +738,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr class="table-active">
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck4" checked>
               <label class="form-check-label" for="customCheck4">
                   <span class="visually-hidden">Select fourth row</span>
@@ -752,7 +752,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr>
           <td>
-              <div class="form-check mb-0">
+              <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck5">
               <label class="form-check-label" for="customCheck5">
                   <span class="visually-hidden">Select fifth row</span>
@@ -766,7 +766,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck6">
               <label class="form-check-label" for="customCheck6">
                   <span class="visually-hidden">Select sixth row</span>
@@ -780,7 +780,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck7">
               <label class="form-check-label" for="customCheck7">
                   <span class="visually-hidden">Select seventh row</span>
@@ -794,7 +794,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck8">
               <label class="form-check-label" for="customCheck8">
                   <span class="visually-hidden">Select eighth row</span>
@@ -818,7 +818,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
     <thead>
       <tr>
         <th scope="col">
-          <div class="form-check mb-0">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" id="customCheck">
             <label class="form-check-label" for="customCheck">
               <span class="visually-hidden">Select all</span>
@@ -834,7 +834,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
     <tbody>
       <tr>
         <td>
-          <div class="form-check mb-0">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" id="customCheck1">
             <label class="form-check-label" for="customCheck1">
                 <span class="visually-hidden">Select first row</span>
@@ -849,7 +849,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
       <tr>...</tr>
       <tr class="table-active">
         <td>
-          <div class="form-check mb-0">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" id="customCheck3" checked>
             <label class="form-check-label" for="customCheck3">
                 <span class="visually-hidden">Select third row</span>
@@ -882,7 +882,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
       <thead>
         <tr>
           <th scope="col">
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck9">
               <label class="form-check-label" for="customCheck9">
                 <span class="visually-hidden">Select all</span>
@@ -898,7 +898,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
       <tbody>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck10">
               <label class="form-check-label" for="customCheck10">
                 <span class="visually-hidden">Select first row</span>
@@ -915,7 +915,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck11">
               <label class="form-check-label" for="customCheck11">
                 <span class="visually-hidden">Select second row</span>
@@ -935,7 +935,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr class="table-active">
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck12" checked>
               <label class="form-check-label" for="customCheck12">
                 <span class="visually-hidden">Select third row</span>
@@ -952,7 +952,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr class="table-active">
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck13" checked>
               <label class="form-check-label" for="customCheck13">
                 <span class="visually-hidden">Select fourth row</span>
@@ -972,7 +972,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr>
           <td>
-              <div class="form-check mb-0">
+              <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck14">
               <label class="form-check-label" for="customCheck14">
                 <span class="visually-hidden">Select fifth row</span>
@@ -992,7 +992,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck15">
               <label class="form-check-label" for="customCheck15">
                 <span class="visually-hidden">Select sixth row</span>
@@ -1012,7 +1012,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck16">
               <label class="form-check-label" for="customCheck16">
                 <span class="visually-hidden">Select seventh row</span>
@@ -1032,7 +1032,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
         </tr>
         <tr>
           <td>
-            <div class="form-check mb-0">
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="customCheck17">
               <label class="form-check-label" for="customCheck17">
                 <span class="visually-hidden">Select eighth row</span>
