@@ -206,7 +206,7 @@ Given that container queries lack adequate support, we offer an alternative solu
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
     <li class="page-item active" aria-current="page">
-      <span class="page-link"><span class="d-sm-none">Page</span>&nbsp;<span class="test">5</span>&nbsp;<span class="d-sm-none">of 10</span></span>
+      <span class="page-link"><span class="d-sm-none">Page</span>&nbsp;5&nbsp;<span class="d-sm-none">of 10</span></span>
     </li>
     <li class="page-item"><a class="page-link" href="#">6</a></li>
     <li class="page-item"><a class="page-link" href="#">7</a></li>
