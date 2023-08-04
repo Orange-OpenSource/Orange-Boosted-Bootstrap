@@ -65,7 +65,7 @@ Boosted's grid system can adapt across all six default breakpoints, and any brea
 
 As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
 
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table mb-4">
     <thead>
       <tr>

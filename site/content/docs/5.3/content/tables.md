@@ -302,7 +302,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table align-middle">
       <caption class="visually-hidden">Boosted vertical alignment changed table</caption>
       <thead>
@@ -338,7 +338,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table align-middle">
     ...
     <thead>
@@ -521,7 +521,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table">
       <caption class="visually-hidden">Boosted responsive table</caption>
       <thead>
@@ -581,7 +581,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table">
     ...
   </table>
@@ -598,7 +598,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{ range $.Site.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}" tabindex="0">
+  <div class="table-responsive{{ .abbr }}">
     <table class="table">
     <caption class="visually-hidden">Boosted responsive table for {{ .abbr }} breakpoint and under</caption>
       <thead>
@@ -660,7 +660,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< tables.inline >}}
 {{- range $.Site.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}" tabindex="0">
+<div class="table-responsive{{ .abbr }}">
   <table class="table">
     ...
   </table>
@@ -682,7 +682,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 {{< /callout >}}
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table table-sm table-hover has-checkbox">
       <caption class="visually-hidden">Boosted table with a selection feature</caption>
       <thead>
@@ -820,7 +820,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table table-sm table-hover has-checkbox">
     ...
     <thead>
@@ -884,7 +884,7 @@ The selection behavior isn't implemented yet. This feature will be delivered wit
 Use SVG or PNG to display icons or thumbnails in your compact table data cell elements (`40px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table table-sm table-hover align-middle has-checkbox">
       <caption class="visually-hidden">Boosted table with icons in a row</caption>
       <thead>
@@ -1064,7 +1064,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table table-sm table-hover align-middle has-checkbox">
     ...
     <td>
@@ -1087,7 +1087,7 @@ Use SVG or PNG to display icons or thumbnails in your compact table data cell el
 Use SVG or PNG to display icons or thumbnails in your table data cell elements (`50px` row height). It will automatically add negative margin to ensure vertical alignment (for icons or thumbnails smaller than `2.5rem`).
 
 <div class="bd-example">
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive">
     <table class="table align-middle">
       <caption class="visually-hidden">Boosted table with icons inside a row</caption>
       <thead>
@@ -1201,7 +1201,7 @@ Use SVG or PNG to display icons or thumbnails in your table data cell elements (
 </div>
 
 ```html
-<div class="table-responsive" tabindex="0">
+<div class="table-responsive">
   <table class="table align-middle">
     ...
     <td>
