@@ -105,13 +105,13 @@
       }
     }
 
-    // Boosted mod: Remove border on input for form element QuantitySelector
+    // Boosted mod: Change border-color when on error for form element QuantitySelector
     .quantity-selector .form-control {
       @include form-validation-state-selector($state) {
 
         // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
-          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+          border-color: $border-color;
         }
       }
     }
