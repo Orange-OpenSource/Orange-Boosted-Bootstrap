@@ -31,13 +31,13 @@
       @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
       order: -1;
       padding-right: $quantity-selector-btn-padding-x;
+      border-right: none;
 
-      &:not(:focus-visible) {
-        border-right: none;
-      }
-
-      &:focus-visible {
-        margin-right: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
+      &:focus {
+        &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+          margin-right: calc(#{$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
+          border-right: var(--#{$prefix}border-width) solid $gray-500;
+        }
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type
@@ -49,14 +49,14 @@
     &:last-of-type {
       @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       padding-left: $quantity-selector-btn-padding-x;
+      border-left: none;
 
-      &:not(:focus-visible) {
-        border-left: none;
-      }
-
-      &:focus-visible {
-        // stylelint-disable-next-line declaration-no-important
-        margin-left: calc(#{$input-border-width} * -2) !important; // stylelint-disable-line function-disallowed-list
+      &:focus {
+        &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
+          // stylelint-disable-next-line declaration-no-important
+          margin-left: calc(#{$input-border-width} * -2) !important; // stylelint-disable-line function-disallowed-list
+          border-left: var(--#{$prefix}border-width) solid $gray-500;
+        }
       }
 
       &.btn-sm { // stylelint-disable-line selector-no-qualifying-type

@@ -111,7 +111,7 @@
 
         // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
         & ~ button {
-          border-color: $border-color;
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
         }
       }
     }
