@@ -11,12 +11,15 @@
     width: 1em;
     height: 1em;
     font-size: $form-star-size;
-    cursor: pointer;
     @include form-star-rating($accessible-orange, $accessible-orange);
 
     &:not(:first-of-type){
       margin-left: $form-star-margin-between;
     }
+  }
+
+  > label {
+    cursor: pointer;
   }
 
   > input:checked ~ label,
@@ -63,6 +66,34 @@
       @include form-star-rating($gray-700, $gray-700);
     }
   }
+
+  &.star-rating-sm {
+
+    > label {
+      font-size: $form-star-size-sm;
+      @include form-star-rating-sm($accessible-orange, $accessible-orange);
+    }
+
+    > input:checked ~ label {
+      @include form-star-rating-sm($gray-700, transparent);
+    }
+
+    > input:checked + label {
+      @include form-star-rating-sm($accessible-orange, $accessible-orange);
+    }
+
+    &:hover input + label {
+      @include form-star-rating-sm($black, $black);
+    }
+
+    > input:hover ~ label {
+      @include form-star-rating-sm($gray-700, transparent);
+    }
+
+    > input:hover + label {
+      @include form-star-rating-sm($black, $black);
+    }
+  }
 }
 
 .star-rating-dark {
@@ -89,32 +120,49 @@
   > input:hover + label {
     @include form-star-rating($white, $white);
   }
-}
 
-.star-rating-sm {
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
 
-  > label {
-    font-size: $form-star-size-sm;
-    @include form-star-rating-sm($accessible-orange, $accessible-orange);
+    > label {
+      @include form-star-rating($gray-700, $gray-700);
+    }
+
+    > input:checked ~ label {
+      @include form-star-rating($gray-700, $gray-500);
+    }
+
+    > input:checked + label {
+      @include form-star-rating($gray-700, $gray-700);
+    }
   }
 
-  > input:checked ~ label {
-    @include form-star-rating-sm($gray-700, transparent);
-  }
+  &.star-rating-sm {
 
-  > input:checked + label {
-    @include form-star-rating-sm($accessible-orange, $accessible-orange);
-  }
+    > label {
+      font-size: $form-star-size-sm;
+      @include form-star-rating-sm($brand-orange, $brand-orange);
+    }
 
-  &:hover input + label {
-    @include form-star-rating-sm($black, $black);
-  }
+    > input:checked ~ label {
+      @include form-star-rating-sm($gray-500, transparent);
+    }
 
-  > input:hover ~ label {
-    @include form-star-rating-sm($gray-700, transparent);
-  }
+    > input:checked + label {
+      @include form-star-rating-sm($brand-orange, $brand-orange);
+    }
 
-  > input:hover + label {
-    @include form-star-rating-sm($black, $black);
+    &:hover input + label {
+      @include form-star-rating-sm($white, $white);
+    }
+
+    > input:hover ~ label {
+      @include form-star-rating-sm($gray-500, transparent);
+    }
+
+    > input:hover + label {
+      @include form-star-rating-sm($white, $white);
+    }
   }
 }
