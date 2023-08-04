@@ -1,0 +1,92 @@
+---
+layout: examples
+title: Popover tour
+extra_css:
+  - "popover-tour.css"
+extra_js:
+  - src: "popover-tour.js"
+aliases:
+  - "/docs/examples/popover-tour"
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol fill="currentColor" viewBox="0 0 24 24" id="notification-alert">
+    <path d="M12 22.2a2.4 2.4 0 0 0 2.4-2.4H9.6a2.4 2.4 0 0 0 2.4 2.4Zm8.458-3.909L19.2 16.2v-5.952c0-3.348-2.3-6.203-5.4-7.016V3a1.8 1.8 0 0 0-3.6 0v.227A7.201 7.201 0 0 0 4.8 10.2v6l-1.258 2.091a.6.6 0 0 0 .515.909h15.886a.6.6 0 0 0 .515-.909Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 24 24" id="reload">
+    <path d="M18.789 5.212a9.6 9.6 0 1 0 0 13.576l-2.546-2.545a6 6 0 1 1 0-8.486v.001L13.802 10.2H19.8A1.2 1.2 0 0 0 21 9V3l-2.211 2.212Z"/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 24 24" id="settings">
+    <path d="M19.862 12.012c0-2.655 2.897-.646 1.548-3.902-1.35-3.257-1.977.211-3.855-1.666-1.877-1.877 1.592-2.504-1.664-3.853-3.257-1.349-1.249 1.547-3.903 1.547-2.655 0-.646-2.896-3.902-1.547-3.257 1.349.211 1.976-1.666 3.853-1.877 1.877-2.505-1.59-3.854 1.666-1.35 3.256 1.548 1.247 1.548 3.902 0 2.655-2.897.646-1.548 3.902 1.35 3.257 1.977-.211 3.854 1.665 1.877 1.877-1.591 2.505 1.666 3.854 3.256 1.349 1.247-1.547 3.902-1.547 2.654 0 .646 2.896 3.903 1.547 3.256-1.349-.213-1.977 1.664-3.854 1.878-1.876 2.505 1.592 3.855-1.665 1.349-3.256-1.548-1.247-1.548-3.902ZM12 7.224a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Z"/>
+  </symbol>
+</svg>
+
+<header class="sticky-top">
+  {{< orange-supra aria_label="Supra navigation - Popover tour example" >}}
+  {{< /orange-supra >}}
+
+  {{< orange-global-headers id="global-header-1" mode="actions" supra=true aria_label="Global navigation - Popover tour example" >}}
+  {{< /orange-global-headers >}}
+</header>
+
+<main>
+  <div class="bg-body title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <div class="d-flex ms-auto">
+        <div class="position-relative">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true">
+              <use xlink:href="#notification-alert"/>
+            </svg>
+            <span class="visually-hidden">Alerts</span>
+          </a>
+
+          <div class="position-absolute top-100 start-50 translate-middle">
+            <button type="button" class="popover-trigger" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" data-bs-sanitize="false"
+                    data-bs-title="Popover header<button class='btn-close float-end' style='margin: -10px;'><span class='visually-hidden' data-bs-dismiss='popover'>Close</span></button>"
+                    data-bs-content="<p class='mb-3'>Purus sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non enim praesent elementum facilisis.</p>
+                                     <div class='d-flex justify-content-between align-items-end pt-1'>
+                                       <p class=' mb-0 fw-bold'>1 of 5</p>
+                                       <nav aria-label='Popover navigation'>
+                                         <ul class='pagination m-0'>
+                                           <li class='page-item disabled'><a class='page-link' aria-label='Previous'></a></li>
+                                           <li class='page-item'><a href='#' class='page-link' aria-label='Next'></a></li>
+                                         </ul>
+                                       </nav>
+                                     </div>">
+              <span class="visually-hidden">Popover on bottom</span>
+            </button>
+          </div>
+        </div>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true">
+            <use xlink:href="#reload"/>
+          </svg>
+          <span class="visually-hidden">Reload</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true">
+            <use xlink:href="#settings"/>
+          </svg>
+          <span class="visually-hidden">Settings</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="border-bottom border-1 border-light custom-local-nav"></div>
+</main>
+
+<footer class="footer bg-dark navbar-dark position-sticky top-100">
+  <h2 class="visually-hidden">Sitemap & information</h2>
+  <div class="container-xxl footer-terms">
+    <ul class="navbar-nav gap-md-3">
+      <li class="fw-bold">© Orange {{< year >}}</li>
+      <li><a class="nav-link" href="https://system.design.orange.com/0c1af118d/p/0127c5-the-orange-design-system/b/135b17" target="_blank" rel="noopener">Terms and conditions</a></li>
+      <li><a class="nav-link" href="https://system.design.orange.com/" target="_blank" rel="noopener">Orange Design System website</a></li>
+      <li><a class="nav-link" href="https://boosted.orange.com/">Boosted</a></li>
+      <li><a class="nav-link" href="https://brand.orange.com/" target="_blank" rel="noopener">Orange Brand website</a></li>
+      <li><a class="nav-link" href="https://developer.orange.com/" target="_blank" rel="noopener">Orange developer website</a></li>
+    </ul>
+  </div>
+</footer>

@@ -18,7 +18,7 @@ import TemplateFactory from './util/template-factory.js'
  */
 
 const NAME = 'tooltip'
-const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn'])
+const DISALLOWED_ATTRIBUTES = new Set(['allowList', 'sanitizeFn'])
 
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_MODAL = 'modal'
@@ -211,6 +211,8 @@ class Tooltip extends BaseComponent {
       EventHandler.trigger(this._element, this.constructor.eventName(EVENT_INSERTED))
     }
 
+    // eslint-disable-next-line no-console
+    console.log(tip)
     this._popper = this._createPopper(tip)
 
     tip.classList.add(CLASS_NAME_SHOW)
