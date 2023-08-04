@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-.title-bar .d-flex {
+.title-bar h1 + * {
   padding: .666666em 0 .333333em;
   margin-right: -1.25rem;
 }
@@ -16,6 +16,10 @@ body {
 
 .custom-local-nav {
   height: 50px;
+}
+
+.popover-width {
+  width: 23.75rem;
 }
 
 .popover-trigger {

@@ -211,8 +211,6 @@ class Tooltip extends BaseComponent {
       EventHandler.trigger(this._element, this.constructor.eventName(EVENT_INSERTED))
     }
 
-    // eslint-disable-next-line no-console
-    console.log(tip)
     this._popper = this._createPopper(tip)
 
     tip.classList.add(CLASS_NAME_SHOW)

@@ -1808,7 +1808,7 @@ $popover-header-color:              $headings-color !default;
 $popover-header-padding-top:        $popover-padding-y !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
 $popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
-$popover-header-padding-x:          $spacer * .9 !default; // Boosted mod: instead of `$spacer`
+$popover-header-padding-x:          $spacer !default; // Boosted mod: instead of `$spacer`
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-top:          0 !default; // Boosted mod
