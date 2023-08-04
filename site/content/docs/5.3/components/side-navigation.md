@@ -391,7 +391,7 @@ Here is the `.side-nav-collapsible` variant. The collapsible side navigation we 
       <div class="side-nav-collapsible">
         <div id="collapsibleElement1" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
         <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement1" aria-expanded="false" aria-controls="collapsibleElement1"><span class="visually-hidden">Open/Close side navigation</span></button>
-        <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
+        <ul class="side-nav-content side-nav-scrollable list-unstyled m-0" tabindex="-1">
           <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
             <a href="#" class="side-nav-item active fw-bold">
               <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
@@ -441,7 +441,7 @@ Add `.side-nav-static` to the `.side-nav` for a static variant.
         <div class="side-nav-collapsible">
           <div id="collapsibleElement2" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
           <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement2" aria-expanded="false" aria-controls="collapsibleElement2"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
+          <ul class="side-nav-content side-nav-scrollable list-unstyled m-0" tabindex="-1">
             <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
               <a href="#" class="side-nav-item active fw-bold">
                 <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
@@ -516,7 +516,7 @@ Here is the example on the collapsible variant.
         <div class="side-nav-collapsible">
           <div id="collapsibleElement4" class="collapse collapse-horizontal"><div>&nbsp;</div></div>
           <button class="side-nav-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleElement4" aria-expanded="false" aria-controls="collapsibleElement4"><span class="visually-hidden">Open/Close side navigation</span></button>
-          <ul class="side-nav-content side-nav-scrollable list-unstyled m-0">
+          <ul class="side-nav-content side-nav-scrollable list-unstyled m-0" tabindex="-1">
             <li data-bs-toggle="tooltip" data-bs-title="Dashboard" data-bs-placement="right">
               <a href="#" class="side-nav-item active fw-bold">
                 <svg width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
