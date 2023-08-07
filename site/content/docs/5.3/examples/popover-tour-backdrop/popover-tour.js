@@ -22,4 +22,6 @@
       })
     })
   })
+
+  boosted.Modal.getOrCreateInstance('body')._initializeBackDrop().show()
 })()
