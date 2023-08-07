@@ -1,7 +1,7 @@
 .vr {
   display: inline-block;
   align-self: stretch;
-  width: 2px; // Boosted mod
+  width: $vr-border-width;
   min-height: 1em;
   background-color: currentcolor;
   opacity: $hr-opacity;
