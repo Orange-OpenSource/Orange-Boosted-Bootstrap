@@ -154,10 +154,6 @@
   &:first-child .page-link {
     margin-right: var(--#{$prefix}pagination-margin-x-first-last);
 
-    &:not(:empty) {
-      padding-right: var(--#{$prefix}pagination-padding-end);
-    }
-
     &::before {
       /* rtl:raw:
       transform: scaleX(-1);
@@ -166,9 +162,6 @@
   }
 
   &:last-child .page-link {
-    &:not(:empty) {
-      padding-left: var(--#{$prefix}pagination-padding-end);
-    }
 
     &::before {
       order: 1;
@@ -203,19 +196,6 @@
   }
   // End mod
 }
-
-// Boosted mod: special style for pagination with icons only
-.icons-only {
-  .page-item {
-    &:first-child .page-link {
-      padding-right: 0;
-    }
-    &:last-child .page-link {
-      padding-left: 0;
-    }
-  }
-}
-// End mod
 
 //
 // Sizing

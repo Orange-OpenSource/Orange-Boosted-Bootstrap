@@ -1577,8 +1577,8 @@ $dropdown-dark-header-color:        $white !default; // Boosted mod
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              null !default;
-$pagination-padding-x:              null !default;
+$pagination-padding-y:              .625rem !default; // Boosted mod: instead of `null`
+$pagination-padding-x:              .8125rem !default; // Boosted mod: instead of `null`
 
 $pagination-font-size:              $font-size-base !default;
 
@@ -1616,7 +1616,7 @@ $pagination-transition:             $transition-focus !default;
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
 $pagination-icon:                   var(--#{$prefix}chevron-icon) !default;
-$pagination-icon-size:              subtract($spacer * 2, calc(var(--#{$prefix}border-width) * 2)) !default; // stylelint-disable-line function-disallowed-list
+$pagination-icon-size:              .875rem !default; // Boosted mod: instead of `subtract($spacer * 2, calc(var(--#{$prefix}border-width) * 2))`
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
 
