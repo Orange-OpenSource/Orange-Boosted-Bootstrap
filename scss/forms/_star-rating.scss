@@ -55,15 +55,15 @@
     pointer-events: none;
 
     > label {
-      @include form-star-rating($gray-700, $gray-700);
-    }
-
-    > input:checked ~ label {
       @include form-star-rating($gray-500, $gray-500);
     }
 
+    > input:checked ~ label {
+      @include form-star-rating($gray-500, transparent);
+    }
+
     > input:checked + label {
-      @include form-star-rating($gray-700, $gray-700);
+      @include form-star-rating($gray-500, $gray-500);
     }
   }
 
@@ -130,7 +130,7 @@
     }
 
     > input:checked ~ label {
-      @include form-star-rating($gray-700, $gray-500);
+      @include form-star-rating($gray-700, transparent);
     }
 
     > input:checked + label {
