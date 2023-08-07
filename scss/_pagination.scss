@@ -43,9 +43,9 @@
   position: relative;
   box-sizing: content-box; // Boosted mod
   display: flex; // Boosted mod
+  gap: 10px; // Boosted mod
   align-items: center; // Boosted mod
   justify-content: center; // Boosted mod
-  gap: 10px; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
   @include font-size(var(--#{$prefix}pagination-font-size));
   font-weight: var(--#{$prefix}pagination-font-weight); // Boosted mod
