@@ -45,6 +45,7 @@
   display: flex; // Boosted mod
   align-items: center; // Boosted mod
   justify-content: center; // Boosted mod
+  gap: 10px; // Boosted mod
   padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
   @include font-size(var(--#{$prefix}pagination-font-size));
   font-weight: var(--#{$prefix}pagination-font-weight); // Boosted mod
@@ -56,6 +57,7 @@
   // Boosted mod: embed icon as mask-image
   @include button-icon(
     var(--#{$prefix}pagination-icon),
+    .625rem,
     var(--#{$prefix}pagination-icon-size),
     $size: var(--#{$prefix}pagination-icon-width) var(--#{$prefix}pagination-icon-height) ,
     $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link",
