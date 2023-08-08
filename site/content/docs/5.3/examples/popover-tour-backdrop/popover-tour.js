@@ -44,7 +44,7 @@
     element.parentElement.querySelectorAll('[href]').forEach(link => {
       if (link.getAttribute('href').startsWith('#')) {
         link.addEventListener('click', () => {
-          document.querySelector(`${link.getAttribute('href')} [data-bs-toggle="popover"]`).click()
+          boosted.Popover.getOrCreateInstance(document.querySelector(`${link.getAttribute('href')} [data-bs-toggle="popover"]`)).show()
           boosted.Popover.getOrCreateInstance(element).hide()
           element.parentElement.parentElement.style.zIndex = null
         })
