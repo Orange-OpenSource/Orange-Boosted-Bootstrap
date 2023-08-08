@@ -1624,10 +1624,12 @@ $pagination-gap:                    10px !default;
 $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
-// End mod
+
+$pagination-item-max-width:         $spacer * 2 !default;
 // fusv-disable
 $pagination-padding-end:            1.125rem !default; // Deprecated in Boosted 5.3.0 for responsive pagination
 // fusv-enable
+// End mod
 // scss-docs-end pagination-variables
 
 // scss-docs-start pagination-dark-variables
@@ -1654,8 +1656,6 @@ $pagination-dark-active-item-border-color:  $brand-orange !default;
 $pagination-dark-disabled-bg:               $black !default;
 $pagination-dark-disabled-color:            $gray-700 !default;
 $pagination-dark-disabled-border-color:     $gray-700 !default;
-
-$pagination-item-max-width:                 2.5rem !default;
 // End mod
 // scss-docs-end pagination-dark-variables
 

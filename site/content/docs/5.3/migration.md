@@ -25,6 +25,14 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
+- **Pagination**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, pagination's variant with icons only has been slightly modified to ensure correct semantic for all assistive technologies. It might be a useful modification to propagate into your websites if you are using this variant.
+  ```diff
+  - <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+  - <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
+  + <li class="page-item"><a class="page-link" href="#"><span class="visually-hidden">Previous</span></a></li>
+  + <li class="page-item"><a class="page-link" href="#"><span class="visually-hidden">Next</span></a></li>
+  ```
 ### Forms
 
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
