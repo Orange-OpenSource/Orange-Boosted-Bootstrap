@@ -69,16 +69,19 @@
 
   &.star-rating-sm {
 
-    > label {
+    > label,
+    span {
       font-size: $form-star-size-sm;
       @include form-star-rating-sm($accessible-orange, $accessible-orange);
     }
 
-    > input:checked ~ label {
+    > input:checked ~ label,
+    .checked ~ span {
       @include form-star-rating-sm($gray-700, transparent);
     }
 
-    > input:checked + label {
+    > input:checked + label,
+    .checked {
       @include form-star-rating-sm($accessible-orange, $accessible-orange);
     }
 
@@ -93,19 +96,42 @@
     > input:hover + label {
       @include form-star-rating-sm($black, $black);
     }
+
+    &.disabled,
+    &:disabled {
+      pointer-events: none;
+
+      > label,
+      span {
+        @include form-star-rating-sm($gray-500, $gray-500);
+      }
+
+      > input:checked ~ label,
+      .checked ~ span {
+        @include form-star-rating-sm($gray-500, transparent);
+      }
+
+      > input:checked + label,
+      .checked {
+        @include form-star-rating-sm($gray-500, $gray-500);
+      }
+    }
   }
 }
 
 .star-rating-dark {
-  > label {
+  > label,
+  span {
     @include form-star-rating($brand-orange, $brand-orange);
   }
 
-  > input:checked ~ label {
+  > input:checked ~ label,
+  .checked ~ span {
     @include form-star-rating($gray-500, transparent);
   }
 
-  > input:checked + label {
+  > input:checked + label,
+  .checked {
     @include form-star-rating($brand-orange, $brand-orange);
   }
 
@@ -140,16 +166,19 @@
 
   &.star-rating-sm {
 
-    > label {
+    > label,
+    span {
       font-size: $form-star-size-sm;
       @include form-star-rating-sm($brand-orange, $brand-orange);
     }
 
-    > input:checked ~ label {
+    > input:checked ~ label,
+    .checked ~ span {
       @include form-star-rating-sm($gray-500, transparent);
     }
 
-    > input:checked + label {
+    > input:checked + label,
+    .checked {
       @include form-star-rating-sm($brand-orange, $brand-orange);
     }
 
@@ -163,6 +192,26 @@
 
     > input:hover + label {
       @include form-star-rating-sm($white, $white);
+    }
+
+    &.disabled,
+    &:disabled {
+      pointer-events: none;
+
+      > label,
+      span {
+        @include form-star-rating-sm($gray-700, $gray-700);
+      }
+
+      > input:checked ~ label,
+      .checked ~ span {
+        @include form-star-rating-sm($gray-700, transparent);
+      }
+
+      > input:checked + label,
+      .checked {
+        @include form-star-rating-sm($gray-700, $gray-700);
+      }
     }
   }
 }
