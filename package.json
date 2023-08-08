@@ -116,7 +116,7 @@
     "@storybook/addon-a11y": "^7.1.1",
     "@storybook/addon-essentials": "^7.1.1",
     "@storybook/html": "^7.1.1",
-    "@storybook/html-webpack5": "^7.1.1",
+    "@storybook/html-webpack5": "^7.2.1",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^7.1.1",
     "autoprefixer": "^10.4.14",
