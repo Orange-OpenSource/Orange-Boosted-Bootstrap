@@ -1,7 +1,3 @@
-//
-// Star rating
-//
-
 .star-rating {
 
   > label,
@@ -50,7 +46,6 @@
     @include form-star-rating($black, $black);
   }
 
-  &.disabled,
   &:disabled {
     pointer-events: none;
 
@@ -97,7 +92,6 @@
       @include form-star-rating-sm($black, $black);
     }
 
-    &.disabled,
     &:disabled {
       pointer-events: none;
 
@@ -147,7 +141,6 @@
     @include form-star-rating($white, $white);
   }
 
-  &.disabled,
   &:disabled {
     pointer-events: none;
 
@@ -194,7 +187,6 @@
       @include form-star-rating-sm($white, $white);
     }
 
-    &.disabled,
     &:disabled {
       pointer-events: none;
 
