@@ -32,9 +32,26 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-pagination-padding-end</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$pagination-padding-end</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
+      <li><code>--bs-pagination-gap</code></li>
+      <li><code>--bs-pagination-icon-min-width</code></li>
+      <li><code>--bs-pagination-item-max-width</code></li>
     </ul>
   </details>
 
@@ -45,6 +62,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$accordion-dark-button-hover-bg</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
+      <li><code>$pagination-gap</code></li>
+      <li><code>$pagination-icon-min-width</code></li>
+      <li><code>$pagination-item-max-width</code></li>
     </ul>
   </details>
 
