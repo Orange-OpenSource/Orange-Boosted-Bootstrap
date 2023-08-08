@@ -178,8 +178,7 @@
     margin-left: var(--#{$prefix}pagination-margin-x-first-last);
   }
 
-  &:not(:first-child),
-  &:not(:last-child) {
+  &:not(:first-child):not(:last-child) {
     max-width: var(--#{$prefix}pagination-item-max-width);
   }
 
