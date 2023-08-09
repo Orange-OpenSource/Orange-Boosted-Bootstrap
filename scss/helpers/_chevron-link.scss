@@ -10,17 +10,14 @@
     margin-left: $linked-chevron-margin-left;
     vertical-align: middle;
     content: "";
-    background-image: var(--#{$prefix}chevron-icon);
-    background-repeat: no-repeat;
+    background-color: currentColor;
+    mask-image: var(--#{$prefix}chevron-icon);
+    mask-repeat: no-repeat;
     transform: $linked-chevron-transform;
   }
 
   &:hover {
     text-decoration: $link-decoration;
-
-    &::after {
-      filter: $orange-filter;
-    }
   }
 }
 // End mod
