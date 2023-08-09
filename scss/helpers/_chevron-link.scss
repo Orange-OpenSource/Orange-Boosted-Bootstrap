@@ -10,7 +10,7 @@
     margin-left: $linked-chevron-margin-left;
     vertical-align: middle;
     content: "";
-    background-color: currentColor;
+    background-color: currentcolor;
     mask-image: var(--#{$prefix}chevron-icon);
     mask-repeat: no-repeat;
     transform: $linked-chevron-transform;
