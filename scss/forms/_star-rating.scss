@@ -1,5 +1,4 @@
 .star-rating {
-
   > label,
   span {
     display: block;
@@ -158,7 +157,6 @@
   }
 
   &.star-rating-sm {
-
     > label,
     span {
       font-size: $form-star-size-sm;
