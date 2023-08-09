@@ -118,13 +118,14 @@
     order: -1;
     height: var(--#{$prefix}alert-logo-size);
     content: "";
-    background-image: var(--#{$prefix}alert-icon-bg-image);
-    background-repeat: no-repeat;
+    background-color: var(--#{$prefix}alert-border-color);
+    mask-image: var(--#{$prefix}alert-icon-bg-image);
+    mask-repeat: no-repeat;
 
     /* rtl:raw:
-    background-position: top right;
+    mask-position: top right;
     */
-    background-size: var(--#{$prefix}alert-logo-size);
+    mask-size: var(--#{$prefix}alert-logo-size);
   }
 }
 
