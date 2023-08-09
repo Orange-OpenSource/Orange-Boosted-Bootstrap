@@ -1625,7 +1625,7 @@ $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
 
-$pagination-item-max-width:         $spacer * 2 !default;
+$pagination-item-max-width:         $spacer * .5 !default;
 // fusv-disable
 $pagination-padding-end:            1.125rem !default; // Deprecated in Boosted 5.3.0 for responsive pagination
 // fusv-enable
