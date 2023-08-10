@@ -9,18 +9,23 @@
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-unchecked-icon};
 
-  &.disabled,
   &:disabled {
     pointer-events: none;
+    --#{$prefix}star-rating-checked-color: var(--#{$prefix}border-color-translucent);
+    --#{$prefix}star-rating-unchecked-color: var(--#{$prefix}border-color-translucent);
   }
 
   > label {
+    cursor: pointer;
+  }
+
+  > label,
+  span {
     display: block;
     float: left;
     width: 1em;
     height: 1em;
     font-size: $form-star-size;
-    cursor: pointer;
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
 
@@ -29,12 +34,14 @@
     }
   }
 
-  > input:checked ~ label {
+  > input:checked ~ label,
+  .checked ~ span {
     mask-image: var(--#{$prefix}star-rating-unchecked-icon);
     background-color: var(--#{$prefix}star-rating-unchecked-color);
   }
 
-  > input:checked + label {
+  > input:checked + label,
+  .checked {
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
   }
@@ -62,5 +69,6 @@
 }
 
 .star-rating-sm > label {
-  font-size: $form-star-size-sm;
+  --#{$prefix}star-rating-checked-icon: #{$form-star-rating-sm-checked-icon};
+  --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-sm-unchecked-icon};
 }

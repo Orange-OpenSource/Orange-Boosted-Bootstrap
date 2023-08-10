@@ -1,5 +1,0 @@
-// scss-docs-start form-star-rating-mixin
-@mixin form-star-rating($color) {
-  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#{$color}' d='m12.5 2.9 2.379 7.35 7.721-.007-6.25 4.536 2.392 7.346-6.242-4.547-6.242 4.547 2.392-7.346-6.25-4.536 7.721.007Z'/></svg>"));
-}
-// scss-docs-end form-star-rating-mixin

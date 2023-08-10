@@ -439,28 +439,47 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 </form>
 {{< /example >}}
 
+### Readonly
+Make star ratings readable but non editable by using `<span>` instead of `<input>` elements.
+
+{{< example >}}
+<div class="star-rating">
+  <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+  <div aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span class="checked"></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+{{< /example >}}
+
 ### Disabled
 
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
 
 {{< example >}}
-<fieldset class="star-rating" disabled>
+<fieldset class="star-rating" disabled aria-hidden="true">
+  <legend class="visually-hidden">Disabled star rating</legend>
+
   <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
-  <label for="terrible4" title="Terrible"></label>
+  <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
 
   <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
-  <label for="bad4" title="Bad"></label>
+  <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
 
   <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
-  <label for="mixed4" title="Mixed"></label>
+  <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
 
   <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
-  <label for="good4" title="Good"></label>
+  <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
 
   <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
-  <label for="excellent4" title="Excellent"></label>
+  <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
 </fieldset>
-<span class="visually-hidden">rated 3 stars out of 5</span>
+<p class="visually-hidden">Disabled star rating: rated 3 out of 5</p>
 {{< /example >}}
 
 <!-- End mod -->
@@ -476,7 +495,3 @@ Variables for checks:
 Variables for switches:
 
 {{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}
-
-### Sass mixins
-
-{{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" >}}
