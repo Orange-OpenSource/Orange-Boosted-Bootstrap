@@ -71,4 +71,5 @@
 .star-rating-sm > label {
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-sm-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-sm-unchecked-icon};
+  font-size: $form-star-size-sm;
 }
