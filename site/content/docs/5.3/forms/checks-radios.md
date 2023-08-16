@@ -497,3 +497,7 @@ Variables for checks:
 Variables for switches:
 
 {{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}
+
+### Sass mixins
+
+{{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" >}}
