@@ -414,7 +414,7 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 
 ### Dark variant
 
-Add `data-bs-theme="dark"` to the `.star-rating` for a dark variant.
+Add `data-bs-theme="dark"` to the `.star-rating` or any parent element for a dark variant.
 
 {{< example class="bg-dark" >}}
 <form>

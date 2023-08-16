@@ -8,6 +8,7 @@
   --#{$prefix}star-rating-hover-color: #{$form-star-rating-hover-color};
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-unchecked-icon};
+  font-size: $form-star-size;
 
   &:disabled {
     pointer-events: none;
@@ -25,7 +26,6 @@
     float: left;
     width: 1em;
     height: 1em;
-    font-size: $form-star-size;
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
 
@@ -40,8 +40,7 @@
     background-color: var(--#{$prefix}star-rating-unchecked-color);
   }
 
-  > input:checked + label,
-  .checked {
+  > input:checked + label {
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
   }
@@ -68,7 +67,7 @@
   }
 }
 
-.star-rating-sm > label {
+.star-rating-sm {
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-sm-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-sm-unchecked-icon};
   font-size: $form-star-size-sm;
