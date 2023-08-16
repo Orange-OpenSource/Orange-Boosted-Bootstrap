@@ -500,4 +500,6 @@ Variables for switches:
 
 ### Sass mixins
 
+{{< deprecated-in "5.3.2" >}}
+
 {{< scss-docs name="form-star-rating-mixin" file="scss/mixins/_star-rating.scss" >}}
