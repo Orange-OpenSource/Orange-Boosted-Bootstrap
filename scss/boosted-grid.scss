@@ -52,7 +52,7 @@ $utilities: map-get-multiple(
     "margin-x",
     "margin-y",
     "margin-top",
-    "margin-right",
+    "margin-end",
     "margin-bottom",
     "margin-start",
     "negative-margin",
@@ -69,6 +69,9 @@ $utilities: map-get-multiple(
     "padding-end",
     "padding-bottom",
     "padding-start",
+    "gap",
+    "row-gap",
+    "column-gap",
   )
 );
 
