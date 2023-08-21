@@ -9,8 +9,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-'use strict'
-
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
