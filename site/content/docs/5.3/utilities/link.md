@@ -10,7 +10,7 @@ added: 5.3
 ---
 
 {{< design-callout-alert >}}
-Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
+Link utilities should be used carefully because the rendering provided in the following examples does not exist in the Orange Design System specifications and do not always meet accessibility standards. But still, these utilities could help in some cases to build specific ues cases or other reusable components.
 {{< /design-callout-alert >}}
 
 ## Link opacity
@@ -87,14 +87,20 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 
 [Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
 
-<!--Boosted mod: feature limited to primary and light, we don't loop over "theme-colors"-->
+<!--Boosted mod: use `contrast_color` as background to ensure a good contrast-->
 {{< example >}}
-<p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary link</a></p>
-<p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light link</a></p>
+{{< colored-links.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<p><a href="#" class="link-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
+{{- end -}}
+{{< /colored-links.inline >}}
 <p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>
 {{< /example >}}
+<!--End mod-->
 
-<!--Boosted mod: removed callout not applicable to our modified example-->
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
 
 ## CSS
 
