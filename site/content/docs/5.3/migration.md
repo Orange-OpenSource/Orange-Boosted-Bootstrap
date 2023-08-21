@@ -1289,20 +1289,22 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
 
-<hr class="my-5">
+## v5.0.0
+
+<hr class="mb-4">
 
 {{< callout info >}}
 **Hey there!** Changes to our first major release of Boosted 5, v5.0.0, are documented below. They don't reflect the additional changes shown above.
 {{< /callout >}}
 
-## Dependencies
+### Dependencies
 
 - Dropped jQuery.
 - Upgraded from Popper v1.x to Popper v2.x.
 - Replaced Libsass with Dart Sass as our Sass compiler given Libsass was deprecated.
 - Migrated from Jekyll to Hugo for building our documentation
 
-## Browser support
+### Browser support
 
 - Dropped Internet Explorer 10 and 11
 - Dropped Microsoft Edge < 16 (Legacy Edge)
@@ -1313,7 +1315,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## Documentation changes
+### Documentation changes
 
 - Redesigned homepage, docs layout, and footer.
 - Added [new Parcel guide](/docs/{{< param docs_version >}}/getting-started/parcel/).
@@ -1325,7 +1327,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
 - Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
-## Sass
+### Sass
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
 
@@ -1369,7 +1371,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - The `border-radius()` mixin now has a default value.
 
-## Color system
+### Color system
 
 - The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `shift-color()` will either tint or shade a color depending on whether its weight parameter is positive or negative. [See #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
 
@@ -1379,7 +1381,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - To support our color system, we've added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
 
-## Grid updates
+### Grid updates
 
 - **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
 
@@ -1399,7 +1401,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Updated the `make-col` mixin to default to equal columns without a specified size.
 
-## Content, Reboot, etc
+### Content, Reboot, etc
 
 - <span class="badge bg-danger">Breaking</span> Orange Helvetica CSS file names changed from `orangeHelvetica.*.css` to `orange-helvetica.*.css`.
 
@@ -1435,11 +1437,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
 
-## RTL
+### RTL
 
 - Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., `start` and `end` in lieu of `left` and `right`.
 
-## Forms
+### Forms
 
 <!-- Boosted mod: no floating labels -->
 
@@ -1470,25 +1472,25 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## Components
+### Components
 
 - Unified `padding` values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our `$spacer` variable. [See #30564](https://github.com/twbs/bootstrap/pull/30564).
 
-### Accordion
+#### Accordion
 
 - Added [new accordion component]({{< docsref "/components/accordion" >}}).
 
-### Alerts
+#### Alerts
 
 - Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
 
-### Back to top
+#### Back to top
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. Back to top component doesn't use JavaScript anymore.
 
-### Badges
+#### Badges
 
 - <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
 
@@ -1498,13 +1500,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
 
-### Breadcrumbs
+#### Breadcrumbs
 
 - Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
 
 - Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
 
-### Buttons
+#### Buttons
 
 - <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
@@ -1518,7 +1520,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Disabled buttons now have `pointer-events: none;`.
 
-### Card
+#### Card
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
 
@@ -1526,13 +1528,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
 
-### Carousel
+#### Carousel
 
 - Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
 
 - Replaced chevron icons for carousel controls with new SVGs from [Solaris]({{< docsref "/extend/icons" >}}).
 
-### Close button
+#### Close button
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
 
@@ -1540,11 +1542,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
 
-### Collapse
+#### Collapse
 
 - Removed scroll anchoring for accordions.
 
-### Dropdowns
+#### Dropdowns
 
 - Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
 
@@ -1562,32 +1564,32 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
 
-### Footer
+#### Footer
 
 - <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/footer" >}}).
 
-### Jumbotron
+#### Jumbotron
 
 - <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
 
-### List group
+#### List group
 
 - Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
 
-### Navs and tabs
+#### Navs and tabs
 
 - Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
 
-### Navbars
+#### Navbars
 
 - <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
 - <span class="badge bg-danger">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
 
-### Offcanvas
+#### Offcanvas
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
 
-### Orange navbar
+#### Orange navbar
 
 - <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
 
@@ -1597,7 +1599,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Classes to handle titles in the bars have been added: use `.title` for a title on a single line, or `.two-lined` for, as its name suggests, a title on two lines.
 
-### Pagination
+#### Pagination
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.has-label` support.
 
@@ -1605,19 +1607,19 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added `transition`s to pagination links.
 
-### Popovers
+#### Popovers
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
 
 - Renamed `whiteList` option to `allowList`.
 
-### Spinners
+#### Spinners
 
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
 
-### Stepped process
+#### Stepped process
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
 
@@ -1625,7 +1627,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
-### Toasts
+#### Toasts
 
 - Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
 
@@ -1633,7 +1635,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
 
-### Tooltips
+#### Tooltips
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
 
@@ -1641,7 +1643,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
 
-## Utilities
+### Utilities
 
 - <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
   - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
@@ -1684,7 +1686,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
 
-## Helpers
+### Helpers
 
 - <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
   - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
@@ -1699,7 +1701,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `boosted-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
 
-## JavaScript
+### JavaScript
 
 - **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
 
