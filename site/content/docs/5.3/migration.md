@@ -30,8 +30,8 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
   ```diff
   - <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
   - <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
-  + <li class="page-item"><a class="page-link" href="#"><span class="visually-hidden">Previous</span></a></li>
-  + <li class="page-item"><a class="page-link" href="#"><span class="visually-hidden">Next</span></a></li>
+  + <li class="page-item"><a class="page-link" href="#" title="Previous"><span class="visually-hidden">Previous</span></a></li>
+  + <li class="page-item"><a class="page-link" href="#" title="Next"><span class="visually-hidden">Next</span></a></li>
   ```
 ### Forms
 
