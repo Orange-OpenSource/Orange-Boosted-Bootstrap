@@ -15,7 +15,7 @@
   @include media-breakpoint-down(lg) {
     .offcanvas-lg {
       // Boosted mod: no `border-right-color`
-      box-shadow: $box-shadow-lg;
+      box-shadow: var(--bs-box-shadow-lg);
     }
   }
 }
