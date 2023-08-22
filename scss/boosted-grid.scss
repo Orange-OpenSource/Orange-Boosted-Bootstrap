@@ -1,19 +1,7 @@
 @import "mixins/banner";
 @include bsBanner(Grid);
 
-// Boosted mod: no $include-column-box-sizing: true !default;
-
-// Boosted mod
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-// End mod
+$include-column-box-sizing: true !default;
 
 @import "functions";
 @import "variables";
@@ -68,9 +56,6 @@ $utilities: map-get-multiple(
     "padding-end",
     "padding-bottom",
     "padding-start",
-    "gap",
-    "row-gap",
-    "column-gap",
   )
 );
 
