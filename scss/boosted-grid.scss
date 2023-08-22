@@ -31,7 +31,6 @@ html {
 @import "grid";
 
 @import "utilities";
-
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-get-multiple(
