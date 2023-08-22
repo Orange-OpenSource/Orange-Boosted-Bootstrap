@@ -22,25 +22,31 @@
 
   > label,
   span {
-    display: block;
     float: left;
     width: 1em;
     height: 1em;
-    mask-image: var(--#{$prefix}star-rating-checked-icon);
-    background-color: var(--#{$prefix}star-rating-checked-color);
+
+    &::before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      mask-image: var(--#{$prefix}star-rating-checked-icon);
+      content: "";
+      background-color: var(--#{$prefix}star-rating-checked-color);
+    }
 
     &:not(:first-of-type){
       margin-left: $form-star-margin-between;
     }
   }
 
-  > input:checked ~ label,
-  .checked ~ span {
+  > input:checked ~ label::before,
+  .checked ~ span::before {
     mask-image: var(--#{$prefix}star-rating-unchecked-icon);
     background-color: var(--#{$prefix}star-rating-unchecked-color);
   }
 
-  > input:checked + label {
+  > input:checked + label::before {
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-checked-color);
   }
@@ -51,17 +57,17 @@
     box-shadow: inset 0 0 0 add(1px, $focus-visible-inner-width) var(--#{$prefix}focus-visible-inner-color);
   }
 
-  &:hover input + label {
+  &:hover input + label::before {
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-hover-color);
   }
 
-  > input:hover ~ label {
+  > input:hover ~ label::before {
     mask-image: var(--#{$prefix}star-rating-unchecked-icon);
     background-color: var(--#{$prefix}star-rating-unchecked-color);
   }
 
-  > input:hover + label {
+  > input:hover + label::before {
     mask-image: var(--#{$prefix}star-rating-checked-icon);
     background-color: var(--#{$prefix}star-rating-hover-color);
   }
