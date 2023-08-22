@@ -82,6 +82,8 @@
       --#{$prefix}accordion-btn-font-size: #{$footer-font-size-sm};
       --#{$prefix}accordion-btn-line-height: #{$footer-accordion-line-height};
       --#{$prefix}accordion-btn-letter-spacing: #{$footer-letter-spacing};
+      --#{$prefix}accordion-active-color: #{$footer-accordion-active-color};
+      --#{$prefix}accordion-btn-hover-bg: #{$footer-accordion-btn-hover-bg};
     }
 
     .footer-column:first-of-type .accordion-header:first-of-type,
