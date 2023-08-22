@@ -22,6 +22,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Accordion**
   - <span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
 
+- **Breadcrumb**
+  - <span class="badge bg-success">New</span> Breadcrumbs now support responsive display.
+
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
@@ -35,6 +38,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
+      <li><code>--bs-breadcrumb-line-height</code></li>
     </ul>
   </details>
 
@@ -43,6 +47,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <ul>
       <li><code>$accordion-button-hover-bg</code></li>
       <li><code>$accordion-dark-button-hover-bg</code></li>
+      <li><code>$breadcrumb-line-height</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
     </ul>
@@ -156,9 +161,6 @@ Please use Boosted v5.3.2 to have the dark mode available.
 - **Buttons**
   - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
   - <span class="badge bg-success">New</span> TikTok social button.
-
-- **Breadcrumb**
-  - <span class="badge bg-success">New</span> Breadcrumbs now support responsive display.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
@@ -436,7 +438,6 @@ Please use Boosted v5.3.2 to have the dark mode available.
       <li><code>--bs-box-shadow-lg</code></li>
       <li><code>--bs-box-shadow-sm</code></li>
       <li><code>--bs-box-shadow</code></li>
-      <li><code>--bs-breadcrumb-line-height</code></li>
       <li><code>--bs-breakpoint-lg</code></li>
       <li><code>--bs-breakpoint-md</code></li>
       <li><code>--bs-breakpoint-sm</code></li>
@@ -562,7 +563,6 @@ Please use Boosted v5.3.2 to have the dark mode available.
       <li><code>$border-color-dark</code></li>
       <li><code>$border-color-translucent-dark</code></li>
       <li><code>$border-radius-xxl</code></li>
-      <li><code>$breadcrumb-line-height</code></li>
       <li><code>$btn-color</code></li>
       <li><code>$card-subtitle-color</code></li>
       <li><code>$card-title-color</code></li>
