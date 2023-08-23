@@ -1,6 +1,7 @@
 .pagination {
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
+  --#{$prefix}pagination-padding-inline-x: #{$pagination-padding-inline-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
   --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
   --#{$prefix}pagination-gap: #{$pagination-gap}; // Boosted mod
@@ -152,6 +153,10 @@
       color: var(--#{$prefix}pagination-active-item-color);
       background-color: var(--#{$prefix}pagination-active-item-bg);
       border-color: var(--#{$prefix}pagination-active-item-border-color);
+    }
+
+    &:not([title]) {
+      padding-inline: var(--#{$prefix}pagination-padding-inline-x);
     }
   }
 

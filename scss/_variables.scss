@@ -1578,7 +1578,8 @@ $dropdown-dark-header-color:        $white !default; // Boosted mod
 
 // scss-docs-start pagination-variables
 $pagination-padding-y:              .5625rem !default; // Boosted mod: instead of `null`
-$pagination-padding-x:              1.125rem !default; // Boosted mod: instead of `null`
+$pagination-padding-x:              .8125rem !default; // Boosted mod: instead of `null`
+$pagination-padding-inline-x:       1.125rem !default; // Boosted mod
 
 $pagination-font-size:              $font-size-base !default;
 
