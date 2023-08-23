@@ -77,6 +77,13 @@ describe('Carousel', () => {
       expect(carousel._interval).toBeNull()
     })
 
+    it('should add class if `ride`!==`carousel`', () => {
+      fixtureEl.innerHTML = '<div id="myCarousel" class="carousel slide" data-bs-ride="true"><ol class="carousel-indicators"></ol></div>'
+
+      const carousel = new Carousel('#myCarousel')
+      expect(carousel._element.classList).toContain('is-paused')
+    })
+
     it('should go to next item if right arrow key is pressed', () => {
       return new Promise(resolve => {
         fixtureEl.innerHTML = [
