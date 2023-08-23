@@ -1578,7 +1578,7 @@ $dropdown-dark-header-color:        $white !default; // Boosted mod
 
 // scss-docs-start pagination-variables
 $pagination-padding-y:              .5625rem !default; // Boosted mod: instead of `null`
-$pagination-padding-x:              .8125rem !default; // Boosted mod: instead of `null`
+$pagination-padding-x:              1.125rem !default; // Boosted mod: instead of `null`
 
 $pagination-font-size:              $font-size-base !default;
 
@@ -1619,7 +1619,7 @@ $pagination-icon-min-width:         .625rem !default;
 $pagination-icon-size:              1.125rem !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
-$pagination-gap:                    10px !default;
+$pagination-gap:                    5px !default;
 
 $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
