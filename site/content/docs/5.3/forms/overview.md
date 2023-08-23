@@ -102,6 +102,11 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
 
 Use the `.is-required` class on `label` to add a `*` symbol after it.
 
+{{< callout warning >}}
+The `*` symbol is actually inserted via CSS in a `::after` pseudo-element. Unfortunately CSS generated content is not well supported by all assistive technologies and/or browsers.
+That is why mandatory input fields require a `<span class="visually-hidden"> (required)</span>` element added inside corressponding labels to ensure correct restitutuion by assistive technologies like screen readers.
+{{< /callout >}}
+
 {{< example >}}
 <form>
   <fieldset>
