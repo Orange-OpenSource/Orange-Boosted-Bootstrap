@@ -123,7 +123,10 @@
 
   // No focus
   &:hover {
-    color: var(--#{$prefix}navbar-brand-hover-color);
+    .title,
+    .two-lined {
+      color: var(--#{$prefix}navbar-brand-hover-color);
+    }
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
@@ -435,7 +438,8 @@
           display: flex;
         }
 
-        &.header-minimized {
+        .header-minimized &:first-child:not(.supra),
+        .header-minimized .supra + &.navbar {
           --#{$prefix}navbar-nav-link-padding-y: .75rem;
         }
 
