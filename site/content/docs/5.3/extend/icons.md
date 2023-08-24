@@ -46,35 +46,51 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 
 You may use an external SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
 
-SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how icons inherit their color from the parent's `.text-primary` class, whereas the second icon get grayed out by `.text-body-secondary`.
+SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming: see in this example how icons inherit their color from the parent's `.text-primary` class, whereas the other icons get their color from [text Orange's colors utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
 
   </div>
   <div class="col-md-8">
-
-{{< example class="mt-0 text-primary" >}}
-<!-- todo other example with fill current color and text success with tick? -->
-<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-</svg>
-<svg width="2em" height="2em" class="text-info" aria-hidden="true">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-</svg>
-<!-- todo example to change for accessibility: bg-dark? to test -->
-<svg width="2em" height="2em" class="text-warning" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
-</svg>
-<svg width="2em" height="2em" class="text-danger" aria-hidden="true" focusable="false">
-  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
-</svg>
+    {{< example >}}
+<p class="p-2 text-primary">
+  <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
+</p>
+<p class="bg-dark p-2 text-primary">
+  <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
+  </svg>
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+  </svg>
+</p>
 {{< /example >}}
   </div>
 </div>
 
 To create your own SVG sprite file, containing only the icons you need:
 - download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
-- optimize them with [svgo](https://github.com/svg/svgo)
+- optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
 - include the path in a tag `<symbol>`, inside a SVG file, like below
-- you may add the attributes `fill="#000000"` and/or `fill-rule="evenodd"`, only if needed
+- you may add the attribute `fill-rule="evenodd"`, but only if needed
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -86,8 +102,6 @@ To create your own SVG sprite file, containing only the icons you need:
   </symbol>
 </svg>
 ```
-
-<!-- todo add link to utilities / colors -->
 
 <div class="row my-4">
   <div class="col-md-4">
