@@ -102,15 +102,20 @@ Use the `.is-disabled` class on `label` to make it appear lighter too.
 
 Use the `.is-required` class on `label` to add a `*` symbol after it.
 
+{{< callout info >}}
+The `*` symbol is actually inserted via CSS in a `::after` pseudo-element. Unfortunately CSS generated content is not well supported by all assistive technologies and/or browsers.
+That is why mandatory input fields require an additional `<span class="visually-hidden"> (required)</span>` element added inside corresponding labels to ensure correct restitution by assistive technologies like screen readers.
+{{< /callout >}}
+
 {{< example >}}
 <form>
   <fieldset>
     <div class="mb-3">
-      <label for="requiredTextInput" class="form-label is-required">Required input</label>
+      <label for="requiredTextInput" class="form-label is-required">Required input<span class="visually-hidden"> (required)</span></label>
       <input type="text" id="requiredTextInput" class="form-control" placeholder="Required input" required>
     </div>
     <div class="mb-3">
-      <label for="requiredSelect" class="form-label is-required">Required select menu</label>
+      <label for="requiredSelect" class="form-label is-required">Required select menu<span class="visually-hidden"> (required)</span></label>
       <select id="requiredSelect" class="form-select" required>
         <option value="">Required select</option>
       </select>
@@ -118,7 +123,7 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
     <div class="mb-3">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="requiredFieldsetCheck" required>
-        <label class="form-check-label" for="requiredFieldsetCheck">Must check this</label>
+        <label class="form-check-label" for="requiredFieldsetCheck">Must check this<span class="visually-hidden"> (required)</span></label>
       </div>
     </div>
     <button type="submit" class="btn btn-primary mt-2">Submit</button>
@@ -143,7 +148,7 @@ This form helper should be displayed right after the label.
   <input type="text" id="tooltipTextInput" class="form-control" placeholder="Tooltip input">
 </div>
 <div>
-  <label for="tooltipSelect" class="form-label is-required mt-3">Select menu with helper inside a Tooltip</label>
+  <label for="tooltipSelect" class="form-label is-required mt-3">Select menu with helper inside a Tooltip<span class="visually-hidden"> (required)</span></label>
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for select menu">
     <span class="visually-hidden">Helper for select menu</span>
   </button>

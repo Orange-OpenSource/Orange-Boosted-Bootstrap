@@ -28,6 +28,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 ### Forms
 
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
+- <span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A `<span class="visually-hidden"> (required)</span>` element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.
 
 ### CSS and Sass variables
 
@@ -1646,7 +1647,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ### Utilities
 
 - <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
-  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
   - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
   - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
   - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
