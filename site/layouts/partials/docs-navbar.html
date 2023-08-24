@@ -1,4 +1,13 @@
 <header class="sticky-top">
+  <nav class="navbar navbar-dark navbar-expand bg-dark supra d-none" aria-label="Supra-navigation - New release banner">
+    <div class="container-xxl d-flex justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://boosted.orange.com">There's a newer version of Boosted!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Main navigation">
     <div class="container-xxl">
       <div class="navbar-brand me-auto me-lg-4">
@@ -37,11 +46,9 @@
               <span class="visually-hidden">GitHub</span>
             </a>
           </li>
-          {{ if eq .Layout "docs" }}
           <li class="nav-item d-flex align-items-md-center mb-0 me-2">
             <div class="bd-search" id="docsearch" data-bd-docs-version="{{ .Site.Params.docs_version }}"></div>
           </li>
-          {{ end }}
 
           {{ partial "docs-versions" . }}
         </ul>

@@ -846,6 +846,10 @@ $hr-border-color:             null !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
 $hr-opacity:                  null !default;
 
+// scss-docs-start vr-variables
+$vr-border-width:             2px !default; // Boosted mod: instead of `var(--#{$prefix}border-width)`
+// scss-docs-end vr-variables
+
 $legend-margin-bottom:        $spacer * .25 !default;
 $legend-font-size:            $font-size-xlg !default;
 $legend-font-weight:          $font-weight-bold !default;
@@ -1507,6 +1511,7 @@ $navbar-dark-hover-color:           $primary !default;
 $navbar-dark-active-color:          $primary !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
 $navbar-dark-toggler-border-color:  transparent !default;
+// Boosted mod: np $navbar-dark-icon-color
 // Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
 $navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
@@ -1532,7 +1537,7 @@ $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default; // Boosted mod
 $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default;
-$dropdown-box-shadow:               $box-shadow !default;
+$dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
@@ -1699,9 +1704,9 @@ $accordion-border-color:                  $gray-500 !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
-$accordion-body-padding-top:              5px !default; // Boosted mod
-$accordion-body-padding-end:              $spacer !default; // Boosted mod
-$accordion-body-padding-bottom:           $spacer !default; // Boosted mod
+$accordion-body-padding-top:              $spacer !default; // Boosted mod
+$accordion-body-padding-end:              0 !default; // Boosted mod
+$accordion-body-padding-bottom:           $spacer * 1.5 !default; // Boosted mod
 $accordion-body-padding-start:            0 !default; // Boosted mod
 // fusv-disable
 $accordion-body-padding-y:                $spacer !default; // Deprecated in Boosted 5.2.3 to divide it in -padding<top | end | bottom |start>
@@ -1713,8 +1718,9 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
+$accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           $accessible-orange !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
+$accordion-button-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1748,7 +1754,8 @@ $accordion-dark-bg:                       $black !default; // Boosted mod
 $accordion-dark-border-color:             $gray-700 !default; // Boosted mod
 $accordion-dark-button-color:             $accordion-dark-color !default; // Boosted mod
 $accordion-dark-button-bg:                $accordion-dark-bg !default; // Boosted mod
-$accordion-dark-button-active-color:      $brand-orange !default; // Boosted mod
+$accordion-dark-button-hover-bg:          $gray-900 !default; // Boosted mod
+$accordion-dark-button-active-color:      $white !default; // Boosted mod
 // scss-docs-end accordion-dark-variables
 
 // Tooltips
@@ -1792,7 +1799,7 @@ $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
-$popover-box-shadow:                $box-shadow !default;
+$popover-box-shadow:                var(--#{$prefix}box-shadow) !default;
 
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
 $popover-header-line-height:        1.11 !default; // Boosted mod
@@ -1872,8 +1879,8 @@ $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !d
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
 $modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // Boosted mod: instead of `subtract($modal-content-border-radius, $modal-content-border-width)`
-$modal-content-box-shadow-xs:       $box-shadow-sm !default;
-$modal-content-box-shadow-sm-up:    $box-shadow !default;
+$modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
+$modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
@@ -2100,7 +2107,7 @@ $carousel-indicator-hover-scale:        1.5 !default;
 $carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
 $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
-$carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
+$carousel-indicator-animation-interval: var(--#{$prefix}carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;
 $carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
@@ -2343,6 +2350,8 @@ $footer-line-height-md:                   $line-height-base !default;
 $footer-title-font-weight:                $font-weight-bold !default;
 $footer-letter-spacing:                   $letter-spacing-base !default;
 $footer-accordion-line-height:            $spacer * 1.45 !default;
+$footer-accordion-active-color:           $brand-orange !default;
+$footer-accordion-btn-hover-bg:           null !default;
 $footer-nav-link-font-weight:             $font-weight-bold !default;
 
 $footer-title-content-padding-top:        $spacer * 1.25 !default;

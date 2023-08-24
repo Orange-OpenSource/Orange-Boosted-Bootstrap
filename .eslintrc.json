@@ -108,7 +108,7 @@
         "node": true
       },
       "parserOptions": {
-        "sourceType": "script"
+        "sourceType": "module"
       },
       "rules": {
         "no-console": "off",
@@ -212,7 +212,8 @@
         "no-multi-str": "off",
         "strict": "error",
         "unicorn/prefer-top-level-await": "off"
-      }
+      },
+      "extends": ["plugin:storybook/recommended"]
     },
     {
       "files": [
