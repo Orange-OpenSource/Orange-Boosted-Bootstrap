@@ -40,7 +40,7 @@ jobs:
                       }
                     }
                   }
-                  items(first:500) {
+                  items(first:100) {
                     nodes {
                       id
                       content {
