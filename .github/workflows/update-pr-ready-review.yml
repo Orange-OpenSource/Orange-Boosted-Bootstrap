@@ -17,7 +17,7 @@ jobs:
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
           PROJECT_NUMBER: ${{ vars.PR_BOARD_PROJECT_NUMBER }}
-          PROJECT_TARGET_COL: "Need Dev Review"
+          PROJECT_TARGET_COL: ${{ vars.PR_BOARD_NEED_DEV_REVIEW_COL_NAME }}
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
