@@ -106,37 +106,30 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 ## Next steps
 
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
-
 - Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
-
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
-
 - Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.
 
 ## JS components
 
-Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+Curious which components explicitly require our JavaScript and Popper? If you're at all unsure about the general page structure, keep reading for an example page template.
 
-<details class="mb-3 border-top border-bottom border-1 border-light">
-<summary class="h3 p-2 mb-0">Show components requiring JavaScript</summary>
-{{< markdown >}}
-- Alerts for dismissing
+- Alerts for dismissing and Close button tooltip
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
+- Close button for displaying and positioning tooltip
 - Collapse for toggling visibility of content
 - Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Footer for extending our Collapse plugin to implement responsive behavior
-- Modals for displaying, positioning, and scroll behavior
-- Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors
+- Modals for displaying, positioning, scroll behavior, and Close button tooltip
+- Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors, and Close button tooltip (Offcanvas only)
 - Navs with the Tab plugin for toggling content panes
-- Offcanvases for displaying, positioning, and scroll behavior
+- Offcanvases for displaying, positioning, scroll behavior, and Close button tooltip
 - Orange navbar for minimizing the header
 - Quantity selector for incrementing/decrementing number value
 - Scrollspy for scroll behavior and navigation updates
-- Toasts for displaying and dismissing
+- Toasts for displaying, dismissing, and Close button tooltip
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
-{{< /markdown >}}
-</details>
 
 {{< callout warning >}}
 #### Required script

@@ -209,8 +209,6 @@ These 2 vertical variants should not be used because they do not respect the Ora
   <button type="button" class="btn btn-primary">Button</button>
   <button type="button" class="btn btn-primary">Button</button>
   <button type="button" class="btn btn-primary">Button</button>
-  <button type="button" class="btn btn-primary">Button</button>
-  <button type="button" class="btn btn-primary">Button</button>
 </div>
 {{< /example >}}
 
@@ -228,9 +226,7 @@ These 2 vertical variants should not be used because they do not respect the Ora
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
   </div>
-  <button type="button" class="btn btn-secondary">Button</button>
-  <button type="button" class="btn btn-secondary">Button</button>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropstart" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
@@ -240,7 +236,7 @@ These 2 vertical variants should not be used because they do not respect the Ora
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
   </div>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropend" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
@@ -250,7 +246,7 @@ These 2 vertical variants should not be used because they do not respect the Ora
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
     </ul>
   </div>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropup" role="group">
     <button type="button" class="btn btn-secondary">Split button</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>

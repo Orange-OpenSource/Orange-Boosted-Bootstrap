@@ -32,7 +32,13 @@ Got all that? Great, let's see how they work with some examples.
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-### Examples
+## Accessibility
+
+For accessibility purpose, [content on hover or focus should be dismissible, hoverable and persistent](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html).
+With Boosted tooltips, no mechanism is available to dismiss the tooltip without moving pointer hover or keyboard focus (due to Popper library's limitations).
+Please pay attention that the tooltip never hides an important content.
+
+## Examples
 
 ### Enable tooltips
 
@@ -129,7 +135,7 @@ With an SVG:
 
   <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
     </svg>
     <span class="visually-hidden">Helper</span>
   </button>
@@ -145,7 +151,7 @@ With an SVG:
 
 <button type="button" class="btn btn-link p-0 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" focusable="false" aria-hidden="true">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tooltip"></use>
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#assistance"></use>
   </svg>
   <span class="visually-hidden">Helper</span>
 </button>
@@ -189,7 +195,7 @@ const tooltip = new boosted.Tooltip('#example', {
 The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin).
 
 {{< callout warning >}}
-**Keep tooltips accessible to keyboard and assistive technology users** by only adding them to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). While other HTML elements can be made focusable by adding `tabindex="0"`, this can create annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce tooltips in this situation. Additionally, do not rely solely on `hover` as the trigger for your tooltips as this will make theme impossible to trigger for keyboard users.
+**Keep tooltips accessible to keyboard and assistive technology users** by only adding them to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). While other HTML elements can be made focusable by adding `tabindex="0"`, this can create annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce tooltips in this situation. Additionally, do not rely solely on `hover` as the trigger for your tooltips as this will make them impossible to trigger for keyboard users.
 {{< /callout >}}
 
 ```html
@@ -197,7 +203,7 @@ The required markup for a tooltip is only a `data` attribute and `title` on the 
 <a href="#" data-bs-toggle="tooltip" data-bs-title="Some tooltip text!">Hover over me</a>
 
 <!-- Generated markup by the plugin -->
-<div class="tooltip bs-tooltip-top" role="tooltip">
+<div class="tooltip bs-tooltip-auto" role="tooltip">
   <div class="tooltip-arrow"></div>
   <div class="tooltip-inner">
     Some tooltip text!
@@ -209,13 +215,11 @@ The required markup for a tooltip is only a `data` attribute and `title` on the 
 
 Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`.
 
-<div class="tooltip-demo">
-{{< example >}}
+{{< example class="tooltip-demo" stackblitz_add_js="true" >}}
 <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Disabled tooltip">
   <button class="btn btn-primary" type="button" disabled>Disabled button</button>
 </span>
 {{< /example >}}
-</div>
 
 ### Options
 
