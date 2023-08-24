@@ -60,7 +60,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>--bs-pagination-gap</code></li>
       <li><code>--bs-pagination-icon-min-width</code></li>
       <li><code>--bs-pagination-item-max-width</code></li>
-      <li><code>--bs-pagination-label-padding-inline-x</code></li>
+      <li><code>--bs-pagination-label-padding-x</code></li>
     </ul>
   </details>
 
@@ -74,7 +74,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$pagination-gap</code></li>
       <li><code>$pagination-icon-min-width</code></li>
       <li><code>$pagination-item-max-width</code></li>
-      <li><code>$pagination-label-padding-inline-x</code></li>
+      <li><code>$pagination-label-padding-x</code></li>
     </ul>
   </details>
 
