@@ -1,7 +1,7 @@
 .pagination {
   // scss-docs-start pagination-css-vars
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
-  --#{$prefix}pagination-label-padding-inline-x: #{$pagination-label-padding-inline-x};
+  --#{$prefix}pagination-label-padding-x: #{$pagination-label-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
   --#{$prefix}pagination-margin-y: #{$pagination-margin-y}; // Boosted mod
   --#{$prefix}pagination-gap: #{$pagination-gap}; // Boosted mod
@@ -159,7 +159,7 @@
   &:first-child .page-link,
   &:last-child .page-link {
     &:not([title]) {
-      --#{$prefix}pagination-padding-x: var(--#{$prefix}pagination-label-padding-inline-x);
+      --#{$prefix}pagination-padding-x: var(--#{$prefix}pagination-label-padding-x);
     }
   }
 
