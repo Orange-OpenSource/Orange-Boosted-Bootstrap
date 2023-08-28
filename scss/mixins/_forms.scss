@@ -95,6 +95,13 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          @include focus-visible();
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+        }
+        // End mod
       }
     }
 
@@ -123,6 +130,13 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+        &:focus {
+          @include focus-visible();
+          border-color: $border-color !important; // stylelint-disable-line declaration-no-important
+        }
+        // End mod
       }
     }
 

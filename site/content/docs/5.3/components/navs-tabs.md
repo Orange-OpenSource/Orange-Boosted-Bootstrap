@@ -335,12 +335,22 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}).
 
-### Tabs with dropdowns
+{{< callout info >}}
+As a design recommendation, dropdowns are typically placed at the end of the nav after all of the links.
+{{< /callout >}}
 
+### Tabs with dropdowns
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -352,14 +362,9 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ### Pills with dropdowns
 
@@ -367,10 +372,17 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 This variant should not be used because it is a button component in the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 {{< example >}}
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -382,14 +394,9 @@ This variant should not be used because it is a button component in the Orange D
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  </li>
 </ul>
 {{< /example >}}
+<!-- End mod -->
 
 ## CSS
 

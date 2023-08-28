@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "./dist/css/boosted-grid.css",
-      "maxSize": "11.0 kB"
+      "maxSize": "7.0 kB"
     },
     {
       "path": "./dist/css/boosted-grid.min.css",
-      "maxSize": "10.0 kB"
+      "maxSize": "6.25 kB"
     },
     {
       "path": "./dist/css/boosted-reboot.css",
