@@ -6,7 +6,7 @@ on:
 
 jobs:
   move_card_to_dev_review_in_progress:
-    if: github.event.pull_request.draft == false && github.event.review.state != 'approved' && github.event.review.user != 'julien-deramond' && github.event.review.user != 'Aniort'
+    if: github.event.pull_request.draft == false && github.event.review.state != 'approved' && github.event.review.user != ${{ vars.LEAD_DEV_GH_USERNAME }} && github.event.review.user != ${{ vars.A11Y_REVIEWER_GH_USERNAME }}
     runs-on: ubuntu-latest
     steps:
       - name: Get Project Data
@@ -14,8 +14,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
-          PROJECT_NUMBER: 12
-          PROJECT_TARGET_COL: "Dev Review In Progress"
+          PROJECT_NUMBER: ${{ vars.PR_BOARD_PROJECT_NUMBER }}
+          PROJECT_TARGET_COL: ${{ vars.PR_BOARD_DEV_REVIEW_IN_PROGRESS_COL_NAME }}
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
