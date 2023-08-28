@@ -13,6 +13,10 @@ added: "5.3"
 
 Resize your browser to see the behavior of this component.
 
+{{< callout info >}}
+Since the component is supposed to be rendered on a full size page and not inside an example with padding, there might be some rendering issues in mobile viewport.
+{{< /callout >}}
+
 {{< example >}}
 <nav class="local-nav" aria-label="Basic local navigation">
   <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
