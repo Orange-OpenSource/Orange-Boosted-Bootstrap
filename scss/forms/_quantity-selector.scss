@@ -35,7 +35,7 @@
 
       &:focus {
         &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
-          padding-right: calc(#{$quantity-selector-btn-padding-x} - var(--#{$prefix}border-width)); // stylelint-disable-line function-disallowed-list
+          padding-right: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
           border-right-width: var(--#{$prefix}border-width);
         }
       }
@@ -53,7 +53,7 @@
 
       &:focus {
         &[data-focus-visible-added] { // stylelint-disable-line selector-no-qualifying-type
-          padding-left: calc(#{$quantity-selector-btn-padding-x} - var(--#{$prefix}border-width)); // stylelint-disable-line function-disallowed-list
+          padding-left: subtract(#{$quantity-selector-btn-padding-x}, var(--#{$prefix}border-width));
           border-left-width: var(--#{$prefix}border-width);
         }
       }
