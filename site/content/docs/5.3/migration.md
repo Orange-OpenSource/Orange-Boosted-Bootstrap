@@ -51,6 +51,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$accordion-dark-button-hover-bg</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
+      <li><code>$form-star-rating-dark-checked-color</code></li>
+      <li><code>$form-star-rating-dark-unchecked-color</code></li>
+      <li><code>$form-star-rating-dark-hover-color</code></li>
     </ul>
   </details>
 

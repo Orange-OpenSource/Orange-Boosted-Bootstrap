@@ -73,6 +73,12 @@
   }
 }
 
+.star-rating-dark {
+  --#{$prefix}star-rating-checked-color: #{$form-star-rating-dark-checked-color};
+  --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-dark-unchecked-color};
+  --#{$prefix}star-rating-hover-color: #{$form-star-rating-dark-hover-color};
+}
+
 .star-rating-sm {
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-sm-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-sm-unchecked-icon};
