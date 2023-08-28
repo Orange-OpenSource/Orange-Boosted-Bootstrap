@@ -29,6 +29,12 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
 
+- <span class="badge bg-success">New</span> Star rating has been slightly changed for accessibility purpose; a visually hidden `span` matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites. Our documentation also includes a disabled and a readonly state for this form element.
+  ```diff
+  -    <label for="excellent" title="Excellent"></label>
+  +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  ```
+
 ### CSS and Sass variables
 
 - <details class="mb-2">
