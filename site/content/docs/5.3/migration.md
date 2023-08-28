@@ -9,6 +9,92 @@ aliases:
 toc: true
 ---
 
+## v5.3.2
+
+<hr class="mb-4">
+
+Boosted v5.3.2 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.2).
+
+### Components
+
+- **Accordion**
+  - <span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
+
+- **Orange navbar**
+  - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
+
+### Forms
+
+- <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
+- <span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A `<span class="visually-hidden"> (required)</span>` element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.
+
+### Examples
+
+- <span class="badge bg-success">New</span> An e-shop page example is now available.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-accordion-btn-hover-bg</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$accordion-button-hover-bg</code></li>
+      <li><code>$accordion-dark-button-hover-bg</code></li>
+      <li><code>$footer-accordion-active-color</code></li>
+      <li><code>$footer-accordion-btn-hover-bg</code></li>
+    </ul>
+  </details>
+
+## v5.3.1
+
+<hr class="mb-4">
+
+Boosted v5.3.1 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.1 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1).
+
+### Components
+
+- **Nav and tabs**
+  - <span class="badge bg-success">New</span> Added support for JavaScript Tabs' <kbd>Home</kbd> and <kbd>End</kbd> keys.
+
+- **Spinner**
+  - <span class="badge bg-warning">Warning</span> For better accessibility, [the example showing a strong loading text associated to a spinner]({{< docsref "/components/spinners#flex" >}}) has been modified to move the `role="status"` at the right place. Please apply this modification in your websites.
+
+  ```diff
+  <button class="btn btn-primary" type="button">
+  -  <span class="spinner-border me-2" role="status" aria-hidden="true"></span>
+  -  Loading...
+  +  <span class="spinner-border me-2" aria-hidden="true"></span>
+  +  <span role="status">Loading...</span>
+  </button>
+  ```
+
+### Forms
+
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
+
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$vr-border-width</code></li>
+    </ul>
+  </details>
+
+### Docs
+
+- Added missing `aria-disabled="true"` for links having only a `.disabled` class in cards, dropdowns, list groups, navbars, nav and tabs, and placeholders. Please apply this modification in your websites.
+
 ## v5.3.0
 
 <hr class="mb-4">
@@ -20,6 +106,14 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 ### Color modes!
 
 Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+
+{{< design-callout-alert >}}
+Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
+
+However, the dark mode was not yet available in the Orange Design System specifications at this time.
+
+Please use Boosted v5.3.2 to have the dark mode available.
+{{< /design-callout-alert >}}
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
@@ -61,8 +155,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **Alert**
   - Alert variants are now styled via CSS variables.
-
   - <span class="badge bg-warning">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of alerts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+
+- **Buttons**
+  - <span class="badge bg-success">New</span> Outlined button `.btn-outline-secondary` is now provided. It is basically `.btn-secondary` with default transparent background.
+  - <span class="badge bg-success">New</span> TikTok social button.
 
 - **Cards**
   - Cards now have a `color` set on them to improve rendering across color modes.
@@ -71,10 +169,25 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   - The examples in our docs are now explicitly initialized and mostly don't use anymore `data-bs-ride`. Depending on how carousels are used in your project, it might need some updates.
   - <span class="badge bg-danger">Breaking</span> The pause/play button is now included within the carousel for a better rendering but still respecting accessibility guidelines; it is now placed on the left-hand side of the indicators. The HTML markup has changed, please use this new version on your websites.
 
+- **Close button**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+  - <span class="badge bg-success">New</span> Added an eco-design variant.
+
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+  - <span class="badge bg-success">New</span> An active link selector has been added for accessibility purpose. It might be a useful modification to propagate into your websites if you have this same kind of footer navigation.
+  - <span class="badge bg-warning">Warning</span> Coverage checker icon has been changed from `ic_Signal` to `ic_Mobile_Network_Coverage`. Please download the right [Solaris icon]({{< docsref "/extend/icons" >}}) and update your websites.
+
 - **List group**
   - List group item variants are now styled via CSS variables.
 
   - <span class="badge bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+
+- **Modal**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of modals. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
+
+- **Navbar**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of offcanvas navbars. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Navs and tabs**
   - <span class="badge bg-danger">Breaking</span> Based on Bootstrap, we've replaced "Tabs light" variant by "Underline" variant. It means that `.nav-tabs-light` is deprecated and doesn't exist anymore and so that the following modification must be done in your websites:
@@ -86,8 +199,8 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
     It also means that the "Nested tabs" variant has been slightly modified to use this new class rather than `.nav-tabs` combined to `.nav-tabs-light`.
 
-- **Orange footer**
-  - <span class="badge bg-warning">Warning</span> For accessibility reasons, having a `aria-labelledby` on the collapse element in the accordions used in Orange footer is not necessary and can be removed. Be careful to not remove the corresponding `id` if used for other purposes. Please reflect these modifications into your websites.
+- **Offcanvas**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of offcanvases. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 - **Progress bars**
   - The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
@@ -129,14 +242,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       </div>
     </div>
     ```
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` on `red` progress bar, to have white font and ensure contrast.
 
 - **Popovers**
   - <span class="badge bg-warning">Warning</span> The paddings have been increased so from now popovers and tooltips will no longer have the same rendering. It can have an impact on the existing design, please check this modification in your websites.
+
+- **Spinners**
+  - <span class="badge bg-danger">Breaking</span> Since we restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}), you now have to use `.text-white` to have a white spinner on a dark background.
+
+- **Stickers**
+  - <span class="badge bg-danger">Breaking</span> Due to the changes in headings font size values, we updated our stickers to use specific non-responsive typography classes which are not introduced in the framework. Please read the updated documentation and check out our stickers examples to adapt your websites.
+
+- **Toasts**
+  - <span class="badge bg-success">New</span> A tooltip was added on close buttons of toasts. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.
 
 ### Contents
 
 - **Typography**
   - We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+  - <span class="badge bg-danger">Breaking</span> Some headings font size values have been changed to be compliant with the design guidelines. Please check it has no impact on your websites.
+    - `<h3>` values are now `24px` for tablet breakpoint and `18px` for mobile breakpoint.
+    - `<h5>` value is now `18px` for tablet breakpoint.
+    - `<h6>` value is now `18px` for desktop and tablet breakpoints.
 
 ### Forms
 
@@ -144,7 +271,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
 
-- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions; form text should be explicitly associated with the form control it relates to using the `aria-labelledby` (for mandatory information such as data format) or `aria-describedby` (for complementary information) attribute. Please apply this modification in your websites if needed.
+- <span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.
 
 - Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
 
@@ -204,16 +331,17 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - <span class="badge bg-warning">Warning</span> We slightly changed the values for `.lh-sm`, `.lh-base` and `.lh-lg` to provide some more usable values. Please check that it doesn't break your design. Otherwise, it could still be reverted by setting the value directly in `_utilities.scss`.
 
+- <span class="badge bg-danger">Breaking</span> We restored all Bootstrap [text color utilities]({{< docsref "/utilities/colors" >}}) and removed automatic corresponding backgrounds. Please note that you must now check for sufficient contrast yourself when using text color utilities. Guidance on this has been added in [Orange's color utilities]({{< docsref "/utilities/colors#oranges-colors" >}}).
+
 ### Examples
 
 - **Cards/Cards RTL**
   - <span class="badge bg-warning">Warning</span> Semantics have been changed for the row containing icons and the actions footer containing secondary buttons in order to be more accessible. Please reflect these modifications into your websites.
 
-- **Form**
+- **Form page**
   - <span class="badge bg-warning">Warning</span> JavaScript has been updated to force the `data-focus-visible-added` attribute on the focused element on first error.
 
-- **E-shop**
-  - <span class="badge bg-success">New</span> An e-shop page example is now available.
+- <span class="badge bg-success">New</span> A download app page is now available.
 
 ### CSS and Sass variables
 
@@ -232,6 +360,15 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 - Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
 
 - `@mixin caret()` has a new interface including a new optional parameters.
+
+- <details class="mb-2">
+  <summary><span class="badge bg-danger">Breaking</span> Deprecated <code>$boosted-prefix</code> in favor of <code>$prefix</code>. Please check and replace all occurrences of <code>$boosted-prefix</code> or <code>--o-</code> and replace them respectively by <code>$prefix</code> or <code>--bs-</code> in your code.</summary>
+
+    ```diff
+    - $boosted-prefix // or `--o-`
+    + $prefix // or `--bs-`
+    ```
+  </details>
 
 - <details class="mb-2">
   <summary><span class="badge bg-danger">Breaking</span> Because of the dark mode we've renamed our dark variant Sass variables; <code>$*-dark</code> in <code>$*-inverted</code></summary>
@@ -255,14 +392,28 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
     <ul>
       <li><code>--bs-border-radius-2xl</code></li>
       <li><code>--bs-offcanvas-transition-duration</code></li>
-      <li><code>--bs-popover-header-padding-x</code></li>
-      <li><code>--bs-popover-header-padding-y</code></li>
+      <li><code>--o-caption-color</code></li>
+      <li><code>--o-carousel-interval</code></li>
+      <li><code>--o-check-icon</code></li>
+      <li><code>--o-chevron-icon</code></li>
+      <li><code>--o-close-icon</code></li>
+      <li><code>--o-control-bg</code></li>
+      <li><code>--o-error-icon</code></li>
+      <li><code>--o-icon-spacing</code></li>
+      <li><code>--o-kbd-bg</code></li>
+      <li><code>--o-kbd-color</code></li>
+      <li><code>--o-network-color</code></li>
+      <li><code>--o-network-logo</code></li>
+      <li><code>--o-pre-color</code></li>
+      <li><code>--o-success-icon</code></li>
+      <li><code>--o-switch-gradient</code></li>
     </ul>
   </details>
 
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Breaking</span> Deprecated Sass variables:</summary>
     <ul>
+      <li><code>$boosted-prefix</code></li>
       <li><code>$border-radius-2xl</code></li>
       <li><code>$code-color-dark</code></li>
       <li><code>$focus-visible-inner-color-dark</code></li>
@@ -273,7 +424,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$link-hover-color-dark</code></li>
       <li><code>$mark-bg-dark</code></li>
       <li><code>$mark-color-dark</code></li>
-      <li><code>$popover-header-padding-y</code></li>
       <li><code>$pre-color-dark</code></li>
       <li><code>$table-caption-color-dark</code></li>
     </ul>
@@ -294,8 +444,14 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-breakpoint-xl</code></li>
       <li><code>--bs-breakpoint-xs</code></li>
       <li><code>--bs-breakpoint-xxl</code></li>
+      <li><code>--bs-caption-color</code></li>
       <li><code>--bs-card-subtitle-color</code></li>
       <li><code>--bs-card-title-color</code></li>
+      <li><code>--bs-carousel-interval</code></li>
+      <li><code>--bs-check-icon</code></li>
+      <li><code>--bs-chevron-icon</code></li>
+      <li><code>--bs-close-icon</code></li>
+      <li><code>--bs-control-bg</code></li>
       <li><code>--bs-danger-bg-subtle</code></li>
       <li><code>--bs-danger-border-subtle</code></li>
       <li><code>--bs-danger-text-emphasis</code></li>
@@ -305,6 +461,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-emphasis-color-rgb</code></li>
       <li><code>--bs-emphasis-color</code></li>
       <li><code>--bs-emphasis-color</code></li>
+      <li><code>--bs-error-icon</code></li>
       <li><code>--bs-focus-ring-box-shadow</code></li>
       <li><code>--bs-focus-ring-color</code></li>
       <li><code>--bs-focus-ring-opacity</code></li>
@@ -319,9 +476,12 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-form-valid-border-color</code></li>
       <li><code>--bs-form-valid-color</code></li>
       <li><code>--bs-heading-color</code></li>
+      <li><code>--bs-icon-spacing</code></li>
       <li><code>--bs-info-bg-subtle</code></li>
       <li><code>--bs-info-border-subtle</code></li>
       <li><code>--bs-info-text-emphasis</code></li>
+      <li><code>--bs-kbd-bg</code></li>
+      <li><code>--bs-kbd-color</code></li>
       <li><code>--bs-light-bg-subtle</code></li>
       <li><code>--bs-light-border-subtle</code></li>
       <li><code>--bs-light-text-emphasis</code></li>
@@ -329,6 +489,7 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-link-decoration</code></li>
       <li><code>--bs-link-hover-color-rgb</code></li>
       <li><code>--bs-link-hover-decoration</code></li>
+      <li><code>--bs-modal-footer-margin-top</code></li>
       <li><code>--bs-nav-underline-border-color</code></li>
       <li><code>--bs-nav-underline-border-radius</code></li>
       <li><code>--bs-nav-underline-border-width</code></li>
@@ -341,11 +502,16 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-nav-underline-link-hover-bg</code></li>
       <li><code>--bs-nav-underline-link-hover-color</code></li>
       <li><code>--bs-nav-underline-link-padding-x</code></li>
-      <li><code>--bs-modal-footer-margin-top</code></li>
+      <li><code>--bs-network-color</code></li>
+      <li><code>--bs-network-logo</code></li>
       <li><code>--bs-offcanvas-transition</code></li>
+      <li><code>--bs-popover-body-padding-bottom</code></li>
+      <li><code>--bs-popover-body-padding-top</code></li>
       <li><code>--bs-popover-header-line-height</code></li>
       <li><code>--bs-popover-header-padding-bottom</code></li>
+      <li><code>--bs-popover-header-padding-top</code></li>
       <li><code>--bs-popover-line-height</code></li>
+      <li><code>--bs-pre-color</code></li>
       <li><code>--bs-primary-bg-subtle</code></li>
       <li><code>--bs-primary-border-subtle</code></li>
       <li><code>--bs-primary-text-emphasis</code></li>
@@ -358,7 +524,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>--bs-secondary-text-emphasis</code></li>
       <li><code>--bs-success-bg-subtle</code></li>
       <li><code>--bs-success-border-subtle</code></li>
+      <li><code>--bs-success-icon</code></li>
       <li><code>--bs-success-text-emphasis</code></li>
+      <li><code>--bs-switch-gradient</code></li>
+      <li><code>--bs-table-bg-state</code></li>
+      <li><code>--bs-table-bg-type</code></li>
+      <li><code>--bs-table-color-state</code></li>
+      <li><code>--bs-table-color-type</code></li>
       <li><code>--bs-tertiary-bg-rgb</code></li>
       <li><code>--bs-tertiary-bg</code></li>
       <li><code>--bs-tertiary-color-rgb</code></li>
@@ -473,9 +645,13 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
       <li><code>$modal-footer-margin-top</code></li>
       <li><code>$modal-footer-margin-top-sm</code></li>
       <li><code>$modal-scrollable-footer-margin-top</code></li>
+      <li><code>$popover-body-padding-bottom</code></li>
+      <li><code>$popover-body-padding-top</code></li>
       <li><code>$popover-header-line-height</code></li>
       <li><code>$popover-header-padding-bottom</code></li>
+      <li><code>$popover-header-padding-top</code></li>
       <li><code>$popover-line-height</code></li>
+      <li><code>$popover-padding-y</code></li>
       <li><code>$pre-color-inverted</code></li>
       <li><code>$primary-bg-subtle-dark</code></li>
       <li><code>$primary-bg-subtle</code></li>
@@ -521,8 +697,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   </details>
 
 ### Docs
-
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
 
 - Improved included JavaScript for live Toast demo.
 
@@ -824,8 +998,8 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 - **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumb now has a dark variant.
 
-- **Footers**
-  - <span class="badge bg-warning">Warning</span> All Footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
+- **Footer**
+  - <span class="badge bg-warning">Warning</span> All footers examples have been modified to use the "Terms and conditions" wording instead of "Terms & Conditions". Please reflect this modification into your websites.
 
 - **List group**
   - <span class="badge bg-success">New</span> List group now has a dark variant.
@@ -882,7 +1056,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     {{< /markdown >}}
   </details>
 
-- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.
+- The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want to apply this same modification within your websites.
 
 ### Helpers and utilities
 
@@ -1120,20 +1294,22 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
 
-<hr class="my-5">
+## v5.0.0
+
+<hr class="mb-4">
 
 {{< callout info >}}
 **Hey there!** Changes to our first major release of Boosted 5, v5.0.0, are documented below. They don't reflect the additional changes shown above.
 {{< /callout >}}
 
-## Dependencies
+### Dependencies
 
 - Dropped jQuery.
 - Upgraded from Popper v1.x to Popper v2.x.
 - Replaced Libsass with Dart Sass as our Sass compiler given Libsass was deprecated.
 - Migrated from Jekyll to Hugo for building our documentation
 
-## Browser support
+### Browser support
 
 - Dropped Internet Explorer 10 and 11
 - Dropped Microsoft Edge < 16 (Legacy Edge)
@@ -1144,7 +1320,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## Documentation changes
+### Documentation changes
 
 - Redesigned homepage, docs layout, and footer.
 - Added [new Parcel guide](/docs/{{< param docs_version >}}/getting-started/parcel/).
@@ -1156,7 +1332,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
 - Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
-## Sass
+### Sass
 
 - We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
 
@@ -1200,7 +1376,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - The `border-radius()` mixin now has a default value.
 
-## Color system
+### Color system
 
 - The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `shift-color()` will either tint or shade a color depending on whether its weight parameter is positive or negative. [See #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
 
@@ -1210,7 +1386,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - To support our color system, we've added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
 
-## Grid updates
+### Grid updates
 
 - **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
 
@@ -1230,7 +1406,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Updated the `make-col` mixin to default to equal columns without a specified size.
 
-## Content, Reboot, etc
+### Content, Reboot, etc
 
 - <span class="badge bg-danger">Breaking</span> Orange Helvetica CSS file names changed from `orangeHelvetica.*.css` to `orange-helvetica.*.css`.
 
@@ -1266,20 +1442,20 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
 
-## RTL
+### RTL
 
 - Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., `start` and `end` in lieu of `left` and `right`.
 
-## Forms
+### Forms
 
 <!-- Boosted mod: no floating labels -->
 
 - <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
   - `.custom-control.custom-checkbox` is now `.form-check`.
-  - `.custom-control.custom-custom-radio` is now `.form-check`.
+  - `.custom-control.custom-radio` is now `.form-check`.
   - `.custom-control.custom-switch` is now `.form-check.form-switch`.
   - `.custom-select` is now `.form-select`.
-  - `.custom-file` and `.form-file` have been replaced by custom styles on top of `.form-control`.
+  - `.custom-file` and `.form-control-file` have been replaced by custom styles on top of `.form-control`.
   - `.custom-range` is now `.form-range`.
   - Dropped native `.form-control-file` and `.form-control-range`.
 
@@ -1301,25 +1477,25 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## Components
+### Components
 
 - Unified `padding` values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our `$spacer` variable. [See #30564](https://github.com/twbs/bootstrap/pull/30564).
 
-### Accordion
+#### Accordion
 
 - Added [new accordion component]({{< docsref "/components/accordion" >}}).
 
-### Alerts
+#### Alerts
 
 - Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
 
 - Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
 
-### Back to top
+#### Back to top
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.o-scroll-up`, use the `.back-to-top` class instead. Please check our [Back to top page]({{< docsref "/components/back-to-top" >}}) to use it properly. Back to top component doesn't use JavaScript anymore.
 
-### Badges
+#### Badges
 
 - <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
 
@@ -1329,13 +1505,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
 
-### Breadcrumbs
+#### Breadcrumbs
 
 - Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
 
 - Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
 
-### Buttons
+#### Buttons
 
 - <span class="badge bg-danger">Breaking</span> **[Toggle buttons](/docs/{{< param docs_version >}}/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
 
@@ -1349,7 +1525,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Disabled buttons now have `pointer-events: none;`.
 
-### Card
+#### Card
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
 
@@ -1357,13 +1533,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
 
-### Carousel
+#### Carousel
 
 - Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
 
 - Replaced chevron icons for carousel controls with new SVGs from [Solaris]({{< docsref "/extend/icons" >}}).
 
-### Close button
+#### Close button
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
 
@@ -1371,11 +1547,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
 
-### Collapse
+#### Collapse
 
 - Removed scroll anchoring for accordions.
 
-### Dropdowns
+#### Dropdowns
 
 - Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
 
@@ -1393,32 +1569,32 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
 
-### Footer
+#### Footer
 
 - <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/footer" >}}).
 
-### Jumbotron
+#### Jumbotron
 
 - <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.
 
-### List group
+#### List group
 
 - Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
 
-### Navs and tabs
+#### Navs and tabs
 
 - Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
 
-### Navbars
+#### Navbars
 
 - <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
 - <span class="badge bg-danger">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
 
-### Offcanvas
+#### Offcanvas
 
 - Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
 
-### Orange navbar
+#### Orange navbar
 
 - <span class="badge bg-danger">Breaking</span> Supra bars now require a `.bg-dark` class.
 
@@ -1428,7 +1604,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Classes to handle titles in the bars have been added: use `.title` for a title on a single line, or `.two-lined` for, as its name suggests, a title on two lines.
 
-### Pagination
+#### Pagination
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.has-label` support.
 
@@ -1436,19 +1612,19 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Added `transition`s to pagination links.
 
-### Popovers
+#### Popovers
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
 
 - Renamed `whiteList` option to `allowList`.
 
-### Spinners
+#### Spinners
 
 - Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - Improved spinner vertical alignment.
 
-### Stepped process
+#### Stepped process
 
 - <span class="badge bg-danger">Breaking</span> Dropped `.o-stepbar`, use `.stepped-process` instead. All other classes using `.stepbar-*` should be replaced by `.stepped-process-*`.
 
@@ -1456,7 +1632,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Dropped `$o-stepbar-height` and lots of new variables were added.
 
-### Toasts
+#### Toasts
 
 - Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
 
@@ -1464,7 +1640,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
 
-### Tooltips
+#### Tooltips
 
 - <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
 
@@ -1472,10 +1648,9 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
 
-## Utilities
+### Utilities
 
 - <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
-  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
   - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
   - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
   - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
@@ -1515,7 +1690,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
 
-## Helpers
+### Helpers
 
 - <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
   - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
@@ -1530,7 +1705,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `boosted-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
 
-## JavaScript
+### JavaScript
 
 - **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
 
