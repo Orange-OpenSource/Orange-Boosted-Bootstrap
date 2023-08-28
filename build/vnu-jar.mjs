@@ -6,10 +6,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-'use strict'
-
-const { execFile, spawn } = require('node:child_process')
-const vnu = require('vnu-jar')
+import { execFile, spawn } from 'node:child_process'
+import vnu from 'vnu-jar'
 
 execFile('java', ['-version'], (error, stdout, stderr) => {
   if (error) {
@@ -36,6 +34,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
     'The “img” role is unnecessary for element “img”.',
     '.*Consider using the “h1” element as a top-level heading only.*'
+    // End mod
   ].join('|')
 
   const args = [
