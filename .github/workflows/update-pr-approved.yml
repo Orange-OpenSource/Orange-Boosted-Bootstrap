@@ -36,9 +36,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
-          PROJECT_NUMBER: 12
-          PROJECT_DESIGN_A11Y_COL: "Need Design and/or Accessibility Review"
-          PROJECT_LEAD_COL: "Need Lead Dev Review"
+          PROJECT_NUMBER: ${{ vars.PR_BOARD_PROJECT_NUMBER }}
+          PROJECT_DESIGN_A11Y_COL: ${{ vars.PR_BOARD_NEED_DESIGN_A11Y_REVIEW_COL_NAME }}
+          PROJECT_LEAD_COL: ${{ vars.PR_BOARD_NEED_LEAD_DEV_REVIEW_COL_NAME }}
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
