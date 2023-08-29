@@ -167,7 +167,7 @@ These border variants with **a radius CSS class different than `.rounded-circle`
 Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
 
 {{< design-callout-alert >}}
-These border variants with **a size css class different than `rounded-0`** should not be used because they do not respect the Orange Design System specifications.
+These border variants with **a size CSS class different than `.rounded-0`** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example class="bd-example-rounded-utils" >}}
