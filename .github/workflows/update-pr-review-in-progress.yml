@@ -6,7 +6,7 @@ on:
 
 jobs:
   move_card_to_dev_review_in_progress:
-    if: ${{ github.event.pull_request.draft == false && github.event.review.state != 'approved' && github.actor != vars.LEAD_DEV_GH_USERNAME && github.actor != vars.A11Y_REVIEWER_GH_USERNAME }}
+    if: ${{ github.event.pull_request.draft == false && github.event.review.state == 'changes_requested' && github.actor != vars.LEAD_DEV_GH_USERNAME && github.actor != vars.A11Y_REVIEWER_GH_USERNAME }}
     runs-on: ubuntu-latest
     steps:
       - name: Get Project Data
