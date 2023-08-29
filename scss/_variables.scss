@@ -2432,6 +2432,8 @@ $tag-active-decoration-color-dark:  $white !default;
 $local-nav-padding-y:           $navbar-nav-link-padding-y !default;
 $local-nav-color:               var(--#{$prefix}body-color) !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
+$local-nav-hover-color:         $local-nav-color !default;
+$local-nav-hover-bg:            $gray-300 !default;
 $local-nav-active-color:        $accessible-orange !default;
 $local-nav-active-bg:           $gray-400 !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
@@ -2442,7 +2444,9 @@ $local-nav-border-width:        1px !default;
 // scss-docs-start local-nav-dark-variables
 $local-nav-dark-color:          $white !default;
 $local-nav-dark-bg:             $black !default;
-$local-nav-dark-active-color:   $brand-orange !default;
+$local-nav-dark-hover-color:    $brand-orange !default;
+$local-nav-dark-hover-bg:       $gray-900 !default;
+$local-nav-dark-active-color:   $local-nav-dark-hover-color !default;
 $local-nav-dark-active-bg:      $gray-700 !default;
 $local-nav-dark-border-color:   $gray-700 !default;
 // scss-docs-end local-nav-dark-variables

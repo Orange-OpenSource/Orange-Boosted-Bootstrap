@@ -14,7 +14,7 @@ added: "5.3"
 Resize your browser to see the behavior of this component.
 
 {{< callout info >}}
-Since the component is supposed to be rendered on a full size page and not inside an example with padding, there might be some rendering issues in mobile viewport.
+Since the component is supposed to be rendered on a full-size page, there are some slight rendering issues in the mobile viewport in the context of this documentation page.
 {{< /callout >}}
 
 {{< example >}}
@@ -28,6 +28,7 @@ Since the component is supposed to be rendered on a full size page and not insid
           <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
           <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><div class="container-xxl">Contact</div></a></li>
         </ul>
       </div>
   </div>
@@ -49,6 +50,7 @@ Add `.local-nav-dark` to the `.local-nav` for a dark variant. Don't forget to ad
           <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
           <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><div class="container-xxl">Contact</div></a></li>
         </ul>
       </div>
   </div>
@@ -69,7 +71,7 @@ Customization through CSS variables can be seen on the `.local-nav-dark` class w
 
 ### Sass variables
 
-Variables for all local navigation:
+Variables for all local navigations:
 
 {{< scss-docs name="local-nav-variables" file="scss/_variables.scss" >}}
 
