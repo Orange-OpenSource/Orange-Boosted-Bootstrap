@@ -1505,15 +1505,15 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-border-color:          $gray-700 !default;
-$navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $primary !default;
-$navbar-dark-active-color:          $primary !default;
-$navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-border-color:  transparent !default;
-// Boosted mod: np $navbar-dark-icon-color
+$navbar-dark-border-color:          $gray-700 !default; // Boosted mod
+$navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
+$navbar-dark-hover-color:           $primary !default; // Boosted mod: instead of `rgba($white, .75)`
+$navbar-dark-active-color:          $primary !default; // Boosted mod: instead of `$white`
+$navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead of `rgba($white, .25)`
+// Boosted mod: no $navbar-dark-icon-color
 // Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
-$navbar-dark-brand-color:           inherit !default;
+$navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
+$navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
 
