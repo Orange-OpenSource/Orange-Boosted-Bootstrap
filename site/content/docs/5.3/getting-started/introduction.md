@@ -106,20 +106,14 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 ## Next steps
 
 - Read a bit more about some [important global environment settings](#important-globals) that Boosted utilizes.
-
 - Read about what's included in Boosted in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
-
 - Need a little more power? Consider building with Boosted by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
-
 - Looking to use Boosted as a module with `<script type="module">`? Please refer to our [using Boosted as a module]({{< docsref "/getting-started/javascript#using-boosted-as-a-module" >}}) section.
 
 ## JS components
 
-Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+Curious which components explicitly require our JavaScript and Popper? If you're at all unsure about the general page structure, keep reading for an example page template.
 
-<details class="mb-3 border-top border-bottom border-1 border-light">
-<summary class="h3 p-2 mb-0">Show components requiring JavaScript</summary>
-{{< markdown >}}
 - Alerts for dismissing and Close button tooltip
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
@@ -136,8 +130,6 @@ Curious which components explicitly require our JavaScript and Popper? Click the
 - Scrollspy for scroll behavior and navigation updates
 - Toasts for displaying, dismissing, and Close button tooltip
 - Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
-{{< /markdown >}}
-</details>
 
 {{< callout warning >}}
 #### Required script

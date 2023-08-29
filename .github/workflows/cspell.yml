@@ -5,7 +5,7 @@ on:
     branches:
       - main
   pull_request:
-    types: [labeled, unlabeled, opened, reopened, synchronize]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
@@ -21,7 +21,7 @@ jobs:
       contents: read
       pull-requests: read
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
+    if: github.actor != 'dependabot[bot]'
 
     steps:
       - name: Clone repository
@@ -30,7 +30,7 @@ jobs:
           persist-credentials: false
 
       - name: Run cspell
-        uses: streetsidesoftware/cspell-action@v2
+        uses: streetsidesoftware/cspell-action@v3
         with:
           config: ".cspell.json"
           files: "**/*.md"
