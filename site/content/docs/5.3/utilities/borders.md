@@ -147,7 +147,7 @@ The three last border utilities with **a width larger than 2px** should not be u
 Add classes to an element to easily round its corners.
 
 {{< design-callout-alert >}}
-These border variants with **a radius css class different than `rounded` and `rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
+These border variants with **a radius CSS class different than `.rounded-circle` and `.rounded-pill`** should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
