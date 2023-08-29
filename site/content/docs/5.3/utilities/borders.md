@@ -68,7 +68,7 @@ Here is a list of these extra classes:
 Or modify the default `border-color` of a component:
 
 {{< design-callout-alert >}}
-These border color variants, which are just **examples illustrating the use of this color utility**, should not be used because they do not respect the Orange Design System specifications.
+These border color variants are just **examples illustrating the use of this color utility**. They should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
