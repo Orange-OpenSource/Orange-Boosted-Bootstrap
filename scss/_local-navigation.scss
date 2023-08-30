@@ -53,7 +53,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-      .container-xxl {
+      [class*="container"] {
         padding: 0;
       }
     }

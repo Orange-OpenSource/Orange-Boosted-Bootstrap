@@ -25,10 +25,10 @@ Since the component is supposed to be rendered on a full-size page, there are so
   <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
       <div class="navbar navbar-expand-lg">
         <ul class="navbar-nav w-100">
-          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
-          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><div class="container-xxl">Contact</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
         </ul>
       </div>
   </div>
@@ -47,10 +47,10 @@ Add `.local-nav-dark` to the `.local-nav` for a dark variant. Don't forget to ad
   <div id="collapseLocalNavDark" class="container-xxl local-nav-collapse d-lg-block collapse">
       <div class="navbar navbar-dark navbar-expand-lg">
         <ul class="navbar-nav w-100">
-          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Discover</div></a></li>
-          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><div class="container-xxl">Shop</div></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><div class="container-xxl">Services</div></a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><div class="container-xxl">Contact</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
         </ul>
       </div>
   </div>
