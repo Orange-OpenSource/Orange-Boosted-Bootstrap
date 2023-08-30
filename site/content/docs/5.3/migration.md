@@ -25,12 +25,16 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Breadcrumb**
   - <span class="badge bg-success">New</span> Breadcrumbs now support responsive display.
 
+- **Local navigation**
+  - <span class="badge bg-success">New</span> Added Local Navigation as a new component.
+
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
 ### Forms
 
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
+- <span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A `<span class="visually-hidden"> (required)</span>` element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.
 
 ### CSS and Sass variables
 
@@ -39,6 +43,16 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
       <li><code>--bs-breadcrumb-line-height</code></li>
+      <li><code>--bs-local-nav-active-bg</code></li>
+      <li><code>--bs-local-nav-active-color</code></li>
+      <li><code>--bs-local-nav-active-marker-width</code></li>
+      <li><code>--bs-local-nav-bg</code></li>
+      <li><code>--bs-local-nav-border-color</code></li>
+      <li><code>--bs-local-nav-border-width</code></li>
+      <li><code>--bs-local-nav-color</code></li>
+      <li><code>--bs-local-nav-hover-bg</code></li>
+      <li><code>--bs-local-nav-hover-color</code></li>
+      <li><code>--bs-local-nav-padding-y</code></li
     </ul>
   </details>
 
@@ -50,6 +64,23 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$breadcrumb-line-height</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
+      <li><code>$local-nav-active-bg</code></li>
+      <li><code>$local-nav-active-color</code></li>
+      <li><code>$local-nav-active-marker-width</code></li>
+      <li><code>$local-nav-bg</code></li>
+      <li><code>$local-nav-border-color</code></li>
+      <li><code>$local-nav-border-width</code></li>
+      <li><code>$local-nav-color</code></li>
+      <li><code>$local-nav-dark-bg</code></li>
+      <li><code>$local-nav-dark-color</code></li>
+      <li><code>$local-nav-dark-hover-bg</code></li>
+      <li><code>$local-nav-dark-hover-color</code></li>
+      <li><code>$local-nav-dark-active-bg</code></li>
+      <li><code>$local-nav-dark-active-color</code></li>
+      <li><code>$local-nav-dark-border-color</code></li>
+      <li><code>$local-nav-hover-bg</code></li>
+      <li><code>$local-nav-hover-color</code></li>
+      <li><code>$local-nav-padding-y</code></li>
     </ul>
   </details>
 
@@ -1651,7 +1682,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 ### Utilities
 
 - <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
-  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
   - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
   - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
   - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
