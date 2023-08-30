@@ -13,6 +13,9 @@ aliases:
 <main class="bg-dark p-5">
   <h1 class="visually-hidden">Fonts examples</h1>
 
+  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+  <label class="btn btn-primary mb-5" for="btn-check" onclick="toggle()">Toggle yellow lines display</label>
+
   <div class="d-flex flex-column">
     <span class="helvetica fw-700 text-white lh-40px letter-spacing-n1 fs-40px bg-light-gray">1234567890 Headline Helvetica Bold</span>
     <hr>
@@ -23,4 +26,15 @@ aliases:
     <span class="arial fw-700 text-white lh-40px letter-spacing-n1 fs-40px bg-light-gray">1234567890 Headline Arial Bold</span>
     <hr>
   </div>
+
+  <div class="position-absolute" style="width: 2px; height: 370px; top: 130px; left: 76px; background-color: rgba(255, 191, 0, .7)"></div>
+  <div class="position-absolute" style="width: 2px; height: 370px; top: 130px; left: 103px; background-color: rgba(255, 191, 0, .7)"></div>
 </main>
+
+<script>
+  function toggle() {
+    document.querySelectorAll('.position-absolute').forEach(function(el) {
+      el.classList.toggle('d-none');
+    });
+  }
+</script>
