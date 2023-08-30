@@ -1,0 +1,39 @@
+/*
+HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+*/
+
+.helvetica {
+  font-family: Helvetica !important;
+}
+
+.helvetica-neue {
+  font-family: "Helvetica Neue" !important;
+}
+
+.helvetica-neue-orange {
+  font-family: HelvNeueOrange !important;
+}
+
+.arial {
+  font-family: Arial !important;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-40px {
+  font-size: 40px;
+}
+
+.lh-40px {
+  line-height: 40px;
+}
+
+.letter-spacing-n1 {
+  letter-spacing: -1px;
+}
+
+.bg-light-gray {
+  background-color: rgba(256, 0, 0, 0.4);
+}
