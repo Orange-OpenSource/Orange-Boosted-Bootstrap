@@ -2438,7 +2438,7 @@ $local-nav-active-color:        $accessible-orange !default;
 $local-nav-active-bg:           $gray-400 !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        $gray-500 !default;
-$local-nav-border-width:        1px !default;
+$local-nav-border-width:        divide(var(--#{$prefix}border-width), 2) !default;
 // scss-docs-end local-nav-variables
 
 // scss-docs-start local-nav-dark-variables
