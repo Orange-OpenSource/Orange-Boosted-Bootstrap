@@ -84,7 +84,7 @@ jobs:
           echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
 
       - name: Change project card to the design and/or accessibility column
-        if: contains(github.event.pull_request.labels.*.name, 'upcoming a11y review') || contains(github.event.pull_request.labels.*.name, 'upcoming design review')
+        if: contains(github.event.pull_request.labels.*.name, 'upcoming a11y review') || contains(github.event.pull_request.labels.*.name, 'upcoming design review') || contains(github.event.pull_request.labels.*.name, 'ready for a11y review') || contains(github.event.pull_request.labels.*.name, 'ready for design review')
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
         run: |
@@ -110,7 +110,7 @@ jobs:
             }' -f project=$PROJECT_ID -f item=$ITEM_ID -f status_field=$STATUS_FIELD_ID -f status_value=${{ env.TARGET_COL_ID1 }} --silent
 
       - name: Change project card to the lead tech column
-        if: "!(contains(github.event.pull_request.labels.*.name, 'upcoming a11y review') || contains(github.event.pull_request.labels.*.name, 'upcoming design review'))"
+        if: "!(contains(github.event.pull_request.labels.*.name, 'upcoming a11y review') || contains(github.event.pull_request.labels.*.name, 'upcoming design review') || contains(github.event.pull_request.labels.*.name, 'ready for a11y review') || contains(github.event.pull_request.labels.*.name, 'ready for design review'))"
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
         run: |
