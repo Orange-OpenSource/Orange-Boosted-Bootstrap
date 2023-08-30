@@ -181,7 +181,7 @@ This variant should not be used because it is a button component in the Orange D
 Take that same HTML, but use `.nav-underline` instead:
 
 {{< callout warning >}}
-If you want it to wrap nicely on lower breakpoints, consider using [our local navigation component]({{< docsref "/components/local-navigation" >}}).
+If you want it to wrap nicely on lower breakpoints, consider using [our Local Navigation component]({{< docsref "/components/local-navigation" >}}).
 {{< /callout >}}
 
 {{< example >}}
