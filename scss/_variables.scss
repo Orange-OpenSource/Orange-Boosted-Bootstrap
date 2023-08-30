@@ -1505,15 +1505,15 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-border-color:          $gray-700 !default;
-$navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $primary !default;
-$navbar-dark-active-color:          $primary !default;
-$navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-border-color:  transparent !default;
-// Boosted mod: np $navbar-dark-icon-color
+$navbar-dark-border-color:          $gray-700 !default; // Boosted mod
+$navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
+$navbar-dark-hover-color:           $primary !default; // Boosted mod: instead of `rgba($white, .75)`
+$navbar-dark-active-color:          $primary !default; // Boosted mod: instead of `$white`
+$navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead of `rgba($white, .25)`
+// Boosted mod: no $navbar-dark-icon-color
 // Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
-$navbar-dark-brand-color:           inherit !default;
+$navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
+$navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
 
@@ -2383,7 +2383,7 @@ $footer-terms-padding-y-md:               $spacer * 1.1 !default;
 $footer-gap:                              $spacer * .75 !default;
 $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
-// End mod
+
 
 // Tags
 
@@ -2424,3 +2424,30 @@ $tag-disabled-color-dark:           $gray-700 !default;
 $tag-border-color-dark:             $gray-700 !default;
 $tag-active-decoration-color-dark:  $white !default;
 // scss-docs-end tag-dark-variables
+
+
+// Local navigation
+
+// scss-docs-start local-nav-variables
+$local-nav-padding-y:           $navbar-nav-link-padding-y !default;
+$local-nav-color:               var(--#{$prefix}body-color) !default;
+$local-nav-bg:                  var(--#{$prefix}body-bg) !default;
+$local-nav-hover-color:         $local-nav-color !default;
+$local-nav-hover-bg:            $gray-300 !default;
+$local-nav-active-color:        $accessible-orange !default;
+$local-nav-active-bg:           $gray-400 !default;
+$local-nav-active-marker-width: $spacer * .2 !default;
+$local-nav-border-color:        $gray-500 !default;
+$local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
+// scss-docs-end local-nav-variables
+
+// scss-docs-start local-nav-dark-variables
+$local-nav-dark-color:          $white !default;
+$local-nav-dark-bg:             $black !default;
+$local-nav-dark-hover-color:    $brand-orange !default;
+$local-nav-dark-hover-bg:       $gray-900 !default;
+$local-nav-dark-active-color:   $local-nav-dark-hover-color !default;
+$local-nav-dark-active-bg:      $gray-700 !default;
+$local-nav-dark-border-color:   $gray-700 !default;
+// scss-docs-end local-nav-dark-variables
+// End mod
