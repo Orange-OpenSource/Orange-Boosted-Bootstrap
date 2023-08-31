@@ -22,3 +22,8 @@
 .line-height-custom {
   line-height: 1.5;
 }
+
+/* For a11y purpose, 200% text was displayed under white bg */
+.card {
+  --bs-card-bg: transparent;
+}
