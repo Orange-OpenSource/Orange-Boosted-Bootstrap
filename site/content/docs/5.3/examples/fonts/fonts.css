@@ -18,8 +18,16 @@ HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Ari
   font-family: Arial !important;
 }
 
+.fw-400 {
+  font-weight: 400;
+}
+
 .fw-700 {
   font-weight: 700;
+}
+
+.fs-20px {
+  font-size: 20px;
 }
 
 .fs-40px {
@@ -28,6 +36,10 @@ HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Ari
 
 .fs-50px {
   font-size: 50px;
+}
+
+.lh-20px {
+  line-height: 20px;
 }
 
 .lh-40px {
@@ -40,6 +52,10 @@ HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Ari
 
 .letter-spacing-n1 {
   letter-spacing: -1px;
+}
+
+.letter-spacing-n1-4 {
+  letter-spacing: -1.4px;
 }
 
 .letter-spacing-n1-6 {
