@@ -2354,7 +2354,7 @@ $sticker-content-max-width-lg:          $sticker-size-lg * .7071067812 !default;
 //// Quantity selector
 // scss-docs-start quantity-selector
 $quantity-selector-width:                 7.5rem !default;
-$quantity-selector-sm-width:              5.5rem !default;
+$quantity-selector-sm-width:              5.625rem !default;
 
 $quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
 $quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x-sm, 2px) !default;
@@ -2372,8 +2372,8 @@ $quantity-selector-icon-remove-sm:        $remove-icon-sm !default;
 $quantity-selector-icon-remove-height:    .125rem !default;
 $quantity-selector-icon-sm-remove-height: .125rem !default;
 
-$quantity-selector-input-max-width:       2.625rem !default;
-$quantity-selector-input-sm-max-width:    2.5rem !default;
+$quantity-selector-input-max-width:       2.5rem !default;
+$quantity-selector-input-sm-max-width:    1.875rem !default;
 // scss-docs-end quantity-selector
 
 //// Footer

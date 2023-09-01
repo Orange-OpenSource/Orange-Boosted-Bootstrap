@@ -1,4 +1,5 @@
 .quantity-selector {
+  display: flex;
   width: $quantity-selector-width;
 
   .form-control {
@@ -25,7 +26,6 @@
   }
 
   button {
-    margin-left: 0 !important; // stylelint-disable-line declaration-no-important
     border: var(--#{$prefix}border-width) solid $gray-500;
 
     &:first-of-type {
