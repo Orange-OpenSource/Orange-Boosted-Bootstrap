@@ -90,11 +90,13 @@ aliases:
         <summary>Here is a non-exhaustive list of missing behaviors.</summary>
         <ul>
           <li>Filters don't work</li>
+          <li>Active filters should update everytime a checkbox is checked</li>
           <li>Filters based on <code>input</code> should update the <code>aria-live="polite"</code></li>
           <li>The focus isn't handled on click on "More something"</li>
           <li>The behavior of button depending on the number of compared items</li>
           <li>Load all results button doesn't work</li>
           <li>Counters doesn't decrease</li>
+          <li>There's only the grid display implemented</li>
         </ul>
       </details>
     </div>
@@ -379,7 +381,7 @@ aliases:
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="alcatelColorFilter">
+                <input class="form-check-input" type="checkbox" value="" id="alcatelColorFilter" checked>
                 <label class="form-check-label" for="alcatelColorFilter">
                   Blue (3)
                 </label>
@@ -397,7 +399,7 @@ aliases:
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="orangeColorFilter" checked>
+                <input class="form-check-input" type="checkbox" value="" id="orangeColorFilter">
                 <label class="form-check-label" for="orangeColorFilter">
                   Red (1)
                 </label>
@@ -449,31 +451,31 @@ aliases:
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="firstStorageFilter">
+                <input class="form-check-input" type="checkbox" value="" id="firstStorageFilter" checked disabled>
                 <label class="form-check-label" for="firstStorageFilter">
                   64 GB (3)
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="secondStorageFilter">
+                <input class="form-check-input" type="checkbox" value="" id="secondStorageFilter" checked disabled>
                 <label class="form-check-label" for="secondStorageFilter">
                   128 GB (3)
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="thirdStorageFilter">
+                <input class="form-check-input" type="checkbox" value="" id="thirdStorageFilter" checked disabled>
                 <label class="form-check-label" for="thirdStorageFilter">
                   256 GB (7)
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="fourthStorageFilter">
+                <input class="form-check-input" type="checkbox" value="" id="fourthStorageFilter" checked disabled>
                 <label class="form-check-label" for="fourthStorageFilter">
                   542 GB (3)
                 </label>
               </div>
               <div class="form-check mt-1 mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="fifthStorageFilter">
+                <input class="form-check-input" type="checkbox" value="" id="fifthStorageFilter" checked disabled>
                 <label class="form-check-label" for="fifthStorageFilter">
                   1 TB (1)
                 </label>
@@ -511,7 +513,7 @@ aliases:
               See 23 results
             </button>
 
-            <button type="button" class="btn btn-dark mt-4">
+            <button type="button" class="btn btn-dark mt-3">
               <svg class="me-1" width="1.25rem" height="1.25rem" aria-hidden="true" focusable="false">
                 <use xlink:href="#delete"/>
               </svg>
@@ -563,12 +565,64 @@ aliases:
           </div>
         </div>
 
-        <p class="pt-md-3 h4 mb-3" aria-live="polite" aria-atomic="true">
-          <span class="text-primary">16 matches</span> / <span class="d-none d-xl-inline">9</span><span class="d-xl-none">6</span> displayed
-        </p>
+        <div class="pt-md-3 h4 mb-2" aria-live="polite" aria-atomic="true">
+          <p><span class="text-primary">16 matches</span> / <span class="d-none d-xl-inline">9</span><span class="d-xl-none">6</span> displayed</p>
+          <div class="row" role="group" aria-label="Active filters">
+            <ul class="d-flex gap-2 list-unstyled pb-2 mb-0 overflow-x-auto">
+              <li>
+                <span class="tag tag-sm" id="labelTagMobileOnly">
+                  Mobile only
+                  <button class="close" aria-labelledby="labelTagMobileOnly"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagApple">
+                  Apple
+                  <button class="close" aria-labelledby="labelTagApple"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagItel">
+                  Itel
+                  <button class="close" aria-labelledby="labelTagItel"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagOrange">
+                  Orange
+                  <button class="close" aria-labelledby="labelTagOrange"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagBlack">
+                  Black
+                  <button class="close" aria-labelledby="labelTagBlack"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagBlue">
+                  Blue
+                  <button class="close" aria-labelledby="labelTagBlue"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagGrey">
+                  Grey
+                  <button class="close" aria-labelledby="labelTagGrey"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+              <li>
+                <span class="tag tag-sm" id="labelTagAllStorage">
+                  Storage — All
+                  <button class="close" aria-labelledby="labelTagAllStorage"><span class="visually-hidden">Close</span></button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-3 list-unstyled">
-          <li class="card border-0 pt-2 pt-md-4">
+          <li class="card border-0 pt-2 pt-md-0">
             <h3 class="visually-hidden">xxxxx xxxxxx xx xxx xxx</h3>
             <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex">
@@ -666,7 +720,7 @@ aliases:
             </div>
           </li>
 
-          <li class="card border-0 pt-4 pt-md-4">
+          <li class="card border-0 pt-4 pt-md-0">
             <h3 class="visually-hidden">xxxx xxx</h3>
             <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-danger fw-bold">
               <div class="d-flex mt-md-3">
@@ -732,7 +786,7 @@ aliases:
             </div>
           </li>
 
-          <li class="card border-0 pt-4 pt-md-5 pt-xl-4">
+          <li class="card border-0 pt-4 pt-md-5 pt-xl-0">
             <h3 class="visually-hidden">xxxxxx xxxx xxx</h3>
             <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-info fw-bold">
               <div class="d-flex mt-xl-3">
@@ -842,7 +896,7 @@ aliases:
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
-                    Gray
+                    Grey
                   </dd>
                   <dd class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
@@ -930,7 +984,7 @@ aliases:
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
-                    Gray
+                    Grey
                   </dd>
                   <dd class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
@@ -1072,7 +1126,7 @@ aliases:
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
-                    Gray
+                    Grey
                   </dd>
                   <dd class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
@@ -1138,7 +1192,7 @@ aliases:
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
-                    Gray
+                    Grey
                   </dd>
                   <dd class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
