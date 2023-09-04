@@ -1,5 +1,6 @@
 .quantity-selector {
   display: flex;
+  flex-wrap: wrap;
   width: $quantity-selector-width;
 
   .form-control {
