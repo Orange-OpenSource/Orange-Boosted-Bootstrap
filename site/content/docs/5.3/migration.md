@@ -38,6 +38,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
   -    <label for="excellent" title="Excellent"></label>
   +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   ```
+- <span class="badge bg-warning">Deprecated</span> The `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
 
 ### CSS and Sass variables
 
@@ -65,9 +66,16 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$accordion-dark-button-hover-bg</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
-      <li><code>$form-star-rating-dark-checked-color</code></li>
-      <li><code>$form-star-rating-dark-hover-color</code></li>
-      <li><code>$form-star-rating-dark-unchecked-color</code></li>
+      <li><code>$form-star-rating-checked-color</code></li>
+      <li><code>$form-star-rating-checked-icon</code></li>
+      <li><code>$form-star-rating-dark-checked-color</code></li>
+      <li><code>$form-star-rating-dark-hover-color</code></li>
+      <li><code>$form-star-rating-dark-unchecked-color</code></li>
+      <li><code>$form-star-rating-hover-color</code></li>
+      <li><code>$form-star-rating-sm-checked-icon</code></li>
+      <li><code>$form-star-rating-sm-unchecked-icon</code></li>
+      <li><code>$form-star-rating-unchecked-color</code></li>
+      <li><code>$form-star-rating-unchecked-icon</code></li>
       <li><code>$local-nav-active-bg</code></li>
       <li><code>$local-nav-active-color</code></li>
       <li><code>$local-nav-active-marker-width</code></li>

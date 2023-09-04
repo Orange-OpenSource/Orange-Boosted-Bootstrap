@@ -1184,9 +1184,9 @@ $form-star-size:                        1.5625rem !default;
 $form-star-size-sm:                     1.25rem !default;
 $form-star-margin-between:              -.125rem !default;
 
-$form-star-rating-checked-color:        var(--#{$prefix}link-hover-color) !default;
-$form-star-rating-unchecked-color:      var(--#{$prefix}code-color) !default;
-$form-star-rating-hover-color:          var(--#{$prefix}emphasis-color) !default;
+$form-star-rating-checked-color:        $accessible-orange !default;
+$form-star-rating-unchecked-color:      $gray-700 !default;
+$form-star-rating-hover-color:          $black !default;
 
 $form-star-rating-dark-checked-color:   $primary !default;
 $form-star-rating-dark-unchecked-color: $gray-500 !default;
