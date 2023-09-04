@@ -1518,15 +1518,15 @@ $navbar-badge-margin-top:                   .375rem !default;
 // End mod
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-border-color:          $gray-700 !default;
-$navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $primary !default;
-$navbar-dark-active-color:          $primary !default;
-$navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-border-color:  transparent !default;
-// Boosted mod: np $navbar-dark-icon-color
+$navbar-dark-border-color:          $gray-700 !default; // Boosted mod
+$navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
+$navbar-dark-hover-color:           $primary !default; // Boosted mod: instead of `rgba($white, .75)`
+$navbar-dark-active-color:          $primary !default; // Boosted mod: instead of `$white`
+$navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead of `rgba($white, .25)`
+// Boosted mod: no $navbar-dark-icon-color
 // Boosted mod: no $navbar-dark-toggler-icon-bg since dark toggler are handled with filter
-$navbar-dark-brand-color:           inherit !default;
+$navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
+$navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
 
@@ -1550,7 +1550,7 @@ $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default; // Boosted mod
 $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default;
-$dropdown-box-shadow:               $box-shadow !default;
+$dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
@@ -1812,7 +1812,7 @@ $popover-border-width:              var(--#{$prefix}border-width) !default;
 $popover-border-color:              var(--#{$prefix}border-color-translucent) !default;
 $popover-border-radius:             var(--#{$prefix}border-radius-lg) !default;
 $popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default; // stylelint-disable-line function-disallowed-list
-$popover-box-shadow:                $box-shadow !default;
+$popover-box-shadow:                var(--#{$prefix}box-shadow) !default;
 
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
 $popover-header-line-height:        1.11 !default; // Boosted mod
@@ -1892,8 +1892,8 @@ $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !d
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
 $modal-content-inner-border-radius: var(--#{$prefix}border-radius) !default; // Boosted mod: instead of `subtract($modal-content-border-radius, $modal-content-border-width)`
-$modal-content-box-shadow-xs:       $box-shadow-sm !default;
-$modal-content-box-shadow-sm-up:    $box-shadow !default;
+$modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
+$modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
@@ -2120,7 +2120,7 @@ $carousel-indicator-hover-scale:        1.5 !default;
 $carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
 $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
-$carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
+$carousel-indicator-animation-interval: var(--#{$prefix}carousel-interval, #{$carousel-indicator-animation-duration}) !default;
 $carousel-indicators-padding-y:         $spacer * .5 !default;
 $carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
@@ -2396,7 +2396,7 @@ $footer-terms-padding-y-md:               $spacer * 1.1 !default;
 $footer-gap:                              $spacer * .75 !default;
 $footer-gap-xl:                           $spacer * 1.7 !default;
 // scss-docs-end footer
-// End mod
+
 
 // Tags
 
@@ -2437,3 +2437,30 @@ $tag-disabled-color-dark:           $gray-700 !default;
 $tag-border-color-dark:             $gray-700 !default;
 $tag-active-decoration-color-dark:  $white !default;
 // scss-docs-end tag-dark-variables
+
+
+// Local navigation
+
+// scss-docs-start local-nav-variables
+$local-nav-padding-y:           $navbar-nav-link-padding-y !default;
+$local-nav-color:               var(--#{$prefix}body-color) !default;
+$local-nav-bg:                  var(--#{$prefix}body-bg) !default;
+$local-nav-hover-color:         $local-nav-color !default;
+$local-nav-hover-bg:            $gray-300 !default;
+$local-nav-active-color:        $accessible-orange !default;
+$local-nav-active-bg:           $gray-400 !default;
+$local-nav-active-marker-width: $spacer * .2 !default;
+$local-nav-border-color:        $gray-500 !default;
+$local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
+// scss-docs-end local-nav-variables
+
+// scss-docs-start local-nav-dark-variables
+$local-nav-dark-color:          $white !default;
+$local-nav-dark-bg:             $black !default;
+$local-nav-dark-hover-color:    $brand-orange !default;
+$local-nav-dark-hover-bg:       $gray-900 !default;
+$local-nav-dark-active-color:   $local-nav-dark-hover-color !default;
+$local-nav-dark-active-bg:      $gray-700 !default;
+$local-nav-dark-border-color:   $gray-700 !default;
+// scss-docs-end local-nav-dark-variables
+// End mod
