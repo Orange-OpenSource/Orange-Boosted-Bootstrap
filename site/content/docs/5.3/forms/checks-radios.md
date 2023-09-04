@@ -440,7 +440,8 @@ Add `.star-rating-dark` to the `.star-rating` for a dark variant.
 {{< /example >}}
 
 ### Readonly
-Make star ratings readable but non editable by using `<span>` instead of `<input>` elements.
+
+Make star ratings readable but non-editable by using `<span>`s instead of `<input>` elements.
 
 {{< example >}}
 <div class="star-rating">
