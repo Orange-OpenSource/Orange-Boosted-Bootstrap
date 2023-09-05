@@ -33,12 +33,15 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
 - <span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A `<span class="visually-hidden"> (required)</span>` element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.
 
-- <span class="badge bg-success">New</span> Star rating has been slightly changed for accessibility purpose; a visually hidden `span` matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites. Our documentation also includes a disabled and a readonly state for this form element.
+- <span class="badge bg-success">New</span> Star rating now has a `readonly` state.
+
+- <span class="badge bg-warning">Warning</span> Star rating has been slightly changed for accessibility purpose; a visually hidden `span` matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites.
+
   ```diff
   -    <label for="excellent" title="Excellent"></label>
   +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   ```
-- <span class="badge bg-warning">Deprecated</span> The `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
+- <span class="badge bg-warning">Deprecated</span> `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
 
 ### CSS and Sass variables
 
