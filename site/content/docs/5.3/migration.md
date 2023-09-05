@@ -41,7 +41,7 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
   -    <label for="excellent" title="Excellent"></label>
   +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   ```
-- <span class="badge bg-warning">Deprecated</span> `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
+- <span class="badge bg-warning">Deprecated</span> The `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
 
 ### CSS and Sass variables
 
