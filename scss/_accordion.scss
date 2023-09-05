@@ -156,6 +156,7 @@
   // scss-docs-end accordion-lg-css-vars
 }
 
+// Deprecated in v5.3.2
 .accordion-dark {
   // scss-docs-start accordion-dark-css-vars
   --#{$prefix}accordion-btn-color: #{$accordion-dark-button-color};

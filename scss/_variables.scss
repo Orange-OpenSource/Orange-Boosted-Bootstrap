@@ -1717,7 +1717,7 @@ $accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
 // stylelint-disable-next-line function-disallowed-list
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
-$accordion-border-color:                  $gray-500 !default; // Boosted mod
+$accordion-border-color:                  var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
@@ -1766,13 +1766,15 @@ $accordion-button-letter-spacing-lg:      $h2-spacing !default;
 // scss-docs-end accordion-variables
 
 // scss-docs-start accordion-dark-variables
-$accordion-dark-color:                    $white !default; // Boosted mod
-$accordion-dark-bg:                       $black !default; // Boosted mod
-$accordion-dark-border-color:             $gray-700 !default; // Boosted mod
-$accordion-dark-button-color:             $accordion-dark-color !default; // Boosted mod
-$accordion-dark-button-bg:                $accordion-dark-bg !default; // Boosted mod
-$accordion-dark-button-hover-bg:          $gray-900 !default; // Boosted mod
-$accordion-dark-button-active-color:      $white !default; // Boosted mod
+// Boosted mod
+$accordion-dark-color:                    $white !default; // Deprecated in v5.3.2
+$accordion-dark-bg:                       $black !default; // Deprecated in v5.3.2
+$accordion-dark-border-color:             $gray-700 !default; // Deprecated in v5.3.2
+$accordion-dark-button-color:             $accordion-dark-color !default; // Deprecated in v5.3.2
+$accordion-dark-button-bg:                $accordion-dark-bg !default; // Deprecated in v5.3.2
+$accordion-dark-button-hover-bg:          $gray-900 !default; // Deprecated in v5.3.2
+$accordion-dark-button-active-color:      $white !default; // Deprecated in v5.3.2
+// End mod
 // scss-docs-end accordion-dark-variables
 
 // Tooltips

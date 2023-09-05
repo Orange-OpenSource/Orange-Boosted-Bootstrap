@@ -202,6 +202,10 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 
 ## Dark variant
 
+{{< deprecated-in "5.3.2" >}}
+
+Prefer using the [`data-bs-theme` attribute]({{< docsref "/customize/color-modes" >}}) instead.
+
 {{< added-in "5.2.0" >}}
 
 Add `.accordion-dark` to the `.accordion` for a dark variant.
