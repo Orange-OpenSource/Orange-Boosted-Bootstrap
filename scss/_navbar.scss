@@ -187,7 +187,7 @@
   .nav-link {
     position: relative;
     padding-top: subtract(var(--#{$prefix}navbar-nav-link-padding-y), var(--#{$prefix}navbar-border-width));
-    margin-left: calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
+    margin: 0 calc(-1 * var(--#{$prefix}navbar-nav-link-padding-x)); // stylelint-disable-line function-disallowed-list
     word-break: break-all;
 
     &:hover {
@@ -384,7 +384,7 @@
 
           // Boosted mod
           .nav-link {
-            margin-left: 0;
+            margin: 0;
 
             &.active::before {
               position: absolute;

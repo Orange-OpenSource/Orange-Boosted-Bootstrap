@@ -1,14 +1,12 @@
-name: Move card to Need Dev Review project column
+name: Move card to Dev Review in Progress column
 on:
-  pull_request_target:
-   types:
-     - ready_for_review
-     - opened
-     - reopened
+  pull_request_review:
+    types:
+      - submitted
 
 jobs:
-  move_card_to_need_dev_review:
-    if: github.event.pull_request.draft == false
+  move_card_to_dev_review_in_progress:
+    if: ${{ github.event.pull_request.draft == false && github.event.review.state == 'changes_requested' && github.actor != vars.LEAD_DEV_GH_USERNAME && github.actor != vars.A11Y_REVIEWER_GH_USERNAME }}
     runs-on: ubuntu-latest
     steps:
       - name: Get Project Data
@@ -17,7 +15,7 @@ jobs:
           ORGANIZATION: ${{ github.repository_owner }}
           PR_ID: ${{ github.event.pull_request.node_id }}
           PROJECT_NUMBER: ${{ vars.PR_BOARD_PROJECT_NUMBER }}
-          PROJECT_TARGET_COL: ${{ vars.PR_BOARD_NEED_DEV_REVIEW_COL_NAME }}
+          PROJECT_TARGET_COL: ${{ vars.PR_BOARD_DEV_REVIEW_IN_PROGRESS_COL_NAME }}
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
@@ -61,7 +59,7 @@ jobs:
           echo 'TARGET_COL_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="${{ env.PROJECT_TARGET_COL }}") |.id' project_data.json) >> $GITHUB_ENV
           echo 'ITEM_ID='$(jq '.data.organization.projectV2.items.nodes[] | select(.content.id=="${{ env.PR_ID }}") |.id' project_data.json) >> $GITHUB_ENV
 
-      - name: Move card to Need Dev Review column
+      - name: Move to Dev Review in Progress Column
         env:
           GITHUB_TOKEN: ${{ secrets.BOOSTED_MOD_PERSONAL_TOKEN_CLASSIC }}
         run: |
@@ -78,10 +76,10 @@ jobs:
                 fieldId: $status_field
                 value: {
                   singleSelectOptionId: $status_value
-                }
+                  }
               }) {
                 projectV2Item {
                   id
-                }
+                  }
               }
             }' -f project=$PROJECT_ID -f item=$ITEM_ID -f status_field=$STATUS_FIELD_ID -f status_value=${{ env.TARGET_COL_ID }} --silent
