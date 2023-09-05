@@ -59,11 +59,9 @@ Whenever possible, we'll assign CSS variables at the base component level (e.g.,
 
 ### Dark text rule
 
-Using CSS variables allows a better flexibility on certain rules. This way we adapt our text variant color to our dark variants components instead of rewriting rules for each component. This process implies to override some existing CSS variables and to re-initialize those in some cases.
+{{< deprecated-in "5.3.2" >}}
 
-Here is our proposal to handle the different text variants over the website:
-
-{{< scss-docs name="root-dark-rule" file="scss/_root.scss" >}}
+Prefer using our built-in contextual dark mode.
 
 ## Prefix
 

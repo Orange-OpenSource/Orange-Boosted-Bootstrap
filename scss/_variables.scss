@@ -16,6 +16,7 @@ $gray-600: #999 !default;
 $gray-700: #666 !default;
 $gray-800: #595959 !default;
 $gray-900: #333 !default;
+$gray-950: #141414 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -30,21 +31,26 @@ $grays: (
   "600": $gray-600,
   "700": $gray-700,
   "800": $gray-800,
-  "900": $gray-900
+  "900": $gray-900,
+  "950": $gray-950
 ) !default;
 // scss-docs-end gray-colors-map
 // fusv-enable
 
-// scss-docs-start brand-colors
 // Boosted mod
+// scss-docs-start brand-colors
 //// Core colors
-$accessible-orange: #f16e00 !default;
 $brand-orange:      #ff7900 !default;
+$accessible-orange: #f16e00 !default;
 //// Functional colors
 $functional-green:  #32c832 !default;
+$accessible-green:  #228722 !default;
 $functional-blue:   #527edb !default;
+$accessible-blue:   #4170d8 !default;
 $functional-yellow: #fc0 !default;
-$functional-red:    #cd3c14 !default;
+$accessible-yellow: #8f7200 !default;
+$functional-red:    #d53f15 !default;
+$accessible-red:    #cd3c14 !default;
 //// Supporting colors
 $supporting-blue:   #4bb4e6 !default;
 $supporting-yellow: #ffd200 !default;
@@ -56,14 +62,14 @@ $supporting-pink:   #ffb4e6 !default;
 
 
 // scss-docs-start color-variables
-$blue:    $functional-blue !default;
+$blue:    $accessible-blue !default;
 $indigo:  $supporting-purple !default;
 $purple:  $supporting-purple !default;
 $pink:    $supporting-pink !default;
-$red:     $functional-red !default;
+$red:     $accessible-red !default;
 $orange:  $brand-orange !default;
-$yellow:  $functional-yellow !default;
-$green:   $functional-green !default;
+$yellow:  $accessible-yellow !default;
+$green:   $accessible-green !default;
 $teal:    $supporting-green !default;
 $cyan:    $supporting-blue !default;
 // scss-docs-end color-variables
@@ -514,12 +520,15 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $black !default; // Boosted mod
-$link-color-inverted:                     $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $accessible-orange !default; // Boosted mod
-$link-hover-color-inverted:               $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
+
+// fusv-disable
+$link-color-inverted:                     $white !default; // Boosted mod: deprecated in v5.3.2
+$link-hover-color-inverted:               $brand-orange !default; // Boosted mod: deprecated in v5.3.2
+// fusv-enable
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
@@ -651,12 +660,15 @@ $focus-visible-zindex:                5 !default; // Boosted mod
 
 $focus-visible-inner-width:           2px !default; // Boosted mod
 $focus-visible-inner-color:           var(--#{$prefix}body-bg) !default; // Boosted mod
-$focus-visible-inner-color-inverted:  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 
 $focus-visible-outer-width:           3px !default;  // Boosted mod
 $focus-visible-outer-offset:          $focus-visible-inner-width !default; // Boosted mod
 $focus-visible-outer-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod
-$focus-visible-outer-color-inverted:  var(--#{$prefix}body-bg) !default; // Boosted mod
+
+// fusv-disable
+$focus-visible-inner-color-inverted:  var(--#{$prefix}emphasis-color) !default; // Boosted mod: deprecated in v5.3.2
+$focus-visible-outer-color-inverted:  var(--#{$prefix}body-bg) !default; // Boosted mod: deprecated in v5.3.2
+// fusv-enable
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
@@ -862,8 +874,10 @@ $mark-padding:                0 .1875em !default; // Boosted mod
 $mark-color:                  $white !default; // Boosted mod
 $mark-bg:                     $black !default; // Boosted mod
 
-$mark-color-inverted:         $black !default; // Boosted mod
-$mark-bg-inverted:            $white !default; // Boosted mod
+// fusv-disable
+$mark-color-inverted:         $black !default; // Boosted mod: deprecated in v5.3.2
+$mark-bg-inverted:            $white !default; // Boosted mod: deprecated in v5.3.2
+// fusv-enable
 // scss-docs-end type-variables
 // End mod
 
@@ -918,8 +932,11 @@ $table-striped-columns-order:           even !default;
 $table-group-separator-color:           currentcolor !default;
 
 $table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
+
+// fusv-disable
+$table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod: deprecated in v5.3.2
+// fusv-enable
 
 // Boosted mod: no $table-bg-scale
 // scss-docs-end table-variables
@@ -2221,20 +2238,23 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // Boosted mod
 $code-font-size:                    .875em !default;
 $code-color:                        $gray-700 !default;
-$code-color-inverted:               $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
-$kbd-color-inverted:                $white !default;
 $kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
-$kbd-bg-inverted:                   $gray-900 !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color:                         var(--#{$prefix}pre-color, $gray-900) !default;
-$pre-color-inverted:                $gray-300 !default;
 $pre-line-height:                   1.25 !default;
+
+// fusv-disable
+$code-color-inverted:               $gray-600 !default;
+$kbd-color-inverted:                $white !default;
+$kbd-bg-inverted:                   $gray-900 !default;
+$pre-color-inverted:                $gray-300 !default;
+// fusv-enable
 // End mod
 
 //
@@ -2404,7 +2424,7 @@ $tag-font-size:                     $font-size-base !default;
 
 $tag-active-color:                  $white !default;
 $tag-disabled-color:                $gray-500 !default;
-$tag-border-color:                  $gray-500 !default;
+$tag-border-color:                  var(--#{$prefix}border-color-translucent) !default;
 $tag-active-decoration-color:       $black !default;
 // scss-docs-end tag-variables
 
