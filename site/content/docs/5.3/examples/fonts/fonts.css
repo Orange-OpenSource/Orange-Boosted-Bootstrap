@@ -46,6 +46,10 @@ HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Ari
   line-height: 20px;
 }
 
+.lh-30px {
+  line-height: 30px;
+}
+
 .lh-40px {
   line-height: 40px;
 }
@@ -64,6 +68,10 @@ HelvNeueOrange, "Helvetica Neue", Helvetica, "Noto Sans", "Liberation Sans", Ari
 
 .letter-spacing-n1-6 {
   letter-spacing: -1.6px;
+}
+
+.letter-spacing-n0-25 {
+  letter-spacing: -0.25px;
 }
 
 .bg-light-gray {
