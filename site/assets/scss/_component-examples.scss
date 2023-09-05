@@ -4,7 +4,7 @@
 
 .bd-code-snippet {
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
 
   @include media-breakpoint-up(md) {
@@ -21,7 +21,7 @@
   position: relative;
   padding: var(--bd-example-padding);
   margin: 0 ($bd-gutter-x * -.5) 1rem;
-  border: solid $gray-400; // Boosted mod: instead of `var(--bs-border-color)`
+  border: solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-color)`
   border-width: 1px 0;
   @include clearfix();
 
@@ -435,6 +435,6 @@
 // scss-docs-end sticker-fs-xl
 
 .border-gray-400 {
-  --bs-border-color: #{$gray-400};
+  --bs-border-color: var(--bs-border-color-translucent);
 }
 // End mod
