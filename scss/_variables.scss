@@ -1101,7 +1101,7 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$input-disabled-color:                  $gray-700 !default; // Boosted mod
+$input-disabled-color:                  $gray-500 !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
