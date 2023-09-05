@@ -2277,7 +2277,8 @@ $back-to-top-link-offset-top:    subtract(100vh, $back-to-top-offset * 4) !defau
 $back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
 $back-to-top-title-offset-right: add(100%, var(--#{$prefix}border-width)) !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
-$back-to-top-title-bg-color:     $white !default;
+$back-to-top-title-color:        var(--#{$prefix}emphasis-color) !default;
+$back-to-top-title-bg-color:     var(--#{$prefix}body-bg) !default;
 $back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
 $back-to-top-icon-width:         add(.5rem, 1px) !default;
 $back-to-top-icon-height:        subtract(1rem, 1px) !default;
