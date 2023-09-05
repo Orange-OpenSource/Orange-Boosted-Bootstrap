@@ -38,7 +38,14 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - <details class="mb-2">
     <summary><span class="badge bg-danger">Deprecated</span> CSS variables:</summary>
     <ul>
-      <li><code>--bs-navbar-hover-color</code></li>
+      <li><code>--bs-navbar-toggler-icon-filter</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge bg-danger">Deprecated</span> Sass variables:</summary>
+    <ul>
+      <li><code>$orange-filter</code></li>
     </ul>
   </details>
 
