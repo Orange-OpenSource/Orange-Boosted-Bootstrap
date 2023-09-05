@@ -42,7 +42,9 @@
   }
   // End mod
 
-  // Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode
+  .dropdown-menu-end {
+    --bs-dropdown-min-width: 8rem;
+  }
 
   // Boosted mod: Specificity
   .navbar-nav.flex-row {
@@ -52,3 +54,5 @@
   }
   // End mod
 }
+
+// Boosted mod: no `@include color-mode(dark)` since Boosted doesn't yet fully support dark mode

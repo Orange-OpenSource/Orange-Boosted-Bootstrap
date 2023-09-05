@@ -45,7 +45,7 @@
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn,
   > .btn-group:not(:first-child) {
-    margin-left: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners
@@ -79,7 +79,8 @@
 //
 
 .dropdown-toggle-split {
-  min-width: add($dropdown-padding-x * 2, calc($caret-width * 2)); /* stylelint-disable-line function-disallowed-list */ // Boosted mod
+  // stylelint-disable-next-line function-disallowed-list
+  min-width: add($dropdown-padding-x * 2, calc(#{$caret-width} * 2)); // Boosted mod
   padding-right: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
   padding-left: subtract($dropdown-padding-x, $btn-border-width); // Boosted mod
   border-color: currentcolor; // Boosted mod
@@ -87,14 +88,14 @@
   // Boosted mod
   .btn-group:not(.dropstart) &,
   .dropstart & ~ .btn {
-    &:not(:hover):not(:focus):not(:active) {
+    &:not(:hover):not(:focus):not(:active):not(.show) {
       border-left-color: transparent;
 
       &::before {
         position: absolute;
-        top: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
-        bottom: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
-        left: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+        top: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
+        bottom: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
+        left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
         width: $btn-border-width;
         color: inherit;
         content: "";
@@ -176,7 +177,7 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: calc($btn-border-width * -1); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners

@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v5.2.3): quantity-selector.js
+ * Boosted quantity-selector.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index.js'
-import EventHandler from './dom/event-handler.js'
 import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants
@@ -26,7 +26,7 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
 const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]'
 const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]'
-const SELECTOR_INPUT_GROUP = '.input-group'
+const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector'
 
 /**
  * Class definition
@@ -59,7 +59,7 @@ class QuantitySelector extends BaseComponent {
 
   // Static
   static StepUp(event) {
-    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
 
     const max = counterInput.getAttribute('max')
@@ -76,7 +76,7 @@ class QuantitySelector extends BaseComponent {
   }
 
   static StepDown(event) {
-    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
 
     const min = counterInput.getAttribute('min')
@@ -93,7 +93,7 @@ class QuantitySelector extends BaseComponent {
   }
 
   static CheckIfDisabledOnChange(event) {
-    const parent = event.target.closest(SELECTOR_INPUT_GROUP)
+    const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR)
     const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT)
     const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON)
     const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON)
@@ -140,7 +140,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, Quantit
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown)
 
 EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const el of SelectorEngine.find(SELECTOR_INPUT_GROUP)) {
+  for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTOR)) {
     QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el)
   }
 })

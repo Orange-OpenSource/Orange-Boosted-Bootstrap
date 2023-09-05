@@ -35,14 +35,12 @@ Thumbs.db
 # Local Netlify folder
 .netlify
 
-# For proper npm login
-.npmrc
-
 # Komodo
 .komodotools
 *.komodoproject
 
 # Folders to ignore
+/dist-sass/
 /js/coverage/
 /node_modules/
 /.pa11y/

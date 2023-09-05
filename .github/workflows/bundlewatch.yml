@@ -7,17 +7,20 @@ on:
       - 'js/**'
       - 'scss/**'
   pull_request:
-    types: [labeled, unlabeled, opened, reopened, synchronize]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
   NODE: 18
 
+permissions:
+  contents: read
+
 jobs:
   bundlewatch:
     runs-on: ubuntu-latest
-    if: "!(contains(github.event.*.labels.*.name, 'skip:ci') || github.actor == 'dependabot[bot]')"
+    if: github.actor != 'dependabot[bot]'
 
     steps:
       - name: Clone repository

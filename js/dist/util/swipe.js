@@ -1,30 +1,26 @@
 /*!
-  * Boosted v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap swipe.js v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap swipe.js v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./config'), require('../dom/event-handler'), require('./index')) :
-  typeof define === 'function' && define.amd ? define(['./config', '../dom/event-handler', './index'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swipe = factory(global.Config, global.EventHandler, global.Index));
-})(this, (function (Config, EventHandler, index) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const Config__default = /*#__PURE__*/_interopDefaultLegacy(Config);
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/event-handler.js'), require('./config.js'), require('./index.js')) :
+  typeof define === 'function' && define.amd ? define(['../dom/event-handler', './config', './index'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swipe = factory(global.EventHandler, global.Config, global.Index));
+})(this, (function (EventHandler, Config, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.3): util/swipe.js
+   * Bootstrap util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -56,7 +52,7 @@
    * Class definition
    */
 
-  class Swipe extends Config__default.default {
+  class Swipe extends Config {
     constructor(element, config) {
       super();
       this._element = element;
@@ -82,7 +78,7 @@
 
     // Public
     dispose() {
-      EventHandler__default.default.off(this._element, EVENT_KEY);
+      EventHandler.off(this._element, EVENT_KEY);
     }
 
     // Private
@@ -100,7 +96,7 @@
         this._deltaX = event.clientX - this._deltaX;
       }
       this._handleSwipe();
-      index.execute(this._config.endCallback);
+      index_js.execute(this._config.endCallback);
     }
     _move(event) {
       this._deltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this._deltaX;
@@ -115,17 +111,17 @@
       if (!direction) {
         return;
       }
-      index.execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
+      index_js.execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
     }
     _initEvents() {
       if (this._supportPointerEvents) {
-        EventHandler__default.default.on(this._element, EVENT_POINTERDOWN, event => this._start(event));
-        EventHandler__default.default.on(this._element, EVENT_POINTERUP, event => this._end(event));
+        EventHandler.on(this._element, EVENT_POINTERDOWN, event => this._start(event));
+        EventHandler.on(this._element, EVENT_POINTERUP, event => this._end(event));
         this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        EventHandler__default.default.on(this._element, EVENT_TOUCHSTART, event => this._start(event));
-        EventHandler__default.default.on(this._element, EVENT_TOUCHMOVE, event => this._move(event));
-        EventHandler__default.default.on(this._element, EVENT_TOUCHEND, event => this._end(event));
+        EventHandler.on(this._element, EVENT_TOUCHSTART, event => this._start(event));
+        EventHandler.on(this._element, EVENT_TOUCHMOVE, event => this._move(event));
+        EventHandler.on(this._element, EVENT_TOUCHEND, event => this._end(event));
       }
     }
     _eventIsPointerPenTouch(event) {

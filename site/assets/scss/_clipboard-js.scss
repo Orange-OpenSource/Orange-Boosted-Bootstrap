@@ -23,12 +23,12 @@
   padding: .5em;
   line-height: 1;
   color: var(--bs-body-color);
-  background-color: transparent; // Boosted mod: so that the focus-visible outline in the source code area is rendered behind this surface
+  background-color: transparent; // Boosted mod: instead of `var(--bd-pre-bg)` so that the focus-visible outline in the source code area is rendered behind this surface
   border: 0;
   @include border-radius(.25rem);
 
   &:hover {
-    color: var(--bs-link-hover-color); // Boosted mod
+    color: var(--bs-link-hover-color);
   }
 
   // Boosted mod: no focus rule
@@ -44,6 +44,6 @@
 .btn-clipboard {
   position: relative;
   z-index: 2;
-  margin-top: var(--#{$prefix}border-width); // Boosted mod
-  margin-right: var(--#{$prefix}border-width); // Boosted mod
+  margin-top: var(--bs-border-width); // Boosted mod: instead of `1.25rem`
+  margin-right: var(--bs-border-width); // Boosted mod: instead of `.75rem`
 }

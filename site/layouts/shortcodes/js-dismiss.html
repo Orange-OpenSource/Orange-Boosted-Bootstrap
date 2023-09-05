@@ -2,14 +2,18 @@
 
 {{- $name := .Get 0 -}}
 
-Dismissal can be achieved with the `data` attribute on a button **within the {{ $name }}** as demonstrated below:
+Dismissal can be achieved with the `data-bs-dismiss` attribute on a button **within the {{ $name }}** as demonstrated below:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}"><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  <span class="visually-hidden">Close</span>
+</button>
 ```
 
-or on a button **outside the {{ $name }}** using the `data-bs-target` as demonstrated below:
+or on a button **outside the {{ $name }}** using the additional `data-bs-target` as demonstrated below:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}"><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+  Close
+</button>
 ```

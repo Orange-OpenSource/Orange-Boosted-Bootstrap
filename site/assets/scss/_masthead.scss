@@ -3,7 +3,10 @@
   padding: 3rem 0;
   // Boosted mod: no gradient background image
 
-  // Boosted mod: no `h1`
+  h1 {
+    --bs-heading-color: var(--bs-emphasis-color);
+    // Boosted mod: no `@include font-size`
+  }
 
   .lead {
     @include font-size(1rem);
@@ -13,7 +16,9 @@
 
   .bd-code-snippet {
     margin: 0;
-    @include border-radius(.5rem);
+    border-color: var(--bs-border-color-translucent);
+    border-width: 1px;
+    @include border-radius(calc(.5rem - 1px));
   }
 
   .highlight {
@@ -28,10 +33,16 @@
     @include media-breakpoint-up(lg) {
       padding-right: 4rem;
     }
+
+    pre {
+      padding: 0;
+      margin: .625rem 0;
+      overflow: hidden;
+    }
   }
   .btn-clipboard {
     position: absolute;
-    top: .3125rem; // Boosted mod
+    top: .3125rem; // Boosted mod: instead of `-.625rem`
     right: 0;
     background-color: transparent;
   }
@@ -46,12 +57,14 @@
 }
 
 .masthead-followup {
-  .lead {
-    @include font-size(1rem);
+  h2,
+  h3,
+  h4 {
+    --bs-heading-color: var(--bs-emphasis-color);
   }
 
-  .highlight {
-    @include border-radius(.5rem);
+  .lead {
+    @include font-size(1rem);
   }
 
   @include media-breakpoint-up(md) {
@@ -60,8 +73,6 @@
     }
   }
 }
-
-// Boosted mod: no .bd-btn-lg
 
 .masthead-followup-icon {
   padding: 1rem;
@@ -80,7 +91,7 @@
 
 .animate-img {
   > img {
-    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+    @include transition(transform .2s ease-in-out);
   }
 
   &:hover > img {

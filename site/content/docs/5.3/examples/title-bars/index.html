@@ -1,0 +1,56 @@
+---
+layout: examples
+title: Title Bars Template
+extra_css:
+  - "title-bars.css"
+html_class: "h-100"
+body_class: "d-flex flex-column"
+aliases:
+  - "/examples/title-bars"
+  - "/docs/examples/title-bars"
+---
+
+<main>
+  <div class="bg-body title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-supporting-pink title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <picture>
+        <source media="(min-width:1440px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1440.png">
+        <source media="(min-width:1280px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1280.png">
+        <source media="(min-width:1024px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-1024.png">
+        <source media="(min-width:768px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-768.png">
+        <source media="(min-width:480px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-480.png">
+        <source media="(min-width:320px)" srcset="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png">
+        <img src="/docs/{{< param docs_version >}}/assets/img/title-bars-illustrations/illustration-320.png" alt="">
+      </picture>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="alert alert-info mb-0" role="alert">
+    <span class="alert-icon"><span class="visually-hidden">Information</span></span>
+    <div>
+      <h4 class="alert-heading">Background image</h4>
+      <p>In order to have a correct background image in the following title bar, the <code>.example-title-bar-custom-background</code> extra class and the corresponding CSS can be found in <a href="title-bars.css" title="Title bars example CSS file">title-bars.css</a>.</p>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-supporting-blue title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+      <div class="col example-title-bar-custom-background"></div>
+    </div>
+  </div>
+
+</main>

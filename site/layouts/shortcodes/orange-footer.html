@@ -7,7 +7,8 @@
     * nav: Display nav content - default = false
     * service: Display service content - default = false
     * mandatory: Display mandatory content - default = false
-    * in_examples: Display in_examples content - default = false
+    * extra_social: Add extra social links - default = false
+    * show_active_link: Display active link in footer - default = false
     * id: Set an id for accordions and the footer itself
 */ -}}
 
@@ -16,7 +17,8 @@
 {{- $nav := .Get "nav" | default false -}}
 {{- $service := .Get "service" | default false -}}
 {{- $mandatory := .Get "mandatory" | default false -}}
-{{- $in_examples := .Get "in_examples" | default false -}}
+{{- $extra_social := .Get "extra_social" | default false -}}
+{{- $show_active_link := .Get "show_active_link" | default false -}}
 {{- $id := .Get "id" -}}
 {{- $input := .Inner -}}
 
@@ -47,10 +49,11 @@
       <li><a href="#" class="btn btn-icon btn-social btn-whatsapp btn-inverse"><span class="visually-hidden">WhatsApp</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-linkedin btn-inverse"><span class="visually-hidden">LinkedIn</span></a></li>
       <li><a href="#" class="btn btn-icon btn-social btn-youtube btn-inverse"><span class="visually-hidden">YouTube</span></a></li>
-      {{- if $in_examples }}
+      {{- if $extra_social }}
         <li><a href="#" class="btn btn-icon btn-social btn-snapchat btn-inverse"><span class="visually-hidden">Snapchat</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-pinterest btn-inverse"><span class="visually-hidden">Pinterest</span></a></li>
         <li><a href="#" class="btn btn-icon btn-social btn-mail btn-inverse"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok btn-inverse"><span class="visually-hidden">TikTok</span></a></li>
       {{- end }}
     </ul>
   </div>
@@ -69,7 +72,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingOne{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseOne{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingOne{{ $id }}">Subcategory</a></li>
@@ -89,7 +92,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingTwo{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseTwo{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingTwo{{ $id }}">Subcategory</a></li>
@@ -109,7 +112,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingThree{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseThree{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingThree{{ $id }}">Subcategory</a></li>
@@ -129,7 +132,7 @@
             </button>
             <span class="d-none d-md-flex">Category</span>
           </h3>
-          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" aria-labelledby="headingFour{{ $id }}" data-bs-parent="#accordion{{ $id }}">
+          <div id="collapseFour{{ $id }}" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion{{ $id }}">
             <ul class="navbar-nav">
               <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
               <li><a class="nav-link" href="#" aria-describedby="headingFour{{ $id }}">Subcategory</a></li>
@@ -152,10 +155,10 @@
 {{- if $service }}
   <div class="container-xxl footer-service">
     <ul class="navbar-nav gap-3 gap-md-4">
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#locate"/></svg><span>Store locator</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#coverage"/></svg><span>Coverage checker</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#contact"/></svg><span>Contact us</span></a></li>
-      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#protection"/></svg><span>Child protection</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#location-pin-compass"/></svg><span>Store locator</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#mobile-network-coverage"/></svg><span>Coverage checker</span></a></li>
+      <li>{{- if $show_active_link }}<a class="nav-link gap-1 active" href="#" aria-current="page">{{- else }}<a class="nav-link gap-1" href="#">{{- end }}<svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#live-chat"/></svg><span>Contact us</span></a></li>
+      <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{ .Site.Params.docs_version }}/assets/img/boosted-sprite.svg#child-protection"/></svg><span>Child protection</span></a></li>
     </ul>
   </div>
 {{- if $mandatory }}
@@ -168,7 +171,11 @@
       <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
       <li><a class="nav-link" href="#">Terms and conditions</a></li>
       <li><a class="nav-link" href="#">Privacy</a></li>
+      {{- if $show_active_link }}
+      <li><a class="nav-link active" href="#" aria-current="page">Accessibility statement</a></li>
+      {{- else }}
       <li><a class="nav-link" href="#">Accessibility statement</a></li>
+      {{- end }}
       <li><a class="nav-link" href="#">Cookie policy</a></li>
     </ul>
   </div>

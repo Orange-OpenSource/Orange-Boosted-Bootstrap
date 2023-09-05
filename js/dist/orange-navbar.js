@@ -1,31 +1,26 @@
 /*!
-  * Boosted v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap orange-navbar.js v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap orange-navbar.js v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./base-component'), require('./dom/selector-engine')) :
-  typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './base-component', './dom/selector-engine'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.OrangeNavbar = factory(global.Index, global.EventHandler, global.BaseComponent, global.SelectorEngine));
-})(this, (function (index, EventHandler, BaseComponent, SelectorEngine) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
-  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./base-component.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js'), require('./util/index.js')) :
+  typeof define === 'function' && define.amd ? define(['./base-component', './dom/event-handler', './dom/selector-engine', './util/index'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.OrangeNavbar = factory(global.BaseComponent, global.EventHandler, global.SelectorEngine, global.Index));
+})(this, (function (BaseComponent, EventHandler, SelectorEngine, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.3): orange-navbar.js
+   * Boosted orange-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -43,7 +38,7 @@
    * Class definition
    */
 
-  class OrangeNavbar extends BaseComponent__default.default {
+  class OrangeNavbar extends BaseComponent {
     // Getters
     static get NAME() {
       return NAME;
@@ -51,7 +46,7 @@
 
     // Static
     static enableMinimizing(el) {
-      // The minimized behaviour works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
+      // The minimized behavior works only if your header has .sticky-top (fixed-top will be sticky without minimizing)
       const scroll = window.scrollY;
       const headerChildren = [...el.children];
       const globalHeaderChild = headerChildren.find(element => !element.classList.contains('supra'));
@@ -82,13 +77,13 @@
    * Data API implementation
    */
 
-  EventHandler__default.default.on(window, EVENT_SCROLL_DATA_API, () => {
-    for (const el of SelectorEngine__default.default.find(SELECTOR_STICKY_TOP)) {
+  EventHandler.on(window, EVENT_SCROLL_DATA_API, () => {
+    for (const el of SelectorEngine.find(SELECTOR_STICKY_TOP)) {
       OrangeNavbar.enableMinimizing(el);
     }
   });
-  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
-    for (const el of SelectorEngine__default.default.find(SELECTOR_STICKY_TOP)) {
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const el of SelectorEngine.find(SELECTOR_STICKY_TOP)) {
       OrangeNavbar.enableMinimizing(el);
     }
   });
@@ -97,7 +92,7 @@
    * jQuery
    */
 
-  index.defineJQueryPlugin(OrangeNavbar);
+  index_js.defineJQueryPlugin(OrangeNavbar);
 
   return OrangeNavbar;
 

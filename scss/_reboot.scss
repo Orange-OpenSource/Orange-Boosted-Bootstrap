@@ -88,19 +88,23 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 //    See https://github.com/WICG/focus-visible
+//    Note 1: this rule is not applied for our focus ring helper which
+//    handles itself outline and box shadow
+//    Note 2: this rule is also not applied for invalid select and invalid input files to ensure
+//    sufficient contrast between select elements on error focused vs. non focused
 // 3. Using the :focus-visible pseudo-class if supported by the browser
 // scss-docs-start focus-visibility
 :focus {
   @include focus-visible(); // 1
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]),
-.js-focus-visible .focus:not([data-focus-visible-added]) { // 2
+.js-focus-visible :focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid),
+.js-focus-visible .focus:not([data-focus-visible-added]):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 2
   outline: 0 !important;
   box-shadow: none;
 }
 
-:focus:not(:focus-visible) { // 3
+:focus:not(:focus-visible):not(.focus-ring):not(.form-select:invalid):not(.form-control[type="file"]:invalid) { // 3
   outline: 0 !important;
   box-shadow: none;
 }
@@ -135,7 +139,7 @@ hr {
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: var(--#{$prefix}heading-color, inherit);
+  color: var(--#{$prefix}heading-color);
 
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
@@ -153,7 +157,8 @@ h1 {
   letter-spacing: $h4-spacing;
 }
 
-h2 {
+h2,
+h3 {
   @extend %heading;
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
@@ -162,7 +167,6 @@ h2 {
   letter-spacing: $h5-spacing;
 }
 
-h3,
 h4,
 h5,
 h6 {
@@ -511,8 +515,11 @@ button {
 // visible (e.g. as result of mouse click or touch tap). It already
 // should be doing this automatically, but seems to currently be
 // confused and applies its very visible two-tone outline anyway.
+//
+// This rule is not applied with the focus ring utility which handles
+// itself outline and box shadow
 
-button:focus:not(:focus-visible) {
+button:focus:not(:focus-visible):not(.focus-ring) {
   outline: 0;
   box-shadow: none; // Bosted mod
 }
@@ -645,15 +652,15 @@ legend {
   height: auto;
 }
 
-// 1. Correct the outline style in Safari.
-// 2. This overrides the extra rounded corners on search inputs in iOS so that our
+// 1. This overrides the extra rounded corners on search inputs in iOS so that our
 //    `.form-control` class can properly style them. Note that this cannot simply
 //    be added to `.form-control` as it's not specific enough. For details, see
 //    https://github.com/twbs/bootstrap/issues/11586.
+// 2. Correct the outline style in Safari.
 
 [type="search"] {
-  outline-offset: -#{$focus-visible-outer-offset}; // 1 // Boosted mod
-  -webkit-appearance: textfield; // 2
+  -webkit-appearance: textfield; // 1
+  outline-offset: -#{$focus-visible-outer-offset}; // 2 // Boosted mod
 }
 
 // 1. A few input types should stay LTR

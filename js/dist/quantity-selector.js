@@ -1,31 +1,26 @@
 /*!
-  * Boosted v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap quantity-selector.js v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap quantity-selector.js v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./base-component'), require('./dom/selector-engine')) :
-  typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './base-component', './dom/selector-engine'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.QuantitySelector = factory(global.Index, global.EventHandler, global.BaseComponent, global.SelectorEngine));
-})(this, (function (index, EventHandler, BaseComponent, SelectorEngine) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
-  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./base-component.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js'), require('./util/index.js')) :
+  typeof define === 'function' && define.amd ? define(['./base-component', './dom/event-handler', './dom/selector-engine', './util/index'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.QuantitySelector = factory(global.BaseComponent, global.EventHandler, global.SelectorEngine, global.Index));
+})(this, (function (BaseComponent, EventHandler, SelectorEngine, index_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v5.2.3): quantity-selector.js
+   * Boosted quantity-selector.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -41,13 +36,13 @@
   const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]';
   const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]';
   const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]';
-  const SELECTOR_INPUT_GROUP = '.input-group';
+  const SELECTOR_QUANTITY_SELECTOR = '.input-group.quantity-selector';
 
   /**
    * Class definition
    */
 
-  class QuantitySelector extends BaseComponent__default.default {
+  class QuantitySelector extends BaseComponent {
     // Getters
     static get NAME() {
       return NAME;
@@ -71,7 +66,7 @@
 
     // Static
     static StepUp(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const max = counterInput.getAttribute('max');
       const step = Number(counterInput.getAttribute('step'));
@@ -83,7 +78,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static StepDown(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const min = counterInput.getAttribute('min');
       const step = Number(counterInput.getAttribute('step'));
@@ -95,7 +90,7 @@
       counterInput.dispatchEvent(eventChange);
     }
     static CheckIfDisabledOnChange(event) {
-      const parent = event.target.closest(SELECTOR_INPUT_GROUP);
+      const parent = event.target.closest(SELECTOR_QUANTITY_SELECTOR);
       const counterInput = parent.querySelector(SELECTOR_COUNTER_INPUT);
       const btnUp = parent.querySelector(SELECTOR_STEP_UP_BUTTON);
       const btnDown = parent.querySelector(SELECTOR_STEP_DOWN_BUTTON);
@@ -129,11 +124,11 @@
    * Data API implementation
    */
 
-  EventHandler__default.default.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange);
-  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp);
-  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown);
-  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
-    for (const el of SelectorEngine__default.default.find(SELECTOR_INPUT_GROUP)) {
+  EventHandler.on(document, EVENT_CHANGE_DATA_API, SELECTOR_COUNTER_INPUT, QuantitySelector.CheckIfDisabledOnChange);
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_UP_BUTTON, QuantitySelector.StepUp);
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_STEP_DOWN_BUTTON, QuantitySelector.StepDown);
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const el of SelectorEngine.find(SELECTOR_QUANTITY_SELECTOR)) {
       QuantitySelector.getOrCreateInstance(el).ValueOnLoad(el);
     }
   });
@@ -142,7 +137,7 @@
    * jQuery
    */
 
-  index.defineJQueryPlugin(QuantitySelector);
+  index_js.defineJQueryPlugin(QuantitySelector);
 
   return QuantitySelector;
 

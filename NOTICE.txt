@@ -25,7 +25,7 @@ End of the parts list under Monotype Imaging Inc Copyright
 
 
 Parts list under Orange SA Copyright
-Copyright (C) 2016 - 2022 Orange SA All rights reserved
+Copyright (C) 2016 - 2023 Orange SA All rights reserved
 
 The following parts are proprietary information of Orange.
 You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software
@@ -36,6 +36,19 @@ Any use or displaying shall constitute an infringement under intellectual proper
 
 dist/img/orange-logo.svg
 nuget/boosted.png
+site/content/docs/**/examples/download-app/img/Banner_image.png
+site/content/docs/**/examples/download-app/img/Buttons.png
+site/content/docs/**/examples/download-app/img/Buttons_dark.png
+site/content/docs/**/examples/download-app/img/Card.png
+site/content/docs/**/examples/download-app/img/Card_dark.png
+site/content/docs/**/examples/download-app/img/Components.png
+site/content/docs/**/examples/download-app/img/Components_dark.png
+site/content/docs/**/examples/download-app/img/Emphasis.png
+site/content/docs/**/examples/download-app/img/Emphasis_dark.png
+site/content/docs/**/examples/download-app/img/Input.png
+site/content/docs/**/examples/download-app/img/Input_dark.png
+site/content/docs/**/examples/download-app/img/List.png
+site/content/docs/**/examples/download-app/img/List_dark.png
 site/layouts/partials/icons.html
 site/layouts/partials/icons/download.svg
 site/static/docs/**/assets/brand/OBS-logo.svg

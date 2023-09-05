@@ -60,7 +60,7 @@ body {
 // Design guidelines
 
 .ods-guidelines {
-  background-color: $gray-300;
+  background-color: var(--bs-secondary-bg);
 
   .card a:hover::before {
     position: absolute;

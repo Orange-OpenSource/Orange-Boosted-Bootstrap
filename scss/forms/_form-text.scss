@@ -7,5 +7,6 @@
   @include font-size($form-text-font-size);
   font-style: $form-text-font-style;
   font-weight: $form-text-font-weight;
+  line-height: $form-text-line-height; // Boosted mod
   color: $form-text-color;
 }

@@ -1,11 +1,11 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.3): index.esm.js
+ * Bootstrap index.esm.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import '../node_modules/focus-visible/dist/focus-visible.js' // Boosted mod
+import '../node_modules/focus-visible/dist/focus-visible.js' /* eslint-disable-line import/no-unassigned-import */ // Boosted mod
 
 export { default as Alert } from './src/alert.js'
 export { default as Button } from './src/button.js'

@@ -1,10 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.2.3): carousel.js
+ * Bootstrap carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
+import BaseComponent from './base-component.js'
+import EventHandler from './dom/event-handler.js'
+import Manipulator from './dom/manipulator.js'
+import SelectorEngine from './dom/selector-engine.js'
 import {
   defineJQueryPlugin,
   getNextActiveElement,
@@ -13,11 +17,7 @@ import {
   reflow,
   triggerTransitionEnd
 } from './util/index.js'
-import EventHandler from './dom/event-handler.js'
-import Manipulator from './dom/manipulator.js'
-import SelectorEngine from './dom/selector-engine.js'
 import Swipe from './util/swipe.js'
-import BaseComponent from './base-component.js'
 
 /**
  * Constants
@@ -72,7 +72,7 @@ const SELECTOR_CAROUSEL_PAUSE_TEXT = 'data-bs-pause-text' // Boosted mod
 const SELECTOR_CAROUSEL_DEFAULT_PLAY_TEXT = 'Play Carousel' // Boosted mod
 const SELECTOR_CAROUSEL_DEFAULT_PAUSE_TEXT = 'Pause Carousel' // Boosted mod
 
-const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-prefix` in scss/_variables.scss
+const PREFIX_CUSTOM_PROPS = 'bs-' // Boosted mod: should match `$prefix` in scss/_variables.scss
 
 const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
@@ -119,7 +119,10 @@ class Carousel extends BaseComponent {
 
     if (this._config.ride === CLASS_NAME_CAROUSEL) {
       this.cycle()
+    } else if (this._indicatorsElement) { // Boosted mod: set the animation properly on progress indicator
+      this._element.classList.add(CLASS_NAME_PAUSED)
     }
+    // End mod
   }
 
   // Getters
@@ -160,7 +163,7 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, set the button to play on mouseenter
+    // Boosted mod: if a play-pause button is present, set the button to play
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('pause')) {
       this._playPauseButton.classList.remove('pause')
       this._playPauseButton.classList.add('play')
@@ -191,7 +194,7 @@ class Carousel extends BaseComponent {
     }
     // End mod
 
-    // Boosted mod: if a play-pause button is present, reset the button to pause on mouseleave
+    // Boosted mod: if a play-pause button is present, reset the button to pause
     if (this._playPauseButton !== null && this._playPauseButton.classList.contains('play')) {
       this._playPauseButton.classList.remove('play')
       this._playPauseButton.classList.add('pause')
@@ -448,7 +451,7 @@ class Carousel extends BaseComponent {
 
     if (!activeElement || !nextElement) {
       // Some weirdness is happening, so we bail
-      // todo: change tests that use empty divs to avoid this check
+      // TODO: change tests that use empty divs to avoid this check
       return
     }
 

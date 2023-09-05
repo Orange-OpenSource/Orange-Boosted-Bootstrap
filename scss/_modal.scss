@@ -31,6 +31,7 @@
   --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
   --#{$prefix}modal-footer-border-width: #{$modal-footer-border-width};
   --#{$prefix}modal-footer-padding: #{$modal-footer-padding}; // Boosted mod
+  --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top}; // Boosted mod
   --#{$prefix}modal-content-padding: #{$modal-content-padding}; // Boosted mod
   --#{$prefix}modal-img-margin: #{$modal-img-margin};
   --#{$prefix}modal-img-btn-close-offset: #{$modal-img-btn-close-offset};
@@ -78,6 +79,7 @@
   // scss-docs-start modal-scrollable-css-vars
   --#{$prefix}modal-scrollable-inner-padding: #{$modal-scrollable-inner-padding}; // Boosted mod
   --#{$prefix}modal-scrollable-inner-margin: #{$modal-scrollable-inner-margin}; // Boosted mod
+  --#{$prefix}modal-footer-margin-top: #{$modal-scrollable-footer-margin-top}; // Boosted mod
   // scss-docs-end modal-scrollable-css-vars
 
   height: calc(100% - var(--#{$prefix}modal-margin) * 2);
@@ -191,6 +193,7 @@
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: var(--#{$prefix}modal-footer-padding); // Boosted mod
+  margin-top: var(--#{$prefix}modal-footer-margin-top); // Boosted mod
   background-color: var(--#{$prefix}modal-footer-bg);
   border-top: if($modal-footer-border-color == null, null, var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color)); // Boosted mod
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
@@ -208,6 +211,7 @@
   .modal {
     --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
     --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
+    --#{$prefix}modal-footer-margin-top: #{$modal-footer-margin-top-sm}; // Boosted mod
   }
 
   // Automatically set modal's width for larger viewports

@@ -1,8 +1,8 @@
-import Carousel from '../../src/carousel'
-import EventHandler from '../../src/dom/event-handler'
-import { clearFixture, createEvent, getFixture, jQueryMock } from '../helpers/fixture'
-import { isRTL, noop } from '../../src/util/index'
-import Swipe from '../../src/util/swipe'
+import Carousel from '../../src/carousel.js'
+import EventHandler from '../../src/dom/event-handler.js'
+import { isRTL, noop } from '../../src/util/index.js'
+import Swipe from '../../src/util/swipe.js'
+import { clearFixture, createEvent, getFixture, jQueryMock } from '../helpers/fixture.js'
 
 describe('Carousel', () => {
   const { Simulator, PointerEvent } = window
@@ -76,6 +76,15 @@ describe('Carousel', () => {
       const carousel = new Carousel('#myCarousel')
       expect(carousel._interval).toBeNull()
     })
+
+    // Boosted mod
+    it('should add class if `ride`!==`carousel`', () => {
+      fixtureEl.innerHTML = '<div id="myCarousel" class="carousel slide" data-bs-ride="true"><ol class="carousel-indicators"></ol></div>'
+
+      const carousel = new Carousel('#myCarousel')
+      expect(carousel._element.classList).toContain('is-paused')
+    })
+    // End mod
 
     it('should go to next item if right arrow key is pressed', () => {
       return new Promise(resolve => {
@@ -1619,7 +1628,7 @@ describe('Carousel', () => {
     })
 
     // Boosted mod
-    it('should set --o-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
+    it('should set --bs-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <ol class="carousel-indicators">',
@@ -1642,12 +1651,12 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl)
       carousel.cycle()
 
-      expect(firstIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('7ms')
+      expect(firstIndicator.style.getPropertyValue('--bs-carousel-interval')).toEqual('7ms')
 
       carousel._activeElement = secondItemEl
       carousel.cycle()
 
-      expect(secondIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('9385ms')
+      expect(secondIndicator.style.getPropertyValue('--bs-carousel-interval')).toEqual('9385ms')
     })
     // End mod
   })

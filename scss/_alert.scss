@@ -78,7 +78,7 @@
 
 @each $state, $value in $alert-colors {
   .alert-#{$state} {
-    --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text);
+    --#{$prefix}alert-color: var(--#{$prefix}body-color); // Boosted mod: instead of `var(--#{$prefix}#{$state}-text-emphasis)`
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
     --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
@@ -141,7 +141,7 @@
   --#{$prefix}alert-icon-size: #{$alert-icon-size-sm};
   --#{$prefix}alert-btn-close-offset: #{$alert-btn-close-offset-sm};
   // scss-docs-end alert-sm-css-vars
-  --#{$boosted-prefix}icon-spacing: #{$btn-close-padding-sm};
+  --#{$prefix}icon-spacing: #{$btn-close-padding-sm};
 
   .alert-icon {
     margin: var(--#{$prefix}alert-icon-margin-y) 0;

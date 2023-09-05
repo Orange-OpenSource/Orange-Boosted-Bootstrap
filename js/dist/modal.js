@@ -1,34 +1,26 @@
 /*!
-  * Boosted v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2015-2022 The Boosted Authors
-  * Copyright 2015-2022 Orange
+  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2015-2023 The Boosted Authors
+  * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap modal.js v5.2.3 (https://boosted.orange.com/)
-  * Copyright 2011-2022 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap modal.js v5.3.1 (https://boosted.orange.com/)
+  * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./dom/selector-engine'), require('./util/scrollbar'), require('./base-component'), require('./util/backdrop'), require('./util/focustrap'), require('./util/component-functions')) :
-  typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './dom/selector-engine', './util/scrollbar', './base-component', './util/backdrop', './util/focustrap', './util/component-functions'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Modal = factory(global.Index, global.EventHandler, global.SelectorEngine, global.Scrollbar, global.BaseComponent, global.Backdrop, global.Focustrap, global.ComponentFunctions));
-})(this, (function (index, EventHandler, SelectorEngine, ScrollBarHelper, BaseComponent, Backdrop, FocusTrap, componentFunctions) { 'use strict';
-
-  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
-
-  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-  const ScrollBarHelper__default = /*#__PURE__*/_interopDefaultLegacy(ScrollBarHelper);
-  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
-  const Backdrop__default = /*#__PURE__*/_interopDefaultLegacy(Backdrop);
-  const FocusTrap__default = /*#__PURE__*/_interopDefaultLegacy(FocusTrap);
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./base-component.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js'), require('./util/backdrop.js'), require('./util/component-functions.js'), require('./util/focustrap.js'), require('./util/index.js'), require('./util/scrollbar.js')) :
+  typeof define === 'function' && define.amd ? define(['./base-component', './dom/event-handler', './dom/selector-engine', './util/backdrop', './util/component-functions', './util/focustrap', './util/index', './util/scrollbar'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Modal = factory(global.BaseComponent, global.EventHandler, global.SelectorEngine, global.Backdrop, global.ComponentFunctions, global.Focustrap, global.Index, global.Scrollbar));
+})(this, (function (BaseComponent, EventHandler, SelectorEngine, Backdrop, componentFunctions_js, FocusTrap, index_js, ScrollBarHelper) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.3): modal.js
+   * Bootstrap modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -72,15 +64,15 @@
    * Class definition
    */
 
-  class Modal extends BaseComponent__default.default {
+  class Modal extends BaseComponent {
     constructor(element, config) {
       super(element, config);
-      this._dialog = SelectorEngine__default.default.findOne(SELECTOR_DIALOG, this._element);
+      this._dialog = SelectorEngine.findOne(SELECTOR_DIALOG, this._element);
       this._backdrop = this._initializeBackDrop();
       this._focustrap = this._initializeFocusTrap();
       this._isShown = false;
       this._isTransitioning = false;
-      this._scrollBar = new ScrollBarHelper__default.default();
+      this._scrollBar = new ScrollBarHelper();
       this._addEventListeners();
     }
 
@@ -103,7 +95,7 @@
       if (this._isShown || this._isTransitioning) {
         return;
       }
-      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, {
+      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {
         relatedTarget
       });
       if (showEvent.defaultPrevented) {
@@ -120,7 +112,7 @@
       if (!this._isShown || this._isTransitioning) {
         return;
       }
-      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE);
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE);
       if (hideEvent.defaultPrevented) {
         return;
       }
@@ -131,9 +123,8 @@
       this._queueCallback(() => this._hideModal(), this._element, this._isAnimated());
     }
     dispose() {
-      for (const htmlElement of [window, this._dialog]) {
-        EventHandler__default.default.off(htmlElement, EVENT_KEY);
-      }
+      EventHandler.off(window, EVENT_KEY);
+      EventHandler.off(this._dialog, EVENT_KEY);
       this._backdrop.dispose();
       this._focustrap.deactivate();
       super.dispose();
@@ -144,14 +135,14 @@
 
     // Private
     _initializeBackDrop() {
-      return new Backdrop__default.default({
+      return new Backdrop({
         isVisible: Boolean(this._config.backdrop),
         // 'static' option will be translated to true, and booleans will keep their value,
         isAnimated: this._isAnimated()
       });
     }
     _initializeFocusTrap() {
-      return new FocusTrap__default.default({
+      return new FocusTrap({
         trapElement: this._element
       });
     }
@@ -165,43 +156,42 @@
       this._element.setAttribute('aria-modal', true);
       this._element.setAttribute('role', 'dialog');
       this._element.scrollTop = 0;
-      const modalBody = SelectorEngine__default.default.findOne(SELECTOR_MODAL_BODY, this._dialog);
+      const modalBody = SelectorEngine.findOne(SELECTOR_MODAL_BODY, this._dialog);
       if (modalBody) {
         modalBody.scrollTop = 0;
       }
-      index.reflow(this._element);
+      index_js.reflow(this._element);
       this._element.classList.add(CLASS_NAME_SHOW);
       const transitionComplete = () => {
         if (this._config.focus) {
           this._focustrap.activate();
         }
         this._isTransitioning = false;
-        EventHandler__default.default.trigger(this._element, EVENT_SHOWN, {
+        EventHandler.trigger(this._element, EVENT_SHOWN, {
           relatedTarget
         });
       };
       this._queueCallback(transitionComplete, this._dialog, this._isAnimated());
     }
     _addEventListeners() {
-      EventHandler__default.default.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+      EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
         if (event.key !== ESCAPE_KEY) {
           return;
         }
         if (this._config.keyboard) {
-          event.preventDefault();
           this.hide();
           return;
         }
         this._triggerBackdropTransition();
       });
-      EventHandler__default.default.on(window, EVENT_RESIZE, () => {
+      EventHandler.on(window, EVENT_RESIZE, () => {
         if (this._isShown && !this._isTransitioning) {
           this._adjustDialog();
         }
       });
-      EventHandler__default.default.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
+      EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
         // a bad trick to segregate clicks that may start inside dialog but end outside, and avoid listen to scrollbar clicks
-        EventHandler__default.default.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+        EventHandler.one(this._element, EVENT_CLICK_DISMISS, event2 => {
           if (this._element !== event.target || this._element !== event2.target) {
             return;
           }
@@ -225,14 +215,14 @@
         document.body.classList.remove(CLASS_NAME_OPEN);
         this._resetAdjustments();
         this._scrollBar.reset();
-        EventHandler__default.default.trigger(this._element, EVENT_HIDDEN);
+        EventHandler.trigger(this._element, EVENT_HIDDEN);
       });
     }
     _isAnimated() {
       return this._element.classList.contains(CLASS_NAME_FADE);
     }
     _triggerBackdropTransition() {
-      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE_PREVENTED);
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
       if (hideEvent.defaultPrevented) {
         return;
       }
@@ -264,11 +254,11 @@
       const scrollbarWidth = this._scrollBar.getWidth();
       const isBodyOverflowing = scrollbarWidth > 0;
       if (isBodyOverflowing && !isModalOverflowing) {
-        const property = index.isRTL() ? 'paddingLeft' : 'paddingRight';
+        const property = index_js.isRTL() ? 'paddingLeft' : 'paddingRight';
         this._element.style[property] = `${scrollbarWidth}px`;
       }
       if (!isBodyOverflowing && isModalOverflowing) {
-        const property = index.isRTL() ? 'paddingRight' : 'paddingLeft';
+        const property = index_js.isRTL() ? 'paddingRight' : 'paddingLeft';
         this._element.style[property] = `${scrollbarWidth}px`;
       }
     }
@@ -296,38 +286,38 @@
    * Data API implementation
    */
 
-  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-    const target = index.getElementFromSelector(this);
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = SelectorEngine.getElementFromSelector(this);
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
-    EventHandler__default.default.one(target, EVENT_SHOW, showEvent => {
+    EventHandler.one(target, EVENT_SHOW, showEvent => {
       if (showEvent.defaultPrevented) {
         // only register focus restorer if modal will actually get shown
         return;
       }
-      EventHandler__default.default.one(target, EVENT_HIDDEN, () => {
-        if (index.isVisible(this)) {
+      EventHandler.one(target, EVENT_HIDDEN, () => {
+        if (index_js.isVisible(this)) {
           this.focus();
         }
       });
     });
 
     // avoid conflict when clicking modal toggler while another one is open
-    const alreadyOpen = SelectorEngine__default.default.findOne(OPEN_SELECTOR);
+    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR);
     if (alreadyOpen) {
       Modal.getInstance(alreadyOpen).hide();
     }
     const data = Modal.getOrCreateInstance(target);
     data.toggle(this);
   });
-  componentFunctions.enableDismissTrigger(Modal);
+  componentFunctions_js.enableDismissTrigger(Modal);
 
   /**
    * jQuery
    */
 
-  index.defineJQueryPlugin(Modal);
+  index_js.defineJQueryPlugin(Modal);
 
   return Modal;
 
