@@ -33,7 +33,7 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix}card-height);
-  color: var(--#{$prefix}body-color);
+  color: var(--#{$prefix}body-color); // var(--#{$prefix}body-contrast) or create new card CSS var
   word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
