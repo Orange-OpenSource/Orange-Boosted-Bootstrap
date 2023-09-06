@@ -13,8 +13,8 @@
 */ -}}
 
 {{- $grays := $.Site.Data.grays -}}
-{{- $default_color := (index $grays 5).hex -}} <!--Boosted mod: 5 instead of 2-->
-{{- $default_background := (index $grays 3).hex -}} <!--Boosted mod: 3 instead of 5-->
+{{- $default_color := "var(--bs-gray-border)" -}} <!--Boosted mod: 5 instead of 2-->
+{{- $default_background := "var(--bs-gray-surface)" -}} <!--Boosted mod: 3 instead of 5-->
 
 {{- $title := .Get "title" | default "Placeholder" -}}
 {{- $class := .Get "class" -}}
@@ -42,7 +42,7 @@
     <rect width="100%" height="100%" fill="{{ $background }}"/>
     {{- if $show_text }}<text x="50%" y="50%" fill="{{ $color }}" dy=".3em">{{ $text }}</text>{{ end -}}
     {{- if $show_icon }}
-    <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="#{{ if eq $background "#000" }}ffffff30{{ else }}00000014{{ end }}">
+    <svg x="30%" y="30%" width="40%" height="40%" viewBox="0 0 24 24" fill="{{ if eq $background "#000" }}#ffffff30{{ else }}{{ $color }}{{ end }}">
       <path d="M20.4 5.4a1.8 1.8 0 0 0-1.8-1.8h-15v15a1.8 1.8 0 0 0 1.8 1.8h15v-15ZM4.8 4.8h13.5a.9.9 0 0 1 .9.9V15l-4.61-5.237c-.167-.217-.436-.217-.602 0l-3.428 3.983-1.894-2.657c-.166-.217-.435-.217-.6 0L5.28 14.21c-.281-.211-.47-.444-.48-.926V4.8Zm4.8 3.25a1.5 1.5 0 1 1-3 .1 1.5 1.5 0 0 1 3-.1Z"></path>
     </svg>
     {{ end -}}
