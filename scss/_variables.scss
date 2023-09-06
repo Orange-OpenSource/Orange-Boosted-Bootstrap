@@ -1545,9 +1545,9 @@ $dropdown-padding-y:                0 !default;
 $dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-line-height:              $line-height-base !default; // Boosted mod
-$dropdown-color:                    var(--#{$prefix}body-color) !default;
-$dropdown-bg:                       var(--#{$prefix}body-bg) !default;
-$dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
+$dropdown-color:                    var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$dropdown-bg:                       var(--#{$prefix}body-bg) !default; // Or var(--#{$prefix}body-surface)
+$dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default; // Or var(--#{$prefix}gray-border)
 $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      0 !default; // Boosted mod
@@ -1555,19 +1555,19 @@ $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .25 !default;
 $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
-$dropdown-link-color:               var(--#{$prefix}body-color) !default;
+$dropdown-link-color:               var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $dropdown-link-hover-color:         $dropdown-link-color !default;
-$dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$dropdown-link-hover-bg:            var(--#{$prefix}gray-border) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 
-$dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
-$dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
+$dropdown-link-active-color:        var(--#{$prefix}body-emphasis-surface) !default; // Boosted mod
+$dropdown-link-active-bg:           var(--#{$prefix}body-emphasis) !default;  // Boosted mod
 
-$dropdown-link-disabled-color:      $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
+$dropdown-link-disabled-color:      var(--#{$prefix}gray-border) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
 
 $dropdown-item-padding-y:           $spacer * .5 !default;
 $dropdown-item-padding-x:           $spacer * .5 !default;
 
-$dropdown-header-color:             $black !default;
+$dropdown-header-color:             var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `$black`
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // Boosted mod
 // fusv-disable
@@ -1575,20 +1575,24 @@ $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-
 // fusv-enable
 // scss-docs-end dropdown-variables
 
+// fusv-disable
 // scss-docs-start dropdown-dark-variables
-$dropdown-dark-color:               $white !default; // Boosted mod
-$dropdown-dark-bg:                  $black !default; // Boosted mod
-$dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
-$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Boosted mod
-$dropdown-dark-box-shadow:          null !default;
-$dropdown-dark-link-color:          $dropdown-dark-color !default;
-$dropdown-dark-link-hover-color:    $white !default;
-$dropdown-dark-link-hover-bg:       $gray-700 !default; // Boosted mod
-$dropdown-dark-link-active-color:   $black !default; // Boosted mod
-$dropdown-dark-link-active-bg:      $white !default; // Boosted mod
-$dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
-$dropdown-dark-header-color:        $white !default; // Boosted mod
+// Boosted mod
+$dropdown-dark-color:               $white !default; // Deprecated in v5.3.2
+$dropdown-dark-bg:                  $black !default; // Deprecated in v5.3.2
+$dropdown-dark-border-color:        $gray-700 !default; // Deprecated in v5.3.2
+$dropdown-dark-divider-bg:          $dropdown-dark-border-color !default; // Deprecated in v5.3.2
+$dropdown-dark-box-shadow:          null !default; // Deprecated in v5.3.2
+$dropdown-dark-link-color:          $dropdown-dark-color !default; // Deprecated in v5.3.2
+$dropdown-dark-link-hover-color:    $white !default; // Deprecated in v5.3.2
+$dropdown-dark-link-hover-bg:       $gray-700 !default; // Deprecated in v5.3.2
+$dropdown-dark-link-active-color:   $black !default; // Deprecated in v5.3.2
+$dropdown-dark-link-active-bg:      $white !default; // Deprecated in v5.3.2
+$dropdown-dark-link-disabled-color: $gray-700 !default; // Deprecated in v5.3.2
+$dropdown-dark-header-color:        $white !default; // Deprecated in v5.3.2
+// End mod
 // scss-docs-end dropdown-dark-variables
+// fusv-enable
 
 // Pagination
 
