@@ -59,19 +59,3 @@
     // Boosted mod: no opacity
   }
 }
-
-// Boosted mod:
-// - no dark mode management so we keep our .btn-close-white
-// - changing color instead of using filter
-.btn-close-white {
-  // scss-docs-start btn-close-white-css-vars
-  --#{$prefix}btn-close-color: #{$btn-close-white-color}; // Boosted mod
-  --#{$prefix}btn-close-bg: #{$btn-close-white-bg}; // Boosted mod
-  --#{$prefix}btn-close-border-color: #{$btn-close-white-border-color}; // Boosted mod
-  --#{$prefix}btn-close-hover-color: #{$btn-close-white-hover-color}; // Boosted mod
-  --#{$prefix}btn-close-active-color: #{$btn-close-white-active-color}; // Boosted mod
-  --#{$prefix}btn-close-active-border-color: #{$btn-close-white-active-border-color}; // Boosted mod
-  --#{$prefix}btn-close-disabled-color: #{$btn-close-white-disabled-color}; // Boosted mod
-  // scss-docs-end btn-close-white-css-vars
-}
-// End mod

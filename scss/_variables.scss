@@ -407,7 +407,7 @@ $add-icon-sm:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $remove-icon-sm:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'><path d='M0 0h10v2H0z'/></svg>") !default;
 $play-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M12.138 16.8 3 21.6V2.4l9.138 4.8L21 12z' fill-rule='evenodd'/></svg>") !default;
 $pause-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M10.2 21H3V3h7.2v18ZM21 21h-7.2V3H21v18Z' fill-rule='evenodd'/></svg>") !default;
-$helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path fill='#{$info}' d='M500 75C265.277 75 75 265.279 75 500s190.277 425 425 425 425-190.279 425-425S734.721 75 500 75Zm30.8 680.633a54.149 54.149 0 0 1-37.069 14.267 56.1 56.1 0 0 1-37.95-14.085q-16.233-14.079-16.226-39.384 0-22.458 15.679-37.781t38.5-15.324q22.464 0 37.789 15.324t15.324 37.781q-.003 24.951-16.047 39.202Zm133.12-330.046a162.251 162.251 0 0 1-29.23 39.38q-16.92 16.574-60.772 55.785A248.236 248.236 0 0 0 554.5 540.18a79.146 79.146 0 0 0-10.868 15.32 75.1 75.1 0 0 0-5.529 13.9q-1.953 6.954-5.879 24.42-6.762 37.068-42.413 37.069-18.541 0-31.192-12.119t-12.647-36q0-29.945 9.262-51.863a131.346 131.346 0 0 1 24.6-38.491q15.319-16.577 41.35-39.4 22.789-19.946 32.962-30.113a101.987 101.987 0 0 0 17.105-22.632 54.714 54.714 0 0 0 6.955-27.086q0-28.517-21.213-48.119t-54.7-19.6q-39.213 0-57.743 19.783t-31.359 58.272Q401.059 423.8 367.2 423.8q-19.964 0-33.683-14.079T319.8 379.248q0-33.852 21.739-68.606t63.447-57.562q41.7-22.814 97.3-22.813 51.66 0 91.244 19.069 39.549 19.074 61.119 51.856t21.571 71.286q.004 30.297-12.297 53.109Z'/></svg>") !default;
+$helper-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M500 75C265.277 75 75 265.279 75 500s190.277 425 425 425 425-190.279 425-425S734.721 75 500 75Zm30.8 680.633a54.149 54.149 0 0 1-37.069 14.267 56.1 56.1 0 0 1-37.95-14.085q-16.233-14.079-16.226-39.384 0-22.458 15.679-37.781t38.5-15.324q22.464 0 37.789 15.324t15.324 37.781q-.003 24.951-16.047 39.202Zm133.12-330.046a162.251 162.251 0 0 1-29.23 39.38q-16.92 16.574-60.772 55.785A248.236 248.236 0 0 0 554.5 540.18a79.146 79.146 0 0 0-10.868 15.32 75.1 75.1 0 0 0-5.529 13.9q-1.953 6.954-5.879 24.42-6.762 37.068-42.413 37.069-18.541 0-31.192-12.119t-12.647-36q0-29.945 9.262-51.863a131.346 131.346 0 0 1 24.6-38.491q15.319-16.577 41.35-39.4 22.789-19.946 32.962-30.113a101.987 101.987 0 0 0 17.105-22.632 54.714 54.714 0 0 0 6.955-27.086q0-28.517-21.213-48.119t-54.7-19.6q-39.213 0-57.743 19.783t-31.359 58.272Q401.059 423.8 367.2 423.8q-19.964 0-33.683-14.079T319.8 379.248q0-33.852 21.739-68.606t63.447-57.562q41.7-22.814 97.3-22.813 51.66 0 91.244 19.069 39.549 19.074 61.119 51.856t21.571 71.286q.004 30.297-12.297 53.109Z'/></svg>") !default;
 
 //// SVG used several times
 $svg-as-custom-props: (
@@ -2193,7 +2193,7 @@ $btn-close-height:              $btn-close-width !default;
 $btn-close-padding:             var(--#{$prefix}icon-spacing, #{$btn-icon-padding-x}) !default; // Boosted mod
 $btn-close-border-width:        var(--#{$prefix}border-width) !default; // Boosted mod
 $btn-close-border-color:        transparent !default; // Boosted mod
-$btn-close-color:               var(--#{$prefix}emphasis-color) !default;
+$btn-close-color:               var(--#{$prefix}emphasis-color) !default; // Or var(--#{$prefix}body-emphasis)
 $btn-close-bg:                  var(--#{$prefix}close-icon) !default; // Boosted mod
 // Boosted mod
 // fusv-disable
@@ -2206,23 +2206,27 @@ $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in
 // Boosted mod
 $btn-close-hover-color:         $btn-close-color !default;
 $btn-close-active-color:        $primary !default;
-$btn-close-active-border-color: $gray-500 !default;
-$btn-close-disabled-color:      $gray-500 !default;
+$btn-close-active-border-color: var(--#{$prefix}gray-border) !default;
+$btn-close-disabled-color:      var(--#{$prefix}gray-border) !default;
 
 $btn-close-icon-size:           1rem auto !default;
 $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !default;
 // End mod
 // scss-docs-end close-variables
 
+// fusv-disable
 // scss-docs-start close-white-variables
-$btn-close-white-color:               $white !default; // Boosted mod
-$btn-close-white-bg:                  transparent !default; // Boosted mod
-$btn-close-white-border-color:        transparent !default; // Boosted mod
-$btn-close-white-hover-color:         $btn-close-white-color !default; // Boosted mod
-$btn-close-white-active-color:        $primary !default; // Boosted mod
-$btn-close-white-active-border-color: $gray-700 !default; // Boosted mod
-$btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
+// Boosted mod
+$btn-close-white-color:               $white !default; // Deprecated in v5.3.2
+$btn-close-white-bg:                  transparent !default; // Deprecated in v5.3.2
+$btn-close-white-border-color:        transparent !default; // Deprecated in v5.3.2
+$btn-close-white-hover-color:         $btn-close-white-color !default; // Deprecated in v5.3.2
+$btn-close-white-active-color:        $primary !default; // Deprecated in v5.3.2
+$btn-close-white-active-border-color: $gray-700 !default; // Deprecated in v5.3.2
+$btn-close-white-disabled-color:      $gray-700 !default; // Deprecated in v5.3.2
+// End mod
 // scss-docs-end close-white-variables
+// fusv-enable
 
 // Offcanvas
 
