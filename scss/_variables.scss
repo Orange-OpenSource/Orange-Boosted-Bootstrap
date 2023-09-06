@@ -1712,11 +1712,11 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 // scss-docs-start accordion-variables
 $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
 $accordion-padding-x:                     0 !default; // Boosted mod
-$accordion-color:                         var(--#{$prefix}body-color) !default;
-$accordion-bg:                            var(--#{$prefix}body-bg) !default;
+$accordion-color:                         var(--#{$prefix}body-contrast) !default;
+$accordion-bg:                            var(--#{$prefix}body-surface) !default;
 // stylelint-disable-next-line function-disallowed-list
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
-$accordion-border-color:                  var(--#{$prefix}border-color-translucent) !default; // Boosted mod
+$accordion-border-color:                  var(--#{$prefix}gray-border) !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
@@ -1731,12 +1731,12 @@ $accordion-body-padding-x:                $spacer !default; // Deprecated in Boo
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  var(--#{$prefix}body-color) !default;
+$accordion-button-color:                  var(--#{$prefix}body-contrast) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod
+$accordion-button-hover-bg:               var(--#{$prefix}gray-surface) !default; // Boosted mod
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
+$accordion-button-active-color:           var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1764,6 +1764,7 @@ $accordion-button-letter-spacing-lg:      $h2-spacing !default;
 // End mod
 // scss-docs-end accordion-variables
 
+// fusv-disable
 // scss-docs-start accordion-dark-variables
 // Boosted mod
 $accordion-dark-color:                    $white !default; // Deprecated in v5.3.2
@@ -1775,6 +1776,7 @@ $accordion-dark-button-hover-bg:          $gray-900 !default; // Deprecated in v
 $accordion-dark-button-active-color:      $white !default; // Deprecated in v5.3.2
 // End mod
 // scss-docs-end accordion-dark-variables
+// fusv-enable
 
 // Tooltips
 
@@ -2086,7 +2088,7 @@ $breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         $spacer * .5 !default;
 $breadcrumb-margin-bottom:          1rem !default;
-$breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod
+$breadcrumb-color:                  var(--#{$prefix}body-emphasis) !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-active-color:           null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
@@ -2095,6 +2097,7 @@ $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
 
+// fusv-disable
 // scss-docs-start breadcrumb-dark-variables
 // Boosted mod
 $breadcrumb-dark-color:             $white !default; // Deprecated in v5.3.2
@@ -2103,6 +2106,7 @@ $breadcrumb-dark-divider-color:     $black !default; // Deprecated in v5.3.2
 $breadcrumb-dark-active-color:      null !default; // Deprecated in v5.3.2
 // End mod
 // scss-docs-end breadcrumb-dark-variables
+// fusv-enable
 
 
 // Carousel
@@ -2279,8 +2283,8 @@ $back-to-top-link-offset-top:    subtract(100vh, $back-to-top-offset * 4) !defau
 $back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
 $back-to-top-title-offset-right: add(100%, var(--#{$prefix}border-width)) !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
-$back-to-top-title-color:        var(--#{$prefix}emphasis-color) !default;
-$back-to-top-title-bg-color:     var(--#{$prefix}body-bg) !default;
+$back-to-top-title-color:        var(--#{$prefix}body-emphasis) !default;
+$back-to-top-title-bg-color:     var(--#{$prefix}body-surface) !default;
 $back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
 $back-to-top-icon-width:         add(.5rem, 1px) !default;
 $back-to-top-icon-height:        subtract(1rem, 1px) !default;
