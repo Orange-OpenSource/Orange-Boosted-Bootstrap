@@ -27,8 +27,9 @@
   flex-shrink: 0;
   width: $form-helper-size;
   height: $form-helper-size;
-  background: no-repeat center/100% escape-svg($helper-icon);
+  background-color: var(--#{$prefix}info-color);
   border: 0;
+  mask: no-repeat center/100% escape-svg($helper-icon);
 
   .form-label + & {
     margin-bottom: $form-helper-label-margin-bottom;
