@@ -9,8 +9,8 @@
   // New palette vars
   --#{$prefix}body-surface: #{$white}; // body-bg
   --#{$prefix}body-contrast: #{$black}; // body-color
-  --#{$prefix}body-emphasis-surface: #{$white};
-  --#{$prefix}body-emphasis: #{$black}; // emphasis-color
+  --#{$prefix}body-emphasis-surface: #{$white}; // highlight-color
+  --#{$prefix}body-emphasis: #{$black}; // emphasis-color / highlight-bg
 
   --#{$prefix}gray-surface: #{$gray-300}; // secondary-bg
   --#{$prefix}gray-border: #{$gray-500}; // border-color-translucent
@@ -19,7 +19,7 @@
   --#{$prefix}negative-color: #{$accessible-red}; // danger
   --#{$prefix}info-color: #{$accessible-blue}; // info
   --#{$prefix}alert-color: #{$accessible-yellow}; // warning
-  --#{$prefix}orange-color: #{$accessible-orange};
+  --#{$prefix}orange-color: #{$accessible-orange}; // link-hover-color
   // End palette
 
   @each $color, $value in $colors {
@@ -162,6 +162,7 @@
     // New palette vars
     --#{$prefix}body-surface: #{$gray-950};
     --#{$prefix}body-contrast: #{$gray-300};
+    --#{$prefix}body-emphasis-surface: #{$black};
     --#{$prefix}body-emphasis: #{$white};
 
     --#{$prefix}gray-surface: #{$gray-900};

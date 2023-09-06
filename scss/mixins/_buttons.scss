@@ -9,17 +9,17 @@
 @mixin button-variant(
   $background,
   $border,
-  $color: color-contrast($background),
-  $hover-background: $black, // Boosted mod
-  $hover-border: $black, // Boosted mod
-  $hover-color: color-contrast($hover-background),
+  $color,
+  $hover-background: var(--#{$prefix}body-emphasis), // Boosted mod
+  $hover-border: var(--#{$prefix}body-emphasis), // Boosted mod
+  $hover-color: var(--#{$prefix}body-emphasis-surface),
   $active-background: $primary, // Boosted mod
   $active-border: $primary, // Boosted mod
-  $active-color: color-contrast($active-background),
-  $disabled-background: $gray-500, // Boosted mod
-  $disabled-border: $gray-500, // Boosted mod
-  $disabled-color: $white, // Boosted mod
-  $btn-focus-shadow-color: $white // Boosted mod
+  $active-color: $black,
+  $disabled-background: var(--#{$prefix}gray-border), // Boosted mod
+  $disabled-border: var(--#{$prefix}gray-border), // Boosted mod
+  $disabled-color: var(--#{$prefix}body-surface), // Boosted mod
+  $btn-focus-shadow-color: var(--#{$prefix}body-emphasis-surface) // Boosted mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};

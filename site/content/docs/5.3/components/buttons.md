@@ -142,54 +142,9 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.2" >}}
 
-Add `.btn-inverse` to the `.btn` for a dark variant.
-
-{{< example class="bg-dark" >}}
-{{< buttons.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-inverse btn-{{ .name }}">{{ .name | title }}</button>
-{{- end -}}
-{{< /buttons.inline >}}
-
-<button type="button" class="btn btn-inverse btn-link">Link</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<button type="button" class="btn btn-inverse btn-primary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Primary
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
-</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
-{{< /example >}}
-<!-- End mod -->
+Prefer using the [`data-bs-theme` attribute]({{< docsref "/customize/color-modes" >}}) instead.
 
 ## Disable text wrapping
 

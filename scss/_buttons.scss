@@ -99,69 +99,42 @@
 // scss-docs-start btn-variant-loops
 .btn-primary,
 .btn-warning {
-  @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
-  &.btn-inverse {
-    @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black, $black);
-  }
+  @include button-variant($primary, $primary, $black, $active-background: var(--#{$prefix}body-emphasis-surface), $active-border: var(--#{$prefix}body-emphasis), $active-color: var(--#{$prefix}body-emphasis));
 }
 
 .btn-light,
 .btn-secondary {
-  @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
+  @include button-variant(var(--#{$prefix}body-surface), var(--#{$prefix}body-emphasis), var(--#{$prefix}body-emphasis), $disabled-background: var(--#{$prefix}body-surface), $disabled-color: var(--#{$prefix}gray-border));
 }
 
 .btn-success {
-  @include button-variant($success, $success);
-  &.btn-inverse {
-    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
+  @include button-variant($success, $success, $white); // var(--#{$prefix}positive-color) ?
 }
 
 .btn-info,
 .btn-dark {
-  @include button-variant($black, $black, $white, $white, $black, $black);
-  &.btn-inverse {
-    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
+  @include button-variant(var(--#{$prefix}body-emphasis), var(--#{$prefix}body-emphasis), var(--#{$prefix}body-emphasis-surface), var(--#{$prefix}body-emphasis-surface), var(--#{$prefix}body-emphasis), var(--#{$prefix}body-emphasis));
 }
 
 .btn-danger {
-  @include button-variant($danger, $danger);
-  &.btn-inverse {
-    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
+  @include button-variant($danger, $danger, $white); // var(--#{$prefix}negative-color) ?
 }
 // scss-docs-end btn-variant-loops
 // End mod
 
 // Boosted mod: only secondary variant
 .btn-outline-secondary {
-  @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
+  @include button-variant(transparent, var(--#{$prefix}body-emphasis), var(--#{$prefix}body-emphasis), $disabled-background: var(--#{$prefix}body-surface), $disabled-color: var(--#{$prefix}gray-border));
 }
 // End mod
 
 // Boosted mod: border-only on :hover and :active
 .btn-no-outline {
-  --#{$prefix}btn-hover-border-color: #{$gray-500};
-  --#{$prefix}btn-active-color: #{$accessible-orange};
-  --#{$prefix}btn-active-border-color: #{$gray-500};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-hover-border-color: var(--#{$prefix}gray-border);
+  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}gray-border);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}gray-border);
   --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
-
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-hover-color: #{$white};
-    --#{$prefix}btn-hover-border-color: #{$gray-700};
-    --#{$prefix}btn-active-color: #{$brand-orange};
-    --#{$prefix}btn-active-border-color: #{$gray-700};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
 }
 // End mod
 
@@ -197,12 +170,6 @@
 
   // Boosted mod: no focus-visible color change
 
-  // Boosted mod: btn inverse
-  &.btn-inverse {
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
-  // End mod
-
   // No need for an active state here
 }
 
@@ -229,25 +196,18 @@
 
 // Boosted mod: social button
 .btn-social {
+  --#{$prefix}btn-color: var(--#{$prefix}body-emphasis);
   --#{$prefix}btn-border-color: currentcolor;
-  --#{$prefix}btn-hover-color: #{$white};
+  --#{$prefix}btn-hover-color: #{$white}; // var(--#{$prefix}body-emphasis-surface) ?
   --#{$prefix}btn-hover-bg: var(--#{$prefix}network-color, #{$black});
   --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
-  --#{$prefix}btn-active-color: #{$white};
-  --#{$prefix}btn-active-bg: #{$black};
-  --#{$prefix}btn-active-border-color: #{$black};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-active-color: var(--#{$prefix}body-emphasis-surface);
+  --#{$prefix}btn-active-bg: var(--#{$prefix}body-emphasis);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}body-emphasis);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}gray-border);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$prefix}network-logo));
-
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-active-color: #{$black};
-    --#{$prefix}btn-active-bg: #{$white};
-    --#{$prefix}btn-active-border-color: #{$white};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
 }
 
 @each $name in map-keys($btn-social-networks) {
