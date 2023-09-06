@@ -2096,10 +2096,12 @@ $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
 
 // scss-docs-start breadcrumb-dark-variables
-$breadcrumb-dark-color:             $white !default; // Boosted mod
-$breadcrumb-dark-bg:                null !default; // Boosted mod
-$breadcrumb-dark-divider-color:     $black !default; // Boosted mod: since the divider is inverted for SVG reasons
-$breadcrumb-dark-active-color:      null !default; // Boosted mod
+// Boosted mod
+$breadcrumb-dark-color:             $white !default; // Deprecated in v5.3.2
+$breadcrumb-dark-bg:                null !default; // Deprecated in v5.3.2
+$breadcrumb-dark-divider-color:     $black !default; // Deprecated in v5.3.2
+$breadcrumb-dark-active-color:      null !default; // Deprecated in v5.3.2
+// End mod
 // scss-docs-end breadcrumb-dark-variables
 
 
