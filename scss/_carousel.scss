@@ -312,6 +312,7 @@
 
   .carousel-control-play-pause {
     margin-bottom: $carousel-indicators-margin-bottom;
+    color: color-contrast($carousel-indicator-active-bg);
     background: rgba($carousel-indicator-active-bg, .5);
     border: 0;
     @include border-radius($spacer, $spacer);
@@ -354,7 +355,7 @@
   left: (100% - $carousel-caption-width) * .5;
   padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
   color: $carousel-caption-color;
-  background-color: color-contrast($carousel-caption-color); // Boosted mod: ensure contrast
+  background-color: $carousel-caption-bg; // Boosted mod: ensure contrast
 }
 
 // Boosted mod: no dark carousel nor carousel in dark mode since Boosted doesn't have any dark mode for now

@@ -2137,7 +2137,8 @@ $carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
 
 $carousel-caption-width:             70% !default;
-$carousel-caption-color:             $black !default;
+$carousel-caption-color:             var(--#{$prefix}body-contrast) !default; // Boosted mod: instead of `$black`
+$carousel-caption-bg:                var(--#{$prefix}body-surface) !default; // Boosted mod
 $carousel-caption-padding-y:         $spacer !default;
 $carousel-caption-padding-x:         $spacer !default; // Boosted mod
 $carousel-caption-spacer:            $spacer * 3 !default;
