@@ -2001,8 +2001,8 @@ $progress-height-xs:                $spacer * .25 !default;
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-color:                  var(--#{$prefix}body-color) !default;
-$list-group-bg:                     var(--#{$prefix}body-bg) !default;
+$list-group-color:                  var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$list-group-bg:                     var(--#{$prefix}body-bg) !default; // Or var(--#{$prefix}body-surface)
 $list-group-border-color:           var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 $list-group-border-width:           var(--#{$prefix}border-width) !default;
 $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
@@ -2011,34 +2011,38 @@ $list-group-item-padding-y:         .875rem !default; // Boosted mod
 $list-group-item-padding-x:         $spacer !default; // Boosted mod
 
 $list-group-hover-bg:               null !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
-$list-group-active-color:           $white !default; // Boosted mod
-$list-group-active-bg:              $black !default; // Boosted mod
+$list-group-active-color:           var(--#{$prefix}body-emphasis-surface) !default; // Boosted mod
+$list-group-active-bg:              var(--#{$prefix}body-emphasis) !default; // Boosted mod
 $list-group-active-border-color:    $list-group-active-bg !default;
 
-$list-group-disabled-color:         $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$list-group-disabled-color:         var(--#{$prefix}gray-border) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $list-group-disabled-bg:            $list-group-bg !default;
 
-$list-group-action-color:           $black !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$list-group-action-hover-color:     $primary !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$list-group-action-color:           var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$list-group-action-hover-color:     var(--#{$prefix}orange-color) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
 
 $list-group-action-active-color:    $list-group-active-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 // scss-docs-end list-group-variables
 
+// fusv-disable
 // scss-docs-start list-group-dark-variables
-$list-group-dark-color:               $white !default; // Boosted mod
-$list-group-dark-bg:                  $black !default; // Boosted mod
-$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
-$list-group-dark-action-color:        $white !default; // Boosted mod
-$list-group-dark-action-hover-color:  $primary !default; // Boosted mod
-$list-group-dark-action-active-color: $black !default; // Boosted mod
-$list-group-dark-action-active-bg:    $white !default; // Boosted mod
-$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
-$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Boosted mod
-$list-group-dark-active-color:        $black !default; // Boosted mod
-$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Boosted mod
-$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Boosted mod
+// Boosted mod
+$list-group-dark-color:               $white !default; // Deprecated in v5.3.2
+$list-group-dark-bg:                  $black !default; // Deprecated in v5.3.2
+$list-group-dark-border-color:        $gray-700 !default; // Deprecated in v5.3.2
+$list-group-dark-action-color:        $white !default; // Deprecated in v5.3.2
+$list-group-dark-action-hover-color:  $primary !default; // Deprecated in v5.3.2
+$list-group-dark-action-active-color: $black !default; // Deprecated in v5.3.2
+$list-group-dark-action-active-bg:    $white !default; // Deprecated in v5.3.2
+$list-group-dark-disabled-color:      $gray-700 !default; // Deprecated in v5.3.2
+$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Deprecated in v5.3.2
+$list-group-dark-active-color:        $black !default; // Deprecated in v5.3.2
+$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Deprecated in v5.3.2
+$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Deprecated in v5.3.2
+// End mod
 // scss-docs-end list-group-dark-variables
+// fusv-enable
 
 
 // Image thumbnails
