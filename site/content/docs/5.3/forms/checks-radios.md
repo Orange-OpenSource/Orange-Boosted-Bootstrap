@@ -412,33 +412,6 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 </form>
 {{< /example >}}
 
-### Dark variant
-
-Add `.star-rating-dark` to the `.star-rating` for a dark variant.
-
-{{< example class="bg-dark" >}}
-<form>
-  <fieldset class="star-rating star-rating-dark">
-    <legend class="visually-hidden">Results relevance</legend>
-
-    <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"></label>
-
-    <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"></label>
-
-    <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"></label>
-
-    <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"></label>
-
-    <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"></label>
-  </fieldset>
-</form>
-{{< /example >}}
-
 ### Disabled
 
 Make star ratings look inactive inside or outside a form by adding the `disabled` boolean attribute to the `<fieldset>` element and the `checked` boolean attribute to any `<input>` element.
@@ -462,6 +435,12 @@ Make star ratings look inactive inside or outside a form by adding the `disabled
 </fieldset>
 <span class="visually-hidden">rated 3 stars out of 5</span>
 {{< /example >}}
+
+### Dark variant
+
+{{< deprecated-in "5.3.2" >}}
+
+Prefer using the [`data-bs-theme` attribute]({{< docsref "/customize/color-modes" >}}) instead.
 
 <!-- End mod -->
 

@@ -49,29 +49,33 @@
   }
 }
 
-.star-rating-dark {
-  > label {
-    @include form-star-rating($brand-orange);
-  }
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .star-rating {
+      > label {
+        @include form-star-rating($brand-orange);
+      }
 
-  > input:checked ~ label {
-    @include form-star-rating($gray-700);
-  }
+      > input:checked ~ label {
+        @include form-star-rating($gray-700);
+      }
 
-  > input:checked + label {
-    @include form-star-rating($brand-orange);
-  }
+      > input:checked + label {
+        @include form-star-rating($brand-orange);
+      }
 
-  &:hover input + label {
-    @include form-star-rating($white);
-  }
+      &:hover input + label {
+        @include form-star-rating($white);
+      }
 
-  > input:hover ~ label {
-    @include form-star-rating($gray-700);
-  }
+      > input:hover ~ label {
+        @include form-star-rating($gray-700);
+      }
 
-  > input:hover + label {
-    @include form-star-rating($white);
+      > input:hover + label {
+        @include form-star-rating($white);
+      }
+    }
   }
 }
 
