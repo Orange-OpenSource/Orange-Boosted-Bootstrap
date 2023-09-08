@@ -1082,7 +1082,7 @@ $form-text-font-size:                   $small-font-size !default;
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 $font-weight-bold !default; // Boosted mod: instead of `null`
 $form-text-line-height:                 $line-height-sm !default; // Boosted mod
-$form-text-color:                       var(--#{$prefix}secondary-color) !default;
+$form-text-color:                       var(--#{$prefix}gray-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
@@ -1090,8 +1090,8 @@ $form-label-margin-bottom:              .5rem !default; // Boosted mod
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                $font-weight-bold !default;
-$form-label-color:                      null !default;
-$form-label-disabled-color:             $gray-500 !default; // Boosted mod
+$form-label-color:                      var(--#{$prefix}bosy-emphasis) !default; // Boosted mod: instead of `null`
+$form-label-disabled-color:             var(--#{$prefix}gray-border) !default; // Boosted mod
 $form-label-required-margin-left:       .1875rem !default; // Boosted mod
 // scss-docs-end form-label-variables
 
@@ -1116,12 +1116,12 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              $white !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
-$input-disabled-color:                  $gray-700 !default; // Boosted mod
+$input-bg:                              var(--#{$prefix}body-surface) !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
+$input-disabled-color:                  var(--#{$prefix}gray-color) !default; // Boosted mod
 $input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           $black !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$input-color:                           var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $input-border-color:                    var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of var(--#{$prefix}border-color)
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // Boosted mod
@@ -1136,7 +1136,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // Boosted mod
 
-$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
+$input-placeholder-color:               $gray-700 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
 
 // Boosted mod: no $input-height-border
@@ -1153,7 +1153,7 @@ $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 $form-color-width:                      2.5rem !default; // Boosted mod: instead of `3rem`
-$form-color-disabled-border-color:      $gray-500 !default; // Boosted mod
+$form-color-disabled-border-color:      var(--#{$prefix}gray-border) !default; // Boosted mod
 $form-color-disabled-background-swatch: brightness(0) invert(1) brightness(.8) !default; // Boosted mod
 // scss-docs-end form-input-variables
 
@@ -1181,7 +1181,7 @@ $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       var(--#{$prefix}check-icon) !default;
-$form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
+$form-check-input-disabled-color:         var(--#{$prefix}gray-random) !default; // Boosted modx
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $form-check-input-checked-color !default;

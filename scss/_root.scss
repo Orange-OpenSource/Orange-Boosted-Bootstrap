@@ -15,6 +15,7 @@
   --#{$prefix}gray-surface: #{$gray-300}; // secondary-bg
   --#{$prefix}gray-border: #{$gray-500}; // border-color-translucent
   --#{$prefix}gray-color: #{$gray-700}; // Could be secondary-color
+  --#{$prefix}gray-random: #{$gray-900};
 
   --#{$prefix}positive-color: #{$accessible-green}; // success
   --#{$prefix}negative-color: #{$accessible-red}; // danger
@@ -169,6 +170,7 @@
     --#{$prefix}gray-surface: #{$gray-900};
     --#{$prefix}gray-border: #{$gray-700};
     --#{$prefix}gray-color: #{$gray-500};
+    --#{$prefix}gray-random: #{$gray-700};
 
     --#{$prefix}positive-color: #{$functional-green};
     --#{$prefix}negative-color: #{$functional-red};

@@ -112,7 +112,7 @@
 
     // Boosted mod
     &:checked,
-    &:indeterminate {
+    &[type="checkbox"]:indeterminate {
       background-color: $form-check-input-disabled-color;
       filter: $invert-filter;
       border-color: $form-check-input-disabled-color;
@@ -202,7 +202,7 @@
       }
 
       &:not(:disabled) {
-        --#{$prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
+        --#{$prefix}switch-gradient: #{linear-gradient(to right, var(--#{$prefix}body-emphasis-surface) $form-switch-bg-square-size, transparent)};
       }
     }
 
@@ -231,6 +231,22 @@
     .form-check-input {
       margin-right: $form-switch-padding-start * -1;
       margin-left: 0;
+    }
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .form-check-input:disabled {
+      &:checked,
+      &:indeterminate {
+        filter: none;
+      }
+    }
+
+    .form-switch .form-check-input:not(:checked):not(:disabled),
+    .form-switch .form-check-input:disabled {
+      filter: none;
     }
   }
 }

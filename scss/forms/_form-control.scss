@@ -205,11 +205,11 @@ textarea {
   width: $form-color-width;
   height: $input-height;
   padding: $input-padding-y;
-  border-color: var(--#{$prefix}body-color); // Boosted mod
+  border-color: var(--#{$prefix}body-emphasis); // Boosted mod
 
   // Boosted mod
   &:hover {
-    background-color: var(--#{$prefix}body-color);
+    background-color: var(--#{$prefix}body-emphsasis);
   }
 
   &:disabled {
