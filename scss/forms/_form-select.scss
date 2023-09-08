@@ -74,4 +74,10 @@
   line-height: 1.5; // Boosted mod
 }
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .form-select {
+      --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator-dark)};
+    }
+  }
+}
