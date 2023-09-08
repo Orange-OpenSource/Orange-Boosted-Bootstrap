@@ -209,7 +209,7 @@ textarea {
 
   // Boosted mod
   &:hover {
-    background-color: var(--#{$prefix}body-emphsasis);
+    background-color: var(--#{$prefix}body-emphasis);
   }
 
   &:disabled {
@@ -242,3 +242,19 @@ textarea {
   &.form-control-sm { height: $input-height-sm; }
   &.form-control-lg { height: $input-height-lg; }
 }
+
+// Boosted mod
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .form-control-color:disabled {
+      &::-moz-color-swatch {
+        filter: $form-color-disabled-background-swatch-dark;
+      }
+
+      &::-webkit-color-swatch {
+        filter: $form-color-disabled-background-swatch-dark;
+      }
+    }
+  }
+}
+// End mod

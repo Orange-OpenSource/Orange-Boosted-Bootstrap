@@ -1090,7 +1090,7 @@ $form-label-margin-bottom:              .5rem !default; // Boosted mod
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                $font-weight-bold !default;
-$form-label-color:                      var(--#{$prefix}bosy-emphasis) !default; // Boosted mod: instead of `null`
+$form-label-color:                      var(--#{$prefix}body-emphasis) !default; // Boosted mod: instead of `null`
 $form-label-disabled-color:             var(--#{$prefix}gray-border) !default; // Boosted mod
 $form-label-required-margin-left:       .1875rem !default; // Boosted mod
 // scss-docs-end form-label-variables
@@ -1137,7 +1137,7 @@ $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none !default; // Boosted mod
 
 $input-placeholder-color:               $gray-700 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$input-plaintext-color:                 var(--#{$prefix}body-color) !default;
+$input-plaintext-color:                 var(--#{$prefix}body-color) !default; // Or var(--#{$prefix}body-contrast)
 
 // Boosted mod: no $input-height-border
 
@@ -1155,6 +1155,7 @@ $input-transition:                      border-color $transition-duration $trans
 $form-color-width:                      2.5rem !default; // Boosted mod: instead of `3rem`
 $form-color-disabled-border-color:      var(--#{$prefix}gray-border) !default; // Boosted mod
 $form-color-disabled-background-swatch: brightness(0) invert(1) brightness(.8) !default; // Boosted mod
+$form-color-disabled-background-swatch-dark: brightness(0) invert(1) brightness(.4) !default; // Boosted mod
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
