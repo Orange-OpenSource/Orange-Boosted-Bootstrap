@@ -19,13 +19,13 @@
     }
 
     &:disabled {
-      color: $gray-500;
-      background-color: $white;
+      color: var(--#{$prefix}gray-border);
+      background-color: var(--#{$prefix}body-surface);
     }
   }
 
   button {
-    border: var(--#{$prefix}border-width) solid $gray-500;
+    border: var(--#{$prefix}border-width) solid var(--#{$prefix}gray-border);
 
     &:first-of-type {
       @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
