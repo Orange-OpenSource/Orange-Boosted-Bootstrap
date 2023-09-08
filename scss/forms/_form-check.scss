@@ -235,22 +235,6 @@
   }
 }
 
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .form-check-input:disabled {
-      &:checked,
-      &:indeterminate {
-        filter: none;
-      }
-    }
-
-    .form-switch .form-check-input:not(:checked):not(:disabled),
-    .form-switch .form-check-input:disabled {
-      filter: none;
-    }
-  }
-}
-
 .form-check-inline {
   display: inline-block;
   margin-right: $form-check-inline-margin-end;
@@ -266,9 +250,9 @@
   // @note meant to override whatever .btn-* variant is used
   + .btn {
     margin-left: 0 !important; // stylelint-disable-line declaration-no-important
-    color: $black;
-    @include gradient-bg($white);
-    border-color: $gray-500;
+    color: var(--#{$prefix}body-emphasis);
+    @include gradient-bg(var(--#{$prefix}body-surface));
+    border-color: var(--#{$prefix}gray-border);
     @include box-shadow($btn-box-shadow);
 
     &.btn-icon:not(.btn-no-outline)::before,
@@ -290,9 +274,9 @@
 
   &:hover + .btn,
   + .btn:hover {
-    color: $accessible-orange;
-    background-color: $white;
-    border-color: $gray-500;
+    color: var(--#{$prefix}orange-color);
+    background-color: var(--#{$prefix}body-surface);
+    border-color: var(--#{$prefix}gray-border);
   }
 
   .btn-group & + .btn:hover {
@@ -308,17 +292,17 @@
 
   &:checked {
     + .btn {
-      color: $white;
-      background-color: $black;
+      color: var(--#{$prefix}body-emphasis-surface);
+      background-color: var(--#{$prefix}body-emphasis);
       // Remove CSS gradients if they're enabled
       background-image: if($enable-gradients, none, null);
-      border-color: $black;
+      border-color: var(--#{$prefix}body-emphasis);
     }
 
     + .btn-no-outline {
       &,
       &:hover {
-        color: $accessible-orange;
+        color: var(--#{$prefix}orange-color);
         background-color: transparent;
       }
     }
@@ -346,7 +330,7 @@
     + .btn {
       color: $form-label-disabled-color; // Boosted mod
       pointer-events: none;
-      background-color: $white; // Boosted mod
+      background-color: var(--#{$prefix}body-surface); // Boosted mod
       // Remove CSS gradients if they're enabled
       background-image: if($enable-gradients, none, null); // Boosted mod
       filter: none;
@@ -356,13 +340,13 @@
 
     // Boosted mod
     &:checked + .btn {
-      color: $white;
+      color: var(--#{$prefix}body-emphasis-surface);
       background-color: $form-label-disabled-color;
       border-color: $form-label-disabled-color;
     }
 
     &:checked + .btn-no-outline {
-      color: $gray-500;
+      color: var(--#{$prefix}gray-border);
       background-color: transparent;
       border-color: currentcolor;
     }
@@ -390,16 +374,32 @@
     &:hover,
     &:active,
     &.active {
-      color: $black;
-      border-color: $gray-500;
+      color: var(--#{$prefix}body-emphasis);
+      border-color: var(--#{$prefix}gray-border);
     }
 
     &:active {
-      color: $accessible-orange;
+      color: var(--#{$prefix}orange-color);
       background-color: transparent;
     }
   }
   // End mod
 }
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    // Boosted mod
+    .form-check-input:disabled {
+      &:checked,
+      &:indeterminate {
+        filter: none;
+      }
+    }
+
+    .form-switch .form-check-input:not(:checked):not(:disabled),
+    .form-switch .form-check-input:disabled {
+      filter: none;
+    }
+  }
+  // End mod
+}
