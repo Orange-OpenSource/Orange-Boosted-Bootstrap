@@ -12,8 +12,8 @@
 
   &:disabled {
     pointer-events: none;
-    --#{$prefix}star-rating-checked-color: var(--#{$prefix}border-color-translucent);
-    --#{$prefix}star-rating-unchecked-color: var(--#{$prefix}border-color-translucent);
+    --#{$prefix}star-rating-checked-color: #{$form-star-rating-disabled-color};
+    --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-disabled-color};
   }
 
   > label {
@@ -71,12 +71,6 @@
     background-color: var(--#{$prefix}star-rating-hover-color);
     mask-image: var(--#{$prefix}star-rating-checked-icon);
   }
-}
-
-.star-rating-dark {
-  --#{$prefix}star-rating-checked-color: #{$form-star-rating-dark-checked-color};
-  --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-dark-unchecked-color};
-  --#{$prefix}star-rating-hover-color: #{$form-star-rating-dark-hover-color};
 }
 
 .star-rating-sm {

@@ -118,24 +118,13 @@ Here is an [accessible example](https://a11y-guidelines.orange.com/en/web/compon
 
 ## Dark variant
 
-{{< callout info >}}
-We add an extra `<p>` around the `<span>` here for accessibility concerns.
+{{< deprecated-in "5.3.3" >}}
+
+{{< callout warning >}}
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
+
+Add `data-bs-theme="dark"` to the `.tag` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
 {{< /callout >}}
-
-Add `.tag-dark` to the `.tag` for a dark variant.
-
-{{< example class="d-flex flex-wrap gap-2 align-items-center bg-dark" >}}
-<p class="mb-0"><span class="tag tag-dark">Informative</span></p>
-<button class="tag tag-dark">Filter</button>
-<a class="tag tag-dark" href="#">Navigation</a>
-<p><span class="tag tag-dark" id="labelTag3">
-  <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
-  </svg>
-  Input
-  <button class="close" aria-labelledby="labelTag3"><span class="visually-hidden">Close</span></button>
-</span></p>
-{{< /example >}}
 
 ## Sizes
 
@@ -196,10 +185,6 @@ Values for the CSS variables are set via Sass, so Sass customization is still su
 
 {{< scss-docs name="tag-css-vars" file="scss/_tags.scss" >}}
 
-Customization through CSS variables can be seen on the `.tag-dark` class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="tag-dark-css-vars" file="scss/_tags.scss" >}}
-
 Customization through CSS variables can be seen on the `.tag-sm` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="tag-sm-css-vars" file="scss/_tags.scss" >}}
@@ -209,10 +194,6 @@ Customization through CSS variables can be seen on the `.tag-sm` class where we 
 Variables for all tags:
 
 {{< scss-docs name="tag-variables" file="scss/_variables.scss" >}}
-
-Variables for the [dark tag](#dark-variant):
-
-{{< scss-docs name="tag-dark-variables" file="scss/_variables.scss" >}}
 
 Variables for the [small tag](#sizes):
 

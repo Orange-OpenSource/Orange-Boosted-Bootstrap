@@ -1,4 +1,6 @@
 .bd-navbar {
+  --bd-navbar-dropdown-item-icon-size: 1.25rem; // Boosted mod
+
   // Boosted mod: no padding
   // Boosted mod: no background-color
   // Boosted mod: no box-shadow
@@ -20,6 +22,11 @@
     &.active {
       color: var(--bs-link-hover-color);
     }
+
+    .bi {
+      width: var(--bd-navbar-dropdown-item-icon-size);
+      height: var(--bd-navbar-dropdown-item-icon-size);
+    }
   }
   // End mod
 
@@ -35,6 +42,15 @@
     @include rfs($font-size-sm, --bs-dropdown-font-size);
     --bs-dropdown-line-height: #{$line-height-sm};
     --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
+
+    .dropdown-item {
+      height: 2.5rem;
+    }
+
+    .bi {
+      width: var(--bd-navbar-dropdown-item-icon-size);
+      height: var(--bd-navbar-dropdown-item-icon-size);
+    }
 
     .active .bi {
       display: block !important; // stylelint-disable-line declaration-no-important
