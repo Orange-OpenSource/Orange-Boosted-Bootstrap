@@ -53,23 +53,43 @@
     - name: Green
       class: green
       level: success
-      hex: "#32c832"
+      hex: "#228722"
       variable: $functional-green
+    - name: Green on dark
+      class: green
+      level: success
+      hex: "#32c832"
+      variable: $functional-green-dark
     - name: Blue
       class: blue
       level: info
-      hex: "#527edb"
+      hex: "#4170d8"
       variable: $functional-blue
+    - name: Blue on dark
+      class: blue
+      level: info
+      hex: "#527edb"
+      variable: $functional-blue-dark
     - name: Yellow
       class: yellow
       level: warning
-      hex: "#fc0"
+      hex: "#8f7200"
       variable: $functional-yellow
+    - name: Yellow on dark
+      class: yellow
+      level: warning
+      hex: "#fc0"
+      variable: $functional-yellow-dark
     - name: Red
       class: red
       level: danger
       hex: "#cd3c14"
       variable: $functional-red
+    - name: Red on dark
+      class: red
+      level: danger
+      hex: "#d53f15"
+      variable: $functional-red-dark
 - category: Grays
   name: "Grays"
   colors:

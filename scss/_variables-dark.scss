@@ -6,44 +6,51 @@
 // Global colors
 //
 
+// Boosted mod: redefine basic colors
+$functional-green-dark:  #32c832 !default;
+$functional-blue-dark:   #527edb !default;
+$functional-yellow-dark: #fc0 !default;
+$functional-red-dark:    #d53f15 !default;
+// End mod
+
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-text-dark-variables
 $primary-text-emphasis-dark:        $primary !default; // Boosted mod: isntead of `tint-color($primary, 40%)`
-$secondary-text-emphasis-dark:      $secondary !default; // Boosted mod: instead of `tint-color($secondary, 40%)`
-$success-text-emphasis-dark:        $success !default; // Boosted mod: instead of `tint-color($success, 40%)`
-$info-text-emphasis-dark:           $info !default; // Boosted mod: instead of `tint-color($info, 40%)`
-$warning-text-emphasis-dark:        $warning !default; // Boosted mod: instead of `tint-color($warning, 40%)`
-$danger-text-emphasis-dark:         $danger !default; // Boosted mod: instead of `tint-color($danger, 40%)`
-$light-text-emphasis-dark:          $light !default; // Boosted mod: instead of `$gray-100`
+$secondary-text-emphasis-dark:      $white !default; // Boosted mod: instead of `tint-color($secondary, 40%)`
+$success-text-emphasis-dark:        $functional-green-dark !default; // Boosted mod: instead of `tint-color($success, 40%)`
+$info-text-emphasis-dark:           $functional-blue-dark !default; // Boosted mod: instead of `tint-color($info, 40%)`
+$warning-text-emphasis-dark:        $functional-yellow-dark !default; // Boosted mod: instead of `tint-color($warning, 40%)`
+$danger-text-emphasis-dark:         $functional-red-dark !default; // Boosted mod: instead of `tint-color($danger, 40%)`
+$light-text-emphasis-dark:          $gray-700 !default; // Boosted mod: instead of `$gray-100`
 $dark-text-emphasis-dark:           $dark !default; // Boosted mod: instead of `$gray-300`
 // scss-docs-end theme-text-dark-variables
 
 // scss-docs-start theme-bg-subtle-dark-variables
 $primary-bg-subtle-dark:            $primary !default; // Boosted mod: instead of `shade-color($primary, 80%)`
-$secondary-bg-subtle-dark:          $secondary !default; // Boosted mod: instead of `shade-color($secondary, 80%)`
-$success-bg-subtle-dark:            $success !default; // Boosted mod: instead of `shade-color($success, 80%)`
-$info-bg-subtle-dark:               $info !default; // Boosted mod: instead of `shade-color($info, 80%)`
-$warning-bg-subtle-dark:            $warning !default; // Boosted mod: instead of `shade-color($warning, 80%)`
-$danger-bg-subtle-dark:             $danger !default; // Boosted mod: instead of `shade-color($danger, 80%)`
-$light-bg-subtle-dark:              $light !default; // Boosted mod: instead of `$gray-800`
+$secondary-bg-subtle-dark:          $white !default; // Boosted mod: instead of `shade-color($secondary, 80%)`
+$success-bg-subtle-dark:            $functional-green-dark !default; // Boosted mod: instead of `shade-color($success, 80%)`
+$info-bg-subtle-dark:               $functional-blue-dark !default; // Boosted mod: instead of `shade-color($info, 80%)`
+$warning-bg-subtle-dark:            $functional-yellow-dark !default; // Boosted mod: instead of `shade-color($warning, 80%)`
+$danger-bg-subtle-dark:             $functional-red-dark !default; // Boosted mod: instead of `shade-color($danger, 80%)`
+$light-bg-subtle-dark:              $gray-700 !default; // Boosted mod: instead of `$gray-800`
 $dark-bg-subtle-dark:               $dark !default; // Boosted mod: instead of `mix($gray-800, $black)`
 // scss-docs-end theme-bg-subtle-dark-variables
 
 // scss-docs-start theme-border-subtle-dark-variables
 $primary-border-subtle-dark:        $primary !default; // Boosted mod: instead of `shade-color($primary, 40%)`
-$secondary-border-subtle-dark:      $secondary !default; // Boosted mod: instead of `shade-color($secondary, 40%)`
-$success-border-subtle-dark:        $success !default; // Boosted mod: instead of `shade-color($success, 40%)`
-$info-border-subtle-dark:           $info !default; // Boosted mod: instead of `shade-color($info, 40%)`
-$warning-border-subtle-dark:        $warning !default; // Boosted mod: instead of `shade-color($warning, 40%)`
-$danger-border-subtle-dark:         $danger !default; // Boosted mod: instead of `shade-color($danger, 40%)`
-$light-border-subtle-dark:          $light !default; // Boosted mod: instead of `$gray-700`
+$secondary-border-subtle-dark:      $white !default; // Boosted mod: instead of `shade-color($secondary, 40%)`
+$success-border-subtle-dark:        $functional-green-dark !default; // Boosted mod: instead of `shade-color($success, 40%)`
+$info-border-subtle-dark:           $functional-blue-dark !default; // Boosted mod: instead of `shade-color($info, 40%)`
+$warning-border-subtle-dark:        $functional-yellow-dark !default; // Boosted mod: instead of `shade-color($warning, 40%)`
+$danger-border-subtle-dark:         $functional-red-dark !default; // Boosted mod: instead of `shade-color($danger, 40%)`
+$light-border-subtle-dark:          $gray-700 !default; // Boosted mod: instead of `$gray-700`
 $dark-border-subtle-dark:           $dark !default; // Boosted mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
 $body-color-dark:                   $gray-300 !default;
 $body-bg-dark:                      $gray-950 !default; // Boosted mod: instead of `$gray-900`
-$body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
-$body-secondary-bg-dark:            $gray-800 !default;
+$body-secondary-color-dark:         $gray-500 !default; // Boosted mod: instead of `rgba($body-color-dark, .75)`
+$body-secondary-bg-dark:            $gray-900 !default; // Boosted mod: instead of `$gray-800`
 $body-tertiary-color-dark:          rgba($body-color-dark, .5) !default;
 $body-tertiary-bg-dark:             #414141 !default; // Boosted mod: instead of `mix($gray-800, $gray-900, 50%)`
 $body-emphasis-color-dark:          $white !default; // Boosted mod: instead of `$gray-100`

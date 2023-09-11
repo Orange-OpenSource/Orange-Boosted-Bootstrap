@@ -6,6 +6,21 @@
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb
 
+$themed-colors: (
+  "surface": $white,
+  "color": $black,
+  "inverted-surface": $black,
+  "inverted-color": $white,
+  "secondary-surface": $gray-300,
+  "secondary-border": $gray-500,
+  "secondary-text": $gray-700,
+  "primary": $accessible-orange,
+  "success": $functional-green,
+  "info": $functional-blue,
+  "warning": $functional-yellow,
+  "danger": $functional-red,
+) !default;
+
 // scss-docs-start theme-text-map
 $theme-colors-text: (
   "primary": $primary-text-emphasis,
@@ -57,11 +72,27 @@ $background-colors: map-merge(
 ) !default;
 // End mod
 
+$themed-colors-dark: null !default;
 $theme-colors-text-dark: null !default;
 $theme-colors-bg-subtle-dark: null !default;
 $theme-colors-border-subtle-dark: null !default;
 
 @if $enable-dark-mode {
+  $themed-colors-dark: (
+    "surface": $gray-950,
+    "color": $gray-300,
+    "inverted-surface": $white,
+    "inverted-color": $black,
+    "secondary-surface": $gray-900,
+    "secondary-border": $gray-700,
+    "secondary-text": $gray-500,
+    "primary": $brand-orange,
+    "success": $functional-green-dark,
+    "info": $functional-blue-dark,
+    "warning": $functional-yellow-dark,
+    "danger": $functional-red-dark,
+  ) !default;
+
   // scss-docs-start theme-text-dark-map
   $theme-colors-text-dark: (
     "primary": $primary-text-emphasis-dark,
