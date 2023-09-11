@@ -217,6 +217,12 @@ $custom-colors: (
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+// Add a custom color to $theme-colors
+$custom-colors-dark: (
+  "custom-color": #e1d2f2
+);
+$theme-colors-dark: map-merge($theme-colors-dark, $custom-colors-dark);
+
 @import "maps";
 @import "mixins";
 @import "utilities";
