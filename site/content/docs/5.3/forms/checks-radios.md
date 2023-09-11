@@ -414,30 +414,13 @@ Star ratings come with a smaller variant: `.star-rating-sm`.
 
 ### Dark variant
 
-Add `.star-rating-dark` to the `.star-rating` for a dark variant.
+{{< deprecated-in "5.3.3" >}}
 
-{{< example class="bg-dark" >}}
-<form>
-  <fieldset class="star-rating star-rating-dark">
-    <legend class="visually-hidden">Results relevance</legend>
+{{< callout warning >}}
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
 
-    <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"><span class="visually-hidden">Terrible</span></label>
-
-    <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"><span class="visually-hidden">Bad</span></label>
-
-    <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"><span class="visually-hidden">Mixed</span></label>
-
-    <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"><span class="visually-hidden">Good</span></label>
-
-    <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
-  </fieldset>
-</form>
-{{< /example >}}
+Add `data-bs-theme="dark"` to the `.star-rating` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
 
 ### Readonly
 

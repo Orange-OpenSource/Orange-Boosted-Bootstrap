@@ -257,24 +257,6 @@
 }
 // scss-docs-end list-group-modifiers
 
-.list-group-dark {
-  // scss-docs-start list-group-dark-css-vars
-  --#{$prefix}list-group-color: #{$list-group-dark-color}; // Boosted mod
-  --#{$prefix}list-group-bg: #{$list-group-dark-bg}; // Boosted mod
-  --#{$prefix}list-group-border-color: #{$list-group-dark-border-color}; // Boosted mod
-  --#{$prefix}list-group-action-color: #{$list-group-dark-action-color}; // Boosted mod
-  --#{$prefix}list-group-action-hover-color: #{$list-group-dark-action-hover-color}; // Boosted mod
-  --#{$prefix}list-group-action-active-color: #{$list-group-dark-action-active-color}; // Boosted mod
-  --#{$prefix}list-group-action-hover-bg: #{$list-group-dark-hover-bg}; // Boosted mod
-  --#{$prefix}list-group-action-active-bg: #{$list-group-dark-action-active-bg}; // Boosted mod
-  --#{$prefix}list-group-disabled-color: #{$list-group-dark-disabled-color}; // Boosted mod
-  --#{$prefix}list-group-disabled-bg: #{$list-group-dark-disabled-bg}; // Boosted mod
-  --#{$prefix}list-group-active-color: #{$list-group-dark-active-color}; // Boosted mod
-  --#{$prefix}list-group-active-bg: #{$list-group-dark-active-bg}; // Boosted mod
-  --#{$prefix}list-group-active-border-color: #{$list-group-dark-active-border-color}; // Boosted mod
-  // scss-docs-end list-group-dark-css-vars
-}
-
 .card .list-group {
   --#{$prefix}list-group-item-padding-x: #{var(--#{$prefix}card-spacer-x)};
 }
