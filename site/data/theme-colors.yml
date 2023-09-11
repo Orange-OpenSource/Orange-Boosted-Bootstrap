@@ -3,19 +3,20 @@
   contrast_color: dark
 - name: secondary
   hex: "#000"
+  contrast_color: white
 - name: success
   hex: "#32c832"
-  contrast_color: dark
 - name: danger
   hex: "#cd3c14"
+  contrast_color: white
 - name: warning
   hex: "#fc0"
   contrast_color: dark
 - name: info
   hex: "#527edb"
-  contrast_color: dark
 - name: light
   hex: "#ddd"
   contrast_color: dark
 - name: dark
   hex: "#000"
+  contrast_color: white

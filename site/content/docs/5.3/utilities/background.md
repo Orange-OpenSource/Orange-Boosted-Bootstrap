@@ -22,20 +22,24 @@ Background utilities like `.bg-*` that generated from our original `$theme-color
 
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
-<div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
+<div class="p-3 mb-2 fw-bold bg-primary text-black">.bg-primary</div>
 <div class="p-3 mb-2 fw-bold bg-secondary text-white">.bg-secondary</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-green">.bg-supporting-green</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-purple">.bg-supporting-purple</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-yellow">.bg-supporting-yellow</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-blue">.bg-supporting-blue</div>
-<div class="p-3 mb-2 fw-bold bg-supporting-pink">.bg-supporting-pink</div>
-<div class="p-3 mb-2 fw-bold bg-light">.bg-light</div>
+<div class="p-3 mb-2 fw-bold bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 fw-bold bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 fw-bold bg-warning text-black">.bg-warning</div>
+<div class="p-3 mb-2 fw-bold bg-info text-white">.bg-info</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-black">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue text-black">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink text-black">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-light text-black">.bg-light</div>
 <div class="p-3 mb-2 fw-bold bg-dark text-white">.bg-dark</div>
 <div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
 <div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
-<div class="p-3 mb-2 fw-bold bg-white">.bg-white</div>
+<div class="p-3 mb-2 fw-bold bg-white text-black">.bg-white</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
@@ -110,9 +114,13 @@ Boosted supersedes Bootstrap color variables with Orange brand color.
 
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-color-dark-variables" file="scss/_variables-dark.scss" >}}
 
 <!-- Boosted mod: no background gradient -->
 
@@ -132,6 +140,8 @@ Theme colors are then put into a Sass map so we can loop over them to generate o
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
+
 Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
@@ -139,6 +149,8 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 RGB colors are generated from a separate Sass map:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-colors-rgb-dark" file="scss/_maps.scss" >}}
 
 Background color opacities build on that with their own map that's consumed by the utilities API:
 
