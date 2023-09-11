@@ -47,32 +47,13 @@ Add `.active` to a `.stepped-process-item` to indicate the current step, alongsi
 
 ## Dark variant
 
-{{< added-in "5.2.1" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Add `.stepped-process-dark` to the `.stepped-process` for a dark variant.
+{{< callout warning >}}
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
 
-{{< example class="bg-dark" >}}
-<nav class="stepped-process stepped-process-dark" aria-label="Checkout process">
-  <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
-  <ol>
-    <li class="stepped-process-item">
-      <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
-    </li>
-    <li class="stepped-process-item active">
-      <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
-    </li>
-    <li class="stepped-process-item">
-      <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
-    </li>
-    <li class="stepped-process-item">
-      <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
-    </li>
-    <li class="stepped-process-item">
-      <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
-    </li>
-  </ol>
-</nav>
-{{< /example >}}
+Add `data-bs-theme="dark"` to the `.stepped-process` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
 
 ## CSS
 
@@ -84,16 +65,6 @@ As part of Boosted's evolving CSS variables approach, stepped processes now use 
 
 {{< scss-docs name="stepped-process-css-vars" file="scss/_stepped-process.scss" >}}
 
-Customization through CSS variables can be seen on the `.stepped-process-dark` modifier class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="stepped-process-dark-css-vars" file="scss/_stepped-process.scss" >}}
-
 ### Sass variables
 
-Variables for all stepped processes:
-
 {{< scss-docs name="stepped-process" file="scss/_variables.scss" >}}
-
-Variables for the [dark stepped process](#dark-variant):
-
-{{< scss-docs name="stepped-process-dark-variables" file="scss/_variables.scss" >}}

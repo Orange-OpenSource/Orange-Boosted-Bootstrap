@@ -15,6 +15,24 @@
   }
 }
 
+// Boosted mod
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    @each $color, $value in $theme-colors-dark {
+      .link-#{$color} {
+        @if $link-shade-percentage != 0 {
+          &:hover {
+            $hover-color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage));
+            color: RGBA(#{to-rgb($hover-color)}, var(--#{$prefix}link-opacity, 1)) if($enable-important-utilities, !important, null);
+            text-decoration-color: RGBA(to-rgb($hover-color), var(--#{$prefix}link-underline-opacity, 1)) if($enable-important-utilities, !important, null);
+          }
+        }
+      }
+    }
+  }
+}
+// End mod
+
 // One-off special link helper as a bridge until v6
 .link-body-emphasis {
   color: RGBA(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}link-opacity, 1)) if($enable-important-utilities, !important, null);

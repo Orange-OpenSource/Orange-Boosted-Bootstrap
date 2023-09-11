@@ -57,14 +57,6 @@ Have a look at our table documentation for some [insight into how we're using CS
 
 Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
 
-### Dark text rule
-
-Using CSS variables allows a better flexibility on certain rules. This way we adapt our text variant color to our dark variants components instead of rewriting rules for each component. This process implies to override some existing CSS variables and to re-initialize those in some cases.
-
-Here is our proposal to handle the different text variants over the website:
-
-{{< scss-docs name="root-dark-rule" file="scss/_root.scss" >}}
-
 ## Prefix
 
 Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that's required on every CSS variable.

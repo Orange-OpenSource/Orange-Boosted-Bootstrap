@@ -137,52 +137,18 @@
   --#{$prefix}form-invalid-color: #{$form-invalid-color};
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
-}
 
-// scss-docs-start root-dark-rule
-// Boosted mod
-[class*="bg-black"],
-[class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
-[class*="bg-secondary"] {
-  --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
-  --#{$prefix}link-color: #{$link-color-inverted};
-  --#{$prefix}link-hover-color: #{$link-hover-color-inverted};
-  --#{$prefix}link-color-rgb: #{to-rgb($link-color-inverted)};
-  --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
-  --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
-  --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
-  --#{$prefix}caption-color: #{$table-caption-color-inverted};
-  --#{$prefix}code-color: #{$code-color-inverted};
-  --#{$prefix}highlight-color: #{$mark-color-inverted};
-  --#{$prefix}highlight-bg: #{$mark-bg-inverted};
-  --#{$prefix}kbd-color: #{$kbd-color-inverted};
-  --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
-  --#{$prefix}pre-color: #{$pre-color-inverted};
-  --#{$prefix}body-color: #{$body-color-dark};
-  --#{$prefix}heading-color: #{$headings-color-dark};
-
-  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-  [class*="bg-"]:not(&):not(.bg-transparent) {
-    --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
-    --#{$prefix}link-color: #{$link-color};
-    --#{$prefix}link-hover-color: #{$link-hover-color};
-    --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
-    --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
-    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
-    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
-    --#{$prefix}caption-color: #{$table-caption-color};
-    --#{$prefix}code-color: #{$code-color};
-    --#{$prefix}highlight-color: #{$mark-color};
-    --#{$prefix}highlight-bg: #{$mark-bg};
-    --#{$prefix}kbd-color: #{$kbd-color};
-    --#{$prefix}kbd-bg: #{$kbd-bg};
-    --#{$prefix}pre-color: #{$pre-color};
-    --#{$prefix}body-color: #{$body-color};
-    --#{$prefix}heading-color: #{$headings-color};
-  }
+  // ******* Additions for dark-mode
+  --#{$prefix}hover-color: #{$body-color};
+  --#{$prefix}active-bg: #{$gray-400};
+  --#{$prefix}disabled-color: #{$gray-500};
+  --#{$prefix}disabled-filter: #{$disabled-filter};
+  --#{$prefix}placeholder-color: #{$gray-700};
+  --#{$prefix}gray-tweak: #{$gray-900};
+  --#{$prefix}input-filter: #{$invert-filter};
+  --#{$prefix}icon-filter: none;
+  // ******* End additions for dark-mode
 }
-// End mod
-// scss-docs-end root-dark-rule
 
 @if $enable-dark-mode {
   @include color-mode(dark, true) {
@@ -206,6 +172,16 @@
     --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
     --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
     --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+
+    // Boosted mod
+    @each $color, $value in $theme-colors-dark {
+      --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors-rgb-dark {
+      --#{$prefix}#{$color}-rgb: #{$value};
+    }
+    // End mod
 
     @each $color, $value in $theme-colors-text-dark {
       --#{$prefix}#{$color}-text-emphasis: #{$value};
@@ -233,10 +209,24 @@
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
 
+    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod
+    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // Boosted mod
+
     --#{$prefix}form-valid-color: #{$form-valid-color-dark};
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+
+    // ******* Additions for dark-mode
+    --#{$prefix}hover-color: #{$brand-orange};
+    --#{$prefix}active-bg: #{$gray-700};
+    --#{$prefix}disabled-color: #{$gray-700};
+    --#{$prefix}disabled-filter: #{$disabled-filter-dark};
+    --#{$prefix}placeholder-color: #{$gray-600};
+    --#{$prefix}gray-tweak: #{$gray-700};
+    --#{$prefix}input-filter: none;
+    --#{$prefix}icon-filter: #{$invert-filter};
+    // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
   }
 }
