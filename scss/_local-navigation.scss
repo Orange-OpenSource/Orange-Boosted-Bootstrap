@@ -117,15 +117,3 @@
     }
   }
 }
-
-.local-nav-dark {
-  // scss-docs-start local-nav-dark-css-vars
-  --#{$prefix}local-nav-color: #{$local-nav-dark-color};
-  --#{$prefix}local-nav-bg: #{$local-nav-dark-bg};
-  --#{$prefix}local-nav-hover-color: #{$local-nav-dark-hover-color};
-  --#{$prefix}local-nav-hover-bg: #{$local-nav-dark-hover-bg};
-  --#{$prefix}local-nav-active-color: #{$local-nav-dark-active-color};
-  --#{$prefix}local-nav-active-bg: #{$local-nav-dark-active-bg};
-  --#{$prefix}local-nav-border-color: #{$local-nav-dark-border-color};
-  // scss-docs-end local-nav-dark-css-vars
-}
