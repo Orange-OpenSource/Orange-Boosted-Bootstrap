@@ -623,7 +623,6 @@ aliases:
 
         <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-3 mb-3 list-unstyled">
           <li class="card border-0 pt-2 pt-md-0">
-            <h3 class="visually-hidden">xxxxx xxxxxx xx xxx xxx</h3>
             <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex">
                 <p class="mb-0 p-2 bg-primary text-nowrap">
@@ -654,39 +653,24 @@ aliases:
                   <span class="visually-hidden">seconds left</span>
                 </p>
               </div>
-              <span class="tag tag-sm">103 in stock</span>
+              <p class="tag tag-sm mb-0">103 in stock</p>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">
-                    {{< placeholder width="100%" height="160" text="icon" >}}
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxx xxxxxx xx xxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
                   </div>
-                  DAS: 0,99 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxx xxxxxx xx xxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible1" name="rating1" value="1" class="visually-hidden">
-                      <label for="terrible1" title="Terrible"></label>
-
-                      <input type="radio" id="bad1" name="rating1" value="2" class="visually-hidden">
-                      <label for="bad1" title="Bad"></label>
-
-                      <input type="radio" id="mixed1" name="rating1" value="3" class="visually-hidden" checked>
-                      <label for="mixed1" title="Mixed"></label>
-
-                      <input type="radio" id="good1" name="rating1" value="4" class="visually-hidden">
-                      <label for="good1" title="Good"></label>
-
-                      <input type="radio" id="excellent1" name="rating1" value="5" class="visually-hidden">
-                      <label for="excellent1" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <defs>
                         <linearGradient id="Gradient1">
@@ -697,14 +681,20 @@ aliases:
                       <circle cx="10" cy="10" r="10" fill="url('#Gradient1')"/>
                     </svg>
                     5 colors
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">2 500 350 FCFA</span><br>
                     <span class="visually-hidden">instead of </span>
                     <span class="text-decoration-line-through">3 000 000 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">
+                    {{< placeholder width="100%" height="160" text="icon" >}}
+                  </div>
+                  DAS: 0,99 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -721,7 +711,6 @@ aliases:
           </li>
 
           <li class="card border-0 pt-4 pt-md-0">
-            <h3 class="visually-hidden">xxxx xxx</h3>
             <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-danger fw-bold">
               <div class="d-flex mt-md-3">
                 <p class="mb-0 p-2 text-bg-danger text-nowrap">
@@ -733,44 +722,35 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,80 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible2" name="rating2" value="1" class="visually-hidden">
-                      <label for="terrible2" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad2" name="rating2" value="2" class="visually-hidden">
-                      <label for="bad2" title="Bad"></label>
-
-                      <input type="radio" id="mixed2" name="rating2" value="3" class="visually-hidden" checked>
-                      <label for="mixed2" title="Mixed"></label>
-
-                      <input type="radio" id="good2" name="rating1" value="4" class="visually-hidden">
-                      <label for="good2" title="Good"></label>
-
-                      <input type="radio" id="excellent2" name="rating2" value="5" class="visually-hidden">
-                      <label for="excellent2" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000"/>
                     </svg>
                     Black
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">50 530 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,80 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -787,7 +767,6 @@ aliases:
           </li>
 
           <li class="card border-0 pt-4 pt-md-5 pt-xl-0">
-            <h3 class="visually-hidden">xxxxxx xxxx xxx</h3>
             <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-info fw-bold">
               <div class="d-flex mt-xl-3">
                 <p class="mb-0 p-2 text-bg-info text-nowrap">
@@ -799,44 +778,35 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,75 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxxx xxxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible3" name="rating3" value="1" class="visually-hidden">
-                      <label for="terrible3" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxx xxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad3" name="rating3" value="2" class="visually-hidden">
-                      <label for="bad3" title="Bad"></label>
-
-                      <input type="radio" id="mixed3" name="rating3" value="3" class="visually-hidden" checked>
-                      <label for="mixed3" title="Mixed"></label>
-
-                      <input type="radio" id="good3" name="rating3" value="4" class="visually-hidden">
-                      <label for="good3" title="Good"></label>
-
-                      <input type="radio" id="excellent3" name="rating3" value="5" class="visually-hidden">
-                      <label for="excellent3" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#085edb"/>
                     </svg>
                     Blue
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">129 952 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,75 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -853,7 +823,6 @@ aliases:
           </li>
 
           <li class="card border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxxxxxx xxx</h3>
             <div class="d-flex mt-xl-3 mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
               <div class="d-flex mt-xl-3">
                 <p class="mb-0 p-2 bg-success text-nowrap">
@@ -865,44 +834,35 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,90 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxxxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible4" name="rating4" value="1" class="visually-hidden">
-                      <label for="terrible4" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad4" name="rating4" value="2" class="visually-hidden">
-                      <label for="bad4" title="Bad"></label>
-
-                      <input type="radio" id="mixed4" name="rating4" value="3" class="visually-hidden" checked>
-                      <label for="mixed4" title="Mixed"></label>
-
-                      <input type="radio" id="good4" name="rating4" value="4" class="visually-hidden">
-                      <label for="good4" title="Good"></label>
-
-                      <input type="radio" id="excellent4" name="rating4" value="5" class="visually-hidden">
-                      <label for="excellent4" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">323 380 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,90 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -919,7 +879,6 @@ aliases:
           </li>
 
           <li class="card border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxxxxxx xxxxxx xxx</h3>
             <div class="d-flex position-relative mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex">
                 <p class="mb-0 p-2 bg-primary text-nowrap">
@@ -950,49 +909,40 @@ aliases:
                   <span class="visually-hidden">seconds left</span>
                 </p>
               </div>
-              <span class="tag tag-sm">103 in stock</span>
+              <p class="tag tag-sm mb-0">103 in stock</p>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,89 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxxxx xxxxxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible5" name="rating5" value="1" class="visually-hidden">
-                      <label for="terrible5" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad5" name="rating5" value="2" class="visually-hidden">
-                      <label for="bad5" title="Bad"></label>
-
-                      <input type="radio" id="mixed5" name="rating5" value="3" class="visually-hidden" checked>
-                      <label for="mixed5" title="Mixed"></label>
-
-                      <input type="radio" id="good5" name="rating5" value="4" class="visually-hidden">
-                      <label for="good5" title="Good"></label>
-
-                      <input type="radio" id="excellent5" name="rating5" value="5" class="visually-hidden">
-                      <label for="excellent5" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">625 605 FCFA</span><br>
                     <span class="visually-hidden">instead of </span>
                     <span class="text-decoration-line-through">725 605 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,89 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -1009,7 +959,6 @@ aliases:
           </li>
 
           <li class="card border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxx xx xx</h3>
             <div class="d-flex mt-md-3 mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex mt-md-3">
                 <p class="mb-0 p-2 bg-primary text-nowrap">
@@ -1021,46 +970,37 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,87 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxx xx xx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible6" name="rating6" value="1" class="visually-hidden">
-                      <label for="terrible6" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxx xx xx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad6" name="rating6" value="2" class="visually-hidden">
-                      <label for="bad6" title="Bad"></label>
-
-                      <input type="radio" id="mixed6" name="rating6" value="3" class="visually-hidden" checked>
-                      <label for="mixed6" title="Mixed"></label>
-
-                      <input type="radio" id="good6" name="rating6" value="4" class="visually-hidden">
-                      <label for="good6" title="Good"></label>
-
-                      <input type="radio" id="excellent6" name="rating6" value="5" class="visually-hidden">
-                      <label for="excellent6" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000000"/>
                     </svg>
                     Black
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">459 900 FCFA</span><br>
                     <span class="visually-hidden">instead of </span>
                     <span class="text-decoration-line-through">359 900 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,87 W/Kg
+                </div>
               </div>
               <div class="d-flex mb-3 p-2 bg-supporting-yellow">
                 <svg class="flex-shrink-0 me-2" width="1.875rem" height="1.875rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -1083,7 +1023,6 @@ aliases:
           </li>
 
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxxxxxx xxx</h3>
             <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-success fw-bold">
               <div class="d-flex">
                 <p class="mb-0 p-2 bg-success text-nowrap">
@@ -1095,44 +1034,35 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,90 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxxxx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible7" name="rating7" value="1" class="visually-hidden">
-                      <label for="terrible7" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad7" name="rating7" value="2" class="visually-hidden">
-                      <label for="bad7" title="Bad"></label>
-
-                      <input type="radio" id="mixed7" name="rating7" value="3" class="visually-hidden" checked>
-                      <label for="mixed7" title="Mixed"></label>
-
-                      <input type="radio" id="good7" name="rating7" value="4" class="visually-hidden">
-                      <label for="good7" title="Good"></label>
-
-                      <input type="radio" id="excellent7" name="rating7" value="5" class="visually-hidden">
-                      <label for="excellent7" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">330 320 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,90 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -1149,7 +1079,6 @@ aliases:
           </li>
 
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxxxxxx xxxxxx xx</h3>
             <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex">
                 <p class="mb-0 p-2 bg-primary text-nowrap">
@@ -1161,46 +1090,37 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,77 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxxxxxx xxxxxx xx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible8" name="rating8" value="1" class="visually-hidden">
-                      <label for="terrible8" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxxxxxx xxxxxx xx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad8" name="rating8" value="2" class="visually-hidden">
-                      <label for="bad8" title="Bad"></label>
-
-                      <input type="radio" id="mixed8" name="rating8" value="3" class="visually-hidden" checked>
-                      <label for="mixed8" title="Mixed"></label>
-
-                      <input type="radio" id="good8" name="rating8" value="4" class="visually-hidden">
-                      <label for="good8" title="Good"></label>
-
-                      <input type="radio" id="excellent8" name="rating8" value="5" class="visually-hidden">
-                      <label for="excellent8" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#666666"/>
                     </svg>
                     Grey
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">550 450 FCFA</span><br>
                     <span class="visually-hidden">instead of </span>
                     <span class="text-decoration-line-through">700 200 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,77 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
@@ -1217,7 +1137,6 @@ aliases:
           </li>
 
           <li class="card d-none d-xl-flex border-0 pt-4 pt-md-5">
-            <h3 class="visually-hidden">xxx xx xxx</h3>
             <div class="d-flex mb-2 align-items-end justify-content-between border-bottom border-primary fw-bold">
               <div class="d-flex">
                 <p class="mb-0 p-2 bg-primary text-nowrap">
@@ -1229,46 +1148,37 @@ aliases:
               </div>
             </div>
             <div class="card-body d-flex flex-column align-items-stretch justify-content-between p-0">
-              <div class="row mb-3 align-items-start">
-                <div class="col-5 small fw-bold">
-                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
-                  DAS: 0,82 W/Kg
-                </div>
-                <dl class="col-7">
-                  <dt class="fs-4 fw-bold mb-2" aria-hidden="true">xxx xx xxx</dt>
-                  <dd>
-                    <fieldset class="star-rating star-rating-sm pt-md-1 mb-3" disabled aria-hidden="true">
-                      <legend class="visually-hidden">rated 3 stars out of 5</legend>
-                      <input type="radio" id="terrible9" name="rating9" value="1" class="visually-hidden">
-                      <label for="terrible9" title="Terrible"></label>
+              <div class="row flex-row-reverse mb-3 align-items-start">
+                <div class="col-7">
+                  <h3 class="fs-4 mb-2">xxx xx xxx</h3>
+                  <div class="star-rating star-rating-sm d-flex pt-md-1 mb-3">
+                    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-                      <input type="radio" id="bad9" name="rating9" value="2" class="visually-hidden">
-                      <label for="bad9" title="Bad"></label>
-
-                      <input type="radio" id="mixed9" name="rating9" value="3" class="visually-hidden" checked>
-                      <label for="mixed9" title="Mixed"></label>
-
-                      <input type="radio" id="good9" name="rating9" value="4" class="visually-hidden">
-                      <label for="good9" title="Good"></label>
-
-                      <input type="radio" id="excellent9" name="rating9" value="5" class="visually-hidden">
-                      <label for="excellent9" title="Excellent"></label>
-                    </fieldset>
-                    <span class="visually-hidden">rated 3 stars out of 5</span>
-                  </dd>
-                  <dd class="mb-3 fw-bold d-inline-flex align-middle">
+                    <div aria-hidden="true">
+                      <span></span>
+                      <span></span>
+                      <span class="checked"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mb-3 fw-bold d-inline-flex align-middle">
                     <svg class="border border-1 rounded-circle me-2 bg-dark" width="1.25rem" height="1.25rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle cx="10" cy="10" r="10" fill="#000000"/>
                     </svg>
                     Black
-                  </dd>
-                  <dd class="mb-0 pt-md-1">
+                  </p>
+                  <p class="mb-0 pt-md-1">
                     <span class="d-block mb-1 fw-bold">From</span>
                     <span class="fs-4 fw-bold text-primary">300 600 FCFA</span><br>
                     <span class="visually-hidden">instead of </span>
                     <span class="text-decoration-line-through">500 600 FCFA</span>
-                  </dd>
-                </dl>
+                  </p>
+                </div>
+                <div class="col-5 small fw-bold">
+                  <div class="mb-1 ratio ratio-3x4">{{< placeholder width="100%" height="160" text="icon" >}}</div>
+                  DAS: 0,82 W/Kg
+                </div>
               </div>
               <div class="row">
                 <div class="offset-5 col-7">
