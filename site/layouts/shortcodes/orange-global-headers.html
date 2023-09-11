@@ -30,7 +30,7 @@
 {{- $aria_label := .Get "aria_label"}}
 {{- $input := .Inner -}}
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{ $aria_label }}">
+<nav class="navbar bg-dark navbar-expand-lg{{ cond $minimized " header-minimized" "" }}" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
       <a class="stretched-link" href="#">
@@ -140,7 +140,7 @@
   </div>
 </nav>
 {{- if $navigation }}
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}.2">
+<nav class="navbar bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}.2">
   <div class="container-xxl">
     <div id="{{ $id }}.1" class="navbar-collapse collapse m-0 {{ $id }}">
 {{- if $supra }}
