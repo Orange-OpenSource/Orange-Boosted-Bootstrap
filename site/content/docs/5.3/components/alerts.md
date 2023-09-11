@@ -150,7 +150,7 @@ Add `.bg-dark` to the `.alert` for a dark variant. Close button can be inverted 
 <div class="alert alert-warning alert-dismissible fade show bg-dark" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 

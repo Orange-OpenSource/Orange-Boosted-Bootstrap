@@ -14,9 +14,9 @@ Wrap a series of buttons with `.btn` in `.btn-group`.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 {{< /example >}}
 
@@ -28,9 +28,9 @@ These classes can also be added to groups of links, as an alternative to the [`.
 
 {{< example >}}
 <div class="btn-group" role="group">
-  <a href="#" class="btn btn-secondary active" aria-current="page">Active link</a>
-  <a href="#" class="btn btn-secondary">Link</a>
-  <a href="#" class="btn btn-secondary">Link</a>
+  <a href="#" class="btn btn-outline-secondary active" aria-current="page">Active link</a>
+  <a href="#" class="btn btn-outline-secondary">Link</a>
+  <a href="#" class="btn btn-outline-secondary">Link</a>
 </div>
 {{< /example >}}
 
@@ -105,12 +105,12 @@ This variant should not be used because it does not respect the Orange Design Sy
     <button type="button" class="btn btn-primary">4</button>
   </div>
   <div class="btn-group me-2" role="group" aria-label="Second group">
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-    <button type="button" class="btn btn-secondary">7</button>
+    <button type="button" class="btn btn-outline-secondary">5</button>
+    <button type="button" class="btn btn-outline-secondary">6</button>
+    <button type="button" class="btn btn-outline-secondary">7</button>
   </div>
   <div class="btn-group" role="group" aria-label="Third group">
-    <button type="button" class="btn btn-info">8</button>
+    <button type="button" class="btn btn-secondary">8</button>
   </div>
 </div>
 {{< /example >}}
@@ -120,10 +120,10 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group me-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
+    <button type="button" class="btn btn-outline-secondary">1</button>
+    <button type="button" class="btn btn-outline-secondary">2</button>
+    <button type="button" class="btn btn-outline-secondary">3</button>
+    <button type="button" class="btn btn-outline-secondary">4</button>
   </div>
   <div class="input-group">
     <div class="input-group-text" id="btnGroupAddon">@</div>
@@ -133,10 +133,10 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
+    <button type="button" class="btn btn-outline-secondary">1</button>
+    <button type="button" class="btn btn-outline-secondary">2</button>
+    <button type="button" class="btn btn-outline-secondary">3</button>
+    <button type="button" class="btn btn-outline-secondary">4</button>
   </div>
   <div class="input-group">
     <div class="input-group-text" id="btnGroupAddon2">@</div>
@@ -151,21 +151,21 @@ Instead of applying button sizing classes to every button in a group, just add `
 
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 <br>
 <div class="btn-group" role="group" aria-label="Default button group">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 <br>
 <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
 {{< /example >}}
 
@@ -179,12 +179,12 @@ This variant should not be used because it does not respect the Orange Design Sy
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  <button type="button" class="btn btn-secondary">1</button>
-  <button type="button" class="btn btn-secondary">2</button>
+  <button type="button" class="btn btn-outline-secondary">1</button>
+  <button type="button" class="btn btn-outline-secondary">2</button>
 
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-secondary">Split button</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Split button</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -214,11 +214,11 @@ These 2 vertical variants should not be used because they do not respect the Ora
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-  <button type="button" class="btn btn-secondary">Button</button>
-  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-outline-secondary">Button</button>
+  <button type="button" class="btn btn-outline-secondary">Button</button>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-secondary">Split button</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Split button</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -227,8 +227,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropstart" role="group">
-    <button type="button" class="btn btn-secondary">Split button</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Split button</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -237,8 +237,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropend" role="group">
-    <button type="button" class="btn btn-secondary">Split button</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Split button</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -247,8 +247,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropup" role="group">
-    <button type="button" class="btn btn-secondary">Split button</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Split button</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">

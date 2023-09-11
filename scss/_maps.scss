@@ -45,11 +45,18 @@ $theme-colors-border-subtle: (
 ) !default;
 // scss-docs-end theme-border-subtle-map
 
+$theme-colors-rgb-dark: null !default;
 $theme-colors-text-dark: null !default;
 $theme-colors-bg-subtle-dark: null !default;
 $theme-colors-border-subtle-dark: null !default;
 
 @if $enable-dark-mode {
+  // Boosted mod
+  // scss-docs-start theme-colors-rgb-dark
+  $theme-colors-rgb-dark: map-loop($theme-colors-dark, to-rgb, "$value") !default;
+  // scss-docs-end theme-colors-rgb-dark
+  // End mod
+
   // scss-docs-start theme-text-dark-map
   $theme-colors-text-dark: (
     "primary": $primary-text-emphasis-dark,

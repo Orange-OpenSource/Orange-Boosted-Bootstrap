@@ -40,9 +40,9 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 <p class="text-body-tertiary">.text-body-tertiary</p>
 
 <p class="text-black bg-white">.text-black</p>
-<p class="text-white bg-dark">.text-white</p>
+<p class="text-white bg-black">.text-white</p>
 <p class="text-black-50 bg-white">.text-black-50</p>
-<p class="text-white-50 bg-dark">.text-white-50</p>
+<p class="text-white-50 bg-black">.text-white-50</p>
 {{< /example >}}
 
 {{< callout warning >}}
@@ -89,20 +89,6 @@ Here are some compliant combinations examples for non-texts elements, such as SV
 
 {{< example >}}
 <p class="p-2">
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-  </svg>
-</p>
-<p class="bg-dark p-2">
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
@@ -179,9 +165,13 @@ Boosted supersedes Bootstrap color variables with Orange brand color.
 
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-color-dark-variables" file="scss/_variables-dark.scss" >}}
 
 Grayscale colors are also available, but only a subset are used to generate any utilities.
 
@@ -201,6 +191,8 @@ Theme colors are then put into a Sass map so we can loop over them to generate o
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
+
 Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
@@ -208,6 +200,8 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 RGB colors are generated from a separate Sass map:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-colors-rgb-dark" file="scss/_maps.scss" >}}
 
 Color opacities build on that with their own map that's consumed by the utilities API:
 
