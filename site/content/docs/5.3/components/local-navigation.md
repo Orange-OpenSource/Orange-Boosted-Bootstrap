@@ -37,25 +37,13 @@ Since the component is supposed to be rendered on a full-size page, there are so
 
 ## Dark variant
 
-Add `.local-nav-dark` to the `.local-nav` for a dark variant. Don't forget to add `.navbar-dark` to the navbar.
+{{< deprecated-in "5.3.3" >}}
 
-{{< example class="bg-dark" >}}
-<nav class="local-nav local-nav-dark" aria-label="Local navigation on dark">
-  <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNavDark" aria-expanded="false" aria-controls="collapseLocalNavDark">
-    <span class="container-xxl">Shop</span>
-  </button>
-  <div id="collapseLocalNavDark" class="container-xxl local-nav-collapse d-lg-block collapse">
-      <div class="navbar navbar-dark navbar-expand-lg">
-        <ul class="navbar-nav w-100">
-          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-        </ul>
-      </div>
-  </div>
-</nav>
-{{< /example >}}
+{{< callout warning >}}
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
+
+Add `data-bs-theme="dark"` to the `.local-nav` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
 
 ## CSS
 
@@ -65,16 +53,6 @@ Values for the CSS variables are set via Sass, so Sass customization is still su
 
 {{< scss-docs name="local-nav-css-vars" file="scss/_local-navigation.scss" >}}
 
-Customization through CSS variables can be seen on the `.local-nav-dark` class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="local-nav-dark-css-vars" file="scss/_local-navigation.scss" >}}
-
 ### Sass variables
 
-Variables for all local navigations:
-
 {{< scss-docs name="local-nav-variables" file="scss/_variables.scss" >}}
-
-Variables for the [dark local navigation](#dark-variant):
-
-{{< scss-docs name="local-nav-dark-variables" file="scss/_variables.scss" >}}

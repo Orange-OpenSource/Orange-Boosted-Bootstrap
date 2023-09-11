@@ -162,25 +162,25 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button class="btn btn-secondary" type="button" id="button-addon1">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
   <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 </div>
 
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-secondary" type="button" id="button-addon2">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-secondary" type="button">Button</button>
-  <button class="btn btn-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
   <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
 </div>
 
 <div class="input-group">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
-  <button class="btn btn-secondary" type="button">Button</button>
-  <button class="btn btn-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
 </div>
 {{< /example >}}
 
@@ -242,8 +242,8 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button type="button" class="btn btn-secondary">Action</button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
@@ -258,8 +258,8 @@ Please refer to the [Forms](https://system.design.orange.com/0c1af118d/p/88ab5b-
 
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-  <button type="button" class="btn btn-secondary">Action</button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
@@ -300,7 +300,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
   <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
     <option selected>Choose...</option>
     <option value="1">One</option>
@@ -316,7 +316,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
     <option value="2">Two</option>
     <option value="3">Three</option>
   </select>
-  <button class="btn btn-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
 </div>
 {{< /example >}}
 
@@ -324,23 +324,23 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 {{< example >}}
 <div class="input-group mb-3">
-  <label for="inputGroupFile01" class="input-group-text">Upload</label>
+  <label class="input-group-text" for="inputGroupFile01">Upload</label>
   <input type="file" class="form-control" id="inputGroupFile01">
 </div>
 
 <div class="input-group mb-3">
   <input type="file" class="form-control" id="inputGroupFile02">
-  <label for="inputGroupFile02" class="input-group-text">Upload</label>
+  <label class="input-group-text" for="inputGroupFile02">Upload</label>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
   <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
 </div>
 
 <div class="input-group">
   <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-  <button class="btn btn-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
 </div>
 {{< /example >}}
 

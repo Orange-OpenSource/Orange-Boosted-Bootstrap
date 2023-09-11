@@ -18,11 +18,7 @@
   // Boosted mod
   // TODO: should probably be a `.btn-*` class
   &:not(.dropdown-toggle-split) {
-    @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $dropdown-border-color, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
-
-    &.btn-inverse {
-      @include button-variant($black, $gray-700, $white, $black, $gray-700, $white, $black, $white, $white, transparent, $gray-700, $gray-700);
-    }
+    @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $dropdown-bg, $dropdown-border-color, $dropdown-color, $dropdown-bg, $dropdown-color, $dropdown-color, $dropdown-bg, var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
   }
   // End mod
 }
@@ -256,7 +252,6 @@
 
 // Dark dropdowns
 .dropdown-menu-dark {
-  // scss-docs-start dropdown-dark-css-vars
   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
   --#{$prefix}dropdown-bg: #{$dropdown-dark-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
@@ -269,5 +264,4 @@
   --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
   --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-  // scss-docs-end dropdown-dark-css-vars
 }
