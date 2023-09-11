@@ -25,6 +25,24 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+
+<button type="button" class="btn btn-link">Link</button>
+{{< /example >}}
+
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+{{< design-callout-alert >}}
+Warning, info, light and dark variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -37,6 +55,7 @@ Boosted includes several button variants, each serving its own semantic purpose,
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 <!-- Boosted mod -->
 ## With icon
@@ -74,19 +93,19 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example >}}
-<button type="button" class="btn btn-icon btn-secondary btn-sm">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
   <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary">
+<button type="button" class="btn btn-icon btn-outline-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary btn-lg">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
@@ -142,53 +161,13 @@ Supported social networks are declared in a dedicated Sass map—meaning you're 
 
 ## Dark variant
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.3" >}}
 
-Add `.btn-inverse` to the `.btn` for a dark variant.
+{{< callout warning >}}
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
 
-{{< example class="bg-dark" >}}
-{{< buttons.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-inverse btn-{{ .name }}">{{ .name | title }}</button>
-{{- end -}}
-{{< /buttons.inline >}}
-
-<button type="button" class="btn btn-inverse btn-link">Link</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<button type="button" class="btn btn-inverse btn-primary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  Primary
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-secondary">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">Secondary</span>
-</button>
-<button type="button" class="btn btn-icon btn-inverse btn-no-outline">
-  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <span class="visually-hidden">No outline</span>
-</button>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
-<a href="#" class="btn btn-icon btn-inverse btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a>
-{{< /example >}}
+Add `data-bs-theme="dark"` to the `.btn` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
+{{< /callout >}}
 <!-- End mod -->
 
 ## Disable text wrapping
@@ -211,15 +190,34 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Outline buttons
 
-In need of a button with a transparent default background color? Replace the default modifier classes with the `.btn-outline-secondary` one to remove all background colors on buttons.
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-{{< example class="bg-supporting-blue" >}}
+{{< example >}}
 <button type="button" class="btn btn-outline-secondary">Secondary</button>
 {{< /example >}}
 
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+
+{{< design-callout-alert >}}
+The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
+{{< /example >}}
+
 {{< callout info >}}
-This button should only be used on a light background in order to have sufficient contrast, otherwise use its dark variant.
+Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 {{< /callout >}}
+</details>
 
 ## Sizes
 
@@ -258,6 +256,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
 {{< /example >}}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -402,11 +401,11 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass mixins
 
-There are three mixins for buttons: button mixins (based on `$theme-colors`), a button size mixin and a button icon mixin.
+There are four mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin, and a button icon mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: no .btn-outline -->
+{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
