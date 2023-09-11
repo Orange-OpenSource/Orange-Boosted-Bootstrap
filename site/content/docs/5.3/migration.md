@@ -74,6 +74,11 @@ Boosted v5.3.2 has landed also including specific Boosted content as usual.
 
 If you need more details about the changes, please refer to the [v5.3.2 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.2).
 
+### Color modes!
+
+- **New colors available.** We introduced the following variables based on brand introduction.
+  - `$gray-950`: `#141414`, a darker gray. Use as body background (dark): `.bg-body`.
+
 ### Components
 
 - **Accordion**
@@ -1274,7 +1279,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
     </ul>
   </details>
 
-- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule]({{< docsref "/customize/css-variables#dark-text-rule" >}}).
+- Dark text variants handling is now explained in [Customize > CSS variables > Dark text rule](https://boosted.orange.com/docs/5.2/customize/css-variables#dark-text-rule).
 
 ## v5.2.0
 

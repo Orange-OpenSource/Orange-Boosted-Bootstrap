@@ -286,10 +286,10 @@ Validation styles are available for the following form controls and components:
     <label for="inputQuantitySelector" class="form-label">Quantity selector</label>
     <div class="input-group quantity-selector w-100">
       <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="11" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
-      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
         <span class="visually-hidden">Step down</span>
       </button>
-      <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+      <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
         <span class="visually-hidden">Step up</span>
       </button>
       <div class="invalid-feedback">Please enter a valid number.</div>

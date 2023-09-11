@@ -172,7 +172,7 @@ Alternatively, you can also add additional controls and components to toasts.
 
 ### Color schemes
 
-Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.text-bg-secondary` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
+Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.text-bg-secondary` to the `.toast`. For a crisp edge, we remove the default border with `.border-0`.
 
 {{< example stackblitz_add_js="true" >}}
 <div class="toast align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -180,7 +180,7 @@ Building on the above example, you can create different toast color schemes with
     <div class="toast-body my-auto">
       Hello, world! This is a toast message.
     </div>
-    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   </div>
 </div>
 {{< /example >}}
