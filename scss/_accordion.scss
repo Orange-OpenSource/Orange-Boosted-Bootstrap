@@ -155,16 +155,3 @@
   --#{$prefix}accordion-btn-letter-spacing: #{$accordion-button-letter-spacing-lg};
   // scss-docs-end accordion-lg-css-vars
 }
-
-.accordion-dark {
-  // scss-docs-start accordion-dark-css-vars
-  --#{$prefix}accordion-btn-color: #{$accordion-dark-button-color};
-  --#{$prefix}accordion-btn-bg: #{$accordion-dark-button-bg};
-  --#{$prefix}accordion-btn-hover-bg: #{$accordion-dark-button-hover-bg};
-  --#{$prefix}accordion-active-color: #{$accordion-dark-button-active-color};
-  --#{$prefix}accordion-border-color: #{$accordion-dark-border-color};
-  --#{$prefix}accordion-color: #{$accordion-dark-color};
-  --#{$prefix}accordion-bg: #{$accordion-dark-bg};
-  // scss-docs-end accordion-dark-css-vars
-}
-// End mod
