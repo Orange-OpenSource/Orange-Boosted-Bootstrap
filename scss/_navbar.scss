@@ -511,7 +511,6 @@
 
 .navbar-dark,
 .navbar[data-bs-theme="dark"] {
-  // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
@@ -522,7 +521,6 @@
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
   --#{$prefix}navbar-toggler-icon-filter: #{$invert-filter}; // Boosted mod
-  // scss-docs-end navbar-dark-css-vars
 }
 
 // Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
