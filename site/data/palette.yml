@@ -97,3 +97,7 @@
       class: 900
       hex: "#333"
       variable: $gray-900
+    - name: 950
+      class: 950
+      hex: "#141414"
+      variable: $gray-950
