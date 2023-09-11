@@ -22,6 +22,9 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 - **Accordion**
   - <span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.
 
+- **Local navigation**
+  - <span class="badge bg-success">New</span> Added Local Navigation as a new component.
+
 - **Orange navbar**
   - <span class="badge bg-warning">Warning</span> The minimizing behavior with `.header-minimized` is applied to the `<header>` instead of one of its children directly.
 
@@ -29,6 +32,16 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
 
 - <span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.
 - <span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A `<span class="visually-hidden"> (required)</span>` element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.
+
+- <span class="badge bg-success">New</span> Star rating now has a `readonly` state.
+
+- <span class="badge bg-warning">Warning</span> Star rating has been slightly changed for accessibility purpose; a visually hidden `span` matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites.
+
+  ```diff
+  -    <label for="excellent" title="Excellent"></label>
+  +    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  ```
+- <span class="badge bg-warning">Deprecated</span> The `form-star-rating()` mixin is now deprecated. We now use a `mask-image` CSS property to display the stars in this form element.
 
 ### Examples
 
@@ -40,6 +53,16 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
+      <li><code>--bs-local-nav-active-bg</code></li>
+      <li><code>--bs-local-nav-active-color</code></li>
+      <li><code>--bs-local-nav-active-marker-width</code></li>
+      <li><code>--bs-local-nav-bg</code></li>
+      <li><code>--bs-local-nav-border-color</code></li>
+      <li><code>--bs-local-nav-border-width</code></li>
+      <li><code>--bs-local-nav-color</code></li>
+      <li><code>--bs-local-nav-hover-bg</code></li>
+      <li><code>--bs-local-nav-hover-color</code></li>
+      <li><code>--bs-local-nav-padding-y</code></li>
     </ul>
   </details>
 
@@ -50,6 +73,33 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$accordion-dark-button-hover-bg</code></li>
       <li><code>$footer-accordion-active-color</code></li>
       <li><code>$footer-accordion-btn-hover-bg</code></li>
+      <li><code>$form-star-rating-checked-color</code></li>
+      <li><code>$form-star-rating-checked-icon</code></li>
+      <li><code>$form-star-rating-dark-checked-color</code></li>
+      <li><code>$form-star-rating-dark-hover-color</code></li>
+      <li><code>$form-star-rating-dark-unchecked-color</code></li>
+      <li><code>$form-star-rating-hover-color</code></li>
+      <li><code>$form-star-rating-sm-checked-icon</code></li>
+      <li><code>$form-star-rating-sm-unchecked-icon</code></li>
+      <li><code>$form-star-rating-unchecked-color</code></li>
+      <li><code>$form-star-rating-unchecked-icon</code></li>
+      <li><code>$local-nav-active-bg</code></li>
+      <li><code>$local-nav-active-color</code></li>
+      <li><code>$local-nav-active-marker-width</code></li>
+      <li><code>$local-nav-bg</code></li>
+      <li><code>$local-nav-border-color</code></li>
+      <li><code>$local-nav-border-width</code></li>
+      <li><code>$local-nav-color</code></li>
+      <li><code>$local-nav-dark-bg</code></li>
+      <li><code>$local-nav-dark-color</code></li>
+      <li><code>$local-nav-dark-hover-bg</code></li>
+      <li><code>$local-nav-dark-hover-color</code></li>
+      <li><code>$local-nav-dark-active-bg</code></li>
+      <li><code>$local-nav-dark-active-color</code></li>
+      <li><code>$local-nav-dark-border-color</code></li>
+      <li><code>$local-nav-hover-bg</code></li>
+      <li><code>$local-nav-hover-color</code></li>
+      <li><code>$local-nav-padding-y</code></li>
     </ul>
   </details>
 
