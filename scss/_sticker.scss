@@ -1,8 +1,9 @@
 .sticker {
   // scss-docs-start sticker-css-vars
   --#{$prefix}sticker-size: #{$sticker-size-md};
-  --#{$prefix}sticker-font-weight: #{$font-weight-bold};
-  --#{$prefix}sticker-background-color: #{$brand-orange};
+  --#{$prefix}sticker-font-weight: #{$sticker-font-weight};
+  --#{$prefix}sticker-color: #{$sticker-color};
+  --#{$prefix}sticker-background-color: #{$sticker-background-color};
   --#{$prefix}sticker-content-max-width: #{$sticker-content-max-width-md};
   // scss-docs-end sticker-css-vars
 
@@ -13,6 +14,7 @@
   width: var(--#{$prefix}sticker-size);
   height: var(--#{$prefix}sticker-size);
   font-weight: var(--#{$prefix}sticker-font-weight);
+  color: var(--#{$prefix}sticker-color);
   text-align: center;
   word-wrap: break-word;
   background-color: var(--#{$prefix}sticker-background-color);
