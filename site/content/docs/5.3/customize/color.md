@@ -72,8 +72,6 @@ Color palette is used throughout Boosted in multiple ways, either in components 
       <figcaption class="py-1">
         <strong>{{ $color.name }}</strong>
         <br>
-        <var>--bs-themed-{{- $color.level -}}</var>
-        <br><br>
         <code>{{ $color.hex }}</code>
         <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
         <var>{{- $color.variable -}}</var>

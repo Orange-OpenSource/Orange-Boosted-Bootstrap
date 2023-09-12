@@ -40,9 +40,9 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 <p class="text-body-tertiary">.text-body-tertiary</p>
 
 <p class="text-black bg-white">.text-black</p>
-<p class="text-white bg-dark">.text-white</p>
+<p class="text-white bg-black">.text-white</p>
 <p class="text-black-50 bg-white">.text-black-50</p>
-<p class="text-white-50 bg-dark">.text-white-50</p>
+<p class="text-white-50 bg-black">.text-white-50</p>
 {{< /example >}}
 
 {{< callout warning >}}
@@ -65,16 +65,17 @@ The `.text-primary` color on dark background (`#ff7900`) can be used in any size
 Here are some compliant combinations examples for texts:
 
 {{< example >}}
+<div class="bg-white py-1" data-bs-theme="light">
+  <p class="text-black">regular black text</p>
+  <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
+  <p class="text-body-secondary">regular secondary text</p>
 
-<p class="text-black">regular black text</p>
-<p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
-<p class="text-body-secondary">regular secondary text</p>
+  <p class="text-black fw-bold">bold black text</p>
+  <p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
+  <p class="text-body-secondary fw-bold">bold secondary text</p>
+</div>
 
-<p class="text-black fw-bold">bold black text</p>
-<p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
-<p class="text-body-secondary fw-bold">bold secondary text</p>
-
-<div class="bg-dark py-1">
+<div class="bg-dark py-1" data-bs-theme="dark">
   <p class="text-white">regular white text on dark</p>
   <p class="text-primary">regular primary text on dark</p>
   <p class="text-light">regular light text on dark</p>
@@ -89,20 +90,6 @@ Here are some compliant combinations examples for non-texts elements, such as SV
 
 {{< example >}}
 <p class="p-2">
-  <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-success" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-danger" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
-  </svg>
-  <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
-    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
-  </svg>
-</p>
-<p class="bg-dark p-2">
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
   </svg>
@@ -182,6 +169,8 @@ Boosted supersedes Bootstrap color variables with Orange brand color.
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-color-dark-variables" file="scss/_variables-dark.scss" >}}
 
 Grayscale colors are also available, but only a subset are used to generate any utilities.
 
