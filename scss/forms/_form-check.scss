@@ -378,6 +378,7 @@
   // End mod
 }
 
+// Boosted mod: remove right/left borders when toggles buttons are grouped in a `.btn-group` only
 .btn-group {
   .btn-check {
     + .btn {
@@ -391,5 +392,6 @@
     }
   }
 }
+// End mod
 
 // Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
