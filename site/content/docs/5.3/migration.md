@@ -96,6 +96,8 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$local-nav-hover-bg</code></li>
       <li><code>$local-nav-hover-color</code></li>
       <li><code>$local-nav-padding-y</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color-dark</code></li>
     </ul>
   </details>
 
