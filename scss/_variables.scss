@@ -882,7 +882,7 @@ $table-cell-icon-margin-bottom:         -.625rem !default; // Boosted mod
 $table-cell-vertical-align:             top !default;
 $table-line-height:                     1.25 !default; // Boosted mod
 
-$table-color:                           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`
+$table-color:                           var(--#{$prefix}emphasis-color) !default;
 $table-bg:                              var(--#{$prefix}body-bg) !default;
 $table-accent-bg:                       transparent !default;
 
