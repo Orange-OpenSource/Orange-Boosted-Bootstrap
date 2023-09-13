@@ -174,7 +174,7 @@ aliases:
     });
   }
   function toggleBackground() {
-    document.querySelectorAll('span').forEach(function(el) {
+    document.querySelectorAll('span, .fw-400 div, .fw-700 div').forEach(function(el) {
       if (el.classList.contains('bg-light-gray')) {
         el.classList.remove('bg-light-gray')
         el.classList.add('bg-none')
