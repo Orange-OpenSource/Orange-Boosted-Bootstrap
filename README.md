@@ -174,14 +174,6 @@ Our default branch is for development of our Boosted 5 release. Head to the [`v4
 - <https://twitter.com/fat>
 - <https://github.com/fat>
 
-
-### Boosted
-
-**Gaël Poupard**
-
-- <https://github.com/ffoodd>
-
-
 ## Thanks
 
 <a href="https://www.browserstack.com/">
