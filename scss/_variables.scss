@@ -996,7 +996,7 @@ $btn-active-box-shadow:       null !default;
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-500 !default;
-// Booste mod: no `$btn-link-focus-shadow-rgb`
+// Boosted mod: no `$btn-link-focus-shadow-rgb`
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           var(--#{$prefix}border-radius) !default;
