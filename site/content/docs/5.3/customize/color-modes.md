@@ -3,6 +3,8 @@ layout: docs
 title: Color modes
 description: Boosted now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
+aliases:
+  - "/docs/customize/color-modes/"
 toc: true
 added: "5.3"
 ---

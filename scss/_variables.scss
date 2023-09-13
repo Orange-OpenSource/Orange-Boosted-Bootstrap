@@ -1180,15 +1180,28 @@ $form-check-btn-check-disabled-opacity:    null !default;
 $form-check-inline-margin-end:    1rem !default;
 
 // Boosted mod: Star rating
-$form-star-size:                  1.5625rem !default;
-$form-star-size-sm:               1.25rem !default;
-$form-star-margin-between:        -.125rem !default;
+$form-star-size:                        1.5625rem !default;
+$form-star-size-sm:                     1.25rem !default;
+$form-star-margin-between:              -.125rem !default;
+
+$form-star-rating-checked-color:        $accessible-orange !default;
+$form-star-rating-unchecked-color:      $gray-700 !default;
+$form-star-rating-hover-color:          $black !default;
+
+$form-star-rating-dark-checked-color:   $primary !default;
+$form-star-rating-dark-unchecked-color: $gray-500 !default;
+$form-star-rating-dark-hover-color:     $white !default;
+
+$form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
+$form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
+$form-star-rating-sm-checked-icon:      escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='#000' stroke='#000' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
+$form-star-rating-sm-unchecked-icon:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='transparent' stroke='#000' d='M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z'/></svg>")) !default;
 //fusv-disable
-$form-star-focus-color:           $black !default; // Deprecated in v5.2.3
-$form-star-focus-outline:         var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3
-$form-star-focus-color-dark:      $white !default; // Deprecated in v5.2.3
-$form-star-focus-outline-dark:    var(--#{$prefix}border-width) solid $form-star-focus-color-dark !default; // Deprecated in v5.2.3
-$form-star-focus-box-shadow:      $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
+$form-star-focus-color:                 $black !default; // Deprecated in v5.2.3
+$form-star-focus-outline:               var(--#{$prefix}border-width) solid $form-star-focus-color !default; // Deprecated in v5.2.3
+$form-star-focus-color-dark:            $white !default; // Deprecated in v5.2.3
+$form-star-focus-outline-dark:          var(--#{$prefix}border-width) solid $form-star-focus-color-dark !default; // Deprecated in v5.2.3
+$form-star-focus-box-shadow:            $input-btn-focus-box-shadow !default; // Deprecated in v5.2.3
 //fusv-enable
 
 // End mod
