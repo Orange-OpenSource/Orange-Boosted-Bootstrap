@@ -20,7 +20,10 @@
 
     &:disabled {
       color: $gray-500;
-      background-color: $white;
+
+      ~ button:disabled {
+        background-color: var(--bs-secondary-bg);
+      }
     }
   }
 
