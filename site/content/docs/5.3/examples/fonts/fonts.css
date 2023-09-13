@@ -79,14 +79,17 @@
 }
 
 .letter-spacing-n0-25 {
-  letter-spacing: -0.25px;
+  letter-spacing: -.25px;
 }
 
 .letter-spacing-n0-5 {
-  letter-spacing: -0.5px;
+  letter-spacing: -.5px;
 }
 
 .bg-light-gray {
-  background-color: rgba(256, 0, 0, 0.4);
+  background-color: rgba(256, 0, 0, .4);
 }
-  
+
+.bg-none {
+  background-color: none;
+}

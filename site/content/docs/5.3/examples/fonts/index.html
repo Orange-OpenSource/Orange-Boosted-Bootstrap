@@ -19,7 +19,10 @@ aliases:
   <h1 class="visually-hidden">Fonts examples</h1>
 
   <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-  <label class="btn btn-primary mb-5" for="btn-check" onclick="toggle()">Toggle yellow lines display</label>
+  <label class="btn btn-primary mb-5" for="btn-check" onclick="toggleLines()">Toggle yellow lines display</label>
+
+  <input type="checkbox" class="btn-check" id="btn-bg" autocomplete="off">
+  <label class="btn btn-primary mb-5" for="btn-bg" onclick="toggleBackground()">Toggle red background display</label>
 
   <div class="d-flex flex-column fw-700 text-white lh-40px letter-spacing-n1 fs-40px">
     <hr>
@@ -165,9 +168,20 @@ aliases:
 </main>
 
 <script>
-  function toggle() {
+  function toggleLines() {
     document.querySelectorAll('.position-absolute').forEach(function(el) {
       el.classList.toggle('d-none');
+    });
+  }
+  function toggleBackground() {
+    document.querySelectorAll('span').forEach(function(el) {
+      if (el.classList.contains('bg-light-gray')) {
+        el.classList.remove('bg-light-gray')
+        el.classList.add('bg-none')
+      } else {
+        el.classList.remove('bg-none')
+        el.classList.add('bg-light-gray')
+      }
     });
   }
 </script>
