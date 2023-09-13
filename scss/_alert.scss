@@ -82,6 +82,15 @@
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
     --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
+
+    @if $state == "warning" {
+      .alert-icon {
+        background-image: linear-gradient($black, $black);
+        background-repeat: no-repeat;
+        background-position: left calc(var(--#{$prefix}alert-logo-size) * 5 / 12) top calc(var(--#{$prefix}alert-logo-size) / 10); // stylelint-disable-line function-disallowed-list
+        background-size: calc(var(--#{$prefix}alert-logo-size) / 6) calc(var(--#{$prefix}alert-logo-size) * .75); // stylelint-disable-line function-disallowed-list
+      }
+    }
   }
 }
 // scss-docs-end alert-modifiers
@@ -118,13 +127,14 @@
     order: -1;
     height: var(--#{$prefix}alert-logo-size);
     content: "";
-    background-image: var(--#{$prefix}alert-icon-bg-image);
-    background-repeat: no-repeat;
+    background-color: var(--#{$prefix}alert-border-color);
+    mask-image: var(--#{$prefix}alert-icon-bg-image);
+    mask-repeat: no-repeat;
 
     /* rtl:raw:
-    background-position: top right;
+    mask-position: top right;
     */
-    background-size: var(--#{$prefix}alert-logo-size);
+    mask-size: var(--#{$prefix}alert-logo-size);
   }
 }
 
