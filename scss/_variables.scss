@@ -1283,12 +1283,12 @@ $form-select-transition:          $input-transition !default;
 
 // scss-docs-start form-range-variables
 $form-range-track-width:          100% !default;
-$form-range-track-height:         .375rem !default;
+$form-range-track-height:         .375rem !default; // Boosted mod: instead of `.5rem`
 $form-range-track-cursor:         pointer !default;
-$form-range-track-bg:             var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$form-range-track-bg:             var(--#{$prefix}secondary-bg) !default;
 $form-range-track-filled-bg:      $primary !default; // Boosted mod
-$form-range-track-border-radius:  null !default;
-$form-range-track-box-shadow:     inset 0 .25rem .25rem rgba($black, .1) !default;
+$form-range-track-border-radius:  null !default; // Boosted mod: instead of `1rem`
+$form-range-track-box-shadow:     inset 0 .25rem .25rem rgba($black, .1) !default; // Boosted mod: instead of `var(--#{$prefix}box-shadow-inset)`
 
 $form-range-thumb-width:                   1rem !default;
 $form-range-thumb-height:                  $form-range-thumb-width !default;
