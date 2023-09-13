@@ -262,6 +262,14 @@
       height: 100%;
       content: "";
     }
+
+    .btn-group &:not(:first-of-type) {
+      border-left: 0;
+    }
+
+    .btn-group &:not(:last-of-type) {
+      border-right: 0;
+    }
   }
 
   &:hover + .btn,
@@ -377,21 +385,5 @@
   }
   // End mod
 }
-
-// Boosted mod: remove right/left borders when toggles buttons are grouped in a `.btn-group` only
-.btn-group {
-  .btn-check {
-    + .btn {
-      &:not(:first-of-type) {
-        border-left: 0;
-      }
-
-      &:not(:last-of-type) {
-        border-right: 0;
-      }
-    }
-  }
-}
-// End mod
 
 // Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
