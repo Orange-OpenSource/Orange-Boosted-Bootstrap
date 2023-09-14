@@ -264,11 +264,11 @@
       content: "";
     }
 
-    .btn-group &:not(:first-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:first-of-type) {
       border-left: 0;
     }
 
-    .btn-group &:not(:last-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:last-of-type) {
       border-right: 0;
     }
   }
