@@ -9,11 +9,9 @@
   backface-visibility: hidden;
 
   > .bi {
-    --test-icon-size: 30px;
-
     flex-shrink: 0;
-    width: var(--test-icon-size);
-    height: var(--test-icon-size);
+    width: $icon-link-icon-size;
+    height: $icon-link-icon-size;
     fill: currentcolor;
     @include transition($icon-link-icon-transition);
   }

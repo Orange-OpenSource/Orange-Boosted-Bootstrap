@@ -76,8 +76,21 @@
       /* Boosted mod: no `.btn-bd-primary` custom style */
 
       .bd-mode-toggle {
+        --bd-mode-toggle-icon-size: 1.25rem; /* Boosted mod */
         z-index: 1500;
       }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      /* Boosted mod */
+      .bd-mode-toggle .dropdown-item .bi,
+      #bd-theme .bi {
+        width: var(--bd-mode-toggle-icon-size) !important;
+        height: var(--bd-mode-toggle-icon-size) !important;
+      }
+      /* End mod */
     </style>
 
     {{ range .Page.Params.extra_css }}
@@ -87,8 +100,8 @@
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      <symbol id="check2" viewBox="0 0 15 12">
+        <polygon id="tick" points="13 0 5 8 2 5 0 7 3 10 5 12 7 10 15 2 13 0"/>
       </symbol>
       <symbol id="circle-half" viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
