@@ -1949,12 +1949,17 @@ $alert-border-width:                var(--#{$prefix}border-width) !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
+// stylelint-disable function-disallowed-list
 $alert-icons: (
   "success": var(--#{$prefix}success-icon),
   "info":    escape-svg($info-icon),
-  "warning": escape-svg($warning-icon),
+  "warning": (
+    "icon":   escape-svg($warning-icon),
+    "bg":     linear-gradient($black, $black) no-repeat left calc(var(--#{$prefix}alert-logo-size) * 5 / 12) top calc(var(--#{$prefix}alert-logo-size) / 10) / calc(var(--#{$prefix}alert-logo-size) / 6) calc(var(--#{$prefix}alert-logo-size) * .75),
+  ),
   "danger":  var(--#{$prefix}error-icon)
 ) !default;
+// stylelint-enable function-disallowed-list
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;

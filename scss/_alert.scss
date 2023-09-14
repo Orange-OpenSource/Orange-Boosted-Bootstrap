@@ -81,16 +81,14 @@
     --#{$prefix}alert-color: var(--#{$prefix}body-color); // Boosted mod: instead of `var(--#{$prefix}#{$state}-text-emphasis)`
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
-    --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)}; // Boosted mod
-
-    @if $state == "warning" {
-      .alert-icon {
-        background-image: linear-gradient($black, $black);
-        background-repeat: no-repeat;
-        background-position: left calc(var(--#{$prefix}alert-logo-size) * 5 / 12) top calc(var(--#{$prefix}alert-logo-size) / 10); // stylelint-disable-line function-disallowed-list
-        background-size: calc(var(--#{$prefix}alert-logo-size) / 6) calc(var(--#{$prefix}alert-logo-size) * .75); // stylelint-disable-line function-disallowed-list
-      }
+    // Boosted mod
+    @if type-of(map-get($alert-icons, $state)) == "map" {
+      --#{$prefix}alert-icon-bg-image: #{map-get(map-get($alert-icons, $state), "icon")};
+      --#{$prefix}alert-icon-bg: #{map-get(map-get($alert-icons, $state), "bg")};
+    } @else {
+      --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)};
     }
+    // End mod
   }
 }
 // scss-docs-end alert-modifiers
@@ -113,6 +111,7 @@
   flex-shrink: 0;
   width: var(--#{$prefix}alert-icon-size);
   margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0; // stylelint-disable-line function-disallowed-list
+  background: var(--#{$prefix}alert-icon-bg);
 
   + * {
     margin: var(--#{$prefix}alert-icon-margin-y) 0 0;
