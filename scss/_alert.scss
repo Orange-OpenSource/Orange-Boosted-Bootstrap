@@ -84,7 +84,15 @@
     // Boosted mod
     @if type-of(map-get($alert-icons, $state)) == "map" {
       --#{$prefix}alert-icon-bg-image: #{map-get(map-get($alert-icons, $state), "icon")};
-      --#{$prefix}alert-icon-bg: #{map-get(map-get($alert-icons, $state), "bg")};
+
+      .alert-icon::before {
+        background: var(--#{$prefix}alert-icon-bg-image) no-repeat top left / var(--#{$prefix}alert-logo-size);
+
+        /* rtl:raw:
+        background-position: top right;
+        */
+        mask: none;
+      }
     } @else {
       --#{$prefix}alert-icon-bg-image: #{map-get($alert-icons, $state)};
     }
@@ -111,7 +119,6 @@
   flex-shrink: 0;
   width: var(--#{$prefix}alert-icon-size);
   margin: calc(-.5 * var(--#{$prefix}alert-icon-margin-y)) 0; // stylelint-disable-line function-disallowed-list
-  background: var(--#{$prefix}alert-icon-bg);
 
   + * {
     margin: var(--#{$prefix}alert-icon-margin-y) 0 0;

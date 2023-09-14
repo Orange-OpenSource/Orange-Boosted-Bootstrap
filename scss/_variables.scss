@@ -393,7 +393,7 @@ $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
-$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875ZM500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z' fill-rule='evenodd'/></svg>") !default;
+$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill='#{$warning}' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875Z'/><path fill='#000' d='M500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
 $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default;
 $add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
 $remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
@@ -1949,17 +1949,13 @@ $alert-border-width:                var(--#{$prefix}border-width) !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
-// stylelint-disable function-disallowed-list
+// Know that using a map for the icon will avoid color change
 $alert-icons: (
   "success": var(--#{$prefix}success-icon),
   "info":    escape-svg($info-icon),
-  "warning": (
-    "icon":   escape-svg($warning-icon),
-    "bg":     linear-gradient($black, $black) no-repeat left calc(var(--#{$prefix}alert-logo-size) * 5 / 12) top calc(var(--#{$prefix}alert-logo-size) / 10) / calc(var(--#{$prefix}alert-logo-size) / 6) calc(var(--#{$prefix}alert-logo-size) * .75),
-  ),
+  "warning": ("icon":   escape-svg($warning-icon)),
   "danger":  var(--#{$prefix}error-icon)
 ) !default;
-// stylelint-enable function-disallowed-list
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
