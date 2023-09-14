@@ -36,6 +36,12 @@
     --bs-dropdown-line-height: #{$line-height-sm};
     --bs-dropdown-item-padding-y: #{$dropdown-item-padding-y + .0625rem};
 
+    .bi {
+      --test-icon-size: 40px;
+      width: var(--test-icon-size) !important; // stylelint-disable-line declaration-no-important
+      height: var(--test-icon-size) !important; // stylelint-disable-line declaration-no-important
+    }
+
     .active .bi {
       display: block !important; // stylelint-disable-line declaration-no-important
     }
