@@ -101,6 +101,9 @@ Here are some compliant combinations examples for non-texts elements, such as SV
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+  </svg>
 </p>
 <p class="bg-dark p-2">
   <svg width="1.875em" height="1.875em" class="text-primary" aria-hidden="true" focusable="false">

@@ -64,6 +64,9 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
   <svg width="1.875em" height="1.875em" class="text-info" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
   </svg>
+  <svg width="1.875em" height="1.875em" class="text-warning" aria-hidden="true" focusable="false">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
+  </svg>
 </p>
 <p class="bg-dark p-2 text-primary">
   <svg width="1.875em" height="1.875em" aria-hidden="true" focusable="false">
@@ -148,17 +151,19 @@ The `viewBox` attribute is required if you wish to resize icons with `background
 
 ### Working with SVGs
 
-SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, we haven’t included these attributes and workarounds in our code.
+{{< callout warning >}}
+SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, **we haven’t systematically included these attributes and workarounds in our code**.
+{{< /callout >}}
 
 Known issues include:
 
-* **Focus handling is broken in Internet Explorer and Edge Legacy.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element. [Learn more on Stack Overflow](https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element).
-* **Browsers inconsistently announce SVGs as `<img>` tags with voice assistance.** Include `role="img"` when possible to avoid any issues. [See this article for details](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2).
-* **Safari skips `aria-label` when used non-focusable SVGs.** As such, use `aria-hidden="true"` when embedding the `<svg>` file and use CSS to visually hide an equivalent label. [More details here](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6).
-* **External SVG sprites may not function correctly in Internet Explorer.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
+* On decorative images:
+  * **Focus handling is broken in Edge Legacy.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element.
+* On informative images:
+  * **Browsers inconsistently announce `<svg>` tags as images with voice assistance.** Include `role="img"` to avoid any issues.
+  * **Safari skips `aria-label` when using non-focusable SVGs.** Prefer using `aria-labelledby` referencing a `title` element inside `svg` tag.
 
-<!-- Boosted mod: link to Orange Accessibility Guidelines -->
-**Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
+For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
 
 ### Icon font
 
