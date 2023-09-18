@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Icons
-description: Guidance and suggestions for using Solaris icon libraries with Boosted.
+description: Guidance and suggestions for using Solaris icon library with Boosted.
 group: extend
 aliases:
   - "/docs/extend/icons/"
@@ -10,15 +10,13 @@ toc: true
 
 While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
-## Solaris
-
 Solaris is a growing library of SVG icons that are designed by [Orange's Global Design Language Team](https://design.orange.com/).
 
 They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal information]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
 [Learn more about Solaris]({{< param icons >}}).
 
-### Use Solaris icons
+## Use Solaris icons
 
 <!-- NOTE: this is partially copied from bootstrap Icons homepage → https://icons.getbootstrap.com -->
 Solaris provides both PNGs and SVGs, but we strongly recommend to use SVGs. There are quite a few ways to include SVG icons into your HTML—depending on how your project is setup.
@@ -26,7 +24,7 @@ Solaris provides both PNGs and SVGs, but we strongly recommend to use SVGs. Ther
 <div class="row my-4">
   <div class="col-md-4">
 
-#### Embedded
+### Embedded
 
 Embed your icons within the HTML of your page (as opposed to an external image file). We recommend you use `em` unit for dimensions to ease resizing via `font-size`.
 
@@ -42,7 +40,7 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 <div class="row my-4">
   <div class="col-md-4">
 
-#### Sprite
+### Sprite
 
 You may use an external SVG sprite—a single SVG file containing all your icons—and insert an icon through the `<use>` element.
 
@@ -89,27 +87,10 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
   </div>
 </div>
 
-To create your own SVG sprite file, containing only the icons you need:
-- download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
-- optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
-- include the path in a tag `<symbol>`, inside a SVG file, like below
-- you may add the attribute `fill-rule="evenodd"`, but only if needed
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon1">
-    <path d="..."/>
-  </symbol>
-  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon2">
-    <path fill-rule="evenodd" d="..."/>
-  </symbol>
-</svg>
-```
-
 <div class="row my-4">
   <div class="col-md-4">
 
-#### External image
+### External image
 
 Copy the Solaris icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
 
@@ -125,7 +106,7 @@ Copy the Solaris icons SVGs to your directory of choice and reference them like 
 <div class="row my-4">
   <div class="col-md-4">
 
-#### CSS
+### CSS
 
 You can also use the SVG within your CSS (be sure to escape any characters with [our internal `escape-svg()` function]({{< docsref "/customize/sass" >}}#escape-svg)).
 
@@ -149,7 +130,7 @@ The `viewBox` attribute is required if you wish to resize icons with `background
 </div>
 
 
-### Working with SVGs
+## About SVGs accessibility
 
 {{< callout warning >}}
 SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, **we haven’t systematically included these attributes and workarounds in our code**.
@@ -165,11 +146,30 @@ Known issues include:
 
 For more details, **Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).
 
-### Icon font
+## Create a SVG sprite file
+
+To create your own SVG sprite file, containing only the icons you need:
+- download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
+- optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
+- include the path in a tag `<symbol>`, inside a SVG file, like below
+- you may add the attribute `fill-rule="evenodd"`, but only if needed
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon1">
+    <path d="..."/>
+  </symbol>
+  <symbol fill="currentColor" viewBox="0 0 24 24" id="my-icon2">
+    <path fill-rule="evenodd" d="..."/>
+  </symbol>
+</svg>
+```
+
+## Icon font
 
 You can also embed Solaris icons in an icon font by using [IcoMoon App](https://icomoon.io/app/).
 
-#### Create your own project
+### Create your own project
 
 Go to the top left menu and select `Manage Projects`:
 
@@ -179,7 +179,7 @@ Create a `New Project` and click on `Load`:
 
 <img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-new-project.png" alt="IcoMoon - New Project" loading="lazy">
 
-#### Select your icons
+### Select your icons
 
 By default there is no icon in this new project.
 
@@ -195,7 +195,7 @@ By default there is no selected icon. Check that you are in selection mode (thir
 
 <img class="img-thumbnail mb-3" width="300" src="/docs/{{< param docs_version >}}/assets/img/icomoon-select-icons.png" alt="IcoMoon - Select Icons" loading="lazy">
 
-#### Download and adapt your font
+### Download and adapt your font
 
 Now you can create your font. Click on `Generate Font` at the bottom right of the page. Depending of the number of selected icons, it can take some time!
 
@@ -203,7 +203,7 @@ Now you can create your font. Click on `Generate Font` at the bottom right of th
 
 Now you have a `Download` button at the bottom right of the page but **WAIT!**.
 
-##### Setting your font preferences
+#### Setting your font preferences
 
 You need to make some changes into `Preferences` to name your font with a name dedicated to your project.
 
@@ -214,7 +214,7 @@ You need to make some changes into `Preferences` to name your font with a name d
 
 <img class="img-thumbnail mb-3" src="/docs/{{< param docs_version >}}/assets/img/icomoon-preferences.png" alt="IcoMoon - Preferences" loading="lazy">
 
-##### Download your font
+#### Download your font
 
 Close the preferences modal.
 
