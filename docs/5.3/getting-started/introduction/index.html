@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Boosted is based on Bootstrap: a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -522,6 +523,7 @@
         <li><a href="#reboot">Reboot</a></li>
       </ul>
     </li>
+    <li><a href="#boosted-community">Boosted community</a></li>
     <li><a href="#bootstrap-community">Bootstrap Community</a></li>
   </ul>
 </nav>
@@ -579,7 +581,7 @@ Thanks for taking this information into account.</p>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Include Boosted&rsquo;s CSS and JS.</strong> Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing <code>&lt;/body&gt;</code>. Learn more about our <a href="#cdn-links">CDN links</a>.</p>
-<p>Boosted also provides Helvetica Neue fonts, <strong>limited to Orange brand usage</strong>: <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/NOTICE.txt">see <code>NOTICE.txt</code> for more information about Helvetica Neue license</a>.</p>
+<p>Boosted also provides Helvetica Neue fonts, <strong>limited to Orange brand usage</strong>: <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/NOTICE.txt">see <code>NOTICE.txt</code> for more information about Helvetica Neue license</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -587,17 +589,17 @@ Thanks for taking this information into account.</p>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Boosted demo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/orange-helvetica.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/css/orange-helvetica.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/js/boosted.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>You can also include <a href="https://popper.js.org/">Popper</a> and our JS separately. If you don&rsquo;t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-5/uuaktuMuP89rRLLF12Nmffr7aMWkLWFVq2xzMjqdXlOiMsRRHpbz3oG92Gvj7u&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/js/boosted.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-6J08e5gwwiEMMruI+Z89EkKdRl6eLwjPfkZpMBRPOfni+wOIfzpORWg1SzksH+j0&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Hello, world!</strong> Open the page in your browser of choice to see your Boosted page. Now you can start building with Boosted by creating your own <a href="/docs/5.3/layout/grid/">layout</a>, adding dozens of <a href="/docs/5.3/components/buttons/">components</a>, and utilizing <a href="/docs/5.3/examples/">our official examples</a>.</p>
@@ -615,15 +617,15 @@ Thanks for taking this information into account.</p>
 <tbody>
 <tr>
 <td>CSS</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css</code></td>
+<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/css/boosted.min.css</code></td>
 </tr>
 <tr>
 <td>CSS for Helvetica Neue</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/orange-helvetica.min.css</code></td>
+<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/css/orange-helvetica.min.css</code></td>
 </tr>
 <tr>
 <td>JS</td>
-<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js</code></td>
+<td><code>https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/js/boosted.bundle.min.js</code></td>
 </tr>
 </tbody>
 </table></div>
@@ -631,23 +633,13 @@ Thanks for taking this information into account.</p>
 <p>You can also use the CDN to fetch any of our <a href="/docs/5.3/getting-started/contents/">additional builds listed in the Contents page</a>.</p>
 <h2 id="next-steps">Next steps <a class="anchor-link" href="#next-steps" aria-label="Link to this section: Next steps"></a></h2>
 <ul>
-<li>
-<p>Read a bit more about some <a href="#important-globals">important global environment settings</a> that Boosted utilizes.</p>
-</li>
-<li>
-<p>Read about what&rsquo;s included in Boosted in our <a href="/docs/5.3/getting-started/contents/">contents section</a> and the list of <a href="#js-components">components that require JavaScript</a> below.</p>
-</li>
-<li>
-<p>Need a little more power? Consider building with Boosted by <a href="/docs/5.3/getting-started/download/#package-managers">including the source files via package manager</a>.</p>
-</li>
-<li>
-<p>Looking to use Boosted as a module with <code>&lt;script type=&quot;module&quot;&gt;</code>? Please refer to our <a href="/docs/5.3/getting-started/javascript/#using-boosted-as-a-module">using Boosted as a module</a> section.</p>
-</li>
+<li>Read a bit more about some <a href="#important-globals">important global environment settings</a> that Boosted utilizes.</li>
+<li>Read about what&rsquo;s included in Boosted in our <a href="/docs/5.3/getting-started/contents/">contents section</a> and the list of <a href="#js-components">components that require JavaScript</a> below.</li>
+<li>Need a little more power? Consider building with Boosted by <a href="/docs/5.3/getting-started/download/#package-managers">including the source files via package manager</a>.</li>
+<li>Looking to use Boosted as a module with <code>&lt;script type=&quot;module&quot;&gt;</code>? Please refer to our <a href="/docs/5.3/getting-started/javascript/#using-boosted-as-a-module">using Boosted as a module</a> section.</li>
 </ul>
 <h2 id="js-components">JS components <a class="anchor-link" href="#js-components" aria-label="Link to this section: JS components"></a></h2>
-<p>Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you&rsquo;re at all unsure about the general page structure, keep reading for an example page template.</p>
-<details class="mb-3 border-top border-bottom border-1 border-light">
-<summary class="h3 p-2 mb-0">Show components requiring JavaScript</summary>
+<p>Curious which components explicitly require our JavaScript and Popper? If you&rsquo;re at all unsure about the general page structure, keep reading for an example page template.</p>
 <ul>
 <li>Alerts for dismissing and Close button tooltip</li>
 <li>Buttons for toggling states and checkbox/radio functionality</li>
@@ -666,8 +658,6 @@ Thanks for taking this information into account.</p>
 <li>Toasts for displaying, dismissing, and Close button tooltip</li>
 <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper</a>)</li>
 </ul>
-
-</details>
 <div class="bd-callout bd-callout-warning">
 <h4 id="required-script">Required script <a class="anchor-link" href="#required-script" aria-label="Link to this section: Required script"></a></h4>
 <p>Boosted includes <a href="https://github.com/WICG/focus-visible">WICG&rsquo;s <code>:focus-visible</code> polyfill</a> to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
@@ -706,11 +696,19 @@ It should be used for critical resources only.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preconnect&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="reboot">Reboot <a class="anchor-link" href="#reboot" aria-label="Link to this section: Reboot"></a></h3>
 <p>For improved cross-browser rendering, we use <a href="/docs/5.3/content/reboot/">Reboot</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
+<h2 id="boosted-community">Boosted community <a class="anchor-link" href="#boosted-community" aria-label="Link to this section: Boosted community"></a></h2>
+<p>Stay up-to-date on the development of Boosted and reach out to the community with these helpful resources.</p>
+<ul>
+<li>Ask questions and explore <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions">our GitHub Discussions</a>.</li>
+<li>Chat with the core team and fellow Boosted users on internal Orange communication tools.</li>
+</ul>
 <h2 id="bootstrap-community">Bootstrap Community <a class="anchor-link" href="#bootstrap-community" aria-label="Link to this section: Bootstrap Community"></a></h2>
 <p>Stay up-to-date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
 <ul>
 <li>Read and subscribe to <a href="https://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
 <li>Ask and explore <a href="https://github.com/twbs/bootstrap/discussions">our GitHub Discussions</a>.</li>
+<li>Ask questions and explore <a href="https://github.com/twbs/bootstrap/discussions">Bootstrap GitHub Discussions</a>.</li>
+<li>Discuss, ask questions, and more on <a href="https://discord.gg/bZUvakRU3M">the community Discord</a> or <a href="https://reddit.com/r/bootstrap">Bootstrap subreddit</a>.</li>
 <li>Chat with fellow Bootstrappers in IRC. On the <code>irc.libera.chat</code> server, in the <code>#bootstrap</code> channel.</li>
 <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-5"><code>bootstrap-5</code></a>).</li>
 <li>Developers should use the keyword <code>bootstrap</code> on packages that modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
@@ -797,7 +795,7 @@ It should be used for critical resources only.</p>
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -816,7 +814,7 @@ It should be used for critical resources only.</p>
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -854,14 +852,14 @@ It should be used for critical resources only.</p>
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

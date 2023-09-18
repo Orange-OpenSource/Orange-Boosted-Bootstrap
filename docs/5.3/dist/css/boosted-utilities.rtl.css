@@ -1,10 +1,10 @@
 /*!
- * Boosted Utilities v5.3.1 (https://boosted.orange.com/)
+ * Boosted Utilities v5.3.2 (https://boosted.orange.com/)
  * Copyright 2014-2023 The Boosted Authors
  * Copyright 2014-2023 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Utilities v5.3.1 (https://getbootstrap.com/)
+ * Bootstrap Utilities v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -224,6 +224,8 @@
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 255, 121, 0;
   --bs-code-color: #a3a3a3;
+  --bs-highlight-color: #eee;
+  --bs-highlight-bg: #665200;
   --bs-border-color: #666;
   --bs-border-color-translucent: #666;
   --bs-form-valid-color: #84de84;
@@ -793,6 +795,18 @@
 
 .d-none {
   display: none !important;
+}
+
+.shadow {
+  box-shadow: var(--bs-box-shadow) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--bs-box-shadow-lg) !important;
 }
 
 .shadow-none {

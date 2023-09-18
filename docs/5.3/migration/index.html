@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -503,23 +504,30 @@
           <div class="collapse bd-toc-collapse ms-md-1" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#v531">v5.3.1</a>
+    <li><a href="#v532">v5.3.2</a>
       <ul>
         <li><a href="#components">Components</a></li>
         <li><a href="#forms">Forms</a></li>
         <li><a href="#css-and-sass-variables">CSS and Sass variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#v531">v5.3.1</a>
+      <ul>
+        <li><a href="#components-1">Components</a></li>
+        <li><a href="#forms-1">Forms</a></li>
+        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
         <li><a href="#docs">Docs</a></li>
       </ul>
     </li>
     <li><a href="#v530">v5.3.0</a>
       <ul>
         <li><a href="#color-modes">Color modes!</a></li>
-        <li><a href="#components-1">Components</a></li>
+        <li><a href="#components-2">Components</a></li>
         <li><a href="#contents">Contents</a></li>
-        <li><a href="#forms-1">Forms</a></li>
+        <li><a href="#forms-2">Forms</a></li>
         <li><a href="#helpers-and-utilities">Helpers and utilities</a></li>
         <li><a href="#examples">Examples</a></li>
-        <li><a href="#css-and-sass-variables-1">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
         <li><a href="#docs-1">Docs</a></li>
         <li><a href="#tooling">Tooling</a></li>
       </ul>
@@ -527,28 +535,28 @@
     <li><a href="#v523">v5.2.3</a>
       <ul>
         <li><a href="#accessibility">Accessibility</a></li>
-        <li><a href="#components-2">Components</a></li>
+        <li><a href="#components-3">Components</a></li>
         <li><a href="#contents-1">Contents</a></li>
-        <li><a href="#forms-2">Forms</a></li>
+        <li><a href="#forms-3">Forms</a></li>
         <li><a href="#examples-1">Examples</a></li>
-        <li><a href="#css-and-sass-variables-2">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v522">v5.2.2</a>
       <ul>
-        <li><a href="#components-3">Components</a></li>
-        <li><a href="#forms-3">Forms</a></li>
+        <li><a href="#components-4">Components</a></li>
+        <li><a href="#forms-4">Forms</a></li>
         <li><a href="#contents-2">Contents</a></li>
         <li><a href="#examples-2">Examples</a></li>
-        <li><a href="#css-and-sass-variables-3">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v521">v5.2.1</a>
       <ul>
-        <li><a href="#components-4">Components</a></li>
+        <li><a href="#components-5">Components</a></li>
         <li><a href="#contents-3">Contents</a></li>
         <li><a href="#helpers-and-utilities-1">Helpers and utilities</a></li>
-        <li><a href="#css-and-sass-variables-4">CSS and Sass variables</a></li>
+        <li><a href="#css-and-sass-variables-5">CSS and Sass variables</a></li>
       </ul>
     </li>
     <li><a href="#v520">v5.2.0</a>
@@ -561,46 +569,50 @@
       </ul>
     </li>
     <li><a href="#v510">v5.1.0</a></li>
-    <li><a href="#dependencies">Dependencies</a></li>
-    <li><a href="#browser-support">Browser support</a></li>
-    <li><a href="#documentation-changes">Documentation changes</a></li>
-    <li><a href="#sass">Sass</a></li>
-    <li><a href="#color-system">Color system</a></li>
-    <li><a href="#grid-updates">Grid updates</a></li>
-    <li><a href="#content-reboot-etc">Content, Reboot, etc</a></li>
-    <li><a href="#rtl">RTL</a></li>
-    <li><a href="#forms-4">Forms</a></li>
-    <li><a href="#components-5">Components</a>
+    <li><a href="#v500">v5.0.0</a>
       <ul>
-        <li><a href="#accordion">Accordion</a></li>
-        <li><a href="#alerts">Alerts</a></li>
-        <li><a href="#back-to-top">Back to top</a></li>
-        <li><a href="#badges">Badges</a></li>
-        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-        <li><a href="#buttons">Buttons</a></li>
-        <li><a href="#card">Card</a></li>
-        <li><a href="#carousel">Carousel</a></li>
-        <li><a href="#close-button">Close button</a></li>
-        <li><a href="#collapse">Collapse</a></li>
-        <li><a href="#dropdowns">Dropdowns</a></li>
-        <li><a href="#footer">Footer</a></li>
-        <li><a href="#jumbotron">Jumbotron</a></li>
-        <li><a href="#list-group">List group</a></li>
-        <li><a href="#navs-and-tabs">Navs and tabs</a></li>
-        <li><a href="#navbars">Navbars</a></li>
-        <li><a href="#offcanvas">Offcanvas</a></li>
-        <li><a href="#orange-navbar">Orange navbar</a></li>
-        <li><a href="#pagination">Pagination</a></li>
-        <li><a href="#popovers">Popovers</a></li>
-        <li><a href="#spinners">Spinners</a></li>
-        <li><a href="#stepped-process">Stepped process</a></li>
-        <li><a href="#toasts">Toasts</a></li>
-        <li><a href="#tooltips">Tooltips</a></li>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#browser-support">Browser support</a></li>
+        <li><a href="#documentation-changes">Documentation changes</a></li>
+        <li><a href="#sass">Sass</a></li>
+        <li><a href="#color-system">Color system</a></li>
+        <li><a href="#grid-updates">Grid updates</a></li>
+        <li><a href="#content-reboot-etc">Content, Reboot, etc</a></li>
+        <li><a href="#rtl">RTL</a></li>
+        <li><a href="#forms-5">Forms</a></li>
+        <li><a href="#components-6">Components</a>
+          <ul>
+            <li><a href="#accordion">Accordion</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+            <li><a href="#back-to-top">Back to top</a></li>
+            <li><a href="#badges">Badges</a></li>
+            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#card">Card</a></li>
+            <li><a href="#carousel">Carousel</a></li>
+            <li><a href="#close-button">Close button</a></li>
+            <li><a href="#collapse">Collapse</a></li>
+            <li><a href="#dropdowns">Dropdowns</a></li>
+            <li><a href="#footer">Footer</a></li>
+            <li><a href="#jumbotron">Jumbotron</a></li>
+            <li><a href="#list-group">List group</a></li>
+            <li><a href="#navs-and-tabs">Navs and tabs</a></li>
+            <li><a href="#navbars">Navbars</a></li>
+            <li><a href="#offcanvas">Offcanvas</a></li>
+            <li><a href="#orange-navbar">Orange navbar</a></li>
+            <li><a href="#pagination">Pagination</a></li>
+            <li><a href="#popovers">Popovers</a></li>
+            <li><a href="#spinners">Spinners</a></li>
+            <li><a href="#stepped-process">Stepped process</a></li>
+            <li><a href="#toasts">Toasts</a></li>
+            <li><a href="#tooltips">Tooltips</a></li>
+          </ul>
+        </li>
+        <li><a href="#utilities">Utilities</a></li>
+        <li><a href="#helpers">Helpers</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
       </ul>
     </li>
-    <li><a href="#utilities">Utilities</a></li>
-    <li><a href="#helpers">Helpers</a></li>
-    <li><a href="#javascript">JavaScript</a></li>
   </ul>
 </nav>
           </div>
@@ -610,11 +622,117 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="v531">v5.3.1 <a class="anchor-link" href="#v531" aria-label="Link to this section: v5.3.1"></a></h2>
+        <h2 id="v532">v5.3.2 <a class="anchor-link" href="#v532" aria-label="Link to this section: v5.3.2"></a></h2>
+<hr class="mb-4">
+<p>Boosted v5.3.2 has landed also including specific Boosted content as usual.</p>
+<p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.2">v5.3.2 release</a>.</p>
+<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
+<ul>
+<li>
+<p><strong>Accordion</strong></p>
+<ul>
+<li><span class="badge bg-warning">Warning</span> Accordion rendering has been improved for better accessibility. Although it is transparent for basic usage, you might want to check the rendering of your custom components if they are composed of an accordion.</li>
+</ul>
+</li>
+<li>
+<p><strong>Local navigation</strong></p>
+<ul>
+<li><span class="badge bg-success">New</span> Added Local Navigation as a new component.</li>
+</ul>
+</li>
+<li>
+<p><strong>Orange navbar</strong></p>
+<ul>
+<li><span class="badge bg-warning">Warning</span> The minimizing behavior with <code>.header-minimized</code> is applied to the <code>&lt;header&gt;</code> instead of one of its children directly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="forms">Forms <a class="anchor-link" href="#forms" aria-label="Link to this section: Forms"></a></h3>
+<ul>
+<li>
+<p><span class="badge bg-success">New</span> In order to improve accessibility for people suffering from any form of color blindness, we added a visual cue to form elements on error when focused so information does not rely exclusively on color anymore. Although is has no direct impact, you might want to apply this same modification within your custom form controls if you have any.</p>
+</li>
+<li>
+<p><span class="badge bg-success">New</span> Labels related to mandatory form fields have been improved for better accessibility. A <code>&lt;span class=&quot;visually-hidden&quot;&gt; (required)&lt;/span&gt;</code> element has been added to ensure correct restitution by assistive technologies like screen readers. Please reflect these modifications into your websites.</p>
+</li>
+<li>
+<p><span class="badge bg-success">New</span> Star rating now has a <code>readonly</code> state.</p>
+</li>
+<li>
+<p><span class="badge bg-warning">Warning</span> Star rating has been slightly changed for accessibility purpose; a visually hidden <code>span</code> matching the title attribute was added and color contrast of inactive stars has been updated. Please reflect this modification into your websites.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">-    &lt;label for=&#34;excellent&#34; title=&#34;Excellent&#34;&gt;&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+    &lt;label for=&#34;excellent&#34; title=&#34;Excellent&#34;&gt;&lt;span class=&#34;visually-hidden&#34;&gt;Excellent&lt;/span&gt;&lt;/label&gt;
+</span></span></span></code></pre></div></li>
+<li>
+<p><span class="badge bg-warning">Deprecated</span> The <code>form-star-rating()</code> mixin is now deprecated. We now use a <code>mask-image</code> CSS property to display the stars in this form element.</p>
+</li>
+</ul>
+<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<ul>
+<li>
+<details class="mb-2">
+  <summary><span class="badge bg-success">New</span> CSS variables:</summary>
+  <ul>
+    <li><code>--bs-accordion-btn-hover-bg</code></li>
+    <li><code>--bs-local-nav-active-bg</code></li>
+    <li><code>--bs-local-nav-active-color</code></li>
+    <li><code>--bs-local-nav-active-marker-width</code></li>
+    <li><code>--bs-local-nav-bg</code></li>
+    <li><code>--bs-local-nav-border-color</code></li>
+    <li><code>--bs-local-nav-border-width</code></li>
+    <li><code>--bs-local-nav-color</code></li>
+    <li><code>--bs-local-nav-hover-bg</code></li>
+    <li><code>--bs-local-nav-hover-color</code></li>
+    <li><code>--bs-local-nav-padding-y</code></li>
+  </ul>
+</details>
+</li>
+<li>
+<details class="mb-2">
+  <summary><span class="badge bg-success">New</span> Sass variables:</summary>
+  <ul>
+    <li><code>$accordion-button-hover-bg</code></li>
+    <li><code>$accordion-dark-button-hover-bg</code></li>
+    <li><code>$footer-accordion-active-color</code></li>
+    <li><code>$footer-accordion-btn-hover-bg</code></li>
+    <li><code>$form-star-rating-checked-color</code></li>
+    <li><code>$form-star-rating-checked-icon</code></li>
+    <li><code>$form-star-rating-dark-checked-color</code></li>
+    <li><code>$form-star-rating-dark-hover-color</code></li>
+    <li><code>$form-star-rating-dark-unchecked-color</code></li>
+    <li><code>$form-star-rating-hover-color</code></li>
+    <li><code>$form-star-rating-sm-checked-icon</code></li>
+    <li><code>$form-star-rating-sm-unchecked-icon</code></li>
+    <li><code>$form-star-rating-unchecked-color</code></li>
+    <li><code>$form-star-rating-unchecked-icon</code></li>
+    <li><code>$local-nav-active-bg</code></li>
+    <li><code>$local-nav-active-color</code></li>
+    <li><code>$local-nav-active-marker-width</code></li>
+    <li><code>$local-nav-bg</code></li>
+    <li><code>$local-nav-border-color</code></li>
+    <li><code>$local-nav-border-width</code></li>
+    <li><code>$local-nav-color</code></li>
+    <li><code>$local-nav-dark-bg</code></li>
+    <li><code>$local-nav-dark-color</code></li>
+    <li><code>$local-nav-dark-hover-bg</code></li>
+    <li><code>$local-nav-dark-hover-color</code></li>
+    <li><code>$local-nav-dark-active-bg</code></li>
+    <li><code>$local-nav-dark-active-color</code></li>
+    <li><code>$local-nav-dark-border-color</code></li>
+    <li><code>$local-nav-hover-bg</code></li>
+    <li><code>$local-nav-hover-color</code></li>
+    <li><code>$local-nav-padding-y</code></li>
+    <li><code>$mark-bg-dark</code></li>
+    <li><code>$mark-color-dark</code></li>
+  </ul>
+</details>
+</li>
+</ul>
+<h2 id="v531">v5.3.1 <a class="anchor-link" href="#v531" aria-label="Link to this section: v5.3.1"></a></h2>
 <hr class="mb-4">
 <p>Boosted v5.3.1 has landed also including specific Boosted content as usual.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.1">v5.3.1 release</a>.</p>
-<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-1">Components <a class="anchor-link" href="#components-1" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Nav and tabs</strong></p>
@@ -635,11 +753,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>&lt;/button&gt;
 </span></span></code></pre></div></li>
 </ul>
-<h3 id="forms">Forms <a class="anchor-link" href="#forms" aria-label="Link to this section: Forms"></a></h3>
+<h3 id="forms-1">Forms <a class="anchor-link" href="#forms-1" aria-label="Link to this section: Forms"></a></h3>
 <ul>
 <li><span class="badge bg-warning">Warning</span> Form text examples have been modified to add some precisions about accessibility. Please apply this modification in your websites if needed.</li>
 </ul>
-<h3 id="css-and-sass-variables">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -666,7 +784,7 @@
     <div class="alert-heading mb-1">Incompatibility with Orange Design System.
         <a href="/docs/5.3/getting-started/introduction/">More information</a></div>
     <div><p>Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.</p>
-<p>However, the dark mode is not yet available in the Orange Design System specifications.</p>
+<p>However, the dark mode was not yet available in the Orange Design System specifications at this time.</p>
 <p>Please wait for the next Boosted versions to use it in your websites.</p>
 </div>
   </div>
@@ -698,7 +816,7 @@
 </span></span><span class="line"><span class="cl"> @import &#34;utilities&#34;;
 </span></span></code></pre></div></li>
 </ul>
-<h3 id="components-1">Components <a class="anchor-link" href="#components-1" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-2">Components <a class="anchor-link" href="#components-2" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Accordion</strong></p>
@@ -879,7 +997,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="forms-1">Forms <a class="anchor-link" href="#forms-1" aria-label="Link to this section: Forms"></a></h3>
+<h3 id="forms-2">Forms <a class="anchor-link" href="#forms-2" aria-label="Link to this section: Forms"></a></h3>
 <ul>
 <li>
 <p><code>.form-control</code> is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.</p>
@@ -997,7 +1115,7 @@
 <p><span class="badge bg-success">New</span> A download app page is now available.</p>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-1">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-1" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p>Adds additional variables for alerts, <code>.btn-close</code>, and <code>.offcanvas</code>.</p>
@@ -1392,7 +1510,7 @@
 <p>Even if the generic case will be transparent for your project, please check this new behavior in your websites.</p>
 </li>
 </ul>
-<h3 id="components-2">Components <a class="anchor-link" href="#components-2" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-3">Components <a class="anchor-link" href="#components-3" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Card</strong></p>
@@ -1477,7 +1595,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="forms-2">Forms <a class="anchor-link" href="#forms-2" aria-label="Link to this section: Forms"></a></h3>
+<h3 id="forms-3">Forms <a class="anchor-link" href="#forms-3" aria-label="Link to this section: Forms"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-success">New</span> Form helpers icon buttons will help you to provide extra help information with the <code>.form-helper</code> utility class.</p>
@@ -1520,7 +1638,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-2">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-2" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <details class="mb-2">
@@ -1626,7 +1744,7 @@
 <hr class="mb-4">
 <p>Boosted v5.2.2 has landed with new bug fixes and documentation updates including a new RTL section in our examples.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.2">v5.2.2 release</a>.</p>
-<h3 id="components-3">Components <a class="anchor-link" href="#components-3" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-4">Components <a class="anchor-link" href="#components-4" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Modals</strong></p>
@@ -1643,7 +1761,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+        &lt;li class=&#34;nav-item&#34;&gt;&lt;a class=&#34;nav-link active&#34; href=&#34;#&#34; aria-label=&#34;EN English version&#34;&gt;EN&lt;/a&gt;&lt;/li&gt;
 </span></span></span></code></pre></div></li>
 </ul>
-<h3 id="forms-3">Forms <a class="anchor-link" href="#forms-3" aria-label="Link to this section: Forms"></a></h3>
+<h3 id="forms-4">Forms <a class="anchor-link" href="#forms-4" aria-label="Link to this section: Forms"></a></h3>
 <ul>
 <li><span class="badge bg-warning">Warning</span> All forms examples have been modified to add a <code>.mt-2</code> to all submit buttons in order to always have 30px between the last form control and the button. Please reflect this modification into your websites.</li>
 </ul>
@@ -1667,7 +1785,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="css-and-sass-variables-3">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-3" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><code>@mixin button-size()</code> has a new interface including a new optional parameter for button letter spacing.</p>
@@ -1697,7 +1815,7 @@
 <hr class="mb-4">
 <p>Boosted v5.2.1 is here with fixes from our latest minor release, v5.2. These changes include bug fixes, documentation updates, and some dependency updates, but also a new Tags component and a lot of new dark variants for our components.</p>
 <p>If you need more details about the changes, please refer to the <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.2.1">v5.2.1 release</a>.</p>
-<h3 id="components-4">Components <a class="anchor-link" href="#components-4" aria-label="Link to this section: Components"></a></h3>
+<h3 id="components-5">Components <a class="anchor-link" href="#components-5" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>
 <p><strong>Back to top</strong></p>
@@ -1789,14 +1907,14 @@
 </details>
 </li>
 <li>
-<p>The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want apply this same modification within your websites.</p>
+<p>The close icon SVG rendering has changed in modals, offcanvases and close buttons. Although is has no direct impact, you might want to apply this same modification within your websites.</p>
 </li>
 </ul>
 <h3 id="helpers-and-utilities-1">Helpers and utilities <a class="anchor-link" href="#helpers-and-utilities-1" aria-label="Link to this section: Helpers and utilities"></a></h3>
 <ul>
 <li><span class="badge bg-success">New</span> <code>.img-thumbnail</code> is now officially supported.</li>
 </ul>
-<h3 id="css-and-sass-variables-4">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-4" aria-label="Link to this section: CSS and Sass variables"></a></h3>
+<h3 id="css-and-sass-variables-5">CSS and Sass variables <a class="anchor-link" href="#css-and-sass-variables-5" aria-label="Link to this section: CSS and Sass variables"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> <code>--bs-pagination-margin-start</code> and <code>--bs-pagination-focus-outline</code> are now deprecated.</p>
@@ -2039,19 +2157,20 @@
 </li>
 </ul>
 <p>Want more information? <a href="https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/">Read the v5.1.0 blog post.</a></p>
-<hr class="my-5">
+<h2 id="v500">v5.0.0 <a class="anchor-link" href="#v500" aria-label="Link to this section: v5.0.0"></a></h2>
+<hr class="mb-4">
 <div class="bd-callout bd-callout-info">
 <strong>Hey there!</strong> Changes to our first major release of Boosted 5, v5.0.0, are documented below. They don&rsquo;t reflect the additional changes shown above.
 </div>
 
-<h2 id="dependencies">Dependencies <a class="anchor-link" href="#dependencies" aria-label="Link to this section: Dependencies"></a></h2>
+<h3 id="dependencies">Dependencies <a class="anchor-link" href="#dependencies" aria-label="Link to this section: Dependencies"></a></h3>
 <ul>
 <li>Dropped jQuery.</li>
 <li>Upgraded from Popper v1.x to Popper v2.x.</li>
 <li>Replaced Libsass with Dart Sass as our Sass compiler given Libsass was deprecated.</li>
 <li>Migrated from Jekyll to Hugo for building our documentation</li>
 </ul>
-<h2 id="browser-support">Browser support <a class="anchor-link" href="#browser-support" aria-label="Link to this section: Browser support"></a></h2>
+<h3 id="browser-support">Browser support <a class="anchor-link" href="#browser-support" aria-label="Link to this section: Browser support"></a></h3>
 <ul>
 <li>Dropped Internet Explorer 10 and 11</li>
 <li>Dropped Microsoft Edge &lt; 16 (Legacy Edge)</li>
@@ -2061,7 +2180,7 @@
 <li>Dropped Chrome &lt; 60</li>
 </ul>
 <hr class="my-5">
-<h2 id="documentation-changes">Documentation changes <a class="anchor-link" href="#documentation-changes" aria-label="Link to this section: Documentation changes"></a></h2>
+<h3 id="documentation-changes">Documentation changes <a class="anchor-link" href="#documentation-changes" aria-label="Link to this section: Documentation changes"></a></h3>
 <ul>
 <li>Redesigned homepage, docs layout, and footer.</li>
 <li>Added <a href="/docs/5.3/getting-started/parcel/">new Parcel guide</a>.</li>
@@ -2073,7 +2192,7 @@
 <li>Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.</li>
 <li>Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.</li>
 </ul>
-<h2 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h2>
+<h3 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h3>
 <ul>
 <li>
 <p>We&rsquo;ve ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like <code>$theme-colors</code>. Check out how to deal with <a href="/docs/5.3/customize/sass/#maps-and-loops">Sass maps</a>.</p>
@@ -2136,7 +2255,7 @@
 <p>The <code>border-radius()</code> mixin now has a default value.</p>
 </li>
 </ul>
-<h2 id="color-system">Color system <a class="anchor-link" href="#color-system" aria-label="Link to this section: Color system"></a></h2>
+<h3 id="color-system">Color system <a class="anchor-link" href="#color-system" aria-label="Link to this section: Color system"></a></h3>
 <ul>
 <li>
 <p>The color system which worked with <code>color-level()</code> and <code>$theme-color-interval</code> was removed in favor of a new color system. All <code>lighten()</code> and <code>darken()</code> functions in our codebase are replaced by <code>tint-color()</code> and <code>shade-color()</code>. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The <code>shift-color()</code> will either tint or shade a color depending on whether its weight parameter is positive or negative. <a href="https://github.com/twbs/bootstrap/pull/30622">See #30622</a> for more details.</p>
@@ -2151,7 +2270,7 @@
 <p>To support our color system, we&rsquo;ve added new custom <code>tint-color()</code> and <code>shade-color()</code> functions to mix our colors appropriately.</p>
 </li>
 </ul>
-<h2 id="grid-updates">Grid updates <a class="anchor-link" href="#grid-updates" aria-label="Link to this section: Grid updates"></a></h2>
+<h3 id="grid-updates">Grid updates <a class="anchor-link" href="#grid-updates" aria-label="Link to this section: Grid updates"></a></h3>
 <ul>
 <li>
 <p><strong>New breakpoint!</strong> Added new <code>xxl</code> breakpoint for <code>1400px</code> and up. No changes to all other breakpoints.</p>
@@ -2182,7 +2301,7 @@
 <p>Updated the <code>make-col</code> mixin to default to equal columns without a specified size.</p>
 </li>
 </ul>
-<h2 id="content-reboot-etc">Content, Reboot, etc <a class="anchor-link" href="#content-reboot-etc" aria-label="Link to this section: Content, Reboot, etc"></a></h2>
+<h3 id="content-reboot-etc">Content, Reboot, etc <a class="anchor-link" href="#content-reboot-etc" aria-label="Link to this section: Content, Reboot, etc"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Orange Helvetica CSS file names changed from <code>orangeHelvetica.*.css</code> to <code>orange-helvetica.*.css</code>.</p>
@@ -2236,11 +2355,11 @@
 <p>Added <code>$enable-smooth-scroll</code>, which applies <code>scroll-behavior: smooth</code> globally—except for users asking for reduced motion through <code>prefers-reduced-motion</code> media query. <a href="https://github.com/twbs/bootstrap/pull/31877">See #31877</a></p>
 </li>
 </ul>
-<h2 id="rtl">RTL <a class="anchor-link" href="#rtl" aria-label="Link to this section: RTL"></a></h2>
+<h3 id="rtl">RTL <a class="anchor-link" href="#rtl" aria-label="Link to this section: RTL"></a></h3>
 <ul>
 <li>Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., <code>start</code> and <code>end</code> in lieu of <code>left</code> and <code>right</code>.</li>
 </ul>
-<h2 id="forms-4">Forms <a class="anchor-link" href="#forms-4" aria-label="Link to this section: Forms"></a></h2>
+<h3 id="forms-5">Forms <a class="anchor-link" href="#forms-5" aria-label="Link to this section: Forms"></a></h3>
 <!-- Boosted mod: no floating labels -->
 <ul>
 <li>
@@ -2281,15 +2400,15 @@
 </li>
 </ul>
 <hr class="my-5">
-<h2 id="components-5">Components <a class="anchor-link" href="#components-5" aria-label="Link to this section: Components"></a></h2>
+<h3 id="components-6">Components <a class="anchor-link" href="#components-6" aria-label="Link to this section: Components"></a></h3>
 <ul>
 <li>Unified <code>padding</code> values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our <code>$spacer</code> variable. <a href="https://github.com/twbs/bootstrap/pull/30564">See #30564</a>.</li>
 </ul>
-<h3 id="accordion">Accordion <a class="anchor-link" href="#accordion" aria-label="Link to this section: Accordion"></a></h3>
+<h4 id="accordion">Accordion <a class="anchor-link" href="#accordion" aria-label="Link to this section: Accordion"></a></h4>
 <ul>
 <li>Added <a href="/docs/5.3/components/accordion/">new accordion component</a>.</li>
 </ul>
-<h3 id="alerts">Alerts <a class="anchor-link" href="#alerts" aria-label="Link to this section: Alerts"></a></h3>
+<h4 id="alerts">Alerts <a class="anchor-link" href="#alerts" aria-label="Link to this section: Alerts"></a></h4>
 <ul>
 <li>
 <p>Alerts now have <a href="/docs/5.3/components/alerts/#icons">examples with icons</a>.</p>
@@ -2298,11 +2417,11 @@
 <p>Removed custom styles for <code>&lt;hr&gt;</code>s in each alert since they already use <code>currentColor</code>.</p>
 </li>
 </ul>
-<h3 id="back-to-top">Back to top <a class="anchor-link" href="#back-to-top" aria-label="Link to this section: Back to top"></a></h3>
+<h4 id="back-to-top">Back to top <a class="anchor-link" href="#back-to-top" aria-label="Link to this section: Back to top"></a></h4>
 <ul>
 <li><span class="badge bg-danger">Breaking</span> Dropped <code>.o-scroll-up</code>, use the <code>.back-to-top</code> class instead. Please check our <a href="/docs/5.3/components/back-to-top/">Back to top page</a> to use it properly. Back to top component doesn&rsquo;t use JavaScript anymore.</li>
 </ul>
-<h3 id="badges">Badges <a class="anchor-link" href="#badges" aria-label="Link to this section: Badges"></a></h3>
+<h4 id="badges">Badges <a class="anchor-link" href="#badges" aria-label="Link to this section: Badges"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Dropped all <code>.badge-*</code> color classes for background utilities (e.g., use <code>.bg-primary</code> instead of <code>.badge-primary</code>).</p>
@@ -2317,7 +2436,7 @@
 <p>Increased default padding for badges from <code>.25em</code>/<code>.5em</code> to <code>.35em</code>/<code>.65em</code>.</p>
 </li>
 </ul>
-<h3 id="breadcrumbs">Breadcrumbs <a class="anchor-link" href="#breadcrumbs" aria-label="Link to this section: Breadcrumbs"></a></h3>
+<h4 id="breadcrumbs">Breadcrumbs <a class="anchor-link" href="#breadcrumbs" aria-label="Link to this section: Breadcrumbs"></a></h4>
 <ul>
 <li>
 <p>Simplified the default appearance of breadcrumbs by removing <code>padding</code>, <code>background-color</code>, and <code>border-radius</code>.</p>
@@ -2326,7 +2445,7 @@
 <p>Added new CSS custom property <code>--bs-breadcrumb-divider</code> for easy customization without needing to recompile CSS.</p>
 </li>
 </ul>
-<h3 id="buttons">Buttons <a class="anchor-link" href="#buttons" aria-label="Link to this section: Buttons"></a></h3>
+<h4 id="buttons">Buttons <a class="anchor-link" href="#buttons" aria-label="Link to this section: Buttons"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> <strong><a href="/docs/5.3/forms/checks-radios/#toggle-buttons">Toggle buttons</a>, with checkboxes or radios, no longer require JavaScript and have new markup.</strong> We no longer require a wrapping element, add <code>.btn-check</code> to the <code>&lt;input&gt;</code>, and pair it with any <code>.btn</code> classes on the <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">See #30650</a>. <em>The docs for this has moved from our Buttons page to the new Forms section.</em></p>
@@ -2347,7 +2466,7 @@
 <p>Disabled buttons now have <code>pointer-events: none;</code>.</p>
 </li>
 </ul>
-<h3 id="card">Card <a class="anchor-link" href="#card" aria-label="Link to this section: Card"></a></h3>
+<h4 id="card">Card <a class="anchor-link" href="#card" aria-label="Link to this section: Card"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Dropped <code>.card-deck</code> in favor of our grid. Wrap your cards in column classes and add a parent <code>.row-cols-*</code> container to recreate card decks (but with more control over responsive alignment).</p>
@@ -2359,7 +2478,7 @@
 <p><span class="badge bg-danger">Breaking</span> Replaced the <code>.card</code> based accordion with a <a href="/docs/5.3/components/accordion/">new Accordion component</a>.</p>
 </li>
 </ul>
-<h3 id="carousel">Carousel <a class="anchor-link" href="#carousel" aria-label="Link to this section: Carousel"></a></h3>
+<h4 id="carousel">Carousel <a class="anchor-link" href="#carousel" aria-label="Link to this section: Carousel"></a></h4>
 <ul>
 <li>
 <p>Added new <a href="/docs/5.3/components/carousel/#dark-variant"><code>.carousel-dark</code> variant</a> for dark text, controls, and indicators (great for lighter backgrounds).</p>
@@ -2368,7 +2487,7 @@
 <p>Replaced chevron icons for carousel controls with new SVGs from <a href="/docs/5.3/extend/icons/">Solaris</a>.</p>
 </li>
 </ul>
-<h3 id="close-button">Close button <a class="anchor-link" href="#close-button" aria-label="Link to this section: Close button"></a></h3>
+<h4 id="close-button">Close button <a class="anchor-link" href="#close-button" aria-label="Link to this section: Close button"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Renamed <code>.close</code> to <code>.btn-close</code> for a less generic name.</p>
@@ -2380,11 +2499,11 @@
 <p>Added new <code>.btn-close-white</code> variant that uses <code>filter: invert(1)</code> to enable higher contrast dismiss icons against darker backgrounds.</p>
 </li>
 </ul>
-<h3 id="collapse">Collapse <a class="anchor-link" href="#collapse" aria-label="Link to this section: Collapse"></a></h3>
+<h4 id="collapse">Collapse <a class="anchor-link" href="#collapse" aria-label="Link to this section: Collapse"></a></h4>
 <ul>
 <li>Removed scroll anchoring for accordions.</li>
 </ul>
-<h3 id="dropdowns">Dropdowns <a class="anchor-link" href="#dropdowns" aria-label="Link to this section: Dropdowns"></a></h3>
+<h4 id="dropdowns">Dropdowns <a class="anchor-link" href="#dropdowns" aria-label="Link to this section: Dropdowns"></a></h4>
 <ul>
 <li>
 <p>Added new <code>.dropdown-menu-dark</code> variant and associated variables for on-demand dark dropdowns.</p>
@@ -2411,32 +2530,32 @@
 <p>Dropdowns now support <code>.dropdown-item</code>s wrapped in <code>&lt;li&gt;</code>s.</p>
 </li>
 </ul>
-<h3 id="footer">Footer <a class="anchor-link" href="#footer" aria-label="Link to this section: Footer"></a></h3>
+<h4 id="footer">Footer <a class="anchor-link" href="#footer" aria-label="Link to this section: Footer"></a></h4>
 <ul>
 <li><span class="badge bg-danger">Breaking</span> Footers&rsquo; HTML structure changed a lot as it works now with sub-components. They don&rsquo;t require <code>.o-footer-*</code> classes anymore, they need <a href="/docs/5.3/components/footer/"><code>.footer-*</code> classes</a>.</li>
 </ul>
-<h3 id="jumbotron">Jumbotron <a class="anchor-link" href="#jumbotron" aria-label="Link to this section: Jumbotron"></a></h3>
+<h4 id="jumbotron">Jumbotron <a class="anchor-link" href="#jumbotron" aria-label="Link to this section: Jumbotron"></a></h4>
 <ul>
 <li><span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities.</li>
 </ul>
-<h3 id="list-group">List group <a class="anchor-link" href="#list-group" aria-label="Link to this section: List group"></a></h3>
+<h4 id="list-group">List group <a class="anchor-link" href="#list-group" aria-label="Link to this section: List group"></a></h4>
 <ul>
 <li>Added new <a href="/docs/5.3/components/list-group/#numbered"><code>.list-group-numbered</code> modifier</a> to list groups.</li>
 </ul>
-<h3 id="navs-and-tabs">Navs and tabs <a class="anchor-link" href="#navs-and-tabs" aria-label="Link to this section: Navs and tabs"></a></h3>
+<h4 id="navs-and-tabs">Navs and tabs <a class="anchor-link" href="#navs-and-tabs" aria-label="Link to this section: Navs and tabs"></a></h4>
 <ul>
 <li>Added new <code>null</code> variables for <code>font-size</code>, <code>font-weight</code>, <code>color</code>, and <code>:hover</code> <code>color</code> to the <code>.nav-link</code> class.</li>
 </ul>
-<h3 id="navbars">Navbars <a class="anchor-link" href="#navbars" aria-label="Link to this section: Navbars"></a></h3>
+<h4 id="navbars">Navbars <a class="anchor-link" href="#navbars" aria-label="Link to this section: Navbars"></a></h4>
 <ul>
 <li><span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).</li>
 <li><span class="badge bg-danger">Breaking</span> The <code>.active</code> class can no longer be applied to <code>.nav-item</code>s, it must be applied directly on <code>.nav-link</code>s.</li>
 </ul>
-<h3 id="offcanvas">Offcanvas <a class="anchor-link" href="#offcanvas" aria-label="Link to this section: Offcanvas"></a></h3>
+<h4 id="offcanvas">Offcanvas <a class="anchor-link" href="#offcanvas" aria-label="Link to this section: Offcanvas"></a></h4>
 <ul>
 <li>Added the new <a href="/docs/5.3/components/offcanvas/">offcanvas component</a>.</li>
 </ul>
-<h3 id="orange-navbar">Orange navbar <a class="anchor-link" href="#orange-navbar" aria-label="Link to this section: Orange navbar"></a></h3>
+<h4 id="orange-navbar">Orange navbar <a class="anchor-link" href="#orange-navbar" aria-label="Link to this section: Orange navbar"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Supra bars now require a <code>.bg-dark</code> class.</p>
@@ -2451,7 +2570,7 @@
 <p>Classes to handle titles in the bars have been added: use <code>.title</code> for a title on a single line, or <code>.two-lined</code> for, as its name suggests, a title on two lines.</p>
 </li>
 </ul>
-<h3 id="pagination">Pagination <a class="anchor-link" href="#pagination" aria-label="Link to this section: Pagination"></a></h3>
+<h4 id="pagination">Pagination <a class="anchor-link" href="#pagination" aria-label="Link to this section: Pagination"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Dropped <code>.has-label</code> support.</p>
@@ -2463,7 +2582,7 @@
 <p>Added <code>transition</code>s to pagination links.</p>
 </li>
 </ul>
-<h3 id="popovers">Popovers <a class="anchor-link" href="#popovers" aria-label="Link to this section: Popovers"></a></h3>
+<h4 id="popovers">Popovers <a class="anchor-link" href="#popovers" aria-label="Link to this section: Popovers"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Renamed <code>.arrow</code> to <code>.popover-arrow</code> in our default popover template.</p>
@@ -2472,7 +2591,7 @@
 <p>Renamed <code>whiteList</code> option to <code>allowList</code>.</p>
 </li>
 </ul>
-<h3 id="spinners">Spinners <a class="anchor-link" href="#spinners" aria-label="Link to this section: Spinners"></a></h3>
+<h4 id="spinners">Spinners <a class="anchor-link" href="#spinners" aria-label="Link to this section: Spinners"></a></h4>
 <ul>
 <li>
 <p>Spinners now honor <code>prefers-reduced-motion: reduce</code> by slowing down animations. <a href="https://github.com/twbs/bootstrap/pull/31882">See #31882</a>.</p>
@@ -2481,7 +2600,7 @@
 <p>Improved spinner vertical alignment.</p>
 </li>
 </ul>
-<h3 id="stepped-process">Stepped process <a class="anchor-link" href="#stepped-process" aria-label="Link to this section: Stepped process"></a></h3>
+<h4 id="stepped-process">Stepped process <a class="anchor-link" href="#stepped-process" aria-label="Link to this section: Stepped process"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Dropped <code>.o-stepbar</code>, use <code>.stepped-process</code> instead. All other classes using <code>.stepbar-*</code> should be replaced by <code>.stepped-process-*</code>.</p>
@@ -2493,7 +2612,7 @@
 <p><span class="badge bg-danger">Breaking</span> Dropped <code>$o-stepbar-height</code> and lots of new variables were added.</p>
 </li>
 </ul>
-<h3 id="toasts">Toasts <a class="anchor-link" href="#toasts" aria-label="Link to this section: Toasts"></a></h3>
+<h4 id="toasts">Toasts <a class="anchor-link" href="#toasts" aria-label="Link to this section: Toasts"></a></h4>
 <ul>
 <li>
 <p>Toasts can now be <a href="/docs/5.3/components/toasts/#placement">positioned</a> in a <code>.toast-container</code> with the help of <a href="/docs/5.3/utilities/position/">positioning utilities</a>.</p>
@@ -2505,7 +2624,7 @@
 <p>Removed <code>overflow: hidden</code> from toasts and replaced with proper <code>border-radius</code>s with <code>calc()</code> functions.</p>
 </li>
 </ul>
-<h3 id="tooltips">Tooltips <a class="anchor-link" href="#tooltips" aria-label="Link to this section: Tooltips"></a></h3>
+<h4 id="tooltips">Tooltips <a class="anchor-link" href="#tooltips" aria-label="Link to this section: Tooltips"></a></h4>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Renamed <code>.arrow</code> to <code>.tooltip-arrow</code> in our default tooltip template.</p>
@@ -2517,12 +2636,11 @@
 <p><span class="badge bg-danger">Breaking</span> Renamed <code>whiteList</code> option to <code>allowList</code>.</p>
 </li>
 </ul>
-<h2 id="utilities">Utilities <a class="anchor-link" href="#utilities" aria-label="Link to this section: Utilities"></a></h2>
+<h3 id="utilities">Utilities <a class="anchor-link" href="#utilities" aria-label="Link to this section: Utilities"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:</p>
 <ul>
-<li>Renamed <code>.left-*</code> and <code>.right-*</code> to <code>.start-*</code> and <code>.end-*</code>.</li>
 <li>Renamed <code>.float-left</code> and <code>.float-right</code> to <code>.float-start</code> and <code>.float-end</code>.</li>
 <li>Renamed <code>.border-left</code> and <code>.border-right</code> to <code>.border-start</code> and <code>.border-end</code>.</li>
 <li>Renamed <code>.rounded-left</code> and <code>.rounded-right</code> to <code>.rounded-start</code> and <code>.rounded-end</code>.</li>
@@ -2580,7 +2698,7 @@
 <p>Extended the <code>.visually-hidden-focusable</code> helper to also work on containers, using <code>:focus-within</code>.</p>
 </li>
 </ul>
-<h2 id="helpers">Helpers <a class="anchor-link" href="#helpers" aria-label="Link to this section: Helpers"></a></h2>
+<h3 id="helpers">Helpers <a class="anchor-link" href="#helpers" aria-label="Link to this section: Helpers"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> <strong>Responsive embed helpers have been renamed to <a href="/docs/5.3/helpers/ratio/">ratio helpers</a></strong> with new class names and improved behaviors, as well as a helpful CSS variable.</p>
@@ -2603,7 +2721,7 @@
 <p><code>boosted-utilities.css</code> now also includes our helpers. Helpers don&rsquo;t need to be imported in custom builds anymore.</p>
 </li>
 </ul>
-<h2 id="javascript">JavaScript <a class="anchor-link" href="#javascript" aria-label="Link to this section: JavaScript"></a></h2>
+<h3 id="javascript">JavaScript <a class="anchor-link" href="#javascript" aria-label="Link to this section: JavaScript"></a></h3>
 <ul>
 <li>
 <p><strong>Dropped jQuery dependency</strong> and rewrote plugins to be in regular JavaScript.</p>
@@ -2707,7 +2825,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -2726,7 +2844,7 @@
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -2764,14 +2882,14 @@
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

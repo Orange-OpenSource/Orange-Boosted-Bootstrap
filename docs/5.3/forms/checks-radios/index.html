@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/forms/checks-radios.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/forms/checks-radios.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -534,6 +535,7 @@
       <ul>
         <li><a href="#sizes">Sizes</a></li>
         <li><a href="#dark-variant">Dark variant</a></li>
+        <li><a href="#readonly">Readonly</a></li>
         <li><a href="#disabled-2">Disabled</a></li>
       </ul>
     </li>
@@ -1256,19 +1258,19 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible" name="rating" value="1" class="visually-hidden">
-    <label for="terrible" title="Terrible"></label>
+    <label for="terrible" title="Terrible"><span class="visually-hidden">Terrible</span></label>
 
     <input type="radio" id="bad" name="rating" value="2" class="visually-hidden">
-    <label for="bad" title="Bad"></label>
+    <label for="bad" title="Bad"><span class="visually-hidden">Bad</span></label>
 
     <input type="radio" id="mixed" name="rating" value="3" class="visually-hidden">
-    <label for="mixed" title="Mixed"></label>
+    <label for="mixed" title="Mixed"><span class="visually-hidden">Mixed</span></label>
 
     <input type="radio" id="good" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good" title="Good"></label>
+    <label for="good" title="Good"><span class="visually-hidden">Good</span></label>
 
     <input type="radio" id="excellent" name="rating" value="5" class="visually-hidden">
-    <label for="excellent" title="Excellent"></label>
+    <label for="excellent" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
@@ -1286,19 +1288,19 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">legend</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Results relevance<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Terrible<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Bad<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Mixed<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Good<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
@@ -1310,19 +1312,19 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
-    <label for="terrible2" title="Terrible"></label>
+    <label for="terrible2" title="Terrible"><span class="visually-hidden">Terrible</span></label>
 
     <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden">
-    <label for="bad2" title="Bad"></label>
+    <label for="bad2" title="Bad"><span class="visually-hidden">Bad</span></label>
 
     <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden">
-    <label for="mixed2" title="Mixed"></label>
+    <label for="mixed2" title="Mixed"><span class="visually-hidden">Mixed</span></label>
 
     <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good2" title="Good"></label>
+    <label for="good2" title="Good"><span class="visually-hidden">Good</span></label>
 
     <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
-    <label for="excellent2" title="Excellent"></label>
+    <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
@@ -1340,19 +1342,19 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">legend</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Results relevance<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Terrible<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Bad<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Mixed<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Good<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent2&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
@@ -1364,19 +1366,19 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
     <legend class="visually-hidden">Results relevance</legend>
 
     <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
-    <label for="terrible3" title="Terrible"></label>
+    <label for="terrible3" title="Terrible"><span class="visually-hidden">Terrible</span></label>
 
     <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
-    <label for="bad3" title="Bad"></label>
+    <label for="bad3" title="Bad"><span class="visually-hidden">Bad</span></label>
 
     <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
-    <label for="mixed3" title="Mixed"></label>
+    <label for="mixed3" title="Mixed"><span class="visually-hidden">Mixed</span></label>
 
     <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
-    <label for="good3" title="Good"></label>
+    <label for="good3" title="Good"><span class="visually-hidden">Good</span></label>
 
     <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
-    <label for="excellent3" title="Excellent"></label>
+    <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
@@ -1394,42 +1396,36 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">legend</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Results relevance<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Terrible<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Bad<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Mixed<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Good<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent3&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="disabled-2">Disabled <a class="anchor-link" href="#disabled-2" aria-label="Link to this section: Disabled"></a></h3>
-<p>Make star ratings look inactive inside or outside a form by adding the <code>disabled</code> boolean attribute to the <code>&lt;fieldset&gt;</code> element and the <code>checked</code> boolean attribute to any <code>&lt;input&gt;</code> element.</p>
+<h3 id="readonly">Readonly <a class="anchor-link" href="#readonly" aria-label="Link to this section: Readonly"></a></h3>
+<p>Make star ratings readable but non-editable by using <code>&lt;span&gt;</code>s instead of <code>&lt;input&gt;</code> elements.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<fieldset class="star-rating" disabled>
-  <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
-  <label for="terrible4" title="Terrible"></label>
+<div class="star-rating">
+  <p class="visually-hidden">Star rating: rated 3 out of 5</p>
 
-  <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
-  <label for="bad4" title="Bad"></label>
-
-  <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
-  <label for="mixed4" title="Mixed"></label>
-
-  <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
-  <label for="good4" title="Good"></label>
-
-  <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
-  <label for="excellent4" title="Excellent"></label>
-</fieldset>
-<span class="visually-hidden">rated 3 stars out of 5</span>
+  <div aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span class="checked"></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -1440,23 +1436,73 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;star-rating&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;star-rating&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Star rating: rated 3 out of 5<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;checked&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
+<h3 id="disabled-2">Disabled <a class="anchor-link" href="#disabled-2" aria-label="Link to this section: Disabled"></a></h3>
+<p>Make star ratings look inactive inside or outside a form by adding the <code>disabled</code> boolean attribute to the <code>&lt;fieldset&gt;</code> element and the <code>checked</code> boolean attribute to any <code>&lt;input&gt;</code> element.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<form>
+  <fieldset class="star-rating" disabled aria-hidden="true">
+    <legend class="visually-hidden">Disabled star rating</legend>
+
+    <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
+    <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+
+    <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
+    <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
+
+    <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden" checked>
+    <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+
+    <input type="radio" id="good4" name="rating" value="4" class="visually-hidden">
+    <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
+
+    <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
+    <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset>
+  <p class="visually-hidden">Disabled star rating: rated 3 out of 5</p>
+</form>
+</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
+        <small class="font-monospace text-body-secondary text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" aria-hidden="true"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">fieldset</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;star-rating&#34;</span> <span class="na">disabled</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">legend</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Disabled star rating<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;terrible4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;terrible4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Terrible&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Terrible<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bad4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;bad4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Bad&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Bad<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>rated 3 stars out of 5<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;mixed4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;mixed4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Mixed&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Mixed<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;good4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;good4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Good&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Good<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;excellent4&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;rating&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;excellent4&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Excellent&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Excellent<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Disabled star rating: rated 3 out of 5<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <!-- End mod -->
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
@@ -1465,7 +1511,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1509,15 +1555,28 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-inline-margin-end</span><span class="o">:</span>    <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Boosted mod: Star rating
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-size</span><span class="o">:</span>                  <span class="mi">1</span><span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-size-sm</span><span class="o">:</span>               <span class="mi">1</span><span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$form-star-margin-between</span><span class="o">:</span>        <span class="o">-</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-size</span><span class="o">:</span>                        <span class="mi">1</span><span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-size-sm</span><span class="o">:</span>                     <span class="mi">1</span><span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-margin-between</span><span class="o">:</span>              <span class="o">-</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-color</span><span class="o">:</span>        <span class="nv">$accessible-orange</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-color</span><span class="o">:</span>      <span class="nv">$gray-700</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-hover-color</span><span class="o">:</span>          <span class="nv">$black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-checked-color</span><span class="o">:</span>   <span class="nv">$primary</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-unchecked-color</span><span class="o">:</span> <span class="nv">$gray-500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-dark-hover-color</span><span class="o">:</span>     <span class="nv">$white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-checked-icon</span><span class="o">:</span>         <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;#000&#39; stroke=&#39;#000&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-unchecked-icon</span><span class="o">:</span>       <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 25 25&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;#000&#39; d=&#39;m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-checked-icon</span><span class="o">:</span>      <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;#000&#39; stroke=&#39;#000&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$form-star-rating-sm-unchecked-icon</span><span class="o">:</span>    <span class="nf">escape-svg</span><span class="p">(</span><span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 20 20&#39;&gt;&lt;path fill=&#39;transparent&#39; stroke=&#39;#000&#39; d=&#39;M10 3.943 11.54 8.7l4.998-.004-4.046 2.936 1.548 4.755L10 13.444l-4.04 2.943 1.548-4.755-4.046-2.936L8.46 8.7 10 3.943Z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//fusv-disable
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-color</span><span class="o">:</span>           <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-outline</span><span class="o">:</span>         <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="ni">solid</span> <span class="nv">$form-star-focus-color</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-color-dark</span><span class="o">:</span>      <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-outline-dark</span><span class="o">:</span>    <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="ni">solid</span> <span class="nv">$form-star-focus-color-dark</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-box-shadow</span><span class="o">:</span>      <span class="nv">$input-btn-focus-box-shadow</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-color</span><span class="o">:</span>                 <span class="nv">$black</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-outline</span><span class="o">:</span>               <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="ni">solid</span> <span class="nv">$form-star-focus-color</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-color-dark</span><span class="o">:</span>            <span class="nv">$white</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-outline-dark</span><span class="o">:</span>          <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="ni">solid</span> <span class="nv">$form-star-focus-color-dark</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-star-focus-box-shadow</span><span class="o">:</span>            <span class="nv">$input-btn-focus-box-shadow</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.3
 </span></span></span><span class="line"><span class="cl"><span class="c1">//fusv-enable
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// End mod
@@ -1526,7 +1585,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1552,10 +1611,13 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$form-switch-checked-bg-position</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">border-width</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span></code></pre></div></div>
 <h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins" aria-label="Link to this section: Sass mixins"></a></h3>
+
+<p><span class="tag tag-sm">Deprecated in v5.3.2</span></p>
+
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/mixins/_star-rating.scss">scss/mixins/_star-rating.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/mixins/_star-rating.scss">scss/mixins/_star-rating.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1646,7 +1708,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1665,7 +1727,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1703,14 +1765,14 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -676,6 +677,14 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 </div>
 
 <h2 id="accented-tables">Accented tables <a class="anchor-link" href="#accented-tables" aria-label="Link to this section: Accented tables"></a></h2>
+<div class="alert alert-info">
+  <span class="alert-icon"><span class="visually-hidden">info</span></span>
+  <div>
+    <div class="alert-heading mb-1">Orange Design System recommendation.</div>
+    <div>It is possible to use striped rows <strong>or</strong> striped columns in your tables, but you <strong>can&rsquo;t use both in a same table</strong>.</div>
+  </div>
+</div>
+
 <h3 id="striped-rows">Striped rows <a class="anchor-link" href="#striped-rows" aria-label="Link to this section: Striped rows"></a></h3>
 <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
 <div class="bd-example">
@@ -1074,7 +1083,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/mixins/_table-variants.scss">scss/mixins/_table-variants.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/mixins/_table-variants.scss">scss/mixins/_table-variants.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1321,6 +1330,15 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="nesting">Nesting <a class="anchor-link" href="#nesting" aria-label="Link to this section: Nesting"></a></h2>
+<div class="alert alert-danger">
+  <span class="alert-icon"><span class="visually-hidden">danger</span></span>
+  <div>
+    <div class="alert-heading mb-1">Incompatibility with Orange Design System.
+        <a href="/docs/5.3/getting-started/introduction/">More information</a></div>
+    <div>This component variant should not be used because it does not respect the Orange Design System specifications. It is not recommended for usability reasons.</div>
+  </div>
+</div>
+
 <p>Border styles, active styles, and table variants are not inherited by nested tables.</p>
 <div class="bd-example">
   <table class="table table-striped table-bordered">
@@ -2479,7 +2497,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -2495,7 +2513,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-cell-vertical-align</span><span class="o">:</span>             <span class="ni">top</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-line-height</span><span class="o">:</span>                     <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nv">$table-color</span><span class="o">:</span>                           <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$table-color</span><span class="o">:</span>                           <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">emphasis-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-bg</span><span class="o">:</span>                              <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-bg</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-accent-bg</span><span class="o">:</span>                       <span class="ni">transparent</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -2503,21 +2521,21 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$table-striped-color</span><span class="o">:</span>                   <span class="nv">$table-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-striped-bg-factor</span><span class="o">:</span>               <span class="mf">.065</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-bg</span><span class="o">:</span>                      <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-striped-bg-factor</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-bg</span><span class="o">:</span>                      <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">emphasis-color-rgb</span><span class="p">)</span><span class="o">,</span> <span class="nv">$table-striped-bg-factor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-striped-hover-color</span><span class="o">:</span>             <span class="nv">$table-color</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-hover-bg-factor</span><span class="o">:</span>         <span class="mf">.4</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-hover-bg</span><span class="o">:</span>                <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-striped-hover-bg-factor</span><span class="p">);</span> <span class="c1">// Boosted mod
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-striped-hover-bg</span><span class="o">:</span>                <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">emphasis-color-rgb</span><span class="p">)</span><span class="o">,</span> <span class="nv">$table-striped-hover-bg-factor</span><span class="p">);</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-variant-striped-bg-factor</span><span class="o">:</span>       <span class="mf">.2</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-variant-striped-hover-bg-factor</span><span class="o">:</span> <span class="mf">.865</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-active-color</span><span class="o">:</span>                    <span class="nv">$table-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-active-bg-factor</span><span class="o">:</span>                <span class="mf">.135</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-active-bg</span><span class="o">:</span>                       <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-active-bg-factor</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-active-bg</span><span class="o">:</span>                       <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">emphasis-color-rgb</span><span class="p">)</span><span class="o">,</span> <span class="nv">$table-active-bg-factor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-variant-active-bg-factor</span><span class="o">:</span>        <span class="mf">.6</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-hover-color</span><span class="o">:</span>                     <span class="nv">$table-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-hover-bg-factor</span><span class="o">:</span>                 <span class="mf">.065</span><span class="p">;</span> <span class="c1">// Boosted mod
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-hover-bg</span><span class="o">:</span>                        <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="nv">$table-hover-bg-factor</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$table-hover-bg</span><span class="o">:</span>                        <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">emphasis-color-rgb</span><span class="p">)</span><span class="o">,</span> <span class="nv">$table-hover-bg-factor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-variant-hover-bg-factor</span><span class="o">:</span>         <span class="mf">.2</span><span class="p">;</span> <span class="c1">// Boosted mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nv">$table-border-factor</span><span class="o">:</span>                   <span class="mf">.4</span><span class="p">;</span> <span class="c1">// Boosted mod
@@ -2540,7 +2558,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -2634,7 +2652,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -2653,7 +2671,7 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -2691,14 +2709,14 @@ You can refer to <a href="/docs/5.3/content/tables/#small-tables">small tables</
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
