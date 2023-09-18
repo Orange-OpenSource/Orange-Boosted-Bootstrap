@@ -14,7 +14,7 @@ Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
 
 However, the dark mode is not yet available in the Orange Design System specifications.
 
-Please wait for the next Boosted versions to use it in your websites.
+Please use Boosted v5.3.3 to have the dark mode available.
 {{< /design-callout-alert >}}
 
 {{< callout >}}
