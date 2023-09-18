@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for how to use Boosted&rsquo;s included navigation components.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block active" aria-current="page">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -871,6 +872,10 @@
 
 <h3 id="underline">Underline <a class="anchor-link" href="#underline" aria-label="Link to this section: Underline"></a></h3>
 <p>Take that same HTML, but use <code>.nav-underline</code> instead:</p>
+<div class="bd-callout bd-callout-warning">
+If you want it to wrap nicely on lower breakpoints, consider using <a href="/docs/5.3/components/local-navigation/">our Local Navigation component</a>.
+</div>
+
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <ul class="nav nav-underline">
   <li class="nav-item">
@@ -1179,11 +1184,22 @@
 <p>Note that navigation bars, even if visually styled as tabs with the <code>.nav-tabs</code> class, should <strong>not</strong> be given <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code> or <code>role=&quot;tabpanel&quot;</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">ARIA Authoring Practices Guide tabs pattern</a>. See <a href="#javascript-behavior">JavaScript behavior</a> for dynamic tabbed interfaces in this section for an example. The <code>aria-current</code> attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding <code>aria-selected=&quot;true&quot;</code> on the active tab.</p>
 <h2 id="using-dropdowns">Using dropdowns <a class="anchor-link" href="#using-dropdowns" aria-label="Link to this section: Using dropdowns"></a></h2>
 <p>Add dropdown menus with a little extra HTML and the <a href="/docs/5.3/components/dropdowns/#usage">dropdowns JavaScript plugin</a>.</p>
+<div class="bd-callout bd-callout-info">
+As a design recommendation, dropdowns are typically placed at the end of the nav after all of the links.
+</div>
+
 <h3 id="tabs-with-dropdowns">Tabs with dropdowns <a class="anchor-link" href="#tabs-with-dropdowns" aria-label="Link to this section: Tabs with dropdowns"></a></h3>
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -1194,12 +1210,6 @@
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
@@ -1216,6 +1226,12 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Active<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item dropdown&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Dropdown<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span><span class="p">&gt;</span>
@@ -1226,14 +1242,9 @@
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Separated link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
+<!-- End mod -->
 <h3 id="pills-with-dropdowns">Pills with dropdowns <a class="anchor-link" href="#pills-with-dropdowns" aria-label="Link to this section: Pills with dropdowns"></a></h3>
 <div class="alert alert-danger">
   <span class="alert-icon"><span class="visually-hidden">danger</span></span>
@@ -1244,10 +1255,17 @@
   </div>
 </div>
 
+<!-- Boosted mod: dropdown nav-item moved at the end of the nav-item list to match the Orange design system requirements -->
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -1258,12 +1276,6 @@
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </li>
 </ul>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom border-gray-400 border-1">
@@ -1280,6 +1292,12 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Active<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item dropdown&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Dropdown<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span><span class="p">&gt;</span>
@@ -1290,14 +1308,9 @@
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Separated link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
+<!-- End mod -->
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 
@@ -1308,7 +1321,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_nav.scss">scss/_nav.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_nav.scss">scss/_nav.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1325,7 +1338,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_nav.scss">scss/_nav.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_nav.scss">scss/_nav.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1346,7 +1359,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_nav.scss">scss/_nav.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_nav.scss">scss/_nav.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1360,7 +1373,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_nav.scss">scss/_nav.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_nav.scss">scss/_nav.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1376,7 +1389,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_nav.scss">scss/_nav.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_nav.scss">scss/_nav.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1398,7 +1411,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1847,7 +1860,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1866,7 +1879,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1904,14 +1917,14 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

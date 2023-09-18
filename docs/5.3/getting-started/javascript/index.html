@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bring Boosted to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -551,7 +552,8 @@
 <strong>Try it yourself!</strong> Download the source code and working demo for using Bootstrap with React, Next.js, and React Bootstrap from the <a href="https://github.com/twbs/examples/tree/main/react-nextjs">twbs/examples repository</a>. You can also <a href="https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx">open the example in StackBlitz</a>.
 </div>
 </li>
-<li>Vue: <a href="https://bootstrap-vue.org/">BootstrapVue</a> (currently only supports Vue 2 and Bootstrap 4)</li>
+<li>Vue: <a href="https://bootstrap-vue.org/">BootstrapVue</a> (Bootstrap 4)</li>
+<li>Vue 3: <a href="https://bootstrap-vue-next.github.io/bootstrap-vue-next/">BootstrapVueNext</a> (Bootstrap 5, currently in alpha)</li>
 <li>Angular: <a href="https://ng-bootstrap.github.io/">ng-bootstrap</a></li>
 </ul>
 <h2 id="using-boosted-as-a-module">Using Boosted as a module <a class="anchor-link" href="#using-boosted-as-a-module" aria-label="Link to this section: Using Boosted as a module"></a></h2>
@@ -585,7 +587,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/css/boosted.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, modularity!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -597,7 +599,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="s2">&#34;imports&#34;</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="s2">&#34;@popperjs/core&#34;</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;boosted&#34;</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.esm.min.js&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;boosted&#34;</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/boosted@5.3.2/dist/js/boosted.esm.min.js&#34;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -724,7 +726,7 @@
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/js/src/util/sanitizer.js">js/src/util/sanitizer.js</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/js/src/util/sanitizer.js">js/src/util/sanitizer.js</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -893,7 +895,7 @@
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -912,7 +914,7 @@
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -950,14 +952,14 @@
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->

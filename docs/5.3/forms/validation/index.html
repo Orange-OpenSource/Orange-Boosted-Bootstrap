@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
-<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fyenpx19UpfUhZ+SD9o9IdxeIJKE6upKx0B54OcXy1TqnO660Qw9xw6rOASP+eir" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -58,7 +58,7 @@
 <meta property="og:image:height" content="630">
 
 
-<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-lWhmB6J6Gh3DTp4BWpiJavDGA+9GMMknnIAmBma4u1cdt/CYGhmokavGkYkvCdsT" crossorigin="anonymous"></script>
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-hwicn9xPpOEg7+nH57TTWRcvXX89AaowA6WlgzxyPYc5OOOockMXp4mt+KozRs6l" crossorigin="anonymous"></script>
 
 
 
@@ -371,6 +371,7 @@
             <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block">Dropdowns</a></li>
             <li><a href="/docs/5.3/components/footer/" class="bd-links-link d-inline-block">Footer</a></li>
             <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block">List group</a></li>
+            <li><a href="/docs/5.3/components/local-navigation/" class="bd-links-link d-inline-block">Local navigation</a></li>
             <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block">Modal</a></li>
             <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block">Navbar</a></li>
             <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block">Navs &amp; tabs</a></li>
@@ -482,7 +483,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/site/content/docs/5.3/forms/validation.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/site/content/docs/5.3/forms/validation.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               View on GitHub
             </a>
           </div>
@@ -550,21 +551,21 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
-    <label for="validationCustom01" class="form-label is-required">First name</label>
+    <label for="validationCustom01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustom02" class="form-label is-required">Last name</label>
+    <label for="validationCustom02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label is-required">Username</label>
+    <label for="validationCustomUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -574,14 +575,14 @@ We are aware that currently the client-side custom validation styles and tooltip
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom03" class="form-label is-required">City</label>
+    <label for="validationCustom03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom04" class="form-label is-required">State</label>
+    <label for="validationCustom04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select" id="validationCustom04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -591,7 +592,7 @@ We are aware that currently the client-side custom validation styles and tooltip
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom05" class="form-label is-required">Zip</label>
+    <label for="validationCustom05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationCustom05" required>
     <div class="invalid-feedback">
       Please provide a valid zip.
@@ -601,7 +602,7 @@ We are aware that currently the client-side custom validation styles and tooltip
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
       <div class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -623,21 +624,21 @@ We are aware that currently the client-side custom validation styles and tooltip
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row g-3 needs-validation&#34;</span> <span class="na">novalidate</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustom01&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Mark&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Looks good!
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustom02&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Otto&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Looks good!
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustomUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustomUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustomUsername&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
@@ -647,14 +648,14 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustom03&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Please provide a valid city.
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustom04&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">disabled</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>Choose...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -664,7 +665,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationCustom05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationCustom05&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Please provide a valid zip.
@@ -674,7 +675,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- Keep this &lt;label&gt; written on one single line to avoid browsers adding an extra and unwanted space between the end of the label (&#34;conditions&#34;) and the asterisk meaning the field is required --&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        You must agree before submitting.
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -711,40 +712,40 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationDefault01" class="form-label is-required">First name</label>
+    <label for="validationDefault01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefault02" class="form-label is-required">Last name</label>
+    <label for="validationDefault02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefaultUsername" class="form-label is-required">Username</label>
+    <label for="validationDefaultUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend2">@</span>
       <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationDefault03" class="form-label is-required">City</label>
+    <label for="validationDefault03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault03" required>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault04" class="form-label is-required">State</label>
+    <label for="validationDefault04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select" id="validationDefault04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
     </select>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault05" class="form-label is-required">Zip</label>
+    <label for="validationDefault05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control" id="validationDefault05" required>
   </div>
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck2">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
     </div>
   </div>
   <div class="col-12">
@@ -763,40 +764,40 @@ We are aware that currently the client-side custom validation styles and tooltip
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row g-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefault01&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Mark&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefault02&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Otto&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefaultUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefaultUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend2&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefaultUsername&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend2&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefault03&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefault04&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">disabled</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>Choose...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationDefault05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationDefault05&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck2&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- Keep this &lt;label&gt; written on one single line to avoid browsers adding an extra and unwanted space between the end of the label (&#34;conditions&#34;) and the asterisk meaning the field is required --&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck2&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck2&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12&#34;</span><span class="p">&gt;</span>
@@ -811,21 +812,21 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationServer01" class="form-label is-required">First name</label>
+    <label for="validationServer01" class="form-label is-required">First name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServer02" class="form-label is-required">Last name</label>
+    <label for="validationServer02" class="form-label is-required">Last name<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServerUsername" class="form-label is-required">Username</label>
+    <label for="validationServerUsername" class="form-label is-required">Username<span class="visually-hidden"> (required)</span></label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
       <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
@@ -835,14 +836,14 @@ We are aware that currently the client-side custom validation styles and tooltip
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationServer03" class="form-label is-required">City</label>
+    <label for="validationServer03" class="form-label is-required">City<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
     <div id="validationServer03Feedback" class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer04" class="form-label is-required">State</label>
+    <label for="validationServer04" class="form-label is-required">State<span class="visually-hidden"> (required)</span></label>
     <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -852,7 +853,7 @@ We are aware that currently the client-side custom validation styles and tooltip
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer05" class="form-label is-required">Zip</label>
+    <label for="validationServer05" class="form-label is-required">Zip<span class="visually-hidden"> (required)</span></label>
     <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
     <div id="validationServer05Feedback" class="invalid-feedback">
       Please provide a valid zip.
@@ -862,7 +863,7 @@ We are aware that currently the client-side custom validation styles and tooltip
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
       <!-- Keep this <label> written on one single line to avoid browsers adding an extra and unwanted space between the end of the label ("conditions") and the asterisk meaning the field is required -->
-      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a></label>
+      <label class="form-check-label" for="invalidCheck3">By checking this box, I agree to the <a href="" target="_blank" aria-label="Terms and conditions (opens new window)">terms and conditions</a><span class="visually-hidden"> (required)</span></label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
       </div>
@@ -884,21 +885,21 @@ We are aware that currently the client-side custom validation styles and tooltip
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row g-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer01&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>First name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control is-valid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer01&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Mark&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Looks good!
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer02&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Last name<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control is-valid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer02&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Otto&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;valid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Looks good!
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-4&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServerUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServerUsername&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Username<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group has-validation&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend3&#34;</span><span class="p">&gt;</span>@<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control is-invalid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServerUsername&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;inputGroupPrepend3 validationServerUsernameFeedback&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
@@ -908,14 +909,14 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer03&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>City<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control is-invalid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer03&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;validationServer03Feedback&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer03Feedback&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Please provide a valid city.
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer04&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>State<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select is-invalid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer04&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;validationServer04Feedback&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">disabled</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>Choose...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -925,7 +926,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationServer05&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Zip<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control is-invalid&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer05&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;validationServer05Feedback&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationServer05Feedback&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Please provide a valid zip.
@@ -935,7 +936,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input is-invalid&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck3&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;invalidCheck3Feedback&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- Keep this &lt;label&gt; written on one single line to avoid browsers adding an extra and unwanted space between the end of the label (&#34;conditions&#34;) and the asterisk meaning the field is required --&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck3&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;invalidCheck3&#34;</span><span class="p">&gt;</span>By checking this box, I agree to the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Terms and conditions (opens new window)&#34;</span><span class="p">&gt;</span>terms and conditions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;invalidCheck3Feedback&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        You must agree before submitting.
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -956,7 +957,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea" class="form-label is-required">Textarea</label>
+    <label for="validationTextarea" class="form-label is-required">Textarea<span class="visually-hidden"> (required)</span></label>
     <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
     <div class="invalid-feedback">
       Please enter a message in the textarea.
@@ -965,22 +966,22 @@ We are aware that currently the client-side custom validation styles and tooltip
 
   <div class="form-check mb-3">
     <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-    <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+    <label class="form-check-label" for="validationFormCheck1">Check this checkbox<span class="visually-hidden"> (required)</span></label>
     <div class="invalid-feedback">Example invalid feedback text</div>
   </div>
 
   <div class="form-check">
     <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
+    <label class="form-check-label" for="validationFormCheck2">Toggle this radio<span class="visually-hidden"> (required)</span></label>
   </div>
   <div class="form-check mb-3">
     <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
+    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio<span class="visually-hidden"> (required)</span></label>
     <div class="invalid-feedback">More example invalid feedback text</div>
   </div>
 
   <div class="mb-3">
-    <select class="form-select" required aria-label="select example">
+    <select class="form-select" required aria-label="Open select menu (required)">
       <option value="">Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -990,7 +991,7 @@ We are aware that currently the client-side custom validation styles and tooltip
   </div>
 
   <div class="mb-3">
-    <input type="file" class="form-control" aria-label="file example" required>
+    <input type="file" class="form-control" aria-label="Select a file (required)" required>
     <div class="invalid-feedback">Example invalid form file feedback</div>
   </div>
 
@@ -1024,7 +1025,7 @@ We are aware that currently the client-side custom validation styles and tooltip
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;was-validated&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationTextarea&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Textarea<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationTextarea&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label is-required&#34;</span><span class="p">&gt;</span>Textarea<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationTextarea&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Required example textarea&#34;</span> <span class="na">required</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      Please enter a message in the textarea.
@@ -1033,22 +1034,22 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check mb-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationFormCheck1&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck1&#34;</span><span class="p">&gt;</span>Check this checkbox<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck1&#34;</span><span class="p">&gt;</span>Check this checkbox<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Example invalid feedback text<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationFormCheck2&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;radio-stacked&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck2&#34;</span><span class="p">&gt;</span>Toggle this radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck2&#34;</span><span class="p">&gt;</span>Toggle this radio<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check mb-3&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;validationFormCheck3&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;radio-stacked&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck3&#34;</span><span class="p">&gt;</span>Or toggle this other radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;validationFormCheck3&#34;</span><span class="p">&gt;</span>Or toggle this other radio<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span> (required)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>More example invalid feedback text<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;select example&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-select&#34;</span> <span class="na">required</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Open select menu (required)&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>Open this select menu<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>One<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Two<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -1058,7 +1059,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;file example&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Select a file (required)&#34;</span> <span class="na">required</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invalid-feedback&#34;</span><span class="p">&gt;</span>Example invalid form file feedback<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
@@ -1091,7 +1092,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_root.scss">scss/_root.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_root.scss">scss/_root.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1106,7 +1107,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1128,7 +1129,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1142,7 +1143,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables-dark.scss">scss/_variables-dark.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables-dark.scss">scss/_variables-dark.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1158,7 +1159,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/mixins/_forms.scss">scss/mixins/_forms.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/mixins/_forms.scss">scss/mixins/_forms.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1257,6 +1258,13 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: no box-shadow
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: focus styles don&#39;t match validation state
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="k">@include</span><span class="nd"> focus-visible</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="na">border-color</span><span class="o">:</span> <span class="nv">$border-color</span> <span class="k">!important</span><span class="p">;</span> <span class="c1">// stylelint-disable-line declaration-no-important
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// End mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -1285,6 +1293,13 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: no box-shadow
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: focus styles don&#39;t match validation state
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Boosted mod: apply focus mixin to allow sufficient contrast between error field focused and non focused
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="k">@include</span><span class="nd"> focus-visible</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="na">border-color</span><span class="o">:</span> <span class="nv">$border-color</span> <span class="k">!important</span><span class="p">;</span> <span class="c1">// stylelint-disable-line declaration-no-important
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// End mod
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -1330,7 +1345,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/_variables.scss">scss/_variables.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1361,7 +1376,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom border-1 border-gray-400">
-      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.1/scss/forms/_validation.scss">scss/forms/_validation.scss</a>
+      <a class="font-monospace link-body-emphasis link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5.3.2/scss/forms/_validation.scss">scss/forms/_validation.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -1454,7 +1469,7 @@ We are aware that currently the client-side custom validation styles and tooltip
           <p class="mb-lg-1">
             Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>-&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
           </p>
-          <p class="mb-lg-1">Currently v5.3.1.</p>
+          <p class="mb-lg-1">Currently v5.3.2.</p>
           <p class="mb-lg-1">
             <a href="https://www.netlify.com" target="_blank" rel="noopener">
               <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deployed by Netlify" width="89" height="40">
@@ -1473,7 +1488,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </nav>
 
 
-    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/boosted.bundle.min.js" integrity="sha384-+lAXqnipqQpjxMdd/9Hp2GOzB4aIouKEYRZ7AE66h68BDob7UlMLpZY7w7SqrC+M" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1511,14 +1526,14 @@ We are aware that currently the client-side custom validation styles and tooltip
       If you are not authorized to used it, don’t include the orange-helvetica.css
       See NOTICE.txt for more information.
     -->
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue55_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-R6e0PFLMMV6HBvkQK22ecNfjOzyh89wSndiTC71MuvoaOnhIYgOAGVC0gW0kVN16" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/fonts\/HelvNeue75_W1G.woff2" rel="preload" as="font" type="font/woff2" integrity="sha384-ylOkwNNvSwXpWNbpEhI45ruJTXyfQbIb42IxMvSGGcndZBpZ9iAmOFSUl4\/Goeqz" crossorigin="anonymous">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83\/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
 
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/css\/boosted.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/css\/boosted.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Boosted Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.1\/dist\/js\/boosted.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/boosted@5.3.2\/dist\/js\/boosted.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
     <!-- Example Code -->
