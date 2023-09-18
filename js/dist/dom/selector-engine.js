@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap selector-engine.js v5.3.1 (https://boosted.orange.com/)
+  * Bootstrap selector-engine.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -38,9 +38,9 @@
       if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
         hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
       }
-      selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
+      selector = hrefAttribute && hrefAttribute !== '#' ? index_js.parseSelector(hrefAttribute.trim()) : null;
     }
-    return index_js.parseSelector(selector);
+    return selector;
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {
