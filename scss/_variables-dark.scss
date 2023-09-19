@@ -25,6 +25,21 @@ $light-dark:                        $gray-500 !default;
 $dark-dark:                         $black !default;
 // scss-docs-end theme-color-dark-variables
 
+// Boosted mod
+// scss-docs-start theme-colors-dark-map
+$theme-colors-dark: (
+  "primary": $primary-dark,
+  "secondary": $secondary-dark,
+  "success": $success-dark,
+  "info": $info-dark,
+  "warning": $warning-dark,
+  "danger": $danger-dark,
+  "light": $light-dark,
+  "dark": $dark-dark,
+) !default;
+// scss-docs-end theme-colors-dark-map
+// End mod
+
 // scss-docs-start theme-text-dark-variables
 $primary-text-emphasis-dark:        $primary-dark !default; // Boosted mod: isntead of `tint-color($primary, 40%)`
 $secondary-text-emphasis-dark:      $secondary-dark !default; // Boosted mod: instead of `tint-color($secondary, 40%)`
