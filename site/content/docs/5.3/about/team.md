@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Team
-description: An overview of the founding team and core contributors to Boosted.
+description: An overview of the core team and core contributors to Boosted.
 group: about
 aliases:
   - "/docs/about/team/"
 ---
 
-Boosted is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
+Boosted is maintained by the core team and a small group of invaluable core contributors, with the massive support and involvement of our community.
 
 {{< team.inline >}}
 <div class="list-group mb-3">

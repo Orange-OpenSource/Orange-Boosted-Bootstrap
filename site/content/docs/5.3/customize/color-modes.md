@@ -3,9 +3,19 @@ layout: docs
 title: Color modes
 description: Boosted now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
+aliases:
+  - "/docs/customize/color-modes/"
 toc: true
 added: "5.3"
 ---
+
+{{< design-callout-alert >}}
+Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
+
+However, the dark mode is not yet available in the Orange Design System specifications.
+
+Please use Boosted v5.3.3 to have the dark mode available.
+{{< /design-callout-alert >}}
 
 {{< callout >}}
 **Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
