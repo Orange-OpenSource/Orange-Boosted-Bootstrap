@@ -10,6 +10,7 @@
   hex: "#cd3c14"
 - name: warning
   hex: "#fc0"
+  contrast_color: dark
 - name: info
   hex: "#527edb"
 - name: light

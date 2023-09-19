@@ -114,6 +114,8 @@ Boosted supersedes Bootstrap color variables with Orange brand color.
 
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
+
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
