@@ -509,9 +509,11 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-All these colors are available as a Sass map, `$theme-colors`.
+All these colors are available as a Sass map, `$theme-colors` or `$theme-colors-dark`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
 
 Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 

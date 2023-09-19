@@ -140,6 +140,8 @@ Theme colors are then put into a Sass map so we can loop over them to generate o
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="theme-colors-dark-map" file="scss/_variables-dark.scss" >}}
+
 Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
@@ -147,6 +149,8 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 RGB colors are generated from a separate Sass map:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-colors-rgb-dark" file="scss/_maps.scss" >}}
 
 Background color opacities build on that with their own map that's consumed by the utilities API:
 
