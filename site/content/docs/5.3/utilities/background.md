@@ -26,7 +26,7 @@ Background utilities like `.bg-*` that generated from our original `$theme-color
 <div class="p-3 mb-2 fw-bold bg-secondary text-white">.bg-secondary</div>
 <div class="p-3 mb-2 fw-bold bg-success text-white">.bg-success</div>
 <div class="p-3 mb-2 fw-bold bg-danger text-white">.bg-danger</div>
-<div class="p-3 mb-2 fw-bold bg-warning text-white">.bg-warning</div>
+<div class="p-3 mb-2 fw-bold bg-warning text-black">.bg-warning</div>
 <div class="p-3 mb-2 fw-bold bg-info text-white">.bg-info</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
 <div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
