@@ -49,7 +49,6 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
     <summary><span class="badge bg-success">New</span> CSS variables:</summary>
     <ul>
       <li><code>--bs-accordion-btn-hover-bg</code></li>
-      <li><code>--bs-alert-icon-bg</code></li>
       <li><code>--bs-local-nav-active-bg</code></li>
       <li><code>--bs-local-nav-active-color</code></li>
       <li><code>--bs-local-nav-active-marker-width</code></li>

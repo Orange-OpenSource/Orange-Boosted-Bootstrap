@@ -82,8 +82,8 @@
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     // Boosted mod: no `--#{$prefix}alert-link-color`
     // Boosted mod
-    @if type-of(map-get($alert-icons, $state)) == "map" {
-      --#{$prefix}alert-icon-bg-image: #{map-get(map-get($alert-icons, $state), "icon")};
+    @if type-of(map-get($alert-icons, $state)) == "list" {
+      --#{$prefix}alert-icon-bg-image: #{nth(map-get($alert-icons, $state), 1)};
 
       .alert-icon::before {
         background: var(--#{$prefix}alert-icon-bg-image) no-repeat top left / var(--#{$prefix}alert-logo-size);

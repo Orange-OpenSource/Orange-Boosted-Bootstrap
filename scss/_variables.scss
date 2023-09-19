@@ -1949,11 +1949,13 @@ $alert-border-width:                var(--#{$prefix}border-width) !default;
 
 // Boosted mod
 $alert-padding-sm:                  $spacer * .5 !default;
-// Know that using a map for the icon will avoid color change
 $alert-icons: (
   "success": var(--#{$prefix}success-icon),
   "info":    escape-svg($info-icon),
-  "warning": ("icon":   escape-svg($warning-icon)),
+  // Create a list for this warning icon to indicate that the mask needs to be replaced by a background image
+  // Be aware that the background of the icon won't change anymore
+  // Note: `true` parameter is only used to create a list, it could be empty (e.g. `(escape-svg($warning-icon),)`)
+  "warning": (escape-svg($warning-icon), true),
   "danger":  var(--#{$prefix}error-icon)
 ) !default;
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
