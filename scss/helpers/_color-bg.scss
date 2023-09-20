@@ -6,6 +6,7 @@
   }
 }
 
+// Boosted mod
 @if $enable-dark-mode {
   @include color-mode(dark) {
     @each $color, $value in $theme-colors-dark {
@@ -15,3 +16,4 @@
     }
   }
 }
+// End mod

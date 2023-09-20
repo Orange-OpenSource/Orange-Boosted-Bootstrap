@@ -8,6 +8,7 @@
   hex: "#32c832"
 - name: danger
   hex: "#cd3c14"
+  contrast_color: white
 - name: warning
   hex: "#fc0"
   contrast_color: dark
