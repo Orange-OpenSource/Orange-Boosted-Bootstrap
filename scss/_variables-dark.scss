@@ -6,14 +6,13 @@
 // Global colors
 //
 
-// Boosted mod: redefine basic colors
+// Boosted mod
 // scss-docs-start brand-colors-dark
 $functional-green-dark:  #32c832 !default;
 $functional-blue-dark:   #527edb !default;
 $functional-yellow-dark: $functional-yellow !default;
 $functional-red-dark:    #d53f15 !default;
 // scss-docs-end brand-colors-dark
-// End mod
 
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-color-dark-variables
@@ -27,7 +26,6 @@ $light-dark:                        $gray-500 !default;
 $dark-dark:                         $black !default;
 // scss-docs-end theme-color-dark-variables
 
-// Boosted mod
 // scss-docs-start theme-colors-dark-map
 $theme-colors-dark: (
   "primary": $primary-dark,
