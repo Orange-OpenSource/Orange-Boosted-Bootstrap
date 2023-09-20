@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.3.1 (https://boosted.orange.com/)
+  * Boosted v5.3.2 (https://boosted.orange.com/)
   * Copyright 2015-2023 The Boosted Authors
   * Copyright 2015-2023 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/main/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.3.1 (https://boosted.orange.com/)
+  * Bootstrap carousel.js v5.3.2 (https://boosted.orange.com/)
   * Copyright 2011-2023 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -114,7 +114,11 @@
       this._addEventListeners();
       if (this._config.ride === CLASS_NAME_CAROUSEL) {
         this.cycle();
+      } else if (this._indicatorsElement) {
+        // Boosted mod: set the animation properly on progress indicator
+        this._element.classList.add(CLASS_NAME_PAUSED);
       }
+      // End mod
     }
 
     // Getters
