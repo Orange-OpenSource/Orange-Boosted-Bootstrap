@@ -86,8 +86,8 @@ $headings-color-dark:               $white !default; // Boosted mod: instead of 
 $link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
 $link-hover-color-dark:             $primary !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   tint-color($code-color, 40%) !default;
-$mark-color-dark:                   $body-color-dark !default;
-$mark-bg-dark:                      $yellow-800 !default;
+$mark-color-dark:                   $black !default; // Boosted mod: instead of `$body-color-dark`
+$mark-bg-dark:                      $white !default; // Boosted mod: instead of `$yellow-800`
 
 
 //

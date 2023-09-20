@@ -27,7 +27,7 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-highlight-bg)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-highlight-bg</div>
+    <div style="width: 200px">--bs-highlight-color</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-highlight-color)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-highlight-color)" data-bs-theme="dark"></div>
   </div>
@@ -37,14 +37,19 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-secondary-bg)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
-    <div style="width: 200px">--bs-color-translucent</div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-color-translucent)" data-bs-theme="light"></div>
-    <div style="width: 50px; height: 50px; background-color:var(--bs-color-translucent)" data-bs-theme="dark"></div>
+    <div style="width: 200px">--bs-border-color-translucent</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-secondary-color</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-secondary-color)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-secondary-color)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-link-hover-color</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-link-hover-color)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-link-hover-color)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-primary</div>
