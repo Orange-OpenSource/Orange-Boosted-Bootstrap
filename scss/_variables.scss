@@ -1716,7 +1716,7 @@ $accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
 // stylelint-disable-next-line function-disallowed-list
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
-$accordion-border-color:                  $gray-500 !default; // Boosted mod
+$accordion-border-color:                  var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, #{$accordion-border-width}) !default;
 
@@ -1736,7 +1736,7 @@ $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod
 $accordion-button-active-bg:              null !default; // Boosted mod: instead of `var(--#{$prefix}primary-bg-subtle)`
-$accordion-button-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
+$accordion-button-active-color:           var(--#{$prefix}body-color) !default; // Boosted mod: instead of `var(--#{$prefix}primary-text-emphasis)`
 
 // Boosted mod: no $accordion-button-focus-border-color
 // Boosted mod: no $accordion-button-focus-box-shadow
@@ -1764,15 +1764,17 @@ $accordion-button-letter-spacing-lg:      $h2-spacing !default;
 // End mod
 // scss-docs-end accordion-variables
 
+// Boosted mod
 // scss-docs-start accordion-dark-variables
-$accordion-dark-color:                    $white !default; // Boosted mod
-$accordion-dark-bg:                       $black !default; // Boosted mod
-$accordion-dark-border-color:             $gray-700 !default; // Boosted mod
-$accordion-dark-button-color:             $accordion-dark-color !default; // Boosted mod
-$accordion-dark-button-bg:                $accordion-dark-bg !default; // Boosted mod
-$accordion-dark-button-hover-bg:          $gray-900 !default; // Boosted mod
-$accordion-dark-button-active-color:      $white !default; // Boosted mod
+$accordion-dark-color:                    $white !default; // Deprecated in v5.3.3
+$accordion-dark-bg:                       $black !default; // Deprecated in v5.3.3
+$accordion-dark-border-color:             $gray-700 !default; // Deprecated in v5.3.3
+$accordion-dark-button-color:             $accordion-dark-color !default; // Deprecated in v5.3.3
+$accordion-dark-button-bg:                $accordion-dark-bg !default; // Deprecated in v5.3.3
+$accordion-dark-button-hover-bg:          $gray-900 !default; // Deprecated in v5.3.3
+$accordion-dark-button-active-color:      $white !default; // Deprecated in v5.3.3
 // scss-docs-end accordion-dark-variables
+// End mod
 
 // Tooltips
 
