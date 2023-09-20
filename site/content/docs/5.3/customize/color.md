@@ -137,6 +137,7 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
     <div class="col">
         <h4>Orange color tokens</h4>
 {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+{{< scss-docs name="brand-colors-dark" file="scss/_variables-dark.scss" >}}
     </div>
     <div class="col">
         <h4>Bootstrap core variables</h4>
