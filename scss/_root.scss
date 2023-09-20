@@ -141,7 +141,8 @@
 
 // scss-docs-start root-dark-rule
 // Boosted mod
-[class*="bg-black"],
+
+/* [class*="bg-black"],
 [class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
 [class*="bg-secondary"] {
   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
@@ -183,6 +184,7 @@
 }
 // End mod
 // scss-docs-end root-dark-rule
+*/
 
 @if $enable-dark-mode {
   @include color-mode(dark, true) {
