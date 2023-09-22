@@ -122,6 +122,8 @@ If you need more details about the changes, please refer to the [v5.3.2 release]
       <li><code>$local-nav-hover-bg</code></li>
       <li><code>$local-nav-hover-color</code></li>
       <li><code>$local-nav-padding-y</code></li>
+      <li><code>$mark-bg-dark</code></li>
+      <li><code>$mark-color-dark</code></li>      
       <li><code>$pagination-gap</code></li>
       <li><code>$pagination-icon-min-width</code></li>
       <li><code>$pagination-item-max-width</code></li>
@@ -182,14 +184,6 @@ If you need more details about the changes, please refer to the [v5.3.0 release]
 ### Color modes!
 
 Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
-
-{{< design-callout-alert >}}
-Color mode mechanism coming from Bootstrap is available from Boosted v5.3.0.
-
-However, the dark mode was not yet available in the Orange Design System specifications at this time.
-
-Please use Boosted v5.3.2 to have the dark mode available.
-{{< /design-callout-alert >}}
 
 - **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
 
