@@ -40,7 +40,7 @@ $light-border-subtle-dark:          $light !default; // Boosted mod: instead of 
 $dark-border-subtle-dark:           $dark !default; // Boosted mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
-$body-color-dark:                   $gray-300 !default;
+$body-color-dark:                   $white !default; // Boosted mod: instead of `$gray-300`
 $body-bg-dark:                      $black !default; // Boosted mod: instead of `$gray-900`
 $body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
 $body-secondary-bg-dark:            $gray-800 !default;
@@ -53,6 +53,8 @@ $headings-color-dark:               $white !default; // Boosted mod: instead of 
 $link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
 $link-hover-color-dark:             $primary !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   tint-color($code-color, 40%) !default;
+$mark-color-dark:                   $body-color-dark !default;
+$mark-bg-dark:                      $yellow-800 !default;
 
 
 //

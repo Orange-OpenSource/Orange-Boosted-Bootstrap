@@ -29,6 +29,7 @@
 .form-check-input {
   --#{$prefix}form-check-bg: #{$form-check-input-bg};
 
+  flex-shrink: 0;
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($input-btn-line-height - $form-check-input-width) * .5; // line-height minus check height
@@ -263,11 +264,11 @@
       content: "";
     }
 
-    &:not(:first-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:first-of-type) {
       border-left: 0;
     }
 
-    &:not(:last-of-type) {
+    .btn-group &:not(.btn-no-outline):not(:last-of-type) {
       border-right: 0;
     }
   }
