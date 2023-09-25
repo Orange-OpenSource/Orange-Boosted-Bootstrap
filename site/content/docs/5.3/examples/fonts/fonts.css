@@ -86,6 +86,26 @@
   line-height: 50px;
 }
 
+.lh-1 {
+  line-height: 1;
+}
+
+.lh-108 {
+  line-height: 1.08;
+}
+
+.lh-111 {
+  line-height: 1.11;
+}
+
+.lh-114 {
+  line-height: 1.14;
+}
+
+.lh-150 {
+  line-height: 1.5;
+}
+
 .letter-spacing-n1 {
   letter-spacing: -1px;
 }
@@ -98,12 +118,24 @@
   letter-spacing: -1.6px;
 }
 
+.letter-spacing-n0-4 {
+  letter-spacing: -.4px;
+}
+
+.letter-spacing-n0-2 {
+  letter-spacing: -.2px;
+}
+
 .letter-spacing-n0-25 {
   letter-spacing: -.25px;
 }
 
 .letter-spacing-n0-5 {
   letter-spacing: -.5px;
+}
+
+.letter-spacing-n0-1 {
+  letter-spacing: -.1px;
 }
 
 .bg-light-gray {
