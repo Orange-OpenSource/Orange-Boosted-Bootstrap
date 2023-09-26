@@ -74,6 +74,12 @@
   display: none;
 }
 
+@media (prefers-color-scheme: light) {
+  [data-bs-theme="auto"] .dark-show {
+    display: none;
+  }
+}
+
 iframe {
   min-height: 10.625rem;
 }
