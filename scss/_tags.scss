@@ -129,12 +129,3 @@ label.tag {
   --#{$prefix}tag-close-margin-start: #{$tag-close-margin-start-sm};
   // scss-docs-end tag-sm-css-vars
 }
-
-.tag-dark {
-  // scss-docs-start tag-dark-css-vars
-  --#{$prefix}tag-border-color: #{$tag-border-color-dark};
-  --#{$prefix}tag-active-color: #{$tag-active-color-dark};
-  --#{$prefix}tag-active-decoration-color: #{$tag-active-decoration-color-dark};
-  --#{$prefix}tag-disabled-color: #{$tag-disabled-color-dark};
-  // scss-docs-end tag-dark-css-vars
-}

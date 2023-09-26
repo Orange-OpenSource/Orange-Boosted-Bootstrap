@@ -80,7 +80,7 @@ Here's an example of all the sub-components included in a responsive dark-themed
       </ul>
       <form class="d-flex navbar-item ms-3" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary btn-inverse" type="submit">Search</button>
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -238,7 +238,7 @@ Place various form controls and components within a navbar:
   <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary btn-inverse" type="submit">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -256,7 +256,7 @@ Immediate child elements of `.navbar` use flex layout<!-- Boosted mod: no justif
     </div>
     <form class="d-flex navbar-item" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary btn-inverse" type="submit">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -280,8 +280,8 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid justify-content-start align-items-center">
-    <button class="btn btn-primary btn-inverse me-2" type="button">Main button</button>
-    <button class="btn btn-sm btn-primary btn-inverse" type="button">Smaller button</button>
+    <button class="btn btn-primary me-2" type="button">Main button</button>
+    <button class="btn btn-sm btn-primary" type="button">Smaller button</button>
   </form>
 </nav>
 {{< /example >}}
@@ -490,7 +490,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
       </ul>
       <form class="d-flex navbar-item ms-3 mt-md-4" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary btn-inverse" type="submit">Search</button>
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -589,7 +589,7 @@ To create an offcanvas navbar that expands into a normal navbar at a specific br
 </nav>
 ```
 
-When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
+When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu` for proper styling with a dark offcanvas.
 
 {{< example stackblitz_add_js="true" >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -601,7 +601,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -627,7 +627,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn btn-primary btn-inverse" type="submit">Search</button>
+          <button class="btn btn btn-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
