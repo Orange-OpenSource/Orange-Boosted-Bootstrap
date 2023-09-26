@@ -163,8 +163,23 @@
     --#{$prefix}body-color: #{$body-color-dark};
     --#{$prefix}heading-color: #{$headings-color-dark};
 
-    // For testing only
-    // --#{$prefix}code-color: #fd0;
+    // For testing only, uncomment to see the colors
+    // --#{$prefix}primary-text-rgb: #ffc0cb;
+    // --#{$prefix}link-color: #ffc0cb;
+    // --#{$prefix}link-hover-color: #ffc0cb;
+    // --#{$prefix}link-color-rgb: #ffc0cb;
+    // --#{$prefix}link-hover-color-rgb: ##ffc0cb;
+    // --#{$prefix}focus-visible-inner-color: #ffc0cb;
+    // --#{$prefix}focus-visible-outer-color: #ffc0cb;
+    // --#{$prefix}caption-color: #ffc0cb;
+    // --#{$prefix}code-color: #ffc0cb;
+    // --#{$prefix}highlight-color: #ffc0cb;
+    // --#{$prefix}highlight-bg: #ffc0cb;
+    // --#{$prefix}kbd-color: #ffc0cb;
+    // --#{$prefix}kbd-bg: #ffc0cb;
+    // --#{$prefix}pre-color: #ffc0cb;
+    // --#{$prefix}body-color: #ffc0cb;
+    // --#{$prefix}heading-color: #ffc0cb;
 
     // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
     [class*="bg-"]:not(&):not(.bg-transparent) {
@@ -185,8 +200,23 @@
       --#{$prefix}body-color: #{$body-color};
       --#{$prefix}heading-color: #{$headings-color};
 
-      // For testing only
-      // --#{$prefix}code-color: #df0;
+      // For testing only, uncomment to see the colors
+      // --#{$prefix}primary-text-rgb: #0ff;
+      // --#{$prefix}link-color: #0ff;
+      // --#{$prefix}link-hover-color: #0ff;
+      // --#{$prefix}link-color-rgb: #0ff;
+      // --#{$prefix}link-hover-color-rgb: #0ff;
+      // --#{$prefix}focus-visible-inner-color: #0ff;
+      // --#{$prefix}focus-visible-outer-color: #0ff;
+      // --#{$prefix}caption-color: #0ff;
+      // --#{$prefix}code-color: #0ff;
+      // --#{$prefix}highlight-color: #0ff;
+      // --#{$prefix}highlight-bg: #0ff;
+      // --#{$prefix}kbd-color: #0ff;
+      // --#{$prefix}kbd-bg: #0ff;
+      // --#{$prefix}pre-color: #0ff;
+      // --#{$prefix}body-color: #0ff;
+      // --#{$prefix}heading-color: #0ff;
     }
   }
 }
