@@ -19,10 +19,6 @@
   // TODO: should probably be a `.btn-*` class
   &:not(.dropdown-toggle-split) {
     @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $white, $dropdown-border-color, $black, $white, $black, $black, $dropdown-bg, $gray-500, $gray-500);
-
-    &.btn-inverse {
-      @include button-variant($black, $gray-700, $white, $black, $gray-700, $white, $black, $white, $white, transparent, $gray-700, $gray-700);
-    }
   }
   // End mod
 }

@@ -203,7 +203,7 @@ Opt into darker dropdowns to match a dark navbar or custom style by adding `.dro
 {{< example class="bg-dark" >}}
 <div class="btn-group">
   <div class="dropdown">
-    <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
     </button>
     <ul class="dropdown-menu dropdown-menu-dark">
@@ -217,8 +217,8 @@ Opt into darker dropdowns to match a dark navbar or custom style by adding `.dro
 </div>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary btn-inverse">Action</button>
-  <button type="button" class="btn btn-secondary btn-inverse dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary">Action</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-dark">
