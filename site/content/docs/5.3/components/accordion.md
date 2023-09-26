@@ -205,12 +205,8 @@ Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accord
 {{< deprecated-in "5.3.3" >}}
 
 {{< callout warning >}}
-New dark accordions in v5.3.3 — We’ve deprecated `.accordion-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.accordion` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
-
-`.accordion-dark` will be removed in v6.
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode: add `data-bs-theme="dark"` to the `.accordion` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
 {{< /callout >}}
-
-{{< added-in "5.2.0" >}}
 
 Add `.accordion-dark` to the `.accordion` for a dark variant.
 
