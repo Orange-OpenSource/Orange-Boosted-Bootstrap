@@ -83,7 +83,7 @@ sitemap_exclude: true
 ### No theme
 
 <div class="border border-tertiary p-3">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample1">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1"
@@ -91,7 +91,7 @@ sitemap_exclude: true
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -108,7 +108,7 @@ sitemap_exclude: true
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -124,7 +124,7 @@ sitemap_exclude: true
 ### Local dark theme
 
 <div class="border border-tertiary p-3" data-bs-theme="dark">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample2">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2"
@@ -132,7 +132,7 @@ sitemap_exclude: true
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -149,7 +149,7 @@ sitemap_exclude: true
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -165,7 +165,7 @@ sitemap_exclude: true
 ### Local light theme
 
 <div class="border border-tertiary p-3" data-bs-theme="light">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample3">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3"
@@ -173,7 +173,7 @@ sitemap_exclude: true
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -190,7 +190,7 @@ sitemap_exclude: true
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -208,7 +208,7 @@ sitemap_exclude: true
 Using bg-dark
 
 <div class="border border-tertiary p-3 bg-dark">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample4">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4"
@@ -216,7 +216,7 @@ Using bg-dark
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample4">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -233,7 +233,7 @@ Using bg-dark
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo4" class="accordion-collapse collapse" data-bs-parent="#accordionExample4">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -252,7 +252,7 @@ Using bg-dark
 Using bg-white
 
 <div class="border border-tertiary p-3 bg-white">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample5">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5"
@@ -260,7 +260,7 @@ Using bg-white
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne5" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne5" class="accordion-collapse collapse show" data-bs-parent="#accordionExample5">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -277,7 +277,7 @@ Using bg-white
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo5" class="accordion-collapse collapse" data-bs-parent="#accordionExample5">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -295,7 +295,7 @@ Using bg-white
 Using dark theme
 
 <div class="border border-tertiary p-3" style="background-color: #492191" data-bs-theme="dark">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample6">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6"
@@ -303,7 +303,7 @@ Using dark theme
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne6" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne6" class="accordion-collapse collapse show" data-bs-parent="#accordionExample6">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -320,7 +320,7 @@ Using dark theme
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo6" class="accordion-collapse collapse" data-bs-parent="#accordionExample6">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -338,7 +338,7 @@ Using dark theme
 Using light theme
 
 <div class="border border-tertiary p-3" style="background-color: #FFF6B6" data-bs-theme="light">
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample7">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne7"
@@ -346,7 +346,7 @@ Using light theme
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne7" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne7" class="accordion-collapse collapse show" data-bs-parent="#accordionExample7">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -363,7 +363,7 @@ Using light theme
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo7" class="accordion-collapse collapse" data-bs-parent="#accordionExample7">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
