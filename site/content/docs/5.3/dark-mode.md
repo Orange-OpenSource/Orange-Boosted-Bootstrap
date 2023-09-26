@@ -86,12 +86,12 @@ sitemap_exclude: true
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1"
+                aria-expanded="true" aria-controls="collapseOne1">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -104,31 +104,14 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -138,18 +121,18 @@ sitemap_exclude: true
   </div>
 </div>
 
-### Local theme dark
+### Local dark theme
 
 <div class="border border-tertiary p-3" data-bs-theme="dark">
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2"
+                aria-expanded="true" aria-controls="collapseOne2">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -162,31 +145,14 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -202,12 +168,12 @@ sitemap_exclude: true
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3"
+                aria-expanded="true" aria-controls="collapseOne3">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -220,91 +186,14 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### White background
-
-Using bg-white
-
-<div class="border border-tertiary p-3 bg-white">
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-          plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -322,12 +211,12 @@ Using bg-dark
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4"
+                aria-expanded="true" aria-controls="collapseOne4">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -340,11 +229,11 @@ Using bg-dark
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -354,17 +243,44 @@ Using bg-dark
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+### Light background
+
+Using bg-white
+
+<div class="border border-tertiary p-3 bg-white">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5"
+                aria-expanded="true" aria-controls="collapseOne5">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne5" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall
+          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
+                data-bs-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo5">
+          Accordion Item #2
         </button>
       </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+          plugin adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -382,12 +298,12 @@ Using dark theme
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6"
+                aria-expanded="true" aria-controls="collapseOne6">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne6" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -400,31 +316,14 @@ Using dark theme
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo6" aria-expanded="false" aria-controls="collapseTwo6">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -442,12 +341,12 @@ Using light theme
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne7"
+                aria-expanded="true" aria-controls="collapseOne7">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne7" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -460,31 +359,14 @@ Using light theme
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                data-bs-target="#collapseTwo7" aria-expanded="false" aria-controls="collapseTwo7">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div id="collapseTwo7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
           appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
           CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
           <code>.accordion-body</code>, though the transition does limit overflow.
@@ -517,7 +399,7 @@ Using light theme
   </div>
 </div>
 
-### Local theme dark
+### Local dark theme
 
 <div class="border border-tertiary p-3" data-bs-theme="dark">
   <div class="alert alert-success" role="alert">
@@ -559,11 +441,11 @@ Using light theme
   </div>
 </div>
 
-### White background
+### Dark background
 
-Using bg-white
+Using bg-dark
 
-<div class="border border-tertiary p-3 bg-white">
+<div class="border border-tertiary p-3 bg-dark">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -582,11 +464,11 @@ Using bg-white
   </div>
 </div>
 
-### Dark background
+### Light background
 
-Using bg-dark
+Using bg-white
 
-<div class="border border-tertiary p-3 bg-dark">
+<div class="border border-tertiary p-3 bg-white">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
