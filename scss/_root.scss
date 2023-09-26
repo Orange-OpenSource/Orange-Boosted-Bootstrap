@@ -141,85 +141,82 @@
 
 // scss-docs-start root-dark-rule
 // Boosted mod
+// [class*="bg-black"],
+// [class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
+// [class*="bg-secondary"] {
+//   --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
+//   --#{$prefix}link-color: #{$link-color-inverted};
+//   --#{$prefix}link-hover-color: #{$link-hover-color-inverted};
+//   --#{$prefix}link-color-rgb: #{to-rgb($link-color-inverted)};
+//   --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
+//   --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
+//   --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
+//   --#{$prefix}caption-color: #{$table-caption-color-inverted};
+//   --#{$prefix}code-color: #{$code-color-inverted};
+//   --#{$prefix}highlight-color: #{$mark-color-inverted};
+//   --#{$prefix}highlight-bg: #{$mark-bg-inverted};
+//   --#{$prefix}kbd-color: #{$kbd-color-inverted};
+//   --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
+//   --#{$prefix}pre-color: #{$pre-color-inverted};
+//   --#{$prefix}body-color: #{$body-color-dark};
+//   --#{$prefix}heading-color: #{$headings-color-dark};
 
-:not([data-bs-theme="dark"]) {
-  [class*="bg-black"],
-  [class*="-dark"]:not(.border-dark):not(.text-dark):not(.btn-dark):not(.focus-ring-dark):not(.link-underline-dark):not(.link-dark),
-  [class*="bg-secondary"] {
-    --#{$prefix}primary-text-rgb: #{to-rgb($brand-orange)};
-    --#{$prefix}link-color: #{$link-color-inverted};
-    --#{$prefix}link-hover-color: #{$link-hover-color-inverted};
-    --#{$prefix}link-color-rgb: #{to-rgb($link-color-inverted)};
-    --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color-inverted)};
-    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-inverted};
-    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-inverted};
-    --#{$prefix}caption-color: #{$table-caption-color-inverted};
-    --#{$prefix}code-color: #{$code-color-inverted};
-    --#{$prefix}highlight-color: #{$mark-color-inverted};
-    --#{$prefix}highlight-bg: #{$mark-bg-inverted};
-    --#{$prefix}kbd-color: #{$kbd-color-inverted};
-    --#{$prefix}kbd-bg: #{$kbd-bg-inverted};
-    --#{$prefix}pre-color: #{$pre-color-inverted};
-    --#{$prefix}body-color: #{$body-color-dark};
-    --#{$prefix}heading-color: #{$headings-color-dark};
+//   // For testing only, uncomment to see the colors
+//   // --#{$prefix}primary-text-rgb: #ffc0cb;
+//   // --#{$prefix}link-color: #ffc0cb;
+//   // --#{$prefix}link-hover-color: #ffc0cb;
+//   // --#{$prefix}link-color-rgb: #ffc0cb;
+//   // --#{$prefix}link-hover-color-rgb: ##ffc0cb;
+//   // --#{$prefix}focus-visible-inner-color: #ffc0cb;
+//   // --#{$prefix}focus-visible-outer-color: #ffc0cb;
+//   // --#{$prefix}caption-color: #ffc0cb;
+//   // --#{$prefix}code-color: #ffc0cb;
+//   // --#{$prefix}highlight-color: #ffc0cb;
+//   // --#{$prefix}highlight-bg: #ffc0cb;
+//   // --#{$prefix}kbd-color: #ffc0cb;
+//   // --#{$prefix}kbd-bg: #ffc0cb;
+//   // --#{$prefix}pre-color: #ffc0cb;
+//   // --#{$prefix}body-color: #ffc0cb;
+//   // --#{$prefix}heading-color: #ffc0cb;
 
-    // For testing only, uncomment to see the colors
-    // --#{$prefix}primary-text-rgb: #ffc0cb;
-    // --#{$prefix}link-color: #ffc0cb;
-    // --#{$prefix}link-hover-color: #ffc0cb;
-    // --#{$prefix}link-color-rgb: #ffc0cb;
-    // --#{$prefix}link-hover-color-rgb: ##ffc0cb;
-    // --#{$prefix}focus-visible-inner-color: #ffc0cb;
-    // --#{$prefix}focus-visible-outer-color: #ffc0cb;
-    // --#{$prefix}caption-color: #ffc0cb;
-    // --#{$prefix}code-color: #ffc0cb;
-    // --#{$prefix}highlight-color: #ffc0cb;
-    // --#{$prefix}highlight-bg: #ffc0cb;
-    // --#{$prefix}kbd-color: #ffc0cb;
-    // --#{$prefix}kbd-bg: #ffc0cb;
-    // --#{$prefix}pre-color: #ffc0cb;
-    // --#{$prefix}body-color: #ffc0cb;
-    // --#{$prefix}heading-color: #ffc0cb;
+//   // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
+//   [class*="bg-"]:not(&):not(.bg-transparent) {
+//     --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
+//     --#{$prefix}link-color: #{$link-color};
+//     --#{$prefix}link-hover-color: #{$link-hover-color};
+//     --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
+//     --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
+//     --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
+//     --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
+//     --#{$prefix}caption-color: #{$table-caption-color};
+//     --#{$prefix}code-color: #{$code-color};
+//     --#{$prefix}highlight-color: #{$mark-color};
+//     --#{$prefix}highlight-bg: #{$mark-bg};
+//     --#{$prefix}kbd-color: #{$kbd-color};
+//     --#{$prefix}kbd-bg: #{$kbd-bg};
+//     --#{$prefix}pre-color: #{$pre-color};
+//     --#{$prefix}body-color: #{$body-color};
+//     --#{$prefix}heading-color: #{$headings-color};
 
-    // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-    [class*="bg-"]:not(&):not(.bg-transparent) {
-      --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)};
-      --#{$prefix}link-color: #{$link-color};
-      --#{$prefix}link-hover-color: #{$link-hover-color};
-      --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
-      --#{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
-      --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color};
-      --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color};
-      --#{$prefix}caption-color: #{$table-caption-color};
-      --#{$prefix}code-color: #{$code-color};
-      --#{$prefix}highlight-color: #{$mark-color};
-      --#{$prefix}highlight-bg: #{$mark-bg};
-      --#{$prefix}kbd-color: #{$kbd-color};
-      --#{$prefix}kbd-bg: #{$kbd-bg};
-      --#{$prefix}pre-color: #{$pre-color};
-      --#{$prefix}body-color: #{$body-color};
-      --#{$prefix}heading-color: #{$headings-color};
-
-      // For testing only, uncomment to see the colors
-      // --#{$prefix}primary-text-rgb: #0ff;
-      // --#{$prefix}link-color: #0ff;
-      // --#{$prefix}link-hover-color: #0ff;
-      // --#{$prefix}link-color-rgb: #0ff;
-      // --#{$prefix}link-hover-color-rgb: #0ff;
-      // --#{$prefix}focus-visible-inner-color: #0ff;
-      // --#{$prefix}focus-visible-outer-color: #0ff;
-      // --#{$prefix}caption-color: #0ff;
-      // --#{$prefix}code-color: #0ff;
-      // --#{$prefix}highlight-color: #0ff;
-      // --#{$prefix}highlight-bg: #0ff;
-      // --#{$prefix}kbd-color: #0ff;
-      // --#{$prefix}kbd-bg: #0ff;
-      // --#{$prefix}pre-color: #0ff;
-      // --#{$prefix}body-color: #0ff;
-      // --#{$prefix}heading-color: #0ff;
-    }
-  }
-}
+//     // For testing only, uncomment to see the colors
+//     // --#{$prefix}primary-text-rgb: #0ff;
+//     // --#{$prefix}link-color: #0ff;
+//     // --#{$prefix}link-hover-color: #0ff;
+//     // --#{$prefix}link-color-rgb: #0ff;
+//     // --#{$prefix}link-hover-color-rgb: #0ff;
+//     // --#{$prefix}focus-visible-inner-color: #0ff;
+//     // --#{$prefix}focus-visible-outer-color: #0ff;
+//     // --#{$prefix}caption-color: #0ff;
+//     // --#{$prefix}code-color: #0ff;
+//     // --#{$prefix}highlight-color: #0ff;
+//     // --#{$prefix}highlight-bg: #0ff;
+//     // --#{$prefix}kbd-color: #0ff;
+//     // --#{$prefix}kbd-bg: #0ff;
+//     // --#{$prefix}pre-color: #0ff;
+//     // --#{$prefix}body-color: #0ff;
+//     // --#{$prefix}heading-color: #0ff;
+//   }
+// }
 // End mod
 // scss-docs-end root-dark-rule
 
