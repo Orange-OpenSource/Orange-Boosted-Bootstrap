@@ -516,11 +516,9 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $black !default; // Boosted mod
-$link-color-inverted:                     $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $accessible-orange !default; // Boosted mod
-$link-hover-color-inverted:               $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -653,12 +651,10 @@ $focus-visible-zindex:                5 !default; // Boosted mod
 
 $focus-visible-inner-width:           2px !default; // Boosted mod
 $focus-visible-inner-color:           var(--#{$prefix}body-bg) !default; // Boosted mod
-$focus-visible-inner-color-inverted:  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 
 $focus-visible-outer-width:           3px !default;  // Boosted mod
 $focus-visible-outer-offset:          $focus-visible-inner-width !default; // Boosted mod
 $focus-visible-outer-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod
-$focus-visible-outer-color-inverted:  var(--#{$prefix}body-bg) !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
@@ -863,9 +859,6 @@ $list-inline-padding:         $spacer * .25 !default;
 $mark-padding:                0 .1875em !default; // Boosted mod
 $mark-color:                  $white !default; // Boosted mod: instead of `$body-color`
 $mark-bg:                     $black !default; // Boosted mod: instead of `$yellow-100`
-
-$mark-color-inverted:         $black !default; // Boosted mod
-$mark-bg-inverted:            $white !default; // Boosted mod
 // scss-docs-end type-variables
 // End mod
 
@@ -920,7 +913,6 @@ $table-striped-columns-order:           even !default;
 $table-group-separator-color:           currentcolor !default;
 
 $table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
 
 // Boosted mod: no $table-bg-scale
@@ -2230,19 +2222,15 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // Boosted mod
 $code-font-size:                    .875em !default;
 $code-color:                        $gray-700 !default;
-$code-color-inverted:               $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
-$kbd-color-inverted:                $white !default;
 $kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
-$kbd-bg-inverted:                   $gray-900 !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color:                         var(--#{$prefix}pre-color, $gray-900) !default;
-$pre-color-inverted:                $gray-300 !default;
 $pre-line-height:                   1.25 !default;
 // End mod
 
