@@ -90,6 +90,10 @@
   line-height: 1;
 }
 
+.lh-107 {
+  line-height: 1.07;
+}
+
 .lh-108 {
   line-height: 1.08;
 }
@@ -116,6 +120,10 @@
 
 .letter-spacing-n1-6 {
   letter-spacing: -1.6px;
+}
+
+.letter-spacing-n0-8 {
+  letter-spacing: -.8px;
 }
 
 .letter-spacing-n0-4 {
