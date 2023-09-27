@@ -536,10 +536,10 @@ Using bg-body
 ### No theme
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
       <span class="container-xxl">Shop</span>
     </button>
-    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+    <div id="collapseLocalNav1" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
@@ -558,10 +558,10 @@ Using bg-body
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav2" aria-expanded="false" aria-controls="collapseLocalNav2">
       <span class="container-xxl">Shop</span>
     </button>
-    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+    <div id="collapseLocalNav2" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
@@ -580,10 +580,10 @@ Using bg-body
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <nav class="local-nav" aria-label="Basic local navigation">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav3" aria-expanded="false" aria-controls="collapseLocalNav3">
       <span class="container-xxl">Shop</span>
     </button>
-    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+    <div id="collapseLocalNav3" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
@@ -600,10 +600,10 @@ Using bg-body
 
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav4" aria-expanded="false" aria-controls="collapseLocalNav4">
       <span class="container-xxl">Shop</span>
     </button>
-    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+    <div id="collapseLocalNav4" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
@@ -620,10 +620,10 @@ Using bg-body
 
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav5" aria-expanded="false" aria-controls="collapseLocalNav5">
       <span class="container-xxl">Shop</span>
     </button>
-    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+    <div id="collapseLocalNav5" class="container-xxl local-nav-collapse d-lg-block collapse">
         <div class="navbar navbar-expand-lg">
           <ul class="navbar-nav w-100">
             <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
