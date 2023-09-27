@@ -324,31 +324,13 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 <!-- Boosted mod -->
 ## Dark variant
 
-{{< added-in "5.2.1" >}}
+{{< deprecated-in "5.3.3" >}}
 
 {{< callout warning >}}
-Dark variant won't support [contextual classes](#contextual-classes) until next release.
+**Heads up!** Dark variants for components are deprecated in Boosted v5.3.3. They are replaced by our contextual dark mode.
+
+Add `data-bs-theme="dark"` to the `.list-group` or any ancestor element to enable a component-specific color mode. [Learn more about our color modes]({{< docsref "/customize/color-modes" >}}).
 {{< /callout >}}
-
-Add `.list-group-dark` to the `.list-group` for a dark variant.
-
-{{< example class="bg-dark" >}}
-<ul class="list-group list-group-dark">
-  <li class="list-group-item">A simple default list group item</li>
-  <li class="list-group-item active">A simple active list group item</li>
-  <li class="list-group-item disabled" aria-disabled="true">A simple disabled list group item</li>
-</ul>
-{{< /example >}}
-
-Dark variant also work with `.list-group-item-action`.
-
-{{< example class="bg-dark" >}}
-<div class="list-group list-group-dark">
-  <a class="list-group-item list-group-item-action" href="#">A simple default link list group item</a>
-  <a class="list-group-item list-group-item-action active" href="#">A simple active link list group item</a>
-  <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A simple disabled link list group item</a>
-</div>
-{{< /example >}}
 <!-- End mod -->
 
 ## CSS
@@ -361,23 +343,9 @@ As part of Boosted's evolving CSS variables approach, list groups now use local 
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
-<!-- Boosted mod -->
-Customization through CSS variables can be seen on the `.list-group-dark` modifier class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="list-group-dark-css-vars" file="scss/_list-group.scss" >}}
-<!-- End mod -->
-
 ### Sass variables
 
-Variables for all list groups:
-
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
-
-<!-- Boosted mod -->
-Variables for the [dark list group](#dark-variant):
-
-{{< scss-docs name="list-group-dark-variables" file="scss/_variables.scss" >}}
-<!-- End mod -->
 
 ### Sass mixins
 

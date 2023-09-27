@@ -2002,21 +2002,6 @@ $list-group-action-active-color:    $list-group-active-color !default; // Booste
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 // scss-docs-end list-group-variables
 
-// scss-docs-start list-group-dark-variables
-$list-group-dark-color:               $white !default; // Boosted mod
-$list-group-dark-bg:                  $black !default; // Boosted mod
-$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
-$list-group-dark-action-color:        $white !default; // Boosted mod
-$list-group-dark-action-hover-color:  $primary !default; // Boosted mod
-$list-group-dark-action-active-color: $black !default; // Boosted mod
-$list-group-dark-action-active-bg:    $white !default; // Boosted mod
-$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
-$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Boosted mod
-$list-group-dark-active-color:        $black !default; // Boosted mod
-$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Boosted mod
-$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Boosted mod
-// scss-docs-end list-group-dark-variables
-
 
 // Image thumbnails
 
