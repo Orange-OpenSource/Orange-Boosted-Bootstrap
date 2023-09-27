@@ -2415,14 +2415,4 @@ $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        $gray-500 !default;
 $local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
 // scss-docs-end local-nav-variables
-
-// scss-docs-start local-nav-dark-variables
-$local-nav-dark-color:          $white !default;
-$local-nav-dark-bg:             $black !default;
-$local-nav-dark-hover-color:    $brand-orange !default;
-$local-nav-dark-hover-bg:       $gray-900 !default;
-$local-nav-dark-active-color:   $local-nav-dark-hover-color !default;
-$local-nav-dark-active-bg:      $gray-700 !default;
-$local-nav-dark-border-color:   $gray-700 !default;
-// scss-docs-end local-nav-dark-variables
 // End mod
