@@ -123,7 +123,9 @@ sitemap_exclude: true
 
 ### Local dark theme
 
-<div class="border border-tertiary p-3" data-bs-theme="dark">
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="accordion" id="accordionExample2">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -164,7 +166,9 @@ sitemap_exclude: true
 
 ### Local light theme
 
-<div class="border border-tertiary p-3" data-bs-theme="light">
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="accordion" id="accordionExample3">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -203,99 +207,10 @@ sitemap_exclude: true
   </div>
 </div>
 
-### Dark background
+### Dark theme on component
 
-Using bg-dark
-
-<div class="border border-tertiary p-3 bg-dark">
-  <div class="accordion" id="accordionExample4">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4"
-                aria-expanded="true" aria-controls="collapseOne4">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample4">
-        <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo4" class="accordion-collapse collapse" data-bs-parent="#accordionExample4">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-          plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-### Light background
-
-Using bg-white
-
-<div class="border border-tertiary p-3 bg-white">
-  <div class="accordion" id="accordionExample5">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5"
-                aria-expanded="true" aria-controls="collapseOne5">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne5" class="accordion-collapse collapse show" data-bs-parent="#accordionExample5">
-        <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo5">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo5" class="accordion-collapse collapse" data-bs-parent="#accordionExample5">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-          plugin adds the appropriate classes that we use to style each element. These classes control the overall
-          appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-          CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-### Custom dark background
-
-Using dark theme
-
-<div class="border border-tertiary p-3" style="background-color: #492191" data-bs-theme="dark">
-  <div class="accordion" id="accordionExample6">
+<div class="border border-tertiary p-3">
+  <div class="accordion" id="accordionExample6" data-bs-theme="dark">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6"
@@ -333,12 +248,10 @@ Using dark theme
   </div>
 </div>
 
-### Custom light background
+### Light theme on component
 
-Using light theme
-
-<div class="border border-tertiary p-3" style="background-color: #FFF6B6" data-bs-theme="light">
-  <div class="accordion" id="accordionExample7">
+<div class="border border-tertiary p-3">
+  <div class="accordion" id="accordionExample7" data-bs-theme="light">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne7"
@@ -401,7 +314,9 @@ Using light theme
 
 ### Local dark theme
 
-<div class="border border-tertiary p-3" data-bs-theme="dark">
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -422,7 +337,9 @@ Using light theme
 
 ### Local light theme
 
-<div class="border border-tertiary p-3" data-bs-theme="light">
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -441,96 +358,280 @@ Using light theme
   </div>
 </div>
 
-### Dark background
+### Dark theme on component
 
-Using bg-dark
-
-<div class="border border-tertiary p-3 bg-dark">
-  <div class="alert alert-success" role="alert">
+<div class="border border-tertiary p-3">
+  <div class="alert alert-success bg-body" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
   </div>
-  <div class="alert alert-info" role="alert">
+  <div class="alert alert-info" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Info</span></span>
     <p>Information notification text goes here.</p>
   </div>
-  <div class="alert alert-warning" role="alert">
+  <div class="alert alert-warning" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
     <p>Warning notification text goes here.</p>
   </div>
-  <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Error</span></span>
     <p>Error notification text goes here.</p>
   </div>
 </div>
 
-### Light background
+### Light theme on component
 
-Using bg-white
-
-<div class="border border-tertiary p-3 bg-white">
-  <div class="alert alert-success" role="alert">
+<div class="border border-tertiary p-3">
+  <div class="alert alert-success bg-body" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
   </div>
-  <div class="alert alert-info" role="alert">
+  <div class="alert alert-info" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Info</span></span>
     <p>Information notification text goes here.</p>
   </div>
-  <div class="alert alert-warning" role="alert">
+  <div class="alert alert-warning" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
     <p>Warning notification text goes here.</p>
   </div>
-  <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Error</span></span>
     <p>Error notification text goes here.</p>
   </div>
 </div>
 
-### Custom dark background
+## Stepped process
 
-Using dark theme
+### No theme
 
-<div class="border border-tertiary p-3" style="background-color: #492191" data-bs-theme="dark">
-  <div class="alert alert-success" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-    <p>Success notification text goes here.</p>
-  </div>
-  <div class="alert alert-info" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Info</span></span>
-    <p>Information notification text goes here.</p>
-  </div>
-  <div class="alert alert-warning" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-    <p>Warning notification text goes here.</p>
-  </div>
-  <div class="alert alert-danger" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Error</span></span>
-    <p>Error notification text goes here.</p>
-  </div>
+<div class="border border-tertiary p-3">
+  <nav class="stepped-process" aria-label="Checkout process">
+    <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
+      </li>
+      <li class="stepped-process-item active">
+        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
+      </li>
+    </ol>
+  </nav>
 </div>
 
-### Custom light background
+### Local dark theme
 
-Using light theme
+Using bg-body
 
-<div class="border border-tertiary p-3" style="background-color: #FFF6B6" data-bs-theme="light">
-  <div class="alert alert-success" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-    <p>Success notification text goes here.</p>
-  </div>
-  <div class="alert alert-info" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Info</span></span>
-    <p>Information notification text goes here.</p>
-  </div>
-  <div class="alert alert-warning" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
-    <p>Warning notification text goes here.</p>
-  </div>
-  <div class="alert alert-danger" role="alert">
-    <span class="alert-icon"><span class="visually-hidden">Error</span></span>
-    <p>Error notification text goes here.</p>
-  </div>
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav class="stepped-process" aria-label="Checkout process">
+    <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
+      </li>
+      <li class="stepped-process-item active">
+        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
+      </li>
+    </ol>
+  </nav>
 </div>
 
+### Local light theme
 
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav class="stepped-process" aria-label="Checkout process">
+    <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
+      </li>
+      <li class="stepped-process-item active">
+        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+### Dark theme on component
+
+<div class="border border-tertiary p-3">
+  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark">
+    <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
+      </li>
+      <li class="stepped-process-item active">
+        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+### Light theme on component
+
+<div class="border border-tertiary p-3">
+  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light">
+    <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
+      </li>
+      <li class="stepped-process-item active">
+        <a class="stepped-process-link" title="2. Review" aria-current="step">Review</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="3. Delivery">Delivery</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="4. Payment">Payment</a>
+      </li>
+      <li class="stepped-process-item">
+        <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+## Local navigation
+
+### No theme
+<div class="border border-tertiary p-3">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+### Local dark theme
+
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+### Local light theme
+
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav class="local-nav" aria-label="Basic local navigation">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+### Dark theme on component
+
+<div class="border border-tertiary p-3">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+### Light theme on component
+
+<div class="border border-tertiary p-3">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav" aria-expanded="false" aria-controls="collapseLocalNav">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
