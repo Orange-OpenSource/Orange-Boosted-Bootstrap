@@ -2242,15 +2242,6 @@ $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect
 $step-link-text-decoration:   $link-decoration !default;
 // scss-docs-end stepped-process
 
-// scss-docs-start stepped-process-dark-variables
-$step-item-dark-bg:           $white !default;
-$step-item-dark-active-bg:    $brand-orange !default;
-$step-item-dark-next-bg:      $gray-700 !default;
-$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $black) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
-$step-link-dark-color:        $black !default;
-$step-link-dark-active-color: $black !default;
-$step-link-dark-next-color:   $white !default;
-// scss-docs-end stepped-process-dark-variables
 
 //// Sticker
 // scss-docs-start sticker
