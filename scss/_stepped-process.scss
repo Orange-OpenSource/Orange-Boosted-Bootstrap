@@ -143,3 +143,15 @@
     flex: $stepped-process-max-items - 1;
   }
 }
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .stepped-process {
+      --#{$prefix}stepped-process-item-bg: #{$step-item-dark-bg};
+      --#{$prefix}stepped-process-item-next-bg: #{$step-item-dark-next-bg};
+      --#{$prefix}stepped-process-item-drop-shadow: #{$step-item-dark-drop-shadow};
+      --#{$prefix}stepped-process-link-color: #{$step-link-dark-color};
+      --#{$prefix}stepped-process-link-next-color: #{$step-link-dark-next-color};
+    }
+  }
+}

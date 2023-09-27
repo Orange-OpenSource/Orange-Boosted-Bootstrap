@@ -118,3 +118,13 @@ $form-invalid-border-color-dark:    $red-300 !default;
 // Boosted mod: no $accordion-button-icon-dark
 // Boosted mod: no $accordion-button-active-icon-dark
 // scss-docs-end sass-dark-mode-vars
+
+//
+// Stepped process
+//
+
+$step-item-dark-bg:           $white !default;
+$step-item-dark-next-bg:      $gray-700 !default;
+$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $body-bg-dark) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $body-bg-dark) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
+$step-link-dark-color:        $black !default;
+$step-link-dark-next-color:   $body-color-dark !default;
