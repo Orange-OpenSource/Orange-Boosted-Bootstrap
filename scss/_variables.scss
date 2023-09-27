@@ -1634,33 +1634,6 @@ $pagination-active-item-border:     $pagination-active-item-bg !default;
 // End mod
 // scss-docs-end pagination-variables
 
-// scss-docs-start pagination-dark-variables
-// Boosted mod
-$pagination-dark-bg:                        $black !default;
-$pagination-dark-color:                     color-contrast($pagination-dark-bg) !default;
-$pagination-dark-border-color:              transparent !default;
-
-$pagination-dark-hover-bg:                  $black !default;
-$pagination-dark-hover-color:               color-contrast($pagination-dark-hover-bg) !default;
-$pagination-dark-hover-border-color:        $gray-700 !default;
-
-$pagination-dark-focus-bg:                  $black !default;
-$pagination-dark-focus-color:               color-contrast($pagination-dark-focus-bg) !default;
-
-$pagination-dark-active-bg:                 $white !default;
-$pagination-dark-active-color:              color-contrast($pagination-dark-active-bg) !default;
-$pagination-dark-active-border-color:       $white !default;
-
-$pagination-dark-active-item-bg:            $brand-orange !default;
-$pagination-dark-active-item-color:         color-contrast($pagination-dark-active-item-bg) !default;
-$pagination-dark-active-item-border-color:  $brand-orange !default;
-
-$pagination-dark-disabled-bg:               $black !default;
-$pagination-dark-disabled-color:            $gray-700 !default;
-$pagination-dark-disabled-border-color:     $gray-700 !default;
-// End mod
-// scss-docs-end pagination-dark-variables
-
 
 // Placeholders
 
