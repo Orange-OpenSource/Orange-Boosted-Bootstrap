@@ -121,7 +121,7 @@ sitemap_exclude: true
   </div>
 </div>
 
-### Local dark theme
+### Dark theme on container
 
 Using bg-body
 
@@ -164,7 +164,7 @@ Using bg-body
   </div>
 </div>
 
-### Local light theme
+### Light theme on container
 
 Using bg-body
 
@@ -209,7 +209,7 @@ Using bg-body
 
 ### Dark theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="accordion" id="accordionExample6" data-bs-theme="dark">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -250,7 +250,7 @@ Using bg-body
 
 ### Light theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="accordion" id="accordionExample7" data-bs-theme="light">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -312,7 +312,7 @@ Using bg-body
   </div>
 </div>
 
-### Local dark theme
+### Dark theme on container
 
 Using bg-body
 
@@ -335,7 +335,7 @@ Using bg-body
   </div>
 </div>
 
-### Local light theme
+### Light theme on container
 
 Using bg-body
 
@@ -360,7 +360,7 @@ Using bg-body
 
 ### Dark theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="alert alert-success bg-body" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -381,7 +381,7 @@ Using bg-body
 
 ### Light theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="alert alert-success bg-body" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -427,7 +427,7 @@ Using bg-body
   </nav>
 </div>
 
-### Local dark theme
+### Dark theme on container
 
 Using bg-body
 
@@ -454,7 +454,7 @@ Using bg-body
   </nav>
 </div>
 
-### Local light theme
+### Light theme on container
 
 Using bg-body
 
@@ -483,7 +483,7 @@ Using bg-body
 
 ### Dark theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #282d55">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -508,7 +508,7 @@ Using bg-body
 
 ### Light theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -552,7 +552,7 @@ Using bg-body
   </nav>
 </div>
 
-### Local dark theme
+### Dark theme on container
 
 Using bg-body
 
@@ -574,7 +574,7 @@ Using bg-body
   </nav>
 </div>
 
-### Local light theme
+### Light theme on container
 
 Using bg-body
 
@@ -598,7 +598,7 @@ Using bg-body
 
 ### Dark theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #282d55">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav4" aria-expanded="false" aria-controls="collapseLocalNav4">
       <span class="container-xxl">Shop</span>
@@ -618,7 +618,7 @@ Using bg-body
 
 ### Light theme on component
 
-<div class="border border-tertiary p-3">
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav5" aria-expanded="false" aria-controls="collapseLocalNav5">
       <span class="container-xxl">Shop</span>
