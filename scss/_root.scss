@@ -137,6 +137,14 @@
   --#{$prefix}form-invalid-color: #{$form-invalid-color};
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
+
+  // *** Boosted dark-mode ***
+
+  // Stepped process
+  --#{$prefix}stepped-process-item-next-bg: #{$step-item-next-bg};
+  // End stepped process
+
+  // *** End Boosted dark-mode ***
 }
 
 @if $enable-dark-mode {
@@ -203,5 +211,13 @@
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
     // scss-docs-end root-dark-mode-vars
+
+    // *** Boosted dark-mode ***
+
+    // Stepped process
+    --#{$prefix}stepped-process-item-next-bg: #{$step-item-next-bg-dark};
+    // End stepped process
+
+    // *** End Boosted dark-mode ***
   }
 }
