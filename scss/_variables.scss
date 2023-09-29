@@ -2233,10 +2233,10 @@ $step-item-arrow-width:       .8125rem !default;
 $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, var(--#{$prefix}border-width)) 50%, 1px 100%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, subtract(100%, 1px) 0%, var(--#{$prefix}border-width) 50%, subtract(100%, 1px) 100%, 100% 100%) #{"*/"} !default; // Used in clip-path
 
 $step-link-width:             1.25ch !default; // Matches width of a single number
-$step-link-color:             $white !default;
+$step-link-color:             var(--#{$prefix}highlight-color) !default;
 $step-link-active-color:      $black !default;
 $step-link-active-outline:    $black !default;
-$step-link-next-color:        $black !default;
+$step-link-next-color:        var(--#{$prefix}link-color) !default;
 $step-link-line-height:       $line-height-sm !default;
 $step-link-marker:            counter(var(--bs-stepped-process-counter)) inspect("\A0") !default;
 $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect(".\A0") !default;
