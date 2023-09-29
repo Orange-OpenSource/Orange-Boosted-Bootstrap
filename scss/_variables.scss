@@ -859,6 +859,7 @@ $list-inline-padding:         $spacer * .25 !default;
 $mark-padding:                0 .1875em !default; // Boosted mod
 $mark-color:                  $white !default; // Boosted mod: instead of `$body-color`
 $mark-bg:                     $black !default; // Boosted mod: instead of `$yellow-100`
+
 // scss-docs-end type-variables
 // End mod
 
@@ -2222,7 +2223,7 @@ $step-item-padding:           7px !default;
 $step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
 // fusv-enable
 $step-item-margin-end:        var(--#{$prefix}border-width) !default;
-$step-item-bg:                $black !default;
+$step-item-bg:                var(--#{$prefix}highlight-bg) !default;
 $step-item-active-bg:         $primary !default;
 $step-item-next-bg:           $gray-400 !default;
 $step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
