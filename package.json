@@ -160,7 +160,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^3.29.1",
     "rollup-plugin-istanbul": "^4.0.0",
-    "rtlcss": "^4.1.0",
+    "rtlcss": "^4.1.1",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "sass-true": "^7.0.0",
