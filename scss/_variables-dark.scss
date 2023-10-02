@@ -73,7 +73,7 @@ $light-border-subtle-dark:          $light-dark !default; // Boosted mod: instea
 $dark-border-subtle-dark:           $dark-dark !default; // Boosted mod: instead of `$gray-800`
 // scss-docs-end theme-border-subtle-dark-variables
 
-$body-color-dark:                   $gray-300 !default;
+$body-color-dark:                   $white !default; // Boosted mod: instead of `$gray-300`
 $body-bg-dark:                      $gray-950 !default; // Boosted mod: instead of `$gray-900`
 $body-secondary-color-dark:         $gray-500 !default; // Boosted mod: instead of `rgba($body-color-dark, .75)`
 $body-secondary-bg-dark:            $gray-900 !default; // Boosted mod: instead of `$gray-800`
