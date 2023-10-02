@@ -2224,7 +2224,7 @@ $step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in 
 $step-item-margin-end:        var(--#{$prefix}border-width) !default;
 $step-item-bg:                var(--#{$prefix}highlight-bg) !default;
 $step-item-active-bg:         $primary !default;
-$step-item-next-bg:           $gray-400 !default;
+$step-item-next-bg:           var(--#{$prefix}border-color-translucent) !default;
 $step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
 $step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 var(--#{$prefix}body-bg)) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 var(--#{$prefix}body-bg)) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
 

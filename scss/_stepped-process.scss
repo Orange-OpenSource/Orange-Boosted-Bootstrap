@@ -10,7 +10,9 @@
   --#{$prefix}stepped-process-item-padding-y: #{$step-item-padding};
   --#{$prefix}stepped-process-item-padding-x: 0;
   --#{$prefix}stepped-process-item-margin-end: #{$step-item-margin-end};
+  --#{$prefix}stepped-process-item-bg: #{$step-item-bg};
   --#{$prefix}stepped-process-item-active-bg: #{$step-item-active-bg};
+  --#{$prefix}stepped-process-item-next-bg: #{$step-item-next-bg};
   --#{$prefix}stepped-process-item-drop-shadow: none;
   --#{$prefix}stepped-process-item-arrow-width: 0;
   --#{$prefix}stepped-process-item-arrow-shape: #{$step-item-arrow-shape};
@@ -54,7 +56,7 @@
   flex: 1;
   padding: var(--#{$prefix}stepped-process-item-padding-y) var(--#{$prefix}stepped-process-item-padding-x);
   counter-increment: var(--#{$prefix}stepped-process-counter);
-  background-color: $step-item-bg;
+  background-color: var(--#{$prefix}stepped-process-item-bg);
   filter: var(--#{$prefix}stepped-process-item-drop-shadow);
 
   &:not(:last-child) {
