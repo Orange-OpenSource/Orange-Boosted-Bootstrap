@@ -198,70 +198,11 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 ## Dark dropdowns
 
+{{< deprecated-in "5.3.3" >}}
+
 Opt into darker dropdowns to match a dark navbar or custom style by adding `.dropdown-menu-dark` onto an existing `.dropdown-menu`. No changes are required to the dropdown items.
 
-{{< example class="bg-dark" >}}
-<div class="btn-group">
-  <div class="dropdown">
-    <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu dropdown-menu-dark">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-secondary btn-inverse">Action</button>
-  <button type="button" class="btn btn-secondary btn-inverse dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
-{{< /example >}}
-
-And putting it to use in a navbar:
-
-{{< example >}}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <div class="navbar-brand">
-      <a class="stretched-link" href="#">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-      </a>
-      <h1 class="title">Navbar</h1>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-{{< /example >}}
+{{< callout-deprecated-dark-variants "dropdown-menu" >}}
 
 ## Directions
 
@@ -901,19 +842,11 @@ Dropdown items include at least one variable that is not set on `.dropdown`. Thi
 - `--bs-dropdown-item-border-radius`
 {{< /callout >}}
 
-Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
-
 ### Sass variables
 
 Variables for all dropdowns:
 
 {{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
-
-Variables for the [dark dropdown](#dark-dropdowns):
-
-{{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
 
 Variables for the CSS-based carets that indicate a dropdown's interactivity:
 

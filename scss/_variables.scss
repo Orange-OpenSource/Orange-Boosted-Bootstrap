@@ -516,11 +516,9 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $black !default; // Boosted mod
-$link-color-inverted:                     $white !default; // Boosted mod
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        $accessible-orange !default; // Boosted mod
-$link-hover-color-inverted:               $brand-orange !default; // Boosted mod
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -653,12 +651,10 @@ $focus-visible-zindex:                5 !default; // Boosted mod
 
 $focus-visible-inner-width:           2px !default; // Boosted mod
 $focus-visible-inner-color:           var(--#{$prefix}body-bg) !default; // Boosted mod
-$focus-visible-inner-color-inverted:  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 
 $focus-visible-outer-width:           3px !default;  // Boosted mod
 $focus-visible-outer-offset:          $focus-visible-inner-width !default; // Boosted mod
 $focus-visible-outer-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod
-$focus-visible-outer-color-inverted:  var(--#{$prefix}body-bg) !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables
@@ -863,9 +859,6 @@ $list-inline-padding:         $spacer * .25 !default;
 $mark-padding:                0 .1875em !default; // Boosted mod
 $mark-color:                  $white !default; // Boosted mod: instead of `$body-color`
 $mark-bg:                     $black !default; // Boosted mod: instead of `$yellow-100`
-
-$mark-color-inverted:         $black !default; // Boosted mod
-$mark-bg-inverted:            $white !default; // Boosted mod
 // scss-docs-end type-variables
 // End mod
 
@@ -920,7 +913,6 @@ $table-striped-columns-order:           even !default;
 $table-group-separator-color:           currentcolor !default;
 
 $table-caption-color:                   var(--#{$prefix}caption-color, var(--#{$prefix}emphasis-color)) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$table-caption-color-inverted:          var(--#{$prefix}body-bg) !default; // Boosted mod
 $table-caption-padding-y:               .75rem !default; // Boosted mod
 
 // Boosted mod: no $table-bg-scale
@@ -1190,10 +1182,6 @@ $form-star-margin-between:              -.125rem !default;
 $form-star-rating-checked-color:        $accessible-orange !default;
 $form-star-rating-unchecked-color:      $gray-700 !default;
 $form-star-rating-hover-color:          $black !default;
-
-$form-star-rating-dark-checked-color:   $primary !default;
-$form-star-rating-dark-unchecked-color: $gray-500 !default;
-$form-star-rating-dark-hover-color:     $white !default;
 
 $form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
 $form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
@@ -1520,7 +1508,6 @@ $navbar-badge-margin-top:                   .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-// scss-docs-start navbar-dark-variables
 $navbar-dark-border-color:          $gray-700 !default; // Boosted mod
 $navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
 $navbar-dark-hover-color:           $primary !default; // Boosted mod: instead of `rgba($white, .75)`
@@ -1531,7 +1518,6 @@ $navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead 
 $navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
 $navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
-// scss-docs-end navbar-dark-variables
 
 
 // Dropdowns
@@ -1575,7 +1561,6 @@ $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-
 // fusv-enable
 // scss-docs-end dropdown-variables
 
-// scss-docs-start dropdown-dark-variables
 $dropdown-dark-color:               $white !default; // Boosted mod
 $dropdown-dark-bg:                  $black !default; // Boosted mod
 $dropdown-dark-border-color:        $gray-700 !default; // Boosted mod
@@ -1588,7 +1573,6 @@ $dropdown-dark-link-active-color:   $black !default; // Boosted mod
 $dropdown-dark-link-active-bg:      $white !default; // Boosted mod
 $dropdown-dark-link-disabled-color: $gray-700 !default; // Boosted mod
 $dropdown-dark-header-color:        $white !default; // Boosted mod
-// scss-docs-end dropdown-dark-variables
 
 // Pagination
 
@@ -1641,33 +1625,6 @@ $pagination-active-item-color:      color-contrast($pagination-active-item-bg) !
 $pagination-active-item-border:     $pagination-active-item-bg !default;
 // End mod
 // scss-docs-end pagination-variables
-
-// scss-docs-start pagination-dark-variables
-// Boosted mod
-$pagination-dark-bg:                        $black !default;
-$pagination-dark-color:                     color-contrast($pagination-dark-bg) !default;
-$pagination-dark-border-color:              transparent !default;
-
-$pagination-dark-hover-bg:                  $black !default;
-$pagination-dark-hover-color:               color-contrast($pagination-dark-hover-bg) !default;
-$pagination-dark-hover-border-color:        $gray-700 !default;
-
-$pagination-dark-focus-bg:                  $black !default;
-$pagination-dark-focus-color:               color-contrast($pagination-dark-focus-bg) !default;
-
-$pagination-dark-active-bg:                 $white !default;
-$pagination-dark-active-color:              color-contrast($pagination-dark-active-bg) !default;
-$pagination-dark-active-border-color:       $white !default;
-
-$pagination-dark-active-item-bg:            $brand-orange !default;
-$pagination-dark-active-item-color:         color-contrast($pagination-dark-active-item-bg) !default;
-$pagination-dark-active-item-border-color:  $brand-orange !default;
-
-$pagination-dark-disabled-bg:               $black !default;
-$pagination-dark-disabled-color:            $gray-700 !default;
-$pagination-dark-disabled-border-color:     $gray-700 !default;
-// End mod
-// scss-docs-end pagination-dark-variables
 
 
 // Placeholders
@@ -1763,18 +1720,6 @@ $accordion-button-line-height-lg:         calc(40 / 30) !default; // stylelint-d
 $accordion-button-letter-spacing-lg:      $h2-spacing !default;
 // End mod
 // scss-docs-end accordion-variables
-
-// Boosted mod
-// scss-docs-start accordion-dark-variables
-$accordion-dark-color:                    $white !default; // Deprecated in v5.3.3
-$accordion-dark-bg:                       $black !default; // Deprecated in v5.3.3
-$accordion-dark-border-color:             $gray-700 !default; // Deprecated in v5.3.3
-$accordion-dark-button-color:             $accordion-dark-color !default; // Deprecated in v5.3.3
-$accordion-dark-button-bg:                $accordion-dark-bg !default; // Deprecated in v5.3.3
-$accordion-dark-button-hover-bg:          $gray-900 !default; // Deprecated in v5.3.3
-$accordion-dark-button-active-color:      $white !default; // Deprecated in v5.3.3
-// scss-docs-end accordion-dark-variables
-// End mod
 
 // Tooltips
 
@@ -2022,21 +1967,6 @@ $list-group-action-active-color:    $list-group-active-color !default; // Booste
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 // scss-docs-end list-group-variables
 
-// scss-docs-start list-group-dark-variables
-$list-group-dark-color:               $white !default; // Boosted mod
-$list-group-dark-bg:                  $black !default; // Boosted mod
-$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
-$list-group-dark-action-color:        $white !default; // Boosted mod
-$list-group-dark-action-hover-color:  $primary !default; // Boosted mod
-$list-group-dark-action-active-color: $black !default; // Boosted mod
-$list-group-dark-action-active-bg:    $white !default; // Boosted mod
-$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
-$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Boosted mod
-$list-group-dark-active-color:        $black !default; // Boosted mod
-$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Boosted mod
-$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Boosted mod
-// scss-docs-end list-group-dark-variables
-
 
 // Image thumbnails
 
@@ -2097,13 +2027,6 @@ $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://w
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
-
-// scss-docs-start breadcrumb-dark-variables
-$breadcrumb-dark-color:             $white !default; // Boosted mod
-$breadcrumb-dark-bg:                null !default; // Boosted mod
-$breadcrumb-dark-divider-color:     $black !default; // Boosted mod: since the divider is inverted for SVG reasons
-$breadcrumb-dark-active-color:      null !default; // Boosted mod
-// scss-docs-end breadcrumb-dark-variables
 
 
 // Carousel
@@ -2210,7 +2133,6 @@ $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !de
 // End mod
 // scss-docs-end close-variables
 
-// scss-docs-start close-white-variables
 $btn-close-white-color:               $white !default; // Boosted mod
 $btn-close-white-bg:                  transparent !default; // Boosted mod
 $btn-close-white-border-color:        transparent !default; // Boosted mod
@@ -2218,7 +2140,6 @@ $btn-close-white-hover-color:         $btn-close-white-color !default; // Booste
 $btn-close-white-active-color:        $primary !default; // Boosted mod
 $btn-close-white-active-border-color: $gray-700 !default; // Boosted mod
 $btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
-// scss-docs-end close-white-variables
 
 // Offcanvas
 
@@ -2242,19 +2163,15 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 // Boosted mod
 $code-font-size:                    .875em !default;
 $code-color:                        $gray-700 !default;
-$code-color-inverted:               $gray-600 !default;
 
 $kbd-padding-y:                     $spacer * .05 !default;
 $kbd-padding-x:                     $spacer * .05 !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}kbd-color, $black) !default;
-$kbd-color-inverted:                $white !default;
 $kbd-bg:                            var(--#{$prefix}kbd-bg, $gray-300) !default;
-$kbd-bg-inverted:                   $gray-900 !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color:                         var(--#{$prefix}pre-color, $gray-900) !default;
-$pre-color-inverted:                $gray-300 !default;
 $pre-line-height:                   1.25 !default;
 // End mod
 
@@ -2315,15 +2232,6 @@ $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect
 $step-link-text-decoration:   $link-decoration !default;
 // scss-docs-end stepped-process
 
-// scss-docs-start stepped-process-dark-variables
-$step-item-dark-bg:           $white !default;
-$step-item-dark-active-bg:    $brand-orange !default;
-$step-item-dark-next-bg:      $gray-700 !default;
-$step-item-dark-drop-shadow:  drop-shadow($step-item-shadow-size 0 0 $black) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $black) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
-$step-link-dark-color:        $black !default;
-$step-link-dark-active-color: $black !default;
-$step-link-dark-next-color:   $white !default;
-// scss-docs-end stepped-process-dark-variables
 
 //// Sticker
 // scss-docs-start sticker
@@ -2439,13 +2347,6 @@ $tag-close-margin-start-sm:         0 !default;
 $tag-font-size-sm:                  $font-size-sm !default;
 // scss-docs-end tag-sm-variables
 
-// scss-docs-start tag-dark-variables
-$tag-active-color-dark:             $black !default;
-$tag-disabled-color-dark:           $gray-700 !default;
-$tag-border-color-dark:             $gray-700 !default;
-$tag-active-decoration-color-dark:  $white !default;
-// scss-docs-end tag-dark-variables
-
 
 // Local navigation
 
@@ -2461,14 +2362,4 @@ $local-nav-active-marker-width: $spacer * .2 !default;
 $local-nav-border-color:        $gray-500 !default;
 $local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
 // scss-docs-end local-nav-variables
-
-// scss-docs-start local-nav-dark-variables
-$local-nav-dark-color:          $white !default;
-$local-nav-dark-bg:             $black !default;
-$local-nav-dark-hover-color:    $brand-orange !default;
-$local-nav-dark-hover-bg:       $gray-900 !default;
-$local-nav-dark-active-color:   $local-nav-dark-hover-color !default;
-$local-nav-dark-active-bg:      $gray-700 !default;
-$local-nav-dark-border-color:   $gray-700 !default;
-// scss-docs-end local-nav-dark-variables
 // End mod

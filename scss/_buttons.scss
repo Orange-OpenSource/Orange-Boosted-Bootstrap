@@ -95,54 +95,34 @@
 // Alternate buttons
 //
 
-// Boosted mod: inconsistent theming ¯\_(ツ)_/¯
 // scss-docs-start btn-variant-loops
 .btn-primary,
 .btn-warning {
   @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
-  &.btn-inverse {
-    @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black, $black);
-  }
 }
 
 .btn-light,
 .btn-secondary {
   @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant($black, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
 }
 
 .btn-success {
   @include button-variant($success, $success);
-  &.btn-inverse {
-    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
 }
 
 .btn-info,
 .btn-dark {
   @include button-variant($black, $black, $white, $white, $black, $black);
-  &.btn-inverse {
-    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
 }
 
 .btn-danger {
   @include button-variant($danger, $danger);
-  &.btn-inverse {
-    @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
 }
 // scss-docs-end btn-variant-loops
-// End mod
 
 // Boosted mod: only secondary variant
 .btn-outline-secondary {
   @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
-  }
 }
 // End mod
 
@@ -153,15 +133,6 @@
   --#{$prefix}btn-active-border-color: #{$gray-500};
   --#{$prefix}btn-disabled-color: #{$gray-500};
   --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
-
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-hover-color: #{$white};
-    --#{$prefix}btn-hover-border-color: #{$gray-700};
-    --#{$prefix}btn-active-color: #{$brand-orange};
-    --#{$prefix}btn-active-border-color: #{$gray-700};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
 }
 // End mod
 
@@ -196,12 +167,6 @@
   }
 
   // Boosted mod: no focus-visible color change
-
-  // Boosted mod: btn inverse
-  &.btn-inverse {
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
-  // End mod
 
   // No need for an active state here
 }
@@ -240,14 +205,6 @@
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$prefix}network-logo));
-
-  &.btn-inverse {
-    --#{$prefix}btn-color: #{$white};
-    --#{$prefix}btn-active-color: #{$black};
-    --#{$prefix}btn-active-bg: #{$white};
-    --#{$prefix}btn-active-border-color: #{$white};
-    --#{$prefix}btn-disabled-color: #{$gray-700};
-  }
 }
 
 @each $name in map-keys($btn-social-networks) {

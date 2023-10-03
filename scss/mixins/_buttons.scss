@@ -3,7 +3,6 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 //
-// Boosted mod: Extra parameter to handle shadow color for inverted buttons
 
 // scss-docs-start btn-variant-mixin
 @mixin button-variant(
@@ -19,7 +18,6 @@
   $disabled-background: $gray-500, // Boosted mod
   $disabled-border: $gray-500, // Boosted mod
   $disabled-color: $white, // Boosted mod
-  $btn-focus-shadow-color: $white // Boosted mod
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
@@ -27,7 +25,7 @@
   --#{$prefix}btn-hover-color: #{$hover-color};
   --#{$prefix}btn-hover-bg: #{$hover-background};
   --#{$prefix}btn-hover-border-color: #{$hover-border};
-  --#{$prefix}btn-focus-shadow-rgb: #{$btn-focus-shadow-color}; // Boosted mod
+  --#{$prefix}btn-focus-shadow-rgb: #{$white}; // Boosted mod
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
   --#{$prefix}btn-active-border-color: #{$active-border};
