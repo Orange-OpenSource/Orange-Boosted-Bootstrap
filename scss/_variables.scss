@@ -2206,26 +2206,27 @@ $stepped-process-font-size:   $small-font-size !default;
 $stepped-process-font-weight: $font-weight-bold !default;
 $stepped-process-max-items:   5 !default;
 $stepped-process-counter:     step !default; // Used as a counter name
+$stepped-process-bg:          var(--#{$prefix}body-bg) !default;
 
 $step-item-padding:           7px !default;
 // fusv-disable
 $step-item-padding-end:       $step-item-padding * 2 !default; // Deprecated in v5.2.0
 // fusv-enable
 $step-item-margin-end:        var(--#{$prefix}border-width) !default;
-$step-item-bg:                $black !default;
+$step-item-bg:                var(--#{$prefix}highlight-bg) !default;
 $step-item-active-bg:         $primary !default;
-$step-item-next-bg:           $gray-400 !default;
+$step-item-next-bg:           var(--#{$prefix}border-color-translucent) !default;
 $step-item-shadow-size:       calc(var(--#{$prefix}border-width) * 1.5) !default; // stylelint-disable-line function-disallowed-list
-$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 $white) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 $white) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
+$step-item-drop-shadow:       drop-shadow($step-item-shadow-size 0 0 var(--#{$prefix}stepped-process-bg)) #{"/* rtl:"} drop-shadow(calc(-1 * #{$step-item-shadow-size}) 0 0 var(--#{$prefix}stepped-process-bg)) #{"*/"} !default; // stylelint-disable-line function-disallowed-list
 
 $step-item-arrow-width:       .8125rem !default;
 $step-item-arrow-shape:       polygon(0% 0%, 1px 0%, subtract(100%, var(--#{$prefix}border-width)) 50%, 1px 100%, 0% 100%) #{"/* rtl:"} polygon(100% 0%, subtract(100%, 1px) 0%, var(--#{$prefix}border-width) 50%, subtract(100%, 1px) 100%, 100% 100%) #{"*/"} !default; // Used in clip-path
 
 $step-link-width:             1.25ch !default; // Matches width of a single number
-$step-link-color:             $white !default;
+$step-link-color:             var(--#{$prefix}highlight-color) !default;
 $step-link-active-color:      $black !default;
 $step-link-active-outline:    $black !default;
-$step-link-next-color:        $black !default;
+$step-link-next-color:        var(--#{$prefix}link-color) !default;
 $step-link-line-height:       $line-height-sm !default;
 $step-link-marker:            counter(var(--bs-stepped-process-counter)) inspect("\A0") !default;
 $step-link-marker-lg:         counter(var(--bs-stepped-process-counter)) inspect(".\A0") !default;
