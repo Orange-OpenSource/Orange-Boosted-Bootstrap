@@ -12,8 +12,8 @@
 
   &:disabled {
     pointer-events: none;
-    --#{$prefix}star-rating-checked-color: var(--#{$prefix}border-color-translucent);
-    --#{$prefix}star-rating-unchecked-color: var(--#{$prefix}border-color-translucent);
+    --#{$prefix}star-rating-checked-color: #{$form-star-rating-disabled-color};
+    --#{$prefix}star-rating-unchecked-color: #{$form-star-rating-disabled-color};
   }
 
   > label {
