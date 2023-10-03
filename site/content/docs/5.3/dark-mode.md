@@ -488,8 +488,8 @@ Using bg-body
 
 ### Dark theme on component
 
-<div class="border border-tertiary p-3" style="background-color: #282d55">
-  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark">
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark" style="--bs-stepped-process-bg: #282d55;">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
       <li class="stepped-process-item">
@@ -514,7 +514,7 @@ Using bg-body
 ### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light">
+  <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light" style="--bs-stepped-process-bg: #b5e8f7;">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
       <li class="stepped-process-item">
