@@ -34,11 +34,9 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 
 Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to invert the close button. This uses the `filter` property to invert the `background-image` without overriding its value.
 
-{{< example class="bg-dark" >}}
-<div data-bs-theme="dark">
-  <button type="button" class="btn-close" aria-label="Close"></button>
-  <button type="button" class="btn-close" disabled aria-label="Close"></button>
-</div>
+{{< example class="bg-dark" stackblitz_add_js="true" >}}
+<button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn-close" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Eco-design variant
