@@ -252,7 +252,6 @@
 
 // Dark dropdowns
 .dropdown-menu-dark {
-  // scss-docs-start dropdown-dark-css-vars
   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
   --#{$prefix}dropdown-bg: #{$dropdown-dark-bg};
   --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
@@ -265,5 +264,4 @@
   --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
   --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-  // scss-docs-end dropdown-dark-css-vars
 }
