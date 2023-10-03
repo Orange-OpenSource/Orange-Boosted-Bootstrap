@@ -1512,7 +1512,6 @@ $navbar-badge-margin-top:                   .375rem !default;
 // scss-docs-end orange-navbar-variables
 // End mod
 
-// scss-docs-start navbar-dark-variables
 $navbar-dark-border-color:          $gray-700 !default; // Boosted mod
 $navbar-dark-color:                 $white !default; // Boosted mod: instead of `rgba($white, .55)`
 $navbar-dark-hover-color:           $primary !default; // Boosted mod: instead of `rgba($white, .75)`
@@ -1523,7 +1522,6 @@ $navbar-dark-disabled-color:        $gray-700 !default; // Boosted mod: instead 
 $navbar-dark-toggler-border-color:  transparent !default; // Boosted mod: instead of `rgba($white, .1)`
 $navbar-dark-brand-color:           inherit !default; // Boosted mod: instead of `$navbar-dark-active-color`
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
-// scss-docs-end navbar-dark-variables
 
 
 // Dropdowns

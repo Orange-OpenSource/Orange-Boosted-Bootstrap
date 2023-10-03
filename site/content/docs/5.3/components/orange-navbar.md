@@ -87,7 +87,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
 ```html
 <header>
   <!-- Supra bar -->
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Responsive behavior example">
+  <nav class="navbar navbar-expand-lg bg-dark supra" aria-label="Supra navigation - Responsive behavior example">
     <div class="container-xxl">
       <!-- Left navbar of the Supra bar -->
       <ul class="navbar-nav me-auto">
@@ -101,7 +101,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
   </nav>
 
   <!-- Global header -->
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - Responsive behavior with a supra bar example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -151,7 +151,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -231,7 +231,7 @@ If you do not intend to use your own SVG, you should explore the DOM solution an
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - With custom logo example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -268,7 +268,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - With one line title example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -302,7 +302,7 @@ Next to the brand logo, you can add a title that can be displayed on one or two 
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - With two lines title example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -343,7 +343,7 @@ You can add a search input into your Global header.
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - With search box example">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -408,7 +408,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
 
 ```html
 <header>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under">
     <div class="container-xxl">
 
       <!-- Orange brand logo -->
@@ -425,7 +425,7 @@ It should be visible only for the larger screens (`lg` to `xxl` breakpoints) usi
     </div>
   </nav>
 
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" aria-label="Global navigation - Nav-under example">
+  <nav class="navbar bg-dark navbar-expand-lg" aria-label="Global navigation - Nav-under example">
     <div class="container-xxl">
       <div id="global-header-6.1" class="navbar-collapse collapse m-0 global-header-6">
         <ul class="navbar-nav">
