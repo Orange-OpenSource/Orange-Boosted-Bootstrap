@@ -83,9 +83,11 @@ sitemap_exclude: true
   </div>
 </div>
 
-## Accordions
+## Components
 
-### No theme
+### Accordions
+
+#### No theme
 
 <div class="border border-tertiary p-3">
   <div class="accordion" id="accordionExample1">
@@ -126,7 +128,7 @@ sitemap_exclude: true
   </div>
 </div>
 
-### Dark theme on container
+#### Dark theme on container
 
 Using bg-body
 
@@ -169,7 +171,7 @@ Using bg-body
   </div>
 </div>
 
-### Light theme on container
+#### Light theme on container
 
 Using bg-body
 
@@ -212,7 +214,7 @@ Using bg-body
   </div>
 </div>
 
-### Dark theme on component
+#### Dark theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="accordion" id="accordionExample6" data-bs-theme="dark">
@@ -253,7 +255,7 @@ Using bg-body
   </div>
 </div>
 
-### Light theme on component
+#### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="accordion" id="accordionExample7" data-bs-theme="light">
@@ -294,9 +296,9 @@ Using bg-body
   </div>
 </div>
 
-## Alerts
+### Alerts
 
-### No theme
+#### No theme
 
 <div class="border border-tertiary p-3">
   <div class="alert alert-success" role="alert">
@@ -317,7 +319,7 @@ Using bg-body
   </div>
 </div>
 
-### Dark theme on container
+#### Dark theme on container
 
 Using bg-body
 
@@ -340,7 +342,7 @@ Using bg-body
   </div>
 </div>
 
-### Light theme on container
+#### Light theme on container
 
 Using bg-body
 
@@ -363,7 +365,7 @@ Using bg-body
   </div>
 </div>
 
-### Dark theme on component
+#### Dark theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="alert alert-success bg-body" role="alert" data-bs-theme="dark">
@@ -384,7 +386,7 @@ Using bg-body
   </div>
 </div>
 
-### Light theme on component
+#### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="alert alert-success bg-body" role="alert" data-bs-theme="light">
@@ -405,9 +407,9 @@ Using bg-body
   </div>
 </div>
 
-## Stepped process
+### Stepped process
 
-### No theme
+#### No theme
 
 <div class="border border-tertiary p-3">
   <nav class="stepped-process" aria-label="Checkout process">
@@ -432,7 +434,7 @@ Using bg-body
   </nav>
 </div>
 
-### Dark theme on container
+#### Dark theme on container
 
 Using bg-body
 
@@ -459,7 +461,7 @@ Using bg-body
   </nav>
 </div>
 
-### Light theme on container
+#### Light theme on container
 
 Using bg-body
 
@@ -486,7 +488,7 @@ Using bg-body
   </nav>
 </div>
 
-### Dark theme on component
+#### Dark theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #282d55;">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark" style="--bs-stepped-process-bg: #282d55;">
@@ -511,7 +513,7 @@ Using bg-body
   </nav>
 </div>
 
-### Light theme on component
+#### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light" style="--bs-stepped-process-bg: #b5e8f7;">
@@ -536,9 +538,9 @@ Using bg-body
   </nav>
 </div>
 
-## Local navigation
+### Local navigation
 
-### No theme
+#### No theme
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
@@ -557,7 +559,7 @@ Using bg-body
   </nav>
 </div>
 
-### Dark theme on container
+#### Dark theme on container
 
 Using bg-body
 
@@ -579,7 +581,7 @@ Using bg-body
   </nav>
 </div>
 
-### Light theme on container
+#### Light theme on container
 
 Using bg-body
 
@@ -601,7 +603,7 @@ Using bg-body
   </nav>
 </div>
 
-### Dark theme on component
+#### Dark theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
@@ -621,7 +623,7 @@ Using bg-body
   </nav>
 </div>
 
-### Light theme on component
+#### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
@@ -639,4 +641,103 @@ Using bg-body
         </div>
     </div>
   </nav>
+</div>
+
+
+## Forms
+
+### Star rating
+
+#### No theme
+
+<div class="border border-tertiary p-3">
+  <form><fieldset class="star-rating">
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible1" name="rating" value="1" class="visually-hidden">
+    <label for="terrible1" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad1" name="rating" value="2" class="visually-hidden">
+    <label for="bad1" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed1" name="rating" value="3" class="visually-hidden">
+    <label for="mixed1" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good1" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good1" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent1" name="rating" value="5" class="visually-hidden">
+    <label for="excellent1" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+</div>
+
+#### Dark theme on container
+
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <form><fieldset class="star-rating">
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
+    <label for="terrible2" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad2" name="rating" value="2" class="visually-hidden">
+    <label for="bad2" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed2" name="rating" value="3" class="visually-hidden">
+    <label for="mixed2" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good2" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good2" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
+    <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+</div>
+
+#### Light theme on container
+
+Using bg-body
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <form><fieldset class="star-rating">
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
+    <label for="terrible3" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad3" name="rating" value="2" class="visually-hidden">
+    <label for="bad3" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed3" name="rating" value="3" class="visually-hidden">
+    <label for="mixed3" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good3" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good3" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
+    <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+</div>
+
+#### Dark theme on component
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <form><fieldset class="star-rating" data-bs-theme="dark">
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
+    <label for="terrible4" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad4" name="rating" value="2" class="visually-hidden">
+    <label for="bad4" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed4" name="rating" value="3" class="visually-hidden">
+    <label for="mixed4" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good4" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good4" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
+    <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+</div>
+
+#### Light theme on component
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <form><fieldset class="star-rating" data-bs-theme="light">
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible5" name="rating" value="1" class="visually-hidden">
+    <label for="terrible5" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad5" name="rating" value="2" class="visually-hidden">
+    <label for="bad5" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed5" name="rating" value="3" class="visually-hidden">
+    <label for="mixed5" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good5" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good5" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent5" name="rating" value="5" class="visually-hidden">
+    <label for="excellent5" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
 </div>

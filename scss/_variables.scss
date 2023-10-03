@@ -1179,9 +1179,10 @@ $form-star-size:                        1.5625rem !default;
 $form-star-size-sm:                     1.25rem !default;
 $form-star-margin-between:              -.125rem !default;
 
-$form-star-rating-checked-color:        $accessible-orange !default;
-$form-star-rating-unchecked-color:      $gray-700 !default;
-$form-star-rating-hover-color:          $black !default;
+$form-star-rating-checked-color:        var(--#{$prefix}link-hover-color) !default;
+$form-star-rating-unchecked-color:      var(--#{$prefix}secondary-color) !default;
+$form-star-rating-hover-color:          var(--#{$prefix}highlight-bg) !default;
+$form-star-rating-disabled-color:       var(--#{$prefix}border-color-translucent) !default;
 
 $form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
 $form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
