@@ -198,10 +198,11 @@ Please refer to the [Dropdown](https://system.design.orange.com/0c1af118d/p/910b
 
 ## Dark dropdowns
 
+{{< deprecated-in "5.3.3" >}}
+
 Opt into darker dropdowns to match a dark navbar or custom style by adding `.dropdown-menu-dark` onto an existing `.dropdown-menu`. No changes are required to the dropdown items.
 
-TODO: deprecated
-
+{{< callout-deprecated-dark-variants "dropdown-menu" >}}
 
 ## Directions
 
@@ -841,19 +842,11 @@ Dropdown items include at least one variable that is not set on `.dropdown`. Thi
 - `--bs-dropdown-item-border-radius`
 {{< /callout >}}
 
-Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
-
-{{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
-
 ### Sass variables
 
 Variables for all dropdowns:
 
 {{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
-
-Variables for the [dark dropdown](#dark-dropdowns):
-
-{{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
 
 Variables for the CSS-based carets that indicate a dropdown's interactivity:
 

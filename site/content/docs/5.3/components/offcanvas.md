@@ -148,7 +148,7 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 
 {{< deprecated-in "5.3.2" >}}
 
-Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
+Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` for proper styling with a dark offcanvas.
 
 {{< callout warning >}}
 **Heads up!** Dark variants for components were deprecated in v5.3.3 with the introduction of color modes. Instead of manually adding classes mentioned above, set `data-bs-theme="dark"` on the root element, a parent wrapper, or the component itself.
