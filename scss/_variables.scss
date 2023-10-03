@@ -2137,7 +2137,6 @@ $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !de
 // End mod
 // scss-docs-end close-variables
 
-// scss-docs-start close-white-variables
 $btn-close-white-color:               $white !default; // Boosted mod
 $btn-close-white-bg:                  transparent !default; // Boosted mod
 $btn-close-white-border-color:        transparent !default; // Boosted mod
@@ -2145,7 +2144,6 @@ $btn-close-white-hover-color:         $btn-close-white-color !default; // Booste
 $btn-close-white-active-color:        $primary !default; // Boosted mod
 $btn-close-white-active-border-color: $gray-700 !default; // Boosted mod
 $btn-close-white-disabled-color:      $gray-700 !default; // Boosted mod
-// scss-docs-end close-white-variables
 
 // Offcanvas
 
