@@ -81,6 +81,22 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-danger)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-danger)" data-bs-theme="dark"></div>
   </div>
+Additional variables for dark-mode (temporary)
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-hover-color</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-hover-color)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-hover-color)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-active-bg</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-active-bg)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-disabled-color</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="dark"></div>
+  </div>
 </div>
 
 ## Components
@@ -368,7 +384,7 @@ Using bg-body
 #### Dark theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
-  <div class="alert alert-success bg-body" role="alert" data-bs-theme="dark">
+  <div class="alert alert-success" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
   </div>
@@ -389,7 +405,7 @@ Using bg-body
 #### Light theme on component
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <div class="alert alert-success bg-body" role="alert" data-bs-theme="light">
+  <div class="alert alert-success" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
   </div>
@@ -541,6 +557,7 @@ Using bg-body
 ### Local navigation
 
 #### No theme
+
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
@@ -642,7 +659,6 @@ Using bg-body
     </div>
   </nav>
 </div>
-
 
 ## Forms
 
