@@ -137,6 +137,10 @@
   --#{$prefix}form-invalid-color: #{$form-invalid-color};
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
+
+  // **** additions for Local nav
+  --#{$prefix}hover-color: #{$body-color};
+  --#{$prefix}active-bg: #{$gray-400};
 }
 
 @if $enable-dark-mode {
@@ -202,6 +206,10 @@
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+
+    // **** additions for Local nav
+    --#{$prefix}hover-color: #{$brand-orange};
+    --#{$prefix}active-bg: #{$gray-700};
     // scss-docs-end root-dark-mode-vars
   }
 }
