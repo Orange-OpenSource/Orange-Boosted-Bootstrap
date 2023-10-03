@@ -26,7 +26,7 @@ Disabled close buttons change their `color`. We've also applied `pointer-events:
 
 ## Dark variant
 
-{{< deprecated-in "5.3.2" >}}
+{{< deprecated-in "5.3.3" >}}
 
 {{< callout warning >}}
 **Heads up!** As of v5.3.0, the `.btn-close-white` class is deprecated. Instead, use `data-bs-theme="dark"` to change the color mode of the close button.
