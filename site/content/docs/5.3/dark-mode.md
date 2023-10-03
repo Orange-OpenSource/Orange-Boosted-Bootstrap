@@ -646,6 +646,43 @@ Using bg-body
 
 ## Forms
 
+### Color
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light" disabled>
+</div>
+
 ### Star rating
 
 #### No theme
