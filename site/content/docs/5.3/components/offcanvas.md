@@ -154,11 +154,11 @@ Change the appearance of offcanvases with utilities to better match them to diff
 **Heads up!** Dark variants for components were deprecated in v5.3.3 with the introduction of color modes. Instead of manually adding classes mentioned above, set `data-bs-theme="dark"` on the root element, a parent wrapper, or the component itself.
 {{< /callout >}}
 
-{{< example class="bd-example-offcanvas p-0 bg-body-secondary overflow-hidden" >}}
+{{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" stackblitz_add_js="true" >}}
 <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvasDark" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"></button>
   </div>
   <div class="offcanvas-body">
     <p>Place offcanvas content here.</p>
