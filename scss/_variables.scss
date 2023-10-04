@@ -650,11 +650,11 @@ $outline-offset:              $outline-width !default; // Deprecated in v5.2.3
 $focus-visible-zindex:                5 !default; // Boosted mod
 
 $focus-visible-inner-width:           2px !default; // Boosted mod
-$focus-visible-inner-color:           var(--#{$prefix}body-bg) !default; // Boosted mod
+$focus-visible-inner-color:           $white !default; // Boosted mod
 
 $focus-visible-outer-width:           3px !default;  // Boosted mod
 $focus-visible-outer-offset:          $focus-visible-inner-width !default; // Boosted mod
-$focus-visible-outer-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod
+$focus-visible-outer-color:           $black !default; // Boosted mod
 // scss-docs-end focus-visible-variables
 
 // scss-docs-start box-shadow-variables

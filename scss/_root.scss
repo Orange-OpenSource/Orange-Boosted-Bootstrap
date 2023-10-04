@@ -204,6 +204,9 @@
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
 
+    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod
+    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // Boosted mod
+
     --#{$prefix}form-valid-color: #{$form-valid-color-dark};
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
