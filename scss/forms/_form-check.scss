@@ -113,9 +113,9 @@
 
     // Boosted mod
     &:checked,
-    &:indeterminate {
+    &[type="checkbox"]:indeterminate {
       background-color: $form-check-input-disabled-color;
-      filter: $invert-filter;
+      filter: $form-check-input-disabled-filter;
       border-color: $form-check-input-disabled-color;
     }
     // End mod
@@ -387,4 +387,4 @@
   // End mod
 }
 
-// Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now
+// Boosted mod: no `@if enable-dark-mode`

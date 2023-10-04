@@ -106,6 +106,16 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="dark"></div>
   </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-gray-tweak</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-input-filter</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-input-filter)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-input-filter)" data-bs-theme="dark"></div>
+  </div>
 </div>
 
 ## Components
@@ -1014,6 +1024,83 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light" disabled>
+</div>
+
+### Checkboxes & Radios
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3 bd-example-indeterminate">
+  <input class="form-check-input" type="checkbox" value="">
+  <input class="form-check-input" type="checkbox" value="" checked>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate">
+  <input class="form-check-input" type="checkbox" value="" disabled>
+  <input class="form-check-input" type="checkbox" value="" checked disabled>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate0" disabled>
+  <input class="form-check-input" type="radio">
+  <input class="form-check-input" type="radio" checked>
+  <input class="form-check-input" type="radio" disabled>
+  <input class="form-check-input" type="radio" checked disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body bd-example-indeterminate" data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="">
+  <input class="form-check-input" type="checkbox" value="" checked>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate1">
+  <input class="form-check-input" type="checkbox" value="" disabled>
+  <input class="form-check-input" type="checkbox" value="" checked disabled>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate2" disabled>
+  <input class="form-check-input" type="radio">
+  <input class="form-check-input" type="radio" checked>
+  <input class="form-check-input" type="radio" disabled>
+  <input class="form-check-input" type="radio" checked disabled>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body bd-example-indeterminate" data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="">
+  <input class="form-check-input" type="checkbox" value="" checked>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate3">
+  <input class="form-check-input" type="checkbox" value="" disabled>
+  <input class="form-check-input" type="checkbox" value="" checked disabled>
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate4" disabled>
+  <input class="form-check-input" type="radio">
+  <input class="form-check-input" type="radio" checked>
+  <input class="form-check-input" type="radio" disabled>
+  <input class="form-check-input" type="radio" checked disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3 bd-example-indeterminate" style="background-color: #282d55;">
+  <input class="form-check-input" type="checkbox" value="" data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="" checked data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate5" data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="" disabled data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="" checked disabled data-bs-theme="dark">
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate6" disabled data-bs-theme="dark">
+  <input class="form-check-input" type="radio" data-bs-theme="dark">
+  <input class="form-check-input" type="radio" checked data-bs-theme="dark">
+  <input class="form-check-input" type="radio" disabled data-bs-theme="dark">
+  <input class="form-check-input" type="radio" checked disabled data-bs-theme="dark">
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3 bd-example-indeterminate" style="background-color: #b5e8f7">
+  <input class="form-check-input" type="checkbox" value="" data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="" checked data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate7" data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="" disabled data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="" checked disabled data-bs-theme="light">
+  <input class="form-check-input" type="checkbox" value="" id="Indeterminate8" disabled data-bs-theme="light">
+  <input class="form-check-input" type="radio" data-bs-theme="light">
+  <input class="form-check-input" type="radio" checked data-bs-theme="light">
+  <input class="form-check-input" type="radio" disabled data-bs-theme="light">
+  <input class="form-check-input" type="radio" checked disabled data-bs-theme="light">
 </div>
 
 ### Controls

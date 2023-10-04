@@ -1166,7 +1166,8 @@ $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       var(--#{$prefix}check-icon) !default;
-$form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
+$form-check-input-disabled-color:         var(--#{$prefix}gray-tweak) !default; // Boosted mod
+$form-check-input-disabled-filter:        var(--#{$prefix}input-filter) !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $form-check-input-checked-color !default;
