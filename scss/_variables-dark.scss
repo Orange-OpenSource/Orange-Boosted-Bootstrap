@@ -89,6 +89,9 @@ $code-color-dark:                   tint-color($code-color, 40%) !default;
 $mark-color-dark:                   $black !default; // Boosted mod: instead of `$body-color-dark`
 $mark-bg-dark:                      $white !default; // Boosted mod: instead of `$yellow-800`
 
+$focus-visible-inner-color-dark:    $black !default; // Boosted mod
+$focus-visible-outer-color-dark:    $white !default; // Boosted mod
+
 //
 // Forms
 //
