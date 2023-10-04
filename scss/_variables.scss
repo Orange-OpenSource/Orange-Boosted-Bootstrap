@@ -1182,7 +1182,7 @@ $form-star-margin-between:              -.125rem !default;
 $form-star-rating-checked-color:        var(--#{$prefix}link-hover-color) !default;
 $form-star-rating-unchecked-color:      var(--#{$prefix}secondary-color) !default;
 $form-star-rating-hover-color:          var(--#{$prefix}highlight-bg) !default;
-$form-star-rating-disabled-color:       var(--#{$prefix}border-color-translucent) !default;
+$form-star-rating-disabled-color:       var(--#{$prefix}disabled-color) !default;
 
 $form-star-rating-checked-icon:         escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='#000' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
 $form-star-rating-unchecked-icon:       escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><path fill='transparent' stroke='#000' d='m12.5 4.523 2.016 6.227 6.542-.005-5.296 3.843 2.027 6.224L12.5 16.96l-5.289 3.852 2.027-6.224-5.296-3.843 6.542.005L12.5 4.523Z'/></svg>")) !default;
@@ -1390,7 +1390,7 @@ $nav-link-font-weight:              $font-weight-bold !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               null !default; // Boosted mod
-$nav-link-disabled-color:           $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$nav-link-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 // Boosted mod: no `$nav-link-focus-box-shadow`
 
 $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
@@ -1451,7 +1451,7 @@ $navbar-toggler-transition:           $transition-focus !default; // Boosted mod
 $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .65)`
 $navbar-light-hover-color:            $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
 $navbar-light-active-color:           $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
-$navbar-light-disabled-color:         $gray-500 !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
+$navbar-light-disabled-color:         var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
 // Boosted mod: no $navbar-light-icon-color
 $navbar-light-toggler-icon-bg:        $burger-icon !default; // Boosted mod: instead of inline SVG
 $navbar-light-toggler-icon-bg-small:  $burger-icon-small !default; // Boosted mod: slightly different burger icon for small breakpoints
@@ -2356,12 +2356,12 @@ $tag-font-size-sm:                  $font-size-sm !default;
 $local-nav-padding-y:           $navbar-nav-link-padding-y !default;
 $local-nav-color:               var(--#{$prefix}body-color) !default;
 $local-nav-bg:                  var(--#{$prefix}body-bg) !default;
-$local-nav-hover-color:         $local-nav-color !default;
-$local-nav-hover-bg:            $gray-300 !default;
-$local-nav-active-color:        $accessible-orange !default;
-$local-nav-active-bg:           $gray-400 !default;
+$local-nav-hover-color:         var(--#{$prefix}hover-color) !default;
+$local-nav-hover-bg:            var(--#{$prefix}secondary-bg) !default;
+$local-nav-active-color:        var(--#{$prefix}link-hover-color) !default;
+$local-nav-active-bg:           var(--#{$prefix}active-bg) !default;
 $local-nav-active-marker-width: $spacer * .2 !default;
-$local-nav-border-color:        $gray-500 !default;
+$local-nav-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $local-nav-border-width:        calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
 // scss-docs-end local-nav-variables
 // End mod
