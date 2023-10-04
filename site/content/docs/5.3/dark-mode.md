@@ -646,6 +646,78 @@ Additional variables for dark-mode (temporary)
 
 ## Forms
 
+### Controls
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <input type="text" class="form-control" placeholder="Input placeholder">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
+  <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
+  <input type="text" class="form-control" value="Readonly input value" readonly>
+  <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
+  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
+  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
+  <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <input type="text" class="form-control" placeholder="Input placeholder">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
+  <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
+  <input type="text" class="form-control" value="Readonly input value" readonly>
+  <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
+  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
+  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
+  <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <input type="text" class="form-control" placeholder="Input placeholder">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
+  <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
+  <input type="text" class="form-control" value="Readonly input value" readonly>
+  <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
+  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
+  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
+  <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <input type="text" class="form-control" placeholder="Input placeholder" data-bs-theme="dark">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder" data-bs-theme="dark"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" data-bs-theme="dark" disabled>
+  <textarea class="form-control" rows="2" data-bs-theme="dark" disabled>Disabled textarea placeholder</textarea>
+  <input type="text" class="form-control" value="Readonly input value" data-bs-theme="dark" readonly>
+  <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="dark" readonly></textarea>
+  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="dark" readonly disabled>
+  <textarea class="form-control" rows="2" data-bs-theme="dark" readonly disabled>Readonly disabled textarea value</textarea>
+  <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="dark" readonly>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <input type="text" class="form-control" placeholder="Input placeholder" data-bs-theme="light">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder" data-bs-theme="light"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" data-bs-theme="light" disabled>
+  <textarea class="form-control" rows="2" data-bs-theme="light" disabled>Disabled textarea placeholder</textarea>
+  <input type="text" class="form-control" value="Readonly input value" data-bs-theme="light" readonly>
+  <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="light" readonly></textarea>
+  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="light" readonly disabled>
+  <textarea class="form-control" rows="2" data-bs-theme="light" readonly disabled>Readonly disabled textarea value</textarea>
+  <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
+</div>
+
 ### Range
 
 <h4 class="mt-3">No theme</h4>
@@ -696,6 +768,29 @@ Additional variables for dark-mode (temporary)
     <input type="radio" id="excellent1" name="rating" value="5" class="visually-hidden">
     <label for="excellent1" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
+  <div class="d-flex star-rating">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <form><fieldset class="star-rating" disabled>
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible11" name="rating" value="1" class="visually-hidden">
+    <label for="terrible11" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad11" name="rating" value="2" class="visually-hidden">
+    <label for="bad11" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed11" name="rating" value="3" class="visually-hidden">
+    <label for="mixed11" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good11" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good11" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent11" name="rating" value="5" class="visually-hidden">
+    <label for="excellent11" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
@@ -713,6 +808,29 @@ Additional variables for dark-mode (temporary)
     <label for="good2" title="Good"><span class="visually-hidden">Good</span></label>
     <input type="radio" id="excellent2" name="rating" value="5" class="visually-hidden">
     <label for="excellent2" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+  <div class="d-flex star-rating">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <form><fieldset class="star-rating" disabled>
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible21" name="rating" value="1" class="visually-hidden">
+    <label for="terrible21" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad21" name="rating" value="2" class="visually-hidden">
+    <label for="bad21" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed21" name="rating" value="3" class="visually-hidden">
+    <label for="mixed21" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good21" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good21" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent21" name="rating" value="5" class="visually-hidden">
+    <label for="excellent21" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
 </div>
 
@@ -732,6 +850,29 @@ Additional variables for dark-mode (temporary)
     <input type="radio" id="excellent3" name="rating" value="5" class="visually-hidden">
     <label for="excellent3" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
+  <div class="d-flex star-rating">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <form><fieldset class="star-rating" disabled>
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible31" name="rating" value="1" class="visually-hidden">
+    <label for="terrible31" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad31" name="rating" value="2" class="visually-hidden">
+    <label for="bad31" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed31" name="rating" value="3" class="visually-hidden">
+    <label for="mixed31" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good31" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good31" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent31" name="rating" value="5" class="visually-hidden">
+    <label for="excellent31" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
@@ -750,6 +891,29 @@ Additional variables for dark-mode (temporary)
     <input type="radio" id="excellent4" name="rating" value="5" class="visually-hidden">
     <label for="excellent4" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
+  <div class="d-flex star-rating" data-bs-theme="dark">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <form><fieldset class="star-rating" data-bs-theme="dark" disabled>
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible41" name="rating" value="1" class="visually-hidden">
+    <label for="terrible41" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad41" name="rating" value="2" class="visually-hidden">
+    <label for="bad41" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed41" name="rating" value="3" class="visually-hidden">
+    <label for="mixed41" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good41" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good41" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent41" name="rating" value="5" class="visually-hidden">
+    <label for="excellent41" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
@@ -767,5 +931,28 @@ Additional variables for dark-mode (temporary)
     <label for="good5" title="Good"><span class="visually-hidden">Good</span></label>
     <input type="radio" id="excellent5" name="rating" value="5" class="visually-hidden">
     <label for="excellent5" title="Excellent"><span class="visually-hidden">Excellent</span></label>
+  </fieldset></form>
+  <div class="d-flex star-rating" data-bs-theme="light">
+    <p class="visually-hidden">Star rating: rated 3 out of 5</p>
+    <div aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span class="checked"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <form><fieldset class="star-rating" data-bs-theme="light" disabled>
+    <legend class="visually-hidden">Results relevance</legend>
+    <input type="radio" id="terrible51" name="rating" value="1" class="visually-hidden">
+    <label for="terrible51" title="Terrible"><span class="visually-hidden">Terrible</span></label>
+    <input type="radio" id="bad51" name="rating" value="2" class="visually-hidden">
+    <label for="bad51" title="Bad"><span class="visually-hidden">Bad</span></label>
+    <input type="radio" id="mixed51" name="rating" value="3" class="visually-hidden">
+    <label for="mixed51" title="Mixed"><span class="visually-hidden">Mixed</span></label>
+    <input type="radio" id="good51" name="rating" value="4" class="visually-hidden" checked>
+    <label for="good51" title="Good"><span class="visually-hidden">Good</span></label>
+    <input type="radio" id="excellent51" name="rating" value="5" class="visually-hidden">
+    <label for="excellent51" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
 </div>
