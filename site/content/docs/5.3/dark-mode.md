@@ -103,7 +103,7 @@ Additional variables for dark-mode (temporary)
 
 ### Accordions
 
-#### No theme
+<h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
   <div class="accordion" id="accordionExample1">
@@ -144,9 +144,7 @@ Additional variables for dark-mode (temporary)
   </div>
 </div>
 
-#### Dark theme on container
-
-Using bg-body
+<h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="accordion" id="accordionExample2">
@@ -187,9 +185,7 @@ Using bg-body
   </div>
 </div>
 
-#### Light theme on container
-
-Using bg-body
+<h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="accordion" id="accordionExample3">
@@ -230,7 +226,7 @@ Using bg-body
   </div>
 </div>
 
-#### Dark theme on component
+<h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="accordion" id="accordionExample6" data-bs-theme="dark">
@@ -271,7 +267,7 @@ Using bg-body
   </div>
 </div>
 
-#### Light theme on component
+<h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="accordion" id="accordionExample7" data-bs-theme="light">
@@ -314,7 +310,7 @@ Using bg-body
 
 ### Alerts
 
-#### No theme
+<h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
   <div class="alert alert-success" role="alert">
@@ -335,9 +331,7 @@ Using bg-body
   </div>
 </div>
 
-#### Dark theme on container
-
-Using bg-body
+<h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="alert alert-success" role="alert">
@@ -358,9 +352,7 @@ Using bg-body
   </div>
 </div>
 
-#### Light theme on container
-
-Using bg-body
+<h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="alert alert-success" role="alert">
@@ -381,7 +373,7 @@ Using bg-body
   </div>
 </div>
 
-#### Dark theme on component
+<h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="alert alert-success" role="alert" data-bs-theme="dark">
@@ -402,7 +394,7 @@ Using bg-body
   </div>
 </div>
 
-#### Light theme on component
+<h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="alert alert-success" role="alert" data-bs-theme="light">
@@ -425,7 +417,7 @@ Using bg-body
 
 ### Stepped process
 
-#### No theme
+<h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
   <nav class="stepped-process" aria-label="Checkout process">
@@ -450,9 +442,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Dark theme on container
-
-Using bg-body
+<h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <nav class="stepped-process" aria-label="Checkout process">
@@ -477,9 +467,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Light theme on container
-
-Using bg-body
+<h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <nav class="stepped-process" aria-label="Checkout process">
@@ -504,7 +492,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Dark theme on component
+<h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55;">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark" style="--bs-stepped-process-bg: #282d55;">
@@ -529,7 +517,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Light theme on component
+<h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light" style="--bs-stepped-process-bg: #b5e8f7;">
@@ -556,7 +544,7 @@ Using bg-body
 
 ### Local navigation
 
-#### No theme
+<h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
   <nav class="local-nav" aria-label="Basic local navigation">
@@ -576,9 +564,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Dark theme on container
-
-Using bg-body
+<h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
@@ -598,9 +584,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Light theme on container
-
-Using bg-body
+<h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <nav class="local-nav" aria-label="Basic local navigation">
@@ -620,7 +604,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Dark theme on component
+<h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
@@ -640,7 +624,7 @@ Using bg-body
   </nav>
 </div>
 
-#### Light theme on component
+<h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
@@ -662,9 +646,41 @@ Using bg-body
 
 ## Forms
 
+### Range
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <input type="range" class="form-range">
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <input type="range" class="form-range">
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <input type="range" class="form-range">
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <input type="range" class="form-range" data-bs-theme="dark">
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <input type="range" class="form-range" data-bs-theme="light">
+</div>
+
 ### Star rating
 
-#### No theme
+<h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
   <form><fieldset class="star-rating">
@@ -682,9 +698,7 @@ Using bg-body
   </fieldset></form>
 </div>
 
-#### Dark theme on container
-
-Using bg-body
+<h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <form><fieldset class="star-rating">
@@ -702,9 +716,7 @@ Using bg-body
   </fieldset></form>
 </div>
 
-#### Light theme on container
-
-Using bg-body
+<h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <form><fieldset class="star-rating">
@@ -722,7 +734,7 @@ Using bg-body
   </fieldset></form>
 </div>
 
-#### Dark theme on component
+<h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55;">
   <form><fieldset class="star-rating" data-bs-theme="dark">
@@ -740,7 +752,7 @@ Using bg-body
   </fieldset></form>
 </div>
 
-#### Light theme on component
+<h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <form><fieldset class="star-rating" data-bs-theme="light">
