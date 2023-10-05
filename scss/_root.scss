@@ -138,7 +138,13 @@
   --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color};
   // scss-docs-end root-form-validation-variables
 
+  // ******* Additions for dark-mode
+  --#{$prefix}hover-color: #{$body-color};
+  --#{$prefix}active-bg: #{$gray-400};
+  --#{$prefix}disabled-color: #{$gray-500};
   --#{$prefix}disabled-filter: #{$disabled-filter};
+  --#{$prefix}placeholder-color: #{$gray-700};
+  // ******* End additions for dark-mode
 }
 
 @if $enable-dark-mode {
@@ -200,12 +206,22 @@
     --#{$prefix}border-color: #{$border-color-dark};
     --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
 
+    --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod
+    --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // Boosted mod
+
     --#{$prefix}form-valid-color: #{$form-valid-color-dark};
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
     --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
     --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+
+    // ******* Additions for dark-mode
+    --#{$prefix}hover-color: #{$brand-orange};
+    --#{$prefix}active-bg: #{$gray-700};
+    --#{$prefix}disabled-color: #{$gray-700};
+    --#{$prefix}disabled-filter: #{$disabled-filter-dark};
+    --#{$prefix}placeholder-color: #{$gray-600};
+    // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
 
-    --#{$prefix}disabled-filter: #{$disabled-filter-dark};
   }
 }
