@@ -149,10 +149,10 @@ For more details, **Orange Accessibility Guidelines** provides [a deep-dive arti
 ## Create a SVG sprite file
 
 To create your own SVG sprite file, containing only the icons you need:
-- download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/939811-solaris-icon-library/b/795c81)
-- optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
-- include the path in a tag `<symbol>`, inside a SVG file, like below
-- you may add the attribute `fill-rule="evenodd"`, but only if needed
+1. download the icons needed from [ODS website](https://system.design.orange.com/0c1af118d/p/65c68d-solaris-icon-library/b/639b3c)
+2. optimize them with [svgo](https://github.com/svg/svgo) and remove useless attributes
+3. include the path in a tag `<symbol>`, inside a SVG file, like below
+4. you may add the attribute `fill-rule="evenodd"`, but only if needed
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
