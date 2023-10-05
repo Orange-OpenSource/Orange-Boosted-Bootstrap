@@ -688,14 +688,17 @@ Additional variables for dark-mode (temporary)
 <h4 class="mt-3">No theme</h4>
 
 <div class="border border-tertiary p-3">
+  <input type="text" class="form-control" placeholder="Input placeholder">
+  <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
+  <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
+  <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
+
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <input type="text" class="form-control" placeholder="Input placeholder">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
@@ -703,8 +706,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
@@ -717,8 +718,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
@@ -731,8 +730,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" data-bs-theme="dark" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" data-bs-theme="dark" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="dark" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="dark" readonly disabled>
-  <textarea class="form-control" rows="2" data-bs-theme="dark" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="dark" readonly>
 </div>
 
@@ -745,8 +742,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" data-bs-theme="light" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" data-bs-theme="light" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="light" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="light" readonly disabled>
-  <textarea class="form-control" rows="2" data-bs-theme="light" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
 </div>
 
