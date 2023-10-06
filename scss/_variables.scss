@@ -1671,7 +1671,7 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 $accordion-padding-y:                     $spacer * .5 !default; // Boosted mod
 $accordion-padding-x:                     0 !default; // Boosted mod
 $accordion-color:                         var(--#{$prefix}body-color) !default;
-$accordion-bg:                            transparent !default;
+$accordion-bg:                            transparent !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 // stylelint-disable-next-line function-disallowed-list
 $accordion-border-width:                  calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod
 $accordion-border-color:                  var(--#{$prefix}border-color-translucent) !default; // Boosted mod
