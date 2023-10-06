@@ -231,11 +231,12 @@ textarea {
   }
 
   &::-moz-color-swatch {
-    border: 0 !important; // stylelint-disable-line declaration-no-important
+    border: 0;
     @include border-radius($input-border-radius);
   }
 
   &::-webkit-color-swatch {
+    border: 0;
     @include border-radius($input-border-radius);
   }
 
