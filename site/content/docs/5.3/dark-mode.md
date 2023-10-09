@@ -745,6 +745,58 @@ Additional variables for dark-mode (temporary)
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
 </div>
 
+### Labels, required fields & text
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3">
+  <label class="form-label">Form label</label>
+  <label class="form-label is-required">Form label</label>
+  <label class="form-label is-disabled">Form label</label>
+  <label class="form-label is-required is-disabled">Form label</label>
+  <div class="form-text">Form text helper</div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <label class="form-label">Form label</label>
+  <label class="form-label is-required">Form label</label>
+  <label class="form-label is-disabled">Form label</label>
+  <label class="form-label is-required is-disabled">Form label</label>
+  <div class="form-text">Form text helper</div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <label class="form-label">Form label</label>
+  <label class="form-label is-required">Form label</label>
+  <label class="form-label is-disabled">Form label</label>
+  <label class="form-label is-required is-disabled">Form label</label>
+  <div class="form-text">Form text helper</div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3" style="background-color: #282d55;">
+  <label class="form-label" data-bs-theme="dark">Form label</label>
+  <label class="form-label is-required" data-bs-theme="dark">Form label</label>
+  <label class="form-label is-disabled" data-bs-theme="dark">Form label</label>
+  <label class="form-label is-required is-disabled" data-bs-theme="dark">Form label</label>
+  <div class="form-text" data-bs-theme="dark">Form text helper</div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3" style="background-color: #b5e8f7">
+  <label class="form-label" data-bs-theme="light">Form label</label>
+  <label class="form-label is-required" data-bs-theme="light">Form label</label>
+  <label class="form-label is-disabled" data-bs-theme="light">Form label</label>
+  <label class="form-label is-required is-disabled" data-bs-theme="light">Form label</label>
+  <div class="form-text" data-bs-theme="light">Form text helper</div>
+</div>
+
 ### Range
 
 <h4 class="mt-3">No theme</h4>
