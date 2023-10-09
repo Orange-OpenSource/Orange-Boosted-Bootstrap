@@ -644,6 +644,113 @@ Additional variables for dark-mode (temporary)
   </nav>
 </div>
 
+### Stickers
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3 d-flex">
+  <div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>
+  <div class="sticker sticker-sm">
+    <svg width="35" height="35" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    </svg>
+    <p class="mb-2">
+      <span class="sticker-fs-m">Free delivery</span>
+    </p>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body d-flex" data-bs-theme="dark">
+  <div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>
+  <div class="sticker sticker-sm">
+    <svg width="35" height="35" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    </svg>
+    <p class="mb-2">
+      <span class="sticker-fs-m">Free delivery</span>
+    </p>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body d-flex" data-bs-theme="light">
+  <div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>
+  <div class="sticker sticker-sm">
+    <svg width="35" height="35" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    </svg>
+    <p class="mb-2">
+      <span class="sticker-fs-m">Free delivery</span>
+    </p>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3 d-flex" style="background-color: #282d55;">
+  <div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>
+  <div class="sticker sticker-sm">
+    <svg width="35" height="35" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    </svg>
+    <p class="mb-2">
+      <span class="sticker-fs-m">Free delivery</span>
+    </p>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3 d-flex" style="background-color: #b5e8f7">
+  <div class="sticker sticker-sm">
+    <p class="mb-0">
+      <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
+      <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
+      <span aria-hidden="true">Per month</span>
+      <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
+    </p>
+  </div>
+  <div class="sticker sticker-sm">
+    <svg width="35" height="35" aria-hidden="true" focusable="false">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+    </svg>
+    <p class="mb-2">
+      <span class="sticker-fs-m">Free delivery</span>
+    </p>
+  </div>
+</div>
+
 ## Forms
 
 ### Color
