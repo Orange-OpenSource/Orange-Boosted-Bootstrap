@@ -646,6 +646,43 @@ Additional variables for dark-mode (temporary)
 
 ## Forms
 
+### Color
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light" disabled>
+</div>
+
 ### Controls
 
 <h4 class="mt-3">No theme</h4>
@@ -657,8 +694,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
@@ -671,8 +706,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
@@ -685,8 +718,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" readonly disabled>
-  <textarea class="form-control" rows="2" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" readonly>
 </div>
 
@@ -699,8 +730,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" data-bs-theme="dark" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" data-bs-theme="dark" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="dark" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="dark" readonly disabled>
-  <textarea class="form-control" rows="2" data-bs-theme="dark" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="dark" readonly>
 </div>
 
@@ -713,8 +742,6 @@ Additional variables for dark-mode (temporary)
   <textarea class="form-control" rows="2" data-bs-theme="light" disabled>Disabled textarea placeholder</textarea>
   <input type="text" class="form-control" value="Readonly input value" data-bs-theme="light" readonly>
   <textarea class="form-control" rows="2" placeholder="Readonly textarea placeholder" data-bs-theme="light" readonly></textarea>
-  <input type="text" class="form-control" placeholder="Readonly disabled input placeholder" data-bs-theme="light" readonly disabled>
-  <textarea class="form-control" rows="2" data-bs-theme="light" readonly disabled>Readonly disabled textarea value</textarea>
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
 </div>
 
@@ -724,30 +751,35 @@ Additional variables for dark-mode (temporary)
 
 <div class="border border-tertiary p-3">
   <input type="range" class="form-range">
+  <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <input type="range" class="form-range">
+  <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <input type="range" class="form-range">
+  <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #282d55;">
   <input type="range" class="form-range" data-bs-theme="dark">
+  <input type="range" class="form-range" data-bs-theme="dark" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <input type="range" class="form-range" data-bs-theme="light">
+  <input type="range" class="form-range" data-bs-theme="light" disabled>
 </div>
 
 ### Star rating

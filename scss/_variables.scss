@@ -418,6 +418,8 @@ $svg-as-custom-props: (
 // see https://codepen.io/sosuke/pen/Pjoqqp
 $invert-filter:         invert(1) !default;
 $orange-filter:         invert(46%) sepia(60%) saturate(2878%) hue-rotate(6deg) brightness(98%) contrast(104%) !default;
+
+$disabled-filter:       brightness(0) invert(1) brightness(.8) !default;
 // End mod
 
 // Options
@@ -1132,8 +1134,11 @@ $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 $form-color-width:                      2.5rem !default; // Boosted mod: instead of `3rem`
-$form-color-disabled-border-color:      $gray-500 !default; // Boosted mod
-$form-color-disabled-background-swatch: brightness(0) invert(1) brightness(.8) !default; // Boosted mod
+$form-color-border-color:               var(--#{$prefix}emphasis-color) !default; // Boosted mod
+$form-color-hover-bg-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod
+$form-color-disabled-bg-color:          $input-bg !default; // Boosted mod
+$form-color-disabled-border-color:      var(--#{$prefix}disabled-color) !default; // Boosted mod
+$form-color-disabled-background-swatch: var(--#{$prefix}disabled-filter) !default; // Boosted mod
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
