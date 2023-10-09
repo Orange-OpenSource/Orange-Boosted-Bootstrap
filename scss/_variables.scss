@@ -1563,17 +1563,17 @@ $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
-$dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$dropdown-link-hover-bg:            var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 
-$dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod: instead of `$component-active-color`
-$dropdown-link-active-bg:           $component-active-color !default; // Boosted mod: instead of `$component-active-bg`
+$dropdown-link-active-color:        var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$component-active-color`
+$dropdown-link-active-bg:           var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `$component-active-bg`
 
-$dropdown-link-disabled-color:      $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
+$dropdown-link-disabled-color:      var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
 
 $dropdown-item-padding-y:           $spacer * .5 !default; // Boosted mod: instead of `$spacer * .25`
 $dropdown-item-padding-x:           $spacer * .5 !default; // Boosted mod: instead of `$spacer`
 
-$dropdown-header-color:             $black !default; // Boosted mod: instead of `$gray-600`
+$dropdown-header-color:             var(--#{$prefix}body-color) !default; // Boosted mod: instead of `$gray-600`
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
 $dropdown-header-padding-y:         $spacer !default; // Boosted mod: instead of `$dropdown-padding-y`
 // fusv-disable
