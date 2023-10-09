@@ -2243,6 +2243,10 @@ $step-link-text-decoration:   $link-decoration !default;
 
 //// Sticker
 // scss-docs-start sticker
+$sticker-color:                         $black !default;
+$sticker-background-color:              $brand-orange !default;
+$sticker-font-weight:                   $font-weight-bold !default;
+
 $sticker-size-sm:                       $spacer * 7 !default;
 $sticker-size-md:                       $spacer * 9 !default;
 $sticker-size-lg:                       $spacer * 14 !default;
