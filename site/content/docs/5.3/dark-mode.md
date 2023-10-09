@@ -712,7 +712,7 @@ Additional variables for dark-mode (temporary)
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="border border-tertiary p-3 d-flex" style="background-color: #282d55;">
-  <div class="sticker sticker-sm">
+  <div class="sticker sticker-sm" data-bs-theme="dark">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
       <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
@@ -720,7 +720,7 @@ Additional variables for dark-mode (temporary)
       <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
     </p>
   </div>
-  <div class="sticker sticker-sm">
+  <div class="sticker sticker-sm" data-bs-theme="dark">
     <svg width="35" height="35" aria-hidden="true" focusable="false">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
     </svg>
@@ -733,7 +733,7 @@ Additional variables for dark-mode (temporary)
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="border border-tertiary p-3 d-flex" style="background-color: #b5e8f7">
-  <div class="sticker sticker-sm">
+  <div class="sticker sticker-sm" data-bs-theme="light">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
       <span class="sticker-fs-xl mb-0 d-block" aria-hidden="true">39.99 €</span>
@@ -741,7 +741,7 @@ Additional variables for dark-mode (temporary)
       <span class="visually-hidden">39.99 € per month instead of 69.99 €</span>
     </p>
   </div>
-  <div class="sticker sticker-sm">
+  <div class="sticker sticker-sm" data-bs-theme="light">
     <svg width="35" height="35" aria-hidden="true" focusable="false">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
     </svg>
