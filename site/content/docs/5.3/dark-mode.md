@@ -526,6 +526,123 @@ sitemap_exclude: true
   </nav>
 </div>
 
+### Spinners
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-body" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="spinner-border" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-primary" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-body" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-body" role="status" data-bs-theme="dark">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="spinner-border" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-primary" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-body" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-body" role="status" data-bs-theme="light">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
 ### Stepped process
 
 <h4 class="mt-3">No theme</h4>
