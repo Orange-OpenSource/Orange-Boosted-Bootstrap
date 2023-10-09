@@ -1195,6 +1195,58 @@ sitemap_exclude: true
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
 </div>
 
+### Helper
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  <div>
+    <label class="form-label is-required">Input label</label>
+    <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  <div>
+    <label class="form-label is-required">Input label</label>
+    <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  <div>
+    <label class="form-label is-required">Input label</label>
+    <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input"><span class="visually-hidden">Helper for input</span></button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input" data-bs-theme="dark"><span class="visually-hidden">Helper for input</span></button>
+  <div>
+    <label class="form-label is-required" data-bs-theme="dark">Input label</label>
+    <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input" data-bs-theme="dark"><span class="visually-hidden">Helper for input</span></button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input" data-bs-theme="light"><span class="visually-hidden">Helper for input</span></button>
+  <div>
+    <label class="form-label is-required" data-bs-theme="light">Input label</label>
+    <button type="button" class="form-helper" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Help for input" data-bs-theme="light"><span class="visually-hidden">Helper for input</span></button>
+  </div>
+</div>
+
 ### Labels, required fields & text
 
 <h4 class="mt-3">No theme</h4>

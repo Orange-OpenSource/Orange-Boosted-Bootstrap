@@ -25,10 +25,18 @@
 .form-helper {
   display: inline-block;
   flex-shrink: 0;
-  width: $form-helper-size;
-  height: $form-helper-size;
-  background: no-repeat center/100% escape-svg($helper-icon);
+  padding: 0;
+  background: transparent;
   border: 0;
+
+  &::before {
+    display: block;
+    width: $form-helper-size;
+    height: $form-helper-size;
+    content: "";
+    background-color: $form-helper-color;
+    mask: no-repeat center/100% $form-helper-icon;
+  }
 
   .form-label + & {
     margin-bottom: $form-helper-label-margin-bottom;
