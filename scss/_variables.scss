@@ -1241,6 +1241,13 @@ $form-switch-bg-square-size:      add(1rem, $spacer * .5) !default;  // Boosted 
 $form-switch-border-radius:       null !default; // Boosted mod
 $form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default; // Boosted mod
 
+$form-switch-square-bg:             var(--#{$prefix}black-tweak) !default; // Boosted mod
+$form-switch-bg:                    $white !default; // Boosted mod
+$form-switch-border-color:          $white !default; // Boosted mod
+$form-switch-filter:                var(--#{$prefix}input-filter) !default; // Boosted mod
+$form-switch-focus-visible-inner:   $black !default; // Boosted mod
+$form-switch-focus-visible-outer:   $white !default; // Boosted mod
+
 // Boosted mod: no $form-switch-focus-color
 // Boosted mod: no $form-switch-focus-bg-image
 
@@ -1249,6 +1256,13 @@ $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default; /
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
 $form-switch-checked-bg-position: calc(var(--#{$prefix}border-width) * 3) 50% !default; // Boosted mod
+
+$form-switch-checked-square-bg:     var(--#{$prefix}body-bg) !default; // Boosted mod
+$form-switch-checked-bg:            $primary !default; // Boosted mod
+$form-switch-checked-border-color:  $primary !default; // Boosted mod
+$form-switch-checked-filter:        none !default; // Boosted mod
+$form-switch-checked-focus-inner:   var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod
+$form-switch-checked-focus-outer:   var(--#{$prefix}focus-visible-outer-color) !default; // Boosted mod
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
