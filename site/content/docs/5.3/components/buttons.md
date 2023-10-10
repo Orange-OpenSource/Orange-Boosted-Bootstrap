@@ -24,6 +24,12 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 
 Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
+{{< design-callout-alert >}}
+Warning, info, and light variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -212,7 +218,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 ## Outline buttons
 
 {{< design-callout-alert >}}
-The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they come from Bootstrap architecture.
+The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
 
 Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}

@@ -97,8 +97,7 @@
 
 // Boosted mod: inconsistent theming ¯\_(ツ)_/¯
 // scss-docs-start btn-variant-loops
-.btn-primary,
-.btn-warning {
+.btn-primary {
   @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
   &.btn-inverse {
     @include button-variant($primary, $primary, $black, $white, $white, $black, $black, $white, $white, $gray-700, $gray-700, $black, $black);
@@ -120,18 +119,31 @@
   }
 }
 
-.btn-info,
-.btn-dark {
-  @include button-variant($black, $black, $white, $white, $black, $black);
-  &.btn-inverse {
-    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
-  }
-}
-
 .btn-danger {
   @include button-variant($danger, $danger);
   &.btn-inverse {
     @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+  }
+}
+
+.btn-warning {
+  @include button-variant($warning, $warning);
+  &.btn-inverse {
+    @include button-variant($warning, $warning, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+  }
+}
+
+.btn-info {
+  @include button-variant($info, $info);
+  &.btn-inverse {
+    @include button-variant($info, $info, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+  }
+}
+
+.btn-dark {
+  @include button-variant($black, $black, $white, $white, $black, $black);
+  &.btn-inverse {
+    @include button-variant($white, $white, $black, $black, $white, $white, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
