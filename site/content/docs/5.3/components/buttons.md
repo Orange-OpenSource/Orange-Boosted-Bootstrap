@@ -40,6 +40,16 @@ Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278eb
 <button type="button" class="btn btn-link">Link</button>
 {{< /example >}}
 
+{{< example class="bg-dark" >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-inverse btn-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
+
+<button type="button" class="btn btn-link">Link</button>
+{{< /example >}}
+
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
@@ -229,6 +239,14 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
+{{< /example >}}
+
+{{< example class="bg-dark" >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-inverse btn-outline-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}
 {{< /example >}}

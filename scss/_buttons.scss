@@ -115,7 +115,7 @@
 .btn-success {
   @include button-variant($success, $success);
   &.btn-inverse {
-    @include button-variant($success, $success, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+    @include button-variant($success, $success, $black, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
@@ -129,14 +129,14 @@
 .btn-warning {
   @include button-variant($warning, $warning);
   &.btn-inverse {
-    @include button-variant($warning, $warning, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+    @include button-variant($warning, $warning, $black, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
 .btn-info {
   @include button-variant($info, $info);
   &.btn-inverse {
-    @include button-variant($info, $info, $black,  $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
+    @include button-variant($info, $info, $black, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
 
@@ -149,7 +149,14 @@
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @include button-outline-variant($value, $active-background: $primary, $active-border: $primary, $hover-background: $value, $hover-border: $value); // Boosted mod: instead of `button-outline-variant($value)`
+    @include button-outline-variant($value, $active-background: $primary, $active-border: $primary, $hover-background: $value, $hover-border: $value);
+  }
+
+  .btn-outline-secondary,
+  .btn-outline-dark {
+    &.btn-inverse {
+      @include button-outline-variant($white, $active-background: $primary, $active-border: $primary, $hover-background: $white, $hover-border: $white);
+    }
   }
 }
 // scss-docs-end btn-variant-loops
