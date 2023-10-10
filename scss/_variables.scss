@@ -2329,6 +2329,9 @@ $footer-gap-xl:                           $spacer * 1.7 !default;
 // Tags
 
 // scss-docs-start tag-variables
+$tag-color:                         var(--#{$prefix}body-color) !default;
+$tag-bg:                            var(--#{$prefix}body-bg) !default;
+
 $tag-gap:                           map-get($spacers, 1) !default;
 $tag-font-shift:                    $spacer * .1 !default;
 $tag-font-weight:                   $font-weight-bold !default;
@@ -2343,10 +2346,10 @@ $tag-close-margin-end:              -$spacer * .3 !default;
 $tag-close-margin-start:            $spacer * .2 !default;
 $tag-font-size:                     $font-size-base !default;
 
-$tag-active-color:                  $white !default;
-$tag-disabled-color:                $gray-500 !default;
-$tag-border-color:                  $gray-500 !default;
-$tag-active-decoration-color:       $black !default;
+$tag-active-color:                  var(--#{$prefix}highlight-color) !default;
+$tag-disabled-color:                var(--#{$prefix}disabled-color) !default;
+$tag-border-color:                  var(--#{$prefix}border-color-translucent) !default;
+$tag-active-decoration-color:       var(--#{$prefix}highlight-bg) !default;
 // scss-docs-end tag-variables
 
 // scss-docs-start tag-sm-variables

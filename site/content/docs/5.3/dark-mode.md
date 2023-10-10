@@ -567,7 +567,7 @@ Additional variables for dark-mode (temporary)
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
+  <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav2" aria-expanded="false" aria-controls="collapseLocalNav2">
       <span class="container-xxl">Shop</span>
     </button>
@@ -749,6 +749,223 @@ Additional variables for dark-mode (temporary)
       <span class="sticker-fs-m">Free delivery</span>
     </p>
   </div>
+</div>
+
+### Tags
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile1" autocomplete="off">
+      <label class="tag" for="btncheck-mobile1"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-tv1" autocomplete="off" checked>
+      <label class="tag" for="btncheck-tv1">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+        </svg>
+        <span class="visually-hidden">Filter by</span>TV
+      </label>
+    </li>
+    <li><a class="tag" href="#">1. Introduction</a></li>
+    <li>
+      <span class="tag" id="labelTag11">
+        Dismissible tag
+        <button class="close" aria-labelledby="labelTag11"><span class="visually-hidden">Close</span></button>
+      </span>
+    </li>
+    <li><span class="tag tag-sm" id="labelTag21">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Dismissible tag
+      <button class="close" aria-labelledby="labelTag21"><span class="visually-hidden">Close</span></button>
+    </span></li>
+    <li>
+      <p><span class="tag disabled" id="labelTag51" aria-disabled="true">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+        </svg>
+        Input
+        <button class="close" aria-labelledby="labelTag51" disabled><span class="visually-hidden">Close</span></button>
+      </span></p>
+    </li>
+  </ul>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile2" autocomplete="off">
+      <label class="tag" for="btncheck-mobile2"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-tv2" autocomplete="off" checked>
+      <label class="tag" for="btncheck-tv2">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+        </svg>
+        <span class="visually-hidden">Filter by</span>TV
+      </label>
+    </li>
+    <li><a class="tag" href="#">1. Introduction</a></li>
+    <li>
+      <span class="tag" id="labelTag12">
+        Dismissible tag
+        <button class="close" aria-labelledby="labelTag12"><span class="visually-hidden">Close</span></button>
+      </span>
+    </li>
+    <li><span class="tag tag-sm" id="labelTag22">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Dismissible tag
+      <button class="close" aria-labelledby="labelTag22"><span class="visually-hidden">Close</span></button>
+    </span></li>
+    <li>
+      <p><span class="tag disabled" id="labelTag52" aria-disabled="true">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+        </svg>
+        Input
+        <button class="close" aria-labelledby="labelTag52" disabled><span class="visually-hidden">Close</span></button>
+      </span></p>
+    </li>
+  </ul>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile3" autocomplete="off">
+      <label class="tag" for="btncheck-mobile3"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-tv3" autocomplete="off" checked>
+      <label class="tag" for="btncheck-tv3">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+        </svg>
+        <span class="visually-hidden">Filter by</span>TV
+      </label>
+    </li>
+    <li><a class="tag" href="#">1. Introduction</a></li>
+    <li>
+      <span class="tag" id="labelTag13">
+        Dismissible tag
+        <button class="close" aria-labelledby="labelTag13"><span class="visually-hidden">Close</span></button>
+      </span>
+    </li>
+    <li><span class="tag tag-sm" id="labelTag23">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Dismissible tag
+      <button class="close" aria-labelledby="labelTag23"><span class="visually-hidden">Close</span></button>
+    </span></li>
+    <li>
+      <p><span class="tag disabled" id="labelTag53" aria-disabled="true">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+        </svg>
+        Input
+        <button class="close" aria-labelledby="labelTag53" disabled><span class="visually-hidden">Close</span></button>
+      </span></p>
+    </li>
+  </ul>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55">
+  <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile4" autocomplete="off">
+      <label class="tag" for="btncheck-mobile4" data-bs-theme="dark"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-tv4" autocomplete="off" checked>
+      <label class="tag" for="btncheck-tv4" data-bs-theme="dark">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+        </svg>
+        <span class="visually-hidden">Filter by</span>TV
+      </label>
+    </li>
+    <li><a class="tag" href="#" data-bs-theme="dark">1. Introduction</a></li>
+    <li>
+      <span class="tag" id="labelTag14" data-bs-theme="dark">
+        Dismissible tag
+        <button class="close" aria-labelledby="labelTag14"><span class="visually-hidden">Close</span></button>
+      </span>
+    </li>
+    <li><span class="tag tag-sm" id="labelTag24" data-bs-theme="dark">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Dismissible tag
+      <button class="close" aria-labelledby="labelTag24"><span class="visually-hidden">Close</span></button>
+    </span></li>
+    <li>
+      <p><span class="tag disabled" id="labelTag54" aria-disabled="true" data-bs-theme="dark">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+        </svg>
+        Input
+        <button class="close" aria-labelledby="labelTag54" disabled><span class="visually-hidden">Close</span></button>
+      </span></p>
+    </li>
+  </ul>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile5" autocomplete="off">
+      <label class="tag" for="btncheck-mobile5" data-bs-theme="light"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-tv5" autocomplete="off" checked>
+      <label class="tag" for="btncheck-tv5" data-bs-theme="light">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M75,200V720H225v80H775V720H925V200H75ZM500,755a30,30,0,1,1,30-30A30,30,0,0,1,500,755Zm365-95H135V260H865V660Z"></path>
+        </svg>
+        <span class="visually-hidden">Filter by</span>TV
+      </label>
+    </li>
+    <li><a class="tag" href="#" data-bs-theme="light">1. Introduction</a></li>
+    <li>
+      <span class="tag" id="labelTag15" data-bs-theme="light">
+        Dismissible tag
+        <button class="close" aria-labelledby="labelTag15"><span class="visually-hidden">Close</span></button>
+      </span>
+    </li>
+    <li><span class="tag tag-sm" id="labelTag25" data-bs-theme="light">
+      <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Dismissible tag
+      <button class="close" aria-labelledby="labelTag25"><span class="visually-hidden">Close</span></button>
+    </span></li>
+    <li>
+      <p><span class="tag disabled" id="labelTag55" aria-disabled="true" data-bs-theme="light">
+        <svg fill="currentColor" width="1.5rem" height="1.5rem" aria-hidden="true" focusable="false">
+          <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+        </svg>
+        Input
+        <button class="close" aria-labelledby="labelTag55" disabled><span class="visually-hidden">Close</span></button>
+      </span></p>
+    </li>
+  </ul>
 </div>
 
 ## Forms
