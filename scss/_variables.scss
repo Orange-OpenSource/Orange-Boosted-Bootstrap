@@ -2092,6 +2092,7 @@ $carousel-transition:                transform $carousel-transition-duration $tr
 // Spinners
 
 // scss-docs-start spinner-variables
+$spinner-color:           var(--#{$prefix}body-color) !default; // Boosted mod
 $spinner-width:           $spacer * 2 !default;
 $spinner-height:          $spinner-width !default;
 $spinner-vertical-align:  -.125em !default;

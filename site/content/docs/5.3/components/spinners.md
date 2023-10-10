@@ -43,13 +43,7 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 <div class="spinner-border text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<div class="spinner-border text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-border text-white" role="status">
+<div class="spinner-border text-body" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
@@ -78,13 +72,7 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 <div class="spinner-grow text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-{{< /example >}}
-
-{{< example class="bg-dark" >}}
-<div class="spinner-grow text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow text-white" role="status">
+<div class="spinner-grow text-body" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
@@ -172,22 +160,22 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true" data-bs-theme="dark"></span>
   <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
+  <span class="spinner-border spinner-border-sm me-2" aria-hidden="true" data-bs-theme="dark"></span>
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true" data-bs-theme="dark"></span>
   <span class="visually-hidden" role="status">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>
+  <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true" data-bs-theme="dark"></span>
   <span role="status">Loading...</span>
 </button>
 {{< /example >}}
