@@ -1538,6 +1538,43 @@ sitemap_exclude: true
   <input type="text" class="form-control-plaintext" value="Readonly plaintext input" data-bs-theme="light" readonly>
 </div>
 
+### File input
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <input class="form-control" type="file">
+  <input class="form-control" type="file" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <input class="form-control" type="file">
+  <input class="form-control" type="file" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <input class="form-control" type="file">
+  <input class="form-control" type="file" disabled>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <input class="form-control" type="file" data-bs-theme="dark">
+  <input class="form-control" type="file" data-bs-theme="dark" disabled>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <input class="form-control" type="file" data-bs-theme="light">
+  <input class="form-control" type="file" data-bs-theme="light" disabled>
+</div>
+
 ### Helper
 
 <h4 class="mt-3">No theme</h4>
