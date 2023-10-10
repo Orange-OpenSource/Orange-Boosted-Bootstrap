@@ -1885,3 +1885,110 @@ sitemap_exclude: true
     <label for="excellent51" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
 </div>
+
+### Input group
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <div class="mb-3">
+    <div class="input-group">
+      <span class="input-group-text">Input group text</span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="input-group">
+    <button class="btn btn-secondary" type="button" disabled>Button</button>
+    <select class="form-select" disabled>
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <span class="input-group-text">Options</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="mb-3">
+    <div class="input-group">
+      <span class="input-group-text">Input group text</span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="input-group">
+    <button class="btn btn-secondary" type="button" disabled>Button</button>
+    <select class="form-select" disabled>
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <span class="input-group-text">Options</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="mb-3">
+    <div class="input-group">
+      <span class="input-group-text">Input group text</span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="input-group">
+    <button class="btn btn-secondary" type="button" disabled>Button</button>
+    <select class="form-select" disabled>
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <span class="input-group-text">Options</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="mb-3">
+    <div class="input-group" data-bs-theme="dark">
+      <span class="input-group-text">Input group text</span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="input-group" data-bs-theme="dark">
+    <button class="btn btn-secondary" type="button" disabled>Button</button>
+    <select class="form-select" disabled>
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <span class="input-group-text">Options</span>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="mb-3">
+    <div class="input-group" data-bs-theme="light">
+      <span class="input-group-text">Input group text</span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="input-group" data-bs-theme="light">
+    <button class="btn btn-secondary" type="button" disabled>Button</button>
+    <select class="form-select" disabled>
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <span class="input-group-text">Options</span>
+  </div>
+</div>
