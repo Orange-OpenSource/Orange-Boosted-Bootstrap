@@ -81,7 +81,11 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-danger)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-danger)" data-bs-theme="dark"></div>
   </div>
-Additional variables for dark-mode (temporary)
+</div>
+
+### Additional CSS variables for dark-mode
+
+<div class="d-flex flex-column gap-2">
   <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-hover-color</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-hover-color)" data-bs-theme="light"></div>
@@ -96,6 +100,11 @@ Additional variables for dark-mode (temporary)
     <div style="width: 200px">--bs-disabled-color</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-disabled-color)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-placeholder-color</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-placeholder-color)" data-bs-theme="dark"></div>
   </div>
 </div>
 
