@@ -960,6 +960,7 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 
 // scss-docs-start btn-variables
 $btn-color:                   var(--#{$prefix}body-color) !default;
+$btn-hover-color:             $btn-color !default; // Boosted mod
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
@@ -982,6 +983,16 @@ $btn-letter-spacing-lg:       $letter-spacing-base * 2 !default; // Boosted mod
 
 $btn-border-width:            $input-btn-border-width !default;
 
+$btn-default-hover-bg:        var(--#{$prefix}highlight-bg) !default; // Boosted mod
+$btn-default-hover-border:    var(--#{$prefix}highlight-bg) !default; // Boosted mod
+$btn-default-hover-color:     var(--#{$prefix}highlight-color) !default; // Boosted mod
+$btn-default-active-bg:       $primary !default; // Boosted mod
+$btn-default-active-border:   $primary !default; // Boosted mod
+$btn-default-active-color:    $black !default; // Boosted mod
+$btn-default-disabled-bg:     var(--#{$prefix}disabled-color) !default; // Boosted mod
+$btn-default-disabled-border: var(--#{$prefix}disabled-color) !default; // Boosted mod
+$btn-default-disabled-color:  var(--#{$prefix}highlight-color) !default; // Boosted mod
+
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
 $btn-focus-width:             $input-btn-focus-width !default;
@@ -991,7 +1002,7 @@ $btn-active-box-shadow:       null !default;
 
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
-$btn-link-disabled-color:     $gray-500 !default;
+$btn-link-disabled-color:     var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `$gray-600`
 // Boosted mod: no `$btn-link-focus-shadow-rgb`
 
 // Allows for customizing button radius independently from global border radius

@@ -72,7 +72,7 @@
 }
 
 @include tac("CloseAlert") {
-  @include button-variant($white, $white, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), $disabled-background: transparent, $disabled-color: var(--#{$prefix}disabled-color));
 }
 
 @include tac("ClosePanel") {
