@@ -211,14 +211,24 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Outline buttons
 
-In need of a button with a transparent default background color? Replace the default modifier classes with the `.btn-outline-secondary` one to remove all background colors on buttons.
+{{< design-callout-alert >}}
+The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they come from Bootstrap architecture.
 
-{{< example class="bg-supporting-blue" >}}
-<button type="button" class="btn btn-outline-secondary">Secondary</button>
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+
+{{< example >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
 {{< /example >}}
 
 {{< callout info >}}
-This button should only be used on a light background in order to have sufficient contrast, otherwise use its dark variant.
+Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 {{< /callout >}}
 
 ## Sizes
@@ -402,11 +412,11 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass mixins
 
-There are three mixins for buttons: button mixins (based on `$theme-colors`), a button size mixin and a button icon mixin.
+There are four mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin, and a button icon mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: no .btn-outline -->
+{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 

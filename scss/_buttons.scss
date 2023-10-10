@@ -134,16 +134,13 @@
     @include button-variant($danger, $danger, $white, $white, $white, $black, $primary, $primary, $black, $gray-700, $gray-700, $black, $black);
   }
 }
-// scss-docs-end btn-variant-loops
-// End mod
 
-// Boosted mod: only secondary variant
-.btn-outline-secondary {
-  @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-  &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, $white, $black, $primary, $primary, $black, transparent, $gray-700, $gray-700, $black);
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, $active-background: $primary, $active-border: $primary, $hover-background: $value, $hover-border: $value); // Boosted mod: instead of `button-outline-variant($value)`
   }
 }
+// scss-docs-end btn-variant-loops
 // End mod
 
 // Boosted mod: border-only on :hover and :active
