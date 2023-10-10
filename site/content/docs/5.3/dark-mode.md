@@ -415,6 +415,108 @@ Additional variables for dark-mode (temporary)
   </div>
 </div>
 
+### Local navigation
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <nav class="local-nav" aria-label="Basic local navigation">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav1" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav class="local-nav" aria-label="Basic local navigation">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav2" aria-expanded="false" aria-controls="collapseLocalNav2">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav2" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav class="local-nav" aria-label="Basic local navigation">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav3" aria-expanded="false" aria-controls="collapseLocalNav3">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav3" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav4" aria-expanded="false" aria-controls="collapseLocalNav4">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav4" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
+    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav5" aria-expanded="false" aria-controls="collapseLocalNav5">
+      <span class="container-xxl">Shop</span>
+    </button>
+    <div id="collapseLocalNav5" class="container-xxl local-nav-collapse d-lg-block collapse">
+        <div class="navbar navbar-expand-lg">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
 ### Stepped process
 
 <h4 class="mt-3">No theme</h4>
@@ -539,108 +641,6 @@ Additional variables for dark-mode (temporary)
         <a class="stepped-process-link" href="#" title="5. Place order">Place order</a>
       </li>
     </ol>
-  </nav>
-</div>
-
-### Local navigation
-
-<h4 class="mt-3">No theme</h4>
-
-<div class="border border-tertiary p-3">
-  <nav class="local-nav" aria-label="Basic local navigation">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
-      <span class="container-xxl">Shop</span>
-    </button>
-    <div id="collapseLocalNav1" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <nav class="local-nav" aria-label="Basic local navigation">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav2" aria-expanded="false" aria-controls="collapseLocalNav2">
-      <span class="container-xxl">Shop</span>
-    </button>
-    <div id="collapseLocalNav2" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <nav class="local-nav" aria-label="Basic local navigation">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav3" aria-expanded="false" aria-controls="collapseLocalNav3">
-      <span class="container-xxl">Shop</span>
-    </button>
-    <div id="collapseLocalNav3" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #282d55">
-  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav4" aria-expanded="false" aria-controls="collapseLocalNav4">
-      <span class="container-xxl">Shop</span>
-    </button>
-    <div id="collapseLocalNav4" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
-    <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav5" aria-expanded="false" aria-controls="collapseLocalNav5">
-      <span class="container-xxl">Shop</span>
-    </button>
-    <div id="collapseLocalNav5" class="container-xxl local-nav-collapse d-lg-block collapse">
-        <div class="navbar navbar-expand-lg">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Discover</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page"><span class="container-xxl">Shop</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><span class="container-xxl">Services</span></a></li>
-            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true"><span class="container-xxl">Contact</span></a></li>
-          </ul>
-        </div>
-    </div>
   </nav>
 </div>
 
