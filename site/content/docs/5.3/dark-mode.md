@@ -2621,6 +2621,123 @@ sitemap_exclude: true
   <div class="form-text" data-bs-theme="light">Form text helper</div>
 </div>
 
+### Quantity selector
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 border border-tertiary p-3">
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelectorDisabled" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled" data-bs-step="down" disabled>
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled" data-bs-step="up" disabled>
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="up">
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelectorDisabled1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled1" data-bs-step="down" disabled>
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled1" data-bs-step="up" disabled>
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelector2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector2" data-bs-step="down">
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector2" data-bs-step="up">
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+  <div class="input-group quantity-selector">
+    <input type="number" id="inputQuantitySelectorDisabled2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled2" data-bs-step="down" disabled>
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled2" data-bs-step="up" disabled>
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="input-group quantity-selector" data-bs-theme="dark">
+    <input type="number" id="inputQuantitySelector3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="down">
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="up">
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+  <div class="input-group quantity-selector" data-bs-theme="dark">
+    <input type="number" id="inputQuantitySelectorDisabled3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled3" data-bs-step="down" disabled>
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled3" data-bs-step="up" disabled>
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="input-group quantity-selector" data-bs-theme="light">
+    <input type="number" id="inputQuantitySelector4" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector4" data-bs-step="down">
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector4" data-bs-step="up">
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+  <div class="input-group quantity-selector" data-bs-theme="light">
+    <input type="number" id="inputQuantitySelectorDisabled4" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled4" data-bs-step="down" disabled>
+      <span class="visually-hidden">Step down</span>
+    </button>
+    <button type="button" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelectorDisabled4" data-bs-step="up" disabled>
+      <span class="visually-hidden">Step up</span>
+    </button>
+  </div>
+</div>
+
 ### Range
 
 <h4 class="mt-3">No theme</h4>
