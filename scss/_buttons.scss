@@ -150,12 +150,11 @@
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value, $active-background: $primary, $active-border: $primary, $hover-background: $value, $hover-border: $value);
-  }
 
-  .btn-outline-secondary,
-  .btn-outline-dark {
-    &.btn-inverse {
-      @include button-outline-variant($white, $active-background: $primary, $active-border: $primary, $hover-background: $white, $hover-border: $white);
+    @if #{$color} == "secondary" or #{$color} == "dark" {
+      &.btn-inverse {
+        @include button-outline-variant($white, $active-background: $primary, $active-border: $primary, $hover-background: $white, $hover-border: $white);
+      }
     }
   }
 }
