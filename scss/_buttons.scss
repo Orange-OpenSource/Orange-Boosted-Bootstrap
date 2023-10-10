@@ -16,6 +16,7 @@
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-color: #{$btn-hover-color}; // Boosted mod
   --#{$prefix}btn-hover-border-color: initial; // Boosted mod
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
@@ -98,40 +99,35 @@
 // scss-docs-start btn-variant-loops
 .btn-primary,
 .btn-warning {
-  @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
+  @include button-variant($primary, $primary, $black, $active-background: transparent, $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
 }
 
 .btn-light,
-.btn-secondary {
-  @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+.btn-secondary,
+.btn-outline-secondary {
+  @include button-variant(transparent, var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), $disabled-background: transparent, $disabled-color: var(--#{$prefix}disabled-color));
 }
 
 .btn-success {
-  @include button-variant($success, $success);
+  @include button-variant($green, $green, $white);
 }
 
 .btn-info,
 .btn-dark {
-  @include button-variant($black, $black, $white, $white, $black, $black);
+  @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: transparent, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
 }
 
 .btn-danger {
-  @include button-variant($danger, $danger);
+  @include button-variant($red, $red, $white);
 }
 // scss-docs-end btn-variant-loops
 
-// Boosted mod: only secondary variant
-.btn-outline-secondary {
-  @include button-variant(transparent, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
-}
-// End mod
-
 // Boosted mod: border-only on :hover and :active
 .btn-no-outline {
-  --#{$prefix}btn-hover-border-color: #{$gray-500};
-  --#{$prefix}btn-active-color: #{$accessible-orange};
-  --#{$prefix}btn-active-border-color: #{$gray-500};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-hover-border-color: var(--#{$prefix}border-color-translucent);
+  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color-translucent);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
   --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
 }
 // End mod
@@ -198,10 +194,10 @@
   --#{$prefix}btn-hover-color: #{$white};
   --#{$prefix}btn-hover-bg: var(--#{$prefix}network-color, #{$black});
   --#{$prefix}btn-hover-border-color: var(--#{$prefix}network-color, #{$black});
-  --#{$prefix}btn-active-color: #{$white};
-  --#{$prefix}btn-active-bg: #{$black};
-  --#{$prefix}btn-active-border-color: #{$black};
-  --#{$prefix}btn-disabled-color: #{$gray-500};
+  --#{$prefix}btn-active-color: var(--#{$prefix}highlight-color);
+  --#{$prefix}btn-active-bg: var(--#{$prefix}highlight-bg);
+  --#{$prefix}btn-active-border-color: var(--#{$prefix}highlight-bg);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
   --#{$prefix}btn-disabled-bg: transparent;
   @include border-radius(50%, 50%);
   @include button-icon(var(--#{$prefix}network-logo));
