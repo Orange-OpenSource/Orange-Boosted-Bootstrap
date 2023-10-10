@@ -1546,9 +1546,9 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 // scss-docs-start dropdown-variables
 $dropdown-min-width:                10rem !default;
-$dropdown-padding-x:                $spacer * .5 !default;
-$dropdown-padding-y:                0 !default;
-$dropdown-spacer:                   0 !default;
+$dropdown-padding-x:                $spacer * .5 !default; // Boosted mod: instead of `0`
+$dropdown-padding-y:                0 !default; // Boosted mod: instead of `.5rem`
+$dropdown-spacer:                   0 !default; // Boosted mod: instead of `.125rem`
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-line-height:              $line-height-base !default; // Boosted mod
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
@@ -1556,26 +1556,26 @@ $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 $dropdown-border-width:             var(--#{$prefix}border-width) !default;
-$dropdown-inner-border-radius:      0 !default; // Boosted mod
+$dropdown-inner-border-radius:      0 !default; // Boosted mod: instead of `calc(#{$dropdown-border-radius} - #{$dropdown-border-width})`
 $dropdown-divider-bg:               $dropdown-border-color !default;
-$dropdown-divider-margin-y:         $spacer * .25 !default;
+$dropdown-divider-margin-y:         $spacer * .25 !default; // Boosted mod: instead of `$spacer * .5`
 $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color:               var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 
-$dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod
-$dropdown-link-active-bg:           $component-active-color !default;  // Boosted mod
+$dropdown-link-active-color:        color-contrast($component-active-color) !default; // Boosted mod: instead of `$component-active-color`
+$dropdown-link-active-bg:           $component-active-color !default; // Boosted mod: instead of `$component-active-bg`
 
 $dropdown-link-disabled-color:      $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-color)`
 
-$dropdown-item-padding-y:           $spacer * .5 !default;
-$dropdown-item-padding-x:           $spacer * .5 !default;
+$dropdown-item-padding-y:           $spacer * .5 !default; // Boosted mod: instead of `$spacer * .25`
+$dropdown-item-padding-x:           $spacer * .5 !default; // Boosted mod: instead of `$spacer`
 
-$dropdown-header-color:             $black !default;
+$dropdown-header-color:             $black !default; // Boosted mod: instead of `$gray-600`
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;
-$dropdown-header-padding-y:         $spacer !default; // Boosted mod
+$dropdown-header-padding-y:         $spacer !default; // Boosted mod: instead of `$dropdown-padding-y`
 // fusv-disable
 $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0
 // fusv-enable
