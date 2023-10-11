@@ -993,6 +993,16 @@ $btn-default-disabled-bg:     var(--#{$prefix}disabled-color) !default; // Boost
 $btn-default-disabled-border: var(--#{$prefix}disabled-color) !default; // Boosted mod
 $btn-default-disabled-color:  var(--#{$prefix}highlight-color) !default; // Boosted mod
 
+$btn-outline-default-hover-bg:        var(--#{$prefix}btn-color) !default; // Boosted mod
+$btn-outline-default-hover-border:    var(--#{$prefix}btn-border-color) !default; // Boosted mod
+$btn-outline-default-hover-color:     $white !default; // Boosted mod
+$btn-outline-default-active-bg:       $primary !default; // Boosted mod
+$btn-outline-default-active-border:   $primary !default; // Boosted mod
+$btn-outline-default-active-color:    $black !default; // Boosted mod
+$btn-outline-default-disabled-bg:     transparent !default; // Boosted mod
+$btn-outline-default-disabled-border: var(--#{$prefix}disabled-color) !default; // Boosted mod
+$btn-outline-default-disabled-color:  var(--#{$prefix}disabled-color) !default; // Boosted mod
+
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
 $btn-focus-width:             $input-btn-focus-width !default;

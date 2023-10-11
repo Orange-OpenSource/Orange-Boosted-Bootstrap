@@ -25,6 +25,24 @@ The `.btn` class is intended to be used in conjunction with our button variants,
 Boosted includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+
+<button type="button" class="btn btn-link">Link</button>
+{{< /example >}}
+
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+{{< design-callout-alert >}}
+Warning, info, light and dark variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
@@ -37,6 +55,7 @@ Boosted includes several button variants, each serving its own semantic purpose,
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+</details>
 
 <!-- Boosted mod -->
 ## With icon
@@ -74,19 +93,19 @@ The recommended way of using an icon in a button is [an embedded SVG]({{< docsre
 Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
 
 {{< example >}}
-<button type="button" class="btn btn-icon btn-secondary btn-sm">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-sm">
   <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary">
+<button type="button" class="btn btn-icon btn-outline-secondary">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
   <span class="visually-hidden">Secondary</span>
 </button>
-<button type="button" class="btn btn-icon btn-secondary btn-lg">
+<button type="button" class="btn btn-icon btn-outline-secondary btn-lg">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
   </svg>
@@ -171,15 +190,34 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Outline buttons
 
-In need of a button with a transparent default background color? Replace the default modifier classes with the `.btn-outline-secondary` one to remove all background colors on buttons.
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-{{< example class="bg-supporting-blue" >}}
+{{< example >}}
 <button type="button" class="btn btn-outline-secondary">Secondary</button>
 {{< /example >}}
 
+<details>
+<summary>Other variants from Bootstrap</summary>
+<br>
+
+{{< design-callout-alert >}}
+The only variant of outline buttons that should be used is the `.btn-outline-secondary` one. The other variants should not be used because they do not respect the Orange Design System specifications as they are inherited from Bootstrap.
+
+Please refer to the [Buttons](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/247486) guidelines on the Orange Design System website.
+{{< /design-callout-alert >}}
+
+{{< example >}}
+{{< buttons.inline >}}
+{{- range (index $.Site.Data "theme-colors") }}
+<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+{{- end -}}
+{{< /buttons.inline >}}
+{{< /example >}}
+
 {{< callout info >}}
-This button should only be used on a light background in order to have sufficient contrast, otherwise use its dark variant.
+Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 {{< /callout >}}
+</details>
 
 ## Sizes
 
@@ -218,6 +256,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
 {{< /example >}}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -362,11 +401,11 @@ Each `.btn-*` modifier class updates the appropriate CSS variables to minimize a
 
 ### Sass mixins
 
-There are three mixins for buttons: button mixins (based on `$theme-colors`), a button size mixin and a button icon mixin.
+There are four mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin, and a button icon mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
-<!-- Boosted mod: no .btn-outline -->
+{{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 

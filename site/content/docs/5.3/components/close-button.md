@@ -58,12 +58,12 @@ If you choose this option, please be aware that if the design of close buttons c
   <span class="visually-hidden">Close</span>
 </button>
 
-<button type="button" class="btn btn-icon btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+<button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>
 
-<button type="button" class="btn btn-icon btn-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
+<button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
   <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
   <span class="visually-hidden">Close</span>
 </button>

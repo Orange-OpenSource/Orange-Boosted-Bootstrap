@@ -36,7 +36,32 @@
 }
 // scss-docs-end btn-variant-mixin
 
-// Boosted mod: no `@mixin button-outline-variant`
+// scss-docs-start btn-outline-variant-mixin
+@mixin button-outline-variant(
+  $color,
+  $color-hover: $btn-outline-default-hover-color, // Boosted mod: instead of `color-contrast($color)`
+  $active-background: $btn-outline-default-active-bg, // Boosted mod: instead of `$color`
+  $active-border: $btn-outline-default-active-border, // Boosted mod: instead of `$color`
+  $active-color: $btn-outline-default-active-color, // Booted mod: `color-contrast($active-background)`
+  $hover-background: $btn-outline-default-hover-bg, // Boosted mod
+  $hover-border: $btn-outline-default-hover-border // Boosted mod
+) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: #{$color};
+  --#{$prefix}btn-hover-color: #{$color-hover};
+  --#{$prefix}btn-hover-bg: #{$hover-background}; // Boosted mod: instead of using `#{$active-background}`
+  --#{$prefix}btn-hover-border-color: #{$hover-border}; // Boosted mod: instead of using `#{$active-border}`
+  --#{$prefix}btn-focus-shadow-rgb: #{$color};
+  --#{$prefix}btn-active-color: #{$active-color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-border-color: #{$active-border};
+  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-color: #{$btn-outline-default-disabled-color};
+  --#{$prefix}btn-disabled-bg: #{$btn-outline-default-disabled-bg};
+  --#{$prefix}btn-disabled-border-color: #{$btn-outline-default-disabled-border};
+  --#{$prefix}gradient: none;
+}
+// scss-docs-end btn-outline-variant-mixin
 
 // scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null, $icon-spacing: $btn-icon-padding-x, $letter-spacing: $letter-spacing-base) {

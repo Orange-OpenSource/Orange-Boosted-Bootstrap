@@ -443,14 +443,36 @@ sitemap_exclude: true
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-secondary" disabled>Secondary</button>
-  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
-  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
   <button type="button" class="btn btn-success">Success</button>
   <button type="button" class="btn btn-success" disabled>Success</button>
   <button type="button" class="btn btn-danger">Danger</button>
   <button type="button" class="btn btn-danger" disabled>Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-warning" disabled>Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-info" disabled>Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-light" disabled>Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-dark" disabled>Dark</button>
   <button type="button" class="btn btn-link">Link</button>
   <button type="button" class="btn btn-link" disabled>Link</button>
+  <button type="button" class="btn btn-outline-primary">Outline primary</button>
+  <button type="button" class="btn btn-outline-primary" disabled>Outline primary</button>
+  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
+  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
+  <button type="button" class="btn btn-outline-success">Outline success</button>
+  <button type="button" class="btn btn-outline-success" disabled>Outline success</button>
+  <button type="button" class="btn btn-outline-danger">Outline danger</button>
+  <button type="button" class="btn btn-outline-danger" disabled>Outline danger</button>
+  <button type="button" class="btn btn-outline-warning">Outline warning</button>
+  <button type="button" class="btn btn-outline-warning" disabled>Outline warning</button>
+  <button type="button" class="btn btn-outline-info">Outline info</button>
+  <button type="button" class="btn btn-outline-info" disabled>Outline info</button>
+  <button type="button" class="btn btn-outline-light">Outline light</button>
+  <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
+  <button type="button" class="btn btn-outline-dark">Outline dark</button>
+  <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
   <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-icon btn-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
@@ -459,10 +481,10 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
@@ -472,14 +494,36 @@ sitemap_exclude: true
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-secondary" disabled>Secondary</button>
-  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
-  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
   <button type="button" class="btn btn-success">Success</button>
   <button type="button" class="btn btn-success" disabled>Success</button>
   <button type="button" class="btn btn-danger">Danger</button>
   <button type="button" class="btn btn-danger" disabled>Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-warning" disabled>Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-info" disabled>Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-light" disabled>Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-dark" disabled>Dark</button>
   <button type="button" class="btn btn-link">Link</button>
   <button type="button" class="btn btn-link" disabled>Link</button>
+  <button type="button" class="btn btn-outline-primary">Outline primary</button>
+  <button type="button" class="btn btn-outline-primary" disabled>Outline primary</button>
+  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
+  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
+  <button type="button" class="btn btn-outline-success">Outline success</button>
+  <button type="button" class="btn btn-outline-success" disabled>Outline success</button>
+  <button type="button" class="btn btn-outline-danger">Outline danger</button>
+  <button type="button" class="btn btn-outline-danger" disabled>Outline danger</button>
+  <button type="button" class="btn btn-outline-warning">Outline warning</button>
+  <button type="button" class="btn btn-outline-warning" disabled>Outline warning</button>
+  <button type="button" class="btn btn-outline-info">Outline info</button>
+  <button type="button" class="btn btn-outline-info" disabled>Outline info</button>
+  <button type="button" class="btn btn-outline-light">Outline light</button>
+  <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
+  <button type="button" class="btn btn-outline-dark">Outline dark</button>
+  <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
   <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-icon btn-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
@@ -488,10 +532,10 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
@@ -501,14 +545,36 @@ sitemap_exclude: true
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-secondary" disabled>Secondary</button>
-  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
-  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
   <button type="button" class="btn btn-success">Success</button>
   <button type="button" class="btn btn-success" disabled>Success</button>
   <button type="button" class="btn btn-danger">Danger</button>
   <button type="button" class="btn btn-danger" disabled>Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-warning" disabled>Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-info" disabled>Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-light" disabled>Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-dark" disabled>Dark</button>
   <button type="button" class="btn btn-link">Link</button>
   <button type="button" class="btn btn-link" disabled>Link</button>
+  <button type="button" class="btn btn-outline-primary">Outline primary</button>
+  <button type="button" class="btn btn-outline-primary" disabled>Outline primary</button>
+  <button type="button" class="btn btn-outline-secondary">Outline secondary</button>
+  <button type="button" class="btn btn-outline-secondary" disabled>Outline secondary</button>
+  <button type="button" class="btn btn-outline-success">Outline success</button>
+  <button type="button" class="btn btn-outline-success" disabled>Outline success</button>
+  <button type="button" class="btn btn-outline-danger">Outline danger</button>
+  <button type="button" class="btn btn-outline-danger" disabled>Outline danger</button>
+  <button type="button" class="btn btn-outline-warning">Outline warning</button>
+  <button type="button" class="btn btn-outline-warning" disabled>Outline warning</button>
+  <button type="button" class="btn btn-outline-info">Outline info</button>
+  <button type="button" class="btn btn-outline-info" disabled>Outline info</button>
+  <button type="button" class="btn btn-outline-light">Outline light</button>
+  <button type="button" class="btn btn-outline-light" disabled>Outline light</button>
+  <button type="button" class="btn btn-outline-dark">Outline dark</button>
+  <button type="button" class="btn btn-outline-dark" disabled>Outline dark</button>
   <button type="button" class="btn btn-primary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-primary" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-icon btn-secondary"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
@@ -517,10 +583,10 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
@@ -530,14 +596,36 @@ sitemap_exclude: true
   <button type="button" class="btn btn-primary" disabled data-bs-theme="dark">Primary</button>
   <button type="button" class="btn btn-secondary" data-bs-theme="dark">Secondary</button>
   <button type="button" class="btn btn-secondary" disabled data-bs-theme="dark">Secondary</button>
-  <button type="button" class="btn btn-outline-secondary" data-bs-theme="dark">Outline secondary</button>
-  <button type="button" class="btn btn-outline-secondary" disabled data-bs-theme="dark">Outline secondary</button>
   <button type="button" class="btn btn-success" data-bs-theme="dark">Success</button>
   <button type="button" class="btn btn-success" disabled data-bs-theme="dark">Success</button>
   <button type="button" class="btn btn-danger" data-bs-theme="dark">Danger</button>
   <button type="button" class="btn btn-danger" disabled data-bs-theme="dark">Danger</button>
+  <button type="button" class="btn btn-warning" data-bs-theme="dark">Warning</button>
+  <button type="button" class="btn btn-warning" disabled data-bs-theme="dark">Warning</button>
+  <button type="button" class="btn btn-info" data-bs-theme="dark">Info</button>
+  <button type="button" class="btn btn-info" disabled data-bs-theme="dark">Info</button>
+  <button type="button" class="btn btn-light" data-bs-theme="dark">Light</button>
+  <button type="button" class="btn btn-light" disabled data-bs-theme="dark">Light</button>
+  <button type="button" class="btn btn-dark" data-bs-theme="dark">Dark</button>
+  <button type="button" class="btn btn-dark" disabled data-bs-theme="dark">Dark</button>
   <button type="button" class="btn btn-link" data-bs-theme="dark">Link</button>
   <button type="button" class="btn btn-link" disabled data-bs-theme="dark">Link</button>
+  <button type="button" class="btn btn-outline-primary" data-bs-theme="dark">Outline primary</button>
+  <button type="button" class="btn btn-outline-primary" disabled data-bs-theme="dark">Outline primary</button>
+  <button type="button" class="btn btn-outline-secondary" data-bs-theme="dark">Outline secondary</button>
+  <button type="button" class="btn btn-outline-secondary" disabled data-bs-theme="dark">Outline secondary</button>
+  <button type="button" class="btn btn-outline-success" data-bs-theme="dark">Outline success</button>
+  <button type="button" class="btn btn-outline-success" disabled data-bs-theme="dark">Outline success</button>
+  <button type="button" class="btn btn-outline-danger" data-bs-theme="dark">Outline danger</button>
+  <button type="button" class="btn btn-outline-danger" disabled data-bs-theme="dark">Outline danger</button>
+  <button type="button" class="btn btn-outline-warning" data-bs-theme="dark">Outline warning</button>
+  <button type="button" class="btn btn-outline-warning" disabled data-bs-theme="dark">Outline warning</button>
+  <button type="button" class="btn btn-outline-info" data-bs-theme="dark">Outline info</button>
+  <button type="button" class="btn btn-outline-info" disabled data-bs-theme="dark">Outline info</button>
+  <button type="button" class="btn btn-outline-light" data-bs-theme="dark">Outline light</button>
+  <button type="button" class="btn btn-outline-light" disabled data-bs-theme="dark">Outline light</button>
+  <button type="button" class="btn btn-outline-dark" data-bs-theme="dark">Outline dark</button>
+  <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="dark">Outline dark</button>
   <button type="button" class="btn btn-primary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-primary" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-icon btn-secondary" data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
@@ -546,10 +634,10 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled data-bs-theme="dark">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" disabled data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled data-bs-theme="dark">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
@@ -559,14 +647,36 @@ sitemap_exclude: true
   <button type="button" class="btn btn-primary" disabled data-bs-theme="light">Primary</button>
   <button type="button" class="btn btn-secondary" data-bs-theme="light">Secondary</button>
   <button type="button" class="btn btn-secondary" disabled data-bs-theme="light">Secondary</button>
-  <button type="button" class="btn btn-outline-secondary" data-bs-theme="light">Outline secondary</button>
-  <button type="button" class="btn btn-outline-secondary" disabled data-bs-theme="light">Outline secondary</button>
   <button type="button" class="btn btn-success" data-bs-theme="light">Success</button>
   <button type="button" class="btn btn-success" disabled data-bs-theme="light">Success</button>
   <button type="button" class="btn btn-danger" data-bs-theme="light">Danger</button>
   <button type="button" class="btn btn-danger" disabled data-bs-theme="light">Danger</button>
+  <button type="button" class="btn btn-warning" data-bs-theme="light">Warning</button>
+  <button type="button" class="btn btn-warning" disabled data-bs-theme="light">Warning</button>
+  <button type="button" class="btn btn-info" data-bs-theme="light">Info</button>
+  <button type="button" class="btn btn-info" disabled data-bs-theme="light">Info</button>
+  <button type="button" class="btn btn-light" data-bs-theme="light">Light</button>
+  <button type="button" class="btn btn-light" disabled data-bs-theme="light">Light</button>
+  <button type="button" class="btn btn-dark" data-bs-theme="light">Dark</button>
+  <button type="button" class="btn btn-dark" disabled data-bs-theme="light">Dark</button>
   <button type="button" class="btn btn-link" data-bs-theme="light">Link</button>
   <button type="button" class="btn btn-link" disabled data-bs-theme="light">Link</button>
+  <button type="button" class="btn btn-outline-primary" data-bs-theme="light">Outline primary</button>
+  <button type="button" class="btn btn-outline-primary" disabled data-bs-theme="light">Outline primary</button>
+  <button type="button" class="btn btn-outline-secondary" data-bs-theme="light">Outline secondary</button>
+  <button type="button" class="btn btn-outline-secondary" disabled data-bs-theme="light">Outline secondary</button>
+  <button type="button" class="btn btn-outline-success" data-bs-theme="light">Outline success</button>
+  <button type="button" class="btn btn-outline-success" disabled data-bs-theme="light">Outline success</button>
+  <button type="button" class="btn btn-outline-danger" data-bs-theme="light">Outline danger</button>
+  <button type="button" class="btn btn-outline-danger" disabled data-bs-theme="light">Outline danger</button>
+  <button type="button" class="btn btn-outline-warning" data-bs-theme="light">Outline warning</button>
+  <button type="button" class="btn btn-outline-warning" disabled data-bs-theme="light">Outline warning</button>
+  <button type="button" class="btn btn-outline-info" data-bs-theme="light">Outline info</button>
+  <button type="button" class="btn btn-outline-info" disabled data-bs-theme="light">Outline info</button>
+  <button type="button" class="btn btn-outline-light" data-bs-theme="light">Outline light</button>
+  <button type="button" class="btn btn-outline-light" disabled data-bs-theme="light">Outline light</button>
+  <button type="button" class="btn btn-outline-dark" data-bs-theme="light">Outline dark</button>
+  <button type="button" class="btn btn-outline-dark" disabled data-bs-theme="light">Outline dark</button>
   <button type="button" class="btn btn-primary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-primary" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg>Primary</button>
   <button type="button" class="btn btn-icon btn-secondary" data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
@@ -575,10 +685,10 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled data-bs-theme="light">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" data-bs-theme="light">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
-  <div class="btn-group"><button class="btn btn-secondary" type="button" disabled data-bs-theme="light">Large split button</button><button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled data-bs-theme="light">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" data-bs-theme="light">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
+  <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled data-bs-theme="light">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
 
 ### Dropdowns
@@ -588,7 +698,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -600,8 +710,8 @@ sitemap_exclude: true
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Action</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -619,7 +729,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -631,8 +741,8 @@ sitemap_exclude: true
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Action</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -650,7 +760,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -662,8 +772,8 @@ sitemap_exclude: true
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Action</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
@@ -681,7 +791,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
         Dropdown button
       </button>
       <ul class="dropdown-menu" data-bs-theme="dark">
@@ -693,8 +803,8 @@ sitemap_exclude: true
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary" data-bs-theme="dark">Action</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
+    <button type="button" class="btn btn-outline-secondary" data-bs-theme="dark">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu" data-bs-theme="dark">
@@ -712,7 +822,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
         Dropdown button
       </button>
       <ul class="dropdown-menu" data-bs-theme="light">
@@ -724,8 +834,8 @@ sitemap_exclude: true
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary" data-bs-theme="light">Action</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
+    <button type="button" class="btn btn-outline-secondary" data-bs-theme="light">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu" data-bs-theme="light">
@@ -741,30 +851,28 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark dropdown variant for retro-compatibility</h4>
 
 <div class="border border-tertiary p-3 bg-dark">
-  <div class="btn-group">
-    <div class="dropdown">
-      <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li><a class="dropdown-item active" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item disabled" aria-disabled="true">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-    </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+      <li><a class="dropdown-item active" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
   </div>
 
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary btn-inverse">Action</button>
-    <button type="button" class="btn btn-secondary btn-inverse dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary">Action</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu dropdown-menu-dark">
       <li><a class="dropdown-item active" href="#">Action</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item disabled" aria-disabled="true">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>

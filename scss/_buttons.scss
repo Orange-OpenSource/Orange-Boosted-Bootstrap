@@ -97,28 +97,54 @@
 //
 
 // scss-docs-start btn-variant-loops
-.btn-primary,
-.btn-warning {
+.btn-primary {
   @include button-variant($primary, $primary, $black, $active-background: transparent, $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
-}
-
-.btn-light,
-.btn-secondary,
-.btn-outline-secondary {
-  @include button-variant(transparent, var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), $disabled-background: transparent, $disabled-color: var(--#{$prefix}disabled-color));
 }
 
 .btn-success {
   @include button-variant($green, $green, $white);
 }
 
-.btn-info,
+.btn-danger {
+  @include button-variant($red, $red, $white);
+}
+
+.btn-warning {
+  @include button-variant($yellow, $yellow, $black);
+}
+
+.btn-info {
+  @include button-variant($blue, $blue, $black);
+}
+
+.btn-light {
+  @include button-variant($light, $light, $black);
+}
+
 .btn-dark {
+  // TODO: highlight bg should be solid
+  @include button-variant($dark, $dark, $white, $hover-background: transparent, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
+}
+
+.btn-secondary {
+  // TODO: highlight bg should be solid
   @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: transparent, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
 }
 
-.btn-danger {
-  @include button-variant($red, $red, $white);
+$hover-color: $yellow !default;
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    $btn-outline-hover-color: $white;
+    @if index(("primary", "warning", "info", "light"), #{$color}) {
+      $btn-outline-hover-color: $black;
+    }
+    @if #{$color} == "secondary" {
+      @include button-outline-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color));
+    } @else {
+      @include button-outline-variant($value, $btn-outline-hover-color);
+    }
+  }
 }
 // scss-docs-end btn-variant-loops
 
