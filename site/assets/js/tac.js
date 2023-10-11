@@ -29,7 +29,7 @@
   window.addEventListener('tac.open_alert', () => {
     const alert = document.getElementById('tarteaucitronAlertBig')
 
-    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-info', 'btn-inverse', 'ms-lg-2')
+    document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-secondary', 'btn-inverse', 'ms-lg-2')
     alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'btn-inverse', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'btn-inverse', 'mx-sm-2', 'my-2', 'my-lg-0')
