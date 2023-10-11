@@ -110,7 +110,7 @@ This variant should not be used because it does not respect the Orange Design Sy
     <button type="button" class="btn btn-secondary">7</button>
   </div>
   <div class="btn-group" role="group" aria-label="Third group">
-    <button type="button" class="btn btn-info">8</button>
+    <button type="button" class="btn btn-dark">8</button>
   </div>
 </div>
 {{< /example >}}
