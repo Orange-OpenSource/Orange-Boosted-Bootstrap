@@ -9,6 +9,21 @@ aliases:
 toc: true
 ---
 
+## v5.3.3
+
+<hr class="mb-4">
+
+Boosted v5.3.3 has landed also including specific Boosted content as usual.
+
+If you need more details about the changes, please refer to the [v5.3.3 release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/tag/v5.3.3).
+
+### Components
+
+- **Buttons**
+  - <span class="badge bg-warning">Warning</span> Warning and info buttons are now rendered in yellow and blue colors. Please check that it doesn't break your design.
+  - All versions of outline buttons are now displayed in the documentation for Bootstrap compatibility reasons even if you can only use the secondary variant.
+    - A new ` button-outline-variant` Sass mixin is now available.
+
 ## v5.3.2
 
 <hr class="mb-4">
