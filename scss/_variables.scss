@@ -1091,6 +1091,7 @@ $form-label-required-color:             var(--#{$prefix}link-hover-color) !defau
 // scss-docs-start form-helper-variables
 $form-helper-size:                      1.25rem !default; // Boosted mod
 $form-helper-color:                     var(--#{$prefix}info) !default; // Boosted mod
+$form-helper-bg:                        var(--#{$prefix}highlight-color) !default; // Boosted mod
 $form-helper-icon:                      escape-svg($helper-icon) !default; // Boosted mod
 $form-helper-label-margin-bottom:       $form-label-margin-bottom - divide(($form-helper-size - $font-size-base), 2) !default; // Boosted mod
 // scss-docs-end form-helper-variables

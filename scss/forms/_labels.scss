@@ -23,6 +23,7 @@
 }
 
 .form-helper {
+  position: relative;
   display: inline-block;
   flex-shrink: 0;
   padding: 0;
@@ -30,6 +31,18 @@
   border: 0;
 
   &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(#{$form-helper-size} - 5px); // stylelint-disable-line function-disallowed-list
+    height: calc(#{$form-helper-size} - 5px); // stylelint-disable-line function-disallowed-list
+    content: "";
+    background-color: $form-helper-bg;
+    border-radius: 50%; // stylelint-disable-line property-disallowed-list
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
     display: block;
     width: $form-helper-size;
     height: $form-helper-size;
