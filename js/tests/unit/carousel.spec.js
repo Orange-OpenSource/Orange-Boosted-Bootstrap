@@ -540,7 +540,7 @@ describe('Carousel', () => {
     it('should take care of element either passed as a CSS selector or DOM element (Play/Pause button)', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel"></div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Pause Carousel</span>',
         '</button>'
       ].join('')
@@ -1181,7 +1181,7 @@ describe('Carousel', () => {
     it('should add pause class on click on Play/Pause button when pause is on', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel is-paused"></div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Pause Carousel</span>',
         '</button>'
       ].join('')
@@ -1196,7 +1196,7 @@ describe('Carousel', () => {
     it('should add play class on click on Play/Pause button when pause is off', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel"></div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Pause Carousel</span>',
         '</button>'
       ].join('')
@@ -1222,7 +1222,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Play Carousel</span>',
         '</button>'
       ].join('')
@@ -1251,7 +1251,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Pause Carousel</span>',
         '</button>'
       ].join('')
@@ -1281,7 +1281,7 @@ describe('Carousel', () => {
           '    <div class="carousel-item">item 3</div>',
           '  </div>',
           '</div>',
-          '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+          '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
           '  <span class="visually-hidden">Play Carousel</span>',
           '</button>'
         ].join('')
@@ -1315,7 +1315,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Play Carousel</span>',
         '</button>'
       ].join('')
@@ -1345,7 +1345,7 @@ describe('Carousel', () => {
           '    <div class="carousel-item">item 3</div>',
           '  </div>',
           '</div>',
-          '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+          '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
           '  <span class="visually-hidden">Play Carousel</span>',
           '</button>'
         ].join('')
@@ -1379,7 +1379,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause play" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Play Carousel</span>',
         '</button>'
       ].join('')
@@ -1409,7 +1409,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">',
         '  <span class="visually-hidden">Pause Carousel</span>',
         '</button>'
       ].join('')
@@ -1442,7 +1442,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="" data-bs-pause-text="" title="">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" data-bs-play-text="" data-bs-pause-text="" title="">',
         '  <span class="visually-hidden"></span>',
         '</button>'
       ].join('')
@@ -1475,7 +1475,7 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
         '</div>',
-        '<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause" data-bs-target="#myCarousel" title="">',
+        '<button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#myCarousel" title="">',
         '  <span class="visually-hidden"></span>',
         '</button>'
       ].join('')
