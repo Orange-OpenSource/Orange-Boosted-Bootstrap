@@ -98,7 +98,7 @@
 
 // scss-docs-start btn-variant-loops
 .btn-primary {
-  @include button-variant($primary, $primary, $black, $active-background: transparent, $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
+  @include button-variant($primary, $primary, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
 }
 
 .btn-success {
@@ -122,13 +122,11 @@
 }
 
 .btn-dark {
-  // TODO: highlight bg should be solid
-  @include button-variant($dark, $dark, $white, $hover-background: transparent, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
+  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: $black, $hover-color: $black);
 }
 
 .btn-secondary {
-  // TODO: highlight bg should be solid
-  @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: transparent, $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
+  @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
 }
 
 $hover-color: $yellow !default;
