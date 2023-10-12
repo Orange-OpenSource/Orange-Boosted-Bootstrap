@@ -963,7 +963,7 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 
 // scss-docs-start btn-variables
 $btn-color:                   var(--#{$prefix}body-color) !default;
-$btn-hover-color:             $btn-color !default; // Boosted mod
+$btn-hover-color:             var(--#{$prefix}link-hover-color) !default; // Boosted mod
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
@@ -985,6 +985,16 @@ $btn-line-height-lg:          $h5-line-height !default; // Boosted mod
 $btn-letter-spacing-lg:       $letter-spacing-base * 2 !default; // Boosted mod
 
 $btn-border-width:            $input-btn-border-width !default;
+$btn-border-color:            var(--#{$prefix}border-color-translucent) !default; // Boosted mod
+$btn-hover-border-color:      $btn-border-color !default; // Boosted mod
+
+$btn-active-color:            $black !default; // Boosted mod
+$btn-active-bg:               $primary !default; // Boosted mod
+$btn-active-border-color:     $primary !default; // Boosted mod
+
+$btn-disabled-color:          var(--#{$prefix}disabled-color) !default; // Boosted mod
+$btn-disabled-bg:             transparent !default; // Boosted mod
+$btn-disabled-border-color:   var(--#{$prefix}disabled-color) !default; // Boosted mod
 
 $btn-default-hover-bg:        var(--#{$prefix}highlight-bg) !default; // Boosted mod
 $btn-default-hover-border:    var(--#{$prefix}highlight-bg) !default; // Boosted mod
@@ -1204,7 +1214,7 @@ $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xml
 
 $form-check-input-disabled-opacity:        null !default;
 $form-check-label-disabled-opacity:        null !default;
-$form-check-btn-check-disabled-opacity:    null !default;
+// Boosted mod: no $form-check-btn-check-disabled-opacity
 
 $form-check-inline-margin-end:    1rem !default;
 

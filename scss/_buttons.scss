@@ -14,12 +14,18 @@
   --#{$prefix}btn-letter-spacing: #{$btn-letter-spacing}; // Boosted mod
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
-  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-border-color: #{$btn-border-color}; // Boosted mod: instead of `transparent`
   --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-color: #{$btn-hover-color}; // Boosted mod
-  --#{$prefix}btn-hover-border-color: initial; // Boosted mod
+  --#{$prefix}btn-hover-border-color: #{$btn-hover-border-color}; // Boosted mod
+  --#{$prefix}btn-active-color: #{$btn-active-color}; // Boosted mod
+  --#{$prefix}btn-active-bg: #{$btn-active-bg}; // Boosted mod
+  --#{$prefix}btn-active-border-color: #{$btn-active-border-color}; // Boosted mod
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-disabled-color: #{$btn-disabled-color}; // Boosted mod
+  --#{$prefix}btn-disabled-bg: #{$btn-disabled-bg}; // Boosted mod
+  --#{$prefix}btn-disabled-border-color: #{$btn-disabled-border-color}; // Boosted mod
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} var(--#{$prefix}btn-focus-shadow-rgb); // Boosted mod
   --#{$prefix}icon-spacing: #{$btn-icon-padding-x}; // Boosted mod
   // scss-docs-end btn-css-vars
@@ -58,8 +64,16 @@
 
   // Boosted mod: no .btn-check:focus-visible + &
 
+  .btn-check:checked + &:not([class="btn-*"]) {
+    color: var(--#{$prefix}highlight-color);
+    background-color: var(--#{$prefix}highlight-bg);
+    border-color: var(--#{$prefix}highlight-bg);
+  }
+
   // Boosted mod: custom styles for .btn-check
   // Boosted mod: simpler rule
+  .btn-check:checked + &:active,
+  .btn-check:checked + &,
   &:active,
   &.active,
   &.show {
@@ -72,6 +86,7 @@
     // Boosted mod: no &:focus-visible
   }
 
+  .btn-check:disabled + &,
   &:disabled,
   &.disabled,
   fieldset:disabled & {
@@ -87,6 +102,28 @@
   // Boosted mod: with icon
   &:not(.btn-icon) > svg {
     transform: translateY(1px);
+  }
+
+  .btn-group .btn-check + &:not(.btn-no-outline):not(:first-of-type) {
+    border-left: 0;
+
+    &::before {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
+  }
+
+  .btn-group .btn-check + &:not(.btn-no-outline):not(:last-of-type) {
+    border-right: 0;
+
+    &::after {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
   }
   // End mod
 }
@@ -144,11 +181,17 @@
 
 // Boosted mod: border-only on :hover and :active
 .btn-no-outline {
-  --#{$prefix}btn-hover-border-color: var(--#{$prefix}border-color-translucent);
-  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
-  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color-translucent);
-  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
-  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), transparent, transparent, var(--#{$prefix}disabled-color));
+
+  .btn-check:checked + &.btn {
+    color: var(--#{$prefix}link-hover-color);
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      border-color: var(--#{$prefix}border-color-translucent);
+    }
+  }
 }
 // End mod
 
