@@ -114,7 +114,7 @@
 }
 
 .btn-info {
-  @include button-variant($blue, $blue, $black);
+  @include button-variant($blue, $blue, $white);
 }
 
 .btn-light {
