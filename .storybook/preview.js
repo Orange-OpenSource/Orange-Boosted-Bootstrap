@@ -1,9 +1,13 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import './storybook.scss';
 import prettier from 'prettier/esm/standalone';
 import htmlParser from 'prettier/esm/parser-html';
 
 export const preview = {
+  /* globalTypes: {
+    theme: { type: 'string' },
+  }, */
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -21,7 +25,17 @@ export const preview = {
         // Pretty print the Docs code source
         return match ? prettier.format(match[1].trim(), {printWidth: 120, parser: "html", plugins: [htmlParser]}) : src;
       }
-    }
-  }
+    },
+  },
+  decorators: [
+    withThemeByDataAttribute({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+      attributeName: 'data-bs-theme',
+    }),
+  ]
 }
 export default preview;
