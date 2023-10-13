@@ -6094,7 +6094,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column align-items-start border p-3 bg-body text-body" data-bs-theme="dark">
+<div class="d-flex flex-column align-items-start border p-3 bg-body" data-bs-theme="dark">
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
@@ -6170,7 +6170,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column align-items-start border p-3 bg-body text-body" data-bs-theme="light">
+<div class="d-flex flex-column align-items-start border p-3 bg-body" data-bs-theme="light">
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
@@ -6251,10 +6251,10 @@ sitemap_exclude: true
   <h2 data-bs-theme="dark">H2</h2>
   <h3 data-bs-theme="dark">H3</h3>
   <h4 data-bs-theme="dark">H4</h4>
-  <p class="text-body" data-bs-theme="dark">Paragraph</p>
+  <p data-bs-theme="dark">Paragraph</p>
   <a data-bs-theme="dark" href="#">Link</a>
   <hr class="w-100" data-bs-theme="dark">
-  <ul class="text-body" data-bs-theme="dark">
+  <ul data-bs-theme="dark">
     <li>First layer
       <ul>
         <li>Second layer
@@ -6265,7 +6265,7 @@ sitemap_exclude: true
       </ul>
     </li>
   </ul>
-  <ol class="text-body" data-bs-theme="dark">
+  <ol data-bs-theme="dark">
     <li>First layer
       <ol>
         <li>Second layer
@@ -6276,7 +6276,7 @@ sitemap_exclude: true
       </ol>
     </li>
   </ol>
-  <dl class="text-body" data-bs-theme="dark">
+  <dl data-bs-theme="dark">
     <dt>Description lists</dt>
     <dd>First description</dd>
     <dt>Second title</dt>
@@ -6286,17 +6286,17 @@ sitemap_exclude: true
   <pre data-bs-theme="dark">Preformatted text</pre>
   <var data-bs-theme="dark">Variable text</var>
   <kbd data-bs-theme="dark">Keyboard input</kbd>
-  <samp class="text-body" data-bs-theme="dark">Sample output</samp>
-  <address class="text-body" data-bs-theme="dark">
+  <samp data-bs-theme="dark">Sample output</samp>
+  <address data-bs-theme="dark">
     <strong>Address</strong><br>
     1123 Fictional St,<br>
     San Francisco, CA 94103<br>
     <abbr title="Phone">P:</abbr> (123) 456-7890
   </address>
-  <blockquote class="text-body" data-bs-theme="dark">
+  <blockquote data-bs-theme="dark">
     Blockquote
   </blockquote>
-  <figure class="text-body" data-bs-theme="dark">
+  <figure data-bs-theme="dark">
     <blockquote class="blockquote">
       <p>Styles Blockquote</p>
     </blockquote>
@@ -6304,19 +6304,19 @@ sitemap_exclude: true
       Figcaption <cite title="Source Title">Source</cite>
     </figcaption>
   </figure>
-  <abbr class="text-body" data-bs-theme="dark" title="Abbreviation">Abbr</abbr>
-  <details class="text-body" data-bs-theme="dark">
+  <abbr data-bs-theme="dark" title="Abbreviation">Abbr</abbr>
+  <details data-bs-theme="dark">
     <summary>Summary</summary>
     <p>Details</p>
   </details>
   <p><mark data-bs-theme="dark">highlight</mark></p>
-  <p><del class="text-body" data-bs-theme="dark">This line of text is meant to be treated as deleted text.</del></p>
-  <p><s class="text-body" data-bs-theme="dark">This line of text is meant to be treated as no longer accurate.</s></p>
-  <p><ins class="text-body" data-bs-theme="dark">This line of text is meant to be treated as an addition to the document.</ins></p>
-  <p><u class="text-body" data-bs-theme="dark">This line of text will render as underlined.</u></p>
-  <p><small class="text-body" data-bs-theme="dark">This line of text is meant to be treated as fine print.</small></p>
-  <p><strong class="text-body" data-bs-theme="dark">This line rendered as bold text.</strong></p>
-  <p><em class="text-body" data-bs-theme="dark">This line rendered as bold text too.</em></p>
+  <p><del data-bs-theme="dark">This line of text is meant to be treated as deleted text.</del></p>
+  <p><s data-bs-theme="dark">This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins data-bs-theme="dark">This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u data-bs-theme="dark">This line of text will render as underlined.</u></p>
+  <p><small data-bs-theme="dark">This line of text is meant to be treated as fine print.</small></p>
+  <p><strong data-bs-theme="dark">This line rendered as bold text.</strong></p>
+  <p><em data-bs-theme="dark">This line rendered as bold text too.</em></p>
   <svg data-bs-theme="dark" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6327,10 +6327,10 @@ sitemap_exclude: true
   <h2 data-bs-theme="light">H2</h2>
   <h3 data-bs-theme="light">H3</h3>
   <h4 data-bs-theme="light">H4</h4>
-  <p class="text-body" data-bs-theme="light">Paragraph</p>
+  <p data-bs-theme="light">Paragraph</p>
   <a data-bs-theme="light" href="#">Link</a>
   <hr class="w-100" data-bs-theme="light">
-  <ul class="text-body" data-bs-theme="light">
+  <ul data-bs-theme="light">
     <li>First layer
       <ul>
         <li>Second layer
@@ -6341,7 +6341,7 @@ sitemap_exclude: true
       </ul>
     </li>
   </ul>
-  <ol class="text-body" data-bs-theme="light">
+  <ol data-bs-theme="light">
     <li>First layer
       <ol>
         <li>Second layer
@@ -6352,7 +6352,7 @@ sitemap_exclude: true
       </ol>
     </li>
   </ol>
-  <dl class="text-body" data-bs-theme="light">
+  <dl data-bs-theme="light">
     <dt>Description lists</dt>
     <dd>First description</dd>
     <dt>Second title</dt>
@@ -6362,17 +6362,17 @@ sitemap_exclude: true
   <pre data-bs-theme="light">Preformatted text</pre>
   <var data-bs-theme="light">Variable text</var>
   <kbd data-bs-theme="light">Keyboard input</kbd>
-  <samp class="text-body" data-bs-theme="light">Sample output</samp>
-  <address class="text-body" data-bs-theme="light">
+  <samp data-bs-theme="light">Sample output</samp>
+  <address data-bs-theme="light">
     <strong>Address</strong><br>
     1123 Fictional St,<br>
     San Francisco, CA 94103<br>
     <abbr title="Phone">P:</abbr> (123) 456-7890
   </address>
-  <blockquote class="text-body" data-bs-theme="light">
+  <blockquote data-bs-theme="light">
     Blockquote
   </blockquote>
-  <figure class="text-body" data-bs-theme="light">
+  <figure data-bs-theme="light">
     <blockquote class="blockquote">
       <p>Styles Blockquote</p>
     </blockquote>
@@ -6380,19 +6380,19 @@ sitemap_exclude: true
       Figcaption <cite title="Source Title">Source</cite>
     </figcaption>
   </figure>
-  <abbr class="text-body" data-bs-theme="light" title="Abbreviation">Abbr</abbr>
-  <details class="text-body" data-bs-theme="light">
+  <abbr data-bs-theme="light" title="Abbreviation">Abbr</abbr>
+  <details data-bs-theme="light">
     <summary>Summary</summary>
     <p>Details</p>
   </details>
   <p><mark data-bs-theme="light">highlight</mark></p>
-  <p><del class="text-body" data-bs-theme="light">This line of text is meant to be treated as deleted text.</del></p>
-  <p><s class="text-body" data-bs-theme="light">This line of text is meant to be treated as no longer accurate.</s></p>
-  <p><ins class="text-body" data-bs-theme="light">This line of text is meant to be treated as an addition to the document.</ins></p>
-  <p><u class="text-body" data-bs-theme="light">This line of text will render as underlined.</u></p>
-  <p><small class="text-body" data-bs-theme="light">This line of text is meant to be treated as fine print.</small></p>
-  <p><strong class="text-body" data-bs-theme="light">This line rendered as bold text.</strong></p>
-  <p><em class="text-body" data-bs-theme="light">This line rendered as bold text too.</em></p>
+  <p><del data-bs-theme="light">This line of text is meant to be treated as deleted text.</del></p>
+  <p><s data-bs-theme="light">This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins data-bs-theme="light">This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u data-bs-theme="light">This line of text will render as underlined.</u></p>
+  <p><small data-bs-theme="light">This line of text is meant to be treated as fine print.</small></p>
+  <p><strong data-bs-theme="light">This line rendered as bold text.</strong></p>
+  <p><em data-bs-theme="light">This line rendered as bold text too.</em></p>
   <svg data-bs-theme="light" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6505,7 +6505,7 @@ sitemap_exclude: true
     </p>
     <p>
       <label for="output1">Example output</label>
-      <output name="result1" id="output1" class="text-body">100</output>
+      <output name="result1" id="output1">100</output>
     </p>
     <p>
       <button type="submit">Button submit</button>
@@ -6629,7 +6629,7 @@ sitemap_exclude: true
     </p>
     <p>
       <label for="output2">Example output</label>
-      <output name="result2" id="output2" class="text-body">100</output>
+      <output name="result2" id="output2">100</output>
     </p>
     <p>
       <button type="submit">Button submit</button>
@@ -6753,7 +6753,7 @@ sitemap_exclude: true
     </p>
     <p>
       <label for="output3">Example output</label>
-      <output name="result3" id="output3" class="text-body">100</output>
+      <output name="result3" id="output3">100</output>
     </p>
     <p>
       <button type="submit">Button submit</button>
@@ -6774,7 +6774,7 @@ sitemap_exclude: true
 
 <div class="border p-3" style="background-color: #282d55;">
   <fieldset>
-    <legend class="text-body" data-bs-theme="dark">Example legend</legend>
+    <legend data-bs-theme="dark">Example legend</legend>
     <p>
       <label for="input4" data-bs-theme="dark">Example input</label>
       <input type="text" id="input4" data-bs-theme="dark" placeholder="Example input">
@@ -6877,7 +6877,7 @@ sitemap_exclude: true
     </p>
     <p>
       <label for="output4" data-bs-theme="dark">Example output</label>
-      <output name="result4" id="output4" data-bs-theme="dark" class="text-body">100</output>
+      <output name="result4" id="output4" data-bs-theme="dark">100</output>
     </p>
     <p>
       <button type="submit" data-bs-theme="dark">Button submit</button>
@@ -6898,7 +6898,7 @@ sitemap_exclude: true
 
 <div class="border p-3" style="background-color: #b5e8f7">
   <fieldset>
-    <legend class="text-body" data-bs-theme="light">Example legend</legend>
+    <legend data-bs-theme="light">Example legend</legend>
     <p>
       <label for="input5" data-bs-theme="light">Example input</label>
       <input type="text" id="input5" data-bs-theme="light" placeholder="Example input">
@@ -7001,7 +7001,7 @@ sitemap_exclude: true
     </p>
     <p>
       <label for="output5" data-bs-theme="light">Example output</label>
-      <output name="result5" id="output5" data-bs-theme="light" class="text-body">100</output>
+      <output name="result5" id="output5" data-bs-theme="light">100</output>
     </p>
     <p>
       <button type="submit" data-bs-theme="light">Button submit</button>
