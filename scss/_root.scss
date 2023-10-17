@@ -224,7 +224,7 @@
     --#{$prefix}disabled-filter: #{$disabled-filter-dark};
     --#{$prefix}placeholder-color: #{$gray-600};
     --#{$prefix}gray-tweak: #{$gray-700};
-    --#{$prefix}input-filter: #{none};
+    --#{$prefix}input-filter: none;
     --#{$prefix}icon-filter: #{$invert-filter};
     // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
