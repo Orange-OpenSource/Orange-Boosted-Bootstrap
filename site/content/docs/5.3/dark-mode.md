@@ -481,8 +481,8 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
@@ -532,8 +532,8 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
@@ -583,8 +583,8 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled>Large button</button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"><span class="visually-hidden">Toggle Dropdown</span></button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled>Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
@@ -634,8 +634,8 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="dark"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="dark"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled data-bs-theme="dark">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" data-bs-theme="dark">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled data-bs-theme="dark">Large button</button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled data-bs-theme="dark">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="dark"><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
@@ -685,8 +685,8 @@ sitemap_exclude: true
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-theme="light"><svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/></svg></button>
   <a href="#" class="btn btn-icon btn-social btn-youtube" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
   <a class="btn btn-icon btn-social btn-youtube disabled" data-bs-theme="light"><span class="visually-hidden">YouTube</span></a>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
-  <div class="btn-group"><button class="btn btn-outline-secondary dropdown-toggle" type="button" disabled data-bs-theme="light">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" data-bs-theme="light">Large button</button></div>
+  <div class="btn-group"><button class="btn btn-secondary dropdown-toggle" type="button" disabled data-bs-theme="light">Large button</button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" data-bs-theme="light">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
   <div class="btn-group"><button class="btn btn-outline-secondary" type="button" disabled data-bs-theme="light">Large split button</button><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" disabled data-bs-theme="light"><span class="visually-hidden">Toggle Dropdown</span></button></div>
 </div>
@@ -698,7 +698,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -729,7 +729,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -760,7 +760,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
@@ -791,7 +791,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3" style="background-color: #282d55">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">
         Dropdown button
       </button>
       <ul class="dropdown-menu" data-bs-theme="dark">
@@ -822,7 +822,7 @@ sitemap_exclude: true
 <div class="border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="btn-group">
     <div class="dropdown">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="light">
         Dropdown button
       </button>
       <ul class="dropdown-menu" data-bs-theme="light">
