@@ -71,10 +71,6 @@
   font-size: $font-size-sm;
 }
 
-@include tac("CloseAlert") {
-  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), $disabled-background: transparent, $disabled-color: var(--#{$prefix}disabled-color));
-}
-
 @include tac("ClosePanel") {
   position: absolute;
   right: $modal-content-padding;

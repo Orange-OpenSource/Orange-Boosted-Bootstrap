@@ -29,6 +29,8 @@
   window.addEventListener('tac.open_alert', () => {
     const alert = document.getElementById('tarteaucitronAlertBig')
 
+    alert.setAttribute('data-bs-theme', 'dark');
+
     document.getElementById('tarteaucitronCloseAlert').classList.add('btn', 'btn-sm', 'btn-secondary', 'ms-lg-2')
     alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ms-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronAllow').innerHTML = tarteaucitron.lang.acceptAll
