@@ -2043,7 +2043,8 @@ $breadcrumb-item-padding-x:         $spacer * .5 !default;
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod
 $breadcrumb-bg:                     null !default;
-$breadcrumb-divider-color:          null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$breadcrumb-divider-color:          $black !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$breadcrumb-divider-filter:         var(--#{$prefix}icon-filter) !default; // Boosted mod
 $breadcrumb-active-color:           null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='m-.4 12 2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
