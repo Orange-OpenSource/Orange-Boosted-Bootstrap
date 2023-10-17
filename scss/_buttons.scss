@@ -122,7 +122,7 @@
 }
 
 .btn-dark {
-  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: $black, $hover-color: $black);
+  @include button-variant($dark, $dark, $white, $hover-background: $white, $hover-border: var(--#{$prefix}highlight-bg, $hover-color: $black);
 }
 
 .btn-secondary {
