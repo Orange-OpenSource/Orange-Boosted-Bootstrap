@@ -5,9 +5,6 @@ import prettier from 'prettier/esm/standalone';
 import htmlParser from 'prettier/esm/parser-html';
 
 export const preview = {
-  /* globalTypes: {
-    theme: { type: 'string' },
-  }, */
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
