@@ -379,7 +379,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-body">
         <h2 class="h5">Popover in a modal</h2>
-        <p>This <button class="btn btn-outline-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</button> triggers a popover on click.</p>
+        <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</button> triggers a popover on click.</p>
         <hr>
         <h2 class="h5">Tooltips in a modal</h2>
         <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
@@ -401,7 +401,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 ```html
 <div class="modal-body">
   <h2 class="h5">Popover in a modal</h2>
-  <p>This <button class="btn btn-outline-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
+  <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
   <hr>
   <h2 class="h5">Tooltips in a modal</h2>
   <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
