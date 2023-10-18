@@ -1981,13 +1981,13 @@ $alert-dismissible-padding-r:       $alert-padding-y * 3 !default; // 3x covers 
 // scss-docs-start progress-variables
 $progress-height:                   $spacer !default;
 $progress-font-size:                $font-size-base !default;
-$progress-bg:                       var(--#{$prefix}secondary-bg) !default;
+$progress-bg:                       var(--#{$prefix}active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $progress-border-radius:            var(--#{$prefix}border-radius) !default;
 $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
-$progress-bar-color:                $black !default;
+$progress-bar-color:                var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$black`
 $progress-bar-font-weight:          $font-weight-bold !default; // Boosted mod
 $progress-bar-text-indent:          map-get($spacers, 2) !default; // Boosted mod
-$progress-bar-bg:                   $primary !default;
+$progress-bar-bg:                   var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `$primary`
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 

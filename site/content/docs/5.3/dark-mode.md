@@ -4366,3 +4366,105 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="input-group quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
 </div>
+
+### Progress
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 40%"></div>
+  </div>
+  <div class="progress progress-xs" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Warning example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Danger example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%">70%</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 40%"></div>
+  </div>
+  <div class="progress progress-xs" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Warning example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Danger example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%">70%</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 40%"></div>
+  </div>
+  <div class="progress progress-xs" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Warning example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Danger example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%">70%</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-success" style="width: 40%"></div>
+  </div>
+  <div class="progress progress-xs" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Warning example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Danger example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%">70%</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-success" style="width: 40%"></div>
+  </div>
+  <div class="progress progress-xs" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Warning example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"></div>
+  </div>
+  <div class="progress progress-sm" role="progressbar" aria-label="Danger example" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%">70%</div>
+  </div>
+</div>
