@@ -115,7 +115,7 @@
     --bs-dropdown-link-hover-bg: #{$blue-600}; // Boosted mod
   }
 
-  .btn-secondary {
+  .btn-dropdown {
     --bs-btn-color: var(--bs-white); // Boosted mod
     --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
     --bs-btn-border-color: #{rgba($white, .25)};

@@ -37,7 +37,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 ## Mixed styles
 
 {{< design-callout-alert >}}
-This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-secondary`.
+This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
 Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples" >}}) secondary variant component. You can also refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
