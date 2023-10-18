@@ -129,8 +129,6 @@
   @include button-variant(var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-bg), var(--#{$prefix}highlight-color), $hover-background: var(--#{$prefix}highlight-color), $hover-border: var(--#{$prefix}highlight-bg), $hover-color: var(--#{$prefix}highlight-bg));
 }
 
-$hover-color: $yellow !default;
-
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     $btn-outline-hover-color: $white;
