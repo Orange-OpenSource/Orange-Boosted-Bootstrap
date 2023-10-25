@@ -60,8 +60,8 @@
   --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
   --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
   --#{$prefix}nav-tabs-link-padding-x: #{$nav-tabs-link-padding-x}; // Boosted mod
-  --#{$prefix}nav-tabs-link-hover-color: #{color-contrast($nav-tabs-link-hover-border-color)}; // Boosted mod
-  --#{$prefix}nav-tabs-link-hover-bg: var(--#{$prefix}nav-tabs-link-hover-border-color); // Boosted mod
+  --#{$prefix}nav-tabs-link-hover-color: #{$nav-tabs-link-hover-color}; // Boosted mod
+  --#{$prefix}nav-tabs-link-hover-bg: #{$nav-tabs-link-hover-bg}; // Boosted mod
   --#{$prefix}nav-tabs-link-border-width: var(--#{$prefix}nav-tabs-border-width) var(--#{$prefix}nav-tabs-border-width) 0; // Boosted mod
   --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
@@ -236,10 +236,11 @@
   --#{$prefix}tab-content-padding-y: #{$spacer};
   --#{$prefix}tab-content-padding-x: #{subtract($nav-tabs-link-padding-x, var(--#{$prefix}tab-content-border-width))};
   --#{$prefix}tab-content-border-width: #{$nav-tabs-border-width};
+  --#{$prefix}tab-content-border-color: #{$nav-tabs-border-color};
   // scss-docs-end tab-content-css-vars
 
   padding: var(--#{$prefix}tab-content-padding-y) var(--#{$prefix}tab-content-padding-x);
-  border: var(--#{$prefix}tab-content-border-width) solid;
+  border: var(--#{$prefix}tab-content-border-width) solid var(--#{$prefix}tab-content-border-color);
   border-top: 0;
   // End mod
 
