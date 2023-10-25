@@ -148,6 +148,8 @@
   --#{$prefix}black-tweak: #{$black};
   --#{$prefix}input-filter: #{$invert-filter};
   --#{$prefix}icon-filter: none;
+  --#{$prefix}select-indicator: #{$form-select-indicator};
+  --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator};
   // ******* End additions for dark-mode
 }
 
@@ -228,6 +230,8 @@
     --#{$prefix}black-tweak: #{$gray-950};
     --#{$prefix}input-filter: none;
     --#{$prefix}icon-filter: #{$invert-filter};
+    --#{$prefix}select-indicator: #{$form-select-indicator-dark};
+    --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator-dark};
     // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
   }
