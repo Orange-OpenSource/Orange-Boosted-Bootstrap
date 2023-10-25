@@ -4,7 +4,7 @@
 // https://primer.github.io/.
 
 .form-select {
-  --#{$prefix}form-select-bg-img: var(--#{$prefix}select-indicator);
+  --#{$prefix}form-select-bg-img: var(--#{$prefix}select-indicator); // Boosted mod: instead of `#{escape-svg($form-select-indicator)}`
 
   display: block;
   width: 100%;

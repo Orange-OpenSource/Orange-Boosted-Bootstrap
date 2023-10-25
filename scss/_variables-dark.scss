@@ -99,8 +99,7 @@ $focus-visible-outer-color-dark:    $white !default; // Boosted mod
 //
 
 // Boosted mod: no $form-select-indicator-color-dark
-
-$form-select-indicator-dark:          escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#fff' d='M7 7 0 0h14L7 7z'/></svg>")) !default;
+$form-select-indicator-dark:          escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#fff' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
 $form-select-disabled-indicator-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#999' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
 
 // Boosted mod: no $form-switch-color-dark
