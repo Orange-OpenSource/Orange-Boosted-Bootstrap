@@ -145,6 +145,7 @@
   --#{$prefix}disabled-filter: #{$disabled-filter};
   --#{$prefix}placeholder-color: #{$gray-700};
   --#{$prefix}gray-tweak: #{$gray-900};
+  --#{$prefix}black-tweak: #{$black};
   --#{$prefix}input-filter: #{$invert-filter};
   --#{$prefix}icon-filter: none;
   // ******* End additions for dark-mode
@@ -224,6 +225,7 @@
     --#{$prefix}disabled-filter: #{$disabled-filter-dark};
     --#{$prefix}placeholder-color: #{$gray-600};
     --#{$prefix}gray-tweak: #{$gray-700};
+    --#{$prefix}black-tweak: #{$gray-950};
     --#{$prefix}input-filter: none;
     --#{$prefix}icon-filter: #{$invert-filter};
     // ******* End additions for dark-mode
