@@ -2324,6 +2324,11 @@ $quantity-selector-sm-width:              5.5rem !default;
 
 $quantity-selector-btn-padding-x:         add($btn-icon-padding-x, 2px) !default;
 $quantity-selector-btn-padding-x-sm:      add($btn-icon-padding-x-sm, 2px) !default;
+$quantity-selector-btn-bg:                var(--#{$prefix}body-bg) !default;
+$quantity-selector-btn-border:            var(--#{$prefix}border-width) solid var(--#{$prefix}border-color-translucent) !default;
+
+$quantity-selector-disabled-color:        var(--#{$prefix}disabled-color) !default;
+$quantity-selector-disabled-bg:           var(--#{$prefix}body-bg) !default;
 
 $quantity-selector-icon-width:            .875rem !default;
 $quantity-selector-icon-sm-width:         .625rem !default;
