@@ -25,11 +25,11 @@
   }
 
   button {
-    background-color: $quantity-selector-button-bg;
-    border: $quantity-selector-button-border;
+    background-color: $quantity-selector-btn-bg;
+    border: $quantity-selector-btn-border;
 
     &:disabled {
-      background-color: $quantity-selector-button-bg;
+      background-color: $quantity-selector-btn-bg;
     }
 
     &:first-of-type {
