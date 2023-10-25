@@ -4,7 +4,7 @@
 // https://primer.github.io/.
 
 .form-select {
-  --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator)};
+  --#{$prefix}form-select-bg-img: var(--#{$prefix}select-indicator);
 
   display: block;
   width: 100%;
@@ -45,7 +45,7 @@
   &:disabled {
     color: $form-select-disabled-color;
     background-color: $form-select-disabled-bg;
-    background-image: escape-svg($form-select-disabled-indicator); // Boosted mod
+    background-image: var(--#{$prefix}select-disabled-indicator); // Boosted mod
     border-color: $form-select-disabled-border-color;
   }
 
