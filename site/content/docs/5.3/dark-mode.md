@@ -121,6 +121,11 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-gray-tweak)" data-bs-theme="dark"></div>
   </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-black-tweak</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="dark"></div>
+  </div>
 </div>
 
 ## Components
@@ -2858,4 +2863,91 @@ sitemap_exclude: true
     <input type="radio" id="excellent51" name="rating" value="5" class="visually-hidden">
     <label for="excellent51" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
+</div>
+
+### Switches
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex border border-tertiary p-3">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch">
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" disabled>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked disabled>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch">
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" disabled>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked disabled>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch">
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" disabled>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" checked disabled>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="form-check form-switch" data-bs-theme="dark">
+    <input class="form-check-input" type="checkbox" role="switch">
+  </div>
+  <div class="form-check form-switch" data-bs-theme="dark">
+    <input class="form-check-input" type="checkbox" role="switch" checked>
+  </div>
+  <div class="form-check form-switch" data-bs-theme="dark">
+    <input class="form-check-input" type="checkbox" role="switch" disabled>
+  </div>
+  <div class="form-check form-switch" data-bs-theme="dark">
+    <input class="form-check-input" type="checkbox" role="switch" checked disabled>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="form-check form-switch" data-bs-theme="light">
+    <input class="form-check-input" type="checkbox" role="switch">
+  </div>
+  <div class="form-check form-switch" data-bs-theme="light">
+    <input class="form-check-input" type="checkbox" role="switch" checked>
+  </div>
+  <div class="form-check form-switch" data-bs-theme="light">
+    <input class="form-check-input" type="checkbox" role="switch" disabled>
+  </div>
+  <div class="form-check form-switch" data-bs-theme="light">
+    <input class="form-check-input" type="checkbox" role="switch" checked disabled>
+  </div>
 </div>
