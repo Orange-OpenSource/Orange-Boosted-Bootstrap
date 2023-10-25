@@ -1871,7 +1871,7 @@ $modal-title-line-height:           $line-height-base !default;
 $modal-content-padding-y:           $spacer !default; // Boosted mod
 $modal-content-padding-x:           0 !default; // Boosted mod
 $modal-content-padding:             $modal-content-padding-y $modal-content-padding-x !default; // Boosted mod
-$modal-content-color:               null !default;
+$modal-content-color:               var(--#{$prefix}body-color) !default; // Boosted mod: instead of `null`
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
