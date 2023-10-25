@@ -154,7 +154,7 @@
 
 .form-switch {
   // Boosted mod
-  --#{$prefix}switch-gradient: #{linear-gradient(to right, $black $form-switch-bg-square-size, transparent)};
+  --#{$prefix}switch-gradient: #{linear-gradient(to right, $form-switch-square-bg $form-switch-bg-square-size, transparent)};
 
   min-height: $form-switch-width * .5;
   padding-left: $form-switch-padding-start;
@@ -166,29 +166,29 @@
     width: $form-switch-width;
     height: $form-switch-width * .5;
     margin-left: $form-switch-padding-start * -1;
-    background-color: $white; // Boosted mod
+    background-color: $form-switch-bg; // Boosted mod
     background-image: var(--#{$prefix}form-switch-bg), var(--#{$prefix}switch-gradient); // Boosted mod: extra param `var(--#{$prefix}switch-gradient)`
-    filter: $invert-filter; // Boosted mod
+    filter: $form-switch-filter; // Boosted mod
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size 100%; // Get a 1px separation
-    border-color: $white; // Boosted mod
+    border-color: $form-switch-border-color; // Boosted mod
     @include border-radius($form-switch-border-radius, 0);
     @include transition($form-switch-transition);
 
     &:focus {
       &[data-focus-visible-added] {
-        @include focus-visible($color: var(--#{$prefix}focus-visible-inner-color), $box-color: var(--#{$prefix}focus-visible-outer-color));
+        @include focus-visible($color: $form-switch-focus-visible-outer, $box-color: $form-switch-focus-visible-inner);
       }
     }
 
     &:checked {
-      background-color: $primary;
-      filter: none; // Boosted mod
-      border-color: $primary;
+      background-color: $form-switch-checked-bg;
+      filter: $form-switch-checked-filter; // Boosted mod
+      border-color: $form-switch-checked-border-color;
 
       &:focus {
         &[data-focus-visible-added] {
-          @include focus-visible($color: var(--#{$prefix}focus-visible-outer-color), $box-color: var(--#{$prefix}focus-visible-inner-color));
+          @include focus-visible($color: $form-switch-checked-focus-outer, $box-color: $form-switch-checked-focus-inner);
         }
       }
 
@@ -203,7 +203,7 @@
       }
 
       &:not(:disabled) {
-        --#{$prefix}switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
+        --#{$prefix}switch-gradient: #{linear-gradient(to right, $form-switch-checked-square-bg $form-switch-bg-square-size, transparent)};
       }
     }
 
@@ -215,7 +215,7 @@
 
     &:disabled {
       background-color: $form-check-input-disabled-color;
-      filter: $invert-filter;
+      filter: $form-check-input-disabled-filter;
       border-color: $form-check-input-disabled-color;
     }
   }
