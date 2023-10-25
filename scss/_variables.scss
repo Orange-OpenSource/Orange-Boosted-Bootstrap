@@ -1284,13 +1284,13 @@ $form-select-font-weight:           $input-font-weight !default;
 $form-select-line-height:           $input-line-height !default;
 $form-select-color:                 $input-color !default;
 $form-select-bg:                    $input-bg !default;
-$form-select-disabled-color:        $gray-700 !default;
+$form-select-disabled-color:        $input-disabled-color !default; // Boosted mod: instead of `null`
 $form-select-disabled-bg:           $input-disabled-bg !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x top add(50%, 1px) !default;
 $form-select-bg-size:               .875rem 1rem !default; // In pixels because image dimensions
-$form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7 0 0h14L7 7z'/></svg>") !default;
-$form-select-disabled-indicator:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$form-select-disabled-color}' d='M7 7 0 0h14L7 7z'/></svg>") !default; // Boosted mod
+$form-select-indicator:             escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod: instead of Bootstrap svg
+$form-select-disabled-indicator:    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#666' d='M7 7 0 0h14L7 7z'/></svg>")) !default; // Boosted mod
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
 $form-select-feedback-icon-position:    center right $form-select-indicator-padding !default;
