@@ -628,7 +628,7 @@ $border-widths: (
   5: $border-width * 2.5
 ) !default;
 $border-style:                solid !default;
-$border-color:                $black !default; // Boosted mod
+$border-color:                $black !default; // Boosted mod: instead of `$gray-300`
 $border-color-translucent:    $gray-500 !default; // Boosted mod: gray value instead of rgba($black, .175)
 // scss-docs-end border-variables
 
@@ -1429,7 +1429,9 @@ $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
 $nav-tabs-border-radius:            var(--#{$prefix}border-radius) !default;
 $nav-tabs-link-padding-x:           1.8125rem !default; // Boosted mod
-$nav-tabs-link-hover-border-color:  $border-color !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color`
+$nav-tabs-link-hover-color:         var(--#{$prefix}highlight-color) !default; // Boosted mod
+$nav-tabs-link-hover-bg:            var(--#{$prefix}highlight-bg) !default; // Boosted mod
+$nav-tabs-link-hover-border-color:  var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color`
 $nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg`
@@ -1442,16 +1444,16 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 $nav-underline-gap:                       0 !default; // Boosted mod: instead of 1rem
 $nav-underline-gap-lg:                    $spacer * .5 !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
-$nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod: instead of .125rem
-$nav-underline-border-color:              $gray-500 !default; // Boosted mod
+$nav-underline-border-width:              calc(var(--#{$prefix}border-width) * .5) !default; // Boosted mod: instead of `.125rem`
+$nav-underline-border-color:              var(--#{$prefix}border-color-translucent) !default; // Boosted mod
 $nav-underline-border-radius:             var(--#{$prefix}border-radius) !default; // Boosted mod
-$nav-underline-link-active-color:         var(--#{$prefix}emphasis-color) !default;
+$nav-underline-link-active-color:         var(--#{$prefix}hover-color) !default; // Boosted mod instead of `var(--#{$prefix}emphasis-color)`
 $nav-underline-link-padding-x:            1.8125rem !default; // Boosted mod
-$nav-underline-link-hover-color:          $accessible-orange !default; // Boosted mod
+$nav-underline-link-hover-color:          var(--#{$prefix}link-hover-color) !default; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
 $nav-underline-link-border-width:         0 0 calc(var(--#{$prefix}nav-underline-border-width) * 4) !default; // Boosted mod
-$nav-underline-link-active-bg:            var(--#{$prefix}body-bg) !default; // Boosted mod
-$nav-underline-link-active-border-color:  $accessible-orange !default; // Boosted mod
+$nav-underline-link-active-bg:            transparent !default; // Boosted mod
+$nav-underline-link-active-border-color:  var(--#{$prefix}link-hover-color) !default; // Boosted mod
 // scss-docs-end nav-variables
 
 

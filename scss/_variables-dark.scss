@@ -80,7 +80,7 @@ $body-secondary-bg-dark:            $gray-900 !default; // Boosted mod: instead 
 $body-tertiary-color-dark:          $gray-600 !default; // Boosted mod: instead of `rgba($body-color-dark, .5)`
 $body-tertiary-bg-dark:             $black !default; // Boosted mod: instead of `mix($gray-800, $gray-900, 50%)`
 $body-emphasis-color-dark:          $white !default; // Boosted mod: instead of `$gray-100`
-$border-color-dark:                 $gray-700 !default;
+$border-color-dark:                 $white !default; // Boosted mod: instead of `$gray-700`
 $border-color-translucent-dark:     $gray-700 !default; // Boosted mod instead of `rgba($white, .15)`
 $headings-color-dark:               $white !default; // Boosted mod: instead of `inherit`
 $link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`

@@ -42,6 +42,11 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-tertiary-bg)" data-bs-theme="dark"></div>
   </div>
   <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-border-color</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-border-color)" data-bs-theme="dark"></div>
+  </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
     <div style="width: 200px">--bs-border-color-translucent</div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-border-color-translucent)" data-bs-theme="dark"></div>
@@ -432,6 +437,88 @@ sitemap_exclude: true
     <span class="alert-icon"><span class="visually-hidden">Error</span></span>
     <p>Error notification text goes here.</p>
   </div>
+</div>
+
+### Breadcrumb
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <nav aria-label="breadcrumb1">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav aria-label="breadcrumb2">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav aria-label="breadcrumb3">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <nav aria-label="breadcrumb4">
+    <ol class="breadcrumb mb-0" data-bs-theme="dark">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';" data-bs-theme="dark">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <nav aria-label="breadcrumb5">
+    <ol class="breadcrumb mb-0" data-bs-theme="light">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';" data-bs-theme="light">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
 </div>
 
 ### Buttons
@@ -980,6 +1067,402 @@ sitemap_exclude: true
         </div>
     </div>
   </nav>
+</div>
+
+### Navs & tabs
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+
+  <ul class="nav nav-underline mt-2">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="nav nav-tabs mt-2">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+
+  <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" aria-current="page" id="nav-tab1" href="#tab1-content" data-bs-toggle="tab" data-bs-target="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Tab 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab2" data-bs-toggle="tab" href="#tab2-content" data-bs-target="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Tab 2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab3" data-bs-toggle="tab" href="#tab3-content" data-bs-target="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">Tab 3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="nav-tab4" data-bs-toggle="tab" data-bs-target="#tab4-content" role="tab" aria-controls="tab4-content" aria-selected="false" aria-disabled="true">Tab 4</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="nav-tabs-content">
+    <div class="tab-pane-with-nested-tab fade show active" id="tab1-content" role="tabpanel" aria-labelledby="nav-tab1">
+      <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="nav-linkA" href="#linkA" data-bs-toggle="tab" data-bs-target="#linkA" role="tab" aria-current="page">Link A</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkB" href="#linkB" data-bs-toggle="tab" data-bs-target="#linkB" role="tab">Link B</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkC" href="#linkC" data-bs-toggle="tab" data-bs-target="#linkC" role="tab">Link C</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link disabled" id="nav-linkD" data-bs-toggle="tab" data-bs-target="#linkD" role="tab" aria-disabled="true">Link D</a>
+        </li>
+      </ul>
+      <div class="tab-content border-0">
+        <div class="tab-pane fade show active" id="linkA" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+        <div class="tab-pane" id="linkB" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
+        <div class="tab-pane" id="linkC" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
+        <div class="tab-pane" id="linkD" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2-content" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+    <div class="tab-pane" id="tab3-content" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+    <div class="tab-pane" id="tab4-content" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <ul class="nav nav-underline">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-2">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" aria-current="page" id="nav-tab1-2" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-2" role="tab" aria-controls="tab1-content-2" aria-selected="true">Tab 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab2-2" data-bs-toggle="tab" href="#" data-bs-target="#tab2-content-2" role="tab" aria-controls="tab2-content-2" aria-selected="false">Tab 2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab3-2" data-bs-toggle="tab" href="#" data-bs-target="#tab3-content-2" role="tab" aria-controls="tab3-content-2" aria-selected="false">Tab 3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="nav-tab4-2" data-bs-toggle="tab" data-bs-target="#tab4-content-2" role="tab" aria-controls="tab4-content-2" aria-selected="false" aria-disabled="true">Tab 4</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="nav-tabs-content-2">
+    <div class="tab-pane-with-nested-tab fade show active" id="tab1-content-2" role="tabpanel" aria-labelledby="nav-tab1">
+      <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="nav-linkA-2" href="#" data-bs-toggle="tab" data-bs-target="#linkA-2" role="tab" aria-current="page">Link A</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkB-2" href="#" data-bs-toggle="tab" data-bs-target="#linkB-2" role="tab">Link B</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkC-2" href="#" data-bs-toggle="tab" data-bs-target="#linkC-2" role="tab">Link C</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link disabled" id="nav-linkD-2" data-bs-toggle="tab" data-bs-target="#linkD-2" role="tab" aria-disabled="true">Link D</a>
+        </li>
+      </ul>
+      <div class="tab-content border-0">
+        <div class="tab-pane fade show active" id="linkA-2" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+        <div class="tab-pane" id="linkB-2" role="tabpanel" aria-labelledby="nav-linkB-2">Content of Link B</div>
+        <div class="tab-pane" id="linkC-2" role="tabpanel" aria-labelledby="nav-linkC-2">Content of Link C</div>
+        <div class="tab-pane" id="linkD-2" role="tabpanel" aria-labelledby="nav-linkD-2">Content of Link D</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2-content-2" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+    <div class="tab-pane" id="tab3-content-2" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+    <div class="tab-pane" id="tab4-content-2" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <ul class="nav nav-underline">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-3">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" aria-current="page" id="nav-tab1-3" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-3" role="tab" aria-controls="tab1-content-3" aria-selected="true">Tab 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab2-3" data-bs-toggle="tab" href="#" data-bs-target="#tab2-content-3" role="tab" aria-controls="tab2-content-3" aria-selected="false">Tab 2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab3-3" data-bs-toggle="tab" href="#" data-bs-target="#tab3-content-3" role="tab" aria-controls="tab3-content-3" aria-selected="false">Tab 3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="nav-tab4-3" data-bs-toggle="tab" data-bs-target="#tab4-content-3" role="tab" aria-controls="tab4-content-3" aria-selected="false" aria-disabled="true">Tab 4</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="nav-tabs-content-3">
+    <div class="tab-pane-with-nested-tab fade show active" id="tab1-content-3" role="tabpanel" aria-labelledby="nav-tab1">
+      <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="nav-linkA-3" href="#" data-bs-toggle="tab" data-bs-target="#linkA-3" role="tab" aria-current="page">Link A</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkB-3" href="#" data-bs-toggle="tab" data-bs-target="#linkB-3" role="tab">Link B</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkC-3" href="#" data-bs-toggle="tab" data-bs-target="#linkC-3" role="tab">Link C</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link disabled" id="nav-linkD-3" data-bs-toggle="tab" data-bs-target="#linkD-3" role="tab" aria-disabled="true">Link D</a>
+        </li>
+      </ul>
+      <div class="tab-content border-0">
+        <div class="tab-pane fade show active" id="linkA-3" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+        <div class="tab-pane" id="linkB-3" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
+        <div class="tab-pane" id="linkC-3" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
+        <div class="tab-pane" id="linkD-3" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2-content-3" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+    <div class="tab-pane" id="tab3-content-3" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+    <div class="tab-pane" id="tab4-content-3" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <ul class="nav nav-underline" data-bs-theme="dark">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-4" data-bs-theme="dark" style="--bs-nav-tabs-link-active-bg: #282d55;">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" aria-current="page" id="nav-tab1-4" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-4" role="tab" aria-controls="tab1-content-4" aria-selected="true">Tab 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab2-4" data-bs-toggle="tab" href="#" data-bs-target="#tab2-content-4" role="tab" aria-controls="tab2-content-4" aria-selected="false">Tab 2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab3-4" data-bs-toggle="tab" href="#" data-bs-target="#tab3-content-4" role="tab" aria-controls="tab3-content-4" aria-selected="false">Tab 3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="nav-tab4-4" data-bs-toggle="tab" data-bs-target="#tab4-content-4" role="tab" aria-controls="tab4-content-4" aria-selected="false" aria-disabled="true">Tab 4</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="nav-tabs-content-4" data-bs-theme="dark">
+    <div class="tab-pane-with-nested-tab fade show active" id="tab1-content-4" role="tabpanel" aria-labelledby="nav-tab1">
+      <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="nav-linkA-4" href="#" data-bs-toggle="tab" data-bs-target="#linkA-4" role="tab" aria-current="page">Link A</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkB-4" href="#" data-bs-toggle="tab" data-bs-target="#linkB-4" role="tab">Link B</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkC-4" href="#" data-bs-toggle="tab" data-bs-target="#linkC-4" role="tab">Link C</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link disabled" id="nav-linkD-4" data-bs-toggle="tab" data-bs-target="#linkD-4" role="tab" aria-disabled="true">Link D</a>
+        </li>
+      </ul>
+      <div class="tab-content border-0">
+        <div class="tab-pane fade show active" id="linkA-4" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+        <div class="tab-pane" id="linkB-4" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
+        <div class="tab-pane" id="linkC-4" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
+        <div class="tab-pane" id="linkD-4" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2-content-4" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+    <div class="tab-pane" id="tab3-content-4" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+    <div class="tab-pane" id="tab4-content-4" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <ul class="nav nav-underline" data-bs-theme="light">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <ul role="tablist" aria-owns="nav-tab1 nav-tab2 nav-tab3 nav-tab4" class="nav nav-tabs mt-2" id="nav-tab-with-nested-tabs-5" data-bs-theme="light" style="--bs-nav-tabs-link-active-bg: #b5e8f7;">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" aria-current="page" id="nav-tab1-5" href="#" data-bs-toggle="tab" data-bs-target="#tab1-content-5" role="tab" aria-controls="tab1-content-5" aria-selected="true">Tab 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab2-5" data-bs-toggle="tab" href="#" data-bs-target="#tab2-content-5" role="tab" aria-controls="tab2-content-5" aria-selected="false">Tab 2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="nav-tab3-5" data-bs-toggle="tab" href="#" data-bs-target="#tab3-content-5" role="tab" aria-controls="tab3-content-5" aria-selected="false">Tab 3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" id="nav-tab4-5" data-bs-toggle="tab" data-bs-target="#tab4-content-5" role="tab" aria-controls="tab4-content-5" aria-selected="false" aria-disabled="true">Tab 4</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="nav-tabs-content-5" data-bs-theme="light">
+    <div class="tab-pane-with-nested-tab fade show active" id="tab1-content-5" role="tabpanel" aria-labelledby="nav-tab1">
+      <ul role="tablist" aria-owns="nav-linkA nav-linkB nav-linkC nav-linkD" class="nav nav-underline mt-0">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="nav-linkA-5" href="#" data-bs-toggle="tab" data-bs-target="#linkA-5" role="tab" aria-current="page">Link A</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkB-5" href="#" data-bs-toggle="tab" data-bs-target="#linkB-5" role="tab">Link B</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="nav-linkC-5" href="#" data-bs-toggle="tab" data-bs-target="#linkC-5" role="tab">Link C</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link disabled" id="nav-linkD-5" data-bs-toggle="tab" data-bs-target="#linkD-5" role="tab" aria-disabled="true">Link D</a>
+        </li>
+      </ul>
+      <div class="tab-content border-0">
+        <div class="tab-pane fade show active" id="linkA-5" role="tabpanel" aria-labelledby="nav-linkA">Content of Link A</div>
+        <div class="tab-pane" id="linkB-5" role="tabpanel" aria-labelledby="nav-linkB">Content of Link B</div>
+        <div class="tab-pane" id="linkC-5" role="tabpanel" aria-labelledby="nav-linkC">Content of Link C</div>
+        <div class="tab-pane" id="linkD-5" role="tabpanel" aria-labelledby="nav-linkD">Content of Link D</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2-content-5" role="tabpanel" aria-labelledby="nav-tab2">Content of Tab 2</div>
+    <div class="tab-pane" id="tab3-content-5" role="tabpanel" aria-labelledby="nav-tab3">Content of Tab 3</div>
+    <div class="tab-pane" id="tab4-content-5" role="tabpanel" aria-labelledby="nav-tab4">Content of Tab 4</div>
+  </div>
 </div>
 
 ### Spinners
@@ -2218,86 +2701,4 @@ sitemap_exclude: true
     <input type="radio" id="excellent51" name="rating" value="5" class="visually-hidden">
     <label for="excellent51" title="Excellent"><span class="visually-hidden">Excellent</span></label>
   </fieldset></form>
-</div>
-
-### Breadcrumb
-
-<h4 class="mt-3">No theme</h4>
-
-<div class="border border-tertiary p-3">
-  <nav aria-label="breadcrumb1">
-    <ol class="breadcrumb mb-0">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <nav aria-label="breadcrumb2">
-    <ol class="breadcrumb mb-0">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <nav aria-label="breadcrumb3">
-    <ol class="breadcrumb mb-0">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
-  <nav aria-label="breadcrumb4">
-    <ol class="breadcrumb mb-0" data-bs-theme="dark">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';" data-bs-theme="dark">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <nav aria-label="breadcrumb5">
-    <ol class="breadcrumb mb-0" data-bs-theme="light">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';" data-bs-theme="light">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
 </div>
