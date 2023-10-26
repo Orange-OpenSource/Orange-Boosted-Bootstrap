@@ -11,6 +11,14 @@ extra_js:
     async: true
 ---
 
+## Form color validation test
+
+<div class="d-flex gap-2 flex-column border border-tertiary p-3">
+  <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
+  <input type="color" class="form-control form-control-color is-valid" value="#a885d8" title="Choose your color">
+  <div><input type="color" class="form-control form-control-color is-invalid" value="#a885d8" title="Choose your color"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
+</div>
+
 {{< callout warning >}}
 We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we'd recommend either using the server-side option or the default browser validation method.
 {{< /callout >}}

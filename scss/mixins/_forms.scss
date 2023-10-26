@@ -49,7 +49,7 @@
 
       .form-control-color {
         @include form-validation-state-selector($state) {
-          width: add($form-color-width, $input-height-inner);
+          width: calc($form-color-width + $form-feedback-icon-size + .8125rem); // stylelint-disable-line function-disallowed-list
         }
       }
     }
