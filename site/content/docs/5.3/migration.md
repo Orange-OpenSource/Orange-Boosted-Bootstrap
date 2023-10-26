@@ -22,6 +22,15 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 - **Badge**
   - <span class="badge text-bg-warning">Warning</span> It has been fixed in several places in the documentation that badge background and text colors should be handled by using `.text-bg-{color}` classes and not only `.bg-{color}` classes. Please reflect these modifications into your websites.
 
+### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
+    <ul>
+      <li><code>--bs-back-to-top-link-icon-margin-left</code></li>
+    </ul>
+  </details>
+
 ## v5.3.2
 
 <hr class="mb-4">
@@ -1046,7 +1055,7 @@ If you need more details about the changes, please refer to the [v5.2.1 release]
 ### Components
 
 - **Back to top**
-  - <span class="badge text-bg-danger">Breaking</span> Back to top 'Label inside' variant was removed because not compliant with Orange Design System. Even if the rendering could still work, it is recommended to only use the versions presented in the documentation.
+  - <span class="badge text-bg-danger">Breaking</span> Back to top 'Label inside' variant was removed because not compliant with Orange Design System.
 
 - **Breadcrumb**
   - <span class="badge text-bg-success">New</span> Breadcrumb now has a dark variant.
