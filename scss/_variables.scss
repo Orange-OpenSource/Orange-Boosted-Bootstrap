@@ -2275,9 +2275,6 @@ $back-to-top-title-offset-right: add(100%, var(--#{$prefix}border-width)) !defau
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
 $back-to-top-title-bg-color:     $white !default;
 $back-to-top-icon:               var(--#{$prefix}chevron-icon) !default;
-// fusv-disable
-$back-to-top-icon-margin-left:   $spacer * .5 !default; // Deprecated in v5.3.3
-// fusv-enable
 $back-to-top-icon-width:         add(.5rem, 1px) !default;
 $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 // scss-docs-end back-to-top

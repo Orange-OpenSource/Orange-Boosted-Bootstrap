@@ -25,13 +25,6 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 ### CSS and Sass variables
 
 - <details class="mb-2">
-    <summary><span class="badge text-bg-danger">Breaking</span> Deprecated Sass variables:</summary>
-    <ul>
-      <li><code>$back-to-top-icon-margin-left</code></li>
-    </ul>
-  </details>
-
-- <details class="mb-2">
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-back-to-top-link-icon-margin-left</code></li>
