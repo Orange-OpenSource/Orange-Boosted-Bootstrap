@@ -49,7 +49,7 @@
 
       .form-control-color {
         @include form-validation-state-selector($state) {
-          width: calc(#{$form-color-width} + #{$input-height-inner-half} + subtract(#{$input-height-inner-quarter}, 2px)); // stylelint-disable-line function-disallowed-list
+          width: calc(#{$form-color-width} + #{$input-height-inner-half} + #{$input-height-inner-quarter} - 2px); // stylelint-disable-line function-disallowed-list
         }
       }
     }
