@@ -2191,9 +2191,9 @@ $btn-close-focus-shadow:        $btn-focus-box-shadow !default; // Deprecated in
 
 // Boosted mod
 $btn-close-hover-color:         $btn-close-color !default;
-$btn-close-active-color:        $primary !default;
-$btn-close-active-border-color: $gray-500 !default;
-$btn-close-disabled-color:      $gray-500 !default;
+$btn-close-active-color:        var(--#{$prefix}link-hover-color) !default;
+$btn-close-active-border-color: var(--#{$prefix}border-color-translucent) !default;
+$btn-close-disabled-color:      var(--#{$prefix}disabled-color) !default;
 
 $btn-close-icon-size:           1rem auto !default;
 $btn-close-padding-sm:          subtract($btn-icon-padding-x, $spacer * .25) !default;
