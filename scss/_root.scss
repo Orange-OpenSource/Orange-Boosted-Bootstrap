@@ -198,6 +198,12 @@
       --#{$prefix}#{$color}-border-subtle: #{$value};
     }
 
+    // Boosted mod
+    @each $icon, $svg in $svg-as-custom-props-dark {
+      --#{$prefix}#{$icon}-icon: #{escape-svg($svg)};
+    }
+    // End mod
+
     --#{$prefix}heading-color: #{$headings-color-dark};
 
     --#{$prefix}link-color: #{$link-color-dark};
