@@ -319,7 +319,7 @@ The classes can be used together with utilities to create responsive floated ima
 
 {{< example >}}
 <div class="clearfix">
-  {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-3 ms-md-3" text="Responsive floated image" >}}
+  {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-3 ms-md-3" text="Responsive floated image" color="#999" >}}
 
   <p>
     A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
