@@ -2,7 +2,7 @@
 
 // List Groups
 
-// Boosted mod: only add an icon on the right instead of changing the cackground-color
+// Boosted mod: only add an icon on the right instead of changing the background-color
 // scss-docs-start list-group-mixin
 @mixin list-group-item-variant($state, $color, $icon) {
   .list-group-item-#{$state} {
