@@ -1626,13 +1626,17 @@ $dropdown-dark-header-color:        $white !default; // Boosted mod
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              null !default;
-$pagination-padding-x:              null !default;
+$pagination-padding-y:              null !default; // Boosted mod: instead of `.375rem`
+$pagination-padding-x:              null !default; // Boosted mod: instead of `.75rem`
+// Boosted mod: no $pagination-padding-y-sm
+// Boosted mod: no $pagination-padding-x-sm
+// Boosted mod: no $pagination-padding-y-lg
+// Boosted mod: no $pagination-padding-x-lg
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  null !default;
-$pagination-bg:                     var(--#{$prefix}body-bg) !default;
+$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-bg:                     transparent !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
@@ -1640,24 +1644,27 @@ $pagination-margin-start:           0 !default; // Boosted mod: instead of `calc
 $pagination-margin-x-first-last:    $spacer * .5 !default; // Boosted mod
 $pagination-border-color:           transparent !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
+// Deprecated in v5.3.3
+// fusv-disable
 $pagination-focus-color:            null !default; // Boosted mod
 $pagination-focus-bg:               null !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 $pagination-focus-box-shadow:       0 0 0 $focus-visible-inner-width var(--#{$prefix}focus-visible-inner-color) !default; // Boosted mod: no `$focus-ring-box-shadow`
 $pagination-focus-outline:          null !default; // Boosted mod
+// fusv-enable
 
-$pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod
-$pagination-hover-bg:               null !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
-$pagination-hover-border-color:     $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
+$pagination-hover-color:            var(--#{$prefix}link-color) !default; // Boosted mod: instead of `var(--#{$prefix}link-hover-color)`
+$pagination-hover-bg:               var(--#{$prefix}active-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$pagination-hover-border-color:     $pagination-hover-bg !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
-$pagination-active-color:           $white !default;
-$pagination-active-bg:              $black !default;
+$pagination-active-color:           var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `$component-active-color`
+$pagination-active-bg:              var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `$component-active-bg`
 $pagination-active-border-color:    $pagination-active-bg !default; // Boosted mod: instead of `$component-active-bg`
 
-$pagination-disabled-color:         $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$pagination-disabled-bg:            $white !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
-$pagination-disabled-border-color:  $pagination-disabled-color !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
+$pagination-disabled-color:         var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$pagination-disabled-bg:            transparent !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
+$pagination-disabled-border-color:  transparent !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 
-$pagination-transition:             $transition-focus !default;
+$pagination-transition:             $transition-focus !default; // Boosted mod: no color, bg-color, border-color, box-shadow
 
 // Boosted mod: no $pagination-border-radius-sm
 // Boosted mod: no $pagination-border-radius-lg
@@ -1670,7 +1677,7 @@ $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
 
 $pagination-active-item-bg:         $primary !default;
-$pagination-active-item-color:      color-contrast($pagination-active-item-bg) !default;
+$pagination-active-item-color:      $black !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
 // End mod
 // scss-docs-end pagination-variables
