@@ -22,7 +22,41 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 - **Badge**
   - <span class="badge text-bg-warning">Warning</span> It has been fixed in several places in the documentation that badge background and text colors should be handled by using `.text-bg-{color}` classes and not only `.bg-{color}` classes. Please reflect these modifications into your websites.
 
+- **List group**
+  - <span class="badge bg-success">New</span> The `.list-group-item-{info/success/warning/danger}` are now branded. Please check that is doesn't break any of your design.
+
 ### CSS and Sass variables
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> CSS variables:</summary>
+    <ul>
+      <li><code>--bs-list-group-font-weight</code></li>
+      <li><code>--bs-list-group-item-icon-margin-x</code></li>
+      <li><code>--bs-list-group-item-icon-size</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
+    <ul>
+      <li><code>$background-colors</code></li>
+      <li><code>$list-group-dark-color</code></li>
+      <li><code>$list-group-dark-bg</code></li>
+      <li><code>$list-group-dark-hover-bg</code></li>
+      <li><code>$list-group-dark-border-color</code></li>
+      <li><code>$list-group-dark-action-color</code></li>
+      <li><code>$list-group-dark-action-hover-color</code></li>
+      <li><code>$list-group-dark-action-active-color</code></li>
+      <li><code>$list-group-dark-action-active-bg</code></li>
+      <li><code>$list-group-dark-disabled-color</code></li>
+      <li><code>$list-group-dark-disabled-bg</code></li>
+      <li><code>$list-group-dark-active-color</code></li>
+      <li><code>$list-group-dark-active-bg</code></li>
+      <li><code>$list-group-dark-active-border-color</code></li>
+      <li><code>$list-group-font-weight</code></li>
+      <li><code>$list-group-item-icon-size</code></li>
+    </ul>
+  </details>
 
 - <details class="mb-2">
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
@@ -242,8 +276,6 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
 
 - **List group**
   - List group item variants are now styled via CSS variables.
-
-  - <span class="badge text-bg-warning">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
 
 - **Modal**
   - <span class="badge text-bg-success">New</span> A tooltip was added on close buttons of modals. Please add this tooltip in your websites, by adding the attributes `data-bs-toggle`, `data-bs-placement` and `data-bs-title`.

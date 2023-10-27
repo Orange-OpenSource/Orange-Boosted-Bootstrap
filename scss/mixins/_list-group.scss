@@ -2,21 +2,31 @@
 
 // List Groups
 
+// Boosted mod: only add an icon on the right instead of changing the cackground-color
 // scss-docs-start list-group-mixin
-@mixin list-group-item-variant($state, $background, $color) {
+@mixin list-group-item-variant($state, $color, $icon) {
   .list-group-item-#{$state} {
-    color: $color;
-    background-color: $background;
+    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) + var(--#{$prefix}list-group-item-icon-size) * 2); // stylelint-disable-line function-disallowed-list
 
-    &.list-group-item-action {
-      // Boosted mod: no &:focus
-      &:hover {
-        color: $color;
-        background-color: if($color == $white, shade-color($background, 10%), tint-color($background, 10%)); // Boosted mod
-      }
+    &::after {
+      position: absolute;
+      top: add(var(--#{$prefix}list-group-item-padding-y), 1px);
+      right: var(--#{$prefix}list-group-item-icon-margin-x);
+      width: var(--#{$prefix}list-group-item-icon-size);
+      height: var(--#{$prefix}list-group-item-icon-size);
+      content: "";
+      background-color: var(--#{$prefix}link-color); // Find a better var once we fully implement dark mode ?
+      -webkit-mask: no-repeat $icon; // stylelint-disable-line property-no-vendor-prefix
+      mask: no-repeat $icon;
+    }
 
-      // Boosted mod: no variant for active state
+    &.disabled::after,
+    &:disabled::after,
+    &.list-group-item-action:active::after,
+    &.active::after {
+      background-color: currentcolor;
     }
   }
 }
 // scss-docs-end list-group-mixin
+// End mod

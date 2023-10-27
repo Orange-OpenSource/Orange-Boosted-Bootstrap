@@ -6,11 +6,14 @@
   // scss-docs-start list-group-css-vars
   --#{$prefix}list-group-color: #{$list-group-color};
   --#{$prefix}list-group-bg: #{$list-group-bg};
+  --#{$prefix}list-group-font-weight: #{$list-group-font-weight}; // Boosted mod
   --#{$prefix}list-group-border-color: #{$list-group-border-color};
   --#{$prefix}list-group-border-width: #{$list-group-border-width};
   --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
   --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
+  --#{$prefix}list-group-item-icon-margin-x: #{subtract(var(--#{$prefix}list-group-item-padding-x), 5px)}; // Boosted mod
+  --#{$prefix}list-group-item-icon-size: #{$list-group-item-icon-size}; // Boosted mod
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
   --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
@@ -30,6 +33,12 @@
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
   @include border-radius(var(--#{$prefix}list-group-border-radius));
+
+  // Boosted mod: specific badge for list-group
+  .badge {
+    --#{$prefix}badge-padding: .125rem .375rem;
+    --#{$prefix}badge-font-size: .875rem;
+  }
 }
 
 .list-group-numbered {
@@ -37,6 +46,8 @@
   counter-reset: section;
 
   > .list-group-item::before {
+    margin-right: subtract(var(--#{$prefix}list-group-item-padding-x), .0625rem); // Boosted mod
+
     // Increments only this instance of the section counter
     content: counters(section, ".") ". ";
     counter-increment: section;
@@ -64,8 +75,7 @@
 
   &:active {
     color: var(--#{$prefix}list-group-action-active-color);
-    background-color: var(--#{$prefix}list-group-action-active-bg);
-    border-color: var(--#{$prefix}list-group-active-border-color); // Boosted mod
+    background: var(--#{$prefix}list-group-action-active-bg); // Boosted mod: bg over bg-color
   }
 }
 
@@ -76,17 +86,20 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x);
+  padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x) add(var(--#{$prefix}list-group-item-padding-y), 1px); // Boosted mod
+  font-weight: var(--#{$prefix}list-group-font-weight); // Boosted mod
   color: var(--#{$prefix}list-group-color);
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}list-group-bg);
   border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
+  border-bottom-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
 
   &:first-child {
     @include border-top-radius(inherit);
   }
 
   &:last-child {
+    border-bottom-width: var(--#{$prefix}list-group-border-width); // Boosted mod
     @include border-bottom-radius(inherit);
   }
 
@@ -101,7 +114,7 @@
   &.active {
     z-index: 2; // Place active items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-active-color);
-    background-color: var(--#{$prefix}list-group-active-bg);
+    background: var(--#{$prefix}list-group-active-bg); // Boosted mod: bg over bg-color
     border-color: var(--#{$prefix}list-group-active-border-color);
   }
 
@@ -109,9 +122,9 @@
   & + .list-group-item {
     border-top-width: 0;
 
-    &.active {
-      margin-top: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
-      border-top-width: var(--#{$prefix}list-group-border-width);
+    &.active { // Boosted mod: border-width of 1px instead of 2px.
+      margin-top: calc(-1 * var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
+      border-top-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -142,12 +155,18 @@
       flex-direction: row;
 
       > .list-group-item {
+        // Boosted mod: remove default border-width
+        border-right-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
+        border-bottom-width: var(--#{$prefix}list-group-border-width);
+        // End mod
+
         &:first-child {
           @include border-bottom-start-radius(var(--#{$prefix}list-group-border-radius));
           @include border-top-end-radius(0);
         }
 
         &:last-child {
+          border-right-width: var(--#{$prefix}list-group-border-width); // Boosted mod
           @include border-top-end-radius(var(--#{$prefix}list-group-border-radius));
           @include border-bottom-start-radius(0);
         }
@@ -160,9 +179,9 @@
           border-top-width: var(--#{$prefix}list-group-border-width);
           border-left-width: 0;
 
-          &.active {
-            margin-left: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
-            border-left-width: var(--#{$prefix}list-group-border-width);
+          &.active { // Boosted mod: border-width between is of 1px instead of 2px
+            margin-left: calc(-1 * var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
+            border-left-width: calc(var(--#{$prefix}list-group-border-width) / 2); // stylelint-disable-line function-disallowed-list
           }
         }
       }
@@ -177,10 +196,13 @@
 // useful within other components (e.g., cards).
 
 .list-group-flush {
+  // stylelint-disable-next-line function-disallowed-list
+  border-top: calc(var(--#{$prefix}list-group-border-width) / 2) solid var(--#{$prefix}list-group-border-color); // Boosted mod
   @include border-radius(0);
 
   > .list-group-item {
-    border-width: 0 0 var(--#{$prefix}list-group-border-width);
+    // stylelint-disable-next-line function-disallowed-list
+    border-width: 0 0 calc(var(--#{$prefix}list-group-border-width) / 2); // Boosted mod: border of 1px
 
     &:last-child {
       border-bottom-width: 0;
@@ -189,7 +211,7 @@
 }
 
 //
-// Boosted mod: supporting colours only + ensure contrasts
+// Boosted mod: the variants apply contextual icons when needed
 //
 
 // scss-docs-start list-group-modifiers
@@ -197,18 +219,39 @@
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
-@each $state, $value in $background-colors { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
+@each $state, $value in $alert-colors { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
   .list-group-item-#{$state} {
-    --#{$prefix}list-group-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}#{state}-text)`
-    --#{$prefix}list-group-bg: #{$value}; // Boosted mod: instead of `var(--#{$prefix}#{$state}-bg-subtle)`
+    // Boosted mod: no `--#{$prefix}list-group-color`
+    // Boosted mod: no `--#{$prefix}list-group-bg`
     // Boosted mod: no `--#{$prefix}list-group-border-color`
-    --#{$prefix}list-group-action-hover-color: #{color-contrast($value)}; // Boosted mod: instead of `var(--#{$prefix}emphasis-color)`;
-    --#{$prefix}list-group-action-hover-bg: #{if(color-contrast($value) == $white, shade-color($value, 10%), tint-color($value, 10%))}; // Boosted mod: instead of `var(--#{$prefix}#{state}-border-subtle)`;
+    // Boosted mod: no `--#{$prefix}list-group-action-hover-color`
+    // Boosted mod: no `--#{$prefix}list-group-action-hover-bg`
     // Boosted mod: no `--#{$prefix}list-group-action-active-color`
     // Boosted mod: no `--#{$prefix}list-group-action-active-bg`
     // Boosted mod: no `--#{$prefix}list-group-active-color`
     // Boosted mod: no `--#{$prefix}list-group-active-bg`
     // Boosted mod: no `--#{$prefix}list-group-active-border-color`
+
+    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) + var(--#{$prefix}list-group-item-icon-size) * 2); // stylelint-disable-line function-disallowed-list
+
+    &::after {
+      position: absolute;
+      top: add(var(--#{$prefix}list-group-item-padding-y), 1px);
+      right: var(--#{$prefix}list-group-item-icon-margin-x);
+      width: var(--#{$prefix}list-group-item-icon-size);
+      height: var(--#{$prefix}list-group-item-icon-size);
+      content: "";
+      background-color: var(--#{$prefix}link-color); // Find a better var once we fully implement dark mode ?
+      -webkit-mask: no-repeat map-get($alert-icons, $state); // stylelint-disable-line property-no-vendor-prefix
+      mask: no-repeat map-get($alert-icons, $state);
+    }
+
+    &.disabled::after,
+    &:disabled::after,
+    &.list-group-item-action:active::after,
+    &.active::after {
+      background-color: currentcolor;
+    }
   }
 }
 // scss-docs-end list-group-modifiers
@@ -221,6 +264,7 @@
   --#{$prefix}list-group-action-color: #{$list-group-dark-action-color}; // Boosted mod
   --#{$prefix}list-group-action-hover-color: #{$list-group-dark-action-hover-color}; // Boosted mod
   --#{$prefix}list-group-action-active-color: #{$list-group-dark-action-active-color}; // Boosted mod
+  --#{$prefix}list-group-action-hover-bg: #{$list-group-dark-hover-bg}; // Boosted mod
   --#{$prefix}list-group-action-active-bg: #{$list-group-dark-action-active-bg}; // Boosted mod
   --#{$prefix}list-group-disabled-color: #{$list-group-dark-disabled-color}; // Boosted mod
   --#{$prefix}list-group-disabled-bg: #{$list-group-dark-disabled-bg}; // Boosted mod
@@ -228,5 +272,10 @@
   --#{$prefix}list-group-active-bg: #{$list-group-dark-active-bg}; // Boosted mod
   --#{$prefix}list-group-active-border-color: #{$list-group-dark-active-border-color}; // Boosted mod
   // scss-docs-end list-group-dark-css-vars
+}
+
+// Specific padding to be aligned in card component
+.card .list-group {
+  --#{$prefix}list-group-item-padding-x: #{var(--#{$prefix}card-spacer-x)};
 }
 // End mod
