@@ -14,7 +14,7 @@ Use the included `.figure`, `.figure-img` and `.figure-caption` classes to provi
 
 {{< example >}}
 <figure class="figure">
-  {{< placeholder width="400" height="300" class="figure-img img-fluid" >}}
+  {{< placeholder width="400" height="300" class="figure-img img-fluid" color="#999" >}}
   <figcaption class="figure-caption">A caption for the above image.</figcaption>
 </figure>
 {{< /example >}}
@@ -23,7 +23,7 @@ Aligning the figure's caption is easy with our [text utilities]({{< docsref "/ut
 
 {{< example >}}
 <figure class="figure">
-  {{< placeholder width="400" height="300" class="figure-img img-fluid" >}}
+  {{< placeholder width="400" height="300" class="figure-img img-fluid" color="#999" >}}
   <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
 </figure>
 {{< /example >}}
