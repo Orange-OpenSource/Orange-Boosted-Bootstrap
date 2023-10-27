@@ -1710,15 +1710,15 @@ $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-bottom * .5 !default; // Boosted mod
 $card-cap-padding-x:                $card-spacer-x !default;
-$card-cap-bg:                       $black !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
-$card-cap-color:                    $white !default; // Boosted mod: instead of `null`
+$card-cap-bg:                       var(--#{$prefix}highlight-bg) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}body-color-rgb), .03)`
+$card-cap-color:                    var(--#{$prefix}highlight-color) !default; // Boosted mod: instead of `null`
 $card-cap-font-weight:              $font-weight-bold !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
-$card-footer-color:                 $gray-700 !default; // Boosted mod
+$card-footer-color:                 var(--#{$prefix}placeholder-color) !default; // Boosted mod
 // scss-docs-end card-variables
 
 // Accordion
