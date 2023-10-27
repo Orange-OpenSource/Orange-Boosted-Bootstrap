@@ -1821,6 +1821,163 @@ sitemap_exclude: true
   </div>
 </div>
 
+### Pagination
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example icons">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example complete">
+    <ul class="pagination mb-0">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link disabled">3</a></li>
+      <li class="page-item disabled"><a class="page-link">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav aria-label="Page navigation example2">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example icons2">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example complete2">
+    <ul class="pagination mb-0">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link disabled">3</a></li>
+      <li class="page-item disabled"><a class="page-link">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav aria-label="Page navigation example3">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example icons3">
+    <ul class="pagination mb-0">
+      <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example complete3">
+    <ul class="pagination mb-0">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link disabled">3</a></li>
+      <li class="page-item disabled"><a class="page-link">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+  <nav aria-label="Page navigation example4">
+    <ul class="pagination mb-0" data-bs-theme="dark">
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example icons4">
+    <ul class="pagination mb-0" data-bs-theme="dark">
+      <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example complete4">
+    <ul class="pagination mb-0" data-bs-theme="dark">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link disabled">3</a></li>
+      <li class="page-item disabled"><a class="page-link">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+  <nav aria-label="Page navigation example5">
+    <ul class="pagination mb-0" data-bs-theme="light">
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example icons5">
+    <ul class="pagination mb-0" data-bs-theme="light">
+      <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
+      <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example complete5">
+    <ul class="pagination mb-0" data-bs-theme="light">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link disabled">3</a></li>
+      <li class="page-item disabled"><a class="page-link">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 ### Popovers
 
 <h4 class="mt-3">No theme</h4>
