@@ -10,7 +10,7 @@
 {{- $aria_label := .Get "aria_label" -}}
 {{- $input := .Inner -}}
 
-<nav class="navbar navbar-expand-lg bg-dark supra" aria-label="{{ $aria_label }}">
+<nav class="navbar navbar-expand-lg supra" data-bs-theme="dark" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -40,7 +40,7 @@
           </svg>
           <span class="visually-hidden">Basket</span>
           <span class="position-relative align-self-start">
-            <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+            <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>

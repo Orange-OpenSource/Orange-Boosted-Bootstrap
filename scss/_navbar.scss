@@ -10,6 +10,7 @@
   --#{$prefix}navbar-font-weight: #{$navbar-font-weight}; // Boosted mod
   --#{$prefix}navbar-border-width: #{$navbar-border-width}; // Boosted mod
   --#{$prefix}navbar-border-color: #{$navbar-border-color}; // Boosted mod
+  --#{$prefix}navbar-bg: #{$navbar-light-bg}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-light-color};
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
@@ -37,7 +38,8 @@
   --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
   --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size-xs}; // Boosted mod
   --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg-small)}; // Boosted mod
-  --#{$prefix}navbar-toggler-icon-filter: none; // Boosted mod
+  --#{$prefix}navbar-toggler-icon-color: #{$navbar-light-icon-color}; // Boosted mod
+  --#{$prefix}navbar-toggler-icon-hover-color: #{$navbar-light-icon-hover-color}; // Boosted mod
   --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
   --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
@@ -55,7 +57,7 @@
   box-shadow: inset 0 calc(-1 * var(--#{$prefix}navbar-border-width)) 0 var(--#{$prefix}navbar-border-color); // stylelint-disable-line function-disallowed-list
   @include transition($navbar-transition);
   // End mod
-  @include gradient-bg();
+  @include gradient-bg(var(--#{$prefix}navbar-bg)); // Boosted mod: instead of `@include gradient-bg()`
 
   // Boosted mod: Difference between xs and md breakpoints
   // scss-docs-start orange-navbar-css-vars
@@ -322,7 +324,9 @@
   // Boosted mod: close icon when opened & color state
   &:hover,
   &:active {
-    --#{$prefix}navbar-toggler-icon-filter: #{$orange-filter};
+    .navbar-toggler-icon {
+      background-color: var(--#{$prefix}navbar-toggler-icon-hover-color);
+    }
   }
 
   &[aria-expanded="true"] {
@@ -342,11 +346,8 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  background-image: var(--#{$prefix}navbar-toggler-icon-bg);
-  filter: var(--#{$prefix}navbar-toggler-icon-filter); // Boosted mod
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-color: var(--#{$prefix}navbar-toggler-icon-color); // Boosted mod
+  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // Boosted mod: instead of background
 }
 
 .navbar-nav-scroll {
@@ -509,8 +510,8 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
-.navbar-dark,
-.navbar[data-bs-theme="dark"] {
+// Boosted mod: no data-bs-theme handling in here.
+.navbar-dark {
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
@@ -520,7 +521,6 @@
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   // Boosted mod: No --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)}; since we handle the variant with filter
-  --#{$prefix}navbar-toggler-icon-filter: #{$invert-filter}; // Boosted mod
 }
 
 // Boosted mod: no `@if enable-dark-mode` since Boosted doesn't have any dark mode for now

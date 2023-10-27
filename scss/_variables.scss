@@ -1498,14 +1498,16 @@ $navbar-toggler-focus-width:          null !default; // Boosted mod
 $navbar-toggler-transition:           $transition-focus !default; // Boosted mod
 
 $navbar-light-color:                  var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .65)`
-$navbar-light-hover-color:            $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
-$navbar-light-active-color:           $accessible-orange !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
+$navbar-light-bg:                     var(--#{$prefix}highlight-color) !default; // Boosted mod
+$navbar-light-hover-color:            var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .8)`
+$navbar-light-active-color:           var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), 1)`
 $navbar-light-disabled-color:         var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .3)`
-// Boosted mod: no $navbar-light-icon-color
+$navbar-light-icon-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `rgba($body-color, .75)`
+$navbar-light-icon-hover-color:       var(--#{$prefix}link-hover-color) !default; // Boosted mod
 $navbar-light-toggler-icon-bg:        $burger-icon !default; // Boosted mod: instead of inline SVG
 $navbar-light-toggler-icon-bg-small:  $burger-icon-small !default; // Boosted mod: slightly different burger icon for small breakpoints
 $navbar-light-toggler-border-color:   null !default; // Boosted mod: instead of `rgba(var(--#{$prefix}emphasis-color-rgb), .15)`
-$navbar-light-brand-color:            $navbar-light-active-color !default;
+$navbar-light-brand-color:            $navbar-light-color !default; // Boosted mod: instead of `$navbar-light-active-color`
 $navbar-light-brand-hover-color:      $navbar-light-active-color !default;
 // scss-docs-end navbar-variables
 
@@ -1519,7 +1521,7 @@ $navbar-brand-logo-transition:              width $navbar-transition-duration $n
 $navbar-active-transition:                  bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 
 $navbar-border-width:                       calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
-$navbar-border-color:                       $gray-500 !default;
+$navbar-border-color:                       var(--#{$prefix}border-color-translucent) !default;
 
 $navbar-brand-margin-y-xs:                  $spacer * .5 !default;
 $navbar-brand-logo-size-xs:                 $spacer * 1.5 !default;
