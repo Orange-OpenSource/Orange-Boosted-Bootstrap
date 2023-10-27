@@ -35,7 +35,7 @@
       {{- if $show_title }}%3Ctitle%3E{{ $title }}%3C/title%3E{{ end -}}
       %3Crect%20width='100%25'%20height='100%25'%20fill='{{ replace $background "#" "%23" }}'%3E%3C/rect%3E
       {{- if $show_text }}%3Ctext%20x='50%25'%20y='50%25'%20fill='{{ replace $color "#" "%23" }}'%20dy='.3em'%3E{{ $text }}%3C/text%3E{{ end -}}
-    %3C/svg%3E">
+    %3C/svg%3E"> <!-- Boosted mod: filter used to handle light/dark mode switch -->
 {{- else -}}
   <svg class="bd-placeholder-img{{ with $class }} {{ . }}{{ end }}" width="{{ $width }}" height="{{ $height }}" xmlns="http://www.w3.org/2000/svg"{{ if (or $show_title $show_text) }} role="img" aria-label="{{ if $show_title }}{{ $title }}{{ if $show_text }}: {{ end }}{{ end }}{{ if ($show_text) }}{{ $text }}{{ end }}"{{ else }} aria-hidden="true"{{ end }} preserveAspectRatio="xMidYMid slice" focusable="false">
     {{- if $show_title }}<title>{{ $title }}</title>{{ end -}}
