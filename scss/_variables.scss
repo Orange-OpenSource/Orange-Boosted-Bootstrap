@@ -2114,7 +2114,8 @@ $carousel-indicators-margin-bottom:     $spacer !default;
 // End mod
 
 $carousel-caption-width:             70% !default;
-$carousel-caption-color:             $black !default;
+$carousel-caption-color:             var(--#{$prefix}body-color) !default;
+$carousel-caption-bg:                var(--#{$prefix}body-bg) !default; // Boosted mod
 $carousel-caption-padding-y:         $spacer !default;
 $carousel-caption-padding-x:         $spacer !default; // Boosted mod
 $carousel-caption-spacer:            $spacer * 3 !default;
@@ -2123,6 +2124,7 @@ $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
 $carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$prefix}chevron-icon) !default;
+$carousel-control-icon-color:        $black !default; // Boosted mod
 $carousel-control-icon-active-bg:    $component-active-bg !default;
 
 $carousel-control-pause-indicators-spacing: 10px !default;
