@@ -444,6 +444,83 @@ sitemap_exclude: true
   </div>
 </div>
 
+### Back to top
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
+    <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Icon only back to top example" class="back-to-top position-static">
+    <a href="#" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav aria-label="Standard back to top example2" class="back-to-top position-static ps-5 ms-5">
+    <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Icon only back to top example2" class="back-to-top position-static">
+    <a href="#" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav aria-label="Standard back to top example3" class="back-to-top position-static ps-5 ms-5">
+    <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Icon only back to top example3" class="back-to-top position-static">
+    <a href="#" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <nav aria-label="Standard back to top example4" class="back-to-top position-static ps-5 ms-5" data-bs-theme="dark">
+    <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Icon only back to top example4" class="back-to-top position-static" data-bs-theme="dark">
+    <a href="#" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <nav aria-label="Standard back to top example5" class="back-to-top position-static ps-5 ms-5" data-bs-theme="light">
+    <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+  <nav aria-label="Icon only back to top example5" class="back-to-top position-static" data-bs-theme="light">
+    <a href="#" class="back-to-top-link position-static btn btn-icon btn-outline-secondary" title="Back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
+</div>
+
 ### Breadcrumb
 
 <h4 class="mt-3">No theme</h4>
@@ -3273,7 +3350,7 @@ sitemap_exclude: true
   </div>
 </div>
 
-### Form validation
+### Validation
 
 <h4 class="mt-3">No theme</h4>
 
