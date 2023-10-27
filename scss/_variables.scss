@@ -796,7 +796,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        700 !default;
 $headings-line-height:        $h6-line-height !default;
-$headings-color:              inherit !default;
+$headings-color:              $black !default; // Boosted mod: instead of `inherit`
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -1816,7 +1816,7 @@ $popover-box-shadow:                var(--#{$prefix}box-shadow) !default;
 $popover-header-font-size:          $font-size-lg !default; // Boosted mod: instead of `$font-size-base`
 $popover-header-line-height:        1.11 !default; // Boosted mod
 $popover-header-bg:                 $popover-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
-$popover-header-color:              $headings-color !default;
+$popover-header-color:              var(--#{$prefix}heading-color) !default; // Boosted mod: instead of `$headings-color`
 $popover-header-padding-top:        $popover-padding-y !default; // Boosted mod
 $popover-header-padding-bottom:     map-get($spacers, 2) !default; // Boosted mod
 $popover-header-padding-y:          initial !default; // Boosted mod: instead of `.5rem`
