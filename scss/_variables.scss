@@ -1366,6 +1366,7 @@ $form-feedback-icon-valid:          var(--#{$prefix}success-icon) !default;
 $form-feedback-icon-invalid:        var(--#{$prefix}error-icon) !default;
 $form-feedback-icon-size:           add($spacer * .25, $spacer * .5) !default; // Boosted mod
 $form-feedback-line-height:         $line-height-sm !default; // Boosted mod
+$form-feedback-color:               var(--#{$prefix}body-color) !default; // Boosted mod
 // scss-docs-end form-feedback-variables
 
 // scss-docs-start form-validation-colors
