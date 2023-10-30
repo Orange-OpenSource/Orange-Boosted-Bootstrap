@@ -46,6 +46,12 @@
   list-style-type: none;
   counter-reset: section;
 
+  // Boosted mod
+  > .list-group-item {
+    display: flex;
+  }
+  // End mod
+
   > .list-group-item::before {
     margin-right: $list-group-numbered-item-margin-end; // Boosted mod
 
