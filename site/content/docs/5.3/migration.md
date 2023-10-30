@@ -39,19 +39,7 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$list-group-dark-color</code></li>
-      <li><code>$list-group-dark-bg</code></li>
-      <li><code>$list-group-dark-hover-bg</code></li>
-      <li><code>$list-group-dark-border-color</code></li>
-      <li><code>$list-group-dark-action-color</code></li>
-      <li><code>$list-group-dark-action-hover-color</code></li>
-      <li><code>$list-group-dark-action-active-color</code></li>
-      <li><code>$list-group-dark-action-active-bg</code></li>
-      <li><code>$list-group-dark-disabled-color</code></li>
-      <li><code>$list-group-dark-disabled-bg</code></li>
-      <li><code>$list-group-dark-active-color</code></li>
-      <li><code>$list-group-dark-active-bg</code></li>
-      <li><code>$list-group-dark-active-border-color</code></li>
+      <li><code>$list-group-divider-size</code></li>
       <li><code>$list-group-font-weight</code></li>
       <li><code>$list-group-item-icon-margin-x</code></li>
       <li><code>$list-group-item-icon-size</code></li>

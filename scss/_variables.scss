@@ -2019,38 +2019,37 @@ $list-group-active-border-color:    $list-group-border-color !default; // Booste
 $list-group-disabled-color:         $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $list-group-disabled-bg:            $list-group-bg !default;
 
-// Boosted mod
 $list-group-action-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $list-group-action-hover-color:     var(--#{$prefix}emphasis-color) !default;
 
 $list-group-action-active-color:    $list-group-active-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 
+// Boosted mod
 $list-group-icons: (
   "success": var(--#{$prefix}success-icon),
   "info":    escape-svg($info-icon),
   "warning": escape-svg($warning-icon),
   "danger":  var(--#{$prefix}error-icon)
 ) !default;
+// End mod
+// scss-docs-end list-group-variables
 
 // scss-docs-start list-group-dark-variables
-// Boosted mod
-$list-group-dark-color:               $white !default;
-$list-group-dark-bg:                  $black !default;
-$list-group-dark-hover-bg:            $gray-900 !default;
-$list-group-dark-border-color:        $gray-700 !default;
-$list-group-dark-action-color:        $white !default;
-$list-group-dark-action-hover-color:  $white !default;
-$list-group-dark-action-active-color: $white !default;
-$list-group-dark-action-active-bg:    no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-700 4px) !default;
-$list-group-dark-disabled-color:      $gray-700 !default;
-$list-group-dark-disabled-bg:         transparent !default;
-$list-group-dark-active-color:        $white !default;
-$list-group-dark-active-bg:           no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-700 4px) !default;
-$list-group-dark-active-border-color: $gray-700 !default;
-// End mod
+$list-group-dark-color:               $white !default; // Boosted mod
+$list-group-dark-bg:                  $black !default; // Boosted mod
+$list-group-dark-hover-bg:            $gray-900 !default; // Boosted mod
+$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
+$list-group-dark-action-color:        $white !default; // Boosted mod
+$list-group-dark-action-hover-color:  $white !default; // Boosted mod
+$list-group-dark-action-active-color: $white !default; // Boosted mod
+$list-group-dark-action-active-bg:    no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-700 4px) !default; // Boosted mod
+$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
+$list-group-dark-disabled-bg:         transparent !default; // Boosted mod
+$list-group-dark-active-color:        $white !default; // Boosted mod
+$list-group-dark-active-bg:           no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-700 4px) !default; // Boosted mod
+$list-group-dark-active-border-color: $gray-700 !default; // Boosted mod
 // scss-docs-end list-group-dark-variables
-// scss-docs-end list-group-variables
 
 // Image thumbnails
 
