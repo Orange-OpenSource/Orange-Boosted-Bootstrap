@@ -23,7 +23,9 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
   - <span class="badge text-bg-warning">Warning</span> It has been fixed in several places in the documentation that badge background and text colors should be handled by using `.text-bg-{color}` classes and not only `.bg-{color}` classes. Please reflect these modifications into your websites.
 
 - **List group**
-  - <span class="badge bg-success">New</span> The `.list-group-item-{info|success|warning|danger}` are now branded. Please check that is doesn't break any of your design.
+  - <span class="badge text-bg-success">New</span> The list group variants using contextual classes are now branded correctly. Please check that it doesn't break your design.
+  - <span class="badge text-bg-success">New</span> List group with badges has been added to Orange Design System specifications and can now be used in your websites.
+  - <span class="badge text-bg-warning">Warning</span> List group font weight is now bold by default. Please check that it doesn't break your design.
 
 ### CSS and Sass variables
 

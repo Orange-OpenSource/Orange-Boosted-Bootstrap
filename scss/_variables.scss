@@ -1995,35 +1995,35 @@ $progress-height-xs:                $spacer * .25 !default;
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-font-weight:            $font-weight-bold !default; // Boosted mod
-$list-group-color:                  var(--#{$prefix}body-color) !default;
-$list-group-bg:                     var(--#{$prefix}body-bg) !default;
-$list-group-border-color:           var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
-$list-group-border-width:           var(--#{$prefix}border-width) !default;
-$list-group-border-radius:          var(--#{$prefix}border-radius) !default;
+$list-group-font-weight:              $font-weight-bold !default; // Boosted mod
+$list-group-color:                    var(--#{$prefix}body-color) !default;
+$list-group-bg:                       var(--#{$prefix}body-bg) !default;
+$list-group-border-color:             var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
+$list-group-border-width:             var(--#{$prefix}border-width) !default;
+$list-group-border-radius:            var(--#{$prefix}border-radius) !default;
 
-$list-group-divider-size:           map-get($border-widths, 1) !default;
+$list-group-divider-size:             map-get($border-widths, 1) !default;
 
-$list-group-item-padding-y:         10px !default; // Boosted mod: instead of $spacer * .5
-$list-group-item-padding-x:         13px !default; // Boosted mod: instead of $spacer
-$list-group-item-icon-size:         $spacer * .85 !default; // Boosted mod
-$list-group-item-icon-margin-x:     subtract(var(--#{$prefix}list-group-item-padding-x), 5px) !default; // Boosted mod
+$list-group-item-padding-y:           10px !default; // Boosted mod: instead of $spacer * .5
+$list-group-item-padding-x:           13px !default; // Boosted mod: instead of $spacer
+$list-group-item-icon-size:           $spacer * .85 !default; // Boosted mod
+$list-group-item-icon-margin-x:       subtract(var(--#{$prefix}list-group-item-padding-x), 5px) !default; // Boosted mod
 
 $list-group-numbered-item-margin-end: 14px !default; // Boosted mod
 
-$list-group-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
-$list-group-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
-$list-group-active-bg:              no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-400 4px) !default; // Boosted mod: instead of `$component-active-bg`
-$list-group-active-border-color:    $list-group-border-color !default; // Boosted mod: instead of `$list-group-active-bg`
+$list-group-hover-bg:                 var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
+$list-group-active-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
+$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-400 4px) !default; // Boosted mod: instead of `$component-active-bg`
+$list-group-active-border-color:      $list-group-border-color !default; // Boosted mod: instead of `$list-group-active-bg`
 
-$list-group-disabled-color:         $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$list-group-disabled-bg:            $list-group-bg !default;
+$list-group-disabled-color:           $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$list-group-disabled-bg:              $list-group-bg !default;
 
-$list-group-action-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
-$list-group-action-hover-color:     var(--#{$prefix}emphasis-color) !default;
+$list-group-action-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$list-group-action-hover-color:       var(--#{$prefix}emphasis-color) !default;
 
-$list-group-action-active-color:    $list-group-active-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
-$list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
+$list-group-action-active-color:      $list-group-active-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
+$list-group-action-active-bg:         $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 
 // Boosted mod
 $list-group-icons: (

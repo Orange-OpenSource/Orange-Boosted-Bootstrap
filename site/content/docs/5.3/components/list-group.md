@@ -147,7 +147,7 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
 {{< design-callout-alert >}}
-This variant, which is just an **example illustrating the use of the layout utility**, should not be used because it does not respect the Orange Design System specifications.
+This variant is just an **example illustrating the use of the layout utility**. It should not be used because it does not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -216,10 +216,6 @@ Contextual classes also work with `.list-group-item-action` for `<a>` and `<butt
 ## With badges
 
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
-
-{{< design-callout-alert >}}
-This variant should not be used because it does not respect the Orange Design System specifications.
-{{< /design-callout-alert >}}
 
 {{< example >}}
 <ul class="list-group">
