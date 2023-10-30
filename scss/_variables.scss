@@ -2007,6 +2007,8 @@ $list-group-item-padding-x:         13px !default; // Boosted mod: instead of $s
 $list-group-item-icon-size:         $spacer * .85 !default; // Boosted mod
 $list-group-item-icon-margin-x:     subtract(var(--#{$prefix}list-group-item-padding-x), 5px) !default; // Boosted mod
 
+$list-group-numbered-item-margin-end: 14px !default; // Boosted mod
+
 $list-group-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $list-group-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
 $list-group-active-bg:              no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-400 4px) !default; // Boosted mod: instead of `$component-active-bg`

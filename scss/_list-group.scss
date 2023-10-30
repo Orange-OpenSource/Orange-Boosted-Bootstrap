@@ -34,11 +34,12 @@
   margin-bottom: 0;
   @include border-radius(var(--#{$prefix}list-group-border-radius));
 
-  // Boosted mod: specific badge for list-group
+  // Boosted mod
   .badge {
     --#{$prefix}badge-padding: .125rem .375rem;
     --#{$prefix}badge-font-size: .875rem;
   }
+  // End mod
 }
 
 .list-group-numbered {
@@ -46,7 +47,7 @@
   counter-reset: section;
 
   > .list-group-item::before {
-    margin-right: subtract(var(--#{$prefix}list-group-item-padding-x), .0625rem); // Boosted mod
+    margin-right: $list-group-numbered-item-margin-end; // Boosted mod
 
     // Increments only this instance of the section counter
     content: counters(section, ".") ". ";
