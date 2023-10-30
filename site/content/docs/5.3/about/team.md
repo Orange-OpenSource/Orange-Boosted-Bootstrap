@@ -14,7 +14,7 @@ Boosted is maintained by the core team and a small group of invaluable core cont
   {{- range (index $.Site.Data "core-team") }}
     <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/{{ .user }}">
       <img src="https://github.com/{{ .user }}.png" alt="@{{ .user }}" width="32" height="32" class="me-2" loading="lazy">
-      <span>
+      <span class="fw-normal">
         <strong>{{ .name }}</strong> @{{ .user }}
       </span>
     </a>
