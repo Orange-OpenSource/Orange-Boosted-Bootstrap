@@ -39,7 +39,6 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 - <details class="mb-2">
     <summary><span class="badge text-bg-success">New</span> Sass variables:</summary>
     <ul>
-      <li><code>$background-colors</code></li>
       <li><code>$list-group-dark-color</code></li>
       <li><code>$list-group-dark-bg</code></li>
       <li><code>$list-group-dark-hover-bg</code></li>
@@ -64,6 +63,13 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
     <summary><span class="badge text-bg-danger">Breaking</span> Deprecated CSS variables:</summary>
     <ul>
       <li><code>--bs-back-to-top-link-icon-margin-left</code></li>
+    </ul>
+  </details>
+
+- <details class="mb-2">
+    <summary><span class="badge text-bg-danger">Breaking</span> Deprecated Sass variables:</summary>
+    <ul>
+      <li><code>$background-colors</code></li>
     </ul>
   </details>
 

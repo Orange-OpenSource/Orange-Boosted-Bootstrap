@@ -269,7 +269,6 @@
   // scss-docs-end list-group-dark-css-vars
 }
 
-// Specific padding to be aligned in card component
 .card .list-group {
   --#{$prefix}list-group-item-padding-x: #{var(--#{$prefix}card-spacer-x)};
 }
