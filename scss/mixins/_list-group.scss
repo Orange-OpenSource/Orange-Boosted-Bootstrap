@@ -6,7 +6,7 @@
 // scss-docs-start list-group-mixin
 @mixin list-group-item-variant($state, $color, $icon) {
   .list-group-item-#{$state} {
-    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) + var(--#{$prefix}list-group-item-icon-size) * 2); // stylelint-disable-line function-disallowed-list
+    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) * 2 + var(--#{$prefix}list-group-item-icon-size)); // stylelint-disable-line function-disallowed-list
 
     &::after {
       position: absolute;

@@ -12,7 +12,7 @@
   --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
   --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
-  --#{$prefix}list-group-item-icon-margin-x: #{subtract(var(--#{$prefix}list-group-item-padding-x), 5px)}; // Boosted mod
+  --#{$prefix}list-group-item-icon-margin-x: #{$list-group-item-icon-margin-x}; // Boosted mod
   --#{$prefix}list-group-item-icon-size: #{$list-group-item-icon-size}; // Boosted mod
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
@@ -232,7 +232,7 @@
     // Boosted mod: no `--#{$prefix}list-group-active-bg`
     // Boosted mod: no `--#{$prefix}list-group-active-border-color`
 
-    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) + var(--#{$prefix}list-group-item-icon-size) * 2); // stylelint-disable-line function-disallowed-list
+    padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) * 2 + var(--#{$prefix}list-group-item-icon-size)); // stylelint-disable-line function-disallowed-list
 
     &::after {
       position: absolute;

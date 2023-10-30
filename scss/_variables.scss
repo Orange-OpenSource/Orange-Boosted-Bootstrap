@@ -2005,8 +2005,7 @@ $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
 $list-group-item-padding-y:         10px !default; // Boosted mod: instead of $spacer * .5
 $list-group-item-padding-x:         13px !default; // Boosted mod: instead of $spacer
 $list-group-item-icon-size:         $spacer * .85 !default; // Boosted mod
-// Boosted mod: no $list-group-item-bg-scale
-// Boosted mod: no $list-group-item-color-scale
+$list-group-item-icon-margin-x:     subtract(var(--#{$prefix}list-group-item-padding-x), 5px) !default; // Boosted mod
 
 $list-group-hover-bg:               var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $list-group-active-color:           var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`

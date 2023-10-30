@@ -54,6 +54,7 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
       <li><code>$list-group-dark-active-bg</code></li>
       <li><code>$list-group-dark-active-border-color</code></li>
       <li><code>$list-group-font-weight</code></li>
+      <li><code>$list-group-item-icon-margin-x</code></li>
       <li><code>$list-group-item-icon-size</code></li>
     </ul>
   </details>
