@@ -115,7 +115,7 @@
   &.active {
     z-index: 2; // Place active items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-active-color);
-    background: var(--#{$prefix}list-group-active-bg); // Boosted mod: bg over bg-color
+    background: var(--#{$prefix}list-group-active-bg); // Boosted mod: `background` instead of `background-color`
     border-color: var(--#{$prefix}list-group-active-border-color);
   }
 
@@ -157,7 +157,7 @@
       flex-direction: row;
 
       > .list-group-item {
-        // Boosted mod: remove default border-width
+        // Boosted mod: remove default border width
         border-right-width: $list-group-divider-size;
         border-bottom-width: var(--#{$prefix}list-group-border-width);
         // End mod
@@ -218,7 +218,7 @@
 // scss-docs-start list-group-modifiers
 // List group contextual variants
 //
-// Add modifier classes to change text and background color on individual items.
+// Add modifier classes to add icon on individual items.
 // Organizationally, this must come after the `:hover` states.
 @each $state, $value in $list-group-icons { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
   .list-group-item-#{$state} {
@@ -233,6 +233,7 @@
     // Boosted mod: no `--#{$prefix}list-group-active-bg`
     // Boosted mod: no `--#{$prefix}list-group-active-border-color`
 
+    // Boosted mod
     padding-right: calc(var(--#{$prefix}list-group-item-icon-margin-x) * 2 + var(--#{$prefix}list-group-item-icon-size)); // stylelint-disable-line function-disallowed-list
 
     &::after {
@@ -245,6 +246,7 @@
       background-color: currentcolor;
       mask: no-repeat $value;
     }
+    // End mod
   }
 }
 // scss-docs-end list-group-modifiers
