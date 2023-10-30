@@ -42,9 +42,11 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
       <li><code>$list-group-dark-hover-bg</code></li>
       <li><code>$list-group-divider-size</code></li>
       <li><code>$list-group-font-weight</code></li>
+      <li><code>$list-group-icons</code></li>
       <li><code>$list-group-item-icon-margin-x</code></li>
       <li><code>$list-group-item-icon-size</code></li>
       <li><code>$list-group-numbered-item-margin-end</code></li>
+      <li><code>$warning-icon-filled</code></li>
     </ul>
   </details>
 
