@@ -219,7 +219,7 @@
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
-@each $state, $value in $alert-colors { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
+@each $state, $value in $list-group-icons { // Boosted mod: instead of `@each $state in map-keys($theme-colors)`
   .list-group-item-#{$state} {
     // Boosted mod: no `--#{$prefix}list-group-color`
     // Boosted mod: no `--#{$prefix}list-group-bg`
@@ -241,16 +241,8 @@
       width: var(--#{$prefix}list-group-item-icon-size);
       height: var(--#{$prefix}list-group-item-icon-size);
       content: "";
-      background-color: var(--#{$prefix}link-color); // Find a better var once we fully implement dark mode ?
-      -webkit-mask: no-repeat map-get($alert-icons, $state); // stylelint-disable-line property-no-vendor-prefix
-      mask: no-repeat map-get($alert-icons, $state);
-    }
-
-    &.disabled::after,
-    &:disabled::after,
-    &.list-group-item-action:active::after,
-    &.active::after {
       background-color: currentcolor;
+      mask: no-repeat $value;
     }
   }
 }

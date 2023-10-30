@@ -393,9 +393,8 @@ $burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $burger-icon-small:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='#{$black}'><path d='M2 19h21v-2H2v2Zm0-6h21v-2H2v2Zm0-6h21V5H2v2Z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 0 1-1.3 3.7L57.7 86a5.8 5.8 0 0 1-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 0 1 1.7-4.1l2.3-2.4a5.8 5.8 0 0 1 4.2-1.7 5.8 5.8 0 0 1 3.8 1.4L52 64.7 86.6 31a5.8 5.8 0 0 1 4-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 1 0 0 125 62.5 62.5 0 0 0 0-125zm0 14.7a11 11 0 1 1 0 22 11 11 0 0 1 0-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
-// $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='1.75 1.75 20.5 20.5'><path fill='#{$warning}' d='M19.875 21H4.1a2.25 2.25 0 0 1-1.946-3.384l.019-.031v-.002l7.868-13.467a2.255 2.255 0 0 1 3.892 0l7.887 13.5A2.249 2.249 0 0 1 19.875 21Zm-7.863-2.4a1.14 1.14 0 1 1 0-2.28 1.14 1.14 0 0 1 0 2.28Zm1.137-10.177-.377 6.195c0 .42-.34.577-.76.577s-.76-.157-.76-.577l-.378-6.21a1.14 1.14 0 1 1 2.275.014Z' fill-rule='evenodd'/></svg>") !default;
-$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 1 0 0 30 15 15 0 0 0 0-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
-// $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 21'><path fill='#{$warning}' d='M16.562 17.833H3.418a1.874 1.874 0 0 1-1.622-2.82l.015-.026.001-.001L8.368 3.764a1.879 1.879 0 0 1 3.244 0l6.572 11.25a1.874 1.874 0 0 1-1.622 2.82zm-6.552-2a.95.95 0 1 1 0-1.9.95.95 0 0 1 0 1.9zm.947-8.48-.314 5.162c0 .35-.283.481-.633.481-.35 0-.633-.131-.633-.481l-.315-5.174a.95.95 0 1 1 1.896.012z'/></svg>") !default;
+$warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill-rule='evenodd' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875ZM500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
+$warning-icon-filled:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='75 125 850 750'><path fill='#{$warning}' fill-rule='evenodd' d='M828.111 875H170.889A93.71 93.71 0 0 1 89.8 734.017l-.008-.005.772-1.321.036-.062 327.8-561.117h.008a93.94 93.94 0 0 1 162.182 0h.008l328.612 562.5-.009.005A93.709 93.709 0 0 1 828.111 875Z'/><path fill='#000' d='M500.5 775a47.5 47.5 0 1 1 47.507-47.5A47.5 47.5 0 0 1 500.5 775Zm47.368-424.038-15.7 258.121c-.009 17.482-14.185 24.05-31.671 24.05s-31.662-6.568-31.671-24.05l-15.74-258.716c-.057-.949-.094-1.9-.094-2.867a47.507 47.507 0 0 1 95.014 0 47.782 47.782 0 0 1-.138 3.462Z'/></svg>") !default;
 $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0 0 15.6 125H125a15.6 15.6 0 0 0 13.5-23.5L83.8 7.8A15.6 15.6 0 0 0 70.3 0zm19.2 50a6.4 6.4 0 0 1 4.4 1.9 6.4 6.4 0 0 1 0 9L79.4 75.6l15 15a6.4 6.4 0 0 1 0 9.2 6.4 6.4 0 0 1-4.5 1.9 6.4 6.4 0 0 1-4.6-2l-15-15-15 15a6.4 6.4 0 0 1-4.6 2 6.4 6.4 0 0 1-4.6-2 6.4 6.4 0 0 1 0-9l15-15L46.8 61a6.4 6.4 0 1 1 9-9.1l14.6 14.5L84.8 52a6.4 6.4 0 0 1 4.7-1.9z'/></svg>") !default;
 $add-icon:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path fill='currentColor' d='M14 6H8V0H6v6H0v2h6v6h2V8h6V6z'/></svg>") !default;
 $remove-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2'><path fill='currentColor' d='M0 0h14v2H0z'/></svg>") !default;
@@ -1957,7 +1956,7 @@ $alert-icons: (
   // Create a list for this warning icon to indicate that the mask needs to be replaced by a background image
   // Be aware that the background of the icon won't change anymore
   // Note: `true` parameter is only used to create a list, it could be empty (e.g. `(escape-svg($warning-icon),)`)
-  "warning": (escape-svg($warning-icon), true),
+  "warning": (escape-svg($warning-icon-filled), true),
   "danger":  var(--#{$prefix}error-icon)
 ) !default;
 $alert-logo-size:                   add($spacer * .5, 1rem) !default;
@@ -2024,6 +2023,15 @@ $list-group-action-hover-color:     var(--#{$prefix}emphasis-color) !default;
 $list-group-action-active-color:    $list-group-active-color !default; // Boosted mod: instead of `var(--#{$prefix}body-color)`
 $list-group-action-active-bg:       $list-group-active-bg !default; // Boosted mod: instead of `var(--#{$prefix}secondary-bg)`
 
+$list-group-icons: (
+  "success": var(--#{$prefix}success-icon),
+  "info":    escape-svg($info-icon),
+  "warning": escape-svg($warning-icon),
+  "danger":  var(--#{$prefix}error-icon)
+) !default;
+
+// scss-docs-start list-group-dark-variables
+// Boosted mod
 $list-group-dark-color:               $white !default;
 $list-group-dark-bg:                  $black !default;
 $list-group-dark-hover-bg:            $gray-900 !default;
@@ -2038,23 +2046,8 @@ $list-group-dark-active-color:        $white !default;
 $list-group-dark-active-bg:           no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-700 4px) !default;
 $list-group-dark-active-border-color: $gray-700 !default;
 // End mod
-// scss-docs-end list-group-variables
-
-// scss-docs-start list-group-dark-variables
-$list-group-dark-color:               $white !default; // Boosted mod
-$list-group-dark-bg:                  $black !default; // Boosted mod
-$list-group-dark-border-color:        $gray-700 !default; // Boosted mod
-$list-group-dark-action-color:        $white !default; // Boosted mod
-$list-group-dark-action-hover-color:  $primary !default; // Boosted mod
-$list-group-dark-action-active-color: $black !default; // Boosted mod
-$list-group-dark-action-active-bg:    $white !default; // Boosted mod
-$list-group-dark-disabled-color:      $gray-700 !default; // Boosted mod
-$list-group-dark-disabled-bg:         $list-group-dark-bg !default; // Boosted mod
-$list-group-dark-active-color:        $black !default; // Boosted mod
-$list-group-dark-active-bg:           $list-group-dark-action-active-bg !default; // Boosted mod
-$list-group-dark-active-border-color: $list-group-dark-active-bg !default; // Boosted mod
 // scss-docs-end list-group-dark-variables
-
+// scss-docs-end list-group-variables
 
 // Image thumbnails
 
