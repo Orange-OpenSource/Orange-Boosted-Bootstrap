@@ -93,7 +93,7 @@
   text-decoration: if($link-decoration == none, null, none);
   background-color: var(--#{$prefix}list-group-bg);
   border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
-  border-bottom-width: calc(var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
+  border-bottom-width: $list-group-divider-size; // Boosted mod
 
   &:first-child {
     @include border-top-radius(inherit);
@@ -123,9 +123,10 @@
   & + .list-group-item {
     border-top-width: 0;
 
-    &.active { // Boosted mod: border-width of 1px instead of 2px.
-      margin-top: calc(-1 * var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
-      border-top-width: calc(var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
+    &.active {
+      // stylelint-disable-next-line function-disallowed-list
+      margin-top: calc(-1 * #{$list-group-divider-size}); // Boosted mod: instead of `calc(-1 * var(--#{$prefix}list-group-border-width))`
+      border-top-width: $list-group-divider-size; // Boosted mod: instead of `var(--#{$prefix}list-group-border-width)`
     }
   }
 
@@ -157,7 +158,7 @@
 
       > .list-group-item {
         // Boosted mod: remove default border-width
-        border-right-width: calc(var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
+        border-right-width: $list-group-divider-size;
         border-bottom-width: var(--#{$prefix}list-group-border-width);
         // End mod
 
@@ -180,9 +181,10 @@
           border-top-width: var(--#{$prefix}list-group-border-width);
           border-left-width: 0;
 
-          &.active { // Boosted mod: border-width between is of 1px instead of 2px
-            margin-left: calc(-1 * var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
-            border-left-width: calc(var(--#{$prefix}list-group-border-width) * .5); // stylelint-disable-line function-disallowed-list
+          &.active {
+            // stylelint-disable-next-line function-disallowed-list
+            margin-left: calc(-1 * #{$list-group-divider-size}); // Boosted mod: instead of `calc(-1 * var(--#{$prefix}list-group-border-width))`
+            border-left-width: $list-group-divider-size; // Boosted mod: instead of `var(--#{$prefix}list-group-border-width)`
           }
         }
       }
@@ -197,13 +199,11 @@
 // useful within other components (e.g., cards).
 
 .list-group-flush {
-  // stylelint-disable-next-line function-disallowed-list
-  border-top: calc(var(--#{$prefix}list-group-border-width) * .5) solid var(--#{$prefix}list-group-border-color); // Boosted mod
+  border-top: $list-group-divider-size solid var(--#{$prefix}list-group-border-color); // Boosted mod
   @include border-radius(0);
 
   > .list-group-item {
-    // stylelint-disable-next-line function-disallowed-list
-    border-width: 0 0 calc(var(--#{$prefix}list-group-border-width) * .5); // Boosted mod: border of 1px
+    border-width: 0 0 $list-group-divider-size; // Boosted mod: instead of `0 0 var(--#{$prefix}list-group-border-width)`
 
     &:last-child {
       border-bottom-width: 0;

@@ -2002,6 +2002,8 @@ $list-group-border-color:           var(--#{$prefix}border-color-translucent) !d
 $list-group-border-width:           var(--#{$prefix}border-width) !default;
 $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
 
+$list-group-divider-size:           map-get($border-widths, 1) !default;
+
 $list-group-item-padding-y:         10px !default; // Boosted mod: instead of $spacer * .5
 $list-group-item-padding-x:         13px !default; // Boosted mod: instead of $spacer
 $list-group-item-icon-size:         $spacer * .85 !default; // Boosted mod
