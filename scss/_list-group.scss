@@ -93,7 +93,7 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x) add(var(--#{$prefix}list-group-item-padding-y), 1px); // Boosted mod
+  padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x);
   font-weight: var(--#{$prefix}list-group-font-weight); // Boosted mod
   color: var(--#{$prefix}list-group-color);
   text-decoration: if($link-decoration == none, null, none);
