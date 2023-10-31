@@ -5581,3 +5581,382 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
 </div>
+
+## Contents
+
+### Tables
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <table class="table table-hover mb-5">
+    <caption>Boosted tables basic and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover caption-bottom mb-5">
+    <caption>Boosted tables striped and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover">
+    <caption>Boosted tables when nested</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in active row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <table class="table table-hover mb-5">
+    <caption>Boosted tables basic and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover caption-bottom mb-5">
+    <caption>Boosted tables striped and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover">
+    <caption>Boosted tables when nested</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in active row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <table class="table table-hover mb-5">
+    <caption>Boosted tables basic and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover caption-bottom mb-5">
+    <caption>Boosted tables striped and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover">
+    <caption>Boosted tables when nested</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in active row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <table class="table table-hover mb-5" data-bs-theme="dark">
+    <caption>Boosted tables basic and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover caption-bottom mb-5" data-bs-theme="dark">
+    <caption>Boosted tables striped and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover" data-bs-theme="dark">
+    <caption>Boosted tables when nested</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in active row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <table class="table table-hover mb-5" data-bs-theme="light">
+    <caption>Boosted tables basic and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover caption-bottom mb-5" data-bs-theme="light">
+    <caption>Boosted tables striped and hover look</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+      <tr><th scope="row">2</th><td>Active</td><td class="table-active">Cell</td><td>@activeCell</td></tr>
+      <tr><th scope="row">3</th><td colspan="2">Random</td><td>@random</td></tr>
+      <tr><th scope="row">4</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+      <tr><th scope="row">5</th><td>Ring of</td><td>Kerry</td><td>@ireland</td></tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-hover" data-bs-theme="light">
+    <caption>Boosted tables when nested</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+    </thead>
+    <tbody>
+      <tr class="table-active"><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in active row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td colspan="4">
+        <table class="table table-hover mb-0">
+          <caption>Boosted nested table in striped row</caption>
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-active"><th scope="row">1</th><td>Active</td><td>Row</td><td>@activeRow</td></tr>
+            <tr><th scope="row">2</th><td>Skye</td><td>Island</td><td>@scotland</td></tr>
+          </tbody>
+        </table>
+      </td></tr>
+    </tbody>
+  </table>
+</div>

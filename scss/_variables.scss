@@ -888,21 +888,21 @@ $table-th-font-weight:                  null !default;
 
 $table-striped-color:                   $table-color !default;
 $table-striped-bg-factor:               .065 !default; // Boosted mod
-$table-striped-bg:                      rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor) !default;
-$table-striped-hover-color:             $table-color !default; // Boosted mod
+$table-striped-bg:                      rgba(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}table-striped-bg-factor)) !default;
+$table-striped-hover-color:             var(--#{$prefix}black) !default; // Boosted mod
 $table-striped-hover-bg-factor:         .4 !default; // Boosted mod
-$table-striped-hover-bg:                rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-hover-bg-factor) !default; // Boosted mod
+$table-striped-hover-bg:                rgba(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}table-striped-hover-bg-factor)) !default; // Boosted mod
 $table-variant-striped-bg-factor:       .2 !default; // Boosted mod
 $table-variant-striped-hover-bg-factor: .865 !default; // Boosted mod
 
-$table-active-color:                    $table-color !default;
+$table-active-color:                    var(--#{$prefix}black) !default; // Boosted mod: instead of `$table-color`
 $table-active-bg-factor:                .135 !default; // Boosted mod
-$table-active-bg:                       rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor) !default;
+$table-active-bg:                       rgba(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}table-active-bg-factor)) !default; // Boosted mod: instead of `$table-active-bg-factor`
 $table-variant-active-bg-factor:        .6 !default; // Boosted mod
 
 $table-hover-color:                     $table-color !default;
 $table-hover-bg-factor:                 .065 !default; // Boosted mod
-$table-hover-bg:                        rgba(var(--#{$prefix}emphasis-color-rgb), $table-hover-bg-factor) !default;
+$table-hover-bg:                        rgba(var(--#{$prefix}emphasis-color-rgb), var(--#{$prefix}table-hover-bg-factor)) !default; // Boosted mod: instead of `$table-hover-bg-factor`
 $table-variant-hover-bg-factor:         .2 !default; // Boosted mod
 
 $table-border-factor:                   .4 !default; // Boosted mod
