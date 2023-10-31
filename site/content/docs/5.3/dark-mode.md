@@ -4375,6 +4375,9 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
   </div>
@@ -4394,6 +4397,9 @@ sitemap_exclude: true
 <div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
@@ -4415,6 +4421,9 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
   </div>
@@ -4435,6 +4444,9 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar bg-success" style="width: 40%"></div>
   </div>
@@ -4454,6 +4466,9 @@ sitemap_exclude: true
 <div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar bg-success" style="width: 40%"></div>
