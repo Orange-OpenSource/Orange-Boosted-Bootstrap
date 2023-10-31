@@ -7670,3 +7670,55 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
 </div>
+
+### Title bars
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="title-bar" data-bs-theme="dark">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="title-bar" data-bs-theme="light">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>

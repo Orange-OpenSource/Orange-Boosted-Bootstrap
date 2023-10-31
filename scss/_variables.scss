@@ -2065,13 +2065,15 @@ $figure-caption-color:              $gray-900 !default; // Boosted mod: instead 
 // Title bars
 
 // scss-docs-start title-bars-variables
+$title-bar-bg:                      var(--#{$prefix}body-bg) !default;
+$title-bar-color:                   var(--#{$prefix}body-color) !default;
 $title-bar-image-ratio:             1.8em !default;
 $title-bar-padding-y:               .3333333em !default;
 $title-bar-font-size:               $h2-font-size !default;
 $title-bar-line-height:             $display-line-height !default;
 $title-bar-letter-spacing:          $h2-spacing !default;
 $title-bar-border-width:            calc(var(--#{$prefix}border-width) * .5) !default; // stylelint-disable-line function-disallowed-list
-$title-bar-border-color:            $gray-500 !default;
+$title-bar-border-color:            var(--#{$prefix}border-color-translucent) !default;
 
 $title-bar-font-size-md:            $display2-size !default;
 $title-bar-letter-spacing-md:       $display2-spacing !default;
@@ -2079,7 +2081,9 @@ $title-bar-letter-spacing-md:       $display2-spacing !default;
 $title-bar-font-size-xl:            $display1-size !default;
 $title-bar-letter-spacing-xl:       $display1-spacing !default;
 
-$title-bar-border-color-dark:       $gray-700 !default;
+// fusv-disable
+$title-bar-border-color-dark:       $gray-700 !default; // Deprecated in v5.3.3
+// fusv-enable
 // scss-docs-end title-bars-variables
 // End mod
 
