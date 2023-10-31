@@ -4375,17 +4375,20 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-primary" style="width: 30%">30% (.bg-primary)</div>
+  </div>
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 25%">25%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4437,17 +4440,20 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-primary" style="width: 30%">30% (.bg-primary)</div>
+  </div>
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 25%">25%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4499,17 +4505,20 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-primary" style="width: 30%">30% (.bg-primary)</div>
+  </div>
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 25%">25%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4561,17 +4570,20 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-primary" style="width: 30%">30% (.bg-primary)</div>
+  </div>
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar bg-success" style="width: 25%">25%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
-    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
-    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4623,17 +4635,20 @@ sitemap_exclude: true
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-primary" style="width: 30%">30% (.bg-primary)</div>
+  </div>
   <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar bg-success" style="width: 25%">25%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
-    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+    <div class="progress-bar bg-info" style="width: 50%">50%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
-    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
