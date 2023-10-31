@@ -4372,11 +4372,50 @@ sitemap_exclude: true
 <h4 class="mt-3">No theme</h4>
 
 <div class="d-flex flex-column gap-2 border border-tertiary p-3">
-  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-primary" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
@@ -4395,11 +4434,50 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-primary" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
@@ -4418,11 +4496,50 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on container</h4>
 
 <div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-primary" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 40%"></div>
@@ -4441,11 +4558,50 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #282d55;">
-  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-bg-primary" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-success overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-info overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-warning overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
+    <div class="progress-bar bg-danger overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar bg-success" style="width: 40%"></div>
@@ -4464,11 +4620,50 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
-  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-white bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-bg-primary" style="width: 30%">30%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Primary example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Success example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-success overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-info overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-warning overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
+    <div class="progress-bar bg-danger overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
   </div>
   <div class="progress progress-sm" role="progressbar" aria-label="Success example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar bg-success" style="width: 40%"></div>
