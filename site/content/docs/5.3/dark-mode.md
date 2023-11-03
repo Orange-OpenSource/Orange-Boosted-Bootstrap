@@ -4276,7 +4276,7 @@ sitemap_exclude: true
 <h4 class="mt-3">No theme</h4>
 
 <div class="d-flex gap-2 border border-tertiary p-3">
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
       <span class="visually-hidden">Step down</span>
@@ -4285,7 +4285,7 @@ sitemap_exclude: true
       <span class="visually-hidden">Step up</span>
     </button>
   </div>
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelectorDisabled" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelectorDisabled" data-bs-step="down" disabled>
       <span class="visually-hidden">Step down</span>
@@ -4299,7 +4299,7 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on container</h4>
 
 <div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">
       <span class="visually-hidden">Step down</span>
@@ -4308,7 +4308,7 @@ sitemap_exclude: true
       <span class="visually-hidden">Step up</span>
     </button>
   </div>
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelectorDisabled1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelectorDisabled1" data-bs-step="down" disabled>
       <span class="visually-hidden">Step down</span>
@@ -4322,7 +4322,7 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on container</h4>
 
 <div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector2" data-bs-step="down">
       <span class="visually-hidden">Step down</span>
@@ -4331,7 +4331,7 @@ sitemap_exclude: true
       <span class="visually-hidden">Step up</span>
     </button>
   </div>
-  <div class="input-group quantity-selector">
+  <div class="quantity-selector">
     <input type="number" id="inputQuantitySelectorDisabled2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelectorDisabled2" data-bs-step="down" disabled>
       <span class="visually-hidden">Step down</span>
@@ -4345,7 +4345,7 @@ sitemap_exclude: true
 <h4 class="mt-3">Dark theme on component</h4>
 
 <div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #282d55;">
-  <div class="input-group quantity-selector" data-bs-theme="dark">
+  <div class="quantity-selector" data-bs-theme="dark">
     <input type="number" id="inputQuantitySelector3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="down">
       <span class="visually-hidden">Step down</span>
@@ -4354,7 +4354,7 @@ sitemap_exclude: true
       <span class="visually-hidden">Step up</span>
     </button>
   </div>
-  <div class="input-group quantity-selector" data-bs-theme="dark">
+  <div class="quantity-selector" data-bs-theme="dark">
     <input type="number" id="inputQuantitySelectorDisabled3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelectorDisabled3" data-bs-step="down" disabled>
       <span class="visually-hidden">Step down</span>
@@ -4368,7 +4368,7 @@ sitemap_exclude: true
 <h4 class="mt-3">Light theme on component</h4>
 
 <div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
-  <div class="input-group quantity-selector" data-bs-theme="light">
+  <div class="quantity-selector" data-bs-theme="light">
     <input type="number" id="inputQuantitySelector4" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector4" data-bs-step="down">
       <span class="visually-hidden">Step down</span>
@@ -4377,7 +4377,7 @@ sitemap_exclude: true
       <span class="visually-hidden">Step up</span>
     </button>
   </div>
-  <div class="input-group quantity-selector" data-bs-theme="light">
+  <div class="quantity-selector" data-bs-theme="light">
     <input type="number" id="inputQuantitySelectorDisabled4" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector" disabled>
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelectorDisabled4" data-bs-step="down" disabled>
       <span class="visually-hidden">Step down</span>
@@ -4819,7 +4819,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-valid" type="checkbox" value="" checked></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value=""></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" checked></div>
-  <div class="input-group quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
+  <div class="quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
   <div><input type="text" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><select class="form-select is-invalid"><option selected disabled value="">Choose...</option><option>...</option></select><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><input type="file" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
@@ -4828,7 +4828,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="checkbox" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value=""><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
-  <div class="input-group quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
+  <div class="quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
@@ -4842,7 +4842,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-valid" type="checkbox" value="" checked></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value=""></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" checked></div>
-  <div class="input-group quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
+  <div class="quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
   <div><input type="text" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><select class="form-select is-invalid"><option selected disabled value="">Choose...</option><option>...</option></select><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><input type="file" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
@@ -4851,7 +4851,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="checkbox" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value=""><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
-  <div class="input-group quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
+  <div class="quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
@@ -4865,7 +4865,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-valid" type="checkbox" value="" checked></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value=""></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" checked></div>
-  <div class="input-group quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
+  <div class="quantity-selector"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
   <div><input type="text" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><select class="form-select is-invalid"><option selected disabled value="">Choose...</option><option>...</option></select><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div><input type="file" class="form-control is-invalid"><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
@@ -4874,7 +4874,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="checkbox" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value=""><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
-  <div class="input-group quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
+  <div class="quantity-selector w-100"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback">Invalid feedback</p></div>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
@@ -4888,7 +4888,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-valid" type="checkbox" value="" data-bs-theme="dark" checked></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" data-bs-theme="dark"></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" data-bs-theme="dark" checked></div>
-  <div class="input-group quantity-selector" data-bs-theme="dark"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
+  <div class="quantity-selector" data-bs-theme="dark"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
   <div><input type="text" class="form-control is-invalid" data-bs-theme="dark"><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
   <div><select class="form-select is-invalid" data-bs-theme="dark"><option selected disabled value="">Choose...</option><option>...</option></select><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
   <div><input type="file" class="form-control is-invalid" data-bs-theme="dark"><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
@@ -4897,7 +4897,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="checkbox" value="" checked data-bs-theme="dark"><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" data-bs-theme="dark"><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="dark"><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
-  <div class="input-group quantity-selector w-100" data-bs-theme="dark"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
+  <div class="quantity-selector w-100" data-bs-theme="dark"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="dark">Invalid feedback</p></div>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
@@ -4911,7 +4911,7 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-valid" type="checkbox" value=""  data-bs-theme="light" checked></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" data-bs-theme="light"></div>
   <div class="form-check"><input class="form-check-input is-valid" type="radio" value="" data-bs-theme="light" checked></div>
-  <div class="input-group quantity-selector" data-bs-theme="light"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
+  <div class="quantity-selector" data-bs-theme="light"><input type="number" class="form-control is-valid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button></div>
   <div><input type="text" class="form-control is-invalid" data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div><select class="form-select is-invalid" data-bs-theme="light"><option selected disabled value="">Choose...</option><option>...</option></select><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div><input type="file" class="form-control is-invalid" data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
@@ -4920,5 +4920,5 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="checkbox" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
-  <div class="input-group quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
+  <div class="quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
 </div>
