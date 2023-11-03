@@ -1725,6 +1725,183 @@ sitemap_exclude: true
 </div>
 
 
+### List group
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3">
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
+  </ol>
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-success">A simple success list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info">A simple info list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-warning">A simple warning list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-danger">A simple danger list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info" disabled>A simple disabled info list group item</button>
+  </div>
+  <ul class="list-group list-group-horizontal-xxl">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+  </ul>
+  <div class="list-group list-group-horizontal-xxl">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
+  </ol>
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-success">A simple success list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info">A simple info list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-warning">A simple warning list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-danger">A simple danger list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info" disabled>A simple disabled info list group item</button>
+  </div>
+  <ul class="list-group list-group-horizontal-xxl">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+  </ul>
+  <div class="list-group list-group-horizontal-xxl">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
+  </ol>
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-success">A simple success list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info">A simple info list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-warning">A simple warning list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-danger">A simple danger list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info" disabled>A simple disabled info list group item</button>
+  </div>
+  <ul class="list-group list-group-horizontal-xxl">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+  </ul>
+  <div class="list-group list-group-horizontal-xxl">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+  <ol class="list-group list-group-numbered" data-bs-theme="dark">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
+  </ol>
+  <div class="list-group" data-bs-theme="dark">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-success">A simple success list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info">A simple info list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-warning">A simple warning list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-danger">A simple danger list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info" disabled>A simple disabled info list group item</button>
+  </div>
+  <ul class="list-group list-group-horizontal-xxl" data-bs-theme="dark">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+  </ul>
+  <div class="list-group list-group-horizontal-xxl" data-bs-theme="dark">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+  <ol class="list-group list-group-numbered" data-bs-theme="light">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-info disabled" aria-disabled="true">A simple disabled info list group item</li>
+  </ol>
+  <div class="list-group" data-bs-theme="light">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-success">A simple success list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info">A simple info list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-warning">A simple warning list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-danger">A simple danger list group item</button>
+    <button type="button" class="list-group-item list-group-item-action text-no-wrap list-group-item-info" disabled>A simple disabled info list group item</button>
+  </div>
+  <ul class="list-group list-group-horizontal-xxl" data-bs-theme="light">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item active" aria-current="true">A list item</li>
+    <li class="list-group-item disabled" aria-disabled="true">A list item</li>
+  </ul>
+  <div class="list-group list-group-horizontal-xxl" data-bs-theme="light">
+    <button type="button" class="list-group-item list-group-item-action text-nowrap">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap active" aria-current="true">The current button</button>
+    <button type="button" class="list-group-item list-group-item-action text-nowrap" disabled>A disabled button item</button>
+  </div>
+</div>
+
 ### Local navigation
 
 <h4 class="mt-3">No theme</h4>
