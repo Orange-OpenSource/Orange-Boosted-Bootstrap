@@ -192,7 +192,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
               </svg>
               <span class="visually-hidden">Basket</span>
               <span class="position-relative align-self-start">
-                <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                   1
                   <span class="visually-hidden">shopping basket items</span>
                 </span>

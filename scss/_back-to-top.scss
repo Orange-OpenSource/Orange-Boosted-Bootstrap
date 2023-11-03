@@ -14,7 +14,6 @@
   --#{$prefix}back-to-top-zindex: #{$zindex-back-to-top};
   --#{$prefix}back-to-top-link-offset-top: #{$back-to-top-link-offset-top};
   --#{$prefix}back-to-top-link-icon: #{$back-to-top-icon};
-  --#{$prefix}back-to-top-link-icon-margin-left: #{$spacer * .5};
   --#{$prefix}back-to-top-link-width: #{$back-to-top-icon-width};
   --#{$prefix}back-to-top-link-height: #{$back-to-top-icon-height};
   --#{$prefix}back-to-top-title-offset-right: #{$back-to-top-title-offset-right};
@@ -48,10 +47,6 @@
 
   &::after {
     transform: rotate(.25turn) #{"/* rtl:ignore */"};
-  }
-
-  &:not([title]):not([data-#{$prefix}label])::after {
-    margin-left: var(--#{$prefix}back-to-top-link-icon-margin-left);
   }
 
   @include media-breakpoint-up(xl) {

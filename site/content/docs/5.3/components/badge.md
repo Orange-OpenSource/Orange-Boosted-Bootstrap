@@ -19,12 +19,12 @@ This component variant should not be used because it does not exist in the Orang
 {{< /design-callout-alert >}}
 
 {{< example >}}
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+<h1>Example heading <span class="badge text-bg-secondary">New</span></h1>
+<h2>Example heading <span class="badge text-bg-secondary">New</span></h2>
+<h3>Example heading <span class="badge text-bg-secondary">New</span></h3>
+<h4>Example heading <span class="badge text-bg-secondary">New</span></h4>
+<h5>Example heading <span class="badge text-bg-secondary">New</span></h5>
+<h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
 {{< /example >}}
 
 ### Buttons
@@ -63,7 +63,7 @@ Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examp
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info text-white">
     99+
     <span class="visually-hidden">shopping basket items</span>
   </span>
