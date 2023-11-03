@@ -6,8 +6,8 @@
   .form-control {
     max-width: $quantity-selector-input-max-width;
     // Add 20% security padding so the input's text isn't clipped when focused
-    padding-right: calc($input-padding-x * .8); // stylelint-disable-line function-disallowed-list
-    padding-left: calc($input-padding-x * .8); // stylelint-disable-line function-disallowed-list
+    padding-right: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
+    padding-left: calc(#{$input-padding-x} * .8); // stylelint-disable-line function-disallowed-list
     text-align: center;
     @include transition(none);
     appearance: textfield;
