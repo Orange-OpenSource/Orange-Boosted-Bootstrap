@@ -297,6 +297,19 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
+    <label for="inputQuantitySelector" class="form-label">Quantity selector</label>
+    <div class="quantity-selector quantity-selector-sm">
+      <input type="number" id="inputQuantitySelectorSm" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="11" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+      <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="down">
+        <span class="visually-hidden">Step down</span>
+      </button>
+      <button type="button" class="btn btn-icon btn-secondary btn-sm" aria-describedby="inputQuantitySelectorSm" data-bs-step="up">
+        <span class="visually-hidden">Step up</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mb-3">
     <button class="btn btn-primary mt-2" type="submit" disabled>Submit form</button>
   </div>
 </form>
