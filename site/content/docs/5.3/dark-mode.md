@@ -3616,6 +3616,58 @@ sitemap_exclude: true
   </ul>
 </div>
 
+### Tooltips
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3">
+  <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
+    <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
+    <div class="tooltip-inner">Tooltip</div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip title">Click to toggle tooltip</button>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
+    <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
+    <div class="tooltip-inner">Tooltip</div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip title">Click to toggle tooltip</button>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
+    <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
+    <div class="tooltip-inner">Tooltip</div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip title">Click to toggle tooltip</button>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="dark">
+    <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
+    <div class="tooltip-inner">Tooltip</div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip title" data-bs-theme="dark">Click to toggle tooltip</button>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="light">
+    <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
+    <div class="tooltip-inner">Tooltip</div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Tooltip title" data-bs-theme="light">Click to toggle tooltip</button>
+</div>
+
 ## Forms
 
 ### Color
