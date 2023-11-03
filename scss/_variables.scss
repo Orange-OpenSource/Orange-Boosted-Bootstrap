@@ -2002,7 +2002,7 @@ $progress-height-xs:                $spacer * .25 !default;
 // scss-docs-start list-group-variables
 $list-group-font-weight:              $font-weight-bold !default; // Boosted mod
 $list-group-color:                    var(--#{$prefix}body-color) !default;
-$list-group-bg:                       var(--#{$prefix}body-bg) !default;
+$list-group-bg:                       transparent !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $list-group-border-color:             var(--#{$prefix}border-color-translucent) !default; // Boosted mod: instead of `var(--#{$prefix}border-color)`
 $list-group-border-width:             var(--#{$prefix}border-width) !default;
 $list-group-border-radius:            var(--#{$prefix}border-radius) !default;
@@ -2018,10 +2018,10 @@ $list-group-numbered-item-margin-end: 14px !default; // Boosted mod
 
 $list-group-hover-bg:                 var(--#{$prefix}secondary-bg) !default; // Boosted mod: instead of `var(--#{$prefix}tertiary-bg)`
 $list-group-active-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `$component-active-color`
-$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, $gray-400 4px) !default; // Boosted mod: instead of `$component-active-bg`
+$list-group-active-bg:                no-repeat linear-gradient(to right, var(--#{$prefix}link-hover-color) 4px, var(--#{$prefix}active-bg) 4px) !default; // Boosted mod: instead of `$component-active-bg`
 $list-group-active-border-color:      $list-group-border-color !default; // Boosted mod: instead of `$list-group-active-bg`
 
-$list-group-disabled-color:           $gray-500 !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
+$list-group-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $list-group-disabled-bg:              $list-group-bg !default;
 
 $list-group-action-color:             var(--#{$prefix}emphasis-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
