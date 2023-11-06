@@ -346,8 +346,12 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
+  // Boosted mod: no `background-image`
+  // Boosted mod: no `background-repeat`
+  // Boosted mod: no `background-position`
+  // Boosted mod: no `background-size`
   background-color: var(--#{$prefix}navbar-toggler-icon-color); // Boosted mod
-  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // Boosted mod: instead of background
+  mask: var(--#{$prefix}navbar-toggler-icon-bg) no-repeat center 100%; // Boosted mod
 }
 
 .navbar-nav-scroll {
@@ -510,7 +514,7 @@
   @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
 }
 
-// Boosted mod: no data-bs-theme handling in here.
+// Boosted mod: no `navbar[data-bs-theme="dark"]` selector
 .navbar-dark {
   --#{$prefix}navbar-border-color: #{$navbar-dark-border-color}; // Boosted mod
   --#{$prefix}navbar-color: #{$navbar-dark-color};
