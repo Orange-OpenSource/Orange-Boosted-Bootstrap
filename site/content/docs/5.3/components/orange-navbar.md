@@ -75,7 +75,7 @@ An additional navbar (with text or icon items) can be added on the right of the 
 
 ### Responsive behavior
 
-<div class="bd-example p-0"">
+<div class="bd-example p-0">
   <header data-bs-theme="dark">
     {{< orange-supra mode="languages" aria_label="Supra navigation - Responsive behavior example" >}}
     {{< /orange-supra >}}
