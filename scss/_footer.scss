@@ -1,28 +1,35 @@
 .footer {
-  > * {
-    // scss-docs-start footer-part-css-vars
-    --#{$prefix}footer-gap: 0;
-    --#{$prefix}footer-padding-top: 0;
-    --#{$prefix}footer-padding-bottom: 0;
-    --#{$prefix}footer-title-margin-bottom: 0;
-    --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
-    --#{$prefix}footer-title-font-weight: #{$footer-title-font-weight};
-    --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
-    --#{$prefix}footer-title-letter-spacing: #{$footer-letter-spacing};
-    // scss-docs-end footer-part-css-vars
-    --#{$prefix}navbar-nav-font-size: #{$footer-font-size-sm};
-    --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
-    --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
+  // scss-docs-start footer-part-css-vars
+  --#{$prefix}footer-gap: 0;
+  --#{$prefix}footer-padding-top: 0;
+  --#{$prefix}footer-padding-bottom: 0;
+  --#{$prefix}footer-color: #{$footer-color};
+  --#{$prefix}footer-title-margin-bottom: 0;
+  --#{$prefix}footer-title-font-size: #{$footer-font-size-md};
+  --#{$prefix}footer-title-font-weight: #{$footer-title-font-weight};
+  --#{$prefix}footer-title-line-height: #{$footer-line-height-md};
+  --#{$prefix}footer-title-letter-spacing: #{$footer-letter-spacing};
+  // scss-docs-end footer-part-css-vars
+  --#{$prefix}navbar-padding-y: 0;
+  --#{$prefix}navbar-nav-link-padding-y: 0;
+  --#{$prefix}navbar-nav-link-padding-x: 0;
+  --#{$prefix}navbar-nav-font-size: #{$footer-font-size-sm};
+  --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
+  --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
 
+  display: block;
+  color: var(--#{$prefix}footer-color);
+  box-shadow: none;
+
+  > [class*="container"] {
+    display: block;
+  }
+
+  > * {
     padding-top: var(--#{$prefix}footer-padding-top);
     padding-bottom: var(--#{$prefix}footer-padding-bottom);
-    color: var(--#{$prefix}body-color);
 
     .navbar-nav {
-      --#{$prefix}nav-link-padding-x: 0;
-      --#{$prefix}nav-link-padding-y: 0;
-      --#{$prefix}nav-link-font-weight: #{$footer-nav-link-font-weight};
-
       flex-wrap: wrap;
       gap: var(--#{$prefix}footer-gap);
 
@@ -68,6 +75,7 @@
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .footer-nav {

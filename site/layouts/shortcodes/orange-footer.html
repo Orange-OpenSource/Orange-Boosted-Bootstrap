@@ -22,7 +22,7 @@
 {{- $id := .Get "id" -}}
 {{- $input := .Inner -}}
 
-<footer class="footer bg-dark">
+<footer class="footer navbar" data-bs-theme="dark">
   <h2 class="visually-hidden">Sitemap & information</h2>
 {{- if $title_content }}
   <div class="container-xxl footer-title-content">
@@ -30,7 +30,7 @@
     <div class="row">
       <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
         <label for="inputEmail{{ $id }}" class="visually-hidden">Email</label>
-        <input type="email" class="form-control text-bg-dark border-dark" id="inputEmail{{ $id }}" placeholder="Enter your email">
+        <input type="email" class="form-control bg-transparent" id="inputEmail{{ $id }}" placeholder="Enter your email">
         <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
       </form>
     </div>
