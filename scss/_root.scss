@@ -150,6 +150,10 @@
   --#{$prefix}icon-filter: none;
   --#{$prefix}select-indicator: #{$form-select-indicator};
   --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator};
+  --#{$prefix}table-striped-bg-factor: #{$table-striped-bg-factor};
+  --#{$prefix}table-striped-hover-bg-factor: #{$table-striped-hover-bg-factor};
+  --#{$prefix}table-hover-bg-factor: #{$table-hover-bg-factor};
+  --#{$prefix}table-active-bg-factor: #{$table-active-bg-factor};
   // ******* End additions for dark-mode
 }
 
@@ -238,6 +242,10 @@
     --#{$prefix}icon-filter: #{$invert-filter};
     --#{$prefix}select-indicator: #{$form-select-indicator-dark};
     --#{$prefix}select-disabled-indicator: #{$form-select-disabled-indicator-dark};
+    --#{$prefix}table-striped-bg-factor: .135; // .2 if solid bg
+    --#{$prefix}table-striped-hover-bg-factor: .855; // .865 if solid bg
+    --#{$prefix}table-hover-bg-factor: .135; // .2 if solid bg
+    --#{$prefix}table-active-bg-factor: .565; // .6 if solid bg
     // ******* End additions for dark-mode
     // scss-docs-end root-dark-mode-vars
   }
