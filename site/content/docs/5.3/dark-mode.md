@@ -2161,6 +2161,223 @@ sitemap_exclude: true
   </div>
 </div>
 
+### Navbar
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Ii</h1>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Ii</h1>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample2" aria-controls="navbarExample2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample2">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Ii</h1>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample3" aria-controls="navbarExample3" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample3">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Ii</h1>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample4" aria-controls="navbarExample4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample4">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="light">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <a class="stretched-link" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
+        </a>
+        <h1 class="title">Ii</h1>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample5" aria-controls="navbarExample5" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample5">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
 ### Navs & tabs
 
 <h4 class="mt-3">No theme</h4>
@@ -2702,6 +2919,448 @@ sitemap_exclude: true
       </div>
     </div>
   </div>
+</div>
+
+### Orange navbar
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <header>
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation1">
+      <div class="container-xxl">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation1">
+      <div class="container-xxl">
+        <div class="navbar-brand me-auto">
+          <a class="stretched-link" href="#">
+            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
+          </a>
+          <h1 class="title">Test</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header1" aria-controls="global-header.11 global-header.21" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header.21" class="navbar-collapse collapse d-sm-flex global-header1">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
+      <div class="container-xxl">
+        <div id="global-header.11" class="navbar-collapse collapse m-0 global-header1">
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <header>
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation2">
+      <div class="container-xxl">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation2">
+      <div class="container-xxl">
+        <div class="navbar-brand me-auto">
+          <a class="stretched-link" href="#">
+            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
+          </a>
+          <h1 class="title">Test</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header2" aria-controls="global-header.12 global-header.22" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header.22" class="navbar-collapse collapse d-sm-flex global-header2">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
+      <div class="container-xxl">
+        <div id="global-header.12" class="navbar-collapse collapse m-0 global-header2">
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <header>
+    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation3">
+      <div class="container-xxl">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation3">
+      <div class="container-xxl">
+        <div class="navbar-brand me-auto">
+          <a class="stretched-link" href="#">
+            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
+          </a>
+          <h1 class="title">Test</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header3" aria-controls="global-header.13 global-header.23" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header.23" class="navbar-collapse collapse d-sm-flex global-header3">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
+      <div class="container-xxl">
+        <div id="global-header.13" class="navbar-collapse collapse m-0 global-header3">
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <header>
+    <nav class="navbar navbar-expand-lg supra" data-bs-theme="dark" aria-label="Supra navigation4">
+      <div class="container-xxl">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Global navigation4">
+      <div class="container-xxl">
+        <div class="navbar-brand me-auto">
+          <a class="stretched-link" href="#">
+            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
+          </a>
+          <h1 class="title">Test</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header4" aria-controls="global-header.14 global-header.24" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header.24" class="navbar-collapse collapse d-sm-flex global-header4">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Global navigation - Standard example with nav-under.2">
+      <div class="container-xxl">
+        <div id="global-header.14" class="navbar-collapse collapse m-0 global-header4">
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <header>
+    <nav class="navbar navbar-expand-lg supra" data-bs-theme="light" aria-label="Supra navigation5">
+      <div class="container-xxl">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="light" aria-label="Global navigation5">
+      <div class="container-xxl">
+        <div class="navbar-brand me-auto">
+          <a class="stretched-link" href="#">
+            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
+          </a>
+          <h1 class="title">Test</h1>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header5" aria-controls="global-header.15 global-header.25" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="global-header.25" class="navbar-collapse collapse d-sm-flex global-header5">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
+                </svg>
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
+                </svg>
+                <span class="visually-hidden">Basket</span>
+                <span class="position-relative align-self-start">
+                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                    1
+                    <span class="visually-hidden">shopping basket items</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon">
+                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
+                <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="light" aria-label="Global navigation - Standard example with nav-under.2">
+      <div class="container-xxl">
+        <div id="global-header.15" class="navbar-collapse collapse m-0 global-header5">
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
+          </ul>
+          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
+            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 </div>
 
 ### Pagination
@@ -4921,663 +5580,4 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
-</div>
-
-### Navbar
-
-<h4 class="mt-3">No theme</h4>
-
-<div class="border border-tertiary p-3">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Ii</h1>
-      </div>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample">
-        <ul class="navbar-nav me-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Ii</h1>
-      </div>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample2" aria-controls="navbarExample2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample2">
-        <ul class="navbar-nav me-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Ii</h1>
-      </div>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample3" aria-controls="navbarExample3" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample3">
-        <ul class="navbar-nav me-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Dark theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
-  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Ii</h1>
-      </div>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample4" aria-controls="navbarExample4" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample4">
-        <ul class="navbar-nav me-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<h4 class="mt-3">Light theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <nav class="navbar navbar-expand-lg" data-bs-theme="light">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a class="stretched-link" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted - Back to Home" loading="lazy">
-        </a>
-        <h1 class="title">Ii</h1>
-      </div>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample5" aria-controls="navbarExample5" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse align-items-end flex-grow-1" id="navbarExample5">
-        <ul class="navbar-nav me-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex navbar-item ms-lg-auto mt-lg-4" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-### Orange navbar
-
-<h4 class="mt-3">No theme</h4>
-
-<div class="border border-tertiary p-3">
-  <header>
-    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation1">
-      <div class="container-xxl">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation1">
-      <div class="container-xxl">
-        <div class="navbar-brand me-auto">
-          <a class="stretched-link" href="#">
-            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
-          </a>
-          <h1 class="title">Test</h1>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header1" aria-controls="global-header.11 global-header.21" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="global-header.21" class="navbar-collapse collapse d-sm-flex global-header1">
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                    1
-                    <span class="visually-hidden">shopping basket items</span>
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
-                <span class="visually-hidden">My account</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
-      <div class="container-xxl">
-        <div id="global-header.11" class="navbar-collapse collapse m-0 global-header1">
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          </ul>
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-</div>
-
-<h4 class="mt-3">Dark theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
-  <header>
-    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation2">
-      <div class="container-xxl">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation2">
-      <div class="container-xxl">
-        <div class="navbar-brand me-auto">
-          <a class="stretched-link" href="#">
-            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
-          </a>
-          <h1 class="title">Test</h1>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header2" aria-controls="global-header.12 global-header.22" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="global-header.22" class="navbar-collapse collapse d-sm-flex global-header2">
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                    1
-                    <span class="visually-hidden">shopping basket items</span>
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
-                <span class="visually-hidden">My account</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
-      <div class="container-xxl">
-        <div id="global-header.12" class="navbar-collapse collapse m-0 global-header2">
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          </ul>
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-</div>
-
-<h4 class="mt-3">Light theme on container</h4>
-
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
-  <header>
-    <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation3">
-      <div class="container-xxl">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation3">
-      <div class="container-xxl">
-        <div class="navbar-brand me-auto">
-          <a class="stretched-link" href="#">
-            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
-          </a>
-          <h1 class="title">Test</h1>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header3" aria-controls="global-header.13 global-header.23" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="global-header.23" class="navbar-collapse collapse d-sm-flex global-header3">
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                    1
-                    <span class="visually-hidden">shopping basket items</span>
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
-                <span class="visually-hidden">My account</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" aria-label="Global navigation - Standard example with nav-under.2">
-      <div class="container-xxl">
-        <div id="global-header.13" class="navbar-collapse collapse m-0 global-header3">
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          </ul>
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-</div>
-
-<h4 class="mt-3">Dark theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
-  <header>
-    <nav class="navbar navbar-expand-lg supra" data-bs-theme="dark" aria-label="Supra navigation4">
-      <div class="container-xxl">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Global navigation4">
-      <div class="container-xxl">
-        <div class="navbar-brand me-auto">
-          <a class="stretched-link" href="#">
-            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
-          </a>
-          <h1 class="title">Test</h1>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header4" aria-controls="global-header.14 global-header.24" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="global-header.24" class="navbar-collapse collapse d-sm-flex global-header4">
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                    1
-                    <span class="visually-hidden">shopping basket items</span>
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
-                <span class="visually-hidden">My account</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Global navigation - Standard example with nav-under.2">
-      <div class="container-xxl">
-        <div id="global-header.14" class="navbar-collapse collapse m-0 global-header4">
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          </ul>
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-</div>
-
-<h4 class="mt-3">Light theme on component</h4>
-
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
-  <header>
-    <nav class="navbar navbar-expand-lg supra" data-bs-theme="light" aria-label="Supra navigation5">
-      <div class="container-xxl">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="light" aria-label="Global navigation5">
-      <div class="container-xxl">
-        <div class="navbar-brand me-auto">
-          <a class="stretched-link" href="#">
-            <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Boosted - Back to Home" loading="lazy" width="50" height="50">
-          </a>
-          <h1 class="title">Test</h1>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".global-header5" aria-controls="global-header.15 global-header.25" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="global-header.25" class="navbar-collapse collapse d-sm-flex global-header5">
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <svg width="1.5rem" height="1.5rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
-                  <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"></use>
-                </svg>
-                <span class="visually-hidden">Basket</span>
-                <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
-                    1
-                    <span class="visually-hidden">shopping basket items</span>
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link nav-icon">
-                <img src="/docs/{{< param docs_version >}}/assets/img/navbar-contact.png" role="img" alt="User" loading="lazy" width="25" height="25">
-                <span class="visually-hidden">My account</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="light" aria-label="Global navigation - Standard example with nav-under.2">
-      <div class="container-xxl">
-        <div id="global-header.15" class="navbar-collapse collapse m-0 global-header5">
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
-          </ul>
-          <ul class="navbar-nav border-top border-1 border-dark d-flex flex-row d-lg-none supra">
-            <li class="nav-item"><a class="nav-link active" href="#" aria-label="EN English version" aria-current="true">EN</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="FR Version française" hreflang="fr" lang="fr">FR</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" aria-label="ES Versión en español" hreflang="es" lang="es">ES</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
 </div>
