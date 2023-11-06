@@ -28,7 +28,7 @@
 {{- $aria_label := .Get "aria_label"}}
 {{- $input := .Inner -}}
 
-<nav class="navbar bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}">
+<nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <div class="navbar-brand me-auto{{ cond (or $navigation $responsive_logo) "" " me-lg-4" }}">
       <a class="stretched-link" href="#">
@@ -89,7 +89,7 @@
 {{- end }}
 {{- if eq $mode "search" }}
     <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
-      <input class="form-control bg-transparent text-white border border-2 border-dark" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control bg-transparent" type="search" placeholder="Search" aria-label="Search">
     </form>
 {{- end }}
     <div id="{{ $id }}.2" class="navbar-collapse collapse d-sm-flex{{ cond $responsive_logo " ms-lg-3" "" }} {{ $id }}">
@@ -110,7 +110,7 @@
             </svg>
             <span class="visually-hidden">Basket</span>
             <span class="position-relative align-self-start">
-              <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+              <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
                 1
                 <span class="visually-hidden">shopping basket items</span>
               </span>
@@ -138,7 +138,7 @@
   </div>
 </nav>
 {{- if $navigation }}
-<nav class="navbar bg-dark navbar-expand-lg" aria-label="{{ $aria_label }}.2">
+<nav class="navbar navbar-expand-lg" aria-label="{{ $aria_label }}.2">
   <div class="container-xxl">
     <div id="{{ $id }}.1" class="navbar-collapse collapse m-0 {{ $id }}">
 {{- if $supra }}
