@@ -2,15 +2,18 @@
   Usage: `orange-supra args`
 
   `args` are all optional and can be one of the following:
-    * mode: mode used to display specific content if defined (choose one among ["languages", "actions"])
     * aria_label: set the aria-label for the current supra bar
+    * mode: mode used to display specific content if defined (choose one among ["languages", "actions"])
+    * theme_dark: set the `data-bs-theme="dark"` for the current supra bar (default: false)
 */ -}}
 
-{{- $mode := .Get "mode" -}}
 {{- $aria_label := .Get "aria_label" -}}
+{{- $mode := .Get "mode" -}}
+{{- $theme_dark := .Get "theme_dark" | default false -}}
+
 {{- $input := .Inner -}}
 
-<nav class="navbar navbar-expand-lg bg-dark supra" aria-label="{{ $aria_label }}">
+<nav class="navbar navbar-expand-lg supra"{{- if $theme_dark }} data-bs-theme="dark"{{- end }} aria-label="{{ $aria_label }}">
   <div class="container-xxl">
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
@@ -40,7 +43,7 @@
           </svg>
           <span class="visually-hidden">Basket</span>
           <span class="position-relative align-self-start">
-            <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+            <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
               1
               <span class="visually-hidden">shopping basket items</span>
             </span>
