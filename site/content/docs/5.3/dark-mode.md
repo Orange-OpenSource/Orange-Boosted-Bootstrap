@@ -143,12 +143,12 @@ sitemap_exclude: true
   <div class="accordion" id="accordionExample1">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1"
-                aria-expanded="true" aria-controls="collapseOne1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseOne1"
+                aria-expanded="true" aria-controls="accordionCollapseOne1">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+      <div id="accordionCollapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -161,11 +161,11 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                data-bs-target="#accordionCollapseTwo1" aria-expanded="false" aria-controls="accordionCollapseTwo1">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+      <div id="accordionCollapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -184,12 +184,12 @@ sitemap_exclude: true
   <div class="accordion" id="accordionExample2">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2"
-                aria-expanded="true" aria-controls="collapseOne2">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseOne2"
+                aria-expanded="true" aria-controls="accordionCollapseOne2">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
+      <div id="accordionCollapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -202,11 +202,11 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                data-bs-target="#accordionCollapseTwo2" aria-expanded="false" aria-controls="accordionCollapseTwo2">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+      <div id="accordionCollapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -225,12 +225,12 @@ sitemap_exclude: true
   <div class="accordion" id="accordionExample3">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3"
-                aria-expanded="true" aria-controls="collapseOne3">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseOne3"
+                aria-expanded="true" aria-controls="accordionCollapseOne3">
           Accordion Item #1
         </button>
       </h2>
-      <div id="collapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
+      <div id="accordionCollapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
         <div class="accordion-body">
           <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
           adds the appropriate classes that we use to style each element. These classes control the overall
@@ -243,11 +243,11 @@ sitemap_exclude: true
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                data-bs-target="#accordionCollapseTwo3" aria-expanded="false" aria-controls="accordionCollapseTwo3">
           Accordion Item #2
         </button>
       </h2>
-      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+      <div id="accordionCollapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
         <div class="accordion-body">
           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
           plugin adds the appropriate classes that we use to style each element. These classes control the overall
@@ -1432,19 +1432,19 @@ sitemap_exclude: true
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1455,19 +1455,19 @@ sitemap_exclude: true
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1478,19 +1478,19 @@ sitemap_exclude: true
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1501,19 +1501,19 @@ sitemap_exclude: true
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1524,19 +1524,19 @@ sitemap_exclude: true
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-no-outline" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
   <button type="button" class="btn btn-icon btn-outline-secondary" disabled data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
-    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.3/assets/img/boosted-sprite.svg#delete"></use></svg>
+    <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"></use></svg>
     <span class="visually-hidden">Close</span>
   </button>
 </div>
@@ -1729,6 +1729,707 @@ sitemap_exclude: true
   </div>
 </div>
 
+### Footer
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <footer class="footer navbar">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail1" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail1" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion1" aria-label="Sitemap footer 1">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne1">
+              <button class="accordion-button container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne1" class="container-xxl accordion-collapse collapse show" data-bs-parent="#accordion1" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne1">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo1">
+              <button class="accordion-button container-xxl px-1 d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo1" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion1" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo1">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree1">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree1" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion1">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree1">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour1">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour1" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion1">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour1">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <footer class="footer navbar">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail2" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail2" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion2" aria-label="Sitemap footer 2">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne2">
+              <button class="accordion-button container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne2" class="container-xxl accordion-collapse collapse show" data-bs-parent="#accordion2" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo2">
+              <button class="accordion-button container-xxl px-1 d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour2">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour2" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion2">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour2">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <footer class="footer navbar">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail3" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion3" aria-label="Sitemap footer 3">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne3">
+              <button class="accordion-button container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne3" class="container-xxl accordion-collapse collapse show" data-bs-parent="#accordion3" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne3">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo3">
+              <button class="accordion-button container-xxl px-1 d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo3">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree3">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree3">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour3">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour3" aria-expanded="false" aria-controls="collapseFour3">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour3" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion3">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour3">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <footer class="footer navbar" data-bs-theme="dark">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail4" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion4" aria-label="Sitemap footer 4">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne4">
+              <button class="accordion-button container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne4" class="container-xxl accordion-collapse collapse show" data-bs-parent="#accordion4" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne4">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo4">
+              <button class="accordion-button container-xxl px-1 d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo4">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree4">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree4">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour4">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour4" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion4">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour4">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <footer class="footer navbar" data-bs-theme="light">
+    <h2 class="visually-hidden">Sitemap &amp; information</h2>
+    <div class="container-xxl footer-title-content">
+      <h3 class="footer-heading">Sign up to our mailing list</h3>
+      <div class="row">
+        <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
+          <label for="inputEmail5" class="visually-hidden">Email</label>
+          <input type="email" class="form-control" id="inputEmail5" placeholder="Enter your email">
+          <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-social">
+      <h3 class="footer-heading me-md-3">Follow us</h3>
+      <ul class="navbar-nav gap-2 flex-row align-self-start">
+        <li><a href="#" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">WhatsApp</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a></li>
+        <li><a href="#" class="btn btn-icon btn-social btn-tiktok"><span class="visually-hidden">TikTok</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-nav">
+      <nav class="accordion" id="accordion5" aria-label="Sitemap footer 5">
+        <div class="row">
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingOne5">
+              <button class="accordion-button container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseOne5" class="container-xxl accordion-collapse collapse show" data-bs-parent="#accordion5" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingOne5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingTwo5">
+              <button class="accordion-button container-xxl px-1 d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="false" aria-controls="collapseTwo5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseTwo5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5" style="">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingTwo5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingThree5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseThree5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingThree5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column col-md-3">
+            <h3 class="accordion-header footer-heading" id="headingFour5">
+              <button class="accordion-button collapsed container-xxl px-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="false" aria-controls="collapseFour5">
+                Category
+              </button>
+              <span class="d-none d-md-flex">Category</span>
+            </h3>
+            <div id="collapseFour5" class="container-xxl accordion-collapse collapse" data-bs-parent="#accordion5">
+              <ul class="navbar-nav">
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+                <li><a class="nav-link" href="#" aria-describedby="headingFour5">Subcategory</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-service">
+      <ul class="navbar-nav gap-3 gap-md-4">
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#location-pin-compass"></use></svg><span>Store locator</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#mobile-network-coverage"></use></svg><span>Coverage checker</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#live-chat"></use></svg><span>Contact us</span></a></li>
+        <li><a class="nav-link gap-1" href="#"><svg width="1.875rem" height="1.875rem" focusable="false" aria-hidden="true"><use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#child-protection"></use></svg><span>Child protection</span></a></li>
+      </ul>
+    </div>
+    <div class="border-bottom border-1 border-dark"></div>
+    <div class="container-xxl footer-terms">
+      <ul class="navbar-nav gap-md-3">
+        <li class="fw-bold">© Orange {{ now.Format "2006" }}</li>
+        <li><a class="nav-link" href="#">Terms and conditions</a></li>
+        <li><a class="nav-link" href="#">Privacy</a></li>
+        <li><a class="nav-link" href="#">Accessibility statement</a></li>
+        <li><a class="nav-link" href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
 
 ### List group
 
