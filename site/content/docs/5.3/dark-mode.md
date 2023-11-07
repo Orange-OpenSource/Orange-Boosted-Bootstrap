@@ -126,6 +126,11 @@ sitemap_exclude: true
     <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="light"></div>
     <div style="width: 50px; height: 50px; background-color:var(--bs-black-tweak)" data-bs-theme="dark"></div>
   </div>
+  <div class="d-flex flex-row gap-2 align-items-center">
+    <div style="width: 200px">--bs-body-color-subtle</div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="light"></div>
+    <div style="width: 50px; height: 50px; background-color:var(--bs-body-color-subtle)" data-bs-theme="dark"></div>
+  </div>
 </div>
 
 ## Components
@@ -4505,6 +4510,1010 @@ sitemap_exclude: true
 </div>
 
 ## Contents
+
+### Basic text elements
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column align-items-start border border-tertiary p-3">
+  <h1>H1</h1>
+  <h2>H2</h2>
+  <h3>H3</h3>
+  <h4>H4</h4>
+  <p>Paragraph</p>
+  <a href="#">Link</a>
+  <hr class="w-100">
+  <ul>
+    <li>First layer
+      <ul>
+        <li>Second layer
+          <ul>
+            <li>Third layer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ol>
+    <li>First layer
+      <ol>
+        <li>Second layer
+          <ol>
+            <li>Third layer</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <dl>
+    <dt>Description lists</dt>
+    <dd>First description</dd>
+    <dt>Second title</dt>
+    <dd>Second description</dd>
+  </dl>
+  <code>Code example</code>
+  <pre>Preformatted text</pre>
+  <var>Variable text</var>
+  <kbd>Keyboard input</kbd>
+  <samp>Sample output</samp>
+  <address>
+    <strong>Address</strong><br>
+    1123 Fictional St,<br>
+    San Francisco, CA 94103<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <figure>
+    <blockquote class="blockquote">
+      <p>Styles Blockquote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Figcaption <cite title="Source Title">Source</cite>
+    </figcaption>
+  </figure>
+  <abbr title="Abbreviation">Abbr</abbr>
+  <details>
+    <summary>Summary</summary>
+    <p>Details</p>
+  </details>
+  <p><mark>highlight</mark></p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as bold text too.</em></p>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column align-items-start border border-tertiary p-3 bg-body text-body" data-bs-theme="dark">
+  <h1>H1</h1>
+  <h2>H2</h2>
+  <h3>H3</h3>
+  <h4>H4</h4>
+  <p>Paragraph</p>
+  <a href="#">Link</a>
+  <hr class="w-100">
+  <ul>
+    <li>First layer
+      <ul>
+        <li>Second layer
+          <ul>
+            <li>Third layer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ol>
+    <li>First layer
+      <ol>
+        <li>Second layer
+          <ol>
+            <li>Third layer</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <dl>
+    <dt>Description lists</dt>
+    <dd>First description</dd>
+    <dt>Second title</dt>
+    <dd>Second description</dd>
+  </dl>
+  <code>Code example</code>
+  <pre>Preformatted text</pre>
+  <var>Variable text</var>
+  <kbd>Keyboard input</kbd>
+  <samp>Sample output</samp>
+  <address>
+    <strong>Address</strong><br>
+    1123 Fictional St,<br>
+    San Francisco, CA 94103<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <figure>
+    <blockquote class="blockquote">
+      <p>Styles Blockquote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Figcaption <cite title="Source Title">Source</cite>
+    </figcaption>
+  </figure>
+  <abbr title="Abbreviation">Abbr</abbr>
+  <details>
+    <summary>Summary</summary>
+    <p>Details</p>
+  </details>
+  <p><mark>highlight</mark></p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as bold text too.</em></p>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column align-items-start border border-tertiary p-3 bg-body text-body" data-bs-theme="light">
+  <h1>H1</h1>
+  <h2>H2</h2>
+  <h3>H3</h3>
+  <h4>H4</h4>
+  <p>Paragraph</p>
+  <a href="#">Link</a>
+  <hr class="w-100">
+  <ul>
+    <li>First layer
+      <ul>
+        <li>Second layer
+          <ul>
+            <li>Third layer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ol>
+    <li>First layer
+      <ol>
+        <li>Second layer
+          <ol>
+            <li>Third layer</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <dl>
+    <dt>Description lists</dt>
+    <dd>First description</dd>
+    <dt>Second title</dt>
+    <dd>Second description</dd>
+  </dl>
+  <code>Code example</code>
+  <pre>Preformatted text</pre>
+  <var>Variable text</var>
+  <kbd>Keyboard input</kbd>
+  <samp>Sample output</samp>
+  <address>
+    <strong>Address</strong><br>
+    1123 Fictional St,<br>
+    San Francisco, CA 94103<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <figure>
+    <blockquote class="blockquote">
+      <p>Styles Blockquote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Figcaption <cite title="Source Title">Source</cite>
+    </figcaption>
+  </figure>
+  <abbr title="Abbreviation">Abbr</abbr>
+  <details>
+    <summary>Summary</summary>
+    <p>Details</p>
+  </details>
+  <p><mark>highlight</mark></p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as bold text too.</em></p>
+  <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+  <h1 data-bs-theme="dark">H1</h1>
+  <h2 data-bs-theme="dark">H2</h2>
+  <h3 data-bs-theme="dark">H3</h3>
+  <h4 data-bs-theme="dark">H4</h4>
+  <p class="text-body" data-bs-theme="dark">Paragraph</p>
+  <a data-bs-theme="dark" href="#">Link</a>
+  <hr class="w-100" data-bs-theme="dark">
+  <ul class="text-body" data-bs-theme="dark">
+    <li>First layer
+      <ul>
+        <li>Second layer
+          <ul>
+            <li>Third layer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ol class="text-body" data-bs-theme="dark">
+    <li>First layer
+      <ol>
+        <li>Second layer
+          <ol>
+            <li>Third layer</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <dl class="text-body" data-bs-theme="dark">
+    <dt>Description lists</dt>
+    <dd>First description</dd>
+    <dt>Second title</dt>
+    <dd>Second description</dd>
+  </dl>
+  <code data-bs-theme="dark">Code example</code>
+  <pre data-bs-theme="dark">Preformatted text</pre>
+  <var data-bs-theme="dark">Variable text</var>
+  <kbd data-bs-theme="dark">Keyboard input</kbd>
+  <samp class="text-body" data-bs-theme="dark">Sample output</samp>
+  <address class="text-body" data-bs-theme="dark">
+    <strong>Address</strong><br>
+    1123 Fictional St,<br>
+    San Francisco, CA 94103<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <blockquote class="text-body" data-bs-theme="dark">
+    Blockquote
+  </blockquote>
+  <figure class="text-body" data-bs-theme="dark">
+    <blockquote class="blockquote">
+      <p>Styles Blockquote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Figcaption <cite title="Source Title">Source</cite>
+    </figcaption>
+  </figure>
+  <abbr class="text-body" data-bs-theme="dark" title="Abbreviation">Abbr</abbr>
+  <details class="text-body" data-bs-theme="dark">
+    <summary>Summary</summary>
+    <p>Details</p>
+  </details>
+  <p><mark data-bs-theme="dark">highlight</mark></p>
+  <p><del class="text-body" data-bs-theme="dark">This line of text is meant to be treated as deleted text.</del></p>
+  <p><s class="text-body" data-bs-theme="dark">This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins class="text-body" data-bs-theme="dark">This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u class="text-body" data-bs-theme="dark">This line of text will render as underlined.</u></p>
+  <p><small class="text-body" data-bs-theme="dark">This line of text is meant to be treated as fine print.</small></p>
+  <p><strong class="text-body" data-bs-theme="dark">This line rendered as bold text.</strong></p>
+  <p><em class="text-body" data-bs-theme="dark">This line rendered as bold text too.</em></p>
+  <svg data-bs-theme="dark" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+  <h1 data-bs-theme="light">H1</h1>
+  <h2 data-bs-theme="light">H2</h2>
+  <h3 data-bs-theme="light">H3</h3>
+  <h4 data-bs-theme="light">H4</h4>
+  <p class="text-body" data-bs-theme="light">Paragraph</p>
+  <a data-bs-theme="light" href="#">Link</a>
+  <hr class="w-100" data-bs-theme="light">
+  <ul class="text-body" data-bs-theme="light">
+    <li>First layer
+      <ul>
+        <li>Second layer
+          <ul>
+            <li>Third layer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ol class="text-body" data-bs-theme="light">
+    <li>First layer
+      <ol>
+        <li>Second layer
+          <ol>
+            <li>Third layer</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <dl class="text-body" data-bs-theme="light">
+    <dt>Description lists</dt>
+    <dd>First description</dd>
+    <dt>Second title</dt>
+    <dd>Second description</dd>
+  </dl>
+  <code data-bs-theme="light">Code example</code>
+  <pre data-bs-theme="light">Preformatted text</pre>
+  <var data-bs-theme="light">Variable text</var>
+  <kbd data-bs-theme="light">Keyboard input</kbd>
+  <samp class="text-body" data-bs-theme="light">Sample output</samp>
+  <address class="text-body" data-bs-theme="light">
+    <strong>Address</strong><br>
+    1123 Fictional St,<br>
+    San Francisco, CA 94103<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <blockquote class="text-body" data-bs-theme="light">
+    Blockquote
+  </blockquote>
+  <figure class="text-body" data-bs-theme="light">
+    <blockquote class="blockquote">
+      <p>Styles Blockquote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Figcaption <cite title="Source Title">Source</cite>
+    </figcaption>
+  </figure>
+  <abbr class="text-body" data-bs-theme="light" title="Abbreviation">Abbr</abbr>
+  <details class="text-body" data-bs-theme="light">
+    <summary>Summary</summary>
+    <p>Details</p>
+  </details>
+  <p><mark data-bs-theme="light">highlight</mark></p>
+  <p><del class="text-body" data-bs-theme="light">This line of text is meant to be treated as deleted text.</del></p>
+  <p><s class="text-body" data-bs-theme="light">This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins class="text-body" data-bs-theme="light">This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u class="text-body" data-bs-theme="light">This line of text will render as underlined.</u></p>
+  <p><small class="text-body" data-bs-theme="light">This line of text is meant to be treated as fine print.</small></p>
+  <p><strong class="text-body" data-bs-theme="light">This line rendered as bold text.</strong></p>
+  <p><em class="text-body" data-bs-theme="light">This line rendered as bold text too.</em></p>
+  <svg data-bs-theme="light" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
+</div>
+
+### Basic form elements
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column border border-tertiary p-3">
+  <fieldset>
+    <legend>Example legend</legend>
+    <p>
+      <label for="input1">Example input</label>
+      <input type="text" id="input1" placeholder="Example input">
+    </p>
+    <p>
+      <label for="email1">Example email</label>
+      <input type="email" id="email1" placeholder="test@example.com" class="">
+    </p>
+    <p>
+      <label for="tel1">Example telephone</label>
+      <input type="tel" id="tel1">
+    </p>
+    <p>
+      <label for="url1">Example url</label>
+      <input type="url" id="url1" class="">
+    </p>
+    <p>
+      <label for="number1">Example number</label>
+      <input type="number" id="number1">
+    </p>
+    <p>
+      <label for="search1">Example search</label>
+      <input type="search" id="search1">
+    </p>
+    <p>
+      <label for="range1">Example range</label>
+      <input type="range" id="range1" min="0" max="10">
+    </p>
+    <p>
+      <label for="file1">Example file input</label>
+      <input type="file" id="file1">
+    </p>
+    <p>
+      <label for="select1">Example select</label>
+      <select id="select1">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </optgroup>
+        <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" value="">
+        Check this checkbox
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="optionsRadios1" id="optionsRadios11" value="option1" checked="">
+        Option one is this and that
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios1" id="optionsRadios21" value="option2">
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios1" id="optionsRadios31" value="option3" disabled="">
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea1">Example textarea</label>
+      <textarea id="textarea1" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date1">Example date</label>
+      <input type="date" id="date1">
+    </p>
+    <p>
+      <label for="time1">Example time</label>
+      <input type="time" id="time1">
+    </p>
+    <p>
+      <label for="password1">Example password</label>
+      <input type="password" id="password1">
+    </p>
+    <p>
+      <label for="datetime-local1">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local1">
+    </p>
+    <p>
+      <label for="week1">Example week</label>
+      <input type="week" id="week1">
+    </p>
+    <p>
+      <label for="month1">Example month</label>
+      <input type="month" id="month1">
+    </p>
+    <p>
+      <label for="color1">Example color</label>
+      <input type="color" id="color1">
+    </p>
+    <p>
+      <label for="output1">Example output</label>
+      <output name="result1" id="output1" class="text-body">100</output>
+    </p>
+    <p>
+      <button type="submit">Button submit</button>
+      <input type="submit" value="Input submit button">
+      <input type="reset" value="Input reset button">
+      <input type="button" value="Input button">
+    </p>
+    <p>
+      <button type="submit" disabled="">Button submit</button>
+      <input type="submit" value="Input submit button" disabled="">
+      <input type="reset" value="Input reset button" disabled="">
+      <input type="button" value="Input button" disabled="">
+    </p>
+  </fieldset>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <fieldset>
+    <legend>Example legend</legend>
+    <p>
+      <label for="input2">Example input</label>
+      <input type="text" id="input2" placeholder="Example input">
+    </p>
+    <p>
+      <label for="email2">Example email</label>
+      <input type="email" id="email2" placeholder="test@example.com" class="">
+    </p>
+    <p>
+      <label for="tel2">Example telephone</label>
+      <input type="tel" id="tel2">
+    </p>
+    <p>
+      <label for="url2">Example url</label>
+      <input type="url" id="url2" class="">
+    </p>
+    <p>
+      <label for="number2">Example number</label>
+      <input type="number" id="number2">
+    </p>
+    <p>
+      <label for="search2">Example search</label>
+      <input type="search" id="search2">
+    </p>
+    <p>
+      <label for="range2">Example range</label>
+      <input type="range" id="range2" min="0" max="10">
+    </p>
+    <p>
+      <label for="file2">Example file input</label>
+      <input type="file" id="file2">
+    </p>
+    <p>
+      <label for="select2">Example select</label>
+      <select id="select2">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </optgroup>
+        <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" value="">
+        Check this checkbox
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="optionsRadios2" id="optionsRadios12" value="option1" checked="">
+        Option one is this and that
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios2" id="optionsRadios22" value="option2">
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios2" id="optionsRadios32" value="option3" disabled="">
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea2">Example textarea</label>
+      <textarea id="textarea2" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date2">Example date</label>
+      <input type="date" id="date2">
+    </p>
+    <p>
+      <label for="time2">Example time</label>
+      <input type="time" id="time2">
+    </p>
+    <p>
+      <label for="password2">Example password</label>
+      <input type="password" id="password2">
+    </p>
+    <p>
+      <label for="datetime-local2">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local2">
+    </p>
+    <p>
+      <label for="week2">Example week</label>
+      <input type="week" id="week2">
+    </p>
+    <p>
+      <label for="month2">Example month</label>
+      <input type="month" id="month2">
+    </p>
+    <p>
+      <label for="color2">Example color</label>
+      <input type="color" id="color2">
+    </p>
+    <p>
+      <label for="output2">Example output</label>
+      <output name="result2" id="output2" class="text-body">100</output>
+    </p>
+    <p>
+      <button type="submit">Button submit</button>
+      <input type="submit" value="Input submit button">
+      <input type="reset" value="Input reset button">
+      <input type="button" value="Input button">
+    </p>
+    <p>
+      <button type="submit" disabled="">Button submit</button>
+      <input type="submit" value="Input submit button" disabled="">
+      <input type="reset" value="Input reset button" disabled="">
+      <input type="button" value="Input button" disabled="">
+    </p>
+  </fieldset>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <fieldset>
+    <legend>Example legend</legend>
+    <p>
+      <label for="input3">Example input</label>
+      <input type="text" id="input3" placeholder="Example input">
+    </p>
+    <p>
+      <label for="email3">Example email</label>
+      <input type="email" id="email3" placeholder="test@example.com" class="">
+    </p>
+    <p>
+      <label for="tel3">Example telephone</label>
+      <input type="tel" id="tel3">
+    </p>
+    <p>
+      <label for="url3">Example url</label>
+      <input type="url" id="url3" class="">
+    </p>
+    <p>
+      <label for="number3">Example number</label>
+      <input type="number" id="number3">
+    </p>
+    <p>
+      <label for="search3">Example search</label>
+      <input type="search" id="search3">
+    </p>
+    <p>
+      <label for="range3">Example range</label>
+      <input type="range" id="range3" min="0" max="10">
+    </p>
+    <p>
+      <label for="file3">Example file input</label>
+      <input type="file" id="file3">
+    </p>
+    <p>
+      <label for="select3">Example select</label>
+      <select id="select3">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </optgroup>
+        <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" value="">
+        Check this checkbox
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="optionsRadios3" id="optionsRadios13" value="option1" checked="">
+        Option one is this and that
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios3" id="optionsRadios23" value="option2">
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios3" id="optionsRadios33" value="option3" disabled="">
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea3">Example textarea</label>
+      <textarea id="textarea3" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date3">Example date</label>
+      <input type="date" id="date3">
+    </p>
+    <p>
+      <label for="time3">Example time</label>
+      <input type="time" id="time3">
+    </p>
+    <p>
+      <label for="password3">Example password</label>
+      <input type="password" id="password3">
+    </p>
+    <p>
+      <label for="datetime-local3">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local3">
+    </p>
+    <p>
+      <label for="week3">Example week</label>
+      <input type="week" id="week3">
+    </p>
+    <p>
+      <label for="month3">Example month</label>
+      <input type="month" id="month3">
+    </p>
+    <p>
+      <label for="color3">Example color</label>
+      <input type="color" id="color3">
+    </p>
+    <p>
+      <label for="output3">Example output</label>
+      <output name="result3" id="output3" class="text-body">100</output>
+    </p>
+    <p>
+      <button type="submit">Button submit</button>
+      <input type="submit" value="Input submit button">
+      <input type="reset" value="Input reset button">
+      <input type="button" value="Input button">
+    </p>
+    <p>
+      <button type="submit" disabled="">Button submit</button>
+      <input type="submit" value="Input submit button" disabled="">
+      <input type="reset" value="Input reset button" disabled="">
+      <input type="button" value="Input button" disabled="">
+    </p>
+  </fieldset>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <fieldset>
+    <legend class="text-body" data-bs-theme="dark">Example legend</legend>
+    <p>
+      <label for="input4" data-bs-theme="dark">Example input</label>
+      <input type="text" id="input4" data-bs-theme="dark" placeholder="Example input">
+    </p>
+    <p>
+      <label for="email4" data-bs-theme="dark">Example email</label>
+      <input type="email" id="email4" data-bs-theme="dark" placeholder="test@example.com" class="">
+    </p>
+    <p>
+      <label for="tel4" data-bs-theme="dark">Example telephone</label>
+      <input type="tel" id="tel4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="url4" data-bs-theme="dark">Example url</label>
+      <input type="url" id="url4" data-bs-theme="dark" class="">
+    </p>
+    <p>
+      <label for="number4" data-bs-theme="dark">Example number</label>
+      <input type="number" id="number4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="search4" data-bs-theme="dark">Example search</label>
+      <input type="search" id="search4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="range4" data-bs-theme="dark">Example range</label>
+      <input type="range" id="range4" data-bs-theme="dark" min="0" max="10">
+    </p>
+    <p>
+      <label for="file4" data-bs-theme="dark">Example file input</label>
+      <input type="file" id="file4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="select4" data-bs-theme="dark">Example select</label>
+      <select id="select4" data-bs-theme="dark">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </optgroup>
+        <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label data-bs-theme="dark">
+        <input type="checkbox" value="">
+        Check this checkbox
+      </label>
+    </p>
+    <p>
+      <label data-bs-theme="dark">
+        <input type="radio" name="optionsRadios4" id="optionsRadios14" value="option1" checked="">
+        Option one is this and that
+      </label>
+      <label data-bs-theme="dark">
+        <input type="radio" name="optionsRadios4" id="optionsRadios24" value="option2">
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label data-bs-theme="dark">
+        <input type="radio" name="optionsRadios4" id="optionsRadios34" value="option3" disabled="">
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea4" data-bs-theme="dark">Example textarea</label>
+      <textarea id="textarea4" data-bs-theme="dark" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date4" data-bs-theme="dark">Example date</label>
+      <input type="date" id="date4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="time4" data-bs-theme="dark">Example time</label>
+      <input type="time" id="time4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="password4" data-bs-theme="dark">Example password</label>
+      <input type="password" id="password4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="datetime-local4" data-bs-theme="dark">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="week4" data-bs-theme="dark">Example week</label>
+      <input type="week" id="week4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="month4" data-bs-theme="dark">Example month</label>
+      <input type="month" id="month4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="color4" data-bs-theme="dark">Example color</label>
+      <input type="color" id="color4" data-bs-theme="dark">
+    </p>
+    <p>
+      <label for="output4" data-bs-theme="dark">Example output</label>
+      <output name="result4" id="output4" data-bs-theme="dark" class="text-body">100</output>
+    </p>
+    <p>
+      <button type="submit" data-bs-theme="dark">Button submit</button>
+      <input type="submit" data-bs-theme="dark" value="Input submit button">
+      <input type="reset" data-bs-theme="dark" value="Input reset button">
+      <input type="button" data-bs-theme="dark" value="Input button">
+    </p>
+    <p>
+      <button type="submit" data-bs-theme="dark" disabled="">Button submit</button>
+      <input type="submit" data-bs-theme="dark" value="Input submit button" disabled="">
+      <input type="reset" data-bs-theme="dark" value="Input reset button" disabled="">
+      <input type="button" data-bs-theme="dark" value="Input button" disabled="">
+    </p>
+  </fieldset>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <fieldset>
+    <legend class="text-body" data-bs-theme="light">Example legend</legend>
+    <p>
+      <label for="input5" data-bs-theme="light">Example input</label>
+      <input type="text" id="input5" data-bs-theme="light" placeholder="Example input">
+    </p>
+    <p>
+      <label for="email5" data-bs-theme="light">Example email</label>
+      <input type="email" id="email5" data-bs-theme="light" placeholder="test@example.com" class="">
+    </p>
+    <p>
+      <label for="tel5" data-bs-theme="light">Example telephone</label>
+      <input type="tel" id="tel5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="url5" data-bs-theme="light">Example url</label>
+      <input type="url" id="url5" data-bs-theme="light" class="">
+    </p>
+    <p>
+      <label for="number5" data-bs-theme="light">Example number</label>
+      <input type="number" id="number5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="search5" data-bs-theme="light">Example search</label>
+      <input type="search" id="search5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="range5" data-bs-theme="light">Example range</label>
+      <input type="range" id="range5" data-bs-theme="light" min="0" max="10">
+    </p>
+    <p>
+      <label for="file5" data-bs-theme="light">Example file input</label>
+      <input type="file" id="file5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="select5" data-bs-theme="light">Example select</label>
+      <select id="select5" data-bs-theme="light">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </optgroup>
+        <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label data-bs-theme="light">
+        <input type="checkbox" value="">
+        Check this checkbox
+      </label>
+    </p>
+    <p>
+      <label data-bs-theme="light">
+        <input type="radio" name="optionsRadios5" id="optionsRadios15" value="option1" checked="">
+        Option one is this and that
+      </label>
+      <label data-bs-theme="light">
+        <input type="radio" name="optionsRadios5" id="optionsRadios25" value="option2">
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label data-bs-theme="light">
+        <input type="radio" name="optionsRadios5" id="optionsRadios35" value="option3" disabled="">
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea5" data-bs-theme="light">Example textarea</label>
+      <textarea id="textarea5" data-bs-theme="light" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date5" data-bs-theme="light">Example date</label>
+      <input type="date" id="date5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="time5" data-bs-theme="light">Example time</label>
+      <input type="time" id="time5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="password5" data-bs-theme="light">Example password</label>
+      <input type="password" id="password5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="datetime-local5" data-bs-theme="light">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="week5" data-bs-theme="light">Example week</label>
+      <input type="week" id="week5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="month5" data-bs-theme="light">Example month</label>
+      <input type="month" id="month5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="color5" data-bs-theme="light">Example color</label>
+      <input type="color" id="color5" data-bs-theme="light">
+    </p>
+    <p>
+      <label for="output5" data-bs-theme="light">Example output</label>
+      <output name="result5" id="output5" data-bs-theme="light" class="text-body">100</output>
+    </p>
+    <p>
+      <button type="submit" data-bs-theme="light">Button submit</button>
+      <input type="submit" data-bs-theme="light" value="Input submit button">
+      <input type="reset" data-bs-theme="light" value="Input reset button">
+      <input type="button" data-bs-theme="light" value="Input button">
+    </p>
+    <p>
+      <button type="submit" data-bs-theme="light" disabled="">Button submit</button>
+      <input type="submit" data-bs-theme="light" value="Input submit button" disabled="">
+      <input type="reset" data-bs-theme="light" value="Input reset button" disabled="">
+      <input type="button" data-bs-theme="light" value="Input button" disabled="">
+    </p>
+  </fieldset>
+</div>
 
 ### Tables
 
