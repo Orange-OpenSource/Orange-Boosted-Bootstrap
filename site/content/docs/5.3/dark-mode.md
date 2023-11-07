@@ -1742,7 +1742,7 @@ sitemap_exclude: true
       <div class="row">
         <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
           <label for="inputEmail1" class="visually-hidden">Email</label>
-          <input type="email" class="form-control bg-transparent" id="inputEmail1" placeholder="Enter your email">
+          <input type="email" class="form-control" id="inputEmail1" placeholder="Enter your email">
           <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
         </form>
       </div>
@@ -1882,7 +1882,7 @@ sitemap_exclude: true
       <div class="row">
         <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
           <label for="inputEmail2" class="visually-hidden">Email</label>
-          <input type="email" class="form-control bg-transparent" id="inputEmail2" placeholder="Enter your email">
+          <input type="email" class="form-control" id="inputEmail2" placeholder="Enter your email">
           <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
         </form>
       </div>
@@ -2022,7 +2022,7 @@ sitemap_exclude: true
       <div class="row">
         <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
           <label for="inputEmail3" class="visually-hidden">Email</label>
-          <input type="email" class="form-control bg-transparent" id="inputEmail3" placeholder="Enter your email">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Enter your email">
           <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
         </form>
       </div>
@@ -2162,7 +2162,7 @@ sitemap_exclude: true
       <div class="row">
         <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
           <label for="inputEmail4" class="visually-hidden">Email</label>
-          <input type="email" class="form-control bg-transparent" id="inputEmail4" placeholder="Enter your email">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email">
           <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
         </form>
       </div>
@@ -2302,7 +2302,7 @@ sitemap_exclude: true
       <div class="row">
         <form class="d-flex col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5 gap-2 gap-md-3">
           <label for="inputEmail5" class="visually-hidden">Email</label>
-          <input type="email" class="form-control bg-transparent" id="inputEmail5" placeholder="Enter your email">
+          <input type="email" class="form-control" id="inputEmail5" placeholder="Enter your email">
           <button type="submit" class="btn btn-outline-secondary text-nowrap">Sign up</button>
         </form>
       </div>
