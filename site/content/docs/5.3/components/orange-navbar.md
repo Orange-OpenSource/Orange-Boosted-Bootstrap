@@ -357,7 +357,7 @@ You can add a search input into your Global header.
 
       <!-- Navbar with action icons -->
       <form class="d-flex d-none d-lg-flex col-3 navbar-item" role="search">
-        <input class="form-control bg-transparent" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       </form>
       <div id="global-header-5.2" class="navbar-collapse collapse d-sm-flex global-header-5">
         <ul class="navbar-nav flex-row">
