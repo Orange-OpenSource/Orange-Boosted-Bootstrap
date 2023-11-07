@@ -1729,7 +1729,6 @@ sitemap_exclude: true
   </div>
 </div>
 
-
 ### Footer
 
 <h4 class="mt-3">No theme</h4>
