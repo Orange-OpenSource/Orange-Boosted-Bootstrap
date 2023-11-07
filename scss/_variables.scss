@@ -2363,6 +2363,7 @@ $quantity-selector-input-sm-max-width:    1.875rem !default;
 
 //// Footer
 // scss-docs-start footer
+$footer-color:                            var(--#{$prefix}body-color) !default;
 $footer-font-size-sm:                     $font-size-sm !default;
 $footer-line-height-sm:                   $line-height-sm !default;
 $footer-font-size-md:                     $font-size-base !default;
@@ -2370,9 +2371,11 @@ $footer-line-height-md:                   $line-height-base !default;
 $footer-title-font-weight:                $font-weight-bold !default;
 $footer-letter-spacing:                   $letter-spacing-base !default;
 $footer-accordion-line-height:            $spacer * 1.45 !default;
-$footer-accordion-active-color:           $brand-orange !default;
+$footer-accordion-active-color:           var(--#{$prefix}link-hover-color) !default;
 $footer-accordion-btn-hover-bg:           null !default;
-$footer-nav-link-font-weight:             $font-weight-bold !default;
+// fusv-disable
+$footer-nav-link-font-weight:             $font-weight-bold !default; // Deprecated in v5.3.3
+// fusv-enable
 
 $footer-title-content-padding-top:        $spacer * 1.25 !default;
 $footer-title-content-padding-bottom:     $spacer * 1.45 !default;
