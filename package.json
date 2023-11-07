@@ -166,7 +166,7 @@
     "sass-true": "^7.0.0",
     "shelljs": "^0.8.5",
     "sirv-cli": "^2.0.2",
-    "storybook": "^7.5.2",
+    "storybook": "^7.5.3",
     "stylelint": "^15.11.0",
     "stylelint-config-twbs-bootstrap": "^11.0.1",
     "tarteaucitronjs": "^1.15.0",
