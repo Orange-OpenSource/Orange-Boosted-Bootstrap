@@ -6033,14 +6033,14 @@ sitemap_exclude: true
     <summary>Summary</summary>
     <p>Details</p>
   </details>
-  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><mark>highlight</mark></p>
   <p><del>This line of text is meant to be treated as deleted text.</del></p>
   <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
   <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
   <p><u>This line of text will render as underlined.</u></p>
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
-  <p><em>This line rendered as bold text too,</em> but would natively be italicized.</p>
+  <p><em>This line rendered as bold text too.</em></p>
   <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6109,14 +6109,14 @@ sitemap_exclude: true
     <summary>Summary</summary>
     <p>Details</p>
   </details>
-  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><mark>highlight</mark></p>
   <p><del>This line of text is meant to be treated as deleted text.</del></p>
   <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
   <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
   <p><u>This line of text will render as underlined.</u></p>
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
-  <p><em>This line rendered as bold text too,</em> but would natively be italicized.</p>
+  <p><em>This line rendered as bold text too.</em></p>
   <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6185,14 +6185,14 @@ sitemap_exclude: true
     <summary>Summary</summary>
     <p>Details</p>
   </details>
-  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><mark>highlight</mark></p>
   <p><del>This line of text is meant to be treated as deleted text.</del></p>
   <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
   <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
   <p><u>This line of text will render as underlined.</u></p>
   <p><small>This line of text is meant to be treated as fine print.</small></p>
   <p><strong>This line rendered as bold text.</strong></p>
-  <p><em>This line rendered as bold text too,</em> but would natively be italicized.</p>
+  <p><em>This line rendered as bold text too.</em></p>
   <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6261,14 +6261,14 @@ sitemap_exclude: true
     <summary>Summary</summary>
     <p>Details</p>
   </details>
-  <p>You can use the mark tag to <mark data-bs-theme="dark">highlight</mark> text.</p>
+  <p><mark data-bs-theme="dark">highlight</mark></p>
   <p><del class="text-body" data-bs-theme="dark">This line of text is meant to be treated as deleted text.</del></p>
   <p><s class="text-body" data-bs-theme="dark">This line of text is meant to be treated as no longer accurate.</s></p>
   <p><ins class="text-body" data-bs-theme="dark">This line of text is meant to be treated as an addition to the document.</ins></p>
   <p><u class="text-body" data-bs-theme="dark">This line of text will render as underlined.</u></p>
   <p><small class="text-body" data-bs-theme="dark">This line of text is meant to be treated as fine print.</small></p>
   <p><strong class="text-body" data-bs-theme="dark">This line rendered as bold text.</strong></p>
-  <p><em class="text-body" data-bs-theme="dark">This line rendered as bold text too,</em> but would natively be italicized.</p>
+  <p><em class="text-body" data-bs-theme="dark">This line rendered as bold text too.</em></p>
   <svg data-bs-theme="dark" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
@@ -6337,14 +6337,14 @@ sitemap_exclude: true
     <summary>Summary</summary>
     <p>Details</p>
   </details>
-  <p>You can use the mark tag to <mark data-bs-theme="light">highlight</mark> text.</p>
+  <p><mark data-bs-theme="light">highlight</mark></p>
   <p><del class="text-body" data-bs-theme="light">This line of text is meant to be treated as deleted text.</del></p>
   <p><s class="text-body" data-bs-theme="light">This line of text is meant to be treated as no longer accurate.</s></p>
   <p><ins class="text-body" data-bs-theme="light">This line of text is meant to be treated as an addition to the document.</ins></p>
   <p><u class="text-body" data-bs-theme="light">This line of text will render as underlined.</u></p>
   <p><small class="text-body" data-bs-theme="light">This line of text is meant to be treated as fine print.</small></p>
   <p><strong class="text-body" data-bs-theme="light">This line rendered as bold text.</strong></p>
-  <p><em class="text-body" data-bs-theme="light">This line rendered as bold text too,</em> but would natively be italicized.</p>
+  <p><em class="text-body" data-bs-theme="light">This line rendered as bold text too.</em></p>
   <svg data-bs-theme="light" class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a gray border around it: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a gray border around it</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="#999" dy=".3em">200x200</text></svg>
 </div>
 
