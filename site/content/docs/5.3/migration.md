@@ -27,6 +27,10 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
   - <span class="badge text-bg-success">New</span> List group with badges has been added to Orange Design System specifications and can now be used in your websites.
   - <span class="badge text-bg-warning">Warning</span> List group font weight is now bold by default. Please check that it doesn't break your design.
 
+### Contents
+
+- <span class="badge text-bg-warning">Warning</span> The `.lead` class has been updated to reflect the new font size values. Please check that it doesn't break your design.
+
 ### Forms
 
 - <span class="badge text-bg-warning">Warning</span> Quantity selector has been updated to ensure a proper visible focus state and the `.input-group` class has been removed. Make sure to incorporate these changes into your websites.
