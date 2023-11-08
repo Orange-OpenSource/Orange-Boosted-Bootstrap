@@ -29,7 +29,7 @@ If you need more details about the changes, please refer to the [v5.3.3 release]
 
 ### Contents
 
-- <span class="badge text-bg-warning">Warning</span> The `.lead` class has been updated to reflect the new font size values. Please check that it doesn't break your design.
+- <span class="badge text-bg-warning">Warning</span> The `.lead` class has been updated to reflect the new letter-spacing value for desktop breakpoint, and the line-height values for tablet and mobile breakpoints. Please check that it doesn't break your design.
 
 ### Forms
 
