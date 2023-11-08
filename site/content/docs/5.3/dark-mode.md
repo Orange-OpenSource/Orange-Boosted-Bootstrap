@@ -8138,3 +8138,546 @@ sitemap_exclude: true
   <div class="form-check"><input class="form-check-input is-invalid" type="radio" value="" checked data-bs-theme="light"><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
   <div class="quantity-selector w-100" data-bs-theme="light"><input type="number" class="form-control is-invalid" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector"><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="down"><span class="visually-hidden">Step down</span></button><button type="button" class="btn btn-icon btn-outline-secondary" data-bs-step="up"><span class="visually-hidden">Step up</span></button><p class="mb-0 invalid-feedback" data-bs-theme="light">Invalid feedback</p></div>
 </div>
+
+## Utilities
+
+### Background
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-green"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-purple"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-yellow"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-blue"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-pink"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-success);" class="bg-supporting-orange"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-tertiary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-white"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-green"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-purple"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-yellow"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-blue"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-pink"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-success);" class="bg-supporting-orange"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-tertiary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-white"></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-green"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-purple"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-yellow"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-blue"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-pink"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-success);" class="bg-supporting-orange"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-tertiary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-white"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-danger" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-warning" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-info" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-green" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-purple" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-yellow" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-blue" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-pink" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-success);" class="bg-supporting-orange" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-light" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-dark" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-tertiary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-black" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-white" data-bs-theme="dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-danger" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-warning" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-info" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-green" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-purple" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-yellow" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-blue" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-supporting-pink" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-success);" class="bg-supporting-orange" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-light" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-dark" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body-tertiary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-body" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-black" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-white" data-bs-theme="light"></div>
+</div>
+
+### Borders
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-danger" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-warning" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-info" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-light" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary" data-bs-theme="dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-danger" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-warning" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-info" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-light" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary" data-bs-theme="light"></div>
+</div>
+
+### Colors
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-emphasis"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-emphasis"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-black"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-white"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-emphasis"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-tertiary"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-danger" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-warning" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-info" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-light" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-dark" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-black" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-white" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-emphasis" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-tertiary" data-bs-theme="dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-danger" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-warning" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-info" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-light" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-dark" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-black" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-white" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-emphasis" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-body-tertiary" data-bs-theme="light"></div>
+</div>
+
+### Link
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-body-emphasis"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-body-emphasis"></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-body-emphasis"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-danger" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-warning" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-info" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-light" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-dark" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-body-emphasis" data-bs-theme="dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-danger" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-warning" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-info" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-light" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-dark" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-body-emphasis" data-bs-theme="light"></div>
+</div>
+
+## Helper
+
+### Color & Background (text-bg)
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-danger"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-warning"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-info"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-danger"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-warning"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-info"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-danger"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-warning"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-info"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-danger" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-warning" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-info" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-light" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-dark" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-danger" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-warning" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-info" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-light" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-dark" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
+</div>
+
+### Focus ring
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-dark"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-danger"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-warning"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-info"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-dark"></div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-danger" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-warning" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-info" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-light" data-bs-theme="dark"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-dark" data-bs-theme="dark"></div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-danger" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-warning" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-info" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-light" data-bs-theme="light"></div>
+  <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-dark" data-bs-theme="light"></div>
+</div>
+
+### Icon link
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+  <a class="link-chevron" href="#">This is a sample link with chevron</a>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <a class="link-chevron" href="#">This is a sample link with chevron</a>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <a class="link-chevron" href="#">This is a sample link with chevron</a>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+  <a class="link-chevron" href="#" data-bs-theme="dark">This is a sample link with chevron</a>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+  <a class="link-chevron" href="#" data-bs-theme="light">This is a sample link with chevron</a>
+</div>

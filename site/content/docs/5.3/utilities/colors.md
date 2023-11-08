@@ -64,24 +64,25 @@ The `.text-primary` color on dark background (`#ff7900`) can be used in any size
 
 Here are some compliant combinations examples for texts:
 
-{{< example >}}
+  {{< example >}}
+<div class="bg-white p-1" data-bs-theme="light">
+  <p class="text-black">regular black text</p>
+  <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
+  <p class="text-body-secondary">regular secondary text</p>
 
-<p class="text-black">regular black text</p>
-<p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
-<p class="text-body-secondary">regular secondary text</p>
+  <p class="text-black fw-bold">bold black text</p>
+  <p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
+  <p class="text-body-secondary fw-bold">bold secondary text</p>
+</div>
 
-<p class="text-black fw-bold">bold black text</p>
-<p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
-<p class="text-body-secondary fw-bold">bold secondary text</p>
+<div class="bg-dark p-1" data-bs-theme="dark">
+  <p class="text-white">regular white text</p>
+  <p class="text-primary">regular primary text</p>
+  <p class="text-body-secondary">regular secondary text</p>
 
-<div class="bg-dark py-1">
-  <p class="text-white">regular white text on dark</p>
-  <p class="text-primary">regular primary text on dark</p>
-  <p class="text-light">regular light text on dark</p>
-
-  <p class="text-white fw-bold">bold white text on dark</p>
-  <p class="text-primary fw-bold">bold primary text on dark</p>
-  <p class="text-light fw-bold">bold light text on dark</p>
+  <p class="text-white fw-bold">bold white text</p>
+  <p class="text-primary fw-bold">bold primary text</p>
+  <p class="text-body-secondary fw-bold">bold secondary text</p>
 </div>
 {{< /example >}}
 

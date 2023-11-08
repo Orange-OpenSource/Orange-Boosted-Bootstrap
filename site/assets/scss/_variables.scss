@@ -1,5 +1,5 @@
 // Local docs variables
-$bd-primary:       $primary; // Boosted mod
+$bd-primary:       $brand-orange; // Boosted mod
 // stylelint-disable-next-line function-disallowed-list
 $bd-primary-light: lighten(saturate($bd-primary, 5%), 15%); // Boosted mod
 $bd-purple:        #4c0bce;

@@ -37,7 +37,7 @@ This component should not be used because it does not exist in the Orange Design
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge text-bg-secondary">4</span>
+  Notifications <span class="badge text-bg-dark">4</span>
 </button>
 {{< /example >}}
 
