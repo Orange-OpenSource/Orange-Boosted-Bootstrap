@@ -5158,6 +5158,58 @@ sitemap_exclude: true
   </ul>
 </div>
 
+### Title bars
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="border border-tertiary p-3">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="title-bar">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="title-bar" data-bs-theme="dark">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="title-bar" data-bs-theme="light">
+    <div class="container-xxl">
+      <h1 class="display-1">Title</h1>
+    </div>
+  </div>
+</div>
+
 ### Tooltips
 
 <h4 class="mt-3">No theme</h4>
