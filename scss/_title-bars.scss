@@ -1,5 +1,7 @@
 .title-bar {
   // scss-docs-start title-bar-css-vars
+  --#{$prefix}title-bar-bg: #{$title-bar-bg};
+  --#{$prefix}title-bar-color: #{$title-bar-color};
   --#{$prefix}title-bar-image-ratio: #{$title-bar-image-ratio};
   --#{$prefix}title-bar-padding-y: #{$title-bar-padding-y};
   --#{$prefix}title-bar-font-size: #{$title-bar-font-size};
@@ -9,6 +11,8 @@
   --#{$prefix}title-bar-border-color: #{$title-bar-border-color};
   // scss-docs-end title-bar-css-vars
 
+  color: var(--#{$prefix}title-bar-color);
+  background-color: var(--#{$prefix}title-bar-bg);
   border-bottom: var(--#{$prefix}title-bar-border-width) solid var(--#{$prefix}title-bar-border-color);
 
   @include media-breakpoint-up(md) {
@@ -19,11 +23,6 @@
   @include media-breakpoint-up(xl) {
     --#{$prefix}title-bar-font-size: #{$title-bar-font-size-xl};
     --#{$prefix}title-bar-letter-spacing: #{$title-bar-letter-spacing-xl};
-  }
-
-  &.bg-dark,
-  &.bg-secondary {
-    --#{$prefix}title-bar-border-color: #{$title-bar-border-color-dark};
   }
 
   > [class*="container"] {
