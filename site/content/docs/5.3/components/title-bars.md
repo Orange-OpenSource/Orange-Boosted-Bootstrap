@@ -21,10 +21,11 @@ See them in action in our [examples page]({{<docsref "/examples/title-bars">}}).
 
 To change the appearance of a title bar, use our [background utilities]({{<docsref "/utilities/background">}}). Orange branded background utilities are `.bg-dark`, `.bg-white` and `.bg-supporting-*`.
 
-Title bars can be displayed with `.bg-black`, `.bg-dark`, `.bg-white` or no background. When using `.bg-black`, `.bg-dark`, `.bg-white` or no background, illustrations can be included as an option, but it's not necessary.
+Title bars can be displayed with `.bg-black`, `.bg-dark`, `.bg-white` or with the default background color. When using `.bg-black`, `.bg-dark`, `.bg-white` or the default background color, illustrations can be included as an option, but it's not necessary.
+
 Supporting colors can also be used as the background color for title bars, but not the supporting light and dark tint colors. When using one of the supporting colors, illustrations must be used.
 
-The image should not overlap on title and the title shouldn't wrap. If this happens, please **transform your title bar** into a white/dark one without any image.
+The image should not overlap on title and the title shouldn't wrap. If this happens, please transform your title bar into a title bar with `.bg-black`, `.bg-dark`, `.bg-white` or with the default background color without any image.
 
 {{< example class="p-0">}}
 <div class="title-bar">
