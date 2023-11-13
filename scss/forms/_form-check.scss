@@ -318,11 +318,11 @@
   &:active + .btn,
   + .btn:active,
   + .btn.active {
-    color: color-contrast($primary);
-    background-color: $primary;
+    color: color-contrast($brand-orange);
+    background-color: $brand-orange;
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
-    border-color: $primary;
+    border-color: $brand-orange;
   }
   // End mod
 
