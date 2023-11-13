@@ -16,8 +16,8 @@ $functional-red-dark:    #d53f15 !default;
 
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-color-dark-variables
-$primary-dark:                      $orange !default;
-$secondary-dark:                    $black !default;
+$primary-dark:                      $brand-orange !default;
+$secondary-dark:                    $white !default;
 $success-dark:                      $functional-green-dark !default;
 $info-dark:                         $functional-blue-dark !default;
 $warning-dark:                      $functional-yellow-dark !default;
@@ -41,7 +41,7 @@ $theme-colors-dark: (
 // End mod
 
 // scss-docs-start theme-text-dark-variables
-$primary-text-emphasis-dark:        $primary-dark !default; // Boosted mod: isntead of `tint-color($primary, 40%)`
+$primary-text-emphasis-dark:        $primary-dark !default; // Boosted mod: instead of `tint-color($primary, 40%)`
 $secondary-text-emphasis-dark:      $secondary-dark !default; // Boosted mod: instead of `tint-color($secondary, 40%)`
 $success-text-emphasis-dark:        $success-dark !default; // Boosted mod: instead of `tint-color($success, 40%)`
 $info-text-emphasis-dark:           $info-dark !default; // Boosted mod: instead of `tint-color($info, 40%)`
@@ -84,10 +84,12 @@ $border-color-dark:                 $white !default; // Boosted mod: instead of 
 $border-color-translucent-dark:     $gray-700 !default; // Boosted mod instead of `rgba($white, .15)`
 $headings-color-dark:               $white !default; // Boosted mod: instead of `inherit`
 $link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
-$link-hover-color-dark:             $primary !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
+$link-hover-color-dark:             $brand-orange !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   tint-color($code-color, 40%) !default;
 $mark-color-dark:                   $black !default; // Boosted mod: instead of `$body-color-dark`
 $mark-bg-dark:                      $white !default; // Boosted mod: instead of `$yellow-800`
+
+$focus-ring-color-dark:             rgba($brand-orange, $focus-ring-opacity) !default; // Boosted mod
 
 $disabled-filter-dark:  brightness(0) invert(1) brightness(.4) !default; // Boosted mod
 
