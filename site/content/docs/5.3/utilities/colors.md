@@ -65,13 +65,13 @@ The `.text-primary` color on dark background (`#ff7900`) can be used in any size
 Here are some compliant combinations examples for texts:
 
   {{< example >}}
-<div class="bg-white p-1" data-bs-theme="light">
-  <p class="text-black">regular black text</p>
-  <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3</p>
+<div class="p-1" data-bs-theme="light">
+  <p>regular text</p>
+  <p class="text-primary fs-3">regular primary text with minimum font-size for contrast with .fs-3 (restrictive because of the light mode)</p>
   <p class="text-body-secondary">regular secondary text</p>
 
-  <p class="text-black fw-bold">bold black text</p>
-  <p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4</p>
+  <p class="fw-bold">bold text</p>
+  <p class="text-primary fs-4 fw-bold">bold primary text with minimum font-size for contrast with .fs-4 (restrictive because of the light mode)</p>
   <p class="text-body-secondary fw-bold">bold secondary text</p>
 </div>
 
