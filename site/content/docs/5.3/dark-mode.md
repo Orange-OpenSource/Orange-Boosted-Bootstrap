@@ -139,7 +139,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div class="accordion" id="accordionExample1">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -180,7 +180,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div class="accordion" id="accordionExample2">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -221,7 +221,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div class="accordion" id="accordionExample3">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -262,7 +262,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55">
+<div class="border p-3" style="background-color: #282d55">
   <div class="accordion" id="accordionExample6" data-bs-theme="dark">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -303,7 +303,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div class="accordion" id="accordionExample7" data-bs-theme="light">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -346,7 +346,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -367,7 +367,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -388,7 +388,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div class="alert alert-success" role="alert">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -409,7 +409,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55">
+<div class="border p-3" style="background-color: #282d55">
   <div class="alert alert-success" role="alert" data-bs-theme="dark">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -430,7 +430,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div class="alert alert-success" role="alert" data-bs-theme="light">
     <span class="alert-icon"><span class="visually-hidden">Success</span></span>
     <p>Success notification text goes here.</p>
@@ -453,7 +453,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
     <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
@@ -468,7 +468,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <nav aria-label="Standard back to top example2" class="back-to-top position-static ps-5 ms-5">
     <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
@@ -483,7 +483,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <nav aria-label="Standard back to top example3" class="back-to-top position-static ps-5 ms-5">
     <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
@@ -498,7 +498,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <nav aria-label="Standard back to top example4" class="back-to-top position-static ps-5 ms-5" data-bs-theme="dark">
     <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
@@ -513,7 +513,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <nav aria-label="Standard back to top example5" class="back-to-top position-static ps-5 ms-5" data-bs-theme="light">
     <a href="#" class="back-to-top-link btn btn-icon btn-outline-secondary position-relative top-0" data-bs-label="Back to top">
       <span class="visually-hidden">Back to top</span>
@@ -530,7 +530,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <nav aria-label="breadcrumb1">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -546,7 +546,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <nav aria-label="breadcrumb2">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -562,7 +562,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <nav aria-label="breadcrumb3">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -578,7 +578,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <nav aria-label="breadcrumb4">
     <ol class="breadcrumb mb-0" data-bs-theme="dark">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -594,7 +594,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <nav aria-label="breadcrumb5">
     <ol class="breadcrumb mb-0" data-bs-theme="light">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -612,7 +612,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
@@ -663,7 +663,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
@@ -714,7 +714,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-primary" disabled>Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
@@ -765,7 +765,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <button type="button" class="btn btn-primary" data-bs-theme="dark">Primary</button>
   <button type="button" class="btn btn-primary" disabled data-bs-theme="dark">Primary</button>
   <button type="button" class="btn btn-secondary" data-bs-theme="dark">Secondary</button>
@@ -816,7 +816,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <button type="button" class="btn btn-primary" data-bs-theme="light">Primary</button>
   <button type="button" class="btn btn-primary" disabled data-bs-theme="light">Primary</button>
   <button type="button" class="btn btn-secondary" data-bs-theme="light">Secondary</button>
@@ -869,7 +869,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="row row-cols-1 row-cols-xl-3 border border-tertiary p-3">
+<div class="row row-cols-1 row-cols-xl-3 border p-3">
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
@@ -932,7 +932,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="row row-cols-1 row-cols-xl-3 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="row row-cols-1 row-cols-xl-3 border p-3 bg-body" data-bs-theme="dark">
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
@@ -995,7 +995,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="row row-cols-1 row-cols-xl-3 border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="row row-cols-1 row-cols-xl-3 border p-3 bg-body" data-bs-theme="light">
   <div class="col">
     <div class="card">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
@@ -1058,7 +1058,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="row row-cols-1 row-cols-xl-3 border border-tertiary p-3" style="background-color: #282d55;">
+<div class="row row-cols-1 row-cols-xl-3 border p-3" style="background-color: #282d55;">
   <div class="col">
     <div class="card" data-bs-theme="dark">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
@@ -1121,7 +1121,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="row row-cols-1 row-cols-xl-3 border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="row row-cols-1 row-cols-xl-3 border p-3" style="background-color: #b5e8f7">
   <div class="col">
     <div class="card" data-bs-theme="light">
       <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
@@ -1186,7 +1186,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-wrap="false">
     <div class="carousel-action-bar">
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExample" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
@@ -1234,7 +1234,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-wrap="false">
     <div class="carousel-action-bar">
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExample2" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
@@ -1282,7 +1282,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-wrap="false">
     <div class="carousel-action-bar">
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExample3" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
@@ -1330,7 +1330,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <div id="carouselExample4" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-wrap="false" data-bs-theme="dark">
     <div class="carousel-action-bar">
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExample4" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
@@ -1378,7 +1378,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div id="carouselExample5" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-wrap="false" data-bs-theme="light">
     <div class="carousel-action-bar">
       <button type="button" class="btn btn-icon carousel-control-play-pause pause" data-bs-target="#carouselExample5" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
@@ -1428,7 +1428,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
@@ -1451,7 +1451,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
@@ -1474,7 +1474,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close">
@@ -1497,7 +1497,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="dark">
@@ -1520,7 +1520,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light"><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light" disabled><span class="visually-hidden">Close</span></button>
   <button type="button" class="btn btn-icon btn-no-outline" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Close" data-bs-theme="light">
@@ -1545,7 +1545,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div class="btn-group">
     <div class="dropdown">
       <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
@@ -1659,7 +1659,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div class="btn-group">
     <div class="dropdown">
       <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
@@ -1773,7 +1773,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div class="btn-group">
     <div class="dropdown">
       <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
@@ -1887,7 +1887,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55">
   <div class="btn-group">
     <div class="dropdown">
       <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-theme="dark">Dropdown button</button>
@@ -2001,7 +2001,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div class="btn-group">
     <div class="dropdown">
       <button data-bs-theme="light" class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
@@ -2116,7 +2116,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark dropdown variant for retro-compatibility</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-dark">
   <div class="dropdown">
     <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
@@ -2149,7 +2149,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <footer class="footer navbar">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
     <div class="container-xxl footer-title-content">
@@ -2289,7 +2289,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <footer class="footer navbar">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
     <div class="container-xxl footer-title-content">
@@ -2429,7 +2429,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <footer class="footer navbar">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
     <div class="container-xxl footer-title-content">
@@ -2569,7 +2569,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <footer class="footer navbar" data-bs-theme="dark">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
     <div class="container-xxl footer-title-content">
@@ -2709,7 +2709,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <footer class="footer navbar" data-bs-theme="light">
     <h2 class="visually-hidden">Sitemap &amp; information</h2>
     <div class="container-xxl footer-title-content">
@@ -2851,7 +2851,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3">
+<div class="d-flex flex-column gap-2 align-items-start border p-3">
   <ol class="list-group list-group-numbered">
     <li class="list-group-item">A list item</li>
     <li class="list-group-item active" aria-current="true">A list item</li>
@@ -2886,7 +2886,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 align-items-start border p-3 bg-body" data-bs-theme="dark">
   <ol class="list-group list-group-numbered">
     <li class="list-group-item">A list item</li>
     <li class="list-group-item active" aria-current="true">A list item</li>
@@ -2921,7 +2921,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 align-items-start border p-3 bg-body" data-bs-theme="light">
   <ol class="list-group list-group-numbered">
     <li class="list-group-item">A list item</li>
     <li class="list-group-item active" aria-current="true">A list item</li>
@@ -2956,7 +2956,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #282d55;">
   <ol class="list-group list-group-numbered" data-bs-theme="dark">
     <li class="list-group-item">A list item</li>
     <li class="list-group-item active" aria-current="true">A list item</li>
@@ -2991,7 +2991,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column gap-2 align-items-start border p-3" style="background-color: #b5e8f7">
   <ol class="list-group list-group-numbered" data-bs-theme="light">
     <li class="list-group-item">A list item</li>
     <li class="list-group-item active" aria-current="true">A list item</li>
@@ -3028,7 +3028,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav1" aria-expanded="false" aria-controls="collapseLocalNav1">
       <span class="container-xxl">Shop</span>
@@ -3048,7 +3048,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav2" aria-expanded="false" aria-controls="collapseLocalNav2">
       <span class="container-xxl">Shop</span>
@@ -3068,7 +3068,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <nav class="local-nav" aria-label="Basic local navigation">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav3" aria-expanded="false" aria-controls="collapseLocalNav3">
       <span class="container-xxl">Shop</span>
@@ -3088,7 +3088,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55">
+<div class="border p-3" style="background-color: #282d55">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="dark">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav4" aria-expanded="false" aria-controls="collapseLocalNav4">
       <span class="container-xxl">Shop</span>
@@ -3108,7 +3108,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <nav class="local-nav" aria-label="Basic local navigation" data-bs-theme="light">
     <button class="local-nav-button collapsed d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocalNav5" aria-expanded="false" aria-controls="collapseLocalNav5">
       <span class="container-xxl">Shop</span>
@@ -3130,7 +3130,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample1">
     Launch modal
   </button>
@@ -3161,7 +3161,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample2">
     Launch modal
   </button>
@@ -3192,7 +3192,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample3">
     Launch modal
   </button>
@@ -3223,7 +3223,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample4" data-bs-theme="dark">
     Launch modal
   </button>
@@ -3254,7 +3254,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample5" data-bs-theme="light">
     Launch modal
   </button>
@@ -3287,7 +3287,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -3330,7 +3330,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -3373,7 +3373,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -3416,7 +3416,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -3459,7 +3459,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <nav class="navbar navbar-expand-lg" data-bs-theme="light">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -3504,7 +3504,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -3606,7 +3606,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <ul class="nav nav-underline">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -3679,7 +3679,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <ul class="nav nav-underline">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -3752,7 +3752,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <ul class="nav nav-underline" data-bs-theme="dark">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -3825,7 +3825,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <ul class="nav nav-underline" data-bs-theme="light">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -3900,7 +3900,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample1">
     Button with data-bs-target
   </button>
@@ -3929,7 +3929,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample2">
     Button with data-bs-target
   </button>
@@ -3958,7 +3958,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3" aria-controls="offcanvasExample3">
     Button with data-bs-target
   </button>
@@ -3987,7 +3987,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <button class="btn btn-primary" data-bs-theme="dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample4">
     Button with data-bs-target
   </button>
@@ -4016,7 +4016,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <button class="btn btn-primary" data-bs-theme="light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample5" aria-controls="offcanvasExample5">
     Button with data-bs-target
   </button>
@@ -4047,7 +4047,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <header>
     <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation1">
       <div class="container-xxl">
@@ -4135,7 +4135,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <header>
     <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation2">
       <div class="container-xxl">
@@ -4223,7 +4223,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <header>
     <nav class="navbar navbar-expand-lg supra" aria-label="Supra navigation3">
       <div class="container-xxl">
@@ -4311,7 +4311,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <header>
     <nav class="navbar navbar-expand-lg supra" data-bs-theme="dark" aria-label="Supra navigation4">
       <div class="container-xxl">
@@ -4399,7 +4399,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <header>
     <nav class="navbar navbar-expand-lg supra" data-bs-theme="light" aria-label="Supra navigation5">
       <div class="container-xxl">
@@ -4489,7 +4489,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3">
+<div class="d-flex flex-column gap-2 border p-3">
   <nav aria-label="Page navigation example">
     <ul class="pagination mb-0">
       <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
@@ -4520,7 +4520,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="dark">
   <nav aria-label="Page navigation example2">
     <ul class="pagination mb-0">
       <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
@@ -4551,7 +4551,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="light">
   <nav aria-label="Page navigation example3">
     <ul class="pagination mb-0">
       <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
@@ -4582,7 +4582,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column gap-2 border p-3" style="background-color: #282d55;">
   <nav aria-label="Page navigation example4">
     <ul class="pagination mb-0" data-bs-theme="dark">
       <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
@@ -4613,7 +4613,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column gap-2 border p-3" style="background-color: #b5e8f7">
   <nav aria-label="Page navigation example5">
     <ul class="pagination mb-0" data-bs-theme="light">
       <li class="page-item"><a class="page-link disabled" aria-label="Next" aria-disabled="true">Previous</a></li>
@@ -4646,35 +4646,35 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3">
   <div class="popover bs-popover-auto fade show position-relative" role="tooltip" data-popper-placement="right"><div class="popover-arrow" style="position: absolute; top: 0px; transform: translate(0px, 49px);"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">And here's some amazing content. It's very engaging. Right?</div></div>
   <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3 bg-body" data-bs-theme="dark">
   <div class="popover bs-popover-auto fade show position-relative" role="tooltip" data-popper-placement="right"><div class="popover-arrow" style="position: absolute; top: 0px; transform: translate(0px, 49px);"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">And here's some amazing content. It's very engaging. Right?</div></div>
   <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3 bg-body" data-bs-theme="light">
   <div class="popover bs-popover-auto fade show position-relative" role="tooltip" data-popper-placement="right"><div class="popover-arrow" style="position: absolute; top: 0px; transform: translate(0px, 49px);"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">And here's some amazing content. It's very engaging. Right?</div></div>
   <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3" style="background-color: #282d55;">
   <div class="popover bs-popover-auto fade show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="dark"><div class="popover-arrow" style="position: absolute; top: 0px; transform: translate(0px, 49px);"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">And here's some amazing content. It's very engaging. Right?</div></div>
   <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?" data-bs-theme="dark">Click to toggle popover</button>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3" style="background-color: #b5e8f7">
   <div class="popover bs-popover-auto fade show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="light"><div class="popover-arrow" style="position: absolute; top: 0px; transform: translate(0px, 49px);"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">And here's some amazing content. It's very engaging. Right?</div></div>
   <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?" data-bs-theme="light">Click to toggle popover</button>
 </div>
@@ -4683,7 +4683,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3">
+<div class="d-flex flex-column gap-2 border p-3">
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
@@ -4748,7 +4748,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="dark">
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
@@ -4813,7 +4813,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex flex-column gap-2 border p-3 bg-body" data-bs-theme="light">
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
@@ -4878,7 +4878,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column gap-2 border p-3" style="background-color: #282d55;">
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
@@ -4943,7 +4943,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column gap-2 border p-3" style="background-color: #b5e8f7">
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar" style="width: 30%">30%</div>
   </div>
@@ -5010,7 +5010,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
@@ -5033,7 +5033,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
@@ -5056,7 +5056,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
@@ -5079,7 +5079,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <div class="spinner-border" role="status" data-bs-theme="dark">
     <span class="visually-hidden">Loading...</span>
   </div>
@@ -5102,7 +5102,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div class="spinner-border" role="status" data-bs-theme="light">
     <span class="visually-hidden">Loading...</span>
   </div>
@@ -5127,7 +5127,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <nav class="stepped-process" aria-label="Checkout process">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -5152,7 +5152,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <nav class="stepped-process" aria-label="Checkout process">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -5177,7 +5177,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <nav class="stepped-process" aria-label="Checkout process">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -5202,7 +5202,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="dark" style="--bs-stepped-process-bg: #282d55;">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -5227,7 +5227,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <nav class="stepped-process" aria-label="Checkout process" data-bs-theme="light" style="--bs-stepped-process-bg: #b5e8f7;">
     <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
     <ol>
@@ -5254,7 +5254,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3 d-flex">
+<div class="border p-3 d-flex">
   <div class="sticker sticker-sm">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -5275,7 +5275,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body d-flex" data-bs-theme="dark">
+<div class="border p-3 bg-body d-flex" data-bs-theme="dark">
   <div class="sticker sticker-sm">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -5296,7 +5296,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body d-flex" data-bs-theme="light">
+<div class="border p-3 bg-body d-flex" data-bs-theme="light">
   <div class="sticker sticker-sm">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -5317,7 +5317,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3 d-flex" style="background-color: #282d55;">
+<div class="border p-3 d-flex" style="background-color: #282d55;">
   <div class="sticker sticker-sm" data-bs-theme="dark">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -5338,7 +5338,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3 d-flex" style="background-color: #b5e8f7">
+<div class="border p-3 d-flex" style="background-color: #b5e8f7">
   <div class="sticker sticker-sm" data-bs-theme="light">
     <p class="mb-0">
       <span class="sticker-fs-s mb-0 d-block text-decoration-line-through" aria-hidden="true">69.99 €</span>
@@ -5361,7 +5361,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-mobile1" autocomplete="off">
@@ -5404,7 +5404,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-mobile2" autocomplete="off">
@@ -5447,7 +5447,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-mobile3" autocomplete="off">
@@ -5490,7 +5490,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55">
+<div class="border p-3" style="background-color: #282d55">
   <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-mobile4" autocomplete="off">
@@ -5533,7 +5533,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <ul class="list-unstyled d-flex gap-2 flex-wrap m-0">
     <li>
       <input type="checkbox" class="btn-check" id="btncheck-mobile5" autocomplete="off">
@@ -5578,7 +5578,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div class="title-bar">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
@@ -5588,7 +5588,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div class="title-bar">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
@@ -5598,7 +5598,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div class="title-bar">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
@@ -5608,7 +5608,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <div class="title-bar" data-bs-theme="dark">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
@@ -5618,7 +5618,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div class="title-bar" data-bs-theme="light">
     <div class="container-xxl">
       <h1 class="display-1">Title</h1>
@@ -5630,7 +5630,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3">
   <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
     <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
     <div class="tooltip-inner">Tooltip</div>
@@ -5640,7 +5640,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3 bg-body" data-bs-theme="dark">
   <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
     <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
     <div class="tooltip-inner">Tooltip</div>
@@ -5650,7 +5650,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3 bg-body" data-bs-theme="light">
   <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right">
     <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
     <div class="tooltip-inner">Tooltip</div>
@@ -5660,7 +5660,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3" style="background-color: #282d55;">
   <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="dark">
     <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
     <div class="tooltip-inner">Tooltip</div>
@@ -5670,7 +5670,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap align-items-center border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap align-items-center border p-3" style="background-color: #b5e8f7">
   <div class="tooltip bs-tooltip-auto show position-relative" role="tooltip" data-popper-placement="right" data-bs-theme="light">
     <div class="tooltip-arrow position-absolute " style="transform: translate(0px, 14px);"></div>
     <div class="tooltip-inner">Tooltip</div>
@@ -5684,7 +5684,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column align-items-start border border-tertiary p-3">
+<div class="d-flex flex-column align-items-start border p-3">
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
@@ -5760,7 +5760,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column align-items-start border border-tertiary p-3 bg-body text-body" data-bs-theme="dark">
+<div class="d-flex flex-column align-items-start border p-3 bg-body text-body" data-bs-theme="dark">
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
@@ -5836,7 +5836,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column align-items-start border border-tertiary p-3 bg-body text-body" data-bs-theme="light">
+<div class="d-flex flex-column align-items-start border p-3 bg-body text-body" data-bs-theme="light">
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
@@ -5912,7 +5912,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column align-items-start border p-3" style="background-color: #282d55;">
   <h1 data-bs-theme="dark">H1</h1>
   <h2 data-bs-theme="dark">H2</h2>
   <h3 data-bs-theme="dark">H3</h3>
@@ -5988,7 +5988,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column align-items-start border p-3" style="background-color: #b5e8f7">
   <h1 data-bs-theme="light">H1</h1>
   <h2 data-bs-theme="light">H2</h2>
   <h3 data-bs-theme="light">H3</h3>
@@ -6066,7 +6066,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3">
+<div class="d-flex flex-column border p-3">
   <fieldset>
     <legend>Example legend</legend>
     <p>
@@ -6190,7 +6190,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <fieldset>
     <legend>Example legend</legend>
     <p>
@@ -6314,7 +6314,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <fieldset>
     <legend>Example legend</legend>
     <p>
@@ -6438,7 +6438,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <fieldset>
     <legend class="text-body" data-bs-theme="dark">Example legend</legend>
     <p>
@@ -6562,7 +6562,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <fieldset>
     <legend class="text-body" data-bs-theme="light">Example legend</legend>
     <p>
@@ -6688,7 +6688,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <table class="table table-hover mb-5">
     <caption>Boosted tables basic and hover look</caption>
     <thead>
@@ -6763,7 +6763,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <table class="table table-hover mb-5">
     <caption>Boosted tables basic and hover look</caption>
     <thead>
@@ -6838,7 +6838,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <table class="table table-hover mb-5">
     <caption>Boosted tables basic and hover look</caption>
     <thead>
@@ -6913,7 +6913,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <table class="table table-hover mb-5" data-bs-theme="dark">
     <caption>Boosted tables basic and hover look</caption>
     <thead>
@@ -6988,7 +6988,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <table class="table table-hover mb-5" data-bs-theme="light">
     <caption>Boosted tables basic and hover look</caption>
     <thead>
@@ -7067,35 +7067,35 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="dark" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light">
   <input type="color" class="form-control form-control-color" value="#a885d8" title="Choose your color" data-bs-theme="light" disabled>
 </div>
@@ -7104,7 +7104,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3 bd-example-indeterminate">
+<div class="border p-3 bd-example-indeterminate">
   <input class="form-check-input" type="checkbox" value="">
   <input class="form-check-input" type="checkbox" value="" checked>
   <input class="form-check-input" type="checkbox" value="" id="Indeterminate">
@@ -7119,7 +7119,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body bd-example-indeterminate" data-bs-theme="dark">
+<div class="border p-3 bg-body bd-example-indeterminate" data-bs-theme="dark">
   <input class="form-check-input" type="checkbox" value="">
   <input class="form-check-input" type="checkbox" value="" checked>
   <input class="form-check-input" type="checkbox" value="" id="Indeterminate1">
@@ -7134,7 +7134,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body bd-example-indeterminate" data-bs-theme="light">
+<div class="border p-3 bg-body bd-example-indeterminate" data-bs-theme="light">
   <input class="form-check-input" type="checkbox" value="">
   <input class="form-check-input" type="checkbox" value="" checked>
   <input class="form-check-input" type="checkbox" value="" id="Indeterminate3">
@@ -7149,7 +7149,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3 bd-example-indeterminate" style="background-color: #282d55;">
+<div class="border p-3 bd-example-indeterminate" style="background-color: #282d55;">
   <input class="form-check-input" type="checkbox" value="" data-bs-theme="dark">
   <input class="form-check-input" type="checkbox" value="" checked data-bs-theme="dark">
   <input class="form-check-input" type="checkbox" value="" id="Indeterminate5" data-bs-theme="dark">
@@ -7164,7 +7164,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3 bd-example-indeterminate" style="background-color: #b5e8f7">
+<div class="border p-3 bd-example-indeterminate" style="background-color: #b5e8f7">
   <input class="form-check-input" type="checkbox" value="" data-bs-theme="light">
   <input class="form-check-input" type="checkbox" value="" checked data-bs-theme="light">
   <input class="form-check-input" type="checkbox" value="" id="Indeterminate7" data-bs-theme="light">
@@ -7181,7 +7181,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <input type="text" class="form-control" placeholder="Input placeholder">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
   <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
@@ -7193,7 +7193,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <input type="text" class="form-control" placeholder="Input placeholder">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
   <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
@@ -7205,7 +7205,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <input type="text" class="form-control" placeholder="Input placeholder">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder"></textarea>
   <input type="text" class="form-control" placeholder="Disabled input placeholder" disabled>
@@ -7217,7 +7217,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <input type="text" class="form-control" placeholder="Input placeholder" data-bs-theme="dark">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder" data-bs-theme="dark"></textarea>
   <input type="text" class="form-control" placeholder="Disabled input placeholder" data-bs-theme="dark" disabled>
@@ -7229,7 +7229,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <input type="text" class="form-control" placeholder="Input placeholder" data-bs-theme="light">
   <textarea class="form-control" rows="2" placeholder="Textarea placeholder" data-bs-theme="light"></textarea>
   <input type="text" class="form-control" placeholder="Disabled input placeholder" data-bs-theme="light" disabled>
@@ -7243,35 +7243,35 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <input class="form-control" type="file">
   <input class="form-control" type="file" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <input class="form-control" type="file">
   <input class="form-control" type="file" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <input class="form-control" type="file">
   <input class="form-control" type="file" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <input class="form-control" type="file" data-bs-theme="dark">
   <input class="form-control" type="file" data-bs-theme="dark" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <input class="form-control" type="file" data-bs-theme="light">
   <input class="form-control" type="file" data-bs-theme="light" disabled>
 </div>
@@ -7280,7 +7280,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
   <div>
     <label class="form-label is-required">Input label</label>
@@ -7290,7 +7290,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
   <div>
     <label class="form-label is-required">Input label</label>
@@ -7300,7 +7300,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input"><span class="visually-hidden">Helper for input</span></button>
   <div>
     <label class="form-label is-required">Input label</label>
@@ -7310,7 +7310,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input" data-bs-theme="dark"><span class="visually-hidden">Helper for input</span></button>
   <div>
     <label class="form-label is-required" data-bs-theme="dark">Input label</label>
@@ -7320,7 +7320,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <button type="button" class="form-helper" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Help for input" data-bs-theme="light"><span class="visually-hidden">Helper for input</span></button>
   <div>
     <label class="form-label is-required" data-bs-theme="light">Input label</label>
@@ -7332,7 +7332,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <div class="mb-3">
     <div class="input-group">
       <span class="input-group-text">Input group text</span>
@@ -7353,7 +7353,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <div class="mb-3">
     <div class="input-group">
       <span class="input-group-text">Input group text</span>
@@ -7374,7 +7374,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <div class="mb-3">
     <div class="input-group">
       <span class="input-group-text">Input group text</span>
@@ -7395,7 +7395,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <div class="mb-3">
     <div class="input-group" data-bs-theme="dark">
       <span class="input-group-text">Input group text</span>
@@ -7416,7 +7416,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <div class="mb-3">
     <div class="input-group" data-bs-theme="light">
       <span class="input-group-text">Input group text</span>
@@ -7439,7 +7439,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3">
+<div class="d-flex flex-column border p-3">
   <label class="form-label">Form label</label>
   <label class="form-label is-required">Form label</label>
   <label class="form-label is-disabled">Form label</label>
@@ -7449,7 +7449,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex flex-column border p-3 bg-body" data-bs-theme="dark">
   <label class="form-label">Form label</label>
   <label class="form-label is-required">Form label</label>
   <label class="form-label is-disabled">Form label</label>
@@ -7459,7 +7459,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex flex-column border p-3 bg-body" data-bs-theme="light">
   <label class="form-label">Form label</label>
   <label class="form-label is-required">Form label</label>
   <label class="form-label is-disabled">Form label</label>
@@ -7469,7 +7469,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex flex-column border p-3" style="background-color: #282d55;">
   <label class="form-label" data-bs-theme="dark">Form label</label>
   <label class="form-label is-required" data-bs-theme="dark">Form label</label>
   <label class="form-label is-disabled" data-bs-theme="dark">Form label</label>
@@ -7479,7 +7479,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex flex-column border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex flex-column border p-3" style="background-color: #b5e8f7">
   <label class="form-label" data-bs-theme="light">Form label</label>
   <label class="form-label is-required" data-bs-theme="light">Form label</label>
   <label class="form-label is-disabled" data-bs-theme="light">Form label</label>
@@ -7491,7 +7491,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 border border-tertiary p-3">
+<div class="d-flex gap-2 border p-3">
   <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
@@ -7514,7 +7514,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 border p-3 bg-body" data-bs-theme="dark">
   <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector1" data-bs-step="down">
@@ -7537,7 +7537,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 border p-3 bg-body" data-bs-theme="light">
   <div class="quantity-selector">
     <input type="number" id="inputQuantitySelector2" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector2" data-bs-step="down">
@@ -7560,7 +7560,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 border p-3" style="background-color: #282d55;">
   <div class="quantity-selector" data-bs-theme="dark">
     <input type="number" id="inputQuantitySelector3" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector3" data-bs-step="down">
@@ -7583,7 +7583,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 border p-3" style="background-color: #b5e8f7">
   <div class="quantity-selector" data-bs-theme="light">
     <input type="number" id="inputQuantitySelector4" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="5" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
     <button type="button" class="btn btn-icon btn-outline-secondary" aria-describedby="inputQuantitySelector4" data-bs-step="down">
@@ -7608,35 +7608,35 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <input type="range" class="form-range">
   <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <input type="range" class="form-range">
   <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <input type="range" class="form-range">
   <input type="range" class="form-range" disabled>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <input type="range" class="form-range" data-bs-theme="dark">
   <input type="range" class="form-range" data-bs-theme="dark" disabled>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <input type="range" class="form-range" data-bs-theme="light">
   <input type="range" class="form-range" data-bs-theme="light" disabled>
 </div>
@@ -7645,7 +7645,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <select class="form-select" aria-label="Default select example">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -7662,7 +7662,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <select class="form-select" aria-label="Default select example">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -7679,7 +7679,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <select class="form-select" aria-label="Default select example">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -7696,7 +7696,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <select class="form-select" aria-label="Default select example" data-bs-theme="dark">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -7713,7 +7713,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <select class="form-select" aria-label="Default select example" data-bs-theme="light">
     <option selected>Open this select menu</option>
     <option value="1">One</option>
@@ -7732,7 +7732,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="border border-tertiary p-3">
+<div class="border p-3">
   <form><fieldset class="star-rating">
     <legend class="visually-hidden">Results relevance</legend>
     <input type="radio" id="terrible1" name="rating" value="1" class="visually-hidden">
@@ -7773,7 +7773,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="border p-3 bg-body" data-bs-theme="dark">
   <form><fieldset class="star-rating">
     <legend class="visually-hidden">Results relevance</legend>
     <input type="radio" id="terrible2" name="rating" value="1" class="visually-hidden">
@@ -7814,7 +7814,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="border p-3 bg-body" data-bs-theme="light">
   <form><fieldset class="star-rating">
     <legend class="visually-hidden">Results relevance</legend>
     <input type="radio" id="terrible3" name="rating" value="1" class="visually-hidden">
@@ -7855,7 +7855,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #282d55;">
+<div class="border p-3" style="background-color: #282d55;">
   <form><fieldset class="star-rating" data-bs-theme="dark">
     <legend class="visually-hidden">Results relevance</legend>
     <input type="radio" id="terrible4" name="rating" value="1" class="visually-hidden">
@@ -7896,7 +7896,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="border p-3" style="background-color: #b5e8f7">
   <form><fieldset class="star-rating" data-bs-theme="light">
     <legend class="visually-hidden">Results relevance</legend>
     <input type="radio" id="terrible5" name="rating" value="1" class="visually-hidden">
@@ -7939,7 +7939,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex border border-tertiary p-3">
+<div class="d-flex border p-3">
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch">
   </div>
@@ -7956,7 +7956,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex border p-3 bg-body" data-bs-theme="dark">
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch">
   </div>
@@ -7973,7 +7973,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex border p-3 bg-body" data-bs-theme="light">
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch">
   </div>
@@ -7990,7 +7990,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex border p-3" style="background-color: #282d55;">
   <div class="form-check form-switch" data-bs-theme="dark">
     <input class="form-check-input" type="checkbox" role="switch">
   </div>
@@ -8007,7 +8007,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex border p-3" style="background-color: #b5e8f7">
   <div class="form-check form-switch" data-bs-theme="light">
     <input class="form-check-input" type="checkbox" role="switch">
   </div>
@@ -8026,7 +8026,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-column border border-tertiary p-3">
+<div class="d-flex gap-2 flex-column border p-3">
   <input type="text" class="form-control is-valid" value="Mark">
   <select class="form-select is-valid"><option selected disabled value="">Choose...</option><option>...</option></select>
   <input type="file" class="form-control is-valid">
@@ -8049,7 +8049,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-column border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-column border p-3 bg-body" data-bs-theme="dark">
   <input type="text" class="form-control is-valid" value="Mark">
   <select class="form-select is-valid"><option selected disabled value="">Choose...</option><option>...</option></select>
   <input type="file" class="form-control is-valid">
@@ -8072,7 +8072,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-column border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-column border p-3 bg-body" data-bs-theme="light">
   <input type="text" class="form-control is-valid" value="Mark">
   <select class="form-select is-valid"><option selected disabled value="">Choose...</option><option>...</option></select>
   <input type="file" class="form-control is-valid">
@@ -8095,7 +8095,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-column border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-column border p-3" style="background-color: #282d55;">
   <input type="text" class="form-control is-valid" value="Mark" data-bs-theme="dark">
   <select class="form-select is-valid" data-bs-theme="dark"><option selected disabled value="">Choose...</option><option>...</option></select>
   <input type="file" class="form-control is-valid" data-bs-theme="dark">
@@ -8118,7 +8118,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-column border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-column border p-3" style="background-color: #b5e8f7">
   <input type="text" class="form-control is-valid" value="Mark" data-bs-theme="light">
   <select class="form-select is-valid" data-bs-theme="light"><option selected disabled value="">Choose...</option><option>...</option></select>
   <input type="file" class="form-control is-valid" data-bs-theme="light">
@@ -8145,7 +8145,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
@@ -8169,7 +8169,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
@@ -8193,7 +8193,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success"></div>
@@ -8217,7 +8217,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success" data-bs-theme="dark"></div>
@@ -8241,7 +8241,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-primary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-secondary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary);" class="bg-success" data-bs-theme="light"></div>
@@ -8267,7 +8267,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
@@ -8278,12 +8278,11 @@ sitemap_exclude: true
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
-  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
@@ -8294,12 +8293,11 @@ sitemap_exclude: true
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
-  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success"></div>
@@ -8310,12 +8308,11 @@ sitemap_exclude: true
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white"></div>
-  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary"></div>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success" data-bs-theme="dark"></div>
@@ -8326,12 +8323,11 @@ sitemap_exclude: true
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white" data-bs-theme="dark"></div>
-  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary" data-bs-theme="dark"></div>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-primary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-secondary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-success" data-bs-theme="light"></div>
@@ -8342,14 +8338,13 @@ sitemap_exclude: true
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-dark" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-black" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-secondary-bg);" class="border border-white" data-bs-theme="light"></div>
-  <div style="width: 2.5rem; height: 2.5rem; background-color: var(--bs-success);" class="border border-tertiary" data-bs-theme="light"></div>
 </div>
 
 ### Colors
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
@@ -8368,7 +8363,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
@@ -8387,7 +8382,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success"></div>
@@ -8406,7 +8401,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success" data-bs-theme="dark"></div>
@@ -8425,7 +8420,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-primary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-secondary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="text-success" data-bs-theme="light"></div>
@@ -8446,7 +8441,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
@@ -8460,7 +8455,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
@@ -8474,7 +8469,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success"></div>
@@ -8488,7 +8483,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success" data-bs-theme="dark"></div>
@@ -8502,7 +8497,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-primary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-secondary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--bs-secondary); background-color: currentColor;" class="link-success" data-bs-theme="light"></div>
@@ -8520,7 +8515,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
@@ -8533,7 +8528,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
@@ -8546,7 +8541,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
@@ -8559,7 +8554,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success" data-bs-theme="dark"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
@@ -8572,7 +8567,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-primary" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-secondary" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary);" class="text-bg-success" data-bs-theme="light"><div style="width: 100%; height: 100%; background-color: currentColor;"></div></div>
@@ -8587,7 +8582,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
@@ -8600,7 +8595,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
@@ -8613,7 +8608,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success"></div>
@@ -8626,7 +8621,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary" data-bs-theme="dark"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success" data-bs-theme="dark"></div>
@@ -8639,7 +8634,7 @@ sitemap_exclude: true
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-primary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-secondary" data-bs-theme="light"></div>
   <div style="width: 2.5rem; height: 2.5rem; padding: 8px; border: 2px solid var(--bs-secondary); background-color: var(--bs-focus-ring-color);" class="focus-ring-success" data-bs-theme="light"></div>
@@ -8654,30 +8649,30 @@ sitemap_exclude: true
 
 <h4 class="mt-3">No theme</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3">
+<div class="d-flex gap-2 flex-wrap border p-3">
   <a class="link-chevron" href="#">This is a sample link with chevron</a>
 </div>
 
 <h4 class="mt-3">Dark theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="dark">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="dark">
   <a class="link-chevron" href="#">This is a sample link with chevron</a>
 </div>
 
 <h4 class="mt-3">Light theme on container</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3 bg-body" data-bs-theme="light">
+<div class="d-flex gap-2 flex-wrap border p-3 bg-body" data-bs-theme="light">
   <a class="link-chevron" href="#">This is a sample link with chevron</a>
 </div>
 
 <h4 class="mt-3">Dark theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #282d55;">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #282d55;">
   <a class="link-chevron" href="#" data-bs-theme="dark">This is a sample link with chevron</a>
 </div>
 
 <h4 class="mt-3">Light theme on component</h4>
 
-<div class="d-flex gap-2 flex-wrap border border-tertiary p-3" style="background-color: #b5e8f7">
+<div class="d-flex gap-2 flex-wrap border p-3" style="background-color: #b5e8f7">
   <a class="link-chevron" href="#" data-bs-theme="light">This is a sample link with chevron</a>
 </div>

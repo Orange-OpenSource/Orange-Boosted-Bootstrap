@@ -52,7 +52,6 @@ Change the border color using utilities built on our theme colors.
 {{< /border.inline >}}
 <span class="border border-black"></span>
 <span class="border border-white"></span>
-<span class="border border-tertiary"></span>
 {{< /example >}}
 
 {{< callout info >}}

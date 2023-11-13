@@ -169,7 +169,7 @@ $utilities: map-merge(
       local-vars: (
         "border-opacity": 1
       ),
-      values: map-merge($utilities-border-colors, ("tertiary": var(--#{$prefix}border-color-translucent)))
+      values: $utilities-border-colors
     ),
     "subtle-border-color": (
       property: border-color,
