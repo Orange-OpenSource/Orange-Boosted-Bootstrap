@@ -33,7 +33,7 @@ For example, to change the color mode of a dropdown menu, add `data-bs-theme="li
 
 {{< example class="d-flex justify-content-between" >}}
 <div class="dropdown" data-bs-theme="light">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
     Default dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
@@ -47,7 +47,7 @@ For example, to change the color mode of a dropdown menu, add `data-bs-theme="li
 </div>
 
 <div class="dropdown" data-bs-theme="dark">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
     Dark dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
@@ -167,7 +167,7 @@ For example, you can create a "blue theme" with the selector `data-bs-theme="blu
   <hr class="my-4">
 
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustom">

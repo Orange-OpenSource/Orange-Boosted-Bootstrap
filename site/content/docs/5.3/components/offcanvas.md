@@ -70,7 +70,7 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </div>
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown">
         Dropdown button
       </button>
       <ul class="dropdown-menu">
