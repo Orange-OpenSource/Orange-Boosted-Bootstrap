@@ -102,19 +102,19 @@
 }
 
 .btn-success {
-  @include button-variant($green, $green, $white);
+  @include button-variant(var(--#{$prefix}success), var(--#{$prefix}success), var(--#{$prefix}highlight-color));
 }
 
 .btn-danger {
-  @include button-variant($red, $red, $white);
+  @include button-variant(var(--#{$prefix}danger), var(--#{$prefix}danger), var(--#{$prefix}highlight-color));
 }
 
 .btn-warning {
-  @include button-variant($yellow, $yellow, $black);
+  @include button-variant($warning, $warning, $black);
 }
 
 .btn-info {
-  @include button-variant($blue, $blue, $white);
+  @include button-variant(var(--#{$prefix}info), var(--#{$prefix}info), var(--#{$prefix}highlight-color));
 }
 
 .btn-light {

@@ -11,7 +11,13 @@
   @include color-mode(dark) {
     @each $color, $value in $theme-colors-dark {
       .text-bg-#{$color} {
-        color: color-contrast($value) if($enable-important-utilities, !important, null);
+        $text-bg-color: var(--#{$prefix}highlight-color);
+        @if index(("primary", "warning", "light"), #{$color}) {
+          $text-bg-color: $black;
+        } @else if (#{$color} == "dark") {
+          $text-bg-color: $white;
+        }
+        color: $text-bg-color if($enable-important-utilities, !important, null);
       }
     }
   }

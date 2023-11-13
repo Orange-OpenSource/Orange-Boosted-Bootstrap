@@ -63,7 +63,7 @@ Please refer to our Boosted [Navbars]({{< docsref "/examples/navbars" >}}) examp
     <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
   </svg>
   <span class="visually-hidden">Shopping basket</span>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info text-white">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">
     99+
     <span class="visually-hidden">shopping basket items</span>
   </span>
