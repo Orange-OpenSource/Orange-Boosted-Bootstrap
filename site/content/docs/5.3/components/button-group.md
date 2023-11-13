@@ -37,7 +37,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 ## Mixed styles
 
 {{< design-callout-alert >}}
-This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-secondary`.
+This variant **using and mixing colored button backgrounds** should not be used because it does not respect the Orange Design System specifications. In button groups, you should only use the button variant that uses `.btn .btn-outline-secondary`.
 
 Please refer to our Boosted [Buttons]({{< docsref "/components/buttons#examples" >}}) secondary variant component. You can also refer to the [Buttons: standard](https://system.design.orange.com/0c1af118d/p/278ebc-buttons-standard/b/539dce) guidelines on the Orange Design System website.
 {{< /design-callout-alert >}}
@@ -200,7 +200,7 @@ This variant should not be used because it does not respect the Orange Design Sy
 Make a set of buttons appear vertically stacked rather than horizontally.
 
 {{< design-callout-alert >}}
-These 2 vertical variants should not be used because they do not respect the Orange Design System specifications.
+These 3 vertical variants should not be used because they do not respect the Orange Design System specifications.
 {{< /design-callout-alert >}}
 
 {{< example >}}
@@ -214,12 +214,11 @@ These 2 vertical variants should not be used because they do not respect the Ora
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-  <button type="button" class="btn btn-outline-secondary">Button</button>
-  <button type="button" class="btn btn-outline-secondary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-outline-secondary">Split button</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -227,9 +226,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropstart" role="group">
-    <button type="button" class="btn btn-outline-secondary">Split button</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -237,9 +235,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropend" role="group">
-    <button type="button" class="btn btn-outline-secondary">Split button</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -247,9 +244,8 @@ These 2 vertical variants should not be used because they do not respect the Ora
     </ul>
   </div>
   <div class="btn-group dropup" role="group">
-    <button type="button" class="btn btn-outline-secondary">Split button</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -259,4 +255,13 @@ These 2 vertical variants should not be used because they do not respect the Ora
 </div>
 {{< /example >}}
 
-<!-- Boosted mod: toggle buttons group don't support vertical variation -->
+{{< example >}}
+<div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+  <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+  <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+  <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+</div>
+{{< /example >}}
