@@ -1326,7 +1326,7 @@ $form-range-track-width:          100% !default;
 $form-range-track-height:         .375rem !default; // Boosted mod: instead of `.5rem`
 $form-range-track-cursor:         pointer !default;
 $form-range-track-bg:             var(--#{$prefix}secondary-bg) !default;
-$form-range-track-filled-bg:      $brand-orange !default; // Boosted mod
+$form-range-track-filled-bg:      var(--#{$prefix}link-hover-color) !default; // Boosted mod
 $form-range-track-border-radius:  null !default; // Boosted mod: instead of `1rem`
 $form-range-track-box-shadow:     var(--#{$prefix}box-shadow-inset) !default;
 
@@ -1339,8 +1339,8 @@ $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !defa
 $form-range-thumb-focus-box-shadow:        null !default; // Boosted mod
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-hover-bg:                var(--#{$prefix}highlight-bg) !default; // Boosted mod
-$form-range-thumb-active-bg:               $brand-orange !default; // Boosted mod: instead of `tint-color($component-active-bg, 70%)`
-$form-range-thumb-active-border:           $brand-orange !default; // Boosted mod
+$form-range-thumb-active-bg:               var(--#{$prefix}link-hover-color) !default; // Boosted mod: instead of `tint-color($component-active-bg, 70%)`
+$form-range-thumb-active-border:           var(--#{$prefix}link-hover-color) !default; // Boosted mod
 $form-range-thumb-disabled-bg:             var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
 $form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default; // Boosted mod: no box shadow
 // scss-docs-end form-range-variables
