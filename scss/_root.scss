@@ -35,7 +35,6 @@
     --#{$prefix}#{$color}-border-subtle: #{$value};
   }
 
-  --#{$prefix}primary-text-rgb: #{to-rgb($accessible-orange)}; // Boosted mod
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
 
@@ -226,6 +225,8 @@
 
     --#{$prefix}focus-visible-inner-color: #{$focus-visible-inner-color-dark}; // Boosted mod
     --#{$prefix}focus-visible-outer-color: #{$focus-visible-outer-color-dark}; // Boosted mod
+
+    --#{$prefix}focus-ring-color: #{$focus-ring-color-dark}; // Boosted mod
 
     --#{$prefix}form-valid-color: #{$form-valid-color-dark};
     --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
