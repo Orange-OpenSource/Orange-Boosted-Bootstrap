@@ -14,13 +14,6 @@
   white-space: nowrap;
   // Generate the caret automatically
   @include caret();
-
-  // Boosted mod
-  // TODO: should probably be a `.btn-*` class
-  &:not(.dropdown-toggle-split) {
-    @include button-variant($dropdown-bg, $dropdown-border-color, $dropdown-color, $dropdown-bg, $dropdown-border-color, $dropdown-color, $dropdown-bg, $dropdown-color, $dropdown-color, $dropdown-bg, var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
-  }
-  // End mod
 }
 
 // The dropdown menu
