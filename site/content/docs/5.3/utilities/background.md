@@ -26,26 +26,26 @@ In case you need to write over one of these background, prefer using our [color 
 
 <!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
-<div class="p-3 mb-2 fw-bold bg-primary"><span class="text-body" data-bs-theme="light">.bg-primary</span></div>
-<div class="p-3 mb-2 fw-bold bg-secondary"><span class="text-body" data-bs-theme="inverted">.bg-secondary</span></div>
-<div class="p-3 mb-2 fw-bold bg-success"><span class="text-body" data-bs-theme="inverted">.bg-success</span></div>
-<div class="p-3 mb-2 fw-bold bg-danger"><span class="text-body" data-bs-theme="inverted">.bg-danger</span></div>
-<div class="p-3 mb-2 fw-bold bg-warning"><span class="text-body" data-bs-theme="light">.bg-warning</span></div>
-<div class="p-3 mb-2 fw-bold bg-info"><span class="text-body" data-bs-theme="inverted">.bg-info</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-green"><span class="text-body" data-bs-theme="light">.bg-supporting-green</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-purple"><span class="text-body" data-bs-theme="light">.bg-supporting-purple</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-yellow"><span class="text-body" data-bs-theme="light">.bg-supporting-yellow</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-blue"><span class="text-body" data-bs-theme="light">.bg-supporting-blue</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-pink"><span class="text-body" data-bs-theme="light">.bg-supporting-pink</span></div>
-<div class="p-3 mb-2 fw-bold bg-supporting-orange"><span class="text-body" data-bs-theme="light">.bg-supporting-pink</span></div>
-<div class="p-3 mb-2 fw-bold bg-light"><span class="text-body" data-bs-theme="light">.bg-light</span></div>
-<div class="p-3 mb-2 fw-bold bg-dark"><span class="text-body" data-bs-theme="dark">.bg-dark</span></div>
-<div class="p-3 mb-2 fw-bold bg-body-secondary"><span class="text-body" data-bs-theme="body">.bg-body-secondary</span></div>
-<div class="p-3 mb-2 fw-bold bg-body-tertiary"><span class="text-body" data-bs-theme="body">.bg-body-tertiary</span></div>
-<div class="p-3 mb-2 fw-bold bg-body"><span class="text-body" data-bs-theme="body">.bg-body</span></div>
-<div class="p-3 mb-2 fw-bold bg-black"><span class="text-body" data-bs-theme="dark">.bg-black</span></div>
-<div class="p-3 mb-2 fw-bold bg-white"><span class="text-body" data-bs-theme="light">.bg-white</span></div>
-<div class="p-3 mb-2 fw-bold bg-transparent"><span class="text-body" data-bs-theme="body">.bg-transparent</span></div>
+<div class="p-3 mb-2 fw-bold bg-primary"><span class="text-bg-primary">.bg-primary</span></div>
+<div class="p-3 mb-2 fw-bold bg-secondary"><span class="text-bg-secondary">.bg-secondary</span></div>
+<div class="p-3 mb-2 fw-bold bg-success"><span class="text-bg-success">.bg-success</span></div>
+<div class="p-3 mb-2 fw-bold bg-danger"><span class="text-bg-danger">.bg-danger</span></div>
+<div class="p-3 mb-2 fw-bold bg-warning"><span class="text-bg-warning">.bg-warning</span></div>
+<div class="p-3 mb-2 fw-bold bg-info"><span class="text-bg-info">.bg-info</span></div>
+<div class="p-3 mb-2 fw-bold bg-supporting-green text-black">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple text-black">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow text-black">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue text-black">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink text-black">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-orange text-black">.bg-supporting-orange</div>
+<div class="p-3 mb-2 fw-bold bg-light"><span class="text-bg-light">.bg-light</span></div>
+<div class="p-3 mb-2 fw-bold bg-dark"><span class="text-bg-dark">.bg-dark</span></div>
+<div class="p-3 mb-2 fw-bold bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 fw-bold bg-body-tertiary">.bg-body-tertiary</div>
+<div class="p-3 mb-2 fw-bold bg-body">.bg-body</div>
+<div class="p-3 mb-2 fw-bold bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 fw-bold bg-white text-black">.bg-white</div>
+<div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
 {{< callout info >}}
