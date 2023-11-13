@@ -1,14 +1,17 @@
 .themed-grid-col {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: var(--bs-secondary-bg); /* Boosted mod */
+  background-color: var(--bs-secondary-bg); /* Boosted mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
+  /* Boosted mod: no `border` */
   outline: 1px solid var(--bs-border-color-translucent); /* Boosted mod */
 }
 
 .themed-container {
+  /* Boosted mod: no `padding` */
   padding-top: .75rem; /* Boosted mod */
   padding-bottom: .75rem; /* Boosted mod */
   margin-bottom: 1.5rem;
-  background-color: var(--bs-border-color-translucent); /* Boosted mod */
+  background-color: var(--bs-border-color-translucent); /* Boosted mod: instead of `rgba(112.520718, 44.062154, 249.437846, .15)` */
+  /* Boosted mod: no `border` */
   outline: 1px solid var(--bs-secondary); /* Boosted mod */
 }
