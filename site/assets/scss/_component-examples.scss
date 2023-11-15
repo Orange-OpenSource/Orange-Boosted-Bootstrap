@@ -178,7 +178,7 @@
     font-weight: $font-weight-bold; // Boosted mod
     color: var(--bs-secondary-color);
     background-color: var(--bs-secondary-bg); // Boosted mod: instead of `var(--bs-tertiary-bg)`
-    border: var(--bs-border-width) solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-color)`
+    border: var(--bs-border-width) solid var(--bs-border-color-translucent); // Boosted mod: instead of `var(--bs-border-width) solid var(--bs-border-color)`
 
     > div {
       display: flex;
