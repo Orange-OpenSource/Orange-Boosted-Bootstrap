@@ -156,9 +156,6 @@
 .bd-black { color: color-contrast($black); background-color: $black; }
 
 // Boosted mod
-.bd-accessible-orange { color: color-contrast($accessible-orange); background-color: $accessible-orange; }
-.bd-supporting-yellow { color: color-contrast($supporting-yellow); background-color: $supporting-yellow; }
-
 @function wcag-level($contrast-ratio) {
   $level: "FAIL";
 
