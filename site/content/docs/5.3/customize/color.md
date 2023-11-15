@@ -11,120 +11,102 @@ toc: true
 <!-- Boosted mod -->
 ## Orange's colors
 
-Color palette is used throughout Boosted in multiple ways, either in components or as utilities for both [`background-color`]({{< docsref "/utilities/background" >}}) and [`color`]({{< docsref "/utilities/colors" >}}).
 
-### Core colors
+### Theme colors
 
-{{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "Core colors" }}
-<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-3">
-  {{- range $color := .colors }}
-    <figure class="col" aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 gy-3">
+  <figure class="double-figure mb-0" aria-label="Primary color">
+    <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-primary" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-primary</code>" data-bs-html="true">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Primary color" preserveAspectRatio="xMidYMid meet">
+        <rect fill="var(--bs-primary)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+        <rect fill="var(--bs-primary)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
       </svg>
-      <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
-        <var>{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-  {{ end -}}
-</div>
-{{ end -}}
-{{< /palette.inline >}}
-
-### Supporting colors
-
-{{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "Supporting colors" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
-  {{- range $color := .colors }}
-    <figure aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
+      <span class="visually-hidden">Copy variable name --bs-primary</span>
+    </button>
+    <figcaption class="py-1">
+      <var class="text-nowrap">--bs-primary</var>
+    </figcaption>
+  </figure>
+  <figure class="double-figure mb-0" aria-label="Secondary color">
+    <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-secondary" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary</code>" data-bs-html="true">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Secondary color" preserveAspectRatio="xMidYMid meet">
+        <rect fill="var(--bs-secondary)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+        <rect fill="var(--bs-secondary)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
       </svg>
-      <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
-        <var>{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-  {{ end -}}
+      <span class="visually-hidden">Copy variable name --bs-secondary</span>
+    </button>
+    <figcaption class="py-1">
+      <var class="text-nowrap">--bs-secondary</var>
+    </figcaption>
+  </figure>
+  <figure class="double-figure mb-0" aria-label="Body color">
+    <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg</code>" data-bs-html="true">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Body color" style="border: 1px solid var(--bs-border-color-translucent)" preserveAspectRatio="xMidYMid meet">
+        <rect fill="var(--bs-body-bg)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+        <rect fill="var(--bs-body-bg)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+      </svg>
+      <span class="visually-hidden">Copy variable name --bs-body-bg</span>
+    </button>
+    <figcaption class="py-1">
+      <var class="text-nowrap">--bs-body-bg</var>
+    </figcaption>
+  </figure>
 </div>
-{{ end -}}
-{{< /palette.inline >}}
 
 ### Functional colors
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3">
   {{- range $color := .colors }}
-    <figure aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
-      </svg>
+  <div class="double-figure d-flex">
+    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-{{ $color.level }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-{{ $color.level }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+          <rect fill="var(--bs-{{ $color.level }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+          <rect fill="var(--bs-{{ $color.level }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+        </svg>
+        <span class="visually-hidden">Copy variable name --bs-{{ $color.level }}</span>
+      </button>
       <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
-        <var>{{- $color.variable -}}</var>
+        <var class="text-nowrap">--bs-{{- $color.level -}}</var>
       </figcaption>
     </figure>
+    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
+      <p class="mb-0" data-bs-theme="light"><code>{{ $color.hex }}</code></p>
+      <p class="mb-2" data-bs-theme="dark"><code>{{ $color.darkHex }}</code></p>
+    </div>
+  </div>
   {{ end -}}
 </div>
 {{ end -}}
 {{< /palette.inline >}}
 
-### Grays
+### Full palette
+
+Color palette is used throughout Boosted in multiple ways, either in components or as utilities such as [`background-color`]({{< docsref "/utilities/background" >}}), [`color`]({{< docsref "/utilities/colors" >}}) or [`border`]({{< docsref "/utilities/borders" >}}).
 
 {{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "Grays" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
-  {{- range $color := .colors }}
-    <figure aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
-      </svg>
-      <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
-        <var>{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
+{{- range where $.Site.Data.palette "category" "ODS colors" }}
+  {{- range $subcategory := .subcategories }}
+  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 gy-3 pb-3">
+    {{- range $color := .colors }}
+      <figure class="mb-0" aria-label="{{ $color.name }}">
+        <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
+          <svg viewBox="0 0 100 100" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet" {{ if or (eq $color.name "White 100") (eq $color.name "Black 900") }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+            <rect fill="{{ $color.hex }}" width="100" height="100"/>
+          </svg>
+          <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
+        </button>
+        <figcaption class="py-1">
+          <code>{{ $color.hex }}</code>
+          <hr class="my-1 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
+          <var>{{- $color.variable -}}</var>
+        </figcaption>
+      </figure>
+    {{ end -}}
+  </div>
   {{ end -}}
-</div>
-{{ end -}}
-{{< /palette.inline >}}
-
-### OBS Gray
-
-{{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "OBS Gray" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
-  {{- range $color := .colors }}
-    <figure aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
-      </svg>
-      <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important">
-        <var>{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-  {{ end -}}
-</div>
 {{ end -}}
 {{< /palette.inline >}}
 
@@ -145,6 +127,9 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
     </div>
 </div>
 <!-- End mod -->
+
+<details>
+<summary>TODO</summary>
 
 ## Colors
 
@@ -562,14 +547,6 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 bd-accessible-orange">
-      <strong class="d-block">$accessible-orange</strong>
-      #f16e00
-    </div>
-    <div class="p-3 mb-2 bd-supporting-yellow">
-      <strong class="d-block">$supporting-yellow</strong>
-      #ffd200
-    </div>
     <div class="p-3 mb-2 bd-black text-white">
       <strong class="d-block">$black</strong>
       #000
@@ -661,3 +638,4 @@ $utilities: map-merge(
 ```
 
 This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.
+</details>
