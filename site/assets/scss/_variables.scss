@@ -39,7 +39,7 @@ $bd-callout-variants: info, warning, danger !default;
   // Boosted mod: no --bd-sidebar-link-bg
   // Boosted mod: no --bd-callout-link
   // Boosted mod: no --bd-callout-code-color
-  --bd-pre-bg: #{adjust-color($gray-900, $lightness: -2.5%)}; // stylelint-disable-line scss/at-function-named-arguments
+  --bd-pre-bg: var(--bs-tertiary-bg); // Boosted mod: instead of `#{adjust-color($gray-900, $lightness: -2.5%)}`
 }
 
 // Boosted mod
