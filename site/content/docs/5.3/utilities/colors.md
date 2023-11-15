@@ -30,7 +30,7 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p class="text-{{ .name }}{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}</p>
-<p class="text-{{ .name }}-emphasis {{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
+<p class="text-{{ .name }}-emphasis{{ with .contrast_color }} bg-{{ . }}{{ end }}">.text-{{ .name }}-emphasis</p>
 {{- end -}}
 {{< /colors.inline >}}
 
