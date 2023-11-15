@@ -314,7 +314,7 @@
   min-height: 16.625rem; // Boosted mod: instead of `15rem`
 
   > div {
-    color: var(--bs-highlight-color);
+    color: var(--bs-highlight-color); // Boosted mod: instead of `var(--bs-body-bg)`
     background-color: var(--bd-primary-light);
     border: 1px solid var(--bd-primary);
 
