@@ -4090,7 +4090,7 @@ sitemap_exclude: true
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                     1
                     <span class="visually-hidden">shopping basket items</span>
                   </span>
@@ -4178,7 +4178,7 @@ sitemap_exclude: true
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                     1
                     <span class="visually-hidden">shopping basket items</span>
                   </span>
@@ -4266,7 +4266,7 @@ sitemap_exclude: true
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                     1
                     <span class="visually-hidden">shopping basket items</span>
                   </span>
@@ -4354,7 +4354,7 @@ sitemap_exclude: true
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                     1
                     <span class="visually-hidden">shopping basket items</span>
                   </span>
@@ -4442,7 +4442,7 @@ sitemap_exclude: true
                 </svg>
                 <span class="visually-hidden">Basket</span>
                 <span class="position-relative align-self-start">
-                  <span class="badge bg-info rounded-pill position-absolute top-0 fs-6 text-white translate-middle">
+                  <span class="badge text-bg-info rounded-pill position-absolute top-0 fs-6 translate-middle">
                     1
                     <span class="visually-hidden">shopping basket items</span>
                   </span>
@@ -4700,7 +4700,7 @@ sitemap_exclude: true
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4765,7 +4765,7 @@ sitemap_exclude: true
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4830,7 +4830,7 @@ sitemap_exclude: true
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4895,7 +4895,7 @@ sitemap_exclude: true
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
-    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="dark">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
@@ -4960,7 +4960,7 @@ sitemap_exclude: true
     <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
-    <div class="progress-bar bg-danger text-white" style="width: 100%">100%</div>
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
   </div>
   <div class="progress" role="progressbar" aria-label="Primary example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" data-bs-theme="light">
     <div class="progress-bar text-bg-primary" style="width: 30%">30% (.text-bg-primary)</div>
