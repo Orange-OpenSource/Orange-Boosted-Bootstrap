@@ -120,21 +120,21 @@ These work great with custom content as well.
       Subheading
       <div class="fw-normal mt-1 lh-base">Content for list item</div>
     </div>
-    <span class="badge bg-info text-white rounded-pill">14</span>
+    <span class="badge text-bg-info rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="me-auto">
       Subheading
       <div class="fw-normal mt-1 lh-base">Content for list item</div>
     </div>
-    <span class="badge bg-info text-white rounded-pill">14</span>
+    <span class="badge text-bg-info rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="me-auto">
       Subheading
       <div class="fw-normal mt-1 lh-base">Content for list item</div>
     </div>
-    <span class="badge bg-info text-white rounded-pill">14</span>
+    <span class="badge text-bg-info rounded-pill">14</span>
   </li>
 </ol>
 {{< /example >}}
@@ -221,15 +221,15 @@ Add badges to any list group item to show unread counts, activity, and more with
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A list item
-    <span class="badge bg-info text-white rounded-pill">14</span>
+    <span class="badge text-bg-info rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A second list item
-    <span class="badge bg-info text-white rounded-pill">2</span>
+    <span class="badge text-bg-info rounded-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A third list item
-    <span class="badge bg-info text-white rounded-pill">1</span>
+    <span class="badge text-bg-info rounded-pill">1</span>
   </li>
 </ul>
 {{< /example >}}
