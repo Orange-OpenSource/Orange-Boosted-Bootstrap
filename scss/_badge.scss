@@ -40,11 +40,3 @@
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x); // Boosted mod
   margin-left: map-get($spacers, 1); // Boosted mod
 }
-
-// Boosted mod: inconsistent background color & naming
-@each $color, $value in $theme-colors {
-  .badge.bg-#{$color} {
-    color: color-contrast($value);
-    background-color: $value !important; // stylelint-disable-line declaration-no-important
-  }
-}
