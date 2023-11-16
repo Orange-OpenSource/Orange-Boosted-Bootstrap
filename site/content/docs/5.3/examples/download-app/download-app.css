@@ -4,6 +4,7 @@
 
 .custom-vr {
   height: 75px;
+  background-color: var(--bs-border-color-translucent);
 }
 
 @media (max-width: 479.98px) {
