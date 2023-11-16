@@ -77,7 +77,7 @@ Here are some representative examples of these classes:
 Additionally, Boosted also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
-  <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bd-primary-rgb),.3) solid 1px;">
+  <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-primary-light-rgb),.15); border: rgba(var(--bs-primary-rgb),.3) solid 1px;">
     Centered element
   </div>
 </div>

@@ -34,7 +34,7 @@
       &:hover,
       &.active {
         color: var(--bd-toc-color);
-        border-left-color: var(--bd-toc-active-border-left-color); // Boosted mod: instead of `--bd-toc-color`
+        border-left-color: var(--bs-primary); // Boosted mod: instead of `--bd-toc-color`
       }
 
       &.active {
