@@ -10,6 +10,7 @@
     flex: 1 1 auto;
   }
 
+  // Boosted mod: rule slightlty modified
   // Bring the hover, focused, and "active" buttons to the front to overlay
   // the borders properly
   > .btn-check:checked + .btn,
@@ -18,6 +19,7 @@
   > .btn.active {
     z-index: 1;
   }
+  // End mod
 
   // Boosted mod
   &:focus-within {
@@ -40,11 +42,13 @@
 .btn-group {
   @include border-radius($border-radius);
 
+  // Boosted mod: rule slightlty modified
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn:not(.btn-toggle),
   > .btn-group:not(:first-child) {
     margin-left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
   }
+  // End mod
 
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
