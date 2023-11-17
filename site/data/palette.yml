@@ -9,14 +9,14 @@
       class: black
       hex: "#000"
       variable: $secondary
-    - name: Accessible orange
+    - name: Primary
       class: orange
       hex: "#f16e00"
-      variable: $accessible-orange
-    - name: Brand orange
+      variable: $primary
+    - name: Supporting orange
       class: orange-2
       hex: "#ff7900"
-      variable: $brand-orange
+      variable: $supporting-orange
 - category: Supporting colors
   name: "Supporting colors"
   colors:

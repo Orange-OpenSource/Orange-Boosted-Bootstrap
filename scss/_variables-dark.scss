@@ -16,7 +16,7 @@ $functional-red-dark:    #f66 !default;
 
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-color-dark-variables
-$primary-dark:                      $brand-orange !default;
+$primary-dark:                      $supporting-orange !default;
 $secondary-dark:                    $white !default;
 $success-dark:                      $functional-green-dark !default;
 $info-dark:                         $functional-blue-dark !default;
@@ -84,12 +84,12 @@ $border-color-dark:                 $white !default; // Boosted mod: instead of 
 $border-color-translucent-dark:     $gray-700 !default; // Boosted mod instead of `rgba($white, .15)`
 $headings-color-dark:               $white !default; // Boosted mod: instead of `inherit`
 $link-color-dark:                   $white !default; // Boosted mod: instead of `tint-color($primary, 40%)`
-$link-hover-color-dark:             $brand-orange !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
+$link-hover-color-dark:             $supporting-orange !default; // Boosted mod: instead of `shift-color($link-color-dark, -$link-shade-percentage)`
 $code-color-dark:                   tint-color($code-color, 40%) !default;
 $mark-color-dark:                   $black !default; // Boosted mod: instead of `$body-color-dark`
 $mark-bg-dark:                      $white !default; // Boosted mod: instead of `$yellow-800`
 
-$focus-ring-color-dark:             rgba($brand-orange, $focus-ring-opacity) !default; // Boosted mod
+$focus-ring-color-dark:             rgba($supporting-orange, $focus-ring-opacity) !default; // Boosted mod
 
 $disabled-filter-dark:  brightness(0) invert(1) brightness(.4) !default; // Boosted mod
 

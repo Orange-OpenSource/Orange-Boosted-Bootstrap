@@ -562,8 +562,8 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 bd-accessible-orange">
-      <strong class="d-block">$accessible-orange</strong>
+    <div class="p-3 mb-2 bd-primary-color">
+      <strong class="d-block">$primary</strong>
       #f16e00
     </div>
     <div class="p-3 mb-2 bd-supporting-yellow">

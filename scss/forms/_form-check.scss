@@ -137,7 +137,7 @@
   &:required {
     ~ .form-check-label::after {
       margin-left: $form-label-required-margin-left;
-      color: $accessible-orange;
+      color: $primary;
       content: "*";
     }
   }
@@ -275,7 +275,7 @@
 
   &:hover + .btn,
   + .btn:hover {
-    color: $accessible-orange;
+    color: $primary;
     background-color: $white;
     border-color: $gray-500;
   }
@@ -303,7 +303,7 @@
     + .btn-no-outline {
       &,
       &:hover {
-        color: $accessible-orange;
+        color: $primary;
         background-color: transparent;
       }
     }
@@ -318,11 +318,11 @@
   &:active + .btn,
   + .btn:active,
   + .btn.active {
-    color: color-contrast($brand-orange);
-    background-color: $brand-orange;
+    color: color-contrast($supporting-orange);
+    background-color: $supporting-orange;
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
-    border-color: $brand-orange;
+    border-color: $supporting-orange;
   }
   // End mod
 
@@ -380,7 +380,7 @@
     }
 
     &:active {
-      color: $accessible-orange;
+      color: $primary;
       background-color: transparent;
     }
   }

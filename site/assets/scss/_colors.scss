@@ -156,7 +156,7 @@
 .bd-black { color: color-contrast($black); background-color: $black; }
 
 // Boosted mod
-.bd-accessible-orange { color: color-contrast($accessible-orange); background-color: $accessible-orange; }
+.bd-primary-color { color: color-contrast($primary); background-color: $primary; }
 .bd-supporting-yellow { color: color-contrast($supporting-yellow); background-color: $supporting-yellow; }
 
 @function wcag-level($contrast-ratio) {
@@ -177,7 +177,7 @@
   @return $level;
 }
 
-@each $color, $value in map-merge($colors, map-merge($grays, ("supporting-yellow": $supporting-yellow, "accessible-orange": $accessible-orange, "black": $black))) {
+@each $color, $value in map-merge($colors, map-merge($grays, ("supporting-yellow": $supporting-yellow, "primary": $primary, "black": $black))) {
   .a11y-swatch-#{$color} {
     color: color-contrast($value);
     background-color: #{$value};

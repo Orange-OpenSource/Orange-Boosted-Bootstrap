@@ -98,7 +98,7 @@
 
 // scss-docs-start btn-variant-loops
 .btn-primary {
-  @include button-variant($brand-orange, $brand-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
+  @include button-variant($supporting-orange, $supporting-orange, $black, $active-background: var(--#{$prefix}highlight-color), $active-border: var(--#{$prefix}highlight-bg), $active-color: var(--#{$prefix}highlight-bg));
 }
 
 .btn-success {
