@@ -58,8 +58,7 @@
 
   // Boosted mod: no .btn-check:focus-visible + &
 
-  // Boosted mod: custom styles for .btn-check
-  // Boosted mod: simpler rule
+  // Boosted mod: selectors are slightlty different to handle `.btn-check:checked`
   .btn-check:checked + &:active,
   .btn-check:checked + &,
   &:active,
@@ -73,7 +72,9 @@
     // Boosted mod: no box shadow modification for the active state
     // Boosted mod: no &:focus-visible
   }
+  // End mod
 
+  // Boosted mod: selectors are slightlty different to handle `.btn-check`
   .btn-check:disabled + &,
   &:disabled,
   &.disabled,
@@ -86,6 +87,7 @@
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }
+  // End mod
 
   // Boosted mod: with icon
   &:not(.btn-icon) > svg {
@@ -145,7 +147,7 @@
 }
 // scss-docs-end btn-variant-loops
 
-// Boosted mod: border-only on :hover and :active
+// Boosted mod: Boosted-specific no outline button
 .btn-no-outline {
   @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), transparent, transparent, var(--#{$prefix}disabled-color));
 
@@ -157,7 +159,10 @@
     }
   }
 }
+// End mod
 
+
+// Boosted mod: Boosted-specific toggle button
 .btn-toggle {
   @include button-variant(transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), $brand-orange, $brand-orange, $black, transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}disabled-color));
 
@@ -192,7 +197,7 @@
 // End mod
 
 
-// Boosted mod: dropdown button
+// Boosted mod: Boosted-specific dropdown button
 .btn-dropdown {
   @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }
