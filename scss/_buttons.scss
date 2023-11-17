@@ -159,7 +159,7 @@
 }
 
 .btn-toggle {
-  @include button-variant(transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), var(--#{$prefix}link-hover-color), var(--#{$prefix}link-hover-color), $black, transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}disabled-color));
+  @include button-variant(transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), $brand-orange, $brand-orange, $black, transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}disabled-color));
 
   .btn-check:checked + & {
     color: var(--#{$prefix}highlight-color);
