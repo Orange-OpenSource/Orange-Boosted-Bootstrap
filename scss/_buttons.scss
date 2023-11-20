@@ -58,8 +58,9 @@
 
   // Boosted mod: no .btn-check:focus-visible + &
 
-  // Boosted mod: custom styles for .btn-check
-  // Boosted mod: simpler rule
+  // Boosted mod: selectors are slightly different to handle `.btn-check:checked`
+  .btn-check:checked + &:active,
+  .btn-check:checked + &,
   &:active,
   &.active,
   &.show {
@@ -71,7 +72,10 @@
     // Boosted mod: no box shadow modification for the active state
     // Boosted mod: no &:focus-visible
   }
+  // End mod
 
+  // Boosted mod: selectors are slightly different to handle `.btn-check`
+  .btn-check:disabled + &,
   &:disabled,
   &.disabled,
   fieldset:disabled & {
@@ -83,6 +87,7 @@
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }
+  // End mod
 
   // Boosted mod: with icon
   &:not(.btn-icon) > svg {
@@ -142,18 +147,57 @@
 }
 // scss-docs-end btn-variant-loops
 
-// Boosted mod: border-only on :hover and :active
+// Boosted mod: Boosted-specific no outline button
 .btn-no-outline {
-  --#{$prefix}btn-hover-border-color: var(--#{$prefix}border-color-translucent);
-  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
-  --#{$prefix}btn-active-border-color: var(--#{$prefix}border-color-translucent);
-  --#{$prefix}btn-disabled-color: var(--#{$prefix}disabled-color);
-  --#{$prefix}btn-disabled-border-color: var(--#{$prefix}btn-border-color);
+  @include button-variant(transparent, transparent, var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), transparent, transparent, var(--#{$prefix}disabled-color));
+
+  .btn-check:checked + &.btn {
+    border-color: transparent;
+
+    &:hover {
+      border-color: var(--#{$prefix}btn-hover-border-color);
+    }
+  }
 }
 // End mod
 
 
-// Boosted mod: dropdown button
+// Boosted mod: Boosted-specific toggle button
+.btn-toggle {
+  @include button-variant(transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}link-hover-color), $brand-orange, $brand-orange, $black, transparent, var(--#{$prefix}border-color-translucent), var(--#{$prefix}disabled-color));
+
+  .btn-check:checked + & {
+    color: var(--#{$prefix}highlight-color);
+    background-color: var(--#{$prefix}highlight-bg);
+    border-color: var(--#{$prefix}highlight-bg);
+  }
+
+  .btn-group .btn-check + &.btn:not(:first-of-type) {
+    border-left: 0;
+
+    &::before {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
+  }
+
+  .btn-group .btn-check + &.btn:not(:last-of-type) {
+    border-right: 0;
+
+    &::after {
+      display: inline-block;
+      width: var(--#{$prefix}btn-border-width);
+      height: 100%;
+      content: "";
+    }
+  }
+}
+// End mod
+
+
+// Boosted mod: Boosted-specific dropdown button
 .btn-dropdown {
   @include button-variant(var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}border-color-translucent), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}body-color), var(--#{$prefix}body-color), var(--#{$prefix}body-bg), var(--#{$prefix}disabled-color), var(--#{$prefix}disabled-color));
 }
