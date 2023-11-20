@@ -246,7 +246,14 @@
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
-  // Boosted mod: no disabled state
+  &[disabled],
+  &:disabled {
+    + .btn {
+      // Boosted mod: no pointer-events
+      // Boosted mod: no filter
+      opacity: $form-check-btn-check-disabled-opacity;
+    }
+  }
 
   // Boosted mod
   &[data-focus-visible-added]:focus {

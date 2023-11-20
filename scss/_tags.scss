@@ -85,6 +85,8 @@
     }
   }
 
+  .btn-check:disabled + &,
+  .btn-check[disabled] + &,
   &[disabled],
   &.disabled {
     color: var(--#{$prefix}tag-disabled-color);
