@@ -8022,6 +8022,543 @@ sitemap_exclude: true
   </div>
 </div>
 
+### Toggle buttons
+
+<h4 class="mt-3">No theme</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3">
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off">
+    <label class="btn btn-toggle" for="btn-check1">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check2" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btn-check2">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check3" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btn-check3">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-primary1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-primary1">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary2" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btn-check-primary2">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary3" autocomplete="off" disabled>
+    <label class="btn btn-outline-primary" for="btn-check-primary3">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-secondary1" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-secondary1">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary2" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary2">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary3" autocomplete="off" disabled>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary3">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-success1" autocomplete="off">
+    <label class="btn btn-outline-success" for="btn-check-success1">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success2" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="btn-check-success2">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success3" autocomplete="off" disabled>
+    <label class="btn btn-outline-success" for="btn-check-success3">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-danger1" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-danger1">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger2" autocomplete="off" checked>
+    <label class="btn btn-outline-danger" for="btn-check-danger2">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger3" autocomplete="off" disabled>
+    <label class="btn btn-outline-danger" for="btn-check-danger3">Single toggle</label>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btncheck1">Checked</label>
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-toggle" for="btncheck2">Checkbox</label>
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btncheck3">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option1">Checked</label>
+    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+    <label class="btn btn-toggle" for="option2">Radio</label>
+    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option3">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option5">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option6">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option7">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option8" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option8">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option9" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option9">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline" id="option10" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option10">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on container</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="dark">
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check11" autocomplete="off">
+    <label class="btn btn-toggle" for="btn-check11">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check21" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btn-check21">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check31" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btn-check31">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-primary11" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-primary11">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary21" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btn-check-primary21">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary31" autocomplete="off" disabled>
+    <label class="btn btn-outline-primary" for="btn-check-primary31">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-secondary11" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-secondary11">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary21" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary21">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary31" autocomplete="off" disabled>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary31">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-success11" autocomplete="off">
+    <label class="btn btn-outline-success" for="btn-check-success11">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success21" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="btn-check-success21">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success31" autocomplete="off" disabled>
+    <label class="btn btn-outline-success" for="btn-check-success31">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-danger11" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-danger11">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger21" autocomplete="off" checked>
+    <label class="btn btn-outline-danger" for="btn-check-danger21">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger31" autocomplete="off" disabled>
+    <label class="btn btn-outline-danger" for="btn-check-danger31">Single toggle</label>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btncheck11">Checked</label>
+    <input type="checkbox" class="btn-check" id="btncheck21" autocomplete="off">
+    <label class="btn btn-toggle" for="btncheck21">Checkbox</label>
+    <input type="checkbox" class="btn-check" id="btncheck31" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btncheck31">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options1" id="option11" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option11">Checked</label>
+    <input type="radio" class="btn-check" name="options1" id="option21" autocomplete="off">
+    <label class="btn btn-toggle" for="option21">Radio</label>
+    <input type="radio" class="btn-check" name="options1" id="option31" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option31">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons1" id="option51" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option51">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons1" id="option61" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option61">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons1" id="option71" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option71">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline1" id="option81" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option81">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline1" id="option91" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option91">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline1" id="option01" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option01">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on container</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3 bg-body" data-bs-theme="light">
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check12" autocomplete="off">
+    <label class="btn btn-toggle" for="btn-check12">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check22" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btn-check22">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check32" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btn-check32">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-primary12" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-primary12">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary22" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btn-check-primary22">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary32" autocomplete="off" disabled>
+    <label class="btn btn-outline-primary" for="btn-check-primary32">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-secondary12" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-secondary12">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary22" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary22">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary32" autocomplete="off" disabled>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary32">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-success12" autocomplete="off">
+    <label class="btn btn-outline-success" for="btn-check-success12">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success22" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="btn-check-success22">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success32" autocomplete="off" disabled>
+    <label class="btn btn-outline-success" for="btn-check-success32">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-danger12" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-danger12">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger22" autocomplete="off" checked>
+    <label class="btn btn-outline-danger" for="btn-check-danger22">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger32" autocomplete="off" disabled>
+    <label class="btn btn-outline-danger" for="btn-check-danger32">Single toggle</label>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btncheck12">Checked</label>
+    <input type="checkbox" class="btn-check" id="btncheck22" autocomplete="off">
+    <label class="btn btn-toggle" for="btncheck22">Checkbox</label>
+    <input type="checkbox" class="btn-check" id="btncheck32" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btncheck32">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options2" id="option12" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option12">Checked</label>
+    <input type="radio" class="btn-check" name="options2" id="option22" autocomplete="off">
+    <label class="btn btn-toggle" for="option22">Radio</label>
+    <input type="radio" class="btn-check" name="options2" id="option32" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option32">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons2" id="option52" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option52">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons2" id="option62" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option62">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons2" id="option72" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option72">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline2" id="option82" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option82">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline2" id="option92" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option92">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline2" id="option02" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option02">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+</div>
+
+<h4 class="mt-3">Dark theme on component</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #282d55;">
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check13" autocomplete="off">
+    <label class="btn btn-toggle" for="btn-check13" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check23" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btn-check23" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check33" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btn-check33" data-bs-theme="dark">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-primary13" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-primary13" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary23" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btn-check-primary23" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary33" autocomplete="off" disabled>
+    <label class="btn btn-outline-primary" for="btn-check-primary33" data-bs-theme="dark">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-secondary13" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-secondary13" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary23" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary23" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary33" autocomplete="off" disabled>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary33" data-bs-theme="dark">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-success13" autocomplete="off">
+    <label class="btn btn-outline-success" for="btn-check-success13" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success23" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="btn-check-success23" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success33" autocomplete="off" disabled>
+    <label class="btn btn-outline-success" for="btn-check-success33" data-bs-theme="dark">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-danger13" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-danger13" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger23" autocomplete="off" checked>
+    <label class="btn btn-outline-danger" for="btn-check-danger23" data-bs-theme="dark">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger33" autocomplete="off" disabled>
+    <label class="btn btn-outline-danger" for="btn-check-danger33" data-bs-theme="dark">Single toggle</label>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck13" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btncheck13" data-bs-theme="dark">Checked</label>
+    <input type="checkbox" class="btn-check" id="btncheck23" autocomplete="off">
+    <label class="btn btn-toggle" for="btncheck23" data-bs-theme="dark">Checkbox</label>
+    <input type="checkbox" class="btn-check" id="btncheck33" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btncheck33" data-bs-theme="dark">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options3" id="option13" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option13" data-bs-theme="dark">Checked</label>
+    <input type="radio" class="btn-check" name="options3" id="option23" autocomplete="off">
+    <label class="btn btn-toggle" for="option23" data-bs-theme="dark">Radio</label>
+    <input type="radio" class="btn-check" name="options3" id="option33" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option33" data-bs-theme="dark">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons3" id="option53" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option53" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons3" id="option63" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option63" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons3" id="option73" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option73" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline3" id="option83" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option83" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline3" id="option93" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option93" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline3" id="option03" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option03" data-bs-theme="dark">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+</div>
+
+<h4 class="mt-3">Light theme on component</h4>
+
+<div class="d-flex flex-column gap-2 align-items-start border border-tertiary p-3" style="background-color: #b5e8f7">
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check14" autocomplete="off">
+    <label class="btn btn-toggle" for="btn-check14" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check24" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btn-check24" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check34" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btn-check34" data-bs-theme="light">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-primary14" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-primary14" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary24" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btn-check-primary24" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-primary34" autocomplete="off" disabled>
+    <label class="btn btn-outline-primary" for="btn-check-primary34" data-bs-theme="light">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-secondary14" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-secondary14" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary24" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary24" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-secondary34" autocomplete="off" disabled>
+    <label class="btn btn-outline-secondary" for="btn-check-secondary34" data-bs-theme="light">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-success14" autocomplete="off">
+    <label class="btn btn-outline-success" for="btn-check-success14" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success24" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="btn-check-success24" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-success34" autocomplete="off" disabled>
+    <label class="btn btn-outline-success" for="btn-check-success34" data-bs-theme="light">Single toggle</label>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <input type="checkbox" class="btn-check" id="btn-check-danger14" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-danger14" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger24" autocomplete="off" checked>
+    <label class="btn btn-outline-danger" for="btn-check-danger24" data-bs-theme="light">Single toggle</label>
+    <input type="checkbox" class="btn-check" id="btn-check-danger34" autocomplete="off" disabled>
+    <label class="btn btn-outline-danger" for="btn-check-danger34" data-bs-theme="light">Single toggle</label>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck14" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="btncheck14" data-bs-theme="light">Checked</label>
+    <input type="checkbox" class="btn-check" id="btncheck24" autocomplete="off">
+    <label class="btn btn-toggle" for="btncheck24" data-bs-theme="light">Checkbox</label>
+    <input type="checkbox" class="btn-check" id="btncheck34" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="btncheck34" data-bs-theme="light">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="options4" id="option14" autocomplete="off" checked>
+    <label class="btn btn-toggle" for="option14" data-bs-theme="light">Checked</label>
+    <input type="radio" class="btn-check" name="options4" id="option24" autocomplete="off">
+    <label class="btn btn-toggle" for="option24" data-bs-theme="light">Radio</label>
+    <input type="radio" class="btn-check" name="options4" id="option34" autocomplete="off" disabled>
+    <label class="btn btn-toggle" for="option34" data-bs-theme="light">Disabled</label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="icons4" id="option54" autocomplete="off" checked>
+    <label class="btn btn-icon btn-toggle" for="option54" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons4" id="option64" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option64" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="icons4" id="option74" autocomplete="off">
+    <label class="btn btn-icon btn-toggle" for="option74" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+  <div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="iconsNoOutline4" id="option84" autocomplete="off" checked>
+    <label class="btn btn-icon btn-no-outline" for="option84" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+      </svg>
+      <span class="visually-hidden">Day</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline4" id="option94" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option94" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+      </svg>
+      <span class="visually-hidden">Week</span>
+    </label>
+    <input type="radio" class="btn-check" name="iconsNoOutline4" id="option04" autocomplete="off">
+    <label class="btn btn-icon btn-no-outline" for="option04" data-bs-theme="light">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+      </svg>
+      <span class="visually-hidden">Month</span>
+    </label>
+  </div>
+</div>
+
 ### Validation
 
 <h4 class="mt-3">No theme</h4>
