@@ -58,7 +58,7 @@
 
   // Boosted mod: no .btn-check:focus-visible + &
 
-  // Boosted mod: selectors are slightlty different to handle `.btn-check:checked`
+  // Boosted mod: selectors are slightly different to handle `.btn-check:checked`
   .btn-check:checked + &:active,
   .btn-check:checked + &,
   &:active,
@@ -74,7 +74,7 @@
   }
   // End mod
 
-  // Boosted mod: selectors are slightlty different to handle `.btn-check`
+  // Boosted mod: selectors are slightly different to handle `.btn-check`
   .btn-check:disabled + &,
   &:disabled,
   &.disabled,
