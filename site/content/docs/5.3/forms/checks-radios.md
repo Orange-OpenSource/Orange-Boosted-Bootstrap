@@ -252,17 +252,17 @@ Create button-like checkboxes and radio buttons by using `.btn` styles rather th
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
+<label class="btn btn-toggle" for="btn-check">Single toggle</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
+<label class="btn btn-toggle" for="btn-check-2">Checked</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Disabled</label>
+<label class="btn btn-toggle" for="btn-check-3">Disabled</label>
 {{< /example >}}
 
 {{< callout info >}}
@@ -278,16 +278,16 @@ Boosted requires to group its radio toggle buttons in a [button group]({{< docsr
 {{< example >}}
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-  <label class="btn btn-secondary" for="option1">Checked</label>
+  <label class="btn btn-toggle" for="option1">Checked</label>
 
   <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-  <label class="btn btn-secondary" for="option2">Radio</label>
+  <label class="btn btn-toggle" for="option2">Radio</label>
 
   <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-  <label class="btn btn-secondary" for="option3">Disabled</label>
+  <label class="btn btn-toggle" for="option3">Disabled</label>
 
   <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-  <label class="btn btn-secondary" for="option4">Radio</label>
+  <label class="btn btn-toggle" for="option4">Radio</label>
 </div>
 {{< /example >}}
 
@@ -301,21 +301,21 @@ Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embe
 {{< example >}}
 <div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
-  <label class="btn btn-icon" for="option5">
+  <label class="btn btn-icon btn-toggle" for="option5">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
     </svg>
     <span class="visually-hidden">Day</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
-  <label class="btn btn-icon" for="option6">
+  <label class="btn btn-icon btn-toggle" for="option6">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
     </svg>
     <span class="visually-hidden">Week</span>
   </label>
   <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
-  <label class="btn btn-icon" for="option7">
+  <label class="btn btn-icon btn-toggle" for="option7">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
       <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
     </svg>
