@@ -5733,6 +5733,10 @@ sitemap_exclude: true
         <button class="close" aria-labelledby="labelTag51" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
     </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile-disabled1" autocomplete="off" disabled>
+      <label class="tag" for="btncheck-mobile-disabled1"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
   </ul>
 </div>
 
@@ -5775,6 +5779,10 @@ sitemap_exclude: true
         Input
         <button class="close" aria-labelledby="labelTag52" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile-disabled2" autocomplete="off" disabled>
+      <label class="tag" for="btncheck-mobile-disabled2"><span class="visually-hidden">Filter by</span>Mobile</label>
     </li>
   </ul>
 </div>
@@ -5819,6 +5827,10 @@ sitemap_exclude: true
         <button class="close" aria-labelledby="labelTag53" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
     </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile-disabled3" autocomplete="off" disabled>
+      <label class="tag" for="btncheck-mobile-disabled3"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
   </ul>
 </div>
 
@@ -5862,6 +5874,10 @@ sitemap_exclude: true
         <button class="close" aria-labelledby="labelTag54" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
     </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile-disabled4" autocomplete="off" disabled>
+      <label class="tag" for="btncheck-mobile-disabled4" data-bs-theme="dark"><span class="visually-hidden">Filter by</span>Mobile</label>
+    </li>
   </ul>
 </div>
 
@@ -5904,6 +5920,10 @@ sitemap_exclude: true
         Input
         <button class="close" aria-labelledby="labelTag55" disabled><span class="visually-hidden">Close</span></button>
       </span></p>
+    </li>
+    <li>
+      <input type="checkbox" class="btn-check" id="btncheck-mobile-disabled5" autocomplete="off" disabled>
+      <label class="tag" for="btncheck-mobile-disabled5" data-bs-theme="light"><span class="visually-hidden">Filter by</span>Mobile</label>
     </li>
   </ul>
 </div>

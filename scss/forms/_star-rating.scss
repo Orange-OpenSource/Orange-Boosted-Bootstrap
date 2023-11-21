@@ -8,7 +8,9 @@
   --#{$prefix}star-rating-hover-color: #{$form-star-rating-hover-color};
   --#{$prefix}star-rating-checked-icon: #{$form-star-rating-checked-icon};
   --#{$prefix}star-rating-unchecked-icon: #{$form-star-rating-unchecked-icon};
+
   font-size: $form-star-size;
+  background-color: transparent;
 
   &:disabled {
     pointer-events: none;
