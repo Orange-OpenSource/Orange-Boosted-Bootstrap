@@ -2486,3 +2486,5 @@ $local-nav-dark-active-bg:      $gray-700 !default;
 $local-nav-dark-border-color:   $gray-700 !default;
 // scss-docs-end local-nav-dark-variables
 // End mod
+
+@import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3

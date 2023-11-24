@@ -101,7 +101,7 @@
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
 
-    .accordion-button {
+    > .accordion-header .accordion-button {
       @include border-top-radius(var(--#{$prefix}accordion-inner-border-radius));
     }
   }
@@ -114,13 +114,13 @@
     @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     border-bottom: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color); // Boosted mod: borders are set on .accordion-header
 
-    .accordion-button {
+    > .accordion-header .accordion-button {
       &.collapsed {
         @include border-bottom-radius(var(--#{$prefix}accordion-inner-border-radius));
       }
     }
 
-    .accordion-collapse {
+    > .accordion-collapse {
       @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
   }
