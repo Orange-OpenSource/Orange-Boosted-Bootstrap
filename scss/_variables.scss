@@ -1436,7 +1436,7 @@ $nav-link-padding-y:                $spacer * .5 !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              $font-weight-bold !default;
-$nav-link-color:                    var(--#{$prefix}link-color) !default;
+$nav-link-color:                    inherit !default; // Boosted mod: instead of `var(--#{$prefix}link-color)`
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               null !default; // Boosted mod
 $nav-link-disabled-color:           var(--#{$prefix}disabled-color) !default; // Boosted mod: instead of `var(--#{$prefix}secondary-color)`
@@ -1640,7 +1640,7 @@ $pagination-padding-x:              null !default; // Boosted mod: instead of `.
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  inherit !default; // Boosted mod: instead of `var(--#{$prefix}link-color)`
 $pagination-bg:                     transparent !default; // Boosted mod: instead of `var(--#{$prefix}body-bg)`
 $pagination-border-radius:          var(--#{$prefix}border-radius) !default;
 $pagination-border-width:           var(--#{$prefix}border-width) !default;
@@ -1951,7 +1951,7 @@ $modal-scale-transform:             scale(1.02) !default;
 $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
 $alert-margin-bottom:               $spacer !default;
-$alert-color:                       inherit !default; // Boosted mod
+$alert-color:                       var(--#{$prefix}body-color) !default; // Boosted mod
 $alert-border-radius:               var(--#{$prefix}border-radius) !default;
 $alert-link-font-weight:            null !default; // Boosted mod
 $alert-heading-font-weight:         $font-weight-bold !default; // Boosted mod
@@ -2068,7 +2068,7 @@ $figure-caption-color:              $gray-900 !default; // Boosted mod: instead 
 
 // scss-docs-start title-bars-variables
 $title-bar-bg:                      var(--#{$prefix}body-bg) !default;
-$title-bar-color:                   var(--#{$prefix}heading-color) !default;
+$title-bar-color:                   var(--#{$prefix}body-color) !default;
 $title-bar-image-ratio:             1.8em !default;
 $title-bar-padding-y:               .3333333em !default;
 $title-bar-font-size:               $h2-font-size !default;
