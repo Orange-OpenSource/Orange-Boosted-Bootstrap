@@ -22,6 +22,8 @@ You can choose to display each part or not, except the last one which is mandato
 
 If these available parts don't meet your specific needs, feel free to develop your own custom part accordingly to the Orange Design System.
 
+The footer is positioned at the bottom of the window when the page content is smaller than the window, and at the bottom of the page when it is bigger.
+
 {{< callout warning >}}
 This footer component is based on the [navbar component]({{< docsref "/components/navbar" >}}). Don't forget to import the corresponding SCSS file if you're using [Lean Sass imports]({{< docsref "/customize/optimize#lean-sass-imports" >}}).
 {{< /callout >}}
