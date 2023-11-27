@@ -48,6 +48,8 @@
   }
   // scss-docs-end scroll-offset
   // End mod
+
+  min-height: 100vh; // Boosted mod
 }
 
 
@@ -63,10 +65,9 @@
 // scss-docs-start reboot-body-rules
 body {
   position: relative; // Boosted mod: required for back-to-top component
+  min-height: 100vh; // Boosted mod
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
-  font-synthesis: none; // Boosted mod // 5
-  @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
   color: var(--#{$prefix}body-color);
@@ -75,10 +76,12 @@ body {
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
   background-color: var(--#{$prefix}body-bg); // 2
+  font-synthesis: none; // Boosted mod // 5
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
   text-rendering: optimizespeed; // Boosted mod
+  @include font-size(var(--#{$prefix}body-font-size));
 }
 // scss-docs-end reboot-body-rules
 
