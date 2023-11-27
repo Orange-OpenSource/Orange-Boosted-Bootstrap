@@ -14,6 +14,8 @@
     --#{$prefix}navbar-nav-line-height: #{$footer-line-height-sm};
     --#{$prefix}navbar-nav-letter-spacing: #{$footer-letter-spacing};
 
+    position: sticky;
+    top: 100vh;
     padding-top: var(--#{$prefix}footer-padding-top);
     padding-bottom: var(--#{$prefix}footer-padding-bottom);
     color: var(--#{$prefix}body-color);
