@@ -70,7 +70,7 @@ body {
       width: 100%;
       height: 0;
       content: "";
-      background-color: $accessible-orange;
+      background-color: var(--bs-link-hover-color);
       @include transition(height ease-out .2s);
     }
 
