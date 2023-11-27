@@ -110,7 +110,6 @@ $utilities-colors: $theme-colors-rgb !default;
 $utilities-text: map-merge(
   $utilities-colors,
   (
-    "primary": to-rgb($accessible-orange), // Boosted mod
     "black": to-rgb($black),
     "white": to-rgb($white),
     "body": to-rgb($body-color)
