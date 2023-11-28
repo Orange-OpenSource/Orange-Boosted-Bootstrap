@@ -46,7 +46,7 @@ The core colors of orange design.
 
 ### Functional colors
 
-The core colors of orange design.
+The functional colors of orange design.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
@@ -79,6 +79,8 @@ The core colors of orange design.
 
 ### Functional grays
 
+The functional grays of orange design.
+
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
@@ -107,6 +109,8 @@ The core colors of orange design.
 {{< /palette.inline >}}
 
 ### Supporting colors
+
+The supporting colors of orange design.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
