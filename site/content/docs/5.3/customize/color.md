@@ -14,65 +14,39 @@ toc: true
 
 ### Theme colors
 
+The core colors of orange design.
+
+{{< palette.inline >}}
+{{- range where $.Site.Data.palette "category" "Core colors" }}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-2 mb-5">
+  {{- range $color := .colors }}
   <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="Primary color">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-primary" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-primary</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Primary color" preserveAspectRatio="xMidYMid meet">
-          <rect fill="var(--bs-primary)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var(--bs-primary)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
+    <figure class="mb-0 w-50" aria-label="{{ $color.name }}">
+      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="{{ $color.variable }}" data-bs-toggle="tooltip" data-bs-title="Copy <code>{{ $color.variable }}</code>" data-bs-html="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet" {{ if eq $color.name "White" }} style="border: 1px solid var(--bs-border-color-translucent)" {{ end }}>
+          <rect fill="var({{ $color.variable }})" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
+          <rect fill="var({{ $color.variable }})" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
         </svg>
-        <span class="visually-hidden">Copy variable name --bs-primary</span>
+        <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
       </button>
       <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">--bs-primary</var>
+        <var class="text-nowrap user-select-all">--bs-{{- $color.class -}}</var>
       </figcaption>
     </figure>
     <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">#f16e00</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">#ff7900</code></p>
+      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">{{ $color.hex }}</code></p>
+      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">{{ $color.darkHex }}</code></p>
     </div>
   </div>
-  <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="Secondary color">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-secondary" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-secondary</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Secondary color" preserveAspectRatio="xMidYMid meet">
-          <rect fill="var(--bs-secondary)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var(--bs-secondary)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name --bs-secondary</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">--bs-secondary</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">#000000</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">#ffffff</code></p>
-    </div>
-  </div>
-  <div class="double-figure d-flex">
-    <figure class="mb-0 w-50" aria-label="Body color">
-      <button class="btn border-0 p-0 color-copy ratio ratio-1x1" data-clipboard-text="--bs-body-bg" data-bs-toggle="tooltip" data-bs-title="Copy <code>--bs-body-bg</code>" data-bs-html="true">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Body color" style="border: 1px solid var(--bs-border-color-translucent)" preserveAspectRatio="xMidYMid meet">
-          <rect fill="var(--bs-body-bg)" x="0" y="0" width="100" height="51" data-bs-theme="light"/>
-          <rect fill="var(--bs-body-bg)" x="0" y="50" width="100" height="50" data-bs-theme="dark"/>
-        </svg>
-        <span class="visually-hidden">Copy variable name --bs-body-bg</span>
-      </button>
-      <figcaption class="pt-1">
-        <var class="text-nowrap user-select-all">--bs-body-bg</var>
-      </figcaption>
-    </figure>
-    <div class="d-flex flex-column justify-content-between w-50 p-2 pb-4">
-      <p class="mb-0" data-bs-theme="light"><code class="user-select-all">#ffffff</code></p>
-      <p class="mb-2" data-bs-theme="dark"><code class="user-select-all">#141414</code></p>
-    </div>
-  </div>
+  {{- end -}}
   <div class="double-figure d-none d-md-flex d-lg-none"></div>
 </div>
+{{ end -}}
+{{< /palette.inline >}}
 
 ### Functional colors
+
+The core colors of orange design.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
