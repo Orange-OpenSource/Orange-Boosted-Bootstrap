@@ -1,22 +1,21 @@
 - category: Core colors
   name: "Core colors"
   colors:
-    - name: White
-      class: white
-      hex: "#fff"
-      variable: $white
-    - name: Black
-      class: black
-      hex: "#000"
-      variable: $secondary
-    - name: Accessible orange
-      class: orange
+    - name: Orange
+      class: primary
       hex: "#f16e00"
-      variable: $accessible-orange
-    - name: Brand orange
-      class: orange-2
-      hex: "#ff7900"
-      variable: $brand-orange
+      darkHex: "#ff7900"
+      variable: --bs-primary
+    - name: Black
+      class: secondary
+      hex: "#000"
+      darkHex: "#fff"
+      variable: --bs-secondary
+    - name: White
+      class: body-bg
+      hex: "#fff"
+      darkHex: "#141414"
+      variable: --bs-body-bg
 - category: Supporting colors
   name: "Supporting colors"
   colors:
