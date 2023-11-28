@@ -40,6 +40,10 @@
       class: pink
       hex: "#ffb4e6"
       variable: $supporting-pink
+    - name: Orange
+      class: orange
+      hex: "#ff7900"
+      variable: $supporting-orange
 - category: OBS Gray
   name: "OBS Gray"
   colors:
@@ -80,31 +84,34 @@
     - name: 300
       class: 300
       hex: "#eee"
-      variable: $gray-300
+      darkHex: "#333"
+      variable: --bs-secondary-bg
     - name: 400
       class: 400
       hex: "#ddd"
-      variable: $gray-400
+      darkHex: "#666"
+      variable: --bs-active-bg
     - name: 500
       class: 500
       hex: "#ccc"
-      variable: $gray-500
-    - name: 600
-      class: 600
-      hex: "#999"
-      variable: $gray-600
+      darkHex: "#666"
+      variable: --bs-disabled-color, --bs-border-color-translucent
     - name: 700
       class: 700
       hex: "#666"
-      variable: $gray-700
+      darkHex: "#999"
+      # darkHex: "#ccc"
+      variable: --bs-secondary-color, --bs-placeholder-color
+    - name: 800
+      class: 800
+      hex: "#595959"
+      darkHex: "#595959"
+      variable: $gray-800
     - name: 900
       class: 900
       hex: "#333"
-      variable: $gray-900
-    - name: 950
-      class: 950
-      hex: "#141414"
-      variable: $gray-950
+      darkHex: "#eee"
+      variable: --bs-body-color-subtle
 - category: ODS colors
   name: "ODS colors"
   subcategories:
@@ -290,7 +297,7 @@
         hex: "#ffd200"
       - name: Yellow 400
         variable: $ods-yellow-400
-        hex: "#ffd400"
+        hex: "#ffb400"
       - name: Yellow 500
         variable: $ods-yellow-500
         hex: "#b98f11"
