@@ -76,12 +76,10 @@ body {
   /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
   background-color: var(--#{$prefix}body-bg); // 2
-  font-synthesis: none; // Boosted mod // 5
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
   text-rendering: optimizespeed; // Boosted mod
-  @include font-size(var(--#{$prefix}body-font-size));
 }
 // scss-docs-end reboot-body-rules
 
