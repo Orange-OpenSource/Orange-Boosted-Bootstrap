@@ -442,11 +442,11 @@
   --bs-border-color: var(--bs-border-color-translucent);
 }
 
-.color-copy:hover {
+.color-copy:hover svg {
   transform: scale(1.07);
 }
 
-.color-copy {
+.color-copy svg {
   // stylelint-disable-next-line property-disallowed-list
   transition: transform .15s ease-in-out;
 }
