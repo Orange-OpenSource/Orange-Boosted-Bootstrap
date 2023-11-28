@@ -177,9 +177,9 @@ Color palette is used throughout Boosted in multiple ways, either in components 
           <span class="visually-hidden">Copy variable name {{ $color.variable }}</span>
         </button>
         <figcaption class="py-1">
-          <code>{{ $color.hex }}</code>
+          <code class="user-select-all">{{ $color.hex }}</code>
           <hr class="my-1 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}>
-          <var>{{- $color.variable -}}</var>
+          <var class="user-select-all">{{- $color.variable -}}</var>
         </figcaption>
       </figure>
     {{ end -}}

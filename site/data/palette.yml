@@ -100,7 +100,6 @@
       class: 700
       hex: "#666"
       darkHex: "#999"
-      # darkHex: "#ccc"
       variable: --bs-secondary-color, --bs-placeholder-color
     - name: 800
       class: 800
