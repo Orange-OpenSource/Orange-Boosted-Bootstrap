@@ -68,6 +68,8 @@ body {
   min-height: 100vh; // Boosted mod
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
+  font-synthesis: none; // Boosted mod // 5
+  @include font-size(var(--#{$prefix}body-font-size));
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
   color: var(--#{$prefix}body-color);
