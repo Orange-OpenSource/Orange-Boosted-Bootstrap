@@ -11,10 +11,15 @@ toc: true
 <!-- Boosted mod -->
 ## Orange's colors
 
+{{< callout info >}}
+This page is an adaptation of the Bootstrap documentation.
+{{< /callout >}}
+
+This first part is about the colors that are dynamic depending on the used theme. The variables They are the variables you should be using inside your project.
 
 ### Theme colors
 
-The core colors of orange design.
+The core colors of orange design. These colors should always dominate other colors inside a page. They are used to highlight elements, figures, texts or actions.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
@@ -46,7 +51,7 @@ The core colors of orange design.
 
 ### Functional colors
 
-The functional colors of orange design.
+The functional colors of orange design. These colors are not meant to be used as backgrounds or colors. They are associated to specific established meanings (respectively success, info or discovery, warning or alert, critical or error). They should be associated with a meaningful icon.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
@@ -79,7 +84,7 @@ The functional colors of orange design.
 
 ### Functional grays
 
-The functional grays of orange design.
+The functional grays of orange design. These colors are used as backgrounds, colors or borders to outline some elements (hover state, disabled state, supporting texts, dividers, low highlights). They should not dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
@@ -110,7 +115,7 @@ The functional grays of orange design.
 
 ### Supporting colors
 
-The supporting colors of orange design.
+The supporting colors of orange design. These colors are meant for backgrounds, data display or illustrations. They should not be used alone or dominate the page.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
@@ -138,9 +143,10 @@ The supporting colors of orange design.
 {{ end -}}
 {{< /palette.inline >}}
 
-### Full palette
+## Orange's full palette
 
-Color palette is used throughout Boosted in multiple ways, either in components or as utilities such as [`background-color`]({{< docsref "/utilities/background" >}}), [`color`]({{< docsref "/utilities/colors" >}}) or [`border`]({{< docsref "/utilities/borders" >}}).
+The variables above should fulfil all your needs, but in case you still need some other colors, here are the design color tokens we use to build the usable colors above.
+None of the following variables are dynamic.
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "ODS colors" }}
@@ -166,7 +172,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 {{ end -}}
 {{< /palette.inline >}}
 
-### Usage
+## Usage
 
 Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
 Boosted core uses Bootstrap's naming for maintenance ease, but **you're encouraged to use Orange color tokens when it comes to custom code**.
@@ -185,9 +191,9 @@ Boosted core uses Bootstrap's naming for maintenance ease, but **you're encourag
 <!-- End mod -->
 
 <details>
-<summary>TODO</summary>
-
-## Colors
+<summary>All colors from Bootstrap</summary>
+<br>
+<h2>Colors</h2>
 
 {{< added-in "5.3.0" >}}
 
@@ -537,7 +543,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
 
 <!--Boosted mod: no "Using the new colors" section because `.bg-primary-subtle` stays orange without opacity in Boosted so the text can't be visible-->
 
-### Theme colors
+<h3>Theme colors</h3>
 
 We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
 
@@ -559,7 +565,7 @@ All these colors are available as a Sass map, `$theme-colors` or `$theme-colors-
 
 Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
-### All colors
+<h3>All colors</h3>
 
 {{< design-callout-alert >}}
 Some of the colors below, especially the **variants suffixed by** `-100` **to** `-900`, do not belong to the Orange Design System specifications.
@@ -614,7 +620,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   </div>
 </div>
 
-### Notes on Sass
+<h3>Notes on Sass</h3>
 
 Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
 
@@ -622,7 +628,7 @@ Using `mix()` is not the same as `lighten()` and `darken()`—the former blends 
 
 Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
 
-## Color Sass maps
+<h2>Color Sass maps</h2>
 
 Boosted's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
 
@@ -637,7 +643,7 @@ Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass ma
 
 Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
-### Example
+<h3>Example</h3>
 
 Here's how you can use these in your Sass:
 
@@ -651,7 +657,7 @@ Here's how you can use these in your Sass:
 
 [Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
 
-## Generating utilities
+<h2>Generating utilities</h2>
 
 {{< added-in "5.1.0" >}}
 
