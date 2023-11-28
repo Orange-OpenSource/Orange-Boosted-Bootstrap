@@ -7,6 +7,7 @@
   padding: $modal-content-padding;
   background-color: $modal-content-bg;
   background-clip: padding-box;
+  border: $modal-content-border-width solid $modal-content-border-color;
   transform: translateX(-50%);
 
   [role="heading"] {
@@ -53,6 +54,7 @@
   font-weight: $font-weight-bold;
   color: $white;
   background: $black;
+  border-top: var(--bs-border-width) solid var(--bs-border-color-translucent);
 
   &[style*="display: block"] {
     display: flex !important; // stylelint-disable-line declaration-no-important
