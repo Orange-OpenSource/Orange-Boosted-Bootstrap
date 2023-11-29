@@ -38,6 +38,7 @@
   bottom: var(--#{$prefix}back-to-top-bottom);
   z-index: var(--#{$prefix}back-to-top-zindex);
   pointer-events: none;
+  background-color: transparent;
 }
 
 .back-to-top-link {
